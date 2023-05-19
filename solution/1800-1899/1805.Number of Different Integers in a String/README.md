@@ -68,23 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numDifferentIntegers(self, word: str) -> int:
-        s = set()
-        i, n = 0, len(word)
-        while i < n:
-            if word[i].isdigit():
-                while i < n and word[i] == '0':
-                    i += 1
-                j = i
-                while j < n and word[j].isdigit():
-                    j += 1
-                s.add(word[i: j])
-                i = j
-            i += 1
-        return len(s)
-```
+
 
 ### **Java**
 
@@ -113,95 +97,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numDifferentIntegers(string word) {
-        unordered_set<string> s;
-        int n = word.size();
-        for (int i = 0; i < n; ++i) {
-            if (isdigit(word[i])) {
-                while (i < n && word[i] == '0') ++i;
-                int j = i;
-                while (j < n && isdigit(word[j])) ++j;
-                s.insert(word.substr(i, j - i));
-                i = j;
-            }
-        }
-        return s.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func numDifferentIntegers(word string) int {
-	s := map[string]struct{}{}
-	n := len(word)
-	for i := 0; i < n; i++ {
-		if word[i] >= '0' && word[i] <= '9' {
-			for i < n && word[i] == '0' {
-				i++
-			}
-			j := i
-			for j < n && word[j] >= '0' && word[j] <= '9' {
-				j++
-			}
-			s[word[i:j]] = struct{}{}
-			i = j
-		}
-	}
-	return len(s)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numDifferentIntegers(word: string): number {
-    return new Set(
-        word
-            .replace(/\D+/g, ' ')
-            .trim()
-            .split(' ')
-            .filter(v => v !== '')
-            .map(v => v.replace(/^0+/g, '')),
-    ).size;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn num_different_integers(word: String) -> i32 {
-        let s = word.as_bytes();
-        let n = s.len();
-        let mut set = HashSet::new();
-        let mut i = 0;
-        while i < n {
-            if s[i] >= b'0' && s[i] <= b'9' {
-                let mut j = i;
-                while j < n && s[j] >= b'0' && s[j] <= b'9' {
-                    j += 1;
-                }
-                while i < j - 1 && s[i] == b'0' {
-                    i += 1;
-                }
-                set.insert(String::from_utf8(s[i..j].to_vec()).unwrap());
-                i = j;
-            } else {
-                i += 1;
-            }
-        }
-        set.len() as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -209,4 +119,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -88,21 +88,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def cycleLengthQueries(self, n: int, queries: List[List[int]]) -> List[int]:
-        ans = []
-        for a, b in queries:
-            t = 1
-            while a != b:
-                if a > b:
-                    a >>= 1
-                else:
-                    b >>= 1
-                t += 1
-            ans.append(t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -131,52 +117,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> cycleLengthQueries(int n, vector<vector<int>>& queries) {
-        vector<int> ans;
-        for (auto& q : queries) {
-            int a = q[0], b = q[1];
-            int t = 1;
-            while (a != b) {
-                if (a > b) {
-                    a >>= 1;
-                } else {
-                    b >>= 1;
-                }
-                ++t;
-            }
-            ans.emplace_back(t);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func cycleLengthQueries(n int, queries [][]int) []int {
-	ans := []int{}
-	for _, q := range queries {
-		a, b := q[0], q[1]
-		t := 1
-		for a != b {
-			if a > b {
-				a >>= 1
-			} else {
-				b >>= 1
-			}
-			t++
-		}
-		ans = append(ans, t)
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -184,4 +131,4 @@ func cycleLengthQueries(n int, queries [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

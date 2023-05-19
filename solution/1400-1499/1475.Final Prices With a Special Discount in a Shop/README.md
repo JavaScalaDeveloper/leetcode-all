@@ -61,13 +61,7 @@
 
 单调栈常见模型：找出每个数左/右边**离它最近的**且**比它大/小的数**。模板：
 
-```python
-stk = []
-for i in range(n):
-    while stk and check(stk[-1], i):
-        stk.pop()
-    stk.append(i)
-```
+
 
 本题我们可以采用正序、逆序两种方式遍历数组 `prices`。
 
@@ -79,44 +73,11 @@ for i in range(n):
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def finalPrices(self, prices: List[int]) -> List[int]:
-        ans = []
-        for i, v in enumerate(prices):
-            ans.append(v)
-            for j in range(i + 1, len(prices)):
-                if prices[j] <= v:
-                    ans[-1] -= prices[j]
-                    break
-        return ans
-```
 
-```python
-class Solution:
-    def finalPrices(self, prices: List[int]) -> List[int]:
-        stk = []
-        ans = prices[:]
-        for i, v in enumerate(prices):
-            while stk and prices[stk[-1]] >= v:
-                ans[stk.pop()] -= v
-            stk.append(i)
-        return ans
-```
 
-```python
-class Solution:
-    def finalPrices(self, prices: List[int]) -> List[int]:
-        stk = []
-        ans = prices[:]
-        for i in range(len(prices) - 1, -1, -1):
-            while stk and prices[stk[-1]] > prices[i]:
-                stk.pop()
-            if stk:
-                ans[i] -= prices[stk[-1]]
-            stk.append(i)
-        return ans
-```
+
+
+
 
 ### **Java**
 
@@ -180,195 +141,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> finalPrices(vector<int>& prices) {
-        int n = prices.size();
-        vector<int> ans(n);
-        for (int i = 0; i < n; ++i) {
-            ans[i] = prices[i];
-            for (int j = i + 1; j < n; ++j) {
-                if (prices[j] <= prices[i]) {
-                    ans[i] -= prices[j];
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> finalPrices(vector<int>& prices) {
-        stack<int> stk;
-        vector<int> ans = prices;
-        for (int i = 0; i < prices.size(); ++i) {
-            while (!stk.empty() && prices[stk.top()] >= prices[i]) {
-                ans[stk.top()] -= prices[i];
-                stk.pop();
-            }
-            stk.push(i);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> finalPrices(vector<int>& prices) {
-        stack<int> stk;
-        int n = prices.size();
-        vector<int> ans(n);
-        for (int i = n - 1; i >= 0; --i) {
-            ans[i] = prices[i];
-            while (!stk.empty() && prices[stk.top()] > prices[i]) {
-                stk.pop();
-            }
-            if (!stk.empty()) {
-                ans[i] -= prices[stk.top()];
-            }
-            stk.push(i);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func finalPrices(prices []int) []int {
-	n := len(prices)
-	ans := make([]int, n)
-	for i, v := range prices {
-		ans[i] = v
-		for j := i + 1; j < n; j++ {
-			if prices[j] <= v {
-				ans[i] -= prices[j]
-				break
-			}
-		}
-	}
-	return ans
-}
-```
 
-```go
-func finalPrices(prices []int) []int {
-	var stk []int
-	n := len(prices)
-	ans := make([]int, n)
-	for i, v := range prices {
-		ans[i] = v
-		for len(stk) > 0 && prices[stk[len(stk)-1]] >= v {
-			ans[stk[len(stk)-1]] -= v
-			stk = stk[:len(stk)-1]
-		}
-		stk = append(stk, i)
-	}
-	return ans
-}
-```
 
-```go
-func finalPrices(prices []int) []int {
-	stk := []int{}
-	n := len(prices)
-	ans := make([]int, n)
-	for i := n - 1; i >= 0; i-- {
-		ans[i] = prices[i]
-		for len(stk) > 0 && prices[stk[len(stk)-1]] > prices[i] {
-			stk = stk[:len(stk)-1]
-		}
-		if len(stk) > 0 {
-			ans[i] -= prices[stk[len(stk)-1]]
-		}
-		stk = append(stk, i)
-	}
-	return ans
-}
-```
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function finalPrices(prices: number[]): number[] {
-    const n = prices.length;
-    const ans = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        ans[i] = prices[i];
-        for (let j = i + 1; j < n; ++j) {
-            if (prices[j] <= prices[i]) {
-                ans[i] -= prices[j];
-                break;
-            }
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function finalPrices(prices: number[]): number[] {
-    const n = prices.length;
-    const stk = [];
-    const ans = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        ans[i] = prices[i];
-        while (stk.length && prices[stk[stk.length - 1]] >= prices[i]) {
-            ans[stk.pop()] -= prices[i];
-        }
-        stk.push(i);
-    }
-    return ans;
-}
-```
 
-```ts
-function finalPrices(prices: number[]): number[] {
-    const n = prices.length;
-    const stack = [];
-    const res = new Array(n);
-    for (let i = n - 1; i >= 0; i--) {
-        const price = prices[i];
-        while (stack.length !== 0 && stack[stack.length - 1] > price) {
-            stack.pop();
-        }
-        res[i] = price - (stack[stack.length - 1] ?? 0);
-        stack.push(price);
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn final_prices(prices: Vec<i32>) -> Vec<i32> {
-        let n = prices.len();
-        let mut stack = Vec::new();
-        let mut res = vec![0; n];
-        for i in (0..n).rev() {
-            let price = prices[i];
-            while !stack.is_empty() && *stack.last().unwrap() > price {
-                stack.pop();
-            }
-            res[i] = price - stack.last().unwrap_or(&0);
-            stack.push(price);
-        }
-        res
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -376,4 +175,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -79,15 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
-        cnt = Counter()
-        for row in matrix:
-            t = tuple(row) if row[0] == 0 else tuple(x ^ 1 for x in row)
-            cnt[t] += 1
-        return max(cnt.values())
-```
+
 
 ### **Java**
 
@@ -110,73 +102,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxEqualRowsAfterFlips(vector<vector<int>>& matrix) {
-        unordered_map<string, int> cnt;
-        int ans = 0;
-        for (auto& row : matrix) {
-            string s;
-            for (int x : row) {
-                s.push_back('0' + (row[0] == 0 ? x : x ^ 1));
-            }
-            ans = max(ans, ++cnt[s]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxEqualRowsAfterFlips(matrix [][]int) (ans int) {
-	cnt := map[string]int{}
-	for _, row := range matrix {
-		s := []byte{}
-		for _, x := range row {
-			if row[0] == 1 {
-				x ^= 1
-			}
-			s = append(s, byte(x)+'0')
-		}
-		t := string(s)
-		cnt[t]++
-		ans = max(ans, cnt[t])
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxEqualRowsAfterFlips(matrix: number[][]): number {
-    const cnt = new Map<string, number>();
-    let ans = 0;
-    for (const row of matrix) {
-        if (row[0] === 1) {
-            for (let i = 0; i < row.length; i++) {
-                row[i] ^= 1;
-            }
-        }
-        const s = row.join('');
-        cnt.set(s, (cnt.get(s) || 0) + 1);
-        ans = Math.max(ans, cnt.get(s)!);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -184,4 +120,4 @@ function maxEqualRowsAfterFlips(matrix: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

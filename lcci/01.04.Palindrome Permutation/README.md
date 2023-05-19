@@ -37,24 +37,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canPermutePalindrome(self, s: str) -> bool:
-        cnt = Counter(s)
-        return sum(v & 1 for v in cnt.values()) < 2
-```
 
-```python
-class Solution:
-    def canPermutePalindrome(self, s: str) -> bool:
-        vis = set()
-        for c in s:
-            if c in vis:
-                vis.remove(c)
-            else:
-                vis.add(c)
-        return len(vis) < 2
-```
+
+
 
 ### **Java**
 
@@ -91,96 +76,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canPermutePalindrome(string s) {
-        unordered_map<char, int> cnt;
-        for (auto& c : s) {
-            ++cnt[c];
-        }
-        int sum = 0;
-        for (auto& [_, v] : cnt) {
-            sum += v & 1;
-        }
-        return sum < 2;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool canPermutePalindrome(string s) {
-        unordered_set<char> vis;
-        for (auto& c : s) {
-            if (vis.count(c)) {
-                vis.erase(c);
-            } else {
-                vis.insert(c);
-            }
-        }
-        return vis.size() < 2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canPermutePalindrome(s string) bool {
-	vis := map[rune]bool{}
-	cnt := 0
-	for _, c := range s {
-		if vis[c] {
-			vis[c] = false
-			cnt--
-		} else {
-			vis[c] = true
-			cnt++
-		}
-	}
-	return cnt < 2
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function canPermutePalindrome(s: string): boolean {
-    const set = new Set<string>();
-    for (const c of s) {
-        if (set.has(c)) {
-            set.delete(c);
-        } else {
-            set.add(c);
-        }
-    }
-    return set.size <= 1;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
 
-impl Solution {
-    pub fn can_permute_palindrome(s: String) -> bool {
-        let mut set = HashSet::new();
-        for c in s.chars() {
-            if set.contains(&c) {
-                set.remove(&c);
-            } else {
-                set.insert(c);
-            }
-        }
-        set.len() <= 1
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -188,4 +100,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

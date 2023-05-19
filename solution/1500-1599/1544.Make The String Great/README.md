@@ -71,17 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makeGood(self, s: str) -> str:
-        stk = []
-        for c in s:
-            if not stk or abs(ord(stk[-1]) - ord(c)) != 32:
-                stk.append(c)
-            else:
-                stk.pop()
-        return "".join(stk)
-```
+
 
 ### **Java**
 
@@ -103,47 +93,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string makeGood(string s) {
-        string stk;
-        for (char c : s) {
-            if (stk.empty() || abs(stk.back() - c) != 32) {
-                stk += c;
-            } else {
-                stk.pop_back();
-            }
-        }
-        return stk;
-    }
-};
-```
 
-### **Go**
 
-```go
-func makeGood(s string) string {
-	stk := []rune{}
-	for _, c := range s {
-		if len(stk) == 0 || abs(int(stk[len(stk)-1]-c)) != 32 {
-			stk = append(stk, c)
-		} else {
-			stk = stk[:len(stk)-1]
-		}
-	}
-	return string(stk)
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **...**
 
@@ -151,4 +107,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

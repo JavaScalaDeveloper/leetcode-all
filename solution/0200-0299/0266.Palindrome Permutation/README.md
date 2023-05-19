@@ -47,11 +47,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canPermutePalindrome(self, s: str) -> bool:
-        return sum(v % 2 for v in Counter(s).values()) <= 1
-```
+
 
 ### **Java**
 
@@ -73,56 +69,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canPermutePalindrome(string s) {
-        vector<int> cnt(26);
-        for (char& c : s) ++cnt[c - 'a'];
-        int n = 0;
-        for (int& v : cnt) n += v & 1;
-        return n < 2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canPermutePalindrome(s string) bool {
-	cnt := make([]int, 26)
-	for _, c := range s {
-		cnt[c-'a']++
-	}
-	n := 0
-	for _, v := range cnt {
-		n += v & 1
-	}
-	return n < 2
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {boolean}
- */
-var canPermutePalindrome = function (s) {
-    let ss = new Set();
-    for (let c of s) {
-        if (ss.has(c)) {
-            ss.delete(c);
-        } else {
-            ss.add(c);
-        }
-    }
-    return ss.size < 2;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -130,4 +87,4 @@ var canPermutePalindrome = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

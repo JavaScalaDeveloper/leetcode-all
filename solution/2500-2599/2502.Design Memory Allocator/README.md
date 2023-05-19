@@ -95,72 +95,9 @@ loc.free(7); // 释放 mID 为 7 的所有内存单元。内存数组保持原�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Allocator:
-
-    def __init__(self, n: int):
-        self.m = [0] * n
-
-    def allocate(self, size: int, mID: int) -> int:
-        cnt = 0
-        for i, v in enumerate(self.m):
-            if v:
-                cnt = 0
-            else:
-                cnt += 1
-                if cnt == size:
-                    self.m[i - size + 1: i + 1] = [mID] * size
-                    return i - size + 1
-        return -1
 
 
-    def free(self, mID: int) -> int:
-        ans = 0
-        for i, v in enumerate(self.m):
-            if v == mID:
-                self.m[i] = 0
-                ans += 1
-        return ans
 
-# Your Allocator object will be instantiated and called as such:
-# obj = Allocator(n)
-# param_1 = obj.allocate(size,mID)
-# param_2 = obj.free(mID)
-```
-
-```python
-from sortedcontainers import SortedList
-
-
-class Allocator:
-
-    def __init__(self, n: int):
-        self.sl = SortedList([(-1, -1), (n, n)])
-        self.d = defaultdict(list)
-
-    def allocate(self, size: int, mID: int) -> int:
-        for (_, s), (e, _) in pairwise(self.sl):
-            s, e = s + 1, e - 1
-            if e - s + 1 >= size:
-                self.sl.add((s, s + size - 1))
-                self.d[mID].append((s, s + size - 1))
-                return s
-        return -1
-
-    def free(self, mID: int) -> int:
-        ans = 0
-        for block in self.d[mID]:
-            self.sl.remove(block)
-            ans += block[1] - block[0] + 1
-        del self.d[mID]
-        return ans
-
-
-# Your Allocator object will be instantiated and called as such:
-# obj = Allocator(n)
-# param_1 = obj.allocate(size,mID)
-# param_2 = obj.free(mID)
-```
 
 ### **Java**
 
@@ -253,202 +190,17 @@ class Allocator {
  */
 ```
 
-### **C++**
 
-```cpp
-class Allocator {
-public:
-    Allocator(int n) {
-        m = vector<int>(n);
-    }
 
-    int allocate(int size, int mID) {
-        int cnt = 0;
-        for (int i = 0; i < m.size(); ++i) {
-            if (m[i]) {
-                cnt = 0;
-            } else if (++cnt == size) {
-                fill(i - size + 1, i + 1, mID);
-                return i - size + 1;
-            }
-        }
-        return -1;
-    }
 
-    int free(int mID) {
-        int ans = 0;
-        for (int i = 0; i < m.size(); ++i) {
-            if (m[i] == mID) {
-                m[i] = 0;
-                ++ans;
-            }
-        }
-        return ans;
-    }
 
-private:
-    vector<int> m;
 
-    void fill(int from, int to, int val) {
-        for (int i = from; i < to; ++i) {
-            m[i] = val;
-        }
-    }
-};
 
-/**
- * Your Allocator object will be instantiated and called as such:
- * Allocator* obj = new Allocator(n);
- * int param_1 = obj->allocate(size,mID);
- * int param_2 = obj->free(mID);
- */
-```
 
-```cpp
-class Allocator {
-public:
-    Allocator(int n) {
-        tm[-1] = -1;
-        tm[n] = n;
-    }
 
-    int allocate(int size, int mID) {
-        int s = -1;
-        for (auto& [v, c] : tm) {
-            if (s != -1) {
-                int e = v - 1;
-                if (e - s + 1 >= size) {
-                    tm[s] = s + size - 1;
-                    d[mID].emplace_back(s);
-                    return s;
-                }
-            }
-            s = c + 1;
-        }
-        return -1;
-    }
 
-    int free(int mID) {
-        int ans = 0;
-        for (int& s : d[mID]) {
-            int e = tm[s];
-            tm.erase(s);
-            ans += e - s + 1;
-        }
-        d.erase(mID);
-        return ans;
-    }
 
-private:
-    map<int, int> tm;
-    unordered_map<int, vector<int>> d;
-};
 
-/**
- * Your Allocator object will be instantiated and called as such:
- * Allocator* obj = new Allocator(n);
- * int param_1 = obj->allocate(size,mID);
- * int param_2 = obj->free(mID);
- */
-```
-
-### **Go**
-
-```go
-type Allocator struct {
-	m []int
-}
-
-func Constructor(n int) Allocator {
-	return Allocator{make([]int, n)}
-}
-
-func (this *Allocator) Allocate(size int, mID int) int {
-	cnt := 0
-	for i, v := range this.m {
-		if v > 0 {
-			cnt = 0
-		} else {
-			cnt++
-			if cnt == size {
-				for j := i - size + 1; j <= i; j++ {
-					this.m[j] = mID
-				}
-				return i - size + 1
-			}
-		}
-	}
-	return -1
-}
-
-func (this *Allocator) Free(mID int) (ans int) {
-	for i, v := range this.m {
-		if v == mID {
-			this.m[i] = 0
-			ans++
-		}
-	}
-	return
-}
-
-/**
- * Your Allocator object will be instantiated and called as such:
- * obj := Constructor(n);
- * param_1 := obj.Allocate(size,mID);
- * param_2 := obj.Free(mID);
- */
-```
-
-```go
-type Allocator struct {
-	rbt *redblacktree.Tree
-	d   map[int][]int
-}
-
-func Constructor(n int) Allocator {
-	rbt := redblacktree.NewWithIntComparator()
-	rbt.Put(-1, -1)
-	rbt.Put(n, n)
-	return Allocator{rbt, map[int][]int{}}
-}
-
-func (this *Allocator) Allocate(size int, mID int) int {
-	s := -1
-	it := this.rbt.Iterator()
-	for it.Next() {
-		v := it.Key().(int)
-		if s != -1 {
-			e := v - 1
-			if e-s+1 >= size {
-				this.rbt.Put(s, s+size-1)
-				this.d[mID] = append(this.d[mID], s)
-				return s
-			}
-		}
-		s = it.Value().(int) + 1
-	}
-	return -1
-}
-
-func (this *Allocator) Free(mID int) int {
-	ans := 0
-	for _, s := range this.d[mID] {
-		if e, ok := this.rbt.Get(s); ok {
-			this.rbt.Remove(s)
-			ans += e.(int) - s + 1
-		}
-	}
-	this.d[mID] = []int{}
-	return ans
-}
-
-/**
- * Your Allocator object will be instantiated and called as such:
- * obj := Constructor(n);
- * param_1 := obj.Allocate(size,mID);
- * param_2 := obj.Free(mID);
- */
-```
 
 ### **...**
 
@@ -456,4 +208,4 @@ func (this *Allocator) Free(mID int) int {
 
 ```
 
-<!-- tabs:end -->
+

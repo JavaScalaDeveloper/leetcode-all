@@ -84,35 +84,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# """
-# This is BinaryMatrix's API interface.
-# You should not implement it, or speculate about its implementation
-# """
-# class BinaryMatrix(object):
-#    def get(self, row: int, col: int) -> int:
-#    def dimensions(self) -> list[]:
 
-
-class Solution:
-    def leftMostColumnWithOne(self, binaryMatrix: 'BinaryMatrix') -> int:
-        rows, cols = binaryMatrix.dimensions()
-        res = -1
-        for row in range(rows):
-            left, right = 0, cols - 1
-            while left < right:
-                mid = (left + right) >> 1
-                if binaryMatrix.get(row, mid) == 1:
-                    right = mid
-                else:
-                    left = mid + 1
-            if binaryMatrix.get(row, left) == 1:
-                if res == -1:
-                    res = left
-                else:
-                    res = min(res, left)
-        return res
-```
 
 ### **Java**
 
@@ -156,92 +128,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * // This is the BinaryMatrix's API interface.
- * // You should not implement it, or speculate about its implementation
- * class BinaryMatrix {
- *   public:
- *     int get(int row, int col);
- *     vector<int> dimensions();
- * };
- */
 
-class Solution {
-public:
-    int leftMostColumnWithOne(BinaryMatrix& binaryMatrix) {
-        vector<int> scale = binaryMatrix.dimensions();
-        int rows = scale[0], cols = scale[1];
-        int res = -1;
-        for (int row = 0; row < rows; ++row) {
-            int left = 0, right = cols - 1;
-            while (left < right) {
-                int mid = left + right >> 1;
-                if (binaryMatrix.get(row, mid) == 1) {
-                    right = mid;
-                } else {
-                    left = mid + 1;
-                }
-            }
-            if (binaryMatrix.get(row, left) == 1) {
-                if (res == -1) {
-                    res = left;
-                } else {
-                    res = min(res, left);
-                }
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * // This is the BinaryMatrix's API interface.
- * // You should not implement it, or speculate about its implementation
- * type BinaryMatrix struct {
- *     Get func(int, int) int
- *     Dimensions func() []int
- * }
- */
 
-func leftMostColumnWithOne(binaryMatrix BinaryMatrix) int {
-	scale := binaryMatrix.Dimensions()
-	rows, cols := scale[0], scale[1]
-	res := -1
-	for row := 0; row < rows; row++ {
-		left, right := 0, cols-1
-		for left < right {
-			mid := (left + right) >> 1
-			if binaryMatrix.Get(row, mid) == 1 {
-				right = mid
-			} else {
-				left = mid + 1
-			}
-		}
-		if binaryMatrix.Get(row, left) == 1 {
-			if res == -1 {
-				res = left
-			} else {
-				res = min(res, left)
-			}
-		}
-	}
-	return res
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **...**
 
@@ -249,4 +142,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

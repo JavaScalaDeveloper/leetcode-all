@@ -51,17 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def subarraySum(self, nums: List[int], k: int) -> int:
-        d = defaultdict(int, {0: 1})
-        ans, sum = 0, 0
-        for num in nums:
-            sum += num
-            ans += d[sum - k]
-            d[sum] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -83,44 +73,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func subarraySum(nums []int, k int) int {
-	m := map[int]int{0: 1}
-	sum, ans := 0, 0
-	for _, num := range nums {
-		sum += num
-		ans += m[sum-k]
-		m[sum]++
-	}
-	return ans
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int subarraySum(vector<int>& nums, int k) {
-        if (nums.size() < 0) return 0;
 
-        int presum = 0;
-        int count = 0;
-        unordered_map<int, int> mp;
-        mp[0] = 1;
 
-        for (int right = 0; right < nums.size(); right++) {
-            presum += nums[right];
-            count += mp[presum - k];
-            mp[presum]++;
-        }
 
-        return count;
-    }
-};
-```
+
 
 ### **...**
 
@@ -128,4 +87,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

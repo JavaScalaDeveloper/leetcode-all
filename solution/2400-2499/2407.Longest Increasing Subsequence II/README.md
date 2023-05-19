@@ -87,64 +87,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Node:
-    def __init__(self):
-        self.l = 0
-        self.r = 0
-        self.v = 0
 
-
-class SegmentTree:
-    def __init__(self, n):
-        self.tr = [Node() for _ in range(4 * n)]
-        self.build(1, 1, n)
-
-    def build(self, u, l, r):
-        self.tr[u].l = l
-        self.tr[u].r = r
-        if l == r:
-            return
-        mid = (l + r) >> 1
-        self.build(u << 1, l, mid)
-        self.build(u << 1 | 1, mid + 1, r)
-
-    def modify(self, u, x, v):
-        if self.tr[u].l == x and self.tr[u].r == x:
-            self.tr[u].v = v
-            return
-        mid = (self.tr[u].l + self.tr[u].r) >> 1
-        if x <= mid:
-            self.modify(u << 1, x, v)
-        else:
-            self.modify(u << 1 | 1, x, v)
-        self.pushup(u)
-
-    def pushup(self, u):
-        self.tr[u].v = max(self.tr[u << 1].v, self.tr[u << 1 | 1].v)
-
-    def query(self, u, l, r):
-        if self.tr[u].l >= l and self.tr[u].r <= r:
-            return self.tr[u].v
-        mid = (self.tr[u].l + self.tr[u].r) >> 1
-        v = 0
-        if l <= mid:
-            v = self.query(u << 1, l, r)
-        if r > mid:
-            v = max(v, self.query(u << 1 | 1, l, r))
-        return v
-
-
-class Solution:
-    def lengthOfLIS(self, nums: List[int], k: int) -> int:
-        tree = SegmentTree(max(nums))
-        ans = 1
-        for v in nums:
-            t = tree.query(1, v - k, v - 1) + 1
-            ans = max(ans, t)
-            tree.modify(1, v, t)
-        return ans
-```
 
 ### **Java**
 
@@ -231,171 +174,17 @@ class SegmentTree {
 }
 ```
 
-### **C++**
 
-```cpp
-class Node {
-public:
-    int l;
-    int r;
-    int v;
-};
 
-class SegmentTree {
-public:
-    vector<Node*> tr;
 
-    SegmentTree(int n) {
-        tr.resize(4 * n);
-        for (int i = 0; i < tr.size(); ++i) tr[i] = new Node();
-        build(1, 1, n);
-    }
 
-    void build(int u, int l, int r) {
-        tr[u]->l = l;
-        tr[u]->r = r;
-        if (l == r) return;
-        int mid = (l + r) >> 1;
-        build(u << 1, l, mid);
-        build(u << 1 | 1, mid + 1, r);
-    }
 
-    void modify(int u, int x, int v) {
-        if (tr[u]->l == x && tr[u]->r == x)
-        {
-            tr[u]->v = v;
-            return;
-        }
-        int mid = (tr[u]->l + tr[u]->r) >> 1;
-        if (x <= mid) modify(u << 1, x, v);
-        else modify(u << 1 | 1, x, v);
-        pushup(u);
-    }
 
-    void pushup(int u) {
-        tr[u]->v = max(tr[u << 1]->v, tr[u << 1 | 1]->v);
-    }
 
-    int query(int u, int l, int r) {
-        if (tr[u]->l >= l && tr[u]->r <= r) return tr[u]->v;
-        int mid = (tr[u]->l + tr[u]->r) >> 1;
-        int v = 0;
-        if (l <= mid) v = query(u << 1, l, r);
-        if (r > mid) v = max(v, query(u << 1 | 1, l, r));
-        return v;
-    }
-};
-
-class Solution {
-public:
-    int lengthOfLIS(vector<int>& nums, int k) {
-        SegmentTree* tree = new SegmentTree(*max_element(nums.begin(), nums.end()));
-        int ans = 1;
-        for (int v : nums) {
-            int t = tree->query(1, v - k, v - 1) + 1;
-            ans = max(ans, t);
-            tree->modify(1, v, t);
-        }
-        return ans;
-    }
-};
-```
-
-### **Go**
-
-```go
-func lengthOfLIS(nums []int, k int) int {
-	mx := nums[0]
-	for _, v := range nums {
-		mx = max(mx, v)
-	}
-	tree := newSegmentTree(mx)
-	ans := 1
-	for _, v := range nums {
-		t := tree.query(1, v-k, v-1) + 1
-		ans = max(ans, t)
-		tree.modify(1, v, t)
-	}
-	return ans
-}
-
-type node struct {
-	l int
-	r int
-	v int
-}
-
-type segmentTree struct {
-	tr []*node
-}
-
-func newSegmentTree(n int) *segmentTree {
-	tr := make([]*node, n<<2)
-	for i := range tr {
-		tr[i] = &node{}
-	}
-	t := &segmentTree{tr}
-	t.build(1, 1, n)
-	return t
-}
-
-func (t *segmentTree) build(u, l, r int) {
-	t.tr[u].l, t.tr[u].r = l, r
-	if l == r {
-		return
-	}
-	mid := (l + r) >> 1
-	t.build(u<<1, l, mid)
-	t.build(u<<1|1, mid+1, r)
-	t.pushup(u)
-}
-
-func (t *segmentTree) modify(u, x, v int) {
-	if t.tr[u].l == x && t.tr[u].r == x {
-		t.tr[u].v = v
-		return
-	}
-	mid := (t.tr[u].l + t.tr[u].r) >> 1
-	if x <= mid {
-		t.modify(u<<1, x, v)
-	} else {
-		t.modify(u<<1|1, x, v)
-	}
-	t.pushup(u)
-}
-
-func (t *segmentTree) query(u, l, r int) int {
-	if t.tr[u].l >= l && t.tr[u].r <= r {
-		return t.tr[u].v
-	}
-	mid := (t.tr[u].l + t.tr[u].r) >> 1
-	v := 0
-	if l <= mid {
-		v = t.query(u<<1, l, r)
-	}
-	if r > mid {
-		v = max(v, t.query(u<<1|1, l, r))
-	}
-	return v
-}
-
-func (t *segmentTree) pushup(u int) {
-	t.tr[u].v = max(t.tr[u<<1].v, t.tr[u<<1|1].v)
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -404,4 +193,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

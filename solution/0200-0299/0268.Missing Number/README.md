@@ -78,18 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        return reduce(xor, (i ^ v for i, v in enumerate(nums, 1)))
-```
 
-```python
-class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        n = len(nums)
-        return (1 + n) * n // 2 - sum(nums)
-```
+
+
 
 ### **Java**
 
@@ -121,106 +112,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int missingNumber(vector<int>& nums) {
-        int n = nums.size();
-        int ans = n;
-        for (int i = 0; i < n; ++i) {
-            ans ^= (i ^ nums[i]);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int missingNumber(vector<int>& nums) {
-        int n = nums.size();
-        return (1 + n) * n / 2 - accumulate(nums.begin(), nums.end(), 0);
-    }
-};
-```
 
-### **Go**
 
-```go
-func missingNumber(nums []int) (ans int) {
-	n := len(nums)
-	ans = n
-	for i, v := range nums {
-		ans ^= (i ^ v)
-	}
-	return
-}
-```
 
-```go
-func missingNumber(nums []int) (ans int) {
-	n := len(nums)
-	ans = n
-	for i, v := range nums {
-		ans += i - v
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var missingNumber = function (nums) {
-    const n = nums.length;
-    let ans = n;
-    for (let i = 0; i < n; ++i) {
-        ans ^= i ^ nums[i];
-    }
-    return ans;
-};
-```
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var missingNumber = function (nums) {
-    const n = nums.length;
-    let ans = n;
-    for (let i = 0; i < n; ++i) {
-        ans += i - nums[i];
-    }
-    return ans;
-};
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums
-     * @return Integer
-     */
-    function missingNumber($nums) {
-        $n = count($nums);
-        $sumN = ($n + 1) * $n / 2;
-        for ($i = 0; $i < $n; $i++) {
-            $sumN -= $nums[$i];
-        }
-        return $sumN;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -228,4 +140,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

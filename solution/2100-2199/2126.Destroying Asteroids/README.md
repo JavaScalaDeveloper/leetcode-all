@@ -58,16 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def asteroidsDestroyed(self, mass: int, asteroids: List[int]) -> bool:
-        asteroids.sort()
-        for v in asteroids:
-            if mass < v:
-                return False
-            mass += v
-        return True
-```
+
 
 ### **Java**
 
@@ -89,46 +80,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool asteroidsDestroyed(int mass, vector<int>& asteroids) {
-        sort(asteroids.begin(), asteroids.end());
-        long long m = mass;
-        for (int v : asteroids) {
-            if (m < v) return false;
-            m += v;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func asteroidsDestroyed(mass int, asteroids []int) bool {
-	m := mass
-	sort.Ints(asteroids)
-	for _, v := range asteroids {
-		if m < v {
-			return false
-		}
-		m += v
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -136,4 +100,4 @@ func asteroidsDestroyed(mass int, asteroids []int) bool {
 
 ```
 
-<!-- tabs:end -->
+

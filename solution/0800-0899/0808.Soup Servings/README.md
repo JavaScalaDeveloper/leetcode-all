@@ -86,26 +86,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def soupServings(self, n: int) -> float:
-        @cache
-        def dfs(i: int, j: int) -> float:
-            if i <= 0 and j <= 0:
-                return 0.5
-            if i <= 0:
-                return 1
-            if j <= 0:
-                return 0
-            return 0.25 * (
-                dfs(i - 4, j)
-                + dfs(i - 3, j - 1)
-                + dfs(i - 2, j - 2)
-                + dfs(i - 1, j - 3)
-            )
 
-        return 1 if n > 4800 else dfs((n + 24) // 25, (n + 24) // 25)
-```
 
 ### **Java**
 
@@ -140,86 +121,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double soupServings(int n) {
-        double f[200][200] = {0.0};
-        function<double(int, int)> dfs = [&](int i, int j) -> double {
-            if (i <= 0 && j <= 0) return 0.5;
-            if (i <= 0) return 1;
-            if (j <= 0) return 0;
-            if (f[i][j] > 0) return f[i][j];
-            double ans = 0.25 * (dfs(i - 4, j) + dfs(i - 3, j - 1) + dfs(i - 2, j - 2) + dfs(i - 1, j - 3));
-            f[i][j] = ans;
-            return ans;
-        };
-        return n > 4800 ? 1 : dfs((n + 24) / 25, (n + 24) / 25);
-    }
-};
-```
 
-### **Go**
 
-```go
-func soupServings(n int) float64 {
-	if n > 4800 {
-		return 1
-	}
-	f := [200][200]float64{}
-	var dfs func(i, j int) float64
-	dfs = func(i, j int) float64 {
-		if i <= 0 && j <= 0 {
-			return 0.5
-		}
-		if i <= 0 {
-			return 1.0
-		}
-		if j <= 0 {
-			return 0
-		}
-		if f[i][j] > 0 {
-			return f[i][j]
-		}
-		ans := 0.25 * (dfs(i-4, j) + dfs(i-3, j-1) + dfs(i-2, j-2) + dfs(i-1, j-3))
-		f[i][j] = ans
-		return ans
-	}
-	return dfs((n+24)/25, (n+24)/25)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function soupServings(n: number): number {
-    const f = new Array(200).fill(0).map(() => new Array(200).fill(-1));
-    const dfs = (i: number, j: number): number => {
-        if (i <= 0 && j <= 0) {
-            return 0.5;
-        }
-        if (i <= 0) {
-            return 1;
-        }
-        if (j <= 0) {
-            return 0;
-        }
-        if (f[i][j] !== -1) {
-            return f[i][j];
-        }
-        f[i][j] =
-            0.25 *
-            (dfs(i - 4, j) +
-                dfs(i - 3, j - 1) +
-                dfs(i - 2, j - 2) +
-                dfs(i - 1, j - 3));
-        return f[i][j];
-    };
-    return n >= 4800 ? 1 : dfs(Math.ceil(n / 25), Math.ceil(n / 25));
-}
-```
+
 
 ### **...**
 
@@ -227,4 +139,4 @@ function soupServings(n: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -85,15 +85,7 @@ x 必须大于 1，所以题目即是求 `dp[1]`。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def stoneGameVIII(self, stones: List[int]) -> int:
-        pre_sum = list(accumulate(stones))
-        f = pre_sum[len(stones) - 1]
-        for i in range(len(stones) - 2, 0, -1):
-            f = max(f, pre_sum[i] - f)
-        return f
-```
+
 
 ### **Java**
 
@@ -123,4 +115,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

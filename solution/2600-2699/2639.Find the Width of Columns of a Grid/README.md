@@ -66,22 +66,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findColumnWidth(self, grid: List[List[int]]) -> List[int]:
-        ans = [0] * len(grid[0])
-        for row in grid:
-            for j, x in enumerate(row):
-                w = len(str(x))
-                ans[j] = max(ans[j], w)
-        return ans
-```
 
-```python
-class Solution:
-    def findColumnWidth(self, grid: List[List[int]]) -> List[int]:
-        return [max(len(str(x)) for x in col) for col in zip(*grid)]
-```
+
+
 
 ### **Java**
 
@@ -103,62 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findColumnWidth(vector<vector<int>>& grid) {
-        int n = grid[0].size();
-        vector<int> ans(n);
-        for (auto& row : grid) {
-            for (int j = 0; j < n; ++j) {
-                int w = to_string(row[j]).size();
-                ans[j] = max(ans[j], w);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findColumnWidth(grid [][]int) []int {
-	ans := make([]int, len(grid[0]))
-	for _, row := range grid {
-		for j, x := range row {
-			w := len(strconv.Itoa(x))
-			ans[j] = max(ans[j], w)
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findColumnWidth(grid: number[][]): number[] {
-    const n = grid[0].length;
-    const ans: number[] = new Array(n).fill(0);
-    for (const row of grid) {
-        for (let j = 0; j < n; ++j) {
-            const w: number = String(row[j]).length;
-            ans[j] = Math.max(ans[j], w);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -166,4 +108,4 @@ function findColumnWidth(grid: number[][]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

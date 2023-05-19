@@ -84,14 +84,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getStrongest(self, arr: List[int], k: int) -> List[int]:
-        arr.sort()
-        m = arr[(len(arr) - 1) >> 1]
-        arr.sort(key=lambda x: (-abs(x - m), -x))
-        return arr[:k]
-```
+
 
 ### **Java**
 
@@ -120,47 +113,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> getStrongest(vector<int>& arr, int k) {
-        sort(arr.begin(), arr.end());
-        int m = arr[(arr.size() - 1) >> 1];
-        sort(arr.begin(), arr.end(), [&](int a, int b) {
-            int x = abs(a - m), y = abs(b - m);
-            return x == y ? a > b : x > y;
-        });
-        vector<int> ans(arr.begin(), arr.begin() + k);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getStrongest(arr []int, k int) []int {
-	sort.Ints(arr)
-	m := arr[(len(arr)-1)>>1]
-	sort.Slice(arr, func(i, j int) bool {
-		x, y := abs(arr[i]-m), abs(arr[j]-m)
-		if x == y {
-			return arr[i] > arr[j]
-		}
-		return x > y
-	})
-	return arr[:k]
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **...**
 
@@ -168,4 +127,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

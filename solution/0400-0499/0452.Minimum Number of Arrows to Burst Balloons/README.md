@@ -70,16 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMinArrowShots(self, points: List[List[int]]) -> int:
-        ans, last = 0, -inf
-        for a, b in sorted(points, key=lambda x: x[1]):
-            if a > last:
-                ans += 1
-                last = b
-        return ans
-```
+
 
 ### **Java**
 
@@ -104,81 +95,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findMinArrowShots(vector<vector<int>>& points) {
-        sort(points.begin(), points.end(), [](vector<int>& a, vector<int>& b) {
-            return a[1] < b[1];
-        });
-        int ans = 0;
-        long long last = -(1LL << 60);
-        for (auto& p : points) {
-            int a = p[0], b = p[1];
-            if (a > last) {
-                ++ans;
-                last = b;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMinArrowShots(points [][]int) (ans int) {
-	sort.Slice(points, func(i, j int) bool { return points[i][1] < points[j][1] })
-	last := -(1 << 60)
-	for _, p := range points {
-		a, b := p[0], p[1]
-		if a > last {
-			ans++
-			last = b
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findMinArrowShots(points: number[][]): number {
-    points.sort((a, b) => a[1] - b[1]);
-    let ans = 0;
-    let last = -Infinity;
-    for (const [a, b] of points) {
-        if (last < a) {
-            ans++;
-            last = b;
-        }
-    }
-    return ans;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int FindMinArrowShots(int[][] points) {
-        Array.Sort(points, (a, b) => a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : 0);
-        int ans = 0;
-        long last = long.MinValue;
-        foreach (var point in points) {
-            if (point[0] > last) {
-                ++ans;
-                last = point[1];
-            }
-        }
-        return ans;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -186,4 +117,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

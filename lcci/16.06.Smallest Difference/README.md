@@ -27,21 +27,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestDifference(self, a: List[int], b: List[int]) -> int:
-        a.sort()
-        b.sort()
-        i = j = 0
-        res = inf
-        while i < len(a) and j < len(b):
-            res = min(res, abs(a[i] - b[j]))
-            if a[i] > b[j]:
-                j += 1
-            else:
-                i += 1
-        return res
-```
+
 
 ### **Java**
 
@@ -67,60 +53,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int smallestDifference(vector<int>& a, vector<int>& b) {
-        sort(a.begin(), a.end());
-        sort(b.begin(), b.end());
-        int i = 0, j = 0;
-        long res = LONG_MAX;
-        while (i < a.size() && j < b.size()) {
-            res = min(res, abs((long)a[i] - (long)b[j]));
-            if (a[i] > b[j])
-                ++j;
-            else
-                ++i;
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestDifference(a []int, b []int) int {
-	sort.Ints(a)
-	sort.Ints(b)
-	i, j, res := 0, 0, 2147483647
-	for i < len(a) && j < len(b) {
-		res = min(res, abs(a[i]-b[j]))
-		if a[i] > b[j] {
-			j++
-		} else {
-			i++
-		}
-	}
-	return res
-}
 
-func abs(a int) int {
-	if a < 0 {
-		return -a
-	}
-	return a
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -128,4 +67,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

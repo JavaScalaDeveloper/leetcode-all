@@ -67,17 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def subdomainVisits(self, cpdomains: List[str]) -> List[str]:
-        cnt = Counter()
-        for s in cpdomains:
-            v = int(s[: s.index(' ')])
-            for i, c in enumerate(s):
-                if c in ' .':
-                    cnt[s[i + 1 :]] += v
-        return [f'{v} {s}' for s, v in cnt.items()]
-```
+
 
 ### **Java**
 
@@ -106,52 +96,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> subdomainVisits(vector<string>& cpdomains) {
-        unordered_map<string, int> cnt;
-        for (auto& s : cpdomains) {
-            int i = s.find(' ');
-            int v = stoi(s.substr(0, i));
-            for (; i < s.size(); ++i) {
-                if (s[i] == ' ' || s[i] == '.') {
-                    cnt[s.substr(i + 1)] += v;
-                }
-            }
-        }
-        vector<string> ans;
-        for (auto& [s, v] : cnt) {
-            ans.push_back(to_string(v) + " " + s);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func subdomainVisits(cpdomains []string) []string {
-    cnt := map[string]int{}
-    for _, s := range cpdomains {
-        i := strings.IndexByte(s, ' ')
-        v, _ := strconv.Atoi(s[:i])
-        for ; i < len(s); i++ {
-            if s[i] == ' ' || s[i] == '.' {
-                cnt[s[i+1:]] += v
-            }
-        }
-    }
-    ans := make([]string, 0, len(cnt))
-    for s, v := range cnt {
-        ans = append(ans, strconv.Itoa(v)+" "+s)
-    }
-    return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -159,4 +110,4 @@ func subdomainVisits(cpdomains []string) []string {
 
 ```
 
-<!-- tabs:end -->
+

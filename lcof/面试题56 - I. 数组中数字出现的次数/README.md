@@ -43,18 +43,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def singleNumbers(self, nums: List[int]) -> List[int]:
-        xs = reduce(xor, nums)
-        a = 0
-        lb = xs & -xs
-        for x in nums:
-            if x & lb:
-                a ^= x
-        b = xs ^ a
-        return [a, b]
-```
+
 
 ### **Java**
 
@@ -78,114 +67,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> singleNumbers(vector<int>& nums) {
-        int xs = 0;
-        for (int& x : nums) {
-            xs ^= x;
-        }
-        int lb = xs & -xs;
-        int a = 0;
-        for (int& x : nums) {
-            if (x & lb) {
-                a ^= x;
-            }
-        }
-        int b = xs ^ a;
-        return {a, b};
-    }
-};
-```
 
-### **Go**
 
-```go
-func singleNumbers(nums []int) []int {
-	xs := 0
-	for _, x := range nums {
-		xs ^= x
-	}
-	lb := xs & -xs
-	a := 0
-	for _, x := range nums {
-		if x&lb != 0 {
-			a ^= x
-		}
-	}
-	b := xs ^ a
-	return []int{a, b}
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var singleNumbers = function (nums) {
-    let xs = 0;
-    for (const x of nums) {
-        xs ^= x;
-    }
-    const lb = xs & -xs;
-    let a = 0;
-    for (const x of nums) {
-        if (x & lb) {
-            a ^= x;
-        }
-    }
-    const b = xs ^ a;
-    return [a, b];
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[] SingleNumbers(int[] nums) {
-        int xs = 0;
-        foreach(int x in nums) {
-            xs ^= x;
-        }
-        int lb = xs & - xs;
-        int a = 0;
-        foreach(int x in nums) {
-            if ((x & lb) != 0) {
-                a ^= x;
-            }
-        }
-        int b = xs ^ a;
-        return new int[] {a, b};
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function singleNumbers(nums: number[]): number[] {
-    let xs = 0;
-    for (const x of nums) {
-        xs ^= x;
-    }
-    const lb = xs & -xs;
-    let a = 0;
-    for (const x of nums) {
-        if (x & lb) {
-            a ^= x;
-        }
-    }
-    const b = xs ^ a;
-    return [a, b];
-}
-```
+
 
 ### **...**
 
@@ -193,4 +93,4 @@ function singleNumbers(nums: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

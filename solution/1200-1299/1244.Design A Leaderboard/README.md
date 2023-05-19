@@ -81,37 +81,7 @@ leaderboard.top(3);           // returns 141 = 51 + 51 + 39;
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedList
 
-
-class Leaderboard:
-    def __init__(self):
-        self.d = defaultdict(int)
-        self.rank = SortedList()
-
-    def addScore(self, playerId: int, score: int) -> None:
-        if playerId not in self.d:
-            self.d[playerId] = score
-            self.rank.add(score)
-        else:
-            self.rank.remove(self.d[playerId])
-            self.d[playerId] += score
-            self.rank.add(self.d[playerId])
-
-    def top(self, K: int) -> int:
-        return sum(self.rank[-K:])
-
-    def reset(self, playerId: int) -> None:
-        self.rank.remove(self.d.pop(playerId))
-
-
-# Your Leaderboard object will be instantiated and called as such:
-# obj = Leaderboard()
-# obj.addScore(playerId,score)
-# param_2 = obj.top(K)
-# obj.reset(playerId)
-```
 
 ### **Java**
 
@@ -165,54 +135,9 @@ class Leaderboard {
  */
 ```
 
-### **C++**
 
-```cpp
-class Leaderboard {
-public:
-    Leaderboard() {
 
-    }
 
-    void addScore(int playerId, int score) {
-        d[playerId] += score;
-        int newScore = d[playerId];
-        if (newScore != score) {
-            rank.erase(rank.find(newScore - score));
-        }
-        rank.insert(newScore);
-    }
-
-    int top(int K) {
-        int ans = 0;
-        for (auto& x : rank) {
-            ans += x;
-            if (--K == 0) {
-                break;
-            }
-        }
-        return ans;
-    }
-
-    void reset(int playerId) {
-        int score = d[playerId];
-        d.erase(playerId);
-        rank.erase(rank.find(score));
-    }
-
-private:
-    unordered_map<int, int> d;
-    multiset<int, greater<int>> rank;
-};
-
-/**
- * Your Leaderboard object will be instantiated and called as such:
- * Leaderboard* obj = new Leaderboard();
- * obj->addScore(playerId,score);
- * int param_2 = obj->top(K);
- * obj->reset(playerId);
- */
-```
 
 ### **...**
 
@@ -220,4 +145,4 @@ private:
 
 ```
 
-<!-- tabs:end -->
+

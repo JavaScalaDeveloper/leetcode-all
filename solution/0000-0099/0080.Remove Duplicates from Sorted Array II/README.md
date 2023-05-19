@@ -88,16 +88,7 @@ for (int i = 0; i &lt; len; i++) {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
-        k = 0
-        for x in nums:
-            if k < 2 or x != nums[k - 2]:
-                nums[k] = x
-                k += 1
-        return k
-```
+
 
 ### **Java**
 
@@ -117,102 +108,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int removeDuplicates(vector<int>& nums) {
-        int k = 0;
-        for (int x : nums) {
-            if (k < 2 || x != nums[k - 2]) {
-                nums[k++] = x;
-            }
-        }
-        return k;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeDuplicates(nums []int) int {
-	k := 0
-	for _, x := range nums {
-		if k < 2 || x != nums[k-2] {
-			nums[k] = x
-			k++
-		}
-	}
-	return k
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function removeDuplicates(nums: number[]): number {
-    let k = 0;
-    for (const x of nums) {
-        if (k < 2 || x !== nums[k - 2]) {
-            nums[k++] = x;
-        }
-    }
-    return k;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int RemoveDuplicates(int[] nums) {
-        int k = 0;
-        foreach (int x in nums) {
-            if (k < 2 || x != nums[k - 2]) {
-                nums[k++] = x;
-            }
-        }
-        return k;
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var removeDuplicates = function (nums) {
-    let k = 0;
-    for (const x of nums) {
-        if (k < 2 || x !== nums[k - 2]) {
-            nums[k++] = x;
-        }
-    }
-    return k;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
-        let mut k = 0;
-        for i in 0..nums.len() {
-            if k < 2 || nums[i] != nums[k - 2] {
-                nums[k] = nums[i];
-                k += 1;
-            }
-        }
-        k as i32
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -220,4 +138,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

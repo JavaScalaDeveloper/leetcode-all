@@ -67,18 +67,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def memLeak(self, memory1: int, memory2: int) -> List[int]:
-        i = 1
-        while i <= max(memory1, memory2):
-            if memory1 >= memory2:
-                memory1 -= i
-            else:
-                memory2 -= i
-            i += 1
-        return [i, memory1, memory2]
-```
+
 
 ### **Java**
 
@@ -100,77 +89,21 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} memory1
- * @param {number} memory2
- * @return {number[]}
- */
-var memLeak = function (memory1, memory2) {
-    let i = 1;
-    for (; i <= Math.max(memory1, memory2); ++i) {
-        if (memory1 >= memory2) {
-            memory1 -= i;
-        } else {
-            memory2 -= i;
-        }
-    }
-    return [i, memory1, memory2];
-};
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> memLeak(int memory1, int memory2) {
-        int i = 1;
-        for (; i <= max(memory1, memory2); ++i) {
-            if (memory1 >= memory2) {
-                memory1 -= i;
-            } else {
-                memory2 -= i;
-            }
-        }
-        return {i, memory1, memory2};
-    }
-};
-```
 
-### **Go**
 
-```go
-func memLeak(memory1 int, memory2 int) []int {
-	i := 1
-	for ; i <= memory1 || i <= memory2; i++ {
-		if memory1 >= memory2 {
-			memory1 -= i
-		} else {
-			memory2 -= i
-		}
-	}
-	return []int{i, memory1, memory2}
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function memLeak(memory1: number, memory2: number): number[] {
-    let i = 1;
-    for (; i <= Math.max(memory1, memory2); ++i) {
-        if (memory1 >= memory2) {
-            memory1 -= i;
-        } else {
-            memory2 -= i;
-        }
-    }
-    return [i, memory1, memory2];
-}
-```
+
 
 ### **...**
 
@@ -178,4 +111,4 @@ function memLeak(memory1: number, memory2: number): number[] {
 
 ```
 
-<!-- tabs:end -->
+

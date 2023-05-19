@@ -64,28 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def mergeInBetween(
-        self, list1: ListNode, a: int, b: int, list2: ListNode
-    ) -> ListNode:
-        p = q = list1
-        for _ in range(a - 1):
-            p = p.next
-        for _ in range(b):
-            q = q.next
-        p.next = list2
-        while p.next:
-            p = p.next
-        p.next = q.next
-        q.next = None
-        return list1
-```
+
 
 ### **Java**
 
@@ -122,140 +101,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* mergeInBetween(ListNode* list1, int a, int b, ListNode* list2) {
-        auto p = list1, q = list1;
-        while (--a) {
-            p = p->next;
-        }
-        while (b--) {
-            q = q->next;
-        }
-        p->next = list2;
-        while (p->next) {
-            p = p->next;
-        }
-        p->next = q->next;
-        q->next = nullptr;
-        return list1;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func mergeInBetween(list1 *ListNode, a int, b int, list2 *ListNode) *ListNode {
-	p, q := list1, list1
-	for ; a > 1; a-- {
-		p = p.Next
-	}
-	for ; b > 0; b-- {
-		q = q.Next
-	}
-	p.Next = list2
-	for p.Next != nil {
-		p = p.Next
-	}
-	p.Next = q.Next
-	q.Next = nil
-	return list1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function mergeInBetween(
-    list1: ListNode | null,
-    a: number,
-    b: number,
-    list2: ListNode | null,
-): ListNode | null {
-    let p = list1;
-    let q = list1;
-    while (--a > 0) {
-        p = p.next;
-    }
-    while (b-- > 0) {
-        q = q.next;
-    }
-    p.next = list2;
-    while (p.next) {
-        p = p.next;
-    }
-    p.next = q.next;
-    q.next = null;
-    return list1;
-}
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int val=0, ListNode next=null) {
- *         this.val = val;
- *         this.next = next;
- *     }
- * }
- */
-public class Solution {
-    public ListNode MergeInBetween(ListNode list1, int a, int b, ListNode list2) {
-        ListNode p = list1, q = list1;
-        while (--a > 0) {
-            p = p.next;
-        }
-        while (b-- > 0) {
-            q = q.next;
-        }
-        p.next = list2;
-        while (p.next != null) {
-            p = p.next;
-        }
-        p.next = q.next;
-        q.next = null;
-        return list1;
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -263,4 +123,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

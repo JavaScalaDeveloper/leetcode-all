@@ -81,19 +81,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reinitializePermutation(self, n: int) -> int:
-        ans, i = 0, 1
-        while 1:
-            ans += 1
-            if i < n >> 1:
-                i <<= 1
-            else:
-                i = (i - (n >> 1)) << 1 | 1
-            if i == 1:
-                return ans
-```
+
 
 ### **Java**
 
@@ -118,45 +106,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int reinitializePermutation(int n) {
-        int ans = 0;
-        for (int i = 1; ; ) {
-            ++ans;
-            if (i < (n >> 1)) {
-                i <<= 1;
-            } else {
-                i = (i - (n >> 1)) << 1 | 1;
-            }
-            if (i == 1) {
-                return ans;
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func reinitializePermutation(n int) (ans int) {
-	for i := 1; ; {
-		ans++
-		if i < (n >> 1) {
-			i <<= 1
-		} else {
-			i = (i-(n>>1))<<1 | 1
-		}
-		if i == 1 {
-			return ans
-		}
-	}
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -164,4 +120,4 @@ func reinitializePermutation(n int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

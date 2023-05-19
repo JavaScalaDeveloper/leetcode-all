@@ -80,47 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def reverseEvenLengthGroups(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        def reverse(head, l):
-            prev, cur, tail = None, head, head
-            i = 0
-            while cur and i < l:
-                t = cur.next
-                cur.next = prev
-                prev = cur
-                cur = t
-                i += 1
-            tail.next = cur
-            return prev
 
-        n = 0
-        t = head
-        while t:
-            t = t.next
-            n += 1
-        dummy = ListNode(0, head)
-        prev = dummy
-        l = 1
-        while (1 + l) * l // 2 <= n and prev:
-            if l % 2 == 0:
-                prev.next = reverse(prev.next, l)
-            i = 0
-            while i < l and prev:
-                prev = prev.next
-                i += 1
-            l += 1
-        left = n - l * (l - 1) // 2
-        if left > 0 and left % 2 == 0:
-            prev.next = reverse(prev.next, left)
-        return dummy.next
-```
 
 ### **Java**
 
@@ -183,46 +143,7 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function reverseEvenLengthGroups(head: ListNode | null): ListNode | null {
-    let nums = [];
-    let cur = head;
-    while (cur) {
-        nums.push(cur.val);
-        cur = cur.next;
-    }
-
-    const n = nums.length;
-    for (let i = 0, k = 1; i < n; i += k, k++) {
-        // 最后一组， 可能出现不足
-        k = Math.min(n - i, k);
-        if (!(k & 1)) {
-            let tmp = nums.splice(i, k);
-            tmp.reverse();
-            nums.splice(i, 0, ...tmp);
-        }
-    }
-
-    cur = head;
-    for (let num of nums) {
-        cur.val = num;
-        cur = cur.next;
-    }
-    return head;
-}
-```
 
 ### **...**
 
@@ -230,4 +151,4 @@ function reverseEvenLengthGroups(head: ListNode | null): ListNode | null {
 
 ```
 
-<!-- tabs:end -->
+

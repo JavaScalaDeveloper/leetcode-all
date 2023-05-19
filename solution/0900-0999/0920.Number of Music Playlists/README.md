@@ -79,37 +79,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numMusicPlaylists(self, n: int, goal: int, k: int) -> int:
-        mod = 10**9 + 7
-        f = [[0] * (n + 1) for _ in range(goal + 1)]
-        f[0][0] = 1
-        for i in range(1, goal + 1):
-            for j in range(1, n + 1):
-                f[i][j] = f[i - 1][j - 1] * (n - j + 1)
-                if j > k:
-                    f[i][j] += f[i - 1][j] * (j - k)
-                f[i][j] %= mod
-        return f[goal][n]
-```
 
-```python
-class Solution:
-    def numMusicPlaylists(self, n: int, goal: int, k: int) -> int:
-        mod = 10**9 + 7
-        f = [0] * (goal + 1)
-        f[0] = 1
-        for i in range(1, goal + 1):
-            g = [0] * (goal + 1)
-            for j in range(1, n + 1):
-                g[j] = f[j - 1] * (n - j + 1)
-                if j > k:
-                    g[j] += f[j] * (j - k)
-                g[j] %= mod
-            f = g
-        return f[n]
-```
+
+
 
 ### **Java**
 
@@ -157,135 +129,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numMusicPlaylists(int n, int goal, int k) {
-        const int mod = 1e9 + 7;
-        long long f[goal + 1][n + 1];
-        memset(f, 0, sizeof(f));
-        f[0][0] = 1;
-        for (int i = 1; i <= goal; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                f[i][j] = f[i - 1][j - 1] * (n - j + 1);
-                if (j > k) {
-                    f[i][j] += f[i - 1][j] * (j - k);
-                }
-                f[i][j] %= mod;
-            }
-        }
-        return f[goal][n];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int numMusicPlaylists(int n, int goal, int k) {
-        const int mod = 1e9 + 7;
-        vector<long long> f(n + 1);
-        f[0] = 1;
-        for (int i = 1; i <= goal; ++i) {
-            vector<long long> g(n + 1);
-            for (int j = 1; j <= n; ++j) {
-                g[j] = f[j - 1] * (n - j + 1);
-                if (j > k) {
-                    g[j] += f[j] * (j - k);
-                }
-                g[j] %= mod;
-            }
-            f = move(g);
-        }
-        return f[n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func numMusicPlaylists(n int, goal int, k int) int {
-	const mod = 1e9 + 7
-	f := make([][]int, goal+1)
-	for i := range f {
-		f[i] = make([]int, n+1)
-	}
-	f[0][0] = 1
-	for i := 1; i <= goal; i++ {
-		for j := 1; j <= n; j++ {
-			f[i][j] = f[i-1][j-1] * (n - j + 1)
-			if j > k {
-				f[i][j] += f[i-1][j] * (j - k)
-			}
-			f[i][j] %= mod
-		}
-	}
-	return f[goal][n]
-}
-```
 
-```go
-func numMusicPlaylists(n int, goal int, k int) int {
-	const mod = 1e9 + 7
-	f := make([]int, goal+1)
-	f[0] = 1
-	for i := 1; i <= goal; i++ {
-		g := make([]int, goal+1)
-		for j := 1; j <= n; j++ {
-			g[j] = f[j-1] * (n - j + 1)
-			if j > k {
-				g[j] += f[j] * (j - k)
-			}
-			g[j] %= mod
-		}
-		f = g
-	}
-	return f[n]
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numMusicPlaylists(n: number, goal: number, k: number): number {
-    const mod = 1e9 + 7;
-    const f = new Array(goal + 1).fill(0).map(() => new Array(n + 1).fill(0));
-    f[0][0] = 1;
-    for (let i = 1; i <= goal; ++i) {
-        for (let j = 1; j <= n; ++j) {
-            f[i][j] = f[i - 1][j - 1] * (n - j + 1);
-            if (j > k) {
-                f[i][j] += f[i - 1][j] * (j - k);
-            }
-            f[i][j] %= mod;
-        }
-    }
-    return f[goal][n];
-}
-```
 
-```ts
-function numMusicPlaylists(n: number, goal: number, k: number): number {
-    const mod = 1e9 + 7;
-    let f = new Array(goal + 1).fill(0);
-    f[0] = 1;
-    for (let i = 1; i <= goal; ++i) {
-        const g = new Array(goal + 1).fill(0);
-        for (let j = 1; j <= n; ++j) {
-            g[j] = f[j - 1] * (n - j + 1);
-            if (j > k) {
-                g[j] += f[j] * (j - k);
-            }
-            g[j] %= mod;
-        }
-        f = g;
-    }
-    return f[n];
-}
-```
+
+
 
 ### **...**
 
@@ -293,4 +153,4 @@ function numMusicPlaylists(n: number, goal: number, k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

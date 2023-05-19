@@ -44,41 +44,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        cur = head
-        while cur and cur.next:
-            if cur.val == cur.next.val:
-                cur.next = cur.next.next
-            else:
-                cur = cur.next
-        return head
-```
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        dummy = ListNode(1000)
-        cur = dummy
-        while head:
-            if head.val != cur.val:
-                cur.next = head
-                cur = cur.next
-            head = head.next
-        cur.next = None
-        return dummy.next
-```
+
+
 
 ### **Java**
 
@@ -110,50 +78,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* deleteDuplicates(ListNode* head) {
-        ListNode* cur = head;
-        while (cur != nullptr && cur->next != nullptr) {
-            if (cur->val == cur->next->val) {
-                cur->next = cur->next->next;
-            } else {
-                cur = cur->next;
-            }
-        }
-        return head;
-    }
-};
-```
 
-### **Go**
 
-```go
-func deleteDuplicates(head *ListNode) *ListNode {
-	current := head
-	for current != nil && current.Next != nil {
-		if current.Val == current.Next.Val {
-			current.Next = current.Next.Next
-		} else {
-			current = current.Next
-		}
-	}
-	return head
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -161,4 +92,4 @@ func deleteDuplicates(head *ListNode) *ListNode {
 
 ```
 
-<!-- tabs:end -->
+

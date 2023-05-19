@@ -84,21 +84,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minSideJumps(self, obstacles: List[int]) -> int:
-        f = [1, 0, 1]
-        for v in obstacles[1:]:
-            for j in range(3):
-                if v == j + 1:
-                    f[j] = inf
-                    break
-            x = min(f) + 1
-            for j in range(3):
-                if v != j + 1:
-                    f[j] = min(f[j], x)
-        return min(f)
-```
+
 
 ### **Java**
 
@@ -128,87 +114,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minSideJumps(vector<int>& obstacles) {
-        const int inf = 1 << 30;
-        int f[3] = {1, 0, 1};
-        for (int i = 1; i < obstacles.size(); ++i) {
-            for (int j = 0; j < 3; ++j) {
-                if (obstacles[i] == j + 1) {
-                    f[j] = inf;
-                    break;
-                }
-            }
-            int x = min({f[0], f[1], f[2]}) + 1;
-            for (int j = 0; j < 3; ++j) {
-                if (obstacles[i] != j + 1) {
-                    f[j] = min(f[j], x);
-                }
-            }
-        }
-        return min({f[0], f[1], f[2]});
-    }
-};
-```
 
-### **Go**
 
-```go
-func minSideJumps(obstacles []int) int {
-	f := [3]int{1, 0, 1}
-	const inf = 1 << 30
-	for _, v := range obstacles[1:] {
-		for j := 0; j < 3; j++ {
-			if v == j+1 {
-				f[j] = inf
-				break
-			}
-		}
-		x := min(f[0], min(f[1], f[2])) + 1
-		for j := 0; j < 3; j++ {
-			if v != j+1 {
-				f[j] = min(f[j], x)
-			}
-		}
-	}
-	return min(f[0], min(f[1], f[2]))
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minSideJumps(obstacles: number[]): number {
-    const inf = 1 << 30;
-    const f = [1, 0, 1];
-    for (let i = 1; i < obstacles.length; ++i) {
-        for (let j = 0; j < 3; ++j) {
-            if (obstacles[i] == j + 1) {
-                f[j] = inf;
-                break;
-            }
-        }
-        const x = Math.min(...f) + 1;
-        for (let j = 0; j < 3; ++j) {
-            if (obstacles[i] != j + 1) {
-                f[j] = Math.min(f[j], x);
-            }
-        }
-    }
-    return Math.min(...f);
-}
-```
+
 
 ### **...**
 
@@ -216,4 +132,4 @@ function minSideJumps(obstacles: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

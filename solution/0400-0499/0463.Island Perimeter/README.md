@@ -60,21 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def islandPerimeter(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        ans = 0
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j] == 1:
-                    ans += 4
-                    if i < m - 1 and grid[i + 1][j] == 1:
-                        ans -= 2
-                    if j < n - 1 and grid[i][j + 1] == 1:
-                        ans -= 2
-        return ans
-```
+
 
 ### **Java**
 
@@ -106,81 +92,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function islandPerimeter(grid: number[][]): number {
-    let m = grid.length,
-        n = grid[0].length;
-    let ans = 0;
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            let top = 0,
-                left = 0;
-            if (i > 0) {
-                top = grid[i - 1][j];
-            }
-            if (j > 0) {
-                left = grid[i][j - 1];
-            }
-            let cur = grid[i][j];
-            if (cur != top) ++ans;
-            if (cur != left) ++ans;
-        }
-    }
-    // 最后一行， 最后一列
-    for (let i = 0; i < m; ++i) {
-        if (grid[i][n - 1] == 1) ++ans;
-    }
-    for (let j = 0; j < n; ++j) {
-        if (grid[m - 1][j] == 1) ++ans;
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int islandPerimeter(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        int ans = 0;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j] == 1) {
-                    ans += 4;
-                    if (i < m - 1 && grid[i + 1][j] == 1) ans -= 2;
-                    if (j < n - 1 && grid[i][j + 1] == 1) ans -= 2;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func islandPerimeter(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	ans := 0
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if grid[i][j] == 1 {
-				ans += 4
-				if i < m-1 && grid[i+1][j] == 1 {
-					ans -= 2
-				}
-				if j < n-1 && grid[i][j+1] == 1 {
-					ans -= 2
-				}
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -188,4 +108,4 @@ func islandPerimeter(grid [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

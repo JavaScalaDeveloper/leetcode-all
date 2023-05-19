@@ -65,11 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isGoodArray(self, nums: List[int]) -> bool:
-        return reduce(gcd, nums) == 1
-```
+
 
 ### **Java**
 
@@ -91,39 +87,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isGoodArray(vector<int>& nums) {
-        int g = 0;
-        for (int x : nums) {
-            g = gcd(x, g);
-        }
-        return g == 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isGoodArray(nums []int) bool {
-	g := 0
-	for _, x := range nums {
-		g = gcd(x, g)
-	}
-	return g == 1
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
+
 
 ### **...**
 
@@ -131,4 +101,4 @@ func gcd(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

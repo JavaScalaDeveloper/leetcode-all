@@ -81,30 +81,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def gridIllumination(self, n: int, lamps: List[List[int]], queries: List[List[int]]) -> List[int]:
-        s = {(i, j) for i, j in lamps}
-        row, col, diag1, diag2 = Counter(), Counter(), Counter(), Counter()
-        for i, j in s:
-            row[i] += 1
-            col[j] += 1
-            diag1[i - j] += 1
-            diag2[i + j] += 1
-        ans = [0] * len(queries)
-        for k, (i, j) in enumerate(queries):
-            if row[i] or col[j] or diag1[i - j] or diag2[i + j]:
-                ans[k] = 1
-            for x in range(i - 1, i + 2):
-                for y in range(j - 1, j + 2):
-                    if (x, y) in s:
-                        s.remove((x, y))
-                        row[x] -= 1
-                        col[y] -= 1
-                        diag1[x - y] -= 1
-                        diag2[x + y] -= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -168,145 +145,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> gridIllumination(int n, vector<vector<int>>& lamps, vector<vector<int>>& queries) {
-        auto f = [&](int i, int j) -> long long {
-            return (long long) i * n + j;
-        };
-        unordered_set<long long> s;
-        unordered_map<int, int> row, col, diag1, diag2;
-        for (auto& lamp : lamps) {
-            int i = lamp[0], j = lamp[1];
-            if (!s.count(f(i, j))) {
-                s.insert(f(i, j));
-                row[i]++;
-                col[j]++;
-                diag1[i - j]++;
-                diag2[i + j]++;
-            }
-        }
-        int m = queries.size();
-        vector<int> ans(m);
-        for (int k = 0; k < m; ++k) {
-            int i = queries[k][0], j = queries[k][1];
-            if (row[i] > 0 || col[j] > 0 || diag1[i - j] > 0 || diag2[i + j] > 0) {
-                ans[k] = 1;
-            }
-            for (int x = i - 1; x <= i + 1; ++x) {
-                for (int y = j - 1; y <= j + 1; ++y) {
-                    if (x < 0 || x >= n || y < 0 || y >= n || !s.count(f(x, y))) {
-                        continue;
-                    }
-                    s.erase(f(x, y));
-                    row[x]--;
-                    col[y]--;
-                    diag1[x - y]--;
-                    diag2[x + y]--;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func gridIllumination(n int, lamps [][]int, queries [][]int) []int {
-	row, col, diag1, diag2 := map[int]int{}, map[int]int{}, map[int]int{}, map[int]int{}
-	type pair struct{ x, y int }
-	s := map[pair]bool{}
-	for _, lamp := range lamps {
-		i, j := lamp[0], lamp[1]
-		p := pair{i, j}
-		if !s[p] {
-			s[p] = true
-			row[i]++
-			col[j]++
-			diag1[i-j]++
-			diag2[i+j]++
-		}
-	}
-	m := len(queries)
-	ans := make([]int, m)
-	for k, q := range queries {
-		i, j := q[0], q[1]
-		if row[i] > 0 || col[j] > 0 || diag1[i-j] > 0 || diag2[i+j] > 0 {
-			ans[k] = 1
-		}
-		for x := i - 1; x <= i+1; x++ {
-			for y := j - 1; y <= j+1; y++ {
-				p := pair{x, y}
-				if s[p] {
-					s[p] = false
-					row[x]--
-					col[y]--
-					diag1[x-y]--
-					diag2[x+y]--
-				}
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function gridIllumination(
-    n: number,
-    lamps: number[][],
-    queries: number[][],
-): number[] {
-    const row = new Map<number, number>();
-    const col = new Map<number, number>();
-    const diag1 = new Map<number, number>();
-    const diag2 = new Map<number, number>();
-    const s = new Set<number>();
-    for (const [i, j] of lamps) {
-        if (s.has(i * n + j)) {
-            continue;
-        }
-        s.add(i * n + j);
-        row.set(i, (row.get(i) || 0) + 1);
-        col.set(j, (col.get(j) || 0) + 1);
-        diag1.set(i - j, (diag1.get(i - j) || 0) + 1);
-        diag2.set(i + j, (diag2.get(i + j) || 0) + 1);
-    }
-    const ans: number[] = [];
-    for (const [i, j] of queries) {
-        if (
-            row.get(i)! > 0 ||
-            col.get(j)! > 0 ||
-            diag1.get(i - j)! > 0 ||
-            diag2.get(i + j)! > 0
-        ) {
-            ans.push(1);
-        } else {
-            ans.push(0);
-        }
-        for (let x = i - 1; x <= i + 1; ++x) {
-            for (let y = j - 1; y <= j + 1; ++y) {
-                if (x < 0 || x >= n || y < 0 || y >= n || !s.has(x * n + y)) {
-                    continue;
-                }
-                s.delete(x * n + y);
-                row.set(x, row.get(x)! - 1);
-                col.set(y, col.get(y)! - 1);
-                diag1.set(x - y, diag1.get(x - y)! - 1);
-                diag2.set(x + y, diag2.get(x + y)! - 1);
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -314,4 +163,4 @@ function gridIllumination(
 
 ```
 
-<!-- tabs:end -->
+

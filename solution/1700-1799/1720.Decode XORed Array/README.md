@@ -56,14 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def decode(self, encoded: List[int], first: int) -> List[int]:
-        ans = [first]
-        for e in encoded:
-            ans.append(ans[-1] ^ e)
-        return ans
-```
+
 
 ### **Java**
 
@@ -83,31 +76,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> decode(vector<int>& encoded, int first) {
-        vector<int> ans {{first}};
-        for (int i = 0; i < encoded.size(); ++i)
-            ans.push_back(ans[i] ^ encoded[i]);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func decode(encoded []int, first int) []int {
-	ans := []int{first}
-	for i, e := range encoded {
-		ans = append(ans, ans[i]^e)
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -115,4 +90,4 @@ func decode(encoded []int, first int) []int {
 
 ```
 
-<!-- tabs:end -->
+

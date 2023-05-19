@@ -79,53 +79,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def idealArrays(self, n: int, maxValue: int) -> int:
-        @cache
-        def dfs(i, cnt):
-            res = c[-1][cnt - 1]
-            if cnt < n:
-                k = 2
-                while k * i <= maxValue:
-                    res = (res + dfs(k * i, cnt + 1)) % mod
-                    k += 1
-            return res
 
-        c = [[0] * 16 for _ in range(n)]
-        mod = 10**9 + 7
-        for i in range(n):
-            for j in range(min(16, i + 1)):
-                c[i][j] = 1 if j == 0 else (c[i - 1][j] + c[i - 1][j - 1]) % mod
-        ans = 0
-        for i in range(1, maxValue + 1):
-            ans = (ans + dfs(i, 1)) % mod
-        return ans
-```
 
-```python
-class Solution:
-    def idealArrays(self, n: int, maxValue: int) -> int:
-        c = [[0] * 16 for _ in range(n)]
-        mod = 10**9 + 7
-        for i in range(n):
-            for j in range(min(16, i + 1)):
-                c[i][j] = 1 if j == 0 else (c[i - 1][j] + c[i - 1][j - 1]) % mod
-        dp = [[0] * 16 for _ in range(maxValue + 1)]
-        for i in range(1, maxValue + 1):
-            dp[i][1] = 1
-        for j in range(1, 15):
-            for i in range(1, maxValue + 1):
-                k = 2
-                while k * i <= maxValue:
-                    dp[k * i][j + 1] = (dp[k * i][j + 1] + dp[i][j]) % mod
-                    k += 1
-        ans = 0
-        for i in range(1, maxValue + 1):
-            for j in range(1, 16):
-                ans = (ans + dp[i][j] * c[-1][j - 1]) % mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -210,164 +166,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int m, n;
-    const int mod = 1e9 + 7;
-    vector<vector<int>> f;
-    vector<vector<int>> c;
 
-    int idealArrays(int n, int maxValue) {
-        this->m = maxValue;
-        this->n = n;
-        f.assign(maxValue + 1, vector<int>(16, -1));
-        c.assign(n, vector<int>(16, 0));
-        for (int i = 0; i < n; ++i)
-            for (int j = 0; j <= i && j < 16; ++j)
-                c[i][j] = !j ? 1 : (c[i - 1][j] + c[i - 1][j - 1]) % mod;
-        int ans = 0;
-        for (int i = 1; i <= m; ++i) ans = (ans + dfs(i, 1)) % mod;
-        return ans;
-    }
 
-    int dfs(int i, int cnt) {
-        if (f[i][cnt] != -1) return f[i][cnt];
-        int res = c[n - 1][cnt - 1];
-        if (cnt < n)
-            for (int k = 2; k * i <= m; ++k)
-                res = (res + dfs(k * i, cnt + 1)) % mod;
-        f[i][cnt] = res;
-        return res;
-    }
-};
-```
 
-```cpp
-using ll = long long;
 
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int idealArrays(int n, int maxValue) {
-        vector<vector<int>> c(n, vector<int>(16));
-        for (int i = 0; i < n; ++i)
-            for (int j = 0; j <= i && j < 16; ++j)
-                c[i][j] = j == 0 ? 1 : (c[i - 1][j] + c[i - 1][j - 1]) % mod;
-        vector<vector<ll>> dp(maxValue + 1, vector<ll>(16));
-        for (int i = 1; i <= maxValue; ++i) dp[i][1] = 1;
-        for (int j = 1; j < 15; ++j)
-        {
-            for (int i = 1; i <= maxValue; ++i)
-            {
-                int k = 2;
-                for (; k * i <= maxValue; ++k) dp[k * i][j + 1] = (dp[k * i][j + 1] + dp[i][j]) % mod;
-            }
-        }
-        ll ans = 0;
-        for (int i = 1; i <= maxValue; ++i)
-            for (int j = 1; j < 16; ++j)
-                ans = (ans + dp[i][j] * c[n - 1][j - 1]) % mod;
-        return (int) ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func idealArrays(n int, maxValue int) int {
-	mod := int(1e9) + 7
-	m := maxValue
-	c := make([][]int, n)
-	f := make([][]int, m+1)
-	for i := range c {
-		c[i] = make([]int, 16)
-	}
-	for i := range f {
-		f[i] = make([]int, 16)
-		for j := range f[i] {
-			f[i][j] = -1
-		}
-	}
-	var dfs func(int, int) int
-	dfs = func(i, cnt int) int {
-		if f[i][cnt] != -1 {
-			return f[i][cnt]
-		}
-		res := c[n-1][cnt-1]
-		if cnt < n {
-			for k := 2; k*i <= m; k++ {
-				res = (res + dfs(k*i, cnt+1)) % mod
-			}
-		}
-		f[i][cnt] = res
-		return res
-	}
-	for i := 0; i < n; i++ {
-		for j := 0; j <= i && j < 16; j++ {
-			if j == 0 {
-				c[i][j] = 1
-			} else {
-				c[i][j] = (c[i-1][j] + c[i-1][j-1]) % mod
-			}
-		}
-	}
-	ans := 0
-	for i := 1; i <= m; i++ {
-		ans = (ans + dfs(i, 1)) % mod
-	}
-	return ans
-}
-```
 
-```go
-func idealArrays(n int, maxValue int) int {
-	mod := int(1e9) + 7
-	c := make([][]int, n)
-	for i := range c {
-		c[i] = make([]int, 16)
-	}
-	for i := 0; i < n; i++ {
-		for j := 0; j <= i && j < 16; j++ {
-			if j == 0 {
-				c[i][j] = 1
-			} else {
-				c[i][j] = (c[i-1][j] + c[i-1][j-1]) % mod
-			}
-		}
-	}
-	dp := make([][]int, maxValue+1)
-	for i := range dp {
-		dp[i] = make([]int, 16)
-		dp[i][1] = 1
-	}
-	for j := 1; j < 15; j++ {
-		for i := 1; i <= maxValue; i++ {
-			k := 2
-			for ; k*i <= maxValue; k++ {
-				dp[k*i][j+1] = (dp[k*i][j+1] + dp[i][j]) % mod
-			}
-		}
-	}
-	ans := 0
-	for i := 1; i <= maxValue; i++ {
-		for j := 1; j < 16; j++ {
-			ans = (ans + dp[i][j]*c[n-1][j-1]) % mod
-		}
-	}
-	return ans
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -375,4 +188,4 @@ func idealArrays(n int, maxValue int) int {
 
 ```
 
-<!-- tabs:end -->
+

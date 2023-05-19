@@ -65,16 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumRemoval(self, beans: List[int]) -> int:
-        beans.sort()
-        ans = s = sum(beans)
-        n = len(beans)
-        for i, v in enumerate(beans):
-            ans = min(ans, s - v * (n - i))
-        return ans
-```
+
 
 ### **Java**
 
@@ -100,60 +91,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function minimumRemoval(beans: number[]): number {
-    const n = beans.length;
-    let sum = beans.reduce((a, c) => a + c, 0);
-    beans.sort((a, b) => a - b);
-    let ans = sum;
-    for (let i = 0; i < n; i++) {
-        let num = beans[i];
-        ans = Math.min(sum - num * (n - i), ans);
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long minimumRemoval(vector<int>& beans) {
-        sort(beans.begin(), beans.end());
-        long long s = accumulate(beans.begin(), beans.end(), 0ll);
-        long long ans = s;
-        int n = beans.size();
-        for (int i = 0; i < n; ++i) ans = min(ans, s - 1ll * beans[i] * (n - i));
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumRemoval(beans []int) int64 {
-	sort.Ints(beans)
-	s := 0
-	for _, v := range beans {
-		s += v
-	}
-	ans := s
-	n := len(beans)
-	for i, v := range beans {
-		ans = min(ans, s-v*(n-i))
-	}
-	return int64(ans)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -161,4 +107,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

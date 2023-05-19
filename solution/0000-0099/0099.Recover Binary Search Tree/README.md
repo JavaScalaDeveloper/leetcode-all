@@ -54,34 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def recoverTree(self, root: Optional[TreeNode]) -> None:
-        """
-        Do not return anything, modify root in-place instead.
-        """
-        def dfs(root):
-            if root is None:
-                return
-            nonlocal prev, first, second
-            dfs(root.left)
-            if prev and prev.val > root.val:
-                if first is None:
-                    first = prev
-                second = root
-            prev = root
-            dfs(root.right)
 
-        prev = first = second = None
-        dfs(root)
-        first.val, second.val = second.val, first.val
-```
 
 ### **Java**
 
@@ -132,157 +105,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    void recoverTree(TreeNode* root) {
-        TreeNode* prev = nullptr;
-        TreeNode* first = nullptr;
-        TreeNode* second = nullptr;
-        function<void(TreeNode* root)> dfs = [&](TreeNode* root) {
-            if (!root) return;
-            dfs(root->left);
-            if (prev && prev->val > root->val) {
-                if (!first) first = prev;
-                second = root;
-            }
-            prev = root;
-            dfs(root->right);
-        };
-        dfs(root);
-        swap(first->val, second->val);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func recoverTree(root *TreeNode) {
-	var prev, first, second *TreeNode
-	var dfs func(*TreeNode)
-	dfs = func(root *TreeNode) {
-		if root == nil {
-			return
-		}
-		dfs(root.Left)
-		if prev != nil && prev.Val > root.Val {
-			if first == nil {
-				first = prev
-			}
-			second = root
-		}
-		prev = root
-		dfs(root.Right)
-	}
-	dfs(root)
-	first.Val, second.Val = second.Val, first.Val
-}
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-public class Solution {
-    private TreeNode prev, first, second;
 
-    public void RecoverTree(TreeNode root) {
-        dfs(root);
-        int t = first.val;
-        first.val = second.val;
-        second.val = t;
-    }
 
-    private void dfs(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-        dfs(root.left);
-        if (prev != null && prev.val > root.val) {
-            if (first == null) {
-                first = prev;
-            }
-            second = root;
-        }
-        prev = root;
-        dfs(root.right);
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {void} Do not return anything, modify root in-place instead.
- */
-var recoverTree = function (root) {
-    let prev = null;
-    let first = null;
-    let second = null;
-    function dfs(root) {
-        if (!root) {
-            return;
-        }
-        dfs(root.left);
-        if (prev && prev.val > root.val) {
-            if (!first) {
-                first = prev;
-            }
-            second = root;
-        }
-        prev = root;
-        dfs(root.right);
-    }
-    dfs(root);
-    const t = first.val;
-    first.val = second.val;
-    second.val = t;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -290,4 +127,4 @@ var recoverTree = function (root) {
 
 ```
 
-<!-- tabs:end -->
+

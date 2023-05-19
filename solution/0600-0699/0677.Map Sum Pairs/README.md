@@ -76,50 +76,7 @@ mapSum.sum("ap");           // 返回 5 (<u>ap</u>ple + <u>ap</u>p = 3 + 2 = 5)
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.children: List[Trie | None] = [None] * 26
-        self.val: int = 0
 
-    def insert(self, w: str, x: int):
-        node = self
-        for c in w:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-            node.val += x
-
-    def search(self, w: str) -> int:
-        node = self
-        for c in w:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                return 0
-            node = node.children[idx]
-        return node.val
-
-
-class MapSum:
-
-    def __init__(self):
-        self.d = defaultdict(int)
-        self.tree = Trie()
-
-    def insert(self, key: str, val: int) -> None:
-        x = val - self.d[key]
-        self.d[key] = val
-        self.tree.insert(key, x)
-
-    def sum(self, prefix: str) -> int:
-        return self.tree.search(prefix)
-
-# Your MapSum object will be instantiated and called as such:
-# obj = MapSum()
-# obj.insert(key,val)
-# param_2 = obj.sum(prefix)
-```
 
 ### **Java**
 
@@ -181,192 +138,17 @@ class MapSum {
  */
 ```
 
-### **C++**
 
-```cpp
-class Trie {
-public:
-    Trie()
-        : children(26, nullptr) {
-    }
 
-    void insert(string& w, int x) {
-        Trie* node = this;
-        for (char c : w) {
-            c -= 'a';
-            if (!node->children[c]) {
-                node->children[c] = new Trie();
-            }
-            node = node->children[c];
-            node->val += x;
-        }
-    }
 
-    int search(string& w) {
-        Trie* node = this;
-        for (char c : w) {
-            c -= 'a';
-            if (!node->children[c]) {
-                return 0;
-            }
-            node = node->children[c];
-        }
-        return node->val;
-    }
 
-private:
-    vector<Trie*> children;
-    int val = 0;
-};
 
-class MapSum {
-public:
-    MapSum() {
-    }
 
-    void insert(string key, int val) {
-        int x = val - d[key];
-        d[key] = val;
-        trie->insert(key, x);
-    }
 
-    int sum(string prefix) {
-        return trie->search(prefix);
-    }
-
-private:
-    unordered_map<string, int> d;
-    Trie* trie = new Trie();
-};
-
-/**
- * Your MapSum object will be instantiated and called as such:
- * MapSum* obj = new MapSum();
- * obj->insert(key,val);
- * int param_2 = obj->sum(prefix);
- */
-```
-
-### **Go**
-
-```go
-type trie struct {
-	children [26]*trie
-	val      int
-}
-
-func (t *trie) insert(w string, x int) {
-	for _, c := range w {
-		c -= 'a'
-		if t.children[c] == nil {
-			t.children[c] = &trie{}
-		}
-		t = t.children[c]
-		t.val += x
-	}
-}
-
-func (t *trie) search(w string) int {
-	for _, c := range w {
-		c -= 'a'
-		if t.children[c] == nil {
-			return 0
-		}
-		t = t.children[c]
-	}
-	return t.val
-}
-
-type MapSum struct {
-	d map[string]int
-	t *trie
-}
-
-func Constructor() MapSum {
-	return MapSum{make(map[string]int), &trie{}}
-}
-
-func (this *MapSum) Insert(key string, val int) {
-	x := val - this.d[key]
-	this.d[key] = val
-	this.t.insert(key, x)
-}
-
-func (this *MapSum) Sum(prefix string) int {
-	return this.t.search(prefix)
-}
-
-/**
- * Your MapSum object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Insert(key,val);
- * param_2 := obj.Sum(prefix);
- */
-```
 
 ### **TypeScript**
 
-```ts
-class Trie {
-    children: Trie[];
-    val: number;
 
-    constructor() {
-        this.children = new Array(26);
-        this.val = 0;
-    }
-
-    insert(w: string, x: number) {
-        let node: Trie = this;
-        for (const c of w) {
-            const i = c.charCodeAt(0) - 97;
-            if (!node.children[i]) {
-                node.children[i] = new Trie();
-            }
-            node = node.children[i];
-            node.val += x;
-        }
-    }
-
-    search(w: string): number {
-        let node: Trie = this;
-        for (const c of w) {
-            const i = c.charCodeAt(0) - 97;
-            if (!node.children[i]) {
-                return 0;
-            }
-            node = node.children[i];
-        }
-        return node.val;
-    }
-}
-
-class MapSum {
-    d: Map<string, number>;
-    t: Trie;
-    constructor() {
-        this.d = new Map();
-        this.t = new Trie();
-    }
-
-    insert(key: string, val: number): void {
-        const x = val - (this.d.get(key) ?? 0);
-        this.d.set(key, val);
-        this.t.insert(key, x);
-    }
-
-    sum(prefix: string): number {
-        return this.t.search(prefix);
-    }
-}
-
-/**
- * Your MapSum object will be instantiated and called as such:
- * var obj = new MapSum()
- * obj.insert(key,val)
- * var param_2 = obj.sum(prefix)
- */
-```
 
 ### **...**
 
@@ -374,4 +156,4 @@ class MapSum {
 
 ```
 
-<!-- tabs:end -->
+

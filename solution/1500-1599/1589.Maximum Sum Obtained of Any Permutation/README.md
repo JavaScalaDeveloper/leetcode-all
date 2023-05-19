@@ -71,22 +71,7 @@ requests[1] -&gt; nums[0] + nums[1] = 3 + 5  = 8
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
-        n = len(nums)
-        d = [0] * n
-        for l, r in requests:
-            d[l] += 1
-            if r + 1 < n:
-                d[r + 1] -= 1
-        for i in range(1, n):
-            d[i] += d[i - 1]
-        nums.sort()
-        d.sort()
-        mod = 10**9 + 7
-        return sum(a * b for a, b in zip(nums, d)) % mod
-```
+
 
 ### **Java**
 
@@ -119,88 +104,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxSumRangeQuery(vector<int>& nums, vector<vector<int>>& requests) {
-        int n = nums.size();
-        int d[n];
-        memset(d, 0, sizeof(d));
-        for (auto& req : requests) {
-            int l = req[0], r = req[1];
-            d[l]++;
-            if (r + 1 < n) {
-                d[r + 1]--;
-            }
-        }
-        for (int i = 1; i < n; ++i) {
-            d[i] += d[i - 1];
-        }
-        sort(nums.begin(), nums.end());
-        sort(d, d + n);
-        long long ans = 0;
-        const int mod = 1e9 + 7;
-        for (int i = 0; i < n; ++i) {
-            ans = (ans + 1LL * nums[i] * d[i]) % mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxSumRangeQuery(nums []int, requests [][]int) (ans int) {
-	n := len(nums)
-	d := make([]int, n)
-	for _, req := range requests {
-		l, r := req[0], req[1]
-		d[l]++
-		if r+1 < n {
-			d[r+1]--
-		}
-	}
-	for i := 1; i < n; i++ {
-		d[i] += d[i-1]
-	}
-	sort.Ints(nums)
-	sort.Ints(d)
-	const mod = 1e9 + 7
-	for i, a := range nums {
-		b := d[i]
-		ans = (ans + a*b) % mod
-	}
-	return
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxSumRangeQuery(nums: number[], requests: number[][]): number {
-    const n = nums.length;
-    const d = new Array(n).fill(0);
-    for (const [l, r] of requests) {
-        d[l]++;
-        if (r + 1 < n) {
-            d[r + 1]--;
-        }
-    }
-    for (let i = 1; i < n; ++i) {
-        d[i] += d[i - 1];
-    }
-    nums.sort((a, b) => a - b);
-    d.sort((a, b) => a - b);
-    let ans = 0;
-    const mod = 10 ** 9 + 7;
-    for (let i = 0; i < n; ++i) {
-        ans = (ans + nums[i] * d[i]) % mod;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -208,4 +122,4 @@ function maxSumRangeQuery(nums: number[], requests: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

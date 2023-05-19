@@ -76,22 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minCost(self, startPos: List[int], homePos: List[int], rowCosts: List[int], colCosts: List[int]) -> int:
-        i, j = startPos
-        x, y = homePos
-        ans = 0
-        if i < x:
-            ans += sum(rowCosts[i + 1: x + 1])
-        else:
-            ans += sum(rowCosts[x: i])
-        if j < y:
-            ans += sum(colCosts[j + 1: y + 1])
-        else:
-            ans += sum(colCosts[y: j])
-        return ans
-```
+
 
 ### **Java**
 
@@ -126,56 +111,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minCost(vector<int>& startPos, vector<int>& homePos, vector<int>& rowCosts, vector<int>& colCosts) {
-        int i = startPos[0], j = startPos[1];
-        int x = homePos[0], y = homePos[1];
-        int ans = 0;
-        if (i < x) {
-            ans += accumulate(rowCosts.begin() + i + 1, rowCosts.begin() + x + 1, 0);
-        } else {
-            ans += accumulate(rowCosts.begin() + x, rowCosts.begin() + i, 0);
-        }
-        if (j < y) {
-            ans += accumulate(colCosts.begin() + j + 1, colCosts.begin() + y + 1, 0);
-        } else {
-            ans += accumulate(colCosts.begin() + y, colCosts.begin() + j, 0);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minCost(startPos []int, homePos []int, rowCosts []int, colCosts []int) (ans int) {
-	i, j := startPos[0], startPos[1]
-	x, y := homePos[0], homePos[1]
-	if i < x {
-		ans += sum(rowCosts, i+1, x+1)
-	} else {
-		ans += sum(rowCosts, x, i)
-	}
-	if j < y {
-		ans += sum(colCosts, j+1, y+1)
-	} else {
-		ans += sum(colCosts, y, j)
-	}
-	return
-}
 
-func sum(nums []int, i, j int) (s int) {
-	for k := i; k < j; k++ {
-		s += nums[k]
-	}
-	return
-}
-```
+
+
+
 
 ### **...**
 
@@ -183,4 +125,4 @@ func sum(nums []int, i, j int) (s int) {
 
 ```
 
-<!-- tabs:end -->
+

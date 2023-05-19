@@ -55,24 +55,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        cnt = Counter(nums)
-        return [v[0] for v in cnt.most_common(k)]
-```
 
-```python
-class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        cnt = Counter(nums)
-        hp = []
-        for num, freq in cnt.items():
-            heappush(hp, (freq, num))
-            if len(hp) > k:
-                heappop(hp)
-        return [v[1] for v in hp]
-```
+
+
 
 ### **Java**
 
@@ -120,136 +105,21 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function topKFrequent(nums: number[], k: number): number[] {
-    let hashMap = new Map();
-    for (let num of nums) {
-        hashMap.set(num, (hashMap.get(num) || 0) + 1);
-    }
-    let list = [...hashMap];
-    list.sort((a, b) => b[1] - a[1]);
-    let ans = [];
-    for (let i = 0; i < k; i++) {
-        ans.push(list[i][0]);
-    }
-    return ans;
-}
-```
 
-```ts
-function topKFrequent(nums: number[], k: number): number[] {
-    const map = new Map<number, number>();
-    let maxCount = 0;
-    for (const num of nums) {
-        map.set(num, (map.get(num) ?? 0) + 1);
-        maxCount = Math.max(maxCount, map.get(num));
-    }
 
-    const res = [];
-    while (k > 0) {
-        for (const key of map.keys()) {
-            if (map.get(key) === maxCount) {
-                res.push(key);
-                k--;
-            }
-        }
-        maxCount--;
-    }
-    return res;
-}
-```
 
-### **C++**
 
-```cpp
-using pii = pair<int, int>;
 
-class Solution {
-public:
-    vector<int> topKFrequent(vector<int>& nums, int k) {
-        unordered_map<int, int> cnt;
-        for (int v : nums) ++cnt[v];
-        priority_queue<pii, vector<pii>, greater<pii>> pq;
-        for (auto& [num, freq] : cnt) {
-            pq.push({freq, num});
-            if (pq.size() > k) {
-                pq.pop();
-            }
-        }
-        vector<int> ans(k);
-        for (int i = 0; i < k; ++i) {
-            ans[i] = pq.top().second;
-            pq.pop();
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func topKFrequent(nums []int, k int) []int {
-	cnt := map[int]int{}
-	for _, v := range nums {
-		cnt[v]++
-	}
-	h := hp{}
-	for v, freq := range cnt {
-		heap.Push(&h, pair{v, freq})
-		if len(h) > k {
-			heap.Pop(&h)
-		}
-	}
-	ans := make([]int, k)
-	for i := range ans {
-		ans[i] = heap.Pop(&h).(pair).v
-	}
-	return ans
-}
 
-type pair struct{ v, cnt int }
-type hp []pair
 
-func (h hp) Len() int            { return len(h) }
-func (h hp) Less(i, j int) bool  { return h[i].cnt < h[j].cnt }
-func (h hp) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
-func (h *hp) Push(v interface{}) { *h = append(*h, v.(pair)) }
-func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {
-        let mut map = HashMap::new();
-        let mut max_count = 0;
-        for &num in nums.iter() {
-            let val = map.get(&num).unwrap_or(&0) + 1;
-            map.insert(num, val);
-            max_count = max_count.max(val);
-        }
-        let mut k = k as usize;
-        let mut res = vec![0; k];
-        while k > 0 {
-            let mut next = 0;
-            for key in map.keys() {
-                let val = map[key];
-                if val == max_count {
-                    res[k - 1] = *key;
-                    k -= 1;
-                } else if val < max_count {
-                    next = next.max(val);
-                }
-            }
-            max_count = next;
-        }
-        res
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -257,4 +127,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

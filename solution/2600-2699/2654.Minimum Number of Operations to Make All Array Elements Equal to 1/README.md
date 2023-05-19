@@ -65,22 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int]) -> int:
-        n = len(nums)
-        cnt = nums.count(1)
-        if cnt:
-            return n - cnt
-        mi = n + 1
-        for i in range(n):
-            g = 0
-            for j in range(i, n):
-                g = gcd(g, nums[j])
-                if g == 1:
-                    mi = min(mi, j - i + 1)
-        return -1 if mi > n else n - 1 + mi - 1
-```
+
 
 ### **Java**
 
@@ -118,113 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<int>& nums) {
-        int n = nums.size();
-        int cnt = 0;
-        for (int x : nums) {
-            if (x == 1) {
-                ++cnt;
-            }
-        }
-        if (cnt) {
-            return n - cnt;
-        }
-        int mi = n + 1;
-        for (int i = 0; i < n; ++i) {
-            int g = 0;
-            for (int j = i; j < n; ++j) {
-                g = gcd(g, nums[j]);
-                if (g == 1) {
-                    mi = min(mi, j - i + 1);
-                }
-            }
-        }
-        return mi > n ? -1 : n - 1 + mi - 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(nums []int) int {
-	n := len(nums)
-	cnt := 0
-	for _, x := range nums {
-		if x == 1 {
-			cnt++
-		}
-	}
-	if cnt > 0 {
-		return n - cnt
-	}
-	mi := n + 1
-	for i := 0; i < n; i++ {
-		g := 0
-		for j := i; j < n; j++ {
-			g = gcd(g, nums[j])
-			if g == 1 {
-				mi = min(mi, j-i+1)
-			}
-		}
-	}
-	if mi > n {
-		return -1
-	}
-	return n - 1 + mi - 1
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function minOperations(nums: number[]): number {
-    const n = nums.length;
-    let cnt = 0;
-    for (const x of nums) {
-        if (x === 1) {
-            ++cnt;
-        }
-    }
-    if (cnt > 0) {
-        return n - cnt;
-    }
-    let mi = n + 1;
-    for (let i = 0; i < n; ++i) {
-        let g = 0;
-        for (let j = i; j < n; ++j) {
-            g = gcd(g, nums[j]);
-            if (g === 1) {
-                mi = Math.min(mi, j - i + 1);
-            }
-        }
-    }
-    return mi > n ? -1 : n - 1 + mi - 1;
-}
 
-function gcd(a: number, b: number): number {
-    return b === 0 ? a : gcd(b, a % b);
-}
-```
 
 ### **...**
 
@@ -232,4 +121,4 @@ function gcd(a: number, b: number): number {
 
 ```
 
-<!-- tabs:end -->
+

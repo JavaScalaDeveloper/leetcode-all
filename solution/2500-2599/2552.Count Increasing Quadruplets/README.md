@@ -67,28 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countQuadruplets(self, nums: List[int]) -> int:
-        n = len(nums)
-        f = [[0] * n for _ in range(n)]
-        g = [[0] * n for _ in range(n)]
-        for j in range(1, n - 2):
-            cnt = sum(nums[l] > nums[j] for l in range(j + 1, n))
-            for k in range(j + 1, n - 1):
-                if nums[j] > nums[k]:
-                    f[j][k] = cnt
-                else:
-                    cnt -= 1
-        for k in range(2, n - 1):
-            cnt = sum(nums[i] < nums[k] for i in range(k))
-            for j in range(k - 1, 0, -1):
-                if nums[j] > nums[k]:
-                    g[j][k] = cnt
-                else:
-                    cnt -= 1
-        return sum(f[j][k] * g[j][k] for j in range(1, n - 2) for k in range(j + 1, n - 1))
-```
+
 
 ### **Java**
 
@@ -137,102 +116,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-const int N = 4001;
-int f[N][N];
-int g[N][N];
 
-class Solution {
-public:
-    long long countQuadruplets(vector<int>& nums) {
-        int n = nums.size();
-        memset(f, 0, sizeof f);
-        memset(g, 0, sizeof g);
-        for (int j = 1; j < n - 2; ++j) {
-            int cnt = 0;
-            for (int l = j + 1; l < n; ++l) {
-                if (nums[l] > nums[j]) {
-                    ++cnt;
-                }
-            }
-            for (int k = j + 1; k < n - 1; ++k) {
-                if (nums[j] > nums[k]) {
-                    f[j][k] = cnt;
-                } else {
-                    --cnt;
-                }
-            }
-        }
-        long long ans = 0;
-        for (int k = 2; k < n - 1; ++k) {
-            int cnt = 0;
-            for (int i = 0; i < k; ++i) {
-                if (nums[i] < nums[k]) {
-                    ++cnt;
-                }
-            }
-            for (int j = k - 1; j > 0; --j) {
-                if (nums[j] > nums[k]) {
-                    g[j][k] = cnt;
-                    ans += 1ll * f[j][k] * g[j][k];
-                } else {
-                    --cnt;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countQuadruplets(nums []int) int64 {
-	n := len(nums)
-	f := make([][]int, n)
-	g := make([][]int, n)
-	for i := range f {
-		f[i] = make([]int, n)
-		g[i] = make([]int, n)
-	}
-	for j := 1; j < n-2; j++ {
-		cnt := 0
-		for l := j + 1; l < n; l++ {
-			if nums[l] > nums[j] {
-				cnt++
-			}
-		}
-		for k := j + 1; k < n-1; k++ {
-			if nums[j] > nums[k] {
-				f[j][k] = cnt
-			} else {
-				cnt--
-			}
-		}
-	}
-	ans := 0
-	for k := 2; k < n-1; k++ {
-		cnt := 0
-		for i := 0; i < k; i++ {
-			if nums[i] < nums[k] {
-				cnt++
-			}
-		}
-		for j := k - 1; j > 0; j-- {
-			if nums[j] > nums[k] {
-				g[j][k] = cnt
-				ans += f[j][k] * g[j][k]
-			} else {
-				cnt--
-			}
-		}
-	}
-	return int64(ans)
-}
-```
+
+
+
 
 ### **...**
 
@@ -240,4 +130,4 @@ func countQuadruplets(nums []int) int64 {
 
 ```
 
-<!-- tabs:end -->
+

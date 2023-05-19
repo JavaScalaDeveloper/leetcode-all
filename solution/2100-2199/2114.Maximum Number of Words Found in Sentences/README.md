@@ -61,11 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mostWordsFound(self, sentences: List[str]) -> int:
-        return 1 + max(s.count(' ') for s in sentences)
-```
+
 
 ### **Java**
 
@@ -89,70 +85,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int mostWordsFound(vector<string>& sentences) {
-        int ans = 0;
-        for (auto& s : sentences) {
-            int cnt = 1 + count(s.begin(), s.end(), ' ');
-            ans = max(ans, cnt);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mostWordsFound(sentences []string) (ans int) {
-	for _, s := range sentences {
-		cnt := 1 + strings.Count(s, " ")
-		if ans < cnt {
-			ans = cnt
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function mostWordsFound(sentences: string[]): number {
-    return sentences.reduce(
-        (r, s) =>
-            Math.max(
-                r,
-                [...s].reduce((r, c) => r + (c === ' ' ? 1 : 0), 1),
-            ),
-        0,
-    );
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn most_words_found(sentences: Vec<String>) -> i32 {
-        let mut ans = 0;
-        for s in sentences.iter() {
-            let mut count = 1;
-            for c in s.as_bytes() {
-                if *c == b' ' {
-                    count += 1;
-                }
-            }
-            ans = ans.max(count);
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -181,4 +128,4 @@ int mostWordsFound(char **sentences, int sentencesSize) {
 
 ```
 
-<!-- tabs:end -->
+

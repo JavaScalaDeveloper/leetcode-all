@@ -70,11 +70,7 @@ word2：    p   q
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mergeAlternately(self, word1: str, word2: str) -> str:
-        return ''.join(a + b for a, b in zip_longest(word1, word2, fillvalue=''))
-```
+
 
 ### **Java**
 
@@ -98,76 +94,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string mergeAlternately(string word1, string word2) {
-        int m = word1.size(), n = word2.size();
-        string ans;
-        for (int i = 0; i < m || i < n; ++i) {
-            if (i < m) ans += word1[i];
-            if (i < n) ans += word2[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mergeAlternately(word1 string, word2 string) string {
-	m, n := len(word1), len(word2)
-	ans := make([]byte, 0, m+n)
-	for i := 0; i < m || i < n; i++ {
-		if i < m {
-			ans = append(ans, word1[i])
-		}
-		if i < n {
-			ans = append(ans, word2[i])
-		}
-	}
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function mergeAlternately(word1: string, word2: string): string {
-    const res = [];
-    const n = Math.max(word1.length, word2.length);
-    for (let i = 0; i < n; i++) {
-        word1[i] && res.push(word1[i]);
-        word2[i] && res.push(word2[i]);
-    }
-    return res.join('');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn merge_alternately(word1: String, word2: String) -> String {
-        let s1 = word1.as_bytes();
-        let s2 = word2.as_bytes();
-        let n = s1.len().max(s2.len());
-        let mut res = vec![];
-        for i in 0..n {
-            if s1.get(i).is_some() {
-                res.push(s1[i]);
-            }
-            if s2.get(i).is_some() {
-                res.push(s2[i]);
-            }
-        }
-        String::from_utf8(res).unwrap()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -199,4 +140,4 @@ char *mergeAlternately(char *word1, char *word2) {
 
 ```
 
-<!-- tabs:end -->
+

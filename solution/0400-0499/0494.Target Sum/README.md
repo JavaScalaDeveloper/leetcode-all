@@ -67,56 +67,15 @@
 
 动态规划——`0-1` 背包朴素做法：
 
-```python
-class Solution:
-    def findTargetSumWays(self, nums: List[int], target: int) -> int:
-        s = sum(nums)
-        if s < target or (s - target) % 2 != 0:
-            return 0
-        m, n = len(nums), (s - target) // 2
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
-        dp[0][0] = 1
-        for i in range(1, m + 1):
-            for j in range(n + 1):
-                dp[i][j] = dp[i - 1][j]
-                if nums[i - 1] <= j:
-                    dp[i][j] += dp[i - 1][j - nums[i - 1]]
-        return dp[-1][-1]
-```
+
 
 动态规划——`0-1` 背包空间优化：
 
-```python
-class Solution:
-    def findTargetSumWays(self, nums: List[int], target: int) -> int:
-        s = sum(nums)
-        if s < target or (s - target) % 2 != 0:
-            return 0
-        n = (s - target) // 2
-        dp = [0] * (n + 1)
-        dp[0] = 1
-        for v in nums:
-            for j in range(n, v - 1, -1):
-                dp[j] += dp[j - v]
-        return dp[-1]
-```
+
 
 DFS：
 
-```python
-class Solution:
-    def findTargetSumWays(self, nums: List[int], target: int) -> int:
-        @cache
-        def dfs(i, t):
-            if i == n:
-                if t == target:
-                    return 1
-                return 0
-            return dfs(i + 1, t + nums[i]) + dfs(i + 1, t - nums[i])
 
-        ans, n = 0, len(nums)
-        return dfs(0, 0)
-```
 
 ### **Java**
 
@@ -172,123 +131,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findTargetSumWays(vector<int>& nums, int target) {
-        int s = accumulate(nums.begin(), nums.end(), 0);
-        if (s < target || (s - target) % 2 != 0) return 0;
-        int m = nums.size(), n = (s - target) / 2;
-        vector<vector<int>> dp(m + 1, vector<int>(n + 1));
-        dp[0][0] = 1;
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 0; j <= n; ++j) {
-                dp[i][j] += dp[i - 1][j];
-                if (nums[i - 1] <= j) dp[i][j] += dp[i - 1][j - nums[i - 1]];
-            }
-        }
-        return dp[m][n];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int findTargetSumWays(vector<int>& nums, int target) {
-        int s = accumulate(nums.begin(), nums.end(), 0);
-        if (s < target || (s - target) % 2 != 0) return 0;
-        int n = (s - target) / 2;
-        vector<int> dp(n + 1);
-        dp[0] = 1;
-        for (int& v : nums)
-            for (int j = n; j >= v; --j)
-                dp[j] += dp[j - v];
-        return dp[n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func findTargetSumWays(nums []int, target int) int {
-	s := 0
-	for _, v := range nums {
-		s += v
-	}
-	if s < target || (s-target)%2 != 0 {
-		return 0
-	}
-	m, n := len(nums), (s-target)/2
-	dp := make([][]int, m+1)
-	for i := range dp {
-		dp[i] = make([]int, n+1)
-	}
-	dp[0][0] = 1
-	for i := 1; i <= m; i++ {
-		for j := 0; j <= n; j++ {
-			dp[i][j] = dp[i-1][j]
-			if nums[i-1] <= j {
-				dp[i][j] += dp[i-1][j-nums[i-1]]
-			}
-		}
-	}
-	return dp[m][n]
-}
-```
 
-```go
-func findTargetSumWays(nums []int, target int) int {
-	s := 0
-	for _, v := range nums {
-		s += v
-	}
-	if s < target || (s-target)%2 != 0 {
-		return 0
-	}
-	n := (s - target) / 2
-	dp := make([]int, n+1)
-	dp[0] = 1
-	for _, v := range nums {
-		for j := n; j >= v; j-- {
-			dp[j] += dp[j-v]
-		}
-	}
-	return dp[n]
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var findTargetSumWays = function (nums, target) {
-    let s = 0;
-    for (let v of nums) {
-        s += v;
-    }
-    if (s < target || (s - target) % 2 != 0) {
-        return 0;
-    }
-    const m = nums.length;
-    const n = (s - target) / 2;
-    let dp = new Array(n + 1).fill(0);
-    dp[0] = 1;
-    for (let i = 1; i <= m; ++i) {
-        for (let j = n; j >= nums[i - 1]; --j) {
-            dp[j] += dp[j - nums[i - 1]];
-        }
-    }
-    return dp[n];
-};
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -296,4 +153,4 @@ var findTargetSumWays = function (nums, target) {
 
 ```
 
-<!-- tabs:end -->
+

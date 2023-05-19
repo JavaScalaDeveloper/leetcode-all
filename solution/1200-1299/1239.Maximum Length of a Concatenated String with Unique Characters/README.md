@@ -70,27 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxLength(self, arr: List[str]) -> int:
-        ans = 0
-        masks = [0]
-        for s in arr:
-            mask = 0
-            for c in s:
-                i = ord(c) - ord('a')
-                if mask >> i & 1:
-                    mask = 0
-                    break
-                mask |= 1 << i
-            if mask == 0:
-                continue
-            for m in masks:
-                if m & mask == 0:
-                    masks.append(m | mask)
-                    ans = max(ans, (m | mask).bit_count())
-        return ans
-```
+
 
 ### **Java**
 
@@ -129,77 +109,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxLength(vector<string>& arr) {
-        int ans = 0;
-        vector<int> masks = {0};
-        for (auto& s : arr) {
-            int mask = 0;
-            for (auto& c : s) {
-                int i = c - 'a';
-                if (mask >> i & 1) {
-                    mask = 0;
-                    break;
-                }
-                mask |= 1 << i;
-            }
-            if (mask == 0) {
-                continue;
-            }
-            int n = masks.size();
-            for (int i = 0; i < n; ++i) {
-                int m = masks[i];
-                if ((m & mask) == 0) {
-                    masks.push_back(m | mask);
-                    ans = max(ans, __builtin_popcount(m | mask));
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxLength(arr []string) (ans int) {
-	masks := []int{0}
-	for _, s := range arr {
-		mask := 0
-		for _, c := range s {
-			i := int(c - 'a')
-			if mask>>i&1 == 1 {
-				mask = 0
-				break
-			}
-			mask |= 1 << i
-		}
-		if mask == 0 {
-			continue
-		}
-		n := len(masks)
-		for _, m := range masks[:n] {
-			if m&mask == 0 {
-				masks = append(masks, m|mask)
-				ans = max(ans, bits.OnesCount(uint(m|mask)))
-			}
-		}
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -207,4 +123,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

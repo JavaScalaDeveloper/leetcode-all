@@ -86,27 +86,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumScore(self, a: int, b: int, c: int) -> int:
-        s = sorted([a, b, c])
-        ans = 0
-        while s[1]:
-            ans += 1
-            s[1] -= 1
-            s[2] -= 1
-            s.sort()
-        return ans
-```
 
-```python
-class Solution:
-    def maximumScore(self, a: int, b: int, c: int) -> int:
-        a, b, c = sorted([a, b, c])
-        if a + b < c:
-            return a + b
-        return (a + b + c) >> 1
-```
+
+
 
 ### **Java**
 
@@ -142,64 +124,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumScore(int a, int b, int c) {
-        vector<int> s = {a, b, c};
-        sort(s.begin(), s.end());
-        int ans = 0;
-        while (s[1]) {
-            ++ans;
-            s[1]--;
-            s[2]--;
-            sort(s.begin(), s.end());
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maximumScore(int a, int b, int c) {
-        vector<int> s = {a, b, c};
-        sort(s.begin(), s.end());
-        if (s[0] + s[1] < s[2]) return s[0] + s[1];
-        return (a + b + c) >> 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumScore(a int, b int, c int) (ans int) {
-	s := []int{a, b, c}
-	sort.Ints(s)
-	for s[1] > 0 {
-		ans++
-		s[1]--
-		s[2]--
-		sort.Ints(s)
-	}
-	return
-}
-```
 
-```go
-func maximumScore(a int, b int, c int) int {
-	s := []int{a, b, c}
-	sort.Ints(s)
-	if s[0]+s[1] < s[2] {
-		return s[0] + s[1]
-	}
-	return (a + b + c) >> 1
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -207,4 +142,4 @@ func maximumScore(a int, b int, c int) int {
 
 ```
 
-<!-- tabs:end -->
+

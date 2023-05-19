@@ -76,27 +76,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countVowelStrings(self, n: int) -> int:
-        @cache
-        def dfs(i, j):
-            return 1 if i >= n else sum(dfs(i + 1, k) for k in range(j, 5))
 
-        return dfs(0, 0)
-```
 
-```python
-class Solution:
-    def countVowelStrings(self, n: int) -> int:
-        f = [1] * 5
-        for _ in range(n - 1):
-            s = 0
-            for j in range(5):
-                s += f[j]
-                f[j] = s
-        return sum(f)
-```
+
 
 ### **Java**
 
@@ -145,89 +127,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countVowelStrings(int n) {
-        int f[n][5];
-        memset(f, 0, sizeof f);
-        function<int(int, int)> dfs = [&](int i, int j) {
-            if (i >= n) {
-                return 1;
-            }
-            if (f[i][j]) {
-                return f[i][j];
-            }
-            int ans = 0;
-            for (int k = j; k < 5; ++k) {
-                ans += dfs(i + 1, k);
-            }
-            return f[i][j] = ans;
-        };
-        return dfs(0, 0);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int countVowelStrings(int n) {
-        int f[5] = {1, 1, 1, 1, 1};
-        for (int i = 0; i < n - 1; ++i) {
-            int s = 0;
-            for (int j = 0; j < 5; ++j) {
-                s += f[j];
-                f[j] = s;
-            }
-        }
-        return accumulate(f, f + 5, 0);
-    }
-};
-```
 
-### **Go**
 
-```go
-func countVowelStrings(n int) int {
-	f := make([][5]int, n)
-	var dfs func(i, j int) int
-	dfs = func(i, j int) int {
-		if i >= n {
-			return 1
-		}
-		if f[i][j] != 0 {
-			return f[i][j]
-		}
-		ans := 0
-		for k := j; k < 5; k++ {
-			ans += dfs(i+1, k)
-		}
-		f[i][j] = ans
-		return ans
-	}
-	return dfs(0, 0)
-}
-```
 
-```go
-func countVowelStrings(n int) (ans int) {
-	f := [5]int{1, 1, 1, 1, 1}
-	for i := 0; i < n-1; i++ {
-		s := 0
-		for j := 0; j < 5; j++ {
-			s += f[j]
-			f[j] = s
-		}
-	}
-	for _, v := range f {
-		ans += v
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -235,4 +145,4 @@ func countVowelStrings(n int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

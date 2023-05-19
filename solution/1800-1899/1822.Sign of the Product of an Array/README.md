@@ -75,17 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def arraySign(self, nums: List[int]) -> int:
-        ans = 1
-        for v in nums:
-            if v == 0:
-                return 0
-            if v < 0:
-                ans *= -1
-        return ans
-```
+
 
 ### **Java**
 
@@ -108,78 +98,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int arraySign(vector<int>& nums) {
-        int ans = 1;
-        for (int v : nums) {
-            if (!v) return 0;
-            if (v < 0) ans *= -1;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func arraySign(nums []int) int {
-	ans := 1
-	for _, v := range nums {
-		if v == 0 {
-			return 0
-		}
-		if v < 0 {
-			ans *= -1
-		}
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var arraySign = function (nums) {
-    let ans = 1;
-    for (const v of nums) {
-        if (!v) {
-            return 0;
-        }
-        if (v < 0) {
-            ans *= -1;
-        }
-    }
-    return ans;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn array_sign(nums: Vec<i32>) -> i32 {
-        let mut ans = 1;
-        for &num in nums.iter() {
-            if num == 0 {
-                return 0;
-            }
-            if num < 0 {
-                ans *= -1;
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **C**
 
@@ -204,4 +137,4 @@ int arraySign(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

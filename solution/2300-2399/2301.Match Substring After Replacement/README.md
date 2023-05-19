@@ -79,29 +79,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def matchReplacement(self, s: str, sub: str, mappings: List[List[str]]) -> bool:
-        d = defaultdict(set)
-        for a, b in mappings:
-            d[a].add(b)
-        for i in range(len(s) - len(sub) + 1):
-            if all(a == b or a in d[b] for a, b in zip(s[i: i + len(sub)], sub)):
-                return True
-        return False
-```
 
-```python
-class Solution:
-    def matchReplacement(self, s: str, sub: str, mappings: List[List[str]]) -> bool:
-        d = [[False] * 128 for _ in range(128)]
-        for a, b in mappings:
-            d[ord(a)][ord(b)] = True
-        for i in range(len(s) - len(sub) + 1):
-            if all(a == b or d[ord(b)][ord(a)] for a, b in zip(s[i: i + len(sub)], sub)):
-                return True
-        return False
-```
+
+
 
 ### **Java**
 
@@ -157,114 +137,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool matchReplacement(string s, string sub, vector<vector<char>>& mappings) {
-        unordered_map<char, unordered_set<char>> d;
-        for (auto& e : mappings) {
-            d[e[0]].insert(e[1]);
-        }
-        int m = s.size(), n = sub.size();
-        for (int i = 0; i < m - n + 1; ++i) {
-            bool ok = true;
-            for (int j = 0; j < n && ok; ++j) {
-                char a = s[i + j], b = sub[j];
-                if (a != b && !d[b].count(a)) {
-                    ok = false;
-                }
-            }
-            if (ok) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool matchReplacement(string s, string sub, vector<vector<char>>& mappings) {
-        bool d[128][128]{};
-        for (auto& e : mappings) {
-            d[e[0]][e[1]] = true;
-        }
-        int m = s.size(), n = sub.size();
-        for (int i = 0; i < m - n + 1; ++i) {
-            bool ok = true;
-            for (int j = 0; j < n && ok; ++j) {
-                char a = s[i + j], b = sub[j];
-                if (a != b && !d[b][a]) {
-                    ok = false;
-                }
-            }
-            if (ok) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func matchReplacement(s string, sub string, mappings [][]byte) bool {
-	d := map[byte]map[byte]bool{}
-	for _, e := range mappings {
-		if d[e[0]] == nil {
-			d[e[0]] = map[byte]bool{}
-		}
-		d[e[0]][e[1]] = true
-	}
-	for i := 0; i < len(s)-len(sub)+1; i++ {
-		ok := true
-		for j := 0; j < len(sub) && ok; j++ {
-			a, b := s[i+j], sub[j]
-			if a != b && !d[b][a] {
-				ok = false
-			}
-		}
-		if ok {
-			return true
-		}
-	}
-	return false
-}
-```
 
-```go
-func matchReplacement(s string, sub string, mappings [][]byte) bool {
-	d := [128][128]bool{}
-	for _, e := range mappings {
-		d[e[0]][e[1]] = true
-	}
-	for i := 0; i < len(s)-len(sub)+1; i++ {
-		ok := true
-		for j := 0; j < len(sub) && ok; j++ {
-			a, b := s[i+j], sub[j]
-			if a != b && !d[b][a] {
-				ok = false
-			}
-		}
-		if ok {
-			return true
-		}
-	}
-	return false
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -272,4 +159,4 @@ func matchReplacement(s string, sub string, mappings [][]byte) bool {
 
 ```
 
-<!-- tabs:end -->
+

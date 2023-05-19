@@ -71,17 +71,7 @@ targetWord 的数值为 "aaaa" -&gt; "0000" -&gt; 0
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isSumEqual(self, firstWord: str, secondWord: str, targetWord: str) -> bool:
-        def f(s):
-            res = 0
-            for c in s:
-                res = res * 10 + (ord(c) - ord('a'))
-            return res
 
-        return f(firstWord) + f(secondWord) == f(targetWord)
-```
 
 ### **Java**
 
@@ -103,95 +93,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isSumEqual(string firstWord, string secondWord, string targetWord) {
-        return f(firstWord) + f(secondWord) == f(targetWord);
-    }
 
-    int f(string s) {
-        int res = 0;
-        for (char c : s) res = res * 10 + (c - 'a');
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isSumEqual(firstWord string, secondWord string, targetWord string) bool {
-	f := func(s string) int {
-		res := 0
-		for _, c := range s {
-			res = res*10 + int(c-'a')
-		}
-		return res
-	}
-	return f(firstWord)+f(secondWord) == f(targetWord)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} firstWord
- * @param {string} secondWord
- * @param {string} targetWord
- * @return {boolean}
- */
-var isSumEqual = function (firstWord, secondWord, targetWord) {
-    function f(s) {
-        let res = 0;
-        for (let c of s) {
-            res = res * 10 + (c.charCodeAt() - 'a'.charCodeAt());
-        }
-        return res;
-    }
-    return f(firstWord) + f(secondWord) == f(targetWord);
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isSumEqual(
-    firstWord: string,
-    secondWord: string,
-    targetWord: string,
-): boolean {
-    const calc = (s: string) => {
-        let res = 0;
-        for (const c of s) {
-            res = res * 10 + c.charCodeAt(0) - 'a'.charCodeAt(0);
-        }
-        return res;
-    };
-    return calc(firstWord) + calc(secondWord) === calc(targetWord);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    fn calc(s: &String) -> i32 {
-        let mut res = 0;
-        for c in s.as_bytes() {
-            res = res * 10 + (c - b'a') as i32;
-        }
-        res
-    }
 
-    pub fn is_sum_equal(first_word: String, second_word: String, target_word: String) -> bool {
-        Self::calc(&first_word) + Self::calc(&second_word) == Self::calc(&target_word)
-    }
-}
-```
+
+
 
 ### **C**
 
@@ -215,4 +135,4 @@ bool isSumEqual(char *firstWord, char *secondWord, char *targetWord) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -71,15 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getLucky(self, s: str, k: int) -> int:
-        s = ''.join(str(ord(c) - ord('a') + 1) for c in s)
-        for _ in range(k):
-            t = sum(int(c) for c in s)
-            s = str(t)
-        return int(s)
-```
+
 
 ### **Java**
 
@@ -105,114 +97,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int getLucky(string s, int k) {
-        string t;
-        for (char c : s) t += to_string(c - 'a' + 1);
-        s = t;
-        while (k--) {
-            int t = 0;
-            for (char c : s) t += c - '0';
-            s = to_string(t);
-        }
-        return stoi(s);
-    }
-};
-```
 
-### **Go**
 
-```go
-func getLucky(s string, k int) int {
-	var t strings.Builder
-	for _, c := range s {
-		t.WriteString(strconv.Itoa(int(c - 'a' + 1)))
-	}
-	s = t.String()
-	for k > 0 {
-		k--
-		t := 0
-		for _, c := range s {
-			t += int(c - '0')
-		}
-		s = strconv.Itoa(t)
-	}
-	ans, _ := strconv.Atoi(s)
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getLucky(s: string, k: number): number {
-    let ans = '';
-    for (const c of s) {
-        ans += c.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
-    }
-    for (let i = 0; i < k; i++) {
-        let t = 0;
-        for (const v of ans) {
-            t += Number(v);
-        }
-        ans = `${t}`;
-    }
-    return Number(ans);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn get_lucky(s: String, k: i32) -> i32 {
-        let mut ans = String::new();
-        for c in s.as_bytes() {
-            ans.push_str(&(c - b'a' + 1).to_string());
-        }
-        for _ in 0..k {
-            let mut t = 0;
-            for c in ans.as_bytes() {
-                t += (c - b'0') as i32;
-            }
-            ans = t.to_string();
-        }
-        ans.parse().unwrap()
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @param Integer $k
-     * @return Integer
-     */
-    function getLucky($s, $k) {
-        $rs = "";
-        for ($i = 0; $i < strlen($s); $i++) {
-            $num = ord($s[$i]) - 96;
-            $rs = $rs.strval($num);
-        }
-        while ($k != 0) {
-            $sum = 0;
-            for ($j = 0; $j < strlen($rs); $j++) {
-                $sum += intval($rs[$j]);
-            }
-            $rs = strval($sum);
-            $k--;
-        }
-        return intval($rs);
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -220,4 +123,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

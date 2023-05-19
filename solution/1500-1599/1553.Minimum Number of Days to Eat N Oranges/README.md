@@ -75,17 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minDays(self, n: int) -> int:
-        @cache
-        def dfs(n):
-            if n < 2:
-                return n
-            return 1 + min(n % 2 + dfs(n // 2), n % 3 + dfs(n // 3))
 
-        return dfs(n)
-```
 
 ### **Java**
 
@@ -113,51 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    unordered_map<int, int> f;
 
-    int minDays(int n) {
-        return dfs(n);
-    }
 
-    int dfs(int n) {
-        if (n < 2) return n;
-        if (f.count(n)) return f[n];
-        int res = 1 + min(n % 2 + dfs(n / 2), n % 3 + dfs(n / 3));
-        f[n] = res;
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minDays(n int) int {
-	f := map[int]int{0: 0, 1: 1}
-	var dfs func(int) int
-	dfs = func(n int) int {
-		if v, ok := f[n]; ok {
-			return v
-		}
-		res := 1 + min(n%2+dfs(n/2), n%3+dfs(n/3))
-		f[n] = res
-		return res
-	}
-	return dfs(n)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **...**
 
@@ -165,4 +117,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

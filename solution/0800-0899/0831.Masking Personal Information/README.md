@@ -123,17 +123,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maskPII(self, s: str) -> str:
-        if s[0].isalpha():
-            s = s.lower()
-            return s[0] + '*****' + s[s.find('@') - 1:]
-        s = ''.join(c for c in s if c.isdigit())
-        cnt = len(s) - 10
-        suf = '***-***-' + s[-4:]
-        return suf if cnt == 0 else f'+{"*" * cnt}-{suf}'
-```
+
 
 ### **Java**
 
@@ -163,83 +153,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string maskPII(string s) {
-        int i = s.find('@');
-        if (i != -1) {
-            string ans;
-            ans += tolower(s[0]);
-            ans += "*****";
-            for (int j = i - 1; j < s.size(); ++j) {
-                ans += tolower(s[j]);
-            }
-            return ans;
-        }
-        string t;
-        for (char c : s) {
-            if (isdigit(c)) {
-                t += c;
-            }
-        }
-        int cnt = t.size() - 10;
-        string suf = "***-***-" + t.substr(t.size() - 4);
-        return cnt == 0 ? suf : "+" + string(cnt, '*') + "-" + suf;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maskPII(s string) string {
-	i := strings.Index(s, "@")
-	if i != -1 {
-		s = strings.ToLower(s)
-		return s[0:1] + "*****" + s[i-1:]
-	}
-	t := []rune{}
-	for _, c := range s {
-		if c >= '0' && c <= '9' {
-			t = append(t, c)
-		}
-	}
-	s = string(t)
-	cnt := len(s) - 10
-	suf := "***-***-" + s[len(s)-4:]
-	if cnt == 0 {
-		return suf
-	}
-	return "+" + strings.Repeat("*", cnt) + "-" + suf
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maskPII(s: string): string {
-    const i = s.indexOf('@');
-    if (i !== -1) {
-        let ans = s[0].toLowerCase() + '*****';
-        for (let j = i - 1; j < s.length; ++j) {
-            ans += s.charAt(j).toLowerCase();
-        }
-        return ans;
-    }
-    let t = '';
-    for (const c of s) {
-        if (/\d/.test(c)) {
-            t += c;
-        }
-    }
-    const cnt = t.length - 10;
-    const suf = `***-***-${t.substring(t.length - 4)}`;
-    return cnt === 0 ? suf : `+${'*'.repeat(cnt)}-${suf}`;
-}
-```
+
 
 ### **...**
 
@@ -247,4 +171,4 @@ function maskPII(s: string): string {
 
 ```
 
-<!-- tabs:end -->
+

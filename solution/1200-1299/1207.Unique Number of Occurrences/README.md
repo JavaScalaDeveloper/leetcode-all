@@ -55,12 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def uniqueOccurrences(self, arr: List[int]) -> bool:
-        cnt = Counter(arr)
-        return len(set(cnt.values())) == len(cnt)
-```
+
 
 ### **Java**
 
@@ -78,46 +73,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool uniqueOccurrences(vector<int>& arr) {
-        unordered_map<int, int> cnt;
-        for (int& x : arr) {
-            ++cnt[x];
-        }
-        unordered_set<int> vis;
-        for (auto& [_, v] : cnt) {
-            if (vis.count(v)) {
-                return false;
-            }
-            vis.insert(v);
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func uniqueOccurrences(arr []int) bool {
-	cnt := map[int]int{}
-	for _, x := range arr {
-		cnt[x]++
-	}
-	vis := map[int]bool{}
-	for _, v := range cnt {
-		if vis[v] {
-			return false
-		}
-		vis[v] = true
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -125,4 +87,4 @@ func uniqueOccurrences(arr []int) bool {
 
 ```
 
-<!-- tabs:end -->
+

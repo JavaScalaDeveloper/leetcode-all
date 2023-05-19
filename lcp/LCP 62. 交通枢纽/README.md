@@ -62,26 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def transportationHub(self, path: List[List[int]]) -> int:
-        ind = Counter()
-        outd = Counter()
-        s = set()
-        vis = set()
-        for a, b in path:
-            if (a, b) in vis:
-                continue
-            vis.add((a, b))
-            s.add(a)
-            s.add(b)
-            outd[a] += 1
-            ind[b] += 1
-        for c in s:
-            if ind[c] == len(s) - 1 and outd[c] == 0:
-                return c
-        return -1
-```
+
 
 ### **Java**
 
@@ -113,91 +94,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int transportationHub(vector<vector<int>>& path) {
-        int ind[1001]{};
-        int outd[1001]{};
-        unordered_set<int> s;
-        unordered_set<int> vis;
-        for (auto& p : path) {
-            int a = p[0], b = p[1];
-            if (vis.count(a * 1000 + b)) {
-                continue;
-            }
-            vis.insert(a * 1000 + b);
-            s.insert(a);
-            s.insert(b);
-            ind[b]++;
-            outd[a]++;
-        }
-        for (int c : s) {
-            if (ind[c] == s.size() - 1 && outd[c] == 0) {
-                return c;
-            }
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func transportationHub(path [][]int) int {
-	ind := [1001]int{}
-	outd := [1001]int{}
-	s := map[int]struct{}{}
-	vis := map[int]bool{}
-	for _, p := range path {
-		a, b := p[0], p[1]
-		if vis[a*1000+b] {
-			continue
-		}
-		vis[a*1000+b] = true
-		s[a] = struct{}{}
-		s[b] = struct{}{}
-		outd[a]++
-		ind[b]++
-	}
-	for c := range s {
-		if ind[c] == len(s)-1 && outd[c] == 0 {
-			return c
-		}
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function transportationHub(path: number[][]): number {
-    const ind: number[] = new Array(1001).fill(0);
-    const outd: number[] = new Array(1001).fill(0);
-    const s: Set<number> = new Set();
-    const vis: Set<number> = new Set();
-    for (const [a, b] of path) {
-        if (vis.has(a * 1000 + b)) {
-            continue;
-        }
-        vis.add(a * 1000 + b);
-        s.add(a);
-        s.add(b);
-        ind[b]++;
-        outd[a]++;
-    }
-    for (const c of s) {
-        if (ind[c] === s.size - 1 && outd[c] === 0) {
-            return c;
-        }
-    }
-    return -1;
-}
-```
+
 
 ### **...**
 
@@ -205,4 +112,4 @@ function transportationHub(path: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

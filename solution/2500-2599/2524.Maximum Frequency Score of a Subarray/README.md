@@ -61,25 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxFrequencyScore(self, nums: List[int], k: int) -> int:
-        mod = 10**9 + 7
-        cnt = Counter(nums[:k])
-        ans = cur = sum(pow(k, v, mod) for k, v in cnt.items()) % mod
-        i = k
-        while i < len(nums):
-            a, b = nums[i - k], nums[i]
-            if a != b:
-                cur += (b - 1) * pow(b, cnt[b], mod) if cnt[b] else b
-                cur -= (a - 1) * pow(a, cnt[a] - 1, mod) if cnt[a] > 1 else a
-                cur %= mod
-                cnt[b] += 1
-                cnt[a] -= 1
-                ans = max(ans, cur)
-            i += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -135,105 +117,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxFrequencyScore(vector<int>& nums, int k) {
-        unordered_map<int, int> cnt;
-        for (int i = 0; i < k; ++i) {
-            cnt[nums[i]]++;
-        }
-        long cur = 0;
-        const int mod = 1e9 + 7;
-        for (auto& [k, v] : cnt) {
-            cur = (cur + qmi(k, v, mod)) % mod;
-        }
-        long ans = cur;
-        for (int i = k; i < nums.size(); ++i) {
-            int a = nums[i - k], b = nums[i];
-            if (a != b) {
-                cur += cnt[b] ? (b - 1) * qmi(b, cnt[b], mod) % mod : b;
-                cur -= cnt[a] > 1 ? (a - 1) * qmi(a, cnt[a] - 1, mod) % mod : a;
-                cur = (cur + mod) % mod;
-                ans = max(ans, cur);
-                cnt[b]++;
-                cnt[a]--;
-            }
-        }
-        return ans;
-    }
 
-    long qmi(long a, long k, long p) {
-        long res = 1;
-        while (k != 0) {
-            if ((k & 1) == 1) {
-                res = res * a % p;
-            }
-            k >>= 1;
-            a = a * a % p;
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxFrequencyScore(nums []int, k int) int {
-	cnt := map[int]int{}
-	for _, v := range nums[:k] {
-		cnt[v]++
-	}
-	cur := 0
-	const mod int = 1e9 + 7
-	for k, v := range cnt {
-		cur = (cur + qmi(k, v, mod)) % mod
-	}
-	ans := cur
-	for i := k; i < len(nums); i++ {
-		a, b := nums[i-k], nums[i]
-		if a != b {
-			if cnt[b] > 0 {
-				cur += (b - 1) * qmi(b, cnt[b], mod) % mod
-			} else {
-				cur += b
-			}
-			if cnt[a] > 1 {
-				cur -= (a - 1) * qmi(a, cnt[a]-1, mod) % mod
-			} else {
-				cur -= a
-			}
-			cur = (cur + mod) % mod
-			ans = max(ans, cur)
-			cnt[b]++
-			cnt[a]--
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func qmi(a, k, p int) int {
-	res := 1
-	for k != 0 {
-		if k&1 == 1 {
-			res = res * a % p
-		}
-		k >>= 1
-		a = a * a % p
-	}
-	return res
-}
-```
+
 
 ### **...**
 
@@ -241,4 +131,4 @@ func qmi(a, k, p int) int {
 
 ```
 
-<!-- tabs:end -->
+

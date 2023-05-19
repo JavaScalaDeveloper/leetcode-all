@@ -57,22 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numKLenSubstrNoRepeats(self, s: str, k: int) -> int:
-        n = len(s)
-        if k > n or k > 26:
-            return 0
-        ans = j = 0
-        cnt = Counter()
-        for i, c in enumerate(s):
-            cnt[c] += 1
-            while cnt[c] > 1 or i - j + 1 > k:
-                cnt[s[j]] -= 1
-                j += 1
-            ans += i - j + 1 == k
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,51 +84,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numKLenSubstrNoRepeats(string s, int k) {
-        int n = s.size();
-        if (k > n || k > 26) {
-            return 0;
-        }
-        int cnt[128]{};
-        int ans = 0;
-        for (int i = 0, j = 0; i < n; ++i) {
-            ++cnt[s[i]];
-            while (cnt[s[i]] > 1 || i - j + 1 > k) {
-                --cnt[s[j++]];
-            }
-            ans += i - j + 1 == k;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numKLenSubstrNoRepeats(s string, k int) (ans int) {
-	if k > len(s) || k > 26 {
-		return 0
-	}
-	cnt := [128]int{}
-	for i, j := 0, 0; i < len(s); i++ {
-		cnt[s[i]]++
-		for cnt[s[i]] > 1 || i-j+1 > k {
-			cnt[s[j]]--
-			j++
-		}
-		if i-j+1 == k {
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -151,4 +98,4 @@ func numKLenSubstrNoRepeats(s string, k int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

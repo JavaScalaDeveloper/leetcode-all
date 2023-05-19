@@ -59,17 +59,7 @@ result[2] = |5-2| + |5-3| + |5-5| = 3 + 2 + 0 = 5。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:
-        ans = []
-        s, t = sum(nums), 0
-        for i, x in enumerate(nums):
-            v = x * i - t + s - t - x * (len(nums) - i)
-            ans.append(v)
-            t += x
-        return ans
-```
+
 
 ### **Java**
 
@@ -95,100 +85,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> getSumAbsoluteDifferences(vector<int>& nums) {
-        int s = accumulate(nums.begin(), nums.end(), 0), t = 0;
-        int n = nums.size();
-        vector<int> ans(n);
-        for (int i = 0; i < n; ++i) {
-            int v = nums[i] * i - t + s - t - nums[i] * (n - i);
-            ans[i] = v;
-            t += nums[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getSumAbsoluteDifferences(nums []int) (ans []int) {
-	var s, t int
-	for _, x := range nums {
-		s += x
-	}
-	for i, x := range nums {
-		v := x*i - t + s - t - x*(len(nums)-i)
-		ans = append(ans, v)
-		t += x
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getSumAbsoluteDifferences(nums: number[]): number[] {
-    const s = nums.reduce((a, b) => a + b);
-    let t = 0;
-    const n = nums.length;
-    const ans = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        const v = nums[i] * i - t + s - t - nums[i] * (n - i);
-        ans[i] = v;
-        t += nums[i];
-    }
-    return ans;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[] GetSumAbsoluteDifferences(int[] nums) {
-        int s = 0, t = 0;
-        foreach (int x in nums) {
-            s += x;
-        }
-        int n = nums.Length;
-        int[] ans = new int[n];
-        for (int i = 0; i < n; ++i) {
-            int v = nums[i] * i - t + s - t - nums[i] * (n - i);
-            ans[i] = v;
-            t += nums[i];
-        }
-        return ans;
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var getSumAbsoluteDifferences = function (nums) {
-    const s = nums.reduce((a, b) => a + b);
-    let t = 0;
-    const n = nums.length;
-    const ans = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        const v = nums[i] * i - t + s - t - nums[i] * (n - i);
-        ans[i] = v;
-        t += nums[i];
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -196,4 +111,4 @@ var getSumAbsoluteDifferences = function (nums) {
 
 ```
 
-<!-- tabs:end -->
+

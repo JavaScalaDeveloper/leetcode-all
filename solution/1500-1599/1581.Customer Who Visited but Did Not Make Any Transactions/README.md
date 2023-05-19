@@ -108,4 +108,4 @@ WHERE visit_id NOT IN (
 GROUP BY customer_id;
 ```
 
-<!-- tabs:end -->
+

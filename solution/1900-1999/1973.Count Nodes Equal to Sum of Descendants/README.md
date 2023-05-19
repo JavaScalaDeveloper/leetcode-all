@@ -70,28 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def equalToDescendants(self, root: Optional[TreeNode]) -> int:
-        def dfs(root):
-            if root is None:
-                return 0
-            l, r = dfs(root.left), dfs(root.right)
-            if l + r == root.val:
-                nonlocal ans
-                ans += 1
-            return root.val + l + r
 
-        ans = 0
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -135,66 +114,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int equalToDescendants(TreeNode* root) {
-        int ans = 0;
-        function<long long(TreeNode*)> dfs = [&](TreeNode* root) -> long long {
-            if (!root) {
-                return 0;
-            }
-            auto l = dfs(root->left);
-            auto r = dfs(root->right);
-            ans += l + r == root->val;
-            return root->val + l + r;
-        };
-        dfs(root);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func equalToDescendants(root *TreeNode) (ans int) {
-	var dfs func(*TreeNode) int
-	dfs = func(root *TreeNode) int {
-		if root == nil {
-			return 0
-		}
-		l, r := dfs(root.Left), dfs(root.Right)
-		if l+r == root.Val {
-			ans++
-		}
-		return root.Val + l + r
-	}
-	dfs(root)
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -202,4 +128,4 @@ func equalToDescendants(root *TreeNode) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

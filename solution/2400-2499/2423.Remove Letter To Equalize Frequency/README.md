@@ -62,17 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def equalFrequency(self, word: str) -> bool:
-        cnt = Counter(word)
-        for c in cnt.keys():
-            cnt[c] -= 1
-            if len(set(v for v in cnt.values() if v)) == 1:
-                return True
-            cnt[c] += 1
-        return False
-```
+
 
 ### **Java**
 
@@ -111,107 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool equalFrequency(string word) {
-        int cnt[26]{};
-        for (char& c : word) {
-            ++cnt[c - 'a'];
-        }
-        for (int i = 0; i < 26; ++i) {
-            if (cnt[i]) {
-                --cnt[i];
-                int x = 0;
-                bool ok = true;
-                for (int v : cnt) {
-                    if (v == 0) {
-                        continue;
-                    }
-                    if (x && v != x) {
-                        ok = false;
-                        break;
-                    }
-                    x = v;
-                }
-                if (ok) {
-                    return true;
-                }
-                ++cnt[i];
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func equalFrequency(word string) bool {
-	cnt := [26]int{}
-	for _, c := range word {
-		cnt[c-'a']++
-	}
-	for i := range cnt {
-		if cnt[i] > 0 {
-			cnt[i]--
-			x := 0
-			ok := true
-			for _, v := range cnt {
-				if v == 0 {
-					continue
-				}
-				if x > 0 && v != x {
-					ok = false
-					break
-				}
-				x = v
-			}
-			if ok {
-				return true
-			}
-			cnt[i]++
-		}
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function equalFrequency(word: string): boolean {
-    const cnt: number[] = new Array(26).fill(0);
-    for (const c of word) {
-        cnt[c.charCodeAt(0) - 97]++;
-    }
-    for (let i = 0; i < 26; ++i) {
-        if (cnt[i]) {
-            cnt[i]--;
-            let x = 0;
-            let ok = true;
-            for (const v of cnt) {
-                if (v === 0) {
-                    continue;
-                }
-                if (x && v !== x) {
-                    ok = false;
-                    break;
-                }
-                x = v;
-            }
-            if (ok) {
-                return true;
-            }
-            cnt[i]++;
-        }
-    }
-    return false;
-}
-```
+
 
 ### **...**
 
@@ -219,4 +119,4 @@ function equalFrequency(word: string): boolean {
 
 ```
 
-<!-- tabs:end -->
+

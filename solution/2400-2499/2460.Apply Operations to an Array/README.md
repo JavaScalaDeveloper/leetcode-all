@@ -73,18 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def applyOperations(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        for i in range(n - 1):
-            if nums[i] == nums[i + 1]:
-                nums[i] <<= 1
-                nums[i + 1] = 0
-        ans = [v for v in nums if v]
-        ans += [0] * (n - len(ans))
-        return ans
-```
+
 
 ### **Java**
 
@@ -117,58 +106,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> applyOperations(vector<int>& nums) {
-        int n = nums.size();
-        for (int i = 0; i < n - 1; ++i) {
-            if (nums[i] == nums[i + 1]) {
-                nums[i] <<= 1;
-                nums[i + 1] = 0;
-            }
-        }
-        vector<int> ans(n);
-        int j = 0;
-        for (int i = 0; i < n; ++i) if (nums[i]) ans[j++] = nums[i];
-        for (int i = 0; i < n; ++i) if (!nums[i]) ans[j++] = nums[i];
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func applyOperations(nums []int) (ans []int) {
-    n := len(nums)
-    for i := 0; i < n - 1; i++ {
-        if nums[i] == nums[i + 1] {
-            nums[i] <<= 1
-            nums[i + 1] = 0
-        }
-    }
-    for _, v := range nums {
-        if v != 0 {
-            ans = append(ans, v)
-        }
-    }
-    for _, v := range nums {
-        if v == 0 {
-            ans = append(ans, v)
-        }
-    }
-    return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -176,4 +124,4 @@ func applyOperations(nums []int) (ans []int) {
 
 ```
 
-<!-- tabs:end -->
+

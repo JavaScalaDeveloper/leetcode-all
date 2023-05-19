@@ -49,11 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rotateString(self, s: str, goal: str) -> bool:
-        return len(s) == len(goal) and goal in s + s
-```
+
 
 ### **Java**
 
@@ -67,57 +63,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool rotateString(string s, string goal) {
-        return s.size() == goal.size() && strstr((s + s).data(), goal.data());
-    }
-};
-```
 
-### **Go**
 
-```go
-func rotateString(s string, goal string) bool {
-	return len(s) == len(goal) && strings.Contains(s+s, goal)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function rotateString(s: string, goal: string): boolean {
-    return s.length === goal.length && (goal + goal).includes(s);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn rotate_string(s: String, goal: String) -> bool {
-        s.len() == goal.len() && (s.clone() + &s).contains(&goal)
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @param String $goal
-     * @return Boolean
-     */
-    function rotateString($s, $goal) {
-        return strlen($goal) === strlen($s) && strpos(($s.$s), $goal) !== false;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -125,4 +89,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

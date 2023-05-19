@@ -78,23 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxConsecutiveAnswers(self, answerKey: str, k: int) -> int:
-        def get(c, k):
-            l = r = -1
-            while r < len(answerKey) - 1:
-                r += 1
-                if answerKey[r] == c:
-                    k -= 1
-                if k < 0:
-                    l += 1
-                    if answerKey[l] == c:
-                        k += 1
-            return r - l
 
-        return max(get('T', k), get('F', k))
-```
 
 ### **Java**
 
@@ -121,106 +105,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxConsecutiveAnswers(string answerKey, int k) {
-        return max(get('T', k, answerKey), get('F', k, answerKey));
-    }
 
-    int get(char c, int k, string& answerKey) {
-        int l = 0, r = 0;
-        while (r < answerKey.size()) {
-            if (answerKey[r++] == c) --k;
-            if (k < 0 && answerKey[l++] == c) ++k;
-        }
-        return r - l;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxConsecutiveAnswers(answerKey string, k int) int {
-	get := func(c byte, k int) int {
-		l, r := -1, -1
-		for r < len(answerKey)-1 {
-			r++
-			if answerKey[r] == c {
-				k--
-			}
-			if k < 0 {
-				l++
-				if answerKey[l] == c {
-					k++
-				}
-			}
-		}
-		return r - l
-	}
-	return max(get('T', k), get('F', k))
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function maxConsecutiveAnswers(answerKey: string, k: number): number {
-    const n = answerKey.length;
-    const getMaxCount = (target: 'T' | 'F'): number => {
-        let l = 0;
-        let u = k;
-        for (const c of answerKey) {
-            if (c !== target) {
-                u--;
-            }
-            if (u < 0 && answerKey[l++] !== target) {
-                u++;
-            }
-        }
-        return n - l;
-    };
-    return Math.max(getMaxCount('T'), getMaxCount('F'));
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_consecutive_answers(answer_key: String, k: i32) -> i32 {
-        let bs = answer_key.as_bytes();
-        let n = bs.len();
-        let get_max_count = |target| {
-            let mut l = 0;
-            let mut u = k;
-            for b in bs.iter() {
-                if b != &target {
-                    u -= 1;
-                }
-                if u < 0 {
-                    if bs[l] != target {
-                        u += 1;
-                    }
-                    l += 1;
-                }
-            }
-            n - l
-        };
-        get_max_count(b'T').max(get_max_count(b'F')) as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -228,4 +127,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

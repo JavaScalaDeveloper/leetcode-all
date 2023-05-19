@@ -59,17 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def timeRequiredToBuy(self, tickets: List[int], k: int) -> int:
-        ans = 0
-        for i, t in enumerate(tickets):
-            if i <= k:
-                ans += min(tickets[k], t)
-            else:
-                ans += min(tickets[k] - 1, t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -93,73 +83,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function timeRequiredToBuy(tickets: number[], k: number): number {
-    const n = tickets.length;
-    let target = tickets[k] - 1;
-    let ans = 0;
-    // round1
-    for (let i = 0; i < n; i++) {
-        let num = tickets[i];
-        if (num <= target) {
-            ans += num;
-            tickets[i] = 0;
-        } else {
-            ans += target;
-            tickets[i] -= target;
-        }
-    }
 
-    // round2
-    for (let i = 0; i <= k; i++) {
-        let num = tickets[i];
-        ans += num > 0 ? 1 : 0;
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int timeRequiredToBuy(vector<int>& tickets, int k) {
-        int ans = 0;
-        for (int i = 0; i < tickets.size(); ++i) {
-            if (i <= k) {
-                ans += min(tickets[k], tickets[i]);
-            } else {
-                ans += min(tickets[k] - 1, tickets[i]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func timeRequiredToBuy(tickets []int, k int) int {
-	ans := 0
-	for i, t := range tickets {
-		if i <= k {
-			ans += min(tickets[k], t)
-		} else {
-			ans += min(tickets[k]-1, t)
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -167,4 +99,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

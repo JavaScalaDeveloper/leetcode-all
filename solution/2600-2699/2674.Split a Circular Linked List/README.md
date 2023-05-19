@@ -56,27 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def splitCircularLinkedList(
-        self, list: Optional[ListNode]
-    ) -> List[Optional[ListNode]]:
-        a = b = list
-        while b.next != list and b.next.next != list:
-            a = a.next
-            b = b.next.next
-        if b.next != list:
-            b = b.next
-        list2 = a.next
-        b.next = list2
-        a.next = list
-        return [list, list2]
-```
+
 
 ### **Java**
 
@@ -111,98 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    vector<ListNode*> splitCircularLinkedList(ListNode* list) {
-        ListNode* a = list;
-        ListNode* b = list;
-        while (b->next != list && b->next->next != list) {
-            a = a->next;
-            b = b->next->next;
-        }
-        if (b->next != list) {
-            b = b->next;
-        }
-        ListNode* list2 = a->next;
-        b->next = list2;
-        a->next = list;
-        return {list, list2};
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func splitCircularLinkedList(list *ListNode) []*ListNode {
-	a, b := list, list
-	for b.Next != list && b.Next.Next != list {
-		a = a.Next
-		b = b.Next.Next
-	}
-	if b.Next != list {
-		b = b.Next
-	}
-	list2 := a.Next
-	b.Next = list2
-	a.Next = list
-	return []*ListNode{list, list2}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function splitCircularLinkedList(
-    list: ListNode | null,
-): Array<ListNode | null> {
-    let a = list;
-    let b = list;
-    while (b.next !== list && b.next.next !== list) {
-        a = a.next;
-        b = b.next.next;
-    }
-    if (b.next !== list) {
-        b = b.next;
-    }
-    const list2 = a.next;
-    b.next = list2;
-    a.next = list;
-    return [list, list2];
-}
-```
 
 ### **...**
 
@@ -210,4 +109,4 @@ function splitCircularLinkedList(
 
 ```
 
-<!-- tabs:end -->
+

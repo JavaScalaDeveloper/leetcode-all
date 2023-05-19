@@ -53,36 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def twoSumBSTs(self, root1: TreeNode, root2: TreeNode, target: int) -> bool:
-        vals1, vals2 = [], []
 
-        def inorder(root, vals):
-            if root:
-                inorder(root.left, vals)
-                vals.append(root.val)
-                inorder(root.right, vals)
-
-        inorder(root1, vals1)
-        inorder(root2, vals2)
-
-        i, j = 0, len(vals2) - 1
-        while i < len(vals1) and j >= 0:
-            if vals1[i] + vals2[j] == target:
-                return True
-            if vals1[i] + vals2[j] < target:
-                i += 1
-            else:
-                j -= 1
-        return False
-```
 
 ### **Java**
 
@@ -135,87 +106,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool twoSumBSTs(TreeNode* root1, TreeNode* root2, int target) {
-        vector<int> vals1, vals2;
-        inorder(root1, vals1);
-        inorder(root2, vals2);
-        int i = 0, j = vals2.size() - 1;
-        while (i < vals1.size() && j >= 0) {
-            int s = vals1[i] + vals2[j];
-            if (s == target)
-                return true;
-            if (s < target)
-                ++i;
-            else
-                --j;
-        }
-        return false;
-    }
 
-    void inorder(TreeNode* root, vector<int>& vals) {
-        if (root) {
-            inorder(root->left, vals);
-            vals.push_back(root->val);
-            inorder(root->right, vals);
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func twoSumBSTs(root1 *TreeNode, root2 *TreeNode, target int) bool {
-	vals1 := inorder(root1)
-	vals2 := inorder(root2)
-	i, j := 0, len(vals2)-1
-	for i < len(vals1) && j >= 0 {
-		s := vals1[i] + vals2[j]
-		if s == target {
-			return true
-		}
-		if s < target {
-			i++
-		} else {
-			j--
-		}
-	}
-	return false
-}
 
-func inorder(root *TreeNode) []int {
-	if root == nil {
-		return nil
-	}
-	left := inorder(root.Left)
-	right := inorder(root.Right)
-	return append(append(left, root.Val), right...)
-}
-```
+
+
 
 ### **...**
 
@@ -223,4 +120,4 @@ func inorder(root *TreeNode) []int {
 
 ```
 
-<!-- tabs:end -->
+

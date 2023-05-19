@@ -69,29 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
-        def dfs(node, s):
-            if node is None:
-                return 0
-            s += node.val
-            ans = cnt[s - targetSum]
-            cnt[s] += 1
-            ans += dfs(node.left, s)
-            ans += dfs(node.right, s)
-            cnt[s] -= 1
-            return ans
 
-        cnt = Counter({0: 1})
-        return dfs(root, 0)
-```
 
 ### **Java**
 
@@ -138,67 +116,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int pathSum(TreeNode* root, int targetSum) {
-        unordered_map<long, int> cnt;
-        cnt[0] = 1;
-        function<int(TreeNode*, long)> dfs = [&](TreeNode* node, long s) -> int {
-            if (!node) return 0;
-            s += node->val;
-            int ans = cnt[s - targetSum];
-            ++cnt[s];
-            ans += dfs(node->left, s) + dfs(node->right, s);
-            --cnt[s];
-            return ans;
-        };
-        return dfs(root, 0);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func pathSum(root *TreeNode, targetSum int) int {
-	cnt := map[int]int{0: 1}
-	var dfs func(*TreeNode, int) int
-	dfs = func(node *TreeNode, s int) int {
-		if node == nil {
-			return 0
-		}
-		s += node.Val
-		ans := cnt[s-targetSum]
-		cnt[s]++
-		ans += dfs(node.Left, s) + dfs(node.Right, s)
-		cnt[s]--
-		return ans
-	}
-	return dfs(root, 0)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -206,4 +130,4 @@ func pathSum(root *TreeNode, targetSum int) int {
 
 ```
 
-<!-- tabs:end -->
+

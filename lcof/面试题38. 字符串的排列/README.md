@@ -49,26 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def permutation(self, s: str) -> List[str]:
-        def dfs(i):
-            if i == len(s) - 1:
-                ans.append(''.join(cs))
-                return
-            vis = set()
-            for j in range(i, len(s)):
-                if cs[j] not in vis:
-                    vis.add(cs[j])
-                    cs[i], cs[j] = cs[j], cs[i]
-                    dfs(i + 1)
-                    cs[i], cs[j] = cs[j], cs[i]
 
-        ans = []
-        cs = list(s)
-        dfs(0)
-        return ans
-```
 
 ### **Java**
 
@@ -108,173 +89,28 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> permutation(string s) {
-        vector<string> ans;
-        function<void(int)> dfs = [&](int i) {
-            if (i == s.size() - 1) {
-                ans.push_back(s);
-                return;
-            }
-            unordered_set<char> vis;
-            for (int j = i; j < s.size(); ++j) {
-                if (!vis.count(s[j])) {
-                    vis.insert(s[j]);
-                    swap(s[i], s[j]);
-                    dfs(i + 1);
-                    swap(s[i], s[j]);
-                }
-            }
-        };
-        dfs(0);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func permutation(s string) (ans []string) {
-	cs := []byte(s)
-	var dfs func(int)
-	dfs = func(i int) {
-		if i == len(s)-1 {
-			ans = append(ans, string(cs))
-			return
-		}
-		vis := map[byte]bool{}
-		for j := i; j < len(s); j++ {
-			if !vis[cs[j]] {
-				vis[cs[j]] = true
-				cs[i], cs[j] = cs[j], cs[i]
-				dfs(i + 1)
-				cs[i], cs[j] = cs[j], cs[i]
-			}
-		}
-	}
-	dfs(0)
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {string[]}
- */
-var permutation = function (s) {
-    const cs = s.split('');
-    const ans = [];
-    const n = s.length;
-    const dfs = i => {
-        if (i == n - 1) {
-            ans.push(cs.join(''));
-            return;
-        }
-        const vis = new Set();
-        for (let j = i; j < n; ++j) {
-            if (!vis.has(cs[j])) {
-                vis.add(cs[j]);
-                [cs[i], cs[j]] = [cs[j], cs[i]];
-                dfs(i + 1);
-                [cs[i], cs[j]] = [cs[j], cs[i]];
-            }
-        }
-    };
-    dfs(0);
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function permutation(s: string): string[] {
-    const n = s.length;
-    const cs = s.split('');
-    const set = new Set<string>();
-    const dfs = (i: number) => {
-        if (i === n) {
-            set.add(cs.join(''));
-            return;
-        }
-        dfs(i + 1);
-        for (let j = i + 1; j < n; j++) {
-            [cs[i], cs[j]] = [cs[j], cs[i]];
-            dfs(i + 1);
-            [cs[i], cs[j]] = [cs[j], cs[i]];
-        }
-    };
-    dfs(0);
-    return [...set];
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    fn dfs(i: usize, cs: &mut Vec<char>, res: &mut Vec<String>) {
-        if i == cs.len() {
-            res.push(cs.iter().collect());
-            return;
-        }
-        let mut set = HashSet::new();
-        for j in i..cs.len() {
-            if set.contains(&cs[j]) {
-                continue;
-            }
-            set.insert(cs[j]);
-            cs.swap(i, j);
-            Self::dfs(i + 1, cs, res);
-            cs.swap(i, j);
-        }
-    }
 
-    pub fn permutation(s: String) -> Vec<String> {
-        let mut res = Vec::new();
-        Self::dfs(0, &mut s.chars().collect(), &mut res);
-        res
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    private char[] cs;
-    private List<string> ans = new List<string>();
 
-    public string[] Permutation(string s) {
-        cs = s.ToCharArray();
-        dfs(0);
-        return ans.ToArray();
-    }
 
-    private void dfs(int i) {
-        if (i == cs.Length - 1) {
-            ans.Add(new string(cs));
-            return;
-        }
-        var vis = new HashSet<char>();
-        for (int j = i; j < cs.Length; ++j) {
-            if (vis.Add(cs[j])) {
-                (cs[i], cs[j]) = (cs[j], cs[i]);
-                dfs(i + 1);
-                (cs[i], cs[j]) = (cs[j], cs[i]);
-            }
-        }
-    }
-}
-```
 
-<!-- tabs:end -->
+
+
+

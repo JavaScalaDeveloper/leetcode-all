@@ -80,32 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def totalCost(self, costs: List[int], k: int, candidates: int) -> int:
-        q = []
-        n = len(costs)
-        i, j = candidates - 1, n - candidates
-        for h in range(candidates):
-            q.append((costs[h], h))
-        for h in range(n - candidates, n):
-            if h > i:
-                q.append((costs[h], h))
-        heapify(q)
-        ans = 0
-        for _ in range(k):
-            c, x = heappop(q)
-            ans += c
-            if x <= i:
-                i += 1
-                if i < j:
-                    heappush(q, (costs[i], i))
-            if x >= j:
-                j -= 1
-                if i < j:
-                    heappush(q, (costs[j], j))
-        return ans
-```
+
 
 ### **Java**
 
@@ -151,92 +126,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using pii = pair<int, int>;
 
-class Solution {
-public:
-    long long totalCost(vector<int>& costs, int k, int candidates) {
-        priority_queue<pii, vector<pii>, greater<pii>> q;
-        int n = costs.size();
-        int i = candidates - 1, j = n - candidates;
-        for (int h = 0; h < candidates; ++h) q.push({costs[h], h});
-        for (int h = n - candidates; h < n; ++h) if (h > i) q.push({costs[h], h});
-        long long ans = 0;
-        while (k--) {
-            auto [c, x] = q.top();
-            q.pop();
-            ans += c;
-            if (x <= i) {
-                if (++i < j) {
-                    q.push({costs[i], i});
-                }
-            }
-            if (x >= j) {
-                if (--j > i) {
-                    q.push({costs[j], j});
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func totalCost(costs []int, k int, candidates int) int64 {
-	q := hp{}
-	n := len(costs)
-	i, j := candidates-1, n-candidates
-	for h := 0; h < candidates; h++ {
-		heap.Push(&q, pair{costs[h], h})
-	}
-	for h := n - candidates; h < n; h++ {
-		if h > i {
-			heap.Push(&q, pair{costs[h], h})
-		}
-	}
-	ans := 0
-	for k > 0 {
-		p := heap.Pop(&q).(pair)
-		c, x := p.c, p.x
-		ans += c
-		if x <= i {
-			i++
-			if i < j {
-				heap.Push(&q, pair{costs[i], i})
-			}
-		}
-		if x >= j {
-			j--
-			if i < j {
-				heap.Push(&q, pair{costs[j], j})
-			}
-		}
-		k--
-	}
-	return int64(ans)
-}
 
-type pair struct{ c, x int }
-type hp []pair
 
-func (h hp) Len() int            { return len(h) }
-func (h hp) Less(i, j int) bool  { return h[i].c < h[j].c || h[i].c == h[j].c && h[i].x < h[j].x }
-func (h hp) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
-func (h *hp) Push(v interface{}) { *h = append(*h, v.(pair)) }
-func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
-```
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -244,4 +144,4 @@ func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1];
 
 ```
 
-<!-- tabs:end -->
+

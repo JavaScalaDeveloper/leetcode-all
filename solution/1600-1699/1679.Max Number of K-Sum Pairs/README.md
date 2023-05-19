@@ -76,36 +76,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxOperations(self, nums: List[int], k: int) -> int:
-        nums.sort()
-        l, r, ans = 0, len(nums) - 1, 0
-        while l < r:
-            s = nums[l] + nums[r]
-            if s == k:
-                ans += 1
-                l, r = l + 1, r - 1
-            elif s > k:
-                r -= 1
-            else:
-                l += 1
-        return ans
-```
 
-```python
-class Solution:
-    def maxOperations(self, nums: List[int], k: int) -> int:
-        cnt = Counter()
-        ans = 0
-        for x in nums:
-            if cnt[k - x]:
-                ans += 1
-                cnt[k - x] -= 1
-            else:
-                cnt[x] += 1
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -154,104 +127,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxOperations(vector<int>& nums, int k) {
-        sort(nums.begin(), nums.end());
-        int cnt = 0;
-        int i = 0, j = nums.size() - 1;
-        while (i < j) {
-            if (nums[i] + nums[j] == k) {
-                i++;
-                j--;
-                cnt++;
-            } else if (nums[i] + nums[j] > k) {
-                j--;
-            } else {
-                i++;
-            }
-        }
-        return cnt;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maxOperations(vector<int>& nums, int k) {
-        unordered_map<int, int> cnt;
-        int ans = 0;
-        for (int& x : nums) {
-            if (cnt[k - x]) {
-                --cnt[k - x];
-                ++ans;
-            } else {
-                ++cnt[x];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxOperations(nums []int, k int) int {
-	sort.Ints(nums)
-	l, r, ans := 0, len(nums)-1, 0
-	for l < r {
-		s := nums[l] + nums[r]
-		if s == k {
-			ans++
-			l++
-			r--
-		} else if s > k {
-			r--
-		} else {
-			l++
-		}
-	}
-	return ans
-}
-```
 
-```go
-func maxOperations(nums []int, k int) (ans int) {
-	cnt := map[int]int{}
-	for _, x := range nums {
-		if cnt[k-x] > 0 {
-			cnt[k-x]--
-			ans++
-		} else {
-			cnt[x]++
-		}
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxOperations(nums: number[], k: number): number {
-    const cnt = new Map();
-    let ans = 0;
-    for (const x of nums) {
-        if (cnt.get(k - x)) {
-            cnt.set(k - x, cnt.get(k - x) - 1);
-            ++ans;
-        } else {
-            cnt.set(x, (cnt.get(x) | 0) + 1);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -259,4 +149,4 @@ function maxOperations(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

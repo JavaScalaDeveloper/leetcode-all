@@ -79,26 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minWindow(self, s: str, t: str) -> str:
-        need = Counter(t)
-        window = Counter()
-        cnt, j, k, mi = 0, 0, -1, inf
-        for i, c in enumerate(s):
-            window[c] += 1
-            if need[c] >= window[c]:
-                cnt += 1
-            while cnt == len(t):
-                if i - j + 1 < mi:
-                    mi = i - j + 1
-                    k = j
-                if need[s[j]] >= window[s[j]]:
-                    cnt -= 1
-                window[s[j]] -= 1
-                j += 1
-        return '' if k < 0 else s[k: k + mi]
-```
+
 
 ### **Java**
 
@@ -135,138 +116,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string minWindow(string s, string t) {
-        int need[128]{};
-        int window[128]{};
-        int m = s.size(), n = t.size();
-        for (char& c : t) {
-            ++need[c];
-        }
-        int cnt = 0, j = 0, k = -1, mi = 1 << 30;
-        for (int i = 0; i < m; ++i) {
-            ++window[s[i]];
-            if (need[s[i]] >= window[s[i]]) {
-                ++cnt;
-            }
-            while (cnt == n) {
-                if (i - j + 1 < mi) {
-                    mi = i - j + 1;
-                    k = j;
-                }
-                if (need[s[j]] >= window[s[j]]) {
-                    --cnt;
-                }
-                --window[s[j++]];
-            }
-        }
-        return k < 0 ? "" : s.substr(k, mi);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minWindow(s string, t string) string {
-	need := [128]int{}
-	window := [128]int{}
-	for _, c := range t {
-		need[c]++
-	}
-	cnt, j, k, mi := 0, 0, -1, 1<<30
-	for i, c := range s {
-		window[c]++
-		if need[c] >= window[c] {
-			cnt++
-		}
-		for cnt == len(t) {
-			if i-j+1 < mi {
-				mi = i - j + 1
-				k = j
-			}
-			if need[s[j]] >= window[s[j]] {
-				cnt--
-			}
-			window[s[j]]--
-			j++
-		}
-	}
-	if k < 0 {
-		return ""
-	}
-	return s[k : k+mi]
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minWindow(s: string, t: string): string {
-    const need: number[] = new Array(128).fill(0);
-    const window: number[] = new Array(128).fill(0);
-    for (const c of t) {
-        ++need[c.charCodeAt(0)];
-    }
-    let cnt = 0;
-    let j = 0;
-    let k = -1;
-    let mi = 1 << 30;
-    for (let i = 0; i < s.length; ++i) {
-        ++window[s.charCodeAt(i)];
-        if (need[s.charCodeAt(i)] >= window[s.charCodeAt(i)]) {
-            ++cnt;
-        }
-        while (cnt === t.length) {
-            if (i - j + 1 < mi) {
-                mi = i - j + 1;
-                k = j;
-            }
-            if (need[s.charCodeAt(j)] >= window[s.charCodeAt(j)]) {
-                --cnt;
-            }
-            --window[s.charCodeAt(j++)];
-        }
-    }
-    return k < 0 ? '' : s.slice(k, k + mi);
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public string MinWindow(string s, string t) {
-        int[] need = new int[128];
-        int[] window = new int[128];
-        foreach (var c in t) {
-            ++need[c];
-        }
-        int cnt = 0, j = 0, k = -1, mi = 1 << 30;
-        for (int i = 0; i < s.Length; ++i) {
-            ++window[s[i]];
-            if (need[s[i]] >= window[s[i]]) {
-                ++cnt;
-            }
-            while (cnt == t.Length) {
-                if (i - j + 1 < mi) {
-                    mi = i - j + 1;
-                    k = j;
-                }
-                if (need[s[j]] >= window[s[j]]) {
-                    --cnt;
-                }
-                --window[s[j++]];
-            }
-        }
-        return k < 0 ? "" : s.Substring(k, mi);
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -274,4 +138,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

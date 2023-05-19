@@ -45,20 +45,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkPerfectNumber(self, num: int) -> bool:
-        if num == 1:
-            return False
-        s, i = 1, 2
-        while i * i <= num:
-            if num % i == 0:
-                s += i
-                if i != num // i:
-                    s += num // i
-            i += 1
-        return s == num
-```
+
 
 ### **Java**
 
@@ -85,44 +72,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkPerfectNumber(int num) {
-        if (num == 1) return false;
-        int s = 1;
-        for (int i = 2; i * i <= num; ++i) {
-            if (num % i == 0) {
-                s += i;
-                if (i != num / i) s += num / i;
-            }
-        }
-        return s == num;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkPerfectNumber(num int) bool {
-	if num == 1 {
-		return false
-	}
-	s := 1
-	for i := 2; i*i <= num; i++ {
-		if num%i == 0 {
-			s += i
-			if i != num/i {
-				s += num / i
-			}
-		}
-	}
-	return s == num
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -130,4 +86,4 @@ func checkPerfectNumber(num int) bool {
 
 ```
 
-<!-- tabs:end -->
+

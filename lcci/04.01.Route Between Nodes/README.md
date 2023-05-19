@@ -41,46 +41,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findWhetherExistsPath(
-        self, n: int, graph: List[List[int]], start: int, target: int
-    ) -> bool:
-        def dfs(u):
-            if u == target:
-                return True
-            for v in g[u]:
-                if v not in vis:
-                    vis.add(v)
-                    if dfs(v):
-                        return True
-            return False
 
-        g = defaultdict(list)
-        for u, v in graph:
-            g[u].append(v)
-        vis = {start}
-        return dfs(start)
-```
 
-```python
-class Solution:
-    def findWhetherExistsPath(self, n: int, graph: List[List[int]], start: int, target: int) -> bool:
-        g = defaultdict(list)
-        for u, v in graph:
-            g[u].append(v)
-        q = deque([start])
-        vis = {start}
-        while q:
-            u = q.popleft()
-            if u == target:
-                return True
-            for v in g[u]:
-                if v not in vis:
-                    vis.add(v)
-                    q.append(v)
-        return False
-```
+
 
 ### **Java**
 
@@ -143,109 +106,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool findWhetherExistsPath(int n, vector<vector<int>>& graph, int start, int target) {
-        unordered_map<int, vector<int>> g;
-        for (auto& e : graph) g[e[0]].push_back(e[1]);
-        unordered_set<int> vis {{start}};
-        return dfs(start, target, g, vis);
-    }
 
-    bool dfs(int u, int& target, unordered_map<int, vector<int>>& g, unordered_set<int>& vis) {
-        if (u == target) return true;
-        for (int& v : g[u]) {
-            if (!vis.count(v)) {
-                vis.insert(v);
-                if (dfs(v, target, g, vis)) return true;
-            }
-        }
-        return false;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool findWhetherExistsPath(int n, vector<vector<int>>& graph, int start, int target) {
-        unordered_map<int, vector<int>> g;
-        for (auto& e : graph) g[e[0]].push_back(e[1]);
-        queue<int> q {{start}};
-        unordered_set<int> vis {{start}};
-        while (!q.empty()) {
-            int u = q.front();
-            if (u == target) return true;
-            q.pop();
-            for (int v : g[u]) {
-                if (!vis.count(v)) {
-                    vis.insert(v);
-                    q.push(v);
-                }
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findWhetherExistsPath(n int, graph [][]int, start int, target int) bool {
-	g := map[int][]int{}
-	for _, e := range graph {
-		u, v := e[0], e[1]
-		g[u] = append(g[u], v)
-	}
-	vis := map[int]bool{start: true}
-	var dfs func(int) bool
-	dfs = func(u int) bool {
-		if u == target {
-			return true
-		}
-		for _, v := range g[u] {
-			if !vis[v] {
-				vis[v] = true
-				if dfs(v) {
-					return true
-				}
-			}
-		}
-		return false
-	}
-	return dfs(start)
-}
-```
 
-```go
-func findWhetherExistsPath(n int, graph [][]int, start int, target int) bool {
-	g := map[int][]int{}
-	for _, e := range graph {
-		u, v := e[0], e[1]
-		g[u] = append(g[u], v)
-	}
-	q := []int{start}
-	vis := map[int]bool{start: true}
-	for len(q) > 0 {
-		u := q[0]
-		if u == target {
-			return true
-		}
-		q = q[1:]
-		for _, v := range g[u] {
-			if !vis[v] {
-				vis[v] = true
-				q = append(q, v)
-			}
-		}
-	}
-	return false
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -253,4 +124,4 @@ func findWhetherExistsPath(n int, graph [][]int, start int, target int) bool {
 
 ```
 
-<!-- tabs:end -->
+

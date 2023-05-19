@@ -109,4 +109,4 @@ FROM (SELECT Score,
       ORDER BY Score DESC) s;
 ```
 
-<!-- tabs:end -->
+

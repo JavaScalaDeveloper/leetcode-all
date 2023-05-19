@@ -89,18 +89,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mergeTriplets(self, triplets: List[List[int]], target: List[int]) -> bool:
-        x, y, z = target
-        d = e = f = 0
-        for a, b, c in triplets:
-            if a <= x and b <= y and c <= z:
-                d = max(d, a)
-                e = max(e, b)
-                f = max(f, c)
-        return [d, e, f] == target
-```
+
 
 ### **Java**
 
@@ -124,68 +113,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool mergeTriplets(vector<vector<int>>& triplets, vector<int>& target) {
-        int x = target[0], y = target[1], z = target[2];
-        int d = 0, e = 0, f = 0;
-        for (auto& t : triplets) {
-            int a = t[0], b = t[1], c = t[2];
-            if (a <= x && b <= y && c <= z) {
-                d = max(d, a);
-                e = max(e, b);
-                f = max(f, c);
-            }
-        }
-        return d == x && e == y && f == z;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mergeTriplets(triplets [][]int, target []int) bool {
-	x, y, z := target[0], target[1], target[2]
-	d, e, f := 0, 0, 0
-	for _, t := range triplets {
-		a, b, c := t[0], t[1], t[2]
-		if a <= x && b <= y && c <= z {
-			d = max(d, a)
-			e = max(e, b)
-			f = max(f, c)
-		}
-	}
-	return d == x && e == y && f == z
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function mergeTriplets(triplets: number[][], target: number[]): boolean {
-    const [x, y, z] = target;
-    let [d, e, f] = [0, 0, 0];
-    for (const [a, b, c] of triplets) {
-        if (a <= x && b <= y && c <= z) {
-            d = Math.max(d, a);
-            e = Math.max(e, b);
-            f = Math.max(f, c);
-        }
-    }
-    return d === x && e === y && f === z;
-}
-```
+
 
 ### **...**
 
@@ -193,4 +131,4 @@ function mergeTriplets(triplets: number[][], target: number[]): boolean {
 
 ```
 
-<!-- tabs:end -->
+

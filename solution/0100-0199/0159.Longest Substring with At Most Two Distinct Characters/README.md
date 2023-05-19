@@ -51,21 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def lengthOfLongestSubstringTwoDistinct(self, s: str) -> int:
-        cnt = Counter()
-        ans = j = 0
-        for i, c in enumerate(s):
-            cnt[c] += 1
-            while len(cnt) > 2:
-                cnt[s[j]] -= 1
-                if cnt[s[j]] == 0:
-                    cnt.pop(s[j])
-                j += 1
-            ans = max(ans, i - j + 1)
-        return ans
-```
+
 
 ### **Java**
 
@@ -94,58 +80,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int lengthOfLongestSubstringTwoDistinct(string s) {
-        unordered_map<char, int> cnt;
-        int n = s.size();
-        int ans = 0;
-        for (int i = 0, j = 0; i < n; ++i) {
-            cnt[s[i]]++;
-            while (cnt.size() > 2) {
-                cnt[s[j]]--;
-                if (cnt[s[j]] == 0) {
-                    cnt.erase(s[j]);
-                }
-                ++j;
-            }
-            ans = max(ans, i - j + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func lengthOfLongestSubstringTwoDistinct(s string) (ans int) {
-	cnt := map[byte]int{}
-	j := 0
-	for i := range s {
-		cnt[s[i]]++
-		for len(cnt) > 2 {
-			cnt[s[j]]--
-			if cnt[s[j]] == 0 {
-				delete(cnt, s[j])
-			}
-			j++
-		}
-		ans = max(ans, i-j+1)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -153,4 +94,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

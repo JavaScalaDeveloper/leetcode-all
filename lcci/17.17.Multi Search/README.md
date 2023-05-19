@@ -37,47 +37,7 @@ smalls = [&quot;is&quot;,&quot;ppi&quot;,&quot;hi&quot;,&quot;sis&quot;,&quot;i&
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.idx = -1
-        self.children = [None] * 26
 
-    def insert(self, word, i):
-        node = self
-        for c in word:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-        node.idx = i
-
-    def search(self, word):
-        res = []
-        node = self
-        for c in word:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                return res
-            node = node.children[idx]
-            if node.idx != -1:
-                res.append(node.idx)
-        return res
-
-
-class Solution:
-    def multiSearch(self, big: str, smalls: List[str]) -> List[List[int]]:
-        tree = Trie()
-        for i, s in enumerate(smalls):
-            tree.insert(s, i)
-        n = len(smalls)
-        ans = [[] for _ in range(n)]
-        for i in range(len(big)):
-            s = big[i:]
-            for idx in tree.search(s):
-                ans[idx].append(i)
-        return ans
-```
 
 ### **Java**
 
@@ -149,116 +109,13 @@ class Trie {
 }
 ```
 
-### **C++**
 
-```cpp
-class Trie {
-private:
-    vector<Trie*> children;
-    int idx;
 
-public:
-    Trie()
-        : children(26)
-        , idx(-1) { }
 
-    void insert(string word, int i) {
-        Trie* node = this;
-        for (char c : word) {
-            int idx = c - 'a';
-            if (!node->children[idx]) node->children[idx] = new Trie();
-            node = node->children[idx];
-        }
-        node->idx = i;
-    }
 
-    vector<int> search(string word) {
-        Trie* node = this;
-        vector<int> res;
-        for (char c : word) {
-            int idx = c - 'a';
-            if (!node->children[idx]) return res;
-            node = node->children[idx];
-            if (node->idx != -1) res.push_back(node->idx);
-        }
-        return res;
-    }
-};
 
-class Solution {
-public:
-    vector<vector<int>> multiSearch(string big, vector<string>& smalls) {
-        Trie* tree = new Trie();
-        int n = smalls.size();
-        for (int i = 0; i < n; ++i) tree->insert(smalls[i], i);
-        vector<vector<int>> ans(n);
-        for (int i = 0, m = big.size(); i < m; ++i) {
-            string s = big.substr(i, m - i);
-            vector<int> t = tree->search(s);
-            for (int& idx : t) ans[idx].push_back(i);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-type Trie struct {
-	children [26]*Trie
-	idx      int
-}
-
-func newTrie() *Trie {
-	return &Trie{idx: -1}
-}
-
-func (this *Trie) insert(word string, idx int) {
-	node := this
-	for _, c := range word {
-		idx := c - 'a'
-		if node.children[idx] == nil {
-			node.children[idx] = newTrie()
-		}
-		node = node.children[idx]
-	}
-	node.idx = idx
-}
-
-func (this *Trie) search(word string) []int {
-	node := this
-	var res []int
-	for _, c := range word {
-		idx := c - 'a'
-		if node.children[idx] == nil {
-			return res
-		}
-		node = node.children[idx]
-		if node.idx != -1 {
-			res = append(res, node.idx)
-		}
-	}
-	return res
-}
-
-func multiSearch(big string, smalls []string) [][]int {
-	tree := newTrie()
-	for i, s := range smalls {
-		tree.insert(s, i)
-	}
-	n := len(smalls)
-	ans := make([][]int, n)
-	for i := range big {
-		s := big[i:]
-		t := tree.search(s)
-		for _, idx := range t {
-			ans[idx] = append(ans[idx], i)
-		}
-	}
-	return ans
-}
-```
 
 ### **...**
 
@@ -266,4 +123,4 @@ func multiSearch(big string, smalls []string) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

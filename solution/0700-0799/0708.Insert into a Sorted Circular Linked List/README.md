@@ -61,33 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val=None, next=None):
-        self.val = val
-        self.next = next
-"""
 
-
-class Solution:
-    def insert(self, head: 'Optional[Node]', insertVal: int) -> 'Node':
-        node = Node(insertVal)
-        if head is None:
-            node.next = node
-            return node
-        prev, curr = head, head.next
-        while curr != head:
-            if prev.val <= insertVal <= curr.val or (
-                prev.val > curr.val and (insertVal >= prev.val or insertVal <= curr.val)
-            ):
-                break
-            prev, curr = curr, curr.next
-        prev.next = node
-        node.next = curr
-        return head
-```
 
 ### **Java**
 
@@ -136,80 +110,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    Node* next;
 
-    Node() {}
 
-    Node(int _val) {
-        val = _val;
-        next = NULL;
-    }
 
-    Node(int _val, Node* _next) {
-        val = _val;
-        next = _next;
-    }
-};
-*/
 
-class Solution {
-public:
-    Node* insert(Node* head, int insertVal) {
-        Node* node = new Node(insertVal);
-        if (!head) {
-            node->next = node;
-            return node;
-        }
-        Node *prev = head, *curr = head->next;
-        while (curr != head) {
-            if ((prev->val <= insertVal && insertVal <= curr->val) || (prev->val > curr->val && (insertVal >= prev->val || insertVal <= curr->val))) break;
-            prev = curr;
-            curr = curr->next;
-        }
-        prev->next = node;
-        node->next = curr;
-        return head;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Next *Node
- * }
- */
-
-func insert(head *Node, x int) *Node {
-	node := &Node{Val: x}
-	if head == nil {
-		node.Next = node
-		return node
-	}
-	prev, curr := head, head.Next
-	for curr != head {
-		if (prev.Val <= x && x <= curr.Val) || (prev.Val > curr.Val && (x >= prev.Val || x <= curr.Val)) {
-			break
-		}
-		prev, curr = curr, curr.Next
-	}
-	prev.Next = node
-	node.Next = curr
-	return head
-}
-```
 
 ### **...**
 
@@ -217,4 +124,4 @@ func insert(head *Node, x int) *Node {
 
 ```
 
-<!-- tabs:end -->
+

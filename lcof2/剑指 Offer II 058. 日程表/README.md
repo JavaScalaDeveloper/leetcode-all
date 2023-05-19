@@ -55,27 +55,7 @@ MyCalendar.book(20, 30); // returns true ，第三个日程安排可以添加到
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedDict
 
-
-class MyCalendar:
-    def __init__(self):
-        self.sd = SortedDict()
-
-    def book(self, start: int, end: int) -> bool:
-        idx = self.sd.bisect_right(start)
-        if 0 <= idx < len(self.sd):
-            if end > self.sd.values()[idx]:
-                return False
-        self.sd[end] = start
-        return True
-
-
-# Your MyCalendar object will be instantiated and called as such:
-# obj = MyCalendar()
-# param_1 = obj.book(start,end)
-```
 
 ### **Java**
 
@@ -112,37 +92,9 @@ class MyCalendar {
  */
 ```
 
-### **Go**
-
-```go
-type MyCalendar struct {
-	rbt *redblacktree.Tree
-}
-
-func Constructor() MyCalendar {
-	return MyCalendar{
-		rbt: redblacktree.NewWithIntComparator(),
-	}
-}
-
-func (this *MyCalendar) Book(start int, end int) bool {
-	if p, ok := this.rbt.Floor(start); ok && p.Value.(int) > start {
-		return false
-	}
-	if p, ok := this.rbt.Ceiling(start); ok && p.Key.(int) < end {
-		return false
-	}
-	this.rbt.Put(start, end)
-	return true
-}
 
 
-/**
- * Your MyCalendar object will be instantiated and called as such:
- * obj := Constructor();
- * param_1 := obj.Book(start,end);
- */
-```
+
 
 ### **...**
 
@@ -150,4 +102,4 @@ func (this *MyCalendar) Book(start int, end int) bool {
 
 ```
 
-<!-- tabs:end -->
+

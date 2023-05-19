@@ -68,26 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def allCellsDistOrder(
-        self, rows: int, cols: int, rCenter: int, cCenter: int
-    ) -> List[List[int]]:
-        q = deque([[rCenter, cCenter]])
-        vis = [[False] * cols for _ in range(rows)]
-        vis[rCenter][cCenter] = True
-        ans = []
-        while q:
-            for _ in range(len(q)):
-                p = q.popleft()
-                ans.append(p)
-                for a, b in pairwise((-1, 0, 1, 0, -1)):
-                    x, y = p[0] + a, p[1] + b
-                    if 0 <= x < rows and 0 <= y < cols and not vis[x][y]:
-                        vis[x][y] = True
-                        q.append([x, y])
-        return ans
-```
+
 
 ### **Java**
 
@@ -123,67 +104,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> allCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {
-        queue<pair<int, int>> q;
-        q.emplace(rCenter, cCenter);
-        vector<vector<int>> ans;
-        bool vis[rows][cols];
-        memset(vis, false, sizeof(vis));
-        vis[rCenter][cCenter] = true;
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        while (!q.empty()) {
-            for (int n = q.size(); n; --n) {
-                auto [i, j] = q.front();
-                q.pop();
-                ans.push_back({i, j});
-                for (int k = 0; k < 4; ++k) {
-                    int x = i + dirs[k];
-                    int y = j + dirs[k + 1];
-                    if (x >= 0 && x < rows && y >= 0 && y < cols && !vis[x][y]) {
-                        vis[x][y] = true;
-                        q.emplace(x, y);
-                    }
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func allCellsDistOrder(rows int, cols int, rCenter int, cCenter int) (ans [][]int) {
-	q := [][]int{{rCenter, cCenter}}
-	vis := make([][]bool, rows)
-	for i := range vis {
-		vis[i] = make([]bool, cols)
-	}
-	vis[rCenter][cCenter] = true
-	dirs := [5]int{-1, 0, 1, 0, -1}
-	for len(q) > 0 {
-		for n := len(q); n > 0; n-- {
-			p := q[0]
-			q = q[1:]
-			ans = append(ans, p)
-			for k := 0; k < 4; k++ {
-				x, y := p[0]+dirs[k], p[1]+dirs[k+1]
-				if x >= 0 && x < rows && y >= 0 && y < cols && !vis[x][y] {
-					vis[x][y] = true
-					q = append(q, []int{x, y})
-				}
-			}
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -191,4 +118,4 @@ func allCellsDistOrder(rows int, cols int, rCenter int, cCenter int) (ans [][]in
 
 ```
 
-<!-- tabs:end -->
+

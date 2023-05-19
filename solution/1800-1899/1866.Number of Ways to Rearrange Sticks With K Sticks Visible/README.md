@@ -76,29 +76,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rearrangeSticks(self, n: int, k: int) -> int:
-        mod = 10**9 + 7
-        f = [[0] * (k + 1) for _ in range(n + 1)]
-        f[0][0] = 1
-        for i in range(1, n + 1):
-            for j in range(1, k + 1):
-                f[i][j] = (f[i - 1][j - 1] + f[i - 1][j] * (i - 1)) % mod
-        return f[n][k]
-```
 
-```python
-class Solution:
-    def rearrangeSticks(self, n: int, k: int) -> int:
-        mod = 10**9 + 7
-        f = [1] + [0] * k
-        for i in range(1, n + 1):
-            for j in range(k, 0, -1):
-                f[j] = (f[j] * (i - 1) + f[j - 1]) % mod
-            f[0] = 0
-        return f[k]
-```
+
+
 
 ### **Java**
 
@@ -137,78 +117,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int rearrangeSticks(int n, int k) {
-        const int mod = 1e9 + 7;
-        int f[n + 1][k + 1];
-        memset(f, 0, sizeof(f));
-        f[0][0] = 1;
-        for (int i = 1; i <= n; ++i) {
-            for (int j = 1; j <= k; ++j) {
-                f[i][j] = (f[i - 1][j - 1] + (i - 1LL) * f[i - 1][j]) % mod;
-            }
-        }
-        return f[n][k];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int rearrangeSticks(int n, int k) {
-        const int mod = 1e9 + 7;
-        int f[k + 1];
-        memset(f, 0, sizeof(f));
-        f[0] = 1;
-        for (int i = 1; i <= n; ++i) {
-            for (int j = k; j; --j) {
-                f[j] = (f[j - 1] + f[j] * (i - 1LL)) % mod;
-            }
-            f[0] = 0;
-        }
-        return f[k];
-    }
-};
-```
 
-### **Go**
 
-```go
-func rearrangeSticks(n int, k int) int {
-	const mod = 1e9 + 7
-	f := make([][]int, n+1)
-	for i := range f {
-		f[i] = make([]int, k+1)
-	}
-	f[0][0] = 1
-	for i := 1; i <= n; i++ {
-		for j := 1; j <= k; j++ {
-			f[i][j] = (f[i-1][j-1] + (i-1)*f[i-1][j]) % mod
-		}
-	}
-	return f[n][k]
-}
-```
 
-```go
-func rearrangeSticks(n int, k int) int {
-	const mod = 1e9 + 7
-	f := make([]int, k+1)
-	f[0] = 1
-	for i := 1; i <= n; i++ {
-		for j := k; j > 0; j-- {
-			f[j] = (f[j-1] + f[j]*(i-1)) % mod
-		}
-		f[0] = 0
-	}
-	return f[k]
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -216,4 +135,4 @@ func rearrangeSticks(n int, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

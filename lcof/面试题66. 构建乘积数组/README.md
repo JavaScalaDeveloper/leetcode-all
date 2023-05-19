@@ -45,20 +45,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def constructArr(self, a: List[int]) -> List[int]:
-        n = len(a)
-        ans = [0] * n
-        left = right = 1
-        for i in range(n):
-            ans[i] = left
-            left *= a[i]
-        for i in range(n - 1, -1, -1):
-            ans[i] *= right
-            right *= a[i]
-        return ans
-```
+
 
 ### **Java**
 
@@ -82,87 +69,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> constructArr(vector<int>& a) {
-        int n = a.size();
-        vector<int> ans(n);
-        for (int i = 0, left = 1; i < n; ++i) {
-            ans[i] = left;
-            left *= a[i];
-        }
-        for (int i = n - 1, right = 1; ~i; --i) {
-            ans[i] *= right;
-            right *= a[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func constructArr(a []int) []int {
-	n := len(a)
-	ans := make([]int, n)
-	for i, left := 0, 1; i < n; i++ {
-		ans[i] = left
-		left *= a[i]
-	}
-	for i, right := n-1, 1; i >= 0; i-- {
-		ans[i] *= right
-		right *= a[i]
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} a
- * @return {number[]}
- */
-var constructArr = function (a) {
-    const n = a.length;
-    const ans = new Array(n);
-    for (let i = 0, left = 1; i < n; ++i) {
-        ans[i] = left;
-        left *= a[i];
-    }
-    for (let i = n - 1, right = 1; ~i; --i) {
-        ans[i] *= right;
-        right *= a[i];
-    }
-    return ans;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[] ConstructArr(int[] a) {
-        int n = a.Length;
-        int[] ans = new int[n];
-        int left = 1, right = 1;
-        for (int i = 0; i < n; i++) {
-            ans[i] = left;
-            left *= a[i];
-        }
-        for (int i = n - 1; i > -1; i--) {
-            ans[i] *= right;
-            right *= a[i];
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -170,4 +91,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

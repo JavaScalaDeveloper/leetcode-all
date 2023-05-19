@@ -74,15 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def arrayChange(self, nums: List[int], operations: List[List[int]]) -> List[int]:
-        d = {v: i for i, v in enumerate(nums)}
-        for a, b in operations:
-            nums[d[a]] = b
-            d[b] = d[a]
-        return nums
-```
+
 
 ### **Java**
 
@@ -105,55 +97,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> arrayChange(vector<int>& nums, vector<vector<int>>& operations) {
-        unordered_map<int, int> d;
-        for (int i = 0; i < nums.size(); ++i) {
-            d[nums[i]] = i;
-        }
-        for (auto& op : operations) {
-            int a = op[0], b = op[1];
-            nums[d[a]] = b;
-            d[b] = d[a];
-        }
-        return nums;
-    }
-};
-```
 
-### **Go**
 
-```go
-func arrayChange(nums []int, operations [][]int) []int {
-	d := map[int]int{}
-	for i, v := range nums {
-		d[v] = i
-	}
-	for _, op := range operations {
-		a, b := op[0], op[1]
-		nums[d[a]] = b
-		d[b] = d[a]
-	}
-	return nums
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function arrayChange(nums: number[], operations: number[][]): number[] {
-    const d = new Map(nums.map((v, i) => [v, i]));
-    for (const [a, b] of operations) {
-        nums[d.get(a)] = b;
-        d.set(b, d.get(a));
-    }
-    return nums;
-}
-```
+
 
 ### **...**
 
@@ -161,4 +115,4 @@ function arrayChange(nums: number[], operations: number[][]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

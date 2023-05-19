@@ -54,25 +54,7 @@ region2 = &quot;New York&quot;
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findSmallestRegion(
-        self, regions: List[List[str]], region1: str, region2: str
-    ) -> str:
-        m = {}
-        for region in regions:
-            for r in region[1:]:
-                m[r] = region[0]
-        s = set()
-        while m.get(region1):
-            s.add(region1)
-            region1 = m[region1]
-        while m.get(region2):
-            if region2 in s:
-                return region2
-            region2 = m[region2]
-        return region1
-```
+
 
 ### **Java**
 
@@ -103,54 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string findSmallestRegion(vector<vector<string>>& regions, string region1, string region2) {
-        unordered_map<string, string> m;
-        for (auto& region : regions)
-            for (int i = 1; i < region.size(); ++i)
-                m[region[i]] = region[0];
-        unordered_set<string> s;
-        while (m.count(region1)) {
-            s.insert(region1);
-            region1 = m[region1];
-        }
-        while (m.count(region2)) {
-            if (s.count(region2)) return region2;
-            region2 = m[region2];
-        }
-        return region1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findSmallestRegion(regions [][]string, region1 string, region2 string) string {
-	m := make(map[string]string)
-	for _, region := range regions {
-		for i := 1; i < len(region); i++ {
-			m[region[i]] = region[0]
-		}
-	}
-	s := make(map[string]bool)
-	for region1 != "" {
-		s[region1] = true
-		region1 = m[region1]
-	}
-	for region2 != "" {
-		if s[region2] {
-			return region2
-		}
-		region2 = m[region2]
-	}
-	return region1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -158,4 +99,4 @@ func findSmallestRegion(regions [][]string, region1 string, region2 string) stri
 
 ```
 
-<!-- tabs:end -->
+

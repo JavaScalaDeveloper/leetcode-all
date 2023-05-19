@@ -62,13 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxRepeating(self, sequence: str, word: str) -> int:
-        for k in range(len(sequence) // len(word), -1, -1):
-            if word * k in sequence:
-                return k
-```
+
 
 ### **Java**
 
@@ -87,39 +81,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxRepeating(string sequence, string word) {
-        int ans = 0;
-        string t = word;
-        int x = sequence.size() / word.size();
-        for (int k = 1; k <= x; ++k) {
-            // C++ 这里从小到大枚举重复值
-            if (sequence.find(t) != string::npos) {
-                ans = k;
-            }
-            t += word;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxRepeating(sequence string, word string) int {
-	for k := len(sequence) / len(word); k > 0; k-- {
-		if strings.Contains(sequence, strings.Repeat(word, k)) {
-			return k
-		}
-	}
-	return 0
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -149,44 +117,11 @@ int maxRepeating(char *sequence, char *word) {
 
 ### **TypeScript**
 
-```ts
-function maxRepeating(sequence: string, word: string): number {
-    let n = sequence.length;
-    let m = word.length;
-    for (let k = Math.floor(n / m); k > 0; k--) {
-        if (sequence.includes(word.repeat(k))) {
-            return k;
-        }
-    }
-    return 0;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_repeating(sequence: String, word: String) -> i32 {
-        let n = sequence.len();
-        let m = word.len();
-        if n < m {
-            return 0;
-        }
-        let mut dp = vec![0; n - m + 1];
-        for i in 0..=n - m {
-            let s = &sequence[i..i + m];
-            if s == word {
-                dp[i] = if (i as i32) - (m as i32) < 0 {
-                    0
-                } else {
-                    dp[i - m]
-                } + 1;
-            }
-        }
-        *dp.iter().max().unwrap()
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -194,4 +129,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

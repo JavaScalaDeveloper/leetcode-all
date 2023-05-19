@@ -63,31 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def pathSum(self, root: TreeNode, target: int) -> List[List[int]]:
-        def dfs(root, s):
-            if root is None:
-                return
-            t.append(root.val)
-            s -= root.val
-            if root.left is None and root.right is None and s == 0:
-                ans.append(t[:])
-            dfs(root.left, s)
-            dfs(root.right, s)
-            t.pop()
 
-        ans = []
-        t = []
-        dfs(root, target)
-        return ans
-```
 
 ### **Java**
 
@@ -134,309 +110,31 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<vector<int>> pathSum(TreeNode* root, int target) {
-        vector<vector<int>> ans;
-        vector<int> t;
-        function<void(TreeNode* root, int s)> dfs = [&](TreeNode* root, int s) {
-            if (!root) {
-                return;
-            }
-            t.push_back(root->val);
-            s -= root->val;
-            if (!root->left && !root->right && !s) {
-                ans.push_back(t);
-            }
-            dfs(root->left, s);
-            dfs(root->right, s);
-            t.pop_back();
-        };
-        dfs(root, target);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func pathSum(root *TreeNode, target int) (ans [][]int) {
-	t := []int{}
-	var dfs func(*TreeNode, int)
-	dfs = func(root *TreeNode, s int) {
-		if root == nil {
-			return
-		}
-		t = append(t, root.Val)
-		s -= root.Val
-		if root.Left == nil && root.Right == nil && s == 0 {
-			cp := make([]int, len(t))
-			copy(cp, t)
-			ans = append(ans, cp)
-		}
-		dfs(root.Left, s)
-		dfs(root.Right, s)
-		t = t[:len(t)-1]
-	}
-	dfs(root, target)
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @param {number} target
- * @return {number[][]}
- */
-var pathSum = function (root, target) {
-    const ans = [];
-    const t = [];
-    const dfs = (root, s) => {
-        if (!root) {
-            return;
-        }
-        t.push(root.val);
-        s -= root.val;
-        if (!root.left && !root.right && !s) {
-            ans.push([...t]);
-        }
-        dfs(root.left, s);
-        dfs(root.right, s);
-        t.pop();
-    };
-    dfs(root, target);
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function pathSum(root: TreeNode | null, target: number): number[][] {
-    const res: number[][] = [];
-    if (root == null) {
-        return res;
-    }
-    const paths: number[] = [];
-    const dfs = ({ val, right, left }: TreeNode, target: number) => {
-        paths.push(val);
-        target -= val;
-        if (left == null && right == null) {
-            if (target === 0) {
-                res.push([...paths]);
-            }
-        } else {
-            left && dfs(left, target);
-            right && dfs(right, target);
-        }
-        paths.pop();
-    };
-    dfs(root, target);
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    fn dfs(
-        root: &Option<Rc<RefCell<TreeNode>>>,
-        mut target: i32,
-        paths: &mut Vec<i32>,
-        res: &mut Vec<Vec<i32>>,
-    ) {
-        if let Some(node) = root.as_ref() {
-            let node = node.borrow();
-            paths.push(node.val);
-            target -= node.val;
-            if node.left.is_none() && node.right.is_none() && target == 0 {
-                res.push(paths.clone());
-            }
-            Self::dfs(&node.left, target, paths, res);
-            Self::dfs(&node.right, target, paths, res);
-            paths.pop();
-        }
-    }
 
-    pub fn path_sum(root: Option<Rc<RefCell<TreeNode>>>, target: i32) -> Vec<Vec<i32>> {
-        let mut res = vec![];
-        Self::dfs(&root, target, &mut vec![], &mut res);
-        res
-    }
-}
-```
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    fn dfs(
-        root: &Option<Rc<RefCell<TreeNode>>>,
-        mut target: i32,
-        paths: &mut Vec<i32>,
-    ) -> Vec<Vec<i32>> {
-        let node = root.as_ref().unwrap().borrow();
-        paths.push(node.val);
-        target -= node.val;
-        let mut res = vec![];
-        // 确定叶结点身份
-        if node.left.is_none() && node.right.is_none() {
-            if target == 0 {
-                res.push(paths.clone());
-            }
-        } else {
-            if node.left.is_some() {
-                let res_l = Self::dfs(&node.left, target, paths);
-                if !res_l.is_empty() {
-                    res = [res, res_l].concat();
-                }
-            }
-            if node.right.is_some() {
-                let res_r = Self::dfs(&node.right, target, paths);
-                if !res_r.is_empty() {
-                    res = [res, res_r].concat();
-                }
-            }
-        }
-        paths.pop();
-        res
-    }
-    pub fn path_sum(root: Option<Rc<RefCell<TreeNode>>>, target: i32) -> Vec<Vec<i32>> {
-        if root.is_none() {
-            return vec![];
-        }
-        Self::dfs(&root, target, &mut vec![])
-    }
-}
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-public class Solution {
-    private List<IList<int>> ans = new List<IList<int>>();
-    private List<int> t = new List<int>();
 
-    public IList<IList<int>> PathSum(TreeNode root, int target) {
-        dfs(root, target);
-        return ans;
-    }
 
-    private void dfs(TreeNode root, int s) {
-        if (root == null) {
-            return;
-        }
-        t.Add(root.val);
-        s -= root.val;
-        if (root.left == null && root.right == null && s == 0) {
-            ans.Add(new List<int>(t));
-        }
-        dfs(root.left, s);
-        dfs(root.right, s);
-        t.RemoveAt(t.Count - 1);
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -444,4 +142,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

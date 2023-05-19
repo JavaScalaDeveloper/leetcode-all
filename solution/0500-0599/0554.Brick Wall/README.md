@@ -51,19 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def leastBricks(self, wall: List[List[int]]) -> int:
-        cnt = defaultdict(int)
-        for row in wall:
-            width = 0
-            for brick in row[:-1]:
-                width += brick
-                cnt[width] += 1
-        if not cnt:
-            return len(wall)
-        return len(wall) - cnt[max(cnt, key=cnt.get)]
-```
+
 
 ### **Java**
 
@@ -86,51 +74,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func leastBricks(wall [][]int) int {
-	cnt := make(map[int]int)
-	for _, row := range wall {
-        width := 0
-		for _, brick := range row[:len(row)-1] {
-            width += brick
-			cnt[width]++
-		}
-	}
-	max := 0
-	for _, v := range cnt {
-		if v > max {
-			max = v
-		}
-	}
-	return len(wall) - max
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} wall
- * @return {number}
- */
-var leastBricks = function (wall) {
-    const cnt = new Map();
-    for (const row of wall) {
-        let width = 0;
-        for (let i = 0, n = row.length - 1; i < n; ++i) {
-            width += row[i];
-            cnt.set(width, (cnt.get(width) || 0) + 1);
-        }
-    }
-    let max = 0;
-    for (const v of cnt.values()) {
-        max = Math.max(max, v);
-    }
-    return wall.length - max;
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -138,4 +88,4 @@ var leastBricks = function (wall) {
 
 ```
 
-<!-- tabs:end -->
+

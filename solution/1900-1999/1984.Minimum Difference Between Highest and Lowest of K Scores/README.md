@@ -57,12 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumDifference(self, nums: List[int], k: int) -> int:
-        nums.sort()
-        return min(nums[i + k - 1] - nums[i] for i in range(len(nums) - k + 1))
-```
+
 
 ### **Java**
 
@@ -83,68 +78,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function minimumDifference(nums: number[], k: number): number {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    let ans = nums[n - 1] - nums[0];
-    for (let i = 0; i + k - 1 < n; i++) {
-        ans = Math.min(nums[i + k - 1] - nums[i], ans);
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumDifference(vector<int>& nums, int k) {
-        sort(nums.begin(), nums.end());
-        int ans = 1e5;
-        for (int i = 0; i < nums.size() - k + 1; ++i)
-            ans = min(ans, nums[i + k - 1] - nums[i]);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumDifference(nums []int, k int) int {
-	sort.Ints(nums)
-	ans := 100000
-	for i := 0; i < len(nums)-k+1; i++ {
-		ans = min(ans, nums[i+k-1]-nums[i])
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn minimum_difference(mut nums: Vec<i32>, k: i32) -> i32 {
-        nums.sort();
-        let k = k as usize;
-        let mut res = i32::MAX;
-        for i in 0..=nums.len() - k {
-            res = res.min(nums[i + k - 1] - nums[i]);
-        }
-        res
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -152,4 +98,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

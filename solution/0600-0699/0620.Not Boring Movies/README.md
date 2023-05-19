@@ -55,4 +55,4 @@ WHERE description NOT LIKE '%boring%'
 ORDER BY rating desc;
 ```
 
-<!-- tabs:end -->
+

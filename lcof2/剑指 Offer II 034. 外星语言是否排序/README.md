@@ -59,27 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isAlienSorted(self, words: List[str], order: str) -> bool:
-        index = {c: i for i, c in enumerate(order)}
-        for i in range(len(words) - 1):
-            w1, w2 = words[i], words[i + 1]
-            l1, l2 = len(w1), len(w2)
-            flag = False
-            for j in range(max(l1, l2)):
-                i1, i2 = (
-                    -1 if j >= l1 else index[w1[j]],
-                    -1 if j >= l2 else index[w2[j]],
-                )
-                if i1 > i2:
-                    # 说明不是按字典序排序，直接返回False
-                    return False
-                if i1 < i2:
-                    # 说明当前两单词是按字典序排序，无需再往下进行循环比较
-                    break
-        return True
-```
+
 
 ### **Java**
 
@@ -116,90 +96,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function isAlienSorted(words: string[], order: string): boolean {
-    let charMap = new Map();
-    for (let i = 0; i < order.length; i++) {
-        charMap.set(order[i], i);
-    }
-    function compare(str1: string, str2: string): boolean {
-        const n = Math.min(str1.length, str2.length);
-        for (let i = 0; i < n; i++) {
-            let k1 = str1[i],
-                k2 = str2[i];
-            if (k1 != k2) return charMap.get(k1) < charMap.get(k2);
-        }
-        return n == str1.length;
-    }
-    for (let i = 1; i < words.length; i++) {
-        if (!compare(words[i - 1], words[i])) return false;
-    }
-    return true;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isAlienSorted(vector<string>& words, string order) {
-        vector<int> index(26);
-        for (int i = 0; i < index.size(); ++i)
-            index[order[i] - 'a'] = i;
-        for (int i = 0; i < words.size() - 1; ++i) {
-            string w1 = words[i];
-            string w2 = words[i + 1];
-            int l1 = w1.size(), l2 = w2.size();
-            for (int j = 0; j < max(l1, l2); ++j) {
-                int i1 = j >= l1 ? -1 : index[w1[j] - 'a'];
-                int i2 = j >= l2 ? -1 : index[w2[j] - 'a'];
-                if (i1 > i2)
-                    return false;
-                if (i1 < i2)
-                    break;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isAlienSorted(words []string, order string) bool {
-	index := make(map[byte]int)
-	for i := range order {
-		index[order[i]] = i
-	}
-	for i := 0; i < len(words)-1; i++ {
-		w1, w2 := words[i], words[i+1]
-		l1, l2 := len(w1), len(w2)
-		flag := true
-		for j := 0; j < min(l1, l2) && flag; j++ {
-			i1, i2 := index[w1[j]], index[w2[j]]
-			if i1 > i2 {
-				return false
-			}
-			if i1 < i2 {
-				flag = false
-			}
-		}
-		if flag && l1 > l2 {
-			return false
-		}
-	}
-	return true
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -207,4 +112,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

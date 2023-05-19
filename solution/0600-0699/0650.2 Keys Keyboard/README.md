@@ -76,36 +76,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minSteps(self, n: int) -> int:
-        @cache
-        def dfs(n):
-            if n == 1:
-                return 0
-            i, ans = 2, n
-            while i * i <= n:
-                if n % i == 0:
-                    ans = min(ans, dfs(n // i) + i)
-                i += 1
-            return ans
 
-        return dfs(n)
-```
 
-```python
-class Solution:
-    def minSteps(self, n: int) -> int:
-        dp = list(range(n + 1))
-        dp[1] = 0
-        for i in range(2, n + 1):
-            j = 2
-            while j * j <= i:
-                if i % j == 0:
-                    dp[i] = min(dp[i], dp[i // j] + j)
-                j += 1
-        return dp[-1]
-```
+
 
 ### **Java**
 
@@ -175,111 +148,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> f;
 
-    int minSteps(int n) {
-        f.assign(n + 1, -1);
-        return dfs(n);
-    }
 
-    int dfs(int n) {
-        if (n == 1) return 0;
-        if (f[n] != -1) return f[n];
-        int ans = n;
-        for (int i = 2; i * i <= n; ++i) {
-            if (n % i == 0) {
-                ans = min(ans, dfs(n / i) + i);
-            }
-        }
-        f[n] = ans;
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int minSteps(int n) {
-        vector<int> dp(n + 1);
-        iota(dp.begin(), dp.end(), 0);
-        dp[1] = 0;
-        for (int i = 2; i < n + 1; ++i) {
-            for (int j = 2; j * j <= i; ++j) {
-                if (i % j == 0) {
-                    dp[i] = min(dp[i], dp[i / j] + j);
-                }
-            }
-        }
-        return dp[n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func minSteps(n int) int {
-	f := make([]int, n+1)
-	for i := range f {
-		f[i] = -1
-	}
-	var dfs func(int) int
-	dfs = func(n int) int {
-		if n == 1 {
-			return 0
-		}
-		if f[n] != -1 {
-			return f[n]
-		}
-		ans := n
-		for i := 2; i*i <= n; i++ {
-			if n%i == 0 {
-				ans = min(ans, dfs(n/i)+i)
-			}
-		}
-		return ans
-	}
-	return dfs(n)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func minSteps(n int) int {
-	dp := make([]int, n+1)
-	for i := range dp {
-		dp[i] = i
-	}
-	dp[1] = 0
-	for i := 2; i < n+1; i++ {
-		for j := 2; j*j <= i; j++ {
-			if i%j == 0 {
-				dp[i] = min(dp[i], dp[i/j]+j)
-			}
-		}
-	}
-	return dp[n]
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -287,4 +166,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

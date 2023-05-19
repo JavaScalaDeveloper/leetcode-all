@@ -102,25 +102,9 @@ HAMMING-WEIGHT(n)
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def hammingWeight(self, n: int) -> int:
-        ans = 0
-        while n:
-            n &= n - 1
-            ans += 1
-        return ans
-```
 
-```python
-class Solution:
-    def hammingWeight(self, n: int) -> int:
-        ans = 0
-        while n:
-            n -= (n & -n)
-            ans += 1
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -154,99 +138,27 @@ public class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int hammingWeight(uint32_t n) {
-        int ans = 0;
-        while (n) {
-            n &= n - 1;
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int hammingWeight(uint32_t n) {
-        int ans = 0;
-        while (n) {
-            n -= (n & -n);
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func hammingWeight(num uint32) int {
-	ans := 0
-	for num != 0 {
-		num &= num - 1
-		ans++
-	}
-	return ans
-}
-```
 
-```go
-func hammingWeight(num uint32) int {
-	ans := 0
-	for num != 0 {
-		num -= (num & -num)
-		ans++
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n - a positive integer
- * @return {number}
- */
-var hammingWeight = function (n) {
-    let ans = 0;
-    while (n) {
-        n &= n - 1;
-        ++ans;
-    }
-    return ans;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn hammingWeight(n: u32) -> i32 {
-        n.count_ones() as i32
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn hammingWeight(mut n: u32) -> i32 {
-        let mut res = 0;
-        while n != 0 {
-            n &= n - 1;
-            res += 1;
-        }
-        res
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
+
 
 ### **C**
 
@@ -267,4 +179,4 @@ int hammingWeight(uint32_t n) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -57,20 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minSubsequence(self, nums: List[int]) -> List[int]:
-        nums.sort(reverse=True)
-        s = sum(nums)
-        ans = []
-        t = 0
-        for v in nums:
-            ans.append(v)
-            t += v
-            if t > s - t:
-                break
-        return ans
-```
+
 
 ### **Java**
 
@@ -98,87 +85,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> minSubsequence(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int s = 0;
-        for (int v : nums) s += v;
-        int t = 0;
-        vector<int> ans;
-        for (int i = nums.size() - 1; ~i; --i) {
-            t += nums[i];
-            ans.push_back(nums[i]);
-            if (t > s - t) break;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minSubsequence(nums []int) []int {
-	sort.Ints(nums)
-	s, t := 0, 0
-	for _, v := range nums {
-		s += v
-	}
-	ans := []int{}
-	for i := len(nums) - 1; i >= 0; i-- {
-		t += nums[i]
-		ans = append(ans, nums[i])
-		if t > s-t {
-			break
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minSubsequence(nums: number[]): number[] {
-    nums.sort((a, b) => b - a);
-    const sum = nums.reduce((r, c) => r + c);
-    const res: number[] = [];
-    let t = 0;
-    for (const num of nums) {
-        t += num;
-        res.push(num);
-        if (t > sum - t) {
-            break;
-        }
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_subsequence(mut nums: Vec<i32>) -> Vec<i32> {
-        nums.sort_by(|a, b| b.cmp(a));
-        let sum = nums.iter().sum::<i32>();
-        let mut res = vec![];
-        let mut t = 0;
-        for num in nums.into_iter() {
-            t += num;
-            res.push(num);
-            if t > sum - t {
-                break;
-            }
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -186,4 +107,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -80,24 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def deleteTreeNodes(self, nodes: int, parent: List[int], value: List[int]) -> int:
-        def dfs(i):
-            s, m = value[i], 1
-            for j in g[i]:
-                t, n = dfs(j)
-                s += t
-                m += n
-            if s == 0:
-                m = 0
-            return (s, m)
 
-        g = defaultdict(list)
-        for i in range(1, nodes):
-            g[parent[i]].append(i)
-        return dfs(0)[1]
-```
 
 ### **Java**
 
@@ -133,58 +116,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int deleteTreeNodes(int nodes, vector<int>& parent, vector<int>& value) {
-        vector<vector<int>> g(nodes);
-        for (int i = 1; i < nodes; ++i) {
-            g[parent[i]].emplace_back(i);
-        }
-        function<pair<int, int>(int)> dfs = [&](int i) -> pair<int, int> {
-            int s = value[i], m = 1;
-            for (int j : g[i]) {
-                auto [t, n] = dfs(j);
-                s += t;
-                m += n;
-            }
-            if (s == 0) {
-                m = 0;
-            }
-            return pair<int, int>{s, m};
-        };
-        return dfs(0).second;
-    }
-};
-```
 
-### **Go**
 
-```go
-func deleteTreeNodes(nodes int, parent []int, value []int) int {
-	g := make([][]int, nodes)
-	for i := 1; i < nodes; i++ {
-		g[parent[i]] = append(g[parent[i]], i)
-	}
-	type pair struct{ s, n int }
-	var dfs func(int) pair
-	dfs = func(i int) pair {
-		s, m := value[i], 1
-		for _, j := range g[i] {
-			t := dfs(j)
-			s += t.s
-			m += t.n
-		}
-		if s == 0 {
-			m = 0
-		}
-		return pair{s, m}
-	}
-	return dfs(0).n
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -192,4 +130,4 @@ func deleteTreeNodes(nodes int, parent []int, value []int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -77,25 +77,7 @@ DFS 记忆化搜索。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkIfPrerequisite(
-        self, numCourses: int, prerequisites: List[List[int]], queries: List[List[int]]
-    ) -> List[bool]:
-        @cache
-        def dfs(a, b):
-            if b in g[a] or a == b:
-                return True
-            for c in g[a]:
-                if dfs(c, b):
-                    return True
-            return False
 
-        g = defaultdict(set)
-        for a, b in prerequisites:
-            g[a].add(b)
-        return [dfs(a, b) for a, b in queries]
-```
 
 ### **Java**
 
@@ -141,84 +123,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<bool> checkIfPrerequisite(int numCourses, vector<vector<int>>& prerequisites, vector<vector<int>>& queries) {
-        vector<vector<int>> g(numCourses, vector<int>(numCourses, -1));
-        for (auto& e : prerequisites) {
-            int a = e[0], b = e[1];
-            g[a][b] = 1;
-        }
-        vector<bool> ans;
-        for (auto& e : queries) {
-            int a = e[0], b = e[1];
-            ans.push_back(dfs(a, b, g));
-        }
-        return ans;
-    }
 
-    bool dfs(int a, int b, vector<vector<int>>& g) {
-        if (g[a][b] != -1) return g[a][b] == 1;
-        if (a == b) {
-            g[a][b] = 1;
-            return true;
-        }
-        for (int i = 0; i < g[a].size(); ++i) {
-            if (g[a][i] == 1 && dfs(i, b, g)) {
-                g[a][b] = 1;
-                return true;
-            }
-        }
-        g[a][b] = 0;
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkIfPrerequisite(numCourses int, prerequisites [][]int, queries [][]int) []bool {
-	g := make([][]int, numCourses)
-	for i := range g {
-		g[i] = make([]int, numCourses)
-		for j := range g[i] {
-			g[i][j] = -1
-		}
-	}
-	for _, e := range prerequisites {
-		a, b := e[0], e[1]
-		g[a][b] = 1
-	}
-	var ans []bool
-	var dfs func(a, b int) bool
-	dfs = func(a, b int) bool {
-		if g[a][b] != -1 {
-			return g[a][b] == 1
-		}
-		if a == b {
-			g[a][b] = 1
-			return true
-		}
-		for i, c := range g[a] {
-			if c == 1 && dfs(i, b) {
-				g[a][b] = 1
-				return true
-			}
-		}
-		g[a][b] = 0
-		return false
-	}
-	for _, e := range queries {
-		a, b := e[0], e[1]
-		ans = append(ans, dfs(a, b))
-	}
-	return ans
-}
-```
+
+
+
 
 ### **...**
 
@@ -226,4 +137,4 @@ func checkIfPrerequisite(numCourses int, prerequisites [][]int, queries [][]int)
 
 ```
 
-<!-- tabs:end -->
+

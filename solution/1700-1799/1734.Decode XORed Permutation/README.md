@@ -53,21 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def decode(self, encoded: List[int]) -> List[int]:
-        n = len(encoded) + 1
-        a = b = 0
-        for i in range(0, n - 1, 2):
-            a ^= encoded[i]
-        for i in range(1, n + 1):
-            b ^= i
-        perm = [0] * n
-        perm[-1] = a ^ b
-        for i in range(n - 2, -1, -1):
-            perm[i] = encoded[i] ^ perm[i + 1]
-        return perm
-```
+
 
 ### **Java**
 
@@ -94,50 +80,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> decode(vector<int>& encoded) {
-        int n = encoded.size() + 1;
-        int a = 0, b = 0;
-        for (int i = 0; i < n - 1; i += 2) {
-            a ^= encoded[i];
-        }
-        for (int i = 1; i <= n; ++i) {
-            b ^= i;
-        }
-        vector<int> perm(n);
-        perm[n - 1] = a ^ b;
-        for (int i = n - 2; ~i; --i) {
-            perm[i] = encoded[i] ^ perm[i + 1];
-        }
-        return perm;
-    }
-};
-```
 
-### **Go**
 
-```go
-func decode(encoded []int) []int {
-	n := len(encoded) + 1
-	a, b := 0, 0
-	for i := 0; i < n-1; i += 2 {
-		a ^= encoded[i]
-	}
-	for i := 1; i <= n; i++ {
-		b ^= i
-	}
-	perm := make([]int, n)
-	perm[n-1] = a ^ b
-	for i := n - 2; i >= 0; i-- {
-		perm[i] = encoded[i] ^ perm[i+1]
-	}
-	return perm
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -145,4 +94,4 @@ func decode(encoded []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

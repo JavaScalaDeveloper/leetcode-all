@@ -70,15 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numTimesAllBlue(self, flips: List[int]) -> int:
-        ans = mx = 0
-        for i, x in enumerate(flips, 1):
-            mx = max(mx, x)
-            ans += mx == i
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,59 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numTimesAllBlue(vector<int>& flips) {
-        int ans = 0, mx = 0;
-        for (int i = 1; i <= flips.size(); ++i) {
-            mx = max(mx, flips[i - 1]);
-            ans += mx == i;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numTimesAllBlue(flips []int) (ans int) {
-	mx := 0
-	for i, x := range flips {
-		mx = max(mx, x)
-		if mx == i+1 {
-			ans++
-		}
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numTimesAllBlue(flips: number[]): number {
-    let ans = 0;
-    let mx = 0;
-    for (let i = 1; i <= flips.length; ++i) {
-        mx = Math.max(mx, flips[i - 1]);
-        if (mx === i) {
-            ++ans;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -159,4 +109,4 @@ function numTimesAllBlue(flips: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

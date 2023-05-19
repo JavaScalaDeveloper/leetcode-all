@@ -69,4 +69,4 @@ LEFT JOIN activity b
 ON a.player_id = b.player_id AND DATEDIFF( a.event_date, b.event_date ) = -1
 ```
 
-<!-- tabs:end -->
+

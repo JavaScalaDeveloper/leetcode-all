@@ -56,15 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
-        d = [0] * 1001
-        for x, f, t in trips:
-            d[f] += x
-            d[t] -= x
-        return all(s <= capacity for s in accumulate(d))
-```
+
 
 ### **Java**
 
@@ -91,95 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool carPooling(vector<vector<int>>& trips, int capacity) {
-        int d[1001]{};
-        for (auto& trip : trips) {
-            int x = trip[0], f = trip[1], t = trip[2];
-            d[f] += x;
-            d[t] -= x;
-        }
-        int s = 0;
-        for (int x : d) {
-            s += x;
-            if (s > capacity) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func carPooling(trips [][]int, capacity int) bool {
-	d := [1001]int{}
-	for _, trip := range trips {
-		x, f, t := trip[0], trip[1], trip[2]
-		d[f] += x
-		d[t] -= x
-	}
-	s := 0
-	for _, x := range d {
-		s += x
-		if s > capacity {
-			return false
-		}
-	}
-	return true
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} trips
- * @param {number} capacity
- * @return {boolean}
- */
-var carPooling = function (trips, capacity) {
-    const d = new Array(1001).fill(0);
-    for (const [x, f, t] of trips) {
-        d[f] += x;
-        d[t] -= x;
-    }
-    let s = 0;
-    for (const x of d) {
-        s += x;
-        if (s > capacity) {
-            return false;
-        }
-    }
-    return true;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function carPooling(trips: number[][], capacity: number): boolean {
-    const d = new Array(1001).fill(0);
-    for (const [x, f, t] of trips) {
-        d[f] += x;
-        d[t] -= x;
-    }
-    let s = 0;
-    for (const x of d) {
-        s += x;
-        if (s > capacity) {
-            return false;
-        }
-    }
-    return true;
-}
-```
+
 
 ### **...**
 
@@ -187,4 +105,4 @@ function carPooling(trips: number[][], capacity: number): boolean {
 
 ```
 
-<!-- tabs:end -->
+

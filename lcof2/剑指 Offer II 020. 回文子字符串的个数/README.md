@@ -60,40 +60,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSubstrings(self, s: str) -> int:
-        def f(i, j):
-            cnt = 0
-            while i >= 0 and j < n:
-                if s[i] != s[j]:
-                    break
-                cnt += 1
-                i, j = i - 1, j + 1
-            return cnt
 
-        n = len(s)
-        return sum(f(i, i) + f(i, i + 1) for i in range(n))
-```
 
-```python
-class Solution:
-    def countSubstrings(self, s: str) -> int:
-        t = '^#' + '#'.join(s) + '#$'
-        n = len(t)
-        p = [0 for _ in range(n)]
-        pos, maxRight = 0, 0
-        ans = 0
-        for i in range(1, n - 1):
-            p[i] = min(maxRight - i, p[2 * pos - i]) if maxRight > i else 1
-            while t[i - p[i]] == t[i + p[i]]:
-                p[i] += 1
-            if i + p[i] > maxRight:
-                maxRight = i + p[i]
-                pos = i
-            ans += p[i] // 2
-        return ans
-```
+
 
 ### **Java**
 
@@ -151,47 +120,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countSubstrings(string s) {
-        int ans = 0;
-        int n = s.size();
-        auto f = [&](int i, int j) -> int {
-            int cnt = 0;
-            for (; i >= 0 && j < n && s[i] == s[j]; --i, ++j) {
-                ++cnt;
-            }
-            return cnt;
-        };
-        for (int i = 0; i < n; ++i) {
-            ans += f(i, i) + f(i, i + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSubstrings(s string) (ans int) {
-	n := len(s)
-	f := func(i, j int) (cnt int) {
-		for ; i >= 0 && j < n && s[i] == s[j]; i, j = i-1, j+1 {
-			cnt++
-		}
-		return
-	}
-	for i := range s {
-		ans += f(i, i)
-		ans += f(i, i+1)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -199,4 +134,4 @@ func countSubstrings(s string) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

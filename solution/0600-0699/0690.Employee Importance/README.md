@@ -44,30 +44,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for Employee.
-class Employee:
-    def __init__(self, id: int, importance: int, subordinates: List[int]):
-        self.id = id
-        self.importance = importance
-        self.subordinates = subordinates
-"""
 
-
-class Solution:
-    def getImportance(self, employees: List['Employee'], id: int) -> int:
-        m = {emp.id: emp for emp in employees}
-
-        def dfs(id: int) -> int:
-            emp = m[id]
-            s = emp.importance
-            for sub in emp.subordinates:
-                s += dfs(sub)
-            return s
-
-        return dfs(id)
-```
 
 ### **Java**
 
@@ -105,39 +82,9 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for Employee.
- * function Employee(id, importance, subordinates) {
- *     this.id = id;
- *     this.importance = importance;
- *     this.subordinates = subordinates;
- * }
- */
 
-/**
- * @param {Employee[]} employees
- * @param {number} id
- * @return {number}
- */
-var GetImportance = function (employees, id) {
-    const map = new Map();
-    for (const employee of employees) {
-        map.set(employee.id, employee);
-    }
-    const dfs = id => {
-        const employee = map.get(id);
-        let sum = employee.importance;
-        for (const subId of employee.subordinates) {
-            sum += dfs(subId);
-        }
-        return sum;
-    };
-    return dfs(id);
-};
-```
+
 
 ### **...**
 
@@ -145,4 +92,4 @@ var GetImportance = function (employees, id) {
 
 ```
 
-<!-- tabs:end -->
+

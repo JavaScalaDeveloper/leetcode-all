@@ -57,15 +57,7 @@ $$
 
 ### **Python3**
 
-```python
-class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        ans, f = -inf, 0
-        for x in nums:
-            f = max(f, 0) + x
-            ans = max(ans, f)
-        return ans
-```
+
 
 ### **Java**
 
@@ -83,104 +75,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxSubArray(vector<int>& nums) {
-        int ans = INT_MIN;
-        int f = 0;
-        for (int& x : nums) {
-            f = max(f, 0) + x;
-            ans = max(ans, f);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxSubArray(nums []int) int {
-	ans, f := -1000000000, 0
-	for _, x := range nums {
-		f = max(f, 0) + x
-		ans = max(ans, f)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var maxSubArray = function (nums) {
-    let ans = -1e10;
-    let f = 0;
-    for (const x of nums) {
-        f = Math.max(f, 0) + x;
-        ans = Math.max(ans, f);
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxSubArray(nums: number[]): number {
-    let res = nums[0];
-    for (let i = 1; i < nums.length; i++) {
-        nums[i] = Math.max(nums[i], nums[i - 1] + nums[i]);
-        res = Math.max(res, nums[i]);
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_sub_array(mut nums: Vec<i32>) -> i32 {
-        let mut res = nums[0];
-        for i in 1..nums.len() {
-            nums[i] = nums[i].max(nums[i - 1] + nums[i]);
-            res = res.max(nums[i]);
-        }
-        res
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MaxSubArray(int[] nums) {
-        int ans = -1000000000;
-        int f = 0;
-        foreach (int x in nums) {
-            f = Math.Max(f, 0) + x;
-            ans = Math.Max(ans, f);
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -188,4 +105,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

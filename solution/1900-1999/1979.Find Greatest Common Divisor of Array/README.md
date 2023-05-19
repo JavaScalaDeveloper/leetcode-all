@@ -67,11 +67,7 @@ nums 中最大的数是 3
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findGCD(self, nums: List[int]) -> int:
-        return gcd(max(nums), min(nums))
-```
+
 
 ### **Java**
 
@@ -94,63 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findGCD(vector<int>& nums) {
-        int a = *max_element(nums.begin(), nums.end());
-        int b = *min_element(nums.begin(), nums.end());
-        return gcd(a, b);
-    }
-};
-```
 
-### **Go**
 
-```go
-func findGCD(nums []int) int {
-	a, b := 1, 1000
-	for _, x := range nums {
-		if a < x {
-			a = x
-		}
-		if b > x {
-			b = x
-		}
-	}
-	return gcd(a, b)
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findGCD(nums: number[]): number {
-    let a = 1;
-    let b = 1000;
-    for (const x of nums) {
-        a = Math.max(a, x);
-        b = Math.min(b, x);
-    }
-    return gcd(a, b);
-}
 
-function gcd(a: number, b: number): number {
-    if (b == 0) {
-        return a;
-    }
-    return gcd(b, a % b);
-}
-```
 
 ### **...**
 
@@ -158,4 +108,4 @@ function gcd(a: number, b: number): number {
 
 ```
 
-<!-- tabs:end -->
+

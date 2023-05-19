@@ -65,24 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canBeIncreasing(self, nums: List[int]) -> bool:
-        def check(nums, i):
-            prev = -inf
-            for j, num in enumerate(nums):
-                if i == j:
-                    continue
-                if prev >= nums[j]:
-                    return False
-                prev = nums[j]
-            return True
 
-        i, n = 1, len(nums)
-        while i < n and nums[i - 1] < nums[i]:
-            i += 1
-        return check(nums, i - 1) or check(nums, i)
-```
 
 ### **Java**
 
@@ -113,55 +96,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canBeIncreasing(vector<int>& nums) {
-        int i = 1, n = nums.size();
-        for (; i < n && nums[i - 1] < nums[i]; ++i)
-            ;
-        return check(nums, i - 1) || check(nums, i);
-    }
 
-    bool check(vector<int>& nums, int i) {
-        int prev = 0;
-        for (int j = 0; j < nums.size(); ++j) {
-            if (i == j) continue;
-            if (prev >= nums[j]) return false;
-            prev = nums[j];
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canBeIncreasing(nums []int) bool {
-	i, n := 1, len(nums)
-	for ; i < n && nums[i-1] < nums[i]; i++ {
 
-	}
-	return check(nums, i-1) || check(nums, i)
-}
 
-func check(nums []int, i int) bool {
-	prev := 0
-	for j := 0; j < len(nums); j++ {
-		if i == j {
-			continue
-		}
-		if prev >= nums[j] {
-			return false
-		}
-		prev = nums[j]
-	}
-	return true
-}
-```
+
 
 ### **...**
 
@@ -169,4 +110,4 @@ func check(nums []int, i int) bool {
 
 ```
 
-<!-- tabs:end -->
+

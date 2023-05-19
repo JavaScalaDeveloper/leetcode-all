@@ -62,25 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def colorTheArray(self, n: int, queries: List[List[int]]) -> List[int]:
-        nums = [0] * n
-        ans = [0] * len(queries)
-        x = 0
-        for k, (i, c) in enumerate(queries):
-            if i > 0 and nums[i] and nums[i - 1] == nums[i]:
-                x -= 1
-            if i < n - 1 and nums[i] and nums[i + 1] == nums[i]:
-                x -= 1
-            if i > 0 and nums[i - 1] == c:
-                x += 1
-            if i < n - 1 and nums[i + 1] == c:
-                x += 1
-            ans[k] = x
-            nums[i] = c
-        return ans
-```
+
 
 ### **Java**
 
@@ -114,90 +96,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> colorTheArray(int n, vector<vector<int>>& queries) {
-        vector<int> nums(n);
-        vector<int> ans;
-        int x = 0;
-        for (auto& q : queries) {
-            int i = q[0], c = q[1];
-            if (i > 0 && nums[i] > 0 && nums[i - 1] == nums[i]) {
-                --x;
-            }
-            if (i < n - 1 && nums[i] > 0 && nums[i + 1] == nums[i]) {
-                --x;
-            }
-            if (i > 0 && nums[i - 1] == c) {
-                ++x;
-            }
-            if (i < n - 1 && nums[i + 1] == c) {
-                ++x;
-            }
-            ans.push_back(x);
-            nums[i] = c;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func colorTheArray(n int, queries [][]int) (ans []int) {
-	nums := make([]int, n)
-	x := 0
-	for _, q := range queries {
-		i, c := q[0], q[1]
-		if i > 0 && nums[i] > 0 && nums[i-1] == nums[i] {
-			x--
-		}
-		if i < n-1 && nums[i] > 0 && nums[i+1] == nums[i] {
-			x--
-		}
-		if i > 0 && nums[i-1] == c {
-			x++
-		}
-		if i < n-1 && nums[i+1] == c {
-			x++
-		}
-		ans = append(ans, x)
-		nums[i] = c
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function colorTheArray(n: number, queries: number[][]): number[] {
-    const nums: number[] = new Array(n).fill(0);
-    const ans: number[] = [];
-    let x = 0;
-    for (const [i, c] of queries) {
-        if (i > 0 && nums[i] > 0 && nums[i - 1] == nums[i]) {
-            --x;
-        }
-        if (i < n - 1 && nums[i] > 0 && nums[i + 1] == nums[i]) {
-            --x;
-        }
-        if (i > 0 && nums[i - 1] == c) {
-            ++x;
-        }
-        if (i < n - 1 && nums[i + 1] == c) {
-            ++x;
-        }
-        ans.push(x);
-        nums[i] = c;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -205,4 +114,4 @@ function colorTheArray(n: number, queries: number[][]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

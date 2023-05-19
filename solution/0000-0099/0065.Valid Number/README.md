@@ -99,37 +99,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isNumber(self, s: str) -> bool:
-        n = len(s)
-        i = 0
-        if s[i] in '+-':
-            i += 1
-        if i == n:
-            return False
-        if s[i] == '.' and (i + 1 == n or s[i + 1] in 'eE'):
-            return False
-        dot = e = 0
-        j = i
-        while j < n:
-            if s[j] == '.':
-                if e or dot:
-                    return False
-                dot += 1
-            elif s[j] in 'eE':
-                if e or j == i or j == n - 1:
-                    return False
-                e += 1
-                if s[j + 1] in '+-':
-                    j += 1
-                    if j == n - 1:
-                        return False
-            elif not s[j].isnumeric():
-                return False
-            j += 1
-        return True
-```
+
 
 ### **Java**
 
@@ -176,88 +146,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isNumber(string s) {
-        int n = s.size();
-        int i = 0;
-        if (s[i] == '+' || s[i] == '-') ++i;
-        if (i == n) return false;
-        if (s[i] == '.' && (i + 1 == n || s[i + 1] == 'e' || s[i + 1] == 'E')) return false;
-        int dot = 0, e = 0;
-        for (int j = i; j < n; ++j) {
-            if (s[j] == '.') {
-                if (e || dot) return false;
-                ++dot;
-            } else if (s[j] == 'e' || s[j] == 'E') {
-                if (e || j == i || j == n - 1) return false;
-                ++e;
-                if (s[j + 1] == '+' || s[j + 1] == '-') {
-                    if (++j == n - 1) return false;
-                }
-            } else if (s[j] < '0' || s[j] > '9') return false;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isNumber(s string) bool {
-	i, n := 0, len(s)
-	if s[i] == '+' || s[i] == '-' {
-		i++
-	}
-	if i == n {
-		return false
-	}
-	if s[i] == '.' && (i+1 == n || s[i+1] == 'e' || s[i+1] == 'E') {
-		return false
-	}
-	var dot, e int
-	for j := i; j < n; j++ {
-		if s[j] == '.' {
-			if e > 0 || dot > 0 {
-				return false
-			}
-			dot++
-		} else if s[j] == 'e' || s[j] == 'E' {
-			if e > 0 || j == i || j == n-1 {
-				return false
-			}
-			e++
-			if s[j+1] == '+' || s[j+1] == '-' {
-				j++
-				if j == n-1 {
-					return false
-				}
-			}
-		} else if s[j] < '0' || s[j] > '9' {
-			return false
-		}
-	}
-	return true
-}
-```
 
-### **C#**
 
-```cs
-using System.Text.RegularExpressions;
 
-public class Solution {
-    private readonly Regex _isNumber_Regex = new Regex(@"^\s*[+-]?(\d+(\.\d*)?|\.\d+)([Ee][+-]?\d+)?\s*$");
 
-    public bool IsNumber(string s) {
-        return _isNumber_Regex.IsMatch(s);
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -265,4 +164,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

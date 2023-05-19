@@ -50,16 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makeEqual(self, words: List[str]) -> bool:
-        counter = Counter()
-        for word in words:
-            for c in word:
-                counter[c] += 1
-        n = len(words)
-        return all(count % n == 0 for count in counter.values())
-```
+
 
 ### **Java**
 
@@ -87,65 +78,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function makeEqual(words: string[]): boolean {
-    let n = words.length;
-    let letters = new Array(26).fill(0);
-    for (let word of words) {
-        for (let i = 0; i < word.length; ++i) {
-            ++letters[word.charCodeAt(i) - 97];
-        }
-    }
 
-    for (let i = 0; i < letters.length; ++i) {
-        if (letters[i] % n != 0) {
-            return false;
-        }
-    }
-    return true;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool makeEqual(vector<string>& words) {
-        vector<int> counter(26, 0);
-        for (string word : words) {
-            for (char c : word) {
-                ++counter[c - 'a'];
-            }
-        }
-        int n = words.size();
-        for (int count : counter) {
-            if (count % n != 0) return false;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func makeEqual(words []string) bool {
-	counter := [26]int{}
-	for _, word := range words {
-		for _, c := range word {
-			counter[c-'a']++
-		}
-	}
-	n := len(words)
-	for _, count := range counter {
-		if count%n != 0 {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -153,4 +94,4 @@ func makeEqual(words []string) bool {
 
 ```
 
-<!-- tabs:end -->
+

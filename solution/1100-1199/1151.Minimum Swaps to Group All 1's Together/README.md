@@ -72,18 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minSwaps(self, data: List[int]) -> int:
-        k = data.count(1)
-        t = sum(data[:k])
-        mx = t
-        for i in range(k, len(data)):
-            t += data[i]
-            t -= data[i - k]
-            mx = max(mx, t)
-        return k - mx
-```
+
 
 ### **Java**
 
@@ -111,74 +100,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minSwaps(vector<int>& data) {
-        int k = 0;
-        for (int& v : data) {
-            k += v;
-        }
-        int t = 0;
-        for (int i = 0; i < k; ++i) {
-            t += data[i];
-        }
-        int mx = t;
-        for (int i = k; i < data.size(); ++i) {
-            t += data[i];
-            t -= data[i - k];
-            mx = max(mx, t);
-        }
-        return k - mx;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minSwaps(data []int) int {
-	k := 0
-	for _, v := range data {
-		k += v
-	}
-	t := 0
-	for _, v := range data[:k] {
-		t += v
-	}
-	mx := t
-	for i := k; i < len(data); i++ {
-		t += data[i]
-		t -= data[i-k]
-		mx = max(mx, t)
-	}
-	return k - mx
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minSwaps(data: number[]): number {
-    const k = data.reduce((acc, cur) => acc + cur, 0);
-    let t = data.slice(0, k).reduce((acc, cur) => acc + cur, 0);
-    let mx = t;
-    for (let i = k; i < data.length; ++i) {
-        t += data[i] - data[i - k];
-        mx = Math.max(mx, t);
-    }
-    return k - mx;
-}
-```
+
 
 ### **...**
 
@@ -186,4 +118,4 @@ function minSwaps(data: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

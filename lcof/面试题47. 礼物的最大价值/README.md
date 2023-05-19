@@ -46,27 +46,9 @@ $$
 
 ### **Python3**
 
-```python
-class Solution:
-    def maxValue(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        f = [[0] * (n + 1) for _ in range(m + 1)]
-        for i, row in enumerate(grid, 1):
-            for j, v in enumerate(row, 1):
-                f[i][j] = max(f[i - 1][j], f[i][j - 1]) + v
-        return f[m][n]
-```
 
-```python
-class Solution:
-    def maxValue(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        f = [[0] * (n + 1) for _ in range(2)]
-        for i, row in enumerate(grid, 1):
-            for j, v in enumerate(row, 1):
-                f[i & 1][j] = max(f[i & 1 ^ 1][j], f[i & 1][j - 1]) + v
-        return f[m & 1][n]
-```
+
+
 
 ### **Java**
 
@@ -100,199 +82,37 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxValue(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<vector<int>> f(m + 1, vector<int>(n + 1, 0));
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                f[i][j] = max(f[i - 1][j], f[i][j - 1]) + grid[i - 1][j - 1];
-            }
-        }
-        return f[m][n];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maxValue(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<vector<int>> f(2, vector<int>(n + 1, 0));
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                f[i & 1][j] = max(f[i & 1 ^ 1][j], f[i & 1][j - 1]) + grid[i - 1][j - 1];
-            }
-        }
-        return f[m & 1][n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxValue(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	f := make([][]int, m+1)
-	for i := range f {
-		f[i] = make([]int, n+1)
-	}
-	for i := 1; i <= m; i++ {
-		for j := 1; j <= n; j++ {
-			f[i][j] = max(f[i-1][j], f[i][j-1]) + grid[i-1][j-1]
-		}
-	}
-	return f[m][n]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func maxValue(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	f := make([][]int, 2)
-	for i := range f {
-		f[i] = make([]int, n+1)
-	}
-	for i := 1; i <= m; i++ {
-		for j := 1; j <= n; j++ {
-			f[i&1][j] = max(f[i&1^1][j], f[i&1][j-1]) + grid[i-1][j-1]
-		}
-	}
-	return f[m&1][n]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} grid
- * @return {number}
- */
-var maxValue = function (grid) {
-    const m = grid.length;
-    const n = grid[0].length;
-    const f = new Array(m + 1).fill(0).map(() => new Array(n + 1).fill(0));
-    for (let i = 1; i <= m; ++i) {
-        for (let j = 1; j <= n; ++j) {
-            f[i][j] = Math.max(f[i - 1][j], f[i][j - 1]) + grid[i - 1][j - 1];
-        }
-    }
-    return f[m][n];
-};
-```
 
-```js
-/**
- * @param {number[][]} grid
- * @return {number}
- */
-var maxValue = function (grid) {
-    const m = grid.length;
-    const n = grid[0].length;
-    const f = new Array(2).fill(0).map(() => new Array(n + 1).fill(0));
-    for (let i = 1; i <= m; ++i) {
-        for (let j = 1; j <= n; ++j) {
-            f[i & 1][j] =
-                Math.max(f[(i & 1) ^ 1][j], f[i & 1][j - 1]) +
-                grid[i - 1][j - 1];
-        }
-    }
-    return f[m & 1][n];
-};
-```
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxValue(grid: number[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    const f = Array.from({ length: m + 1 }, _ => new Array(n + 1).fill(0));
-    for (let i = 1; i <= m; ++i) {
-        for (let j = 1; j <= n; ++j) {
-            f[i][j] = Math.max(f[i - 1][j], f[i][j - 1]) + grid[i - 1][j - 1];
-        }
-    }
-    return f[m][n];
-}
-```
 
-```ts
-function maxValue(grid: number[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    const f = Array.from({ length: 2 }, _ => new Array(n + 1).fill(0));
-    for (let i = 1; i <= m; ++i) {
-        for (let j = 1; j <= n; ++j) {
-            f[i & 1][j] =
-                Math.max(f[(i & 1) ^ 1][j], f[i & 1][j - 1]) +
-                grid[i - 1][j - 1];
-        }
-    }
-    return f[m & 1][n];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_value(mut grid: Vec<Vec<i32>>) -> i32 {
-        let n = grid.len();
-        let m = grid[0].len();
-        for i in 1..n {
-            grid[i][0] += grid[i - 1][0];
-        }
-        for i in 1..m {
-            grid[0][i] += grid[0][i - 1];
-        }
-        for i in 1..n {
-            for j in 1..m {
-                grid[i][j] += grid[i][j - 1].max(grid[i - 1][j]);
-            }
-        }
-        grid[n - 1][m - 1]
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MaxValue(int[][] grid) {
-        int m = grid.Length, n = grid[0].Length;
-        int[, ] f = new int[m + 1, n + 1];
-        for (int i = 1; i < m + 1; i++) {
-            for (int j = 1; j < n + 1; j++) {
-                f[i, j] = Math.Max(f[i - 1, j], f[i, j - 1]) + grid[i - 1][j - 1];
-            }
-        }
-        return f[m, n];
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -300,4 +120,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

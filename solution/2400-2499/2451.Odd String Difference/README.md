@@ -67,15 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def oddString(self, words: List[str]) -> str:
-        cnt = defaultdict(list)
-        for w in words:
-            d = [str(ord(b) - ord(a)) for a, b in pairwise(w)]
-            cnt[','.join(d)].append(w)
-        return next(v[0] for v in cnt.values() if len(v) == 1)
-```
+
 
 ### **Java**
 
@@ -102,102 +94,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string oddString(vector<string>& words) {
-        unordered_map<string, vector<string>> cnt;
-        for (auto& w : words) {
-            string d;
-            for (int i = 0; i < w.size() - 1; ++i) {
-                d += (char) (w[i + 1] - w[i]);
-                d += ',';
-            }
-            cnt[d].emplace_back(w);
-        }
-        for (auto& [_, v] : cnt) {
-            if (v.size() == 1) {
-                return v[0];
-            }
-        }
-        return "";
-    }
-};
-```
 
-### **Go**
 
-```go
-func oddString(words []string) string {
-	cnt := map[string][]string{}
-	for _, w := range words {
-		d := make([]byte, len(w)-1)
-		for i := 0; i < len(w)-1; i++ {
-			d[i] = w[i+1] - w[i]
-		}
-		t := string(d)
-		cnt[t] = append(cnt[t], w)
-	}
-	for _, v := range cnt {
-		if len(v) == 1 {
-			return v[0]
-		}
-	}
-	return ""
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function oddString(words: string[]): string {
-    const n = words[0].length;
-    const map = new Map<string, [boolean, number]>();
-    words.forEach((word, i) => {
-        const diff: number[] = [];
-        for (let j = 1; j < n; j++) {
-            diff.push(word[j].charCodeAt(0) - word[j - 1].charCodeAt(0));
-        }
-        const k = diff.join();
-        map.set(k, [!map.has(k), i]);
-    });
-    for (const [isOnly, i] of map.values()) {
-        if (isOnly) {
-            return words[i];
-        }
-    }
-    return '';
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn odd_string(words: Vec<String>) -> String {
-        let n = words[0].len();
-        let mut map: HashMap<String, (bool, usize)> = HashMap::new();
-        for (i, word) in words.iter().enumerate() {
-            let mut k = String::new();
-            for j in 1..n {
-                k.push_str(&(word.as_bytes()[j] - word.as_bytes()[j - 1]).to_string());
-                k.push(',');
-            }
-            let new_is_only = !map.contains_key(&k);
-            map.insert(k, (new_is_only, i));
-        }
-        for (is_only, i) in map.values() {
-            if *is_only {
-                return words[*i].clone();
-            }
-        }
-        String::new()
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -205,4 +116,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

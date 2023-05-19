@@ -70,28 +70,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countTime(self, time: str) -> int:
-        def check(s: str, t: str) -> bool:
-            return all(a == b or b == '?' for a, b in zip(s, t))
 
-        return sum(check(f'{h:02d}:{m:02d}', time) for h in range(24) for m in range(60))
-```
 
-```python
-class Solution:
-    def countTime(self, time: str) -> int:
-        def f(s: str, m: int) -> int:
-            cnt = 0
-            for i in range(m):
-                a = s[0] == '?' or (int(s[0]) == i // 10)
-                b = s[1] == '?' or (int(s[1]) == i % 10)
-                cnt += a and b
-            return cnt
 
-        return f(time[:2], 24) * f(time[3:], 60)
-```
 
 ### **Java**
 
@@ -137,126 +118,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countTime(string time) {
-        int ans = 0;
-        for (int h = 0; h < 24; ++h) {
-            for (int m = 0; m < 60; ++m) {
-                char s[20];
-                sprintf(s, "%02d:%02d", h, m);
-                int ok = 1;
-                for (int i = 0; i < 5; ++i) {
-                    if (s[i] != time[i] && time[i] != '?') {
-                        ok = 0;
-                        break;
-                    }
-                }
-                ans += ok;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int countTime(string time) {
-        auto f = [](string s, int m) {
-            int cnt = 0;
-            for (int i = 0; i < m; ++i) {
-                bool a = s[0] == '?' || s[0] - '0' == i / 10;
-                bool b = s[1] == '?' || s[1] - '0' == i % 10;
-                cnt += a && b;
-            }
-            return cnt;
-        };
-        return f(time.substr(0, 2), 24) * f(time.substr(3, 2), 60);
-    }
-};
-```
 
-### **Go**
 
-```go
-func countTime(time string) int {
-	ans := 0
-	for h := 0; h < 24; h++ {
-		for m := 0; m < 60; m++ {
-			s := fmt.Sprintf("%02d:%02d", h, m)
-			ok := 1
-			for i := 0; i < 5; i++ {
-				if s[i] != time[i] && time[i] != '?' {
-					ok = 0
-					break
-				}
-			}
-			ans += ok
-		}
-	}
-	return ans
-}
-```
 
-```go
-func countTime(time string) int {
-	f := func(s string, m int) (cnt int) {
-		for i := 0; i < m; i++ {
-			a := s[0] == '?' || int(s[0]-'0') == i/10
-			b := s[1] == '?' || int(s[1]-'0') == i%10
-			if a && b {
-				cnt++
-			}
-		}
-		return
-	}
-	return f(time[:2], 24) * f(time[3:], 60)
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countTime(time: string): number {
-    let ans = 0;
-    for (let h = 0; h < 24; ++h) {
-        for (let m = 0; m < 60; ++m) {
-            const s = `${h}`.padStart(2, '0') + ':' + `${m}`.padStart(2, '0');
-            let ok = 1;
-            for (let i = 0; i < 5; ++i) {
-                if (s[i] !== time[i] && time[i] !== '?') {
-                    ok = 0;
-                    break;
-                }
-            }
-            ans += ok;
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function countTime(time: string): number {
-    const f = (s: string, m: number): number => {
-        let cnt = 0;
-        for (let i = 0; i < m; ++i) {
-            const a = s[0] === '?' || s[0] === Math.floor(i / 10).toString();
-            const b = s[1] === '?' || s[1] === (i % 10).toString();
-            if (a && b) {
-                ++cnt;
-            }
-        }
-        return cnt;
-    };
-    return f(time.slice(0, 2), 24) * f(time.slice(3), 60);
-}
-```
+
+
 
 ### **...**
 
@@ -264,4 +142,4 @@ function countTime(time: string): number {
 
 ```
 
-<!-- tabs:end -->
+

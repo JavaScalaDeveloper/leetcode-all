@@ -55,11 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def hammingDistance(self, x: int, y: int) -> int:
-        return (x ^ y).bit_count()
-```
+
 
 ### **Java**
 
@@ -73,57 +69,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int hammingDistance(int x, int y) {
-        return __builtin_popcount(x ^ y);
-    }
-};
-```
 
-### **Go**
 
-```go
-func hammingDistance(x int, y int) int {
-	return bits.OnesCount(uint(x ^ y))
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} x
- * @param {number} y
- * @return {number}
- */
-var hammingDistance = function (x, y) {
-    x ^= y;
-    let ans = 0;
-    while (x) {
-        x -= x & -x;
-        ++ans;
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function hammingDistance(x: number, y: number): number {
-    x ^= y;
-    let ans = 0;
-    while (x) {
-        x -= x & -x;
-        ++ans;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -131,4 +91,4 @@ function hammingDistance(x: number, y: number): number {
 
 ```
 
-<!-- tabs:end -->
+

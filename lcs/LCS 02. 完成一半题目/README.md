@@ -48,18 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def halfQuestions(self, questions: List[int]) -> int:
-        cnt = Counter(questions)
-        ans, n = 0, len(questions) >> 1
-        for _, v in cnt.most_common():
-            ans += 1
-            n -= v
-            if n <= 0:
-                break
-        return ans
-```
+
 
 ### **Java**
 
@@ -84,86 +73,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int halfQuestions(vector<int>& questions) {
-        int cnt[1001]{};
-        for (int& x : questions) {
-            ++cnt[x];
-        }
-        sort(cnt, cnt + 1001);
-        int ans = 0, n = questions.size() / 2;
-        for (int i = 1000; n > 0; --i) {
-            ++ans;
-            n -= cnt[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func halfQuestions(questions []int) (ans int) {
-	cnt := make([]int, 1010)
-	for _, x := range questions {
-		cnt[x]++
-	}
-	n := len(questions) >> 1
-	sort.Ints(cnt)
-	for i := len(cnt) - 1; n > 0; i-- {
-		ans++
-		n -= cnt[i]
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} questions
- * @return {number}
- */
-var halfQuestions = function (questions) {
-    const cnt = new Array(1010).fill(0);
-    for (const x of questions) {
-        ++cnt[x];
-    }
-    cnt.sort((a, b) => b - a);
-    let ans = 0;
-    let n = questions.length >> 1;
-    for (let i = 0; n > 0; ++i) {
-        ++ans;
-        n -= cnt[i];
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function halfQuestions(questions: number[]): number {
-    const cnt = new Array(1010).fill(0);
-    for (const x of questions) {
-        ++cnt[x];
-    }
-    cnt.sort((a, b) => b - a);
-    let ans = 0;
-    let n = questions.length >> 1;
-    for (let i = 0; n > 0; ++i) {
-        ++ans;
-        n -= cnt[i];
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -171,4 +95,4 @@ function halfQuestions(questions: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

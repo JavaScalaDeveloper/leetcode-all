@@ -65,14 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
-        for i, s in enumerate(sentence.split(), 1):
-            if s.startswith(searchWord):
-                return i
-        return -1
-```
+
 
 ### **Java**
 
@@ -92,86 +85,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int isPrefixOfWord(string sentence, string searchWord) {
-        stringstream ss(sentence);
-        string s;
-        for (int i = 1; ss >> s; ++i) {
-            if (s.find(searchWord) == 0) {
-                return i;
-            }
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isPrefixOfWord(sentence string, searchWord string) int {
-	for i, s := range strings.Split(sentence, " ") {
-		if strings.HasPrefix(s, searchWord) {
-			return i + 1
-		}
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isPrefixOfWord(sentence: string, searchWord: string): number {
-    const ss = sentence.split(/\s/);
-    const n = ss.length;
-    for (let i = 0; i < n; i++) {
-        if (ss[i].startsWith(searchWord)) {
-            return i + 1;
-        }
-    }
-    return -1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn is_prefix_of_word(sentence: String, search_word: String) -> i32 {
-        let ss = sentence.split_whitespace().collect::<Vec<&str>>();
-        for i in 0..ss.len() {
-            if ss[i].starts_with(&search_word) {
-                return (i + 1) as i32;
-            }
-        }
-        -1
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $sentence
-     * @param String $searchWord
-     * @return Integer
-     */
-    function isPrefixOfWord($sentence, $searchWord) {
-        $arr = explode(" ", $sentence);
-        for ($i = 0; $i < count($arr); $i++) {
-            if (strpos($arr[$i], $searchWord) === 0) return $i + 1;
-        }
-        return -1;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -179,4 +111,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -74,13 +74,7 @@ nums[0] 和 nums[1] 形成一个数对，并从 nums 中移除，nums = [2] 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfPairs(self, nums: List[int]) -> List[int]:
-        cnt = Counter(nums)
-        s = sum(v // 2 for v in cnt.values())
-        return [s, len(nums) - s * 2]
-```
+
 
 ### **Java**
 
@@ -102,73 +96,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> numberOfPairs(vector<int>& nums) {
-        vector<int> cnt(101);
-        for (int& x : nums) {
-            ++cnt[x];
-        }
-        int s = 0;
-        for (int& v : cnt) {
-            s += v >> 1;
-        }
-        return {s, (int) nums.size() - s * 2};
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfPairs(nums []int) []int {
-	cnt := [101]int{}
-	for _, x := range nums {
-		cnt[x]++
-	}
-	s := 0
-	for _, v := range cnt {
-		s += v / 2
-	}
-	return []int{s, len(nums) - s*2}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numberOfPairs(nums: number[]): number[] {
-    const n = nums.length;
-    const count = new Array(101).fill(0);
-    for (const num of nums) {
-        count[num]++;
-    }
-    const sum = count.reduce((r, v) => r + (v >> 1), 0);
-    return [sum, n - sum * 2];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn number_of_pairs(nums: Vec<i32>) -> Vec<i32> {
-        let n = nums.len();
-        let mut count = [0; 101];
-        for &v in nums.iter() {
-            count[v as usize] += 1;
-        }
-        let mut sum = 0;
-        for v in count.iter() {
-            sum += v >> 1;
-        }
-        vec![sum as i32, (n - sum * 2) as i32]
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -193,40 +135,13 @@ int *numberOfPairs(int *nums, int numsSize, int *returnSize) {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var numberOfPairs = function (nums) {
-    const cnt = new Array(101).fill(0);
-    for (const x of nums) {
-        ++cnt[x];
-    }
-    const s = cnt.reduce((a, b) => a + (b >> 1), 0);
-    return [s, nums.length - s * 2];
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[] NumberOfPairs(int[] nums) {
-        int[] cnt = new int[101];
-        foreach(int x in nums) {
-            ++cnt[x];
-        }
-        int s = 0;
-        foreach(int v in cnt) {
-            s += v / 2;
-        }
-        return new int[] {s, nums.Length - s * 2};
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -234,4 +149,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

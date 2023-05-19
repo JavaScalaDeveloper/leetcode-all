@@ -49,22 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numSubarrayProductLessThanK(self, nums: List[int], k: int) -> int:
-        n = len(nums)
-        ans = 0
-        sum = 1
-        left, right = 0, 0
-        while right < n:
-            sum *= nums[right]
-            right += 1
-            while sum >= k and left < right:
-                sum /= nums[left]
-                left += 1
-            ans += right - left
-        return ans
-```
+
 
 ### **Java**
 
@@ -89,51 +74,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func numSubarrayProductLessThanK(nums []int, k int) int {
-	n := len(nums)
-	ans := 0
-	sum := 1
-	left, right := 0, 0
-	for right < n {
-		sum *= nums[right]
-		right++
-		for sum >= k && left < right {
-			sum /= nums[left]
-			left++
-		}
-		ans += right - left
-	}
-	return ans
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numSubarrayProductLessThanK(vector<int>& nums, int k) {
-        int left = 0, right;
-        long mul = 1;
-        int count = 0;
 
-        for (right = 0; right < nums.size(); right++) {
-            mul *= nums[right];
 
-            while (left <= right && mul >= k) {
-                mul /= nums[left++];
-            }
 
-            count += right >= left ? right - left + 1 : 0;
-        }
 
-        return count;
-    }
-};
-```
 
 ### **...**
 
@@ -141,4 +88,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

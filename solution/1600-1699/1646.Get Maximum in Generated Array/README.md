@@ -82,17 +82,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getMaximumGenerated(self, n: int) -> int:
-        if n < 2:
-            return n
-        nums = [0] * (n + 1)
-        nums[1] = 1
-        for i in range(2, n + 1):
-            nums[i] = nums[i >> 1] if i % 2 == 0 else nums[i >> 1] + nums[(i >> 1) + 1]
-        return max(nums)
-```
+
 
 ### **Java**
 
@@ -114,70 +104,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int getMaximumGenerated(int n) {
-        if (n < 2) {
-            return n;
-        }
-        int nums[n + 1];
-        nums[0] = 0;
-        nums[1] = 1;
-        for (int i = 2; i <= n; ++i) {
-            nums[i] = i % 2 == 0 ? nums[i >> 1] : nums[i >> 1] + nums[(i >> 1) + 1];
-        }
-        return *max_element(nums, nums + n + 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func getMaximumGenerated(n int) (ans int) {
-	if n < 2 {
-		return n
-	}
-	nums := make([]int, n+1)
-	nums[1] = 1
-	for i := 2; i <= n; i++ {
-		if i%2 == 0 {
-			nums[i] = nums[i/2]
-		} else {
-			nums[i] = nums[i/2] + nums[i/2+1]
-		}
-		ans = max(ans, nums[i])
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getMaximumGenerated(n: number): number {
-    if (n === 0) {
-        return 0;
-    }
-    const nums: number[] = new Array(n + 1).fill(0);
-    nums[1] = 1;
-    for (let i = 2; i < n + 1; ++i) {
-        nums[i] =
-            i % 2 === 0 ? nums[i >> 1] : nums[i >> 1] + nums[(i >> 1) + 1];
-    }
-    return Math.max(...nums);
-}
-```
+
 
 ### **...**
 
@@ -185,4 +122,4 @@ function getMaximumGenerated(n: number): number {
 
 ```
 
-<!-- tabs:end -->
+

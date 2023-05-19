@@ -82,20 +82,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def bestClosingTime(self, customers: str) -> int:
-        n = len(customers)
-        s = [0] * (n + 1)
-        for i, c in enumerate(customers):
-            s[i + 1] = s[i] + int(c == 'Y')
-        ans, cost = 0, inf
-        for j in range(n + 1):
-            t = j - s[j] + s[-1] - s[j]
-            if cost > t:
-                ans, cost = j, t
-        return ans
-```
+
 
 ### **Java**
 
@@ -122,52 +109,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int bestClosingTime(string customers) {
-        int n = customers.size();
-        vector<int> s(n + 1);
-        for (int i = 0; i < n; ++i) {
-            s[i + 1] = s[i] + (customers[i] == 'Y');
-        }
-        int ans = 0, cost = 1 << 30;
-        for (int j = 0; j <= n; ++j) {
-            int t = j - s[j] + s[n] - s[j];
-            if (cost > t) {
-                ans = j;
-                cost = t;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func bestClosingTime(customers string) (ans int) {
-	n := len(customers)
-	s := make([]int, n+1)
-	for i, c := range customers {
-		s[i+1] = s[i]
-		if c == 'Y' {
-			s[i+1]++
-		}
-	}
-	cost := 1 << 30
-	for j := 0; j <= n; j++ {
-		t := j - s[j] + s[n] - s[j]
-		if cost > t {
-			ans, cost = j, t
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -175,4 +123,4 @@ func bestClosingTime(customers string) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

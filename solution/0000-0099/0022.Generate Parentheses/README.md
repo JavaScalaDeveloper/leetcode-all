@@ -55,22 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def generateParenthesis(self, n: int) -> List[str]:
-        def dfs(l, r, t):
-            if l > n or r > n or l < r:
-                return
-            if l == n and r == n:
-                ans.append(t)
-                return
-            dfs(l + 1, r, t + '(')
-            dfs(l, r + 1, t + ')')
 
-        ans = []
-        dfs(0, 0, '')
-        return ans
-```
 
 ### **Java**
 
@@ -101,123 +86,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> generateParenthesis(int n) {
-        vector<string> ans;
-        function<void(int, int, string)> dfs = [&](int l, int r, string t) {
-            if (l > n || r > n || l < r) return;
-            if (l == n && r == n) {
-                ans.push_back(t);
-                return;
-            }
-            dfs(l + 1, r, t + "(");
-            dfs(l, r + 1, t + ")");
-        };
-        dfs(0, 0, "");
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func generateParenthesis(n int) (ans []string) {
-	var dfs func(int, int, string)
-	dfs = func(l, r int, t string) {
-		if l > n || r > n || l < r {
-			return
-		}
-		if l == n && r == n {
-			ans = append(ans, t)
-			return
-		}
-		dfs(l+1, r, t+"(")
-		dfs(l, r+1, t+")")
-	}
-	dfs(0, 0, "")
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {string[]}
- */
-var generateParenthesis = function (n) {
-    function dfs(l, r, t) {
-        if (l > n || r > n || l < r) {
-            return;
-        }
-        if (l == n && r == n) {
-            ans.push(t);
-            return;
-        }
-        dfs(l + 1, r, t + '(');
-        dfs(l, r + 1, t + ')');
-    }
-    let ans = [];
-    dfs(0, 0, '');
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function generateParenthesis(n: number): string[] {
-    function dfs(l, r, t) {
-        if (l > n || r > n || l < r) {
-            return;
-        }
-        if (l == n && r == n) {
-            ans.push(t);
-            return;
-        }
-        dfs(l + 1, r, t + '(');
-        dfs(l, r + 1, t + ')');
-    }
-    let ans = [];
-    dfs(0, 0, '');
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    fn dfs(left: i32, right: i32, s: &mut String, res: &mut Vec<String>) {
-        if left == 0 && right == 0 {
-            res.push(s.clone());
-            return;
-        }
-        if left > 0 {
-            s.push('(');
-            Self::dfs(left - 1, right, s, res);
-            s.pop();
-        }
-        if right > left {
-            s.push(')');
-            Self::dfs(left, right - 1, s, res);
-            s.pop();
-        }
-    }
 
-    pub fn generate_parenthesis(n: i32) -> Vec<String> {
-        let mut res = Vec::new();
-        Self::dfs(n, n, &mut String::new(), &mut res);
-        res
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -225,4 +112,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -68,20 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mincostToHireWorkers(self, quality: List[int], wage: List[int], k: int) -> float:
-        t = sorted(zip(quality, wage), key=lambda x: x[1] / x[0])
-        ans, tot = inf, 0
-        h = []
-        for q, w in t:
-            tot += q
-            heappush(h, -q)
-            if len(h) == k:
-                ans = min(ans, w / q * tot)
-                tot += heappop(h)
-        return ans
-```
+
 
 ### **Java**
 
@@ -122,81 +109,13 @@ class Pair {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double mincostToHireWorkers(vector<int>& quality, vector<int>& wage, int k) {
-        int n = quality.size();
-        vector<pair<double, int>> t(n);
-        for (int i = 0; i < n; ++i) {
-            t[i] = {(double) wage[i] / quality[i], quality[i]};
-        }
-        sort(t.begin(), t.end());
-        priority_queue<int> pq;
-        double ans = 1e9;
-        int tot = 0;
-        for (auto& [x, q] : t) {
-            tot += q;
-            pq.push(q);
-            if (pq.size() == k) {
-                ans = min(ans, tot * x);
-                tot -= pq.top();
-                pq.pop();
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mincostToHireWorkers(quality []int, wage []int, k int) float64 {
-	t := []pair{}
-	for i, q := range quality {
-		t = append(t, pair{float64(wage[i]) / float64(q), q})
-	}
-	sort.Slice(t, func(i, j int) bool { return t[i].x < t[j].x })
-	tot := 0
-	var ans float64 = 1e9
-	pq := hp{}
-	for _, e := range t {
-		tot += e.q
-		heap.Push(&pq, e.q)
-		if pq.Len() == k {
-			ans = min(ans, float64(tot)*e.x)
-			tot -= heap.Pop(&pq).(int)
-		}
-	}
-	return ans
-}
 
-func min(a, b float64) float64 {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-type pair struct {
-	x float64
-	q int
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-func (h *hp) Less(i, j int) bool { return h.IntSlice[i] > h.IntSlice[j] }
-```
 
 ### **...**
 
@@ -204,4 +123,4 @@ func (h *hp) Less(i, j int) bool { return h.IntSlice[i] > h.IntSlice[j] }
 
 ```
 
-<!-- tabs:end -->
+

@@ -91,37 +91,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minCost(self, nums: List[int], cost: List[int]) -> int:
-        arr = sorted(zip(nums, cost))
-        n = len(arr)
-        f = [0] * (n + 1)
-        g = [0] * (n + 1)
-        for i in range(1, n + 1):
-            a, b = arr[i - 1]
-            f[i] = f[i - 1] + a * b
-            g[i] = g[i - 1] + b
-        ans = inf
-        for i in range(1, n + 1):
-            a = arr[i - 1][0]
-            l = a * g[i - 1] - f[i - 1]
-            r = f[n] - f[i] - a * (g[n] - g[i])
-            ans = min(ans, l + r)
-        return ans
-```
 
-```python
-class Solution:
-    def minCost(self, nums: List[int], cost: List[int]) -> int:
-        arr = sorted(zip(nums, cost))
-        mid = sum(cost) // 2
-        s = 0
-        for x, c in arr:
-            s += c
-            if s > mid:
-                return sum(abs(v - x) * c for v, c in arr)
-```
+
+
 
 ### **Java**
 
@@ -189,140 +161,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using ll = long long;
 
-class Solution {
-public:
-    long long minCost(vector<int>& nums, vector<int>& cost) {
-        int n = nums.size();
-        vector<pair<int, int>> arr(n);
-        for (int i = 0; i < n; ++i) arr[i] = {nums[i], cost[i]};
-        sort(arr.begin(), arr.end());
-        vector<ll> f(n + 1), g(n + 1);
-        for (int i = 1; i <= n; ++i) {
-            auto [a, b] = arr[i - 1];
-            f[i] = f[i - 1] + 1ll * a * b;
-            g[i] = g[i - 1] + b;
-        }
-        ll ans = 1e18;
-        for (int i = 1; i <= n; ++i) {
-            auto [a, _] = arr[i - 1];
-            ll l = 1ll * a * g[i - 1] - f[i - 1];
-            ll r = f[n] - f[i] - 1ll * a * (g[n] - g[i]);
-            ans = min(ans, l + r);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-using ll = long long;
 
-class Solution {
-public:
-    long long minCost(vector<int>& nums, vector<int>& cost) {
-        int n = nums.size();
-        vector<pair<int, int>> arr(n);
-        for (int i = 0; i < n; ++i) arr[i] = {nums[i], cost[i]};
-        sort(arr.begin(), arr.end());
-        ll mid = accumulate(cost.begin(), cost.end(), 0ll) / 2;
-        ll s = 0, ans = 0;
-        for (auto [x, c] : arr) {
-            s += c;
-            if (s > mid) {
-                for (auto [v, d] : arr) {
-                    ans += 1ll * abs(v - x) * d;
-                }
-                break;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minCost(nums []int, cost []int) int64 {
-	n := len(nums)
-	type pair struct{ a, b int }
-	arr := make([]pair, n)
-	for i, a := range nums {
-		b := cost[i]
-		arr[i] = pair{a, b}
-	}
-	sort.Slice(arr, func(i, j int) bool { return arr[i].a < arr[j].a })
-	f := make([]int, n+1)
-	g := make([]int, n+1)
-	for i := 1; i <= n; i++ {
-		a, b := arr[i-1].a, arr[i-1].b
-		f[i] = f[i-1] + a*b
-		g[i] = g[i-1] + b
-	}
-	var ans int64 = 1e18
-	for i := 1; i <= n; i++ {
-		a := arr[i-1].a
-		l := a*g[i-1] - f[i-1]
-		r := f[n] - f[i] - a*(g[n]-g[i])
-		ans = min(ans, int64(l+r))
-	}
-	return ans
-}
 
-func min(a, b int64) int64 {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func minCost(nums []int, cost []int) int64 {
-	n := len(nums)
-	type pair struct{ a, b int }
-	arr := make([]pair, n)
-	mid := 0
-	for i, a := range nums {
-		b := cost[i]
-		mid += b
-		arr[i] = pair{a, b}
-	}
-	mid /= 2
-	sort.Slice(arr, func(i, j int) bool { return arr[i].a < arr[j].a })
-	s, ans := 0, 0
-	for _, e := range arr {
-		x, c := e.a, e.b
-		s += c
-		if s > mid {
-			for _, t := range arr {
-				ans += abs(t.a-x) * t.b
-			}
-			break
-		}
-	}
-	return int64(ans)
 
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -330,4 +183,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

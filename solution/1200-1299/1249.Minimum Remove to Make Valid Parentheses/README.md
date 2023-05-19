@@ -75,31 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minRemoveToMakeValid(self, s: str) -> str:
-        stk = []
-        x = 0
-        for c in s:
-            if c == ')' and x == 0:
-                continue
-            if c == '(':
-                x += 1
-            elif c == ')':
-                x -= 1
-            stk.append(c)
-        x = 0
-        ans = []
-        for c in stk[::-1]:
-            if c == '(' and x == 0:
-                continue
-            if c == ')':
-                x += 1
-            elif c == '(':
-                x -= 1
-            ans.append(c)
-        return ''.join(ans[::-1])
-```
+
 
 ### **Java**
 
@@ -141,157 +117,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string minRemoveToMakeValid(string s) {
-        string stk;
-        int x = 0;
-        for (char& c : s) {
-            if (c == ')' && x == 0) continue;
-            if (c == '(') ++x;
-            else if (c == ')') --x;
-            stk.push_back(c);
-        }
-        string ans;
-        x = 0;
-        while (stk.size()) {
-            char c = stk.back();
-            stk.pop_back();
-            if (c == '(' && x == 0) continue;
-            if (c == ')') ++x;
-            else if (c == '(') --x;
-            ans.push_back(c);
-        }
-        reverse(ans.begin(), ans.end());
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minRemoveToMakeValid(s string) string {
-	stk := []byte{}
-	x := 0
-	for i := range s {
-		c := s[i]
-		if c == ')' && x == 0 {
-			continue
-		}
-		if c == '(' {
-			x++
-		} else if c == ')' {
-			x--
-		}
-		stk = append(stk, c)
-	}
-	ans := []byte{}
-	x = 0
-	for i := len(stk) - 1; i >= 0; i-- {
-		c := stk[i]
-		if c == '(' && x == 0 {
-			continue
-		}
-		if c == ')' {
-			x++
-		} else if c == '(' {
-			x--
-		}
-		ans = append(ans, c)
-	}
-	for i, j := 0, len(ans)-1; i < j; i, j = i+1, j-1 {
-		ans[i], ans[j] = ans[j], ans[i]
-	}
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minRemoveToMakeValid(s: string): string {
-    let left = 0;
-    let right = 0;
-    for (const c of s) {
-        if (c === '(') {
-            left++;
-        } else if (c === ')') {
-            if (right < left) {
-                right++;
-            }
-        }
-    }
 
-    let hasLeft = 0;
-    let res = '';
-    for (const c of s) {
-        if (c === '(') {
-            if (hasLeft < right) {
-                hasLeft++;
-                res += c;
-            }
-        } else if (c === ')') {
-            if (hasLeft != 0 && right !== 0) {
-                right--;
-                hasLeft--;
-                res += c;
-            }
-        } else {
-            res += c;
-        }
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_remove_to_make_valid(s: String) -> String {
-        let bs = s.as_bytes();
-        let mut right = {
-            let mut left = 0;
-            let mut right = 0;
-            for c in bs.iter() {
-                match c {
-                    &b'(' => left += 1,
-                    &b')' if right < left => right += 1,
-                    _ => {}
-                }
-            }
-            right
-        };
-        let mut has_left = 0;
-        let mut res = vec![];
-        for c in bs.iter() {
-            match c {
-                &b'(' => {
-                    if has_left < right {
-                        has_left += 1;
-                        res.push(*c);
-                    }
-                }
-                &b')' => {
-                    if has_left != 0 && right != 0 {
-                        right -= 1;
-                        has_left -= 1;
-                        res.push(*c);
-                    }
-                }
-                _ => {
-                    res.push(*c);
-                }
-            }
-        }
-        String::from_utf8_lossy(&res).to_string()
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -299,4 +139,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -72,4 +72,4 @@ FROM Activity
 ORDER BY 1, 2;
 ```
 
-<!-- tabs:end -->
+

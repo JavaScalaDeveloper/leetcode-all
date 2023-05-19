@@ -84,22 +84,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def convertArray(self, nums: List[int]) -> int:
-        def solve(nums):
-            n = len(nums)
-            f = [[0] * 1001 for _ in range(n + 1)]
-            for i, x in enumerate(nums, 1):
-                mi = inf
-                for j in range(1001):
-                    if mi > f[i - 1][j]:
-                        mi = f[i - 1][j]
-                    f[i][j] = mi + abs(x - j)
-            return min(f[n])
 
-        return min(solve(nums), solve(nums[::-1]))
-```
 
 ### **Java**
 
@@ -139,85 +124,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int convertArray(vector<int>& nums) {
-        int a = solve(nums);
-        reverse(nums.begin(), nums.end());
-        int b = solve(nums);
-        return min(a, b);
-    }
 
-    int solve(vector<int>& nums) {
-        int n = nums.size();
-        int f[n + 1][1001];
-        memset(f, 0, sizeof(f));
-        for (int i = 1; i <= n; ++i) {
-            int mi = 1 << 30;
-            for (int j = 0; j <= 1000; ++j) {
-                mi = min(mi, f[i - 1][j]);
-                f[i][j] = mi + abs(nums[i - 1] - j);
-            }
-        }
-        return *min_element(f[n], f[n] + 1001);
-    }
-};
-```
 
-### **Go**
 
-```go
-func convertArray(nums []int) int {
-	return min(solve(nums), solve(reverse(nums)))
-}
 
-func solve(nums []int) int {
-	n := len(nums)
-	f := make([][1001]int, n+1)
-	for i := 1; i <= n; i++ {
-		mi := 1 << 30
-		for j := 0; j <= 1000; j++ {
-			mi = min(mi, f[i-1][j])
-			f[i][j] = mi + abs(nums[i-1]-j)
-		}
-	}
-	ans := 1 << 30
-	for _, x := range f[n] {
-		ans = min(ans, x)
-	}
-	return ans
-}
 
-func reverse(nums []int) []int {
-	for i, j := 0, len(nums)-1; i < j; i, j = i+1, j-1 {
-		nums[i], nums[j] = nums[j], nums[i]
-	}
-	return nums
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -225,4 +142,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

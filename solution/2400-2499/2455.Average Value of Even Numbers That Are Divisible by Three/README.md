@@ -53,16 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def averageValue(self, nums: List[int]) -> int:
-        s = n = 0
-        for v in nums:
-            if v % 6 == 0:
-                s += v
-                n += 1
-        return 0 if n == 0 else s // n
-```
+
 
 ### **Java**
 
@@ -83,41 +74,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int averageValue(vector<int>& nums) {
-        int s = 0, n = 0;
-        for (int v : nums) {
-            if (v % 6 == 0) {
-                s += v;
-                ++n;
-            }
-        }
-        return n == 0 ? 0 : s / n;
-    }
-};
-```
 
-### **Go**
 
-```go
-func averageValue(nums []int) int {
-	s, n := 0, 0
-	for _, v := range nums {
-		if v%6 == 0 {
-			s += v
-			n++
-		}
-	}
-	if n == 0 {
-		return 0
-	}
-	return s / n
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -141,45 +104,11 @@ int averageValue(int *nums, int numsSize) {
 
 ### **TypeScript**
 
-```ts
-function averageValue(nums: number[]): number {
-    let sum = 0;
-    let n = 0;
-    for (const num of nums) {
-        if (num % 6 === 0) {
-            sum += num;
-            n++;
-        }
-    }
 
-    if (n === 0) {
-        return 0;
-    }
-    return Math.floor(sum / n);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn average_value(nums: Vec<i32>) -> i32 {
-        let mut sum = 0;
-        let mut n = 0;
-        for num in nums.iter() {
-            if num % 6 == 0 {
-                sum += num;
-                n += 1;
-            }
-        }
 
-        if n == 0 {
-            return 0;
-        }
-        sum / n
-    }
-}
-```
+
 
 ### **...**
 
@@ -187,4 +116,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

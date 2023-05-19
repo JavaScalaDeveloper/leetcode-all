@@ -86,19 +86,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isTransformable(self, s: str, t: str) -> bool:
-        pos = defaultdict(deque)
-        for i, c in enumerate(s):
-            pos[int(c)].append(i)
-        for c in t:
-            x = int(c)
-            if not pos[x] or any(pos[i] and pos[i][0] < pos[x][0] for i in range(x)):
-                return False
-            pos[x].popleft()
-        return True
-```
+
 
 ### **Java**
 
@@ -129,56 +117,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isTransformable(string s, string t) {
-        queue<int> pos[10];
-        for (int i = 0; i < s.size(); ++i) {
-            pos[s[i] - '0'].push(i);
-        }
-        for (char& c : t) {
-            int x = c - '0';
-            if (pos[x].empty()) {
-                return false;
-            }
-            for (int j = 0; j < x; ++j) {
-                if (!pos[j].empty() && pos[j].front() < pos[x].front()) {
-                    return false;
-                }
-            }
-            pos[x].pop();
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isTransformable(s string, t string) bool {
-	pos := [10][]int{}
-	for i, c := range s {
-		pos[c-'0'] = append(pos[c-'0'], i)
-	}
-	for _, c := range t {
-		x := int(c - '0')
-		if len(pos[x]) == 0 {
-			return false
-		}
-		for j := 0; j < x; j++ {
-			if len(pos[j]) > 0 && pos[j][0] < pos[x][0] {
-				return false
-			}
-		}
-		pos[x] = pos[x][1:]
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -186,4 +131,4 @@ func isTransformable(s string, t string) bool {
 
 ```
 
-<!-- tabs:end -->
+

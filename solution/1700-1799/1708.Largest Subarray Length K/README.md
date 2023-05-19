@@ -70,13 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestSubarray(self, nums: List[int], k: int) -> List[int]:
-        mx = max(nums[: len(nums) - k + 1])
-        i = nums.index(mx)
-        return nums[i: i + k]
-```
+
 
 ### **Java**
 
@@ -101,32 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> largestSubarray(vector<int>& nums, int k) {
-        auto pos = max_element(nums.begin(), nums.begin() + nums.size() - k + 1);
-        return {pos, pos + k};
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestSubarray(nums []int, k int) []int {
-	i, mx := 0, 0
-	for j := 0; j < len(nums)-k+1; j++ {
-		if mx < nums[j] {
-			mx = nums[j]
-			i = j
-		}
-	}
-	return nums[i : i+k]
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -134,4 +109,4 @@ func largestSubarray(nums []int, k int) []int {
 
 ```
 
-<!-- tabs:end -->
+

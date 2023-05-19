@@ -79,20 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMin(self, nums: List[int]) -> int:
-        if nums[0] <= nums[-1]:
-            return nums[0]
-        left, right = 0, len(nums) - 1
-        while left < right:
-            mid = (left + right) >> 1
-            if nums[0] <= nums[mid]:
-                left = mid + 1
-            else:
-                right = mid
-        return nums[left]
-```
+
 
 ### **Java**
 
@@ -119,105 +106,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findMin(vector<int>& nums) {
-        int n = nums.size();
-        if (nums[0] <= nums[n - 1]) return nums[0];
-        int left = 0, right = n - 1;
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (nums[0] <= nums[mid])
-                left = mid + 1;
-            else
-                right = mid;
-        }
-        return nums[left];
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMin(nums []int) int {
-	n := len(nums)
-	if nums[0] <= nums[n-1] {
-		return nums[0]
-	}
-	left, right := 0, n-1
-	for left < right {
-		mid := (left + right) >> 1
-		if nums[0] <= nums[mid] {
-			left = mid + 1
-		} else {
-			right = mid
-		}
-	}
-	return nums[left]
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var findMin = function (nums) {
-    let l = 0,
-        r = nums.length - 1;
-    if (nums[l] < nums[r]) return nums[0];
-    while (l < r) {
-        const m = (l + r) >> 1;
-        if (nums[m] > nums[r]) l = m + 1;
-        else r = m;
-    }
-    return nums[l];
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn find_min(nums: Vec<i32>) -> i32 {
-        let mut left = 0;
-        let mut right = nums.len() - 1;
-        while left < right {
-            let mid = left + (right - left) / 2;
-            if nums[mid] > nums[right] {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-        nums[left]
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findMin(nums: number[]): number {
-    let left = 0;
-    let right = nums.length - 1;
-    while (left < right) {
-        const mid = (left + right) >>> 1;
-        if (nums[mid] > nums[right]) {
-            left = mid + 1;
-        } else {
-            right = mid;
-        }
-    }
-    return nums[left];
-}
-```
+
 
 ### **...**
 
@@ -225,4 +132,4 @@ function findMin(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

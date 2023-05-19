@@ -85,28 +85,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
 
-
-class Solution:
-    def detectCycle(self, head: ListNode) -> ListNode:
-        slow = fast = head
-        has_cycle = False
-        while not has_cycle and fast and fast.next:
-            slow, fast = slow.next, fast.next.next
-            has_cycle = slow == fast
-        if not has_cycle:
-            return None
-        p = head
-        while p != slow:
-            p, slow = p.next, slow.next
-        return p
-```
 
 ### **Java**
 
@@ -148,138 +127,19 @@ public class Solution {
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function detectCycle(head: ListNode | null): ListNode | null {
-    let slow = head,
-        fast = head;
-    while (fast) {
-        slow = slow.next;
-        if (!fast.next) return null;
-        fast = fast.next.next;
 
-        if (fast == slow) {
-            let cur = head;
-            while (cur != slow) {
-                slow = slow.next;
-                cur = cur.next;
-            }
-            return cur;
-        }
-    }
-    return null;
-}
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    ListNode* detectCycle(ListNode* head) {
-        ListNode* slow = head;
-        ListNode* fast = head;
-        bool hasCycle = false;
-        while (!hasCycle && fast && fast->next) {
-            slow = slow->next;
-            fast = fast->next->next;
-            hasCycle = slow == fast;
-        }
-        if (!hasCycle) {
-            return nullptr;
-        }
-        ListNode* p = head;
-        while (p != slow) {
-            p = p->next;
-            slow = slow->next;
-        }
-        return p;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
 
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-var detectCycle = function (head) {
-    let slow = head;
-    let fast = head;
-    let hasCycle = false;
-    while (!hasCycle && fast && fast.next) {
-        slow = slow.next;
-        fast = fast.next.next;
-        hasCycle = slow == fast;
-    }
-    if (!hasCycle) {
-        return null;
-    }
-    let p = head;
-    while (p != slow) {
-        p = p.next;
-        slow = slow.next;
-    }
-    return p;
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func detectCycle(head *ListNode) *ListNode {
-    slow, fast := head, head
-    hasCycle := false
-    for !hasCycle && fast != nil && fast.Next != nil {
-        slow, fast = slow.Next, fast.Next.Next
-        hasCycle = slow == fast
-    }
-    if !hasCycle {
-        return nil
-    }
-    p := head
-    for p != slow {
-        p, slow = p.Next, slow.Next
-    }
-    return p
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -287,4 +147,4 @@ func detectCycle(head *ListNode) *ListNode {
 
 ```
 
-<!-- tabs:end -->
+

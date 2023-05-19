@@ -75,34 +75,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestSquareStreak(self, nums: List[int]) -> int:
-        s = set(nums)
-        ans = -1
-        for v in nums:
-            t = 0
-            while v in s:
-                v *= v
-                t += 1
-            if t > 1:
-                ans = max(ans, t)
-        return ans
-```
 
-```python
-class Solution:
-    def longestSquareStreak(self, nums: List[int]) -> int:
-        @cache
-        def dfs(x):
-            if x not in s:
-                return 0
-            return 1 + dfs(x * x)
 
-        s = set(nums)
-        ans = max(dfs(x) for x in nums)
-        return -1 if ans < 2 else ans
-```
+
 
 ### **Java**
 
@@ -161,101 +136,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestSquareStreak(vector<int>& nums) {
-        unordered_set<long long> s(nums.begin(), nums.end());
-        int ans = -1;
-        for (int& v : nums) {
-            int t = 0;
-            long long x = v;
-            while (s.count(x)) {
-                x *= x;
-                ++t;
-            }
-            if (t > 1) ans = max(ans, t);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int longestSquareStreak(vector<int>& nums) {
-        unordered_set<long long> s(nums.begin(), nums.end());
-        int ans = 0;
-        unordered_map<int, int> f;
-        function<int(int)> dfs = [&](int x) -> int {
-            if (!s.count(x)) return 0;
-            if (f.count(x)) return f[x];
-            long long t = 1ll * x * x;
-            if (t > INT_MAX) return 1;
-            f[x] = 1 + dfs(x * x);
-            return f[x];
-        };
-        for (int& v : nums) ans = max(ans, dfs(v));
-        return ans < 2 ? -1 : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestSquareStreak(nums []int) int {
-	s := map[int]bool{}
-	for _, v := range nums {
-		s[v] = true
-	}
-	ans := -1
-	for _, v := range nums {
-		t := 0
-		for s[v] {
-			v *= v
-			t++
-		}
-		if t > 1 && t > ans {
-			ans = t
-		}
-	}
-	return ans
-}
-```
 
-```go
-func longestSquareStreak(nums []int) (ans int) {
-	s := map[int]bool{}
-	for _, v := range nums {
-		s[v] = true
-	}
-	f := map[int]int{}
-	var dfs func(int) int
-	dfs = func(x int) int {
-		if !s[x] {
-			return 0
-		}
-		if v, ok := f[x]; ok {
-			return v
-		}
-		f[x] = 1 + dfs(x*x)
-		return f[x]
-	}
-	for _, v := range nums {
-		if t := dfs(v); ans < t {
-			ans = t
-		}
-	}
-	if ans < 2 {
-		return -1
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -263,4 +154,4 @@ func longestSquareStreak(nums []int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

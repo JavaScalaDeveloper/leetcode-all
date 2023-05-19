@@ -103,42 +103,7 @@ read4(buf4); // read4 返回 0。现在 buf = &quot;&quot;，fp 指向文件末�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-The read4 API is already defined for you.
 
-    @param buf4, a list of characters
-    @return an integer
-    def read4(buf4):
-
-# Below is an example of how the read4 API can be called.
-file = File("abcdefghijk") # File is "abcdefghijk", initially file pointer (fp) points to 'a'
-buf4 = [' '] * 4 # Create buffer with enough space to store characters
-read4(buf4) # read4 returns 4. Now buf = ['a','b','c','d'], fp points to 'e'
-read4(buf4) # read4 returns 4. Now buf = ['e','f','g','h'], fp points to 'i'
-read4(buf4) # read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
-"""
-
-
-class Solution:
-    def read(self, buf, n):
-        """
-        :type buf: Destination buffer (List[str])
-        :type n: Number of characters to read (int)
-        :rtype: The number of actual characters read (int)
-        """
-        i = 0
-        buf4 = [0] * 4
-        v = 5
-        while v >= 4:
-            v = read4(buf4)
-            for j in range(v):
-                buf[i] = buf4[j]
-                i += 1
-                if i >= n:
-                    return n
-        return i
-```
 
 ### **Java**
 
@@ -173,73 +138,13 @@ public class Solution extends Reader4 {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * The read4 API is defined in the parent class Reader4.
- *     int read4(char *buf4);
- */
 
-class Solution {
-public:
-    /**
-     * @param buf Destination buffer
-     * @param n   Number of characters to read
-     * @return    The number of actual characters read
-     */
-    int read(char *buf, int n) {
-        char buf4[4];
-        int i = 0, v = 5;
-        while (v >= 4) {
-            v = read4(buf4);
-            for (int j = 0; j < v; ++j) {
-                buf[i++] = buf4[j];
-                if (i >= n) {
-                    return n;
-                }
-            }
-        }
-        return i;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * The read4 API is already defined for you.
- *
- *     read4 := func(buf4 []byte) int
- *
- * // Below is an example of how the read4 API can be called.
- * file := File("abcdefghijk") // File is "abcdefghijk", initially file pointer (fp) points to 'a'
- * buf4 := make([]byte, 4) // Create buffer with enough space to store characters
- * read4(buf4) // read4 returns 4. Now buf = ['a','b','c','d'], fp points to 'e'
- * read4(buf4) // read4 returns 4. Now buf = ['e','f','g','h'], fp points to 'i'
- * read4(buf4) // read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
- */
 
-var solution = func(read4 func([]byte) int) func([]byte, int) int {
-	// implement read below.
-	return func(buf []byte, n int) int {
-		buf4 := make([]byte, 4)
-		i, v := 0, 5
-		for v >= 4 {
-			v = read4(buf4)
-			for j := 0; j < v; j++ {
-				buf[i] = buf4[j]
-				i++
-				if i >= n {
-					return n
-				}
-			}
-		}
-		return i
-	}
-}
-```
+
+
 
 ### **...**
 
@@ -247,4 +152,4 @@ var solution = func(read4 func([]byte) int) func([]byte, int) int {
 
 ```
 
-<!-- tabs:end -->
+

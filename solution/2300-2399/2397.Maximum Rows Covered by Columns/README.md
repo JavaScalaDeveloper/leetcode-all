@@ -66,22 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumRows(self, matrix: List[List[int]], numSelect: int) -> int:
-        rows = []
-        for row in matrix:
-            mask = reduce(or_, (1 << j for j, x in enumerate(row) if x), 0)
-            rows.append(mask)
 
-        ans = 0
-        for mask in range(1 << len(matrix[0])):
-            if mask.bit_count() != numSelect:
-                continue
-            t = sum((x & mask) == x for x in rows)
-            ans = max(ans, t)
-        return ans
-```
 
 ### **Java**
 
@@ -117,74 +102,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumRows(vector<vector<int>>& matrix, int numSelect) {
-        int m = matrix.size(), n = matrix[0].size();
-        int rows[m];
-        memset(rows, 0, sizeof(rows));
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (matrix[i][j]) {
-                    rows[i] |= 1 << j;
-                }
-            }
-        }
-        int ans = 0;
-        for (int mask = 1; mask < 1 << n; ++mask) {
-            if (__builtin_popcount(mask) != numSelect) {
-                continue;
-            }
-            int t = 0;
-            for (int x : rows) {
-                t += (x & mask) == x;
-            }
-            ans = max(ans, t);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumRows(matrix [][]int, numSelect int) (ans int) {
-	m, n := len(matrix), len(matrix[0])
-	rows := make([]int, m)
-	for i, row := range matrix {
-		for j, x := range row {
-			if x == 1 {
-				rows[i] |= 1 << j
-			}
-		}
-	}
-	for mask := 1; mask < 1<<n; mask++ {
-		if bits.OnesCount(uint(mask)) != numSelect {
-			continue
-		}
-		t := 0
-		for _, x := range rows {
-			if (x & mask) == x {
-				t++
-			}
-		}
-		if ans < t {
-			ans = t
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -193,4 +121,4 @@ func maximumRows(matrix [][]int, numSelect int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

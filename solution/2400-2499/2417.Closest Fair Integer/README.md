@@ -58,26 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def closestFair(self, n: int) -> int:
-        a = b = k = 0
-        t = n
-        while t:
-            if (t % 10) & 1:
-                a += 1
-            else:
-                b += 1
-            t //= 10
-            k += 1
-        if k & 1:
-            x = 10**k
-            y = int('1' * (k >> 1) or '0')
-            return x + y
-        if a == b:
-            return n
-        return self.closestFair(n + 1)
-```
+
 
 ### **Java**
 
@@ -113,74 +94,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int closestFair(int n) {
-        int a = 0, b = 0;
-        int t = n, k = 0;
-        while (t) {
-            if ((t % 10) & 1) {
-                ++a;
-            } else {
-                ++b;
-            }
-            ++k;
-            t /= 10;
-        }
-        if (a == b) {
-            return n;
-        }
-        if (k % 2 == 1) {
-            int x = pow(10, k);
-            int y = 0;
-            for (int i = 0; i < k >> 1; ++i) {
-                y = y * 10 + 1;
-            }
-            return x + y;
-        }
-        return closestFair(n + 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func closestFair(n int) int {
-	a, b := 0, 0
-	t, k := n, 0
-	for t > 0 {
-		if (t%10)%2 == 1 {
-			a++
-		} else {
-			b++
-		}
-		k++
-		t /= 10
-	}
-	if a == b {
-		return n
-	}
-	if k%2 == 1 {
-		x := int(math.Pow(10, float64(k)))
-		y := 0
-		for i := 0; i < k>>1; i++ {
-			y = y*10 + 1
-		}
-		return x + y
-	}
-	return closestFair(n + 1)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -188,4 +112,4 @@ func closestFair(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

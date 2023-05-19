@@ -54,18 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canReorderDoubled(self, arr: List[int]) -> bool:
-        freq = Counter(arr)
-        if freq[0] & 1:
-            return False
-        for x in sorted(freq, key=abs):
-            if freq[x << 1] < freq[x]:
-                return False
-            freq[x << 1] -= freq[x]
-        return True
-```
+
 
 ### **Java**
 
@@ -94,61 +83,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canReorderDoubled(vector<int>& arr) {
-        unordered_map<int, int> freq;
-        for (int& v : arr) ++freq[v];
-        if (freq[0] & 1) return false;
-        vector<int> keys;
-        for (auto& [k, _] : freq) keys.push_back(k);
-        sort(keys.begin(), keys.end(), [](int a, int b) { return abs(a) < abs(b); });
-        for (int& k : keys) {
-            if (freq[k * 2] < freq[k]) return false;
-            freq[k * 2] -= freq[k];
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canReorderDoubled(arr []int) bool {
-	freq := make(map[int]int)
-	for _, v := range arr {
-		freq[v]++
-	}
-	if freq[0]%2 != 0 {
-		return false
-	}
-	var keys []int
-	for k := range freq {
-		keys = append(keys, k)
-	}
-	sort.Slice(keys, func(i, j int) bool {
-		return abs(keys[i]) < abs(keys[j])
-	})
-	for _, k := range keys {
-		if freq[k*2] < freq[k] {
-			return false
-		}
-		freq[k*2] -= freq[k]
-	}
-	return true
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **...**
 
@@ -156,4 +97,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

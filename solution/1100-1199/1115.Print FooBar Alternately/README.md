@@ -81,30 +81,7 @@ class FooBar {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from threading import Semaphore
 
-
-class FooBar:
-    def __init__(self, n):
-        self.n = n
-        self.f = Semaphore(1)
-        self.b = Semaphore(0)
-
-    def foo(self, printFoo: "Callable[[], None]") -> None:
-        for _ in range(self.n):
-            self.f.acquire()
-            # printFoo() outputs "foo". Do not change or remove this line.
-            printFoo()
-            self.b.release()
-
-    def bar(self, printBar: "Callable[[], None]") -> None:
-        for _ in range(self.n):
-            self.b.acquire()
-            # printBar() outputs "bar". Do not change or remove this line.
-            printBar()
-            self.f.release()
-```
 
 ### **Java**
 
@@ -140,42 +117,9 @@ class FooBar {
 }
 ```
 
-### **C++**
 
-```cpp
-#include <semaphore.h>
 
-class FooBar {
-private:
-    int n;
-    sem_t f, b;
 
-public:
-    FooBar(int n) {
-        this->n = n;
-        sem_init(&f, 0, 1);
-        sem_init(&b, 0, 0);
-    }
-
-    void foo(function<void()> printFoo) {
-        for (int i = 0; i < n; i++) {
-            sem_wait(&f);
-        	// printFoo() outputs "foo". Do not change or remove this line.
-        	printFoo();
-            sem_post(&b);
-        }
-    }
-
-    void bar(function<void()> printBar) {
-        for (int i = 0; i < n; i++) {
-            sem_wait(&b);
-        	// printBar() outputs "bar". Do not change or remove this line.
-        	printBar();
-            sem_post(&f);
-        }
-    }
-};
-```
 
 ### **...**
 
@@ -183,4 +127,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

@@ -64,15 +64,7 @@
 
 由于 python `int` 是无限长整型，左移不会自动溢出，因此需要特殊处理。
 
-```python
-class Solution:
-    def getSum(self, a: int, b: int) -> int:
-        a, b = a & 0xFFFFFFFF, b & 0xFFFFFFFF
-        while b:
-            carry = ((a & b) << 1) & 0xFFFFFFFF
-            a, b = a ^ b, carry
-        return a if a < 0x80000000 else ~(a ^ 0xFFFFFFFF)
-```
+
 
 ### **Java**
 
@@ -86,34 +78,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int getSum(int a, int b) {
-        while (b) {
-            unsigned int carry = (unsigned int)(a & b) << 1;
-            a = a ^ b;
-            b = carry;
-        }
-        return a;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getSum(a int, b int) int {
-	for b != 0 {
-		s := a ^ b
-		b = (a & b) << 1
-		a = s
-	}
-	return a
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -121,4 +92,4 @@ func getSum(a int, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

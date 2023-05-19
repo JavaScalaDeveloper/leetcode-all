@@ -79,47 +79,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def bestTeamScore(self, scores: List[int], ages: List[int]) -> int:
-        arr = sorted(zip(scores, ages))
-        n = len(arr)
-        f = [0] * n
-        for i, (score, age) in enumerate(arr):
-            for j in range(i):
-                if age >= arr[j][1]:
-                    f[i] = max(f[i], f[j])
-            f[i] += score
-        return max(f)
-```
-
-```python
-class BinaryIndexedTree:
-    def __init__(self, n):
-        self.n = n
-        self.c = [0] * (n + 1)
-
-    def update(self, x, val):
-        while x <= self.n:
-            self.c[x] = max(self.c[x], val)
-            x += x & -x
-
-    def query(self, x):
-        s = 0
-        while x:
-            s = max(s, self.c[x])
-            x -= x & -x
-        return s
 
 
-class Solution:
-    def bestTeamScore(self, scores: List[int], ages: List[int]) -> int:
-        m = max(ages)
-        tree = BinaryIndexedTree(m)
-        for score, age in sorted(zip(scores, ages)):
-            tree.update(age, score + tree.query(age))
-        return tree.query(m)
-```
+
 
 ### **Java**
 
@@ -198,209 +160,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int bestTeamScore(vector<int>& scores, vector<int>& ages) {
-        int n = ages.size();
-        vector<pair<int, int>> arr(n);
-        for (int i = 0; i < n; ++i) {
-            arr[i] = {scores[i], ages[i]};
-        }
-        sort(arr.begin(), arr.end());
-        vector<int> f(n);
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < i; ++j) {
-                if (arr[i].second >= arr[j].second) {
-                    f[i] = max(f[i], f[j]);
-                }
-            }
-            f[i] += arr[i].first;
-        }
-        return *max_element(f.begin(), f.end());
-    }
-};
-```
 
-```cpp
-class BinaryIndexedTree {
-public:
-    BinaryIndexedTree(int _n) : n(_n), c(_n + 1) {}
 
-    void update(int x, int val) {
-        while (x <= n) {
-            c[x] = max(c[x], val);
-            x += x & -x;
-        }
-    }
 
-    int query(int x) {
-        int s = 0;
-        while (x) {
-            s = max(s, c[x]);
-            x -= x & -x;
-        }
-        return s;
-    }
 
-private:
-    int n;
-    vector<int> c;
-};
 
-class Solution {
-public:
-    int bestTeamScore(vector<int>& scores, vector<int>& ages) {
-        int n = ages.size();
-        vector<pair<int, int>> arr(n);
-        for (int i = 0; i < n; ++i) {
-            arr[i] = {scores[i], ages[i]};
-        }
-        sort(arr.begin(), arr.end());
-        int m = *max_element(ages.begin(), ages.end());
-        BinaryIndexedTree tree(m);
-        for (auto& [score, age] : arr) {
-            tree.update(age, score + tree.query(age));
-        }
-        return tree.query(m);
-    }
-};
-```
 
-### **Go**
 
-```go
-func bestTeamScore(scores []int, ages []int) (ans int) {
-	n := len(ages)
-	arr := make([][2]int, n)
-	for i := range ages {
-		arr[i] = [2]int{scores[i], ages[i]}
-	}
-	sort.Slice(arr, func(i, j int) bool {
-		a, b := arr[i], arr[j]
-		return a[0] < b[0] || a[0] == b[0] && a[1] < b[1]
-	})
-	f := make([]int, n)
-	for i := range arr {
-		for j := 0; j < i; j++ {
-			if arr[i][1] >= arr[j][1] {
-				f[i] = max(f[i], f[j])
-			}
-		}
-		f[i] += arr[i][0]
-		ans = max(ans, f[i])
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-type BinaryIndexedTree struct {
-	n int
-	c []int
-}
 
-func newBinaryIndexedTree(n int) *BinaryIndexedTree {
-	c := make([]int, n+1)
-	return &BinaryIndexedTree{n, c}
-}
-
-func (this *BinaryIndexedTree) update(x, val int) {
-	for x <= this.n {
-		this.c[x] = max(this.c[x], val)
-		x += x & -x
-	}
-}
-
-func (this *BinaryIndexedTree) query(x int) int {
-	s := 0
-	for x > 0 {
-		s = max(s, this.c[x])
-		x -= x & -x
-	}
-	return s
-}
-
-func bestTeamScore(scores []int, ages []int) int {
-	n := len(ages)
-	arr := make([][2]int, n)
-	m := 0
-	for i, age := range ages {
-		m = max(m, age)
-		arr[i] = [2]int{scores[i], age}
-	}
-	sort.Slice(arr, func(i, j int) bool {
-		a, b := arr[i], arr[j]
-		return a[0] < b[0] || a[0] == b[0] && a[1] < b[1]
-	})
-	tree := newBinaryIndexedTree(m)
-	for _, x := range arr {
-		tree.update(x[1], x[0]+tree.query(x[1]))
-	}
-	return tree.query(m)
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
 ### **TypeScript**
 
-```ts
-function bestTeamScore(scores: number[], ages: number[]): number {
-    const arr = ages.map((age, i) => [age, scores[i]]);
-    arr.sort((a, b) => (a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]));
-    const n = arr.length;
-    const f = new Array(n).fill(0);
-    for (let i = 0; i < n; ++i) {
-        for (let j = 0; j < i; ++j) {
-            if (arr[i][1] >= arr[j][1]) {
-                f[i] = Math.max(f[i], f[j]);
-            }
-        }
-        f[i] += arr[i][1];
-    }
-    return Math.max(...f);
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} scores
- * @param {number[]} ages
- * @return {number}
- */
-var bestTeamScore = function (scores, ages) {
-    const arr = ages.map((age, i) => [age, scores[i]]);
-    arr.sort((a, b) => (a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]));
-    const n = arr.length;
-    const f = new Array(n).fill(0);
-    for (let i = 0; i < n; ++i) {
-        for (let j = 0; j < i; ++j) {
-            if (arr[i][1] >= arr[j][1]) {
-                f[i] = Math.max(f[i], f[j]);
-            }
-        }
-        f[i] += arr[i][1];
-    }
-    return Math.max(...f);
-};
-```
+
+
+
 
 ### **...**
 
@@ -408,4 +186,4 @@ var bestTeamScore = function (scores, ages) {
 
 ```
 
-<!-- tabs:end -->
+

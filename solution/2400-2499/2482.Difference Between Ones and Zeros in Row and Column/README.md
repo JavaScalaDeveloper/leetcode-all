@@ -83,22 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def onesMinusZeros(self, grid: List[List[int]]) -> List[List[int]]:
-        m, n = len(grid), len(grid[0])
-        rows = [0] * m
-        cols = [0] * n
-        for i, row in enumerate(grid):
-            for j, v in enumerate(row):
-                rows[i] += v
-                cols[j] += v
-        diff = [[0] * n for _ in range(m)]
-        for i, r in enumerate(rows):
-            for j, c in enumerate(cols):
-                diff[i][j] = r + c - (n - r) - (m - c)
-        return diff
-```
+
 
 ### **Java**
 
@@ -128,110 +113,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> onesMinusZeros(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<int> rows(m);
-        vector<int> cols(n);
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                int v = grid[i][j];
-                rows[i] += v;
-                cols[j] += v;
-            }
-        }
-        vector<vector<int>> diff(m, vector<int>(n));
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                diff[i][j] = rows[i] + cols[j] - (n - rows[i]) - (m - cols[j]);
-            }
-        }
-        return diff;
-    }
-};
-```
 
-### **Go**
 
-```go
-func onesMinusZeros(grid [][]int) [][]int {
-	m, n := len(grid), len(grid[0])
-	rows := make([]int, m)
-	cols := make([]int, n)
-	diff := make([][]int, m)
-	for i, row := range grid {
-		diff[i] = make([]int, n)
-		for j, v := range row {
-			rows[i] += v
-			cols[j] += v
-		}
-	}
-	for i, r := range rows {
-		for j, c := range cols {
-			diff[i][j] = r + c - (n - r) - (m - c)
-		}
-	}
-	return diff
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function onesMinusZeros(grid: number[][]): number[][] {
-    const m = grid.length;
-    const n = grid[0].length;
-    const rows = new Array(m).fill(0);
-    const cols = new Array(n).fill(0);
-    for (let i = 0; i < m; i++) {
-        for (let j = 0; j < n; j++) {
-            if (grid[i][j]) {
-                rows[i]++;
-                cols[j]++;
-            }
-        }
-    }
-    const ans = Array.from({ length: m }, () => new Array(n).fill(0));
-    for (let i = 0; i < m; i++) {
-        for (let j = 0; j < n; j++) {
-            ans[i][j] = rows[i] + cols[j] - (m - rows[i]) - (n - cols[j]);
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn ones_minus_zeros(grid: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-        let m = grid.len();
-        let n = grid[0].len();
-        let mut rows = vec![0; m];
-        let mut cols = vec![0; n];
-        for i in 0..m {
-            for j in 0..n {
-                if grid[i][j] == 1 {
-                    rows[i] += 1;
-                    cols[j] += 1;
-                }
-            }
-        }
-        let mut ans = vec![vec![0; n]; m];
-        for i in 0..m {
-            for j in 0..n {
-                ans[i][j] = (rows[i] + cols[j] - (m - rows[i]) - (n - cols[j])) as i32;
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -273,4 +169,4 @@ int **onesMinusZeros(int **grid, int gridSize, int *gridColSize, int *returnSize
 
 ```
 
-<!-- tabs:end -->
+

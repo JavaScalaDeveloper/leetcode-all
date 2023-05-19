@@ -63,30 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countPairs(self, n: int, edges: List[List[int]]) -> int:
-        def dfs(i):
-            vis.add(i)
-            cnt = 1
-            for j in g[i]:
-                if j not in vis:
-                    cnt += dfs(j)
-            return cnt
 
-        g = defaultdict(list)
-        for a, b in edges:
-            g[a].append(b)
-            g[b].append(a)
-        vis = set()
-        ans = s = 0
-        for i in range(n):
-            if i not in vis:
-                t = dfs(i)
-                ans += s * t
-                s += t
-        return ans
-```
 
 ### **Java**
 
@@ -130,108 +107,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long countPairs(int n, vector<vector<int>>& edges) {
-        vector<vector<int>> g(n);
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            g[a].emplace_back(b);
-            g[b].emplace_back(a);
-        }
-        vector<bool> vis(n);
-        function<int(int)> dfs = [&](int i) -> int {
-            vis[i] = true;
-            int cnt = 1;
-            for (int j : g[i]) {
-                if (!vis[j]) {
-                    cnt += dfs(j);
-                }
-            }
-            return cnt;
-        };
-        long long ans = 0, s = 0;
-        for (int i = 0; i < n; ++i) {
-            if (!vis[i]) {
-                long long t = dfs(i);
-                ans += s * t;
-                s += t;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countPairs(n int, edges [][]int) (ans int64) {
-	g := make([][]int, n)
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-	}
-	vis := make([]bool, n)
-	var dfs func(int) int
-	dfs = func(i int) int {
-		vis[i] = true
-		cnt := 1
-		for _, j := range g[i] {
-			if !vis[j] {
-				cnt += dfs(j)
-			}
-		}
-		return cnt
-	}
-	var s int64
-	for i := 0; i < n; i++ {
-		if !vis[i] {
-			t := int64(dfs(i))
-			ans += s * t
-			s += t
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countPairs(n: number, edges: number[][]): number {
-    const g = Array.from({ length: n }, () => []);
-    for (const [a, b] of edges) {
-        g[a].push(b);
-        g[b].push(a);
-    }
-    const vis = new Array(n).fill(false);
-    const dfs = (i: number) => {
-        vis[i] = true;
-        let cnt = 1;
-        for (const j of g[i]) {
-            if (!vis[j]) {
-                cnt += dfs(j);
-            }
-        }
-        return cnt;
-    };
-    let ans = 0;
-    let s = 0;
-    for (let i = 0; i < n; ++i) {
-        if (!vis[i]) {
-            const t = dfs(i);
-            ans += s * t;
-            s += t;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -239,4 +125,4 @@ function countPairs(n: number, edges: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

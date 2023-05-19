@@ -54,19 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def verifyPreorder(self, preorder: List[int]) -> bool:
-        stk = []
-        last = -inf
-        for x in preorder:
-            if x < last:
-                return False
-            while stk and stk[-1] < x:
-                last = stk.pop()
-            stk.append(x)
-        return True
-```
+
 
 ### **Java**
 
@@ -91,46 +79,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool verifyPreorder(vector<int>& preorder) {
-        stack<int> stk;
-        int last = INT_MIN;
-        for (int x : preorder) {
-            if (x < last) return false;
-            while (!stk.empty() && stk.top() < x) {
-                last = stk.top();
-                stk.pop();
-            }
-            stk.push(x);
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func verifyPreorder(preorder []int) bool {
-	var stk []int
-	last := math.MinInt32
-	for _, x := range preorder {
-		if x < last {
-			return false
-		}
-		for len(stk) > 0 && stk[len(stk)-1] < x {
-			last = stk[len(stk)-1]
-			stk = stk[0 : len(stk)-1]
-		}
-		stk = append(stk, x)
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -138,4 +93,4 @@ func verifyPreorder(preorder []int) bool {
 
 ```
 
-<!-- tabs:end -->
+

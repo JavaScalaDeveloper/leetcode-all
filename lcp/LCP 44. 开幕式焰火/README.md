@@ -48,26 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-class Solution:
-    def numColor(self, root: TreeNode) -> int:
-        s = set()
 
-        def dfs(root):
-            if root:
-                s.add(root.val)
-                dfs(root.left)
-                dfs(root.right)
-
-        dfs(root)
-        return len(s)
-```
 
 ### **Java**
 
@@ -103,63 +84,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    unordered_set<int> s;
 
-    int numColor(TreeNode* root) {
-        dfs(root);
-        return s.size();
-    }
 
-    void dfs(TreeNode* root) {
-        if (!root) return;
-        s.insert(root->val);
-        dfs(root->left);
-        dfs(root->right);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-var s map[int]bool
 
-func numColor(root *TreeNode) int {
-	s = make(map[int]bool)
-	dfs(root)
-	return len(s)
-}
 
-func dfs(root *TreeNode) {
-	if root != nil {
-		s[root.Val] = true
-		dfs(root.Left)
-		dfs(root.Right)
-	}
-}
-```
 
 ### **...**
 
@@ -167,4 +98,4 @@ func dfs(root *TreeNode) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -75,29 +75,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def answerQueries(self, nums: List[int], queries: List[int]) -> List[int]:
-        nums.sort()
-        s = list(accumulate(nums))
-        return [bisect_right(s, q) for q in queries]
-```
 
-```python
-class Solution:
-    def answerQueries(self, nums: List[int], queries: List[int]) -> List[int]:
-        nums.sort()
-        m = len(queries)
-        ans = [0] * m
-        idx = sorted(range(m), key=lambda i: queries[i])
-        s = j = 0
-        for i in idx:
-            while j < len(nums) and s + nums[j] <= queries[i]:
-                s += nums[j]
-                j += 1
-            ans[i] = j
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -156,160 +136,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> answerQueries(vector<int>& nums, vector<int>& queries) {
-        sort(nums.begin(), nums.end());
-        for (int i = 1; i < nums.size(); i++) {
-            nums[i] += nums[i - 1];
-        }
-        vector<int> ans;
-        for (auto& q : queries) {
-            ans.push_back(upper_bound(nums.begin(), nums.end(), q) - nums.begin());
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> answerQueries(vector<int>& nums, vector<int>& queries) {
-        sort(nums.begin(), nums.end());
-        int m = queries.size();
-        vector<int> idx(m);
-        iota(idx.begin(), idx.end(), 0);
-        sort(idx.begin(), idx.end(), [&](int i, int j) {
-            return queries[i] < queries[j];
-        });
-        vector<int> ans(m);
-        int s = 0, j = 0;
-        for (int i : idx) {
-            while (j < nums.size() && s + nums[j] <= queries[i]) {
-                s += nums[j++];
-            }
-            ans[i] = j;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func answerQueries(nums []int, queries []int) (ans []int) {
-	sort.Ints(nums)
-	for i := 1; i < len(nums); i++ {
-		nums[i] += nums[i-1]
-	}
-	for _, q := range queries {
-		ans = append(ans, sort.SearchInts(nums, q+1))
-	}
-	return
-}
-```
 
-```go
-func answerQueries(nums []int, queries []int) (ans []int) {
-	sort.Ints(nums)
-	m := len(queries)
-	idx := make([]int, m)
-	for i := range idx {
-		idx[i] = i
-	}
-	sort.Slice(idx, func(i, j int) bool { return queries[idx[i]] < queries[idx[j]] })
-	ans = make([]int, m)
-	s, j := 0, 0
-	for _, i := range idx {
-		for j < len(nums) && s+nums[j] <= queries[i] {
-			s += nums[j]
-			j++
-		}
-		ans[i] = j
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function answerQueries(nums: number[], queries: number[]): number[] {
-    nums.sort((a, b) => a - b);
-    for (let i = 1; i < nums.length; i++) {
-        nums[i] += nums[i - 1];
-    }
-    const ans: number[] = [];
-    const search = (nums: number[], x: number) => {
-        let l = 0;
-        let r = nums.length;
-        while (l < r) {
-            const mid = (l + r) >> 1;
-            if (nums[mid] > x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    };
-    for (const q of queries) {
-        ans.push(search(nums, q));
-    }
-    return ans;
-}
-```
 
-```ts
-function answerQueries(nums: number[], queries: number[]): number[] {
-    nums.sort((a, b) => a - b);
-    const m = queries.length;
-    const idx: number[] = new Array(m);
-    for (let i = 0; i < m; i++) {
-        idx[i] = i;
-    }
-    idx.sort((i, j) => queries[i] - queries[j]);
-    const ans: number[] = new Array(m);
-    let s = 0;
-    let j = 0;
-    for (const i of idx) {
-        while (j < nums.length && s + nums[j] <= queries[i]) {
-            s += nums[j++];
-        }
-        ans[i] = j;
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn answer_queries(mut nums: Vec<i32>, queries: Vec<i32>) -> Vec<i32> {
-        let n = nums.len();
-        nums.sort();
-        queries
-            .into_iter()
-            .map(|query| {
-                let mut sum = 0;
-                for i in 0..n {
-                    sum += nums[i];
-                    if sum > query {
-                        return i as i32;
-                    }
-                }
-                n as i32
-            })
-            .collect()
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -317,4 +164,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

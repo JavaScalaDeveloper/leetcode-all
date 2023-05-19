@@ -48,24 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reverseVowels(self, s: str) -> str:
-        vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
-        i, j = 0, len(s) - 1
-        chars = list(s)
-        while i < j:
-            if chars[i] not in vowels:
-                i += 1
-                continue
-            if chars[j] not in vowels:
-                j -= 1
-                continue
-            chars[i], chars[j] = chars[j], chars[i]
-            i += 1
-            j -= 1
-        return ''.join(chars)
-```
+
 
 ### **Java**
 
@@ -98,33 +81,9 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func reverseVowels(s string) string {
-	left, right := 0, len(s)-1
-	a := []byte(s)
-	for left < right {
-		for left < right && !isVowel(a[left]) {
-			left++
-		}
-		for left < right && !isVowel(a[right]) {
-			right--
-		}
-		if left != right && isVowel(a[left]) && isVowel(a[right]) {
-			a[left], a[right] = a[right], a[left]
-			left++
-			right--
-		}
-	}
-	return string(a)
-}
 
-func isVowel(b byte) bool {
-	return b == 'a' || b == 'e' || b == 'i' || b == 'o' || b == 'u' ||
-		b == 'A' || b == 'E' || b == 'I' || b == 'O' || b == 'U'
-}
-```
+
 
 ### **...**
 
@@ -132,4 +91,4 @@ func isVowel(b byte) bool {
 
 ```
 
-<!-- tabs:end -->
+

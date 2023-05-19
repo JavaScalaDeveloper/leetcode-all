@@ -115,45 +115,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numWays(self, words: List[str], target: str) -> int:
-        @cache
-        def dfs(i: int, j: int) -> int:
-            if i >= m:
-                return 1
-            if j >= n:
-                return 0
-            ans = dfs(i + 1, j + 1) * cnt[j][ord(target[i]) - ord('a')]
-            ans = (ans + dfs(i, j + 1)) % mod
-            return ans
 
-        m, n = len(target), len(words[0])
-        cnt = [[0] * 26 for _ in range(n)]
-        for w in words:
-            for j, c in enumerate(w):
-                cnt[j][ord(c) - ord('a')] += 1
-        mod = 10**9 + 7
-        return dfs(0, 0)
-```
 
-```python
-class Solution:
-    def numWays(self, words: List[str], target: str) -> int:
-        m, n = len(target), len(words[0])
-        cnt = [[0] * 26 for _ in range(n)]
-        for w in words:
-            for j, c in enumerate(w):
-                cnt[j][ord(c) - ord('a')] += 1
-        mod = 10**9 + 7
-        f = [[0] * (n + 1) for _ in range(m + 1)]
-        f[0] = [1] * (n + 1)
-        for i in range(1, m + 1):
-            for j in range(1, n + 1):
-                f[i][j] = f[i][j - 1] + f[i - 1][j - 1] * cnt[j - 1][ord(target[i - 1]) - ord('a')]
-                f[i][j] %= mod
-        return f[m][n]
-```
+
 
 ### **Java**
 
@@ -225,161 +189,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numWays(vector<string>& words, string target) {
-        const int mod = 1e9 + 7;
-        int m = target.size(), n = words[0].size();
-        vector<vector<int>> cnt(n, vector<int>(26));
-        for (auto& w : words) {
-            for (int j = 0; j < n; ++j) {
-                ++cnt[j][w[j] - 'a'];
-            }
-        }
-        int f[m][n];
-        memset(f, -1, sizeof(f));
-        function<int(int, int)> dfs = [&](int i, int j) -> int {
-            if (i >= m) {
-                return 1;
-            }
-            if (j >= n) {
-                return 0;
-            }
-            if (f[i][j] != -1) {
-                return f[i][j];
-            }
-            int ans = dfs(i, j + 1);
-            ans = (ans + 1LL * dfs(i + 1, j + 1) * cnt[j][target[i] - 'a']) % mod;
-            return f[i][j] = ans;
-        };
-        return dfs(0, 0);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int numWays(vector<string>& words, string target) {
-        int m = target.size(), n = words[0].size();
-        const int mod = 1e9 + 7;
-        long long f[m + 1][n + 1];
-        memset(f, 0, sizeof(f));
-        fill(f[0], f[0] + n + 1, 1);
-        vector<vector<int>> cnt(n, vector<int>(26));
-        for (auto& w : words) {
-            for (int j = 0; j < n; ++j) {
-                ++cnt[j][w[j] - 'a'];
-            }
-        }
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                f[i][j] = f[i][j - 1] + f[i - 1][j - 1] * cnt[j - 1][target[i - 1] - 'a'];
-                f[i][j] %= mod;
-            }
-        }
-        return f[m][n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func numWays(words []string, target string) int {
-	m, n := len(target), len(words[0])
-	f := make([][]int, m)
-	cnt := make([][26]int, n)
-	for _, w := range words {
-		for j, c := range w {
-			cnt[j][c-'a']++
-		}
-	}
-	for i := range f {
-		f[i] = make([]int, n)
-		for j := range f[i] {
-			f[i][j] = -1
-		}
-	}
-	const mod = 1e9 + 7
-	var dfs func(i, j int) int
-	dfs = func(i, j int) int {
-		if i >= m {
-			return 1
-		}
-		if j >= n {
-			return 0
-		}
-		if f[i][j] != -1 {
-			return f[i][j]
-		}
-		ans := dfs(i, j+1)
-		ans = (ans + dfs(i+1, j+1)*cnt[j][target[i]-'a']) % mod
-		f[i][j] = ans
-		return ans
-	}
-	return dfs(0, 0)
-}
-```
 
-```go
-func numWays(words []string, target string) int {
-	const mod = 1e9 + 7
-	m, n := len(target), len(words[0])
-	f := make([][]int, m+1)
-	for i := range f {
-		f[i] = make([]int, n+1)
-	}
-	for j := range f[0] {
-		f[0][j] = 1
-	}
-	cnt := make([][26]int, n)
-	for _, w := range words {
-		for j, c := range w {
-			cnt[j][c-'a']++
-		}
-	}
-	for i := 1; i <= m; i++ {
-		for j := 1; j <= n; j++ {
-			f[i][j] = f[i][j-1] + f[i-1][j-1]*cnt[j-1][target[i-1]-'a']
-			f[i][j] %= mod
-		}
-	}
-	return f[m][n]
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numWays(words: string[], target: string): number {
-    const m = target.length;
-    const n = words[0].length;
-    const f = new Array(m + 1).fill(0).map(() => new Array(n + 1).fill(0));
-    const mod = 1e9 + 7;
-    for (let j = 0; j <= n; ++j) {
-        f[0][j] = 1;
-    }
-    const cnt = new Array(n).fill(0).map(() => new Array(26).fill(0));
-    for (const w of words) {
-        for (let j = 0; j < n; ++j) {
-            ++cnt[j][w.charCodeAt(j) - 97];
-        }
-    }
-    for (let i = 1; i <= m; ++i) {
-        for (let j = 1; j <= n; ++j) {
-            f[i][j] =
-                f[i][j - 1] +
-                f[i - 1][j - 1] * cnt[j - 1][target.charCodeAt(i - 1) - 97];
-            f[i][j] %= mod;
-        }
-    }
-    return f[m][n];
-}
-```
+
 
 ### **...**
 
@@ -387,4 +211,4 @@ function numWays(words: string[], target: string): number {
 
 ```
 
-<!-- tabs:end -->
+

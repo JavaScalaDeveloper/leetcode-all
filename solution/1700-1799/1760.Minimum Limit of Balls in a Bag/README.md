@@ -80,14 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumSize(self, nums: List[int], maxOperations: int) -> int:
-        def check(mx: int) -> bool:
-            return sum((x - 1) // mx for x in nums) <= maxOperations
 
-        return bisect_left(range(1, max(nums)), True, key=check) + 1
-```
 
 ### **Java**
 
@@ -117,104 +110,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumSize(vector<int>& nums, int maxOperations) {
-        int left = 1, right = *max_element(nums.begin(), nums.end());
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            long long cnt = 0;
-            for (int x : nums) {
-                cnt += (x - 1) / mid;
-            }
-            if (cnt <= maxOperations) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumSize(nums []int, maxOperations int) int {
-	r := 0
-	for _, x := range nums {
-		r = max(r, x)
-	}
-	return 1 + sort.Search(r, func(mx int) bool {
-		mx++
-		cnt := 0
-		for _, x := range nums {
-			cnt += (x - 1) / mx
-		}
-		return cnt <= maxOperations
-	})
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} maxOperations
- * @return {number}
- */
-var minimumSize = function (nums, maxOperations) {
-    let left = 1;
-    let right = Math.max(...nums);
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        let cnt = 0;
-        for (const x of nums) {
-            cnt += ~~((x - 1) / mid);
-        }
-        if (cnt <= maxOperations) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumSize(nums: number[], maxOperations: number): number {
-    let left = 1;
-    let right = Math.max(...nums);
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        let cnt = 0;
-        for (const x of nums) {
-            cnt += ~~((x - 1) / mid);
-        }
-        if (cnt <= maxOperations) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-```
+
 
 ### **...**
 
@@ -222,4 +132,4 @@ function minimumSize(nums: number[], maxOperations: number): number {
 
 ```
 
-<!-- tabs:end -->
+

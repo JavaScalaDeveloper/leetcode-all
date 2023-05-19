@@ -66,44 +66,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minNumber(self, nums1: List[int], nums2: List[int]) -> int:
-        ans = 100
-        for a in nums1:
-            for b in nums2:
-                if a == b:
-                    ans = min(ans, a)
-                else:
-                    ans = min(ans, 10 * a + b, 10 * b + a)
-        return ans
-```
 
-```python
-class Solution:
-    def minNumber(self, nums1: List[int], nums2: List[int]) -> int:
-        s = set(nums1) & set(nums2)
-        if s:
-            return min(s)
-        a, b = min(nums1), min(nums2)
-        return min(a * 10 + b, b * 10 + a)
-```
 
-```python
-class Solution:
-    def minNumber(self, nums1: List[int], nums2: List[int]) -> int:
-        mask1 = mask2 = 0
-        for x in nums1:
-            mask1 |= 1 << x
-        for x in nums2:
-            mask2 |= 1 << x
-        mask = mask1 & mask2
-        if mask:
-            return (mask & -mask).bit_length() - 1
-        a = (mask1 & -mask1).bit_length() - 1
-        b = (mask2 & -mask2).bit_length() - 1
-        return min(a * 10 + b, b * 10 + a)
-```
+
+
+
 
 ### **Java**
 
@@ -176,253 +143,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minNumber(vector<int>& nums1, vector<int>& nums2) {
-        int ans = 100;
-        for (int a : nums1) {
-            for (int b : nums2) {
-                if (a == b) {
-                    ans = min(ans, a);
-                } else {
-                    ans = min({ans, a * 10 + b, b * 10 + a});
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int minNumber(vector<int>& nums1, vector<int>& nums2) {
-        bitset<10> s1;
-        bitset<10> s2;
-        for (int x : nums1) {
-            s1[x] = 1;
-        }
-        for (int x : nums2) {
-            s2[x] = 1;
-        }
-        int a = 0, b = 0;
-        for (int i = 1; i < 10; ++i) {
-            if (s1[i] && s2[i]) {
-                return i;
-            }
-            if (!a && s1[i]) {
-                a = i;
-            }
-            if (!b && s2[i]) {
-                b = i;
-            }
-        }
-        return min(a * 10 + b, b * 10 + a);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int minNumber(vector<int>& nums1, vector<int>& nums2) {
-        int mask1 = 0, mask2 = 0;
-        for (int x : nums1) {
-            mask1 |= 1 << x;
-        }
-        for (int x : nums2) {
-            mask2 |= 1 << x;
-        }
-        int mask = mask1 & mask2;
-        if (mask) {
-            return __builtin_ctz(mask);
-        }
-        int a = __builtin_ctz(mask1);
-        int b = __builtin_ctz(mask2);
-        return min(a * 10 + b, b * 10 + a);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minNumber(nums1 []int, nums2 []int) int {
-	ans := 100
-	for _, a := range nums1 {
-		for _, b := range nums2 {
-			if a == b {
-				ans = min(ans, a)
-			} else {
-				ans = min(ans, min(a*10+b, b*10+a))
-			}
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func minNumber(nums1 []int, nums2 []int) int {
-	s1 := [10]bool{}
-	s2 := [10]bool{}
-	for _, x := range nums1 {
-		s1[x] = true
-	}
-	for _, x := range nums2 {
-		s2[x] = true
-	}
-	a, b := 0, 0
-	for i := 1; i < 10; i++ {
-		if s1[i] && s2[i] {
-			return i
-		}
-		if a == 0 && s1[i] {
-			a = i
-		}
-		if b == 0 && s2[i] {
-			b = i
-		}
-	}
-	return min(a*10+b, b*10+a)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func minNumber(nums1 []int, nums2 []int) int {
-	var mask1, mask2 uint
-	for _, x := range nums1 {
-		mask1 |= 1 << x
-	}
-	for _, x := range nums2 {
-		mask2 |= 1 << x
-	}
-	if mask := mask1 & mask2; mask != 0 {
-		return bits.TrailingZeros(mask)
-	}
-	a, b := bits.TrailingZeros(mask1), bits.TrailingZeros(mask2)
-	return min(a*10+b, b*10+a)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minNumber(nums1: number[], nums2: number[]): number {
-    let ans = 100;
-    for (const a of nums1) {
-        for (const b of nums2) {
-            if (a == b) {
-                ans = Math.min(ans, a);
-            } else {
-                ans = Math.min(ans, a * 10 + b, b * 10 + a);
-            }
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function minNumber(nums1: number[], nums2: number[]): number {
-    const s1: boolean[] = new Array(10).fill(false);
-    const s2: boolean[] = new Array(10).fill(false);
-    for (const x of nums1) {
-        s1[x] = true;
-    }
-    for (const x of nums2) {
-        s2[x] = true;
-    }
-    let a = 0;
-    let b = 0;
-    for (let i = 1; i < 10; ++i) {
-        if (s1[i] && s2[i]) {
-            return i;
-        }
-        if (a == 0 && s1[i]) {
-            a = i;
-        }
-        if (b == 0 && s2[i]) {
-            b = i;
-        }
-    }
-    return Math.min(a * 10 + b, b * 10 + a);
-}
-```
 
-```ts
-function minNumber(nums1: number[], nums2: number[]): number {
-    let mask1: number = 0;
-    let mask2: number = 0;
-    for (const x of nums1) {
-        mask1 |= 1 << x;
-    }
-    for (const x of nums2) {
-        mask2 |= 1 << x;
-    }
-    const mask = mask1 & mask2;
-    if (mask !== 0) {
-        return numberOfTrailingZeros(mask);
-    }
-    const a = numberOfTrailingZeros(mask1);
-    const b = numberOfTrailingZeros(mask2);
-    return Math.min(a * 10 + b, b * 10 + a);
-}
 
-function numberOfTrailingZeros(i: number): number {
-    let y = 0;
-    if (i === 0) {
-        return 32;
-    }
-    let n = 31;
-    y = i << 16;
-    if (y != 0) {
-        n = n - 16;
-        i = y;
-    }
-    y = i << 8;
-    if (y != 0) {
-        n = n - 8;
-        i = y;
-    }
-    y = i << 4;
-    if (y != 0) {
-        n = n - 4;
-        i = y;
-    }
-    y = i << 2;
-    if (y != 0) {
-        n = n - 2;
-        i = y;
-    }
-    return n - ((i << 1) >>> 31);
-}
-```
+
+
 
 ### **...**
 
@@ -430,4 +173,4 @@ function numberOfTrailingZeros(i: number): number {
 
 ```
 
-<!-- tabs:end -->
+

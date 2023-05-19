@@ -60,37 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findRadius(self, houses: List[int], heaters: List[int]) -> int:
-        houses.sort()
-        heaters.sort()
 
-        def check(r):
-            m, n = len(houses), len(heaters)
-            i = j = 0
-            while i < m:
-                if j >= n:
-                    return False
-                mi = heaters[j] - r
-                mx = heaters[j] + r
-                if houses[i] < mi:
-                    return False
-                if houses[i] > mx:
-                    j += 1
-                else:
-                    i += 1
-            return True
-
-        left, right = 0, int(1e9)
-        while left < right:
-            mid = (left + right) >> 1
-            if check(mid):
-                right = mid
-            else:
-                left = mid + 1
-        return left
-```
 
 ### **Java**
 
@@ -117,103 +87,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function findRadius(houses: number[], heaters: number[]): number {
-    houses.sort((a, b) => a - b);
-    heaters.sort((a, b) => a - b);
-    const m = houses.length,
-        n = heaters.length;
-    let ans = 0;
-    for (let i = 0, j = 0; i < m; i++) {
-        let cur = Math.abs(houses[i] - heaters[j]);
-        while (
-            j + 1 < n &&
-            Math.abs(houses[i] - heaters[j]) >=
-                Math.abs(houses[i] - heaters[j + 1])
-        ) {
-            cur = Math.min(Math.abs(houses[i] - heaters[++j]), cur);
-        }
-        ans = Math.max(cur, ans);
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findRadius(vector<int>& houses, vector<int>& heaters) {
-        sort(houses.begin(), houses.end());
-        sort(heaters.begin(), heaters.end());
-        int left = 0, right = 1e9;
-        while (left < right) {
-            int mid = left + right >> 1;
-            if (check(houses, heaters, mid))
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return left;
-    }
 
-    bool check(vector<int>& houses, vector<int>& heaters, int r) {
-        int m = houses.size(), n = heaters.size();
-        int i = 0, j = 0;
-        while (i < m) {
-            if (j >= n) return false;
-            int mi = heaters[j] - r;
-            int mx = heaters[j] + r;
-            if (houses[i] < mi) return false;
-            if (houses[i] > mx)
-                ++j;
-            else
-                ++i;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findRadius(houses []int, heaters []int) int {
-	sort.Ints(houses)
-	sort.Ints(heaters)
-	m, n := len(houses), len(heaters)
 
-	check := func(r int) bool {
-		var i, j int
-		for i < m {
-			if j >= n {
-				return false
-			}
-			mi, mx := heaters[j]-r, heaters[j]+r
-			if houses[i] < mi {
-				return false
-			}
-			if houses[i] > mx {
-				j++
-			} else {
-				i++
-			}
-		}
-		return true
-	}
-	left, right := 0, int(1e9)
-	for left < right {
-		mid := (left + right) >> 1
-		if check(mid) {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
-```
+
+
+
 
 ### **...**
 
@@ -221,4 +103,4 @@ func findRadius(houses []int, heaters []int) int {
 
 ```
 
-<!-- tabs:end -->
+

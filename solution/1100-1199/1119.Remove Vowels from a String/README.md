@@ -49,11 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeVowels(self, s: str) -> str:
-        return "".join(c for c in s if c not in "aeiou")
-```
+
 
 ### **Java**
 
@@ -74,36 +70,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string removeVowels(string s) {
-        string ans;
-        for (char& c : s) {
-            if (!(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')) {
-                ans += c;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeVowels(s string) string {
-	ans := []rune{}
-	for _, c := range s {
-		if !(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-			ans = append(ans, c)
-		}
-	}
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -111,4 +84,4 @@ func removeVowels(s string) string {
 
 ```
 
-<!-- tabs:end -->
+

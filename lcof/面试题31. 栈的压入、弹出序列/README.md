@@ -54,17 +54,7 @@ push(5), pop() -&gt; 5, pop() -&gt; 3, pop() -&gt; 2, pop() -&gt; 1
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
-        j, stk = 0, []
-        for v in pushed:
-            stk.append(v)
-            while stk and stk[-1] == popped[j]:
-                stk.pop()
-                j += 1
-        return j == len(pushed)
-```
+
 
 ### **Java**
 
@@ -87,120 +77,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
-        stack<int> stk;
-        int j = 0;
-        for (int v : pushed) {
-            stk.push(v);
-            while (!stk.empty() && stk.top() == popped[j]) {
-                stk.pop();
-                ++j;
-            }
-        }
-        return j == pushed.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func validateStackSequences(pushed []int, popped []int) bool {
-	stk := []int{}
-	j := 0
-	for _, v := range pushed {
-		stk = append(stk, v)
-		for len(stk) > 0 && stk[len(stk)-1] == popped[j] {
-			stk = stk[:len(stk)-1]
-			j++
-		}
-	}
-	return j == len(pushed)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function validateStackSequences(pushed: number[], popped: number[]): boolean {
-    const stk = [];
-    let j = 0;
-    for (const v of pushed) {
-        stk.push(v);
-        while (stk.length && stk[stk.length - 1] == popped[j]) {
-            stk.pop();
-            ++j;
-        }
-    }
-    return j == pushed.length;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool ValidateStackSequences(int[] pushed, int[] popped) {
-        Stack<int> stk = new Stack<int>();
-        int j = 0;
-        foreach (int x in pushed)
-        {
-            stk.Push(x);
-            while (stk.Count != 0 && stk.Peek() == popped[j]) {
-                stk.Pop();
-                ++j;
-            }
-        }
-        return stk.Count == 0;
-    }
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn validate_stack_sequences(pushed: Vec<i32>, popped: Vec<i32>) -> bool {
-        let mut stack = Vec::new();
-        let mut i = 0;
-        for &num in pushed.iter() {
-            stack.push(num);
-            while !stack.is_empty() && *stack.last().unwrap() == popped[i] {
-                stack.pop();
-                i += 1;
-            }
-        }
-        stack.len() == 0
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} pushed
- * @param {number[]} popped
- * @return {boolean}
- */
-var validateStackSequences = function (pushed, popped) {
-    let stk = [];
-    let j = 0;
-    for (const v of pushed) {
-        stk.push(v);
-        while (stk.length && stk[stk.length - 1] == popped[j]) {
-            stk.pop();
-            ++j;
-        }
-    }
-    return j == pushed.length;
-};
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -208,4 +107,4 @@ var validateStackSequences = function (pushed, popped) {
 
 ```
 
-<!-- tabs:end -->
+

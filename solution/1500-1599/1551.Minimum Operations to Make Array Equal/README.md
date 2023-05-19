@@ -49,14 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, n: int) -> int:
-        ans = 0
-        for i in range(n >> 1):
-            ans += n - (2 * i + 1)
-        return ans
-```
+
 
 ### **Java**
 
@@ -74,30 +67,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperations(int n) {
-        int ans = 0;
-        for (int i = 0; i < (n >> 1); ++i) ans += (n - (2 * i + 1));
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(n int) int {
-	ans := 0
-	for i := 0; i < (n >> 1); i++ {
-		ans += (n - (2*i + 1))
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -105,4 +81,4 @@ func minOperations(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

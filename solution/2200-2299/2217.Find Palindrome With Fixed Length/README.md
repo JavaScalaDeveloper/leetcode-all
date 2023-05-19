@@ -53,22 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kthPalindrome(self, queries: List[int], intLength: int) -> List[int]:
-        l = (intLength + 1) >> 1
-        start, end = 10 ** (l - 1), 10**l - 1
-        ans = []
-        for q in queries:
-            v = start + q - 1
-            if v > end:
-                ans.append(-1)
-                continue
-            s = str(v)
-            s += s[::-1][intLength % 2 :]
-            ans.append(int(s))
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,114 +82,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<long long> kthPalindrome(vector<int>& queries, int intLength) {
-        int l = (intLength + 1) >> 1;
-        long long start = pow(10, l - 1), end = pow(10, l) - 1;
-        vector<long long> ans;
-        for (int& q : queries) {
-            long long v = start + q - 1;
-            if (v > end) {
-                ans.push_back(-1);
-                continue;
-            }
-            string s = to_string(v);
-            string s1 = s;
-            reverse(s1.begin(), s1.end());
-            s += s1.substr(intLength % 2);
-            ans.push_back(stoll(s));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func kthPalindrome(queries []int, intLength int) []int64 {
-	l := (intLength + 1) >> 1
-	start, end := int(math.Pow10(l-1)), int(math.Pow10(l))-1
-	var ans []int64
-	for _, q := range queries {
-		v := start + q - 1
-		if v > end {
-			ans = append(ans, -1)
-			continue
-		}
-		t := v
-		if intLength%2 == 1 {
-			t /= 10
-		}
-		for t > 0 {
-			v = v*10 + t%10
-			t /= 10
-		}
-		ans = append(ans, int64(v))
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function kthPalindrome(queries: number[], intLength: number): number[] {
-    const isOdd = intLength % 2 === 1;
-    const bestNum = 10 ** ((intLength >> 1) + (isOdd ? 1 : 0) - 1);
-    const max = bestNum * 9;
-    return queries.map(v => {
-        if (v > max) {
-            return -1;
-        }
-        const num = bestNum + v - 1;
-        return Number(
-            num +
-                (num + '')
-                    .split('')
-                    .reverse()
-                    .slice(isOdd ? 1 : 0)
-                    .join(''),
-        );
-    });
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn kth_palindrome(queries: Vec<i32>, int_length: i32) -> Vec<i64> {
-        let is_odd = int_length & 1 == 1;
-        let best_num = i32::pow(10, (int_length / 2 + if is_odd { 0 } else { -1 }) as u32);
-        let max = best_num * 9;
-        queries
-            .iter()
-            .map(|&num| {
-                if num > max {
-                    return -1;
-                }
-                let num = best_num + num - 1;
-                format!(
-                    "{}{}",
-                    num,
-                    num.to_string()
-                        .chars()
-                        .rev()
-                        .skip(if is_odd { 1 } else { 0 })
-                        .collect::<String>()
-                )
-                .parse()
-                .unwrap()
-            })
-            .collect()
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -212,4 +104,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

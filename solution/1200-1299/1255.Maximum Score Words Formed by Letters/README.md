@@ -83,19 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
-        cnt = Counter(letters)
-        n = len(words)
-        ans = 0
-        for i in range(1 << n):
-            cur = Counter(''.join([words[j] for j in range(n) if i >> j & 1]))
-            if all(v <= cnt[c] for c, v in cur.items()):
-                t = sum(v * score[ord(c) - ord('a')] for c, v in cur.items())
-                ans = max(ans, t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -137,79 +125,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxScoreWords(vector<string>& words, vector<char>& letters, vector<int>& score) {
-        int cnt[26]{};
-        for (char& c : letters) {
-            cnt[c - 'a']++;
-        }
-        int n = words.size();
-        int ans = 0;
-        for (int i = 0; i < 1 << n; ++i) {
-            int cur[26]{};
-            for (int j = 0; j < n; ++j) {
-                if (i >> j & 1) {
-                    for (char& c : words[j]) {
-                        cur[c - 'a']++;
-                    }
-                }
-            }
-            bool ok = true;
-            int t = 0;
-            for (int j = 0; j < 26; ++j) {
-                if (cur[j] > cnt[j]) {
-                    ok = false;
-                    break;
-                }
-                t += cur[j] * score[j];
-            }
-            if (ok && ans < t) {
-                ans = t;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxScoreWords(words []string, letters []byte, score []int) (ans int) {
-	cnt := [26]int{}
-	for _, c := range letters {
-		cnt[c-'a']++
-	}
-	n := len(words)
-	for i := 0; i < 1<<n; i++ {
-		cur := [26]int{}
-		for j := 0; j < n; j++ {
-			if i>>j&1 == 1 {
-				for _, c := range words[j] {
-					cur[c-'a']++
-				}
-			}
-		}
-		ok := true
-		t := 0
-		for i, v := range cur {
-			if v > cnt[i] {
-				ok = false
-				break
-			}
-			t += v * score[i]
-		}
-		if ok && ans < t {
-			ans = t
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -217,4 +139,4 @@ func maxScoreWords(words []string, letters []byte, score []int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -58,29 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxDistance(self, position: List[int], m: int) -> int:
-        def check(f):
-            prev = position[0]
-            cnt = 1
-            for curr in position[1:]:
-                if curr - prev >= f:
-                    prev = curr
-                    cnt += 1
-            return cnt >= m
 
-        position.sort()
-        left, right = 1, position[-1]
-        while left < right:
-            mid = (left + right + 1) >> 1
-
-            if check(mid):
-                left = mid
-            else:
-                right = mid - 1
-        return left
-```
 
 ### **Java**
 
@@ -117,104 +95,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxDistance(vector<int>& position, int m) {
-        sort(position.begin(), position.end());
-        int left = 1, right = position[position.size() - 1];
-        while (left < right) {
-            int mid = (left + right + 1) >> 1;
-            if (check(position, mid, m))
-                left = mid;
-            else
-                right = mid - 1;
-        }
-        return left;
-    }
 
-    bool check(vector<int>& position, int f, int m) {
-        int prev = position[0];
-        int cnt = 1;
-        for (int i = 1; i < position.size(); ++i) {
-            int curr = position[i];
-            if (curr - prev >= f) {
-                prev = curr;
-                ++cnt;
-            }
-        }
-        return cnt >= m;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxDistance(position []int, m int) int {
-	sort.Ints(position)
-	left, right := 1, position[len(position)-1]
-	check := func(f int) bool {
-		prev, cnt := position[0], 1
-		for _, curr := range position[1:] {
-			if curr-prev >= f {
-				prev = curr
-				cnt++
-			}
-		}
-		return cnt >= m
-	}
-	for left < right {
-		mid := (left + right + 1) >> 1
-		if check(mid) {
-			left = mid
-		} else {
-			right = mid - 1
-		}
-	}
-	return left
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} position
- * @param {number} m
- * @return {number}
- */
-var maxDistance = function (position, m) {
-    position.sort((a, b) => {
-        return a - b;
-    });
-    let left = 1,
-        right = position[position.length - 1];
-    const check = function (f) {
-        let prev = position[0];
-        let cnt = 1;
-        for (let i = 1; i < position.length; ++i) {
-            const curr = position[i];
-            if (curr - prev >= f) {
-                prev = curr;
-                ++cnt;
-            }
-        }
-        return cnt >= m;
-    };
-    while (left < right) {
-        const mid = (left + right + 1) >> 1;
-        if (check(mid)) {
-            left = mid;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return left;
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -222,4 +113,4 @@ var maxDistance = function (position, m) {
 
 ```
 
-<!-- tabs:end -->
+

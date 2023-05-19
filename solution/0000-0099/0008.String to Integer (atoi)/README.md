@@ -98,36 +98,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def myAtoi(self, s: str) -> int:
-        if not s:
-            return 0
-        n = len(s)
-        if n == 0:
-            return 0
-        i = 0
-        while s[i] == ' ':
-            i += 1
-            # 仅包含空格
-            if i == n:
-                return 0
-        sign = -1 if s[i] == '-' else 1
-        if s[i] in ['-', '+']:
-            i += 1
-        res, flag = 0, (2**31 - 1) // 10
-        while i < n:
-            # 非数字，跳出循环体
-            if not s[i].isdigit():
-                break
-            c = int(s[i])
-            # 溢出判断
-            if res > flag or (res == flag and c > 7):
-                return 2**31 - 1 if sign > 0 else -(2**31)
-            res = res * 10 + c
-            i += 1
-        return sign * res
-```
+
 
 ### **Java**
 
@@ -161,45 +132,9 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func myAtoi(s string) int {
-	i, n := 0, len(s)
-	num := 0
 
-	for i < n && s[i] == ' ' {
-		i++
-	}
-	if i == n {
-		return 0
-	}
 
-	sign := 1
-	if s[i] == '-' {
-		sign = -1
-		i++
-	} else if s[i] == '+' {
-		i++
-	}
-
-	for i < n && s[i] >= '0' && s[i] <= '9' {
-		num = num*10 + int(s[i]-'0')
-		i++
-		if num > math.MaxInt32 {
-			break
-		}
-	}
-
-	if num > math.MaxInt32 {
-		if sign == -1 {
-			return math.MinInt32
-		}
-		return math.MaxInt32
-	}
-	return sign * num
-}
-```
 
 ### **...**
 
@@ -207,4 +142,4 @@ func myAtoi(s string) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -63,20 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isCovered(self, ranges: List[List[int]], left: int, right: int) -> bool:
-        diff = [0] * 52
-        for l, r in ranges:
-            diff[l] += 1
-            diff[r + 1] -= 1
-        cur = 0
-        for i, x in enumerate(diff):
-            cur += x
-            if left <= i <= right and cur == 0:
-                return False
-        return True
-```
+
 
 ### **Java**
 
@@ -103,96 +90,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isCovered(vector<vector<int>>& ranges, int left, int right) {
-        int diff[52]{};
-        for (auto& range : ranges) {
-            int l = range[0], r = range[1];
-            ++diff[l];
-            --diff[r + 1];
-        }
-        int cur = 0;
-        for (int i = 0; i < 52; ++i) {
-            cur += diff[i];
-            if (i >= left && i <= right && cur <= 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isCovered(ranges [][]int, left int, right int) bool {
-	diff := [52]int{}
-	for _, rg := range ranges {
-		l, r := rg[0], rg[1]
-		diff[l]++
-		diff[r+1]--
-	}
-	cur := 0
-	for i, x := range diff {
-		cur += x
-		if i >= left && i <= right && cur <= 0 {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isCovered(ranges: number[][], left: number, right: number): boolean {
-    const diff = new Array(52).fill(0);
-    for (const [l, r] of ranges) {
-        ++diff[l];
-        --diff[r + 1];
-    }
-    let cur = 0;
-    for (let i = 0; i < 52; ++i) {
-        cur += diff[i];
-        if (i >= left && i <= right && cur <= 0) {
-            return false;
-        }
-    }
-    return true;
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} ranges
- * @param {number} left
- * @param {number} right
- * @return {boolean}
- */
-var isCovered = function (ranges, left, right) {
-    const diff = new Array(52).fill(0);
-    for (const [l, r] of ranges) {
-        ++diff[l];
-        --diff[r + 1];
-    }
-    let cur = 0;
-    for (let i = 0; i < 52; ++i) {
-        cur += diff[i];
-        if (i >= left && i <= right && cur <= 0) {
-            return false;
-        }
-    }
-    return true;
-};
-```
+
+
+
 
 ### **...**
 
@@ -200,4 +112,4 @@ var isCovered = function (ranges, left, right) {
 
 ```
 
-<!-- tabs:end -->
+

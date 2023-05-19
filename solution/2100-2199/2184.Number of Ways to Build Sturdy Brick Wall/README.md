@@ -64,57 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def buildWall(self, height: int, width: int, bricks: List[int]) -> int:
-        def dfs(v):
-            if v > width:
-                return
-            if v == width:
-                s.append(t[:])
-                return
-            for x in bricks:
-                t.append(x)
-                dfs(v + x)
-                t.pop()
 
-        def check(a, b):
-            s1, s2 = a[0], b[0]
-            i = j = 1
-            while i < len(a) and j < len(b):
-                if s1 == s2:
-                    return False
-                if s1 < s2:
-                    s1 += a[i]
-                    i += 1
-                else:
-                    s2 += b[j]
-                    j += 1
-            return True
-
-        mod = 10**9 + 7
-        s = []
-        t = []
-        dfs(0)
-        g = defaultdict(list)
-        n = len(s)
-        for i in range(n):
-            if check(s[i], s[i]):
-                g[i].append(i)
-            for j in range(i + 1, n):
-                if check(s[i], s[j]):
-                    g[i].append(j)
-                    g[j].append(i)
-        dp = [[0] * n for _ in range(height)]
-        for j in range(n):
-            dp[0][j] = 1
-        for i in range(1, height):
-            for j in range(n):
-                for k in g[j]:
-                    dp[i][j] += dp[i - 1][k]
-                    dp[i][j] %= mod
-        return sum(dp[-1]) % mod
-```
 
 ### **Java**
 
@@ -198,163 +148,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> bricks;
-    int width;
-    int mod = 1e9 + 7;
-    vector<vector<int>> res;
-    vector<int> t;
 
-    int buildWall(int height, int width, vector<int>& bricks) {
-        this->width = width;
-        this->bricks = bricks;
-        dfs(0);
-        t.resize(0);
-        int n = res.size();
-        vector<vector<int>> g(n);
-        for (int i = 0; i < n; ++i) {
-            if (check(res[i], res[i])) {
-                g[i].push_back(i);
-            }
-            for (int j = i + 1; j < n; ++j) {
-                if (check(res[i], res[j])) {
-                    g[i].push_back(j);
-                    g[j].push_back(i);
-                }
-            }
-        }
-        vector<vector<int>> dp(height, vector<int>(n));
-        for (int j = 0; j < n; ++j) dp[0][j] = 1;
-        for (int i = 1; i < height; ++i) {
-            for (int j = 0; j < n; ++j) {
-                for (int k : g[j]) {
-                    dp[i][j] += dp[i - 1][k];
-                    dp[i][j] %= mod;
-                }
-            }
-        }
-        int ans = 0;
-        for (int j = 0; j < n; ++j) {
-            ans += dp[height - 1][j];
-            ans %= mod;
-        }
-        return ans;
-    }
 
-    bool check(vector<int>& a, vector<int>& b) {
-        int s1 = a[0], s2 = b[0];
-        int i = 1, j = 1;
-        while (i < a.size() && j < b.size()) {
-            if (s1 == s2) return false;
-            if (s1 < s2) s1 += a[i++];
-            else s2 += b[j++];
-        }
-        return true;
-    }
 
-    void dfs(int v) {
-        if (v > width) return;
-        if (v == width) {
-            res.push_back(t);
-            return;
-        }
-        for (int x : bricks) {
-            t.push_back(x);
-            dfs(v + x);
-            t.pop_back();
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func buildWall(height int, width int, bricks []int) int {
-	mod := int(1e9) + 7
-	res := [][]int{}
-	t := []int{}
-	var dfs func(v int)
-	dfs = func(v int) {
-		if v > width {
-			return
-		}
-		if v == width {
-			cp := make([]int, len(t))
-			copy(cp, t)
-			res = append(res, cp)
-			return
-		}
-		for _, x := range bricks {
-			t = append(t, x)
-			dfs(v + x)
-			t = t[:len(t)-1]
-		}
-	}
-	check := func(a, b []int) bool {
-		s1, s2 := a[0], b[0]
-		i, j := 1, 1
-		for i < len(a) && j < len(b) {
-			if s1 == s2 {
-				return false
-			}
-			if s1 < s2 {
-				s1 += a[i]
-				i++
-			} else {
-				s2 += b[j]
-				j++
-			}
-		}
-		return true
-	}
-	dfs(0)
-	n := len(res)
-	g := make([][]int, n)
-	for i := 0; i < n; i++ {
-		if check(res[i], res[i]) {
-			g[i] = append(g[i], i)
-		}
-		for j := i + 1; j < n; j++ {
-			if check(res[i], res[j]) {
-				g[i] = append(g[i], j)
-				g[j] = append(g[j], i)
-			}
-		}
-	}
-	dp := make([][]int, height)
-	for i := range dp {
-		dp[i] = make([]int, n)
-	}
-	for j := 0; j < n; j++ {
-		dp[0][j] = 1
-	}
-	for i := 1; i < height; i++ {
-		for j := 0; j < n; j++ {
-			for _, k := range g[j] {
-				dp[i][j] += dp[i-1][k]
-				dp[i][j] %= mod
-			}
-		}
-	}
-	ans := 0
-	for j := 0; j < n; j++ {
-		ans += dp[height-1][j]
-		ans %= mod
-	}
-	return ans
-}
-```
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -362,4 +166,4 @@ func buildWall(height int, width int, bricks []int) int {
 
 ```
 
-<!-- tabs:end -->
+

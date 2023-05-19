@@ -87,27 +87,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumFuelCost(self, roads: List[List[int]], seats: int) -> int:
-        def dfs(a, fa):
-            size = 1
-            for b in g[a]:
-                if b != fa:
-                    t = dfs(b, a)
-                    nonlocal ans
-                    ans += (t + seats - 1) // seats
-                    size += t
-            return size
 
-        g = defaultdict(list)
-        for a, b in roads:
-            g[a].append(b)
-            g[b].append(a)
-        ans = 0
-        dfs(0, -1)
-        return ans
-```
 
 ### **Java**
 
@@ -147,71 +127,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long minimumFuelCost(vector<vector<int>>& roads, int seats) {
-        int n = roads.size() + 1;
-        vector<vector<int>> g(n);
-        for (auto& e : roads) {
-            int a = e[0], b = e[1];
-            g[a].emplace_back(b);
-            g[b].emplace_back(a);
-        }
-        long long ans = 0;
-        function<int(int, int)> dfs = [&](int a, int fa) -> int {
-            int size = 1;
-            for (int b : g[a]) {
-                if (b != fa) {
-                    int t = dfs(b, a);
-                    ans += (t + seats - 1) / seats;
-                    size += t;
-                }
-            }
-            return size;
-        };
-        dfs(0, -1);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumFuelCost(roads [][]int, seats int) int64 {
-	n := len(roads) + 1
-	g := make([][]int, n)
-	for _, e := range roads {
-		a, b := e[0], e[1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-	}
-	ans := 0
-	var dfs func(int, int) int
-	dfs = func(a, fa int) int {
-		size := 1
-		for _, b := range g[a] {
-			if b != fa {
-				t := dfs(b, a)
-				ans += (t + seats - 1) / seats
-				size += t
-			}
-		}
-		return size
-	}
-	dfs(0, -1)
-	return int64(ans)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -219,4 +145,4 @@ func minimumFuelCost(roads [][]int, seats int) int64 {
 
 ```
 
-<!-- tabs:end -->
+

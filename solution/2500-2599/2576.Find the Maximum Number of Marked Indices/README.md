@@ -70,21 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxNumOfMarkedIndices(self, nums: List[int]) -> int:
-        nums.sort()
-        n = len(nums)
-        i, j = 0, (n + 1) // 2
-        ans = 0
-        while j < n:
-            while j < n and nums[i] * 2 > nums[j]:
-                j += 1
-            if j < n:
-                ans += 2
-            i, j = i + 1, j + 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -109,64 +95,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxNumOfMarkedIndices(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        int ans = 0;
-        for (int i = 0, j = (n + 1) / 2; j < n; ++i, ++j) {
-            while (j < n && nums[i] * 2 > nums[j]) {
-                ++j;
-            }
-            if (j < n) {
-                ans += 2;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxNumOfMarkedIndices(nums []int) (ans int) {
-	sort.Ints(nums)
-	n := len(nums)
-	for i, j := 0, (n+1)/2; j < n; i, j = i+1, j+1 {
-		for j < n && nums[i]*2 > nums[j] {
-			j++
-		}
-		if j < n {
-			ans += 2
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxNumOfMarkedIndices(nums: number[]): number {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    let ans = 0;
-    for (let i = 0, j = Math.floor((n + 1) / 2); j < n; ++i, ++j) {
-        while (j < n && nums[i] * 2 > nums[j]) {
-            ++j;
-        }
-        if (j < n) {
-            ans += 2;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -174,4 +113,4 @@ function maxNumOfMarkedIndices(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

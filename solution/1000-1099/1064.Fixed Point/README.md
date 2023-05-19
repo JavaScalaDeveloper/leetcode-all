@@ -59,18 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def fixedPoint(self, arr: List[int]) -> int:
-        left, right = 0, len(arr) - 1
-        while left < right:
-            mid = (left + right) >> 1
-            if arr[mid] >= mid:
-                right = mid
-            else:
-                left = mid + 1
-        return left if arr[left] == left else -1
-```
+
 
 ### **Java**
 
@@ -93,45 +82,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int fixedPoint(vector<int>& arr) {
-        int left = 0, right = arr.size() - 1;
-        while (left < right) {
-            int mid = left + right >> 1;
-            if (arr[mid] >= mid) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return arr[left] == left ? left : -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func fixedPoint(arr []int) int {
-	left, right := 0, len(arr)-1
-	for left < right {
-		mid := (left + right) >> 1
-		if arr[mid] >= mid {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	if arr[left] == left {
-		return left
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -139,4 +96,4 @@ func fixedPoint(arr []int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -61,14 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxNumberOfBalloons(self, text: str) -> int:
-        cnt = Counter(text)
-        cnt['o'] >>= 1
-        cnt['l'] >>= 1
-        return min(cnt[c] for c in 'balon')
-```
+
 
 ### **Java**
 
@@ -92,110 +85,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxNumberOfBalloons(string text) {
-        int cnt[26]{};
-        for (char c : text) {
-            ++cnt[c - 'a'];
-        }
-        cnt['o' - 'a'] >>= 1;
-        cnt['l' - 'a'] >>= 1;
-        int ans = 1 << 30;
-        string t = "balon";
-        for (char c : t) {
-            ans = min(ans, cnt[c - 'a']);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxNumberOfBalloons(text string) int {
-	cnt := [26]int{}
-	for _, c := range text {
-		cnt[c-'a']++
-	}
-	cnt['l'-'a'] >>= 1
-	cnt['o'-'a'] >>= 1
-	ans := 1 << 30
-	for _, c := range "balon" {
-		if x := cnt[c-'a']; ans > x {
-			ans = x
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxNumberOfBalloons(text: string): number {
-    const cnt = new Array(26).fill(0);
-    for (const c of text) {
-        cnt[c.charCodeAt(0) - 97]++;
-    }
-    return Math.min(cnt[0], cnt[1], cnt[11] >> 1, cnt[14] >> 1, cnt[13]);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_number_of_balloons(text: String) -> i32 {
-        let mut arr = [0; 5];
-        for c in text.chars() {
-            match c {
-                'b' => arr[0] += 1,
-                'a' => arr[1] += 1,
-                'l' => arr[2] += 1,
-                'o' => arr[3] += 1,
-                'n' => arr[4] += 1,
-                _ => {}
-            }
-        }
-        arr[2] /= 2;
-        arr[3] /= 2;
-        let mut res = i32::MAX;
-        for num in arr {
-            res = res.min(num);
-        }
-        res
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $text
-     * @return Integer
-     */
-    function maxNumberOfBalloons($text) {
-        $cnt1 = $cnt2 = $cnt3 = $cnt4 = $cnt5 = 0;
-        for ($i = 0; $i < strlen($text); $i++) {
-            if ($text[$i] == "b") $cnt1 += 1;
-            else if ($text[$i] == "a") $cnt2 += 1;
-            else if ($text[$i] == "l") $cnt3 += 1;
-            else if ($text[$i] == "o") $cnt4 += 1;
-            else if ($text[$i] == "n") $cnt5 += 1;
-        }
-        $cnt3 = floor($cnt3 / 2);
-        $cnt4 = floor($cnt4 / 2);
-        return min($cnt1, $cnt2, $cnt3, $cnt4, $cnt5);
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -203,4 +111,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

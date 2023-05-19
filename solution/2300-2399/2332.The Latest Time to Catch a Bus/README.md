@@ -71,24 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def latestTimeCatchTheBus(
-        self, buses: List[int], passengers: List[int], capacity: int
-    ) -> int:
-        buses.sort()
-        passengers.sort()
-        j = 0
-        for t in buses:
-            c = capacity
-            while c and j < len(passengers) and passengers[j] <= t:
-                c, j = c - 1, j + 1
-        j -= 1
-        ans = buses[-1] if c else passengers[j]
-        while ~j and passengers[j] == ans:
-            ans, j = ans - 1, j - 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -118,59 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int latestTimeCatchTheBus(vector<int>& buses, vector<int>& passengers, int capacity) {
-        sort(buses.begin(), buses.end());
-        sort(passengers.begin(), passengers.end());
-        int j = 0, c = 0;
-        for (int t : buses) {
-            c = capacity;
-            while (c && j < passengers.size() && passengers[j] <= t) --c, ++j;
-        }
-        --j;
-        int ans = c ? buses[buses.size() - 1] : passengers[j];
-        while (~j && ans == passengers[j]) --j, --ans;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func latestTimeCatchTheBus(buses []int, passengers []int, capacity int) int {
-	sort.Ints(buses)
-	sort.Ints(passengers)
-	j, c := 0, 0
-	for _, t := range buses {
-		c = capacity
-		for c > 0 && j < len(passengers) && passengers[j] <= t {
-			j++
-			c--
-		}
-	}
-	j--
-	ans := buses[len(buses)-1]
-	if c == 0 {
-		ans = passengers[j]
-	}
-	for j >= 0 && ans == passengers[j] {
-		ans--
-		j--
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -178,4 +119,4 @@ func latestTimeCatchTheBus(buses []int, passengers []int, capacity int) int {
 
 ```
 
-<!-- tabs:end -->
+

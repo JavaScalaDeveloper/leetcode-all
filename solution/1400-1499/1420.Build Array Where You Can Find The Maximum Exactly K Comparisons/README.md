@@ -106,28 +106,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numOfArrays(self, n: int, m: int, k: int) -> int:
-        if k == 0:
-            return 0
-        dp = [[[0] * (m + 1) for _ in range(k + 1)] for _ in range(n + 1)]
-        mod = 10**9 + 7
-        for i in range(1, m + 1):
-            dp[1][1][i] = 1
-        for i in range(2, n + 1):
-            for c in range(1, min(k + 1, i + 1)):
-                for j in range(1, m + 1):
-                    dp[i][c][j] = dp[i - 1][c][j] * j
-                    for j0 in range(1, j):
-                        dp[i][c][j] += dp[i - 1][c - 1][j0]
-                        dp[i][c][j] %= mod
-        ans = 0
-        for i in range(1, m + 1):
-            ans += dp[n][k][i]
-            ans %= mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -164,69 +143,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numOfArrays(int n, int m, int k) {
-        if (k == 0) return 0;
-        int mod = 1e9 + 7;
-        using ll = long long;
-        vector<vector<vector<ll>>> dp(n + 1, vector<vector<ll>>(k + 1, vector<ll>(m + 1)));
-        for (int i = 1; i <= m; ++i) dp[1][1][i] = 1;
-        for (int i = 2; i <= n; ++i) {
-            for (int c = 1; c <= min(i, k); ++c) {
-                for (int j = 1; j <= m; ++j) {
-                    dp[i][c][j] = (dp[i - 1][c][j] * j) % mod;
-                    for (int j0 = 1; j0 < j; ++j0) {
-                        dp[i][c][j] = (dp[i][c][j] + dp[i - 1][c - 1][j0]) % mod;
-                    }
-                }
-            }
-        }
-        ll ans = 0;
-        for (int i = 1; i <= m; ++i) ans = (ans + dp[n][k][i]) % mod;
-        return (int) ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numOfArrays(n int, m int, k int) int {
-	if k == 0 {
-		return 0
-	}
-	mod := int(1e9) + 7
-	dp := make([][][]int, n+1)
-	for i := range dp {
-		dp[i] = make([][]int, k+1)
-		for j := range dp[i] {
-			dp[i][j] = make([]int, m+1)
-		}
-	}
-	for i := 1; i <= m; i++ {
-		dp[1][1][i] = 1
-	}
-	for i := 2; i <= n; i++ {
-		for c := 1; c <= k && c <= i; c++ {
-			for j := 1; j <= m; j++ {
-				dp[i][c][j] = (dp[i-1][c][j] * j) % mod
-				for j0 := 1; j0 < j; j0++ {
-					dp[i][c][j] = (dp[i][c][j] + dp[i-1][c-1][j0]) % mod
-				}
-			}
-		}
-	}
-	ans := 0
-	for i := 1; i <= m; i++ {
-		ans = (ans + dp[n][k][i]) % mod
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -234,4 +157,4 @@ func numOfArrays(n int, m int, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

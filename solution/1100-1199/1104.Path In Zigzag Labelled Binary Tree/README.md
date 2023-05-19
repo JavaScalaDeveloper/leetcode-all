@@ -56,20 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def pathInZigZagTree(self, label: int) -> List[int]:
-        x = i = 1
-        while (x << 1) <= label:
-            x <<= 1
-            i += 1
-        ans = [0] * i
-        while i:
-            ans[i - 1] = label
-            label = ((1 << (i - 1)) + (1 << i) - 1 - label) >> 1
-            i -= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -94,47 +81,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> pathInZigZagTree(int label) {
-        int x = 1, i = 1;
-        while ((x << 1) <= label) {
-            x <<= 1;
-            ++i;
-        }
-        vector<int> ans;
-        for (; i > 0; --i) {
-            ans.push_back(label);
-            label = ((1 << (i - 1)) + (1 << i) - 1 - label) >> 1;
-        }
-        reverse(ans.begin(), ans.end());
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func pathInZigZagTree(label int) (ans []int) {
-	x, i := 1, 1
-	for x<<1 <= label {
-		x <<= 1
-		i++
-	}
-	for ; i > 0; i-- {
-		ans = append(ans, label)
-		label = ((1 << (i - 1)) + (1 << i) - 1 - label) >> 1
-	}
-	for i, j := 0, len(ans)-1; i < j; i, j = i+1, j-1 {
-		ans[i], ans[j] = ans[j], ans[i]
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -142,4 +95,4 @@ func pathInZigZagTree(label int) (ans []int) {
 
 ```
 
-<!-- tabs:end -->
+

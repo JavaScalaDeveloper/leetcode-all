@@ -70,17 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minMaxGame(self, nums: List[int]) -> int:
-        n = len(nums)
-        while n > 1:
-            n >>= 1
-            for i in range(n):
-                a, b = nums[i << 1], nums[i << 1 | 1]
-                nums[i] = min(a, b) if i % 2 == 0 else max(a, b)
-        return nums[0]
-```
+
 
 ### **Java**
 
@@ -101,93 +91,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minMaxGame(vector<int>& nums) {
-        for (int n = nums.size(); n > 1;) {
-            n >>= 1;
-            for (int i = 0; i < n; ++i) {
-                int a = nums[i << 1], b = nums[i << 1 | 1];
-                nums[i] = i % 2 == 0 ? min(a, b) : max(a, b);
-            }
-        }
-        return nums[0];
-    }
-};
-```
 
-### **Go**
 
-```go
-func minMaxGame(nums []int) int {
-	for n := len(nums); n > 1; {
-		n >>= 1
-		for i := 0; i < n; i++ {
-			a, b := nums[i<<1], nums[i<<1|1]
-			if i%2 == 0 {
-				nums[i] = min(a, b)
-			} else {
-				nums[i] = max(a, b)
-			}
-		}
-	}
-	return nums[0]
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function minMaxGame(nums: number[]): number {
-    for (let n = nums.length; n > 1; ) {
-        n >>= 1;
-        for (let i = 0; i < n; ++i) {
-            const a = nums[i << 1];
-            const b = nums[(i << 1) | 1];
-            nums[i] = i % 2 == 0 ? Math.min(a, b) : Math.max(a, b);
-        }
-    }
-    return nums[0];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_max_game(mut nums: Vec<i32>) -> i32 {
-        let mut n = nums.len();
-        while n != 1 {
-            n >>= 1;
-            for i in 0..n {
-                nums[i] = (if i & 1 == 1 {
-                    i32::max
-                } else {
-                    i32::min
-                })(nums[i << 1], nums[i << 1 | 1])
-            }
-        }
-        nums[0]
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -214,4 +132,4 @@ int minMaxGame(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

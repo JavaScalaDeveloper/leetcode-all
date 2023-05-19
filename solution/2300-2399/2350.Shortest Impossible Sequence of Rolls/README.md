@@ -69,18 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shortestSequence(self, rolls: List[int], k: int) -> int:
-        ans = 1
-        s = set()
-        for v in rolls:
-            s.add(v)
-            if len(s) == k:
-                ans += 1
-                s.clear()
-        return ans
-```
+
 
 ### **Java**
 
@@ -103,48 +92,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int shortestSequence(vector<int>& rolls, int k) {
-        unordered_set<int> s;
-        int ans = 1;
-        for (int v : rolls) {
-            s.insert(v);
-            if (s.size() == k) {
-                s.clear();
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func shortestSequence(rolls []int, k int) int {
-	s := map[int]bool{}
-	ans := 1
-	for _, v := range rolls {
-		s[v] = true
-		if len(s) == k {
-			ans++
-			s = map[int]bool{}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -152,4 +110,4 @@ func shortestSequence(rolls []int, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

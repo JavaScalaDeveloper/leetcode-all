@@ -81,25 +81,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countDigitOne(self, n: int) -> int:
-        @cache
-        def dfs(pos, cnt, limit):
-            if pos < 0:
-                return cnt
-            up = a[pos] if limit else 9
-            ans = 0
-            for i in range(up + 1):
-                ans += dfs(pos - 1, cnt + (i == 1), limit and i == up)
-            return ans
 
-        a = []
-        while n:
-            a.append(n % 10)
-            n //= 10
-        return dfs(len(a) - 1, 0, True)
-```
 
 ### **Java**
 
@@ -135,124 +117,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countDigitOne(int n) {
-        int a[12]{};
-        int f[12][12];
-        memset(f, -1, sizeof f);
-        int i = -1;
-        for (; n; n /= 10) {
-            a[++i] = n % 10;
-        }
-        function<int(int, int, bool)> dfs = [&](int pos, int cnt, bool limit) -> int {
-            if (pos < 0) {
-                return cnt;
-            }
-            if (!limit && f[pos][cnt] != -1) {
-                return f[pos][cnt];
-            }
-            int up = limit ? a[pos] : 9;
-            int ans = 0;
-            for (int i = 0; i <= up; ++i) {
-                ans += dfs(pos - 1, cnt + (i == 1), limit && i == up);
-            }
-            return f[pos][cnt] = ans;
-        };
-        return dfs(i, 0, true);
-    }
-};
-```
 
-```go
-func countDigitOne(n int) int {
-	a := [12]int{}
-	f := [12][12]int{}
-	for i := range f {
-		for j := range f[i] {
-			f[i][j] = -1
-		}
-	}
-	i := -1
-	for ; n > 0; n /= 10 {
-		i++
-		a[i] = n % 10
-	}
-	var dfs func(int, int, bool) int
-	dfs = func(pos, cnt int, limit bool) int {
-		if pos < 0 {
-			return cnt
-		}
-		if !limit && f[pos][cnt] != -1 {
-			return f[pos][cnt]
-		}
-		up := 9
-		if limit {
-			up = a[pos]
-		}
-		ans := 0
-		for i := 0; i <= up; i++ {
-			t := 0
-			if i == 1 {
-				t++
-			}
-			ans += dfs(pos-1, cnt+t, limit && i == up)
-		}
-		f[pos][cnt] = ans
-		return ans
-	}
-	return dfs(i, 0, true)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var countDigitOne = function (n) {
-    let res = 0;
-    let i = 1;
-    while (i <= n) {
-        let high = ~~(n / i / 10);
-        let cur = ~~(n / i) % 10;
-        let low = n - ~~(n / i) * i;
-        switch (cur) {
-            case 0:
-                res += high * i;
-                break;
-            case 1:
-                res += high * i + low + 1;
-                break;
-            default:
-                res += (high + 1) * i;
-        }
-        i *= 10;
-    }
-    return res;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int CountDigitOne(int n) {
-        long mulk = 1;
-        int ans = 0;
-        for (int k = 0; n >= mulk; ++k) {
-            ans += (int) (n / (mulk * 10) * mulk) + (int) Math.Min(Math.Max(n % (mulk * 10) - mulk + 1, 0), mulk);
-            mulk *= 10;
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -260,4 +137,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

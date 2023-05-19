@@ -92,27 +92,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
-        dirs = [[-1, 0], [0, 1], [1, 0], [0, -1]]
-        s = {(x, y) for x, y in obstacles}
-        ans, p = 0, 1
-        x = y = 0
-        for v in commands:
-            if v == -2:
-                p = (p + 3) % 4
-            elif v == -1:
-                p = (p + 1) % 4
-            else:
-                for _ in range(v):
-                    nx, ny = x + dirs[p][0], y + dirs[p][1]
-                    if (nx, ny) in s:
-                        break
-                    x, y = nx, ny
-                    ans = max(ans, x * x + y * y)
-        return ans
-```
+
 
 ### **Java**
 
@@ -150,76 +130,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int robotSim(vector<int>& commands, vector<vector<int>>& obstacles) {
-        vector<vector<int>> dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
-        unordered_set<string> s;
-        for (auto v : obstacles) s.insert(to_string(v[0]) + "." + to_string(v[1]));
-        int ans = 0, p = 1;
-        int x = 0, y = 0;
-        for (int v : commands) {
-            if (v == -2)
-                p = (p + 3) % 4;
-            else if (v == -1)
-                p = (p + 1) % 4;
-            else {
-                while (v--) {
-                    int nx = x + dirs[p][0], ny = y + dirs[p][1];
-                    if (s.count(to_string(nx) + "." + to_string(ny))) break;
-                    x = nx;
-                    y = ny;
-                    ans = max(ans, x * x + y * y);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func robotSim(commands []int, obstacles [][]int) int {
-	dirs := [][]int{{-1, 0}, {0, 1}, {1, 0}, {0, -1}}
-	s := map[string]bool{}
-	for _, v := range obstacles {
-		t := strconv.Itoa(v[0]) + "." + strconv.Itoa(v[1])
-		s[t] = true
-	}
-	ans, p := 0, 1
-	x, y := 0, 0
-	for _, v := range commands {
-		if v == -2 {
-			p = (p + 3) % 4
-		} else if v == -1 {
-			p = (p + 1) % 4
-		} else {
-			for i := 0; i < v; i++ {
-				nx, ny := x+dirs[p][0], y+dirs[p][1]
-				t := strconv.Itoa(nx) + "." + strconv.Itoa(ny)
-				if s[t] {
-					break
-				}
-				x, y = nx, ny
-				ans = max(ans, x*x+y*y)
-			}
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -227,4 +144,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

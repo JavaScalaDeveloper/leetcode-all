@@ -49,17 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def checkTree(self, root: Optional[TreeNode]) -> bool:
-        return root.val == root.left.val + root.right.val
-```
+
 
 ### **Java**
 
@@ -88,98 +78,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool checkTree(TreeNode* root) {
-        return root->val == root->left->val + root->right->val;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func checkTree(root *TreeNode) bool {
-	return root.Val == root.Left.Val+root.Right.Val
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function checkTree(root: TreeNode | null): boolean {
-    return root.val === root.left.val + root.right.val;
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    pub fn check_tree(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
-        let node = root.as_ref().unwrap().borrow();
-        let left = node.left.as_ref().unwrap().borrow().val;
-        let right = node.right.as_ref().unwrap().borrow().val;
-        node.val == left + right
-    }
-}
-```
+
+
 
 ### **C**
 
@@ -205,4 +118,4 @@ bool checkTree(struct TreeNode *root) {
 
 ```
 
-<!-- tabs:end -->
+

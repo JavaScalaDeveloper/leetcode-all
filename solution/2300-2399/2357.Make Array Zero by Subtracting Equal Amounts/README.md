@@ -60,11 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumOperations(self, nums: List[int]) -> int:
-        return len({x for x in nums if x})
-```
+
 
 ### **Java**
 
@@ -87,63 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumOperations(vector<int>& nums) {
-        bool s[101]{};
-        s[0] = true;
-        int ans = 0;
-        for (int& x : nums) {
-            if (!s[x]) {
-                ++ans;
-                s[x] = true;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumOperations(nums []int) (ans int) {
-	s := [101]bool{true}
-	for _, x := range nums {
-		if !s[x] {
-			s[x] = true
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumOperations(nums: number[]): number {
-    const set = new Set(nums);
-    set.delete(0);
-    return set.size;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn minimum_operations(nums: Vec<i32>) -> i32 {
-        let mut set = nums.iter().collect::<HashSet<&i32>>();
-        set.remove(&0);
-        set.len() as i32
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -169,4 +123,4 @@ int minimumOperations(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

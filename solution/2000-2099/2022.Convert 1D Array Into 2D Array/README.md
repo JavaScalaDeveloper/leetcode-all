@@ -79,13 +79,7 @@ original 中只有 1 个元素。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def construct2DArray(self, original: List[int], m: int, n: int) -> List[List[int]]:
-        if m * n != len(original):
-            return []
-        return [original[i : i + n] for i in range(0, m * n, n)]
-```
+
 
 ### **Java**
 
@@ -108,79 +102,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> construct2DArray(vector<int>& original, int m, int n) {
-        if (m * n != original.size()) {
-            return {};
-        }
-        vector<vector<int>> ans(m, vector<int>(n));
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                ans[i][j] = original[i * n + j];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func construct2DArray(original []int, m int, n int) (ans [][]int) {
-	if m*n != len(original) {
-		return [][]int{}
-	}
-	for i := 0; i < m*n; i += n {
-		ans = append(ans, original[i:i+n])
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} original
- * @param {number} m
- * @param {number} n
- * @return {number[][]}
- */
-var construct2DArray = function (original, m, n) {
-    if (m * n != original.length) {
-        return [];
-    }
-    const ans = [];
-    for (let i = 0; i < m * n; i += n) {
-        ans.push(original.slice(i, i + n));
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function construct2DArray(
-    original: number[],
-    m: number,
-    n: number,
-): number[][] {
-    if (m * n != original.length) {
-        return [];
-    }
-    const ans: number[][] = [];
-    for (let i = 0; i < m * n; i += n) {
-        ans.push(original.slice(i, i + n));
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -188,4 +124,4 @@ function construct2DArray(
 
 ```
 
-<!-- tabs:end -->
+

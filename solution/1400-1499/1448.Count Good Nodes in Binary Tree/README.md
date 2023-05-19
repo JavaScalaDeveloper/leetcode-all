@@ -59,29 +59,7 @@ DFS，利用 mx 变量记录已经访问过的节点的最大值，与当前将�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def goodNodes(self, root: TreeNode) -> int:
-        def dfs(root, mx):
-            if root is None:
-                return
-            nonlocal ans
-            if mx <= root.val:
-                ans += 1
-                mx = root.val
-            dfs(root.left, mx)
-            dfs(root.right, mx)
 
-        ans = 0
-        dfs(root, -10000)
-        return ans
-```
 
 ### **Java**
 
@@ -126,71 +104,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int ans;
 
-    int goodNodes(TreeNode* root) {
-        ans = 0;
-        dfs(root, -10000);
-        return ans;
-    }
 
-    void dfs(TreeNode* root, int mx) {
-        if (!root) return;
-        if (mx <= root->val) {
-            ++ans;
-            mx = root->val;
-        }
-        dfs(root->left, mx);
-        dfs(root->right, mx);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func goodNodes(root *TreeNode) int {
-	ans := 0
-	var dfs func(root *TreeNode, mx int)
-	dfs = func(root *TreeNode, mx int) {
-		if root == nil {
-			return
-		}
-		if mx <= root.Val {
-			ans++
-			mx = root.Val
-		}
-		dfs(root.Left, mx)
-		dfs(root.Right, mx)
-	}
-	dfs(root, -10000)
-	return ans
-}
-```
+
+
 
 ### **...**
 
@@ -198,4 +118,4 @@ func goodNodes(root *TreeNode) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -66,18 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxLengthBetweenEqualCharacters(self, s: str) -> int:
-        d = {}
-        ans = -1
-        for i, c in enumerate(s):
-            if c in d:
-                ans = max(ans, i - d[c] - 1)
-            else:
-                d[c] = i
-        return ans
-```
+
 
 ### **Java**
 
@@ -102,54 +91,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxLengthBetweenEqualCharacters(string s) {
-        vector<int> d(26, -1);
-        int ans = -1;
-        for (int i = 0; i < s.size(); ++i) {
-            int j = s[i] - 'a';
-            if (d[j] == -1) {
-                d[j] = i;
-            } else {
-                ans = max(ans, i - d[j] - 1);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxLengthBetweenEqualCharacters(s string) int {
-	d := make([]int, 26)
-	for i := range d {
-		d[i] = -1
-	}
-	ans := -1
-	for i, c := range s {
-		c -= 'a'
-		if d[c] == -1 {
-			d[c] = i
-		} else {
-			ans = max(ans, i-d[c]-1)
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **C**
 
@@ -176,45 +124,11 @@ int maxLengthBetweenEqualCharacters(char *s) {
 
 ### **TypeScript**
 
-```ts
-function maxLengthBetweenEqualCharacters(s: string): number {
-    const n = s.length;
-    const pos = new Array(26).fill(-1);
-    let res = -1;
-    for (let i = 0; i < n; i++) {
-        const j = s[i].charCodeAt(0) - 'a'.charCodeAt(0);
-        if (pos[j] === -1) {
-            pos[j] = i;
-        } else {
-            res = Math.max(res, i - pos[j] - 1);
-        }
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_length_between_equal_characters(s: String) -> i32 {
-        let s = s.as_bytes();
-        let n = s.len();
-        let mut pos = [-1; 26];
-        let mut res = -1;
-        for i in 0..n {
-            let j = (s[i] - b'a') as usize;
-            let i = i as i32;
-            if pos[j] == -1 {
-                pos[j] = i;
-            } else {
-                res = res.max(i - pos[j] - 1);
-            }
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -222,4 +136,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -66,18 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countHousePlacements(self, n: int) -> int:
-        mod = 10**9 + 7
-        f = [1] * n
-        g = [1] * n
-        for i in range(1, n):
-            f[i] = g[i - 1]
-            g[i] = (f[i - 1] + g[i - 1]) % mod
-        v = f[-1] + g[-1]
-        return v * v % mod
-```
+
 
 ### **Java**
 
@@ -101,77 +90,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countHousePlacements(int n) {
-        const int mod = 1e9 + 7;
-        int f[n], g[n];
-        f[0] = g[0] = 1;
-        for (int i = 1; i < n; ++i) {
-            f[i] = g[i - 1];
-            g[i] = (f[i - 1] + g[i - 1]) % mod;
-        }
-        long v = f[n - 1] + g[n - 1];
-        return v * v % mod;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countHousePlacements(n int) int {
-	const mod = 1e9 + 7
-	f := make([]int, n)
-	g := make([]int, n)
-	f[0], g[0] = 1, 1
-	for i := 1; i < n; i++ {
-		f[i] = g[i-1]
-		g[i] = (f[i-1] + g[i-1]) % mod
-	}
-	v := f[n-1] + g[n-1]
-	return v * v % mod
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countHousePlacements(n: number): number {
-    const f = new Array(n);
-    const g = new Array(n);
-    f[0] = g[0] = 1n;
-    const mod = BigInt(10 ** 9 + 7);
-    for (let i = 1; i < n; ++i) {
-        f[i] = g[i - 1];
-        g[i] = (f[i - 1] + g[i - 1]) % mod;
-    }
-    const v = f[n - 1] + g[n - 1];
-    return Number(v ** 2n % mod);
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int CountHousePlacements(int n) {
-        const int mod = (int) 1e9 + 7;
-        int[] f = new int[n];
-        int[] g = new int[n];
-        f[0] = g[0] = 1;
-        for (int i = 1; i < n; ++i) {
-            f[i] = g[i - 1];
-            g[i] = (f[i - 1] + g[i - 1]) % mod;
-        }
-        long v = (f[n - 1] + g[n - 1]) % mod;
-        return (int) (v * v % mod);
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -179,4 +112,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

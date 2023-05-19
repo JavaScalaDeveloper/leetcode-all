@@ -63,16 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sortSentence(self, s: str) -> str:
-        words = s.split()
-        ans = [None] * len(words)
-        for w in words:
-            i = int(w[-1]) - 1
-            ans[i] = w[:-1]
-        return ' '.join(ans)
-```
+
 
 ### **Java**
 
@@ -92,76 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string sortSentence(string s) {
-        istringstream is(s);
-        string t;
-        vector<string> words;
-        while (is >> t) words.push_back(t);
-        vector<string> res(words.size());
-        for (auto& w : words) {
-            int i = w[w.size() - 1] - '1';
-            res[i] = w.substr(0, w.size() - 1);
-        }
-        string ans;
-        for (auto& w : res) {
-            ans += w + " ";
-        }
-        ans.pop_back();
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sortSentence(s string) string {
-	words := strings.Split(s, " ")
-	ans := make([]string, len(words))
-	for _, w := range words {
-		i := w[len(w)-1] - '1'
-		ans[i] = w[:len(w)-1]
-	}
-	return strings.Join(ans, " ")
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {string}
- */
-var sortSentence = function (s) {
-    const words = s.split(' ');
-    const ans = new Array(words.length);
-    for (const w of words) {
-        const i = w.charCodeAt(w.length - 1) - '1'.charCodeAt(0);
-        ans[i] = w.slice(0, w.length - 1);
-    }
-    return ans.join(' ');
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function sortSentence(s: string): string {
-    const words = s.split(' ');
-    const ans = new Array(words.length);
-    for (const w of words) {
-        const i = w.charCodeAt(w.length - 1) - '1'.charCodeAt(0);
-        ans[i] = w.slice(0, w.length - 1);
-    }
-    return ans.join(' ');
-}
-```
+
 
 ### **...**
 
@@ -169,4 +105,4 @@ function sortSentence(s: string): string {
 
 ```
 
-<!-- tabs:end -->
+

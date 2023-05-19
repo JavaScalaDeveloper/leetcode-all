@@ -79,12 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimizeSum(self, nums: List[int]) -> int:
-        nums.sort()
-        return min(nums[-1] - nums[2], nums[-2] - nums[1], nums[-3] - nums[0])
-```
+
 
 ### **Java**
 
@@ -103,63 +98,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimizeSum(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        return min({nums[n - 1] - nums[2], nums[n - 2] - nums[1], nums[n - 3] - nums[0]});
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimizeSum(nums []int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	return min(nums[n-1]-nums[2], min(nums[n-2]-nums[1], nums[n-3]-nums[0]))
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimizeSum(nums: number[]): number {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    return Math.min(
-        nums[n - 3] - nums[0],
-        nums[n - 2] - nums[1],
-        nums[n - 1] - nums[2],
-    );
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn minimize_sum(mut nums: Vec<i32>) -> i32 {
-        nums.sort();
-        let n = nums.len();
-        (nums[n - 1] - nums[2])
-            .min(nums[n - 2] - nums[1])
-            .min(nums[n - 3] - nums[0])
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -182,4 +135,4 @@ int minimizeSum(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

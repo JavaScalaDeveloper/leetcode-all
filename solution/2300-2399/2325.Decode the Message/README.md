@@ -73,17 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def decodeMessage(self, key: str, message: str) -> str:
-        d = {" ": " "}
-        i = 0
-        for c in key:
-            if c not in d:
-                d[c] = ascii_lowercase[i]
-                i += 1
-        return "".join(d[c] for c in message)
-```
+
 
 ### **Java**
 
@@ -109,85 +99,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string decodeMessage(string key, string message) {
-        char d[128]{};
-        d[' '] = ' ';
-        char i = 'a';
-        for (char& c : key) {
-            if (!d[c]) {
-                d[c] = i++;
-            }
-        }
-        for (char& c : message) {
-            c = d[c];
-        }
-        return message;
-    }
-};
-```
 
-### **Go**
 
-```go
-func decodeMessage(key string, message string) string {
-	d := [128]byte{}
-	d[' '] = ' '
-	for i, j := 0, 0; i < len(key); i++ {
-		if d[key[i]] == 0 {
-			d[key[i]] = byte('a' + j)
-			j++
-		}
-	}
-	ans := []byte(message)
-	for i, c := range ans {
-		ans[i] = d[c]
-	}
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function decodeMessage(key: string, message: string): string {
-    const d = new Map<string, string>();
-    for (const c of key) {
-        if (c === ' ' || d.has(c)) {
-            continue;
-        }
-        d.set(c, String.fromCharCode('a'.charCodeAt(0) + d.size));
-    }
-    d.set(' ', ' ');
-    return [...message].map(v => d.get(v)).join('');
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn decode_message(key: String, message: String) -> String {
-        let mut d = HashMap::new();
-        for c in key.as_bytes() {
-            if *c == b' ' || d.contains_key(c) {
-                continue;
-            }
-            d.insert(c, char::from((97 + d.len()) as u8));
-        }
-        message
-            .as_bytes()
-            .iter()
-            .map(|c| d.get(c).unwrap_or(&' '))
-            .collect()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -218,4 +144,4 @@ char *decodeMessage(char *key, char *message) {
 
 ```
 
-<!-- tabs:end -->
+

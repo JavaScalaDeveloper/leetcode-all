@@ -56,11 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findCenter(self, edges: List[List[int]]) -> int:
-        return edges[0][0] if edges[0][0] in edges[1] else edges[0][1]
-```
+
 
 ### **Java**
 
@@ -78,68 +74,23 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function findCenter(edges: number[][]): number {
-    for (let num of edges[0]) {
-        if (edges[1].includes(num)) {
-            return num;
-        }
-    }
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findCenter(vector<vector<int>>& edges) {
-        int a = edges[0][0], b = edges[0][1];
-        int c = edges[1][0], d = edges[1][1];
-        return a == c || a == d ? a : b;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findCenter(edges [][]int) int {
-	a, b := edges[0][0], edges[0][1]
-	c, d := edges[1][0], edges[1][1]
-	if a == c || a == d {
-		return a
-	}
-	return b
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn find_center(edges: Vec<Vec<i32>>) -> i32 {
-        if edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1] {
-            return edges[0][0];
-        }
-        edges[0][1]
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} edges
- * @return {number}
- */
-var findCenter = function (edges) {
-    const [a, b] = edges[0];
-    const [c, d] = edges[1];
-    return a == c || a == d ? a : b;
-};
-```
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -147,4 +98,4 @@ var findCenter = function (edges) {
 
 ```
 
-<!-- tabs:end -->
+

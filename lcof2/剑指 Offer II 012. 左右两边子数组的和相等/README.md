@@ -68,18 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def pivotIndex(self, nums: List[int]) -> int:
-        n = len(nums)
-        sum = [0 for _ in range(n + 1)]
-        for i in range(1, n + 1):
-            sum[i] = sum[i - 1] + nums[i - 1]
-        for i in range(0, n):
-            if sum[i] == sum[n] - sum[i + 1]:
-                return i
-        return -1
-```
+
 
 ### **Java**
 
@@ -103,45 +92,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func pivotIndex(nums []int) int {
-	n := len(nums)
-	sum := make([]int, n+1)
-	for i := 1; i <= n; i++ {
-		sum[i] = sum[i-1] + nums[i-1]
-	}
-	for i := 0; i < n; i++ {
-		if sum[i] == sum[n]-sum[i+1] {
-			return i
-		}
-	}
-	return -1
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int pivotIndex(vector<int>& nums) {
-        int sum = 0;
-        int total = 0;
-        for (int num : nums)
-            sum += num;
 
-        for (int i = 0; i < nums.size(); i++) {
-            total += nums[i];
-            if (total - nums[i] == sum - total)
-                return i;
-        }
 
-        return -1;
-    }
-};
-```
+
+
 
 ### **...**
 
@@ -149,4 +106,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

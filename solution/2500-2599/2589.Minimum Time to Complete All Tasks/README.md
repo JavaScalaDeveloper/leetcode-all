@@ -69,23 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMinimumTime(self, tasks: List[List[int]]) -> int:
-        tasks.sort(key=lambda x: x[1])
-        vis = [0] * 2010
-        ans = 0
-        for start, end, duration in tasks:
-            duration -= sum(vis[start: end + 1])
-            i = end
-            while i >= start and duration > 0:
-                if not vis[i]:
-                    duration -= 1
-                    vis[i] = 1
-                    ans += 1
-                i -= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -114,76 +98,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findMinimumTime(vector<vector<int>>& tasks) {
-        sort(tasks.begin(), tasks.end(), [&](auto& a, auto& b) { return a[1] < b[1]; });
-        bitset<2010> vis;
-        int ans = 0;
-        for (auto& task : tasks) {
-            int start = task[0], end = task[1], duration = task[2];
-            for (int i = start; i <= end; ++i) {
-                duration -= vis[i];
-            }
-            for (int i = end; i >= start && duration > 0; --i) {
-                if (!vis[i]) {
-                    --duration;
-                    ans += vis[i] = 1;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMinimumTime(tasks [][]int) (ans int) {
-	sort.Slice(tasks, func(i, j int) bool { return tasks[i][1] < tasks[j][1] })
-	vis := [2010]int{}
-	for _, task := range tasks {
-		start, end, duration := task[0], task[1], task[2]
-		for _, x := range vis[start : end+1] {
-			duration -= x
-		}
-		for i := end; i >= start && duration > 0; i-- {
-			if vis[i] == 0 {
-				vis[i] = 1
-				duration--
-				ans++
-			}
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findMinimumTime(tasks: number[][]): number {
-    tasks.sort((a, b) => a[1] - b[1]);
-    const vis = new Array(2010).fill(0);
-    let ans = 0;
-    for (let [start, end, duration] of tasks) {
-        for (let i = start; i <= end; ++i) {
-            duration -= vis[i];
-        }
-        for (let i = end; i >= start && duration > 0; --i) {
-            if (vis[i] === 0) {
-                --duration;
-                ans += vis[i] = 1;
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -191,4 +116,4 @@ function findMinimumTime(tasks: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

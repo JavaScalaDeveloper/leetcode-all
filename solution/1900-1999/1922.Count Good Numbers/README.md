@@ -58,22 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countGoodNumbers(self, n: int) -> int:
-        mod = 10**9 + 7
 
-        def myPow(x, n):
-            res = 1
-            while n:
-                if (n & 1) == 1:
-                    res = res * x % mod
-                x = x * x % mod
-                n >>= 1
-            return res
-
-        return myPow(5, (n + 1) >> 1) * myPow(4, n >> 1) % mod
-```
 
 ### **Java**
 
@@ -101,53 +86,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-int MOD = 1000000007;
 
-class Solution {
-public:
-    int countGoodNumbers(long long n) {
-        return (int)(myPow(5, (n + 1) >> 1) * myPow(4, n >> 1) % MOD);
-    }
 
-private:
-    long long myPow(long long x, long long n) {
-        long long res = 1;
-        while (n) {
-            if ((n & 1) == 1) {
-                res = res * x % MOD;
-            }
-            x = x * x % MOD;
-            n >>= 1;
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-const mod int64 = 1e9 + 7
 
-func countGoodNumbers(n int64) int {
-	return int(myPow(5, (n+1)>>1) * myPow(4, n>>1) % mod)
-}
 
-func myPow(x, n int64) int64 {
-	var res int64 = 1
-	for n != 0 {
-		if (n & 1) == 1 {
-			res = res * x % mod
-		}
-		x = x * x % mod
-		n >>= 1
-	}
-	return res
-}
-```
 
 ### **...**
 
@@ -155,4 +100,4 @@ func myPow(x, n int64) int64 {
 
 ```
 
-<!-- tabs:end -->
+

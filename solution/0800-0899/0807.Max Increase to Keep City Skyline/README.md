@@ -61,17 +61,7 @@ gridNew = [ [8, 4, 8, 7],
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxIncreaseKeepingSkyline(self, grid: List[List[int]]) -> int:
-        rmx = [max(row) for row in grid]
-        cmx = [max(col) for col in zip(*grid)]
-        return sum(
-            (min(rmx[i], cmx[j]) - grid[i][j])
-            for i in range(len(grid))
-            for j in range(len(grid[0]))
-        )
-```
+
 
 ### **Java**
 
@@ -102,89 +92,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function maxIncreaseKeepingSkyline(grid: number[][]): number {
-    let rows = grid.map(arr => Math.max(...arr)),
-        cols = [];
-    let m = grid.length,
-        n = grid[0].length;
-    for (let j = 0; j < n; ++j) {
-        cols[j] = grid[0][j];
-        for (let i = 1; i < m; ++i) {
-            cols[j] = Math.max(cols[j], grid[i][j]);
-        }
-    }
 
-    let ans = 0;
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            ans += Math.min(rows[i], cols[j]) - grid[i][j];
-        }
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<int> rmx(m, 0);
-        vector<int> cmx(n, 0);
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                rmx[i] = max(rmx[i], grid[i][j]);
-                cmx[j] = max(cmx[j], grid[i][j]);
-            }
-        }
-        int ans = 0;
-        for (int i = 0; i < m; ++i)
-            for (int j = 0; j < n; ++j)
-                ans += min(rmx[i], cmx[j]) - grid[i][j];
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxIncreaseKeepingSkyline(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	rmx := make([]int, m)
-	cmx := make([]int, n)
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			rmx[i] = max(rmx[i], grid[i][j])
-			cmx[j] = max(cmx[j], grid[i][j])
-		}
-	}
-	ans := 0
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			ans += min(rmx[i], cmx[j]) - grid[i][j]
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -192,4 +108,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

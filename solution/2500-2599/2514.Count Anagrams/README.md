@@ -51,39 +51,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-mod = 10**9 + 7
-f = [1]
-for i in range(1, 10**5 + 1):
-    f.append(f[-1] * i % mod)
 
 
-class Solution:
-    def countAnagrams(self, s: str) -> int:
-        ans = 1
-        for w in s.split():
-            cnt = Counter(w)
-            ans *= f[len(w)]
-            ans %= mod
-            for v in cnt.values():
-                ans *= pow(f[v], -1, mod)
-                ans %= mod
-        return ans
-```
 
-```python
-class Solution:
-    def countAnagrams(self, s: str) -> int:
-        mod = 10**9 + 7
-        ans = mul = 1
-        for w in s.split():
-            cnt = Counter()
-            for i, c in enumerate(w, 1):
-                cnt[c] += 1
-                mul = mul * cnt[c] % mod
-                ans = ans * i % mod
-        return ans * pow(mul, -1, mod) % mod
-```
 
 ### **Java**
 
@@ -119,70 +89,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int countAnagrams(string s) {
-        stringstream ss(s);
-        string w;
-        long ans = 1, mul = 1;
-        while (ss >> w) {
-            int cnt[26] = {0};
-            for (int i = 1; i <= w.size(); ++i) {
-                int c = w[i - 1] - 'a';
-                ++cnt[c];
-                ans = ans * i % mod;
-                mul = mul * cnt[c] % mod;
-            }
-        }
-        return ans * pow(mul, mod - 2) % mod;
-    }
 
-    long pow(long x, int n) {
-        long res = 1L;
-        for (; n; n /= 2) {
-            if (n % 2) res = res * x % mod;
-            x = x * x % mod;
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-const mod int = 1e9 + 7
 
-func countAnagrams(s string) int {
-	ans, mul := 1, 1
-	for _, w := range strings.Split(s, " ") {
-		cnt := [26]int{}
-		for i, c := range w {
-			i++
-			cnt[c-'a']++
-			ans = ans * i % mod
-			mul = mul * cnt[c-'a'] % mod
-		}
-	}
-	return ans * pow(mul, mod-2) % mod
-}
 
-func pow(x, n int) int {
-	res := 1
-	for ; n > 0; n >>= 1 {
-		if n&1 > 0 {
-			res = res * x % mod
-		}
-		x = x * x % mod
-	}
-	return res
-}
-```
 
 ### **...**
 
@@ -190,4 +103,4 @@ func pow(x, n int) int {
 
 ```
 
-<!-- tabs:end -->
+

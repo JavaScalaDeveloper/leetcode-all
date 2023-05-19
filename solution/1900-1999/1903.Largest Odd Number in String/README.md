@@ -57,14 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestOddNumber(self, num: str) -> str:
-        for i in range(len(num) - 1, -1, -1):
-            if (int(num[i]) & 1) == 1:
-                return num[: i + 1]
-        return ''
-```
+
 
 ### **Java**
 
@@ -84,54 +77,17 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} num
- * @return {string}
- */
-var largestOddNumber = function (num) {
-    let n = num.length;
-    for (let j = n - 1; j >= 0; j--) {
-        if (num.charAt(j) & (1 == 1)) {
-            return num.slice(0, j + 1);
-        }
-    }
-    return '';
-};
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string largestOddNumber(string num) {
-        for (int i = num.size() - 1; i >= 0; --i) {
-            int c = num[i] - '0';
-            if ((c & 1) == 1) {
-                return num.substr(0, i + 1);
-            }
-        }
-        return "";
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestOddNumber(num string) string {
-	for i := len(num) - 1; i >= 0; i-- {
-		c := num[i] - '0'
-		if (c & 1) == 1 {
-			return num[:i+1]
-		}
-	}
-	return ""
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -139,4 +95,4 @@ func largestOddNumber(num string) string {
 
 ```
 
-<!-- tabs:end -->
+

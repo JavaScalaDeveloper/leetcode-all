@@ -83,11 +83,7 @@ int gray(x) {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def grayCode(self, n: int) -> List[int]:
-        return [i ^ (i >> 1) for i in range(1 << n)]
-```
+
 
 ### **Java**
 
@@ -105,47 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> grayCode(int n) {
-        vector<int> ans;
-        for (int i = 0; i < 1 << n; ++i) {
-            ans.push_back(i ^ (i >> 1));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func grayCode(n int) (ans []int) {
-	for i := 0; i < 1<<n; i++ {
-		ans = append(ans, i^(i>>1))
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number[]}
- */
-var grayCode = function (n) {
-    const ans = [];
-    for (let i = 0; i < 1 << n; ++i) {
-        ans.push(i ^ (i >> 1));
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -153,4 +119,4 @@ var grayCode = function (n) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -59,21 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
-        def swap(i, j):
-            nums[i], nums[j] = nums[j], nums[i]
 
-        n = len(nums)
-        for i in range(n):
-            while 1 <= nums[i] <= n and nums[i] != nums[nums[i] - 1]:
-                swap(i, nums[i] - 1)
-        for i in range(n):
-            if i + 1 != nums[i]:
-                return i + 1
-        return n + 1
-```
 
 ### **Java**
 
@@ -104,46 +90,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int firstMissingPositive(vector<int>& nums) {
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            while (nums[i] >= 1 && nums[i] <= n && nums[i] != nums[nums[i] - 1]) {
-                swap(nums[i], nums[nums[i] - 1]);
-            }
-        }
-        for (int i = 0; i < n; ++i) {
-            if (i + 1 != nums[i]) {
-                return i + 1;
-            }
-        }
-        return n + 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func firstMissingPositive(nums []int) int {
-	n := len(nums)
-	for i := range nums {
-		for nums[i] >= 1 && nums[i] <= n && nums[i] != nums[nums[i]-1] {
-			nums[i], nums[nums[i]-1] = nums[nums[i]-1], nums[i]
-		}
-	}
-	for i, v := range nums {
-		if i+1 != v {
-			return i + 1
-		}
-	}
-	return n + 1
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -172,89 +125,17 @@ int firstMissingPositive(int* nums, int numsSize) {
 }
 ```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int FirstMissingPositive(int[] nums) {
-        var i = 0;
-        while (i < nums.Length)
-        {
-            if (nums[i] > 0 && nums[i] <= nums.Length)
-            {
-                var index = nums[i] -1;
-                if (index != i && nums[index] != nums[i])
-                {
-                    var temp = nums[i];
-                    nums[i] = nums[index];
-                    nums[index] = temp;
-                }
-                else
-                {
-                    ++i;
-                }
-            }
-            else
-            {
-                ++i;
-            }
-        }
 
-        for (i = 0; i < nums.Length; ++i)
-        {
-            if (nums[i] != i + 1)
-            {
-                return i + 1;
-            }
-        }
-        return nums.Length + 1;
-    }
-}
-```
+
 
 ### **TypeScript**
 
-```ts
-function firstMissingPositive(nums: number[]): number {
-    const n = nums.length;
-    let i = 0;
-    while (i < n) {
-        const j = nums[i] - 1;
-        if (j === i || j < 0 || j >= n || nums[i] === nums[j]) {
-            i++;
-        } else {
-            [nums[i], nums[j]] = [nums[j], nums[i]];
-        }
-    }
 
-    const res = nums.findIndex((v, i) => v !== i + 1);
-    return (res === -1 ? n : res) + 1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn first_missing_positive(mut nums: Vec<i32>) -> i32 {
-        let n = nums.len();
-        let mut i = 0;
-        while i < n {
-            let j = nums[i] - 1;
-            if i as i32 == j || j < 0 || j >= n as i32 || nums[i] == nums[j as usize] {
-                i += 1;
-            } else {
-                nums.swap(i, j as usize);
-            }
-        }
-        nums.iter()
-            .enumerate()
-            .position(|(i, &v)| v as usize != i + 1)
-            .unwrap_or(n) as i32
-            + 1
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -262,4 +143,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

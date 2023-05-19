@@ -76,34 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumTime(self, hens: List[int], grains: List[int]) -> int:
-        def check(t):
-            j = 0
-            for x in hens:
-                if j == m:
-                    return True
-                y = grains[j]
-                if y <= x:
-                    d = x - y
-                    if d > t:
-                        return False
-                    while j < m and grains[j] <= x:
-                        j += 1
-                    while j < m and min(d, grains[j] - x) + grains[j] - y <= t:
-                        j += 1
-                else:
-                    while j < m and grains[j] - x <= t:
-                        j += 1
-            return j == m
 
-        hens.sort()
-        grains.sort()
-        m = len(grains)
-        r = abs(hens[0] - grains[0]) + grains[-1] - grains[0] + 1
-        return bisect_left(range(r), True, key=check)
-```
 
 ### **Java**
 
@@ -163,167 +136,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumTime(vector<int>& hens, vector<int>& grains) {
-        int m = grains.size();
-        sort(hens.begin(), hens.end());
-        sort(grains.begin(), grains.end());
-        int l = 0;
-        int r = abs(hens[0] - grains[0]) + grains[m - 1] - grains[0];
-        auto check = [&](int t) -> bool {
-            int j = 0;
-            for (int x : hens) {
-                if (j == m) {
-                    return true;
-                }
-                int y = grains[j];
-                if (y <= x) {
-                    int d = x - y;
-                    if (d > t) {
-                        return false;
-                    }
-                    while (j < m && grains[j] <= x) {
-                        ++j;
-                    }
-                    while (j < m && min(d, grains[j] - x) + grains[j] - y <= t) {
-                        ++j;
-                    }
-                } else {
-                    while (j < m && grains[j] - x <= t) {
-                        ++j;
-                    }
-                }
-            }
-            return j == m;
-        };
-        while (l < r) {
-            int mid = (l + r) >> 1;
-            if (check(mid)) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumTime(hens []int, grains []int) int {
-	sort.Ints(hens)
-	sort.Ints(grains)
-	m := len(grains)
-	l, r := 0, abs(hens[0]-grains[0])+grains[m-1]-grains[0]
-	check := func(t int) bool {
-		j := 0
-		for _, x := range hens {
-			if j == m {
-				return true
-			}
-			y := grains[j]
-			if y <= x {
-				d := x - y
-				if d > t {
-					return false
-				}
-				for j < m && grains[j] <= x {
-					j++
-				}
-				for j < m && min(d, grains[j]-x)+grains[j]-y <= t {
-					j++
-				}
-			} else {
-				for j < m && grains[j]-x <= t {
-					j++
-				}
-			}
-		}
-		return j == m
-	}
-	for l < r {
-		mid := (l + r) >> 1
-		if check(mid) {
-			r = mid
-		} else {
-			l = mid + 1
-		}
-	}
-	return l
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumTime(hens: number[], grains: number[]): number {
-    hens.sort((a, b) => a - b);
-    grains.sort((a, b) => a - b);
-    const m = grains.length;
-    let l = 0;
-    let r = Math.abs(hens[0] - grains[0]) + grains[m - 1] - grains[0] + 1;
 
-    const check = (t: number): boolean => {
-        let j = 0;
-        for (const x of hens) {
-            if (j === m) {
-                return true;
-            }
-            const y = grains[j];
-            if (y <= x) {
-                const d = x - y;
-                if (d > t) {
-                    return false;
-                }
-                while (j < m && grains[j] <= x) {
-                    ++j;
-                }
-                while (
-                    j < m &&
-                    Math.min(d, grains[j] - x) + grains[j] - y <= t
-                ) {
-                    ++j;
-                }
-            } else {
-                while (j < m && grains[j] - x <= t) {
-                    ++j;
-                }
-            }
-        }
-        return j === m;
-    };
-
-    while (l < r) {
-        const mid = (l + r) >> 1;
-        if (check(mid)) {
-            r = mid;
-        } else {
-            l = mid + 1;
-        }
-    }
-    return l;
-}
-```
 
 ### **...**
 
@@ -331,4 +154,4 @@ function minimumTime(hens: number[], grains: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

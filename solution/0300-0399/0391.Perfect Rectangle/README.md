@@ -55,40 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isRectangleCover(self, rectangles: List[List[int]]) -> bool:
-        area = 0
-        minX, minY = rectangles[0][0], rectangles[0][1]
-        maxX, maxY = rectangles[0][2], rectangles[0][3]
-        cnt = defaultdict(int)
 
-        for r in rectangles:
-            area += (r[2] - r[0]) * (r[3] - r[1])
-
-            minX = min(minX, r[0])
-            minY = min(minY, r[1])
-            maxX = max(maxX, r[2])
-            maxY = max(maxY, r[3])
-
-            cnt[(r[0], r[1])] += 1
-            cnt[(r[0], r[3])] += 1
-            cnt[(r[2], r[3])] += 1
-            cnt[(r[2], r[1])] += 1
-
-        if (
-            area != (maxX - minX) * (maxY - minY)
-            or cnt[(minX, minY)] != 1
-            or cnt[(minX, maxY)] != 1
-            or cnt[(maxX, maxY)] != 1
-            or cnt[(maxX, minY)] != 1
-        ):
-            return False
-
-        del cnt[(minX, minY)], cnt[(minX, maxY)], cnt[(maxX, maxY)], cnt[(maxX, minY)]
-
-        return all(c == 2 or c == 4 for c in cnt.values())
-```
 
 ### **Java**
 
@@ -161,115 +128,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
 
-class Solution {
-public:
-    bool isRectangleCover(vector<vector<int>>& rectangles) {
-        long long area = 0;
-        int minX = rectangles[0][0], minY = rectangles[0][1];
-        int maxX = rectangles[0][2], maxY = rectangles[0][3];
 
-        using pii = pair<int, int>;
-        map<pii, int> cnt;
 
-        for (auto& r : rectangles) {
-            area += (r[2] - r[0]) * (r[3] - r[1]);
 
-            minX = min(minX, r[0]);
-            minY = min(minY, r[1]);
-            maxX = max(maxX, r[2]);
-            maxY = max(maxY, r[3]);
 
-            ++cnt[{r[0], r[1]}];
-            ++cnt[{r[0], r[3]}];
-            ++cnt[{r[2], r[3]}];
-            ++cnt[{r[2], r[1]}];
-        }
 
-        if (area != (long long)(maxX - minX) * (maxY - minY) || cnt[{minX, minY}] != 1 || cnt[{minX, maxY}] != 1 || cnt[{maxX, maxY}] != 1 || cnt[{maxX, minY}] != 1) {
-            return false;
-        }
-
-        cnt.erase({minX, minY});
-        cnt.erase({minX, maxY});
-        cnt.erase({maxX, maxY});
-        cnt.erase({maxX, minY});
-
-        return all_of(cnt.begin(), cnt.end(), [](pair<pii, int> e) {
-            return e.second == 2 || e.second == 4;
-        });
-    }
-};
-```
-
-### **Go**
-
-```go
-type pair struct {
-	first  int
-	second int
-}
-
-func isRectangleCover(rectangles [][]int) bool {
-	area := 0
-	minX, minY := rectangles[0][0], rectangles[0][1]
-	maxX, maxY := rectangles[0][2], rectangles[0][3]
-
-	cnt := make(map[pair]int)
-	for _, r := range rectangles {
-		area += (r[2] - r[0]) * (r[3] - r[1])
-
-		minX = min(minX, r[0])
-		minY = min(minY, r[1])
-		maxX = max(maxX, r[2])
-		maxY = max(maxY, r[3])
-
-		cnt[pair{r[0], r[1]}]++
-		cnt[pair{r[0], r[3]}]++
-		cnt[pair{r[2], r[3]}]++
-		cnt[pair{r[2], r[1]}]++
-	}
-
-	if area != (maxX-minX)*(maxY-minY) ||
-		cnt[pair{minX, minY}] != 1 ||
-		cnt[pair{minX, maxY}] != 1 ||
-		cnt[pair{maxX, maxY}] != 1 ||
-		cnt[pair{maxX, minY}] != 1 {
-		return false
-	}
-
-	delete(cnt, pair{minX, minY})
-	delete(cnt, pair{minX, maxY})
-	delete(cnt, pair{maxX, maxY})
-	delete(cnt, pair{maxX, minY})
-
-	for _, c := range cnt {
-		if c != 2 && c != 4 {
-			return false
-		}
-	}
-	return true
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
 ### **...**
 
@@ -277,4 +142,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

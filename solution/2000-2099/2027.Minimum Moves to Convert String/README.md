@@ -65,18 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumMoves(self, s: str) -> int:
-        ans = i = 0
-        while i < len(s):
-            if s[i] == "X":
-                ans += 1
-                i += 3
-            else:
-                i += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,78 +86,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumMoves(string s) {
-        int ans = 0;
-        for (int i = 0; i < s.size(); ++i) {
-            if (s[i] == 'X') {
-                ++ans;
-                i += 2;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumMoves(s string) (ans int) {
-	for i := 0; i < len(s); i++ {
-		if s[i] == 'X' {
-			ans++
-			i += 2
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumMoves(s: string): number {
-    const n = s.length;
-    let ans = 0;
-    let i = 0;
-    while (i < n) {
-        if (s[i] === 'X') {
-            ans++;
-            i += 3;
-        } else {
-            i++;
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn minimum_moves(s: String) -> i32 {
-        let s = s.as_bytes();
-        let n = s.len();
-        let mut ans = 0;
-        let mut i = 0;
-        while i < n {
-            if s[i] == b'X' {
-                ans += 1;
-                i += 3;
-            } else {
-                i += 1;
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -195,4 +127,4 @@ int minimumMoves(char *s) {
 
 ```
 
-<!-- tabs:end -->
+

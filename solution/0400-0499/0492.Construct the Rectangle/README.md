@@ -58,14 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def constructRectangle(self, area: int) -> List[int]:
-        w = int(sqrt(area))
-        while area % w != 0:
-            w -= 1
-        return [area // w, w]
-```
+
 
 ### **Java**
 
@@ -83,30 +76,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> constructRectangle(int area) {
-        int w = sqrt(1.0 * area);
-        while (area % w != 0) --w;
-        return {area / w, w};
-    }
-};
-```
 
-### **Go**
 
-```go
-func constructRectangle(area int) []int {
-	w := int(math.Sqrt(float64(area)))
-	for area%w != 0 {
-		w--
-	}
-	return []int{area / w, w}
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -114,4 +90,4 @@ func constructRectangle(area int) []int {
 
 ```
 
-<!-- tabs:end -->
+

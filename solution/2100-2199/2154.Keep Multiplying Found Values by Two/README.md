@@ -60,14 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findFinalValue(self, nums: List[int], original: int) -> int:
-        s = set(nums)
-        while original in s:
-            original <<= 1
-        return original
-```
+
 
 ### **Java**
 
@@ -91,44 +84,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function findFinalValue(nums: number[], original: number): number {
-    let set: Set<number> = new Set(nums);
-    while (set.has(original)) {
-        original *= 2;
-    }
-    return original;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findFinalValue(vector<int>& nums, int original) {
-        unordered_set<int> s;
-        for (int num : nums) s.insert(num);
-        while (s.count(original)) original <<= 1;
-        return original;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findFinalValue(nums []int, original int) int {
-	s := make(map[int]bool)
-	for _, num := range nums {
-		s[num] = true
-	}
-	for s[original] {
-		original <<= 1
-	}
-	return original
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -136,4 +100,4 @@ func findFinalValue(nums []int, original int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -84,35 +84,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-class Solution:
-    def closeLampInTree(self, root: TreeNode) -> int:
-        def dfs(root):
-            if root is None:
-                return 0, 0, 0, 0
-            l1, l2, l3, l4 = dfs(root.left)
-            r1, r2, r3, r4 = dfs(root.right)
-            t1 = t2 = t3 = t4 = inf
-            if root.val:
-                t1 = min(l1 + r1 + 1, l2 + r2 + 1, l3 + r3 + 1, l4 + r4 + 3)
-                t2 = min(l1 + r1 + 2, l2 + r2, l3 + r3 + 2, l4 + r4 + 2)
-                t3 = min(l1 + r1, l2 + r2 + 2, l3 + r3 + 2, l4 + r4 + 2)
-                t4 = min(l1 + r1 + 1, l2 + r2 + 1, l3 + r3 + 3, l4 + r4 + 1)
-            else:
-                t1 = min(l1 + r1, l2 + r2 + 2, l3 + r3 + 2, l4 + r4 + 2)
-                t2 = min(l1 + r1 + 1, l2 + r2 + 1, l3 + r3 + 3, l4 + r4 + 1)
-                t3 = min(l1 + r1 + 1, l2 + r2 + 1, l3 + r3 + 1, l4 + r4 + 3)
-                t4 = min(l1 + r1 + 2, l2 + r2, l3 + r3 + 2, l4 + r4 + 2)
-            return t1, t2, t3, t4
 
-        return dfs(root)[0]
-```
 
 ### **Java**
 
@@ -166,100 +138,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    int closeLampInTree(TreeNode* root) {
-        return dfs(root)[0];
-    }
 
-    vector<int> dfs(TreeNode* root) {
-        vector<int> ans(4);
-        if (!root) {
-            return ans;
-        }
-        auto left = dfs(root->left);
-        auto right = dfs(root->right);
-        int l1 = left[0], l2 = left[1], l3 = left[2], l4 = left[3];
-        int r1 = right[0], r2 = right[1], r3 = right[2], r4 = right[3];
-        if (root->val) {
-            ans[0] = min({l1 + r1 + 1, l2 + r2 + 1, l3 + r3 + 1, l4 + r4 + 3});
-            ans[1] = min({l1 + r1 + 2, l2 + r2, l3 + r3 + 2, l4 + r4 + 2});
-            ans[2] = min({l1 + r1, l2 + r2 + 2, l3 + r3 + 2, l4 + r4 + 2});
-            ans[3] = min({l1 + r1 + 1, l2 + r2 + 1, l3 + r3 + 3, l4 + r4 + 1});
-        } else {
-            ans[0] = min({l1 + r1, l2 + r2 + 2, l3 + r3 + 2, l4 + r4 + 2});
-            ans[1] = min({l1 + r1 + 1, l2 + r2 + 1, l3 + r3 + 3, l4 + r4 + 1});
-            ans[2] = min({l1 + r1 + 1, l2 + r2 + 1, l3 + r3 + 1, l4 + r4 + 3});
-            ans[3] = min({l1 + r1 + 2, l2 + r2, l3 + r3 + 2, l4 + r4 + 2});
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func closeLampInTree(root *TreeNode) (ans int) {
-	const inf = 1 << 30
-	var dfs func(*TreeNode) (int, int, int, int)
-	dfs = func(root *TreeNode) (int, int, int, int) {
-		if root == nil {
-			return 0, 0, 0, 0
-		}
-		l1, l2, l3, l4 := dfs(root.Left)
-		r1, r2, r3, r4 := dfs(root.Right)
-		t1, t2, t3, t4 := inf, inf, inf, inf
-		if root.Val == 1 {
-			t1 = min(l1+r1+1, l2+r2+1, l3+r3+1, l4+r4+3)
-			t2 = min(l1+r1+2, l2+r2, l3+r3+2, l4+r4+2)
-			t3 = min(l1+r1, l2+r2+2, l3+r3+2, l4+r4+2)
-			t4 = min(l1+r1+1, l2+r2+1, l3+r3+3, l4+r4+1)
-		} else {
-			t1 = min(l1+r1, l2+r2+2, l3+r3+2, l4+r4+2)
-			t2 = min(l1+r1+1, l2+r2+1, l3+r3+3, l4+r4+1)
-			t3 = min(l1+r1+1, l2+r2+1, l3+r3+1, l4+r4+3)
-			t4 = min(l1+r1+2, l2+r2, l3+r3+2, l4+r4+2)
-		}
-		return t1, t2, t3, t4
-	}
-	ans, _, _, _ = dfs(root)
-	return
-}
 
-func min(a, b, c, d int) int {
-	if b < a {
-		a = b
-	}
-	if c < a {
-		a = c
-	}
-	if d < a {
-		a = d
-	}
-	return a
-}
-```
+
+
 
 ### **...**
 
@@ -267,4 +152,4 @@ func min(a, b, c, d int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -89,19 +89,7 @@ M             1000</pre>
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def intToRoman(self, num: int) -> str:
-        cs = ('M', 'CM', 'D', 'CD', 'C', 'XC',
-              'L', 'XL', 'X', 'IX', 'V', 'IV', 'I')
-        vs = (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
-        ans = []
-        for c, v in zip(cs, vs):
-            while num >= v:
-                num -= v
-                ans.append(c)
-        return ''.join(ans)
-```
+
 
 ### **Java**
 
@@ -125,92 +113,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string intToRoman(int num) {
-        vector<string> cs = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-        vector<int> vs = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        string ans;
-        for (int i = 0; i < cs.size(); ++i) {
-            while (num >= vs[i]) {
-                num -= vs[i];
-                ans += cs[i];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func intToRoman(num int) string {
-	cs := []string{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
-	vs := []int{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}
-	ans := &strings.Builder{}
-	for i, v := range vs {
-		for num >= v {
-			num -= v
-			ans.WriteString(cs[i])
-		}
-	}
-	return ans.String()
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function intToRoman(num: number): string {
-    const cs: string[] = [
-        'M',
-        'CM',
-        'D',
-        'CD',
-        'C',
-        'XC',
-        'L',
-        'XL',
-        'X',
-        'IX',
-        'V',
-        'IV',
-        'I',
-    ];
-    const vs: number[] = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-    const ans: string[] = [];
-    for (let i = 0; i < vs.length; ++i) {
-        while (num >= vs[i]) {
-            num -= vs[i];
-            ans.push(cs[i]);
-        }
-    }
-    return ans.join('');
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public string IntToRoman(int num) {
-        List<string> cs = new List<string>{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-        List<int> vs = new List<int>{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        StringBuilder ans = new StringBuilder();
-        for (int i = 0; i < cs.Count; i++) {
-            while (num >= vs[i]) {
-                ans.Append(cs[i]);
-                num -= vs[i];
-            }
-        }
-        return ans.ToString();
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -218,4 +135,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -71,29 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def calculate(self, s: str) -> int:
-        v, n = 0, len(s)
-        sign = '+'
-        stk = []
-        for i, c in enumerate(s):
-            if c.isdigit():
-                v = v * 10 + int(c)
-            if i == n - 1 or c in '+-*/':
-                match sign:
-                    case '+':
-                        stk.append(v)
-                    case '-':
-                        stk.append(-v)
-                    case '*':
-                        stk.append(stk.pop() * v)
-                    case '/':
-                        stk.append(int(stk.pop() / v))
-                sign = c
-                v = 0
-        return sum(stk)
-```
+
 
 ### **Java**
 
@@ -133,78 +111,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int calculate(string s) {
-        int v = 0, n = s.size();
-        char sign = '+';
-        stack<int> stk;
-        for (int i = 0; i < n; ++i) {
-            char c = s[i];
-            if (isdigit(c)) v = v * 10 + (c - '0');
-            if (i == n - 1 || c == '+' || c == '-' || c == '*' || c == '/') {
-                if (sign == '+') stk.push(v);
-                else if (sign == '-') stk.push(-v);
-                else if (sign == '*') {
-                    int t = stk.top();
-                    stk.pop();
-                    stk.push(t * v);
-                } else {
-                    int t = stk.top();
-                    stk.pop();
-                    stk.push(t / v);
-                }
-                sign = c;
-                v = 0;
-            }
-        }
-        int ans = 0;
-        while (!stk.empty()) {
-            ans += stk.top();
-            stk.pop();
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func calculate(s string) int {
-	sign := '+'
-	stk := []int{}
-	v := 0
-	for i, c := range s {
-		digit := '0' <= c && c <= '9'
-		if digit {
-			v = v*10 + int(c-'0')
-		}
-		if i == len(s)-1 || !digit && c != ' ' {
-			switch sign {
-			case '+':
-				stk = append(stk, v)
-			case '-':
-				stk = append(stk, -v)
-			case '*':
-				stk[len(stk)-1] *= v
-			case '/':
-				stk[len(stk)-1] /= v
-			}
-			sign = c
-			v = 0
-		}
-	}
-	ans := 0
-	for _, v := range stk {
-		ans += v
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -212,4 +125,4 @@ func calculate(s string) int {
 
 ```
 
-<!-- tabs:end -->
+

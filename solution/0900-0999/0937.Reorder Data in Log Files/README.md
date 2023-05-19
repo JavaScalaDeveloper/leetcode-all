@@ -67,15 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reorderLogFiles(self, logs: List[str]) -> List[str]:
-        def cmp(x):
-            a, b = x.split(' ', 1)
-            return (0, b, a) if b[0].isalpha() else (1,)
 
-        return sorted(logs, key=cmp)
-```
 
 ### **Java**
 
@@ -107,53 +99,11 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function reorderLogFiles(logs: string[]): string[] {
-    const isDigit = (c: string) => c >= '0' && c <= '9';
-    return logs.sort((a, b) => {
-        const end1 = a[a.length - 1];
-        const end2 = b[b.length - 1];
-        if (isDigit(end1) && isDigit(end2)) {
-            return 0;
-        }
-        if (isDigit(end1)) {
-            return 1;
-        }
-        if (isDigit(end2)) {
-            return -1;
-        }
-        const content1 = a.split(' ').slice(1).join(' ');
-        const content2 = b.split(' ').slice(1).join(' ');
-        if (content1 === content2) {
-            return a < b ? -1 : 1;
-        }
-        return content1 < content2 ? -1 : 1;
-    });
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn reorder_log_files(mut logs: Vec<String>) -> Vec<String> {
-        logs.sort_by(|s1, s2| {
-            let (start1, content1) = s1.split_once(' ').unwrap();
-            let (start2, content2) = s2.split_once(' ').unwrap();
-            match (
-                content1.chars().nth(0).unwrap().is_digit(10),
-                content2.chars().nth(0).unwrap().is_digit(10),
-            ) {
-                (true, true) => std::cmp::Ordering::Equal,
-                (true, false) => std::cmp::Ordering::Greater,
-                (false, true) => std::cmp::Ordering::Less,
-                (false, false) => content1.cmp(&content2).then(start1.cmp(&start2)),
-            }
-        });
-        logs
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -161,4 +111,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

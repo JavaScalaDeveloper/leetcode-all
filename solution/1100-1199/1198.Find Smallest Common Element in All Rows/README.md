@@ -50,17 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestCommonElement(self, mat: List[List[int]]) -> int:
-        counter = Counter()
-        for row in mat:
-            for num in row:
-                counter[num] += 1
-                if counter[num] == len(mat):
-                    return num
-        return -1
-```
+
 
 ### **Java**
 
@@ -89,4 +79,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -77,27 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def distributeCoins(self, root: Optional[TreeNode]) -> int:
-        def dfs(root):
-            if root is None:
-                return 0
-            left, right = dfs(root.left), dfs(root.right)
-            nonlocal ans
-            ans += abs(left) + abs(right)
-            return left + right + root.val - 1
 
-        ans = 0
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -139,104 +119,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int distributeCoins(TreeNode* root) {
-        int ans = 0;
-        function<int(TreeNode*)> dfs = [&](TreeNode* root) -> int {
-            if (!root) {
-                return 0;
-            }
-            int left = dfs(root->left);
-            int right = dfs(root->right);
-            ans += abs(left) + abs(right);
-            return left + right + root->val - 1;
-        };
-        dfs(root);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func distributeCoins(root *TreeNode) (ans int) {
-	var dfs func(*TreeNode) int
-	dfs = func(root *TreeNode) int {
-		if root == nil {
-			return 0
-		}
-		left, right := dfs(root.Left), dfs(root.Right)
-		ans += abs(left) + abs(right)
-		return left + right + root.Val - 1
-	}
-	dfs(root)
-	return
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function distributeCoins(root: TreeNode | null): number {
-    let ans = 0;
-    const dfs = (root: TreeNode | null) => {
-        if (!root) {
-            return 0;
-        }
-        const left = dfs(root.left);
-        const right = dfs(root.right);
-        ans += Math.abs(left) + Math.abs(right);
-        return left + right + root.val - 1;
-    };
-    dfs(root);
-    return ans;
-}
-```
 
 ### **...**
 
@@ -244,4 +137,4 @@ function distributeCoins(root: TreeNode | null): number {
 
 ```
 
-<!-- tabs:end -->
+

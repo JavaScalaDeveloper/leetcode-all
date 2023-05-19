@@ -40,23 +40,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
 
-
-class Solution:
-    def deleteNode(self, node):
-        """
-        :type node: ListNode
-        :rtype: void Do not return anything, modify node in-place instead.
-        """
-        node.val = node.next.val
-        node.next = node.next.next
-```
 
 ### **Java**
 
@@ -79,61 +63,17 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
- * @param {ListNode} node
- * @return {void} Do not return anything, modify node in-place instead.
- */
-var deleteNode = function (node) {
-    node.val = node.next.val;
-    node.next = node.next.next;
-};
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    void deleteNode(ListNode* node) {
-        node->val = node->next->val;
-        node->next = node->next->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func deleteNode(node *ListNode) {
-	node.Val = node.Next.Val
-	node.Next = node.Next.Next
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -141,4 +81,4 @@ func deleteNode(node *ListNode) {
 
 ```
 
-<!-- tabs:end -->
+

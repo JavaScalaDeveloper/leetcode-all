@@ -46,27 +46,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def computeSimilarities(self, docs: List[List[int]]) -> List[str]:
-        eps = 1e-9
-        d = defaultdict(list)
-        for i, v in enumerate(docs):
-            for x in v:
-                d[x].append(i)
-        cnt = Counter()
-        for ids in d.values():
-            n = len(ids)
-            for i in range(n):
-                for j in range(i + 1, n):
-                    cnt[(ids[i], ids[j])] += 1
-        ans = []
-        for (i, j), v in cnt.items():
-            tot = len(docs[i]) + len(docs[j]) - v
-            x = v / tot + eps
-            ans.append(f'{i},{j}: {x:.4f}')
-        return ans
-```
+
 
 ### **Java**
 
@@ -106,75 +86,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using pii = pair<int, int>;
 
-class Solution {
-public:
-    vector<string> computeSimilarities(vector<vector<int>>& docs) {
-        double eps = 1e-9;
-        unordered_map<int, vector<int>> d;
-        for (int i = 0; i < docs.size(); ++i) {
-            for (int v : docs[i]) {
-                d[v].push_back(i);
-            }
-        }
-        map<pii, int> cnt;
-        for (auto& [_, ids] : d) {
-            int n = ids.size();
-            for (int i = 0; i < n; ++i) {
-                for (int j = i + 1; j < n; ++j) {
-                    cnt[{ids[i], ids[j]}]++;
-                }
-            }
-        }
-        vector<string> ans;
-        for (auto& [k, v] : cnt) {
-            auto [i, j] = k;
-            int tot = docs[i].size() + docs[j].size() - v;
-            double x = (double) v / tot + eps;
-            char t[20];
-            sprintf(t, "%d,%d: %0.4lf", i, j, x);
-            ans.push_back(t);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func computeSimilarities(docs [][]int) []string {
-	d := map[int][]int{}
-	for i, v := range docs {
-		for _, x := range v {
-			d[x] = append(d[x], i)
-		}
-	}
-	type pair struct{ i, j int }
-	cnt := map[pair]int{}
-	for _, ids := range d {
-		n := len(ids)
-		for i := 0; i < n; i++ {
-			for j := i + 1; j < n; j++ {
-				k := pair{ids[i], ids[j]}
-				cnt[k]++
-			}
-		}
-	}
-	ans := []string{}
-	for k, v := range cnt {
-		i, j := k.i, k.j
-		tot := len(docs[i]) + len(docs[j]) - v
-		x := float64(v)/float64(tot) + 1e-9
-		ans = append(ans, strconv.Itoa(i)+","+strconv.Itoa(j)+": "+fmt.Sprintf("%.4f", x))
-	}
-	return ans
-}
-```
+
+
+
 
 ### **...**
 
@@ -182,4 +100,4 @@ func computeSimilarities(docs [][]int) []string {
 
 ```
 
-<!-- tabs:end -->
+

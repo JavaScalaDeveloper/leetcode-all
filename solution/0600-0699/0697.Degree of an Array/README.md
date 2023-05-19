@@ -59,24 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findShortestSubArray(self, nums: List[int]) -> int:
-        cnt = Counter(nums)
-        degree = cnt.most_common()[0][1]
-        left, right = {}, {}
-        for i, v in enumerate(nums):
-            if v not in left:
-                left[v] = i
-            right[v] = i
-        ans = inf
-        for v in nums:
-            if cnt[v] == degree:
-                t = right[v] - left[v] + 1
-                if ans > t:
-                    ans = t
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,138 +95,15 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findShortestSubArray(vector<int>& nums) {
-        unordered_map<int, int> cnt;
-        unordered_map<int, int> left;
-        unordered_map<int, int> right;
-        int degree = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            int v = nums[i];
-            degree = max(degree, ++cnt[v]);
-            if (!left.count(v)) {
-                left[v] = i;
-            }
-            right[v] = i;
-        }
-        int ans = 1e6;
-        for (int v : nums) {
-            if (cnt[v] == degree) {
-                int t = right[v] - left[v] + 1;
-                if (ans > t) {
-                    ans = t;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findShortestSubArray(nums []int) int {
-	cnt := map[int]int{}
-	left := map[int]int{}
-	right := map[int]int{}
-	var degree int
-	for i, v := range nums {
-		cnt[v]++
-		if degree < cnt[v] {
-			degree = cnt[v]
-		}
-		if _, ok := left[v]; !ok {
-			left[v] = i
-		}
-		right[v] = i
-	}
-	ans := 100000
-	for v, c := range cnt {
-		if c == degree {
-			t := right[v] - left[v] + 1
-			if ans > t {
-				ans = t
-			}
-		}
-	}
-	return ans
-}
-```
 
-```go
-func findShortestSubArray(nums []int) (ans int) {
-	ans = 50000
-	numsMap := make(map[int]int, len(nums))
-	for _, num := range nums {
-		numsMap[num]++
-	}
-	var maxDegree int
-	for _, num := range numsMap {
-		maxDegree = max(num, maxDegree)
-	}
-	degreeNums := getMaxDegreeElem(maxDegree, numsMap)
-	for _, num := range degreeNums {
-		f := findSubArray(num, nums)
-		ans = min(ans, f)
-	}
-	return
-}
 
-func findSubArray(target int, nums []int) int {
-	start := getStartIdx(target, nums)
-	end := getEndIdx(target, nums)
-	return (end - start) + 1
-}
 
-func getStartIdx(target int, nums []int) (start int) {
-	for idx, num := range nums {
-		if num == target {
-			start = idx
-			break
-		}
-	}
-	return start
-}
 
-func getEndIdx(target int, nums []int) (end int) {
-	for i := len(nums) - 1; i > 0; i-- {
-		if nums[i] == target {
-			end = i
-			break
-		}
-	}
-	return
-}
 
-func getMaxDegreeElem(maxDegree int, numsMap map[int]int) []int {
-	var ans []int
-	for key, value := range numsMap {
-		if value == maxDegree {
-			ans = append(ans, key)
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a > b {
-		return b
-	}
-	return a
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
 ### **...**
 
@@ -251,4 +111,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

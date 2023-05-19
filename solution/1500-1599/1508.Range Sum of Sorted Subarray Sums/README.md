@@ -62,19 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
-        arr = []
-        for i in range(n):
-            s = 0
-            for j in range(i, n):
-                s += nums[j]
-                arr.append(s)
-        arr.sort()
-        mod = 10**9 + 7
-        return sum(arr[left - 1: right]) % mod
-```
+
 
 ### **Java**
 
@@ -102,51 +90,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int rangeSum(vector<int>& nums, int n, int left, int right) {
-        int arr[n * (n + 1) / 2];
-        for (int i = 0, k = 0; i < n; ++i) {
-            int s = 0;
-            for (int j = i; j < n; ++j) {
-                s += nums[j];
-                arr[k++] = s;
-            }
-        }
-        sort(arr, arr + n * (n + 1) / 2);
-        int ans = 0;
-        const int mod = 1e9 + 7;
-        for (int i = left - 1; i < right; ++i) {
-            ans = (ans + arr[i]) % mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func rangeSum(nums []int, n int, left int, right int) (ans int) {
-	var arr []int
-	for i := 0; i < n; i++ {
-		s := 0
-		for j := i; j < n; j++ {
-			s += nums[j]
-			arr = append(arr, s)
-		}
-	}
-	sort.Ints(arr)
-	const mod int = 1e9 + 7
-	for _, x := range arr[left-1 : right] {
-		ans = (ans + x) % mod
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -154,4 +104,4 @@ func rangeSum(nums []int, n int, left int, right int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

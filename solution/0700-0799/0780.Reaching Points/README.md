@@ -67,22 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reachingPoints(self, sx: int, sy: int, tx: int, ty: int) -> bool:
-        while tx > sx and ty > sy and tx != ty:
-            if tx > ty:
-                tx %= ty
-            else:
-                ty %= tx
-        if tx == sx and ty == sy:
-            return True
-        if tx == sx:
-            return ty > sy and (ty - sy) % tx == 0
-        if ty == sy:
-            return tx > sx and (tx - sx) % ty == 0
-        return False
-```
+
 
 ### **Java**
 
@@ -112,49 +97,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool reachingPoints(int sx, int sy, int tx, int ty) {
-        while (tx > sx && ty > sy && tx != ty) {
-            if (tx > ty)
-                tx %= ty;
-            else
-                ty %= tx;
-        }
-        if (tx == sx && ty == sy) return true;
-        if (tx == sx) return ty > sy && (ty - sy) % tx == 0;
-        if (ty == sy) return tx > sx && (tx - sx) % ty == 0;
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reachingPoints(sx int, sy int, tx int, ty int) bool {
-	for tx > sx && ty > sy && tx != ty {
-		if tx > ty {
-			tx %= ty
-		} else {
-			ty %= tx
-		}
-	}
-	if tx == sx && ty == sy {
-		return true
-	}
-	if tx == sx {
-		return ty > sy && (ty-sy)%tx == 0
-	}
-	if ty == sy {
-		return tx > sx && (tx-sx)%ty == 0
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -162,4 +111,4 @@ func reachingPoints(sx int, sy int, tx int, ty int) bool {
 
 ```
 
-<!-- tabs:end -->
+

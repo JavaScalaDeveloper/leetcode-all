@@ -66,19 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def scheduleCourse(self, courses: List[List[int]]) -> int:
-        courses.sort(key=lambda x: x[1])
-        pq = []
-        s = 0
-        for d, e in courses:
-            heappush(pq, -d)
-            s += d
-            if s > e:
-                s += heappop(pq)
-        return len(pq)
-```
+
 
 ### **Java**
 
@@ -103,73 +91,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int scheduleCourse(vector<vector<int>>& courses) {
-        sort(courses.begin(), courses.end(), [](const auto& c0, const auto& c1) {
-            return c0[1] < c1[1];
-        });
-        int s = 0;
-        priority_queue<int> pq;
-        for (auto& course : courses) {
-            int d = course[0], e = course[1];
-            pq.push(d);
-            s += d;
-            if (s > e) {
-                s -= pq.top();
-                pq.pop();
-            }
-        }
-        return pq.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func scheduleCourse(courses [][]int) int {
-	sort.Slice(courses, func(i, j int) bool {
-		return courses[i][1] < courses[j][1]
-	})
 
-	h := &Heap{}
-	s := 0
-	for _, course := range courses {
-		if d := course[0]; s+d <= course[1] {
-			s += d
-			heap.Push(h, d)
-		} else if h.Len() > 0 && d < h.IntSlice[0] {
-			s += d - h.IntSlice[0]
-			h.IntSlice[0] = d
-			heap.Fix(h, 0)
-		}
-	}
-	return h.Len()
-}
 
-type Heap struct {
-	sort.IntSlice
-}
 
-func (h Heap) Less(i, j int) bool {
-	return h.IntSlice[i] > h.IntSlice[j]
-}
 
-func (h *Heap) Push(x interface{}) {
-	h.IntSlice = append(h.IntSlice, x.(int))
-}
-
-func (h *Heap) Pop() interface{} {
-	a := h.IntSlice
-	x := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return x
-}
-```
 
 ### **...**
 
@@ -177,4 +105,4 @@ func (h *Heap) Pop() interface{} {
 
 ```
 
-<!-- tabs:end -->
+

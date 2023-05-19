@@ -89,28 +89,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumJumps(self, forbidden: List[int], a: int, b: int, x: int) -> int:
-        s = set(forbidden)
-        q = deque([(0, 1)])
-        vis = {(0, 1)}
-        ans = 0
-        while q:
-            for _ in range(len(q)):
-                i, k = q.popleft()
-                if i == x:
-                    return ans
-                nxt = [(i + a, 1)]
-                if k & 1:
-                    nxt.append((i - b, 0))
-                for j, k in nxt:
-                    if 0 <= j < 6000 and j not in s and (j, k) not in vis:
-                        q.append((j, k))
-                        vis.add((j, k))
-            ans += 1
-        return -1
-```
+
 
 ### **Java**
 
@@ -157,82 +136,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumJumps(vector<int>& forbidden, int a, int b, int x) {
-        unordered_set<int> s(forbidden.begin(), forbidden.end());
-        queue<pair<int, int>> q;
-        q.emplace(0, 1);
-        const int n = 6000;
-        bool vis[n][2];
-        memset(vis, false, sizeof(vis));
-        vis[0][1] = true;
-        int ans = 0;
-        while (!q.empty()) {
-            for (int t = q.size(); t; --t) {
-                auto [i, k] = q.front();
-                q.pop();
-                if (i == x) {
-                    return ans;
-                }
-                vector<pair<int, int>> nxts = {{i + a, 1}};
-                if (k & 1) {
-                    nxts.emplace_back(i - b, 0);
-                }
-                for (auto [j, l] : nxts) {
-                    if (j >= 0 && j < n && !s.count(j) && !vis[j][l]) {
-                        vis[j][l] = true;
-                        q.emplace(j, l);
-                    }
-                }
-            }
-            ++ans;
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumJumps(forbidden []int, a int, b int, x int) (ans int) {
-	s := map[int]bool{}
-	for _, v := range forbidden {
-		s[v] = true
-	}
-	q := [][2]int{[2]int{0, 1}}
-	const n = 6000
-	vis := make([][2]bool, n)
-	vis[0][1] = true
-	for len(q) > 0 {
-		for t := len(q); t > 0; t-- {
-			p := q[0]
-			q = q[1:]
-			i, k := p[0], p[1]
-			if i == x {
-				return
-			}
-			nxt := [][2]int{[2]int{i + a, 1}}
-			if k&1 == 1 {
-				nxt = append(nxt, [2]int{i - b, 0})
-			}
-			for _, e := range nxt {
-				j, l := e[0], e[1]
-				if j >= 0 && j < n && !s[j] && !vis[j][l] {
-					q = append(q, [2]int{j, l})
-					vis[j][l] = true
-				}
-			}
-		}
-		ans++
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -240,4 +150,4 @@ func minimumJumps(forbidden []int, a int, b int, x int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

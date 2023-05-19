@@ -120,28 +120,7 @@ int search(int left, int right) {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumRemovals(self, s: str, p: str, removable: List[int]) -> int:
-        def check(k):
-            i = j = 0
-            ids = set(removable[:k])
-            while i < m and j < n:
-                if i not in ids and s[i] == p[j]:
-                    j += 1
-                i += 1
-            return j == n
 
-        m, n = len(s), len(p)
-        left, right = 0, len(removable)
-        while left < right:
-            mid = (left + right + 1) >> 1
-            if check(mid):
-                left = mid
-            else:
-                right = mid - 1
-        return left
-```
 
 ### **Java**
 
@@ -181,146 +160,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function maximumRemovals(s: string, p: string, removable: number[]): number {
-    let left = 0,
-        right = removable.length;
-    while (left < right) {
-        let mid = (left + right + 1) >> 1;
-        if (isSub(s, p, new Set(removable.slice(0, mid)))) {
-            left = mid;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return left;
-}
 
-function isSub(str: string, sub: string, idxes: Set<number>): boolean {
-    let m = str.length,
-        n = sub.length;
-    let i = 0,
-        j = 0;
-    while (i < m && j < n) {
-        if (!idxes.has(i) && str.charAt(i) == sub.charAt(j)) {
-            ++j;
-        }
-        ++i;
-    }
-    return j == n;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumRemovals(string s, string p, vector<int>& removable) {
-        int left = 0, right = removable.size();
-        while (left < right) {
-            int mid = left + right + 1 >> 1;
-            if (check(s, p, removable, mid)) {
-                left = mid;
-            } else {
-                right = mid - 1;
-            }
-        }
-        return left;
-    }
 
-    bool check(string s, string p, vector<int>& removable, int mid) {
-        int m = s.size(), n = p.size(), i = 0, j = 0;
-        unordered_set<int> ids;
-        for (int k = 0; k < mid; ++k) {
-            ids.insert(removable[k]);
-        }
-        while (i < m && j < n) {
-            if (ids.count(i) == 0 && s[i] == p[j]) {
-                ++j;
-            }
-            ++i;
-        }
-        return j == n;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumRemovals(s string, p string, removable []int) int {
-	check := func(k int) bool {
-		ids := make(map[int]bool)
-		for _, r := range removable[:k] {
-			ids[r] = true
-		}
-		var i, j int
-		for i < len(s) && j < len(p) {
-			if !ids[i] && s[i] == p[j] {
-				j++
-			}
-			i++
-		}
-		return j == len(p)
-	}
 
-	left, right := 0, len(removable)
-	for left < right {
-		mid := (left + right + 1) >> 1
-		if check(mid) {
-			left = mid
-		} else {
-			right = mid - 1
-		}
-	}
-	return left
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
 
-impl Solution {
-    pub fn maximum_removals(s: String, p: String, removable: Vec<i32>) -> i32 {
-        let m = s.len();
-        let n = p.len();
-        let s = s.as_bytes();
-        let p = p.as_bytes();
 
-        let check = |k| {
-            let mut i = 0;
-            let mut j = 0;
-            let ids: HashSet<i32> = removable[..k].iter().cloned().collect();
-            while i < m && j < n {
-                if !ids.contains(&(i as i32)) && s[i] == p[j] {
-                    j += 1;
-                }
-                i += 1;
-            }
-            j == n
-        };
 
-        let mut left = 0;
-        let mut right = removable.len();
-        while left + 1 < right {
-            let mid = left + (right - left) / 2;
-            if check(mid) {
-                left = mid;
-            } else {
-                right = mid;
-            }
-        }
 
-        if check(right) {
-            return right as i32;
-        }
-        left as i32
-    }
-}
-```
 
 ### **...**
 
@@ -328,4 +180,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -134,7 +134,7 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ```
 
-<!-- tabs:end -->
+
 
 <!-- 这里是bash_problem_readme_template结束位置 -->
 
@@ -160,7 +160,7 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ```
 
-<!-- tabs:end -->
+
 
 <!-- 这里是bash_problem_readme_template_en结束位置 -->
 
@@ -188,9 +188,7 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -200,17 +198,13 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ```
 
-### **C++**
 
-```cpp
 
-```
 
-### **Go**
 
-```go
 
-```
+
+
 
 ### **...**
 
@@ -218,7 +212,7 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ```
 
-<!-- tabs:end -->
+
 
 <!-- 这里是problem_readme_template结束位置 -->
 
@@ -240,9 +234,7 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ### **Python3**
 
-```python
 
-```
 
 ### **Java**
 
@@ -250,17 +242,13 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ```
 
-### **C++**
 
-```cpp
 
-```
 
-### **Go**
 
-```go
 
-```
+
+
 
 ### **...**
 
@@ -268,7 +256,7 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ```
 
-<!-- tabs:end -->
+
 
 <!-- 这里是problem_readme_template_en结束位置 -->
 
@@ -300,7 +288,7 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ```
 
-<!-- tabs:end -->
+
 
 <!-- 这里是sql_problem_readme_template结束位置 -->
 
@@ -326,7 +314,7 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ```
 
-<!-- tabs:end -->
+
 
 <!-- 这里是sql_problem_readme_template_en结束位置 -->
 
@@ -354,11 +342,9 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
-<!-- tabs:end -->
+
 
 <!-- 这里是ts_problem_readme_template结束位置 -->
 
@@ -380,10 +366,8 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ### **TypeScript**
 
-```ts
 
-```
 
-<!-- tabs:end -->
+
 
 <!-- 这里是ts_problem_readme_template_en结束位置 -->

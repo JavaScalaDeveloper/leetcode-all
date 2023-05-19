@@ -73,35 +73,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfArithmeticSlices(self, nums: List[int]) -> int:
-        ans, cnt = 0, 2
-        d = 3000
-        for a, b in pairwise(nums):
-            if b - a == d:
-                cnt += 1
-            else:
-                d = b - a
-                cnt = 2
-            ans += max(0, cnt - 2)
-        return ans
-```
 
-```python
-class Solution:
-    def numberOfArithmeticSlices(self, nums: List[int]) -> int:
-        ans = cnt = 0
-        d = 3000
-        for a, b in pairwise(nums):
-            if b - a == d:
-                cnt += 1
-            else:
-                d = b - a
-                cnt = 0
-            ans += cnt
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -126,68 +100,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfArithmeticSlices(vector<int>& nums) {
-        int ans = 0, cnt = 0;
-        int d = 3000;
-        for (int i = 0; i < nums.size() - 1; ++i) {
-            if (nums[i + 1] - nums[i] == d) {
-                ++cnt;
-            } else {
-                d = nums[i + 1] - nums[i];
-                cnt = 0;
-            }
-            ans += cnt;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfArithmeticSlices(nums []int) (ans int) {
-	cnt, d := 0, 3000
-	for i, b := range nums[1:] {
-		a := nums[i]
-		if b-a == d {
-			cnt++
-		} else {
-			d = b - a
-			cnt = 0
-		}
-		ans += cnt
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numberOfArithmeticSlices(nums: number[]): number {
-    let ans = 0;
-    let cnt = 0;
-    let d = 3000;
-    for (let i = 0; i < nums.length - 1; ++i) {
-        const a = nums[i];
-        const b = nums[i + 1];
-        if (b - a == d) {
-            ++cnt;
-        } else {
-            d = b - a;
-            cnt = 0;
-        }
-        ans += cnt;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -195,4 +118,4 @@ function numberOfArithmeticSlices(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

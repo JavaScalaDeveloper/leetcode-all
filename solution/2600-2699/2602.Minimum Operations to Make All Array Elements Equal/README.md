@@ -79,20 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int], queries: List[int]) -> List[int]:
-        nums.sort()
-        s = list(accumulate(nums, initial=0))
-        ans = []
-        for x in queries:
-            i = bisect_left(nums, x + 1)
-            t = s[-1] - s[i] - (len(nums) - i) * x
-            i = bisect_left(nums, x)
-            t += x * i - s[i]
-            ans.append(t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -133,86 +120,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<long long> minOperations(vector<int>& nums, vector<int>& queries) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        vector<long long> s(n + 1);
-        for (int i = 0; i < n; ++i) {
-            s[i + 1] = s[i] + nums[i];
-        }
-        vector<long long> ans;
-        for (auto& x : queries) {
-            int i = lower_bound(nums.begin(), nums.end(), x + 1) - nums.begin();
-            long long t = s[n] - s[i] - 1LL * (n - i) * x;
-            i = lower_bound(nums.begin(), nums.end(), x) - nums.begin();
-            t += 1LL * x * i - s[i];
-            ans.push_back(t);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(nums []int, queries []int) (ans []int64) {
-	sort.Ints(nums)
-	n := len(nums)
-	s := make([]int, n+1)
-	for i, x := range nums {
-		s[i+1] = s[i] + x
-	}
-	for _, x := range queries {
-		i := sort.SearchInts(nums, x+1)
-		t := s[n] - s[i] - (n-i)*x
-		i = sort.SearchInts(nums, x)
-		t += x*i - s[i]
-		ans = append(ans, int64(t))
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minOperations(nums: number[], queries: number[]): number[] {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    const s: number[] = new Array(n + 1).fill(0);
-    for (let i = 0; i < n; ++i) {
-        s[i + 1] = s[i] + nums[i];
-    }
-    const search = (x: number): number => {
-        let l = 0;
-        let r = n;
-        while (l < r) {
-            const mid = (l + r) >> 1;
-            if (nums[mid] >= x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    };
-    const ans: number[] = [];
-    for (const x of queries) {
-        const i = search(x + 1);
-        let t = s[n] - s[i] - (n - i) * x;
-        const j = search(x);
-        t += x * j - s[j];
-        ans.push(t);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -220,4 +138,4 @@ function minOperations(nums: number[], queries: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

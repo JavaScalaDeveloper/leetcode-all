@@ -80,54 +80,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def pairSum(self, head: Optional[ListNode]) -> int:
-        s = []
-        while head:
-            s.append(head.val)
-            head = head.next
-        n = len(s)
-        return max(s[i] + s[-(i + 1)] for i in range(n >> 1))
-```
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def pairSum(self, head: Optional[ListNode]) -> int:
-        def reverse(head):
-            dummy = ListNode()
-            curr = head
-            while curr:
-                next = curr.next
-                curr.next = dummy.next
-                dummy.next = curr
-                curr = next
-            return dummy.next
 
-        slow, fast = head, head.next
-        while fast and fast.next:
-            slow, fast = slow.next, fast.next.next
-        pa = head
-        q = slow.next
-        slow.next = None
-        pb = reverse(q)
-        ans = 0
-        while pa and pb:
-            ans = max(ans, pa.val + pb.val)
-            pa = pa.next
-            pb = pb.next
-        return ans
-```
+
 
 ### **Java**
 
@@ -205,258 +160,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    int pairSum(ListNode* head) {
-        vector<int> s;
-        for (; head != nullptr; head = head->next) s.push_back(head->val);
-        int ans = 0, n = s.size();
-        for (int i = 0; i < (n >> 1); ++i) ans = max(ans, s[i] + s[n - i - 1]);
-        return ans;
-    }
-};
-```
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    int pairSum(ListNode* head) {
-        ListNode* slow = head;
-        ListNode* fast = head->next;
-        while (fast && fast->next)
-        {
-            slow = slow->next;
-            fast = fast->next->next;
-        }
-        ListNode* pa = head;
-        ListNode* q = slow->next;
-        slow->next = nullptr;
-        ListNode* pb = reverse(q);
-        int ans = 0;
-        while (pa)
-        {
-            ans = max(ans, pa->val + pb->val);
-            pa = pa->next;
-            pb = pb->next;
-        }
-        return ans;
-    }
 
-    ListNode* reverse(ListNode* head) {
-        ListNode* dummy = new ListNode();
-        ListNode* curr = head;
-        while (curr)
-        {
-            ListNode* next = curr->next;
-            curr->next = dummy->next;
-            dummy->next = curr;
-            curr = next;
-        }
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func pairSum(head *ListNode) int {
-	var s []int
-	for ; head != nil; head = head.Next {
-		s = append(s, head.Val)
-	}
-	ans, n := 0, len(s)
-	for i := 0; i < (n >> 1); i++ {
-		if ans < s[i]+s[n-i-1] {
-			ans = s[i] + s[n-i-1]
-		}
-	}
-	return ans
-}
-```
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func pairSum(head *ListNode) int {
-	reverse := func(head *ListNode) *ListNode {
-		dummy := &ListNode{}
-		curr := head
-		for curr != nil {
-			next := curr.Next
-			curr.Next = dummy.Next
-			dummy.Next = curr
-			curr = next
-		}
-		return dummy.Next
-	}
-	slow, fast := head, head.Next
-	for fast != nil && fast.Next != nil {
-		slow, fast = slow.Next, fast.Next.Next
-	}
-	pa := head
-	q := slow.Next
-	slow.Next = nil
-	pb := reverse(q)
-	ans := 0
-	for pa != nil {
-		ans = max(ans, pa.Val+pb.Val)
-		pa = pa.Next
-		pb = pb.Next
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function pairSum(head: ListNode | null): number {
-    const arr = [];
-    let node = head;
-    while (node) {
-        arr.push(node.val);
-        node = node.next;
-    }
-    const n = arr.length;
-    let ans = 0;
-    for (let i = 0; i < n >> 1; i++) {
-        ans = Math.max(ans, arr[i] + arr[n - 1 - i]);
-    }
-    return ans;
-}
-```
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function pairSum(head: ListNode | null): number {
-    let fast = head;
-    let slow = head;
-    while (fast) {
-        fast = fast.next.next;
-        slow = slow.next;
-    }
-    let prev = null;
-    while (slow) {
-        const next = slow.next;
-        slow.next = prev;
-        prev = slow;
-        slow = next;
-    }
-    let left = head;
-    let right = prev;
-    let ans = 0;
-    while (left && right) {
-        ans = Math.max(ans, left.val + right.val);
-        left = left.next;
-        right = right.next;
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for singly-linked list.
-// #[derive(PartialEq, Eq, Clone, Debug)]
-// pub struct ListNode {
-//   pub val: i32,
-//   pub next: Option<Box<ListNode>>
-// }
-//
-// impl ListNode {
-//   #[inline]
-//   fn new(val: i32) -> Self {
-//     ListNode {
-//       next: None,
-//       val
-//     }
-//   }
-// }
-impl Solution {
-    pub fn pair_sum(head: Option<Box<ListNode>>) -> i32 {
-        let mut arr = Vec::new();
-        let mut node = &head;
-        while node.is_some() {
-            let t = node.as_ref().unwrap();
-            arr.push(t.val);
-            node = &t.next;
-        }
-        let n = arr.len();
-        let mut ans = 0;
-        for i in 0..n >> 1 {
-            ans = ans.max(arr[i] + arr[n - 1 - i]);
-        }
-        ans
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -464,4 +188,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -66,19 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minEatingSpeed(self, piles: List[int], h: int) -> int:
-        left, right = 1, int(1e9)
-        while left < right:
-            mid = (left + right) >> 1
-            s = sum((x + mid - 1) // mid for x in piles)
-            if s <= h:
-                right = mid
-            else:
-                left = mid + 1
-        return left
-```
+
 
 ### **Java**
 
@@ -105,93 +93,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minEatingSpeed(vector<int>& piles, int h) {
-        int left = 1, right = 1e9;
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            int s = 0;
-            for (int& x : piles) s += (x + mid - 1) / mid;
-            if (s <= h)
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minEatingSpeed(piles []int, h int) int {
-	return sort.Search(1e9, func(i int) bool {
-		if i == 0 {
-			return false
-		}
-		s := 0
-		for _, x := range piles {
-			s += (x + i - 1) / i
-		}
-		return s <= h
-	})
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minEatingSpeed(piles: number[], h: number): number {
-    let left = 1;
-    let right = Math.max(...piles);
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        let s = 0;
-        for (const x of piles) {
-            s += Math.ceil(x / mid);
-        }
-        if (s <= h) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MinEatingSpeed(int[] piles, int h) {
-        int left = 1, right = piles.Max();
-        while (left < right)
-        {
-            int mid = (left + right) >> 1;
-            int s = 0;
-            foreach (int pile in piles)
-            {
-                s += (pile + mid - 1) / mid;
-            }
-            if (s <= h)
-            {
-                right = mid;
-            }
-            else
-            {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -199,4 +115,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

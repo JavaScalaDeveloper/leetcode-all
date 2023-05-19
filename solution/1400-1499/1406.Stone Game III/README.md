@@ -87,27 +87,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def stoneGameIII(self, stoneValue: List[int]) -> str:
-        @cache
-        def dfs(i: int) -> int:
-            if i >= n:
-                return 0
-            ans, s = -inf, 0
-            for j in range(3):
-                if i + j >= n:
-                    break
-                s += stoneValue[i + j]
-                ans = max(ans, s - dfs(i + j + 1))
-            return ans
 
-        n = len(stoneValue)
-        ans = dfs(0)
-        if ans == 0:
-            return 'Tie'
-        return 'Alice' if ans > 0 else 'Bob'
-```
 
 ### **Java**
 
@@ -148,111 +128,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string stoneGameIII(vector<int>& stoneValue) {
-        int n = stoneValue.size();
-        int f[n];
-        memset(f, 0x3f, sizeof(f));
-        function<int(int)> dfs = [&](int i) -> int {
-            if (i >= n) {
-                return 0;
-            }
-            if (f[i] != 0x3f3f3f3f) {
-                return f[i];
-            }
-            int ans = -(1 << 30), s = 0;
-            for (int j = 0; j < 3 && i + j < n; ++j) {
-                s += stoneValue[i + j];
-                ans = max(ans, s - dfs(i + j + 1));
-            }
-            return f[i] = ans;
-        };
-        int ans = dfs(0);
-        if (ans == 0) {
-            return "Tie";
-        }
-        return ans > 0 ? "Alice" : "Bob";
-    }
-};
-```
 
-### **Go**
 
-```go
-func stoneGameIII(stoneValue []int) string {
-	n := len(stoneValue)
-	f := make([]int, n)
-	const inf = 1 << 30
-	for i := range f {
-		f[i] = inf
-	}
-	var dfs func(int) int
-	dfs = func(i int) int {
-		if i >= n {
-			return 0
-		}
-		if f[i] != inf {
-			return f[i]
-		}
-		ans, s := -(1 << 30), 0
-		for j := 0; j < 3 && i+j < n; j++ {
-			s += stoneValue[i+j]
-			ans = max(ans, s-dfs(i+j+1))
-		}
-		f[i] = ans
-		return ans
-	}
-	ans := dfs(0)
-	if ans == 0 {
-		return "Tie"
-	}
-	if ans > 0 {
-		return "Alice"
-	}
-	return "Bob"
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function stoneGameIII(stoneValue: number[]): string {
-    const n = stoneValue.length;
-    const inf = 1 << 30;
-    const f: number[] = new Array(n).fill(inf);
-    const dfs = (i: number): number => {
-        if (i >= n) {
-            return 0;
-        }
-        if (f[i] !== inf) {
-            return f[i];
-        }
-        let ans = -inf;
-        let s = 0;
-        for (let j = 0; j < 3 && i + j < n; ++j) {
-            s += stoneValue[i + j];
-            ans = Math.max(ans, s - dfs(i + j + 1));
-        }
-        return (f[i] = ans);
-    };
-    const ans = dfs(0);
-    if (ans === 0) {
-        return 'Tie';
-    }
-    return ans > 0 ? 'Alice' : 'Bob';
-}
-```
+
 
 ### **...**
 
@@ -260,4 +146,4 @@ function stoneGameIII(stoneValue: number[]): string {
 
 ```
 
-<!-- tabs:end -->
+

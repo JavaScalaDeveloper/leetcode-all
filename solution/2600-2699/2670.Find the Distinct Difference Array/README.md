@@ -61,35 +61,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def distinctDifferenceArray(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        ans = [0] * n
-        for i in range(n):
-            a = len(set(nums[: i + 1]))
-            b = len(set(nums[i + 1 :]))
-            ans[i] = a - b
-        return ans
-```
 
-```python
-class Solution:
-    def distinctDifferenceArray(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        suf = [0] * (n + 1)
-        s = set()
-        for i in range(n - 1, -1, -1):
-            s.add(nums[i])
-            suf[i] = len(s)
 
-        s.clear()
-        ans = [0] * n
-        for i, x in enumerate(nums):
-            s.add(x)
-            ans[i] = len(s) - suf[i + 1]
-        return ans
-```
+
 
 ### **Java**
 
@@ -116,71 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> distinctDifferenceArray(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> suf(n + 1);
-        unordered_set<int> s;
-        for (int i = n - 1; i >= 0; --i) {
-            s.insert(nums[i]);
-            suf[i] = s.size();
-        }
-        s.clear();
-        vector<int> ans(n);
-        for (int i = 0; i < n; ++i) {
-            s.insert(nums[i]);
-            ans[i] = s.size() - suf[i + 1];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func distinctDifferenceArray(nums []int) []int {
-	n := len(nums)
-	suf := make([]int, n+1)
-	s := map[int]bool{}
-	for i := n - 1; i >= 0; i-- {
-		s[nums[i]] = true
-		suf[i] = len(s)
-	}
-	ans := make([]int, n)
-	s = map[int]bool{}
-	for i, x := range nums {
-		s[x] = true
-		ans[i] = len(s) - suf[i+1]
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function distinctDifferenceArray(nums: number[]): number[] {
-    const n = nums.length;
-    const suf: number[] = new Array(n + 1).fill(0);
-    const s: Set<number> = new Set();
-    for (let i = n - 1; i >= 0; --i) {
-        s.add(nums[i]);
-        suf[i] = s.size;
-    }
-    s.clear();
-    const ans: number[] = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        s.add(nums[i]);
-        ans[i] = s.size - suf[i + 1];
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -188,4 +108,4 @@ function distinctDifferenceArray(nums: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

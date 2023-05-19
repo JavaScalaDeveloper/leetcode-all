@@ -54,31 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
-        n, ans = len(nums), []
-        nums.sort()
-        for i in range(n - 2):
-            if i > 0 and nums[i] == nums[i - 1]:
-                continue
-            left, right = i + 1, n - 1
-            while left < right:
-                cur = nums[i] + nums[left] + nums[right]
-                if cur < 0:
-                    left += 1
-                elif cur > 0:
-                    right -= 1
-                else:
-                    ans.append([nums[i], nums[left], nums[right]])
-                    while left < right and nums[left] == nums[left + 1]:
-                        left += 1
-                    while left < right and nums[right] == nums[right - 1]:
-                        right -= 1
-                    left += 1
-                    right -= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -119,75 +95,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func threeSum(nums []int) [][]int {
-	n := len(nums)
-	ans := make([][]int, 0)
-	sort.Ints(nums)
-	for i := 0; i < n-2 && nums[i] <= 0; i++ {
-		left, right := i+1, n-1
-		for left < right {
-			cur := nums[i] + nums[left] + nums[right]
-			if cur < 0 {
-				left++
-			} else if cur > 0 {
-				right--
-			} else {
-				ans = append(ans, []int{nums[i], nums[left], nums[right]})
-				for left < right && nums[left] == nums[left+1] {
-					left++
-				}
-				for left < right && nums[right] == nums[right-1] {
-					right--
-				}
-				left++
-				right--
-			}
-		}
-		for i < n-2 && nums[i] == nums[i+1] {
-			i++
-		}
-	}
-	return ans
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
-        vector<vector<int>> res;
 
-        sort(nums.begin(), nums.end());
-        for (int k = 0; k < nums.size(); k++) {
-            int i = k + 1;
-            int j = nums.size() - 1;
-            if (k > 0 && nums[k] == nums[k - 1]) continue;
 
-            while (i < j) {
-                if (nums[i] + nums[j] + nums[k] == 0) {
-                    res.push_back(vector<int> {nums[k], nums[i], nums[j]});
-                    i++;
-                    j--;
 
-                    while (i < j && nums[i] == nums[i - 1]) i++;
-                    while (i < j && nums[j] == nums[j + 1]) j--;
-                } else if (nums[i] + nums[j] + nums[k] < 0) {
-                    i++;
-                } else {
-                    j--;
-                }
-            }
-        }
 
-        return res;
-    }
-};
-```
 
 ### **...**
 
@@ -195,4 +109,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

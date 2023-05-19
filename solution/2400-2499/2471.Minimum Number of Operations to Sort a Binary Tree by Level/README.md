@@ -73,44 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def minimumOperations(self, root: Optional[TreeNode]) -> int:
-        def swap(arr, i, j):
-            arr[i], arr[j] = arr[j], arr[i]
 
-        def f(t):
-            n = len(t)
-            m = {v: i for i, v in enumerate(sorted(t))}
-            for i in range(n):
-                t[i] = m[t[i]]
-            ans = 0
-            for i in range(n):
-                while t[i] != i:
-                    swap(t, i, t[i])
-                    ans += 1
-            return ans
-
-        q = deque([root])
-        ans = 0
-        while q:
-            t = []
-            for _ in range(len(q)):
-                node = q.popleft()
-                t.append(node.val)
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
-            ans += f(t)
-        return ans
-```
 
 ### **Java**
 
@@ -184,218 +147,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int minimumOperations(TreeNode* root) {
-        queue<TreeNode*> q{{root}};
-        int ans = 0;
-        auto f = [](vector<int>& t) {
-            int n = t.size();
-            vector<int> alls(t.begin(), t.end());
-            sort(alls.begin(), alls.end());
-            unordered_map<int, int> m;
-            int ans = 0;
-            for (int i = 0; i < n; ++i) m[alls[i]] = i;
-            for (int i = 0; i < n; ++i) t[i] = m[t[i]];
-            for (int i = 0; i < n; ++i) {
-                while (t[i] != i) {
-                    swap(t[i], t[t[i]]);
-                    ++ans;
-                }
-            }
-            return ans;
-        };
-        while (!q.empty()) {
-            vector<int> t;
-            for (int n = q.size(); n; --n) {
-                auto node = q.front();
-                q.pop();
-                t.emplace_back(node->val);
-                if (node->left) q.push(node->left);
-                if (node->right) q.push(node->right);
-            }
-            ans += f(t);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func minimumOperations(root *TreeNode) (ans int) {
-	f := func(t []int) int {
-		var alls []int
-		for _, v := range t {
-			alls = append(alls, v)
-		}
-		sort.Ints(alls)
-		m := make(map[int]int)
-		for i, v := range alls {
-			m[v] = i
-		}
-		for i := range t {
-			t[i] = m[t[i]]
-		}
-		res := 0
-		for i := range t {
-			for t[i] != i {
-				t[i], t[t[i]] = t[t[i]], t[i]
-				res++
-			}
-		}
-		return res
-	}
 
-	q := []*TreeNode{root}
-	for len(q) > 0 {
-		t := []int{}
-		for n := len(q); n > 0; n-- {
-			node := q[0]
-			q = q[1:]
-			t = append(t, node.Val)
-			if node.Left != nil {
-				q = append(q, node.Left)
-			}
-			if node.Right != nil {
-				q = append(q, node.Right)
-			}
-		}
-		ans += f(t)
-	}
-	return
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function minimumOperations(root: TreeNode | null): number {
-    const queue = [root];
-    let ans = 0;
-    while (queue.length !== 0) {
-        const n = queue.length;
-        const row: number[] = [];
-        for (let i = 0; i < n; i++) {
-            const { val, left, right } = queue.shift();
-            row.push(val);
-            left && queue.push(left);
-            right && queue.push(right);
-        }
-        for (let i = 0; i < n - 1; i++) {
-            let minIdx = i;
-            for (let j = i + 1; j < n; j++) {
-                if (row[j] < row[minIdx]) {
-                    minIdx = j;
-                }
-            }
-            if (i !== minIdx) {
-                [row[i], row[minIdx]] = [row[minIdx], row[i]];
-                ans++;
-            }
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-use std::collections::VecDeque;
-impl Solution {
-    pub fn minimum_operations(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        let mut queue = VecDeque::new();
-        queue.push_back(root);
-        let mut ans = 0;
-        while !queue.is_empty() {
-            let n = queue.len();
-            let mut row = Vec::new();
-            for _ in 0..n {
-                let mut node = queue.pop_front().unwrap();
-                let mut node = node.as_mut().unwrap().borrow_mut();
-                row.push(node.val);
-                if node.left.is_some() {
-                    queue.push_back(node.left.take());
-                }
-                if node.right.is_some() {
-                    queue.push_back(node.right.take());
-                }
-            }
-            for i in 0..n - 1 {
-                let mut min_idx = i;
-                for j in i + 1..n {
-                    if row[j] < row[min_idx] {
-                        min_idx = j;
-                    }
-                }
-                if i != min_idx {
-                    row.swap(i, min_idx);
-                    ans += 1;
-                }
-            }
-        }
-        ans
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -403,4 +169,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

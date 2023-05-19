@@ -76,31 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minDifference(self, nums: List[int], queries: List[List[int]]) -> List[int]:
-        m, n = len(nums), len(queries)
-        pre_sum = [[0] * 101 for _ in range(m + 1)]
-        for i in range(1, m + 1):
-            for j in range(1, 101):
-                t = 1 if nums[i - 1] == j else 0
-                pre_sum[i][j] = pre_sum[i - 1][j] + t
 
-        ans = []
-        for i in range(n):
-            left, right = queries[i][0], queries[i][1] + 1
-            t = inf
-            last = -1
-            for j in range(1, 101):
-                if pre_sum[right][j] - pre_sum[left][j] > 0:
-                    if last != -1:
-                        t = min(t, j - last)
-                    last = j
-            if t == inf:
-                t = -1
-            ans.append(t)
-        return ans
-```
 
 ### **Java**
 
@@ -143,114 +119,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function minDifference(nums: number[], queries: number[][]): number[] {
-    let m = nums.length,
-        n = queries.length;
-    let max = 100;
-    // let max = Math.max(...nums);
-    let pre: number[][] = [];
-    pre.push(new Array(max + 1).fill(0));
-    for (let i = 0; i < m; ++i) {
-        let num = nums[i];
-        pre.push(pre[i].slice());
-        pre[i + 1][num] += 1;
-    }
 
-    let ans = [];
-    for (let [left, right] of queries) {
-        let last = -1;
-        let min = Infinity;
-        for (let j = 1; j < max + 1; ++j) {
-            if (pre[left][j] < pre[right + 1][j]) {
-                if (last != -1) {
-                    min = Math.min(min, j - last);
-                }
-                last = j;
-            }
-        }
-        ans.push(min == Infinity ? -1 : min);
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> minDifference(vector<int>& nums, vector<vector<int>>& queries) {
-        int m = nums.size(), n = queries.size();
-        int preSum[m + 1][101];
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 1; j <= 100; ++j) {
-                int t = nums[i - 1] == j ? 1 : 0;
-                preSum[i][j] = preSum[i - 1][j] + t;
-            }
-        }
 
-        vector<int> ans(n);
-        for (int i = 0; i < n; ++i) {
-            int left = queries[i][0], right = queries[i][1] + 1;
-            int t = 101;
-            int last = -1;
-            for (int j = 1; j <= 100; ++j) {
-                if (preSum[right][j] > preSum[left][j]) {
-                    if (last != -1) {
-                        t = min(t, j - last);
-                    }
-                    last = j;
-                }
-            }
-            if (t == 101) {
-                t = -1;
-            }
-            ans[i] = t;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minDifference(nums []int, queries [][]int) []int {
-	m, n := len(nums), len(queries)
-	preSum := make([][101]int, m+1)
-	for i := 1; i <= m; i++ {
-		for j := 1; j <= 100; j++ {
-			t := 0
-			if nums[i-1] == j {
-				t = 1
-			}
-			preSum[i][j] = preSum[i-1][j] + t
-		}
-	}
 
-	ans := make([]int, n)
-	for i := 0; i < n; i++ {
-		left, right := queries[i][0], queries[i][1]+1
-		t, last := 101, -1
-		for j := 1; j <= 100; j++ {
-			if preSum[right][j]-preSum[left][j] > 0 {
-				if last != -1 {
-					if t > j-last {
-						t = j - last
-					}
-				}
-				last = j
-			}
-		}
-		if t == 101 {
-			t = -1
-		}
-		ans[i] = t
-	}
-	return ans
-}
-```
+
+
 
 ### **...**
 
@@ -258,4 +135,4 @@ func minDifference(nums []int, queries [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

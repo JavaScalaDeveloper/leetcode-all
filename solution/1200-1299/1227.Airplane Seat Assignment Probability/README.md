@@ -133,11 +133,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def nthPersonGetsNthSeat(self, n: int) -> float:
-        return 1 if n == 1 else 0.5
-```
+
 
 ### **Java**
 
@@ -151,27 +147,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double nthPersonGetsNthSeat(int n) {
-        return n == 1 ? 1 : .5;
-    }
-};
-```
 
-### **Go**
 
-```go
-func nthPersonGetsNthSeat(n int) float64 {
-	if n == 1 {
-		return 1
-	}
-	return .5
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -179,4 +161,4 @@ func nthPersonGetsNthSeat(n int) float64 {
 
 ```
 
-<!-- tabs:end -->
+

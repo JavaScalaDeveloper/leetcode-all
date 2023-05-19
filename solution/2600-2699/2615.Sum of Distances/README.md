@@ -62,22 +62,7 @@ i = 4 ，arr[4] = 0 因为不存在值等于 2 的其他下标。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def distance(self, nums: List[int]) -> List[int]:
-        d = defaultdict(list)
-        for i, x in enumerate(nums):
-            d[x].append(i)
-        ans = [0] * len(nums)
-        for idx in d.values():
-            left, right = 0, sum(idx) - len(idx) * idx[0]
-            for i in range(len(idx)):
-                ans[idx[i]] = left + right
-                if i + 1 < len(idx):
-                    left += (idx[i + 1] - idx[i]) * (i + 1)
-                    right -= (idx[i + 1] - idx[i]) * (len(idx) - i - 1)
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,65 +97,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<long long> distance(vector<int>& nums) {
-        int n = nums.size();
-        vector<long long> ans(n);
-        unordered_map<int, vector<int>> d;
-        for (int i = 0; i < n; ++i) {
-            d[nums[i]].push_back(i);
-        }
-        for (auto& [_, idx] : d) {
-            int m = idx.size();
-            long long left = 0;
-            long long right = -1LL * m * idx[0];
-            for (int i : idx) {
-                right += i;
-            }
-            for (int i = 0; i < m; ++i) {
-                ans[idx[i]] = left + right;
-                if (i + 1 < m) {
-                    left += (idx[i + 1] - idx[i]) * (i + 1);
-                    right -= (idx[i + 1] - idx[i]) * (m - i - 1);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func distance(nums []int) []int64 {
-	n := len(nums)
-	ans := make([]int64, n)
-	d := map[int][]int{}
-	for i, x := range nums {
-		d[x] = append(d[x], i)
-	}
-	for _, idx := range d {
-		m := len(idx)
-		left, right := 0, -m*idx[0]
-		for _, i := range idx {
-			right += i
-		}
-		for i := range idx {
-			ans[idx[i]] = int64(left + right)
-			if i+1 < m {
-				left += (idx[i+1] - idx[i]) * (i + 1)
-				right -= (idx[i+1] - idx[i]) * (m - i - 1)
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -178,4 +111,4 @@ func distance(nums []int) []int64 {
 
 ```
 
-<!-- tabs:end -->
+

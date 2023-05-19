@@ -92,41 +92,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def oddCells(self, m: int, n: int, indices: List[List[int]]) -> int:
-        g = [[0] * n for _ in range(m)]
-        for r, c in indices:
-            for i in range(m):
-                g[i][c] += 1
-            for j in range(n):
-                g[r][j] += 1
-        return sum(v % 2 for row in g for v in row)
-```
 
-```python
-class Solution:
-    def oddCells(self, m: int, n: int, indices: List[List[int]]) -> int:
-        row = [0] * m
-        col = [0] * n
-        for r, c in indices:
-            row[r] += 1
-            col[c] += 1
-        return sum((i + j) % 2 for i in row for j in col)
-```
 
-```python
-class Solution:
-    def oddCells(self, m: int, n: int, indices: List[List[int]]) -> int:
-        row = [0] * m
-        col = [0] * n
-        for r, c in indices:
-            row[r] += 1
-            col[c] += 1
-        cnt1 = sum(v % 2 for v in row)
-        cnt2 = sum(v % 2 for v in col)
-        return cnt1 * (n - cnt2) + cnt2 * (m - cnt1)
-```
+
+
+
 
 ### **Java**
 
@@ -199,130 +169,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int oddCells(int m, int n, vector<vector<int>>& indices) {
-        vector<vector<int>> g(m, vector<int>(n));
-        for (auto& e : indices) {
-            int r = e[0], c = e[1];
-            for (int i = 0; i < m; ++i) ++g[i][c];
-            for (int j = 0; j < n; ++j) ++g[r][j];
-        }
-        int ans = 0;
-        for (auto& row : g)
-            for (int v : row) ans += v % 2;
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int oddCells(int m, int n, vector<vector<int>>& indices) {
-        vector<int> row(m);
-        vector<int> col(n);
-        for (auto& e : indices)
-        {
-            int r = e[0], c = e[1];
-            row[r]++;
-            col[c]++;
-        }
-        int ans = 0;
-        for (int i : row) for (int j : col) ans += (i + j) % 2;
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int oddCells(int m, int n, vector<vector<int>>& indices) {
-        vector<int> row(m);
-        vector<int> col(n);
-        for (auto& e : indices)
-        {
-            int r = e[0], c = e[1];
-            row[r]++;
-            col[c]++;
-        }
-        int cnt1 = 0, cnt2 = 0;
-        for (int v : row) cnt1 += v % 2;
-        for (int v : col) cnt2 += v % 2;
-        return cnt1 * (n - cnt2) + cnt2 * (m - cnt1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func oddCells(m int, n int, indices [][]int) int {
-	g := make([][]int, m)
-	for i := range g {
-		g[i] = make([]int, n)
-	}
-	for _, e := range indices {
-		r, c := e[0], e[1]
-		for i := 0; i < m; i++ {
-			g[i][c]++
-		}
-		for j := 0; j < n; j++ {
-			g[r][j]++
-		}
-	}
-	ans := 0
-	for _, row := range g {
-		for _, v := range row {
-			ans += v % 2
-		}
-	}
-	return ans
-}
-```
 
-```go
-func oddCells(m int, n int, indices [][]int) int {
-	row := make([]int, m)
-	col := make([]int, n)
-	for _, e := range indices {
-		r, c := e[0], e[1]
-		row[r]++
-		col[c]++
-	}
-	ans := 0
-	for _, i := range row {
-		for _, j := range col {
-			ans += (i + j) % 2
-		}
-	}
-	return ans
-}
-```
 
-```go
-func oddCells(m int, n int, indices [][]int) int {
-	row := make([]int, m)
-	col := make([]int, n)
-	for _, e := range indices {
-		r, c := e[0], e[1]
-		row[r]++
-		col[c]++
-	}
-	cnt1, cnt2 := 0, 0
-	for _, v := range row {
-		cnt1 += v % 2
-	}
-	for _, v := range col {
-		cnt2 += v % 2
-	}
-	return cnt1*(n-cnt2) + cnt2*(m-cnt1)
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -330,4 +191,4 @@ func oddCells(m int, n int, indices [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

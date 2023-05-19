@@ -73,25 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def search(self, nums: List[int], target: int) -> int:
-        n = len(nums)
-        left, right = 0, n - 1
-        while left < right:
-            mid = (left + right) >> 1
-            if nums[0] <= nums[mid]:
-                if nums[0] <= target <= nums[mid]:
-                    right = mid
-                else:
-                    left = mid + 1
-            else:
-                if nums[mid] < target <= nums[n - 1]:
-                    left = mid + 1
-                else:
-                    right = mid
-        return left if nums[left] == target else -1
-```
+
 
 ### **Java**
 
@@ -123,154 +105,27 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```cpp
-class Solution {
-public:
-    int search(vector<int>& nums, int target) {
-        int n = nums.size();
-        int left = 0, right = n - 1;
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (nums[0] <= nums[mid]) {
-                if (nums[0] <= target && target <= nums[mid])
-                    right = mid;
-                else
-                    left = mid + 1;
-            } else {
-                if (nums[mid] < target && target <= nums[n - 1])
-                    left = mid + 1;
-                else
-                    right = mid;
-            }
-        }
-        return nums[left] == target ? left : -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func search(nums []int, target int) int {
-	n := len(nums)
-	left, right := 0, n-1
-	for left < right {
-		mid := (left + right) >> 1
-		if nums[0] <= nums[mid] {
-			if nums[0] <= target && target <= nums[mid] {
-				right = mid
-			} else {
-				left = mid + 1
-			}
-		} else {
-			if nums[mid] < target && target <= nums[n-1] {
-				left = mid + 1
-			} else {
-				right = mid
-			}
-		}
-	}
-	if nums[left] == target {
-		return left
-	}
-	return -1
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var search = function (nums, target) {
-    const n = nums.length;
-    let left = 0,
-        right = n - 1;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        if (nums[0] <= nums[mid]) {
-            if (nums[0] <= target && target <= nums[mid]) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        } else {
-            if (nums[mid] < target && target <= nums[n - 1]) {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-    }
-    return nums[left] == target ? left : -1;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn search(nums: Vec<i32>, target: i32) -> i32 {
-        let mut l = 0;
-        let mut r = nums.len() - 1;
-        while l <= r {
-            let mid = l + r >> 1;
-            if nums[mid] == target {
-                return mid as i32;
-            }
 
-            if nums[l] <= nums[mid] {
-                if target < nums[mid] && target >= nums[l] {
-                    r = mid - 1;
-                } else {
-                    l = mid + 1;
-                }
-            } else {
-                if target > nums[mid] && target <= nums[r] {
-                    l = mid + 1;
-                } else {
-                    r = mid - 1;
-                }
-            }
-        }
-        -1
-    }
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function search(nums: number[], target: number): number {
-    const n = nums.length;
-    let left = 0,
-        right = n - 1;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        if (nums[0] <= nums[mid]) {
-            if (nums[0] <= target && target <= nums[mid]) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        } else {
-            if (nums[mid] < target && target <= nums[n - 1]) {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-    }
-    return nums[left] == target ? left : -1;
-}
-```
+
 
 ### **...**
 
@@ -278,4 +133,4 @@ function search(nums: number[], target: number): number {
 
 ```
 
-<!-- tabs:end -->
+

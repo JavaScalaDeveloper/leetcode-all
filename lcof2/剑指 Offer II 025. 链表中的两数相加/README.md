@@ -63,30 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-        s1, s2 = [], []
-        while l1:
-            s1.append(l1.val)
-            l1 = l1.next
-        while l2:
-            s2.append(l2.val)
-            l2 = l2.next
-        carry, dummy = 0, ListNode()
-        while s1 or s2 or carry:
-            carry += (0 if not s1 else s1.pop()) + (0 if not s2 else s2.pop())
-            # 创建结点，利用头插法将结点插入链表
-            node = ListNode(carry % 10, dummy.next)
-            dummy.next = node
-            carry //= 10
-        return dummy.next
-```
+
 
 ### **Java**
 
@@ -126,83 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        stack<int> s1;
-        stack<int> s2;
-        for (; l1; l1 = l1->next) s1.push(l1->val);
-        for (; l2; l2 = l2->next) s2.push(l2->val);
-        int carry = 0;
-        ListNode* dummy = new ListNode();
-        while (!s1.empty() || !s2.empty() || carry) {
-            if (!s1.empty()) {
-                carry += s1.top();
-                s1.pop();
-            }
-            if (!s2.empty()) {
-                carry += s2.top();
-                s2.pop();
-            }
-            ListNode* node = new ListNode(carry % 10, dummy->next);
-            dummy->next = node;
-            carry /= 10;
-        }
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	s1, s2 := arraystack.New(), arraystack.New()
-	for l1 != nil {
-		s1.Push(l1.Val)
-		l1 = l1.Next
-	}
-	for l2 != nil {
-		s2.Push(l2.Val)
-		l2 = l2.Next
-	}
-	carry, dummy := 0, new(ListNode)
-	for !s1.Empty() || !s2.Empty() || carry > 0 {
-		v, ok := s1.Pop()
-		if ok {
-			carry += v.(int)
-		}
-		v, ok = s2.Pop()
-		if ok {
-			carry += v.(int)
-		}
-		node := &ListNode{Val: carry % 10, Next: dummy.Next}
-		dummy.Next = node
-		carry /= 10
-	}
-	return dummy.Next
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -210,4 +117,4 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 ```
 
-<!-- tabs:end -->
+

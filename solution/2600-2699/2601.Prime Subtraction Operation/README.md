@@ -74,27 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def primeSubOperation(self, nums: List[int]) -> bool:
-        p = []
-        for i in range(2, max(nums)):
-            for j in p:
-                if i % j == 0:
-                    break
-            else:
-                p.append(i)
 
-        n = len(nums)
-        for i in range(n - 2, -1, -1):
-            if nums[i] < nums[i + 1]:
-                continue
-            j = bisect_right(p, nums[i] - nums[i + 1])
-            if j == len(p) or p[j] >= nums[i]:
-                return False
-            nums[i] -= p[j]
-        return True
-```
 
 ### **Java**
 
@@ -145,116 +125,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool primeSubOperation(vector<int>& nums) {
-        vector<int> p;
-        for (int i = 2; i <= 1000; ++i) {
-            bool ok = true;
-            for (int j : p) {
-                if (i % j == 0) {
-                    ok = false;
-                    break;
-                }
-            }
-            if (ok) {
-                p.push_back(i);
-            }
-        }
-        int n = nums.size();
-        for (int i = n - 2; i >= 0; --i) {
-            if (nums[i] < nums[i + 1]) {
-                continue;
-            }
-            int j = upper_bound(p.begin(), p.end(), nums[i] - nums[i + 1]) - p.begin();
-            if (j == p.size() || p[j] >= nums[i]) {
-                return false;
-            }
-            nums[i] -= p[j];
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func primeSubOperation(nums []int) bool {
-	p := []int{}
-	for i := 2; i <= 1000; i++ {
-		ok := true
-		for _, j := range p {
-			if i%j == 0 {
-				ok = false
-				break
-			}
-		}
-		if ok {
-			p = append(p, i)
-		}
-	}
-	for i := len(nums) - 2; i >= 0; i-- {
-		if nums[i] < nums[i+1] {
-			continue
-		}
-		j := sort.SearchInts(p, nums[i]-nums[i+1]+1)
-		if j == len(p) || p[j] >= nums[i] {
-			return false
-		}
-		nums[i] -= p[j]
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function primeSubOperation(nums: number[]): boolean {
-    const p: number[] = [];
-    for (let i = 2; i <= 1000; ++i) {
-        let ok = true;
-        for (const j of p) {
-            if (i % j === 0) {
-                ok = false;
-                break;
-            }
-        }
-        if (ok) {
-            p.push(i);
-        }
-    }
-    const search = (x: number): number => {
-        let l = 0;
-        let r = p.length;
-        while (l < r) {
-            const mid = (l + r) >> 1;
-            if (p[mid] > x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    };
-    const n = nums.length;
-    for (let i = n - 2; i >= 0; --i) {
-        if (nums[i] < nums[i + 1]) {
-            continue;
-        }
-        const j = search(nums[i] - nums[i + 1]);
-        if (j === p.length || p[j] >= nums[i]) {
-            return false;
-        }
-        nums[i] -= p[j];
-    }
-    return true;
-}
-```
+
 
 ### **...**
 
@@ -262,4 +143,4 @@ function primeSubOperation(nums: number[]): boolean {
 
 ```
 
-<!-- tabs:end -->
+

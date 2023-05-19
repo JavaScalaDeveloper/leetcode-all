@@ -76,36 +76,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canFormArray(self, arr: List[int], pieces: List[List[int]]) -> bool:
-        i = 0
-        while i < len(arr):
-            k = 0
-            while k < len(pieces) and pieces[k][0] != arr[i]:
-                k += 1
-            if k == len(pieces):
-                return False
-            j = 0
-            while j < len(pieces[k]) and arr[i] == pieces[k][j]:
-                i, j = i + 1, j + 1
-        return True
-```
 
-```python
-class Solution:
-    def canFormArray(self, arr: List[int], pieces: List[List[int]]) -> bool:
-        d = {p[0]: p for p in pieces}
-        i, n = 0, len(arr)
-        while i < n:
-            if arr[i] not in d:
-                return False
-            p = d[arr[i]]
-            if arr[i: i + len(p)] != p:
-                return False
-            i += len(p)
-        return True
-```
+
+
 
 ### **Java**
 
@@ -155,179 +128,31 @@ class Solution {
 }
 ```
 
-### **C++**
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canFormArray(vector<int>& arr, vector<vector<int>>& pieces) {
-        for (int i = 0; i < arr.size();) {
-            int k = 0;
-            while (k < pieces.size() && pieces[k][0] != arr[i]) {
-                ++k;
-            }
-            if (k == pieces.size()) {
-                return false;
-            }
-            int j = 0;
-            while (j < pieces[k].size() && arr[i] == pieces[k][j]) {
-                ++i;
-                ++j;
-            }
-        }
-        return true;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool canFormArray(vector<int>& arr, vector<vector<int>>& pieces) {
-        unordered_map<int, vector<int>> d;
-        for (auto& p : pieces) {
-            d[p[0]] = p;
-        }
-        for (int i = 0; i < arr.size();) {
-            if (!d.count(arr[i])) {
-                return false;
-            }
-            for (int& v : d[arr[i]]) {
-                if (arr[i++] != v) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canFormArray(arr []int, pieces [][]int) bool {
-	for i := 0; i < len(arr); {
-		k := 0
-		for k < len(pieces) && pieces[k][0] != arr[i] {
-			k++
-		}
-		if k == len(pieces) {
-			return false
-		}
-		j := 0
-		for j < len(pieces[k]) && arr[i] == pieces[k][j] {
-			i, j = i+1, j+1
-		}
-	}
-	return true
-}
-```
 
-```go
-func canFormArray(arr []int, pieces [][]int) bool {
-	d := map[int][]int{}
-	for _, p := range pieces {
-		d[p[0]] = p
-	}
-	for i := 0; i < len(arr); {
-		p, ok := d[arr[i]]
-		if !ok {
-			return false
-		}
-		for _, v := range p {
-			if arr[i] != v {
-				return false
-			}
-			i++
-		}
-	}
-	return true
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} arr
- * @param {number[][]} pieces
- * @return {boolean}
- */
-var canFormArray = function (arr, pieces) {
-    const d = new Map();
-    for (const p of pieces) {
-        d.set(p[0], p);
-    }
-    for (let i = 0; i < arr.length; ) {
-        if (!d.has(arr[i])) {
-            return false;
-        }
-        const p = d.get(arr[i]);
-        for (const v of p) {
-            if (arr[i++] != v) {
-                return false;
-            }
-        }
-    }
-    return true;
-};
-```
+
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function canFormArray(arr: number[], pieces: number[][]): boolean {
-    const n = arr.length;
-    let i = 0;
-    while (i < n) {
-        const target = arr[i];
-        const items = pieces.find(v => v[0] === target);
-        if (items == null) {
-            return false;
-        }
-        for (const item of items) {
-            if (item !== arr[i]) {
-                return false;
-            }
-            i++;
-        }
-    }
-    return true;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn can_form_array(arr: Vec<i32>, pieces: Vec<Vec<i32>>) -> bool {
-        let n = arr.len();
-        let mut map = HashMap::new();
-        for (i, v) in pieces.iter().enumerate() {
-            map.insert(v[0], i);
-        }
-        let mut i = 0;
-        while i < n {
-            match map.get(&arr[i]) {
-                None => return false,
-                Some(&j) => {
-                    for &item in pieces[j].iter() {
-                        if item != arr[i] {
-                            return false;
-                        }
-                        i += 1;
-                    }
-                }
-            }
-        }
-        true
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -335,4 +160,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

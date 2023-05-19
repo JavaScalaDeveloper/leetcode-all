@@ -62,17 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def twoEditWords(self, queries: List[str], dictionary: List[str]) -> List[str]:
-        ans = []
-        for s in queries:
-            for t in dictionary:
-                if sum(a != b for a, b in zip(s, t)) < 3:
-                    ans.append(s)
-                    break
-        return ans
-```
+
 
 ### **Java**
 
@@ -102,98 +92,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> twoEditWords(vector<string>& queries, vector<string>& dictionary) {
-        vector<string> ans;
-        for (auto& s : queries) {
-            for (auto& t : dictionary) {
-                int cnt = 0;
-                for (int i = 0; i < s.size(); ++i) cnt += s[i] != t[i];
-                if (cnt < 3) {
-                    ans.emplace_back(s);
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func twoEditWords(queries []string, dictionary []string) (ans []string) {
-	for _, s := range queries {
-		for _, t := range dictionary {
-			cnt := 0
-			for i := range s {
-				if s[i] != t[i] {
-					cnt++
-				}
-			}
-			if cnt < 3 {
-				ans = append(ans, s)
-				break
-			}
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function twoEditWords(queries: string[], dictionary: string[]): string[] {
-    const n = queries[0].length;
-    return queries.filter(querie => {
-        for (const s of dictionary) {
-            let diff = 0;
-            for (let i = 0; i < n; i++) {
-                if (querie[i] !== s[i] && ++diff > 2) {
-                    break;
-                }
-            }
-            if (diff <= 2) {
-                return true;
-            }
-        }
-        return false;
-    });
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn two_edit_words(queries: Vec<String>, dictionary: Vec<String>) -> Vec<String> {
-        let n = queries[0].len();
-        queries
-            .into_iter()
-            .filter(|querie| {
-                for s in dictionary.iter() {
-                    let mut diff = 0;
-                    for i in 0..n {
-                        if querie.as_bytes()[i] != s.as_bytes()[i] {
-                            diff += 1;
-                        }
-                    }
-                    if diff <= 2 {
-                        return true;
-                    }
-                }
-                false
-            })
-            .collect()
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -201,4 +114,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

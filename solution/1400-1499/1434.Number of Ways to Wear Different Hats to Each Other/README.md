@@ -89,26 +89,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberWays(self, hats: List[List[int]]) -> int:
-        g = defaultdict(list)
-        for i, h in enumerate(hats):
-            for v in h:
-                g[v].append(i)
-        mod = 10**9 + 7
-        n = len(hats)
-        m = max(max(h) for h in hats)
-        f = [[0] * (1 << n) for _ in range(m + 1)]
-        f[0][0] = 1
-        for i in range(1, m + 1):
-            for j in range(1 << n):
-                f[i][j] = f[i - 1][j]
-                for k in g[i]:
-                    if j >> k & 1:
-                        f[i][j] = (f[i][j] + f[i - 1][j ^ (1 << k)]) % mod
-        return f[m][-1]
-```
+
 
 ### **Java**
 
@@ -149,116 +130,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberWays(vector<vector<int>>& hats) {
-        int n = hats.size();
-        int m = 0;
-        for (auto& h : hats) {
-            m = max(m, *max_element(h.begin(), h.end()));
-        }
-        vector<vector<int>> g(m + 1);
-        for (int i = 0; i < n; ++i) {
-            for (int& v : hats[i]) {
-                g[v].push_back(i);
-            }
-        }
-        const int mod = 1e9 + 7;
-        int f[m + 1][1 << n];
-        memset(f, 0, sizeof(f));
-        f[0][0] = 1;
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 0; j < 1 << n; ++j) {
-                f[i][j] = f[i -1][j];
-                for (int k : g[i]) {
-                    if (j >> k & 1) {
-                        f[i][j] = (f[i][j] + f[i - 1][j ^ (1 << k)]) % mod;
-                    }
-                }
-            }
-        }
-        return f[m][(1 << n) - 1];
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberWays(hats [][]int) int {
-	n := len(hats)
-	m := 0
-	for _, h := range hats {
-		for _, v := range h {
-			m = max(m, v)
-		}
-	}
-	g := make([][]int, m+1)
-	for i, h := range hats {
-		for _, v := range h {
-			g[v] = append(g[v], i)
-		}
-	}
-	const mod = 1e9 + 7
-	f := make([][]int, m+1)
-	for i := range f {
-		f[i] = make([]int, 1<<n)
-	}
-	f[0][0] = 1
-	for i := 1; i <= m; i++ {
-		for j := 0; j < 1<<n; j++ {
-			f[i][j] = f[i-1][j]
-			for _, k := range g[i] {
-				if j>>k&1 == 1 {
-					f[i][j] = (f[i][j] + f[i-1][j^(1<<k)]) % mod
-				}
-			}
-		}
-	}
-	return f[m][(1<<n)-1]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numberWays(hats: number[][]): number {
-    const n = hats.length;
-    const m = Math.max(...hats.flat());
-    const g: number[][] = Array.from({ length: m + 1 }, () => []);
-    for (let i = 0; i < n; ++i) {
-        for (const v of hats[i]) {
-            g[v].push(i);
-        }
-    }
-    const f: number[][] = Array.from({ length: m + 1 }, () =>
-        Array.from({ length: 1 << n }, () => 0),
-    );
-    f[0][0] = 1;
-    const mod = 1e9 + 7;
-    for (let i = 1; i <= m; ++i) {
-        for (let j = 0; j < 1 << n; ++j) {
-            f[i][j] = f[i - 1][j];
-            for (const k of g[i]) {
-                if (((j >> k) & 1) === 1) {
-                    f[i][j] = (f[i][j] + f[i - 1][j ^ (1 << k)]) % mod;
-                }
-            }
-        }
-    }
-    return f[m][(1 << n) - 1];
-}
-```
+
 
 ### **...**
 
@@ -266,4 +148,4 @@ function numberWays(hats: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

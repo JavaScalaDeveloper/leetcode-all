@@ -83,29 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def parseBoolExpr(self, expression: str) -> bool:
-        stk = []
-        for c in expression:
-            if c in 'tf!&|':
-                stk.append(c)
-            elif c == ')':
-                t = f = 0
-                while stk[-1] in 'tf':
-                    t += stk[-1] == 't'
-                    f += stk[-1] == 'f'
-                    stk.pop()
-                match stk.pop():
-                    case '!':
-                        c = 't' if f else 'f'
-                    case '&':
-                        c = 'f' if f else 't'
-                    case '|':
-                        c = 't' if t else 'f'
-                stk.append(c)
-        return stk[0] == 't'
-```
+
 
 ### **Java**
 
@@ -138,141 +116,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool parseBoolExpr(string expression) {
-        stack<char> stk;
-        for (char c : expression) {
-            if (c != '(' && c != ')' && c != ',') stk.push(c);
-            else if (c == ')') {
-                int t = 0, f = 0;
-                while (stk.top() == 't' || stk.top() == 'f') {
-                    t += stk.top() == 't';
-                    f += stk.top() == 'f';
-                    stk.pop();
-                }
-                char op = stk.top();
-                stk.pop();
-                if (op == '!') c = f ? 't' : 'f';
-                if (op == '&') c = f ? 'f' : 't';
-                if (op == '|') c = t ? 't' : 'f';
-                stk.push(c);
-            }
-        }
-        return stk.top() == 't';
-    }
-};
-```
 
-### **Go**
 
-```go
-func parseBoolExpr(expression string) bool {
-	stk := []rune{}
-	for _, c := range expression {
-		if c != '(' && c != ')' && c != ',' {
-			stk = append(stk, c)
-		} else if c == ')' {
-			var t, f int
-			for stk[len(stk)-1] == 't' || stk[len(stk)-1] == 'f' {
-				if stk[len(stk)-1] == 't' {
-					t++
-				} else {
-					f++
-				}
-				stk = stk[:len(stk)-1]
-			}
-			op := stk[len(stk)-1]
-			stk = stk[:len(stk)-1]
-			c = 'f'
-			if (op == '!' && f > 0) || (op == '&' && f == 0) || (op == '|' && t > 0) {
-				c = 't'
-			}
-			stk = append(stk, c)
-		}
-	}
-	return stk[0] == 't'
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function parseBoolExpr(expression: string): boolean {
-    const expr = expression;
-    const n = expr.length;
-    let i = 0;
-    const dfs = () => {
-        let res: boolean[] = [];
-        while (i < n) {
-            const c = expr[i++];
-            if (c === ')') {
-                break;
-            }
 
-            if (c === '!') {
-                res.push(!dfs()[0]);
-            } else if (c === '|') {
-                res.push(dfs().some(v => v));
-            } else if (c === '&') {
-                res.push(dfs().every(v => v));
-            } else if (c === 't') {
-                res.push(true);
-            } else if (c === 'f') {
-                res.push(false);
-            }
-        }
-        return res;
-    };
-    return dfs()[0];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    fn dfs(i: &mut usize, expr: &[u8]) -> Vec<bool> {
-        let n = expr.len();
-        let mut res = Vec::new();
-        while *i < n {
-            let c = expr[*i];
-            *i += 1;
-            match c {
-                b')' => {
-                    break;
-                }
-                b't' => {
-                    res.push(true);
-                }
-                b'f' => {
-                    res.push(false);
-                }
-                b'!' => {
-                    res.push(!Self::dfs(i, expr)[0]);
-                }
-                b'&' => {
-                    res.push(Self::dfs(i, expr).iter().all(|v| *v));
-                }
-                b'|' => {
-                    res.push(Self::dfs(i, expr).iter().any(|v| *v));
-                }
-                _ => {}
-            }
-        }
-        res
-    }
 
-    pub fn parse_bool_expr(expression: String) -> bool {
-        let expr = expression.as_bytes();
-        let mut i = 0;
-        Self::dfs(&mut i, expr)[0]
-    }
-}
-```
+
 
 ### **...**
 
@@ -280,4 +138,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

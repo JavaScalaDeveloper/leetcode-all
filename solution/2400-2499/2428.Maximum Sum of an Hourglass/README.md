@@ -57,19 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxSum(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        ans = 0
-        for i in range(1, m - 1):
-            for j in range(1, n - 1):
-                s = -grid[i][j - 1] - grid[i][j + 1]
-                s += sum(grid[x][y] for x in range(i - 1, i + 2)
-                         for y in range(j - 1, j + 2))
-                ans = max(ans, s)
-        return ans
-```
+
 
 ### **Java**
 
@@ -96,78 +84,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxSum(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        int ans = 0;
-        for (int i = 1; i < m - 1; ++i) {
-            for (int j = 1; j < n - 1; ++j) {
-                int s = -grid[i][j - 1] - grid[i][j + 1];
-                for (int x = i - 1; x <= i + 1; ++x) {
-                    for (int y = j - 1; y <= j + 1; ++y) {
-                        s += grid[x][y];
-                    }
-                }
-                ans = max(ans, s);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxSum(grid [][]int) (ans int) {
-	m, n := len(grid), len(grid[0])
-	for i := 1; i < m-1; i++ {
-		for j := 1; j < n-1; j++ {
-			s := -grid[i][j-1] - grid[i][j+1]
-			for x := i - 1; x <= i+1; x++ {
-				for y := j - 1; y <= j+1; y++ {
-					s += grid[x][y]
-				}
-			}
-			ans = max(ans, s)
-		}
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxSum(grid: number[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    let ans = 0;
-    for (let i = 1; i < m - 1; ++i) {
-        for (let j = 1; j < n - 1; ++j) {
-            let s = -grid[i][j - 1] - grid[i][j + 1];
-            for (let x = i - 1; x <= i + 1; ++x) {
-                for (let y = j - 1; y <= j + 1; ++y) {
-                    s += grid[x][y];
-                }
-            }
-            ans = Math.max(ans, s);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -175,4 +102,4 @@ function maxSum(grid: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -48,18 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def generate(self, numRows: int) -> List[List[int]]:
-        ans = []
-        for i in range(numRows):
-            t = [
-                1 if j == 0 or j == i else ans[-1][j] + ans[-1][j - 1]
-                for j in range(i + 1)
-            ]
-            ans.append(t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -84,74 +73,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function generate(numRows: number): number[][] {
-    if (numRows == 0) return [];
-    let ans = [[1]];
-    for (let i = 1; i < numRows; ++i) {
-        ans.push(new Array(i + 1).fill(1));
-        let half = i >> 1;
-        for (let j = 1; j <= half; ++j) {
-            let cur = ans[i - 1][j - 1] + ans[i - 1][j];
-            ans[i][j] = cur;
-            ans[i][i - j] = cur;
-        }
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> generate(int numRows) {
-        vector<vector<int>> ans;
-        for (int i = 0; i < numRows; ++i) {
-            vector<int> t(i + 1, 1);
-            for (int j = 1; j < i; ++j) t[j] = ans[i - 1][j] + ans[i - 1][j - 1];
-            ans.push_back(t);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func generate(numRows int) [][]int {
-	ans := make([][]int, numRows)
-	for i := range ans {
-		t := make([]int, i+1)
-		t[0], t[i] = 1, 1
-		for j := 1; j < i; j++ {
-			t[j] = ans[i-1][j] + ans[i-1][j-1]
-		}
-		ans[i] = t
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-const generate = function (numRows) {
-    let arr = [];
-    for (let i = 0; i < numRows; i++) {
-        let row = [];
-        row[0] = 1;
-        row[i] = 1;
-        for (let j = 1; j < row.length - 1; j++) {
-            row[j] = arr[i - 1][j - 1] + arr[i - 1][j];
-        }
-        arr.push(row);
-    }
-    return arr;
-};
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -159,4 +93,4 @@ const generate = function (numRows) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -117,36 +117,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isNumber(self, s: str) -> bool:
-        i, j = 0, len(s) - 1
-        while i < j and s[i] == " ":
-            i += 1
-        while i <= j and s[j] == " ":
-            j -= 1
-        if i > j:
-            return False
-        digit = dot = e = False
-        while i <= j:
-            if s[i] in "+-":
-                if i and s[i - 1] not in " eE":
-                    return False
-            elif s[i].isdigit():
-                digit = True
-            elif s[i] == ".":
-                if dot or e:
-                    return False
-                dot = True
-            elif s[i] in "eE":
-                if not digit or e:
-                    return False
-                e, digit = True, False
-            else:
-                return False
-            i += 1
-        return digit
-```
+
 
 ### **Java**
 
@@ -196,132 +167,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isNumber(string s) {
-        int i = 0, j = s.size() - 1;
-        while (i < j && s[i] == ' ') {
-            ++i;
-        }
-        while (i <= j && s[j] == ' ') {
-            --j;
-        }
-        if (i > j) {
-            return false;
-        }
-        bool digit = false, dot = false, e = false;
-        for (; i <= j; ++i) {
-            if (s[i] == '+' || s[i] == '-') {
-                if (i && s[i - 1] != ' ' && s[i - 1] != 'e' && s[i - 1] != 'E') {
-                    return false;
-                }
-            } else if (isdigit(s[i])) {
-                digit = true;
-            } else if (s[i] == '.') {
-                if (dot || e) {
-                    return false;
-                }
-                dot = true;
-            } else if (s[i] == 'e' || s[i] == 'E') {
-                if (!digit || e) {
-                    return false;
-                }
-                e = true;
-                digit = false;
-            } else {
-                return false;
-            }
-        }
-        return digit;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isNumber(s string) bool {
-	i, j := 0, len(s)-1
-	for i < j && s[i] == ' ' {
-		i++
-	}
-	for i <= j && s[j] == ' ' {
-		j--
-	}
-	if i > j {
-		return false
-	}
-	digit, dot, e := false, false, false
-	for ; i <= j; i++ {
-		if s[i] == '+' || s[i] == '-' {
-			if i > 0 && s[i-1] != ' ' && s[i-1] != 'e' && s[i-1] != 'E' {
-				return false
-			}
-		} else if s[i] >= '0' && s[i] <= '9' {
-			digit = true
-		} else if s[i] == '.' {
-			if dot || e {
-				return false
-			}
-			dot = true
-		} else if s[i] == 'e' || s[i] == 'E' {
-			if !digit || e {
-				return false
-			}
-			digit, e = false, true
-		} else {
-			return false
-		}
-	}
-	return digit
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool IsNumber(string s) {
-        int i = 0, j = s.Length - 1;
-        while (i < j && s[i] == ' ') {
-            ++i;
-        }
-        while (i <= j && s[j] == ' ') {
-            --j;
-        }
-        if (i > j) {
-            return false;
-        }
-        bool digit = false, dot = false, e = false;
-        for (; i <= j; ++i) {
-            if (s[i] == '+' || s[i] == '-') {
-                if (i > 0 && s[i - 1] != ' ' && s[i - 1] != 'e' && s[i - 1] != 'E') {
-                    return false;
-                }
-            } else if (s[i] >= '0' && s[i] <= '9') {
-                digit = true;
-            } else if (s[i] == '.') {
-                if (dot || e) {
-                    return false;
-                }
-                dot = true;
-            } else if (s[i] == 'e' || s[i] == 'E') {
-                if (!digit || e) {
-                    return false;
-                }
-                e = true;
-                digit = false;
-            } else {
-                return false;
-            }
-        }
-        return digit;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -329,4 +185,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

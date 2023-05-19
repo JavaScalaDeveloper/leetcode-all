@@ -53,25 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
-        @cache
-        def dfs(i, j, k):
-            if i < 0 or j < 0 or i >= m or j >= n:
-                return 1
-            if k <= 0:
-                return 0
-            res = 0
-            for a, b in [[-1, 0], [1, 0], [0, 1], [0, -1]]:
-                x, y = i + a, j + b
-                res += dfs(x, y, k - 1)
-                res %= mod
-            return res
 
-        mod = 10**9 + 7
-        return dfs(startRow, startColumn, maxMove)
-```
 
 ### **Java**
 
@@ -151,79 +133,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int m;
-    int n;
-    const int mod = 1e9 + 7;
-    int f[51][51][51];
-    int dirs[5] = {-1, 0, 1, 0, -1};
 
-    int findPaths(int m, int n, int maxMove, int startRow, int startColumn) {
-        memset(f, 0xff, sizeof(f));
-        this->m = m;
-        this->n = n;
-        return dfs(startRow, startColumn, maxMove);
-    }
 
-    int dfs(int i, int j, int k) {
-        if (i < 0 || i >= m || j < 0 || j >= n) return 1;
-        if (f[i][j][k] != -1) return f[i][j][k];
-        if (k == 0) return 0;
-        int res = 0;
-        for (int t = 0; t < 4; ++t) {
-            int x = i + dirs[t], y = j + dirs[t + 1];
-            res += dfs(x, y, k - 1);
-            res %= mod;
-        }
-        f[i][j][k] = res;
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findPaths(m int, n int, maxMove int, startRow int, startColumn int) int {
-	f := make([][][]int, m+1)
-	for i := range f {
-		f[i] = make([][]int, n+1)
-		for j := range f[i] {
-			f[i][j] = make([]int, maxMove+1)
-			for k := range f[i][j] {
-				f[i][j][k] = -1
-			}
-		}
-	}
-	var mod int = 1e9 + 7
-	dirs := []int{-1, 0, 1, 0, -1}
-	var dfs func(i, j, k int) int
-	dfs = func(i, j, k int) int {
-		if i < 0 || i >= m || j < 0 || j >= n {
-			return 1
-		}
-		if f[i][j][k] != -1 {
-			return f[i][j][k]
-		}
-		if k == 0 {
-			return 0
-		}
-		res := 0
-		for t := 0; t < 4; t++ {
-			x, y := i+dirs[t], j+dirs[t+1]
-			res += dfs(x, y, k-1)
-			res %= mod
-		}
-		f[i][j][k] = res
-		return res
-	}
-	return dfs(startRow, startColumn, maxMove)
-}
-```
+
+
 
 ### **...**
 
@@ -231,4 +147,4 @@ func findPaths(m int, n int, maxMove int, startRow int, startColumn int) int {
 
 ```
 
-<!-- tabs:end -->
+

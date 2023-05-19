@@ -105,33 +105,7 @@ memoFactorial(3); // 返回 6。 没有调用 factorial()，因为前面有相�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-type Fn = (...params: any) => any;
 
-function memoize(fn: Fn): Fn {
-    const cache: Record<any, any> = {};
-
-    return function (...args) {
-        if (args in cache) {
-            return cache[args];
-        }
-        const result = fn(...args);
-        cache[args] = result;
-        return result;
-    };
-}
-
-/**
- * let callCount = 0;
- * const memoizedFn = memoize(function (a, b) {
- *	 callCount += 1;
- *   return a + b;
- * })
- * memoizedFn(2, 3) // 5
- * memoizedFn(2, 3) // 5
- * console.log(callCount) // 1
- */
-```
 
 ### **...**
 
@@ -139,4 +113,4 @@ function memoize(fn: Fn): Fn {
 
 ```
 
-<!-- tabs:end -->
+

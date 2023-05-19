@@ -83,19 +83,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def assignBikes(self, workers: List[List[int]], bikes: List[List[int]]) -> int:
-        n, m = len(workers), len(bikes)
-        f = [[inf] * (1 << m) for _ in range(n + 1)]
-        f[0][0] = 0
-        for i, (x1, y1) in enumerate(workers, 1):
-            for j in range(1 << m):
-                for k, (x2, y2) in enumerate(bikes):
-                    if j >> k & 1:
-                        f[i][j] = min(f[i][j], f[i - 1][j ^ (1 << k)] + abs(x1 - x2) + abs(y1 - y2))
-        return min(f[n])
-```
+
 
 ### **Java**
 
@@ -127,103 +115,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int assignBikes(vector<vector<int>>& workers, vector<vector<int>>& bikes) {
-        int n = workers.size(), m = bikes.size();
-        int f[n + 1][1 << m];
-        memset(f, 0x3f, sizeof(f));
-        f[0][0] = 0;
-        for (int i = 1; i <= n; ++i) {
-            for (int j = 0; j < 1 << m; ++j) {
-                for (int k = 0; k < m; ++k) {
-                    if (j >> k & 1) {
-                        int d = abs(workers[i - 1][0] - bikes[k][0]) + abs(workers[i - 1][1] - bikes[k][1]);
-                        f[i][j] = min(f[i][j], f[i - 1][j ^ (1 << k)] + d);
-                    }
-                }
-            }
-        }
-        return *min_element(f[n], f[n] + (1 << m));
-    }
-};
-```
 
-### **Go**
 
-```go
-func assignBikes(workers [][]int, bikes [][]int) int {
-	n, m := len(workers), len(bikes)
-	f := make([][]int, n+1)
-	const inf = 1 << 30
-	for i := range f {
-		f[i] = make([]int, 1<<m)
-		for j := range f[i] {
-			f[i][j] = inf
-		}
-	}
-	f[0][0] = 0
-	for i := 1; i <= n; i++ {
-		for j := 0; j < 1<<m; j++ {
-			for k := 0; k < m; k++ {
-				if j>>k&1 == 1 {
-					d := abs(workers[i-1][0]-bikes[k][0]) + abs(workers[i-1][1]-bikes[k][1])
-					f[i][j] = min(f[i][j], f[i-1][j^(1<<k)]+d)
-				}
-			}
-		}
-	}
-	ans := inf
-	for _, x := range f[n] {
-		ans = min(ans, x)
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function assignBikes(workers: number[][], bikes: number[][]): number {
-    const n = workers.length;
-    const m = bikes.length;
-    const inf = 1 << 30;
-    const f: number[][] = new Array(n + 1)
-        .fill(0)
-        .map(() => new Array(1 << m).fill(inf));
-    f[0][0] = 0;
-    for (let i = 1; i <= n; ++i) {
-        for (let j = 0; j < 1 << m; ++j) {
-            for (let k = 0; k < m; ++k) {
-                if (((j >> k) & 1) === 1) {
-                    const d =
-                        Math.abs(workers[i - 1][0] - bikes[k][0]) +
-                        Math.abs(workers[i - 1][1] - bikes[k][1]);
-                    f[i][j] = Math.min(f[i][j], f[i - 1][j ^ (1 << k)] + d);
-                }
-            }
-        }
-    }
-    return Math.min(...f[n]);
-}
-```
+
 
 ### **...**
 
@@ -231,4 +133,4 @@ function assignBikes(workers: number[][], bikes: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

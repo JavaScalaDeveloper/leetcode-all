@@ -84,44 +84,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.children: List[Union[Trie, None]] = [None] * 26
-        self.v: List[int] = []
 
-    def insert(self, w, i):
-        node = self
-        for c in w:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-            if len(node.v) < 3:
-                node.v.append(i)
-
-    def search(self, w):
-        node = self
-        ans = [[] for _ in range(len(w))]
-        for i, c in enumerate(w):
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                break
-            node = node.children[idx]
-            ans[i] = node.v
-        return ans
-
-
-class Solution:
-    def suggestedProducts(
-        self, products: List[str], searchWord: str
-    ) -> List[List[str]]:
-        products.sort()
-        trie = Trie()
-        for i, w in enumerate(products):
-            trie.insert(w, i)
-        return [[products[i] for i in v] for v in trie.search(searchWord)]
-```
 
 ### **Java**
 
@@ -183,122 +146,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Trie {
-public:
-    void insert(string& w, int i) {
-        Trie* node = this;
-        for (int j = 0; j < w.size(); ++j) {
-            int idx = w[j] - 'a';
-            if (!node->children[idx]) {
-                node->children[idx] = new Trie();
-            }
-            node = node->children[idx];
-            if (node->v.size() < 3) {
-                node->v.push_back(i);
-            }
-        }
-    }
 
-    vector<vector<int>> search(string& w) {
-        Trie* node = this;
-        int n = w.size();
-        vector<vector<int>> ans(n);
-        for (int i = 0; i < w.size(); ++i) {
-            int idx = w[i] - 'a';
-            if (!node->children[idx]) {
-                break;
-            }
-            node = node->children[idx];
-            ans[i] = move(node->v);
-        }
-        return ans;
-    }
 
-private:
-    vector<Trie*> children = vector<Trie*>(26);
-    vector<int> v;
-};
 
-class Solution {
-public:
-    vector<vector<string>> suggestedProducts(vector<string>& products, string searchWord) {
-        sort(products.begin(), products.end());
-        Trie* trie = new Trie();
-        for (int i = 0; i < products.size(); ++i) {
-            trie->insert(products[i], i);
-        }
-        vector<vector<string>> ans;
-        for (auto& v : trie->search(searchWord)) {
-            vector<string> t;
-            for (int i : v) {
-                t.push_back(products[i]);
-            }
-            ans.push_back(move(t));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-type Trie struct {
-	children [26]*Trie
-	v        []int
-}
 
-func newTrie() *Trie {
-	return &Trie{}
-}
-func (this *Trie) insert(w string, i int) {
-	node := this
-	for _, c := range w {
-		c -= 'a'
-		if node.children[c] == nil {
-			node.children[c] = newTrie()
-		}
-		node = node.children[c]
-		if len(node.v) < 3 {
-			node.v = append(node.v, i)
-		}
-	}
-}
-
-func (this *Trie) search(w string) [][]int {
-	node := this
-	n := len(w)
-	ans := make([][]int, n)
-	for i, c := range w {
-		c -= 'a'
-		if node.children[c] == nil {
-			break
-		}
-		node = node.children[c]
-		ans[i] = node.v
-	}
-	return ans
-}
-
-func suggestedProducts(products []string, searchWord string) (ans [][]string) {
-	sort.Strings(products)
-	trie := newTrie()
-	for i, w := range products {
-		trie.insert(w, i)
-	}
-	for _, v := range trie.search(searchWord) {
-		t := []string{}
-		for _, i := range v {
-			t = append(t, products[i])
-		}
-		ans = append(ans, t)
-	}
-	return
-}
-```
 
 ### **...**
 
@@ -306,4 +160,4 @@ func suggestedProducts(products []string, searchWord string) (ans [][]string) {
 
 ```
 
-<!-- tabs:end -->
+

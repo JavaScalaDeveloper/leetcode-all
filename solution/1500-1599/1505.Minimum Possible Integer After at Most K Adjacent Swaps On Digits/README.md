@@ -99,51 +99,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class BinaryIndexedTree:
-    def __init__(self, n):
-        self.n = n
-        self.c = [0] * (n + 1)
 
-    @staticmethod
-    def lowbit(x):
-        return x & -x
-
-    def update(self, x, delta):
-        while x <= self.n:
-            self.c[x] += delta
-            x += BinaryIndexedTree.lowbit(x)
-
-    def query(self, x):
-        s = 0
-        while x:
-            s += self.c[x]
-            x -= BinaryIndexedTree.lowbit(x)
-        return s
-
-
-class Solution:
-    def minInteger(self, num: str, k: int) -> str:
-        pos = defaultdict(deque)
-        for i, v in enumerate(num, 1):
-            pos[int(v)].append(i)
-        ans = []
-        n = len(num)
-        tree = BinaryIndexedTree(n)
-        for i in range(1, n + 1):
-            for v in range(10):
-                q = pos[v]
-                if q:
-                    j = q[0]
-                    dist = tree.query(n) - tree.query(j) + j - i
-                    if dist <= k:
-                        k -= dist
-                        q.popleft()
-                        ans.append(str(v))
-                        tree.update(j, 1)
-                        break
-        return ''.join(ans)
-```
 
 ### **Java**
 
@@ -213,127 +169,13 @@ class BinaryIndexedTree {
 }
 ```
 
-### **C++**
 
-```cpp
-class BinaryIndexedTree {
-public:
-    int n;
-    vector<int> c;
 
-    BinaryIndexedTree(int _n)
-        : n(_n)
-        , c(_n + 1) { }
 
-    void update(int x, int delta) {
-        while (x <= n) {
-            c[x] += delta;
-            x += lowbit(x);
-        }
-    }
 
-    int query(int x) {
-        int s = 0;
-        while (x > 0) {
-            s += c[x];
-            x -= lowbit(x);
-        }
-        return s;
-    }
 
-    int lowbit(int x) {
-        return x & -x;
-    }
-};
 
-class Solution {
-public:
-    string minInteger(string num, int k) {
-        vector<queue<int>> pos(10);
-        int n = num.size();
-        for (int i = 0; i < n; ++i) pos[num[i] - '0'].push(i + 1);
-        BinaryIndexedTree* tree = new BinaryIndexedTree(n);
-        string ans = "";
-        for (int i = 1; i <= n; ++i) {
-            for (int v = 0; v < 10; ++v) {
-                auto& q = pos[v];
-                if (!q.empty()) {
-                    int j = q.front();
-                    int dist = tree->query(n) - tree->query(j) + j - i;
-                    if (dist <= k) {
-                        k -= dist;
-                        q.pop();
-                        ans += (v + '0');
-                        tree->update(j, 1);
-                        break;
-                    }
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
-
-```go
-type BinaryIndexedTree struct {
-	n int
-	c []int
-}
-
-func newBinaryIndexedTree(n int) *BinaryIndexedTree {
-	c := make([]int, n+1)
-	return &BinaryIndexedTree{n, c}
-}
-
-func (this *BinaryIndexedTree) lowbit(x int) int {
-	return x & -x
-}
-
-func (this *BinaryIndexedTree) update(x, delta int) {
-	for x <= this.n {
-		this.c[x] += delta
-		x += this.lowbit(x)
-	}
-}
-
-func (this *BinaryIndexedTree) query(x int) int {
-	s := 0
-	for x > 0 {
-		s += this.c[x]
-		x -= this.lowbit(x)
-	}
-	return s
-}
-
-func minInteger(num string, k int) string {
-	pos := make([][]int, 10)
-	for i, c := range num {
-		pos[c-'0'] = append(pos[c-'0'], i+1)
-	}
-	n := len(num)
-	tree := newBinaryIndexedTree(n)
-	var ans strings.Builder
-	for i := 1; i <= n; i++ {
-		for v := 0; v < 10; v++ {
-			if len(pos[v]) > 0 {
-				j := pos[v][0]
-				dist := tree.query(n) - tree.query(j) + j - i
-				if dist <= k {
-					k -= dist
-					pos[v] = pos[v][1:]
-					ans.WriteByte(byte(v + '0'))
-					tree.update(j, 1)
-					break
-				}
-			}
-		}
-	}
-	return ans.String()
-}
-```
 
 ### **...**
 
@@ -341,4 +183,4 @@ func minInteger(num string, k int) string {
 
 ```
 
-<!-- tabs:end -->
+

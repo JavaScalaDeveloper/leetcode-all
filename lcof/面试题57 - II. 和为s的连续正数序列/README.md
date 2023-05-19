@@ -46,22 +46,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def findContinuousSequence(self, target: int) -> List[List[int]]:
-        l, r = 1, 2
-        ans = []
-        while l < r:
-            s = (l + r) * (r - l + 1) // 2
-            if s == target:
-                ans.append(list(range(l, r + 1)))
-                l += 1
-            elif s < target:
-                r += 1
-            else:
-                l += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -90,112 +75,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> findContinuousSequence(int target) {
-        vector<vector<int>> ans;
-        int l = 1, r = 2;
-        while (l < r) {
-            int s = (l + r) * (r - l + 1) / 2;
-            if (s == target) {
-                vector<int> t(r - l + 1);
-                iota(t.begin(), t.end(), l);
-                ans.emplace_back(t);
-                ++l;
-            } else if (s < target) {
-                ++r;
-            } else {
-                ++l;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findContinuousSequence(target int) (ans [][]int) {
-	l, r := 1, 2
-	for l < r {
-		s := (l + r) * (r - l + 1) / 2
-		if s == target {
-			t := make([]int, r-l+1)
-			for i := range t {
-				t[i] = l + i
-			}
-			ans = append(ans, t)
-			l++
-		} else if s < target {
-			r++
-		} else {
-			l++
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} target
- * @return {number[][]}
- */
-var findContinuousSequence = function (target) {
-    const ans = [];
-    let l = 1;
-    let r = 2;
-    while (l < r) {
-        const s = ((l + r) * (r - l + 1)) >> 1;
-        if (s == target) {
-            const t = [];
-            for (let i = l; i <= r; ++i) {
-                t.push(i);
-            }
-            ans.push(t);
-            ++l;
-        } else if (s < target) {
-            ++r;
-        } else {
-            ++l;
-        }
-    }
-    return ans;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[][] FindContinuousSequence(int target) {
-        List<int[]> ans = new List<int[]>();
-        int l = 1, r = 2;
-        while (l < r) {
-            int s = (l + r) * (r - l + 1) >> 1;
-            if (s == target) {
-                List<int> t = new List<int>();
-                for (int i = l; i <= r; i++) {
-                    t.Add(i);
-                }
-                l += 1;
-                ans.Add(t.ToArray());
-            } else if (s < target) {
-                r += 1;
-            } else {
-                l += 1;
-            }
-        }
-        return ans.ToArray();
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -203,4 +97,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

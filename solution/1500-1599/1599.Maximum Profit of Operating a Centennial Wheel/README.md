@@ -86,26 +86,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperationsMaxProfit(
-        self, customers: List[int], boardingCost: int, runningCost: int
-    ) -> int:
-        ans = -1
-        mx = t = 0
-        wait = 0
-        i = 0
-        while wait or i < len(customers):
-            wait += customers[i] if i < len(customers) else 0
-            up = wait if wait < 4 else 4
-            wait -= up
-            t += up * boardingCost - runningCost
-            i += 1
-            if t > mx:
-                mx = t
-                ans = i
-        return ans
-```
+
 
 ### **Java**
 
@@ -133,61 +114,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperationsMaxProfit(vector<int>& customers, int boardingCost, int runningCost) {
-        int ans = -1;
-        int mx = 0, t = 0;
-        int wait = 0, i = 0;
-        while (wait || i < customers.size()) {
-            wait += i < customers.size() ? customers[i] : 0;
-            int up = min(4, wait);
-            wait -= up;
-            ++i;
-            t += up * boardingCost - runningCost;
-            if (t > mx) {
-                mx = t;
-                ans = i;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperationsMaxProfit(customers []int, boardingCost int, runningCost int) int {
-	ans := -1
-	t, mx := 0, 0
-	wait, i := 0, 0
-	for wait > 0 || i < len(customers) {
-		if i < len(customers) {
-			wait += customers[i]
-		}
-		up := min(4, wait)
-		wait -= up
-		t += up*boardingCost - runningCost
-		i++
-		if t > mx {
-			mx = t
-			ans = i
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -195,4 +128,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

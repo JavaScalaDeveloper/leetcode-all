@@ -80,31 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumRefill(self, plants: List[int], capacityA: int, capacityB: int) -> int:
-        i, j = 0, len(plants) - 1
-        ans = 0
-        a, b = capacityA, capacityB
-        while i <= j:
-            if i == j:
-                if max(capacityA, capacityB) < plants[i]:
-                    ans += 1
-                break
-            if capacityA < plants[i]:
-                capacityA = a - plants[i]
-                ans += 1
-            else:
-                capacityA -= plants[i]
-            if capacityB < plants[j]:
-                capacityB = b - plants[j]
-                ans += 1
-            else:
-                capacityB -= plants[j]
-            i += 1
-            j -= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -142,84 +118,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumRefill(vector<int>& plants, int capacityA, int capacityB) {
-        int i = 0, j = plants.size() - 1;
-        int ans = 0, a = capacityA, b = capacityB;
-        while (i <= j) {
-            if (i == j) {
-                if (max(capacityA, capacityB) < plants[i]) ++ans;
-                break;
-            }
-            if (capacityA < plants[i]) {
-                capacityA = a - plants[i];
-                ++ans;
-            } else
-                capacityA -= plants[i];
 
-            if (capacityB < plants[j]) {
-                capacityB = b - plants[j];
-                ++ans;
-            } else
-                capacityB -= plants[j];
-            ++i;
-            --j;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumRefill(plants []int, capacityA int, capacityB int) int {
-	i, j := 0, len(plants)-1
-	ans, a, b := 0, capacityA, capacityB
-	for i <= j {
-		if i == j {
-			if max(capacityA, capacityB) < plants[i] {
-				ans++
-			}
-			break
-		}
-		if capacityA < plants[i] {
-			capacityA = a - plants[i]
-			ans++
-		} else {
-			capacityA -= plants[i]
-		}
-		if capacityB < plants[j] {
-			capacityB = b - plants[j]
-			ans++
-		} else {
-			capacityB -= plants[j]
-		}
-		i++
-		j--
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -227,4 +138,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

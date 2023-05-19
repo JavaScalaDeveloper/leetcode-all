@@ -69,15 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
-        ans = numBottles
-        while numBottles >= numExchange:
-            numBottles -= (numExchange - 1)
-            ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -96,54 +88,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numWaterBottles(int numBottles, int numExchange) {
-        int ans = numBottles;
-        while (numBottles >= numExchange) {
-            numBottles -= (numExchange - 1);
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numWaterBottles(numBottles int, numExchange int) int {
-	ans := numBottles
-	for numBottles >= numExchange {
-		numBottles -= (numExchange - 1)
-		ans++
-	}
-	return ans
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer $numBottles
-     * @param Integer $numExchange
-     * @return Integer
-     */
-    function numWaterBottles($numBottles, $numExchange) {
-        $sum = $numBottles;
-        while ($numBottles >= $numExchange) {
-            $numBottles = $numBottles - $numExchange + 1;
-            $sum++;
-        }
-        return $sum;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -151,4 +106,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

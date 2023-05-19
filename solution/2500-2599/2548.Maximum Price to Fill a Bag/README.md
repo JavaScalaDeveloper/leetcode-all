@@ -71,16 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxPrice(self, items: List[List[int]], capacity: int) -> float:
-        ans = 0
-        for p, w in sorted(items, key=lambda x: x[1] / x[0]):
-            v = min(w, capacity)
-            ans += v / w * p
-            capacity -= v
-        return -1 if capacity else ans
-```
+
 
 ### **Java**
 
@@ -102,64 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double maxPrice(vector<vector<int>>& items, int capacity) {
-        sort(items.begin(), items.end(), [&](const auto& a, const auto& b) { return a[1] * b[0] < a[0] * b[1];});
-        double ans = 0;
-        for (auto& e : items) {
-            int p = e[0], w = e[1];
-            int v = min(w, capacity);
-            ans += v * 1.0 / w * p;
-            capacity -= v;
-        }
-        return capacity > 0 ? -1 : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxPrice(items [][]int, capacity int) (ans float64) {
-	sort.Slice(items, func(i, j int) bool { return items[i][1]*items[j][0] < items[i][0]*items[j][1] })
-	for _, e := range items {
-		p, w := e[0], e[1]
-		v := min(w, capacity)
-		ans += float64(v) / float64(w) * float64(p)
-		capacity -= v
-	}
-	if capacity > 0 {
-		return -1
-	}
-	return
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxPrice(items: number[][], capacity: number): number {
-    items.sort((a, b) => a[1] * b[0] - a[0] * b[1]);
-    let ans = 0;
-    for (const [p, w] of items) {
-        const v = Math.min(w, capacity);
-        ans += (v / w) * p;
-        capacity -= v;
-    }
-    return capacity ? -1 : ans;
-}
-```
+
 
 ### **...**
 
@@ -167,4 +111,4 @@ function maxPrice(items: number[][], capacity: number): number {
 
 ```
 
-<!-- tabs:end -->
+

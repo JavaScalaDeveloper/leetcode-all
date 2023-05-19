@@ -57,11 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minPartitions(self, n: str) -> int:
-        return int(max(n))
-```
+
 
 ### **Java**
 
@@ -79,55 +75,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minPartitions(string n) {
-        int ans = 0;
-        for (char& c : n) ans = max(ans, c - '0');
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minPartitions(n string) (ans int) {
-	for _, c := range n {
-		if t := int(c - '0'); ans < t {
-			ans = t
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minPartitions(n: string): number {
-    let nums = n.split('').map(d => parseInt(d));
-    let ans = Math.max(...nums);
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_partitions(n: String) -> i32 {
-        let mut ans = 0;
-        for c in n.as_bytes() {
-            ans = ans.max((c - b'0') as i32);
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -150,4 +112,4 @@ int minPartitions(char *n) {
 
 ```
 
-<!-- tabs:end -->
+

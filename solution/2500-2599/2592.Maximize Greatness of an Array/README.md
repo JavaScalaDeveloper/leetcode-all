@@ -58,15 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximizeGreatness(self, nums: List[int]) -> int:
-        nums.sort()
-        i = 0
-        for x in nums:
-            i += x > nums[i]
-        return i
-```
+
 
 ### **Java**
 
@@ -87,51 +79,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximizeGreatness(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int i = 0;
-        for (int x : nums) {
-            i += x > nums[i];
-        }
-        return i;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximizeGreatness(nums []int) int {
-	sort.Ints(nums)
-	i := 0
-	for _, x := range nums {
-		if x > nums[i] {
-			i++
-		}
-	}
-	return i
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximizeGreatness(nums: number[]): number {
-    nums.sort((a, b) => a - b);
-    let i = 0;
-    for (const x of nums) {
-        if (x > nums[i]) {
-            i += 1;
-        }
-    }
-    return i;
-}
-```
+
 
 ### **...**
 
@@ -139,4 +97,4 @@ function maximizeGreatness(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

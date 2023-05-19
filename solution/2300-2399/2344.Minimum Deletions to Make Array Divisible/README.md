@@ -64,34 +64,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int], numsDivide: List[int]) -> int:
-        x = numsDivide[0]
-        for v in numsDivide[1:]:
-            x = gcd(x, v)
-        nums.sort()
-        for i, v in enumerate(nums):
-            if x % v == 0:
-                return i
-        return -1
-```
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int], numsDivide: List[int]) -> int:
-        x = gcd(*numsDivide)
-        nums.sort()
-        return next((i for i, v in enumerate(nums) if x % v == 0), -1)
-```
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int], numsDivide: List[int]) -> int:
-        x = gcd(*numsDivide)
-        y = min((v for v in nums if x % v == 0), default=0)
-        return sum(v < y for v in nums) if y else -1
-```
+
+
+
 
 ### **Java**
 
@@ -150,122 +127,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<int>& nums, vector<int>& numsDivide) {
-        int x = 0;
-        for (int& v : numsDivide) {
-            x = gcd(x, v);
-        }
-        sort(nums.begin(), nums.end());
-        for (int i = 0; i < nums.size(); ++i) {
-            if (x % nums[i] == 0) {
-                return i;
-            }
-        }
-        return -1;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<int>& nums, vector<int>& numsDivide) {
-        int x = 0;
-        for (int& v : numsDivide) {
-            x = gcd(x, v);
-        }
-        int y = 1 << 30;
-        for (int& v : nums) {
-            if (x % v == 0) {
-                y = min(y, v);
-            }
-        }
-        if (y == 1 << 30) {
-            return -1;
-        }
-        int ans = 0;
-        for (int& v : nums) {
-            ans += v < y;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(nums []int, numsDivide []int) int {
-	x := 0
-	for _, v := range numsDivide {
-		x = gcd(x, v)
-	}
-	sort.Ints(nums)
-	for i, v := range nums {
-		if x%v == 0 {
-			return i
-		}
-	}
-	return -1
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
 
-```go
-func minOperations(nums []int, numsDivide []int) int {
-	x := 0
-	for _, v := range numsDivide {
-		x = gcd(x, v)
-	}
-	y := 1 << 30
-	for _, v := range nums {
-		if x%v == 0 {
-			y = min(y, v)
-		}
-	}
-	if y == 1<<30 {
-		return -1
-	}
-	ans := 0
-	for _, v := range nums {
-		if v < y {
-			ans++
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -273,4 +149,4 @@ func gcd(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

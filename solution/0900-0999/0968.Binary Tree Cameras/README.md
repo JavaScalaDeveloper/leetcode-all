@@ -74,28 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def minCameraCover(self, root: Optional[TreeNode]) -> int:
-        def dfs(root):
-            if root is None:
-                return inf, 0, 0
-            la, lb, lc = dfs(root.left)
-            ra, rb, rc = dfs(root.right)
-            a = min(la, lb, lc) + min(ra, rb, rc) + 1
-            b = min(la + rb, lb + ra, la + ra)
-            c = lb + rb
-            return a, b, c
 
-        a, b, _ = dfs(root)
-        return min(a, b)
-```
 
 ### **Java**
 
@@ -137,114 +116,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-struct Status {
-    int a, b, c;
-};
 
-class Solution {
-public:
-    int minCameraCover(TreeNode* root) {
-        auto [a, b, _] = dfs(root);
-        return min(a, b);
-    }
 
-    Status dfs(TreeNode* root) {
-        if (!root) {
-            return {1 << 29, 0, 0};
-        }
-        auto [la, lb, lc] = dfs(root->left);
-        auto [ra, rb, rc] = dfs(root->right);
-        int a = 1 + min({la, lb, lc}) + min({ra, rb, rc});
-        int b = min({la + ra, la + rb, lb + ra});
-        int c = lb + rb;
-        return {a, b, c};
-    };
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func minCameraCover(root *TreeNode) int {
-	var dfs func(*TreeNode) (int, int, int)
-	dfs = func(root *TreeNode) (int, int, int) {
-		if root == nil {
-			return 1 << 29, 0, 0
-		}
-		la, lb, lc := dfs(root.Left)
-		ra, rb, rc := dfs(root.Right)
-		a := 1 + min(la, min(lb, lc)) + min(ra, min(rb, rc))
-		b := min(la+ra, min(la+rb, lb+ra))
-		c := lb + rb
-		return a, b, c
-	}
-	a, b, _ := dfs(root)
-	return min(a, b)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function minCameraCover(root: TreeNode | null): number {
-    const dfs = (root: TreeNode | null): number[] => {
-        if (!root) {
-            return [1 << 29, 0, 0];
-        }
-        const [la, lb, lc] = dfs(root.left);
-        const [ra, rb, rc] = dfs(root.right);
-        const a = 1 + Math.min(la, lb, lc) + Math.min(ra, rb, rc);
-        const b = Math.min(la + ra, la + rb, lb + ra);
-        const c = lb + rb;
-        return [a, b, c];
-    };
-    const [a, b, _] = dfs(root);
-    return Math.min(a, b);
-}
-```
 
 ### **...**
 
@@ -252,4 +134,4 @@ function minCameraCover(root: TreeNode | null): number {
 
 ```
 
-<!-- tabs:end -->
+

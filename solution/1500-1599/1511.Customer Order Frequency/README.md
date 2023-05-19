@@ -136,4 +136,4 @@ HAVING sum(if(month(o.order_date)=6, price*quantity, 0)) >= 100
 AND sum(if(month(o.order_date)=7, price*quantity, 0)) >= 100;
 ```
 
-<!-- tabs:end -->
+

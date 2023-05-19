@@ -40,39 +40,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def trulyMostPopular(self, names: List[str], synonyms: List[str]) -> List[str]:
-        def dfs(a):
-            vis.add(a)
-            mi, x = a, cnt[a]
-            for b in g[a]:
-                if b not in vis:
-                    t, y = dfs(b)
-                    if mi > t:
-                        mi = t
-                    x += y
-            return mi, x
 
-        g = defaultdict(list)
-        for e in synonyms:
-            a, b = e[1:-1].split(',')
-            g[a].append(b)
-            g[b].append(a)
-        s = set()
-        cnt = defaultdict(int)
-        for x in names:
-            name, freq = x[:-1].split("(")
-            s.add(name)
-            cnt[name] = int(freq)
-        vis = set()
-        ans = []
-        for name in s:
-            if name not in vis:
-                name, freq = dfs(name)
-                ans.append(f"{name}({freq})")
-        return ans
-```
 
 ### **Java**
 
@@ -127,139 +95,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> trulyMostPopular(vector<string>& names, vector<string>& synonyms) {
-        unordered_map<string, vector<string>> g;
-        unordered_map<string, int> cnt;
-        for (auto& e : synonyms) {
-            int i = e.find(',');
-            string a = e.substr(1, i - 1);
-            string b = e.substr(i + 1, e.size() - i - 2);
-            g[a].emplace_back(b);
-            g[b].emplace_back(a);
-        }
-        unordered_set<string> s;
-        for (auto& e : names) {
-            int i = e.find('(');
-            string name = e.substr(0, i);
-            s.insert(name);
-            cnt[name] += stoi(e.substr(i + 1, e.size() - i - 2));
-        }
-        unordered_set<string> vis;
-        int freq = 0;
 
-        function<string(string)> dfs = [&](string a) -> string {
-            string res = a;
-            vis.insert(a);
-            freq += cnt[a];
-            for (auto& b : g[a]) {
-                if (!vis.count(b)) {
-                    string t = dfs(b);
-                    if (t < res) {
-                        res = move(t);
-                    }
-                }
-            }
-            return move(res);
-        };
 
-        vector<string> ans;
-        for (auto& name : s) {
-            if (!vis.count(name)) {
-                freq = 0;
-                string x = dfs(name);
-                ans.emplace_back(x + "(" + to_string(freq) + ")");
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func trulyMostPopular(names []string, synonyms []string) (ans []string) {
-	g := map[string][]string{}
-	for _, s := range synonyms {
-		i := strings.Index(s, ",")
-		a, b := s[1:i], s[i+1:len(s)-1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-	}
-	s := map[string]struct{}{}
-	cnt := map[string]int{}
-	for _, e := range names {
-		i := strings.Index(e, "(")
-		name, num := e[:i], e[i+1:len(e)-1]
-		x, _ := strconv.Atoi(num)
-		cnt[name] += x
-		s[name] = struct{}{}
-	}
-	freq := 0
-	vis := map[string]struct{}{}
-	var dfs func(string) string
-	dfs = func(a string) string {
-		vis[a] = struct{}{}
-		freq += cnt[a]
-		res := a
-		for _, b := range g[a] {
-			if _, ok := vis[b]; !ok {
-				t := dfs(b)
-				if t < res {
-					res = t
-				}
-			}
-		}
-		return res
-	}
-	for name := range s {
-		if _, ok := vis[name]; !ok {
-			freq = 0
-			root := dfs(name)
-			ans = append(ans, root+"("+strconv.Itoa(freq)+")")
-		}
-	}
-	return
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function trulyMostPopular(names: string[], synonyms: string[]): string[] {
-    const map = new Map<string, string>();
-    for (const synonym of synonyms) {
-        const [k1, k2] = [...synonym]
-            .slice(1, synonym.length - 1)
-            .join('')
-            .split(',');
-        const [v1, v2] = [map.get(k1) ?? k1, map.get(k2) ?? k2];
-        const min = v1 < v2 ? v1 : v2;
-        const max = v1 < v2 ? v2 : v1;
-        map.set(k1, min);
-        map.set(k2, min);
-        for (const [k, v] of map.entries()) {
-            if (v === max) {
-                map.set(k, min);
-            }
-        }
-    }
 
-    const keyCount = new Map<string, number>();
-    for (const name of names) {
-        const num = name.match(/\d+/)[0];
-        const k = name.split('(')[0];
-        const key = map.get(k) ?? k;
-        keyCount.set(key, (keyCount.get(key) ?? 0) + Number(num));
-    }
-    return [...keyCount.entries()].map(([k, v]) => `${k}(${v})`);
-}
-```
 
 ### **...**
 
@@ -267,4 +113,4 @@ function trulyMostPopular(names: string[], synonyms: string[]): string[] {
 
 ```
 
-<!-- tabs:end -->
+

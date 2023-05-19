@@ -68,61 +68,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 **方法二：二分查找 + BFS**
 
@@ -140,76 +94,15 @@ d[find(a)] = distance
 
 并查集：
 
-```python
-class Solution:
-    def minimumEffortPath(self, heights: List[List[int]]) -> int:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        m, n = len(heights), len(heights[0])
-        p = list(range(m * n))
-        e = []
-        for i in range(m):
-            for j in range(n):
-                if i < m - 1:
-                    e.append((abs(heights[i][j] - heights[i + 1][j]), i * n + j, (i + 1) * n + j))
-                if j < n - 1:
-                    e.append((abs(heights[i][j] - heights[i][j + 1]), i * n + j, i * n + j + 1))
-        e.sort()
-        for h, i, j in e:
-            p[find(i)] = find(j)
-            if find(0) == find(m * n - 1):
-                return h
-        return 0
-```
 
 二分查找 + BFS：
 
-```python
-class Solution:
-    def minimumEffortPath(self, heights: List[List[int]]) -> int:
-        m, n = len(heights), len(heights[0])
-        left, right = 0, 999999
-        while left < right:
-            mid = (left + right) >> 1
-            q = deque([(0, 0)])
-            vis = {(0, 0)}
-            while q:
-                i, j = q.popleft()
-                for a, b in [[0, 1], [0, -1], [1, 0], [-1, 0]]:
-                    x, y = i + a, j + b
-                    if 0 <= x < m and 0 <= y < n and (x, y) not in vis and abs(heights[i][j] - heights[x][y]) <= mid:
-                        q.append((x, y))
-                        vis.add((x, y))
-            if (m - 1, n - 1) in vis:
-                right = mid
-            else:
-                left = mid + 1
-        return left
-```
+
 
 Dijkstra 算法：
 
-```python
-class Solution:
-    def minimumEffortPath(self, heights: List[List[int]]) -> int:
-        INF = 0x3f3f3f3f
-        m, n = len(heights), len(heights[0])
-        dist = [[INF] * n for _ in range(m)]
-        dist[0][0] = 0
-        dirs = [-1, 0, 1, 0, -1]
-        q = [(0, 0, 0)]
-        while q:
-            t, i, j = heappop(q)
-            for k in range(4):
-                x, y = i + dirs[k], j + dirs[k + 1]
-                if 0 <= x < m and 0 <= y < n and max(t, abs(heights[x][y] - heights[i][j])) < dist[x][y]:
-                    dist[x][y] = max(t, abs(heights[x][y] - heights[i][j]))
-                    heappush(q, (dist[x][y], x, y))
-        return dist[-1][-1]
-```
+
 
 ### **Java**
 
@@ -331,210 +224,29 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 并查集：
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    int minimumEffortPath(vector<vector<int>>& heights) {
-        int m = heights.size(), n = heights[0].size();
-        p.resize(m * n);
-        for (int i = 0; i < p.size(); ++i) p[i] = i;
-        vector<vector<int>> edges;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (i < m - 1) edges.push_back({abs(heights[i][j] - heights[i + 1][j]), i * n + j, (i + 1) * n + j});
-                if (j < n - 1) edges.push_back({abs(heights[i][j] - heights[i][j + 1]), i * n + j, i * n + j + 1});
-            }
-        }
-        sort(edges.begin(), edges.end());
-        for (auto& e : edges) {
-            int i = e[1], j = e[2];
-            p[find(i)] = find(j);
-            if (find(0) == find(m * n - 1)) return e[0];
-        }
-        return 0;
-    }
-
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
 二分查找 + BFS：
 
-```cpp
-class Solution {
-public:
-    int minimumEffortPath(vector<vector<int>>& heights) {
-        int m = heights.size(), n = heights[0].size();
-        int left = 0, right = 999999;
-        vector<int> dirs = {-1, 0, 1, 0, -1};
-        while (left < right)
-        {
-            int mid = (left + right) >> 1;
-            vector<vector<bool>> vis(m, vector<bool>(n));
-            vis[0][0] = true;
-            queue<pair<int, int>> q;
-            q.push({0, 0});
-            while (!q.empty())
-            {
-                auto [i, j] = q.front();
-                q.pop();
-                for (int k = 0; k < 4; ++k)
-                {
-                    int x = i + dirs[k], y = j + dirs[k + 1];
-                    if (x >= 0 && x < m && y >= 0 && y < n && !vis[x][y] && abs(heights[i][j] - heights[x][y]) <= mid)
-                    {
-                        q.push({x, y});
-                        vis[x][y] = true;
-                    }
-                }
-            }
-            if (vis[m - 1][n - 1]) right = mid;
-            else left = mid + 1;
-        }
-        return left;
-    }
-};
-```
+
 
 Dijkstra 算法：
 
-```cpp
-class Solution {
-public:
-    int minimumEffortPath(vector<vector<int>>& heights) {
-        int m = heights.size(), n = heights[0].size();
-        vector<vector<int>> dist(m, vector<int>(n, 0x3f3f3f3f));
-        dist[0][0] = 0;
-        priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, greater<tuple<int, int, int>>> q;
-        q.push({0, 0, 0});
-        vector<int> dirs = {-1, 0, 1, 0, -1};
-        while (!q.empty())
-        {
-            auto [t, i, j] = q.top();
-            q.pop();
-            for (int k = 0; k < 4; ++k)
-            {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n)
-                {
-                    int nd = max(t, abs(heights[x][y] - heights[i][j]));
-                    if (nd < dist[x][y])
-                    {
-                        dist[x][y] = nd;
-                        q.push({nd, x, y});
-                    }
-                }
-            }
-        }
-        return dist[m - 1][n - 1];
-    }
-};
-```
 
-### **Go**
+
+
 
 并查集：
 
-```go
-func minimumEffortPath(heights [][]int) int {
-	m, n := len(heights), len(heights[0])
-	p := make([]int, m*n)
-	for i := range p {
-		p[i] = i
-	}
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	edges := [][]int{}
-	for i, row := range heights {
-		for j, h := range row {
-			if i < m-1 {
-				s := []int{abs(h - heights[i+1][j]), i*n + j, (i+1)*n + j}
-				edges = append(edges, s)
-			}
-			if j < n-1 {
-				s := []int{abs(h - row[j+1]), i*n + j, i*n + j + 1}
-				edges = append(edges, s)
-			}
-		}
-	}
-	sort.Slice(edges, func(i, j int) bool {
-		return edges[i][0] < edges[j][0]
-	})
-	for _, e := range edges {
-		i, j := e[1], e[2]
-		p[find(i)] = find(j)
-		if find(0) == find(m*n-1) {
-			return e[0]
-		}
-	}
-	return 0
-}
 
-func abs(x int) int {
-	if x > 0 {
-		return x
-	}
-	return -x
-}
-```
 
 二分查找 + BFS：
 
-```go
-func minimumEffortPath(heights [][]int) int {
-	m, n := len(heights), len(heights[0])
-	left, right := 0, 999999
-	dirs := []int{-1, 0, 1, 0, -1}
-	for left < right {
-		mid := (left + right) >> 1
-		vis := make([][]bool, m)
-		for i := range vis {
-			vis[i] = make([]bool, n)
-		}
-		vis[0][0] = true
-		q := [][]int{{0, 0}}
-		for len(q) > 0 {
-			p := q[0]
-			q = q[1:]
-			i, j := p[0], p[1]
-			for k := 0; k < 4; k++ {
-				x, y := i+dirs[k], j+dirs[k+1]
-				if x >= 0 && x < m && y >= 0 && y < n && !vis[x][y] && abs(heights[i][j]-heights[x][y]) <= mid {
-					q = append(q, []int{x, y})
-					vis[x][y] = true
-				}
-			}
-		}
-		if vis[m-1][n-1] {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
 
-func abs(x int) int {
-	if x > 0 {
-		return x
-	}
-	return -x
-}
-```
 
 ### **...**
 
@@ -542,4 +254,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

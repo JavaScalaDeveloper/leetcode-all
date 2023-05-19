@@ -70,22 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def brightestPosition(self, lights: List[List[int]]) -> int:
-        d = defaultdict(int)
-        for i, j in lights:
-            l, r = i - j, i + j
-            d[l] += 1
-            d[r + 1] -= 1
-        ans = s = mx = 0
-        for k in sorted(d):
-            s += d[k]
-            if mx < s:
-                mx = s
-                ans = k
-        return ans
-```
+
 
 ### **Java**
 
@@ -114,91 +99,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int brightestPosition(vector<vector<int>>& lights) {
-        map<int, int> d;
-        for (auto& x : lights) {
-            int l = x[0] - x[1], r = x[0] + x[1];
-            ++d[l];
-            --d[r + 1];
-        }
-        int ans = 0, s = 0, mx = 0;
-        for (auto& [i, v] : d) {
-            s += v;
-            if (mx < s) {
-                mx = s;
-                ans = i;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func brightestPosition(lights [][]int) (ans int) {
-	d := map[int]int{}
-	for _, x := range lights {
-		l, r := x[0]-x[1], x[0]+x[1]
-		d[l]++
-		d[r+1]--
-	}
-	keys := make([]int, 0, len(d))
-	for i := range d {
-		keys = append(keys, i)
-	}
-	sort.Ints(keys)
-	mx, s := 0, 0
-	for _, i := range keys {
-		s += d[i]
-		if mx < s {
-			mx = s
-			ans = i
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} lights
- * @return {number}
- */
-var brightestPosition = function (lights) {
-    const d = new Map();
-    for (const [i, j] of lights) {
-        const l = i - j;
-        const r = i + j;
-        d.set(l, (d.get(l) ?? 0) + 1);
-        d.set(r + 1, (d.get(r + 1) ?? 0) - 1);
-    }
-    const keys = [];
-    for (const k of d.keys()) {
-        keys.push(k);
-    }
-    keys.sort((a, b) => a - b);
-    let ans = 0;
-    let s = 0;
-    let mx = 0;
-    for (const i of keys) {
-        s += d.get(i);
-        if (mx < s) {
-            mx = s;
-            ans = i;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -206,4 +117,4 @@ var brightestPosition = function (lights) {
 
 ```
 
-<!-- tabs:end -->
+

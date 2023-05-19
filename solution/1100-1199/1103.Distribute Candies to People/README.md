@@ -63,17 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def distributeCandies(self, candies: int, num_people: int) -> List[int]:
-        ans = [0] * num_people
-        i = 0
-        while candies > 0:
-            ans[i % num_people] += min(candies, i + 1)
-            candies -= min(candies, i + 1)
-            i += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -92,41 +82,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> distributeCandies(int candies, int num_people) {
-        vector<int> ans(num_people);
-        for (int i = 0; candies > 0; ++i) {
-            ans[i % num_people] += min(candies, i + 1);
-            candies -= min(candies, i + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func distributeCandies(candies int, num_people int) []int {
-	ans := make([]int, num_people)
-	for i := 0; candies > 0; i++ {
-		ans[i%num_people] += min(candies, i+1)
-		candies -= min(candies, i+1)
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -134,4 +96,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

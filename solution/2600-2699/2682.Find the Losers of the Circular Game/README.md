@@ -77,17 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def circularGameLosers(self, n: int, k: int) -> List[int]:
-        vis = [False] * n
-        i, p = 0, 1
-        while not vis[i]:
-            vis[i] = True
-            i = (i + p * k) % n
-            p += 1
-        return [i + 1 for i in range(n) if not vis[i]]
-```
+
 
 ### **Java**
 
@@ -114,46 +104,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> circularGameLosers(int n, int k) {
-        bool vis[n];
-        memset(vis, false, sizeof(vis));
-        for (int i = 0, p = 1; !vis[i]; ++p) {
-            vis[i] = true;
-            i = (i + p * k) % n;
-        }
-        vector<int> ans;
-        for (int i = 0, j = 0; i < n; ++i) {
-            if (!vis[i]) {
-                ans.push_back(i + 1);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func circularGameLosers(n int, k int) (ans []int) {
-	vis := make([]bool, n)
-	for i, p := 0, 1; !vis[i]; p++ {
-		vis[i] = true
-		i = (i + p*k) % n
-	}
-	for i, x := range vis {
-		if !x {
-			ans = append(ans, i+1)
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -161,4 +118,4 @@ func circularGameLosers(n int, k int) (ans []int) {
 
 ```
 
-<!-- tabs:end -->
+

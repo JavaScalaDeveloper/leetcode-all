@@ -67,31 +67,7 @@ JSON 的基本类型是字符串、数字型、布尔值和 null。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-function jsonStringify(object: any): string {
-    if (object === null) {
-        return 'null';
-    }
-    if (typeof object === 'string') {
-        return `"${object}"`;
-    }
-    if (typeof object === 'number' || typeof object === 'boolean') {
-        return object.toString();
-    }
-    if (Array.isArray(object)) {
-        return `[${object.map(jsonStringify).join(',')}]`;
-    }
-    if (typeof object === 'object') {
-        return `{${Object.entries(object)
-            .map(
-                ([key, value]) =>
-                    `${jsonStringify(key)}:${jsonStringify(value)}`,
-            )
-            .join(',')}}`;
-    }
-    return '';
-}
-```
+
 
 ### **...**
 
@@ -99,4 +75,4 @@ function jsonStringify(object: any): string {
 
 ```
 
-<!-- tabs:end -->
+

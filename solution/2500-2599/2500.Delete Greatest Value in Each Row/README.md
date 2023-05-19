@@ -76,13 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def deleteGreatestValue(self, grid: List[List[int]]) -> int:
-        for row in grid:
-            row.sort()
-        return sum(max(col) for col in zip(*grid))
-```
+
 
 ### **Java**
 
@@ -107,45 +101,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int deleteGreatestValue(vector<vector<int>>& grid) {
-        for (auto& row : grid) sort(row.begin(), row.end());
-        int ans = 0;
-        for (int j = 0; j < grid[0].size(); ++j) {
-            int t = 0;
-            for (int i = 0; i < grid.size(); ++i) {
-                t = max(t, grid[i][j]);
-            }
-            ans += t;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func deleteGreatestValue(grid [][]int) (ans int) {
-	for _, row := range grid {
-		sort.Ints(row)
-	}
-	for j := range grid[0] {
-		t := 0
-		for i := range grid {
-			if t < grid[i][j] {
-				t = grid[i][j]
-			}
-		}
-		ans += t
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -153,4 +115,4 @@ func deleteGreatestValue(grid [][]int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -67,15 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int]) -> int:
-        ans = mx = 0
-        for v in nums:
-            ans += max(0, mx + 1 - v)
-            mx = max(mx + 1, v)
-        return ans
-```
+
 
 ### **Java**
 
@@ -94,86 +86,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<int>& nums) {
-        int ans = 0, mx = 0;
-        for (int& v : nums) {
-            ans += max(0, mx + 1 - v);
-            mx = max(mx + 1, v);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(nums []int) (ans int) {
-	mx := 0
-	for _, v := range nums {
-		ans += max(0, mx+1-v)
-		mx = max(mx+1, v)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MinOperations(int[] nums) {
-        int ans = 0, mx = 0;
-        foreach (int v in nums) {
-            ans += Math.Max(0, mx + 1 - v);
-            mx = Math.Max(mx + 1, v);
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minOperations(nums: number[]): number {
-    let ans = 0;
-    let max = 0;
-    for (const v of nums) {
-        ans += Math.max(0, max + 1 - v);
-        max = Math.max(max + 1, v);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_operations(nums: Vec<i32>) -> i32 {
-        let mut ans = 0;
-        let mut max = 0;
-        for &v in nums.iter() {
-            ans += 0.max(max + 1 - v);
-            max = v.max(max + 1);
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -197,4 +128,4 @@ int minOperations(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

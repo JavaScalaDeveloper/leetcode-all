@@ -63,18 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def differByOne(self, dict: List[str]) -> bool:
-        s = set()
-        for word in dict:
-            for i in range(len(word)):
-                t = word[:i] + "*" + word[i + 1 :]
-                if t in s:
-                    return True
-                s.add(t)
-        return False
-```
+
 
 ### **Java**
 
@@ -98,43 +87,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool differByOne(vector<string>& dict) {
-        unordered_set<string> s;
-        for (auto word : dict) {
-            for (int i = 0; i < word.size(); ++i) {
-                auto t = word;
-                t[i] = '*';
-                if (s.count(t)) return true;
-                s.insert(t);
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func differByOne(dict []string) bool {
-	s := make(map[string]bool)
-	for _, word := range dict {
-		for i := range word {
-			t := word[:i] + "*" + word[i+1:]
-			if s[t] {
-				return true
-			}
-			s[t] = true
-		}
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -142,4 +101,4 @@ func differByOne(dict []string) bool {
 
 ```
 
-<!-- tabs:end -->
+

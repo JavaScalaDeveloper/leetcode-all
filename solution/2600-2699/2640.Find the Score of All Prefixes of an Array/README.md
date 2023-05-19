@@ -70,17 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findPrefixScore(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        ans = [0] * n
-        mx = 0
-        for i, x in enumerate(nums):
-            mx = max(mx, x)
-            ans[i] = x + mx + (0 if i == 0 else ans[i - 1])
-        return ans
-```
+
 
 ### **Java**
 
@@ -101,63 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<long long> findPrefixScore(vector<int>& nums) {
-        int n = nums.size();
-        vector<long long> ans(n);
-        int mx = 0;
-        for (int i = 0; i < n; ++i) {
-            mx = max(mx, nums[i]);
-            ans[i] = nums[i] + mx + (i == 0 ? 0 : ans[i - 1]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findPrefixScore(nums []int) []int64 {
-	n := len(nums)
-	ans := make([]int64, n)
-	mx := 0
-	for i, x := range nums {
-		mx = max(mx, x)
-		ans[i] = int64(x + mx)
-		if i > 0 {
-			ans[i] += ans[i-1]
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findPrefixScore(nums: number[]): number[] {
-    const n = nums.length;
-    const ans: number[] = new Array(n);
-    let mx: number = 0;
-    for (let i = 0; i < n; ++i) {
-        mx = Math.max(mx, nums[i]);
-        ans[i] = nums[i] + mx + (i === 0 ? 0 : ans[i - 1]);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -165,4 +109,4 @@ function findPrefixScore(nums: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

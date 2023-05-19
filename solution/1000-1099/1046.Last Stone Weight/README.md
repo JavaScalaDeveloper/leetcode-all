@@ -57,17 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def lastStoneWeight(self, stones: List[int]) -> int:
-        h = [-x for x in stones]
-        heapify(h)
-        while len(h) > 1:
-            y, x = -heappop(h), -heappop(h)
-            if x != y:
-                heappush(h, x - y)
-        return 0 if not h else -h[0]
-```
+
 
 ### **Java**
 
@@ -92,103 +82,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int lastStoneWeight(vector<int>& stones) {
-        priority_queue<int> pq;
-        for (int x : stones) {
-            pq.push(x);
-        }
-        while (pq.size() > 1) {
-            int y = pq.top();
-            pq.pop();
-            int x = pq.top();
-            pq.pop();
-            if (x != y) {
-                pq.push(y - x);
-            }
-        }
-        return pq.empty() ? 0 : pq.top();
-    }
-};
-```
 
-### **Go**
 
-```go
-func lastStoneWeight(stones []int) int {
-	q := &hp{stones}
-	heap.Init(q)
-	for q.Len() > 1 {
-		y, x := q.pop(), q.pop()
-		if x != y {
-			q.push(y - x)
-		}
-	}
-	if q.Len() > 0 {
-		return q.IntSlice[0]
-	}
-	return 0
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h hp) Less(i, j int) bool  { return h.IntSlice[i] > h.IntSlice[j] }
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-func (h *hp) push(v int) { heap.Push(h, v) }
-func (h *hp) pop() int   { return heap.Pop(h).(int) }
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} stones
- * @return {number}
- */
-var lastStoneWeight = function (stones) {
-    const pq = new MaxPriorityQueue();
-    for (const x of stones) {
-        pq.enqueue(x);
-    }
-    while (pq.size() > 1) {
-        const y = pq.dequeue()['priority'];
-        const x = pq.dequeue()['priority'];
-        if (x != y) {
-            pq.enqueue(y - x);
-        }
-    }
-    return pq.isEmpty() ? 0 : pq.dequeue()['priority'];
-};
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function lastStoneWeight(stones: number[]): number {
-    const pq = new MaxPriorityQueue();
-    for (const x of stones) {
-        pq.enqueue(x);
-    }
-    while (pq.size() > 1) {
-        const y = pq.dequeue().element;
-        const x = pq.dequeue().element;
-        if (x !== y) {
-            pq.enqueue(y - x);
-        }
-    }
-    return pq.isEmpty() ? 0 : pq.dequeue().element;
-}
-```
+
 
 ### **...**
 
@@ -196,4 +104,4 @@ function lastStoneWeight(stones: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

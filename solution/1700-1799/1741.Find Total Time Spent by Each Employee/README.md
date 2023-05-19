@@ -72,4 +72,4 @@ GROUP BY
     emp_id, event_day;
 ```
 
-<!-- tabs:end -->
+

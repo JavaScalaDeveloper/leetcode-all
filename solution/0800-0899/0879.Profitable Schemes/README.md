@@ -84,39 +84,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def profitableSchemes(self, n: int, minProfit: int, group: List[int], profit: List[int]) -> int:
-        @cache
-        def dfs(i: int, j: int, k: int) -> int:
-            if i >= len(group):
-                return 1 if k == minProfit else 0
-            ans = dfs(i + 1, j, k)
-            if j + group[i] <= n:
-                ans += dfs(i + 1, j + group[i], min(k + profit[i], minProfit))
-            return ans % (10**9 + 7)
 
-        return dfs(0, 0, 0)
-```
 
-```python
-class Solution:
-    def profitableSchemes(self, n: int, minProfit: int, group: List[int], profit: List[int]) -> int:
-        mod = 10**9 + 7
-        m = len(group)
-        f = [[[0] * (minProfit + 1) for _ in range(n + 1)]
-             for _ in range(m + 1)]
-        for j in range(n + 1):
-            f[0][j][0] = 1
-        for i, (x, p) in enumerate(zip(group, profit), 1):
-            for j in range(n + 1):
-                for k in range(minProfit + 1):
-                    f[i][j][k] = f[i - 1][j][k]
-                    if j >= x:
-                        f[i][j][k] = (f[i][j][k] + f[i - 1]
-                                      [j - x][max(0, k - p)]) % mod
-        return f[m][n][minProfit]
-```
+
 
 ### **Java**
 
@@ -186,144 +156,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int profitableSchemes(int n, int minProfit, vector<int>& group, vector<int>& profit) {
-        int m = group.size();
-        int f[m][n + 1][minProfit + 1];
-        memset(f, -1, sizeof(f));
-        const int mod = 1e9 + 7;
-        function<int(int, int, int)> dfs = [&](int i, int j, int k) -> int {
-            if (i >= m) {
-                return k == minProfit ? 1 : 0;
-            }
-            if (f[i][j][k] != -1) {
-                return f[i][j][k];
-            }
-            int ans = dfs(i + 1, j, k);
-            if (j + group[i] <= n) {
-                ans += dfs(i + 1, j + group[i], min(k + profit[i], minProfit));
-            }
-            ans %= mod;
-            return f[i][j][k] = ans;
-        };
-        return dfs(0, 0, 0);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int profitableSchemes(int n, int minProfit, vector<int>& group, vector<int>& profit) {
-        int m = group.size();
-        int f[m + 1][n + 1][minProfit + 1];
-        memset(f, 0, sizeof(f));
-        for (int j = 0; j <= n; ++j) {
-            f[0][j][0] = 1;
-        }
-        const int mod = 1e9 + 7;
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 0; j <= n; ++j) {
-                for (int k = 0; k <= minProfit; ++k) {
-                    f[i][j][k] = f[i - 1][j][k];
-                    if (j >= group[i - 1]) {
-                        f[i][j][k] = (f[i][j][k] + f[i - 1][j - group[i - 1]][max(0, k - profit[i - 1])]) % mod;
-                    }
-                }
-            }
-        }
-        return f[m][n][minProfit];
-    }
-};
-```
 
-### **Go**
 
-```go
-func profitableSchemes(n int, minProfit int, group []int, profit []int) int {
-	m := len(group)
-	f := make([][][]int, m)
-	for i := range f {
-		f[i] = make([][]int, n+1)
-		for j := range f[i] {
-			f[i][j] = make([]int, minProfit+1)
-			for k := range f[i][j] {
-				f[i][j][k] = -1
-			}
-		}
-	}
-	const mod = 1e9 + 7
-	var dfs func(i, j, k int) int
-	dfs = func(i, j, k int) int {
-		if i >= m {
-			if k >= minProfit {
-				return 1
-			}
-			return 0
-		}
-		if f[i][j][k] != -1 {
-			return f[i][j][k]
-		}
-		ans := dfs(i+1, j, k)
-		if j+group[i] <= n {
-			ans += dfs(i+1, j+group[i], min(k+profit[i], minProfit))
-		}
-		ans %= mod
-		f[i][j][k] = ans
-		return ans
-	}
-	return dfs(0, 0, 0)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **Go**
 
-```go
-func profitableSchemes(n int, minProfit int, group []int, profit []int) int {
-	m := len(group)
-	f := make([][][]int, m+1)
-	for i := range f {
-		f[i] = make([][]int, n+1)
-		for j := range f[i] {
-			f[i][j] = make([]int, minProfit+1)
-		}
-	}
-	for j := 0; j <= n; j++ {
-		f[0][j][0] = 1
-	}
-	const mod = 1e9 + 7
-	for i := 1; i <= m; i++ {
-		for j := 0; j <= n; j++ {
-			for k := 0; k <= minProfit; k++ {
-				f[i][j][k] = f[i-1][j][k]
-				if j >= group[i-1] {
-					f[i][j][k] += f[i-1][j-group[i-1]][max(0, k-profit[i-1])]
-					f[i][j][k] %= mod
-				}
-			}
-		}
-	}
-	return f[m][n][minProfit]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -331,4 +176,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

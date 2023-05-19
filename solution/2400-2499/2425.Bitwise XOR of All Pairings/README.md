@@ -62,18 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def xorAllNums(self, nums1: List[int], nums2: List[int]) -> int:
-        ans = 0
-        if len(nums2) & 1:
-            for v in nums1:
-                ans ^= v
-        if len(nums1) & 1:
-            for v in nums2:
-                ans ^= v
-        return ans
-```
+
 
 ### **Java**
 
@@ -98,61 +87,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int xorAllNums(vector<int>& nums1, vector<int>& nums2) {
-        int ans = 0;
-        if (nums2.size() % 2 == 1) {
-            for (int v : nums1) {
-                ans ^= v;
-            }
-        }
-        if (nums1.size() % 2 == 1) {
-            for (int v : nums2) {
-                ans ^= v;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func xorAllNums(nums1 []int, nums2 []int) int {
-	ans := 0
-	if len(nums2)%2 == 1 {
-		for _, v := range nums1 {
-			ans ^= v
-		}
-	}
-	if len(nums1)%2 == 1 {
-		for _, v := range nums2 {
-			ans ^= v
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function xorAllNums(nums1: number[], nums2: number[]): number {
-    let ans = 0;
-    if (nums2.length % 2 != 0) {
-        ans ^= nums1.reduce((a, c) => a ^ c, 0);
-    }
-    if (nums1.length % 2 != 0) {
-        ans ^= nums2.reduce((a, c) => a ^ c, 0);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -160,4 +105,4 @@ function xorAllNums(nums1: number[], nums2: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

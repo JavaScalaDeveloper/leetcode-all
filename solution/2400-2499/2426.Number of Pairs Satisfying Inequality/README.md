@@ -66,39 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class BinaryIndexedTree:
-    def __init__(self, n):
-        self.n = n
-        self.c = [0] * (n + 1)
 
-    @staticmethod
-    def lowbit(x):
-        return x & -x
-
-    def update(self, x, delta):
-        while x <= self.n:
-            self.c[x] += delta
-            x += BinaryIndexedTree.lowbit(x)
-
-    def query(self, x):
-        s = 0
-        while x:
-            s += self.c[x]
-            x -= BinaryIndexedTree.lowbit(x)
-        return s
-
-
-class Solution:
-    def numberOfPairs(self, nums1: List[int], nums2: List[int], diff: int) -> int:
-        tree = BinaryIndexedTree(10**5)
-        ans = 0
-        for a, b in zip(nums1, nums2):
-            v = a - b
-            ans += tree.query(v + diff + 40000)
-            tree.update(v + 40000, 1)
-        return ans
-```
 
 ### **Java**
 
@@ -149,104 +117,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class BinaryIndexedTree {
-public:
-    int n;
-    vector<int> c;
 
-    BinaryIndexedTree(int _n)
-        : n(_n)
-        , c(_n + 1) { }
 
-    void update(int x, int delta) {
-        while (x <= n) {
-            c[x] += delta;
-            x += lowbit(x);
-        }
-    }
 
-    int query(int x) {
-        int s = 0;
-        while (x > 0) {
-            s += c[x];
-            x -= lowbit(x);
-        }
-        return s;
-    }
 
-    int lowbit(int x) {
-        return x & -x;
-    }
-};
 
-class Solution {
-public:
-    long long numberOfPairs(vector<int>& nums1, vector<int>& nums2, int diff) {
-        BinaryIndexedTree* tree = new BinaryIndexedTree(1e5);
-        long long ans = 0;
-        for (int i = 0; i < nums1.size(); ++i) {
-            int v = nums1[i] - nums2[i];
-            ans += tree->query(v + diff + 40000);
-            tree->update(v + 40000, 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
-
-```go
-type BinaryIndexedTree struct {
-	n int
-	c []int
-}
-
-func newBinaryIndexedTree(n int) *BinaryIndexedTree {
-	c := make([]int, n+1)
-	return &BinaryIndexedTree{n, c}
-}
-
-func (this *BinaryIndexedTree) lowbit(x int) int {
-	return x & -x
-}
-
-func (this *BinaryIndexedTree) update(x, delta int) {
-	for x <= this.n {
-		this.c[x] += delta
-		x += this.lowbit(x)
-	}
-}
-
-func (this *BinaryIndexedTree) query(x int) int {
-	s := 0
-	for x > 0 {
-		s += this.c[x]
-		x -= this.lowbit(x)
-	}
-	return s
-}
-
-func numberOfPairs(nums1 []int, nums2 []int, diff int) int64 {
-	tree := newBinaryIndexedTree(100000)
-	ans := 0
-	for i := range nums1 {
-		v := nums1[i] - nums2[i]
-		ans += tree.query(v + diff + 40000)
-		tree.update(v+40000, 1)
-	}
-	return int64(ans)
-}
-```
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -254,4 +135,4 @@ func numberOfPairs(nums1 []int, nums2 []int, diff int) int64 {
 
 ```
 
-<!-- tabs:end -->
+

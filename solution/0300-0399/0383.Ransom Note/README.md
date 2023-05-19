@@ -62,16 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        cnt = Counter(magazine)
-        for c in ransomNote:
-            cnt[c] -= 1
-            if cnt[c] < 0:
-                return False
-        return True
-```
+
 
 ### **Java**
 
@@ -94,102 +85,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canConstruct(string ransomNote, string magazine) {
-        int cnt[26]{};
-        for (char& c : magazine) {
-            ++cnt[c - 'a'];
-        }
-        for (char& c : ransomNote) {
-            if (--cnt[c - 'a'] < 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canConstruct(ransomNote string, magazine string) bool {
-	cnt := [26]int{}
-	for _, c := range magazine {
-		cnt[c-'a']++
-	}
-	for _, c := range ransomNote {
-		cnt[c-'a']--
-		if cnt[c-'a'] < 0 {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function canConstruct(ransomNote: string, magazine: string): boolean {
-    const cnt = new Array(26).fill(0);
-    for (const c of magazine) {
-        ++cnt[c.charCodeAt(0) - 97];
-    }
-    for (const c of ransomNote) {
-        if (--cnt[c.charCodeAt(0) - 97] < 0) {
-            return false;
-        }
-    }
-    return true;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool CanConstruct(string ransomNote, string magazine) {
-        int[] cnt = new int[26];
-        foreach (var c in magazine) {
-            ++cnt[c - 'a'];
-        }
-        foreach (var c in ransomNote) {
-            if (--cnt[c - 'a'] < 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $ransomNote
-     * @param String $magazine
-     * @return Boolean
-     */
-    function canConstruct($ransomNote, $magazine) {
-        $arrM = str_split($magazine);
-        for ($i = 0; $i < strlen($magazine); $i++) {
-            $hashtable[$arrM[$i]] += 1;
-        }
-        for ($j = 0; $j < strlen($ransomNote); $j++) {
-            if (!isset($hashtable[$ransomNote[$j]]) || $hashtable[$ransomNote[$j]] == 0) return false;
-            else $hashtable[$ransomNote[$j]] -= 1;
-        }
-        return true;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -197,4 +111,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

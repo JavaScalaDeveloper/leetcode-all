@@ -44,11 +44,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countOdds(self, low: int, high: int) -> int:
-        return ((high + 1) >> 1) - (low >> 1)
-```
+
 
 ### **Java**
 
@@ -62,42 +58,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countOdds(int low, int high) {
-        return (high + 1 >> 1) - (low >> 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func countOdds(low int, high int) int {
-	return ((high + 1) >> 1) - (low >> 1)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countOdds(low: number, high: number): number {
-    return ((high + 1) >> 1) - (low >> 1);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn count_odds(low: i32, high: i32) -> i32 {
-        ((high + 1) >> 1) - (low >> 1)
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -107,20 +82,9 @@ int countOdds(int low, int high) {
 }
 ```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer $low
-     * @param Integer $high
-     * @return Integer
-     */
-    function countOdds($low, $high) {
-        return (($high + 1) >> 1) - ($low >> 1);
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -128,4 +92,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

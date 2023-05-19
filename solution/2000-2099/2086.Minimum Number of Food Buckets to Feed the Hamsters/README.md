@@ -88,23 +88,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumBuckets(self, street: str) -> int:
-        ans = 0
-        i, n = 0, len(street)
-        while i < n:
-            if street[i] == 'H':
-                if i + 1 < n and street[i + 1] == '.':
-                    i += 2
-                    ans += 1
-                elif i and street[i - 1] == '.':
-                    ans += 1
-                else:
-                    return -1
-            i += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -132,51 +116,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumBuckets(string street) {
-        int n = street.size();
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            if (street[i] == 'H') {
-                if (i + 1 < n && street[i + 1] == '.') {
-                    ++ans;
-                    i += 2;
-                } else if (i && street[i - 1] == '.') {
-                    ++ans;
-                } else {
-                    return -1;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumBuckets(street string) int {
-	ans, n := 0, len(street)
-	for i := 0; i < n; i++ {
-		if street[i] == 'H' {
-			if i+1 < n && street[i+1] == '.' {
-				ans++
-				i += 2
-			} else if i > 0 && street[i-1] == '.' {
-				ans++
-			} else {
-				return -1
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -184,4 +130,4 @@ func minimumBuckets(street string) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -67,34 +67,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
-        ans = 0
-        for i, a in enumerate(nums):
-            for b in nums[i + 1:]:
-                ans = max(ans, (a - 1) * (b - 1))
-        return ans
-```
 
-```python
-class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
-        nums.sort()
-        return (nums[-1] - 1) * (nums[-2] - 1)
-```
 
-```python
-class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
-        a = b = 0
-        for v in nums:
-            if v > a:
-                a, b = v, a
-            elif v > b:
-                b = v
-        return (a - 1) * (b - 1)
-```
+
+
+
 
 ### **Java**
 
@@ -142,90 +119,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProduct(vector<int>& nums) {
-        int ans = 0;
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            for (int j = i + 1; j < n; ++j) {
-                ans = max(ans, (nums[i] - 1) * (nums[j] - 1));
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maxProduct(vector<int>& nums) {
-        sort(nums.rbegin(), nums.rend());
-        return (nums[0] - 1) * (nums[1] - 1);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maxProduct(vector<int>& nums) {
-        int a = 0, b = 0;
-        for (int v : nums) {
-            if (v > a) {
-                b = a;
-                a = v;
-            } else if (v > b) {
-                b = v;
-            }
-        }
-        return (a - 1) * (b - 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxProduct(nums []int) int {
-	ans := 0
-	for i, a := range nums {
-		for _, b := range nums[i+1:] {
-			t := (a - 1) * (b - 1)
-			if ans < t {
-				ans = t
-			}
-		}
-	}
-	return ans
-}
-```
 
-```go
-func maxProduct(nums []int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	return (nums[n-1] - 1) * (nums[n-2] - 1)
-}
-```
 
-```go
-func maxProduct(nums []int) int {
-	a, b := 0, 0
-	for _, v := range nums {
-		if v > a {
-			b, a = a, v
-		} else if v > b {
-			b = v
-		}
-	}
-	return (a - 1) * (b - 1)
-}
-```
+
+
+
+
+
+
+
+
 
 ### **C**
 
@@ -248,57 +156,13 @@ int maxProduct(int* nums, int numsSize){
 
 ### **TypeScript**
 
-```ts
-function maxProduct(nums: number[]): number {
-    const n = nums.length;
-    for (let i = 0; i < 2; i++) {
-        let maxIdx = i;
-        for (let j = i + 1; j < n; j++) {
-            if (nums[j] > nums[maxIdx]) {
-                maxIdx = j;
-            }
-        }
-        [nums[i], nums[maxIdx]] = [nums[maxIdx], nums[i]];
-    }
-    return (nums[0] - 1) * (nums[1] - 1);
-}
-```
 
-```ts
-function maxProduct(nums: number[]): number {
-    let max = 0;
-    let submax = 0;
-    for (const num of nums) {
-        if (num > max) {
-            submax = max;
-            max = num;
-        } else if (num > submax) {
-            submax = num;
-        }
-    }
-    return (max - 1) * (submax - 1);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_product(nums: Vec<i32>) -> i32 {
-        let mut max = 0;
-        let mut submax = 0;
-        for &num in nums.iter() {
-            if num > max {
-                submax = max;
-                max = num;
-            } else if num > submax {
-                submax = num;
-            }
-        }
-        (max - 1) * (submax - 1)
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -306,4 +170,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

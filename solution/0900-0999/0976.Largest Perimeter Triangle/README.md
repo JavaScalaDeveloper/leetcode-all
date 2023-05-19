@@ -62,15 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestPerimeter(self, nums: List[int]) -> int:
-        nums.sort()
-        for i in range(len(nums) - 1, 1, -1):
-            if (c := nums[i - 1] + nums[i - 2]) > nums[i]:
-                return c + nums[i]
-        return 0
-```
+
 
 ### **Java**
 
@@ -91,70 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int largestPerimeter(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        for (int i = nums.size() - 1; i >= 2; --i) {
-            int c = nums[i - 1] + nums[i - 2];
-            if (c > nums[i]) return c + nums[i];
-        }
-        return 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestPerimeter(nums []int) int {
-	sort.Ints(nums)
-	for i := len(nums) - 1; i >= 2; i-- {
-		c := nums[i-1] + nums[i-2]
-		if c > nums[i] {
-			return c + nums[i]
-		}
-	}
-	return 0
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function largestPerimeter(nums: number[]): number {
-    const n = nums.length;
-    nums.sort((a, b) => b - a);
-    for (let i = 2; i < n; i++) {
-        const [a, b, c] = [nums[i - 2], nums[i - 1], nums[i]];
-        if (a < b + c) {
-            return a + b + c;
-        }
-    }
-    return 0;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn largest_perimeter(mut nums: Vec<i32>) -> i32 {
-        let n = nums.len();
-        nums.sort_unstable_by(|a, b| b.cmp(&a));
-        for i in 2..n {
-            let (a, b, c) = (nums[i - 2], nums[i - 1], nums[i]);
-            if a < b + c {
-                return a + b + c;
-            }
-        }
-        0
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -180,4 +123,4 @@ int largestPerimeter(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -75,42 +75,7 @@ void mergeSort(int[] nums, int left, int right) {
 
 ### **Python3**
 
-```python
-N = int(input())
-nums = list(map(int, input().split()))
 
-
-def merge_sort(nums, left, right):
-    if left >= right:
-        return
-    mid = (left + right) >> 1
-    merge_sort(nums, left, mid)
-    merge_sort(nums, mid + 1, right)
-    tmp = []
-    i, j = left, mid + 1
-    while i <= mid and j <= right:
-        if nums[i] <= nums[j]:
-            tmp.append(nums[i])
-            i += 1
-        else:
-            tmp.append(nums[j])
-            j += 1
-    while i <= mid:
-        tmp.append(nums[i])
-        i += 1
-    while j <= right:
-        tmp.append(nums[j])
-        j += 1
-
-    j = 0
-    for i in range(left, right + 1):
-        nums[i] = tmp[j]
-        j += 1
-
-
-merge_sort(nums, 0, N - 1)
-print(' '.join(list(map(str, nums))))
-```
 
 ### **Java**
 
@@ -161,213 +126,20 @@ public class Main {
 }
 ```
 
-### **JavaScript**
 
-```js
-var buf = '';
 
-process.stdin.on('readable', function () {
-    var chunk = process.stdin.read();
-    if (chunk) buf += chunk.toString();
-});
 
-let getInputArgs = line => {
-    return line
-        .split(' ')
-        .filter(s => s !== '')
-        .map(x => parseInt(x));
-};
 
-function mergeSort(nums, left, right) {
-    if (left >= right) {
-        return;
-    }
 
-    const mid = (left + right) >> 1;
-    mergeSort(nums, left, mid);
-    mergeSort(nums, mid + 1, right);
-    let i = left;
-    let j = mid + 1;
-    let tmp = [];
-    while (i <= mid && j <= right) {
-        if (nums[i] <= nums[j]) {
-            tmp.push(nums[i++]);
-        } else {
-            tmp.push(nums[j++]);
-        }
-    }
-    while (i <= mid) {
-        tmp.push(nums[i++]);
-    }
-    while (j <= right) {
-        tmp.push(nums[j++]);
-    }
-    for (i = left, j = 0; i <= right; ++i, ++j) {
-        nums[i] = tmp[j];
-    }
-}
 
-process.stdin.on('end', function () {
-    buf.split('\n').forEach(function (line, lineIdx) {
-        if (lineIdx % 2 === 1) {
-            nums = getInputArgs(line);
-            mergeSort(nums, 0, nums.length - 1);
-            console.log(nums.join(' '));
-        }
-    });
-});
-```
 
-### **Go**
 
-```go
-package main
 
-import "fmt"
 
-func mergeSort(nums []int, left, right int) {
-	if left >= right {
-		return
-	}
-	mid := (left + right) >> 1
-	mergeSort(nums, left, mid)
-	mergeSort(nums, mid+1, right)
-	i, j := left, mid+1
-	tmp := make([]int, 0)
-	for i <= mid && j <= right {
-		if nums[i] <= nums[j] {
-			tmp = append(tmp, nums[i])
-			i++
-		} else {
-			tmp = append(tmp, nums[j])
-			j++
-		}
-	}
-	for i <= mid {
-		tmp = append(tmp, nums[i])
-		i++
-	}
-	for j <= right {
-		tmp = append(tmp, nums[j])
-		j++
-	}
-	for i, j = left, 0; i <= right; i, j = i+1, j+1 {
-		nums[i] = tmp[j]
-	}
-}
 
-func main() {
-	var n int
-	fmt.Scanf("%d\n", &n)
-	nums := make([]int, n)
-	for i := 0; i < n; i++ {
-		fmt.Scanf("%d", &nums[i])
-	}
 
-	mergeSort(nums, 0, n-1)
 
-	for _, v := range nums {
-		fmt.Printf("%d ", v)
-	}
-}
-```
 
-### **C++**
 
-```cpp
-#include <iostream>
 
-using namespace std;
 
-const int N = 1e6 + 10;
-
-int n;
-int nums[N];
-int tmp[N];
-
-void merge_sort(int nums[], int left, int right) {
-    if (left >= right) return;
-    int mid = (left + right) >> 1;
-    merge_sort(nums, left, mid);
-    merge_sort(nums, mid + 1, right);
-    int i = left, j = mid + 1, k = 0;
-    while (i <= mid && j <= right) {
-        if (nums[i] <= nums[j])
-            tmp[k++] = nums[i++];
-        else
-            tmp[k++] = nums[j++];
-    }
-    while (i <= mid) tmp[k++] = nums[i++];
-    while (j <= right) tmp[k++] = nums[j++];
-    for (i = left, j = 0; i <= right; ++i, ++j) nums[i] = tmp[j];
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-    for (int i = 0; i < n; ++i) scanf("%d", &nums[i]);
-    merge_sort(nums, 0, n - 1);
-    for (int i = 0; i < n; ++i) printf("%d ", nums[i]);
-}
-```
-
-### **Rust**
-
-```rust
-use std::io;
-
-fn merge_sort(nums: &mut Vec<i32>, left: usize, right: usize) {
-    if left >= right {
-        return;
-    }
-
-    let mid = left + (right - left) / 2;
-    merge_sort(nums, left, mid);
-    merge_sort(nums, mid + 1, right);
-
-    let mut temp = Vec::new();
-    let mut i = left;
-    let mut j = mid + 1;
-
-    while i <= mid && j <= right {
-        if nums[i] < nums[j] {
-            temp.push(nums[i]);
-            i += 1;
-        } else {
-            temp.push(nums[j]);
-            j += 1;
-        }
-    }
-    while i <= mid {
-        temp.push(nums[i]);
-        i += 1;
-    }
-    while j <= right {
-        temp.push(nums[j]);
-        j += 1;
-    }
-
-    for i in left..=right {
-        nums[i] = temp[i - left];
-    }
-}
-
-fn main() -> io::Result<()> {
-    let mut n = String::new();
-    io::stdin().read_line(&mut n)?;
-    let n = n.trim().parse::<usize>().unwrap();
-
-    let mut nums = String::new();
-    io::stdin().read_line(&mut nums)?;
-    let mut nums: Vec<i32> = nums.split(' ').map(|s| s.trim().parse().unwrap()).collect();
-
-    merge_sort(&mut nums, 0, n - 1);
-    for num in nums.iter() {
-        print!("{} ", num);
-    }
-
-    Ok(())
-}
-```
-
-<!-- tabs:end -->

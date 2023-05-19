@@ -65,24 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def nextBeautifulNumber(self, n: int) -> int:
-        def check(num):
-            counter = [0] * 10
-            for c in str(num):
-                counter[int(c)] += 1
 
-            for c in str(num):
-                if counter[int(c)] != int(c):
-                    return False
-            return True
-
-        for i in range(n + 1, 10**7):
-            if check(i):
-                return i
-        return -1
-```
 
 ### **Java**
 
@@ -117,79 +100,15 @@ class Solution {
 
 ## **TypeScript**
 
-```ts
-function nextBeautifulNumber(n: number): number {
-    for (let ans = n + 1; ; ans++) {
-        if (isValid(ans)) {
-            return ans;
-        }
-    }
-}
 
-function isValid(n: number): boolean {
-    let record = new Array(10).fill(0);
-    while (n > 0) {
-        const idx = n % 10;
-        record[idx]++;
-        n = Math.floor(n / 10);
-    }
-    for (let i = 0; i < 10; i++) {
-        if (record[i] && record[i] != i) return false;
-    }
-    return true;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int nextBeautifulNumber(int n) {
-        for (int i = n + 1; i < 10000000; ++i) {
-            if (check(i)) return i;
-        }
-        return -1;
-    }
 
-    bool check(int num) {
-        string s = to_string(num);
-        vector<int> counter(10);
-        for (char c : s) ++counter[c - '0'];
-        for (char c : s) {
-            if (counter[c - '0'] != c - '0') return false;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func nextBeautifulNumber(n int) int {
-	check := func(num int) bool {
-		s := strconv.Itoa(num)
-		counter := make([]int, 10)
-		for _, c := range s {
-			counter[int(c-'0')]++
-		}
-		for _, c := range s {
-			if counter[int(c-'0')] != int(c-'0') {
-				return false
-			}
-		}
-		return true
-	}
 
-	for i := n + 1; i <= 10000000; i++ {
-		if check(i) {
-			return i
-		}
-	}
-	return -1
-}
-```
+
+
 
 ### **...**
 
@@ -197,4 +116,4 @@ func nextBeautifulNumber(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

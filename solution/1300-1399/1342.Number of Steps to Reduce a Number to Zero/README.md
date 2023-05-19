@@ -58,26 +58,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfSteps(self, num: int) -> int:
-        ans = 0
-        while num:
-            if num & 1:
-                num -= 1
-            else:
-                num >>= 1
-            ans += 1
-        return ans
-```
 
-```python
-class Solution:
-    def numberOfSteps(self, num: int) -> int:
-        if num == 0:
-            return 0
-        return 1 + (self.numberOfSteps(num // 2) if num % 2 == 0 else self.numberOfSteps(num - 1))
-```
+
+
 
 ### **Java**
 
@@ -112,104 +95,25 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function numberOfSteps(num: number): number {
-    let ans = 0;
-    while (num) {
-        num = num & 1 ? num - 1 : num >>> 1;
-        ans++;
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfSteps(int num) {
-        int ans = 0;
-        while (num) {
-            num = num & 1 ? num - 1 : num >> 1;
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int numberOfSteps(int num) {
-        if (num == 0) return 0;
-        return 1 + (num & 1 ? numberOfSteps(num - 1) : numberOfSteps(num >> 1));
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfSteps(num int) int {
-	ans := 0
-	for num != 0 {
-		if (num & 1) == 1 {
-			num--
-		} else {
-			num >>= 1
-		}
-		ans++
-	}
-	return ans
-}
-```
 
-```go
-func numberOfSteps(num int) int {
-	if num == 0 {
-		return 0
-	}
-	if (num & 1) == 0 {
-		return 1 + numberOfSteps(num>>1)
-	}
-	return 1 + numberOfSteps(num-1)
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn number_of_steps(mut num: i32) -> i32 {
-        let mut count = 0;
-        while num != 0 {
-            if num % 2 == 0 {
-                num >>= 1;
-            } else {
-                num -= 1;
-            }
-            count += 1;
-        }
-        count
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn number_of_steps(mut num: i32) -> i32 {
-        if num == 0 {
-            0
-        } else if num % 2 == 0 {
-            1 + Solution::number_of_steps(num >> 1)
-        } else {
-            1 + Solution::number_of_steps(num - 1)
-        }
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -217,4 +121,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

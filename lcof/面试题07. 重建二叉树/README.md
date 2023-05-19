@@ -52,30 +52,7 @@
 
 ### **Python3**
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
-
-class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
-        def dfs(i, j, n):
-            if n < 1:
-                return None
-            root = TreeNode(preorder[i])
-            k = d[preorder[i]]
-            l = k - j
-            root.left = dfs(i + 1, j, l)
-            root.right = dfs(i + 1 + l, k + 1, n - l - 1)
-            return root
-
-        d = {v: i for i, v in enumerate(inorder)}
-        return dfs(0, 0, len(preorder))
-```
 
 ### **Java**
 
@@ -118,245 +95,31 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        unordered_map<int, int> d;
-        int n = inorder.size();
-        for (int i = 0; i < n; ++i) {
-            d[inorder[i]] = i;
-        }
-        function<TreeNode*(int, int, int)> dfs = [&](int i, int j, int n) -> TreeNode* {
-            if (n < 1) {
-                return nullptr;
-            }
-            int k = d[preorder[i]];
-            int l = k - j;
-            TreeNode* root = new TreeNode(preorder[i]);
-            root->left = dfs(i + 1, j, l);
-            root->right = dfs(i + 1 + l, k + 1, n - l - 1);
-            return root;
-        };
-        return dfs(0, 0, n);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func buildTree(preorder []int, inorder []int) *TreeNode {
-	d := map[int]int{}
-	for i, v := range inorder {
-		d[v] = i
-	}
-	var dfs func(i, j, n int) *TreeNode
-	dfs = func(i, j, n int) *TreeNode {
-		if n < 1 {
-			return nil
-		}
-		k := d[preorder[i]]
-		l := k - j
-		root := &TreeNode{Val: preorder[i]}
-		root.Left = dfs(i+1, j, l)
-		root.Right = dfs(i+1+l, k+1, n-l-1)
-		return root
-	}
-	return dfs(0, 0, len(inorder))
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
- */
-/**
- * @param {number[]} preorder
- * @param {number[]} inorder
- * @return {TreeNode}
- */
-var buildTree = function (preorder, inorder) {
-    const d = new Map();
-    const n = inorder.length;
-    for (let i = 0; i < n; ++i) {
-        d.set(inorder[i], i);
-    }
-    const dfs = (i, j, n) => {
-        if (n < 1) {
-            return null;
-        }
-        const k = d.get(preorder[i]);
-        const l = k - j;
-        const root = new TreeNode(preorder[i]);
-        root.left = dfs(i + 1, j, l);
-        root.right = dfs(i + 1 + l, k + 1, n - l - 1);
-        return root;
-    };
-    return dfs(0, 0, n);
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function buildTree(preorder: number[], inorder: number[]): TreeNode | null {
-    const d = new Map<number, number>();
-    const n = inorder.length;
-    for (let i = 0; i < n; ++i) {
-        d.set(inorder[i], i);
-    }
-    const dfs = (i: number, j: number, n: number): TreeNode | null => {
-        if (n < 1) {
-            return null;
-        }
-        const k = d.get(preorder[i]) ?? 0;
-        const l = k - j;
-        const root = new TreeNode(preorder[i]);
-        root.left = dfs(i + 1, j, l);
-        root.right = dfs(i + 1 + l, k + 1, n - l - 1);
-        return root;
-    };
-    return dfs(0, 0, n);
-}
-```
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function buildTree(preorder: number[], inorder: number[]): TreeNode | null {
-    if (inorder.length === 0) {
-        return null;
-    }
-    const val = preorder[0];
-    const i = inorder.indexOf(val);
-    return new TreeNode(
-        val,
-        buildTree(preorder.slice(1, i + 1), inorder.slice(0, i)),
-        buildTree(preorder.slice(i + 1), inorder.slice(i + 1)),
-    );
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    fn help(preorder: &[i32], inorder: &[i32]) -> Option<Rc<RefCell<TreeNode>>> {
-        if inorder.is_empty() {
-            return None;
-        }
-        let val = preorder[0];
-        let i = inorder.iter().position(|num| *num == val).unwrap();
-        Some(Rc::new(RefCell::new(TreeNode {
-            val,
-            left: Self::help(&preorder[1..i + 1], &inorder[..i]),
-            right: Self::help(&preorder[i + 1..], &inorder[i + 1..]),
-        })))
-    }
 
-    pub fn build_tree(preorder: Vec<i32>, inorder: Vec<i32>) -> Option<Rc<RefCell<TreeNode>>> {
-        Self::help(&preorder, &inorder)
-    }
-}
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
-    public TreeNode BuildTree(int[] preorder, int[] inorder) {
-        if (preorder.Length == 0) {
-            return null;
-        }
-        TreeNode root = new TreeNode(preorder[0]);
-        int idx = Array.IndexOf(inorder, root.val);
-        root.left = BuildTree(preorder[1..(index+1)], inorder[0..idx]);
-        root.right = BuildTree(preorder[(index+1)..], inorder[(idx+1)..]);
-        return root;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -364,4 +127,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

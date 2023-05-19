@@ -63,11 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximum69Number(self, num: int) -> int:
-        return int(str(num).replace("6", "9", 1))
-```
+
 
 ### **Java**
 
@@ -81,58 +77,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximum69Number(int num) {
-        string s = to_string(num);
-        for (char& ch : s) {
-            if (ch == '6') {
-                ch = '9';
-                break;
-            }
-        }
-        return stoi(s);
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximum69Number(num int) int {
-	s := strconv.Itoa(num)
-	nums := []byte(s)
-	for i, ch := range nums {
-		if ch == '6' {
-			nums[i] = '9'
-			break
-		}
-	}
-	ans, _ := strconv.Atoi(string(nums))
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximum69Number(num: number): number {
-    return Number((num + '').replace('6', '9'));
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn maximum69_number(num: i32) -> i32 {
-        num.to_string().replacen('6', "9", 1).parse().unwrap()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -152,22 +111,9 @@ int maximum69Number(int num) {
 }
 ```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer $num
-     * @return Integer
-     */
-    function maximum69Number($num) {
-        $num = strval($num);
-        $n = strpos($num, "6");
-        $num[$n] = 9;
-        return intval($num);
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -175,4 +121,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

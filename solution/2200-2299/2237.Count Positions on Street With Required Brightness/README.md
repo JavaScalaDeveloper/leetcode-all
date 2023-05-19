@@ -72,18 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def meetRequirement(
-        self, n: int, lights: List[List[int]], requirement: List[int]
-    ) -> int:
-        d = [0] * 100010
-        for p, r in lights:
-            i, j = max(0, p - r), min(n - 1, p + r)
-            d[i] += 1
-            d[j + 1] -= 1
-        return sum(s >= r for s, r in zip(accumulate(d), requirement))
-```
+
 
 ### **Java**
 
@@ -112,68 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int meetRequirement(int n, vector<vector<int>>& lights, vector<int>& requirement) {
-        vector<int> d(100010);
-        for (auto& e : lights) {
-            int i = max(0, e[0] - e[1]), j = min(n - 1, e[0] + e[1]);
-            ++d[i];
-            --d[j + 1];
-        }
-        int s = 0, ans = 0;
-        for (int i = 0; i < n; ++i) {
-            s += d[i];
-            if (s >= requirement[i]) ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func meetRequirement(n int, lights [][]int, requirement []int) int {
-	d := make([]int, 100010)
-	for _, e := range lights {
-		i, j := max(0, e[0]-e[1]), min(n-1, e[0]+e[1])
-		d[i]++
-		d[j+1]--
-	}
-	var s, ans int
-	for i, r := range requirement {
-		s += d[i]
-		if s >= r {
-			ans++
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -181,4 +119,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

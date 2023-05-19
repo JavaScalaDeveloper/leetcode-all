@@ -89,44 +89,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# """
-# This is FontInfo's API interface.
-# You should not implement it, or speculate about its implementation
-# """
-# class FontInfo(object):
-#    Return the width of char ch when fontSize is used.
-#    def getWidth(self, fontSize, ch):
-#        """
-#        :type fontSize: int
-#        :type ch: char
-#        :rtype int
-#        """
-#
-#    def getHeight(self, fontSize):
-#        """
-#        :type fontSize: int
-#        :rtype int
-#        """
-class Solution:
-    def maxFont(
-        self, text: str, w: int, h: int, fonts: List[int], fontInfo: 'FontInfo'
-    ) -> int:
-        def check(size):
-            if fontInfo.getHeight(size) > h:
-                return False
-            return sum(fontInfo.getWidth(size, c) for c in text) <= w
 
-        left, right = 0, len(fonts) - 1
-        ans = -1
-        while left < right:
-            mid = (left + right + 1) >> 1
-            if check(fonts[mid]):
-                left = mid
-            else:
-                right = mid - 1
-        return fonts[left] if check(fonts[left]) else -1
-```
 
 ### **Java**
 
@@ -170,100 +133,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * // This is the FontInfo's API interface.
- * // You should not implement it, or speculate about its implementation
- * class FontInfo {
- *   public:
- *     // Return the width of char ch when fontSize is used.
- *     int getWidth(int fontSize, char ch);
- *
- *     // Return Height of any char when fontSize is used.
- *     int getHeight(int fontSize)
- * };
- */
-class Solution {
-public:
-    int maxFont(string text, int w, int h, vector<int>& fonts, FontInfo fontInfo) {
-        auto check = [&](int size) {
-            if (fontInfo.getHeight(size) > h) return false;
-            int width = 0;
-            for (char& c : text) {
-                width += fontInfo.getWidth(size, c);
-            }
-            return width <= w;
-        };
-        int left = 0, right = fonts.size() - 1;
-        while (left < right) {
-            int mid = (left + right + 1) >> 1;
-            if (check(fonts[mid])) {
-                left = mid;
-            } else {
-                right = mid - 1;
-            }
-        }
-        return check(fonts[left]) ? fonts[left] : -1;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * // This is the FontInfo's API interface.
- * // You should not implement it, or speculate about its implementation
- * function FontInfo() {
- *
- *		@param {number} fontSize
- *		@param {char} ch
- *     	@return {number}
- *     	this.getWidth = function(fontSize, ch) {
- *      	...
- *     	};
- *
- *		@param {number} fontSize
- *     	@return {number}
- *     	this.getHeight = function(fontSize) {
- *      	...
- *     	};
- * };
- */
-/**
- * @param {string} text
- * @param {number} w
- * @param {number} h
- * @param {number[]} fonts
- * @param {FontInfo} fontInfo
- * @return {number}
- */
-var maxFont = function (text, w, h, fonts, fontInfo) {
-    const check = function (size) {
-        if (fontInfo.getHeight(size) > h) {
-            return false;
-        }
-        let width = 0;
-        for (const c of text) {
-            width += fontInfo.getWidth(size, c);
-        }
-        return width <= w;
-    };
-    let left = 0;
-    let right = fonts.length - 1;
-    while (left < right) {
-        const mid = (left + right + 1) >> 1;
-        if (check(fonts[mid])) {
-            left = mid;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return check(fonts[left]) ? fonts[left] : -1;
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -271,4 +147,4 @@ var maxFont = function (text, w, h, fonts, fontInfo) {
 
 ```
 
-<!-- tabs:end -->
+

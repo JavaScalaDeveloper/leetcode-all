@@ -82,4 +82,4 @@ GROUP BY
     activity_date;
 ```
 
-<!-- tabs:end -->
+

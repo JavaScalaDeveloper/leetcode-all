@@ -63,11 +63,7 @@ s1 + s1 = "abaaba"
 
 ### **Python3**
 
-```python
-class Solution:
-    def isFlipedString(self, s1: str, s2: str) -> bool:
-        return len(s1) == len(s2) and s2 in s1 * 2
-```
+
 
 ### **Java**
 
@@ -81,73 +77,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isFlipedString(string s1, string s2) {
-        return s1.size() == s2.size() && (s1 + s1).find(s2) != string::npos;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isFlipedString(s1 string, s2 string) bool {
-	return len(s1) == len(s2) && strings.Contains(s1+s1, s2)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isFlipedString(s1: string, s2: string): boolean {
-    return s1.length === s2.length && (s2 + s2).indexOf(s1) !== -1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn is_fliped_string(s1: String, s2: String) -> bool {
-        s1.len() == s2.len() && (s2.clone() + &s2).contains(&s1)
-    }
-}
-```
+
+
+
 
 原始写法：
 
-```rust
-impl Solution {
-    pub fn is_fliped_string(s1: String, s2: String) -> bool {
-        if s1 == s2 {
-            return true;
-        }
-        if s1.len() != s2.len() {
-            return false;
-        }
-        let s2: Vec<char> = (s2.clone() + &s2).chars().collect();
-        let n = s1.len();
-        let m = s2.len();
-        for i in 0..m - n {
-            let mut is_pass = true;
-            for (j, c) in s1.chars().enumerate() {
-                if c != s2[i + j] {
-                    is_pass = false;
-                    break;
-                }
-            }
-            if is_pass {
-                return true;
-            };
-        }
-        false
-    }
-}
-```
+
 
 ### **...**
 
@@ -155,4 +103,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

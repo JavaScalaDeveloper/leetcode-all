@@ -66,19 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def connectSticks(self, sticks: List[int]) -> int:
-        h = []
-        for s in sticks:
-            heappush(h, s)
-        res = 0
-        while len(h) > 1:
-            val = heappop(h) + heappop(h)
-            res += val
-            heappush(h, val)
-        return res
-```
+
 
 ### **Java**
 
@@ -102,60 +90,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int connectSticks(vector<int>& sticks) {
-        priority_queue<int, vector<int>, greater<int>> pq;
-        for (int x : sticks) pq.push(x);
-        int res = 0;
-        while (pq.size() > 1) {
-            int val = pq.top();
-            pq.pop();
-            val += pq.top();
-            pq.pop();
-            res += val;
-            pq.push(val);
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func connectSticks(sticks []int) int {
-	h := IntHeap(sticks)
-	heap.Init(&h)
-	res := 0
-	for h.Len() > 1 {
-		val := heap.Pop(&h).(int)
-		val += heap.Pop(&h).(int)
-		res += val
-		heap.Push(&h, val)
-	}
-	return res
-}
 
-type IntHeap []int
 
-func (h IntHeap) Len() int           { return len(h) }
-func (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }
-func (h IntHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
-func (h *IntHeap) Push(x interface{}) {
-	*h = append(*h, x.(int))
-}
-func (h *IntHeap) Pop() interface{} {
-	old := *h
-	n := len(old)
-	x := old[n-1]
-	*h = old[0 : n-1]
-	return x
-}
-```
+
+
 
 ### **...**
 
@@ -163,4 +104,4 @@ func (h *IntHeap) Pop() interface{} {
 
 ```
 
-<!-- tabs:end -->
+

@@ -70,19 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def balancedStringSplit(self, s: str) -> int:
-        ans = l = 0
-        for c in s:
-            if c == 'L':
-                l += 1
-            else:
-                l -= 1
-            if l == 0:
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -107,67 +95,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int balancedStringSplit(string s) {
-        int ans = 0, l = 0;
-        for (char c : s) {
-            if (c == 'L')
-                ++l;
-            else
-                --l;
-            if (l == 0) ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func balancedStringSplit(s string) int {
-	ans, l := 0, 0
-	for _, c := range s {
-		if c == 'L' {
-			l++
-		} else {
-			l--
-		}
-		if l == 0 {
-			ans++
-		}
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {number}
- */
-var balancedStringSplit = function (s) {
-    let ans = 0;
-    let l = 0;
-    for (let c of s) {
-        if (c == 'L') {
-            ++l;
-        } else {
-            --l;
-        }
-        if (l == 0) {
-            ++ans;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -175,4 +113,4 @@ var balancedStringSplit = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

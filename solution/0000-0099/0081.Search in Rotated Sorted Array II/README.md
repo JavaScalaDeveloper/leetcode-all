@@ -63,28 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def search(self, nums: List[int], target: int) -> bool:
-        l, r = 0, len(nums) - 1
-        while l <= r:
-            mid = (l + r) >> 1
-            if nums[mid] == target:
-                return True
-            if nums[mid] < nums[r] or nums[mid] < nums[l]:
-                if target > nums[mid] and target <= nums[r]:
-                    l = mid + 1
-                else:
-                    r = mid - 1
-            elif nums[mid] > nums[l] or nums[mid] > nums[r]:
-                if target < nums[mid] and target >= nums[l]:
-                    r = mid - 1
-                else:
-                    l = mid + 1
-            else:
-                r -= 1
-        return False
-```
+
 
 ### **Java**
 
@@ -115,35 +94,11 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```cpp
-class Solution {
-public:
-    bool search(vector<int>& nums, int target) {
-        int l = 0, r = nums.size() - 1;
-        while (l <= r) {
-            int mid = (l + r) >> 1;
-            if (nums[mid] == target) return true;
-            if (nums[mid] < nums[r] || nums[mid] < nums[l]) {
-                if (target > nums[mid] && target <= nums[r])
-                    l = mid + 1;
-                else
-                    r = mid - 1;
-            } else if (nums[mid] > nums[l] || nums[mid] > nums[r]) {
-                if (target < nums[mid] && target >= nums[l])
-                    r = mid - 1;
-                else
-                    l = mid + 1;
-            } else
-                r--;
-        }
-        return false;
-    }
-};
-```
+
 
 ### **...**
 
@@ -151,4 +106,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

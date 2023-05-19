@@ -90,26 +90,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
-        row = [[False] * 9 for _ in range(9)]
-        col = [[False] * 9 for _ in range(9)]
-        sub = [[False] * 9 for _ in range(9)]
-        for i in range(9):
-            for j in range(9):
-                c = board[i][j]
-                if c == '.':
-                    continue
-                num = int(c) - 1
-                k = i // 3 * 3 + j // 3
-                if row[i][num] or col[j][num] or sub[k][num]:
-                    return False
-                row[i][num] = True
-                col[j][num] = True
-                sub[k][num] = True
-        return True
-```
+
 
 ### **Java**
 
@@ -142,119 +123,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isValidSudoku(vector<vector<char>>& board) {
-        vector<vector<bool>> row(9, vector<bool>(9, false));
-        vector<vector<bool>> col(9, vector<bool>(9, false));
-        vector<vector<bool>> sub(9, vector<bool>(9, false));
-        for (int i = 0; i < 9; ++i) {
-            for (int j = 0; j < 9; ++j) {
-                char c = board[i][j];
-                if (c == '.') continue;
-                int num = c - '0' - 1;
-                int k = i / 3 * 3 + j / 3;
-                if (row[i][num] || col[j][num] || sub[k][num]) {
-                    return false;
-                }
-                row[i][num] = true;
-                col[j][num] = true;
-                sub[k][num] = true;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isValidSudoku(board [][]byte) bool {
-	row, col, sub := [9][9]bool{}, [9][9]bool{}, [9][9]bool{}
-	for i := 0; i < 9; i++ {
-		for j := 0; j < 9; j++ {
-			num := board[i][j] - byte('1')
-			if num < 0 || num > 9 {
-				continue
-			}
-			k := i/3*3 + j/3
-			if row[i][num] || col[j][num] || sub[k][num] {
-				return false
-			}
-			row[i][num] = true
-			col[j][num] = true
-			sub[k][num] = true
-		}
-	}
-	return true
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {character[][]} board
- * @return {boolean}
- */
-var isValidSudoku = function (board) {
-    const row = [...Array(9)].map(() => Array(9).fill(false));
-    const col = [...Array(9)].map(() => Array(9).fill(false));
-    const sub = [...Array(9)].map(() => Array(9).fill(false));
-    for (let i = 0; i < 9; ++i) {
-        for (let j = 0; j < 9; ++j) {
-            const num = board[i][j].charCodeAt() - '1'.charCodeAt();
-            if (num < 0 || num > 8) {
-                continue;
-            }
-            const k = Math.floor(i / 3) * 3 + Math.floor(j / 3);
-            if (row[i][num] || col[j][num] || sub[k][num]) {
-                return false;
-            }
-            row[i][num] = true;
-            col[j][num] = true;
-            sub[k][num] = true;
-        }
-    }
-    return true;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isValidSudoku(board: string[][]): boolean {
-    const row: boolean[][] = Array.from({ length: 9 }, () =>
-        Array.from({ length: 9 }, () => false),
-    );
-    const col: boolean[][] = Array.from({ length: 9 }, () =>
-        Array.from({ length: 9 }, () => false),
-    );
-    const sub: boolean[][] = Array.from({ length: 9 }, () =>
-        Array.from({ length: 9 }, () => false),
-    );
-    for (let i = 0; i < 9; ++i) {
-        for (let j = 0; j < 9; ++j) {
-            const num = board[i][j].charCodeAt(0) - '1'.charCodeAt(0);
-            if (num < 0 || num > 8) {
-                continue;
-            }
-            const k = Math.floor(i / 3) * 3 + Math.floor(j / 3);
-            if (row[i][num] || col[j][num] || sub[k][num]) {
-                return false;
-            }
-            row[i][num] = true;
-            col[j][num] = true;
-            sub[k][num] = true;
-        }
-    }
-    return true;
-}
-```
+
 
 ### **...**
 
@@ -262,4 +145,4 @@ function isValidSudoku(board: string[][]): boolean {
 
 ```
 
-<!-- tabs:end -->
+

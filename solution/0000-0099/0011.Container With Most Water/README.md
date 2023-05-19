@@ -62,20 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxArea(self, height: List[int]) -> int:
-        i, j = 0, len(height) - 1
-        ans = 0
-        while i < j:
-            t = (j - i) * min(height[i], height[j])
-            ans = max(ans, t)
-            if height[i] < height[j]:
-                i += 1
-            else:
-                j -= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -100,145 +87,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxArea(vector<int>& height) {
-        int i = 0, j = height.size() - 1;
-        int ans = 0;
-        while (i < j) {
-            int t = min(height[i], height[j]) * (j - i);
-            ans = max(ans, t);
-            if (height[i] < height[j]) {
-                ++i;
-            } else {
-                --j;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxArea(height []int) (ans int) {
-	i, j := 0, len(height)-1
-	for i < j {
-		t := min(height[i], height[j]) * (j - i)
-		ans = max(ans, t)
-		if height[i] < height[j] {
-			i++
-		} else {
-			j--
-		}
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} height
- * @return {number}
- */
-var maxArea = function (height) {
-    let i = 0;
-    let j = height.length - 1;
-    let ans = 0;
-    while (i < j) {
-        const t = Math.min(height[i], height[j]) * (j - i);
-        ans = Math.max(ans, t);
-        if (height[i] < height[j]) {
-            ++i;
-        } else {
-            --j;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxArea(height: number[]): number {
-    let i = 0;
-    let j = height.length - 1;
-    let ans = 0;
-    while (i < j) {
-        const t = Math.min(height[i], height[j]) * (j - i);
-        ans = Math.max(ans, t);
-        if (height[i] < height[j]) {
-            ++i;
-        } else {
-            --j;
-        }
-    }
-    return ans;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MaxArea(int[] height) {
-        int i = 0, j = height.Length - 1;
-        int ans = 0;
-        while (i < j) {
-            int t = Math.Min(height[i], height[j]) * (j - i);
-            ans = Math.Max(ans, t);
-            if (height[i] < height[j]) {
-                ++i;
-            } else {
-                --j;
-            }
-        }
-        return ans;
-    }
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_area(height: Vec<i32>) -> i32 {
-        let mut i = 0;
-        let mut j = height.len() - 1;
-        let mut res = 0;
-        while i < j {
-            res = res.max(height[i].min(height[j]) * (j - i) as i32);
-            if height[i] <= height[j] {
-                i += 1;
-            } else {
-                j -= 1;
-            }
-        }
-        res
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -246,4 +117,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

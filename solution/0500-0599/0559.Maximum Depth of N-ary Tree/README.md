@@ -51,22 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val=None, children=None):
-        self.val = val
-        self.children = children
-"""
 
-
-class Solution:
-    def maxDepth(self, root: 'Node') -> int:
-        if root is None:
-            return 0
-        return 1 + max([self.maxDepth(child) for child in root.children], default=0)
-```
 
 ### **Java**
 
@@ -106,69 +91,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    vector<Node*> children;
 
-    Node() {}
 
-    Node(int _val) {
-        val = _val;
-    }
 
-    Node(int _val, vector<Node*> _children) {
-        val = _val;
-        children = _children;
-    }
-};
-*/
 
-class Solution {
-public:
-    int maxDepth(Node* root) {
-        if (!root) return 0;
-        int ans = 1;
-        for (auto& child : root->children) ans = max(ans, 1 + maxDepth(child));
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Children []*Node
- * }
- */
-
-func maxDepth(root *Node) int {
-	if root == nil {
-		return 0
-	}
-	ans := 1
-	for _, child := range root.Children {
-		ans = max(ans, 1+maxDepth(child))
-	}
-	return ans
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
 ### **...**
 
@@ -176,4 +105,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

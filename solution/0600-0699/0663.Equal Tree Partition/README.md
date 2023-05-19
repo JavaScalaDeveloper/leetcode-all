@@ -70,29 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def checkEqualTree(self, root: TreeNode) -> bool:
-        def sum(root):
-            if root is None:
-                return 0
-            l, r = sum(root.left), sum(root.right)
-            seen.append(l + r + root.val)
-            return seen[-1]
 
-        seen = []
-        s = sum(root)
-        if s % 2 == 1:
-            return False
-        seen.pop()
-        return s // 2 in seen
-```
 
 ### **Java**
 
@@ -140,78 +118,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<int> seen;
 
-    bool checkEqualTree(TreeNode* root) {
-        int s = sum(root);
-        if (s % 2 != 0) return false;
-        seen.pop_back();
-        return count(seen.begin(), seen.end(), s / 2);
-    }
 
-    int sum(TreeNode* root) {
-        if (!root) return 0;
-        int l = sum(root->left), r = sum(root->right);
-        int s = l + r + root->val;
-        seen.push_back(s);
-        return s;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func checkEqualTree(root *TreeNode) bool {
-	var seen []int
-	var sum func(root *TreeNode) int
-	sum = func(root *TreeNode) int {
-		if root == nil {
-			return 0
-		}
-		l, r := sum(root.Left), sum(root.Right)
-		s := l + r + root.Val
-		seen = append(seen, s)
-		return s
-	}
 
-	s := sum(root)
-	if s%2 != 0 {
-		return false
-	}
-	seen = seen[:len(seen)-1]
-	for _, v := range seen {
-		if v == s/2 {
-			return true
-		}
-	}
-	return false
-}
-```
+
 
 ### **...**
 
@@ -219,4 +132,4 @@ func checkEqualTree(root *TreeNode) bool {
 
 ```
 
-<!-- tabs:end -->
+

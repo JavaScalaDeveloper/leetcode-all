@@ -83,29 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumVisitedCells(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        dist = [[-1] * n for _ in range(m)]
-        dist[0][0] = 1
-        row = [[] for _ in range(m)]
-        col = [[] for _ in range(n)]
-        for i in range(m):
-            for j in range(n):
-                while row[i] and grid[i][row[i][0][1]] + row[i][0][1] < j:
-                    heappop(row[i])
-                if row[i] and (dist[i][j] == -1 or dist[i][j] > row[i][0][0] + 1):
-                    dist[i][j] = row[i][0][0] + 1
-                while col[j] and grid[col[j][0][1]][j] + col[j][0][1] < i:
-                    heappop(col[j])
-                if col[j] and (dist[i][j] == -1 or dist[i][j] > col[j][0][0] + 1):
-                    dist[i][j] = col[j][0][0] + 1
-                if dist[i][j] != -1:
-                    heappush(row[i], (dist[i][j], j))
-                    heappush(col[j], (dist[i][j], i))
-        return dist[-1][-1]
-```
+
 
 ### **Java**
 
@@ -151,96 +129,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumVisitedCells(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<vector<int>> dist(m, vector<int>(n, -1));
-        using pii = pair<int, int>;
-        priority_queue<pii, vector<pii>, greater<pii>> row[m];
-        priority_queue<pii, vector<pii>, greater<pii>> col[n];
-        dist[0][0] = 1;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                while (!row[i].empty() && grid[i][row[i].top().second] + row[i].top().second < j) {
-                    row[i].pop();
-                }
-                if (!row[i].empty() && (dist[i][j] == -1 || row[i].top().first + 1 < dist[i][j])) {
-                    dist[i][j] = row[i].top().first + 1;
-                }
-                while (!col[j].empty() && grid[col[j].top().second][j] + col[j].top().second < i) {
-                    col[j].pop();
-                }
-                if (!col[j].empty() && (dist[i][j] == -1 || col[j].top().first + 1 < dist[i][j])) {
-                    dist[i][j] = col[j].top().first + 1;
-                }
-                if (dist[i][j] != -1) {
-                    row[i].emplace(dist[i][j], j);
-                    col[j].emplace(dist[i][j], i);
-                }
-            }
-        }
-        return dist[m - 1][n - 1];
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumVisitedCells(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	dist := make([][]int, m)
-	row := make([]hp, m)
-	col := make([]hp, n)
-	for i := range dist {
-		dist[i] = make([]int, n)
-		for j := range dist[i] {
-			dist[i][j] = -1
-		}
-	}
-	dist[0][0] = 1
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			for len(row[i]) > 0 && grid[i][row[i][0].second]+row[i][0].second < j {
-				heap.Pop(&row[i])
-			}
-			if len(row[i]) > 0 && (dist[i][j] == -1 || row[i][0].first+1 < dist[i][j]) {
-				dist[i][j] = row[i][0].first + 1
-			}
-			for len(col[j]) > 0 && grid[col[j][0].second][j]+col[j][0].second < i {
-				heap.Pop(&col[j])
-			}
-			if len(col[j]) > 0 && (dist[i][j] == -1 || col[j][0].first+1 < dist[i][j]) {
-				dist[i][j] = col[j][0].first + 1
-			}
-			if dist[i][j] != -1 {
-				heap.Push(&row[i], pair{dist[i][j], j})
-				heap.Push(&col[j], pair{dist[i][j], i})
-			}
-		}
-	}
-	return dist[m-1][n-1]
-}
 
-type pair struct {
-	first  int
-	second int
-}
 
-type hp []pair
 
-func (a hp) Len() int      { return len(a) }
-func (a hp) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
-func (a hp) Less(i, j int) bool {
-	return a[i].first < a[j].first || (a[i].first == a[j].first && a[i].second < a[j].second)
-}
-func (a *hp) Push(x interface{}) { *a = append(*a, x.(pair)) }
-func (a *hp) Pop() interface{}   { l := len(*a); t := (*a)[l-1]; *a = (*a)[:l-1]; return t }
-```
+
 
 ### **...**
 
@@ -248,4 +143,4 @@ func (a *hp) Pop() interface{}   { l := len(*a); t := (*a)[l-1]; *a = (*a)[:l-1]
 
 ```
 
-<!-- tabs:end -->
+

@@ -61,39 +61,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestCommomSubsequence(self, arrays: List[List[int]]) -> List[int]:
-        n = len(arrays)
-        counter = defaultdict(int)
-        for array in arrays:
-            for e in array:
-                counter[e] += 1
-        return [e for e, count in counter.items() if count == n]
-```
 
-```python
-class Solution:
-    def longestCommomSubsequence(self, arrays: List[List[int]]) -> List[int]:
-        def common(l1, l2):
-            i, j, n1, n2 = 0, 0, len(l1), len(l2)
-            res = []
-            while i < n1 and j < n2:
-                if l1[i] == l2[j]:
-                    res.append(l1[i])
-                    i += 1
-                    j += 1
-                elif l1[i] > l2[j]:
-                    j += 1
-                else:
-                    i += 1
-            return res
 
-        n = len(arrays)
-        for i in range(1, n):
-            arrays[i] = common(arrays[i - 1], arrays[i])
-        return arrays[n - 1]
-```
+
 
 ### **Java**
 
@@ -120,46 +90,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> longestCommomSubsequence(vector<vector<int>>& arrays) {
-        unordered_map<int, int> counter;
-        vector<int> res;
-        int n = arrays.size();
-        for (auto array : arrays) {
-            for (auto e : array) {
-                counter[e] += 1;
-                if (counter[e] == n) {
-                    res.push_back(e);
-                }
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestCommomSubsequence(arrays [][]int) []int {
-    counter := make(map[int]int)
-    n := len(arrays)
-    var res []int
-    for _, array := range arrays {
-        for _, e := range array {
-            counter[e]++
-            if counter[e] == n {
-                res = append(res, e)
-            }
-        }
-    }
-    return res
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -167,4 +104,4 @@ func longestCommomSubsequence(arrays [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

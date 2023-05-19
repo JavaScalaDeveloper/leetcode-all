@@ -63,29 +63,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumTotal(self, triangle: List[List[int]]) -> int:
-        n = len(triangle)
-        dp = [[0] * (n + 1) for _ in range(n + 1)]
-        for i in range(n - 1, -1, -1):
-            for j in range(i + 1):
-                dp[i][j] = min(dp[i + 1][j], dp[i + 1][j + 1]) + triangle[i][j]
-        return dp[0][0]
-```
+
 
 空间优化：
 
-```python
-class Solution:
-    def minimumTotal(self, triangle: List[List[int]]) -> int:
-        n = len(triangle)
-        dp = [0] * (n + 1)
-        for i in range(n - 1, -1, -1):
-            for j in range(i + 1):
-                dp[j] = min(dp[j], dp[j + 1]) + triangle[i][j]
-        return dp[0]
-```
+
 
 ### **Java**
 
@@ -106,76 +88,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumTotal(vector<vector<int>>& triangle) {
-        int n = triangle.size();
-        vector<int> dp(n + 1);
-        for (int i = n - 1; i >= 0; --i)
-            for (int j = 0; j <= i; ++j)
-                dp[j] = min(dp[j], dp[j + 1]) + triangle[i][j];
-        return dp[0];
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumTotal(triangle [][]int) int {
-	n := len(triangle)
-	dp := make([]int, n+1)
-	for i := n - 1; i >= 0; i-- {
-		for j := 0; j <= i; j++ {
-			dp[j] = min(dp[j], dp[j+1]) + triangle[i][j]
-		}
-	}
-	return dp[0]
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumTotal(triangle: number[][]): number {
-    const n = triangle.length;
-    for (let i = n - 2; i >= 0; i--) {
-        for (let j = 0; j < i + 1; j++) {
-            triangle[i][j] += Math.min(
-                triangle[i + 1][j],
-                triangle[i + 1][j + 1],
-            );
-        }
-    }
-    return triangle[0][0];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn minimum_total(mut triangle: Vec<Vec<i32>>) -> i32 {
-        let n = triangle.len();
-        for i in (0..n - 1).rev() {
-            for j in 0..i + 1 {
-                triangle[i][j] += triangle[i + 1][j].min(triangle[i + 1][j + 1]);
-            }
-        }
-        triangle[0][0]
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -183,4 +110,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

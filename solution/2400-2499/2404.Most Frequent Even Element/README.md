@@ -59,16 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mostFrequentEven(self, nums: List[int]) -> int:
-        cnt = Counter(x for x in nums if x % 2 == 0)
-        ans, mx = -1, 0
-        for x, v in cnt.items():
-            if v > mx or (v == mx and ans > x):
-                ans, mx = x, v
-        return ans
-```
+
 
 ### **Java**
 
@@ -96,120 +87,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int mostFrequentEven(vector<int>& nums) {
-        unordered_map<int, int> cnt;
-        for (int x : nums) {
-            if (x % 2 == 0) {
-                ++cnt[x];
-            }
-        }
-        int ans = -1, mx = 0;
-        for (auto& [x, v] : cnt) {
-            if (mx < v || (mx == v && ans > x)) {
-                ans = x;
-                mx = v;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mostFrequentEven(nums []int) int {
-	cnt := map[int]int{}
-	for _, x := range nums {
-		if x%2 == 0 {
-			cnt[x]++
-		}
-	}
-	ans, mx := -1, 0
-	for x, v := range cnt {
-		if mx < v || (mx == v && x < ans) {
-			ans, mx = x, v
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function mostFrequentEven(nums: number[]): number {
-    const cnt: Map<number, number> = new Map();
-    for (const x of nums) {
-        if (x % 2 === 0) {
-            cnt.set(x, (cnt.get(x) ?? 0) + 1);
-        }
-    }
-    let ans = -1;
-    let mx = 0;
-    for (const [x, v] of cnt) {
-        if (mx < v || (mx === v && ans > x)) {
-            ans = x;
-            mx = v;
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn most_frequent_even(nums: Vec<i32>) -> i32 {
-        let mut cnt = HashMap::new();
-        for &x in nums.iter() {
-            if x % 2 == 0 {
-                *cnt.entry(x).or_insert(0) += 1;
-            }
-        }
-        let mut ans = -1;
-        let mut mx = 0;
-        for (&x, &v) in cnt.iter() {
-            if mx < v || (mx == v && ans > x) {
-                ans = x;
-                mx = v;
-            }
-        }
-        ans
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums
-     * @return Integer
-     */
-    function mostFrequentEven($nums) {
-        $max = $rs = -1;
-        for ($i = 0; $i < count($nums); $i++) {
-            if ($nums[$i] % 2 == 0) {
-                $hashtable[$nums[$i]] += 1;
-                if ($hashtable[$nums[$i]] > $max || ($hashtable[$nums[$i]] == $max && $rs > $nums[$i])) {
-                    $max = $hashtable[$nums[$i]];
-                    $rs = $nums[$i];
-                }
-            }
-        }
-        return $rs;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -217,4 +113,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

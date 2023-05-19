@@ -71,42 +71,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def hIndex(self, citations: List[int]) -> int:
-        citations.sort(reverse=True)
-        for h in range(len(citations), 0, -1):
-            if citations[h - 1] >= h:
-                return h
-        return 0
-```
 
-```python
-class Solution:
-    def hIndex(self, citations: List[int]) -> int:
-        n = len(citations)
-        cnt = [0] * (n + 1)
-        for x in citations:
-            cnt[min(x, n)] += 1
-        s = 0
-        for h in range(n, -1, -1):
-            s += cnt[h]
-            if s >= h:
-                return h
-```
 
-```python
-class Solution:
-    def hIndex(self, citations: List[int]) -> int:
-        l, r = 0, len(citations)
-        while l < r:
-            mid = (l + r + 1) >> 1
-            if sum(x >= mid for x in citations) >= mid:
-                l = mid
-            else:
-                r = mid - 1
-        return l
-```
+
+
+
 
 ### **Java**
 
@@ -168,177 +137,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int hIndex(vector<int>& citations) {
-        sort(citations.rbegin(), citations.rend());
-        for (int h = citations.size(); h; --h) {
-            if (citations[h - 1] >= h) {
-                return h;
-            }
-        }
-        return 0;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int hIndex(vector<int>& citations) {
-        int n = citations.size();
-        int cnt[n + 1];
-        memset(cnt, 0, sizeof(cnt));
-        for (int x : citations) {
-            ++cnt[min(x, n)];
-        }
-        for (int h = n, s = 0;; --h) {
-            s += cnt[h];
-            if (s >= h) {
-                return h;
-            }
-        }
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int hIndex(vector<int>& citations) {
-        int l = 0, r = citations.size();
-        while (l < r) {
-            int mid = (l + r + 1) >> 1;
-            int s = 0;
-            for (int x : citations) {
-                if (x >= mid) {
-                    ++s;
-                }
-            }
-            if (s >= mid) {
-                l = mid;
-            } else {
-                r = mid - 1;
-            }
-        }
-        return l;
-    }
-};
-```
 
-### **Go**
 
-```go
-func hIndex(citations []int) int {
-	sort.Ints(citations)
-	n := len(citations)
-	for h := n; h > 0; h-- {
-		if citations[n-h] >= h {
-			return h
-		}
-	}
-	return 0
-}
-```
 
-```go
-func hIndex(citations []int) int {
-	n := len(citations)
-	cnt := make([]int, n+1)
-	for _, x := range citations {
-		cnt[min(x, n)]++
-	}
-	for h, s := n, 0; ; h-- {
-		s += cnt[h]
-		if s >= h {
-			return h
-		}
-	}
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func hIndex(citations []int) int {
-	l, r := 0, len(citations)
-	for l < r {
-		mid := (l + r + 1) >> 1
-		s := 0
-		for _, x := range citations {
-			if x >= mid {
-				s++
-			}
-		}
-		if s >= mid {
-			l = mid
-		} else {
-			r = mid - 1
-		}
-	}
-	return l
-}
-```
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function hIndex(citations: number[]): number {
-    citations.sort((a, b) => b - a);
-    for (let h = citations.length; h; --h) {
-        if (citations[h - 1] >= h) {
-            return h;
-        }
-    }
-    return 0;
-}
-```
 
-```ts
-function hIndex(citations: number[]): number {
-    const n: number = citations.length;
-    const cnt: number[] = new Array(n + 1).fill(0);
-    for (const x of citations) {
-        ++cnt[Math.min(x, n)];
-    }
-    for (let h = n, s = 0; ; --h) {
-        s += cnt[h];
-        if (s >= h) {
-            return h;
-        }
-    }
-}
-```
 
-```ts
-function hIndex(citations: number[]): number {
-    let l = 0;
-    let r = citations.length;
-    while (l < r) {
-        const mid = (l + r + 1) >> 1;
-        let s = 0;
-        for (const x of citations) {
-            if (x >= mid) {
-                ++s;
-            }
-        }
-        if (s >= mid) {
-            l = mid;
-        } else {
-            r = mid - 1;
-        }
-    }
-    return l;
-}
-```
+
+
+
 
 ### **...**
 
@@ -346,4 +167,4 @@ function hIndex(citations: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

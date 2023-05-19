@@ -70,16 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def diagonalSum(self, mat: List[List[int]]) -> int:
-        ans = 0
-        n = len(mat)
-        for i, row in enumerate(mat):
-            j = n - i - 1
-            ans += row[i] + (0 if j == i else row[j])
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,71 +90,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int diagonalSum(vector<vector<int>>& mat) {
-        int ans = 0;
-        int n = mat.size();
-        for (int i = 0; i < n; ++i) {
-            int j = n - i - 1;
-            ans += mat[i][i] + (i == j ? 0 : mat[i][j]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func diagonalSum(mat [][]int) (ans int) {
-	n := len(mat)
-	for i, row := range mat {
-		ans += row[i]
-		if j := n - i - 1; j != i {
-			ans += row[j]
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function diagonalSum(mat: number[][]): number {
-    const n = mat.length;
-    let ans = 0;
-    for (let i = 0; i < n; i++) {
-        ans += mat[i][i] + mat[i][n - 1 - i];
-    }
-    if (n & 1) {
-        ans -= mat[n >> 1][n >> 1];
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn diagonal_sum(mat: Vec<Vec<i32>>) -> i32 {
-        let n = mat.len();
-        let mut ans = 0;
-        for i in 0..n {
-            ans += mat[i][i] + mat[n - 1 - i][i];
-        }
-        if n & 1 == 1 {
-            ans -= mat[n >> 1][n >> 1];
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -186,4 +127,4 @@ int diagonalSum(int **mat, int matSize, int *matColSize) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -78,52 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeSubfolders(self, folder: List[str]) -> List[str]:
-        folder.sort()
-        ans = [folder[0]]
-        for f in folder[1:]:
-            m, n = len(ans[-1]), len(f)
-            if m >= n or not (ans[-1] == f[:m] and f[m] == '/'):
-                ans.append(f)
-        return ans
-```
 
-```python
-class Trie:
-    def __init__(self):
-        self.children = {}
-        self.fid = -1
 
-    def insert(self, i, f):
-        node = self
-        ps = f.split('/')
-        for p in ps[1:]:
-            if p not in node.children:
-                node.children[p] = Trie()
-            node = node.children[p]
-        node.fid = i
 
-    def search(self):
-        def dfs(root):
-            if root.fid != -1:
-                ans.append(root.fid)
-                return
-            for child in root.children.values():
-                dfs(child)
-
-        ans = []
-        dfs(self)
-        return ans
-
-class Solution:
-    def removeSubfolders(self, folder: List[str]) -> List[str]:
-        trie = Trie()
-        for i, f in enumerate(folder):
-            trie.insert(i, f)
-        return [folder[i] for i in trie.search()]
-```
 
 ### **Java**
 
@@ -197,204 +154,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> removeSubfolders(vector<string>& folder) {
-        sort(folder.begin(), folder.end());
-        vector<string> ans = {folder[0]};
-        for (int i = 1; i < folder.size(); ++i) {
-            int m = ans.back().size();
-            int n = folder[i].size();
-            if (m >= n || !(ans.back() == folder[i].substr(0, m) && folder[i][m] == '/')) {
-                ans.emplace_back(folder[i]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Trie {
-public:
-    void insert(int fid, string& f) {
-        Trie* node = this;
-        vector<string> ps = split(f, '/');
-        for (int i = 1; i < ps.size(); ++i) {
-            auto& p = ps[i];
-            if (!node->children.count(p)) {
-                node->children[p] = new Trie();
-            }
-            node = node->children[p];
-        }
-        node->fid = fid;
-    }
 
-    vector<int> search() {
-        vector<int> ans;
-        function<void(Trie*)> dfs = [&](Trie* root) {
-            if (root->fid != -1) {
-                ans.push_back(root->fid);
-                return;
-            }
-            for (auto& [_, child] : root->children) {
-                dfs(child);
-            }
-        };
-        dfs(this);
-        return ans;
-    }
 
-    vector<string> split(string& s, char delim) {
-        stringstream ss(s);
-        string item;
-        vector<string> res;
-        while (getline(ss, item, delim)) {
-            res.emplace_back(item);
-        }
-        return res;
-    }
 
-private:
-    unordered_map<string, Trie*> children;
-    int fid = -1;
-};
 
-class Solution {
-public:
-    vector<string> removeSubfolders(vector<string>& folder) {
-        Trie* trie = new Trie();
-        for (int i = 0; i < folder.size(); ++i) {
-            trie->insert(i, folder[i]);
-        }
-        vector<string> ans;
-        for (int i : trie->search()) {
-            ans.emplace_back(folder[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeSubfolders(folder []string) []string {
-	sort.Strings(folder)
-	ans := []string{folder[0]}
-	for _, f := range folder[1:] {
-		m, n := len(ans[len(ans)-1]), len(f)
-		if m >= n || !(ans[len(ans)-1] == f[:m] && f[m] == '/') {
-			ans = append(ans, f)
-		}
-	}
-	return ans
-}
-```
 
-```go
-type Trie struct {
-	children map[string]*Trie
-	isEnd    bool
-}
 
-func newTrie() *Trie {
-	m := map[string]*Trie{}
-	return &Trie{children: m}
-}
 
-func (this *Trie) insert(w string) {
-	node := this
-	for _, p := range strings.Split(w, "/")[1:] {
-		if _, ok := node.children[p]; !ok {
-			node.children[p] = newTrie()
-		}
-		node, _ = node.children[p]
-	}
-	node.isEnd = true
-}
 
-func (this *Trie) search(w string) bool {
-	node := this
-	for _, p := range strings.Split(w, "/")[1:] {
-		if _, ok := node.children[p]; !ok {
-			return false
-		}
-		node, _ = node.children[p]
-		if node.isEnd {
-			return true
-		}
-	}
-	return false
-}
 
-func removeSubfolders(folder []string) []string {
-	sort.Slice(folder, func(i, j int) bool {
-		return len(strings.Split(folder[i], "/")) < len(strings.Split(folder[j], "/"))
-	})
-	trie := newTrie()
-	var ans []string
-	for _, v := range folder {
-		if !trie.search(v) {
-			trie.insert(v)
-			ans = append(ans, v)
-		}
-	}
-	return ans
-}
-```
-
-```go
-type Trie struct {
-	children map[string]*Trie
-	fid      int
-}
-
-func newTrie() *Trie {
-	return &Trie{map[string]*Trie{}, -1}
-}
-
-func (this *Trie) insert(fid int, f string) {
-	node := this
-	ps := strings.Split(f, "/")
-	for _, p := range ps[1:] {
-		if _, ok := node.children[p]; !ok {
-			node.children[p] = newTrie()
-		}
-		node = node.children[p]
-	}
-	node.fid = fid
-}
-
-func (this *Trie) search() (ans []int) {
-	var dfs func(*Trie)
-	dfs = func(root *Trie) {
-		if root.fid != -1 {
-			ans = append(ans, root.fid)
-			return
-		}
-		for _, child := range root.children {
-			dfs(child)
-		}
-	}
-	dfs(this)
-	return
-}
-
-func removeSubfolders(folder []string) (ans []string) {
-	trie := newTrie()
-	for i, f := range folder {
-		trie.insert(i, f)
-	}
-	for _, i := range trie.search() {
-		ans = append(ans, folder[i])
-	}
-	return
-}
-```
 
 ### **...**
 
@@ -402,4 +174,4 @@ func removeSubfolders(folder []string) (ans []string) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -70,23 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumsSplicedArray(self, nums1: List[int], nums2: List[int]) -> int:
-        def f(nums1, nums2):
-            d = [a - b for a, b in zip(nums1, nums2)]
-            t = mx = d[0]
-            for v in d[1:]:
-                if t > 0:
-                    t += v
-                else:
-                    t = v
-                mx = max(mx, t)
-            return mx
 
-        s1, s2 = sum(nums1), sum(nums2)
-        return max(s2 + f(nums1, nums2), s1 + f(nums2, nums1))
-```
 
 ### **Java**
 
@@ -120,76 +104,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumsSplicedArray(vector<int>& nums1, vector<int>& nums2) {
-        int s1 = 0, s2 = 0, n = nums1.size();
-        for (int i = 0; i < n; ++i) {
-            s1 += nums1[i];
-            s2 += nums2[i];
-        }
-        return max(s2 + f(nums1, nums2), s1 + f(nums2, nums1));
-    }
 
-    int f(vector<int>& nums1, vector<int>& nums2) {
-        int t = nums1[0] - nums2[0];
-        int mx = t;
-        for (int i = 1; i < nums1.size(); ++i) {
-            int v = nums1[i] - nums2[i];
-            if (t > 0)
-                t += v;
-            else
-                t = v;
-            mx = max(mx, t);
-        }
-        return mx;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumsSplicedArray(nums1 []int, nums2 []int) int {
-	s1, s2 := 0, 0
-	n := len(nums1)
-	for i, v := range nums1 {
-		s1 += v
-		s2 += nums2[i]
-	}
-	f := func(nums1, nums2 []int) int {
-		t := nums1[0] - nums2[0]
-		mx := t
-		for i := 1; i < n; i++ {
-			v := nums1[i] - nums2[i]
-			if t > 0 {
-				t += v
-			} else {
-				t = v
-			}
-			mx = max(mx, t)
-		}
-		return mx
-	}
-	return max(s2+f(nums1, nums2), s1+f(nums2, nums1))
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -197,4 +122,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

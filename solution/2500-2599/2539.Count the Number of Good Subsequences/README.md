@@ -66,32 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-N = 10001
-MOD = 10**9 + 7
-f = [1] * N
-g = [1] * N
-for i in range(1, N):
-    f[i] = f[i - 1] * i % MOD
-    g[i] = pow(f[i], MOD - 2, MOD)
 
-
-def comb(n, k):
-    return f[n] * g[k] * g[n - k] % MOD
-
-
-class Solution:
-    def countGoodSubsequences(self, s: str) -> int:
-        cnt = Counter(s)
-        ans = 0
-        for i in range(1, max(cnt.values()) + 1):
-            x = 1
-            for v in cnt.values():
-                if v >= i:
-                    x = x * (comb(v, i) + 1) % MOD
-            ans = (ans + x - 1) % MOD
-        return ans
-```
 
 ### **Java**
 
@@ -150,122 +125,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-int N = 10001;
-int MOD = 1e9 + 7;
-long f[10001];
-long g[10001];
 
-long qmi(long a, long k, long p) {
-    long res = 1;
-    while (k != 0) {
-        if ((k & 1) == 1) {
-            res = res * a % p;
-        }
-        k >>= 1;
-        a = a * a % p;
-    }
-    return res;
-}
 
-int init = []() {
-    f[0] = 1;
-    g[0] = 1;
-    for (int i = 1; i < N; ++i) {
-        f[i] = f[i - 1] * i % MOD;
-        g[i] = qmi(f[i], MOD - 2, MOD);
-    }
-    return 0;
-}();
 
-int comb(int n, int k) {
-    return (f[n] * g[k] % MOD) * g[n - k] % MOD;
-}
 
-class Solution {
-public:
-    int countGoodSubsequences(string s) {
-        int cnt[26]{};
-        int mx = 1;
-        for (char& c : s) {
-            mx = max(mx, ++cnt[c - 'a']);
-        }
-        long ans = 0;
-        for (int i = 1; i <= mx; ++i) {
-            long x = 1;
-            for (int j = 0; j < 26; ++j) {
-                if (cnt[j] >= i) {
-                    x = (x * (comb(cnt[j], i) + 1)) % MOD;
-                }
-            }
-            ans = (ans + x - 1) % MOD;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-const n = 1e4 + 1
-const mod = 1e9 + 7
-
-var f = make([]int, n)
-var g = make([]int, n)
-
-func qmi(a, k, p int) int {
-	res := 1
-	for k != 0 {
-		if k&1 == 1 {
-			res = res * a % p
-		}
-		k >>= 1
-		a = a * a % p
-	}
-	return res
-}
-
-func init() {
-	f[0], g[0] = 1, 1
-	for i := 1; i < n; i++ {
-		f[i] = f[i-1] * i % mod
-		g[i] = qmi(f[i], mod-2, mod)
-	}
-}
-
-func comb(n, k int) int {
-	return (f[n] * g[k] % mod) * g[n-k] % mod
-}
-
-func countGoodSubsequences(s string) (ans int) {
-	cnt := [26]int{}
-	mx := 1
-	for _, c := range s {
-		cnt[c-'a']++
-		mx = max(mx, cnt[c-'a'])
-	}
-	for i := 1; i <= mx; i++ {
-		x := 1
-		for _, v := range cnt {
-			if v >= i {
-				x = (x * (comb(v, i) + 1)) % mod
-			}
-		}
-		ans = (ans + x - 1) % mod
-	}
-	return
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
 ### **...**
 
@@ -273,4 +139,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

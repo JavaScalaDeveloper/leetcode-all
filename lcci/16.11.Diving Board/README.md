@@ -30,18 +30,7 @@ k = 3
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def divingBoard(self, shorter: int, longer: int, k: int) -> List[int]:
-        if k == 0:
-            return []
-        if longer == shorter:
-            return [longer * k]
-        ans = []
-        for i in range(k + 1):
-            ans.append(longer * i + shorter * (k - i))
-        return ans
-```
+
 
 ### **Java**
 
@@ -65,39 +54,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> divingBoard(int shorter, int longer, int k) {
-        if (k == 0) return {};
-        if (longer == shorter) return {longer * k};
-        vector<int> ans;
-        for (int i = 0; i < k + 1; ++i)
-            ans.push_back(longer * i + shorter * (k - i));
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func divingBoard(shorter int, longer int, k int) []int {
-	if k == 0 {
-		return []int{}
-	}
-	if longer == shorter {
-		return []int{longer * k}
-	}
-	var ans []int
-	for i := 0; i < k+1; i++ {
-		ans = append(ans, longer*i+shorter*(k-i))
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -105,4 +68,4 @@ func divingBoard(shorter int, longer int, k int) []int {
 
 ```
 
-<!-- tabs:end -->
+

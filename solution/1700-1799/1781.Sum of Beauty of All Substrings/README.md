@@ -55,17 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def beautySum(self, s: str) -> int:
-        ans, n = 0, len(s)
-        for i in range(n):
-            cnt = Counter()
-            for j in range(i, n):
-                cnt[s[j]] += 1
-                ans += max(cnt.values()) - min(cnt.values())
-        return ans
-```
+
 
 ### **Java**
 
@@ -95,80 +85,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int beautySum(string s) {
-        int ans = 0;
-        int n = s.size();
-        int cnt[26];
-        for (int i = 0; i < n; ++i) {
-            memset(cnt, 0, sizeof cnt);
-            for (int j = i; j < n; ++j) {
-                ++cnt[s[j] - 'a'];
-                int mi = 1000, mx = 0;
-                for (int& v : cnt) {
-                    if (v > 0) {
-                        mi = min(mi, v);
-                        mx = max(mx, v);
-                    }
-                }
-                ans += mx - mi;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func beautySum(s string) (ans int) {
-	for i := range s {
-		cnt := [26]int{}
-		for j := i; j < len(s); j++ {
-			cnt[s[j]-'a']++
-			mi, mx := 1000, 0
-			for _, v := range cnt {
-				if v > 0 {
-					if mi > v {
-						mi = v
-					}
-					if mx < v {
-						mx = v
-					}
-				}
-			}
-			ans += mx - mi
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {number}
- */
-var beautySum = function (s) {
-    let ans = 0;
-    for (let i = 0; i < s.length; ++i) {
-        const cnt = new Map();
-        for (let j = i; j < s.length; ++j) {
-            cnt.set(s[j], (cnt.get(s[j]) || 0) + 1);
-            const t = Array.from(cnt.values());
-            ans += Math.max(...t) - Math.min(...t);
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -176,4 +103,4 @@ var beautySum = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

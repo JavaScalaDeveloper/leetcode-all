@@ -49,30 +49,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
-        cnt = Counter()
-        ans = 0
-        for a, b in dominoes:
-            ans += cnt[(a, b)]
-            cnt[(a, b)] += 1
-            if a != b:
-                cnt[(b, a)] += 1
-        return ans
-```
 
-```python
-class Solution:
-    def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
-        cnt = Counter()
-        ans = 0
-        for a, b in dominoes:
-            x = a * 10 + b if a < b else b * 10 + a
-            ans += cnt[x]
-            cnt[x] += 1
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -92,39 +71,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numEquivDominoPairs(vector<vector<int>>& dominoes) {
-        int cnt[100]{};
-        int ans = 0;
-        for (auto& e : dominoes) {
-            int x = e[0] < e[1] ? e[0] * 10 + e[1] : e[1] * 10 + e[0];
-            ans += cnt[x]++;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numEquivDominoPairs(dominoes [][]int) (ans int) {
-	cnt := [100]int{}
-	for _, e := range dominoes {
-		x := e[0]*10 + e[1]
-		if e[0] > e[1] {
-			x = e[1]*10 + e[0]
-		}
-		ans += cnt[x]
-		cnt[x]++
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -132,4 +85,4 @@ func numEquivDominoPairs(dominoes [][]int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

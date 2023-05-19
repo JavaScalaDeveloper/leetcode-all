@@ -47,20 +47,7 @@
 
 模板：
 
-```python
-def merge(intervals):
-    ans = []
-    intervals.sort()
-    st, ed = intervals[0]
-    for s, e in intervals[1:]:
-        if ed < s:
-            ans.append([st, ed])
-            st, ed = s, e
-        else:
-            ed = max(ed, e)
-    ans.append([st, ed])
-    return ans
-```
+
 
 <!-- tabs:start -->
 
@@ -68,21 +55,7 @@ def merge(intervals):
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        intervals.sort()
-        ans = []
-        st, ed = intervals[0]
-        for s, e in intervals[1:]:
-            if ed < s:
-                ans.append([st, ed])
-                st, ed = s, e
-            else:
-                ed = max(ed, e)
-        ans.append([st, ed])
-        return ans
-```
+
 
 ### **Java**
 
@@ -110,78 +83,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end());
-        int st = intervals[0][0], ed = intervals[0][1];
-        vector<vector<int>> ans;
-        for (int i = 1; i < intervals.size(); ++i) {
-            int s = intervals[i][0], e = intervals[i][1];
-            if (ed < s) {
-                ans.push_back({st, ed});
-                st = s, ed = e;
-            } else
-                ed = max(ed, e);
-        }
-        ans.push_back({st, ed});
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func merge(intervals [][]int) [][]int {
-	sort.Slice(intervals, func(i, j int) bool {
-		return intervals[i][0] < intervals[j][0]
-	})
-	st, ed := intervals[0][0], intervals[0][1]
-	var ans [][]int
-	for _, e := range intervals[1:] {
-		if ed < e[0] {
-			ans = append(ans, []int{st, ed})
-			st, ed = e[0], e[1]
-		} else if ed < e[1] {
-			ed = e[1]
-		}
-	}
-	ans = append(ans, []int{st, ed})
-	return ans
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[][] Merge(int[][] intervals) {
-        intervals = intervals.OrderBy(a => a[0]).ToArray();
-        int st = intervals[0][0], ed = intervals[0][1];
-        var ans = new List<int[]>();
-        for (int i = 1; i < intervals.Length; ++i)
-        {
-            int s = intervals[i][0], e = intervals[i][1];
-            if (ed < s)
-            {
-                ans.Add(new int[]{st, ed});
-                st = s;
-                ed = e;
-            }
-            else
-            {
-                ed = Math.Max(ed, e);
-            }
-        }
-        ans.Add(new int[]{st, ed});
-        return ans.ToArray();
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -189,4 +101,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

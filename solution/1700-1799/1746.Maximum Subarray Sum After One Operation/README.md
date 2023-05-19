@@ -62,18 +62,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxSumAfterOperation(self, nums: List[int]) -> int:
-        f = g = 0
-        ans = -inf
-        for x in nums:
-            ff = max(f, 0) + x
-            gg = max(max(f, 0) + x * x, g + x)
-            f, g = ff, gg
-            ans = max(ans, f, g)
-        return ans
-```
+
 
 ### **Java**
 
@@ -96,48 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxSumAfterOperation(vector<int>& nums) {
-        int f = 0, g = 0;
-        int ans = INT_MIN;
-        for (int x : nums) {
-            int ff = max(f, 0) + x;
-            int gg = max(max(f, 0) + x * x, g + x);
-            f = ff;
-            g = gg;
-            ans = max({ans, f, g});
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxSumAfterOperation(nums []int) int {
-	var f, g int
-	ans := -(1 << 30)
-	for _, x := range nums {
-		ff := max(f, 0) + x
-		gg := max(max(f, 0)+x*x, g+x)
-		f, g = ff, gg
-		ans = max(ans, max(f, g))
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -145,4 +99,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

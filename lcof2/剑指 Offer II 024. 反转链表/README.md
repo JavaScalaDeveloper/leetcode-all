@@ -62,24 +62,7 @@
 
 ### **Python3**
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
 
-
-class Solution:
-    def reverseList(self, head: ListNode) -> ListNode:
-        pre, p = None, head
-        while p:
-            q = p.next
-            p.next = pre
-            pre = p
-            p = q
-        return pre
-```
 
 ### **Java**
 
@@ -132,111 +115,21 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-var reverseList = function (head) {
-    let pre = null;
-    for (let p = head; p; ) {
-        let q = p.next;
-        p.next = pre;
-        pre = p;
-        p = q;
-    }
-    return pre;
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func reverseList(head *ListNode) *ListNode {
-	var pre *ListNode
-	for p := head; p != nil; {
-		q := p.Next
-		p.Next = pre
-		pre = p
-		p = q
-	}
-	return pre
-}
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* reverseList(ListNode* head) {
-        ListNode* pre = nullptr;
-        ListNode* p = head;
-        while (p) {
-            ListNode* q = p->next;
-            p->next = pre;
-            pre = p;
-            p = q;
-        }
-        return pre;
-    }
-};
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int val=0, ListNode next=null) {
- *         this.val = val;
- *         this.next = next;
- *     }
- * }
- */
-public class Solution {
-    public ListNode ReverseList(ListNode head) {
-        ListNode pre = null;
-        for (ListNode p = head; p != null;)
-        {
-            ListNode t = p.next;
-            p.next = pre;
-            pre = p;
-            p = t;
-        }
-        return pre;
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -244,4 +137,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

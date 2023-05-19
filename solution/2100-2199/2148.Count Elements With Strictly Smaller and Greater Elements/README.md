@@ -48,12 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countElements(self, nums: List[int]) -> int:
-        mi, mx = min(nums), max(nums)
-        return sum(mi < num < mx for num in nums)
-```
+
 
 ### **Java**
 
@@ -79,67 +74,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countElements(vector<int>& nums) {
-        int mi = 1e6, mx = -1e6;
-        for (int num : nums) {
-            mi = min(mi, num);
-            mx = max(mx, num);
-        }
-        int ans = 0;
-        for (int num : nums)
-            if (mi < num && num < mx)
-                ++ans;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countElements(nums []int) int {
-	mi, mx := int(1e6), -int(1e6)
-	for _, num := range nums {
-		if num < mi {
-			mi = num
-		}
-		if num > mx {
-			mx = num
-		}
-	}
-	ans := 0
-	for _, num := range nums {
-		if mi < num && num < mx {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-function countElements(nums: number[]): number {
-    const min = Math.min(...nums),
-        max = Math.max(...nums);
-    let ans = 0;
-    for (let i = 0; i < nums.length; ++i) {
-        let cur = nums[i];
-        if (cur < max && cur > min) {
-            ++ans;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -147,4 +94,4 @@ function countElements(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

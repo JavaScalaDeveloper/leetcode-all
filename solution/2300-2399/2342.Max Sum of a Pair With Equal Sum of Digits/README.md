@@ -69,39 +69,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumSum(self, nums: List[int]) -> int:
-        d = defaultdict(list)
-        for v in nums:
-            x, y = v, 0
-            while x:
-                y += x % 10
-                x //= 10
-            d[y].append(v)
-        ans = -1
-        for vs in d.values():
-            if len(vs) > 1:
-                vs.sort(reverse=True)
-                ans = max(ans, vs[0] + vs[1])
-        return ans
-```
 
-```python
-class Solution:
-    def maximumSum(self, nums: List[int]) -> int:
-        ans = -1
-        d = defaultdict(int)
-        for v in nums:
-            x, y = v, 0
-            while x:
-                y += x % 10
-                x //= 10
-            if y in d:
-                ans = max(ans, d[y] + v)
-            d[y] = max(d[y], v)
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -152,114 +122,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumSum(vector<int>& nums) {
-        vector<vector<int>> d(100);
-        for (int& v : nums) {
-            int y = 0;
-            for (int x = v; x > 0; x /= 10) {
-                y += x % 10;
-            }
-            d[y].emplace_back(v);
-        }
-        int ans = -1;
-        for (auto& vs : d) {
-            if (vs.size() > 1) {
-                sort(vs.rbegin(), vs.rend());
-                ans = max(ans, vs[0] + vs[1]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maximumSum(vector<int>& nums) {
-        int ans = -1;
-        int d[100]{};
-        for (int& v : nums) {
-            int y = 0;
-            for (int x = v; x; x /= 10) {
-                y += x % 10;
-            }
-            if (d[y]) {
-                ans = max(ans, d[y] + v);
-            }
-            d[y] = max(d[y], v);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumSum(nums []int) int {
-	d := [100][]int{}
-	for _, v := range nums {
-		y := 0
-		for x := v; x > 0; x /= 10 {
-			y += x % 10
-		}
-		d[y] = append(d[y], v)
-	}
-	ans := -1
-	for _, vs := range d {
-		m := len(vs)
-		if m > 1 {
-			sort.Ints(vs)
-			ans = max(ans, vs[m-1]+vs[m-2])
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func maximumSum(nums []int) int {
-	ans := -1
-	d := [100]int{}
-	for _, v := range nums {
-		y := 0
-		for x := v; x > 0; x /= 10 {
-			y += x % 10
-		}
-		if d[y] > 0 {
-			ans = max(ans, d[y]+v)
-		}
-		d[y] = max(d[y], v)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -267,4 +144,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

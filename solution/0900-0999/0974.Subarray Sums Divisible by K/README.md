@@ -63,17 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def subarraysDivByK(self, nums: List[int], k: int) -> int:
-        cnt = Counter({0: 1})
-        ans = s = 0
-        for x in nums:
-            s = (s + x) % k
-            ans += cnt[s]
-            cnt[s] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -95,55 +85,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int subarraysDivByK(vector<int>& nums, int k) {
-        unordered_map<int, int> cnt{{0, 1}};
-        int ans = 0, s = 0;
-        for (int& x : nums) {
-            s = ((s + x) % k + k) % k;
-            ans += cnt[s]++;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func subarraysDivByK(nums []int, k int) (ans int) {
-	cnt := map[int]int{0: 1}
-	s := 0
-	for _, x := range nums {
-		s = ((s+x)%k + k) % k
-		ans += cnt[s]
-		cnt[s]++
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function subarraysDivByK(nums: number[], k: number): number {
-    const counter = new Map();
-    counter.set(0, 1);
-    let s = 0,
-        ans = 0;
-    for (const num of nums) {
-        s += num;
-        const t = ((s % k) + k) % k;
-        ans += counter.get(t) || 0;
-        counter.set(t, (counter.get(t) || 0) + 1);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -151,4 +103,4 @@ function subarraysDivByK(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

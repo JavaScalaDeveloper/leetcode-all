@@ -66,14 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:
-        ans = duration
-        for a, b in pairwise(timeSeries):
-            ans += min(duration, b - a)
-        return ans
-```
+
 
 ### **Java**
 
@@ -92,68 +85,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findPoisonedDuration(vector<int>& timeSeries, int duration) {
-        int ans = duration;
-        int n = timeSeries.size();
-        for (int i = 1; i < n; ++i) {
-            ans += min(duration, timeSeries[i] - timeSeries[i - 1]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findPoisonedDuration(timeSeries []int, duration int) (ans int) {
-	ans = duration
-	for i, x := range timeSeries[1:] {
-		ans += min(duration, x-timeSeries[i])
-	}
-	return
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int FindPoisonedDuration(int[] timeSeries, int duration) {
-        int ans = duration;
-        int n = timeSeries.Length;
-        for (int i = 1; i < n; ++i) {
-            ans += Math.Min(duration, timeSeries[i] - timeSeries[i - 1]);
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findPoisonedDuration(timeSeries: number[], duration: number): number {
-    const n = timeSeries.length;
-    let ans = duration;
-    for (let i = 1; i < n; ++i) {
-        ans += Math.min(duration, timeSeries[i] - timeSeries[i - 1]);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -161,4 +107,4 @@ function findPoisonedDuration(timeSeries: number[], duration: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -63,17 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestCombination(self, candidates: List[int]) -> int:
-        ans = 0
-        for i in range(32):
-            t = 0
-            for x in candidates:
-                t += (x >> i) & 1
-            ans = max(ans, t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,20 +87,7 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function largestCombination(candidates: number[]): number {
-    const n = 24;
-    let ans = 0;
-    for (let i = 0; i < n; i++) {
-        let count = 0;
-        for (let num of candidates) {
-            if ((num >> i) & 1) count++;
-        }
-        ans = Math.max(ans, count);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -118,4 +95,4 @@ function largestCombination(candidates: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

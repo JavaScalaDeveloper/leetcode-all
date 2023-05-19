@@ -47,14 +47,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def numWays(self, n: int) -> int:
-        a = b = 1
-        for _ in range(n):
-            a, b = b, (a + b) % 1000000007
-        return a
-```
+
 
 ### **Java**
 
@@ -72,93 +65,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numWays(int n) {
-        int a = 1, b = 1;
-        while (n--) {
-            int c = (a + b) % 1000000007;
-            a = b;
-            b = c;
-        }
-        return a;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numWays(n int) int {
-	a, b := 1, 1
-	for i := 0; i < n; i++ {
-		a, b = b, (a+b)%1000000007
-	}
-	return a
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var numWays = function (n) {
-    let a = (b = 1);
-    while (n--) {
-        [a, b] = [b, (a + b) % (1e9 + 7)];
-    }
-    return a;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numWays(n: number): number {
-    let a = 0;
-    let b = 1;
-    for (let i = 0; i < n; i++) {
-        [a, b] = [b, (a + b) % 1000000007];
-    }
-    return b;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn num_ways(n: i32) -> i32 {
-        let mut tup = (0, 1);
-        for _ in 0..n {
-            tup = (tup.1, (tup.0 + tup.1) % 1000000007);
-        }
-        tup.1
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int NumWays(int n) {
-        int a = 1, b = 1, tmp;
-        for (int i = 0; i < n; i++) {
-            tmp = a;
-            a = b;
-            b = (tmp + b) % 1000000007;
-        }
-        return a % 1000000007;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -166,4 +95,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

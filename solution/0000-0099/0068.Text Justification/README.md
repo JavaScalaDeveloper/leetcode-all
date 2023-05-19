@@ -94,35 +94,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
-        ans = []
-        i, n = 0, len(words)
-        while i < n:
-            t = []
-            cnt = len(words[i])
-            t.append(words[i])
-            i += 1
-            while i < n and cnt + 1 + len(words[i]) <= maxWidth:
-                cnt += 1 + len(words[i])
-                t.append(words[i])
-                i += 1
-            if i == n or len(t) == 1:
-                left = ' '.join(t)
-                right = ' ' * (maxWidth - len(left))
-                ans.append(left + right)
-                continue
-            space_width = maxWidth - (cnt - len(t) + 1)
-            w, m = divmod(space_width, len(t) - 1)
-            row = []
-            for j, s in enumerate(t[:-1]):
-                row.append(s)
-                row.append(' ' * (w + (1 if j < m else 0)))
-            row.append(t[-1])
-            ans.append(''.join(row))
-        return ans
-```
+
 
 ### **Java**
 
@@ -163,152 +135,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> fullJustify(vector<string>& words, int maxWidth) {
-        vector<string> ans;
-        for (int i = 0, n = words.size(); i < n;) {
-            vector<string> t = {words[i]};
-            int cnt = words[i].size();
-            ++i;
-            while (i < n && cnt + 1 + words[i].size() <= maxWidth) {
-                cnt += 1 + words[i].size();
-                t.emplace_back(words[i++]);
-            }
-            if (i == n || t.size() == 1) {
-                string left = t[0];
-                for (int j = 1; j < t.size(); ++j) {
-                    left += " " + t[j];
-                }
-                string right = string(maxWidth - left.size(), ' ');
-                ans.emplace_back(left + right);
-                continue;
-            }
-            int spaceWidth = maxWidth - (cnt - t.size() + 1);
-            int w = spaceWidth / (t.size() - 1);
-            int m = spaceWidth % (t.size() - 1);
-            string row;
-            for (int j = 0; j < t.size() - 1; ++j) {
-                row += t[j] + string(w + (j < m ? 1 : 0), ' ');
-            }
-            row += t.back();
-            ans.emplace_back(row);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func fullJustify(words []string, maxWidth int) (ans []string) {
-	for i, n := 0, len(words); i < n; {
-		t := []string{words[i]}
-		cnt := len(words[i])
-		i++
-		for i < n && cnt+1+len(words[i]) <= maxWidth {
-			cnt += 1 + len(words[i])
-			t = append(t, words[i])
-			i++
-		}
-		if i == n || len(t) == 1 {
-			left := strings.Join(t, " ")
-			right := strings.Repeat(" ", maxWidth-len(left))
-			ans = append(ans, left+right)
-			continue
-		}
-		spaceWidth := maxWidth - (cnt - len(t) + 1)
-		w := spaceWidth / (len(t) - 1)
-		m := spaceWidth % (len(t) - 1)
-		row := strings.Builder{}
-		for j, s := range t[:len(t)-1] {
-			row.WriteString(s)
-			row.WriteString(strings.Repeat(" ", w))
-			if j < m {
-				row.WriteString(" ")
-			}
-		}
-		row.WriteString(t[len(t)-1])
-		ans = append(ans, row.String())
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function fullJustify(words: string[], maxWidth: number): string[] {
-    const ans: string[] = [];
-    for (let i = 0, n = words.length; i < n; ) {
-        const t: string[] = [words[i]];
-        let cnt = words[i++].length;
-        while (i < n && cnt + 1 + words[i].length <= maxWidth) {
-            t.push(words[i]);
-            cnt += 1 + words[i++].length;
-        }
-        if (i === n || t.length === 1) {
-            const left: string = t.join(' ');
-            const right: string = ' '.repeat(maxWidth - left.length);
-            ans.push(left + right);
-            continue;
-        }
-        const spaceWidth: number = maxWidth - (cnt - t.length + 1);
-        const w: number = Math.floor(spaceWidth / (t.length - 1));
-        const m: number = spaceWidth % (t.length - 1);
-        const row: string[] = [];
-        for (let j = 0; j < t.length - 1; ++j) {
-            row.push(t[j]);
-            row.push(' '.repeat(w + (j < m ? 1 : 0)));
-        }
-        row.push(t[t.length - 1]);
-        ans.push(row.join(''));
-    }
-    return ans;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public IList<string> FullJustify(string[] words, int maxWidth) {
-        var ans = new List<string>();
-        for (int i = 0, n = words.Length; i < n;) {
-            var t = new List<string>();
-            t.Add(words[i]);
-            int cnt = words[i].Length;
-            ++i;
-            while (i < n && cnt + 1 + words[i].Length <= maxWidth) {
-                t.Add(words[i]);
-                cnt += 1 + words[i].Length;
-                ++i;
-            }
-            if (i == n || t.Count == 1) {
-                string left = string.Join(" ", t);
-                string right = new string(' ', maxWidth - left.Length);
-                ans.Add(left + right);
-                continue;
-            }
-            int spaceWidth = maxWidth - (cnt - t.Count + 1);
-            int w = spaceWidth / (t.Count - 1);
-            int m = spaceWidth % (t.Count - 1);
-            var row = new StringBuilder();
-            for (int j = 0; j < t.Count - 1; ++j) {
-                row.Append(t[j]);
-                row.Append(new string(' ', w + (j < m ? 1 : 0)));
-            }
-            row.Append(t[t.Count - 1]);
-            ans.Add(row.ToString());
-        }
-        return ans;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -316,4 +157,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

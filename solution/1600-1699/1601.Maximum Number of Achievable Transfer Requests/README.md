@@ -79,24 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumRequests(self, n: int, requests: List[List[int]]) -> int:
-        def check(mask: int) -> bool:
-            cnt = [0] * n
-            for i, (f, t) in enumerate(requests):
-                if mask >> i & 1:
-                    cnt[f] -= 1
-                    cnt[t] += 1
-            return all(v == 0 for v in cnt)
 
-        ans = 0
-        for mask in range(1 << len(requests)):
-            cnt = mask.bit_count()
-            if ans < cnt and check(mask):
-                ans = cnt
-        return ans
-```
 
 ### **Java**
 
@@ -141,149 +124,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumRequests(int n, vector<vector<int>>& requests) {
-        int m = requests.size();
-        int ans = 0;
-        auto check = [&](int mask) -> bool {
-            int cnt[n];
-            memset(cnt, 0, sizeof(cnt));
-            for (int i = 0; i < m; ++i) {
-                if (mask >> i & 1) {
-                    int f = requests[i][0], t = requests[i][1];
-                    --cnt[f];
-                    ++cnt[t];
-                }
-            }
-            for (int v : cnt) {
-                if (v) {
-                    return false;
-                }
-            }
-            return true;
-        };
-        for (int mask = 0; mask < 1 << m; ++mask) {
-            int cnt = __builtin_popcount(mask);
-            if (ans < cnt && check(mask)) {
-                ans = cnt;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumRequests(n int, requests [][]int) (ans int) {
-	m := len(requests)
-	check := func(mask int) bool {
-		cnt := make([]int, n)
-		for i, r := range requests {
-			if mask>>i&1 == 1 {
-				f, t := r[0], r[1]
-				cnt[f]--
-				cnt[t]++
-			}
-		}
-		for _, v := range cnt {
-			if v != 0 {
-				return false
-			}
-		}
-		return true
-	}
-	for mask := 0; mask < 1<<m; mask++ {
-		cnt := bits.OnesCount(uint(mask))
-		if ans < cnt && check(mask) {
-			ans = cnt
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumRequests(n: number, requests: number[][]): number {
-    const m = requests.length;
-    let ans = 0;
-    const check = (mask: number): boolean => {
-        const cnt = new Array(n).fill(0);
-        for (let i = 0; i < m; ++i) {
-            if ((mask >> i) & 1) {
-                const [f, t] = requests[i];
-                --cnt[f];
-                ++cnt[t];
-            }
-        }
-        return cnt.every(v => v === 0);
-    };
-    for (let mask = 0; mask < 1 << m; ++mask) {
-        const cnt = bitCount(mask);
-        if (ans < cnt && check(mask)) {
-            ans = cnt;
-        }
-    }
-    return ans;
-}
 
-function bitCount(i: number): number {
-    i = i - ((i >>> 1) & 0x55555555);
-    i = (i & 0x33333333) + ((i >>> 2) & 0x33333333);
-    i = (i + (i >>> 4)) & 0x0f0f0f0f;
-    i = i + (i >>> 8);
-    i = i + (i >>> 16);
-    return i & 0x3f;
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @param {number[][]} requests
- * @return {number}
- */
-var maximumRequests = function (n, requests) {
-    const m = requests.length;
-    let ans = 0;
-    const check = mask => {
-        const cnt = new Array(n).fill(0);
-        for (let i = 0; i < m; ++i) {
-            if ((mask >> i) & 1) {
-                const [f, t] = requests[i];
-                --cnt[f];
-                ++cnt[t];
-            }
-        }
-        return cnt.every(v => v === 0);
-    };
-    for (let mask = 0; mask < 1 << m; ++mask) {
-        const cnt = bitCount(mask);
-        if (ans < cnt && check(mask)) {
-            ans = cnt;
-        }
-    }
-    return ans;
-};
 
-function bitCount(i) {
-    i = i - ((i >>> 1) & 0x55555555);
-    i = (i & 0x33333333) + ((i >>> 2) & 0x33333333);
-    i = (i + (i >>> 4)) & 0x0f0f0f0f;
-    i = i + (i >>> 8);
-    i = i + (i >>> 16);
-    return i & 0x3f;
-}
-```
+
 
 ### **...**
 
@@ -291,4 +146,4 @@ function bitCount(i) {
 
 ```
 
-<!-- tabs:end -->
+

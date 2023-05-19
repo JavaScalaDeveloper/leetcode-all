@@ -93,19 +93,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def elementInNums(self, nums: List[int], queries: List[List[int]]) -> List[int]:
-        n, m = len(nums), len(queries)
-        ans = [-1] * m
-        for j, (t, i) in enumerate(queries):
-            t %= (2 * n)
-            if t < n and i < n - t:
-                ans[j] = nums[i + t]
-            elif t > n and i < t - n:
-                ans[j] = nums[i]
-        return ans
-```
+
 
 ### **Java**
 
@@ -131,53 +119,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> elementInNums(vector<int>& nums, vector<vector<int>>& queries) {
-        int n = nums.size(), m = queries.size();
-        vector<int> ans(m, -1);
-        for (int j = 0; j < m; ++j) {
-            int t = queries[j][0], i = queries[j][1];
-            t %= (n * 2);
-            if (t < n && i < n - t) {
-                ans[j] = nums[i + t];
-            } else if (t > n && i < t - n) {
-                ans[j] = nums[i];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func elementInNums(nums []int, queries [][]int) []int {
-	n, m := len(nums), len(queries)
-	ans := make([]int, m)
-	for j, q := range queries {
-		t, i := q[0], q[1]
-		t %= (n * 2)
-		ans[j] = -1
-		if t < n && i < n-t {
-			ans[j] = nums[i+t]
-		} else if t > n && i < t-n {
-			ans[j] = nums[i]
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -185,4 +137,4 @@ func elementInNums(nums []int, queries [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

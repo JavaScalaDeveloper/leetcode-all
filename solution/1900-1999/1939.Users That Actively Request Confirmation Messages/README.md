@@ -98,4 +98,4 @@ WHERE c1.time_stamp < c2.time_stamp
 AND TIMESTAMPDIFF(SECOND, c1.time_stamp, c2.time_stamp) <= 24 * 60 * 60;
 ```
 
-<!-- tabs:end -->
+

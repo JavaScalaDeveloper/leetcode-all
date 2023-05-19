@@ -64,31 +64,11 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def hammingWeight(self, n: int) -> int:
-        return n.bit_count()
-```
 
-```python
-class Solution:
-    def hammingWeight(self, n: int) -> int:
-        ans = 0
-        while n:
-            n &= n - 1
-            ans += 1
-        return ans
-```
 
-```python
-class Solution:
-    def hammingWeight(self, n: int) -> int:
-        ans = 0
-        while n:
-            n -= n & (-n)
-            ans += 1
-        return ans
-```
+
+
+
 
 ### **Java**
 
@@ -120,89 +100,25 @@ public class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int hammingWeight(uint32_t n) {
-        int ans = 0;
-        while (n) {
-            n &= n - 1;
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int hammingWeight(uint32_t n) {
-        int ans = 0;
-        while (n != 0) {
-            n -= n & -n;
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func hammingWeight(num uint32) (ans int) {
-	for num != 0 {
-		num &= num - 1
-		ans++
-	}
-	return
-}
-```
 
-```go
-func hammingWeight(num uint32) (ans int) {
-	for num != 0 {
-		num -= num & -num
-		ans++
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n - a positive integer
- * @return {number}
- */
-var hammingWeight = function (n) {
-    let ans = 0;
-    while (n != 0) {
-        n &= n - 1;
-        ++ans;
-    }
-    return ans;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int HammingWeight(uint n) {
-        int ans = 0;
-        while (n != 0) {
-            n &= (n - 1);
-            ++ans;
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -210,4 +126,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

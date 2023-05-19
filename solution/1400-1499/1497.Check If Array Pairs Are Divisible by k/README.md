@@ -68,12 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canArrange(self, arr: List[int], k: int) -> bool:
-        cnt = Counter(x % k for x in arr)
-        return cnt[0] % 2 == 0 and all(cnt[i] == cnt[k - i] for i in range(1, k))
-```
+
 
 ### **Java**
 
@@ -96,42 +91,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canArrange(vector<int>& arr, int k) {
-        vector<int> cnt(k);
-        for (int& x : arr) {
-            ++cnt[((x % k) + k) % k];
-        }
-        for (int i = 1; i < k; ++i) {
-            if (cnt[i] != cnt[k - i]) {
-                return false;
-            }
-        }
-        return cnt[0] % 2 == 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canArrange(arr []int, k int) bool {
-	cnt := make([]int, k)
-	for _, x := range arr {
-		cnt[(x%k+k)%k]++
-	}
-	for i := 1; i < k; i++ {
-		if cnt[i] != cnt[k-i] {
-			return false
-		}
-	}
-	return cnt[0]%2 == 0
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -139,4 +105,4 @@ func canArrange(arr []int, k int) bool {
 
 ```
 
-<!-- tabs:end -->
+

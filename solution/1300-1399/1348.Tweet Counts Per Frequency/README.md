@@ -87,37 +87,7 @@ tweetCounts.getTweetCountsPerFrequency("hour", "tweet3", 0, 210);  //&nbsp;返�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedList
 
-
-class TweetCounts:
-
-    def __init__(self):
-        self.d = {"minute": 60, "hour": 3600, "day": 86400}
-        self.data = defaultdict(SortedList)
-
-    def recordTweet(self, tweetName: str, time: int) -> None:
-        self.data[tweetName].add(time)
-
-    def getTweetCountsPerFrequency(self, freq: str, tweetName: str, startTime: int, endTime: int) -> List[int]:
-        f = self.d[freq]
-        tweets = self.data[tweetName]
-        t = startTime
-        ans = []
-        while t <= endTime:
-            l = tweets.bisect_left(t)
-            r = tweets.bisect_left(min(t + f, endTime + 1))
-            ans.append(r - l)
-            t += f
-        return ans
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
-```
 
 ### **Java**
 
@@ -166,44 +136,9 @@ class TweetCounts {
  */
 ```
 
-### **C++**
 
-```cpp
-class TweetCounts {
-public:
-    TweetCounts() {
-    }
 
-    void recordTweet(string tweetName, int time) {
-        data[tweetName].insert(time);
-    }
 
-    vector<int> getTweetCountsPerFrequency(string freq, string tweetName, int startTime, int endTime) {
-        int f = 60;
-        if (freq == "hour")
-            f = 3600;
-        else if (freq == "day")
-            f = 86400;
-        vector<int> ans((endTime - startTime) / f + 1);
-        auto l = data[tweetName].lower_bound(startTime);
-        auto r = data[tweetName].upper_bound(endTime);
-        for (; l != r; ++l) {
-            ++ans[(*l - startTime) / f];
-        }
-        return ans;
-    }
-
-private:
-    unordered_map<string, multiset<int>> data;
-};
-
-/**
- * Your TweetCounts object will be instantiated and called as such:
- * TweetCounts* obj = new TweetCounts();
- * obj->recordTweet(tweetName,time);
- * vector<int> param_2 = obj->getTweetCountsPerFrequency(freq,tweetName,startTime,endTime);
- */
-```
 
 ### **...**
 
@@ -211,4 +146,4 @@ private:
 
 ```
 
-<!-- tabs:end -->
+

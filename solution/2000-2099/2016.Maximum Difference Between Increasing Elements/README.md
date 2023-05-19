@@ -67,18 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumDifference(self, nums: List[int]) -> int:
-        mi = inf
-        ans = -1
-        for x in nums:
-            if x > mi:
-                ans = max(ans, x - mi)
-            else:
-                mi = x
-        return ans
-```
+
 
 ### **Java**
 
@@ -101,104 +90,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumDifference(vector<int>& nums) {
-        int mi = 1 << 30;
-        int ans = -1;
-        for (int& x : nums) {
-            if (x > mi) {
-                ans = max(ans, x - mi);
-            } else {
-                mi = x;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumDifference(nums []int) int {
-	mi := 1 << 30
-	ans := -1
-	for _, x := range nums {
-		if mi < x {
-			ans = max(ans, x-mi)
-		} else {
-			mi = x
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumDifference(nums: number[]): number {
-    const n = nums.length;
-    let min = nums[0];
-    let res = -1;
-    for (let i = 1; i < n; i++) {
-        res = Math.max(res, nums[i] - min);
-        min = Math.min(min, nums[i]);
-    }
-    return res === 0 ? -1 : res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn maximum_difference(nums: Vec<i32>) -> i32 {
-        let mut min = nums[0];
-        let mut res = -1;
-        for i in 1..nums.len() {
-            res = res.max(nums[i] - min);
-            min = min.min(nums[i]);
-        }
-        match res {
-            0 => -1,
-            _ => res,
-        }
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var maximumDifference = function (nums) {
-    let mi = 1 << 30;
-    let ans = -1;
-    for (const x of nums) {
-        if (mi < x) {
-            ans = Math.max(ans, x - mi);
-        } else {
-            mi = x;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -206,4 +116,4 @@ var maximumDifference = function (nums) {
 
 ```
 
-<!-- tabs:end -->
+

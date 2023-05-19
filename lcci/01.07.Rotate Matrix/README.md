@@ -59,21 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rotate(self, matrix: List[List[int]]) -> None:
-        """
-        Do not return anything, modify matrix in-place instead.
-        """
-        n = len(matrix)
-        for i in range(n // 2):
-            for j in range(i, n - 1 - i):
-                t = matrix[i][j]
-                matrix[i][j] = matrix[n - j - 1][i]
-                matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1]
-                matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1]
-                matrix[j][n - i - 1] = t
-```
+
 
 ### **Java**
 
@@ -96,44 +82,13 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} matrix
- * @return {void} Do not return anything, modify matrix in-place instead.
- */
-var rotate = function (matrix) {
-    const n = matrix.length;
-    for (let i = 0; i < n / 2; i++) {
-        for (let j = i; j < n - i - 1; j++) {
-            let t = matrix[i][j];
-            matrix[i][j] = matrix[n - j - 1][i];
-            matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1];
-            matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1];
-            matrix[j][n - i - 1] = t;
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func rotate(matrix [][]int) {
-	n := len(matrix)
-	r, c := n/2, (n+1)/2
-	for i := 0; i < r; i++ {
-		for j := 0; j < c; j++ {
-			temp := matrix[i][j]
-			matrix[i][j] = matrix[n-j-1][i]
-			matrix[n-j-1][i] = matrix[n-i-1][n-j-1]
-			matrix[n-i-1][n-j-1] = matrix[j][n-i-1]
-			matrix[j][n-i-1] = temp
-		}
-	}
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -141,4 +96,4 @@ func rotate(matrix [][]int) {
 
 ```
 
-<!-- tabs:end -->
+

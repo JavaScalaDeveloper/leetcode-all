@@ -54,16 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findLonely(self, nums: List[int]) -> List[int]:
-        counter = Counter(nums)
-        ans = []
-        for num, cnt in counter.items():
-            if cnt == 1 and counter[num - 1] == 0 and counter[num + 1] == 0:
-                ans.append(num)
-        return ans
-```
+
 
 ### **Java**
 
@@ -88,61 +79,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findLonely(vector<int>& nums) {
-        unordered_map<int, int> counter;
-        for (int num : nums) ++counter[num];
-        vector<int> ans;
-        for (auto& e : counter) {
-            int k = e.first, v = e.second;
-            if (v == 1 && !counter.count(k - 1) && !counter.count(k + 1)) ans.push_back(k);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findLonely(nums []int) []int {
-	counter := make(map[int]int)
-	for _, num := range nums {
-		counter[num]++
-	}
-	var ans []int
-	for k, v := range counter {
-		if v == 1 && counter[k-1] == 0 && counter[k+1] == 0 {
-			ans = append(ans, k)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-function findLonely(nums: number[]): number[] {
-    let hashMap: Map<number, number> = new Map();
-    for (let num of nums) {
-        hashMap.set(num, (hashMap.get(num) || 0) + 1);
-    }
-    let ans: Array<number> = [];
-    for (let [num, count] of hashMap.entries()) {
-        if (count == 1 && !hashMap.get(num - 1) && !hashMap.get(num + 1)) {
-            ans.push(num);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -150,4 +99,4 @@ function findLonely(nums: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

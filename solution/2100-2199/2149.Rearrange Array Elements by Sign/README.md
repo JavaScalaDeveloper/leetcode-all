@@ -62,20 +62,7 @@ nums 中的正整数是 [3,1,2] ，负整数是 [-2,-5,-4] 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rearrangeArray(self, nums: List[int]) -> List[int]:
-        ans = [0] * len(nums)
-        i, j = 0, 1
-        for num in nums:
-            if num > 0:
-                ans[i] = num
-                i += 2
-            else:
-                ans[j] = num
-                j += 2
-        return ans
-```
+
 
 ### **Java**
 
@@ -101,68 +88,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> rearrangeArray(vector<int>& nums) {
-        vector<int> ans(nums.size());
-        int i = 0, j = 1;
-        for (int num : nums) {
-            if (num > 0) {
-                ans[i] = num;
-                i += 2;
-            } else {
-                ans[j] = num;
-                j += 2;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func rearrangeArray(nums []int) []int {
-	ans := make([]int, len(nums))
-	i, j := 0, 1
-	for _, num := range nums {
-		if num > 0 {
-			ans[i] = num
-			i += 2
-		} else {
-			ans[j] = num
-			j += 2
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-function rearrangeArray(nums: number[]): number[] {
-    let ans = [];
-    let i = 0,
-        j = 1;
-    for (let num of nums) {
-        if (num > 0) {
-            ans[i] = num;
-            i += 2;
-        } else {
-            ans[j] = num;
-            j += 2;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -170,4 +108,4 @@ function rearrangeArray(nums: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

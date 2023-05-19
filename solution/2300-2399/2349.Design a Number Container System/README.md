@@ -65,32 +65,7 @@ nc.find(10); // 数字 10 所在下标为 2 ，3 和 5 。最小下标为 2 ，�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedSet
 
-
-class NumberContainers:
-    def __init__(self):
-        self.mp = {}
-        self.t = defaultdict(SortedSet)
-
-    def change(self, index: int, number: int) -> None:
-        if index in self.mp:
-            v = self.mp[index]
-            self.t[v].remove(index)
-        self.mp[index] = number
-        self.t[number].add(index)
-
-    def find(self, number: int) -> int:
-        s = self.t[number]
-        return s[0] if s else -1
-
-
-# Your NumberContainers object will be instantiated and called as such:
-# obj = NumberContainers()
-# obj.change(index,number)
-# param_2 = obj.find(number)
-```
 
 ### **Java**
 
@@ -129,85 +104,17 @@ class NumberContainers {
  */
 ```
 
-### **C++**
 
-```cpp
-class NumberContainers {
-public:
-    map<int, int> mp;
-    map<int, set<int>> t;
 
-    NumberContainers() {
-    }
 
-    void change(int index, int number) {
-        auto it = mp.find(index);
-        if (it != mp.end()) {
-            t[it->second].erase(index);
-            it->second = number;
-        } else
-            mp[index] = number;
-        t[number].insert(index);
-    }
 
-    int find(int number) {
-        auto it = t.find(number);
-        return it == t.end() || it->second.empty() ? -1 : *it->second.begin();
-    }
-};
 
-/**
- * Your NumberContainers object will be instantiated and called as such:
- * NumberContainers* obj = new NumberContainers();
- * obj->change(index,number);
- * int param_2 = obj->find(number);
- */
-```
 
-### **Go**
 
-```go
-type NumberContainers struct {
-	mp map[int]int
-	t  map[int]*redblacktree.Tree
-}
-
-func Constructor() NumberContainers {
-	return NumberContainers{map[int]int{}, map[int]*redblacktree.Tree{}}
-}
-
-func (this *NumberContainers) Change(index int, number int) {
-	if num, ok := this.mp[index]; ok {
-		this.t[num].Remove(index)
-	}
-	this.mp[index] = number
-	if this.t[number] == nil {
-		this.t[number] = redblacktree.NewWithIntComparator()
-	}
-	this.t[number].Put(index, nil)
-}
-
-func (this *NumberContainers) Find(number int) int {
-	s, ok := this.t[number]
-	if !ok || s.Size() == 0 {
-		return -1
-	}
-	return s.Left().Key.(int)
-}
-
-/**
- * Your NumberContainers object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Change(index,number);
- * param_2 := obj.Find(number);
- */
-```
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -215,4 +122,4 @@ func (this *NumberContainers) Find(number int) int {
 
 ```
 
-<!-- tabs:end -->
+

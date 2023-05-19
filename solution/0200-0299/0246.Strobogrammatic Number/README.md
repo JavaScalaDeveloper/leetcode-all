@@ -52,18 +52,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isStrobogrammatic(self, num: str) -> bool:
-        d = [0, 1, -1, -1, -1, -1, 9, -1, 8, 6]
-        i, j = 0, len(num) - 1
-        while i <= j:
-            a, b = int(num[i]), int(num[j])
-            if d[a] != b:
-                return False
-            i, j = i + 1, j - 1
-        return True
-```
+
 
 ### **Java**
 
@@ -84,38 +73,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isStrobogrammatic(string num) {
-        vector<int> d = {0, 1, -1, -1, -1, -1, 9, -1, 8, 6};
-        for (int i = 0, j = num.size() - 1; i <= j; ++i, --j) {
-            int a = num[i] - '0', b = num[j] - '0';
-            if (d[a] != b) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isStrobogrammatic(num string) bool {
-	d := []int{0, 1, -1, -1, -1, -1, 9, -1, 8, 6}
-	for i, j := 0, len(num)-1; i <= j; i, j = i+1, j-1 {
-		a, b := int(num[i]-'0'), int(num[j]-'0')
-		if d[a] != b {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -123,4 +87,4 @@ func isStrobogrammatic(num string) bool {
 
 ```
 
-<!-- tabs:end -->
+

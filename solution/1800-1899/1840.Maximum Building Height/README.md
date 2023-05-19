@@ -86,25 +86,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxBuilding(self, n: int, restrictions: List[List[int]]) -> int:
-        r = restrictions
-        r.append([1, 0])
-        r.sort()
-        if r[-1][0] != n:
-            r.append([n, n - 1])
-        m = len(r)
-        for i in range(1, m):
-            r[i][1] = min(r[i][1], r[i - 1][1] + r[i][0] - r[i - 1][0])
-        for i in range(m - 2, 0, -1):
-            r[i][1] = min(r[i][1], r[i + 1][1] + r[i + 1][0] - r[i][0])
-        ans = 0
-        for i in range(m - 1):
-            t = (r[i][1] + r[i + 1][1] + r[i + 1][0] - r[i][0]) // 2
-            ans = max(ans, t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -140,71 +122,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxBuilding(int n, vector<vector<int>>& restrictions) {
-        auto&& r = restrictions;
-        r.push_back({1, 0});
-        sort(r.begin(), r.end());
-        if (r[r.size() - 1][0] != n) r.push_back({n, n - 1});
-        int m = r.size();
-        for (int i = 1; i < m; ++i) {
-            r[i][1] = min(r[i][1], r[i - 1][1] + r[i][0] - r[i - 1][0]);
-        }
-        for (int i = m - 2; i > 0; --i) {
-            r[i][1] = min(r[i][1], r[i + 1][1] + r[i + 1][0] - r[i][0]);
-        }
-        int ans = 0;
-        for (int i = 0; i < m - 1; ++i) {
-            int t = (r[i][1] + r[i + 1][1] + r[i + 1][0] - r[i][0]) / 2;
-            ans = max(ans, t);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxBuilding(n int, restrictions [][]int) (ans int) {
-	r := restrictions
-	r = append(r, []int{1, 0})
-	sort.Slice(r, func(i, j int) bool { return r[i][0] < r[j][0] })
-	if r[len(r)-1][0] != n {
-		r = append(r, []int{n, n - 1})
-	}
-	m := len(r)
-	for i := 1; i < m; i++ {
-		r[i][1] = min(r[i][1], r[i-1][1]+r[i][0]-r[i-1][0])
-	}
-	for i := m - 2; i > 0; i-- {
-		r[i][1] = min(r[i][1], r[i+1][1]+r[i+1][0]-r[i][0])
-	}
-	for i := 0; i < m-1; i++ {
-		t := (r[i][1] + r[i+1][1] + r[i+1][0] - r[i][0]) / 2
-		ans = max(ans, t)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -212,4 +136,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

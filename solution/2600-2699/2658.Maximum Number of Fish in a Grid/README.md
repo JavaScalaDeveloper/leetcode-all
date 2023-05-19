@@ -77,26 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMaxFish(self, grid: List[List[int]]) -> int:
-        def dfs(i: int, j: int) -> int:
-            cnt = grid[i][j]
-            grid[i][j] = 0
-            for a, b in pairwise((-1, 0, 1, 0, -1)):
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n and grid[x][y]:
-                    cnt += dfs(x, y)
-            return cnt
 
-        m, n = len(grid), len(grid[0])
-        ans = 0
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j]:
-                    ans = max(ans, dfs(i, j))
-        return ans
-```
 
 ### **Java**
 
@@ -138,106 +119,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findMaxFish(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        int ans = 0;
-        function<int(int, int)> dfs = [&](int i, int j) -> int {
-            int cnt = grid[i][j];
-            grid[i][j] = 0;
-            int dirs[5] = {-1, 0, 1, 0, -1};
-            for (int k = 0; k < 4; ++k) {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y]) {
-                    cnt += dfs(x, y);
-                }
-            }
-            return cnt;
-        };
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j]) {
-                    ans = max(ans, dfs(i, j));
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMaxFish(grid [][]int) (ans int) {
-	m, n := len(grid), len(grid[0])
-	dirs := [5]int{-1, 0, 1, 0, -1}
-	var dfs func(i, j int) int
-	dfs = func(i, j int) int {
-		cnt := grid[i][j]
-		grid[i][j] = 0
-		for k := 0; k < 4; k++ {
-			x, y := i+dirs[k], j+dirs[k+1]
-			if x >= 0 && x < m && y >= 0 && y < n && grid[x][y] > 0 {
-				cnt += dfs(x, y)
-			}
-		}
-		return cnt
-	}
-	for i := range grid {
-		for j := range grid[i] {
-			if grid[i][j] > 0 {
-				ans = max(ans, dfs(i, j))
-			}
-		}
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findMaxFish(grid: number[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
 
-    const dirs = [-1, 0, 1, 0, -1];
-    const dfs = (i: number, j: number): number => {
-        let cnt = grid[i][j];
-        grid[i][j] = 0;
-        for (let k = 0; k < 4; ++k) {
-            const x = i + dirs[k];
-            const y = j + dirs[k + 1];
-            if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] > 0) {
-                cnt += dfs(x, y);
-            }
-        }
-        return cnt;
-    };
-
-    let ans = 0;
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            if (grid[i][j] > 0) {
-                ans = Math.max(ans, dfs(i, j));
-            }
-        }
-    }
-    return ans;
-}
-```
 
 ### **...**
 
@@ -245,4 +137,4 @@ function findMaxFish(grid: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

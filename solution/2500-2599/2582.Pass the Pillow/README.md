@@ -72,23 +72,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def passThePillow(self, n: int, time: int) -> int:
-        ans = k = 1
-        for _ in range(time):
-            ans += k
-            if ans == 1 or ans == n:
-                k *= -1
-        return ans
-```
 
-```python
-class Solution:
-    def passThePillow(self, n: int, time: int) -> int:
-        k, mod = divmod(time, n - 1)
-        return n - mod if k & 1 else mod + 1
-```
+
+
 
 ### **Java**
 
@@ -119,83 +105,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int passThePillow(int n, int time) {
-        int ans = 1, k = 1;
-        while (time--) {
-            ans += k;
-            if (ans == 1 || ans == n) {
-                k *= -1;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int passThePillow(int n, int time) {
-        int k = time / (n - 1);
-        int mod = time % (n - 1);
-        return k & 1 ? n - mod : mod + 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func passThePillow(n int, time int) int {
-	ans, k := 1, 1
-	for ; time > 0; time-- {
-		ans += k
-		if ans == 1 || ans == n {
-			k *= -1
-		}
-	}
-	return ans
-}
-```
 
-```go
-func passThePillow(n int, time int) int {
-	k, mod := time/(n-1), time%(n-1)
-	if k&1 == 1 {
-		return n - mod
-	}
-	return mod + 1
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function passThePillow(n: number, time: number): number {
-    let ans = 1,
-        k = 1;
-    while (time-- > 0) {
-        ans += k;
-        if (ans === 1 || ans === n) {
-            k *= -1;
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function passThePillow(n: number, time: number): number {
-    const k = time / (n - 1);
-    const mod = time % (n - 1);
-    return (k & 1) == 1 ? n - mod : mod + 1;
-}
-```
+
+
 
 ### **...**
 
@@ -203,4 +129,4 @@ function passThePillow(n: number, time: number): number {
 
 ```
 
-<!-- tabs:end -->
+

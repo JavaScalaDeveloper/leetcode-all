@@ -56,17 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rotate(self, matrix: List[List[int]]) -> None:
-        n = len(matrix)
-        for i in range(n >> 1):
-            for j in range(n):
-                matrix[i][j], matrix[n - i - 1][j] = matrix[n - i - 1][j], matrix[i][j]
-        for i in range(n):
-            for j in range(i):
-                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-```
+
 
 ### **Java**
 
@@ -94,127 +84,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    void rotate(vector<vector<int>>& matrix) {
-        int n = matrix.size();
-        for (int i = 0; i < n >> 1; ++i) {
-            for (int j = 0; j < n; ++j) {
-                swap(matrix[i][j], matrix[n - i - 1][j]);
-            }
-        }
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < i; ++j) {
-                swap(matrix[i][j], matrix[j][i]);
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func rotate(matrix [][]int) {
-	n := len(matrix)
-	for i := 0; i < n>>1; i++ {
-		for j := 0; j < n; j++ {
-			matrix[i][j], matrix[n-i-1][j] = matrix[n-i-1][j], matrix[i][j]
-		}
-	}
-	for i := 0; i < n; i++ {
-		for j := 0; j < i; j++ {
-			matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-		}
-	}
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} matrix
- * @return {void} Do not return anything, modify matrix in-place instead.
- */
-var rotate = function (matrix) {
-    matrix.reverse();
-    for (let i = 0; i < matrix.length; ++i) {
-        for (let j = 0; j < i; ++j) {
-            [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
-        }
-    }
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- Do not return anything, modify matrix in-place instead.
- */
-function rotate(matrix: number[][]): void {
-    matrix.reverse();
-    for (let i = 0; i < matrix.length; ++i) {
-        for (let j = 0; j < i; ++j) {
-            const t = matrix[i][j];
-            matrix[i][j] = matrix[j][i];
-            matrix[j][i] = t;
-        }
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public void Rotate(int[][] matrix) {
-        int n = matrix.Length;
-        for (int i = 0; i < n >> 1; ++i) {
-            for (int j = 0; j < n; ++j) {
-                int t = matrix[i][j];
-                matrix[i][j] = matrix[n - i - 1][j];
-                matrix[n - i - 1][j] = t;
-            }
-        }
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < i; ++j) {
-                int t = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = t;
-            }
-        }
-    }
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn rotate(matrix: &mut Vec<Vec<i32>>) {
-        let n = matrix.len();
-        for i in 0..n/2 {
-            for j in 0..n {
-                let t = matrix[i][j];
-                matrix[i][j] = matrix[n-i-1][j];
-                matrix[n-i-1][j] = t;
-            }
-        }
-        for i in 0..n {
-            for j in 0..i {
-                let t = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = t;
-            }
-        }
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -222,4 +114,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

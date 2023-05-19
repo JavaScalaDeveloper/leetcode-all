@@ -76,37 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def totalStrength(self, strength: List[int]) -> int:
-        n = len(strength)
-        left = [-1] * n
-        right = [n] * n
-        stk = []
-        for i, v in enumerate(strength):
-            while stk and strength[stk[-1]] >= v:
-                stk.pop()
-            if stk:
-                left[i] = stk[-1]
-            stk.append(i)
-        stk = []
-        for i in range(n - 1, -1, -1):
-            while stk and strength[stk[-1]] > strength[i]:
-                stk.pop()
-            if stk:
-                right[i] = stk[-1]
-            stk.append(i)
 
-        ss = list(accumulate(list(accumulate(strength, initial=0)), initial=0))
-        mod = int(1e9) + 7
-        ans = 0
-        for i, v in enumerate(strength):
-            l, r = left[i] + 1, right[i] - 1
-            a = (ss[r + 2] - ss[i + 1]) * (i - l + 1)
-            b = (ss[i + 1] - ss[l]) * (r - i + 1)
-            ans = (ans + (a - b) * v) % mod
-        return ans
-```
 
 ### **Java**
 
@@ -162,101 +132,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int totalStrength(vector<int>& strength) {
-        int n = strength.size();
-        vector<int> left(n, -1);
-        vector<int> right(n, n);
-        stack<int> stk;
-        for (int i = 0; i < n; ++i) {
-            while (!stk.empty() && strength[stk.top()] >= strength[i]) stk.pop();
-            if (!stk.empty()) left[i] = stk.top();
-            stk.push(i);
-        }
-        stk = stack<int>();
-        for (int i = n - 1; i >= 0; --i) {
-            while (!stk.empty() && strength[stk.top()] > strength[i]) stk.pop();
-            if (!stk.empty()) right[i] = stk.top();
-            stk.push(i);
-        }
-        int mod = 1e9 + 7;
-        vector<int> s(n + 1);
-        for (int i = 0; i < n; ++i) s[i + 1] = (s[i] + strength[i]) % mod;
-        vector<int> ss(n + 2);
-        for (int i = 0; i < n + 1; ++i) ss[i + 1] = (ss[i] + s[i]) % mod;
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            int v = strength[i];
-            int l = left[i] + 1, r = right[i] - 1;
-            long a = (long)(i - l + 1) * (ss[r + 2] - ss[i + 1]);
-            long b = (long)(r - i + 1) * (ss[i + 1] - ss[l]);
-            ans = (ans + v * ((a - b) % mod)) % mod;
-        }
-        return (int)(ans + mod) % mod;
-    }
-};
-```
 
-### **Go**
 
-```go
-func totalStrength(strength []int) int {
-	n := len(strength)
-	left := make([]int, n)
-	right := make([]int, n)
-	for i := range left {
-		left[i] = -1
-		right[i] = n
-	}
-	stk := []int{}
-	for i, v := range strength {
-		for len(stk) > 0 && strength[stk[len(stk)-1]] >= v {
-			stk = stk[:len(stk)-1]
-		}
-		if len(stk) > 0 {
-			left[i] = stk[len(stk)-1]
-		}
-		stk = append(stk, i)
-	}
-	stk = []int{}
-	for i := n - 1; i >= 0; i-- {
-		for len(stk) > 0 && strength[stk[len(stk)-1]] > strength[i] {
-			stk = stk[:len(stk)-1]
-		}
-		if len(stk) > 0 {
-			right[i] = stk[len(stk)-1]
-		}
-		stk = append(stk, i)
-	}
-	mod := int(1e9) + 7
-	s := make([]int, n+1)
-	for i, v := range strength {
-		s[i+1] = (s[i] + v) % mod
-	}
-	ss := make([]int, n+2)
-	for i, v := range s {
-		ss[i+1] = (ss[i] + v) % mod
-	}
-	ans := 0
-	for i, v := range strength {
-		l, r := left[i]+1, right[i]-1
-		a := (ss[r+2] - ss[i+1]) * (i - l + 1)
-		b := (ss[i+1] - ss[l]) * (r - i + 1)
-		ans = (ans + v*((a-b)%mod)) % mod
-	}
-	return (ans + mod) % mod
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -264,4 +150,4 @@ func totalStrength(strength []int) int {
 
 ```
 
-<!-- tabs:end -->
+

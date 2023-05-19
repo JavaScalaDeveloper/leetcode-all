@@ -68,21 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumBeauty(self, items: List[List[int]], queries: List[int]) -> List[int]:
-        items.sort()
-        prices = [p for p, _ in items]
-        mx = [items[0][1]]
-        for _, b in items[1:]:
-            mx.append(max(mx[-1], b))
-        ans = [0] * len(queries)
-        for i, q in enumerate(queries):
-            j = bisect_right(prices, q)
-            if j:
-                ans[i] = mx[j - 1]
-        return ans
-```
+
 
 ### **Java**
 
@@ -116,68 +102,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> maximumBeauty(vector<vector<int>>& items, vector<int>& queries) {
-        sort(items.begin(), items.end());
-        for (int i = 1; i < items.size(); ++i) items[i][1] = max(items[i - 1][1], items[i][1]);
-        int n = queries.size();
-        vector<int> ans(n);
-        for (int i = 0; i < n; ++i) {
-            int left = 0, right = items.size();
-            while (left < right) {
-                int mid = (left + right) >> 1;
-                if (items[mid][0] > queries[i])
-                    right = mid;
-                else
-                    left = mid + 1;
-            }
-            if (left) ans[i] = items[left - 1][1];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumBeauty(items [][]int, queries []int) []int {
-	sort.Slice(items, func(i, j int) bool {
-		return items[i][0] < items[j][0]
-	})
-	for i := 1; i < len(items); i++ {
-		items[i][1] = max(items[i-1][1], items[i][1])
-	}
-	n := len(queries)
-	ans := make([]int, n)
-	for i, v := range queries {
-		left, right := 0, len(items)
-		for left < right {
-			mid := (left + right) >> 1
-			if items[mid][0] > v {
-				right = mid
-			} else {
-				left = mid + 1
-			}
-		}
-		if left > 0 {
-			ans[i] = items[left-1][1]
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -185,4 +116,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

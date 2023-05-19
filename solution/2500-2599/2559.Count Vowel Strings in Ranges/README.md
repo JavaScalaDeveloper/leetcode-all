@@ -64,12 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:
-        t = [i for i, w in enumerate(words) if w[0] in "aeiou" and w[-1] in "aeiou"]
-        return [bisect_left(t, r + 1) - bisect_left(t, l) for l, r in queries]
-```
+
 
 ### **Java**
 
@@ -108,48 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> vowelStrings(vector<string>& words, vector<vector<int>>& queries) {
-        vector<int> t;
-        unordered_set<char> vowels = {'a', 'e', 'i', 'o', 'u'};
-        for (int i = 0; i < words.size(); ++i) {
-            if (vowels.count(words[i][0]) && vowels.count(words[i].back())) {
-                t.push_back(i);
-            }
-        }
-        vector<int> ans;
-        for (auto& q : queries) {
-            int x = lower_bound(t.begin(), t.end(), q[1] + 1) - lower_bound(t.begin(), t.end(), q[0]);
-            ans.push_back(x);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func vowelStrings(words []string, queries [][]int) (ans []int) {
-	vowels := "aeiou"
-	t := []int{}
-	for i, w := range words {
-		if strings.Contains(vowels, w[:1]) && strings.Contains(vowels, w[len(w)-1:]) {
-			t = append(t, i)
-		}
-	}
-	for _, q := range queries {
-		i := sort.Search(len(t), func(i int) bool { return t[i] >= q[0] })
-		j := sort.Search(len(t), func(i int) bool { return t[i] >= q[1]+1 })
-		ans = append(ans, j-i)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -157,4 +117,4 @@ func vowelStrings(words []string, queries [][]int) (ans []int) {
 
 ```
 
-<!-- tabs:end -->
+

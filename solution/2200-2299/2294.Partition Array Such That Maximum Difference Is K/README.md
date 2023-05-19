@@ -77,17 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def partitionArray(self, nums: List[int], k: int) -> int:
-        nums.sort()
-        ans, a = 1, nums[0]
-        for b in nums:
-            if b - a > k:
-                a = b
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -109,57 +99,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int partitionArray(vector<int>& nums, int k) {
-        sort(nums.begin(), nums.end());
-        int ans = 1, a = nums[0];
-        for (int& b : nums) {
-            if (b - a > k) {
-                a = b;
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func partitionArray(nums []int, k int) int {
-	sort.Ints(nums)
-	ans, a := 1, nums[0]
-	for _, b := range nums {
-		if b-a > k {
-			a = b
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function partitionArray(nums: number[], k: number): number {
-    nums.sort((a, b) => a - b);
-    let ans = 1;
-    let a = nums[0];
-    for (const b of nums) {
-        if (b - a > k) {
-            a = b;
-            ++ans;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -167,4 +117,4 @@ function partitionArray(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

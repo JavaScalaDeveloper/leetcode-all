@@ -69,26 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxCount(self, banned: List[int], n: int, maxSum: int) -> int:
-        banned.extend([0, n + 1])
-        ban = sorted(set(banned))
-        ans = 0
-        for i, j in pairwise(ban):
-            left, right = 0, j - i - 1
-            while left < right:
-                mid = (left + right + 1) >> 1
-                if (i + 1 + i + mid) * mid // 2 <= maxSum:
-                    left = mid
-                else:
-                    right = mid - 1
-            ans += left
-            maxSum -= (i + 1 + i + left) * left // 2
-            if maxSum <= 0:
-                break
-        return ans
-```
+
 
 ### **Java**
 
@@ -128,72 +109,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxCount(vector<int>& banned, int n, long long maxSum) {
-        banned.push_back(0);
-        banned.push_back(n + 1);
-        sort(banned.begin(), banned.end());
-        banned.erase(unique(banned.begin(), banned.end()), banned.end());
-        int ans = 0;
-        for (int k = 1; k < banned.size(); ++k) {
-            int i = banned[k - 1], j = banned[k];
-            int left = 0, right = j - i - 1;
-            while (left < right) {
-                int mid = left + ((right - left + 1) / 2);
-                if ((i + 1 + i + mid) * 1LL * mid / 2 <= maxSum) {
-                    left = mid;
-                } else {
-                    right = mid - 1;
-                }
-            }
-            ans += left;
-            maxSum -= (i + 1 + i + left) * 1LL * left / 2;
-            if (maxSum <= 0) {
-                break;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxCount(banned []int, n int, maxSum int64) (ans int) {
-	banned = append(banned, []int{0, n + 1}...)
-	sort.Ints(banned)
-	ban := []int{}
-	for i, x := range banned {
-		if i > 0 && x == banned[i-1] {
-			continue
-		}
-		ban = append(ban, x)
-	}
-	for k := 1; k < len(ban); k++ {
-		i, j := ban[k-1], ban[k]
-		left, right := 0, j-i-1
-		for left < right {
-			mid := (left + right + 1) >> 1
-			if int64((i+1+i+mid)*mid/2) <= maxSum {
-				left = mid
-			} else {
-				right = mid - 1
-			}
-		}
-		ans += left
-		maxSum -= int64((i + 1 + i + left) * left / 2)
-		if maxSum <= 0 {
-			break
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -201,4 +123,4 @@ func maxCount(banned []int, n int, maxSum int64) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

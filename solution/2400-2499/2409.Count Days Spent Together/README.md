@@ -58,16 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countDaysTogether(self, arriveAlice: str, leaveAlice: str, arriveBob: str, leaveBob: str) -> int:
-        a = max(arriveAlice, arriveBob)
-        b = min(leaveAlice, leaveBob)
-        days = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
-        x = sum(days[:int(a[:2]) - 1]) + int(a[3:])
-        y = sum(days[:int(b[:2]) - 1]) + int(b[3:])
-        return max(y - x + 1, 0)
-```
+
 
 ### **Java**
 
@@ -97,69 +88,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    int countDaysTogether(string arriveAlice, string leaveAlice, string arriveBob, string leaveBob) {
-        string a = arriveAlice < arriveBob ? arriveBob : arriveAlice;
-        string b = leaveAlice < leaveBob ? leaveAlice : leaveBob;
-        int x = f(a), y = f(b);
-        return max(0, y - x + 1);
-    }
 
-    int f(string s) {
-        int m, d;
-        sscanf(s.c_str(), "%d-%d", &m, &d);
-        int res = 0;
-        for (int i = 0; i < m - 1; ++i) {
-            res += days[i];
-        }
-        res += d;
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countDaysTogether(arriveAlice string, leaveAlice string, arriveBob string, leaveBob string) int {
-	days := []int{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-	f := func(s string) int {
-		m, _ := strconv.Atoi(s[:2])
-		d, _ := strconv.Atoi(s[3:])
-		res := 0
-		for i := 0; i < m-1; i++ {
-			res += days[i]
-		}
-		res += d
-		return res
-	}
-	a, b := arriveAlice, leaveBob
-	if arriveAlice < arriveBob {
-		a = arriveBob
-	}
-	if leaveAlice < leaveBob {
-		b = leaveAlice
-	}
-	x, y := f(a), f(b)
-	ans := y - x + 1
-	if ans < 0 {
-		return 0
-	}
-	return ans
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -168,4 +107,4 @@ func countDaysTogether(arriveAlice string, leaveAlice string, arriveBob string, 
 
 ```
 
-<!-- tabs:end -->
+

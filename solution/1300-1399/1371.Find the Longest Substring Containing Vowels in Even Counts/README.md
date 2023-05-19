@@ -57,21 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findTheLongestSubstring(self, s: str) -> int:
-        pos = [inf] * 32
-        pos[0] = -1
-        vowels = 'aeiou'
-        state = ans = 0
-        for i, c in enumerate(s):
-            for j, v in enumerate(vowels):
-                if c == v:
-                    state ^= 1 << j
-            ans = max(ans, i - pos[state])
-            pos[state] = min(pos[state], i)
-        return ans
-```
+
 
 ### **Java**
 
@@ -102,65 +88,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findTheLongestSubstring(string s) {
-        vector<int> pos(32, INT_MAX);
-        pos[0] = -1;
-        string vowels = "aeiou";
-        int state = 0, ans = 0;
-        for (int i = 0; i < s.size(); ++i) {
-            for (int j = 0; j < 5; ++j)
-                if (s[i] == vowels[j])
-                    state ^= (1 << j);
-            ans = max(ans, i - pos[state]);
-            pos[state] = min(pos[state], i);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findTheLongestSubstring(s string) int {
-	pos := make([]int, 32)
-	for i := range pos {
-		pos[i] = math.MaxInt32
-	}
-	pos[0] = -1
-	vowels := "aeiou"
-	state, ans := 0, 0
-	for i, c := range s {
-		for j, v := range vowels {
-			if c == v {
-				state ^= (1 << j)
-			}
-		}
-		ans = max(ans, i-pos[state])
-		pos[state] = min(pos[state], i)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -168,4 +102,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

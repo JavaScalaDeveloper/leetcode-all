@@ -70,22 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:
-        @cache
-        def dfs(i):
-            if i > high:
-                return 0
-            ans = 0
-            if low <= i <= high:
-                ans += 1
-            ans += dfs(i + zero) + dfs(i + one)
-            return ans % mod
 
-        mod = 10**9 + 7
-        return dfs(0)
-```
 
 ### **Java**
 
@@ -129,64 +114,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int countGoodStrings(int low, int high, int zero, int one) {
-        vector<int> f(high + 1, -1);
-        function<int(int)> dfs = [&](int i) -> int {
-            if (i > high) return 0;
-            if (f[i] != -1) return f[i];
-            long ans = i >= low && i <= high;
-            ans += dfs(i + zero) + dfs(i + one);
-            ans %= mod;
-            f[i] = ans;
-            return ans;
-        };
-        return dfs(0);
-    }
-};
-```
 
-### **Go**
 
-```go
-func countGoodStrings(low int, high int, zero int, one int) int {
-	f := make([]int, high+1)
-	for i := range f {
-		f[i] = -1
-	}
-	const mod int = 1e9 + 7
-	var dfs func(i int) int
-	dfs = func(i int) int {
-		if i > high {
-			return 0
-		}
-		if f[i] != -1 {
-			return f[i]
-		}
-		ans := 0
-		if i >= low && i <= high {
-			ans++
-		}
-		ans += dfs(i+zero) + dfs(i+one)
-		ans %= mod
-		f[i] = ans
-		return ans
-	}
-	return dfs(0)
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -194,4 +132,4 @@ func countGoodStrings(low int, high int, zero int, one int) int {
 
 ```
 
-<!-- tabs:end -->
+

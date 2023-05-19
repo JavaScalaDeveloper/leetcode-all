@@ -55,35 +55,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def dicesProbability(self, n: int) -> List[float]:
-        f = [[0] * (6 * n + 1) for _ in range(n + 1)]
-        for j in range(1, 7):
-            f[1][j] = 1
-        for i in range(2, n + 1):
-            for j in range(i, 6 * i + 1):
-                for k in range(1, 7):
-                    if j - k >= 0:
-                        f[i][j] += f[i - 1][j - k]
-        m = pow(6, n)
-        return [f[n][i] / m for i in range(n, 6 * n + 1)]
-```
 
-```python
-class Solution:
-    def dicesProbability(self, n: int) -> List[float]:
-        f = [0] + [1] * 6
-        for i in range(2, n + 1):
-            g = [0] * (6 * i + 1)
-            for j in range(i, 6 * i + 1):
-                for k in range(1, 7):
-                    if 0 <= j - k < len(f):
-                        g[j] += f[j - k]
-            f = g
-        m = pow(6, n)
-        return [f[j] / m for j in range(n, 6 * n + 1)]
-```
+
+
 
 ### **Java**
 
@@ -115,137 +89,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<double> dicesProbability(int n) {
-        int f[n + 1][6 * n + 1];
-        memset(f, 0, sizeof f);
-        for (int j = 1; j <= 6; ++j) {
-            f[1][j] = 1;
-        }
-        for (int i = 2; i <= n; ++i) {
-            for (int j = i; j <= 6 * i; ++j) {
-                for (int k = 1; k <= 6; ++k) {
-                    if (j >= k) {
-                        f[i][j] += f[i - 1][j - k];
-                    }
-                }
-            }
-        }
-        vector<double> ans(5 * n + 1);
-        double m = pow(6, n);
-        for (int i = 0; i < ans.size(); ++i) {
-            ans[i] = f[n][n + i] / m;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func dicesProbability(n int) (ans []float64) {
-	f := make([][]int, n+1)
-	for i := range f {
-		f[i] = make([]int, 6*n+1)
-	}
-	for j := 1; j <= 6; j++ {
-		f[1][j] = 1
-	}
-	for i := 2; i <= n; i++ {
-		for j := i; j <= 6*i; j++ {
-			for k := 1; k <= 6; k++ {
-				if j >= k {
-					f[i][j] += f[i-1][j-k]
-				}
-			}
-		}
-	}
-	m := math.Pow(6, float64(n))
-	for j := n; j <= 6*n; j++ {
-		ans = append(ans, float64(f[n][j])/m)
-	}
-	return
-}
-```
 
-```go
-func dicesProbability(n int) []float64 {
-	dp := make([]float64, 7)
-	for i := 1; i <= 6; i++ {
-		dp[i] = 1.0 / 6.0
-	}
-	for i := 2; i <= n; i++ {
-		n := len(dp)
-		tmp := make([]float64, 6*i+1)
-		for j := 0; j < n; j++ {
-			for k := 1; k <= 6; k++ {
-				tmp[j+k] += dp[j] / 6.0
-			}
-		}
-		dp = tmp
-	}
-	return dp[n:]
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number[]}
- */
-var dicesProbability = function (n) {
-    const f = Array.from({ length: n + 1 }, () => Array(6 * n + 1).fill(0));
-    for (let j = 1; j <= 6; ++j) {
-        f[1][j] = 1;
-    }
-    for (let i = 2; i <= n; ++i) {
-        for (let j = i; j <= 6 * i; ++j) {
-            for (let k = 1; k <= 6; ++k) {
-                if (j >= k) {
-                    f[i][j] += f[i - 1][j - k];
-                }
-            }
-        }
-    }
-    const ans = [];
-    const m = Math.pow(6, n);
-    for (let j = n; j <= 6 * n; ++j) {
-        ans.push(f[n][j] / m);
-    }
-    return ans;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public double[] DicesProbability(int n) {
-        var bp = new double[6];
-        for (int i = 0; i < 6; i++) {
-            bp[i] = 1 / 6.0;
-        }
-        double[] ans = new double[]{1};
-        for (int i = 1; i <= n; i++) {
-            var tmp = ans;
-            ans = new double[tmp.Length + 5];
-            for (int i1 = 0; i1 < tmp.Length; i1++) {
-                for (int i2 = 0; i2 < bp.Length; i2++) {
-                    ans[i1+i2] += tmp[i1] * bp[i2];
-                }
-            }
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -253,4 +113,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

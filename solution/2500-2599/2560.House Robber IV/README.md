@@ -67,20 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minCapability(self, nums: List[int], k: int) -> int:
-        def f(x):
-            cnt, j = 0, -2
-            for i, v in enumerate(nums):
-                if v > x or i == j + 1:
-                    continue
-                cnt += 1
-                j = i
-            return cnt >= k
 
-        return bisect_left(range(max(nums) + 1), True, key=f)
-```
 
 ### **Java**
 
@@ -115,54 +102,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minCapability(vector<int>& nums, int k) {
-        auto f = [&](int x) {
-            int cnt = 0, j = -2;
-            for (int i = 0; i < nums.size(); ++i) {
-                if (nums[i] > x || i == j + 1) {
-                    continue;
-                }
-                ++cnt;
-                j = i;
-            }
-            return cnt >= k;
-        };
-        int left = 0, right = *max_element(nums.begin(), nums.end());
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (f(mid)) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minCapability(nums []int, k int) int {
-	return sort.Search(1e9+1, func(x int) bool {
-		cnt, j := 0, -2
-		for i, v := range nums {
-			if v > x || i == j+1 {
-				continue
-			}
-			cnt++
-			j = i
-		}
-		return cnt >= k
-	})
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -170,4 +116,4 @@ func minCapability(nums []int, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

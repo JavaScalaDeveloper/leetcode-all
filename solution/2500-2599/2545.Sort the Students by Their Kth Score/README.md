@@ -68,11 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sortTheStudents(self, score: List[List[int]], k: int) -> List[List[int]]:
-        return sorted(score, key=lambda x: -x[k])
-```
+
 
 ### **Java**
 
@@ -87,46 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> sortTheStudents(vector<vector<int>>& score, int k) {
-        sort(score.begin(), score.end(), [&](const auto& a, const auto& b) { return a[k] > b[k]; });
-        return score;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sortTheStudents(score [][]int, k int) [][]int {
-	sort.Slice(score, func(i, j int) bool { return score[i][k] > score[j][k] })
-	return score
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function sortTheStudents(score: number[][], k: number): number[][] {
-    return score.sort((a, b) => b[k] - a[k]);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sort_the_students(mut score: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {
-        let k = k as usize;
-        score.sort_by(|a, b| b[k].cmp(&a[k]));
-        score
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -134,4 +105,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

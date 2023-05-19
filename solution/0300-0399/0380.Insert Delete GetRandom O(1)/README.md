@@ -75,40 +75,7 @@ randomizedSet.getRandom(); // 由于 2 是集合中唯一的数字，getRandom �
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class RandomizedSet:
 
-    def __init__(self):
-        self.d = {}
-        self.q = []
-
-    def insert(self, val: int) -> bool:
-        if val in self.d:
-            return False
-        self.d[val] = len(self.q)
-        self.q.append(val)
-        return True
-
-    def remove(self, val: int) -> bool:
-        if val not in self.d:
-            return False
-        i = self.d[val]
-        self.d[self.q[-1]] = i
-        self.q[i] = self.q[-1]
-        self.q.pop()
-        self.d.pop(val)
-        return True
-
-    def getRandom(self) -> int:
-        return choice(self.q)
-
-
-# Your RandomizedSet object will be instantiated and called as such:
-# obj = RandomizedSet()
-# param_1 = obj.insert(val)
-# param_2 = obj.remove(val)
-# param_3 = obj.getRandom()
-```
 
 ### **Java**
 
@@ -158,235 +125,25 @@ class RandomizedSet {
  */
 ```
 
-### **C++**
 
-```cpp
-class RandomizedSet {
-public:
-    RandomizedSet() {
 
-    }
 
-    bool insert(int val) {
-        if (d.count(val)) {
-            return false;
-        }
-        d[val] = q.size();
-        q.push_back(val);
-        return true;
-    }
 
-    bool remove(int val) {
-        if (!d.count(val)) {
-            return false;
-        }
-        int i = d[val];
-        d[q.back()] = i;
-        q[i] = q.back();
-        q.pop_back();
-        d.erase(val);
-        return true;
-    }
 
-    int getRandom() {
-        return q[rand() % q.size()];
-    }
 
-private:
-    unordered_map<int, int> d;
-    vector<int> q;
-};
 
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * RandomizedSet* obj = new RandomizedSet();
- * bool param_1 = obj->insert(val);
- * bool param_2 = obj->remove(val);
- * int param_3 = obj->getRandom();
- */
-```
-
-### **Go**
-
-```go
-type RandomizedSet struct {
-	d map[int]int
-	q []int
-}
-
-func Constructor() RandomizedSet {
-	return RandomizedSet{map[int]int{}, []int{}}
-}
-
-func (this *RandomizedSet) Insert(val int) bool {
-	if _, ok := this.d[val]; ok {
-		return false
-	}
-	this.d[val] = len(this.q)
-	this.q = append(this.q, val)
-	return true
-}
-
-func (this *RandomizedSet) Remove(val int) bool {
-	if _, ok := this.d[val]; !ok {
-		return false
-	}
-	i := this.d[val]
-	this.d[this.q[len(this.q)-1]] = i
-	this.q[i] = this.q[len(this.q)-1]
-	this.q = this.q[:len(this.q)-1]
-	delete(this.d, val)
-	return true
-}
-
-func (this *RandomizedSet) GetRandom() int {
-	return this.q[rand.Intn(len(this.q))]
-}
-
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * obj := Constructor();
- * param_1 := obj.Insert(val);
- * param_2 := obj.Remove(val);
- * param_3 := obj.GetRandom();
- */
-```
 
 ### **TypeScript**
 
-```ts
-class RandomizedSet {
-    private d: Map<number, number> = new Map();
-    private q: number[] = [];
-
-    constructor() {}
-
-    insert(val: number): boolean {
-        if (this.d.has(val)) {
-            return false;
-        }
-        this.d.set(val, this.q.length);
-        this.q.push(val);
-        return true;
-    }
-
-    remove(val: number): boolean {
-        if (!this.d.has(val)) {
-            return false;
-        }
-        const i = this.d.get(val)!;
-        this.d.set(this.q[this.q.length - 1], i);
-        this.q[i] = this.q[this.q.length - 1];
-        this.q.pop();
-        this.d.delete(val);
-        return true;
-    }
-
-    getRandom(): number {
-        return this.q[Math.floor(Math.random() * this.q.length)];
-    }
-}
-
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * var obj = new RandomizedSet()
- * var param_1 = obj.insert(val)
- * var param_2 = obj.remove(val)
- * var param_3 = obj.getRandom()
- */
-```
-
-### **Rust**
-
-```rust
-use std::collections::HashSet;
-use rand::Rng;
-
-struct RandomizedSet {
-    list: HashSet<i32>
-}
 
 
-/**
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
-impl RandomizedSet {
 
-    fn new() -> Self {
-        Self {
-            list: HashSet::new()
-        }
-    }
 
-    fn insert(&mut self, val: i32) -> bool {
-        self.list.insert(val)
-    }
 
-    fn remove(&mut self, val: i32) -> bool {
-        self.list.remove(&val)
-    }
 
-    fn get_random(&self) -> i32 {
-        let i = rand::thread_rng().gen_range(0, self.list.len());
-        *self.list.iter().collect::<Vec<&i32>>()[i]
-    }
-}
 
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * let obj = RandomizedSet::new();
- * let ret_1: bool = obj.insert(val);
- * let ret_2: bool = obj.remove(val);
- * let ret_3: i32 = obj.get_random();
- */
-```
 
-### **C#**
 
-```cs
-public class RandomizedSet {
-    private Dictionary<int, int> d = new Dictionary<int, int>();
-    private List<int> q = new List<int>();
-
-    public RandomizedSet() {
-
-    }
-
-    public bool Insert(int val) {
-        if (d.ContainsKey(val)) {
-            return false;
-        }
-        d.Add(val, q.Count);
-        q.Add(val);
-        return true;
-    }
-
-    public bool Remove(int val) {
-        if (!d.ContainsKey(val)) {
-            return false;
-        }
-        int i = d[val];
-        d[q[q.Count - 1]] = i;
-        q[i] = q[q.Count - 1];
-        q.RemoveAt(q.Count - 1);
-        d.Remove(val);
-        return true;
-    }
-
-    public int GetRandom() {
-        return q[new Random().Next(0, q.Count)];
-    }
-}
-
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * RandomizedSet obj = new RandomizedSet();
- * bool param_1 = obj.Insert(val);
- * bool param_2 = obj.Remove(val);
- * int param_3 = obj.GetRandom();
- */
-```
 
 ### **...**
 
@@ -394,4 +151,4 @@ public class RandomizedSet {
 
 ```
 
-<!-- tabs:end -->
+

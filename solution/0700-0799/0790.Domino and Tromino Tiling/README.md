@@ -82,42 +82,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numTilings(self, n: int) -> int:
-        @cache
-        def dfs(i, j):
-            if i > n or j > n:
-                return 0
-            if i == n and j == n:
-                return 1
-            ans = 0
-            if i == j:
-                ans = dfs(i + 2, j + 2) + dfs(i + 1, j + 1) + dfs(i + 2, j + 1) + dfs(i + 1, j + 2)
-            elif i > j:
-                ans = dfs(i, j + 2) + dfs(i + 1, j + 2)
-            else:
-                ans = dfs(i + 2, j) + dfs(i + 2, j + 1)
-            return ans % mod
 
-        mod = 10**9 + 7
-        return dfs(0, 0)
-```
 
-```python
-class Solution:
-    def numTilings(self, n: int) -> int:
-        f = [1, 0, 0, 0]
-        mod = 10**9 + 7
-        for i in range(1, n + 1):
-            g = [0] * 4
-            g[0] = (f[0] + f[1] + f[2] + f[3]) % mod
-            g[1] = (f[2] + f[3]) % mod
-            g[2] = (f[1] + f[3]) % mod
-            g[3] = f[0]
-            f = g
-        return f[0]
-```
+
 
 ### **Java**
 
@@ -141,46 +108,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int numTilings(int n) {
-        long f[4] = {1, 0, 0, 0};
-        for (int i = 1; i <= n; ++i) {
-            long g[4] = {0, 0, 0, 0};
-            g[0] = (f[0] + f[1] + f[2] + f[3]) % mod;
-            g[1] = (f[2] + f[3]) % mod;
-            g[2] = (f[1] + f[3]) % mod;
-            g[3] = f[0];
-            memcpy(f, g, sizeof(g));
-        }
-        return f[0];
-    }
-};
-```
 
-### **Go**
 
-```go
-func numTilings(n int) int {
-	f := [4]int{}
-	f[0] = 1
-	const mod int = 1e9 + 7
-	for i := 1; i <= n; i++ {
-		g := [4]int{}
-		g[0] = (f[0] + f[1] + f[2] + f[3]) % mod
-		g[1] = (f[2] + f[3]) % mod
-		g[2] = (f[1] + f[3]) % mod
-		g[3] = f[0]
-		f = g
-	}
-	return f[0]
-}
-```
+
+
+
 
 ### **...**
 
@@ -188,4 +122,4 @@ func numTilings(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

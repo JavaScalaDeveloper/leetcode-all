@@ -67,31 +67,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findWords(self, words: List[str]) -> List[str]:
-        s1 = set('qwertyuiop')
-        s2 = set('asdfghjkl')
-        s3 = set('zxcvbnm')
-        ans = []
-        for w in words:
-            s = set(w.lower())
-            if s <= s1 or s <= s2 or s <= s3:
-                ans.append(w)
-        return ans
-```
 
-```python
-class Solution:
-    def findWords(self, words: List[str]) -> List[str]:
-        ans = []
-        s = "12210111011122000010020202"
-        for w in words:
-            x = s[ord(w[0].lower()) - ord('a')]
-            if all(s[ord(c.lower()) - ord('a')] == x for c in w):
-                ans.append(w)
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -121,102 +99,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> findWords(vector<string>& words) {
-        string s = "12210111011122000010020202";
-        vector<string> ans;
-        for (auto& w : words) {
-            char x = s[tolower(w[0]) - 'a'];
-            bool ok = true;
-            for (char& c : w) {
-                if (s[tolower(c) - 'a'] != x) {
-                    ok = false;
-                    break;
-                }
-            }
-            if (ok) {
-                ans.emplace_back(w);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findWords(words []string) (ans []string) {
-	s := "12210111011122000010020202"
-	for _, w := range words {
-		x := s[unicode.ToLower(rune(w[0]))-'a']
-		ok := true
-		for _, c := range w[1:] {
-			if s[unicode.ToLower(c)-'a'] != x {
-				ok = false
-				break
-			}
-		}
-		if ok {
-			ans = append(ans, w)
-		}
-	}
-	return
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public string[] FindWords(string[] words) {
-        string s = "12210111011122000010020202";
-        IList<string> ans = new List<string>();
-        foreach (string w in words) {
-            char x = s[char.ToLower(w[0]) - 'a'];
-            bool ok = true;
-            for (int i = 1; i < w.Length; ++i) {
-                if (s[char.ToLower(w[i]) - 'a'] != x) {
-                    ok = false;
-                    break;
-                }
-            }
-            if (ok) {
-                ans.Add(w);
-            }
-        }
-        return ans.ToArray();
-    }
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findWords(words: string[]): string[] {
-    const s = '12210111011122000010020202';
-    const ans: string[] = [];
-    for (const w of words) {
-        const t = w.toLowerCase();
-        const x = s[t.charCodeAt(0) - 'a'.charCodeAt(0)];
-        let ok = true;
-        for (const c of t) {
-            if (s[c.charCodeAt(0) - 'a'.charCodeAt(0)] !== x) {
-                ok = false;
-                break;
-            }
-        }
-        if (ok) {
-            ans.push(w);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -224,4 +121,4 @@ function findWords(words: string[]): string[] {
 
 ```
 
-<!-- tabs:end -->
+

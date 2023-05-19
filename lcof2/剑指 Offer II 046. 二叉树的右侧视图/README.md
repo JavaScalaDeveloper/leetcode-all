@@ -56,30 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def rightSideView(self, root: TreeNode) -> List[int]:
-        ans = []
-        if not root:
-            return ans
-        d = deque([root])
-        while d:
-            n = len(d)
-            ans.append(d[0].val)
-            for i in range(n):
-                node = d.popleft()
-                if node.right:
-                    d.append(node.right)
-                if node.left:
-                    d.append(node.left)
-        return ans
-```
+
 
 ### **Java**
 
@@ -126,74 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<int> rightSideView(TreeNode* root) {
-        vector<int> ans;
-        if (!root) return ans;
-        queue<TreeNode*> q;
-        q.push(root);
-        while (!q.empty()) {
-            ans.push_back(q.front()->val);
-            for (int i = q.size(); i > 0; --i) {
-                auto node = q.front();
-                q.pop();
-                if (node->right) q.push(node->right);
-                if (node->left) q.push(node->left);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func rightSideView(root *TreeNode) []int {
-	var ans []int
-	if root == nil {
-		return ans
-	}
-	q := []*TreeNode{root}
-	for len(q) > 0 {
-		ans = append(ans, q[0].Val)
-		for i := len(q); i > 0; i-- {
-			node := q[0]
-			q = q[1:]
-			if node.Right != nil {
-				q = append(q, node.Right)
-			}
-			if node.Left != nil {
-				q = append(q, node.Left)
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -201,4 +117,4 @@ func rightSideView(root *TreeNode) []int {
 
 ```
 
-<!-- tabs:end -->
+

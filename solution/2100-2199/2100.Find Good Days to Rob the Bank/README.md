@@ -73,21 +73,7 @@ left, right 分别记录左右符合要求的天数。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def goodDaysToRobBank(self, security: List[int], time: int) -> List[int]:
-        n = len(security)
-        if n <= time * 2:
-            return []
-        left, right = [0] * n, [0] * n
-        for i in range(1, n):
-            if security[i] <= security[i - 1]:
-                left[i] = left[i - 1] + 1
-        for i in range(n - 2, -1, -1):
-            if security[i] <= security[i + 1]:
-                right[i] = right[i + 1] + 1
-        return [i for i in range(n) if time <= min(left[i], right[i])]
-```
+
 
 ### **Java**
 
@@ -123,124 +109,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> goodDaysToRobBank(vector<int>& security, int time) {
-        int n = security.size();
-        if (n <= time * 2) return {};
-        vector<int> left(n);
-        vector<int> right(n);
-        for (int i = 1; i < n; ++i)
-            if (security[i] <= security[i - 1])
-                left[i] = left[i - 1] + 1;
-        for (int i = n - 2; i >= 0; --i)
-            if (security[i] <= security[i + 1])
-                right[i] = right[i + 1] + 1;
-        vector<int> ans;
-        for (int i = time; i < n - time; ++i)
-            if (time <= min(left[i], right[i]))
-                ans.push_back(i);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func goodDaysToRobBank(security []int, time int) []int {
-	n := len(security)
-	if n <= time*2 {
-		return []int{}
-	}
-	left := make([]int, n)
-	right := make([]int, n)
-	for i := 1; i < n; i++ {
-		if security[i] <= security[i-1] {
-			left[i] = left[i-1] + 1
-		}
-	}
-	for i := n - 2; i >= 0; i-- {
-		if security[i] <= security[i+1] {
-			right[i] = right[i+1] + 1
-		}
-	}
-	var ans []int
-	for i := time; i < n - time; i++ {
-		if time <= left[i] && time <= right[i] {
-			ans = append(ans, i)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function goodDaysToRobBank(security: number[], time: number): number[] {
-    const n = security.length;
-    if (n <= time * 2) {
-        return [];
-    }
-    const l = new Array(n).fill(0);
-    const r = new Array(n).fill(0);
-    for (let i = 1; i < n; i++) {
-        if (security[i] <= security[i - 1]) {
-            l[i] = l[i - 1] + 1;
-        }
-        if (security[n - i - 1] <= security[n - i]) {
-            r[n - i - 1] = r[n - i] + 1;
-        }
-    }
-    const res = [];
-    for (let i = time; i < n - time; i++) {
-        if (time <= Math.min(l[i], r[i])) {
-            res.push(i);
-        }
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-use std::cmp::Ordering;
 
-impl Solution {
-    pub fn good_days_to_rob_bank(security: Vec<i32>, time: i32) -> Vec<i32> {
-        let time = time as usize;
-        let n = security.len();
-        if time * 2 >= n {
-            return vec![];
-        }
-        let mut g = vec![0; n];
-        for i in 1..n {
-            g[i] = match security[i].cmp(&security[i - 1]) {
-                Ordering::Less => -1,
-                Ordering::Greater => 1,
-                Ordering::Equal => 0,
-            }
-        }
-        let (mut a, mut b) = (vec![0; n + 1], vec![0; n + 1]);
-        for i in 1..=n {
-            a[i] = a[i - 1] + if g[i - 1] == 1 { 1 } else { 0 };
-            b[i] = b[i - 1] + if g[i - 1] == -1 { 1 } else { 0 };
-        }
-        let mut res = vec![];
-        for i in time..n - time {
-            if a[i + 1] - a[i + 1 - time] == 0 && b[i + 1 + time] - b[i + 1] == 0 {
-                res.push((i) as i32);
-            }
-        }
-        res
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -248,4 +131,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

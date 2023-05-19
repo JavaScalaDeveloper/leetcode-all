@@ -69,24 +69,7 @@ arr1 = [1,2] 和 arr2 = [3] 满足所有条件。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimizeSet(
-        self, divisor1: int, divisor2: int, uniqueCnt1: int, uniqueCnt2: int
-    ) -> int:
-        def f(x):
-            cnt1 = x // divisor1 * (divisor1 - 1) + x % divisor1
-            cnt2 = x // divisor2 * (divisor2 - 1) + x % divisor2
-            cnt = x // divisor * (divisor - 1) + x % divisor
-            return (
-                cnt1 >= uniqueCnt1
-                and cnt2 >= uniqueCnt2
-                and cnt >= uniqueCnt1 + uniqueCnt2
-            )
 
-        divisor = lcm(divisor1, divisor2)
-        return bisect_left(range(10**10), True, key=f)
-```
 
 ### **Java**
 
@@ -121,61 +104,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimizeSet(int divisor1, int divisor2, int uniqueCnt1, int uniqueCnt2) {
-        long left = 1, right = 1e10;
-        long divisor = lcm((long) divisor1, (long) divisor2);
-        while (left < right) {
-            long mid = (left + right) >> 1;
-            long cnt1 = mid / divisor1 * (divisor1 - 1) + mid % divisor1;
-            long cnt2 = mid / divisor2 * (divisor2 - 1) + mid % divisor2;
-            long cnt = mid / divisor * (divisor - 1) + mid % divisor;
-            if (cnt1 >= uniqueCnt1 && cnt2 >= uniqueCnt2 && cnt >= uniqueCnt1 + uniqueCnt2) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimizeSet(divisor1 int, divisor2 int, uniqueCnt1 int, uniqueCnt2 int) int {
-	divisor := lcm(divisor1, divisor2)
-	left, right := 1, 10000000000
-	for left < right {
-		mid := (left + right) >> 1
-		cnt1 := mid/divisor1*(divisor1-1) + mid%divisor1
-		cnt2 := mid/divisor2*(divisor2-1) + mid%divisor2
-		cnt := mid/divisor*(divisor-1) + mid%divisor
-		if cnt1 >= uniqueCnt1 && cnt2 >= uniqueCnt2 && cnt >= uniqueCnt1+uniqueCnt2 {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
 
-func lcm(a, b int) int {
-	return a * b / gcd(a, b)
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
 
 ### **...**
 
@@ -183,4 +118,4 @@ func gcd(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

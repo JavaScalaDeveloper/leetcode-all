@@ -79,27 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findAllRecipes(self, recipes: List[str], ingredients: List[List[str]], supplies: List[str]) -> List[str]:
-        g = defaultdict(list)
-        indeg = defaultdict(int)
-        for a, b in zip(recipes, ingredients):
-            for v in b:
-                g[v].append(a)
-            indeg[a] += len(b)
-        q = deque(supplies)
-        ans = []
-        while q:
-            for _ in range(len(q)):
-                i = q.popleft()
-                for j in g[i]:
-                    indeg[j] -= 1
-                    if indeg[j] == 0:
-                        ans.append(j)
-                        q.append(j)
-        return ans
-```
+
 
 ### **Java**
 
@@ -139,83 +119,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> findAllRecipes(vector<string>& recipes, vector<vector<string>>& ingredients, vector<string>& supplies) {
-        unordered_map<string, vector<string>> g;
-        unordered_map<string, int> indeg;
-        for (int i = 0; i < recipes.size(); ++i) {
-            for (auto& v : ingredients[i]) {
-                g[v].push_back(recipes[i]);
-            }
-            indeg[recipes[i]] = ingredients[i].size();
-        }
-        queue<string> q;
-        for (auto& s : supplies) {
-            q.push(s);
-        }
-        vector<string> ans;
-        while (!q.empty()) {
-            for (int n = q.size(); n; --n) {
-                auto i = q.front();
-                q.pop();
-                for (auto j : g[i]) {
-                    if (--indeg[j] == 0) {
-                        ans.push_back(j);
-                        q.push(j);
-                    }
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findAllRecipes(recipes []string, ingredients [][]string, supplies []string) []string {
-	g := map[string][]string{}
-	indeg := map[string]int{}
-	for i, a := range recipes {
-		for _, b := range ingredients[i] {
-			g[b] = append(g[b], a)
-		}
-		indeg[a] = len(ingredients[i])
-	}
-	q := []string{}
-	for _, s := range supplies {
-		q = append(q, s)
-	}
-	ans := []string{}
-	for len(q) > 0 {
-		for n := len(q); n > 0; n-- {
-			i := q[0]
-			q = q[1:]
-			for _, j := range g[i] {
-				indeg[j]--
-				if indeg[j] == 0 {
-					ans = append(ans, j)
-					q = append(q, j)
-				}
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -223,4 +139,4 @@ func findAllRecipes(recipes []string, ingredients [][]string, supplies []string)
 
 ```
 
-<!-- tabs:end -->
+

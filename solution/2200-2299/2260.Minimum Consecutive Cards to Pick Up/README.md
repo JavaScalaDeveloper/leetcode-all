@@ -49,17 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumCardPickup(self, cards: List[int]) -> int:
-        last = {}
-        ans = inf
-        for i, x in enumerate(cards):
-            if x in last:
-                ans = min(ans, i - last[x] + 1)
-            last[x] = i
-        return -1 if ans == inf else ans
-```
+
 
 ### **Java**
 
@@ -82,62 +72,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumCardPickup(vector<int>& cards) {
-        unordered_map<int, int> last;
-        int n = cards.size();
-        int ans = n + 1;
-        for (int i = 0; i < n; ++i) {
-            if (last.count(cards[i])) {
-                ans = min(ans, i - last[cards[i]] + 1);
-            }
-            last[cards[i]] = i;
-        }
-        return ans > n ? -1 : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumCardPickup(cards []int) int {
-	last := map[int]int{}
-	n := len(cards)
-	ans := n + 1
-	for i, x := range cards {
-		if j, ok := last[x]; ok && ans > i-j+1 {
-			ans = i - j + 1
-		}
-		last[x] = i
-	}
-	if ans > n {
-		return -1
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumCardPickup(cards: number[]): number {
-    const n = cards.length;
-    const last = new Map<number, number>();
-    let ans = n + 1;
-    for (let i = 0; i < n; ++i) {
-        if (last.has(cards[i])) {
-            ans = Math.min(ans, i - last.get(cards[i]) + 1);
-        }
-        last.set(cards[i], i);
-    }
-    return ans > n ? -1 : ans;
-}
-```
+
 
 ### **...**
 
@@ -145,4 +90,4 @@ function minimumCardPickup(cards: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

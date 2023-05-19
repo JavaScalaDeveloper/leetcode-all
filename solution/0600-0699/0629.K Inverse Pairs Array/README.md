@@ -69,19 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kInversePairs(self, n: int, k: int) -> int:
-        mod = 10**9 + 7
-        f = [1] + [0] * k
-        s = [0] * (k + 2)
-        for i in range(1, n + 1):
-            for j in range(1, k + 1):
-                f[j] = (s[j + 1] - s[max(0, j - (i - 1))]) % mod
-            for j in range(1, k + 2):
-                s[j] = (s[j - 1] + f[j - 1]) % mod
-        return f[k]
-```
+
 
 ### **Java**
 
@@ -109,82 +97,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int kInversePairs(int n, int k) {
-        int f[k + 1];
-        int s[k + 2];
-        memset(f, 0, sizeof(f));
-        f[0] = 1;
-        fill(s, s + k + 2, 1);
-        s[0] = 0;
-        const int mod = 1e9 + 7;
-        for (int i = 1; i <= n; ++i) {
-            for (int j = 1; j <= k; ++j) {
-                f[j] = (s[j + 1] - s[max(0, j - (i - 1))] + mod) % mod;
-            }
-            for (int j = 1; j <= k + 1; ++j) {
-                s[j] = (s[j - 1] + f[j - 1]) % mod;
-            }
-        }
-        return f[k];
-    }
-};
-```
 
-### **Go**
 
-```go
-func kInversePairs(n int, k int) int {
-	f := make([]int, k+1)
-	s := make([]int, k+2)
-	f[0] = 1
-	for i, x := range f {
-		s[i+1] = s[i] + x
-	}
-	const mod = 1e9 + 7
-	for i := 1; i <= n; i++ {
-		for j := 1; j <= k; j++ {
-			f[j] = (s[j+1] - s[max(0, j-(i-1))] + mod) % mod
-		}
-		for j := 1; j <= k+1; j++ {
-			s[j] = (s[j-1] + f[j-1]) % mod
-		}
-	}
-	return f[k]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function kInversePairs(n: number, k: number): number {
-    const f: number[] = new Array(k + 1).fill(0);
-    f[0] = 1;
-    const s: number[] = new Array(k + 2).fill(1);
-    s[0] = 0;
-    const mod: number = 1e9 + 7;
-    for (let i = 1; i <= n; ++i) {
-        for (let j = 1; j <= k; ++j) {
-            f[j] = (s[j + 1] - s[Math.max(0, j - (i - 1))] + mod) % mod;
-        }
-        for (let j = 1; j <= k + 1; ++j) {
-            s[j] = (s[j - 1] + f[j - 1]) % mod;
-        }
-    }
-    return f[k];
-}
-```
+
 
 ### **...**
 
@@ -192,4 +115,4 @@ function kInversePairs(n: number, k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

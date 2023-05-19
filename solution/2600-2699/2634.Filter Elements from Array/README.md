@@ -67,17 +67,7 @@ const newArray = filter(arr, fn); // [20, 30]
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-function filter(arr: number[], fn: (n: number, i: number) => any): number[] {
-    const ans: number[] = [];
-    for (let i = 0; i < arr.length; ++i) {
-        if (fn(arr[i], i)) {
-            ans.push(arr[i]);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -85,4 +75,4 @@ function filter(arr: number[], fn: (n: number, i: number) => any): number[] {
 
 ```
 
-<!-- tabs:end -->
+

@@ -57,23 +57,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findLHS(self, nums: List[int]) -> int:
-        ans = 0
-        counter = Counter(nums)
-        for num in nums:
-            if num + 1 in counter:
-                ans = max(ans, counter[num] + counter[num + 1])
-        return ans
-```
 
-```python
-class Solution:
-    def findLHS(self, nums: List[int]) -> int:
-        counter = Counter(nums)
-        return max([counter[num] + counter[num + 1] for num in nums if num + 1 in counter], default=0)
-```
+
+
 
 ### **Java**
 
@@ -97,51 +83,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findLHS(vector<int>& nums) {
-        unordered_map<int, int> counter;
-        for (int num : nums) {
-            ++counter[num];
-        }
-        int ans = 0;
-        for (int num : nums) {
-            if (counter.count(num + 1)) {
-                ans = max(ans, counter[num] + counter[num + 1]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findLHS(nums []int) int {
-	counter := make(map[int]int)
-	for _, num := range nums {
-		counter[num]++
-	}
-	ans := 0
-	for _, num := range nums {
-		if counter[num+1] > 0 {
-			ans = max(ans, counter[num]+counter[num+1])
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -149,4 +97,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -90,21 +90,7 @@ n = 1
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-type F = () => Promise<any>;
 
-function promisePool(functions: F[], n: number): Promise<any> {
-    const wrappers = functions.map(fn => async () => {
-        await fn();
-        const nxt = waiting.shift();
-        nxt && (await nxt());
-    });
-
-    const running = wrappers.slice(0, n);
-    const waiting = wrappers.slice(n);
-    return Promise.all(running.map(fn => fn()));
-}
-```
 
 ### **...**
 
@@ -112,4 +98,4 @@ function promisePool(functions: F[], n: number): Promise<any> {
 
 ```
 
-<!-- tabs:end -->
+

@@ -90,22 +90,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def evaluate(self, s: str, knowledge: List[List[str]]) -> str:
-        d = {a: b for a, b in knowledge}
-        i, n = 0, len(s)
-        ans = []
-        while i < n:
-            if s[i] == '(':
-                j = s.find(')', i + 1)
-                ans.append(d.get(s[i + 1: j], '?'))
-                i = j
-            else:
-                ans.append(s[i])
-            i += 1
-        return ''.join(ans)
-```
+
 
 ### **Java**
 
@@ -133,120 +118,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string evaluate(string s, vector<vector<string>>& knowledge) {
-        unordered_map<string, string> d;
-        for (auto& e : knowledge) {
-            d[e[0]] = e[1];
-        }
-        string ans;
-        for (int i = 0; i < s.size(); ++i) {
-            if (s[i] == '(') {
-                int j = s.find(")", i + 1);
-                auto t = s.substr(i + 1, j - i - 1);
-                ans += d.count(t) ? d[t] : "?";
-                i = j;
-            } else {
-                ans += s[i];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func evaluate(s string, knowledge [][]string) string {
-	d := map[string]string{}
-	for _, v := range knowledge {
-		d[v[0]] = v[1]
-	}
-	var ans strings.Builder
-	for i := 0; i < len(s); i++ {
-		if s[i] == '(' {
-			j := i + 1
-			for s[j] != ')' {
-				j++
-			}
-			if v, ok := d[s[i+1:j]]; ok {
-				ans.WriteString(v)
-			} else {
-				ans.WriteByte('?')
-			}
-			i = j
-		} else {
-			ans.WriteByte(s[i])
-		}
-	}
-	return ans.String()
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function evaluate(s: string, knowledge: string[][]): string {
-    const n = s.length;
-    const map = new Map();
-    for (const [k, v] of knowledge) {
-        map.set(k, v);
-    }
-    const ans = [];
-    let i = 0;
-    while (i < n) {
-        if (s[i] === '(') {
-            const j = s.indexOf(')', i + 1);
-            ans.push(map.get(s.slice(i + 1, j)) ?? '?');
-            i = j;
-        } else {
-            ans.push(s[i]);
-        }
-        i++;
-    }
-    return ans.join('');
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn evaluate(s: String, knowledge: Vec<Vec<String>>) -> String {
-        let s = s.as_bytes();
-        let n = s.len();
-        let mut map = HashMap::new();
-        for v in knowledge.iter() {
-            map.insert(&v[0], &v[1]);
-        }
-        let mut ans = String::new();
-        let mut i = 0;
-        while i < n {
-            if s[i] == b'(' {
-                i += 1;
-                let mut j = i;
-                let mut key = String::new();
-                while s[j] != b')' {
-                    key.push(s[j] as char);
-                    j += 1;
-                }
-                ans.push_str(map.get(&key).unwrap_or(&&'?'.to_string()));
-                i = j;
-            } else {
-                ans.push(s[i] as char);
-            }
-            i += 1;
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -254,4 +140,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

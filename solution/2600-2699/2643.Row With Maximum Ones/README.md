@@ -64,16 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rowAndMaximumOnes(self, mat: List[List[int]]) -> List[int]:
-        ans = [0, 0]
-        for i, row in enumerate(mat):
-            cnt = row.count(1)
-            if ans[1] < cnt:
-                ans = [i, cnt]
-        return ans
-```
+
 
 ### **Java**
 
@@ -100,63 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> rowAndMaximumOnes(vector<vector<int>>& mat) {
-        vector<int> ans(2);
-        for (int i = 0; i < mat.size(); ++i) {
-            int cnt = 0;
-            for (auto& x : mat[i]) {
-                cnt += x == 1;
-            }
-            if (ans[1] < cnt) {
-                ans[0] = i;
-                ans[1] = cnt;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func rowAndMaximumOnes(mat [][]int) []int {
-	ans := make([]int, 2)
-	for i, row := range mat {
-		cnt := 0
-		for _, x := range row {
-			if x == 1 {
-				cnt++
-			}
-		}
-		if ans[1] < cnt {
-			ans[0], ans[1] = i, cnt
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function rowAndMaximumOnes(mat: number[][]): number[] {
-    const ans: number[] = [0, 0];
-    for (let i = 0; i < mat.length; ++i) {
-        const cnt = mat[i].reduce((a, b) => a + b);
-        if (ans[1] < cnt) {
-            ans[0] = i;
-            ans[1] = cnt;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -164,4 +109,4 @@ function rowAndMaximumOnes(mat: number[][]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

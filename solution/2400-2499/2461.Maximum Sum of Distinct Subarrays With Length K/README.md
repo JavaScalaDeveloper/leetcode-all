@@ -66,26 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumSubarraySum(self, nums: List[int], k: int) -> int:
-        n = len(nums)
-        cnt = Counter(nums[:k])
-        s = sum(nums[:k])
-        ans = 0
-        for i in range(k, n):
-            if len(cnt) == k:
-                ans = max(ans, s)
-            cnt[nums[i]] += 1
-            cnt[nums[i - k]] -= 1
-            s += nums[i]
-            s -= nums[i - k]
-            if cnt[nums[i - k]] == 0:
-                cnt.pop(nums[i - k])
-        if len(cnt) == k:
-            ans = max(ans, s)
-        return ans
-```
+
 
 ### **Java**
 
@@ -122,75 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long maximumSubarraySum(vector<int>& nums, int k) {
-        int n = nums.size();
-        unordered_map<int, int> cnt;
-        long long s = 0, ans = 0;
-        for (int i = 0; i < k; ++i) {
-            cnt[nums[i]]++;
-            s += nums[i];
-        }
-        for (int i = k; i < n; ++i) {
-            if (cnt.size() == k) ans = max(ans, s);
-            cnt[nums[i]]++;
-            cnt[nums[i - k]]--;
-            if (cnt[nums[i - k]] == 0) cnt.erase(nums[i - k]);
-            s += nums[i];
-            s -= nums[i - k];
-        }
-        if (cnt.size() == k) ans = max(ans, s);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumSubarraySum(nums []int, k int) int64 {
-	n := len(nums)
-	cnt := map[int]int{}
-	s, ans := 0, 0
-	for i := 0; i < k; i++ {
-		cnt[nums[i]]++
-		s += nums[i]
-	}
-	for i := k; i < n; i++ {
-		if len(cnt) == k {
-			ans = max(ans, s)
-		}
-		cnt[nums[i]]++
-		cnt[nums[i-k]]--
-		if cnt[nums[i-k]] == 0 {
-			delete(cnt, nums[i-k])
-		}
-		s += nums[i]
-		s -= nums[i-k]
-	}
-	if len(cnt) == k {
-		ans = max(ans, s)
-	}
-	return int64(ans)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -198,4 +121,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

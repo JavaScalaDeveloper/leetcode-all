@@ -73,20 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def getDecimalValue(self, head: ListNode) -> int:
-        ans = 0
-        while head:
-            ans = ans << 1 | head.val
-            head = head.next
-        return ans
-```
+
 
 ### **Java**
 
@@ -114,127 +101,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    int getDecimalValue(ListNode* head) {
-        int ans = 0;
-        for (; head; head = head->next) {
-            ans = ans << 1 | head->val;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func getDecimalValue(head *ListNode) (ans int) {
-	for ; head != nil; head = head.Next {
-		ans = ans<<1 | head.Val
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} head
- * @return {number}
- */
-var getDecimalValue = function (head) {
-    let ans = 0;
-    for (; head; head = head.next) {
-        ans = (ans << 1) | head.val;
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function getDecimalValue(head: ListNode | null): number {
-    let ans = 0;
-    for (; head; head = head.next) {
-        ans = (ans << 1) | head.val;
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for singly-linked list.
-// #[derive(PartialEq, Eq, Clone, Debug)]
-// pub struct ListNode {
-//   pub val: i32,
-//   pub next: Option<Box<ListNode>>
-// }
-//
-// impl ListNode {
-//   #[inline]
-//   fn new(val: i32) -> Self {
-//     ListNode {
-//       next: None,
-//       val
-//     }
-//   }
-// }
-impl Solution {
-    pub fn get_decimal_value(head: Option<Box<ListNode>>) -> i32 {
-        let mut ans = 0;
-        let mut cur = &head;
-        while let Some(node) = cur {
-            ans = (ans << 1) | node.val;
-            cur = &node.next;
-        }
-        ans
-    }
-}
-```
+
+
 
 ### **C**
 
@@ -259,37 +144,9 @@ int getDecimalValue(struct ListNode *head) {
 }
 ```
 
-### **PHP**
 
-```PHP
-/**
- * Definition for a singly-linked list.
- * class ListNode {
- *     public $val = 0;
- *     public $next = null;
- *     function __construct($val = 0, $next = null) {
- *         $this->val = $val;
- *         $this->next = $next;
- *     }
- * }
- */
-class Solution {
 
-    /**
-     * @param ListNode $head
-     * @return Integer
-     */
-    function getDecimalValue($head) {
-        $rs = array();
-        while ($head != null) {
-            array_push($rs, $head->val);
-            $head = $head->next;
-        }
-        $rsStr = implode($rs);
-        return bindec($rsStr);
-    }
-}
-```
+
 
 ### **...**
 
@@ -297,4 +154,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

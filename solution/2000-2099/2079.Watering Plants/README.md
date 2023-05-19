@@ -79,19 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def wateringPlants(self, plants: List[int], capacity: int) -> int:
-        ans, cap = 0, capacity
-        for i, x in enumerate(plants):
-            if cap >= x:
-                cap -= x
-                ans += 1
-            else:
-                cap = capacity - x
-                ans += i * 2 + 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -115,86 +103,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int wateringPlants(vector<int>& plants, int capacity) {
-        int ans = 0, cap = capacity;
-        for (int i = 0; i < plants.size(); ++i) {
-            if (cap >= plants[i]) {
-                cap -= plants[i];
-                ++ans;
-            } else {
-                cap = capacity - plants[i];
-                ans += i * 2 + 1;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func wateringPlants(plants []int, capacity int) int {
-	ans, cap := 0, capacity
-	for i, x := range plants {
-		if cap >= x {
-			cap -= x
-			ans++
-		} else {
-			cap = capacity - x
-			ans += i*2 + 1
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function wateringPlants(plants: number[], capacity: number): number {
-    const n = plants.length;
-    let ans = 0;
-    let water = capacity;
-    for (let i = 0; i < n; i++) {
-        if (water < plants[i]) {
-            ans += i * 2 + 1;
-            water = capacity - plants[i];
-        } else {
-            ans++;
-            water -= plants[i];
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn watering_plants(plants: Vec<i32>, capacity: i32) -> i32 {
-        let n = plants.len();
-        let mut ans = 0;
-        let mut water = capacity;
-        for i in 0..n {
-            if water < plants[i] {
-                ans += 2 * i + 1;
-                water = capacity - plants[i];
-            } else {
-                ans += 1;
-                water -= plants[i];
-            }
-        }
-        ans as i32
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -221,4 +144,4 @@ int wateringPlants(int *plants, int plantsSize, int capacity) {
 
 ```
 
-<!-- tabs:end -->
+

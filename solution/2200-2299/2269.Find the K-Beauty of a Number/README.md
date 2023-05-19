@@ -70,17 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def divisorSubstrings(self, num: int, k: int) -> int:
-        ans = 0
-        s = str(num)
-        for i in range(len(s) - k + 1):
-            t = int(s[i : i + k])
-            if t and num % t == 0:
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -102,54 +92,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int divisorSubstrings(int num, int k) {
-        int ans = 0;
-        string s = to_string(num);
-        for (int i = 0; i < s.size() - k + 1; ++i) {
-            int t = stoi(s.substr(i, k));
-            ans += t && num % t == 0;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func divisorSubstrings(num int, k int) int {
-	ans := 0
-	s := strconv.Itoa(num)
-	for i := 0; i < len(s)-k+1; i++ {
-		t, _ := strconv.Atoi(s[i : i+k])
-		if t > 0 && num%t == 0 {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function divisorSubstrings(num: number, k: number): number {
-    let ans = 0;
-    const s = num.toString();
-    for (let i = 0; i < s.length - k + 1; ++i) {
-        const t = parseInt(s.substring(i, i + k));
-        if (t !== 0 && num % t === 0) {
-            ++ans;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -157,4 +110,4 @@ function divisorSubstrings(num: number, k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

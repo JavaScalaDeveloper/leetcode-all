@@ -71,25 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-        g = defaultdict(list)
-        indeg = [0] * numCourses
-        for a, b in prerequisites:
-            g[b].append(a)
-            indeg[a] += 1
-        ans = []
-        q = deque(i for i, x in enumerate(indeg) if x == 0)
-        while q:
-            i = q.popleft()
-            ans.append(i)
-            for j in g[i]:
-                indeg[j] -= 1
-                if indeg[j] == 0:
-                    q.append(j)
-        return ans if len(ans) == numCourses else []
-```
+
 
 ### **Java**
 
@@ -128,143 +110,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
-        vector<vector<int>> g(numCourses);
-        vector<int> indeg(numCourses);
-        for (auto& p : prerequisites) {
-            int a = p[0], b = p[1];
-            g[b].push_back(a);
-            ++indeg[a];
-        }
-        queue<int> q;
-        for (int i = 0; i < numCourses; ++i) {
-            if (indeg[i] == 0) {
-                q.push(i);
-            }
-        }
-        vector<int> ans;
-        while (!q.empty()) {
-            int i = q.front();
-            q.pop();
-            ans.push_back(i);
-            for (int j : g[i]) {
-                if (--indeg[j] == 0) {
-                    q.push(j);
-                }
-            }
-        }
-        return ans.size() == numCourses ? ans : vector<int>();
-    }
-};
-```
 
-### **Go**
 
-```go
-func findOrder(numCourses int, prerequisites [][]int) []int {
-	g := make([][]int, numCourses)
-	indeg := make([]int, numCourses)
-	for _, p := range prerequisites {
-		a, b := p[0], p[1]
-		g[b] = append(g[b], a)
-		indeg[a]++
-	}
-	q := []int{}
-	for i, x := range indeg {
-		if x == 0 {
-			q = append(q, i)
-		}
-	}
-	ans := []int{}
-	for len(q) > 0 {
-		i := q[0]
-		q = q[1:]
-		ans = append(ans, i)
-		for _, j := range g[i] {
-			indeg[j]--
-			if indeg[j] == 0 {
-				q = append(q, j)
-			}
-		}
-	}
-	if len(ans) == numCourses {
-		return ans
-	}
-	return []int{}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findOrder(numCourses: number, prerequisites: number[][]): number[] {
-    const g: number[][] = new Array(numCourses).fill(0).map(() => []);
-    const indeg: number[] = new Array(numCourses).fill(0);
-    for (const [a, b] of prerequisites) {
-        g[b].push(a);
-        indeg[a]++;
-    }
-    const q: number[] = [];
-    for (let i = 0; i < numCourses; ++i) {
-        if (indeg[i] == 0) {
-            q.push(i);
-        }
-    }
-    const ans: number[] = [];
-    while (q.length) {
-        const i = q.shift()!;
-        ans.push(i);
-        for (const j of g[i]) {
-            if (--indeg[j] == 0) {
-                q.push(j);
-            }
-        }
-    }
-    return ans.length === numCourses ? ans : [];
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[] FindOrder(int numCourses, int[][] prerequisites) {
-        var g = new List<int>[numCourses];
-        for (int i = 0; i < numCourses; ++i) {
-            g[i] = new List<int>();
-        }
-        var indeg = new int[numCourses];
-        foreach (var p in prerequisites) {
-            int a = p[0], b = p[1];
-            g[b].Add(a);
-            ++indeg[a];
-        }
-        var q = new Queue<int>();
-        for (int i = 0; i < numCourses; ++i) {
-            if (indeg[i] == 0) {
-                q.Enqueue(i);
-            }
-        }
-        var ans = new int[numCourses];
-        var cnt = 0;
-        while (q.Count > 0) {
-            int i = q.Dequeue();
-            ans[cnt++] = i;
-            foreach (int j in g[i]) {
-                if (--indeg[j] == 0) {
-                    q.Enqueue(j);
-                }
-            }
-        }
-        return cnt == numCourses ? ans : new int[0];
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -272,4 +132,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

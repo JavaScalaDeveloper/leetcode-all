@@ -58,18 +58,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countElements(self, arr: List[int]) -> int:
-        return sum(x + 1 in arr for x in arr)
-```
 
-```python
-class Solution:
-    def countElements(self, arr: List[int]) -> int:
-        s = set(arr)
-        return sum(x + 1 in s for x in arr)
-```
+
+
 
 ### **Java**
 
@@ -110,108 +101,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countElements(vector<int>& arr) {
-        int ans = 0;
-        for (int x : arr) {
-            for (int v : arr) {
-                if (x + 1 == v) {
-                    ++ans;
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int countElements(vector<int>& arr) {
-        unordered_set<int> s(arr.begin(), arr.end());
-        int ans = 0;
-        for (int x : arr) {
-            ans += s.count(x + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countElements(arr []int) int {
-	ans := 0
-	for _, x := range arr {
-		for _, v := range arr {
-			if x+1 == v {
-				ans++
-				break
-			}
-		}
-	}
-	return ans
-}
-```
 
-```go
-func countElements(arr []int) int {
-	s := map[int]bool{}
-	for _, x := range arr {
-		s[x] = true
-	}
-	ans := 0
-	for _, x := range arr {
-		if s[x+1] {
-			ans++
-		}
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} arr
- * @return {number}
- */
-var countElements = function (arr) {
-    let ans = 0;
-    for (const x of arr) {
-        ans += arr.includes(x + 1);
-    }
-    return ans;
-};
-```
 
-```js
-/**
- * @param {number[]} arr
- * @return {number}
- */
-var countElements = function (arr) {
-    const s = new Set();
-    for (const x of arr) {
-        s.add(x);
-    }
-    let ans = 0;
-    for (const x of arr) {
-        if (s.has(x + 1)) {
-            ++ans;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -219,4 +125,4 @@ var countElements = function (arr) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -80,24 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxScore(self, nums: List[int]) -> int:
-        m = len(nums)
-        f = [0] * (1 << m)
-        g = [[0] * m for _ in range(m)]
-        for i in range(m):
-            for j in range(i + 1, m):
-                g[i][j] = gcd(nums[i], nums[j])
-        for k in range(1 << m):
-            if (cnt := k.bit_count()) % 2 == 0:
-                for i in range(m):
-                    if k >> i & 1:
-                        for j in range(i + 1, m):
-                            if k >> j & 1:
-                                f[k] = max(f[k], f[k ^ (1 << i) ^ (1 << j)] + cnt // 2 * g[i][j])
-        return f[-1]
-```
+
 
 ### **Java**
 
@@ -138,129 +121,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxScore(vector<int>& nums) {
-        int m = nums.size();
-        int g[m][m];
-        for (int i = 0; i < m; ++i) {
-            for (int j = i + 1; j < m; ++j) {
-                g[i][j] = gcd(nums[i], nums[j]);
-            }
-        }
-        int f[1 << m];
-        memset(f, 0, sizeof f);
-        for (int k = 0; k < 1 << m; ++k) {
-            int cnt = __builtin_popcount(k);
-            if (cnt % 2 == 0) {
-                for (int i = 0; i < m; ++i) {
-                    if (k >> i & 1) {
-                        for (int j = i + 1; j < m; ++j) {
-                            if (k >> j & 1) {
-                                f[k] = max(f[k], f[k ^ (1 << i) ^ (1 << j)] + cnt / 2 * g[i][j]);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return f[(1 << m) - 1];
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxScore(nums []int) int {
-	m := len(nums)
-	g := [14][14]int{}
-	for i := 0; i < m; i++ {
-		for j := i + 1; j < m; j++ {
-			g[i][j] = gcd(nums[i], nums[j])
-		}
-	}
-	f := make([]int, 1<<m)
-	for k := 0; k < 1<<m; k++ {
-		cnt := bits.OnesCount(uint(k))
-		if cnt%2 == 0 {
-			for i := 0; i < m; i++ {
-				if k>>i&1 == 1 {
-					for j := i + 1; j < m; j++ {
-						if k>>j&1 == 1 {
-							f[k] = max(f[k], f[k^(1<<i)^(1<<j)]+cnt/2*g[i][j])
-						}
-					}
-				}
-			}
-		}
-	}
-	return f[1<<m-1]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function maxScore(nums: number[]): number {
-    const m = nums.length;
-    const f: number[] = new Array(1 << m).fill(0);
-    const g: number[][] = new Array(m).fill(0).map(() => new Array(m).fill(0));
-    for (let i = 0; i < m; ++i) {
-        for (let j = i + 1; j < m; ++j) {
-            g[i][j] = gcd(nums[i], nums[j]);
-        }
-    }
-    for (let k = 0; k < 1 << m; ++k) {
-        const cnt = bitCount(k);
-        if (cnt % 2 === 0) {
-            for (let i = 0; i < m; ++i) {
-                if ((k >> i) & 1) {
-                    for (let j = i + 1; j < m; ++j) {
-                        if ((k >> j) & 1) {
-                            const t =
-                                f[k ^ (1 << i) ^ (1 << j)] +
-                                ~~(cnt / 2) * g[i][j];
-                            f[k] = Math.max(f[k], t);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    return f[(1 << m) - 1];
-}
 
-function gcd(a: number, b: number): number {
-    return b ? gcd(b, a % b) : a;
-}
-
-function bitCount(i: number): number {
-    i = i - ((i >>> 1) & 0x55555555);
-    i = (i & 0x33333333) + ((i >>> 2) & 0x33333333);
-    i = (i + (i >>> 4)) & 0x0f0f0f0f;
-    i = i + (i >>> 8);
-    i = i + (i >>> 16);
-    return i & 0x3f;
-}
-```
 
 ### **...**
 
@@ -268,4 +139,4 @@ function bitCount(i: number): number {
 
 ```
 
-<!-- tabs:end -->
+

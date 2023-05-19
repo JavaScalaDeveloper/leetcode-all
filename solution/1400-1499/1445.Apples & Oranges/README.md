@@ -82,4 +82,4 @@ GROUP BY sale_date
 ORDER BY sale_date;
 ```
 
-<!-- tabs:end -->
+

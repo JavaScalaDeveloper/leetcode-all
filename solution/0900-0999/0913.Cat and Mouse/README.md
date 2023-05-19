@@ -95,63 +95,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-HOLE, MOUSE_START, CAT_START = 0, 1, 2
-MOUSE_TURN, CAT_TURN = 0, 1
-MOUSE_WIN, CAT_WIN, TIE = 1, 2, 0
 
-
-class Solution:
-    def catMouseGame(self, graph: List[List[int]]) -> int:
-        def get_prev_states(state):
-            m, c, t = state
-            pt = t ^ 1
-            pre = []
-            if pt == CAT_TURN:
-                for pc in graph[c]:
-                    if pc != HOLE:
-                        pre.append((m, pc, pt))
-            else:
-                for pm in graph[m]:
-                    pre.append((pm, c, pt))
-            return pre
-
-        n = len(graph)
-        res = [[[0, 0] for _ in range(n)] for _ in range(n)]
-        degree = [[[0, 0] for _ in range(n)] for _ in range(n)]
-        for i in range(n):
-            for j in range(1, n):
-                degree[i][j][MOUSE_TURN] = len(graph[i])
-                degree[i][j][CAT_TURN] = len(graph[j])
-            for j in graph[HOLE]:
-                degree[i][j][CAT_TURN] -= 1
-        q = deque()
-        for j in range(1, n):
-            res[0][j][MOUSE_TURN] = res[0][j][CAT_TURN] = MOUSE_WIN
-            q.append((0, j, MOUSE_TURN))
-            q.append((0, j, CAT_TURN))
-        for i in range(1, n):
-            res[i][i][MOUSE_TURN] = res[i][i][CAT_TURN] = CAT_WIN
-            q.append((i, i, MOUSE_TURN))
-            q.append((i, i, CAT_TURN))
-        while q:
-            state = q.popleft()
-            t = res[state[0]][state[1]][state[2]]
-            for prev_state in get_prev_states(state):
-                pm, pc, pt = prev_state
-                if res[pm][pc][pt] == TIE:
-                    win = (t == MOUSE_WIN and pt == MOUSE_TURN) or (
-                        t == CAT_WIN and pt == CAT_TURN)
-                    if win:
-                        res[pm][pc][pt] = t
-                        q.append(prev_state)
-                    else:
-                        degree[pm][pc][pt] -= 1
-                        if degree[pm][pc][pt] == 0:
-                            res[pm][pc][pt] = t
-                            q.append(prev_state)
-        return res[MOUSE_START][CAT_START][MOUSE_TURN]
-```
 
 ### **Java**
 
@@ -241,166 +185,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-const int HOLE = 0;
-const int MOUSE_START = 1;
-const int CAT_START = 2;
-const int MOUSE_TURN = 0;
-const int CAT_TURN = 1;
-const int MOUSE_WIN = 1;
-const int CAT_WIN = 2;
-const int TIE = 0;
 
-class Solution {
-public:
-    int catMouseGame(vector<vector<int>>& graph) {
-        int n = graph.size();
-        int res[n][n][2];
-        int degree[n][n][2];
-        memset(res, 0, sizeof res);
-        memset(degree, 0, sizeof degree);
-        for (int i = 0; i < n; ++i) {
-            for (int j = 1; j < n; ++j) {
-                degree[i][j][MOUSE_TURN] = graph[i].size();
-                degree[i][j][CAT_TURN] = graph[j].size();
-            }
-            for (int j : graph[HOLE]) {
-                --degree[i][j][CAT_TURN];
-            }
-        }
-        auto getPrevStates = [&](int m, int c, int t) {
-            int pt = t ^ 1;
-            vector<tuple<int, int, int>> pre;
-            if (pt == CAT_TURN) {
-                for (int pc : graph[c]) {
-                    if (pc != HOLE) {
-                        pre.emplace_back(m, pc, pt);
-                    }
-                }
-            } else {
-                for (int pm : graph[m]) {
-                    pre.emplace_back(pm, c, pt);
-                }
-            }
-            return pre;
-        };
-        queue<tuple<int, int, int>> q;
-        for (int j = 1; j < n; ++j) {
-            res[0][j][MOUSE_TURN] = res[0][j][CAT_TURN] = MOUSE_WIN;
-            q.emplace(0, j, MOUSE_TURN);
-            q.emplace(0, j, CAT_TURN);
-        }
-        for (int i = 1; i < n; ++i) {
-            res[i][i][MOUSE_TURN] = res[i][i][CAT_TURN] = CAT_WIN;
-            q.emplace(i, i, MOUSE_TURN);
-            q.emplace(i, i, CAT_TURN);
-        }
-        while (!q.empty()) {
-            auto [m, c, t] = q.front();
-            q.pop();
-            int x = res[m][c][t];
-            for (auto [pm, pc, pt] : getPrevStates(m, c, t)) {
-                if (res[pm][pc][pt] == TIE) {
-                    bool win = (x == MOUSE_WIN && pt == MOUSE_TURN) || (x == CAT_WIN && pt == CAT_TURN);
-                    if (win) {
-                        res[pm][pc][pt] = x;
-                        q.emplace(pm, pc, pt);
-                    } else {
-                        if (--degree[pm][pc][pt] == 0) {
-                            res[pm][pc][pt] = x;
-                            q.emplace(pm, pc, pt);
-                        }
-                    }
-                }
-            }
-        }
-        return res[MOUSE_START][CAT_START][MOUSE_TURN];
-    }
-};
-```
 
-### **Go**
 
-```go
-const (
-	hole       = 0
-	mouseStart = 1
-	catStart   = 2
-	mouseTurn  = 0
-	catTurn    = 1
-	mouseWin   = 1
-	catWin     = 2
-	tie        = 0
-)
 
-func catMouseGame(graph [][]int) int {
-	res := [50][50][2]int{}
-	degree := [50][50][2]int{}
-	n := len(graph)
-	for i := 0; i < n; i++ {
-		for j := 1; j < n; j++ {
-			degree[i][j][mouseTurn] = len(graph[i])
-			degree[i][j][catTurn] = len(graph[j])
-		}
-		for _, j := range graph[hole] {
-			degree[i][j][catTurn]--
-		}
-	}
-	type tuple struct{ m, c, t int }
-	q := []tuple{}
-	for j := 1; j < n; j++ {
-		res[0][j][mouseTurn], res[0][j][catTurn] = mouseWin, mouseWin
-		q = append(q, tuple{0, j, mouseTurn})
-		q = append(q, tuple{0, j, catTurn})
-	}
-	for i := 1; i < n; i++ {
-		res[i][i][mouseTurn], res[i][i][catTurn] = catWin, catWin
-		q = append(q, tuple{i, i, mouseTurn})
-		q = append(q, tuple{i, i, catTurn})
-	}
-	getPrevStates := func(m, c, t int) []tuple {
-		pre := []tuple{}
-		pt := t ^ 1
-		if pt == catTurn {
-			for _, pc := range graph[c] {
-				if pc != hole {
-					pre = append(pre, tuple{m, pc, pt})
-				}
-			}
-		} else {
-			for _, pm := range graph[m] {
-				pre = append(pre, tuple{pm, c, pt})
-			}
-		}
-		return pre
-	}
-	for len(q) > 0 {
-		state := q[0]
-		m, c, t := state.m, state.c, state.t
-		q = q[1:]
-		x := res[m][c][t]
-		for _, prevState := range getPrevStates(m, c, t) {
-			pm, pc, pt := prevState.m, prevState.c, prevState.t
-			if res[pm][pc][pt] == tie {
-				win := (x == mouseWin && pt == mouseTurn) || (x == catWin && pt == catTurn)
-				if win {
-					res[pm][pc][pt] = x
-					q = append(q, tuple{pm, pc, pt})
-				} else {
-					degree[pm][pc][pt]--
-					if degree[pm][pc][pt] == 0 {
-						res[pm][pc][pt] = x
-						q = append(q, tuple{pm, pc, pt})
-					}
-				}
-			}
-		}
-	}
-	return res[mouseStart][catStart][mouseTurn]
-}
-```
+
+
 
 ### **...**
 
@@ -408,4 +199,4 @@ func catMouseGame(graph [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

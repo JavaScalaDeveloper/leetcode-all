@@ -79,19 +79,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minPathCost(self, grid: List[List[int]], moveCost: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        f = grid[0]
-        for i in range(1, m):
-            g = [inf] * n
-            for j in range(n):
-                for k in range(n):
-                    g[j] = min(g[j], f[k] + moveCost[grid[i - 1][k]][j] + grid[i][j])
-            f = g
-        return min(f)
-```
+
 
 ### **Java**
 
@@ -124,112 +112,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minPathCost(vector<vector<int>>& grid, vector<vector<int>>& moveCost) {
-        int m = grid.size(), n = grid[0].size();
-        const int inf = 1 << 30;
-        vector<int> f = grid[0];
-        for (int i = 1; i < m; ++i) {
-            vector<int> g(n, inf);
-            for (int j = 0; j < n; ++j) {
-                for (int k = 0; k < n; ++k) {
-                    g[j] = min(g[j], f[k] + moveCost[grid[i - 1][k]][j] + grid[i][j]);
-                }
-            }
-            f = move(g);
-        }
-        return *min_element(f.begin(), f.end());
-    }
-};
-```
 
-### **Go**
 
-```go
-func minPathCost(grid [][]int, moveCost [][]int) int {
-	m, n := len(grid), len(grid[0])
-	const inf = 1 << 30
-	f := grid[0]
-	for i := 1; i < m; i++ {
-		g := make([]int, n)
-		for j := 0; j < n; j++ {
-			g[j] = inf
-			for k := 0; k < n; k++ {
-				g[j] = min(g[j], f[k]+moveCost[grid[i-1][k]][j]+grid[i][j])
-			}
-		}
-		f = g
-	}
-	ans := inf
-	for _, v := range f {
-		ans = min(ans, v)
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_path_cost(grid: Vec<Vec<i32>>, move_cost: Vec<Vec<i32>>) -> i32 {
-        let (m, n) = (grid.len(), grid[0].len());
-        let mut dp = vec![0; n];
-        for i in 0..m - 1 {
-            let mut counter = vec![i32::MAX; n];
-            for j in 0..n {
-                let val = grid[i][j];
-                for k in 0..n {
-                    counter[k] = counter[k].min(val + move_cost[val as usize][k] + dp[j]);
-                }
-            }
-            for j in 0..n {
-                dp[j] = counter[j];
-            }
-        }
-        let mut res = i32::MAX;
-        for i in 0..n {
-            res = res.min(dp[i] + grid[m - 1][i]);
-        }
-        res
-    }
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minPathCost(grid: number[][], moveCost: number[][]): number {
-    const m = grid.length,
-        n = grid[0].length;
-    let pre = grid[0].slice();
-    for (let i = 1; i < m; i++) {
-        let next = new Array(n);
-        for (let j = 0; j < n; j++) {
-            const key = grid[i - 1][j];
-            for (let k = 0; k < n; k++) {
-                let sum = pre[j] + moveCost[key][k] + grid[i][k];
-                if (j == 0 || next[k] > sum) {
-                    next[k] = sum;
-                }
-            }
-        }
-        pre = next;
-    }
-    return Math.min(...pre);
-}
-```
+
 
 ### **...**
 
@@ -237,4 +134,4 @@ function minPathCost(grid: number[][], moveCost: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

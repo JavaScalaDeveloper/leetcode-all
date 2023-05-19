@@ -69,20 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getDescentPeriods(self, prices: List[int]) -> int:
-        ans = 0
-        i, n = 0, len(prices)
-        while i < n:
-            j = i + 1
-            while j < n and prices[j - 1] - prices[j] == 1:
-                j += 1
-            cnt = j - i
-            ans += (1 + cnt) * cnt // 2
-            i = j
-        return ans
-```
+
 
 ### **Java**
 
@@ -106,61 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long getDescentPeriods(vector<int>& prices) {
-        long long ans = 0;
-        int n = prices.size();
-        for (int i = 0, j = 0; i < n; i = j) {
-            j = i + 1;
-            while (j < n && prices[j - 1] - prices[j] == 1) {
-                ++j;
-            }
-            int cnt = j - i;
-            ans += (1LL + cnt) * cnt / 2;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getDescentPeriods(prices []int) (ans int64) {
-	n := len(prices)
-	for i, j := 0, 0; i < n; i = j {
-		j = i + 1
-		for j < n && prices[j-1]-prices[j] == 1 {
-			j++
-		}
-		cnt := j - i
-		ans += int64((1 + cnt) * cnt / 2)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getDescentPeriods(prices: number[]): number {
-    let ans = 0;
-    const n = prices.length;
-    for (let i = 0, j = 0; i < n; i = j) {
-        j = i + 1;
-        while (j < n && prices[j - 1] - prices[j] === 1) {
-            ++j;
-        }
-        const cnt = j - i;
-        ans += Math.floor(((1 + cnt) * cnt) / 2);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -168,4 +111,4 @@ function getDescentPeriods(prices: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

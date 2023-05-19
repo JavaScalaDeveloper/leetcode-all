@@ -43,34 +43,7 @@ DFS。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findLadders(
-        self, beginWord: str, endWord: str, wordList: List[str]
-    ) -> List[str]:
-        def check(a, b):
-            return sum(a[i] != b[i] for i in range(len(a))) == 1
 
-        def dfs(begin, end, t):
-            nonlocal ans
-            if ans:
-                return
-            if begin == end:
-                ans = t.copy()
-                return
-            for word in wordList:
-                if word in visited or not check(begin, word):
-                    continue
-                visited.add(word)
-                t.append(word)
-                dfs(word, end, t)
-                t.pop()
-
-        ans = []
-        visited = set()
-        dfs(beginWord, endWord, [beginWord])
-        return ans
-```
 
 ### **Java**
 
@@ -126,96 +99,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> words;
-    vector<string> ans;
-    unordered_set<string> visited;
 
-    vector<string> findLadders(string beginWord, string endWord, vector<string>& wordList) {
-        this->words = wordList;
-        ans.resize(0);
-        vector<string> t;
-        t.push_back(beginWord);
-        dfs(beginWord, endWord, t);
-        return ans;
-    }
 
-    void dfs(string begin, string end, vector<string>& t) {
-        if (!ans.empty()) return;
-        if (begin == end) {
-            ans = t;
-            return;
-        }
-        for (auto word : words) {
-            if (visited.count(word) || !check(begin, word)) continue;
-            visited.insert(word);
-            t.push_back(word);
-            dfs(word, end, t);
-            t.pop_back();
-        }
-    }
 
-    bool check(string a, string b) {
-        if (a.size() != b.size()) return false;
-        int cnt = 0;
-        for (int i = 0; i < a.size(); ++i)
-            if (a[i] != b[i]) ++cnt;
-        return cnt == 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findLadders(beginWord string, endWord string, wordList []string) []string {
-	var ans []string
-	visited := make(map[string]bool)
 
-	check := func(a, b string) bool {
-		if len(a) != len(b) {
-			return false
-		}
-		cnt := 0
-		for i := 0; i < len(a); i++ {
-			if a[i] != b[i] {
-				cnt++
-			}
-		}
-		return cnt == 1
-	}
-
-	var dfs func(begin, end string, t []string)
-	dfs = func(begin, end string, t []string) {
-		if len(ans) > 0 {
-			return
-		}
-		if begin == end {
-			ans = make([]string, len(t))
-			copy(ans, t)
-			return
-		}
-		for _, word := range wordList {
-			if visited[word] || !check(begin, word) {
-				continue
-			}
-			t = append(t, word)
-			visited[word] = true
-			dfs(word, end, t)
-			t = t[:len(t)-1]
-		}
-	}
-
-	var t []string
-	t = append(t, beginWord)
-	dfs(beginWord, endWord, t)
-	return ans
-}
-```
 
 ### **...**
 
@@ -223,4 +113,4 @@ func findLadders(beginWord string, endWord string, wordList []string) []string {
 
 ```
 
-<!-- tabs:end -->
+

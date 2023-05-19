@@ -61,23 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSquares(self, matrix: List[List[int]]) -> int:
-        m, n = len(matrix), len(matrix[0])
-        f = [[0] * n for _ in range(m)]
-        ans = 0
-        for i, row in enumerate(matrix):
-            for j, v in enumerate(row):
-                if v == 0:
-                    continue
-                if i == 0 or j == 0:
-                    f[i][j] = 1
-                else:
-                    f[i][j] = min(f[i - 1][j - 1], f[i - 1][j], f[i][j - 1]) + 1
-                ans += f[i][j]
-        return ans
-```
+
 
 ### **Java**
 
@@ -108,62 +92,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countSquares(vector<vector<int>>& matrix) {
-        int m = matrix.size(), n = matrix[0].size();
-        int ans = 0;
-        vector<vector<int>> f(m, vector<int>(n));
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (matrix[i][j] == 0) continue;
-                if (i == 0 || j == 0)
-                    f[i][j] = 1;
-                else
-                    f[i][j] = min(f[i - 1][j - 1], min(f[i - 1][j], f[i][j - 1])) + 1;
-                ans += f[i][j];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSquares(matrix [][]int) int {
-	m, n, ans := len(matrix), len(matrix[0]), 0
-	f := make([][]int, m)
-	for i := range f {
-		f[i] = make([]int, n)
-	}
-	for i, row := range matrix {
-		for j, v := range row {
-			if v == 0 {
-				continue
-			}
-			if i == 0 || j == 0 {
-				f[i][j] = 1
-			} else {
-				f[i][j] = min(f[i-1][j-1], min(f[i-1][j], f[i][j-1])) + 1
-			}
-			ans += f[i][j]
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -171,4 +106,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

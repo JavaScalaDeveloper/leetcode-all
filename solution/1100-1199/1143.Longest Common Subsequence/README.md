@@ -77,19 +77,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        m, n = len(text1), len(text2)
-        f = [[0] * (n + 1) for _ in range(m + 1)]
-        for i in range(1, m + 1):
-            for j in range(1, n + 1):
-                if text1[i - 1] == text2[j - 1]:
-                    f[i][j] = f[i - 1][j - 1] + 1
-                else:
-                    f[i][j] = max(f[i - 1][j], f[i][j - 1])
-        return f[m][n]
-```
+
 
 ### **Java**
 
@@ -114,145 +102,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestCommonSubsequence(string text1, string text2) {
-        int m = text1.size(), n = text2.size();
-        int f[m + 1][n + 1];
-        memset(f, 0, sizeof f);
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                if (text1[i - 1] == text2[j - 1]) {
-                    f[i][j] = f[i - 1][j - 1] + 1;
-                } else {
-                    f[i][j] = max(f[i - 1][j], f[i][j - 1]);
-                }
-            }
-        }
-        return f[m][n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestCommonSubsequence(text1 string, text2 string) int {
-	m, n := len(text1), len(text2)
-	f := make([][]int, m+1)
-	for i := range f {
-		f[i] = make([]int, n+1)
-	}
-	for i := 1; i <= m; i++ {
-		for j := 1; j <= n; j++ {
-			if text1[i-1] == text2[j-1] {
-				f[i][j] = f[i-1][j-1] + 1
-			} else {
-				f[i][j] = max(f[i-1][j], f[i][j-1])
-			}
-		}
-	}
-	return f[m][n]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} text1
- * @param {string} text2
- * @return {number}
- */
-var longestCommonSubsequence = function (text1, text2) {
-    const m = text1.length;
-    const n = text2.length;
-    const f = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
-    for (let i = 1; i <= m; ++i) {
-        for (let j = 1; j <= n; ++j) {
-            if (text1[i - 1] == text2[j - 1]) {
-                f[i][j] = f[i - 1][j - 1] + 1;
-            } else {
-                f[i][j] = Math.max(f[i - 1][j], f[i][j - 1]);
-            }
-        }
-    }
-    return f[m][n];
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function longestCommonSubsequence(text1: string, text2: string): number {
-    const m = text1.length;
-    const n = text2.length;
-    const f = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
-    for (let i = 1; i <= m; i++) {
-        for (let j = 1; j <= n; j++) {
-            if (text1[i - 1] === text2[j - 1]) {
-                f[i][j] = f[i - 1][j - 1] + 1;
-            } else {
-                f[i][j] = Math.max(f[i - 1][j], f[i][j - 1]);
-            }
-        }
-    }
-    return f[m][n];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn longest_common_subsequence(text1: String, text2: String) -> i32 {
-        let (m, n) = (text1.len(), text2.len());
-        let (text1, text2) = (text1.as_bytes(), text2.as_bytes());
-        let mut f = vec![vec![0; n + 1]; m + 1];
-        for i in 1..=m {
-            for j in 1..=n {
-                f[i][j] = if text1[i - 1] == text2[j - 1] {
-                    f[i - 1][j - 1] + 1
-                } else {
-                    f[i - 1][j].max(f[i][j - 1])
-                }
-            }
-        }
-        f[m][n]
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int LongestCommonSubsequence(string text1, string text2) {
-        int m = text1.Length, n = text2.Length;
-        int[,] f = new int[m + 1, n + 1];
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                if (text1[i - 1] == text2[j - 1]) {
-                    f[i, j] = f[i - 1, j - 1] + 1;
-                } else {
-                    f[i, j] = Math.Max(f[i - 1, j], f[i, j - 1]);
-                }
-            }
-        }
-        return f[m, n];
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -260,4 +132,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

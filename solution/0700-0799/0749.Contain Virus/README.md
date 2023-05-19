@@ -81,51 +81,7 @@ DFS 找到每个病毒区域 `areas[i]`，同时记录每个区域边界节点 `
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def containVirus(self, isInfected: List[List[int]]) -> int:
-        def dfs(i, j):
-            vis[i][j] = True
-            areas[-1].append((i, j))
-            for a, b in [[0, -1], [0, 1], [-1, 0], [1, 0]]:
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n:
-                    if isInfected[x][y] == 1 and not vis[x][y]:
-                        dfs(x, y)
-                    elif isInfected[x][y] == 0:
-                        c[-1] += 1
-                        boundaries[-1].add((x, y))
 
-        m, n = len(isInfected), len(isInfected[0])
-        ans = 0
-        while 1:
-            vis = [[False] * n for _ in range(m)]
-            areas = []
-            c = []
-            boundaries = []
-            for i, row in enumerate(isInfected):
-                for j, v in enumerate(row):
-                    if v == 1 and not vis[i][j]:
-                        areas.append([])
-                        boundaries.append(set())
-                        c.append(0)
-                        dfs(i, j)
-            if not areas:
-                break
-            idx = boundaries.index(max(boundaries, key=len))
-            ans += c[idx]
-            for k, area in enumerate(areas):
-                if k == idx:
-                    for i, j in area:
-                        isInfected[i][j] = -1
-                else:
-                    for i, j in area:
-                        for a, b in [[0, -1], [0, 1], [-1, 0], [1, 0]]:
-                            x, y = i + a, j + b
-                            if 0 <= x < m and 0 <= y < n and isInfected[x][y] == 0:
-                                isInfected[x][y] = 1
-        return ans
-```
 
 ### **Java**
 
@@ -224,181 +180,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const vector<int> dirs = {-1, 0, 1, 0, -1};
-    vector<int> c;
-    vector<vector<int>> areas;
-    vector<unordered_set<int>> boundaries;
-    vector<vector<int>> infected;
-    vector<vector<bool>> vis;
-    int m;
-    int n;
 
-    int containVirus(vector<vector<int>>& isInfected) {
-        infected = isInfected;
-        m = infected.size();
-        n = infected[0].size();
-        vis.assign(m, vector<bool>(n));
-        int ans = 0;
-        while (1) {
-            for (int i = 0; i < m; ++i)
-                for (int j = 0; j < n; ++j) vis[i][j] = false;
-            c.clear();
-            areas.clear();
-            boundaries.clear();
-            for (int i = 0; i < m; ++i) {
-                for (int j = 0; j < n; ++j) {
-                    if (infected[i][j] == 1 && !vis[i][j]) {
-                        c.push_back(0);
-                        areas.push_back({});
-                        boundaries.push_back({});
-                        dfs(i, j);
-                    }
-                }
-            }
-            if (areas.empty()) break;
-            int idx = getMax();
-            ans += c[idx];
-            for (int t = 0; t < areas.size(); ++t) {
-                if (t == idx) {
-                    for (int v : areas[t]) {
-                        int i = v / n, j = v % n;
-                        infected[i][j] = -1;
-                    }
-                } else {
-                    for (int v : areas[t]) {
-                        int i = v / n, j = v % n;
-                        for (int k = 0; k < 4; ++k) {
-                            int x = i + dirs[k], y = j + dirs[k + 1];
-                            if (x >= 0 && x < m && y >= 0 && y < n && infected[x][y] == 0) infected[x][y] = 1;
-                        }
-                    }
-                }
-            }
-        }
-        return ans;
-    }
 
-    int getMax() {
-        int idx = 0;
-        int mx = boundaries[0].size();
-        for (int i = 1; i < boundaries.size(); ++i) {
-            int t = boundaries[i].size();
-            if (mx < t) {
-                mx = t;
-                idx = i;
-            }
-        }
-        return idx;
-    }
 
-    void dfs(int i, int j) {
-        vis[i][j] = true;
-        areas.back().push_back(i * n + j);
-        for (int k = 0; k < 4; ++k) {
-            int x = i + dirs[k], y = j + dirs[k + 1];
-            if (x >= 0 && x < m && y >= 0 && y < n) {
-                if (infected[x][y] == 1 && !vis[x][y])
-                    dfs(x, y);
-                else if (infected[x][y] == 0) {
-                    c.back() += 1;
-                    boundaries.back().insert(x * n + y);
-                }
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func containVirus(isInfected [][]int) int {
-	m, n := len(isInfected), len(isInfected[0])
-	ans := 0
-	dirs := []int{-1, 0, 1, 0, -1}
-	max := func(boundaries []map[int]bool) int {
-		idx := 0
-		mx := len(boundaries[0])
-		for i, v := range boundaries {
-			t := len(v)
-			if mx < t {
-				mx = t
-				idx = i
-			}
-		}
-		return idx
-	}
 
-	for {
-		vis := make([][]bool, m)
-		for i := range vis {
-			vis[i] = make([]bool, n)
-		}
-		areas := []map[int]bool{}
-		boundaries := []map[int]bool{}
-		c := []int{}
-
-		var dfs func(i, j int)
-		dfs = func(i, j int) {
-			vis[i][j] = true
-			idx := len(areas) - 1
-			areas[idx][i*n+j] = true
-			for k := 0; k < 4; k++ {
-				x, y := i+dirs[k], j+dirs[k+1]
-				if x >= 0 && x < m && y >= 0 && y < n {
-					if isInfected[x][y] == 1 && !vis[x][y] {
-						dfs(x, y)
-					} else if isInfected[x][y] == 0 {
-						c[idx]++
-						boundaries[idx][x*n+y] = true
-					}
-				}
-			}
-		}
-
-		for i, row := range isInfected {
-			for j, v := range row {
-				if v == 1 && !vis[i][j] {
-					areas = append(areas, map[int]bool{})
-					boundaries = append(boundaries, map[int]bool{})
-					c = append(c, 0)
-					dfs(i, j)
-				}
-			}
-		}
-		if len(areas) == 0 {
-			break
-		}
-		idx := max(boundaries)
-		ans += c[idx]
-		for t, area := range areas {
-			if t == idx {
-				for v := range area {
-					i, j := v/n, v%n
-					isInfected[i][j] = -1
-				}
-			} else {
-				for v := range area {
-					i, j := v/n, v%n
-					for k := 0; k < 4; k++ {
-						x, y := i+dirs[k], j+dirs[k+1]
-						if x >= 0 && x < m && y >= 0 && y < n && isInfected[x][y] == 0 {
-							isInfected[x][y] = 1
-						}
-					}
-				}
-			}
-		}
-
-	}
-	return ans
-}
-```
 
 ### **...**
 
@@ -406,4 +194,4 @@ func containVirus(isInfected [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

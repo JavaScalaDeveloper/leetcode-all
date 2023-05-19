@@ -78,47 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        def dfs(i: int, s: int):
-            if s == 0:
-                ans.append(t[:])
-                return
-            if s < candidates[i]:
-                return
-            for j in range(i, len(candidates)):
-                t.append(candidates[j])
-                dfs(j, s - candidates[j])
-                t.pop()
 
-        candidates.sort()
-        t = []
-        ans = []
-        dfs(0, target)
-        return ans
-```
 
-```python
-class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        def dfs(i: int, s: int):
-            if s == 0:
-                ans.append(t[:])
-                return
-            if i >= len(candidates) or s < candidates[i]:
-                return
-            dfs(i + 1, s)
-            t.append(candidates[i])
-            dfs(i, s - candidates[i])
-            t.pop()
 
-        candidates.sort()
-        t = []
-        ans = []
-        dfs(0, target)
-        return ans
-```
 
 ### **Java**
 
@@ -183,276 +145,35 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        sort(candidates.begin(), candidates.end());
-        vector<vector<int>> ans;
-        vector<int> t;
-        function<void(int, int)> dfs = [&](int i, int s) {
-            if (s == 0) {
-                ans.emplace_back(t);
-                return;
-            }
-            if (s < candidates[i]) {
-                return;
-            }
-            for (int j = i; j < candidates.size(); ++j) {
-                t.push_back(candidates[j]);
-                dfs(j, s - candidates[j]);
-                t.pop_back();
-            }
-        };
-        dfs(0, target);
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        sort(candidates.begin(), candidates.end());
-        vector<vector<int>> ans;
-        vector<int> t;
-        function<void(int, int)> dfs = [&](int i, int s) {
-            if (s == 0) {
-                ans.emplace_back(t);
-                return;
-            }
-            if (i >= candidates.size() || s < candidates[i]) {
-                return;
-            }
-            dfs(i + 1, s);
-            t.push_back(candidates[i]);
-            dfs(i, s - candidates[i]);
-            t.pop_back();
-        };
-        dfs(0, target);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func combinationSum(candidates []int, target int) (ans [][]int) {
-	sort.Ints(candidates)
-	t := []int{}
-	var dfs func(i, s int)
-	dfs = func(i, s int) {
-		if s == 0 {
-			cp := make([]int, len(t))
-			copy(cp, t)
-			ans = append(ans, cp)
-			return
-		}
-		if s < candidates[i] {
-			return
-		}
-		for j := i; j < len(candidates); j++ {
-			t = append(t, candidates[j])
-			dfs(j, s-candidates[j])
-			t = t[:len(t)-1]
-		}
-	}
-	dfs(0, target)
-	return
-}
-```
 
-```go
-func combinationSum(candidates []int, target int) (ans [][]int) {
-	sort.Ints(candidates)
-	t := []int{}
-	var dfs func(i, s int)
-	dfs = func(i, s int) {
-		if s == 0 {
-			cp := make([]int, len(t))
-			copy(cp, t)
-			ans = append(ans, cp)
-			return
-		}
-		if i >= len(candidates) || s < candidates[i] {
-			return
-		}
-		dfs(i+1, s)
-		t = append(t, candidates[i])
-		dfs(i, s-candidates[i])
-		t = t[:len(t)-1]
-	}
-	dfs(0, target)
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function combinationSum(candidates: number[], target: number): number[][] {
-    candidates.sort((a, b) => a - b);
-    const ans: number[][] = [];
-    const t: number[] = [];
-    const dfs = (i: number, s: number) => {
-        if (s === 0) {
-            ans.push(t.slice());
-            return;
-        }
-        if (s < candidates[i]) {
-            return;
-        }
-        for (let j = i; j < candidates.length; ++j) {
-            t.push(candidates[j]);
-            dfs(j, s - candidates[j]);
-            t.pop();
-        }
-    };
-    dfs(0, target);
-    return ans;
-}
-```
 
-```ts
-function combinationSum(candidates: number[], target: number): number[][] {
-    candidates.sort((a, b) => a - b);
-    const ans: number[][] = [];
-    const t: number[] = [];
-    const dfs = (i: number, s: number) => {
-        if (s === 0) {
-            ans.push(t.slice());
-            return;
-        }
-        if (i >= candidates.length || s < candidates[i]) {
-            return;
-        }
-        dfs(i + 1, s);
-        t.push(candidates[i]);
-        dfs(i, s - candidates[i]);
-        t.pop();
-    };
-    dfs(0, target);
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    fn dfs(i: usize, s: i32, candidates: &Vec<i32>, t: &mut Vec<i32>, ans: &mut Vec<Vec<i32>>) {
-        if s == 0 {
-            ans.push(t.clone());
-            return;
-        }
-        if s < candidates[i] {
-            return;
-        }
-        for j in i..candidates.len() {
-            t.push(candidates[j]);
-            Self::dfs(j, s - candidates[j], candidates, t, ans);
-            t.pop();
-        }
-    }
 
-    pub fn combination_sum(mut candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
-        candidates.sort();
-        let mut ans = Vec::new();
-        Self::dfs(0, target, &candidates, &mut vec![], &mut ans);
-        ans
-    }
-}
-```
 
-```rust
-impl Solution {
-    fn dfs(i: usize, s: i32, candidates: &Vec<i32>, t: &mut Vec<i32>, ans: &mut Vec<Vec<i32>>) {
-        if s == 0 {
-            ans.push(t.clone());
-            return;
-        }
-        if i >= candidates.len() || s < candidates[i] {
-            return;
-        }
-        Self::dfs(i + 1, s, candidates, t, ans);
-        t.push(candidates[i]);
-        Self::dfs(i, s - candidates[i], candidates, t, ans);
-        t.pop();
-    }
 
-    pub fn combination_sum(mut candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
-        candidates.sort();
-        let mut ans = Vec::new();
-        Self::dfs(0, target, &candidates, &mut vec![], &mut ans);
-        ans
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    private List<IList<int>> ans = new List<IList<int>>();
-    private List<int> t = new List<int>();
-    private int[] candidates;
 
-    public IList<IList<int>> CombinationSum(int[] candidates, int target) {
-        Array.Sort(candidates);
-        this.candidates = candidates;
-        dfs(0, target);
-        return ans;
-    }
 
-    private void dfs(int i, int s) {
-        if (s == 0) {
-            ans.Add(new List<int>(t));
-            return;
-        }
-        if (s < candidates[i]) {
-            return;
-        }
-        for (int j = i; j < candidates.Length; ++j) {
-            t.Add(candidates[j]);
-            dfs(j, s - candidates[j]);
-            t.RemoveAt(t.Count - 1);
-        }
-    }
-}
-```
 
-```cs
-public class Solution {
-    private List<IList<int>> ans = new List<IList<int>>();
-    private List<int> t = new List<int>();
-    private int[] candidates;
 
-    public IList<IList<int>> CombinationSum(int[] candidates, int target) {
-        Array.Sort(candidates);
-        this.candidates = candidates;
-        dfs(0, target);
-        return ans;
-    }
 
-    private void dfs(int i, int s) {
-        if (s == 0) {
-            ans.Add(new List<int>(t));
-            return;
-        }
-        if (i >= candidates.Length || s < candidates[i]) {
-            return;
-        }
-        dfs(i + 1, s);
-        t.Add(candidates[i]);
-        dfs(i, s - candidates[i]);
-        t.RemoveAt(t.Count - 1);
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -460,4 +181,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

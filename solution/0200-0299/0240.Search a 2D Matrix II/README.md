@@ -73,30 +73,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        for row in matrix:
-            j = bisect_left(row, target)
-            if j < len(matrix[0]) and row[j] == target:
-                return True
-        return False
-```
 
-```python
-class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        m, n = len(matrix), len(matrix[0])
-        i, j = m - 1, 0
-        while i >= 0 and j < n:
-            if matrix[i][j] == target:
-                return True
-            if matrix[i][j] > target:
-                i -= 1
-            else:
-                j += 1
-        return False
-```
+
+
 
 ### **Java**
 
@@ -136,206 +115,37 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        for (auto& row : matrix) {
-            int j = lower_bound(row.begin(), row.end(), target) - row.begin();
-            if (j < matrix[0].size() && row[j] == target) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        int m = matrix.size(), n = matrix[0].size();
-        int i = m - 1, j = 0;
-        while (i >= 0 && j < n) {
-            if (matrix[i][j] == target) {
-                return true;
-            }
-            if (matrix[i][j] > target) {
-                --i;
-            } else {
-                ++j;
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func searchMatrix(matrix [][]int, target int) bool {
-	for _, row := range matrix {
-		j := sort.SearchInts(row, target)
-		if j < len(matrix[0]) && row[j] == target {
-			return true
-		}
-	}
-	return false
-}
-```
 
-```go
-func searchMatrix(matrix [][]int, target int) bool {
-	m, n := len(matrix), len(matrix[0])
-	i, j := m-1, 0
-	for i >= 0 && j < n {
-		if matrix[i][j] == target {
-			return true
-		}
-		if matrix[i][j] > target {
-			i--
-		} else {
-			j++
-		}
-	}
-	return false
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function searchMatrix(matrix: number[][], target: number): boolean {
-    const n = matrix[0].length;
-    for (const row of matrix) {
-        let left = 0,
-            right = n;
-        while (left < right) {
-            const mid = (left + right) >> 1;
-            if (row[mid] >= target) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        if (left != n && row[left] == target) {
-            return true;
-        }
-    }
-    return false;
-}
-```
 
-```ts
-function searchMatrix(matrix: number[][], target: number): boolean {
-    let m = matrix.length,
-        n = matrix[0].length;
-    let i = m - 1,
-        j = 0;
-    while (i >= 0 && j < n) {
-        let cur = matrix[i][j];
-        if (cur == target) return true;
-        if (cur > target) {
-            --i;
-        } else {
-            ++j;
-        }
-    }
-    return false;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool SearchMatrix(int[][] matrix, int target) {
-        foreach (int[] row in matrix) {
-            int j = Array.BinarySearch(row, target);
-            if (j >= 0) {
-                return true;
-            }
-        }
-        return false;
-    }
-}
-```
 
-```cs
-public class Solution {
-    public bool SearchMatrix(int[][] matrix, int target) {
-        int m = matrix.Length, n = matrix[0].Length;
-        int i = m - 1, j = 0;
-        while (i >= 0 && j < n) {
-            if (matrix[i][j] == target) {
-                return true;
-            }
-            if (matrix[i][j] > target) {
-                --i;
-            } else {
-                ++j;
-            }
-        }
-        return false;
-    }
-}
-```
 
-### **Rust**
 
-```rust
-use std::cmp::Ordering;
 
-impl Solution {
-    pub fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {
-        let m = matrix.len();
-        let n = matrix[0].len();
-        let mut i = 0;
-        let mut j = n;
-        while i < m && j > 0 {
-            match target.cmp(&matrix[i][j - 1]) {
-                Ordering::Less => j -= 1,
-                Ordering::Greater => i += 1,
-                Ordering::Equal => return true,
-            }
-        }
-        false
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} matrix
- * @param {number} target
- * @return {boolean}
- */
-var searchMatrix = function (matrix, target) {
-    const n = matrix[0].length;
-    for (const row of matrix) {
-        let left = 0,
-            right = n;
-        while (left < right) {
-            const mid = (left + right) >> 1;
-            if (row[mid] >= target) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        if (left != n && row[left] == target) {
-            return true;
-        }
-    }
-    return false;
-};
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -343,4 +153,4 @@ var searchMatrix = function (matrix, target) {
 
 ```
 
-<!-- tabs:end -->
+

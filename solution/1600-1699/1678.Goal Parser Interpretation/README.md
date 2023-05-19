@@ -69,23 +69,9 @@ G -&gt; G
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def interpret(self, command: str) -> str:
-        return command.replace('()', 'o').replace('(al)', 'al')
-```
 
-```python
-class Solution:
-    def interpret(self, command: str) -> str:
-        ans = []
-        for i, c in enumerate(command):
-            if c == 'G':
-                ans.append(c)
-            elif c == '(':
-                ans.append('o' if command[i + 1] == ')' else 'al')
-        return ''.join(ans)
-```
+
+
 
 ### **Java**
 
@@ -116,119 +102,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string interpret(string command) {
-        while (command.find("()") != -1) command.replace(command.find("()"), 2, "o");
-        while (command.find("(al)") != -1) command.replace(command.find("(al)"), 4, "al");
-        return command;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    string interpret(string command) {
-        string ans;
-        for (int i = 0; i < command.size(); ++i) {
-            char c = command[i];
-            if (c == 'G') ans += c;
-            else if (c == '(') ans += command[i + 1] == ')' ? "o" : "al";
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func interpret(command string) string {
-    command = strings.ReplaceAll(command, "()", "o")
-    command = strings.ReplaceAll(command, "(al)", "al")
-    return command
-}
-```
 
-```go
-func interpret(command string) string {
-	ans := &strings.Builder{}
-	for i, c := range command {
-		if c == 'G' {
-			ans.WriteRune(c)
-		} else if c == '(' {
-			if command[i+1] == ')' {
-				ans.WriteByte('o')
-			} else {
-				ans.WriteString("al")
-			}
-		}
-	}
-	return ans.String()
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function interpret(command: string): string {
-    return command.replace(/\(\)/g, 'o').replace(/\(al\)/g, 'al');
-}
-```
 
-```ts
-function interpret(command: string): string {
-    const n = command.length;
-    const ans: string[] = [];
-    for (let i = 0; i < n; i++) {
-        const c = command[i];
-        if (c === 'G') {
-            ans.push(c);
-        } else if (c === '(') {
-            ans.push(command[i + 1] === ')' ? 'o' : 'al');
-        }
-    }
-    return ans.join('');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn interpret(command: String) -> String {
-        command.replace("()", "o").replace("(al)", "al")
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn interpret(command: String) -> String {
-        let mut ans = String::new();
-        let bs = command.as_bytes();
-        for i in 0..bs.len() {
-            if bs[i] == b'G' {
-                ans.push_str("G");
-            }
-            if bs[i] == b'(' {
-                ans.push_str({
-                    if bs[i + 1] == b')' {
-                        "o"
-                    } else {
-                        "al"
-                    }
-                })
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
+
+
 
 ### **C**
 
@@ -261,4 +157,4 @@ char *interpret(char *command) {
 
 ```
 
-<!-- tabs:end -->
+

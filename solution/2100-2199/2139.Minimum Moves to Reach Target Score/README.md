@@ -71,17 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minMoves(self, target: int, maxDoubles: int) -> int:
-        if target == 1:
-            return 0
-        if maxDoubles == 0:
-            return target - 1
-        if target % 2 == 0 and maxDoubles:
-            return 1 + self.minMoves(target >> 1, maxDoubles - 1)
-        return 1 + self.minMoves(target - 1, maxDoubles)
-```
+
 
 ### **Java**
 
@@ -104,44 +94,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minMoves(int target, int maxDoubles) {
-        if (target == 1) return 0;
-        if (maxDoubles == 0) return target - 1;
-        if (target % 2 == 0 && maxDoubles) return 1 + minMoves(target >> 1, maxDoubles - 1);
-        return 1 + minMoves(target - 1, maxDoubles);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minMoves(target int, maxDoubles int) int {
-	if target == 1 {
-		return 0
-	}
-	if maxDoubles == 0 {
-		return target - 1
-	}
-	if target%2 == 0 && maxDoubles > 0 {
-		return 1 + minMoves(target>>1, maxDoubles-1)
-	}
-	return 1 + minMoves(target-1, maxDoubles)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -149,4 +114,4 @@ func minMoves(target int, maxDoubles int) int {
 
 ```
 
-<!-- tabs:end -->
+

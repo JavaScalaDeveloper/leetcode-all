@@ -75,26 +75,9 @@ word2 表示的字符串为 "a" + "bc" -> "abc"
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
-        return ''.join(word1) == ''.join(word2)
-```
 
-```python
-class Solution:
-    def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
-        i = j = x = y = 0
-        while i < len(word1) and j < len(word2):
-            if word1[i][x] != word2[j][y]:
-                return False
-            x, y = x + 1, y + 1
-            if x == len(word1[i]):
-                x, i = 0, i + 1
-            if y == len(word2[j]):
-                y, j = 0, j + 1
-        return i == len(word1) and j == len(word2)
-```
+
+
 
 ### **Java**
 
@@ -131,58 +114,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
-        return reduce(word1.cbegin(), word1.cend()) == reduce(word2.cbegin(), word2.cend());
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
-        int i = 0, j = 0, x = 0, y = 0;
-        while (i < word1.size() && j < word2.size()) {
-            if (word1[i][x++] != word2[j][y++]) return false;
-            if (x == word1[i].size()) x = 0, i++;
-            if (y == word2[j].size()) y = 0, j++;
-        }
-        return i == word1.size() && j == word2.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func arrayStringsAreEqual(word1 []string, word2 []string) bool {
-	return strings.Join(word1, "") == strings.Join(word2, "")
-}
-```
 
-```go
-func arrayStringsAreEqual(word1 []string, word2 []string) bool {
-	var i, j, x, y int
-	for i < len(word1) && j < len(word2) {
-		if word1[i][x] != word2[j][y] {
-			return false
-		}
-		x, y = x+1, y+1
-		if x == len(word1[i]) {
-			x, i = 0, i+1
-		}
-		if y == len(word2[j]) {
-			y, j = 0, j+1
-		}
-	}
-	return i == len(word1) && j == len(word2)
-}
-```
+
+
+
+
+
+
 
 ### **C**
 
@@ -212,66 +154,15 @@ bool arrayStringsAreEqual(char **word1, int word1Size, char **word2, int word2Si
 
 ### **TypeScript**
 
-```ts
-function arrayStringsAreEqual(word1: string[], word2: string[]): boolean {
-    return word1.join('') === word2.join('');
-}
-```
 
-```ts
-function arrayStringsAreEqual(word1: string[], word2: string[]): boolean {
-    let [i, j, x, y] = [0, 0, 0, 0];
-    while (i < word1.length && j < word2.length) {
-        if (word1[i][x++] !== word2[j][y++]) {
-            return false;
-        }
-        if (x === word1[i].length) {
-            x = 0;
-            ++i;
-        }
-        if (y === word2[j].length) {
-            y = 0;
-            ++j;
-        }
-    }
-    return i === word1.length && j === word2.length;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn array_strings_are_equal(word1: Vec<String>, word2: Vec<String>) -> bool {
-        word1.join("") == word2.join("")
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn array_strings_are_equal(word1: Vec<String>, word2: Vec<String>) -> bool {
-        let (n, m) = (word1.len(), word2.len());
-        let (mut i, mut j, mut x, mut y) = (0, 0, 0, 0);
-        while i < n && j < m {
-            if word1[i].as_bytes()[x] != word2[j].as_bytes()[y] {
-                return false;
-            }
-            x += 1;
-            y += 1;
-            if x == word1[i].len() {
-                x = 0;
-                i += 1;
-            }
-            if y == word2[j].len() {
-                y = 0;
-                j += 1;
-            }
-        }
-        i == n && j == m
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -279,4 +170,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

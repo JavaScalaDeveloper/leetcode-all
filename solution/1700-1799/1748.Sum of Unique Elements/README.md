@@ -60,12 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sumOfUnique(self, nums: List[int]) -> int:
-        cnt = Counter(nums)
-        return sum(x for x, v in cnt.items() if v == 1)
-```
+
 
 ### **Java**
 
@@ -106,172 +101,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int sumOfUnique(vector<int>& nums) {
-        int cnt[101]{};
-        for (int& x : nums) {
-            ++cnt[x];
-        }
-        int ans = 0;
-        for (int x = 0; x < 101; ++x) {
-            if (cnt[x] == 1) {
-                ans += x;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int sumOfUnique(vector<int>& nums) {
-        int ans = 0;
-        int cnt[101]{};
-        for (int& x : nums) {
-            if (++cnt[x] == 1) {
-                ans += x;
-            } else if (cnt[x] == 2) {
-                ans -= x;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sumOfUnique(nums []int) (ans int) {
-	cnt := [101]int{}
-	for _, x := range nums {
-		cnt[x]++
-	}
-	for x := 0; x < 101; x++ {
-		if cnt[x] == 1 {
-			ans += x
-		}
-	}
-	return
-}
-```
 
-```go
-func sumOfUnique(nums []int) (ans int) {
-	cnt := [101]int{}
-	for _, x := range nums {
-		cnt[x]++
-		if cnt[x] == 1 {
-			ans += x
-		} else if cnt[x] == 2 {
-			ans -= x
-		}
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function sumOfUnique(nums: number[]): number {
-    const cnt = new Array(101).fill(0);
-    for (const x of nums) {
-        ++cnt[x];
-    }
-    let ans = 0;
-    for (let x = 0; x < 101; ++x) {
-        if (cnt[x] == 1) {
-            ans += x;
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function sumOfUnique(nums: number[]): number {
-    let ans = 0;
-    const cnt = new Array(101).fill(0);
-    for (const x of nums) {
-        if (++cnt[x] === 1) {
-            ans += x;
-        } else if (cnt[x] === 2) {
-            ans -= x;
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sum_of_unique(nums: Vec<i32>) -> i32 {
-        let mut cnt = [0; 101];
-        for x in nums {
-            cnt[x as usize] += 1;
-        }
-        let mut ans = 0;
-        for x in 1..101 {
-            if cnt[x] == 1 {
-                ans += x;
-            }
-        }
-        ans as i32
-    }
-}
-```
 
-```rust
-use std::collections::HashMap;
 
-impl Solution {
-    pub fn sum_of_unique(nums: Vec<i32>) -> i32 {
-        let mut res = 0;
-        let mut map = HashMap::new();
-        for num in nums {
-            if map.contains_key(&num) {
-                if *map.get(&num).unwrap() {
-                    map.insert(num, false);
-                    res -= num;
-                }
-            } else {
-                map.insert(num, true);
-                res += num;
-            }
-        }
-        res
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums
-     * @return Integer
-     */
-    function sumOfUnique($nums) {
-        $sum = 0;
-        for ($i = 0; $i < count($nums); $i++) {
-            $hashtable[$nums[$i]] += 1;
-            if ($hashtable[$nums[$i]] == 1) $sum += $nums[$i];
-            if ($hashtable[$nums[$i]] == 2) $sum -= $nums[$i];
-        }
-        return $sum;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -279,4 +135,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

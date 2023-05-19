@@ -61,9 +61,7 @@ Department 表：
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -79,4 +77,4 @@ Department 表：
 
 ```
 
-<!-- tabs:end -->
+

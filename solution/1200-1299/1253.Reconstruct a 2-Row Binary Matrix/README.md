@@ -77,26 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reconstructMatrix(self, upper: int, lower: int, colsum: List[int]) -> List[List[int]]:
-        n = len(colsum)
-        ans = [[0] * n for _ in range(2)]
-        for j, v in enumerate(colsum):
-            if v == 2:
-                ans[0][j] = ans[1][j] = 1
-                upper, lower = upper - 1, lower - 1
-            if v == 1:
-                if upper > lower:
-                    upper -= 1
-                    ans[0][j] = 1
-                else:
-                    lower -= 1
-                    ans[1][j] = 1
-            if upper < 0 or lower < 0:
-                return []
-        return ans if lower == upper == 0 else []
-```
+
 
 ### **Java**
 
@@ -143,72 +124,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> reconstructMatrix(int upper, int lower, vector<int>& colsum) {
-        int n = colsum.size();
-        vector<vector<int>> ans(2, vector<int>(n));
-        for (int j = 0; j < n; ++j) {
-            if (colsum[j] == 2) {
-                ans[0][j] = ans[1][j] = 1;
-                upper--;
-                lower--;
-            }
-            if (colsum[j] == 1) {
-                if (upper > lower) {
-                    upper--;
-                    ans[0][j] = 1;
-                } else {
-                    lower--;
-                    ans[1][j] = 1;
-                }
-            }
-            if (upper < 0 || lower < 0) {
-                return {};
-            }
-        }
-        return upper != 0 || lower != 0 ? vector<vector<int>>{} : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reconstructMatrix(upper int, lower int, colsum []int) [][]int {
-	n := len(colsum)
-	ans := make([][]int, 2)
-	for i := range ans {
-		ans[i] = make([]int, n)
-	}
-	for j, v := range colsum {
-		if v == 2 {
-			ans[0][j], ans[1][j] = 1, 1
-			upper--
-			lower--
-		}
-		if v == 1 {
-			if upper > lower {
-				upper--
-				ans[0][j] = 1
-			} else {
-				lower--
-				ans[1][j] = 1
-			}
-		}
-		if upper < 0 || lower < 0 {
-			return [][]int{}
-		}
-	}
-	if upper != 0 || lower != 0 {
-		return [][]int{}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -216,4 +138,4 @@ func reconstructMatrix(upper int, lower int, colsum []int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

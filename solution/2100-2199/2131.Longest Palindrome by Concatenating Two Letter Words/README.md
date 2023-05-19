@@ -73,20 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestPalindrome(self, words: List[str]) -> int:
-        cnt = Counter(words)
-        ans = x = 0
-        for k, v in cnt.items():
-            if k[0] == k[1]:
-                x += v & 1
-                ans += v // 2 * 2 * 2
-            else:
-                ans += min(v, cnt[k[::-1]]) * 2
-        ans += 2 if x else 0
-        return ans
-```
+
 
 ### **Java**
 
@@ -117,72 +104,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestPalindrome(vector<string>& words) {
-        unordered_map<string, int> cnt;
-        for (auto& w : words) cnt[w]++;
-        int ans = 0, x = 0;
-        for (auto& [k, v] : cnt) {
-            string rk = k;
-            reverse(rk.begin(), rk.end());
-            if (k[0] == k[1]) {
-                x += v & 1;
-                ans += v / 2 * 2 * 2;
-            } else if (cnt.count(rk)) {
-                ans += min(v, cnt[rk]) * 2;
-            }
-        }
-        ans += x ? 2 : 0;
-        return ans;
-    }
-};
-```
+
+
 
 ## **Go**
 
-```go
-func longestPalindrome(words []string) int {
-	cnt := map[string]int{}
-	for _, w := range words {
-		cnt[w]++
-	}
-	ans, x := 0, 0
-	for k, v := range cnt {
-		if k[0] == k[1] {
-			x += v & 1
-			ans += v / 2 * 2 * 2
-		} else {
-			rk := string([]byte{k[1], k[0]})
-			if y, ok := cnt[rk]; ok {
-				ans += min(v, y) * 2
-			}
-		}
-	}
-	if x > 0 {
-		ans += 2
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -190,4 +124,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

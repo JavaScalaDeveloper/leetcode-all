@@ -58,20 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxChunksToSorted(self, arr: List[int]) -> int:
-        stk = []
-        for v in arr:
-            if not stk or v >= stk[-1]:
-                stk.append(v)
-            else:
-                mx = stk.pop()
-                while stk and stk[-1] > v:
-                    stk.pop()
-                stk.append(mx)
-        return len(stk)
-```
+
 
 ### **Java**
 
@@ -97,90 +84,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxChunksToSorted(vector<int>& arr) {
-        stack<int> stk;
-        for (int& v : arr) {
-            if (stk.empty() || stk.top() <= v)
-                stk.push(v);
-            else {
-                int mx = stk.top();
-                stk.pop();
-                while (!stk.empty() && stk.top() > v) stk.pop();
-                stk.push(mx);
-            }
-        }
-        return stk.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxChunksToSorted(arr []int) int {
-	var stk []int
-	for _, v := range arr {
-		if len(stk) == 0 || stk[len(stk)-1] <= v {
-			stk = append(stk, v)
-		} else {
-			mx := stk[len(stk)-1]
-			stk = stk[:len(stk)-1]
-			for len(stk) > 0 && stk[len(stk)-1] > v {
-				stk = stk[:len(stk)-1]
-			}
-			stk = append(stk, mx)
-		}
-	}
-	return len(stk)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxChunksToSorted(arr: number[]): number {
-    const stack = [];
-    for (const num of arr) {
-        if (stack.length !== 0 && num < stack[stack.length - 1]) {
-            const max = stack.pop();
-            while (stack.length !== 0 && num < stack[stack.length - 1]) {
-                stack.pop();
-            }
-            stack.push(max);
-        } else {
-            stack.push(num);
-        }
-    }
-    return stack.length;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_chunks_to_sorted(arr: Vec<i32>) -> i32 {
-        let mut stack = vec![];
-        for num in arr.iter() {
-            if !stack.is_empty() && num < stack.last().unwrap() {
-                let max = stack.pop().unwrap();
-                while !stack.is_empty() && num < stack.last().unwrap() {
-                    stack.pop();
-                }
-                stack.push(max)
-            } else {
-                stack.push(*num);
-            }
-        }
-        stack.len() as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -188,4 +106,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -53,61 +53,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 对于本题，初始每个 account 是一个独立的集合。遍历 accounts 列表，若遇到相同的 email，则将两账户进行合并，遍历完毕得到并查集。
 
@@ -119,36 +73,7 @@ d[find(a)] = distance
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        n = len(accounts)
-        p = list(range(n))
-        email_id = {}
-        for i, account in enumerate(accounts):
-            name = account[0]
-            for email in account[1:]:
-                if email in email_id:
-                    p[find(i)] = find(email_id[email])
-                else:
-                    email_id[email] = i
-        mp = defaultdict(set)
-        for i, account in enumerate(accounts):
-            for email in account[1:]:
-                mp[find(i)].add(email)
-
-        ans = []
-        for i, emails in mp.items():
-            t = [accounts[i][0]]
-            t.extend(sorted(emails))
-            ans.append(t)
-        return ans
-```
 
 ### **Java**
 
@@ -205,56 +130,9 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
-        int n = accounts.size();
-        p.resize(n);
-        for (int i = 0; i < n; ++i) p[i] = i;
-        unordered_map<string, int> emailId;
-        for (int i = 0; i < n; ++i) {
-            auto account = accounts[i];
-            auto name = account[0];
-            for (int j = 1; j < account.size(); ++j) {
-                string email = account[j];
-                if (emailId.count(email))
-                    p[find(i)] = find(emailId[email]);
-                else
-                    emailId[email] = i;
-            }
-        }
-        unordered_map<int, unordered_set<string>> mp;
-        for (int i = 0; i < n; ++i) {
-            auto account = accounts[i];
-            for (int j = 1; j < account.size(); ++j) {
-                string email = account[j];
-                mp[find(i)].insert(email);
-            }
-        }
-        vector<vector<string>> ans;
-        for (auto& [i, emails] : mp) {
-            vector<string> t;
-            t.push_back(accounts[i][0]);
-            for (string email : emails) t.push_back(email);
-            sort(t.begin() + 1, t.end());
-            ans.push_back(t);
-        }
-        return ans;
-    }
 
-    int find(int x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
-        }
-        return p[x];
-    }
-};
-```
 
 ### **...**
 
@@ -262,4 +140,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

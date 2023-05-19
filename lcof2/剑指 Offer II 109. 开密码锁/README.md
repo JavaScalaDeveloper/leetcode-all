@@ -75,46 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def openLock(self, deadends: List[str], target: str) -> int:
-        s = set(deadends)
-        if target in s or '0000' in s:
-            return -1
-        if target == '0000':
-            return 0
 
-        def prev(c):
-            return '9' if c == '0' else str(int(c) - 1)
-
-        def next(c):
-            return '0' if c == '9' else str(int(c) + 1)
-
-        def get(t):
-            res = []
-            t = list(t)
-            for i in range(4):
-                c = t[i]
-                t[i] = prev(c)
-                res.append(''.join(t))
-                t[i] = next(c)
-                res.append(''.join(t))
-                t[i] = c
-            return res
-
-        visited = set()
-        q = deque([('0000', 0)])
-        while q:
-            status, step = q.popleft()
-            for t in get(status):
-                if t in visited or t in s:
-                    continue
-                if t == target:
-                    return step + 1
-                q.append((t, step + 1))
-                visited.add(t)
-        return -1
-```
 
 ### **Java**
 
@@ -177,57 +138,9 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int openLock(vector<string>& deadends, string target) {
-        unordered_set<string> s(deadends.begin(), deadends.end());
-        if (s.count(target) || s.count("0000")) return -1;
-        if (target == "0000") return 0;
-        unordered_set<string> visited;
-        queue<string> q;
-        q.push("0000");
-        int step = 0;
-        while (!q.empty()) {
-            ++step;
-            for (int i = 0, n = q.size(); i < n; ++i) {
-                string status = q.front();
-                q.pop();
-                for (auto t : get(status)) {
-                    if (visited.count(t) || s.count(t)) continue;
-                    if (t == target) return step;
-                    q.push(t);
-                    visited.insert(t);
-                }
-            }
-        }
-        return -1;
-    }
 
-    char prev(char c) {
-        return c == '0' ? '9' : (char)(c - 1);
-    }
 
-    char next(char c) {
-        return c == '9' ? '0' : (char)(c + 1);
-    }
-
-    vector<string> get(string& t) {
-        vector<string> res;
-        for (int i = 0; i < 4; ++i) {
-            char c = t[i];
-            t[i] = prev(c);
-            res.push_back(t);
-            t[i] = next(c);
-            res.push_back(t);
-            t[i] = c;
-        }
-        return res;
-    }
-};
-```
 
 ### **...**
 
@@ -235,4 +148,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

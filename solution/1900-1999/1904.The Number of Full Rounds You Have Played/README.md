@@ -70,18 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfRounds(self, startTime: str, finishTime: str) -> int:
-        def get(s: str) -> int:
-            return int(s[:2]) * 60 + int(s[3:])
 
-        start, finish = get(startTime), get(finishTime)
-        if start > finish:
-            finish += 24 * 60
-        start, finish = (start + 14) // 15, finish // 15
-        return max(0, finish - start)
-```
 
 ### **Java**
 
@@ -107,70 +96,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function numberOfRounds(startTime: string, finishTime: string): number {
-    let m1 = toMinutes(startTime),
-        m2 = toMinutes(finishTime);
-    if (m1 > m2) {
-        m2 += 24 * 60;
-    }
-    let ans = Math.floor(m2 / 15) - Math.ceil(m1 / 15);
-    return ans > 0 ? ans : 0;
-}
 
-function toMinutes(time: string): number {
-    let [h, m] = time.split(':').map(Number);
-    return h * 60 + m;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfRounds(string startTime, string finishTime) {
-        int start = get(startTime), finish = get(finishTime);
-        if (start > finish) {
-            finish += 24 * 60;
-        }
-        start = (start + 14) / 15;
-        finish /= 15;
-        return max(0, finish - start);
-    }
 
-private:
-    int get(string s) {
-        int a, b;
-        sscanf(s.c_str(), "%d:%d", &a, &b);
-        return a * 60 + b;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfRounds(startTime string, finishTime string) int {
-	start, finish := get(startTime), get(finishTime)
-	if start > finish {
-		finish += 24 * 60
-	}
-	start = (start + 14) / 15
-	finish /= 15
-	if start > finish {
-		return 0
-	}
-	return finish - start
 
-}
 
-func get(s string) int {
-	var a, b int
-	fmt.Sscanf(s, "%d:%d", &a, &b)
-	return a*60 + b
-}
-```
+
 
 ### **...**
 
@@ -178,4 +112,4 @@ func get(s string) int {
 
 ```
 
-<!-- tabs:end -->
+

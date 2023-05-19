@@ -83,24 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumCost(self, sentence: str, k: int) -> int:
-        @cache
-        def dfs(i):
-            if s[-1] - s[i] + n - i - 1 <= k:
-                return 0
-            ans, j = inf, i + 1
-            while j < n and (t := s[j] - s[i] + j - i - 1) <= k:
-                ans = min(ans, (k - t) ** 2 + dfs(j))
-                j += 1
-            return ans
 
-        t = [len(w) for w in sentence.split()]
-        n = len(t)
-        s = list(accumulate(t, initial=0))
-        return dfs(0)
-```
 
 ### **Java**
 
@@ -146,87 +129,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int inf = INT_MAX;
-    int n;
 
-    int minimumCost(string sentence, int k) {
-        istringstream is(sentence);
-        vector<string> words;
-        string word;
-        while (is >> word) words.push_back(word);
-        n = words.size();
-        vector<int> s(n + 1);
-        for (int i = 0; i < n; ++i) s[i + 1] = s[i] + words[i].size();
-        vector<int> memo(n, inf);
-        return dfs(0, k, s, memo);
-    }
 
-    int dfs(int i, int k, vector<int>& s, vector<int>& memo) {
-        if (memo[i] != inf) return memo[i];
-        if (s[n] - s[i] + n - i - 1 <= k) {
-            memo[i] = 0;
-            return 0;
-        }
-        int ans = inf;
-        for (int j = i + 1; j < n; ++j) {
-            int t = s[j] - s[i] + j - i - 1;
-            if (t <= k) ans = min(ans, (k - t) * (k - t) + dfs(j, k, s, memo));
-        }
-        memo[i] = ans;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumCost(sentence string, k int) int {
-	words := strings.Split(sentence, " ")
-	n := len(words)
-	inf := math.MaxInt32
-	s := make([]int, n+1)
-	for i, word := range words {
-		s[i+1] = s[i] + len(word)
-	}
-	memo := make([]int, n)
-	for i := range memo {
-		memo[i] = inf
-	}
-	var dfs func(int) int
-	dfs = func(i int) int {
-		if memo[i] != inf {
-			return memo[i]
-		}
-		if s[n]-s[i]+n-i-1 <= k {
-			memo[i] = 0
-			return 0
-		}
-		ans := inf
-		for j := i + 1; j < n; j++ {
-			t := s[j] - s[i] + j - i - 1
-			if t <= k {
-				ans = min(ans, (k-t)*(k-t)+dfs(j))
-			}
-		}
-		memo[i] = ans
-		return ans
-	}
-	return dfs(0)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **...**
 
@@ -234,4 +143,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

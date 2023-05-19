@@ -74,16 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfBeams(self, bank: List[str]) -> int:
-        last = ans = 0
-        for b in bank:
-            if (t := b.count('1')) > 0:
-                ans += last * t
-                last = t
-        return ans
-```
+
 
 ### **Java**
 
@@ -111,92 +102,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfBeams(vector<string>& bank) {
-        int ans = 0;
-        int last = 0;
-        for (auto& b : bank) {
-            int t = 0;
-            for (char& c : b)
-                if (c == '1')
-                    ++t;
-            if (t) {
-                ans += last * t;
-                last = t;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfBeams(bank []string) int {
-	ans, last := 0, 0
-	for _, b := range bank {
-		t := strings.Count(b, "1")
-		if t > 0 {
-			ans += t * last
-			last = t
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-function numberOfBeams(bank: string[]): number {
-    let last = 0;
-    let ans = 0;
-    for (const r of bank) {
-        let t = 0;
-        for (const v of r) {
-            if (v === '1') {
-                t++;
-            }
-        }
-        if (t !== 0) {
-            ans += last * t;
-            last = t;
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn number_of_beams(bank: Vec<String>) -> i32 {
-        let mut last = 0;
-        let mut ans = 0;
-        for r in bank.iter() {
-            let mut t = 0;
-            for &v in r.as_bytes() {
-                if v == b'1' {
-                    t += 1;
-                }
-            }
-            if t != 0 {
-                ans += last * t;
-                last = t;
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -226,4 +148,4 @@ int numberOfBeams(char **bank, int bankSize) {
 
 ```
 
-<!-- tabs:end -->
+

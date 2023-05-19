@@ -49,27 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def missingTwo(self, nums: List[int]) -> List[int]:
-        n = len(nums) + 2
-        xor = 0
-        for v in nums:
-            xor ^= v
-        for i in range(1, n + 1):
-            xor ^= i
 
-        diff = xor & (-xor)
-        a = 0
-        for v in nums:
-            if v & diff:
-                a ^= v
-        for i in range(1, n + 1):
-            if i & diff:
-                a ^= i
-        b = xor ^ a
-        return [a, b]
-```
 
 ### **Java**
 
@@ -104,55 +84,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> missingTwo(vector<int>& nums) {
-        int n = nums.size() + 2;
-        int eor = 0;
-        for (int v : nums) eor ^= v;
-        for (int i = 1; i <= n; ++i) eor ^= i;
 
-        int diff = eor & -eor;
-        int a = 0;
-        for (int v : nums) if (v & diff) a ^= v;
-        for (int i = 1; i <= n; ++i) if (i & diff) a ^= i;
-        int b = eor ^ a;
-        return {a, b};
-    }
-};
-```
 
-### **Go**
 
-```go
-func missingTwo(nums []int) []int {
-	n := len(nums) + 2
-	xor := 0
-	for _, v := range nums {
-		xor ^= v
-	}
-	for i := 1; i <= n; i++ {
-		xor ^= i
-	}
-	diff := xor & -xor
-	a := 0
-	for _, v := range nums {
-		if (v & diff) != 0 {
-			a ^= v
-		}
-	}
-	for i := 1; i <= n; i++ {
-		if (i & diff) != 0 {
-			a ^= i
-		}
-	}
-	b := xor ^ a
-	return []int{a, b}
-}
-```
+
+
+
 
 ### **...**
 
@@ -160,4 +98,4 @@ func missingTwo(nums []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

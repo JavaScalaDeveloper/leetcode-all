@@ -58,32 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minStickers(self, stickers: List[str], target: str) -> int:
-        q = deque([0])
-        ans = 0
-        n = len(target)
-        vis = [False] * (1 << n)
-        vis[0] = True
-        while q:
-            for _ in range(len(q)):
-                state = q.popleft()
-                if state == (1 << n) - 1:
-                    return ans
-                for s in stickers:
-                    nxt = state
-                    cnt = Counter(s)
-                    for i, c in enumerate(target):
-                        if not (nxt & (1 << i)) and cnt[c]:
-                            nxt |= 1 << i
-                            cnt[c] -= 1
-                    if not vis[nxt]:
-                        vis[nxt] = True
-                        q.append(nxt)
-            ans += 1
-        return -1
-```
+
 
 ### **Java**
 
@@ -130,131 +105,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minStickers(vector<string>& stickers, string target) {
-        queue<int> q {{0}};
-        int ans = 0;
-        int n = target.size();
-        vector<bool> vis(1 << n);
-        vis[0] = true;
-        while (!q.empty()) {
-            for (int t = q.size(); t; --t) {
-                int state = q.front();
-                if (state == (1 << n) - 1) return ans;
-                q.pop();
-                for (auto& s : stickers) {
-                    int nxt = state;
-                    vector<int> cnt(26);
-                    for (char& c : s) ++cnt[c - 'a'];
-                    for (int i = 0; i < n; ++i) {
-                        int idx = target[i] - 'a';
-                        if (!(nxt & (1 << i)) && cnt[idx]) {
-                            nxt |= 1 << i;
-                            --cnt[idx];
-                        }
-                    }
-                    if (!vis[nxt]) {
-                        vis[nxt] = true;
-                        q.push(nxt);
-                    }
-                }
-            }
-            ++ans;
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minStickers(stickers []string, target string) int {
-	q := []int{0}
-	n := len(target)
-	vis := make([]bool, 1<<n)
-	vis[0] = true
-	ans := 0
-	for len(q) > 0 {
-		for t := len(q); t > 0; t-- {
-			state := q[0]
-			if state == (1<<n)-1 {
-				return ans
-			}
-			q = q[1:]
-			for _, s := range stickers {
-				nxt := state
-				cnt := make([]int, 26)
-				for _, c := range s {
-					cnt[c-'a']++
-				}
-				for i, c := range target {
-					idx := c - 'a'
-					if (nxt&(1<<i)) == 0 && cnt[idx] > 0 {
-						nxt |= 1 << i
-						cnt[idx]--
-					}
-				}
-				if !vis[nxt] {
-					vis[nxt] = true
-					q = append(q, nxt)
-				}
-			}
-		}
-		ans++
-	}
-	return -1
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::{HashSet, VecDeque};
 
-impl Solution {
-    pub fn min_stickers(stickers: Vec<String>, target: String) -> i32 {
-        let mut q = VecDeque::new();
-        q.push_back(0);
-        let mut ans = 0;
-        let n = target.len();
-        let mut vis = HashSet::new();
-        vis.insert(0);
-        while !q.is_empty() {
-            for _ in 0..q.len() {
-                let state = q.pop_front().unwrap();
-                if state == (1 << n) - 1 {
-                    return ans;
-                }
-                for s in &stickers {
-                    let mut nxt = state;
-                    let mut cnt = [0; 26];
-                    for &c in s.as_bytes() {
-                        cnt[(c - b'a') as usize] += 1;
-                    }
-                    for (i, &c) in target.as_bytes().iter().enumerate() {
-                        let idx = (c - b'a') as usize;
-                        if (nxt & (1 << i)) == 0 && cnt[idx] > 0 {
-                            nxt |= 1 << i;
-                            cnt[idx] -= 1;
-                        }
-                    }
-                    if !vis.contains(&nxt) {
-                        q.push_back(nxt);
-                        vis.insert(nxt);
-                    }
-                }
-            }
-            ans += 1;
-        }
-        -1
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -262,4 +123,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

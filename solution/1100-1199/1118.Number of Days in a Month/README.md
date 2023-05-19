@@ -50,13 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfDays(self, year: int, month: int) -> int:
-        leap = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
-        days = [0, 31, 29 if leap else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-        return days[month]
-```
+
 
 ### **Java**
 
@@ -72,32 +66,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfDays(int year, int month) {
-        bool leap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-        vector<int> days = {0, 31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        return days[month];
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfDays(year int, month int) int {
-	leap := (year%4 == 0 && year%100 != 0) || (year%400 == 0)
-	x := 28
-	if leap {
-		x = 29
-	}
-	days := []int{0, 31, x, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-	return days[month]
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -105,4 +80,4 @@ func numberOfDays(year int, month int) int {
 
 ```
 
-<!-- tabs:end -->
+

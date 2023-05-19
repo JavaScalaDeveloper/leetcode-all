@@ -92,26 +92,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxDepthAfterSplit(self, seq: str) -> List[int]:
-        ans = [0] * len(seq)
-        a = b = 0
-        for i, c in enumerate(seq):
-            if c == "(":
-                if a < b:
-                    a += 1
-                else:
-                    b += 1
-                    ans[i] = 1
-            else:
-                if a > b:
-                    a -= 1
-                else:
-                    b -= 1
-                    ans[i] = 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -162,60 +143,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> maxDepthAfterSplit(string seq) {
-        int n = seq.size();
-        vector<int> ans(n);
-        int a = 0, b = 0;
-        for (int i = 0; i < n; ++i) {
-            char c = seq[i];
-            if (c == '(') {
-                if (a < b)
-                    ++a;
-                else
-                    ++b, ans[i] = 1;
-            } else {
-                if (a > b)
-                    --a;
-                else
-                    --b, ans[i] = 1;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxDepthAfterSplit(seq string) []int {
-	ans := make([]int, len(seq))
-	a, b := 0, 0
-	for i, c := range seq {
-		if c == '(' {
-			if a < b {
-				a++
-			} else {
-				b++
-				ans[i] = 1
-			}
-		} else {
-			if a > b {
-				a--
-			} else {
-				b--
-				ans[i] = 1
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -223,4 +157,4 @@ func maxDepthAfterSplit(seq string) []int {
 
 ```
 
-<!-- tabs:end -->
+

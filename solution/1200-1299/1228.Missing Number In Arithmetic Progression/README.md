@@ -59,22 +59,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def missingNumber(self, arr: List[int]) -> int:
-        return (arr[0] + arr[-1]) * (len(arr) + 1) // 2 - sum(arr)
-```
 
-```python
-class Solution:
-    def missingNumber(self, arr: List[int]) -> int:
-        n = len(arr)
-        d = (arr[-1] - arr[0]) // n
-        for i in range(1, n):
-            if arr[i] != arr[i - 1] + d:
-                return arr[i - 1] + d
-        return arr[0]
-```
+
+
 
 ### **Java**
 
@@ -106,47 +93,15 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int missingNumber(vector<int>& arr) {
-        int n = arr.size();
-        int x = (arr[0] + arr[n - 1]) * (n + 1) / 2;
-        int y = accumulate(arr.begin(), arr.end(), 0);
-        return x - y;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int missingNumber(vector<int>& arr) {
-        int n = arr.size();
-        int d = (arr[n - 1] - arr[0]) / n;
-        for (int i = 1; i < n; ++i)
-            if (arr[i] != arr[i - 1] + d) return arr[i - 1] + d;
-        return arr[0];
-    }
-};
-```
 
-### **Go**
 
-```go
-func missingNumber(arr []int) int {
-	n := len(arr)
-	d := (arr[n-1] - arr[0]) / n
-	for i := 1; i < n; i++ {
-		if arr[i] != arr[i-1]+d {
-			return arr[i-1] + d
-		}
-	}
-	return arr[0]
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -154,4 +109,4 @@ func missingNumber(arr []int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -48,14 +48,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.</pre>
 
 ### **Python3**
 
-```python
-class Solution:
-    def fib(self, n: int) -> int:
-        a, b = 0, 1
-        for _ in range(n):
-            a, b = b, (a + b) % 1000000007
-        return a
-```
+
 
 ### **Java**
 
@@ -73,95 +66,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int fib(int n) {
-        int a = 0, b = 1;
-        while (n--) {
-            int c = (a + b) % 1000000007;
-            a = b;
-            b = c;
-        }
-        return a;
-    }
-};
-```
 
-### **Go**
 
-```go
-func fib(n int) int {
-	a, b := 0, 1
-	for i := 0; i < n; i++ {
-		a, b = b, (a+b)%1000000007
-	}
-	return a
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var fib = function (n) {
-    let a = 0;
-    let b = 1;
-    while (n--) {
-        [a, b] = [b, (a + b) % (1e9 + 7)];
-    }
-    return a;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function fib(n: number): number {
-    let a: number = 0,
-        b: number = 1;
-    for (let i: number = 0; i < n; i++) {
-        let c: number = (a + b) % 1000000007;
-        [a, b] = [b, c];
-    }
-    return a;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn fib(n: i32) -> i32 {
-        let mut tup = (0, 1);
-        for _ in 0..n {
-            tup = (tup.1, (tup.0 + tup.1) % 1000000007);
-        }
-        return tup.0;
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int Fib(int n) {
-        int a = 0, b = 1, tmp;
-        for (int i = 0; i < n; i++) {
-            tmp = a;
-            a = b;
-            b = (tmp + b) % 1000000007;
-        }
-        return a % 1000000007;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -169,4 +96,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

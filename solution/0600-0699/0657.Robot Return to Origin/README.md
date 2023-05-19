@@ -49,21 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def judgeCircle(self, moves: str) -> bool:
-        x = y = 0
-        for c in moves:
-            if c == 'R':
-                x += 1
-            elif c == 'L':
-                x -= 1
-            elif c == 'U':
-                y += 1
-            elif c == 'D':
-                y -= 1
-        return x == 0 and y == 0
-```
+
 
 ### **Java**
 
@@ -91,24 +77,7 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function judgeCircle(moves: string): boolean {
-    let x = 0,
-        y = 0;
-    const dir = {
-        R: [1, 0],
-        L: [-1, 0],
-        U: [0, 1],
-        D: [0, -1],
-    };
-    for (let u of moves) {
-        const [dx, dy] = dir[u];
-        x += dx;
-        y += dy;
-    }
-    return !x && !y;
-}
-```
+
 
 ### **...**
 
@@ -116,4 +85,4 @@ function judgeCircle(moves: string): boolean {
 
 ```
 
-<!-- tabs:end -->
+

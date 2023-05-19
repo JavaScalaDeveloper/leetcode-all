@@ -62,21 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countQuadruples(self, firstString: str, secondString: str) -> int:
-        last = {c: i for i, c in enumerate(secondString)}
-        ans, mi = 0, inf
-        for i, c in enumerate(firstString):
-            if c in last:
-                t = i - last[c]
-                if mi > t:
-                    mi = t
-                    ans = 1
-                elif mi == t:
-                    ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -107,58 +93,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countQuadruples(string firstString, string secondString) {
-        int last[26] = {0};
-        for (int i = 0; i < secondString.size(); ++i) {
-            last[secondString[i] - 'a'] = i + 1;
-        }
-        int ans = 0, mi = 1 << 30;
-        for (int i = 0; i < firstString.size(); ++i) {
-            int j = last[firstString[i] - 'a'];
-            if (j) {
-                int t = i - j;
-                if (mi > t) {
-                    mi = t;
-                    ans = 1;
-                } else if (mi == t) {
-                    ++ans;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countQuadruples(firstString string, secondString string) (ans int) {
-	last := [26]int{}
-	for i, c := range secondString {
-		last[c-'a'] = i + 1
-	}
-	mi := 1 << 30
-	for i, c := range firstString {
-		j := last[c-'a']
-		if j > 0 {
-			t := i - j
-			if mi > t {
-				mi = t
-				ans = 1
-			} else if mi == t {
-				ans++
-			}
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -166,4 +107,4 @@ func countQuadruples(firstString string, secondString string) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

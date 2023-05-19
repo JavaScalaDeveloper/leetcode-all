@@ -66,21 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minFlips(self, s: str) -> int:
-        n = len(s)
-        target = '01'
-        cnt = 0
-        for i, c in enumerate(s):
-            cnt += c != target[i & 1]
-        res = min(cnt, n - cnt)
-        for i in range(n):
-            cnt -= s[i] != target[i & 1]
-            cnt += s[i] != target[(i + n) & 1]
-            res = min(res, cnt, n - cnt)
-        return res
-```
+
 
 ### **Java**
 
@@ -108,23 +94,7 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function minFlips(s: string): number {
-    const n: number = s.length;
-    const target: string[] = ['0', '1'];
-    let count: number = 0;
-    for (let i: number = 0; i < n; ++i) {
-        count += s.charAt(i) == target[i & 1] ? 0 : 1;
-    }
-    let res = Math.min(count, n - count);
-    for (let i: number = 0; i < n; ++i) {
-        count -= s.charAt(i) == target[i & 1] ? 0 : 1;
-        count += s.charAt(i) == target[(i + n) & 1] ? 0 : 1;
-        res = Math.min(res, count, n - count);
-    }
-    return res;
-}
-```
+
 
 ### **...**
 
@@ -132,4 +102,4 @@ function minFlips(s: string): number {
 
 ```
 
-<!-- tabs:end -->
+

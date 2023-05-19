@@ -55,18 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findNthDigit(self, n: int) -> int:
-        k, cnt = 1, 9
-        while k * cnt < n:
-            n -= k * cnt
-            k += 1
-            cnt *= 10
-        num = 10 ** (k - 1) + (n - 1) // k
-        idx = (n - 1) % k
-        return int(str(num)[idx])
-```
+
 
 ### **Java**
 
@@ -88,79 +77,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findNthDigit(int n) {
-        int k = 1, cnt = 9;
-        while (1ll * k * cnt < n) {
-            n -= k * cnt;
-            ++k;
-            cnt *= 10;
-        }
-        int num = pow(10, k - 1) + (n - 1) / k;
-        int idx = (n - 1) % k;
-        return to_string(num)[idx] - '0';
-    }
-};
-```
 
-### **Go**
 
-```go
-func findNthDigit(n int) int {
-	k, cnt := 1, 9
-	for k*cnt < n {
-		n -= k * cnt
-		k++
-		cnt *= 10
-	}
-	num := int(math.Pow10(k-1)) + (n-1)/k
-	idx := (n - 1) % k
-	return int(strconv.Itoa(num)[idx] - '0')
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var findNthDigit = function (n) {
-    let k = 1,
-        cnt = 9;
-    while (k * cnt < n) {
-        n -= k * cnt;
-        ++k;
-        cnt *= 10;
-    }
-    const num = Math.pow(10, k - 1) + (n - 1) / k;
-    const idx = (n - 1) % k;
-    return num.toString()[idx];
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int FindNthDigit(int n) {
-        int k = 1, cnt = 9;
-        while ((long) k * cnt < n) {
-            n -= k * cnt;
-            ++k;
-            cnt *= 10;
-        }
-        int num = (int) Math.Pow(10, k - 1) + (n - 1) / k;
-        int idx = (n - 1) % k;
-        return num.ToString()[idx] - '0';
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -168,4 +99,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -73,21 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def flipAndInvertImage(self, image: List[List[int]]) -> List[List[int]]:
-        n = len(image)
-        for row in image:
-            i, j = 0, n - 1
-            while i < j:
-                if row[i] == row[j]:
-                    row[i] ^= 1
-                    row[j] ^= 1
-                i, j = i + 1, j - 1
-            if i == j:
-                row[i] ^= 1
-        return image
-```
+
 
 ### **Java**
 
@@ -113,73 +99,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> flipAndInvertImage(vector<vector<int>>& image) {
-        for (auto& row : image) {
-            int i = 0, j = row.size() - 1;
-            for (; i < j; ++i, --j) {
-                if (row[i] == row[j]) {
-                    row[i] ^= 1;
-                    row[j] ^= 1;
-                }
-            }
-            if (i == j) {
-                row[i] ^= 1;
-            }
-        }
-        return image;
-    }
-};
-```
 
-### **Go**
 
-```go
-func flipAndInvertImage(image [][]int) [][]int {
-	for _, row := range image {
-		i, j := 0, len(row)-1
-		for ; i < j; i, j = i+1, j-1 {
-			if row[i] == row[j] {
-				row[i] ^= 1
-				row[j] ^= 1
-			}
-		}
-		if i == j {
-			row[i] ^= 1
-		}
-	}
-	return image
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} image
- * @return {number[][]}
- */
-var flipAndInvertImage = function (image) {
-    for (const row of image) {
-        let i = 0;
-        let j = row.length - 1;
-        for (; i < j; ++i, --j) {
-            if (row[i] == row[j]) {
-                row[i] ^= 1;
-                row[j] ^= 1;
-            }
-        }
-        if (i == j) {
-            row[i] ^= 1;
-        }
-    }
-    return image;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -187,4 +117,4 @@ var flipAndInvertImage = function (image) {
 
 ```
 
-<!-- tabs:end -->
+

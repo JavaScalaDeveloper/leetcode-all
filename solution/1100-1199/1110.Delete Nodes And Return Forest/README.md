@@ -55,37 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def delNodes(self, root: TreeNode, to_delete: List[int]) -> List[TreeNode]:
-        def dfs(fa, root):
-            if root is None:
-                return
-            dfs(root, root.left)
-            dfs(root, root.right)
-            if root.val in s:
-                if fa and fa.left == root:
-                    fa.left = None
-                if fa and fa.right == root:
-                    fa.right = None
-                if root.left:
-                    ans.append(root.left)
-                if root.right:
-                    ans.append(root.right)
 
-        s = set(to_delete)
-        ans = []
-        if root.val not in s:
-            ans.append(root)
-        dfs(None, root)
-        return ans
-```
 
 ### **Java**
 
@@ -188,91 +158,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<TreeNode*> delNodes(TreeNode* root, vector<int>& to_delete) {
-        vector<TreeNode*> ans;
-        unordered_set<int> s(to_delete.begin(), to_delete.end());
-        if (!s.count(root->val)) ans.push_back(root);
-        dfs(nullptr, root, s, ans);
-        return ans;
-    }
 
-    void dfs(TreeNode* fa, TreeNode* root, unordered_set<int>& s, vector<TreeNode*>& ans) {
-        if (!root) return;
-        dfs(root, root->left, s, ans);
-        dfs(root, root->right, s, ans);
-        if (s.count(root->val)) {
-            if (fa && fa->left == root) fa->left = nullptr;
-            if (fa && fa->right == root) fa->right = nullptr;
-            if (root->left) ans.push_back(root->left);
-            if (root->right) ans.push_back(root->right);
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func delNodes(root *TreeNode, to_delete []int) []*TreeNode {
-	s := map[int]bool{}
-	for _, v := range to_delete {
-		s[v] = true
-	}
-	ans := []*TreeNode{}
-	if !s[root.Val] {
-		ans = append(ans, root)
-	}
-	var fa *TreeNode
-	var dfs func(fa, root *TreeNode)
-	dfs = func(fa, root *TreeNode) {
-		if root == nil {
-			return
-		}
-		dfs(root, root.Left)
-		dfs(root, root.Right)
-		if s[root.Val] {
-			if fa != nil && fa.Left == root {
-				fa.Left = nil
-			}
-			if fa != nil && fa.Right == root {
-				fa.Right = nil
-			}
-			if root.Left != nil {
-				ans = append(ans, root.Left)
-			}
-			if root.Right != nil {
-				ans = append(ans, root.Right)
-			}
-		}
-	}
-	dfs(fa, root)
-	return ans
-}
-```
+
+
+
 
 ### **...**
 
@@ -280,4 +172,4 @@ func delNodes(root *TreeNode, to_delete []int) []*TreeNode {
 
 ```
 
-<!-- tabs:end -->
+

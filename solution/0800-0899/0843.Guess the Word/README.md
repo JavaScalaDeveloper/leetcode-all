@@ -73,9 +73,7 @@ master.guess("abcczz") 返回 4 ，因为 "abcczz" 共有 4 个字母匹配。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -91,4 +89,4 @@ master.guess("abcczz") 返回 4 ，因为 "abcczz" 共有 4 个字母匹配。
 
 ```
 
-<!-- tabs:end -->
+

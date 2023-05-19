@@ -52,22 +52,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def lengthOfLongestSubstringKDistinct(self, s: str, k: int) -> int:
-        cnt = Counter()
-        n = len(s)
-        ans = j = 0
-        for i, c in enumerate(s):
-            cnt[c] += 1
-            while len(cnt) > k:
-                cnt[s[j]] -= 1
-                if cnt[s[j]] == 0:
-                    cnt.pop(s[j])
-                j += 1
-            ans = max(ans, i - j + 1)
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,57 +82,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int lengthOfLongestSubstringKDistinct(string s, int k) {
-        unordered_map<char, int> cnt;
-        int n = s.size();
-        int ans = 0, j = 0;
-        for (int i = 0; i < n; ++i) {
-            cnt[s[i]]++;
-            while (cnt.size() > k) {
-                if (--cnt[s[j]] == 0) {
-                    cnt.erase(s[j]);
-                }
-                ++j;
-            }
-            ans = max(ans, i - j + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func lengthOfLongestSubstringKDistinct(s string, k int) (ans int) {
-	cnt := map[byte]int{}
-	j := 0
-	for i := range s {
-		cnt[s[i]]++
-		for len(cnt) > k {
-			cnt[s[j]]--
-			if cnt[s[j]] == 0 {
-				delete(cnt, s[j])
-			}
-			j++
-		}
-		ans = max(ans, i-j+1)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -155,4 +96,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

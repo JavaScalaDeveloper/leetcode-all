@@ -59,23 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
-        def dfs(root):
-            if root is None:
-                return []
-            ans = dfs(root.left) + dfs(root.right)
-            return ans or [root.val]
 
-        return dfs(root1) == dfs(root2)
-```
 
 ### **Java**
 
@@ -118,64 +102,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool leafSimilar(TreeNode* root1, TreeNode* root2) {
-        return dfs(root1) == dfs(root2);
-    }
 
-    vector<int> dfs(TreeNode* root) {
-        if (!root) return {};
-        auto ans = dfs(root->left);
-        auto right = dfs(root->right);
-        ans.insert(ans.end(), right.begin(), right.end());
-        if (ans.empty()) ans.push_back(root->val);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func leafSimilar(root1 *TreeNode, root2 *TreeNode) bool {
-	var dfs func(*TreeNode) []int
-	dfs = func(root *TreeNode) []int {
-		if root == nil {
-			return []int{}
-		}
-		ans := dfs(root.Left)
-		ans = append(ans, dfs(root.Right)...)
-		if len(ans) == 0 {
-			ans = append(ans, root.Val)
-		}
-		return ans
-	}
-	return reflect.DeepEqual(dfs(root1), dfs(root2))
-}
-```
+
+
+
 
 ### **...**
 
@@ -183,4 +116,4 @@ func leafSimilar(root1 *TreeNode, root2 *TreeNode) bool {
 
 ```
 
-<!-- tabs:end -->
+

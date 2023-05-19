@@ -40,16 +40,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        cnt = [0] * 32
-        for x in nums:
-            for i in range(32):
-                cnt[i] += x & 1
-                x >>= 1
-        return sum(1 << i for i in range(32) if cnt[i] % 3)
-```
+
 
 ### **Java**
 
@@ -74,119 +65,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int singleNumber(vector<int>& nums) {
-        int cnt[32]{};
-        for (int& x : nums) {
-            for (int i = 0; i < 32; ++i) {
-                cnt[i] += x & 1;
-                x >>= 1;
-            }
-        }
-        int ans = 0;
-        for (int i = 0; i < 32; ++i) {
-            if (cnt[i] % 3) {
-                ans |= 1 << i;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func singleNumber(nums []int) (ans int) {
-	cnt := [32]int{}
-	for _, x := range nums {
-		for i := range cnt {
-			cnt[i] += x & 1
-			x >>= 1
-		}
-	}
-	for i, v := range cnt {
-		if v%3 == 1 {
-			ans |= 1 << i
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var singleNumber = function (nums) {
-    const cnt = new Array(32).fill(0);
-    for (let x of nums) {
-        for (let i = 0; i < 32; ++i) {
-            cnt[i] += x & 1;
-            x >>= 1;
-        }
-    }
-    let ans = 0;
-    for (let i = 0; i < 32; ++i) {
-        if (cnt[i] % 3) {
-            ans |= 1 << i;
-        }
-    }
-    return ans;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn single_number(nums: Vec<i32>) -> i32 {
-        let mut counts = [0; 32];
-        for num in nums.iter() {
-            for i in 0..32 {
-                counts[i] += (num >> i) & 1;
-            }
-        }
-        let mut res = 0;
-        for count in counts.iter().rev() {
-            res <<= 1;
-            res |= count % 3;
-        }
-        res
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int SingleNumber(int[] nums) {
-        int[] cnt = new int[32];
-        foreach(int x in nums) {
-            int v = x;
-            for (int i = 0; i < 32; ++i) {
-                cnt[i] += v & 1;
-                v >>= 1;
-            }
-        }
-        int ans = 0;
-        for (int i = 0; i < 32; ++i) {
-            if (cnt[i] % 3 == 1) {
-                ans |= 1 << i;
-            }
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -194,4 +91,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

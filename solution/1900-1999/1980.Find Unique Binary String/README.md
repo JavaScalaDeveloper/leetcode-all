@@ -65,17 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findDifferentBinaryString(self, nums: List[str]) -> str:
-        mask = 0
-        for x in nums:
-            mask |= 1 << x.count("1")
-        n = len(nums)
-        for i in range(n + 1):
-            if mask >> i & 1 ^ 1:
-                return "1" * i + "0" * (n - i)
-```
+
 
 ### **Java**
 
@@ -103,41 +93,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string findDifferentBinaryString(vector<string>& nums) {
-        int mask = 0;
-        for (auto& x : nums) {
-            int cnt = count(x.begin(), x.end(), '1');
-            mask |= 1 << cnt;
-        }
-        for (int i = 0; ; ++i) {
-            if (mask >> i & 1 ^ 1) {
-                return string(i, '1') + string(nums.size() - i, '0');
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func findDifferentBinaryString(nums []string) string {
-	mask := 0
-	for _, x := range nums {
-		mask |= 1 << strings.Count(x, "1")
-	}
-	for i := 0; ; i++ {
-		if mask>>i&1 == 0 {
-			return strings.Repeat("1", i) + strings.Repeat("0", len(nums)-i)
-		}
-	}
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -145,4 +107,4 @@ func findDifferentBinaryString(nums []string) string {
 
 ```
 
-<!-- tabs:end -->
+

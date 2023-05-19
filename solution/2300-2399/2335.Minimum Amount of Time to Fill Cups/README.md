@@ -79,26 +79,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def fillCups(self, amount: List[int]) -> int:
-        ans = 0
-        while sum(amount):
-            amount.sort()
-            ans += 1
-            amount[2] -= 1
-            amount[1] = max(0, amount[1] - 1)
-        return ans
-```
 
-```python
-class Solution:
-    def fillCups(self, amount: List[int]) -> int:
-        amount.sort()
-        if amount[0] + amount[1] <= amount[2]:
-            return amount[2]
-        return (sum(amount) + 1) // 2
-```
+
+
 
 ### **Java**
 
@@ -131,91 +114,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int fillCups(vector<int>& amount) {
-        int ans = 0;
-        while (amount[0] + amount[1] + amount[2]) {
-            sort(amount.begin(), amount.end());
-            ++ans;
-            amount[2]--;
-            amount[1] = max(0, amount[1] - 1);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int fillCups(vector<int>& amount) {
-        sort(amount.begin(), amount.end());
-        if (amount[0] + amount[1] <= amount[2]) {
-            return amount[2];
-        }
-        return (amount[0] + amount[1] + amount[2] + 1) / 2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func fillCups(amount []int) int {
-	ans := 0
-	for amount[0]+amount[1]+amount[2] > 0 {
-		sort.Ints(amount)
-		ans++
-		amount[2]--
-		if amount[1] > 0 {
-			amount[1]--
-		}
-	}
-	return ans
-}
-```
 
-```go
-func fillCups(amount []int) int {
-	sort.Ints(amount)
-	if amount[0]+amount[1] <= amount[2] {
-		return amount[2]
-	}
-	return (amount[0] + amount[1] + amount[2] + 1) / 2
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function fillCups(amount: number[]): number {
-    amount.sort((a, b) => a - b);
-    let [a, b, c] = amount;
-    let diff = a + b - c;
-    if (diff <= 0) return c;
-    else return Math.floor((diff + 1) / 2) + c;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn fill_cups(mut amount: Vec<i32>) -> i32 {
-        amount.sort();
-        let dif = amount[0] + amount[1] - amount[2];
-        if dif <= 0 {
-            return amount[2];
-        }
-        (dif + 1) / 2 + amount[2]
-    }
-}
 
-```
+
+
 
 ### **...**
 
@@ -223,4 +140,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

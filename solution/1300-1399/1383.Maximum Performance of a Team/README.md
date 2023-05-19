@@ -65,23 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxPerformance(
-        self, n: int, speed: List[int], efficiency: List[int], k: int
-    ) -> int:
-        t = sorted(zip(speed, efficiency), key=lambda x: -x[1])
-        ans = tot = 0
-        mod = 10**9 + 7
-        h = []
-        for s, e in t:
-            tot += s
-            ans = max(ans, tot * e)
-            heappush(h, s)
-            if len(h) == k:
-                tot -= heappop(h)
-        return ans % mod
-```
+
 
 ### **Java**
 
@@ -114,75 +98,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxPerformance(int n, vector<int>& speed, vector<int>& efficiency, int k) {
-        vector<pair<int, int>> t(n);
-        for (int i = 0; i < n; ++i) t[i] = {-efficiency[i], speed[i]};
-        sort(t.begin(), t.end());
-        priority_queue<int, vector<int>, greater<int>> q;
-        long long ans = 0, tot = 0;
-        int mod = 1e9 + 7;
-        for (auto& x : t) {
-            int s = x.second, e = -x.first;
-            tot += s;
-            ans = max(ans, tot * e);
-            q.push(s);
-            if (q.size() == k) {
-                tot -= q.top();
-                q.pop();
-            }
-        }
-        return (int) (ans % mod);
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxPerformance(n int, speed []int, efficiency []int, k int) int {
-	t := make([][]int, n)
-	for i, s := range speed {
-		t[i] = []int{s, efficiency[i]}
-	}
-	sort.Slice(t, func(i, j int) bool { return t[i][1] > t[j][1] })
-	var mod int = 1e9 + 7
-	ans, tot := 0, 0
-	pq := hp{}
-	for _, x := range t {
-		s, e := x[0], x[1]
-		tot += s
-		ans = max(ans, tot*e)
-		heap.Push(&pq, s)
-		if pq.Len() == k {
-			tot -= heap.Pop(&pq).(int)
-		}
-	}
-	return ans % mod
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-func (h *hp) Less(i, j int) bool { return h.IntSlice[i] < h.IntSlice[j] }
-```
+
 
 ### **...**
 
@@ -190,4 +112,4 @@ func (h *hp) Less(i, j int) bool { return h.IntSlice[i] < h.IntSlice[j] }
 
 ```
 
-<!-- tabs:end -->
+

@@ -69,11 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removePalindromeSub(self, s: str) -> int:
-        return 1 if s[::-1] == s else 2
-```
+
 
 ### **Java**
 
@@ -92,67 +88,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int removePalindromeSub(string s) {
-        for (int i = 0, j = s.size() - 1; i < j; ++i, --j) {
-            if (s[i] != s[j]) {
-                return 2;
-            }
-        }
-        return 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removePalindromeSub(s string) int {
-	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
-		if s[i] != s[j] {
-			return 2
-		}
-	}
-	return 1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function removePalindromeSub(s: string): number {
-    for (let i = 0, j = s.length - 1; i < j; ++i, --j) {
-        if (s[i] !== s[j]) {
-            return 2;
-        }
-    }
-    return 1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn remove_palindrome_sub(s: String) -> i32 {
-        let mut l = 0;
-        let mut r = s.len() - 1;
-        let s: Vec<char> = s.chars().collect();
-        while l < r {
-            if s[l] != s[r] {
-                return 2;
-            }
-            l += 1;
-            r -= 1;
-        }
-        1
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -160,4 +110,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

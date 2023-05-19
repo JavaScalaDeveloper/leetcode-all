@@ -64,53 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.children = [None] * 26
-        self.v = []
 
-    def insert(self, w, i):
-        node = self
-        for c in w:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-            node.v.append(i)
-
-    def search(self, w):
-        node = self
-        for c in w:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                return []
-            node = node.children[idx]
-        return node.v
-
-
-class Solution:
-    def wordSquares(self, words: List[str]) -> List[List[str]]:
-        def dfs(t):
-            if len(t) == len(words[0]):
-                ans.append(t[:])
-                return
-            idx = len(t)
-            pref = [v[idx] for v in t]
-            indexes = trie.search(''.join(pref))
-            for i in indexes:
-                t.append(words[i])
-                dfs(t)
-                t.pop()
-
-        trie = Trie()
-        ans = []
-        for i, w in enumerate(words):
-            trie.insert(w, i)
-        for w in words:
-            dfs([w])
-        return ans
-```
 
 ### **Java**
 
@@ -186,72 +140,9 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-type Trie struct {
-	children [26]*Trie
-	v        []int
-}
 
-func newTrie() *Trie {
-	return &Trie{}
-}
-func (this *Trie) insert(word string, i int) {
-	node := this
-	for _, c := range word {
-		c -= 'a'
-		if node.children[c] == nil {
-			node.children[c] = newTrie()
-		}
-		node = node.children[c]
-		node.v = append(node.v, i)
-	}
-}
-func (this *Trie) search(word string) []int {
-	node := this
-	for _, c := range word {
-		c -= 'a'
-		if node.children[c] == nil {
-			return []int{}
-		}
-		node = node.children[c]
-	}
-	return node.v
-}
 
-func wordSquares(words []string) [][]string {
-	trie := newTrie()
-	for i, w := range words {
-		trie.insert(w, i)
-	}
-	ans := [][]string{}
-	var dfs func([]string)
-	dfs = func(t []string) {
-		if len(t) == len(words[0]) {
-			cp := make([]string, len(t))
-			copy(cp, t)
-			ans = append(ans, cp)
-			return
-		}
-		idx := len(t)
-		pref := []byte{}
-		for _, v := range t {
-			pref = append(pref, v[idx])
-		}
-		indexes := trie.search(string(pref))
-		for _, i := range indexes {
-			t = append(t, words[i])
-			dfs(t)
-			t = t[:len(t)-1]
-		}
-	}
-	for _, w := range words {
-		dfs([]string{w})
-	}
-	return ans
-}
-```
 
 ### **...**
 
@@ -259,4 +150,4 @@ func wordSquares(words []string) [][]string {
 
 ```
 
-<!-- tabs:end -->
+

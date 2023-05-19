@@ -65,23 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def pruneTree(self, root: TreeNode) -> TreeNode:
-        if root is None:
-            return root
-        root.left = self.pruneTree(root.left)
-        root.right = self.pruneTree(root.right)
-        if root.val == 0 and root.left is None and root.right is None:
-            return None
-        return root
-```
+
 
 ### **Java**
 
@@ -118,81 +102,17 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func pruneTree(root *TreeNode) *TreeNode {
-	if root == nil {
-		return nil
-	}
-	root.Left = pruneTree(root.Left)
-	root.Right = pruneTree(root.Right)
-	if root.Val == 0 && root.Left == nil && root.Right == nil {
-		return nil
-	}
-	return root
-}
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* pruneTree(TreeNode* root) {
-        if (!root) return nullptr;
-        root->left = pruneTree(root->left);
-        root->right = pruneTree(root->right);
-        if (!root->val && !root->left && !root->right) return nullptr;
-        return root;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {TreeNode}
- */
-var pruneTree = function (root) {
-    if (!root) return null;
-    root.left = pruneTree(root.left);
-    root.right = pruneTree(root.right);
-    if (root.val == 0 && !root.left && !root.right) {
-        return null;
-    }
-    return root;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -200,4 +120,4 @@ var pruneTree = function (root) {
 
 ```
 
-<!-- tabs:end -->
+

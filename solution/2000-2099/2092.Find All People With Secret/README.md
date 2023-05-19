@@ -79,35 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findAllPeople(
-        self, n: int, meetings: List[List[int]], firstPerson: int
-    ) -> List[int]:
-        vis = [False] * n
-        vis[0] = vis[firstPerson] = True
-        meetings.sort(key=lambda x: x[2])
-        i, m = 0, len(meetings)
-        while i < m:
-            j = i
-            while j + 1 < m and meetings[j + 1][2] == meetings[i][2]:
-                j += 1
-            s = set()
-            g = defaultdict(list)
-            for x, y, _ in meetings[i : j + 1]:
-                g[x].append(y)
-                g[y].append(x)
-                s.update([x, y])
-            q = deque([u for u in s if vis[u]])
-            while q:
-                u = q.popleft()
-                for v in g[u]:
-                    if not vis[v]:
-                        vis[v] = True
-                        q.append(v)
-            i = j + 1
-        return [i for i, v in enumerate(vis) if v]
-```
+
 
 ### **Java**
 
@@ -162,160 +134,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findAllPeople(int n, vector<vector<int>>& meetings, int firstPerson) {
-        vector<bool> vis(n);
-        vis[0] = vis[firstPerson] = true;
-        sort(meetings.begin(), meetings.end(), [&](const auto& x, const auto& y) {
-            return x[2] < y[2];
-        });
-        for (int i = 0, m = meetings.size(); i < m;) {
-            int j = i;
-            for (; j + 1 < m && meetings[j + 1][2] == meetings[i][2]; ++j)
-                ;
-            unordered_map<int, vector<int>> g;
-            unordered_set<int> s;
-            for (int k = i; k <= j; ++k) {
-                int x = meetings[k][0], y = meetings[k][1];
-                g[x].push_back(y);
-                g[y].push_back(x);
-                s.insert(x);
-                s.insert(y);
-            }
-            queue<int> q;
-            for (int u : s)
-                if (vis[u])
-                    q.push(u);
-            while (!q.empty()) {
-                int u = q.front();
-                q.pop();
-                for (int v : g[u]) {
-                    if (!vis[v]) {
-                        vis[v] = true;
-                        q.push(v);
-                    }
-                }
-            }
-            i = j + 1;
-        }
-        vector<int> ans;
-        for (int i = 0; i < n; ++i)
-            if (vis[i])
-                ans.push_back(i);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findAllPeople(n int, meetings [][]int, firstPerson int) []int {
-	vis := make([]bool, n)
-	vis[0], vis[firstPerson] = true, true
-	sort.Slice(meetings, func(i, j int) bool {
-		return meetings[i][2] < meetings[j][2]
-	})
-	for i, j, m := 0, 0, len(meetings); i < m; i = j + 1 {
-		j = i
-		for j+1 < m && meetings[j+1][2] == meetings[i][2] {
-			j++
-		}
-		g := map[int][]int{}
-		s := map[int]bool{}
-		for _, e := range meetings[i : j+1] {
-			x, y := e[0], e[1]
-			g[x] = append(g[x], y)
-			g[y] = append(g[y], x)
-			s[x], s[y] = true, true
-		}
-		q := []int{}
-		for u := range s {
-			if vis[u] {
-				q = append(q, u)
-			}
-		}
-		for len(q) > 0 {
-			u := q[0]
-			q = q[1:]
-			for _, v := range g[u] {
-				if !vis[v] {
-					vis[v] = true
-					q = append(q, v)
-				}
-			}
-		}
-	}
-	var ans []int
-	for i, v := range vis {
-		if v {
-			ans = append(ans, i)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findAllPeople(
-    n: number,
-    meetings: number[][],
-    firstPerson: number,
-): number[] {
-    let parent: Array<number> = Array.from({ length: n + 1 }, (v, i) => i);
-    parent[firstPerson] = 0;
 
-    function findParent(index: number): number {
-        if (parent[index] != index) parent[index] = findParent(parent[index]);
-        return parent[index];
-    }
-
-    let map = new Map<number, Array<Array<number>>>();
-    for (let meeting of meetings) {
-        const time = meeting[2];
-        let members: Array<Array<number>> = map.get(time) || new Array();
-        members.push(meeting);
-        map.set(time, members);
-    }
-    const times = [...map.keys()].sort((a, b) => a - b);
-    for (let time of times) {
-        // round 1
-        for (let meeting of map.get(time)) {
-            let [a, b] = meeting;
-            if (!parent[findParent(a)] || !parent[findParent(b)]) {
-                parent[findParent(a)] = 0;
-                parent[findParent(b)] = 0;
-            }
-            parent[findParent(a)] = parent[findParent(b)];
-        }
-        // round 2
-        for (let meeting of map.get(time)) {
-            let [a, b] = meeting;
-            if (!parent[findParent(a)] || !parent[findParent(b)]) {
-                parent[findParent(a)] = 0;
-                parent[findParent(b)] = 0;
-            } else {
-                parent[a] = a;
-                parent[b] = b;
-            }
-        }
-    }
-
-    let ans = new Array<number>();
-    for (let i = 0; i <= n; i++) {
-        if (!parent[findParent(i)]) {
-            ans.push(i);
-        }
-    }
-    return ans;
-}
-```
 
 ### **...**
 
@@ -323,4 +152,4 @@ function findAllPeople(
 
 ```
 
-<!-- tabs:end -->
+

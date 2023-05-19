@@ -81,19 +81,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def goodBinaryStrings(self, minLength: int, maxLength: int, oneGroup: int, zeroGroup: int) -> int:
-        mod = 10**9 + 7
-        f = [1] + [0] * maxLength
-        for i in range(1, len(f)):
-            if i - oneGroup >= 0:
-                f[i] += f[i - oneGroup]
-            if i - zeroGroup >= 0:
-                f[i] += f[i - zeroGroup]
-            f[i] %= mod
-        return sum(f[minLength:]) % mod
-```
+
 
 ### **Java**
 
@@ -122,55 +110,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int goodBinaryStrings(int minLength, int maxLength, int oneGroup, int zeroGroup) {
-        const int mod = 1e9 + 7;
-        int f[maxLength + 1];
-        memset(f, 0, sizeof f);
-        f[0] = 1;
-        for (int i = 1; i <= maxLength; ++i) {
-            if (i - oneGroup >= 0) {
-                f[i] = (f[i] + f[i - oneGroup]) % mod;
-            }
-            if (i - zeroGroup >= 0) {
-                f[i] = (f[i] + f[i - zeroGroup]) % mod;
-            }
-        }
-        int ans = 0;
-        for (int i = minLength; i <= maxLength; ++i) {
-            ans = (ans + f[i]) % mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func goodBinaryStrings(minLength int, maxLength int, oneGroup int, zeroGroup int) (ans int) {
-	const mod int = 1e9 + 7
-	f := make([]int, maxLength+1)
-	f[0] = 1
-	for i := 1; i <= maxLength; i++ {
-		if i-oneGroup >= 0 {
-			f[i] += f[i-oneGroup]
-		}
-		if i-zeroGroup >= 0 {
-			f[i] += f[i-zeroGroup]
-		}
-		f[i] %= mod
-	}
-	for _, v := range f[minLength:] {
-		ans = (ans + v) % mod
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -178,4 +124,4 @@ func goodBinaryStrings(minLength int, maxLength int, oneGroup int, zeroGroup int
 
 ```
 
-<!-- tabs:end -->
+

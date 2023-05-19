@@ -87,35 +87,7 @@ frequencyTracker.hasFrequency(1); // 返回 true ，因为 3 出现 1 次
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class FrequencyTracker:
-    def __init__(self):
-        self.cnt = defaultdict(int)
-        self.freq = defaultdict(int)
 
-    def add(self, number: int) -> None:
-        if self.freq[self.cnt[number]] > 0:
-            self.freq[self.cnt[number]] -= 1
-        self.cnt[number] += 1
-        self.freq[self.cnt[number]] += 1
-
-    def deleteOne(self, number: int) -> None:
-        if self.cnt[number] == 0:
-            return
-        self.freq[self.cnt[number]] -= 1
-        self.cnt[number] -= 1
-        self.freq[self.cnt[number]] += 1
-
-    def hasFrequency(self, frequency: int) -> bool:
-        return self.freq[frequency] > 0
-
-
-# Your FrequencyTracker object will be instantiated and called as such:
-# obj = FrequencyTracker()
-# obj.add(number)
-# obj.deleteOne(number)
-# param_3 = obj.hasFrequency(frequency)
-```
 
 ### **Java**
 
@@ -162,140 +134,17 @@ class FrequencyTracker {
  */
 ```
 
-### **C++**
 
-```cpp
-class FrequencyTracker {
-public:
-    FrequencyTracker() {
 
-    }
 
-    void add(int number) {
-        int f =  cnt[number];
-        if (f > 0) {
-            freq[f]--;
-        }
-        cnt[number]++;
-        freq[f + 1]++;
-    }
 
-    void deleteOne(int number) {
-        int f = cnt[number];
-        if (f == 0) {
-            return;
-        }
-        freq[f]--;
-        cnt[number]--;
-        freq[f - 1]++;
-    }
 
-    bool hasFrequency(int frequency) {
-        return freq[frequency] > 0;
-    }
 
-private:
-    unordered_map<int, int> cnt;
-    unordered_map<int, int> freq;
-};
 
-/**
- * Your FrequencyTracker object will be instantiated and called as such:
- * FrequencyTracker* obj = new FrequencyTracker();
- * obj->add(number);
- * obj->deleteOne(number);
- * bool param_3 = obj->hasFrequency(frequency);
- */
-```
-
-### **Go**
-
-```go
-type FrequencyTracker struct {
-	cnt  map[int]int
-	freq map[int]int
-}
-
-func Constructor() FrequencyTracker {
-	return FrequencyTracker{map[int]int{}, map[int]int{}}
-}
-
-func (this *FrequencyTracker) Add(number int) {
-	f := this.cnt[number]
-	if f > 0 {
-		this.freq[f]--
-	}
-	this.cnt[number]++
-	this.freq[f+1]++
-}
-
-func (this *FrequencyTracker) DeleteOne(number int) {
-	f := this.cnt[number]
-	if f == 0 {
-		return
-	}
-	this.freq[f]--
-	this.cnt[number]--
-	this.freq[f-1]++
-}
-
-func (this *FrequencyTracker) HasFrequency(frequency int) bool {
-	return this.freq[frequency] > 0
-}
-
-/**
- * Your FrequencyTracker object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Add(number);
- * obj.DeleteOne(number);
- * param_3 := obj.HasFrequency(frequency);
- */
-```
 
 ### **TypeScript**
 
-```ts
-class FrequencyTracker {
-    private cnt: Map<number, number>;
-    private freq: Map<number, number>;
 
-    constructor() {
-        this.cnt = new Map();
-        this.freq = new Map();
-    }
-
-    add(number: number): void {
-        const f = this.cnt.get(number) || 0;
-        if (f > 0) {
-            this.freq.set(f, (this.freq.get(f) || 0) - 1);
-        }
-        this.cnt.set(number, f + 1);
-        this.freq.set(f + 1, (this.freq.get(f + 1) || 0) + 1);
-    }
-
-    deleteOne(number: number): void {
-        const f = this.cnt.get(number) || 0;
-        if (f === 0) {
-            return;
-        }
-        this.freq.set(f, (this.freq.get(f) || 0) - 1);
-        this.cnt.set(number, f - 1);
-        this.freq.set(f - 1, (this.freq.get(f - 1) || 0) + 1);
-    }
-
-    hasFrequency(frequency: number): boolean {
-        return (this.freq.get(frequency) || 0) > 0;
-    }
-}
-
-/**
- * Your FrequencyTracker object will be instantiated and called as such:
- * var obj = new FrequencyTracker()
- * obj.add(number)
- * obj.deleteOne(number)
- * var param_3 = obj.hasFrequency(frequency)
- */
-```
 
 ### **...**
 
@@ -303,4 +152,4 @@ class FrequencyTracker {
 
 ```
 
-<!-- tabs:end -->
+

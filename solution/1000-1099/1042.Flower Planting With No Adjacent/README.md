@@ -75,23 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def gardenNoAdj(self, n: int, paths: List[List[int]]) -> List[int]:
-        g = defaultdict(list)
-        for x, y in paths:
-            x, y = x - 1, y - 1
-            g[x].append(y)
-            g[y].append(x)
-        ans = [0] * n
-        for x in range(n):
-            used = {ans[y] for y in g[x]}
-            for c in range(1, 5):
-                if c not in used:
-                    ans[x] = c
-                    break
-        return ans
-```
+
 
 ### **Java**
 
@@ -126,89 +110,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> gardenNoAdj(int n, vector<vector<int>>& paths) {
-        vector<vector<int>> g(n);
-        for (auto& p : paths) {
-            int x = p[0] - 1, y = p[1] - 1;
-            g[x].push_back(y);
-            g[y].push_back(x);
-        }
-        vector<int> ans(n);
-        bool used[5];
-        for (int x = 0; x < n; ++x) {
-            memset(used, false, sizeof(used));
-            for (int y : g[x]) {
-                used[ans[y]] = true;
-            }
-            for (int c = 1; c < 5; ++c) {
-                if (!used[c]) {
-                    ans[x] = c;
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func gardenNoAdj(n int, paths [][]int) []int {
-	g := make([][]int, n)
-	for _, p := range paths {
-		x, y := p[0]-1, p[1]-1
-		g[x] = append(g[x], y)
-		g[y] = append(g[y], x)
-	}
-	ans := make([]int, n)
-	for x := 0; x < n; x++ {
-		used := [5]bool{}
-		for _, y := range g[x] {
-			used[ans[y]] = true
-		}
-		for c := 1; c < 5; c++ {
-			if !used[c] {
-				ans[x] = c
-				break
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function gardenNoAdj(n: number, paths: number[][]): number[] {
-    const g: number[][] = new Array(n).fill(0).map(() => []);
-    for (const [x, y] of paths) {
-        g[x - 1].push(y - 1);
-        g[y - 1].push(x - 1);
-    }
-    const ans: number[] = new Array(n).fill(0);
-    for (let x = 0; x < n; ++x) {
-        const used: boolean[] = new Array(5).fill(false);
-        for (const y of g[x]) {
-            used[ans[y]] = true;
-        }
-        for (let c = 1; c < 5; ++c) {
-            if (!used[c]) {
-                ans[x] = c;
-                break;
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -216,4 +128,4 @@ function gardenNoAdj(n: number, paths: number[][]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

@@ -72,19 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def similarPairs(self, words: List[str]) -> int:
-        ans = 0
-        cnt = Counter()
-        for w in words:
-            v = 0
-            for c in w:
-                v |= 1 << (ord(c) - ord("A"))
-            ans += cnt[v]
-            cnt[v] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -108,41 +96,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int similarPairs(vector<string>& words) {
-        int ans = 0;
-        unordered_map<int, int> cnt;
-        for (auto& w : words) {
-            int v = 0;
-            for (auto& c : w) v |= 1 << c - 'a';
-            ans += cnt[v];
-            cnt[v]++;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func similarPairs(words []string) (ans int) {
-	cnt := map[int]int{}
-	for _, w := range words {
-		v := 0
-		for _, c := range w {
-			v |= 1 << (c - 'a')
-		}
-		ans += cnt[v]
-		cnt[v]++
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -150,4 +110,4 @@ func similarPairs(words []string) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

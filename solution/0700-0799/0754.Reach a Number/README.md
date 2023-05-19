@@ -71,17 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reachNumber(self, target: int) -> int:
-        target = abs(target)
-        s = k = 0
-        while 1:
-            if s >= target and (s - target) % 2 == 0:
-                return k
-            k += 1
-            s += k
-```
+
 
 ### **Java**
 
@@ -103,60 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int reachNumber(int target) {
-        target = abs(target);
-        int s = 0, k = 0;
-        while (1) {
-            if (s >= target && (s - target) % 2 == 0) return k;
-            ++k;
-            s += k;
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func reachNumber(target int) int {
-	if target < 0 {
-		target = -target
-	}
-	var s, k int
-	for {
-		if s >= target && (s-target)%2 == 0 {
-			return k
-		}
-		k++
-		s += k
-	}
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} target
- * @return {number}
- */
-var reachNumber = function (target) {
-    target = Math.abs(target);
-    let [s, k] = [0, 0];
-    while (1) {
-        if (s >= target && (s - target) % 2 == 0) {
-            return k;
-        }
-        ++k;
-        s += k;
-    }
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -164,4 +111,4 @@ var reachNumber = function (target) {
 
 ```
 
-<!-- tabs:end -->
+

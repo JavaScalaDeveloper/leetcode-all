@@ -63,61 +63,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 <!-- tabs:start -->
 
@@ -127,45 +81,11 @@ d[find(a)] = distance
 
 染色法：
 
-```python
-class Solution:
-    def isBipartite(self, graph: List[List[int]]) -> bool:
-        def dfs(u, c):
-            color[u] = c
-            for v in graph[u]:
-                if not color[v]:
-                    if not dfs(v, 3 - c):
-                        return False
-                elif color[v] == c:
-                    return False
-            return True
 
-        n = len(graph)
-        color = [0] * n
-        for i in range(n):
-            if not color[i] and not dfs(i, 1):
-                return False
-        return True
-```
 
 并查集：
 
-```python
-class Solution:
-    def isBipartite(self, graph: List[List[int]]) -> bool:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        p = list(range(len(graph)))
-        for u, g in enumerate(graph):
-            for v in g:
-                if find(u) == find(v):
-                    return False
-                p[find(v)] = find(g[0])
-        return True
-```
 
 ### **Java**
 
@@ -239,183 +159,35 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 染色法：
 
-```cpp
-class Solution {
-public:
-    bool isBipartite(vector<vector<int>>& graph) {
-        int n = graph.size();
-        vector<int> color(n);
-        for (int i = 0; i < n; ++i)
-            if (!color[i] && !dfs(i, 1, color, graph))
-                return false;
-        return true;
-    }
 
-    bool dfs(int u, int c, vector<int>& color, vector<vector<int>>& g) {
-        color[u] = c;
-        for (int& v : g[u]) {
-            if (!color[v]) {
-                if (!dfs(v, 3 - c, color, g)) return false;
-            } else if (color[v] == c)
-                return false;
-        }
-        return true;
-    }
-};
-```
 
 并查集：
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    bool isBipartite(vector<vector<int>>& graph) {
-        int n = graph.size();
-        p.resize(n);
-        for (int i = 0; i < n; ++i) p[i] = i;
-        for (int u = 0; u < n; ++u)
-        {
-            auto& g = graph[u];
-            for (int v : g)
-            {
-                if (find(u) == find(v)) return 0;
-                p[find(v)] = find(g[0]);
-            }
-        }
-        return 1;
-    }
 
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
 染色法：
 
-```go
-func isBipartite(graph [][]int) bool {
-	n := len(graph)
-	color := make([]int, n)
-	var dfs func(u, c int) bool
-	dfs = func(u, c int) bool {
-		color[u] = c
-		for _, v := range graph[u] {
-			if color[v] == 0 {
-				if !dfs(v, 3-c) {
-					return false
-				}
-			} else if color[v] == c {
-				return false
-			}
-		}
-		return true
-	}
-	for i := range graph {
-		if color[i] == 0 && !dfs(i, 1) {
-			return false
-		}
-	}
-	return true
-}
-```
+
 
 并查集：
 
-```go
-func isBipartite(graph [][]int) bool {
-	n := len(graph)
-	p := make([]int, n)
-	for i := range p {
-		p[i] = i
-	}
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	for u, g := range graph {
-		for _, v := range g {
-			if find(u) == find(v) {
-				return false
-			}
-			p[find(v)] = find(g[0])
-		}
-	}
-	return true
-}
-```
+
 
 ### **TypeScript**
 
 染色法：
 
-```ts
-function isBipartite(graph: number[][]): boolean {
-    const n = graph.length;
-    let valid = true;
-    // 0 未遍历， 1 红色标记， 2 绿色标记
-    let colors = new Array(n).fill(0);
-    function dfs(idx: number, color: number, graph: number[][]) {
-        colors[idx] = color;
-        const nextColor = 3 - color;
-        for (let j of graph[idx]) {
-            if (!colors[j]) {
-                dfs(j, nextColor, graph);
-                if (!valid) return;
-            } else if (colors[j] != nextColor) {
-                valid = false;
-                return;
-            }
-        }
-    }
 
-    for (let i = 0; i < n && valid; i++) {
-        if (!colors[i]) {
-            dfs(i, 1, graph);
-        }
-    }
-    return valid;
-}
-```
 
 并查集：
 
-```ts
-function isBipartite(graph: number[][]): boolean {
-    const n = graph.length;
-    let p = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        p[i] = i;
-    }
-    function find(x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
-        }
-        return p[x];
-    }
-    for (let u = 0; u < n; ++u) {
-        for (let v of graph[u]) {
-            if (find(u) == find(v)) {
-                return false;
-            }
-            p[find(v)] = find(graph[u][0]);
-        }
-    }
-    return true;
-}
-```
+
 
 ### **...**
 
@@ -423,4 +195,4 @@ function isBipartite(graph: number[][]): boolean {
 
 ```
 
-<!-- tabs:end -->
+

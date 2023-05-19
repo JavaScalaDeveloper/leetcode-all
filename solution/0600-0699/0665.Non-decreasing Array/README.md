@@ -59,23 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkPossibility(self, nums: List[int]) -> bool:
-        def is_sorted(nums: List[int]) -> bool:
-            return all(a <= b for a, b in pairwise(nums))
 
-        n = len(nums)
-        for i in range(n - 1):
-            a, b = nums[i], nums[i + 1]
-            if a > b:
-                nums[i] = b
-                if is_sorted(nums):
-                    return True
-                nums[i] = nums[i + 1] = a
-                return is_sorted(nums)
-        return True
-```
 
 ### **Java**
 
@@ -110,86 +94,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkPossibility(vector<int>& nums) {
-        int n = nums.size();
-        for (int i = 0; i < n - 1; ++i) {
-            int a = nums[i], b = nums[i + 1];
-            if (a > b) {
-                nums[i] = b;
-                if (is_sorted(nums.begin(), nums.end())) {
-                    return true;
-                }
-                nums[i] = a;
-                nums[i + 1] = a;
-                return is_sorted(nums.begin(), nums.end());
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkPossibility(nums []int) bool {
-	isSorted := func(nums []int) bool {
-		for i, b := range nums[1:] {
-			if nums[i] > b {
-				return false
-			}
-		}
-		return true
-	}
-	for i := 0; i < len(nums)-1; i++ {
-		a, b := nums[i], nums[i+1]
-		if a > b {
-			nums[i] = b
-			if isSorted(nums) {
-				return true
-			}
-			nums[i] = a
-			nums[i+1] = a
-			return isSorted(nums)
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function checkPossibility(nums: number[]): boolean {
-    const isSorted = (nums: number[]) => {
-        for (let i = 0; i < nums.length - 1; ++i) {
-            if (nums[i] > nums[i + 1]) {
-                return false;
-            }
-        }
-        return true;
-    };
-    for (let i = 0; i < nums.length - 1; ++i) {
-        const a = nums[i],
-            b = nums[i + 1];
-        if (a > b) {
-            nums[i] = b;
-            if (isSorted(nums)) {
-                return true;
-            }
-            nums[i] = a;
-            nums[i + 1] = a;
-            return isSorted(nums);
-        }
-    }
-    return true;
-}
-```
+
 
 ### **...**
 
@@ -197,4 +112,4 @@ function checkPossibility(nums: number[]): boolean {
 
 ```
 
-<!-- tabs:end -->
+

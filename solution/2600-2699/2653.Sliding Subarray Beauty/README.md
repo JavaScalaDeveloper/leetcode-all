@@ -80,42 +80,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedList
 
 
-class Solution:
-    def getSubarrayBeauty(self, nums: List[int], k: int, x: int) -> List[int]:
-        sl = SortedList(nums[:k])
-        ans = [sl[x - 1] if sl[x - 1] < 0 else 0]
-        for i in range(k, len(nums)):
-            sl.remove(nums[i - k])
-            sl.add(nums[i])
-            ans.append(sl[x - 1] if sl[x - 1] < 0 else 0)
-        return ans
-```
 
-```python
-class Solution:
-    def getSubarrayBeauty(self, nums: List[int], k: int, x: int) -> List[int]:
-        def f(x: int) -> int:
-            s = 0
-            for i in range(50):
-                s += cnt[i]
-                if s >= x:
-                    return i - 50
-            return 0
-
-        cnt = [0] * 101
-        for v in nums[:k]:
-            cnt[v + 50] += 1
-        ans = [f(x)]
-        for i in range(k, len(nums)):
-            cnt[nums[i] + 50] += 1
-            cnt[nums[i - k] + 50] -= 1
-            ans.append(f(x))
-        return ans
-```
 
 ### **Java**
 
@@ -152,98 +119,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> getSubarrayBeauty(vector<int>& nums, int k, int x) {
-        int n = nums.size();
-        int cnt[101]{};
-        for (int i = 0; i < k; ++i) {
-            ++cnt[nums[i] + 50];
-        }
-        vector<int> ans(n - k + 1);
-        auto f = [&](int x) {
-            int s = 0;
-            for (int i = 0; i < 50; ++i) {
-                s += cnt[i];
-                if (s >= x) {
-                    return i - 50;
-                }
-            }
-            return 0;
-        };
-        ans[0] = f(x);
-        for (int i = k, j = 1; i < n; ++i) {
-            ++cnt[nums[i] + 50];
-            --cnt[nums[i - k] + 50];
-            ans[j++] = f(x);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getSubarrayBeauty(nums []int, k int, x int) []int {
-	n := len(nums)
-	cnt := [101]int{}
-	for _, x := range nums[:k] {
-		cnt[x+50]++
-	}
-	ans := make([]int, n-k+1)
-	f := func(x int) int {
-		s := 0
-		for i := 0; i < 50; i++ {
-			s += cnt[i]
-			if s >= x {
-				return i - 50
-			}
-		}
-		return 0
-	}
-	ans[0] = f(x)
-	for i, j := k, 1; i < n; i, j = i+1, j+1 {
-		cnt[nums[i]+50]++
-		cnt[nums[i-k]+50]--
-		ans[j] = f(x)
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getSubarrayBeauty(nums: number[], k: number, x: number): number[] {
-    const n = nums.length;
-    const cnt: number[] = new Array(101).fill(0);
-    for (let i = 0; i < k; ++i) {
-        ++cnt[nums[i] + 50];
-    }
-    const ans: number[] = new Array(n - k + 1);
-    const f = (x: number): number => {
-        let s = 0;
-        for (let i = 0; i < 50; ++i) {
-            s += cnt[i];
-            if (s >= x) {
-                return i - 50;
-            }
-        }
-        return 0;
-    };
-    ans[0] = f(x);
-    for (let i = k, j = 1; i < n; ++i, ++j) {
-        cnt[nums[i] + 50]++;
-        cnt[nums[i - k] + 50]--;
-        ans[j] = f(x);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -251,4 +137,4 @@ function getSubarrayBeauty(nums: number[], k: number, x: number): number[] {
 
 ```
 
-<!-- tabs:end -->
+

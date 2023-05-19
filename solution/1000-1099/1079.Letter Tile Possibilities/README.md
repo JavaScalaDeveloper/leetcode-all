@@ -62,22 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numTilePossibilities(self, tiles: str) -> int:
-        def dfs(cnt: Counter) -> int:
-            ans = 0
-            for i, x in cnt.items():
-                if x > 0:
-                    ans += 1
-                    cnt[i] -= 1
-                    ans += dfs(cnt)
-                    cnt[i] += 1
-            return ans
 
-        cnt = Counter(tiles)
-        return dfs(cnt)
-```
 
 ### **Java**
 
@@ -108,80 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numTilePossibilities(string tiles) {
-        int cnt[26]{};
-        for (char c : tiles) {
-            ++cnt[c - 'A'];
-        }
-        function<int(int* cnt)> dfs = [&](int* cnt) -> int {
-            int res = 0;
-            for (int i = 0; i < 26; ++i) {
-                if (cnt[i] > 0) {
-                    ++res;
-                    --cnt[i];
-                    res += dfs(cnt);
-                    ++cnt[i];
-                }
-            }
-            return res;
-        };
-        return dfs(cnt);
-    }
-};
-```
 
-### **Go**
 
-```go
-func numTilePossibilities(tiles string) int {
-	cnt := [26]int{}
-	for _, c := range tiles {
-		cnt[c-'A']++
-	}
-	var dfs func(cnt [26]int) int
-	dfs = func(cnt [26]int) (res int) {
-		for i, x := range cnt {
-			if x > 0 {
-				res++
-				cnt[i]--
-				res += dfs(cnt)
-				cnt[i]++
-			}
-		}
-		return
-	}
-	return dfs(cnt)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numTilePossibilities(tiles: string): number {
-    const cnt: number[] = new Array(26).fill(0);
-    for (const c of tiles) {
-        ++cnt[c.charCodeAt(0) - 'A'.charCodeAt(0)];
-    }
-    const dfs = (cnt: number[]): number => {
-        let res = 0;
-        for (let i = 0; i < 26; ++i) {
-            if (cnt[i] > 0) {
-                ++res;
-                --cnt[i];
-                res += dfs(cnt);
-                ++cnt[i];
-            }
-        }
-        return res;
-    };
-    return dfs(cnt);
-}
-```
+
 
 ### **...**
 
@@ -189,4 +111,4 @@ function numTilePossibilities(tiles: string): number {
 
 ```
 
-<!-- tabs:end -->
+

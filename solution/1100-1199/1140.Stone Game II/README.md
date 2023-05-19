@@ -69,37 +69,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def stoneGameII(self, piles: List[int]) -> int:
-        @cache
-        def dfs(i, m):
-            if m * 2 >= n - i:
-                return s[n] - s[i]
-            return max(
-                s[n] - s[i] - dfs(i + x, max(m, x)) for x in range(1, m << 1 | 1)
-            )
 
-        n = len(piles)
-        s = list(accumulate(piles, initial=0))
-        return dfs(0, 1)
-```
 
-```python
-class Solution:
-    def stoneGameII(self, piles: List[int]) -> int:
-        @cache
-        def dfs(i: int, m: int = 1) -> int:
-            if i >= len(piles):
-                return 0
-            t = inf
-            for x in range(1, m << 1 | 1):
-                t = min(t, dfs(i + x, max(m, x)))
-            return s[-1] - s[i] - t
 
-        s = list(accumulate(piles, initial=0))
-        return dfs(0)
-```
 
 ### **Java**
 
@@ -137,100 +109,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int stoneGameII(vector<int>& piles) {
-        int n = piles.size();
-        int s[n + 1];
-        s[0] = 0;
-        for (int i = 0; i < n; ++i) {
-            s[i + 1] = s[i] + piles[i];
-        }
-        int f[n][n + 1];
-        memset(f, 0, sizeof f);
-        function<int(int, int)> dfs = [&](int i, int m) -> int {
-            if (m * 2 >= n - i) {
-                return s[n] - s[i];
-            }
-            if (f[i][m]) {
-                return f[i][m];
-            }
-            int res = 0;
-            for (int x = 1; x <= m << 1; ++x) {
-                res = max(res, s[n] - s[i] - dfs(i + x, max(x, m)));
-            }
-            return f[i][m] = res;
-        };
-        return dfs(0, 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func stoneGameII(piles []int) int {
-	n := len(piles)
-	s := make([]int, n+1)
-	f := make([][]int, n+1)
-	for i, x := range piles {
-		s[i+1] = s[i] + x
-		f[i] = make([]int, n+1)
-	}
-	var dfs func(i, m int) int
-	dfs = func(i, m int) int {
-		if m*2 >= n-i {
-			return s[n] - s[i]
-		}
-		if f[i][m] > 0 {
-			return f[i][m]
-		}
-		f[i][m] = 0
-		for x := 1; x <= m<<1; x++ {
-			f[i][m] = max(f[i][m], s[n]-s[i]-dfs(i+x, max(m, x)))
-		}
-		return f[i][m]
-	}
-	return dfs(0, 1)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function stoneGameII(piles: number[]): number {
-    const n = piles.length;
-    const f = Array.from({ length: n }, _ => new Array(n + 1).fill(0));
-    const s = new Array(n + 1).fill(0);
-    for (let i = 0; i < n; ++i) {
-        s[i + 1] = s[i] + piles[i];
-    }
-    const dfs = (i: number, m: number) => {
-        if (m * 2 >= n - i) {
-            return s[n] - s[i];
-        }
-        if (f[i][m]) {
-            return f[i][m];
-        }
-        let res = 0;
-        for (let x = 1; x <= m * 2; ++x) {
-            res = Math.max(res, s[n] - s[i] - dfs(i + x, Math.max(m, x)));
-        }
-        return (f[i][m] = res);
-    };
-    return dfs(0, 1);
-}
-```
+
 
 ### **...**
 
@@ -238,4 +127,4 @@ function stoneGameII(piles: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

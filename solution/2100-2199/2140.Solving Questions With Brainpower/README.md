@@ -95,30 +95,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mostPoints(self, questions: List[List[int]]) -> int:
-        @cache
-        def dfs(i: int) -> int:
-            if i >= len(questions):
-                return 0
-            p, b = questions[i]
-            return max(p + dfs(i + b + 1), dfs(i + 1))
 
-        return dfs(0)
-```
 
-```python
-class Solution:
-    def mostPoints(self, questions: List[List[int]]) -> int:
-        n = len(questions)
-        f = [0] * (n + 1)
-        for i in range(n - 1, -1, -1):
-            p, b = questions[i]
-            j = i + b + 1
-            f[i] = max(f[i + 1], p + (0 if j > n else f[j]))
-        return f[0]
-```
+
 
 ### **Java**
 
@@ -165,130 +144,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long mostPoints(vector<vector<int>>& questions) {
-        int n = questions.size();
-        long long f[n];
-        memset(f, 0, sizeof(f));
-        function<long long(int)> dfs = [&](int i) -> long long {
-            if (i >= n) {
-                return 0;
-            }
-            if (f[i]) {
-                return f[i];
-            }
-            int p = questions[i][0], b = questions[i][1];
-            return f[i] = max(p + dfs(i + b + 1), dfs(i + 1));
-        };
-        return dfs(0);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    long long mostPoints(vector<vector<int>>& questions) {
-        int n = questions.size();
-        long long f[n + 1];
-        memset(f, 0, sizeof(f));
-        for (int i = n - 1; ~i; --i) {
-            int p = questions[i][0], b = questions[i][1];
-            int j = i + b + 1;
-            f[i] = max(f[i + 1], p + (j > n ? 0 : f[j]));
-        }
-        return f[0];
-    }
-};
-```
 
-### **Go**
 
-```go
-func mostPoints(questions [][]int) int64 {
-	n := len(questions)
-	f := make([]int64, n)
-	var dfs func(int) int64
-	dfs = func(i int) int64 {
-		if i >= n {
-			return 0
-		}
-		if f[i] > 0 {
-			return f[i]
-		}
-		p, b := questions[i][0], questions[i][1]
-		f[i] = max(int64(p)+dfs(i+b+1), dfs(i+1))
-		return f[i]
-	}
-	return dfs(0)
-}
 
-func max(a, b int64) int64 {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func mostPoints(questions [][]int) int64 {
-	n := len(questions)
-	f := make([]int64, n+1)
-	for i := n - 1; i >= 0; i-- {
-		p := int64(questions[i][0])
-		if j := i + questions[i][1] + 1; j <= n {
-			p += f[j]
-		}
-		f[i] = max(f[i+1], p)
-	}
-	return f[0]
-}
 
-func max(a, b int64) int64 {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function mostPoints(questions: number[][]): number {
-    const n = questions.length;
-    const f = Array(n).fill(0);
-    const dfs = (i: number): number => {
-        if (i >= n) {
-            return 0;
-        }
-        if (f[i] > 0) {
-            return f[i];
-        }
-        const [p, b] = questions[i];
-        return (f[i] = Math.max(p + dfs(i + b + 1), dfs(i + 1)));
-    };
-    return dfs(0);
-}
-```
 
-```ts
-function mostPoints(questions: number[][]): number {
-    const n = questions.length;
-    const f = Array(n + 1).fill(0);
-    for (let i = n - 1; i >= 0; --i) {
-        const [p, b] = questions[i];
-        const j = i + b + 1;
-        f[i] = Math.max(f[i + 1], p + (j > n ? 0 : f[j]));
-    }
-    return f[0];
-}
-```
+
+
 
 ### **...**
 
@@ -296,4 +168,4 @@ function mostPoints(questions: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

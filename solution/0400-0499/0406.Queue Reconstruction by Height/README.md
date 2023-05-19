@@ -60,15 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
-        people.sort(key=lambda x: (-x[0], x[1]))
-        ans = []
-        for p in people:
-            ans.insert(p[1], p)
-        return ans
-```
+
 
 ### **Java**
 
@@ -87,39 +79,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
-        sort(people.begin(), people.end(), [](const vector<int>& a, const vector<int>& b) {
-            return a[0] > b[0] || (a[0] == b[0] && a[1] < b[1]);
-        });
-        vector<vector<int>> ans;
-        for (const vector<int>& p : people)
-            ans.insert(ans.begin() + p[1], p);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reconstructQueue(people [][]int) [][]int {
-	sort.Slice(people, func(i, j int) bool {
-		a, b := people[i], people[j]
-		return a[0] > b[0] || a[0] == b[0] && a[1] < b[1]
-	})
-	var ans [][]int
-	for _, p := range people {
-		i := p[1]
-		ans = append(ans[:i], append([][]int{p}, ans[i:]...)...)
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -127,4 +93,4 @@ func reconstructQueue(people [][]int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -77,18 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkArithmeticSubarrays(self, nums: List[int], l: List[int], r: List[int]) -> List[bool]:
-        def check(nums, l, r):
-            n = r - l + 1
-            s = set(nums[l: l + n])
-            a1, an = min(nums[l: l + n]), max(nums[l: l + n])
-            d, mod = divmod(an - a1, n - 1)
-            return mod == 0 and all((a1 + (i - 1) * d) in s for i in range(1, n))
 
-        return [check(nums, left, right) for left, right in zip(l, r)]
-```
 
 ### **Java**
 
@@ -127,134 +116,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<bool> checkArithmeticSubarrays(vector<int>& nums, vector<int>& l, vector<int>& r) {
-        vector<bool> ans;
-        auto check = [](vector<int>& nums, int l, int r) {
-            unordered_set<int> s;
-            int n = r - l + 1;
-            int a1 = 1 << 30, an = -a1;
-            for (int i = l; i <= r; ++i) {
-                s.insert(nums[i]);
-                a1 = min(a1, nums[i]);
-                an = max(an, nums[i]);
-            }
-            if ((an - a1) % (n - 1)) {
-                return false;
-            }
-            int d = (an - a1) / (n - 1);
-            for (int i = 1; i < n; ++i) {
-                if (!s.count(a1 + (i - 1) * d)) {
-                    return false;
-                }
-            }
-            return true;
-        };
-        for (int i = 0; i < l.size(); ++i) {
-            ans.push_back(check(nums, l[i], r[i]));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkArithmeticSubarrays(nums []int, l []int, r []int) (ans []bool) {
-	check := func(nums []int, l, r int) bool {
-		s := map[int]struct{}{}
-		n := r - l + 1
-		a1, an := 1<<30, -(1 << 30)
-		for _, x := range nums[l : r+1] {
-			s[x] = struct{}{}
-			if a1 > x {
-				a1 = x
-			}
-			if an < x {
-				an = x
-			}
-		}
-		if (an-a1)%(n-1) != 0 {
-			return false
-		}
-		d := (an - a1) / (n - 1)
-		for i := 1; i < n; i++ {
-			if _, ok := s[a1+(i-1)*d]; !ok {
-				return false
-			}
-		}
-		return true
-	}
-	for i := range l {
-		ans = append(ans, check(nums, l[i], r[i]))
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function checkArithmeticSubarrays(
-    nums: number[],
-    l: number[],
-    r: number[],
-): boolean[] {
-    const check = (nums: number[], l: number, r: number): boolean => {
-        const s = new Set<number>();
-        const n = r - l + 1;
-        let a1 = 1 << 30;
-        let an = -a1;
-        for (let i = l; i <= r; ++i) {
-            s.add(nums[i]);
-            a1 = Math.min(a1, nums[i]);
-            an = Math.max(an, nums[i]);
-        }
-        if ((an - a1) % (n - 1) !== 0) {
-            return false;
-        }
-        const d = Math.floor((an - a1) / (n - 1));
-        for (let i = 1; i < n; ++i) {
-            if (!s.has(a1 + (i - 1) * d)) {
-                return false;
-            }
-        }
-        return true;
-    };
-    const ans: boolean[] = [];
-    for (let i = 0; i < l.length; ++i) {
-        ans.push(check(nums, l[i], r[i]));
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn check_arithmetic_subarrays(nums: Vec<i32>, l: Vec<i32>, r: Vec<i32>) -> Vec<bool> {
-        let m = l.len();
-        let mut res = vec![true; m];
-        for i in 0..m {
-            let mut arr = nums[l[i] as usize..=r[i] as usize].to_vec();
-            arr.sort();
-            for j in 2..arr.len() {
-                if arr[j - 2] - arr[j - 1] != arr[j - 1] - arr[j] {
-                    res[i] = false;
-                    break;
-                }
-            }
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -262,4 +138,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

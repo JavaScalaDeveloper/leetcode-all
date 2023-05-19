@@ -62,16 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def divisibilityArray(self, word: str, m: int) -> List[int]:
-        ans = []
-        x = 0
-        for c in word:
-            x = (x * 10 + int(c)) % m
-            ans.append(1 if x == 0 else 0)
-        return ans
-```
+
 
 ### **Java**
 
@@ -94,75 +85,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> divisibilityArray(string word, int m) {
-        vector<int> ans;
-        long long x = 0;
-        for (char& c : word) {
-            x = (x * 10 + c - '0') % m;
-            ans.push_back(x == 0 ? 1 : 0);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func divisibilityArray(word string, m int) (ans []int) {
-	x := 0
-	for _, c := range word {
-		x = (x*10 + int(c-'0')) % m
-		if x == 0 {
-			ans = append(ans, 1)
-		} else {
-			ans = append(ans, 0)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function divisibilityArray(word: string, m: number): number[] {
-    const ans: number[] = [];
-    let x = 0;
-    for (const c of word) {
-        x = (x * 10 + Number(c)) % m;
-        ans.push(x === 0 ? 1 : 0);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn divisibility_array(word: String, m: i32) -> Vec<i32> {
-        let m = m as i64;
-        let mut x = 0i64;
-        word.as_bytes()
-            .iter()
-            .map(|&c| {
-                x = (x * 10 + i64::from(c - b'0')) % m;
-                if x == 0 {
-                    1
-                } else {
-                    0
-                }
-            })
-            .collect()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -189,4 +126,4 @@ int *divisibilityArray(char *word, int m, int *returnSize) {
 
 ```
 
-<!-- tabs:end -->
+

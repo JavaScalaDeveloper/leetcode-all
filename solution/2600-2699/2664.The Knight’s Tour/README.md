@@ -63,29 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def tourOfKnight(self, m: int, n: int, r: int, c: int) -> List[List[int]]:
-        def dfs(i: int, j: int):
-            nonlocal ok
-            if g[i][j] == m * n - 1:
-                ok = True
-                return
-            for a, b in pairwise((-2, -1, 2, 1, -2, 1, 2, -1, -2)):
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n and g[x][y] == -1:
-                    g[x][y] = g[i][j] + 1
-                    dfs(x, y)
-                    if ok:
-                        return
-                    g[x][y] = -1
 
-        g = [[-1] * n for _ in range(m)]
-        g[r][c] = 0
-        ok = False
-        dfs(r, c)
-        return g
-```
 
 ### **Java**
 
@@ -131,105 +109,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> tourOfKnight(int m, int n, int r, int c) {
-        vector<vector<int>> g(m, vector<int>(n, -1));
-        g[r][c] = 0;
-        int dirs[9] = {-2, -1, 2, 1, -2, 1, 2, -1, -2};
-        bool ok = false;
-        function<void(int, int)> dfs = [&](int i, int j) {
-            if (g[i][j] == m * n - 1) {
-                ok = true;
-                return;
-            }
-            for (int k = 0; k < 8; ++k) {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n && g[x][y] == -1) {
-                    g[x][y] = g[i][j] + 1;
-                    dfs(x, y);
-                    if (ok) {
-                        return;
-                    }
-                    g[x][y] = -1;
-                }
-            }
-        };
-        dfs(r, c);
-        return g;
-    }
-};
-```
 
-### **Go**
 
-```go
-func tourOfKnight(m int, n int, r int, c int) [][]int {
-	g := make([][]int, m)
-	for i := range g {
-		g[i] = make([]int, n)
-		for j := range g[i] {
-			g[i][j] = -1
-		}
-	}
-	g[r][c] = 0
-	ok := false
-	var dfs func(i, j int)
-	dfs = func(i, j int) {
-		if g[i][j] == m*n-1 {
-			ok = true
-			return
-		}
-		dirs := []int{-2, -1, 2, 1, -2, 1, 2, -1, -2}
-		for k := 0; k < 8; k++ {
-			x, y := i+dirs[k], j+dirs[k+1]
-			if x >= 0 && x < m && y >= 0 && y < n && g[x][y] == -1 {
-				g[x][y] = g[i][j] + 1
-				dfs(x, y)
-				if ok {
-					return
-				}
-				g[x][y] = -1
-			}
-		}
-	}
-	dfs(r, c)
-	return g
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function tourOfKnight(m: number, n: number, r: number, c: number): number[][] {
-    const g: number[][] = new Array(m).fill(0).map(() => new Array(n).fill(-1));
-    const dirs = [-2, -1, 2, 1, -2, 1, 2, -1, -2];
-    let ok = false;
-    const dfs = (i: number, j: number) => {
-        if (g[i][j] === m * n - 1) {
-            ok = true;
-            return;
-        }
-        for (let k = 0; k < 8; ++k) {
-            const [x, y] = [i + dirs[k], j + dirs[k + 1]];
-            if (x >= 0 && x < m && y >= 0 && y < n && g[x][y] === -1) {
-                g[x][y] = g[i][j] + 1;
-                dfs(x, y);
-                if (ok) {
-                    return;
-                }
-                g[x][y] = -1;
-            }
-        }
-    };
-    g[r][c] = 0;
-    dfs(r, c);
-    return g;
-}
-```
+
 
 ### **...**
 
@@ -237,4 +127,4 @@ function tourOfKnight(m: number, n: number, r: number, c: number): number[][] {
 
 ```
 
-<!-- tabs:end -->
+

@@ -102,4 +102,4 @@ HAVING
     SUM(t.amount) > 10000;
 ```
 
-<!-- tabs:end -->
+

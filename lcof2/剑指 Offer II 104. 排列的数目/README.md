@@ -65,17 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def combinationSum4(self, nums: List[int], target: int) -> int:
-        dp = [0] * (target + 1)
-        dp[0] = 1
-        for i in range(1, target + 1):
-            for num in nums:
-                if i >= num:
-                    dp[i] += dp[i - num]
-        return dp[-1]
-```
+
 
 ### **Java**
 
@@ -99,42 +89,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int combinationSum4(vector<int>& nums, int target) {
-        vector<int> dp(target + 1);
-        dp[0] = 1;
-        for (int i = 1; i <= target; ++i) {
-            for (int num : nums) {
-                if (i >= num && dp[i - num] < INT_MAX - dp[i]) {
-                    dp[i] += dp[i - num];
-                }
-            }
-        }
-        return dp[target];
-    }
-};
-```
 
-### **Go**
 
-```go
-func combinationSum4(nums []int, target int) int {
-	dp := make([]int, target+1)
-	dp[0] = 1
-	for i := 1; i <= target; i++ {
-		for _, num := range nums {
-			if i >= num {
-				dp[i] += dp[i-num]
-			}
-		}
-	}
-	return dp[target]
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -142,4 +103,4 @@ func combinationSum4(nums []int, target int) int {
 
 ```
 
-<!-- tabs:end -->
+

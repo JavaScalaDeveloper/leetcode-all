@@ -75,20 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxDistToClosest(self, seats: List[int]) -> int:
-        first = last = None
-        d = 0
-        for i, c in enumerate(seats):
-            if c:
-                if last is not None:
-                    d = max(d, i - last)
-                if first is None:
-                    first = i
-                last = i
-        return max(first, len(seats) - last - 1, d // 2)
-```
+
 
 ### **Java**
 
@@ -115,57 +102,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxDistToClosest(vector<int>& seats) {
-        int first = -1, last = -1;
-        int d = 0, n = seats.size();
-        for (int i = 0; i < n; ++i) {
-            if (seats[i] == 1) {
-                if (last != -1) {
-                    d = max(d, i - last);
-                }
-                if (first == -1) {
-                    first = i;
-                }
-                last = i;
-            }
-        }
-        return max({d / 2, max(first, n - last - 1)});
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxDistToClosest(seats []int) int {
-	first, last := -1, -1
-	d := 0
-	for i, c := range seats {
-		if c == 1 {
-			if last != -1 {
-				d = max(d, i-last)
-			}
-			if first == -1 {
-				first = i
-			}
-			last = i
-		}
-	}
-	return max(d/2, max(first, len(seats)-last-1))
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -173,4 +116,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

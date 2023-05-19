@@ -74,33 +74,7 @@ medianFinder.findMedian(); // return 2.0</pre>
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class MedianFinder:
 
-    def __init__(self):
-        """
-        initialize your data structure here.
-        """
-        self.h1 = []
-        self.h2 = []
-
-    def addNum(self, num: int) -> None:
-        heappush(self.h1, num)
-        heappush(self.h2, -heappop(self.h1))
-        if len(self.h2) - len(self.h1) > 1:
-            heappush(self.h1, -heappop(self.h2))
-
-    def findMedian(self) -> float:
-        if len(self.h2) > len(self.h1):
-            return -self.h2[0]
-        return (self.h1[0] - self.h2[0]) / 2
-
-
-# Your MedianFinder object will be instantiated and called as such:
-# obj = MedianFinder()
-# obj.addNum(num)
-# param_2 = obj.findMedian()
-```
 
 ### **Java**
 
@@ -139,283 +113,29 @@ class MedianFinder {
  */
 ```
 
-### **C++**
 
-```cpp
-class MedianFinder {
-public:
-    /** initialize your data structure here. */
-    MedianFinder() {
 
-    }
 
-    void addNum(int num) {
-        q1.push(num);
-        q2.push(q1.top());
-        q1.pop();
-        if (q2.size() - q1.size() > 1) {
-            q1.push(q2.top());
-            q2.pop();
-        }
-    }
 
-    double findMedian() {
-        if (q2.size() > q1.size()) {
-            return q2.top();
-        }
-        return (double) (q1.top() + q2.top()) / 2;
-    }
 
-private:
-    priority_queue<int, vector<int>, greater<int>> q1;
-    priority_queue<int> q2;
-};
 
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * MedianFinder* obj = new MedianFinder();
- * obj->addNum(num);
- * double param_2 = obj->findMedian();
- */
-```
 
-### **Go**
 
-```go
-type MedianFinder struct {
-	q1 hp
-	q2 hp
-}
 
-/** initialize your data structure here. */
-func Constructor() MedianFinder {
-	return MedianFinder{hp{}, hp{}}
-}
 
-func (this *MedianFinder) AddNum(num int) {
-	heap.Push(&this.q1, num)
-	heap.Push(&this.q2, -heap.Pop(&this.q1).(int))
-	if this.q2.Len()-this.q1.Len() > 1 {
-		heap.Push(&this.q1, -heap.Pop(&this.q2).(int))
-	}
-}
 
-func (this *MedianFinder) FindMedian() float64 {
-	if this.q2.Len() > this.q1.Len() {
-		return -float64(this.q2.IntSlice[0])
-	}
-	return float64(this.q1.IntSlice[0]-this.q2.IntSlice[0]) / 2.0
-}
-
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * obj := Constructor();
- * obj.AddNum(num);
- * param_2 := obj.FindMedian();
- */
-
-type hp struct{ sort.IntSlice }
-
-func (h hp) Less(i, j int) bool  { return h.IntSlice[i] < h.IntSlice[j] }
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-```
-
-### **JavaScript**
-
-```js
-/**
- * initialize your data structure here.
- */
-var MedianFinder = function () {
-    this.val = [];
-};
-
-/**
- * @param {number} num
- * @return {void}
- */
-MedianFinder.prototype.addNum = function (num) {
-    let left = 0;
-    let right = this.val.length;
-    while (left < right) {
-        let mid = left + ~~((right - left) / 2);
-        if (num > this.val[mid]) {
-            left = mid + 1;
-        } else {
-            right = mid;
-        }
-    }
-    this.val.splice(left, 0, num);
-};
-
-/**
- * @return {number}
- */
-MedianFinder.prototype.findMedian = function () {
-    let mid = ~~(this.val.length / 2);
-    return this.val.length % 2
-        ? this.val[mid]
-        : (this.val[mid - 1] + this.val[mid]) / 2;
-};
-```
 
 ### **TypeScript**
 
-```ts
-class MedianFinder {
-    private nums: number[];
 
-    constructor() {
-        this.nums = [];
-    }
 
-    addNum(num: number): void {
-        const { nums } = this;
-        let l = 0;
-        let r = nums.length;
-        while (l < r) {
-            const mid = (l + r) >>> 1;
-            if (nums[mid] < num) {
-                l = mid + 1;
-            } else {
-                r = mid;
-            }
-        }
-        nums.splice(l, 0, num);
-    }
 
-    findMedian(): number {
-        const { nums } = this;
-        const n = nums.length;
-        if ((n & 1) === 1) {
-            return nums[n >> 1];
-        }
-        return (nums[n >> 1] + nums[(n >> 1) - 1]) / 2;
-    }
-}
 
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * var obj = new MedianFinder()
- * obj.addNum(num)
- * var param_2 = obj.findMedian()
- */
-```
 
-### **Rust**
 
-```rust
-struct MedianFinder {
-    nums: Vec<i32>,
-}
 
-/**
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
-impl MedianFinder {
-    /** initialize your data structure here. */
-    fn new() -> Self {
-        Self { nums: Vec::new() }
-    }
 
-    fn add_num(&mut self, num: i32) {
-        let mut l = 0;
-        let mut r = self.nums.len();
-        while l < r {
-            let mid = l + r >> 1;
-            if self.nums[mid] < num {
-                l = mid + 1;
-            } else {
-                r = mid;
-            }
-        }
-        self.nums.insert(l, num);
-    }
 
-    fn find_median(&self) -> f64 {
-        let n = self.nums.len();
-        if (n & 1) == 1 {
-            return f64::from(self.nums[n >> 1]);
-        }
-        f64::from(self.nums[n >> 1] + self.nums[(n >> 1) - 1]) / 2.0
-    }
-}
-
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * let obj = MedianFinder::new();
- * obj.add_num(num);
- * let ret_2: f64 = obj.find_median();
- */
-```
-
-### **C#**
-
-```cs
-public class MedianFinder {
-    private List<int> nums;
-    private int curIndex;
-
-    /** initialize your data structure here. */
-    public MedianFinder() {
-        nums = new List<int>();
-    }
-
-    private int FindIndex(int val) {
-        int left = 0;
-        int right = nums.Count - 1;
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (val > nums[mid]) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
-            }
-        }
-        return left;
-    }
-
-    public void AddNum(int num) {
-        if (nums.Count == 0) {
-            nums.Add(num);
-            curIndex = 0;
-        } else {
-            curIndex = FindIndex(num);
-            if (curIndex == nums.Count) {
-                nums.Add(num);
-            } else {
-                nums.Insert(curIndex, num);
-            }
-        }
-    }
-
-    public double FindMedian() {
-        if (nums.Count % 2 == 1) {
-            return (double)nums[nums.Count / 2];
-        } else {
-            if (nums.Count == 0) {
-                return 0;
-            } else {
-                return (double) (nums[nums.Count / 2 - 1] + nums[nums.Count / 2]) / 2;
-            }
-        }
-    }
-}
-
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * MedianFinder obj = new MedianFinder();
- * obj.AddNum(num);
- * double param_2 = obj.FindMedian();
- */
-```
 
 ### **...**
 
@@ -423,4 +143,4 @@ public class MedianFinder {
 
 ```
 
-<!-- tabs:end -->
+

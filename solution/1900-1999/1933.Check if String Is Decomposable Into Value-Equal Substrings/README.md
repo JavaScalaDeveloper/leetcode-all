@@ -69,23 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isDecomposable(self, s: str) -> bool:
-        i, n = 0, len(s)
-        cnt2 = 0
-        while i < n:
-            j = i
-            while j < n and s[j] == s[i]:
-                j += 1
-            if (j - i) % 3 == 1:
-                return False
-            cnt2 += (j - i) % 3 == 2
-            if cnt2 > 1:
-                return False
-            i = j
-        return cnt2 == 1
-```
+
 
 ### **Java**
 
@@ -114,51 +98,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isDecomposable(string s) {
-        int i = 0, n = s.size();
-        int cnt2 = 0;
-        while (i < n) {
-            int j = i;
-            while (j < n && s[j] == s[i]) ++j;
-            if ((j - i) % 3 == 1) return false;
-            if ((j - i) % 3 == 2 && ++cnt2 > 1) return false;
-            i = j;
-        }
-        return cnt2 == 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isDecomposable(s string) bool {
-	i, n := 0, len(s)
-	cnt2 := 0
-	for i < n {
-		j := i
-		for j < n && s[j] == s[i] {
-			j++
-		}
-		if (j-i)%3 == 1 {
-			return false
-		}
-		if (j-i)%3 == 2 {
-			cnt2++
-			if cnt2 > 1 {
-				return false
-			}
-		}
-		i = j
-	}
-	return cnt2 == 1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -166,4 +112,4 @@ func isDecomposable(s string) bool {
 
 ```
 
-<!-- tabs:end -->
+

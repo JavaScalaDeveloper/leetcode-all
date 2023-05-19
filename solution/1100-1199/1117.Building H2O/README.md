@@ -65,28 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from threading import Semaphore
 
-
-class H2O:
-    def __init__(self):
-        self.h = Semaphore(2)
-        self.o = Semaphore(0)
-
-    def hydrogen(self, releaseHydrogen: "Callable[[], None]") -> None:
-        self.h.acquire()
-        # releaseHydrogen() outputs "H". Do not change or remove this line.
-        releaseHydrogen()
-        if self.h._value == 0:
-            self.o.release()
-
-    def oxygen(self, releaseOxygen: "Callable[[], None]") -> None:
-        self.o.acquire()
-        # releaseOxygen() outputs "O". Do not change or remove this line.
-        releaseOxygen()
-        self.h.release(2)
-```
 
 ### **Java**
 
@@ -116,43 +95,9 @@ class H2O {
 }
 ```
 
-### **C++**
 
-```cpp
-#include <semaphore.h>
 
-class H2O {
-private:
-    sem_t h, o;
-    int st;
 
-public:
-    H2O() {
-        sem_init(&h, 0, 2);
-        sem_init(&o, 0, 0);
-        st = 0;
-    }
-
-    void hydrogen(function<void()> releaseHydrogen) {
-        sem_wait(&h);
-        // releaseHydrogen() outputs "H". Do not change or remove this line.
-        releaseHydrogen();
-        ++st;
-        if (st == 2) {
-            sem_post(&o);
-        }
-    }
-
-    void oxygen(function<void()> releaseOxygen) {
-        sem_wait(&o);
-        // releaseOxygen() outputs "O". Do not change or remove this line.
-        releaseOxygen();
-        st = 0;
-        sem_post(&h);
-        sem_post(&h);
-    }
-};
-```
 
 ### **...**
 
@@ -160,4 +105,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

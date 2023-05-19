@@ -71,16 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxIceCream(self, costs: List[int], coins: int) -> int:
-        costs.sort()
-        for i, c in enumerate(costs):
-            if coins < c:
-                return i
-            coins -= c
-        return len(costs)
-```
+
 
 ### **Java**
 
@@ -102,58 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxIceCream(vector<int>& costs, int coins) {
-        sort(costs.begin(), costs.end());
-        int n = costs.size();
-        for (int i = 0; i < n; ++i) {
-            if (coins < costs[i]) return i;
-            coins -= costs[i];
-        }
-        return n;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxIceCream(costs []int, coins int) int {
-	sort.Ints(costs)
-	for i, c := range costs {
-		if coins < c {
-			return i
-		}
-		coins -= c
-	}
-	return len(costs)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} costs
- * @param {number} coins
- * @return {number}
- */
-var maxIceCream = function (costs, coins) {
-    costs.sort((a, b) => a - b);
-    const n = costs.length;
-    for (let i = 0; i < n; ++i) {
-        if (coins < costs[i]) {
-            return i;
-        }
-        coins -= costs[i];
-    }
-    return n;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -161,4 +111,4 @@ var maxIceCream = function (costs, coins) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -68,44 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numBusesToDestination(self, routes: List[List[int]], source: int, target: int) -> int:
-        if source == target:
-            return 0
 
-        # 一条公交线路有哪些公交站
-        s = [set(r) for r in routes]
-
-        # 一个公交站在哪些公交线路有
-        d = defaultdict(list)
-        for i, r in enumerate(routes):
-            for v in r:
-                d[v].append(i)
-
-        g = defaultdict(list)
-        for ids in d.values():
-            m = len(ids)
-            for i in range(m):
-                for j in range(i + 1, m):
-                    a, b = ids[i], ids[j]
-                    g[a].append(b)
-                    g[b].append(a)
-        q = deque(d[source])
-        ans = 1
-        vis = set(d[source])
-        while q:
-            for _ in range(len(q)):
-                i = q.popleft()
-                if target in s[i]:
-                    return ans
-                for j in g[i]:
-                    if j not in vis:
-                        vis.add(j)
-                        q.append(j)
-            ans += 1
-        return -1
-```
 
 ### **Java**
 
@@ -166,118 +129,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numBusesToDestination(vector<vector<int>>& routes, int source, int target) {
-        if (source == target) {
-            return 0;
-        }
-        int n = routes.size();
-        vector<unordered_set<int>> s(n);
-        vector<vector<int>> g(n);
-        unordered_map<int, vector<int>> d;
-        for (int i = 0; i < n; ++i) {
-            for (int v : routes[i]) {
-                s[i].insert(v);
-                d[v].push_back(i);
-            }
-        }
-        for (auto& [_, ids] : d) {
-            int m = ids.size();
-            for (int i = 0; i < m; ++i) {
-                for (int j = i + 1; j < m; ++j) {
-                    int a = ids[i], b = ids[j];
-                    g[a].push_back(b);
-                    g[b].push_back(a);
-                }
-            }
-        }
-        queue<int> q;
-        unordered_set<int> vis;
-        int ans = 1;
-        for (int v : d[source]) {
-            q.push(v);
-            vis.insert(v);
-        }
-        while (!q.empty()) {
-            for (int k = q.size(); k; --k) {
-                int i = q.front();
-                q.pop();
-                if (s[i].count(target)) {
-                    return ans;
-                }
-                for (int j : g[i]) {
-                    if (!vis.count(j)) {
-                        vis.insert(j);
-                        q.push(j);
-                    }
-                }
-            }
-            ++ans;
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numBusesToDestination(routes [][]int, source int, target int) int {
-	if source == target {
-		return 0
-	}
-	n := len(routes)
-	s := make([]map[int]bool, n)
-	g := make([][]int, n)
-	d := map[int][]int{}
-	for i, r := range routes {
-		for _, v := range r {
-			if s[i] == nil {
-				s[i] = make(map[int]bool)
-			}
-			s[i][v] = true
-			d[v] = append(d[v], i)
-		}
-	}
-	for _, ids := range d {
-		m := len(ids)
-		for i := 0; i < m; i++ {
-			for j := i + 1; j < m; j++ {
-				a, b := ids[i], ids[j]
-				g[a] = append(g[a], b)
-				g[b] = append(g[b], a)
-			}
-		}
-	}
-	q := d[source]
-	vis := map[int]bool{}
-	for _, v := range d[source] {
-		vis[v] = true
-	}
-	ans := 1
-	for len(q) > 0 {
-		for k := len(q); k > 0; k-- {
-			i := q[0]
-			q = q[1:]
-			if s[i][target] {
-				return ans
-			}
-			for _, j := range g[i] {
-				if !vis[j] {
-					vis[j] = true
-					q = append(q, j)
-				}
-			}
-		}
-		ans++
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -285,4 +143,4 @@ func numBusesToDestination(routes [][]int, source int, target int) int {
 
 ```
 
-<!-- tabs:end -->
+

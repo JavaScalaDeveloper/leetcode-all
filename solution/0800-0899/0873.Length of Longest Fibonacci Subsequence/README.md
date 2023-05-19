@@ -64,24 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def lenLongestFibSubseq(self, arr: List[int]) -> int:
-        mp = {v: i for i, v in enumerate(arr)}
-        n = len(arr)
-        dp = [[0] * n for _ in range(n)]
-        for i in range(n):
-            for j in range(i):
-                dp[j][i] = 2
-        ans = 0
-        for i in range(n):
-            for j in range(i):
-                d = arr[i] - arr[j]
-                if d in mp and (k := mp[d]) < j:
-                    dp[j][i] = max(dp[j][i], dp[k][j] + 1)
-                    ans = max(ans, dp[j][i])
-        return ans
-```
+
 
 ### **Java**
 
@@ -119,108 +102,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int lenLongestFibSubseq(vector<int>& arr) {
-        unordered_map<int, int> mp;
-        int n = arr.size();
-        for (int i = 0; i < n; ++i) mp[arr[i]] = i;
-        vector<vector<int>> dp(n, vector<int>(n));
-        for (int i = 0; i < n; ++i)
-            for (int j = 0; j < i; ++j)
-                dp[j][i] = 2;
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < i; ++j) {
-                int d = arr[i] - arr[j];
-                if (mp.count(d)) {
-                    int k = mp[d];
-                    if (k < j) {
-                        dp[j][i] = max(dp[j][i], dp[k][j] + 1);
-                        ans = max(ans, dp[j][i]);
-                    }
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func lenLongestFibSubseq(arr []int) int {
-	n := len(arr)
-	mp := make(map[int]int, n)
-	for i, v := range arr {
-		mp[v] = i + 1
-	}
-	dp := make([][]int, n)
-	for i := 0; i < n; i++ {
-		dp[i] = make([]int, n)
-		for j := 0; j < i; j++ {
-			dp[j][i] = 2
-		}
-	}
-	ans := 0
-	for i := 0; i < n; i++ {
-		for j := 0; j < i; j++ {
-			d := arr[i] - arr[j]
-			k := mp[d] - 1
-			if k >= 0 && k < j {
-				dp[j][i] = max(dp[j][i], dp[k][j]+1)
-				ans = max(ans, dp[j][i])
-			}
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} arr
- * @return {number}
- */
-var lenLongestFibSubseq = function (arr) {
-    const mp = new Map();
-    const n = arr.length;
-    const dp = new Array(n).fill(0).map(() => new Array(n).fill(0));
-    for (let i = 0; i < n; ++i) {
-        mp.set(arr[i], i);
-        for (let j = 0; j < i; ++j) {
-            dp[j][i] = 2;
-        }
-    }
-    let ans = 0;
-    for (let i = 0; i < n; ++i) {
-        for (let j = 0; j < i; ++j) {
-            const d = arr[i] - arr[j];
-            if (mp.has(d)) {
-                const k = mp.get(d);
-                if (k < j) {
-                    dp[j][i] = Math.max(dp[j][i], dp[k][j] + 1);
-                    ans = Math.max(ans, dp[j][i]);
-                }
-            }
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -228,4 +120,4 @@ var lenLongestFibSubseq = function (arr) {
 
 ```
 
-<!-- tabs:end -->
+

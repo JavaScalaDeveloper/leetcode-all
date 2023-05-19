@@ -71,9 +71,7 @@ bSTIterator.prev(); // 状态变为 [3, 7, &lt;u&gt;9&lt;/u&gt;, 15, 20], 返回
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -89,4 +87,4 @@ bSTIterator.prev(); // 状态变为 [3, 7, &lt;u&gt;9&lt;/u&gt;, 15, 20], 返回
 
 ```
 
-<!-- tabs:end -->
+

@@ -56,22 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findRestaurant(self, list1: List[str], list2: List[str]) -> List[str]:
-        ans = []
-        mp = {v: i for i, v in enumerate(list2)}
-        mi = 2000
-        for i, v in enumerate(list1):
-            if v in mp:
-                t = i + mp[v]
-                if t < mi:
-                    mi = t
-                    ans = [v]
-                elif t == mi:
-                    ans.append(v)
-        return ans
-```
+
 
 ### **Java**
 
@@ -104,108 +89,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> findRestaurant(vector<string>& list1, vector<string>& list2) {
-        unordered_map<string, int> mp;
-        for (int i = 0; i < list2.size(); ++i) mp[list2[i]] = i;
-        int mi = 2000;
-        vector<string> ans;
-        for (int i = 0; i < list1.size(); ++i) {
-            if (mp.count(list1[i])) {
-                int t = i + mp[list1[i]];
-                if (t < mi) {
-                    ans.clear();
-                    ans.push_back(list1[i]);
-                    mi = t;
-                } else if (t == mi) {
-                    ans.push_back(list1[i]);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```cpp
-func findRestaurant(list1 []string, list2 []string) []string {
-	mp := make(map[string]int)
-	for i, v := range list2 {
-		mp[v] = i
-	}
-	mi := 2000
-	var ans []string
-	for i, v := range list1 {
-		if _, ok := mp[v]; ok {
-			t := i + mp[v]
-			if t < mi {
-				ans = []string{v}
-				mi = t
-			} else if t == mi {
-				ans = append(ans, v)
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findRestaurant(list1: string[], list2: string[]): string[] {
-    let minI = Infinity;
-    const res = [];
-    const map = new Map<string, number>(list1.map((s, i) => [s, i]));
-    list2.forEach((s, i) => {
-        if (map.has(s)) {
-            const sumI = i + map.get(s);
-            if (sumI <= minI) {
-                if (sumI < minI) {
-                    minI = sumI;
-                    res.length = 0;
-                }
-                res.push(s);
-            }
-        }
-    });
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-use std::iter::FromIterator;
 
-impl Solution {
-    pub fn find_restaurant(list1: Vec<String>, list2: Vec<String>) -> Vec<String> {
-        let map: HashMap<String, usize> = HashMap::from_iter(list1.into_iter().zip(0..));
-        let mut res = vec![];
-        let mut min_i = usize::MAX;
-        list2.into_iter().enumerate().for_each(|(i, key)| {
-            if map.contains_key(&key) {
-                let sum_i = map.get(&key).unwrap() + i;
-                if sum_i <= min_i {
-                    if (sum_i < min_i) {
-                        min_i = sum_i;
-                        res.clear();
-                    }
-                    res.push(key);
-                }
-            }
-        });
-        res
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -213,4 +111,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

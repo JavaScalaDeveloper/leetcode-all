@@ -65,22 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, nums1: List[int], nums2: List[int], k: int) -> int:
-        ans = x = 0
-        for a, b in zip(nums1, nums2):
-            if k == 0:
-                if a != b:
-                    return -1
-                continue
-            if (a - b) % k:
-                return -1
-            y = (a - b) // k
-            ans += abs(y)
-            x += y
-        return -1 if x else ans // 2
-```
+
 
 ### **Java**
 
@@ -110,123 +95,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long minOperations(vector<int>& nums1, vector<int>& nums2, int k) {
-        long long ans = 0, x = 0;
-        for (int i = 0; i < nums1.size(); ++i) {
-            int a = nums1[i], b = nums2[i];
-            if (k == 0) {
-                if (a != b) {
-                    return -1;
-                }
-                continue;
-            }
-            if ((a - b) % k != 0) {
-                return -1;
-            }
-            int y = (a - b) / k;
-            ans += abs(y);
-            x += y;
-        }
-        return x == 0 ? ans / 2 : -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(nums1 []int, nums2 []int, k int) int64 {
-	ans, x := 0, 0
-	for i, a := range nums1 {
-		b := nums2[i]
-		if k == 0 {
-			if a != b {
-				return -1
-			}
-			continue
-		}
-		if (a-b)%k != 0 {
-			return -1
-		}
-		y := (a - b) / k
-		ans += abs(y)
-		x += y
-	}
-	if x != 0 {
-		return -1
-	}
-	return int64(ans / 2)
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minOperations(nums1: number[], nums2: number[], k: number): number {
-    const n = nums1.length;
-    if (k === 0) {
-        return nums1.every((v, i) => v === nums2[i]) ? 0 : -1;
-    }
-    let sum1 = 0;
-    let sum2 = 0;
-    for (let i = 0; i < n; i++) {
-        const diff = nums1[i] - nums2[i];
-        sum1 += diff;
-        if (diff % k !== 0) {
-            return -1;
-        }
-        sum2 += Math.abs(diff);
-    }
-    if (sum1 !== 0) {
-        return -1;
-    }
-    return sum2 / (k * 2);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_operations(nums1: Vec<i32>, nums2: Vec<i32>, k: i32) -> i64 {
-        let k = k as i64;
-        let n = nums1.len();
-        if k == 0 {
-            return if nums1.iter().enumerate().all(|(i, &v)| v == nums2[i]) {
-                0
-            } else {
-                -1
-            };
-        }
-        let mut sum1 = 0;
-        let mut sum2 = 0;
-        for i in 0..n {
-            let diff = (nums1[i] - nums2[i]) as i64;
-            sum1 += diff;
-            if diff % k != 0 {
-                return -1;
-            }
-            sum2 += diff.abs();
-        }
-        if sum1 != 0 {
-            return -1;
-        }
-        sum2 / (k * 2)
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -263,4 +146,4 @@ long long minOperations(int *nums1, int nums1Size, int *nums2, int nums2Size, in
 
 ```
 
-<!-- tabs:end -->
+

@@ -70,21 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numFriendRequests(self, ages: List[int]) -> int:
-        counter = Counter(ages)
-        ans = 0
-        for i in range(1, 121):
-            n1 = counter[i]
-            for j in range(1, 121):
-                n2 = counter[j]
-                if not (j <= 0.5 * i + 7 or j > i or (j > 100 and i < 100)):
-                    ans += n1 * n2
-                    if i == j:
-                        ans -= n2
-        return ans
-```
+
 
 ### **Java**
 
@@ -115,54 +101,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numFriendRequests(vector<int>& ages) {
-        vector<int> counter(121);
-        for (int age : ages) ++counter[age];
-        int ans = 0;
-        for (int i = 1; i < 121; ++i) {
-            int n1 = counter[i];
-            for (int j = 1; j < 121; ++j) {
-                int n2 = counter[j];
-                if (!(j <= 0.5 * i + 7 || j > i || (j > 100 && i < 100))) {
-                    ans += n1 * n2;
-                    if (i == j) ans -= n2;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numFriendRequests(ages []int) int {
-	counter := make([]int, 121)
-	for _, age := range ages {
-		counter[age]++
-	}
-	ans := 0
-	for i := 1; i < 121; i++ {
-		n1 := counter[i]
-		for j := 1; j < 121; j++ {
-			n2 := counter[j]
-			if !(j <= i/2+7 || j > i || (j > 100 && i < 100)) {
-				ans += n1 * n2
-				if i == j {
-					ans -= n2
-				}
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -170,4 +115,4 @@ func numFriendRequests(ages []int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -61,18 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumMoney(self, transactions: List[List[int]]) -> int:
-        s = sum(max(0, a - b) for a, b in transactions)
-        ans = 0
-        for a, b in transactions:
-            if a > b:
-                ans = max(ans, s + b)
-            else:
-                ans = max(ans, s + a)
-        return ans
-```
+
 
 ### **Java**
 
@@ -98,59 +87,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long minimumMoney(vector<vector<int>>& transactions) {
-        long long s = 0, ans = 0;
-        for (auto& e : transactions) {
-            s += max(0, e[0] - e[1]);
-        }
-        for (auto& e : transactions) {
-            if (e[0] > e[1]) {
-                ans = max(ans, s + e[1]);
-            } else {
-                ans = max(ans, s + e[0]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumMoney(transactions [][]int) int64 {
-	s, ans := 0, 0
-	for _, e := range transactions {
-		s += max(0, e[0]-e[1])
-	}
-	for _, e := range transactions {
-		if e[0] > e[1] {
-			ans = max(ans, s+e[1])
-		} else {
-			ans = max(ans, s+e[0])
-		}
-	}
-	return int64(ans)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -159,4 +106,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

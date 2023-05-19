@@ -85,18 +85,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findDuplicate(self, paths: List[str]) -> List[List[str]]:
-        d = defaultdict(list)
-        for p in paths:
-            ps = p.split()
-            for f in ps[1:]:
-                i = f.find('(')
-                name, content = f[:i], f[i + 1: -1]
-                d[content].append(ps[0] + '/' + name)
-        return [v for v in d.values() if len(v) > 1]
-```
+
 
 ### **Java**
 
@@ -126,84 +115,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<string>> findDuplicate(vector<string>& paths) {
-        unordered_map<string, vector<string>> d;
-        for (auto& p : paths) {
-            auto ps = split(p, ' ');
-            for (int i = 1; i < ps.size(); ++i) {
-                int j = ps[i].find('(');
-                auto content = ps[i].substr(j + 1, ps[i].size() - j - 2);
-                auto name = ps[0] + '/' + ps[i].substr(0, j);
-                d[content].push_back(name);
-            }
-        }
-        vector<vector<string>> ans;
-        for (auto& [_, e] : d) {
-            if (e.size() > 1) {
-                ans.push_back(e);
-            }
-        }
-        return ans;
-    }
 
-    vector<string> split(string& s, char c) {
-        vector<string> res;
-        stringstream ss(s);
-        string t;
-        while (getline(ss, t, c)) {
-            res.push_back(t);
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findDuplicate(paths []string) [][]string {
-	d := map[string][]string{}
-	for _, p := range paths {
-		ps := strings.Split(p, " ")
-		for i := 1; i < len(ps); i++ {
-			j := strings.IndexByte(ps[i], '(')
-			content := ps[i][j+1 : len(ps[i])-1]
-			name := ps[0] + "/" + ps[i][:j]
-			d[content] = append(d[content], name)
-		}
-	}
-	ans := [][]string{}
-	for _, e := range d {
-		if len(e) > 1 {
-			ans = append(ans, e)
-		}
-	}
-	return ans
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findDuplicate(paths: string[]): string[][] {
-    const d = new Map<string, string[]>();
-    for (const p of paths) {
-        const [root, ...fs] = p.split(' ');
-        for (const f of fs) {
-            const [name, content] = f.split(/\(|\)/g).filter(Boolean);
-            const t = d.get(content) ?? [];
-            t.push(root + '/' + name);
-            d.set(content, t);
-        }
-    }
-    return [...d.values()].filter(e => e.length > 1);
-}
-```
+
 
 ### **...**
 
@@ -211,4 +133,4 @@ function findDuplicate(paths: string[]): string[][] {
 
 ```
 
-<!-- tabs:end -->
+

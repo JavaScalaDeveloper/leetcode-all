@@ -60,11 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sumOfNumberAndReverse(self, num: int) -> bool:
-        return any(k + int(str(k)[::-1]) == num for k in range(num + 1))
-```
+
 
 ### **Java**
 
@@ -89,45 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool sumOfNumberAndReverse(int num) {
-        for (int x = 0; x <= num; ++x) {
-            int k = x;
-            int y = 0;
-            while (k > 0) {
-                y = y * 10 + k % 10;
-                k /= 10;
-            }
-            if (x + y == num) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sumOfNumberAndReverse(num int) bool {
-	for x := 0; x <= num; x++ {
-		k, y := x, 0
-		for k > 0 {
-			y = y*10 + k%10
-			k /= 10
-		}
-		if x+y == num {
-			return true
-		}
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -150,40 +114,11 @@ bool sumOfNumberAndReverse(int num) {
 
 ### **TypeScript**
 
-```ts
-function sumOfNumberAndReverse(num: number): boolean {
-    for (let i = 0; i <= num; i++) {
-        if (i + Number([...(i + '')].reverse().join('')) === num) {
-            return true;
-        }
-    }
-    return false;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sum_of_number_and_reverse(num: i32) -> bool {
-        for i in 0..=num {
-            if i + {
-                let mut t = i;
-                let mut j = 0;
-                while t > 0 {
-                    j = j * 10 + t % 10;
-                    t /= 10;
-                }
-                j
-            } == num
-            {
-                return true;
-            }
-        }
-        false
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -191,4 +126,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

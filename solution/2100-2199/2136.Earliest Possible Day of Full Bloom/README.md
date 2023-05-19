@@ -76,15 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def earliestFullBloom(self, plantTime: List[int], growTime: List[int]) -> int:
-        ans = t = 0
-        for a, b in sorted(zip(plantTime, growTime), key=lambda x: -x[1]):
-            t += a
-            ans = max(ans, t + b)
-        return ans
-```
+
 
 ### **Java**
 
@@ -110,60 +102,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int earliestFullBloom(vector<int>& plantTime, vector<int>& growTime) {
-        int n = plantTime.size();
-        vector<pair<int, int>> arr;
-        for (int i = 0; i < n; ++i) arr.push_back({-growTime[i], plantTime[i]});
-        sort(arr.begin(), arr.end());
-        int ans = 0, t = 0;
-        for (auto [a, b] : arr) {
-            t += b;
-            ans = max(ans, t - a);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func earliestFullBloom(plantTime []int, growTime []int) int {
-	arr := [][]int{}
-	for i, a := range plantTime {
-		arr = append(arr, []int{a, growTime[i]})
-	}
-	sort.Slice(arr, func(i, j int) bool {
-		return arr[i][1] > arr[j][1]
-	})
-	ans, t := 0, 0
-	for _, e := range arr {
-		t += e[0]
-		ans = max(ans, t+e[1])
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -171,4 +122,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

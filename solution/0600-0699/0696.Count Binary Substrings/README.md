@@ -47,23 +47,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countBinarySubstrings(self, s: str) -> int:
-        i, n = 0, len(s)
-        t = []
-        while i < n:
-            cnt = 1
-            while i + 1 < n and s[i + 1] == s[i]:
-                cnt += 1
-                i += 1
-            t.append(cnt)
-            i += 1
-        ans = 0
-        for i in range(1, len(t)):
-            ans += min(t[i - 1], t[i])
-        return ans
-```
+
 
 ### **Java**
 
@@ -92,59 +76,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countBinarySubstrings(string s) {
-        int i = 0, n = s.size();
-        vector<int> t;
-        while (i < n) {
-            int cnt = 1;
-            while (i + 1 < n && s[i + 1] == s[i]) {
-                ++cnt;
-                ++i;
-            }
-            t.push_back(cnt);
-            ++i;
-        }
-        int ans = 0;
-        for (i = 1; i < t.size(); ++i) ans += min(t[i - 1], t[i]);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countBinarySubstrings(s string) int {
-	i, n := 0, len(s)
-	var t []int
-	for i < n {
-		cnt := 1
-		for i+1 < n && s[i+1] == s[i] {
-			i++
-			cnt++
-		}
-		t = append(t, cnt)
-		i++
-	}
-	ans := 0
-	for i := 1; i < len(t); i++ {
-		ans += min(t[i-1], t[i])
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -152,4 +90,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -75,24 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def compareVersion(self, version1: str, version2: str) -> int:
-        m, n = len(version1), len(version2)
-        i = j = 0
-        while i < m or j < n:
-            a = b = 0
-            while i < m and version1[i] != '.':
-                a = a * 10 + int(version1[i])
-                i += 1
-            while j < n and version2[j] != '.':
-                b = b * 10 + int(version2[j])
-                j += 1
-            if a != b:
-                return -1 if a < b else 1
-            i, j = i + 1, j + 1
-        return 0
-```
+
 
 ### **Java**
 
@@ -119,94 +102,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int compareVersion(string version1, string version2) {
-        int m = version1.size(), n = version2.size();
-        for (int i = 0, j = 0; i < m || j < n; ++i, ++j) {
-            int a = 0, b = 0;
-            while (i < m && version1[i] != '.') {
-                a = a * 10 + (version1[i++] - '0');
-            }
-            while (j < n && version2[j] != '.') {
-                b = b * 10 + (version2[j++] - '0');
-            }
-            if (a != b) {
-                return a < b ? -1 : 1;
-            }
-        }
-        return 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func compareVersion(version1 string, version2 string) int {
-	m, n := len(version1), len(version2)
-	for i, j := 0, 0; i < m || j < n; i, j = i+1, j+1 {
-		var a, b int
-		for i < m && version1[i] != '.' {
-			a = a*10 + int(version1[i]-'0')
-			i++
-		}
-		for j < n && version2[j] != '.' {
-			b = b*10 + int(version2[j]-'0')
-			j++
-		}
-		if a < b {
-			return -1
-		}
-		if a > b {
-			return 1
-		}
-	}
-	return 0
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int CompareVersion(string version1, string version2) {
-        int m = version1.Length, n = version2.Length;
-        for (int i = 0, j = 0; i < m || j < n; ++i, ++j) {
-            int a = 0, b = 0;
-            while (i < m && version1[i] != '.') {
-                a = a * 10 + (version1[i++] - '0');
-            }
-            while (j < n && version2[j] != '.') {
-                b = b * 10 + (version2[j++] - '0');
-            }
-            if (a != b) {
-                return a < b ? -1 : 1;
-            }
-        }
-        return 0;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function compareVersion(version1: string, version2: string): number {
-    let v1 = version1.split('.'),
-        v2 = version2.split('.');
-    for (let i = 0; i < Math.max(v1.length, v2.length); i++) {
-        let c1 = Number(v1[i] || 0),
-            c2 = Number(v2[i] || 0);
-        if (c1 > c2) return 1;
-        if (c1 < c2) return -1;
-    }
-    return 0;
-}
-```
+
 
 ### **...**
 
@@ -214,4 +124,4 @@ function compareVersion(version1: string, version2: string): number {
 
 ```
 
-<!-- tabs:end -->
+

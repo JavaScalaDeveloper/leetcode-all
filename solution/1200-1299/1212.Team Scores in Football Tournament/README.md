@@ -112,4 +112,4 @@ ORDER BY num_points DESC
          ,team_id;
 ```
 
-<!-- tabs:end -->
+

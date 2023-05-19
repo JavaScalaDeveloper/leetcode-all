@@ -67,19 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isOneEditDistance(self, s: str, t: str) -> bool:
-        if len(s) < len(t):
-            return self.isOneEditDistance(t, s)
-        m, n = len(s), len(t)
-        if m - n > 1:
-            return False
-        for i, c in enumerate(t):
-            if c != s[i]:
-                return s[i + 1 :] == t[i + 1 :] if m == n else s[i + 1 :] == t[i:]
-        return m == n + 1
-```
+
 
 ### **Java**
 
@@ -108,48 +96,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isOneEditDistance(string s, string t) {
-        int m = s.size(), n = t.size();
-        if (m < n) return isOneEditDistance(t, s);
-        if (m - n > 1) return false;
-        for (int i = 0; i < n; ++i) {
-            if (s[i] != t[i]) {
-                if (m == n) return s.substr(i + 1) == t.substr(i + 1);
-                return s.substr(i + 1) == t.substr(i);
-            }
-        }
-        return m == n + 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isOneEditDistance(s string, t string) bool {
-	m, n := len(s), len(t)
-	if m < n {
-		return isOneEditDistance(t, s)
-	}
-	if m-n > 1 {
-		return false
-	}
-	for i := range t {
-		if s[i] != t[i] {
-			if m == n {
-				return s[i+1:] == t[i+1:]
-			}
-			return s[i+1:] == t[i:]
-		}
-	}
-	return m == n+1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -157,4 +110,4 @@ func isOneEditDistance(s string, t string) bool {
 
 ```
 
-<!-- tabs:end -->
+

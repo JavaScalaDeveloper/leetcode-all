@@ -67,24 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
-        d = defaultdict(list)
-        for name, t in zip(keyName, keyTime):
-            t = int(t[:2]) * 60 + int(t[3:])
-            d[name].append(t)
-        ans = []
-        for name, ts in d.items():
-            if (n := len(ts)) > 2:
-                ts.sort()
-                for i in range(n - 2):
-                    if ts[i + 2] - ts[i] <= 60:
-                        ans.append(name)
-                        break
-        ans.sort()
-        return ans
-```
+
 
 ### **Java**
 
@@ -121,67 +104,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> alertNames(vector<string>& keyName, vector<string>& keyTime) {
-        unordered_map<string, vector<int>> d;
-        for (int i = 0; i < keyName.size(); ++i) {
-            auto name = keyName[i];
-            auto time = keyTime[i];
-            int a, b;
-            sscanf(time.c_str(), "%d:%d", &a, &b);
-            int t = a * 60 + b;
-            d[name].emplace_back(t);
-        }
-        vector<string> ans;
-        for (auto& [name, ts] : d) {
-            int n = ts.size();
-            if (n > 2) {
-                sort(ts.begin(), ts.end());
-                for (int i = 0; i < n - 2; ++i) {
-                    if (ts[i + 2] - ts[i] <= 60) {
-                        ans.emplace_back(name);
-                        break;
-                    }
-                }
-            }
-        }
-        sort(ans.begin(), ans.end());
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func alertNames(keyName []string, keyTime []string) (ans []string) {
-	d := map[string][]int{}
-	for i, name := range keyName {
-		var a, b int
-		fmt.Sscanf(keyTime[i], "%d:%d", &a, &b)
-		t := a*60 + b
-		d[name] = append(d[name], t)
-	}
-	for name, ts := range d {
-		n := len(ts)
-		if n > 2 {
-			sort.Ints(ts)
-			for i := 0; i < n-2; i++ {
-				if ts[i+2]-ts[i] <= 60 {
-					ans = append(ans, name)
-					break
-				}
-			}
-		}
-	}
-	sort.Strings(ans)
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -189,4 +118,4 @@ func alertNames(keyName []string, keyTime []string) (ans []string) {
 
 ```
 
-<!-- tabs:end -->
+

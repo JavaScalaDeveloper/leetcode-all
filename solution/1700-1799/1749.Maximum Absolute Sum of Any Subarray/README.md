@@ -71,17 +71,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxAbsoluteSum(self, nums: List[int]) -> int:
-        f = g = 0
-        ans = 0
-        for x in nums:
-            f = max(f, 0) + x
-            g = min(g, 0) + x
-            ans = max(ans, f, abs(g))
-        return ans
-```
+
 
 ### **Java**
 
@@ -102,74 +92,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxAbsoluteSum(vector<int>& nums) {
-        int f = 0, g = 0;
-        int ans = 0;
-        for (int& x : nums) {
-            f = max(f, 0) + x;
-            g = min(g, 0) + x;
-            ans = max({ans, f, abs(g)});
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxAbsoluteSum(nums []int) (ans int) {
-	var f, g int
-	for _, x := range nums {
-		f = max(f, 0) + x
-		g = min(g, 0) + x
-		ans = max(ans, max(f, abs(g)))
-	}
-	return
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **TypeScript**
 
-```ts
-function maxAbsoluteSum(nums: number[]): number {
-    let f = 0;
-    let g = 0;
-    let ans = 0;
-    for (const x of nums) {
-        f = Math.max(f, 0) + x;
-        g = Math.min(g, 0) + x;
-        ans = Math.max(ans, f, -g);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -177,4 +110,4 @@ function maxAbsoluteSum(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

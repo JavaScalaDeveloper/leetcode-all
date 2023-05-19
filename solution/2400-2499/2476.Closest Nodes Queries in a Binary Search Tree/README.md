@@ -70,33 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def closestNodes(self, root: Optional[TreeNode], queries: List[int]) -> List[List[int]]:
-        def dfs(root):
-            if root is None:
-                return
-            dfs(root.left)
-            nums.append(root.val)
-            dfs(root.right)
 
-        nums = []
-        dfs(root)
-        ans = []
-        for v in queries:
-            i = bisect_right(nums, v) - 1
-            j = bisect_left(nums, v)
-            mi = nums[i] if 0 <= i < len(nums) else -1
-            mx = nums[j] if 0 <= j < len(nums) else -1
-            ans.append([mi, mx])
-        return ans
-```
 
 ### **Java**
 
@@ -158,90 +132,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<vector<int>> closestNodes(TreeNode* root, vector<int>& queries) {
-        vector<int> nums;
-        function<void(TreeNode* root)> dfs = [&](TreeNode* root) {
-            if (!root) return;
-            dfs(root->left);
-            nums.emplace_back(root->val);
-            dfs(root->right);
-        };
-        dfs(root);
-        vector<vector<int>> ans;
-        int n = nums.size();
-        for (int& v : queries) {
-            int i = upper_bound(nums.begin(), nums.end(), v) - nums.begin() - 1;
-            int j = lower_bound(nums.begin(), nums.end(), v) - nums.begin();
-            int mi = i >= 0 && i < n ? nums[i] : -1;
-            int mx = j >= 0 && j < n ? nums[j] : -1;
-            ans.push_back({mi, mx});
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func closestNodes(root *TreeNode, queries []int) (ans [][]int) {
-	nums := []int{}
-	var dfs func(*TreeNode)
-	dfs = func(root *TreeNode) {
-		if root == nil {
-			return
-		}
-		dfs(root.Left)
-		nums = append(nums, root.Val)
-		dfs(root.Right)
-	}
-	dfs(root)
-	n := len(nums)
-	for _, v := range queries {
-		i := sort.SearchInts(nums, v+1) - 1
-		j := sort.SearchInts(nums, v)
-		mi, mx := -1, -1
-		if i >= 0 && i < n {
-			mi = nums[i]
-		}
-		if j >= 0 && j < n {
-			mx = nums[j]
-		}
-		ans = append(ans, []int{mi, mx})
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -249,4 +150,4 @@ func closestNodes(root *TreeNode, queries []int) (ans [][]int) {
 
 ```
 
-<!-- tabs:end -->
+

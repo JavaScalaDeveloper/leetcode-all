@@ -64,29 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def nextLargerNodes(self, head: Optional[ListNode]) -> List[int]:
-        nums = []
-        while head:
-            nums.append(head.val)
-            head = head.next
-        stk = []
-        n = len(nums)
-        ans = [0] * n
-        for i in range(n - 1, -1, -1):
-            while stk and stk[-1] <= nums[i]:
-                stk.pop()
-            if stk:
-                ans[i] = stk[-1]
-            stk.append(nums[i])
-        return ans
-```
+
 
 ### **Java**
 
@@ -126,230 +104,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    vector<int> nextLargerNodes(ListNode* head) {
-        vector<int> nums;
-        for (; head; head = head->next) {
-            nums.push_back(head->val);
-        }
-        stack<int> stk;
-        int n = nums.size();
-        vector<int> ans(n);
-        for (int i = n - 1; ~i; --i) {
-            while (!stk.empty() && stk.top() <= nums[i]) {
-                stk.pop();
-            }
-            if (!stk.empty()) {
-                ans[i] = stk.top();
 
-            }
-            stk.push(nums[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func nextLargerNodes(head *ListNode) []int {
-	nums := []int{}
-	for ; head != nil; head = head.Next {
-		nums = append(nums, head.Val)
-	}
-	stk := []int{}
-	n := len(nums)
-	ans := make([]int, n)
-	for i := n - 1; i >= 0; i-- {
-		for len(stk) > 0 && stk[len(stk)-1] <= nums[i] {
-			stk = stk[:len(stk)-1]
-		}
-		if len(stk) > 0 {
-			ans[i] = stk[len(stk)-1]
-		}
-		stk = append(stk, nums[i])
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} head
- * @return {number[]}
- */
-var nextLargerNodes = function (head) {
-    const nums = [];
-    while (head) {
-        nums.push(head.val);
-        head = head.next;
-    }
-    const stk = [];
-    const n = nums.length;
-    const ans = new Array(n).fill(0);
-    for (let i = n - 1; i >= 0; --i) {
-        while (stk.length && stk[stk.length - 1] <= nums[i]) {
-            stk.pop();
-        }
-        ans[i] = stk.length ? stk[stk.length - 1] : 0;
-        stk.push(nums[i]);
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function nextLargerNodes(head: ListNode | null): number[] {
-    const nums: number[] = [];
-    while (head) {
-        nums.push(head.val);
-        head = head.next;
-    }
-    const stk: number[] = [];
-    const n = nums.length;
-    const ans: number[] = new Array(n).fill(0);
-    for (let i = n - 1; ~i; --i) {
-        while (stk.length && stk[stk.length - 1] <= nums[i]) {
-            stk.pop();
-        }
-        ans[i] = stk.length ? stk[stk.length - 1] : 0;
-        stk.push(nums[i]);
-    }
-    return ans;
-}
-```
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-interface Item {
-    index: number;
-    val: number;
-}
 
-function nextLargerNodes(head: ListNode | null): number[] {
-    const res: number[] = [];
-    const stack: Item[] = [];
-    let cur = head;
-    for (let i = 0; cur != null; i++) {
-        res.push(0);
-        const { val, next } = cur;
-        while (stack.length !== 0 && stack[stack.length - 1].val < val) {
-            res[stack.pop().index] = val;
-        }
-        stack.push({
-            val,
-            index: i,
-        });
-        cur = next;
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for singly-linked list.
-// #[derive(PartialEq, Eq, Clone, Debug)]
-// pub struct ListNode {
-//   pub val: i32,
-//   pub next: Option<Box<ListNode>>
-// }
-//
-// impl ListNode {
-//   #[inline]
-//   fn new(val: i32) -> Self {
-//     ListNode {
-//       next: None,
-//       val
-//     }
-//   }
-// }
-struct Item {
-    index: usize,
-    val: i32,
-}
 
-impl Solution {
-    pub fn next_larger_nodes(head: Option<Box<ListNode>>) -> Vec<i32> {
-        let mut res = Vec::new();
-        let mut stack: Vec<Item> = Vec::new();
-        let mut cur = &head;
-        for i in 0..usize::MAX {
-            if cur.is_none() {
-                break;
-            }
-            res.push(0);
-            let node = cur.as_ref().unwrap();
-            while !stack.is_empty() && stack.last().unwrap().val < node.val {
-                res[stack.pop().unwrap().index] = node.val;
-            }
-            stack.push(Item {
-                index: i,
-                val: node.val,
-            });
-            cur = &node.next;
-        }
-        res
-    }
-}
-```
 
 ### **...**
 
@@ -357,4 +132,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -90,25 +90,7 @@ findRoot 函数应该返回根 Node(1) ，驱动程序代码将序列化它并�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val=None, children=None):
-        self.val = val
-        self.children = children if children is not None else []
-"""
 
-
-class Solution:
-    def findRoot(self, tree: List['Node']) -> 'Node':
-        x = 0
-        for node in tree:
-            x ^= node.val
-            for child in node.children:
-                x ^= child.val
-        return next(node for node in tree if node.val == x)
-```
 
 ### **Java**
 
@@ -156,101 +138,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    vector<Node*> children;
 
-    Node() {}
 
-    Node(int _val) {
-        val = _val;
-    }
 
-    Node(int _val, vector<Node*> _children) {
-        val = _val;
-        children = _children;
-    }
-};
-*/
 
-class Solution {
-public:
-    Node* findRoot(vector<Node*> tree) {
-        int x = 0;
-        for (Node* node : tree) {
-            x ^= node->val;
-            for (Node* child : node->children) {
-                x ^= child->val;
-            }
-        }
-        for (int i = 0;; ++i) {
-            if (tree[i]->val == x) {
-                return tree[i];
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Children []*Node
- * }
- */
-
-func findRoot(tree []*Node) *Node {
-	x := 0
-	for _, node := range tree {
-		x ^= node.Val
-		for _, child := range node.Children {
-			x ^= child.Val
-		}
-	}
-	for i := 0; ; i++ {
-		if tree[i].Val == x {
-			return tree[i]
-		}
-	}
-}
-```
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for Node.
- * class Node {
- *     val: number
- *     children: Node[]
- *     constructor(val?: number, children?: Node[]) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.children = (children===undefined ? [] : children)
- *     }
- * }
- */
 
-function findRoot(tree: Node[]): Node | null {
-    let x = 0;
-    for (const node of tree) {
-        x ^= node.val;
-        for (const child of node.children) {
-            x ^= child.val;
-        }
-    }
-    return tree.find(node => node.val === x) || null;
-}
-```
 
 ### **...**
 
@@ -258,4 +156,4 @@ function findRoot(tree: Node[]): Node | null {
 
 ```
 
-<!-- tabs:end -->
+

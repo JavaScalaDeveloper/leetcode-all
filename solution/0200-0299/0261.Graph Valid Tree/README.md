@@ -49,61 +49,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 <!-- tabs:start -->
 
@@ -111,22 +65,7 @@ d[find(a)] = distance
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def validTree(self, n: int, edges: List[List[int]]) -> bool:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        p = list(range(n))
-        for a, b in edges:
-            if find(a) == find(b):
-                return False
-            p[find(a)] = find(b)
-            n -= 1
-        return n == 1
-```
 
 ### **Java**
 
@@ -161,88 +100,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    bool validTree(int n, vector<vector<int>>& edges) {
-        p.resize(n);
-        for (int i = 0; i < n; ++i) p[i] = i;
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            if (find(a) == find(b)) return 0;
-            p[find(a)] = find(b);
-            --n;
-        }
-        return n == 1;
-    }
 
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
-```go
-func validTree(n int, edges [][]int) bool {
-	p := make([]int, n)
-	for i := range p {
-		p[i] = i
-	}
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		if find(a) == find(b) {
-			return false
-		}
-		p[find(a)] = find(b)
-		n--
-	}
-	return n == 1
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @param {number[][]} edges
- * @return {boolean}
- */
-var validTree = function (n, edges) {
-    let p = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        p[i] = i;
-    }
-    function find(x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
-        }
-        return p[x];
-    }
-    for (const [a, b] of edges) {
-        if (find(a) == find(b)) {
-            return false;
-        }
-        p[find(a)] = find(b);
-        --n;
-    }
-    return n == 1;
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -250,4 +118,4 @@ var validTree = function (n, edges) {
 
 ```
 
-<!-- tabs:end -->
+

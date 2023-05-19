@@ -65,17 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numMovesStones(self, a: int, b: int, c: int) -> List[int]:
-        x, z = min(a, b, c), max(a, b, c)
-        y = a + b + c - x - z
-        mi = mx = 0
-        if z - x > 2:
-            mi = 1 if y - x < 3 or z - y < 3 else 2
-            mx = z - x - 2
-        return [mi, mx]
-```
+
 
 ### **Java**
 
@@ -97,74 +87,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> numMovesStones(int a, int b, int c) {
-        int x = min({a, b, c});
-        int z = max({a, b, c});
-        int y = a + b + c - x - z;
-        int mi = 0, mx = 0;
-        if (z - x > 2) {
-            mi = y - x < 3 || z - y < 3 ? 1 : 2;
-            mx = z - x - 2;
-        }
-        return {mi, mx};
-    }
-};
-```
 
-### **Go**
 
-```go
-func numMovesStones(a int, b int, c int) []int {
-	x := min(a, min(b, c))
-	z := max(a, max(b, c))
-	y := a + b + c - x - z
-	mi, mx := 0, 0
-	if z-x > 2 {
-		mi = 2
-		if y-x < 3 || z-y < 3 {
-			mi = 1
-		}
-		mx = z - x - 2
-	}
-	return []int{mi, mx}
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function numMovesStones(a: number, b: number, c: number): number[] {
-    const x = Math.min(a, Math.min(b, c));
-    const z = Math.max(a, Math.max(b, c));
-    const y = a + b + c - x - z;
-    let mi = 0,
-        mx = 0;
-    if (z - x > 2) {
-        mi = y - x < 3 || z - y < 3 ? 1 : 2;
-        mx = z - x - 2;
-    }
-    return [mi, mx];
-}
-```
+
 
 ### **...**
 
@@ -172,4 +105,4 @@ function numMovesStones(a: number, b: number, c: number): number[] {
 
 ```
 
-<!-- tabs:end -->
+

@@ -63,12 +63,7 @@ num[2] = '0' 。数字 2 在 num 中出现了 0 次。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def digitCount(self, num: str) -> bool:
-        cnt = Counter(num)
-        return all(cnt[str(i)] == int(v) for i, v in enumerate(num))
-```
+
 
 ### **Java**
 
@@ -92,77 +87,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool digitCount(string num) {
-        int cnt[10]{};
-        for (char& c : num) {
-            ++cnt[c - '0'];
-        }
-        for (int i = 0; i < num.size(); ++i) {
-            if (cnt[i] != num[i] - '0') {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func digitCount(num string) bool {
-	cnt := [10]int{}
-	for _, c := range num {
-		cnt[c-'0']++
-	}
-	for i, v := range num {
-		if cnt[i] != int(v-'0') {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function digitCount(num: string): boolean {
-    const n = num.length;
-    const count = new Array(10).fill(0);
-    for (let i = 0; i < n; i++) {
-        count[i] = Number(num[i]);
-    }
-    for (const c of num) {
-        count[c]--;
-    }
-    return count.every(v => v === 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn digit_count(num: String) -> bool {
-        let s = num.as_bytes();
-        let n = num.len();
-        let mut count = [0; 10];
-        for i in 0..n {
-            count[i] = s[i] - b'0';
-        }
-        for c in s {
-            count[(c - b'0') as usize] -= 1;
-        }
-        count.iter().all(|v| *v == 0)
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -190,4 +129,4 @@ bool digitCount(char *num) {
 
 ```
 
-<!-- tabs:end -->
+

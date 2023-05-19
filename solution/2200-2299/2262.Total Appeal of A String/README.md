@@ -71,18 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def appealSum(self, s: str) -> int:
-        ans = t = 0
-        pos = [-1] * 26
-        for i, c in enumerate(s):
-            c = ord(c) - ord('a')
-            t += i - pos[c]
-            ans += t
-            pos[c] = i
-        return ans
-```
+
 
 ### **Java**
 
@@ -106,59 +95,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long appealSum(string s) {
-        long long ans = 0, t = 0;
-        vector<int> pos(26, -1);
-        for (int i = 0; i < s.size(); ++i) {
-            int c = s[i] - 'a';
-            t += i - pos[c];
-            ans += t;
-            pos[c] = i;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func appealSum(s string) int64 {
-	var ans, t int64
-	pos := make([]int, 26)
-	for i := range pos {
-		pos[i] = -1
-	}
-	for i, c := range s {
-		c -= 'a'
-		t += int64(i - pos[c])
-		ans += t
-		pos[c] = i
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function appealSum(s: string): number {
-    const n = s.length;
-    let dp = new Array(n + 1).fill(0);
-    const hashMap = new Map();
-    for (let i = 0; i < n; i++) {
-        const c = s.charAt(i);
-        dp[i + 1] = dp[i] + i + 1 - (hashMap.get(c) || 0);
-        hashMap.set(c, i + 1);
-    }
-    return dp.reduce((a, c) => a + c, 0);
-}
-```
+
 
 ### **...**
 
@@ -166,4 +113,4 @@ function appealSum(s: string): number {
 
 ```
 
-<!-- tabs:end -->
+

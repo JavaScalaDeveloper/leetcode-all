@@ -66,23 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimizeError(self, prices: List[str], target: int) -> str:
-        mi = 0
-        arr = []
-        for p in prices:
-            p = float(p)
-            mi += int(p)
-            if d := p - int(p):
-                arr.append(d)
-        if not mi <= target <= mi + len(arr):
-            return "-1"
-        d = target - mi
-        arr.sort(reverse=True)
-        ans = d - sum(arr[:d]) + sum(arr[d:])
-        return f'{ans:.3f}'
-```
+
 
 ### **Java**
 
@@ -119,69 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string minimizeError(vector<string>& prices, int target) {
-        int mi = 0;
-        vector<double> arr;
-        for (auto& p : prices) {
-            double price = stod(p);
-            mi += (int) price;
-            double d = price - (int) price;
-            if (d > 0) {
-                arr.push_back(d);
-            }
-        }
-        if (target < mi || target > mi + arr.size()) {
-            return "-1";
-        }
-        int d = target - mi;
-        sort(arr.rbegin(), arr.rend());
-        double ans = d;
-        for (int i = 0; i < d; ++i) {
-            ans -= arr[i];
-        }
-        for (int i = d; i < arr.size(); ++i) {
-            ans += arr[i];
-        }
-        string s = to_string(ans);
-        return s.substr(0, s.find('.') + 4);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimizeError(prices []string, target int) string {
-	arr := []float64{}
-	mi := 0
-	for _, p := range prices {
-		price, _ := strconv.ParseFloat(p, 64)
-		mi += int(math.Floor(price))
-		d := price - float64(math.Floor(price))
-		if d > 0 {
-			arr = append(arr, d)
-		}
-	}
-	if target < mi || target > mi+len(arr) {
-		return "-1"
-	}
-	d := target - mi
-	sort.Float64s(arr)
-	ans := float64(d)
-	for i := 0; i < d; i++ {
-		ans -= arr[len(arr)-i-1]
-	}
-	for i := d; i < len(arr); i++ {
-		ans += arr[len(arr)-i-1]
-	}
-	return fmt.Sprintf("%.3f", ans)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -189,4 +117,4 @@ func minimizeError(prices []string, target int) string {
 
 ```
 
-<!-- tabs:end -->
+

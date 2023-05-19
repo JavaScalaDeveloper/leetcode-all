@@ -51,16 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMaxAverage(self, nums: List[int], k: int) -> float:
-        s = sum(nums[:k])
-        ans = s
-        for i in range(k, len(nums)):
-            s += nums[i] - nums[i - k]
-            ans = max(ans, s)
-        return ans / k
-```
+
 
 ### **Java**
 
@@ -85,65 +76,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function findMaxAverage(nums: number[], k: number): number {
-    let n = nums.length;
-    let ans = 0;
-    let sum = 0;
-    // 前k
-    for (let i = 0; i < k; i++) {
-        sum += nums[i];
-    }
-    ans = sum;
-    for (let i = k; i < n; i++) {
-        sum += nums[i] - nums[i - k];
-        ans = Math.max(ans, sum);
-    }
-    return ans / k;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn find_max_average(nums: Vec<i32>, k: i32) -> f64 {
-        let k = k as usize;
-        let n = nums.len();
-        let mut sum = nums.iter().take(k).sum::<i32>();
-        let mut max = sum;
-        for i in k..n {
-            sum += nums[i] - nums[i - k];
-            max = max.max(sum);
-        }
-        f64::from(max) / f64::from(k as i32)
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums
-     * @param Integer $k
-     * @return Float
-     */
-    function findMaxAverage($nums, $k) {
-        $sum = 0;
-        for ($i = 0; $i < $k; $i++) {
-            $sum += $nums[$i];
-        }
-        $max = $sum;
-        for ($j = $k; $j < count($nums); $j++) {
-            $sum = $sum - $nums[$j - $k] + $nums[$j];
-            $max = max($max, $sum);
-        }
-        return $max / $k;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -151,4 +92,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

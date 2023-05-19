@@ -79,33 +79,7 @@ detectSquares.count([11, 10]); // 返回 2 。你可以选择：
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class DetectSquares:
-    def __init__(self):
-        self.cnt = defaultdict(Counter)
 
-    def add(self, point: List[int]) -> None:
-        x, y = point
-        self.cnt[x][y] += 1
-
-    def count(self, point: List[int]) -> int:
-        x1, y1 = point
-        if x1 not in self.cnt:
-            return 0
-        ans = 0
-        for x2 in self.cnt.keys():
-            if x2 != x1:
-                d = x2 - x1
-                ans += self.cnt[x2][y1] * self.cnt[x1][y1 + d] * self.cnt[x2][y1 + d]
-                ans += self.cnt[x2][y1] * self.cnt[x1][y1 - d] * self.cnt[x2][y1 - d]
-        return ans
-
-
-# Your DetectSquares object will be instantiated and called as such:
-# obj = DetectSquares()
-# obj.add(point)
-# param_2 = obj.count(point)
-```
 
 ### **Java**
 
@@ -153,89 +127,13 @@ class DetectSquares {
  */
 ```
 
-### **C++**
 
-```cpp
-class DetectSquares {
-public:
-    DetectSquares() {
 
-    }
 
-    void add(vector<int> point) {
-        int x = point[0], y = point[1];
-        ++cnt[x][y];
-    }
 
-    int count(vector<int> point) {
-        int x1 = point[0], y1 = point[1];
-        if (!cnt.count(x1)) {
-            return 0;
-        }
-        int ans = 0;
-        for (auto& [x2, cnt2] : cnt) {
-            if (x2 != x1) {
-                int d = x2 - x1;
-                auto& cnt1 = cnt[x1];
-                ans += cnt2[y1] * cnt1[y1 + d] * cnt2[y1 + d];
-                ans += cnt2[y1] * cnt1[y1 - d] * cnt2[y1 - d];
-            }
-        }
-        return ans;
-    }
 
-private:
-    unordered_map<int, unordered_map<int, int>> cnt;
-};
 
-/**
- * Your DetectSquares object will be instantiated and called as such:
- * DetectSquares* obj = new DetectSquares();
- * obj->add(point);
- * int param_2 = obj->count(point);
- */
-```
 
-### **Go**
-
-```go
-type DetectSquares struct {
-	cnt map[int]map[int]int
-}
-
-func Constructor() DetectSquares {
-	return DetectSquares{map[int]map[int]int{}}
-}
-
-func (this *DetectSquares) Add(point []int) {
-	x, y := point[0], point[1]
-	if _, ok := this.cnt[x]; !ok {
-		this.cnt[x] = map[int]int{}
-	}
-	this.cnt[x][y]++
-}
-
-func (this *DetectSquares) Count(point []int) (ans int) {
-	x1, y1 := point[0], point[1]
-	if cnt1, ok := this.cnt[x1]; ok {
-		for x2, cnt2 := range this.cnt {
-			if x2 != x1 {
-				d := x2 - x1
-				ans += cnt2[y1] * cnt1[y1+d] * cnt2[y1+d]
-				ans += cnt2[y1] * cnt1[y1-d] * cnt2[y1-d]
-			}
-		}
-	}
-	return
-}
-
-/**
- * Your DetectSquares object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Add(point);
- * param_2 := obj.Count(point);
- */
-```
 
 ### **...**
 
@@ -243,4 +141,4 @@ func (this *DetectSquares) Count(point []int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

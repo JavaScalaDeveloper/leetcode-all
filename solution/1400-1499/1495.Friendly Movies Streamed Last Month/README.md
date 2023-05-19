@@ -120,4 +120,4 @@ WHERE
         AND (MONTH(program_date) , YEAR(program_date)) = (6 , 2020);
 ```
 
-<!-- tabs:end -->
+

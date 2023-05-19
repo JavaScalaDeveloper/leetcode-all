@@ -56,11 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findNumbers(self, nums: List[int]) -> int:
-        return sum(len(str(v)) % 2 == 0 for v in nums)
-```
+
 
 ### **Java**
 
@@ -80,49 +76,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findNumbers(vector<int>& nums) {
-        int ans = 0;
-        for (int& v : nums) {
-            ans += to_string(v).size() % 2 == 0;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findNumbers(nums []int) (ans int) {
-	for _, v := range nums {
-		if len(strconv.Itoa(v))%2 == 0 {
-			ans++
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var findNumbers = function (nums) {
-    let ans = 0;
-    for (const v of nums) {
-        ans += String(v).length % 2 == 0;
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -130,4 +94,4 @@ var findNumbers = function (nums) {
 
 ```
 
-<!-- tabs:end -->
+

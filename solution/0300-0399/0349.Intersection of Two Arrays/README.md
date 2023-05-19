@@ -46,16 +46,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        s = set(nums1)
-        res = set()
-        for num in nums2:
-            if num in s:
-                res.add(num)
-        return list(res)
-```
+
 
 ### **Java**
 
@@ -84,93 +75,21 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums1
- * @param {number[]} nums2
- * @return {number[]}
- */
-var intersection = function (nums1, nums2) {
-    const s = new Set();
-    for (const num of nums1) {
-        s.add(num);
-    }
-    let res = new Set();
-    for (const num of nums2) {
-        if (s.has(num)) {
-            res.add(num);
-        }
-    }
-    return [...res];
-};
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        unordered_set<int> s;
-        for (int num : nums1) s.insert(num);
-        unordered_set<int> t;
-        vector<int> res;
-        for (int num : nums2) {
-            if (s.count(num) && !t.count(num)) {
-                t.insert(num);
-                res.push_back(num);
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func intersection(nums1 []int, nums2 []int) []int {
-	s := make(map[int]bool)
-	for _, num := range nums1 {
-		s[num] = true
-	}
-	t := make(map[int]bool)
-	var res []int
-	for _, num := range nums2 {
-		if s[num] && !t[num] {
-			res = append(res, num)
-			t[num] = true
-		}
-	}
-	return res
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums1
-     * @param Integer[] $nums2
-     * @return Integer[]
-     */
-    function intersection($nums1, $nums2) {
-        $rs = [];
-        $set1 = array_values(array_unique($nums1));
-        $set2 = array_values(array_unique($nums2));
-        for ($i = 0; $i < count($set1); $i++) {
-            $hashmap[$set1[$i]] = 1;
-        }
-        for ($j = 0; $j < count($set2); $j++) {
-            if ($hashmap[$set2[$j]]) array_push($rs, $set2[$j]);
-        }
-        return $rs;
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -178,4 +97,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

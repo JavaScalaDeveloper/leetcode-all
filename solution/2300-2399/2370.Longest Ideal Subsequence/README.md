@@ -67,23 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestIdealString(self, s: str, k: int) -> int:
-        n = len(s)
-        ans = 1
-        dp = [1] * n
-        d = {s[0]: 0}
-        for i in range(1, n):
-            a = ord(s[i])
-            for b in ascii_lowercase:
-                if abs(a - ord(b)) > k:
-                    continue
-                if b in d:
-                    dp[i] = max(dp[i], dp[d[b]] + 1)
-            d[s[i]] = i
-        return max(dp)
-```
+
 
 ### **Java**
 
@@ -116,85 +100,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestIdealString(string s, int k) {
-        int n = s.size();
-        int ans = 1;
-        vector<int> dp(n, 1);
-        unordered_map<char, int> d;
-        d[s[0]] = 0;
-        for (int i = 1; i < n; ++i) {
-            char a = s[i];
-            for (char b = 'a'; b <= 'z'; ++b) {
-                if (abs(a - b) > k) continue;
-                if (d.count(b)) dp[i] = max(dp[i], dp[d[b]] + 1);
-            }
-            d[a] = i;
-            ans = max(ans, dp[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestIdealString(s string, k int) int {
-	n := len(s)
-	ans := 1
-	dp := make([]int, n)
-	for i := range dp {
-		dp[i] = 1
-	}
-	d := map[byte]int{s[0]: 0}
-	for i := 1; i < n; i++ {
-		a := s[i]
-		for b := byte('a'); b <= byte('z'); b++ {
-			if int(a)-int(b) > k || int(b)-int(a) > k {
-				continue
-			}
-			if v, ok := d[b]; ok {
-				dp[i] = max(dp[i], dp[v]+1)
-			}
-		}
-		d[a] = i
-		ans = max(ans, dp[i])
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function longestIdealString(s: string, k: number): number {
-    const dp = new Array(26).fill(0);
-    for (const c of s) {
-        const x = c.charCodeAt(0) - 'a'.charCodeAt(0);
-        let t = 0;
-        for (let i = 0; i < 26; i++) {
-            if (Math.abs(x - i) <= k) {
-                t = Math.max(t, dp[i] + 1);
-            }
-        }
-        dp[x] = Math.max(dp[x], t);
-    }
 
-    return dp.reduce((r, c) => Math.max(r, c), 0);
-}
-```
 
 ### **...**
 
@@ -202,4 +118,4 @@ function longestIdealString(s: string, k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -84,16 +84,7 @@ $$times[i] = \lfloor \frac{dist[i]-1}{speed[i]} \rfloor$$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:
-        times = [(d - 1) // s for d, s in zip(dist, speed)]
-        times.sort()
-        for i, t in enumerate(times):
-            if t < i:
-                return i
-        return len(dist)
-```
+
 
 ### **Java**
 
@@ -118,88 +109,21 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} dist
- * @param {number[]} speed
- * @return {number}
- */
-var eliminateMaximum = function (dist, speed) {
-    let arr = [];
-    for (let i = 0; i < dist.length; i++) {
-        arr[i] = dist[i] / speed[i];
-    }
-    arr.sort((a, b) => a - b);
-    let ans = 0;
-    while (arr[0] > ans) {
-        arr.shift();
-        ++ans;
-    }
-    return ans;
-};
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int eliminateMaximum(vector<int>& dist, vector<int>& speed) {
-        int n = dist.size();
-        vector<int> times;
-        for (int i = 0; i < n; ++i) {
-            times.push_back((dist[i] - 1) / speed[i]);
-        }
-        sort(times.begin(), times.end());
-        for (int i = 0; i < n; ++i) {
-            if (times[i] < i) {
-                return i;
-            }
-        }
-        return n;
-    }
-};
-```
 
-### **Go**
 
-```go
-func eliminateMaximum(dist []int, speed []int) int {
-	n := len(dist)
-	times := make([]int, n)
-	for i, d := range dist {
-		times[i] = (d - 1) / speed[i]
-	}
-	sort.Ints(times)
-	for i, t := range times {
-		if t < i {
-			return i
-		}
-	}
-	return n
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function eliminateMaximum(dist: number[], speed: number[]): number {
-    const n = dist.length;
-    const times = new Array(n).fill(0);
-    for (let i = 0; i < n; ++i) {
-        times[i] = Math.floor((dist[i] - 1) / speed[i]);
-    }
-    times.sort((a, b) => a - b);
-    for (let i = 0; i < n; ++i) {
-        if (times[i] < i) {
-            return i;
-        }
-    }
-    return n;
-}
-```
+
 
 ### **...**
 
@@ -207,4 +131,4 @@ function eliminateMaximum(dist: number[], speed: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

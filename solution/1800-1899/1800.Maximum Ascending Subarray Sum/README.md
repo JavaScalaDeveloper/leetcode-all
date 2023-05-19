@@ -76,18 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxAscendingSum(self, nums: List[int]) -> int:
-        ans = t = 0
-        for i, v in enumerate(nums):
-            if i == 0 or v > nums[i - 1]:
-                t += v
-                ans = max(ans, t)
-            else:
-                t = v
-        return ans
-```
+
 
 ### **Java**
 
@@ -110,44 +99,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxAscendingSum(vector<int>& nums) {
-        int ans = 0, t = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (i == 0 || nums[i] > nums[i - 1]) {
-                t += nums[i];
-                ans = max(ans, t);
-            } else {
-                t = nums[i];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxAscendingSum(nums []int) int {
-	ans, t := 0, 0
-	for i, v := range nums {
-		if i == 0 || v > nums[i-1] {
-			t += v
-			if ans < t {
-				ans = t
-			}
-		} else {
-			t = v
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -170,41 +128,11 @@ int maxAscendingSum(int* nums, int numsSize){
 
 ### **TypeScript**
 
-```ts
-function maxAscendingSum(nums: number[]): number {
-    const n = nums.length;
-    let res = nums[0];
-    let sum = nums[0];
-    for (let i = 1; i < n; i++) {
-        if (nums[i] <= nums[i - 1]) {
-            res = Math.max(res, sum);
-            sum = 0;
-        }
-        sum += nums[i];
-    }
-    return Math.max(res, sum);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_ascending_sum(nums: Vec<i32>) -> i32 {
-        let n = nums.len();
-        let mut res = nums[0];
-        let mut sum = nums[0];
-        for i in 1..n {
-            if nums[i - 1] >= nums[i] {
-                res = res.max(sum);
-                sum = 0;
-            }
-            sum += nums[i];
-        }
-        res.max(sum)
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -212,4 +140,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

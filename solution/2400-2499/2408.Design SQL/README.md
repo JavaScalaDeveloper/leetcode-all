@@ -79,28 +79,7 @@ sql.selectCell("two", 2, 2); // 返回 "fifth"，查找表 "two" 中 id 为 2 �
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class SQL:
 
-    def __init__(self, names: List[str], columns: List[int]):
-        self.tables = defaultdict(list)
-
-    def insertRow(self, name: str, row: List[str]) -> None:
-        self.tables[name].append(row)
-
-    def deleteRow(self, name: str, rowId: int) -> None:
-        pass
-
-    def selectCell(self, name: str, rowId: int, columnId: int) -> str:
-        return self.tables[name][rowId - 1][columnId - 1]
-
-
-# Your SQL object will be instantiated and called as such:
-# obj = SQL(names, columns)
-# obj.insertRow(name,row)
-# obj.deleteRow(name,rowId)
-# param_3 = obj.selectCell(name,rowId,columnId)
-```
 
 ### **Java**
 
@@ -135,73 +114,17 @@ class SQL {
  */
 ```
 
-### **C++**
 
-```cpp
-class SQL {
-public:
-    unordered_map<string, vector<vector<string>>> tables;
-    SQL(vector<string>& names, vector<int>& columns) {
-    }
 
-    void insertRow(string name, vector<string> row) {
-        tables[name].push_back(row);
-    }
 
-    void deleteRow(string name, int rowId) {
-    }
 
-    string selectCell(string name, int rowId, int columnId) {
-        return tables[name][rowId - 1][columnId - 1];
-    }
-};
 
-/**
- * Your SQL object will be instantiated and called as such:
- * SQL* obj = new SQL(names, columns);
- * obj->insertRow(name,row);
- * obj->deleteRow(name,rowId);
- * string param_3 = obj->selectCell(name,rowId,columnId);
- */
-```
 
-### **Go**
 
-```go
-type SQL struct {
-	tables map[string][][]string
-}
-
-func Constructor(names []string, columns []int) SQL {
-	return SQL{map[string][][]string{}}
-}
-
-func (this *SQL) InsertRow(name string, row []string) {
-	this.tables[name] = append(this.tables[name], row)
-}
-
-func (this *SQL) DeleteRow(name string, rowId int) {
-
-}
-
-func (this *SQL) SelectCell(name string, rowId int, columnId int) string {
-	return this.tables[name][rowId-1][columnId-1]
-}
-
-/**
- * Your SQL object will be instantiated and called as such:
- * obj := Constructor(names, columns);
- * obj.InsertRow(name,row);
- * obj.DeleteRow(name,rowId);
- * param_3 := obj.SelectCell(name,rowId,columnId);
- */
-```
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -210,4 +133,4 @@ func (this *SQL) SelectCell(name string, rowId int, columnId int) string {
 
 ```
 
-<!-- tabs:end -->
+

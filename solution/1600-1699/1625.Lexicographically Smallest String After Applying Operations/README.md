@@ -103,49 +103,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findLexSmallestString(self, s: str, a: int, b: int) -> str:
-        q = deque([s])
-        vis = {s}
-        ans = s
-        while q:
-            s = q.popleft()
-            if ans > s:
-                ans = s
-            t1 = ''.join([str((int(c) + a) % 10) if i & 1 else c for i, c in enumerate(s)])
-            t2 = s[-b:] + s[:-b]
-            for t in (t1, t2):
-                if t not in vis:
-                    vis.add(t)
-                    q.append(t)
-        return ans
-```
 
-```python
-class Solution:
-    def findLexSmallestString(self, s: str, a: int, b: int) -> str:
-        ans = s
-        n = len(s)
-        s = list(s)
-        for _ in range(n):
-            s = s[-b:] + s[:-b]
-            for j in range(10):
-                for k in range(1, n, 2):
-                    s[k] = str((int(s[k]) + a) % 10)
-                if b & 1:
-                    for p in range(10):
-                        for k in range(0, n, 2):
-                            s[k] = str((int(s[k]) + a) % 10)
-                        t = ''.join(s)
-                        if ans > t:
-                            ans = t
-                else:
-                    t = ''.join(s)
-                    if ans > t:
-                        ans = t
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -217,128 +177,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string findLexSmallestString(string s, int a, int b) {
-        queue<string> q{{s}};
-        unordered_set<string> vis{{s}};
-        string ans = s;
-        int n = s.size();
-        while (!q.empty()) {
-            s = q.front();
-            q.pop();
-            ans = min(ans, s);
-            string t1 = s;
-            for (int i = 1; i < n; i += 2) {
-                t1[i] = (t1[i] - '0' + a) % 10 + '0';
-            }
-            string t2 = s.substr(n - b) + s.substr(0, n - b);
-            for (auto& t : {t1, t2}) {
-                if (!vis.count(t)) {
-                    vis.insert(t);
-                    q.emplace(t);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    string findLexSmallestString(string s, int a, int b) {
-        int n = s.size();
-        string ans = s;
-        for (int i = 0; i < n; ++i) {
-            s = s.substr(n - b) + s.substr(0, n - b);
-            for (int j = 0; j < 10; ++j) {
-                for (int k = 1; k < n; k += 2) {
-                    s[k] = (s[k] - '0' + a) % 10 + '0';
-                }
-                if (b & 1) {
-                    for (int p = 0; p < 10; ++p) {
-                        for (int k = 0; k < n; k += 2) {
-                            s[k] = (s[k] - '0' + a) % 10 + '0';
-                        }
-                        ans = min(ans, s);
-                    }
-                } else {
-                    ans = min(ans, s);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findLexSmallestString(s string, a int, b int) string {
-	q := []string{s}
-	vis := map[string]bool{s: true}
-	ans := s
-	n := len(s)
-	for len(q) > 0 {
-		s = q[0]
-		q = q[1:]
-		if ans > s {
-			ans = s
-		}
-		t1 := []byte(s)
-		for i := 1; i < n; i += 2 {
-			t1[i] = byte((int(t1[i]-'0')+a)%10 + '0')
-		}
-		t2 := s[n-b:] + s[:n-b]
-		for _, t := range []string{string(t1), t2} {
-			if !vis[t] {
-				vis[t] = true
-				q = append(q, t)
-			}
-		}
-	}
-	return ans
-}
-```
 
-```go
-func findLexSmallestString(s string, a int, b int) string {
-	n := len(s)
-	ans := s
-	for _ = range s {
-		s = s[n-b:] + s[:n-b]
-		cs := []byte(s)
-		for j := 0; j < 10; j++ {
-			for k := 1; k < n; k += 2 {
-				cs[k] = byte((int(cs[k]-'0')+a)%10 + '0')
-			}
-			if b&1 == 1 {
-				for p := 0; p < 10; p++ {
-					for k := 0; k < n; k += 2 {
-						cs[k] = byte((int(cs[k]-'0')+a)%10 + '0')
-					}
-					s = string(cs)
-					if ans > s {
-						ans = s
-					}
-				}
-			} else {
-				s = string(cs)
-				if ans > s {
-					ans = s
-				}
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -346,4 +195,4 @@ func findLexSmallestString(s string, a int, b int) string {
 
 ```
 
-<!-- tabs:end -->
+

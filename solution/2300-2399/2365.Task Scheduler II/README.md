@@ -84,17 +84,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def taskSchedulerII(self, tasks: List[int], space: int) -> int:
-        day = defaultdict(int)
-        ans = 0
-        for task in tasks:
-            ans += 1
-            ans = max(ans, day[task])
-            day[task] = ans + space + 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -115,54 +105,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long taskSchedulerII(vector<int>& tasks, int space) {
-        unordered_map<int, long long> day;
-        long long ans = 0;
-        for (int& task : tasks) {
-            ++ans;
-            ans = max(ans, day[task]);
-            day[task] = ans + space + 1;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func taskSchedulerII(tasks []int, space int) (ans int64) {
-	day := map[int]int64{}
-	for _, task := range tasks {
-		ans++
-		if ans < day[task] {
-			ans = day[task]
-		}
-		day[task] = ans + int64(space) + 1
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function taskSchedulerII(tasks: number[], space: number): number {
-    const day = new Map<number, number>();
-    let ans = 0;
-    for (const task of tasks) {
-        ++ans;
-        ans = Math.max(ans, day.get(task) ?? 0);
-        day.set(task, ans + space + 1);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -170,4 +123,4 @@ function taskSchedulerII(tasks: number[], space: number): number {
 
 ```
 
-<!-- tabs:end -->
+

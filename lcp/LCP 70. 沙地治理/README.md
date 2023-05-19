@@ -67,25 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sandyLandManagement(self, size: int) -> List[List[int]]:
-        ans = [[1, 1]]
-        k = 0
-        for i in range(size, 1, -1):
-            if k == 0:
-                for j in range(1, i << 1, 2):
-                    ans.append([i, j])
-            elif k == 1:
-                ans.append([i, 2])
-            elif k == 2:
-                for j in range(3, i << 1, 2):
-                    ans.append([i, j])
-            else:
-                ans.append([i, 1])
-            k = (k + 1) % 4
-        return ans
-```
+
 
 ### **Java**
 
@@ -116,57 +98,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> sandyLandManagement(int size) {
-        vector<vector<int>> ans;
-        ans.push_back({1, 1});
-        for (int i = size, k = 0; i > 1; --i, k = (k + 1) % 4) {
-            if (k == 0) {
-                for (int j = 1; j < i << 1; j += 2) {
-                    ans.push_back({i, j});
-                }
-            } else if (k == 1) {
-                ans.push_back({i, 2});
-            } else if (k == 2) {
-                for (int j = 3; j < i << 1; j += 2) {
-                    ans.push_back({i, j});
-                }
-            } else {
-                ans.push_back({i, 1});
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sandyLandManagement(size int) (ans [][]int) {
-	ans = append(ans, []int{1, 1})
-	for i, k := size, 0; i > 1; i, k = i-1, (k+1)%4 {
-		if k == 0 {
-			for j := 1; j < i<<1; j += 2 {
-				ans = append(ans, []int{i, j})
-			}
-		} else if k == 1 {
-			ans = append(ans, []int{i, 2})
-		} else if k == 2 {
-			for j := 3; j < i<<1; j += 2 {
-				ans = append(ans, []int{i, j})
-			}
-		} else {
-			ans = append(ans, []int{i, 1})
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -174,4 +112,4 @@ func sandyLandManagement(size int) (ans [][]int) {
 
 ```
 
-<!-- tabs:end -->
+

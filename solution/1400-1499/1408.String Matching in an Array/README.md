@@ -59,17 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def stringMatching(self, words: List[str]) -> List[str]:
-        ans = []
-        for i, w1 in enumerate(words):
-            for j, w2 in enumerate(words):
-                if i != j and w1 in w2:
-                    ans.append(w1)
-                    break
-        return ans
-```
+
 
 ### **Java**
 
@@ -93,79 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> stringMatching(vector<string>& words) {
-        vector<string> ans;
-        int n = words.size();
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (i != j && words[j].find(words[i]) != string::npos) {
-                    ans.push_back(words[i]);
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func stringMatching(words []string) []string {
-	ans := []string{}
-	for i, w1 := range words {
-		for j, w2 := range words {
-			if i != j && strings.Contains(w2, w1) {
-				ans = append(ans, w1)
-				break
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function stringMatching(words: string[]): string[] {
-    const res: string[] = [];
-    for (const target of words) {
-        for (const word of words) {
-            if (word !== target && word.includes(target)) {
-                res.push(target);
-                break;
-            }
-        }
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn string_matching(words: Vec<String>) -> Vec<String> {
-        let mut res = Vec::new();
-        for target in words.iter() {
-            for word in words.iter() {
-                if word != target && word.contains(target) {
-                    res.push(target.clone());
-                    break;
-                }
-            }
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -173,4 +105,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

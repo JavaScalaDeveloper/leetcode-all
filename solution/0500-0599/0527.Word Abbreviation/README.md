@@ -57,87 +57,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.children = [None] * 26
-        self.v = defaultdict(int)
-
-    def insert(self, w):
-        node = self
-        for c in w:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-            node.v[(w[-1], len(w))] += 1
-
-    def search(self, w):
-        node = self
-        res = []
-        for c in w[:-1]:
-            idx = ord(c) - ord('a')
-            node = node.children[idx]
-            res.append(c)
-            if node.v[(w[-1], len(w))] == 1:
-                break
-        n = len(w) - len(res) - 1
-        if n:
-            res.append(str(n))
-        res.append(w[-1])
-        t = ''.join(res)
-        return t if len(t) < len(w) else w
 
 
-class Solution:
-    def wordsAbbreviation(self, words: List[str]) -> List[str]:
-        trie = Trie()
-        for w in words:
-            trie.insert(w)
-        return [trie.search(w) for w in words]
-```
 
-```python
-class Trie:
-    def __init__(self):
-        self.children = [None] * 26
-        self.v = Counter()
-
-    def insert(self, w):
-        node = self
-        for c in w:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-            node.v[w[-1]] += 1
-
-    def search(self, w):
-        node = self
-        res = []
-        for c in w[:-1]:
-            idx = ord(c) - ord('a')
-            node = node.children[idx]
-            res.append(c)
-            if node.v[w[-1]] == 1:
-                break
-        n = len(w) - len(res) - 1
-        if n:
-            res.append(str(n))
-        res.append(w[-1])
-        t = ''.join(res)
-        return t if len(t) < len(w) else w
-
-class Solution:
-    def wordsAbbreviation(self, words: List[str]) -> List[str]:
-        trees = {}
-        for w in words:
-            if len(w) not in trees:
-                trees[len(w)] = Trie()
-        for w in words:
-            trees[len(w)].insert(w)
-        return [trees[len(w)].search(w) for w in words]
-```
 
 ### **Java**
 
@@ -202,69 +124,9 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-type Trie struct {
-	children [26]*Trie
-	v        [26]int
-}
 
-func newTrie() *Trie {
-	return &Trie{}
-}
-func (this *Trie) insert(w string) {
-	node := this
-	t := w[len(w)-1] - 'a'
-	for _, c := range w {
-		c -= 'a'
-		if node.children[c] == nil {
-			node.children[c] = newTrie()
-		}
-		node = node.children[c]
-		node.v[t]++
-	}
-}
-func (this *Trie) search(w string) string {
-	node := this
-	t := w[len(w)-1] - 'a'
-	res := &strings.Builder{}
-	for _, c := range w[:len(w)-1] {
-		res.WriteRune(c)
-		c -= 'a'
-		node = node.children[c]
-		if node.v[t] == 1 {
-			break
-		}
-	}
-	n := len(w) - res.Len() - 1
-	if n > 0 {
-		res.WriteString(strconv.Itoa(n))
-	}
-	res.WriteByte(w[len(w)-1])
-	if res.Len() < len(w) {
-		return res.String()
-	}
-	return w
-}
 
-func wordsAbbreviation(words []string) []string {
-	trees := map[int]*Trie{}
-	for _, w := range words {
-		if _, ok := trees[len(w)]; !ok {
-			trees[len(w)] = newTrie()
-		}
-	}
-	for _, w := range words {
-		trees[len(w)].insert(w)
-	}
-	ans := []string{}
-	for _, w := range words {
-		ans = append(ans, trees[len(w)].search(w))
-	}
-	return ans
-}
-```
 
 ### **...**
 
@@ -272,4 +134,4 @@ func wordsAbbreviation(words []string) []string {
 
 ```
 
-<!-- tabs:end -->
+

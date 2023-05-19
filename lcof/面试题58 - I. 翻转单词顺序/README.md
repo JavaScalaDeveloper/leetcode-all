@@ -52,11 +52,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def reverseWords(self, s: str) -> str:
-        return " ".join(s.strip().split()[::-1])
-```
+
 
 ### **Java**
 
@@ -75,204 +71,49 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string reverseWords(string s) {
-        string res;
-        int i = s.size() - 1;
-        while (i >= 0) {
-            if (s[i] == ' ') {
-                i--;
-            } else {
-                int j = i;
-                while (i >= 0 && s[i] != ' ') {
-                    i--;
-                }
-                res += s.substr(i + 1, j - i);
-                res.push_back(' ');
-            }
-        }
-        return res.substr(0, res.size() - 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func reverseWords(s string) string {
-	s = strings.Trim(s, " ")
-	n := len(s) - 1
-	builder := new(strings.Builder)
-	for i, j := n, n; i >= 0; j = i {
-		for i >= 0 && s[i] != ' ' {
-			i--
-		}
-		if builder.Len() != 0 {
-			builder.WriteRune(' ')
-		}
-		builder.WriteString(s[i+1 : j+1])
-		for i >= 0 && s[i] == ' ' {
-			i--
-		}
-	}
-	return builder.String()
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {string}
- */
-var reverseWords = function (s) {
-    return s
-        .split(' ')
-        .reduce((acc, cur) => (cur !== '' ? acc.concat(cur) : acc), [])
-        .reverse()
-        .join(' ');
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
 API：
 
-```ts
-function reverseWords(s: string): string {
-    return s.trim().split(/\s+/).reverse().join(' ');
-}
-```
+
 
 双指针：
 
-```ts
-function reverseWords(s: string): string {
-    s = s.trim();
-    const res = [];
-    let l = s.length - 1;
-    let r = s.length - 1;
-    while (l >= 0) {
-        while (s[l] !== ' ' && l >= 0) {
-            l--;
-        }
-        res.push(s.substring(l + 1, r + 1));
-        while (s[l] === ' ' && l >= 0) {
-            l--;
-        }
-        r = l;
-    }
-    return res.join(' ');
-}
-```
 
-### **Rust**
+
+
 
 传统：
 
-```rust
-impl Solution {
-    pub fn reverse_words(mut s: String) -> String {
-        let mut res = s.trim().split(' ').rev().collect::<Vec<&str>>();
-        for i in (0..res.len()).rev() {
-            if res[i] == "" {
-                res.remove(i);
-            }
-        }
-        res.join(" ")
-    }
-}
-```
+
 
 函数式：
 
-```rust
-impl Solution {
-    pub fn reverse_words(s: String) -> String {
-        s.split(' ')
-            .filter(|str| str != &"")
-            .rev()
-            .collect::<Vec<_>>()
-            .join("")
-    }
-}
-```
+
 
 使用 `split_whitespace()`：
 
-```rust
-impl Solution {
-    pub fn reverse_words(s: String) -> String {
-        s.split_whitespace().rev().collect::<Vec<_>>().join(" ")
-    }
-}
-```
+
 
 双指针：
 
-```rust
-impl Solution {
-    pub fn reverse_words(mut s: String) -> String {
-        s = s.trim().to_string();
-        // 添加辅助空格，防止 usize 破界
-        s.insert_str(0, " ");
-        let chars = s.chars().collect::<Vec<char>>();
-        let mut res = vec![];
-        let mut l = chars.len() - 1;
-        let mut r = chars.len() - 1;
-        while l > 0 {
-            while chars[l] == ' ' {
-                if l == 0 {
-                    break;
-                }
-                l -= 1;
-            }
-            r = l;
-            while chars[l] != ' ' {
-                if l == 0 {
-                    break;
-                }
-                l -= 1;
-            }
-            let mut str = String::new();
-            for i in l + 1..r + 1 {
-                str.push(chars[i]);
-            }
-            res.push(str);
-        }
-        res.join(" ")
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public string ReverseWords(string s) {
-        string[] tmp = s.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        Stack<string> ss = new Stack<string>();
-        string res = "";
 
-        foreach (var i in tmp) {
-            ss.Push(i);
-        }
 
-        while (ss.Count > 0) {
-            res += ss.Pop();
-            if (ss.Count > 0) {
-                res += " ";
-            }
-        }
-        return res;
-    }
-}
-```
+
 
 ### **...**
 
@@ -280,4 +121,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

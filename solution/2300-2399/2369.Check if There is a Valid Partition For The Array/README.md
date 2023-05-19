@@ -81,45 +81,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def validPartition(self, nums: List[int]) -> bool:
-        @cache
-        def dfs(i):
-            if i == n:
-                return True
-            res = False
-            if i < n - 1 and nums[i] == nums[i + 1]:
-                res = res or dfs(i + 2)
-            if i < n - 2 and nums[i] == nums[i + 1] and nums[i + 1] == nums[i + 2]:
-                res = res or dfs(i + 3)
-            if (
-                i < n - 2
-                and nums[i + 1] - nums[i] == 1
-                and nums[i + 2] - nums[i + 1] == 1
-            ):
-                res = res or dfs(i + 3)
-            return res
 
-        n = len(nums)
-        return dfs(0)
-```
 
-```python
-class Solution:
-    def validPartition(self, nums: List[int]) -> bool:
-        n = len(nums)
-        dp = [False] * (n + 1)
-        dp[0] = True
-        for i in range(2, n + 1):
-            if nums[i - 1] == nums[i - 2]:
-                dp[i] = dp[i] or dp[i - 2]
-            if i > 2 and nums[i - 1] == nums[i - 2] == nums[i - 3]:
-                dp[i] = dp[i] or dp[i - 3]
-            if i > 2 and nums[i - 1] - nums[i - 2] == 1 and nums[i - 2] - nums[i - 3] == 1:
-                dp[i] = dp[i] or dp[i - 3]
-        return dp[-1]
-```
+
 
 ### **Java**
 
@@ -184,167 +148,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> f;
-    vector<int> nums;
-    int n;
 
-    bool validPartition(vector<int>& nums) {
-        n = nums.size();
-        this->nums = nums;
-        f.assign(n, -1);
-        return dfs(0);
-    }
 
-    bool dfs(int i) {
-        if (i == n) return true;
-        if (f[i] != -1) return f[i] == 1;
-        bool res = false;
-        if (i < n - 1 && nums[i] == nums[i + 1]) res = res || dfs(i + 2);
-        if (i < n - 2 && nums[i] == nums[i + 1] && nums[i + 1] == nums[i + 2]) res = res || dfs(i + 3);
-        if (i < n - 2 && nums[i + 1] - nums[i] == 1 && nums[i + 2] - nums[i + 1] == 1) res = res || dfs(i + 3);
-        f[i] = res ? 1 : 0;
-        return res;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool validPartition(vector<int>& nums) {
-        int n = nums.size();
-        vector<bool> dp(n + 1);
-        dp[0] = true;
-        for (int i = 2; i <= n; ++i)
-        {
-            if (nums[i - 1] == nums[i - 2]) dp[i] = dp[i] || dp[i - 2];
-            if (i > 2 && nums[i - 1] == nums[i - 2] && nums[i - 2] == nums[i - 3]) dp[i] = dp[i] || dp[i - 3];
-            if (i > 2 && nums[i - 1] - nums[i - 2] == 1 && nums[i - 2] - nums[i - 3] == 1) dp[i] = dp[i] || dp[i - 3];
-        }
-        return dp[n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func validPartition(nums []int) bool {
-	n := len(nums)
-	f := make([]int, n)
-	for i := range f {
-		f[i] = -1
-	}
-	var dfs func(int) bool
-	dfs = func(i int) bool {
-		if i == n {
-			return true
-		}
-		if f[i] != -1 {
-			return f[i] == 1
-		}
-		res := false
-		f[i] = 0
-		if i < n-1 && nums[i] == nums[i+1] {
-			res = res || dfs(i+2)
-		}
-		if i < n-2 && nums[i] == nums[i+1] && nums[i+1] == nums[i+2] {
-			res = res || dfs(i+3)
-		}
-		if i < n-2 && nums[i+1]-nums[i] == 1 && nums[i+2]-nums[i+1] == 1 {
-			res = res || dfs(i+3)
-		}
-		if res {
-			f[i] = 1
-		}
-		return res
-	}
-	return dfs(0)
-}
-```
 
-```go
-func validPartition(nums []int) bool {
-	n := len(nums)
-	dp := make([]bool, n+1)
-	dp[0] = true
-	for i := 2; i <= n; i++ {
-		if nums[i-1] == nums[i-2] {
-			dp[i] = dp[i] || dp[i-2]
-		}
-		if i > 2 && nums[i-1] == nums[i-2] && nums[i-2] == nums[i-3] {
-			dp[i] = dp[i] || dp[i-3]
-		}
-		if i > 2 && nums[i-1]-nums[i-2] == 1 && nums[i-2]-nums[i-3] == 1 {
-			dp[i] = dp[i] || dp[i-3]
-		}
-	}
-	return dp[n]
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function validPartition(nums: number[]): boolean {
-    const n = nums.length;
-    const vis = new Array(n).fill(false);
-    const queue = [0];
-    while (queue.length !== 0) {
-        const i = queue.shift() ?? 0;
 
-        if (i === n) {
-            return true;
-        }
 
-        if (!vis[i + 2] && i + 2 <= n && nums[i] === nums[i + 1]) {
-            queue.push(i + 2);
-            vis[i + 2] = true;
-        }
 
-        if (
-            !vis[i + 3] &&
-            i + 3 <= n &&
-            ((nums[i] === nums[i + 1] && nums[i + 1] === nums[i + 2]) ||
-                (nums[i] === nums[i + 1] - 1 &&
-                    nums[i + 1] === nums[i + 2] - 1))
-        ) {
-            queue.push(i + 3);
-            vis[i + 3] = true;
-        }
-    }
-    return false;
-}
-```
-
-```ts
-function validPartition(nums: number[]): boolean {
-    const n = nums.length;
-    const dp = new Array(n + 1).fill(false);
-    dp[0] = true;
-    for (let i = 2; i <= n; ++i) {
-        if (nums[i - 1] == nums[i - 2]) {
-            dp[i] = dp[i] || dp[i - 2];
-        }
-        if (i > 2 && nums[i - 1] == nums[i - 2] && nums[i - 2] == nums[i - 3]) {
-            dp[i] = dp[i] || dp[i - 3];
-        }
-        if (
-            i > 2 &&
-            nums[i - 1] - nums[i - 2] == 1 &&
-            nums[i - 2] - nums[i - 3] == 1
-        ) {
-            dp[i] = dp[i] || dp[i - 3];
-        }
-    }
-    return dp[n];
-}
-```
 
 ### **...**
 
@@ -352,4 +172,4 @@ function validPartition(nums: number[]): boolean {
 
 ```
 
-<!-- tabs:end -->
+

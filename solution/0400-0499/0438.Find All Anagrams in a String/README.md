@@ -56,23 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
-        counter = Counter(p)
-        ans = []
-        left = right = 0
-        t = Counter()
-        while right < len(s):
-            t[s[right]] += 1
-            while t[s[right]] > counter[s[right]]:
-                t[s[left]] -= 1
-                left += 1
-            if right - left + 1 == len(p):
-                ans.append(left)
-            right += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -137,114 +121,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function findAnagrams(s: string, p: string): number[] {
-    let n = s.length,
-        m = p.length;
-    let cnt = new Array(26).fill(0);
-    let ans = [];
-    for (let i = 0; i < m; i++) {
-        cnt[p.charCodeAt(i) - 97]--;
-        cnt[s.charCodeAt(i) - 97]++;
-    }
-    if (cnt.every(v => v == 0)) {
-        ans.push(0);
-    }
-    for (let i = m; i < n; i++) {
-        cnt[s.charCodeAt(i) - 97]++;
-        cnt[s.charCodeAt(i - m) - 97]--;
-        if (cnt.every(v => v == 0)) {
-            ans.push(i - m + 1);
-        }
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findAnagrams(string s, string p) {
-        vector<int> counter(26);
-        for (char c : p) ++counter[c - 'a'];
-        vector<int> ans;
-        int left = 0, right = 0;
-        vector<int> t(26);
-        while (right < s.size()) {
-            int i = s[right] - 'a';
-            ++t[i];
-            while (t[i] > counter[i]) {
-                --t[s[left] - 'a'];
-                ++left;
-            }
-            if (right - left + 1 == p.size()) ans.push_back(left);
-            ++right;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findAnagrams(s string, p string) []int {
-	counter := make([]int, 26)
-	for _, c := range p {
-		counter[c-'a']++
-	}
-	var ans []int
-	left, right := 0, 0
-	t := make([]int, 26)
-	for right < len(s) {
-		i := s[right] - 'a'
-		t[i]++
-		for t[i] > counter[i] {
-			t[s[left]-'a']--
-			left++
-		}
-		if right-left+1 == len(p) {
-			ans = append(ans, left)
-		}
-		right++
-	}
-	return ans
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn find_anagrams(s: String, p: String) -> Vec<i32> {
-        let (s, p) = (s.as_bytes(), p.as_bytes());
-        let (m, n) = (s.len(), p.len());
-        let mut res = vec![];
-        if n > m {
-            return res;
-        }
 
-        let mut counter = [0; 26];
-        for i in 0..n {
-            counter[(p[i] - b'a') as usize] += 1;
-            counter[(s[i] - b'a') as usize] -= 1;
-        }
-        for i in n..m {
-            if counter.iter().all(|&v| v == 0) {
-                res.push((i - n) as i32);
-            }
-            counter[(s[i] - b'a') as usize] -= 1;
-            counter[(s[i - n] - b'a') as usize] += 1;
-        }
-        if counter.iter().all(|&v| v == 0) {
-            res.push((m - n) as i32);
-        }
-        res
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -252,4 +141,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

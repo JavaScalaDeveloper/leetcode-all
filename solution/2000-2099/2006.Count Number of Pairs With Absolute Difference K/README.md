@@ -81,23 +81,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countKDifference(self, nums: List[int], k: int) -> int:
-        n = len(nums)
-        return sum(abs(nums[i] - nums[j]) == k for i in range(n) for j in range(i + 1, n))
-```
 
-```python
-class Solution:
-    def countKDifference(self, nums: List[int], k: int) -> int:
-        ans = 0
-        cnt = Counter()
-        for num in nums:
-            ans += cnt[num - k] + cnt[num + k]
-            cnt[num] += 1
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -138,135 +124,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countKDifference(vector<int>& nums, int k) {
-        int n = nums.size();
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            for (int j = i + 1; j < n; ++j) {
-                ans += abs(nums[i] - nums[j]) == k;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int countKDifference(vector<int>& nums, int k) {
-        int ans = 0;
-        int cnt[110]{};
-        for (int num : nums) {
-            if (num >= k) {
-                ans += cnt[num - k];
-            }
-            if (num + k <= 100) {
-                ans += cnt[num + k];
-            }
-            ++cnt[num];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countKDifference(nums []int, k int) int {
-	n := len(nums)
-	ans := 0
-	for i := 0; i < n; i++ {
-		for j := i + 1; j < n; j++ {
-			if abs(nums[i]-nums[j]) == k {
-				ans++
-			}
-		}
-	}
-	return ans
-}
 
-func abs(x int) int {
-	if x > 0 {
-		return x
-	}
-	return -x
-}
-```
 
-```go
-func countKDifference(nums []int, k int) (ans int) {
-	cnt := [110]int{}
-	for _, num := range nums {
-		if num >= k {
-			ans += cnt[num-k]
-		}
-		if num+k <= 100 {
-			ans += cnt[num+k]
-		}
-		cnt[num]++
-	}
-	return
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countKDifference(nums: number[], k: number): number {
-    let ans = 0;
-    let cnt = new Map();
-    for (let num of nums) {
-        ans += (cnt.get(num - k) || 0) + (cnt.get(num + k) || 0);
-        cnt.set(num, (cnt.get(num) || 0) + 1);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn count_k_difference(nums: Vec<i32>, k: i32) -> i32 {
-        let mut res = 0;
-        let n = nums.len();
-        for i in 0..n - 1 {
-            for j in i..n {
-                if (nums[i] - nums[j]).abs() == k {
-                    res += 1;
-                }
-            }
-        }
-        res
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn count_k_difference(nums: Vec<i32>, k: i32) -> i32 {
-        let mut arr = [0; 101];
-        let mut res = 0;
-        for num in nums {
-            if num - k >= 1 {
-                res += arr[(num - k) as usize];
-            }
-            if num + k <= 100 {
-                res += arr[(num + k) as usize]
-            }
-            arr[num as usize] += 1;
-        }
-        res
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -274,4 +152,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

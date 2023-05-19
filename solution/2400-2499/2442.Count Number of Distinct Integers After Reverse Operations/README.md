@@ -57,15 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countDistinctIntegers(self, nums: List[int]) -> int:
-        s = set(nums)
-        for x in nums:
-            y = int(str(x)[::-1])
-            s.add(y)
-        return len(s)
-```
+
 
 ### **Java**
 
@@ -91,81 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countDistinctIntegers(vector<int>& nums) {
-        unordered_set<int> s(nums.begin(), nums.end());
-        for (int x : nums) {
-            int y = 0;
-            while (x) {
-                y = y * 10 + x % 10;
-                x /= 10;
-            }
-            s.insert(y);
-        }
-        return s.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func countDistinctIntegers(nums []int) int {
-	s := map[int]struct{}{}
-	for _, x := range nums {
-		s[x] = struct{}{}
-	}
-	for _, x := range nums {
-		y := 0
-		for x > 0 {
-			y = y*10 + x%10
-			x /= 10
-		}
-		s[y] = struct{}{}
-	}
-	return len(s)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countDistinctIntegers(nums: number[]): number {
-    const n = nums.length;
-    for (let i = 0; i < n; i++) {
-        nums.push(Number([...(nums[i] + '')].reverse().join('')));
-    }
-    return new Set(nums).size;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn count_distinct_integers(nums: Vec<i32>) -> i32 {
-        let mut set = HashSet::new();
-        for i in 0..nums.len() {
-            let mut num = nums[i];
-            set.insert(num);
-            set.insert({
-                let mut item = 0;
-                while num > 0 {
-                    item = item * 10 + num % 10;
-                    num /= 10;
-                }
-                item
-            });
-        }
-        set.len() as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -173,4 +105,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

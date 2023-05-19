@@ -76,18 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sumOddLengthSubarrays(self, arr: List[int]) -> int:
-        ans, n = 0, len(arr)
-        for i in range(n):
-            s = 0
-            for j in range(i, n):
-                s += arr[j]
-                if (j - i + 1) & 1:
-                    ans += s
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,85 +101,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int sumOddLengthSubarrays(vector<int>& arr) {
-        int n = arr.size();
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            int s = 0;
-            for (int j = i; j < n; ++j) {
-                s += arr[j];
-                if ((j - i + 1) & 1) {
-                    ans += s;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sumOddLengthSubarrays(arr []int) (ans int) {
-	n := len(arr)
-	for i := range arr {
-		s := 0
-		for j := i; j < n; j++ {
-			s += arr[j]
-			if (j-i+1)%2 == 1 {
-				ans += s
-			}
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function sumOddLengthSubarrays(arr: number[]): number {
-    const n = arr.length;
-    let ans = 0;
-    for (let i = 0; i < n; ++i) {
-        let s = 0;
-        for (let j = i; j < n; ++j) {
-            s += arr[j];
-            if ((j - i + 1) % 2 === 1) {
-                ans += s;
-            }
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sum_odd_length_subarrays(arr: Vec<i32>) -> i32 {
-        let n = arr.len();
-        let mut ans = 0;
-        for i in 0..n {
-            let mut s = 0;
-            for j in i..n {
-                s += arr[j];
-                if (j - i + 1) % 2 == 1 {
-                    ans += s;
-                }
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -216,4 +141,4 @@ int sumOddLengthSubarrays(int* arr, int arrSize){
 
 ```
 
-<!-- tabs:end -->
+

@@ -70,21 +70,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def strangePrinter(self, s: str) -> int:
-        n = len(s)
-        f = [[inf] * n for _ in range(n)]
-        for i in range(n - 1, -1, -1):
-            f[i][i] = 1
-            for j in range(i + 1, n):
-                if s[i] == s[j]:
-                    f[i][j] = f[i][j - 1]
-                else:
-                    for k in range(i, j):
-                        f[i][j] = min(f[i][j], f[i][k] + f[k + 1][j])
-        return f[0][-1]
-```
+
 
 ### **Java**
 
@@ -116,90 +102,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int strangePrinter(string s) {
-        int n = s.size();
-        int f[n][n];
-        memset(f, 0x3f, sizeof(f));
-        for (int i = n - 1; ~i; --i) {
-            f[i][i] = 1;
-            for (int j = i + 1; j < n; ++j) {
-                if (s[i] == s[j]) {
-                    f[i][j] = f[i][j - 1];
-                } else {
-                    for (int k = i; k < j; ++k) {
-                        f[i][j] = min(f[i][j], f[i][k] + f[k + 1][j]);
-                    }
-                }
-            }
-        }
-        return f[0][n - 1];
-    }
-};
-```
 
-### **Go**
 
-```go
-func strangePrinter(s string) int {
-	n := len(s)
-	f := make([][]int, n)
-	for i := range f {
-		f[i] = make([]int, n)
-		for j := range f[i] {
-			f[i][j] = 1 << 30
-		}
-	}
-	for i := n - 1; i >= 0; i-- {
-		f[i][i] = 1
-		for j := i + 1; j < n; j++ {
-			if s[i] == s[j] {
-				f[i][j] = f[i][j-1]
-			} else {
-				for k := i; k < j; k++ {
-					f[i][j] = min(f[i][j], f[i][k]+f[k+1][j])
-				}
-			}
-		}
-	}
-	return f[0][n-1]
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function strangePrinter(s: string): number {
-    const n = s.length;
-    const f: number[][] = new Array(n)
-        .fill(0)
-        .map(() => new Array(n).fill(1 << 30));
-    for (let i = n - 1; i >= 0; --i) {
-        f[i][i] = 1;
-        for (let j = i + 1; j < n; ++j) {
-            if (s[i] === s[j]) {
-                f[i][j] = f[i][j - 1];
-            } else {
-                for (let k = i; k < j; ++k) {
-                    f[i][j] = Math.min(f[i][j], f[i][k] + f[k + 1][j]);
-                }
-            }
-        }
-    }
-    return f[0][n - 1];
-}
-```
+
 
 ### **...**
 
@@ -207,4 +120,4 @@ function strangePrinter(s: string): number {
 
 ```
 
-<!-- tabs:end -->
+

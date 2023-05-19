@@ -56,17 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findOcurrences(self, text: str, first: str, second: str) -> List[str]:
-        words = text.split()
-        ans = []
-        for i in range(len(words) - 2):
-            a, b, c = words[i : i + 3]
-            if a == first and b == second:
-                ans.append(c)
-        return ans
-```
+
 
 ### **Java**
 
@@ -88,60 +78,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> findOcurrences(string text, string first, string second) {
-        istringstream is(text);
-        vector<string> words;
-        string word;
-        while (is >> word) {
-            words.emplace_back(word);
-        }
-        vector<string> ans;
-        int n = words.size();
-        for (int i = 0; i < n - 2; ++i) {
-            if (words[i] == first && words[i + 1] == second) {
-                ans.emplace_back(words[i + 2]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findOcurrences(text string, first string, second string) (ans []string) {
-	words := strings.Split(text, " ")
-	n := len(words)
-	for i := 0; i < n-2; i++ {
-		if words[i] == first && words[i+1] == second {
-			ans = append(ans, words[i+2])
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findOcurrences(text: string, first: string, second: string): string[] {
-    const words = text.split(' ');
-    const n = words.length;
-    const ans: string[] = [];
-    for (let i = 0; i < n - 2; i++) {
-        if (words[i] === first && words[i + 1] === second) {
-            ans.push(words[i + 2]);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -149,4 +96,4 @@ function findOcurrences(text: string, first: string, second: string): string[] {
 
 ```
 
-<!-- tabs:end -->
+

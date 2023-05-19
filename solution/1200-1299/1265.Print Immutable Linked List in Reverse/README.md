@@ -77,22 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# """
-# This is the ImmutableListNode's API interface.
-# You should not implement it, or speculate about its implementation.
-# """
-# class ImmutableListNode:
-#     def printValue(self) -> None: # print the value of this node.
-#     def getNext(self) -> 'ImmutableListNode': # return the next node.
 
-
-class Solution:
-    def printLinkedListInReverse(self, head: 'ImmutableListNode') -> None:
-        if head:
-            self.printLinkedListInReverse(head.getNext())
-            head.printValue()
-```
 
 ### **Java**
 
@@ -118,76 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * // This is the ImmutableListNode's API interface.
- * // You should not implement it, or speculate about its implementation.
- * class ImmutableListNode {
- * public:
- *    void printValue(); // print the value of the node.
- *    ImmutableListNode* getNext(); // return the next node.
- * };
- */
 
-class Solution {
-public:
-    void printLinkedListInReverse(ImmutableListNode* head) {
-        if (head) {
-            printLinkedListInReverse(head->getNext());
-            head->printValue();
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-/*   Below is the interface for ImmutableListNode, which is already defined for you.
- *
- *   type ImmutableListNode struct {
- *
- *   }
- *
- *   func (this *ImmutableListNode) getNext() ImmutableListNode {
- *		// return the next node.
- *   }
- *
- *   func (this *ImmutableListNode) printValue() {
- *		// print the value of this node.
- *   }
- */
 
-func printLinkedListInReverse(head ImmutableListNode) {
-	if head != nil {
-		printLinkedListInReverse(head.getNext())
-		head.printValue()
-	}
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * // This is the ImmutableListNode's API interface.
- * // You should not implement it, or speculate about its implementation
- * class ImmutableListNode {
- *      printValue() {}
- *
- *      getNext(): ImmutableListNode {}
- * }
- */
 
-function printLinkedListInReverse(head: ImmutableListNode) {
-    if (head) {
-        printLinkedListInReverse(head.next);
-        head.printValue();
-    }
-}
-```
 
 ### **...**
 
@@ -195,4 +121,4 @@ function printLinkedListInReverse(head: ImmutableListNode) {
 
 ```
 
-<!-- tabs:end -->
+

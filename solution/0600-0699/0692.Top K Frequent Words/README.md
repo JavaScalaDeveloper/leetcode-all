@@ -57,12 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def topKFrequent(self, words: List[str], k: int) -> List[str]:
-        cnt = Counter(words)
-        return sorted(cnt, key=lambda x: (-cnt[x], x))[:k]
-```
+
 
 ### **Java**
 
@@ -94,44 +89,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> topKFrequent(vector<string>& words, int k) {
-        unordered_map<string, int> cnt;
-        for (auto& v : words) ++cnt[v];
-        vector<string> ans;
-        for (auto& [key, _] : cnt) ans.emplace_back(key);
-        sort(ans.begin(), ans.end(), [&](const string& a, const string& b) -> bool {
-            return cnt[a] == cnt[b] ? a < b : cnt[a] > cnt[b];
-        });
-        ans.erase(ans.begin() + k, ans.end());
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func topKFrequent(words []string, k int) []string {
-	cnt := map[string]int{}
-	for _, v := range words {
-		cnt[v]++
-	}
-	ans := []string{}
-	for v := range cnt {
-		ans = append(ans, v)
-	}
-	sort.Slice(ans, func(i, j int) bool {
-		a, b := ans[i], ans[j]
-		return cnt[a] > cnt[b] || cnt[a] == cnt[b] && a < b
-	})
-	return ans[:k]
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -139,4 +103,4 @@ func topKFrequent(words []string, k int) []string {
 
 ```
 
-<!-- tabs:end -->
+

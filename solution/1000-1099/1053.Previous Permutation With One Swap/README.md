@@ -63,18 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def prevPermOpt1(self, arr: List[int]) -> List[int]:
-        n = len(arr)
-        for i in range(n - 1, 0, -1):
-            if arr[i - 1] > arr[i]:
-                for j in range(n - 1, i - 1, -1):
-                    if arr[j] < arr[i - 1] and arr[j] != arr[j - 1]:
-                        arr[i - 1], arr[j] = arr[j], arr[i - 1]
-                        return arr
-        return arr
-```
+
 
 ### **Java**
 
@@ -101,67 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> prevPermOpt1(vector<int>& arr) {
-        int n = arr.size();
-        for (int i = n - 1; i > 0; --i) {
-            if (arr[i - 1] > arr[i]) {
-                for (int j = n - 1; j > i - 1; --j) {
-                    if (arr[j] < arr[i - 1] && arr[j] != arr[j - 1]) {
-                        swap(arr[i - 1], arr[j]);
-                        return arr;
-                    }
-                }
-            }
-        }
-        return arr;
-    }
-};
-```
 
-### **Go**
 
-```go
-func prevPermOpt1(arr []int) []int {
-	n := len(arr)
-	for i := n - 1; i > 0; i-- {
-		if arr[i-1] > arr[i] {
-			for j := n - 1; j > i-1; j-- {
-				if arr[j] < arr[i-1] && arr[j] != arr[j-1] {
-					arr[i-1], arr[j] = arr[j], arr[i-1]
-					return arr
-				}
-			}
-		}
-	}
-	return arr
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function prevPermOpt1(arr: number[]): number[] {
-    const n = arr.length;
-    for (let i = n - 1; i > 0; --i) {
-        if (arr[i - 1] > arr[i]) {
-            for (let j = n - 1; j > i - 1; --j) {
-                if (arr[j] < arr[i - 1] && arr[j] !== arr[j - 1]) {
-                    const t = arr[i - 1];
-                    arr[i - 1] = arr[j];
-                    arr[j] = t;
-                    return arr;
-                }
-            }
-        }
-    }
-    return arr;
-}
-```
+
 
 ### **...**
 
@@ -169,4 +108,4 @@ function prevPermOpt1(arr: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

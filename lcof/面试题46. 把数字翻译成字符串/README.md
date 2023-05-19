@@ -59,36 +59,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def translateNum(self, num: int) -> int:
-        @cache
-        def dfs(i):
-            if i >= n - 1:
-                return 1
-            ans = dfs(i + 1)
-            if s[i] == "1" or (s[i] == "2" and s[i + 1] < "6"):
-                ans += dfs(i + 2)
-            return ans
 
-        s = str(num)
-        n = len(s)
-        return dfs(0)
-```
 
-```python
-class Solution:
-    def translateNum(self, num: int) -> int:
-        s = str(num)
-        n = len(s)
-        a = b = 1
-        for i in range(1, n):
-            c = b
-            if s[i - 1] == '1' or (s[i - 1] == '2' and s[i] < '6'):
-                c += a
-            a, b = b, c
-        return b
-```
+
 
 ### **Java**
 
@@ -142,253 +115,39 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int translateNum(int num) {
-        string s = to_string(num);
-        int n = s.size();
-        int f[12]{};
-        function<int(int)> dfs = [&](int i) -> int {
-            if (i >= n - 1) {
-                return 1;
-            }
-            if (f[i]) {
-                return f[i];
-            }
-            int ans = dfs(i + 1);
-            if (s[i] == '1' || (s[i] == '2' && s[i + 1] < '6')) {
-                ans += dfs(i + 2);
-            }
-            return f[i] = ans;
-        };
-        return dfs(0);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int translateNum(int num) {
-        string s = to_string(num);
-        int n = s.size();
-        int a = 1, b = 1;
-        for (int i = 1; i < n; ++i) {
-            int c = b;
-            if (s[i - 1] == '1' || (s[i - 1] == '2' && s[i] < '6')) {
-                c += a;
-            }
-            a = b;
-            b = c;
-        }
-        return b;
-    }
-};
-```
 
-### **Go**
 
-```go
-func translateNum(num int) int {
-	s := strconv.Itoa(num)
-	n := len(s)
-	f := [12]int{}
-	var dfs func(int) int
-	dfs = func(i int) int {
-		if i >= n-1 {
-			return 1
-		}
-		if f[i] != 0 {
-			return f[i]
-		}
-		ans := dfs(i + 1)
-		if s[i] == '1' || (s[i] == '2' && s[i+1] < '6') {
-			ans += dfs(i + 2)
-		}
-		f[i] = ans
-		return ans
-	}
-	return dfs(0)
-}
-```
 
-```go
-func translateNum(num int) int {
-	s := strconv.Itoa(num)
-	n := len(s)
-	a, b := 1, 1
-	for i := 1; i < n; i++ {
-		c := b
-		if s[i-1] == '1' || (s[i-1] == '2' && s[i] < '6') {
-			c += a
-		}
-		a, b = b, c
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} num
- * @return {number}
- */
-var translateNum = function (num) {
-    const s = num.toString();
-    const n = s.length;
-    const f = new Array(n).fill(0);
-    const dfs = i => {
-        if (i >= n - 1) {
-            return 1;
-        }
-        if (f[i]) {
-            return f[i];
-        }
-        let ans = dfs(i + 1);
-        if (s[i] === '1' || (s[i] === '2' && s[i + 1] < '6')) {
-            ans += dfs(i + 2);
-        }
-        f[i] = ans;
-        return ans;
-    };
-    return dfs(0);
-};
-```
 
-```js
-/**
- * @param {number} num
- * @return {number}
- */
-var translateNum = function (num) {
-    const s = num.toString();
-    const n = s.length;
-    let a = 1;
-    let b = 1;
-    for (let i = 1; i < n; ++i) {
-        let c = b;
-        if (s[i - 1] === '1' || (s[i - 1] === '2' && s[i] < '6')) {
-            c += a;
-        }
-        a = b;
-        b = c;
-    }
-    return b;
-};
-```
+
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function translateNum(num: number): number {
-    const s = num.toString();
-    const n = s.length;
-    const f = new Array(n).fill(0);
-    const dfs = (i: number): number => {
-        if (i >= n - 1) {
-            return 1;
-        }
-        if (f[i]) {
-            return f[i];
-        }
-        let ans = dfs(i + 1);
-        if (s[i] === '1' || (s[i] === '2' && s[i + 1] < '6')) {
-            ans += dfs(i + 2);
-        }
-        f[i] = ans;
-        return ans;
-    };
-    return dfs(0);
-}
-```
 
-```ts
-function translateNum(num: number): number {
-    const s = num.toString();
-    const n = s.length;
-    let a = 1;
-    let b = 1;
-    for (let i = 1; i < n; ++i) {
-        let c = b;
-        if (s[i - 1] === '1' || (s[i - 1] === '2' && s[i] < '6')) {
-            c += a;
-        }
-        a = b;
-        b = c;
-    }
-    return b;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn translate_num(num: i32) -> i32 {
-        let mut a = 1;
-        let mut b = 1;
-        let str = num.to_string();
-        for i in 0..str.len() - 1 {
-            let c = a + b;
-            a = b;
-            let num = str[i..i + 2].parse::<i32>().unwrap();
-            if num >= 10 && num < 26 {
-                b = c;
-            }
-        }
-        b
-    }
-}
-```
 
-```rust
-impl Solution {
-    fn dfs(s: &String, i: usize, res: &mut i32) {
-        if i >= s.len() {
-            return;
-        }
-        let val = s[i - 1..=i].parse::<i32>().unwrap();
-        if val >= 10 && val <= 25 {
-            *res += 1;
-            Self::dfs(s, i + 2, res);
-        }
-        Self::dfs(s, i + 1, res);
-    }
 
-    pub fn translate_num(num: i32) -> i32 {
-        let s = num.to_string();
-        let mut res = 1;
-        Self::dfs(&s, 1, &mut res);
-        res
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int TranslateNum(int num) {
-        var s = num.ToString();
-        int n = s.Length;
-        int a = 1, b = 1;
-        for (int i = 1; i < n; ++i) {
-            int c = b;
-            if (s[i - 1] == '1' || (s[i - 1] == '2' && s[i] < '6')) {
-                c += a;
-            }
-            a = b;
-            b = c;
-        }
-        return b;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -396,4 +155,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

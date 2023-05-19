@@ -64,21 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def takeCharacters(self, s: str, k: int) -> int:
-        cnt = Counter(s)
-        if any(cnt[c] < k for c in "abc"):
-            return -1
-        ans = j = 0
-        for i, c in enumerate(s):
-            cnt[c] -= 1
-            while cnt[c] < k:
-                cnt[s[j]] += 1
-                j += 1
-            ans = max(ans, i - j + 1)
-        return len(s) - ans
-```
+
 
 ### **Java**
 
@@ -109,116 +95,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int takeCharacters(string s, int k) {
-        int cnt[3] = {0};
-        for (char& c : s) ++cnt[c - 'a'];
-        if (cnt[0] < k || cnt[1] < k || cnt[2] < k) return -1;
-        int ans = 0, j = 0;
-        int n = s.size();
-        for (int i = 0; i < n; ++i) {
-            int c = s[i] - 'a';
-            --cnt[c];
-            while (cnt[c] < k) {
-                ++cnt[s[j++] - 'a'];
-            }
-            ans = max(ans, i - j + 1);
-        }
-        return n - ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func takeCharacters(s string, k int) int {
-	cnt := [3]int{}
-	for _, c := range s {
-		cnt[c-'a']++
-	}
-	if cnt[0] < k || cnt[1] < k || cnt[2] < k {
-		return -1
-	}
-	ans, j := 0, 0
-	for i, c := range s {
-		c -= 'a'
-		cnt[c]--
-		for cnt[c] < k {
-			cnt[s[j]-'a']++
-			j++
-		}
-		ans = max(ans, i-j+1)
-	}
-	return len(s) - ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function takeCharacters(s: string, k: number): number {
-    const getIndex = (c: string) => c.charCodeAt(0) - 'a'.charCodeAt(0);
-    const count = [0, 0, 0];
-    for (const c of s) {
-        count[getIndex(c)]++;
-    }
-    if (count.some(v => v < k)) {
-        return -1;
-    }
-    const n = s.length;
-    let ans = 0;
-    for (let i = 0, j = 0; j < n; j++) {
-        count[getIndex(s[j])]--;
-        while (count[getIndex(s[j])] < k) {
-            count[getIndex(s[i])]++;
-            i++;
-        }
-        ans = Math.max(ans, j - i + 1);
-    }
-    return n - ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn take_characters(s: String, k: i32) -> i32 {
-        let s = s.as_bytes();
-        let mut count = vec![0; 3];
-        for c in s.iter() {
-            count[(c - b'a') as usize] += 1;
-        }
-        if count.iter().any(|v| *v < k) {
-            return -1;
-        }
-        let n = s.len();
-        let mut ans = 0;
-        let mut i = 0;
-        for j in 0..n {
-            count[(s[j] - b'a') as usize] -= 1;
-            while count[(s[j] - b'a') as usize] < k {
-                count[(s[i] - b'a') as usize] += 1;
-                i += 1;
-            }
-            ans = ans.max(j - i + 1);
-        }
-        (n - ans) as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -226,4 +117,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

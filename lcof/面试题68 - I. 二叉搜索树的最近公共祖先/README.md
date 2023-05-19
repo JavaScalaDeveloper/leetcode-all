@@ -54,44 +54,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
 
-class Solution:
-    def lowestCommonAncestor(
-        self, root: TreeNode, p: TreeNode, q: TreeNode
-    ) -> TreeNode:
-        while 1:
-            if root.val < p.val and root.val < q.val:
-                root = root.right
-            elif root.val > p.val and root.val > q.val:
-                root = root.left
-            else:
-                return root
-```
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        if root.val < p.val and root.val < q.val:
-            return self.lowestCommonAncestor(root.right, p, q)
-        if root.val > p.val and root.val > q.val:
-            return self.lowestCommonAncestor(root.left, p, q)
-        return root
-```
 
 ### **Java**
 
@@ -145,243 +110,31 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if (root->val < p->val && root->val < q->val) {
-            return lowestCommonAncestor(root->right, p, q);
-        }
-        if (root->val > p->val && root->val > q->val) {
-            return lowestCommonAncestor(root->left, p, q);
-        }
-        return root;
-    }
-};
-```
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        while (1) {
-            if (root->val < p->val && root->val < q->val) {
-                root = root->right;
-            } else if (root->val > p->val && root->val > q->val) {
-                root = root->left;
-            } else {
-                return root;
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val   int
- *     Left  *TreeNode
- *     Right *TreeNode
- * }
- */
 
-func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
-	if root.Val < p.Val && root.Val < q.Val {
-		return lowestCommonAncestor(root.Right, p, q)
-	}
-	if root.Val > p.Val && root.Val > q.Val {
-		return lowestCommonAncestor(root.Left, p, q)
-	}
-	return root
-}
-```
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val   int
- *     Left  *TreeNode
- *     Right *TreeNode
- * }
- */
 
-func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
-	for {
-		if root.Val < p.Val && root.Val < q.Val {
-			root = root.Right
-		} else if root.Val > p.Val && root.Val > q.Val {
-			root = root.Left
-		} else {
-			return root
-		}
-	}
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
- */
-/**
- * @param {TreeNode} root
- * @param {TreeNode} p
- * @param {TreeNode} q
- * @return {TreeNode}
- */
-var lowestCommonAncestor = function (root, p, q) {
-    if (root.val < p.val && root.val < q.val) {
-        return lowestCommonAncestor(root.right, p, q);
-    } else if (root.val > p.val && root.val > q.val) {
-        return lowestCommonAncestor(root.left, p, q);
-    }
-    return root;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
-function lowestCommonAncestor(
-    root: TreeNode | null,
-    p: TreeNode | null,
-    q: TreeNode | null,
-): TreeNode | null {
-    if (root == null) {
-        return root;
-    }
-    if (root.val > p.val && root.val > q.val) {
-        return lowestCommonAncestor(root.left, p, q);
-    }
-    if (root.val < p.val && root.val < q.val) {
-        return lowestCommonAncestor(root.right, p, q);
-    }
-    return root;
-}
-```
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
-function lowestCommonAncestor(
-    root: TreeNode | null,
-    p: TreeNode | null,
-    q: TreeNode | null,
-): TreeNode | null {
-    if (root == null) {
-        return root;
-    }
-    while (true) {
-        if (root.val > p.val && root.val > q.val) {
-            root = root.left;
-        } else if (root.val < p.val && root.val < q.val) {
-            root = root.right;
-        } else {
-            return root;
-        }
-    }
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-use std::cmp::Ordering;
-impl Solution {
-    pub fn lowest_common_ancestor(
-        mut root: Option<Rc<RefCell<TreeNode>>>,
-        p: Option<Rc<RefCell<TreeNode>>>,
-        q: Option<Rc<RefCell<TreeNode>>>,
-    ) -> Option<Rc<RefCell<TreeNode>>> {
-        let p = p.unwrap().borrow().val;
-        let q = q.unwrap().borrow().val;
-        loop {
-            let mut cur = root.as_ref().unwrap().borrow().val;
-            match (cur.cmp(&p), cur.cmp(&q)) {
-                (Ordering::Less, Ordering::Less) => root = root.unwrap().borrow().right.clone(),
-                (Ordering::Greater, Ordering::Greater) => {
-                    root = root.unwrap().borrow().left.clone()
-                }
-                (_, _) => break root,
-            }
-        }
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -389,4 +142,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

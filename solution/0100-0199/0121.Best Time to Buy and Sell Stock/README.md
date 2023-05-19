@@ -60,15 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        ans, mi = 0, inf
-        for v in prices:
-            ans = max(ans, v - mi)
-            mi = min(mi, v)
-        return ans
-```
+
 
 ### **Java**
 
@@ -87,132 +79,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-        int ans = 0, mi = prices[0];
-        for (int& v : prices) {
-            ans = max(ans, v - mi);
-            mi = min(mi, v);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxProfit(prices []int) (ans int) {
-	mi := prices[0]
-	for _, v := range prices {
-		ans = max(ans, v-mi)
-		mi = min(mi, v)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} prices
- * @return {number}
- */
-var maxProfit = function (prices) {
-    let ans = 0;
-    let mi = prices[0];
-    for (const v of prices) {
-        ans = Math.max(ans, v - mi);
-        mi = Math.min(mi, v);
-    }
-    return ans;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MaxProfit(int[] prices) {
-        int ans = 0, mi = prices[0];
-        foreach (int v in prices) {
-            ans = Math.Max(ans, v - mi);
-            mi = Math.Min(mi, v);
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxProfit(prices: number[]): number {
-    let ans = 0;
-    let mi = prices[0];
-    for (const v of prices) {
-        ans = Math.max(ans, v - mi);
-        mi = Math.min(mi, v);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_profit(prices: Vec<i32>) -> i32 {
-        let mut res = 0;
-        let mut min = i32::MAX;
-        for price in prices {
-            res = res.max(price - min);
-            min = min.min(price);
-        }
-        res
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $prices
-     * @return Integer
-     */
-    function maxProfit($prices) {
-        $win = 0;
-        $minPrice = $prices[0];
-        $len = count($prices);
-        for ($i = 1; $i < $len; $i++) {
-            $minPrice = min($minPrice, $prices[$i]);
-            $win = max($win, $prices[$i] - $minPrice);
-        }
-        return $win;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -220,4 +113,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

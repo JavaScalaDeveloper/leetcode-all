@@ -82,16 +82,7 @@ value = 7 的物品在 items2 中 weight = 1 ，总重量为 1 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mergeSimilarItems(
-        self, items1: List[List[int]], items2: List[List[int]]
-    ) -> List[List[int]]:
-        cnt = Counter()
-        for v, w in chain(items1, items2):
-            cnt[v] += w
-        return sorted(cnt.items())
-```
+
 
 ### **Java**
 
@@ -118,90 +109,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> mergeSimilarItems(vector<vector<int>>& items1, vector<vector<int>>& items2) {
-        int cnt[1010]{};
-        for (auto& x : items1) {
-            cnt[x[0]] += x[1];
-        }
-        for (auto& x : items2) {
-            cnt[x[0]] += x[1];
-        }
-        vector<vector<int>> ans;
-        for (int i = 0; i < 1010; ++i) {
-            if (cnt[i]) {
-                ans.push_back({i, cnt[i]});
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mergeSimilarItems(items1 [][]int, items2 [][]int) (ans [][]int) {
-	cnt := [1010]int{}
-	for _, x := range items1 {
-		cnt[x[0]] += x[1]
-	}
-	for _, x := range items2 {
-		cnt[x[0]] += x[1]
-	}
-	for i, x := range cnt {
-		if x > 0 {
-			ans = append(ans, []int{i, x})
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function mergeSimilarItems(items1: number[][], items2: number[][]): number[][] {
-    const count = new Array(1001).fill(0);
-    for (const [v, w] of items1) {
-        count[v] += w;
-    }
-    for (const [v, w] of items2) {
-        count[v] += w;
-    }
-    return [...count.entries()].filter(v => v[1] !== 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn merge_similar_items(items1: Vec<Vec<i32>>, items2: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-        let mut count = [0; 1001];
-        for item in items1.iter() {
-            count[item[0] as usize] += item[1];
-        }
-        for item in items2.iter() {
-            count[item[0] as usize] += item[1];
-        }
-        count
-            .iter()
-            .enumerate()
-            .filter_map(|(i, &v)| {
-                if v == 0 {
-                    return None;
-                }
-                Some(vec![i as i32, v])
-            })
-            .collect()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -243,4 +165,4 @@ int **mergeSimilarItems(int **items1, int items1Size, int *items1ColSize, int **
 
 ```
 
-<!-- tabs:end -->
+

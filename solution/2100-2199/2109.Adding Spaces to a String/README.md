@@ -75,32 +75,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def addSpaces(self, s: str, spaces: List[int]) -> str:
-        ans = []
-        j = 0
-        for i, c in enumerate(s):
-            if j < len(spaces) and i == spaces[j]:
-                ans.append(' ')
-                j += 1
-            ans.append(c)
-        return ''.join(ans)
-```
 
-```python
-class Solution:
-    def addSpaces(self, s: str, spaces: List[int]) -> str:
-        ans = []
-        i, j = len(s) - 1, len(spaces) - 1
-        while i >= 0:
-            ans.append(s[i])
-            if j >= 0 and i == spaces[j]:
-                ans.append(' ')
-                j -= 1
-            i -= 1
-        return ''.join(ans[::-1])
-```
+
+
 
 ### **Java**
 
@@ -122,58 +99,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string addSpaces(string s, vector<int>& spaces) {
-        string ans = "";
-        for (int i = 0, j = 0; i < s.size(); ++i) {
-            if (j < spaces.size() && i == spaces[j]) {
-                ans += ' ';
-                ++j;
-            }
-            ans += s[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func addSpaces(s string, spaces []int) string {
-	var ans []byte
-	for i, j := 0, 0; i < len(s); i++ {
-		if j < len(spaces) && i == spaces[j] {
-			ans = append(ans, ' ')
-			j++
-		}
-		ans = append(ans, s[i])
-	}
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-function addSpaces(s: string, spaces: number[]): string {
-    let ans = '';
-    for (let i = 0, j = 0; i < s.length; i++) {
-        if (j < spaces.length && i === spaces[j]) {
-            ans += ' ';
-            ++j;
-        }
-        ans += s[i];
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -181,4 +119,4 @@ function addSpaces(s: string, spaces: number[]): string {
 
 ```
 
-<!-- tabs:end -->
+

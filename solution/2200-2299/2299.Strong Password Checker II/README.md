@@ -70,25 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def strongPasswordCheckerII(self, password: str) -> bool:
-        if len(password) < 8:
-            return False
-        mask = 0
-        for i, c in enumerate(password):
-            if i and c == password[i - 1]:
-                return False
-            if c.islower():
-                mask |= 1
-            elif c.isupper():
-                mask |= 2
-            elif c.isdigit():
-                mask |= 4
-            else:
-                mask |= 8
-        return mask == 15
-```
+
 
 ### **Java**
 
@@ -121,120 +103,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool strongPasswordCheckerII(string password) {
-        if (password.size() < 8) {
-            return false;
-        }
-        int mask = 0;
-        for (int i = 0; i < password.size(); ++i) {
-            char c = password[i];
-            if (i && c == password[i - 1]) {
-                return false;
-            }
-            if (c >= 'a' && c <= 'z') {
-                mask |= 1;
-            } else if (c >= 'A' && c <= 'Z') {
-                mask |= 2;
-            } else if (c >= '0' && c <= '9') {
-                mask |= 4;
-            } else {
-                mask |= 8;
-            }
-        }
-        return mask == 15;
-    }
-};
-```
 
-### **Go**
 
-```go
-func strongPasswordCheckerII(password string) bool {
-	if len(password) < 8 {
-		return false
-	}
-	mask := 0
-	for i, c := range password {
-		if i > 0 && byte(c) == password[i-1] {
-			return false
-		}
-		if unicode.IsLower(c) {
-			mask |= 1
-		} else if unicode.IsUpper(c) {
-			mask |= 2
-		} else if unicode.IsDigit(c) {
-			mask |= 4
-		} else {
-			mask |= 8
-		}
-	}
-	return mask == 15
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function strongPasswordCheckerII(password: string): boolean {
-    if (password.length < 8) {
-        return false;
-    }
-    let mask = 0;
-    for (let i = 0; i < password.length; ++i) {
-        const c = password[i];
-        if (i && c == password[i - 1]) {
-            return false;
-        }
-        if (c >= 'a' && c <= 'z') {
-            mask |= 1;
-        } else if (c >= 'A' && c <= 'Z') {
-            mask |= 2;
-        } else if (c >= '0' && c <= '9') {
-            mask |= 4;
-        } else {
-            mask |= 8;
-        }
-    }
-    return mask == 15;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn strong_password_checker_ii(password: String) -> bool {
-        let s = password.as_bytes();
-        let n = password.len();
-        if n < 8 {
-            return false;
-        }
-        let mut mask = 0;
-        let mut prev = b' ';
-        for &c in s.iter() {
-            if c == prev {
-                return false;
-            }
-            mask |= if c.is_ascii_uppercase() {
-                0b1000
-            } else if c.is_ascii_lowercase() {
-                0b100
-            } else if c.is_ascii_digit() {
-                0b10
-            } else {
-                0b1
-            };
-            prev = c;
-        }
-        mask == 0b1111
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -271,4 +154,4 @@ bool strongPasswordCheckerII(char *password) {
 
 ```
 
-<!-- tabs:end -->
+

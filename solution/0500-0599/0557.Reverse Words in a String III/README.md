@@ -46,11 +46,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reverseWords(self, s: str) -> str:
-        return ' '.join([t[::-1] for t in s.split(' ')])
-```
+
 
 ### **Java**
 
@@ -71,90 +67,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string reverseWords(string s) {
-        for (int i = 0, n = s.size(); i < n; ++i) {
-            int j = i;
-            while (++j < n && s[j] != ' ')
-                ;
-            reverse(s.begin() + i, s.begin() + j);
-            i = j;
-        }
-        return s;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reverseWords(s string) string {
-	t := []byte(s)
-	for i := 0; i < len(t); i++ {
-		j := i
-		for j < len(t) && t[j] != ' ' {
-			j++
-		}
-		for st, ed := i, j-1; st < ed; st, ed = st+1, ed-1 {
-			t[st], t[ed] = t[ed], t[st]
-		}
-		i = j
-	}
-	return string(t)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function reverseWords(s: string): string {
-    return s
-        .split(/\s+/)
-        .map(str => {
-            let res = '';
-            for (const c of str) {
-                res = c + res;
-            }
-            return res;
-        })
-        .join(' ');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn reverse_words(s: String) -> String {
-        s.split(' ')
-            .map(|s| s.chars().rev().collect::<String>())
-            .collect::<Vec<_>>()
-            .join(" ")
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @return String
-     */
-    function reverseWords($s) {
-        $sArr = explode(' ', $s);
-        for ($i = 0; $i < count($sArr); $i++) {
-            $sArr[$i] = strrev($sArr[$i]);
-        }
-        return implode(" ", $sArr);
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -162,4 +93,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

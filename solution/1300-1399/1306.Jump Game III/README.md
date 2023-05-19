@@ -72,21 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canReach(self, arr: List[int], start: int) -> bool:
-        q = deque([start])
-        while q:
-            i = q.popleft()
-            if arr[i] == 0:
-                return True
-            x = arr[i]
-            arr[i] = -1
-            for j in (i + x, i - x):
-                if 0 <= j < len(arr) and arr[j] >= 0:
-                    q.append(j)
-        return False
-```
+
 
 ### **Java**
 
@@ -115,76 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canReach(vector<int>& arr, int start) {
-        queue<int> q{{start}};
-        while (!q.empty()) {
-            int i = q.front();
-            q.pop();
-            if (arr[i] == 0) {
-                return true;
-            }
-            int x = arr[i];
-            arr[i] = -1;
-            for (int j : {i + x, i - x}) {
-                if (j >= 0 && j < arr.size() && ~arr[j]) {
-                    q.push(j);
-                }
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canReach(arr []int, start int) bool {
-	q := []int{start}
-	for len(q) > 0 {
-		i := q[0]
-		q = q[1:]
-		if arr[i] == 0 {
-			return true
-		}
-		x := arr[i]
-		arr[i] = -1
-		for _, j := range []int{i + x, i - x} {
-			if j >= 0 && j < len(arr) && arr[j] >= 0 {
-				q = append(q, j)
-			}
-		}
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function canReach(arr: number[], start: number): boolean {
-    const q: number[] = [start];
-    while (q.length) {
-        const i: number = q.shift()!;
-        if (arr[i] === 0) {
-            return true;
-        }
-        const x: number = arr[i];
-        arr[i] = -1;
-        for (const j of [i + x, i - x]) {
-            if (j >= 0 && j < arr.length && arr[j] !== -1) {
-                q.push(j);
-            }
-        }
-    }
-    return false;
-}
-```
+
 
 ### **...**
 
@@ -192,4 +119,4 @@ function canReach(arr: number[], start: number): boolean {
 
 ```
 
-<!-- tabs:end -->
+

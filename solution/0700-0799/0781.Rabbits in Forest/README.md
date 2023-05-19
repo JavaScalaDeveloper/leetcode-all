@@ -57,12 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numRabbits(self, answers: List[int]) -> int:
-        counter = Counter(answers)
-        return sum([math.ceil(v / (k + 1)) * (k + 1) for k, v in counter.items()])
-```
+
 
 ### **Java**
 
@@ -91,4 +86,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

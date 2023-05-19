@@ -67,24 +67,7 @@ Bob 可以移除下标 2 的蓝色气球。这将花费 3 秒。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minCost(self, colors: str, neededTime: List[int]) -> int:
-        ans = i = 0
-        n = len(colors)
-        while i < n:
-            j = i
-            s = mx = 0
-            while j < n and colors[j] == colors[i]:
-                s += neededTime[j]
-                if mx < neededTime[j]:
-                    mx = neededTime[j]
-                j += 1
-            if j - i > 1:
-                ans += s - mx
-            i = j
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,59 +95,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minCost(string colors, vector<int>& neededTime) {
-        int ans = 0;
-        int n = colors.size();
-        for (int i = 0, j = 0; i < n; i = j) {
-            j = i;
-            int s = 0, mx = 0;
-            while (j < n && colors[j] == colors[i]) {
-                s += neededTime[j];
-                mx = max(mx, neededTime[j]);
-                ++j;
-            }
-            if (j - i > 1) {
-                ans += s - mx;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minCost(colors string, neededTime []int) (ans int) {
-	n := len(colors)
-	for i, j := 0, 0; i < n; i = j {
-		j = i
-		s, mx := 0, 0
-		for j < n && colors[j] == colors[i] {
-			s += neededTime[j]
-			if mx < neededTime[j] {
-				mx = neededTime[j]
-			}
-			j++
-		}
-		if j-i > 1 {
-			ans += s - mx
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -172,4 +113,4 @@ func minCost(colors string, neededTime []int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

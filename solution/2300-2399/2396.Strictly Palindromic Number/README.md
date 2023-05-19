@@ -60,11 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isStrictlyPalindromic(self, n: int) -> bool:
-        return False
-```
+
 
 ### **Java**
 
@@ -78,42 +74,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isStrictlyPalindromic(int n) {
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isStrictlyPalindromic(n int) bool {
-	return false
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isStrictlyPalindromic(n: number): boolean {
-    return false;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn is_strictly_palindromic(n: i32) -> bool {
-        false
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -130,4 +105,4 @@ bool isStrictlyPalindromic(int n) {
 
 ```
 
-<!-- tabs:end -->
+

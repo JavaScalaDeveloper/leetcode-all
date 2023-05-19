@@ -42,33 +42,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class TripleInOne:
-    def __init__(self, stackSize: int):
-        self._capacity = stackSize
-        self._s = [[], [], []]
 
-    def push(self, stackNum: int, value: int) -> None:
-        if len(self._s[stackNum]) < self._capacity:
-            self._s[stackNum].append(value)
-
-    def pop(self, stackNum: int) -> int:
-        return -1 if self.isEmpty(stackNum) else self._s[stackNum].pop()
-
-    def peek(self, stackNum: int) -> int:
-        return -1 if self.isEmpty(stackNum) else self._s[stackNum][-1]
-
-    def isEmpty(self, stackNum: int) -> bool:
-        return len(self._s[stackNum]) == 0
-
-
-# Your TripleInOne object will be instantiated and called as such:
-# obj = TripleInOne(stackSize)
-# obj.push(stackNum,value)
-# param_2 = obj.pop(stackNum)
-# param_3 = obj.peek(stackNum)
-# param_4 = obj.isEmpty(stackNum)
-```
 
 ### **Java**
 
@@ -118,67 +92,9 @@ class TripleInOne {
  */
 ```
 
-### **Go**
 
-```go
-type TripleInOne struct {
-	data      []int
-	offset    [3]int
-	stackSize int
-}
 
-func Constructor(stackSize int) TripleInOne {
-	total := stackSize * 3
-	data := make([]int, total)
-	offset := [3]int{}
-	for i := 0; i < 3; i++ {
-		offset[i] = i * stackSize
-	}
-	return TripleInOne{
-		data:      data,
-		offset:    offset,
-		stackSize: stackSize,
-	}
-}
 
-func (this *TripleInOne) Push(stackNum int, value int) {
-	i := this.offset[stackNum]
-	if i < (stackNum+1)*this.stackSize {
-		this.data[i] = value
-		this.offset[stackNum]++
-	}
-}
-
-func (this *TripleInOne) Pop(stackNum int) int {
-	i := this.offset[stackNum]
-	if i == stackNum*this.stackSize {
-		return -1
-	}
-	this.offset[stackNum]--
-	return this.data[i-1]
-}
-
-func (this *TripleInOne) Peek(stackNum int) int {
-	i := this.offset[stackNum]
-	if i == stackNum*this.stackSize {
-		return -1
-	}
-	return this.data[i-1]
-}
-
-func (this *TripleInOne) IsEmpty(stackNum int) bool {
-	return this.offset[stackNum] == stackNum*this.stackSize
-}
-
-/**
- * Your TripleInOne object will be instantiated and called as such:
- * obj := Constructor(stackSize);
- * obj.Push(stackNum,value);
- * param_2 := obj.Pop(stackNum);
- * param_3 := obj.Peek(stackNum);
- * param_4 := obj.IsEmpty(stackNum);
- */
-```
 
 ### **...**
 
@@ -186,4 +102,4 @@ func (this *TripleInOne) IsEmpty(stackNum int) bool {
 
 ```
 
-<!-- tabs:end -->
+

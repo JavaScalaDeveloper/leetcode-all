@@ -60,30 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def removeNodes(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        nums = []
-        while head:
-            nums.append(head.val)
-            head = head.next
-        stk = []
-        for v in nums:
-            while stk and stk[-1] < v:
-                stk.pop()
-            stk.append(v)
-        dummy = ListNode()
-        head = dummy
-        for v in stk:
-            head.next = ListNode(v)
-            head = head.next
-        return dummy.next
-```
+
 
 ### **Java**
 
@@ -125,77 +102,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* removeNodes(ListNode* head) {
-        vector<int> nums;
-        while (head) {
-            nums.emplace_back(head->val);
-            head = head->next;
-        }
-        vector<int> stk;
-        for (int v : nums) {
-            while (!stk.empty() && stk.back() < v) {
-                stk.pop_back();
-            }
-            stk.push_back(v);
-        }
-        ListNode* dummy = new ListNode();
-        head = dummy;
-        for (int v : stk) {
-            head->next = new ListNode(v);
-            head = head->next;
-        }
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func removeNodes(head *ListNode) *ListNode {
-	nums := []int{}
-	for head != nil {
-		nums = append(nums, head.Val)
-		head = head.Next
-	}
-	stk := []int{}
-	for _, v := range nums {
-		for len(stk) > 0 && stk[len(stk)-1] < v {
-			stk = stk[:len(stk)-1]
-		}
-		stk = append(stk, v)
-	}
-	dummy := &ListNode{}
-	head = dummy
-	for _, v := range stk {
-		head.Next = &ListNode{Val: v}
-		head = head.Next
-	}
-	return dummy.Next
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -203,4 +116,4 @@ func removeNodes(head *ListNode) *ListNode {
 
 ```
 
-<!-- tabs:end -->
+

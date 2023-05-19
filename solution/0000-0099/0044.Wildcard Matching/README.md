@@ -81,23 +81,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isMatch(self, s: str, p: str) -> bool:
-        m, n = len(s), len(p)
-        dp = [[False] * (n + 1) for _ in range(m + 1)]
-        dp[0][0] = True
-        for j in range(1, n + 1):
-            if p[j - 1] == '*':
-                dp[0][j] = dp[0][j - 1]
-        for i in range(1, m + 1):
-            for j in range(1, n + 1):
-                if s[i - 1] == p[j - 1] or p[j - 1] == '?':
-                    dp[i][j] = dp[i - 1][j - 1]
-                elif p[j - 1] == '*':
-                    dp[i][j] = dp[i - 1][j] or dp[i][j - 1]
-        return dp[m][n]
-```
+
 
 ### **Java**
 
@@ -128,61 +112,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isMatch(string s, string p) {
-        int m = s.size(), n = p.size();
-        vector<vector<bool>> dp(m + 1, vector<bool>(n + 1));
-        dp[0][0] = true;
-        for (int j = 1; j <= n; ++j) {
-            if (p[j - 1] == '*') {
-                dp[0][j] = dp[0][j - 1];
-            }
-        }
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                if (s[i - 1] == p[j - 1] || p[j - 1] == '?') {
-                    dp[i][j] = dp[i - 1][j - 1];
-                } else if (p[j - 1] == '*') {
-                    dp[i][j] = dp[i - 1][j] || dp[i][j - 1];
-                }
-            }
-        }
-        return dp[m][n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func isMatch(s string, p string) bool {
-	m, n := len(s), len(p)
-	dp := make([][]bool, m+1)
-	for i := range dp {
-		dp[i] = make([]bool, n+1)
-	}
-	dp[0][0] = true
-	for j := 1; j <= n; j++ {
-		if p[j-1] == '*' {
-			dp[0][j] = dp[0][j-1]
-		}
-	}
-	for i := 1; i <= m; i++ {
-		for j := 1; j <= n; j++ {
-			if s[i-1] == p[j-1] || p[j-1] == '?' {
-				dp[i][j] = dp[i-1][j-1]
-			} else if p[j-1] == '*' {
-				dp[i][j] = dp[i-1][j] || dp[i][j-1]
-			}
-		}
-	}
-	return dp[m][n]
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -190,4 +126,4 @@ func isMatch(s string, p string) bool {
 
 ```
 
-<!-- tabs:end -->
+

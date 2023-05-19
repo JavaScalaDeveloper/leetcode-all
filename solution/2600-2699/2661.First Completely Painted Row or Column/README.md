@@ -63,23 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def firstCompleteIndex(self, arr: List[int], mat: List[List[int]]) -> int:
-        m, n = len(mat), len(mat[0])
-        idx = {}
-        for i in range(m):
-            for j in range(n):
-                idx[mat[i][j]] = (i, j)
-        row = [0] * m
-        col = [0] * n
-        for k in range(len(arr)):
-            i, j = idx[arr[k]]
-            row[i] += 1
-            col[j] += 1
-            if row[i] == n or col[j] == m:
-                return k
-```
+
 
 ### **Java**
 
@@ -110,81 +94,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int firstCompleteIndex(vector<int>& arr, vector<vector<int>>& mat) {
-        int m = mat.size(), n = mat[0].size();
-        unordered_map<int, pair<int, int>> idx;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                idx[mat[i][j]] = {i, j};
-            }
-        }
-        vector<int> row(m), col(n);
-        for (int k = 0;; ++k) {
-            auto [i, j] = idx[arr[k]];
-            ++row[i];
-            ++col[j];
-            if (row[i] == n || col[j] == m) {
-                return k;
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func firstCompleteIndex(arr []int, mat [][]int) int {
-	m, n := len(mat), len(mat[0])
-	idx := map[int][2]int{}
-	for i := range mat {
-		for j := range mat[i] {
-			idx[mat[i][j]] = [2]int{i, j}
-		}
-	}
-	row := make([]int, m)
-	col := make([]int, n)
-	for k := 0; ; k++ {
-		x := idx[arr[k]]
-		i, j := x[0], x[1]
-		row[i]++
-		col[j]++
-		if row[i] == n || col[j] == m {
-			return k
-		}
-	}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function firstCompleteIndex(arr: number[], mat: number[][]): number {
-    const m = mat.length;
-    const n = mat[0].length;
-    const idx: Map<number, number[]> = new Map();
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            idx.set(mat[i][j], [i, j]);
-        }
-    }
-    const row: number[] = new Array(m).fill(0);
-    const col: number[] = new Array(n).fill(0);
-    for (let k = 0; ; ++k) {
-        const [i, j] = idx.get(arr[k])!;
-        ++row[i];
-        ++col[j];
-        if (row[i] === n || col[j] === m) {
-            return k;
-        }
-    }
-}
-```
+
 
 ### **...**
 
@@ -192,4 +112,4 @@ function firstCompleteIndex(arr: number[], mat: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

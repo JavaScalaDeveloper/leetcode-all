@@ -76,15 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def averageWaitingTime(self, customers: List[List[int]]) -> float:
-        tot = t = 0
-        for a, b in customers:
-            t = max(t, a) + b
-            tot += t - a
-        return tot / len(customers)
-```
+
 
 ### **Java**
 
@@ -105,44 +97,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double averageWaitingTime(vector<vector<int>>& customers) {
-        double tot = 0;
-        int t = 0;
-        for (auto& e : customers) {
-            int a = e[0], b = e[1];
-            t = max(t, a) + b;
-            tot += t - a;
-        }
-        return tot / customers.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func averageWaitingTime(customers [][]int) float64 {
-	tot, t := 0, 0
-	for _, e := range customers {
-		a, b := e[0], e[1]
-		t = max(t, a) + b
-		tot += t - a
-	}
-	return float64(tot) / float64(len(customers))
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -150,4 +111,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -65,20 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def surfaceArea(self, grid: List[List[int]]) -> int:
-        ans = 0
-        for i, row in enumerate(grid):
-            for j, v in enumerate(row):
-                if v:
-                    ans += 2 + v * 4
-                    if i:
-                        ans -= min(v, grid[i - 1][j]) * 2
-                    if j:
-                        ans -= min(v, grid[i][j - 1]) * 2
-        return ans
-```
+
 
 ### **Java**
 
@@ -107,56 +94,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int surfaceArea(vector<vector<int>>& grid) {
-        int n = grid.size();
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j]) {
-                    ans += 2 + grid[i][j] * 4;
-                    if (i) ans -= min(grid[i][j], grid[i - 1][j]) * 2;
-                    if (j) ans -= min(grid[i][j], grid[i][j - 1]) * 2;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func surfaceArea(grid [][]int) int {
-	ans := 0
-	for i, row := range grid {
-		for j, v := range row {
-			if v > 0 {
-				ans += 2 + v*4
-				if i > 0 {
-					ans -= min(v, grid[i-1][j]) * 2
-				}
-				if j > 0 {
-					ans -= min(v, grid[i][j-1]) * 2
-				}
-			}
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -164,4 +108,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

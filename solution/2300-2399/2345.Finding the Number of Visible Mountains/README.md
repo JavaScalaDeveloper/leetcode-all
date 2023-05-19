@@ -64,21 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def visibleMountains(self, peaks: List[List[int]]) -> int:
-        arr = [(x - y, x + y) for x, y in peaks]
-        cnt = Counter(arr)
-        arr.sort(key=lambda x: (x[0], -x[1]))
-        ans, cur = 0, -inf
-        for l, r in arr:
-            if r <= cur:
-                continue
-            cur = r
-            if cnt[(l, r)] == 1:
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -140,65 +126,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int visibleMountains(vector<vector<int>>& peaks) {
-        vector<pair<int, int>> arr;
-        for (auto& e : peaks) {
-            int x = e[0], y = e[1];
-            arr.emplace_back(x - y, -(x + y));
-        }
-        sort(arr.begin(), arr.end());
-        int n = arr.size();
-        int ans = 0, cur = INT_MIN;
-        for (int i = 0; i < n; ++i) {
-            int l = arr[i].first, r = -arr[i].second;
-            if (r <= cur) {
-                continue;
-            }
-            cur = r;
-            ans += i == n - 1 || (i < n - 1 && arr[i] != arr[i + 1]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func visibleMountains(peaks [][]int) (ans int) {
-	n := len(peaks)
-	type pair struct{ l, r int }
-	arr := make([]pair, n)
-	for _, p := range peaks {
-		x, y := p[0], p[1]
-		arr = append(arr, pair{x - y, x + y})
-	}
-	sort.Slice(arr, func(i, j int) bool { return arr[i].l < arr[j].l || (arr[i].l == arr[j].l && arr[i].r > arr[j].r) })
-	cur := math.MinInt32
-	for i, e := range arr {
-		l, r := e.l, e.r
-		if r <= cur {
-			continue
-		}
-		cur = r
-		if !(i < n-1 && l == arr[i+1].l && r == arr[i+1].r) {
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -206,4 +144,4 @@ func visibleMountains(peaks [][]int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -50,62 +50,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reversePairs(self, nums: List[int]) -> int:
-        def merge_sort(l, r):
-            if l >= r:
-                return 0
-            mid = (l + r) >> 1
-            ans = merge_sort(l, mid) + merge_sort(mid + 1, r)
-            t = []
-            i, j = l, mid + 1
-            while i <= mid and j <= r:
-                if nums[i] <= nums[j]:
-                    t.append(nums[i])
-                    i += 1
-                else:
-                    ans += mid - i + 1
-                    t.append(nums[j])
-                    j += 1
-            t.extend(nums[i : mid + 1])
-            t.extend(nums[j : r + 1])
-            nums[l : r + 1] = t
-            return ans
 
-        return merge_sort(0, len(nums) - 1)
-```
 
-```python
-class BinaryIndexedTree:
-    def __init__(self, n):
-        self.n = n
-        self.c = [0] * (n + 1)
 
-    def update(self, x, delta):
-        while x <= self.n:
-            self.c[x] += delta
-            x += x & -x
-
-    def query(self, x):
-        s = 0
-        while x:
-            s += self.c[x]
-            x -= x & -x
-        return s
-
-class Solution:
-    def reversePairs(self, nums: List[int]) -> int:
-        alls = sorted(set(nums))
-        m = len(alls)
-        tree = BinaryIndexedTree(m)
-        ans = 0
-        for v in nums[::-1]:
-            x = bisect_left(alls, v) + 1
-            ans += tree.query(x - 1)
-            tree.update(x, 1)
-        return ans
-```
 
 ### **Java**
 
@@ -202,296 +149,29 @@ class BinaryIndexedTree {
 }
 ```
 
-### **C++**
-
-```cpp
-class Solution {
-public:
-    int reversePairs(vector<int>& nums) {
-        int n = nums.size();
-        if (n == 0) {
-            return 0;
-        }
-        int t[n];
-        function<int(int, int)> mergeSort = [&](int l, int r) -> int {
-            if (l >= r) {
-                return 0;
-            }
-            int mid = (l + r) >> 1;
-            int ans = mergeSort(l, mid) + mergeSort(mid + 1, r);
-            int i = l, j = mid + 1, k = 0;
-            while (i <= mid && j <= r) {
-                if (nums[i] <= nums[j]) {
-                    t[k++] = nums[i++];
-                } else {
-                    ans += mid - i + 1;
-                    t[k++] = nums[j++];
-                }
-            }
-            while (i <= mid) {
-                t[k++] = nums[i++];
-            }
-            while (j <= r) {
-                t[k++] = nums[j++];
-            }
-            for (i = l; i <= r; ++i) {
-                nums[i] = t[i - l];
-            }
-            return ans;
-        };
-        return mergeSort(0, n - 1);
-    }
-};
-```
-
-```cpp
-class BinaryIndexedTree {
-public:
-    int n;
-    vector<int> c;
-
-    BinaryIndexedTree(int _n): n(_n), c(_n + 1){}
-
-    void update(int x, int delta) {
-        while (x <= n) {
-            c[x] += delta;
-            x += x & -x;
-        }
-    }
-
-    int query(int x) {
-        int s = 0;
-        while (x > 0) {
-            s += c[x];
-            x -= x & -x;
-        }
-        return s;
-    }
-};
 
 
-class Solution {
-public:
-    int reversePairs(vector<int>& nums) {
-        vector<int> alls = nums;
-        sort(alls.begin(), alls.end());
-        alls.erase(unique(alls.begin(), alls.end()), alls.end());
-        BinaryIndexedTree tree(alls.size());
-        int ans = 0;
-        for (int i = nums.size() - 1; ~i; --i) {
-            int x = lower_bound(alls.begin(), alls.end(), nums[i]) - alls.begin() + 1;
-            ans += tree.query(x - 1);
-            tree.update(x, 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reversePairs(nums []int) int {
-	n := len(nums)
-	t := make([]int, n)
-	var mergeSort func(l, r int) int
-	mergeSort = func(l, r int) int {
-		if l >= r {
-			return 0
-		}
-		mid := (l + r) >> 1
-		ans := mergeSort(l, mid) + mergeSort(mid+1, r)
-		i, j, k := l, mid+1, 0
-		for i <= mid && j <= r {
-			if nums[i] <= nums[j] {
-				t[k] = nums[i]
-				k, i = k+1, i+1
-			} else {
-				ans += mid - i + 1
-				t[k] = nums[j]
-				k, j = k+1, j+1
-			}
-		}
-		for ; i <= mid; i, k = i+1, k+1 {
-			t[k] = nums[i]
-		}
-		for ; j <= r; j, k = j+1, k+1 {
-			t[k] = nums[j]
-		}
-		for i = l; i <= r; i++ {
-			nums[i] = t[i-l]
-		}
-		return ans
-	}
-	return mergeSort(0, n-1)
-}
-```
 
-```go
-func reversePairs(nums []int) (ans int) {
-	s := map[int]bool{}
-	for _, v := range nums {
-		s[v] = true
-	}
-	alls := []int{}
-	for v := range s {
-		alls = append(alls, v)
-	}
-	sort.Ints(alls)
-	tree := newBinaryIndexedTree(len(alls))
-	for i := len(nums) - 1; i >= 0; i-- {
-		x := sort.SearchInts(alls, nums[i]) + 1
-		ans += tree.query(x - 1)
-		tree.update(x, 1)
-	}
-	return
-}
 
-type BinaryIndexedTree struct {
-	n int
-	c []int
-}
 
-func newBinaryIndexedTree(n int) *BinaryIndexedTree {
-	c := make([]int, n+1)
-	return &BinaryIndexedTree{n, c}
-}
 
-func (this *BinaryIndexedTree) update(x, delta int) {
-	for x <= this.n {
-		this.c[x] += delta
-		x += x & -x
-	}
-}
 
-func (this *BinaryIndexedTree) query(x int) int {
-	s := 0
-	for x > 0 {
-		s += this.c[x]
-		x -= x & -x
-	}
-	return s
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var reversePairs = function (nums) {
-    const mergeSort = (l, r) => {
-        if (l >= r) {
-            return 0;
-        }
-        const mid = (l + r) >> 1;
-        let ans = mergeSort(l, mid) + mergeSort(mid + 1, r);
-        let i = l;
-        let j = mid + 1;
-        let t = [];
-        while (i <= mid && j <= r) {
-            if (nums[i] <= nums[j]) {
-                t.push(nums[i++]);
-            } else {
-                ans += mid - i + 1;
-                t.push(nums[j++]);
-            }
-        }
-        while (i <= mid) {
-            t.push(nums[i++]);
-        }
-        while (j <= r) {
-            t.push(nums[j++]);
-        }
-        for (i = l; i <= r; ++i) {
-            nums[i] = t[i - l];
-        }
-        return ans;
-    };
-    return mergeSort(0, nums.length - 1);
-};
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function reversePairs(nums: number[]): number {
-    const mergeSort = (l: number, r: number): number => {
-        if (l >= r) {
-            return 0;
-        }
-        const mid = (l + r) >> 1;
-        let ans = mergeSort(l, mid) + mergeSort(mid + 1, r);
-        let i = l;
-        let j = mid + 1;
-        const t: number[] = [];
-        while (i <= mid && j <= r) {
-            if (nums[i] <= nums[j]) {
-                t.push(nums[i++]);
-            } else {
-                ans += mid - i + 1;
-                t.push(nums[j++]);
-            }
-        }
-        while (i <= mid) {
-            t.push(nums[i++]);
-        }
-        while (j <= r) {
-            t.push(nums[j++]);
-        }
-        for (i = l; i <= r; ++i) {
-            nums[i] = t[i - l];
-        }
-        return ans;
-    };
-    return mergeSort(0, nums.length - 1);
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    private int[] nums;
-    private int[] t;
 
-    public int ReversePairs(int[] nums) {
-        this.nums = nums;
-        int n = nums.Length;
-        this.t = new int[n];
-        return mergeSort(0, n - 1);
-    }
 
-    private int mergeSort(int l, int r) {
-        if (l >= r) {
-            return 0;
-        }
-        int mid = (l + r) >> 1;
-        int ans = mergeSort(l, mid) + mergeSort(mid + 1, r);
-        int i = l, j = mid + 1, k = 0;
-        while (i <= mid && j <= r) {
-            if (nums[i] <= nums[j]) {
-                t[k++] = nums[i++];
-            } else {
-                ans += mid - i + 1;
-                t[k++] = nums[j++];
-            }
-        }
-        while (i <= mid) {
-            t[k++] = nums[i++];
-        }
-        while (j <= r) {
-            t[k++] = nums[j++];
-        }
-        for (i = l; i <= r; ++i) {
-            nums[i] = t[i - l];
-        }
-        return ans;
-    }
-}
-```
+
 
 ### **...**
 
@@ -499,4 +179,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

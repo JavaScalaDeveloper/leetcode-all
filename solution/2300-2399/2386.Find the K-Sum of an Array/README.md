@@ -69,25 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kSum(self, nums: List[int], k: int) -> int:
-        mx = 0
-        for i, v in enumerate(nums):
-            if v > 0:
-                mx += v
-            else:
-                nums[i] = -v
-        nums.sort()
-        h = [(0, 0)]
-        for _ in range(k - 1):
-            s, i = heappop(h)
-            if i < len(nums):
-                heappush(h, (s + nums[i], i + 1))
-                if i:
-                    heappush(h, (s + nums[i] - nums[i - 1], i + 1))
-        return mx - h[0][0]
-```
+
 
 ### **Java**
 
@@ -125,85 +107,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using pli = pair<long long, int>;
 
-class Solution {
-public:
-    long long kSum(vector<int>& nums, int k) {
-        long long mx = 0;
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] > 0) {
-                mx += nums[i];
-            } else {
-                nums[i] *= -1;
-            }
-        }
-        sort(nums.begin(), nums.end());
-        priority_queue<pli, vector<pli>, greater<pli>> pq;
-        pq.push({0, 0});
-        while (--k) {
-            auto p = pq.top();
-            pq.pop();
-            long long s = p.first;
-            int i = p.second;
-            if (i < n) {
-                pq.push({s + nums[i], i + 1});
-                if (i) {
-                    pq.push({s + nums[i] - nums[i - 1], i + 1});
-                }
-            }
-        }
-        return mx - pq.top().first;
-    }
-};
-```
 
-### **Go**
 
-```go
-func kSum(nums []int, k int) int64 {
-	mx := 0
-	for i, v := range nums {
-		if v > 0 {
-			mx += v
-		} else {
-			nums[i] *= -1
-		}
-	}
-	sort.Ints(nums)
-	h := &hp{{0, 0}}
-	for k > 1 {
-		k--
-		p := heap.Pop(h).(pair)
-		if p.i < len(nums) {
-			heap.Push(h, pair{p.sum + nums[p.i], p.i + 1})
-			if p.i > 0 {
-				heap.Push(h, pair{p.sum + nums[p.i] - nums[p.i-1], p.i + 1})
-			}
-		}
-	}
-	return int64(mx) - int64((*h)[0].sum)
-}
 
-type pair struct{ sum, i int }
-type hp []pair
 
-func (h hp) Len() int            { return len(h) }
-func (h hp) Less(i, j int) bool  { return h[i].sum < h[j].sum }
-func (h hp) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
-func (h *hp) Push(v interface{}) { *h = append(*h, v.(pair)) }
-func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
-```
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -212,4 +126,4 @@ func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1];
 
 ```
 
-<!-- tabs:end -->
+

@@ -58,21 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t) or s == t:
-            return False
-        n = len(s)
-        chars = [0] * 26
-        for i in range(n):
-            chars[ord(s[i]) - ord('a')] += 1
-            chars[ord(t[i]) - ord('a')] -= 1
-        for c in chars:
-            if c != 0:
-                return False
-        return True
-```
+
 
 ### **Java**
 
@@ -100,48 +86,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isAnagram(string s, string t) {
-        if (s.size() != t.size() || s == t)
-            return false;
-        vector<int> chars(26, 0);
-        for (int i = 0, n = s.size(); i < n; ++i) {
-            ++chars[s[i] - 'a'];
-            --chars[t[i] - 'a'];
-        }
-        for (int c : chars) {
-            if (c != 0)
-                return false;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isAnagram(s string, t string) bool {
-    if len(s) != len(t) || s == t {
-        return false
-    }
-    var chars [26]int
-    for i := 0; i < len(s); i++ {
-        chars[s[i]-'a']++
-        chars[t[i]-'a']--
-    }
-    for _, c := range chars {
-        if c != 0 {
-            return false
-        }
-    }
-    return true
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -149,4 +100,4 @@ func isAnagram(s string, t string) bool {
 
 ```
 
-<!-- tabs:end -->
+

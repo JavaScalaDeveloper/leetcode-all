@@ -87,37 +87,9 @@ p = &quot;mis*is*p*.&quot;
 
 ### **Python3**
 
-```python
-class Solution:
-    def isMatch(self, s: str, p: str) -> bool:
-        @cache
-        def dfs(i, j):
-            if j >= n:
-                return i == m
-            if j + 1 < n and p[j + 1] == '*':
-                return dfs(i, j + 2) or (i < m and (s[i] == p[j] or p[j] == '.') and dfs(i + 1, j))
-            return i < m and (s[i] == p[j] or p[j] == '.') and dfs(i + 1, j + 1)
 
-        m, n = len(s), len(p)
-        return dfs(0, 0)
-```
 
-```python
-class Solution:
-    def isMatch(self, s: str, p: str) -> bool:
-        m, n = len(s), len(p)
-        f = [[False] * (n + 1) for _ in range(m + 1)]
-        f[0][0] = True
-        for i in range(m + 1):
-            for j in range(1, n + 1):
-                if p[j - 1] == "*":
-                    f[i][j] = f[i][j - 2]
-                    if i > 0 and (p[j - 2] == "." or s[i - 1] == p[j - 2]):
-                        f[i][j] |= f[i - 1][j]
-                elif i > 0 and (p[j - 1] == "." or s[i - 1] == p[j - 1]):
-                    f[i][j] = f[i - 1][j - 1]
-        return f[m][n]
-```
+
 
 ### **Java**
 
@@ -180,249 +152,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isMatch(string s, string p) {
-        int m = s.size(), n = p.size();
-        int f[m + 1][n + 1];
-        memset(f, 0, sizeof f);
-        function<bool(int, int)> dfs = [&](int i, int j) -> bool {
-            if (j >= n) {
-                return i == m;
-            }
-            if (f[i][j]) {
-                return f[i][j] == 1;
-            }
-            int res = -1;
-            if (j + 1 < n && p[j + 1] == '*') {
-                if (dfs(i, j + 2) or (i < m and (s[i] == p[j] or p[j] == '.') and dfs(i + 1, j))) {
-                    res = 1;
-                }
-            } else if (i < m and (s[i] == p[j] or p[j] == '.') and dfs(i + 1, j + 1)) {
-                res = 1;
-            }
-            f[i][j] = res;
-            return res == 1;
-        };
-        return dfs(0, 0);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool isMatch(string s, string p) {
-        int m = s.size(), n = p.size();
-        bool f[m + 1][n + 1];
-        memset(f, false, sizeof f);
-        f[0][0] = true;
-        for (int i = 0; i <= m; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                if (p[j - 1] == '*') {
-                    f[i][j] = f[i][j - 2];
-                    if (i && (p[j - 2] == '.' || p[j - 2] == s[i - 1])) {
-                        f[i][j] |= f[i - 1][j];
-                    }
-                } else if (i && (p[j - 1] == '.' || p[j - 1] == s[i - 1])) {
-                    f[i][j] = f[i - 1][j - 1];
-                }
-            }
-        }
-        return f[m][n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func isMatch(s string, p string) bool {
-	m, n := len(s), len(p)
-	f := make([][]int, m+1)
-	for i := range f {
-		f[i] = make([]int, n+1)
-	}
-	var dfs func(i, j int) bool
-	dfs = func(i, j int) bool {
-		if j >= n {
-			return i == m
-		}
-		if f[i][j] != 0 {
-			return f[i][j] == 1
-		}
-		res := -1
-		if j+1 < n && p[j+1] == '*' {
-			if dfs(i, j+2) || (i < m && (s[i] == p[j] || p[j] == '.') && dfs(i+1, j)) {
-				res = 1
-			}
-		} else if i < m && (s[i] == p[j] || p[j] == '.') && dfs(i+1, j+1) {
-			res = 1
-		}
-		f[i][j] = res
-		return res == 1
-	}
-	return dfs(0, 0)
-}
-```
 
-```go
-func isMatch(s string, p string) bool {
-	m, n := len(s), len(p)
-	f := make([][]bool, m+1)
-	for i := range f {
-		f[i] = make([]bool, n+1)
-	}
-	f[0][0] = true
-	for i := 0; i <= m; i++ {
-		for j := 1; j <= n; j++ {
-			if p[j-1] == '*' {
-				f[i][j] = f[i][j-2]
-				if i > 0 && (p[j-2] == '.' || p[j-2] == s[i-1]) {
-					f[i][j] = f[i][j] || f[i-1][j]
-				}
-			} else if i > 0 && (p[j-1] == '.' || p[j-1] == s[i-1]) {
-				f[i][j] = f[i-1][j-1]
-			}
-		}
-	}
-	return f[m][n]
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @param {string} p
- * @return {boolean}
- */
-var isMatch = function (s, p) {
-    const m = s.length;
-    const n = p.length;
-    const f = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
-    const dfs = (i, j) => {
-        if (j >= n) {
-            return i == m;
-        }
-        if (f[i][j]) {
-            return f[i][j] == 1;
-        }
-        let res = -1;
-        if (j + 1 < n && p[j + 1] === '*') {
-            if (
-                dfs(i, j + 2) ||
-                (i < m && (s[i] == p[j] || p[j] == '.') && dfs(i + 1, j))
-            ) {
-                res = 1;
-            }
-        } else if (
-            i < m &&
-            (s[i] == p[j] || p[j] == '.') &&
-            dfs(i + 1, j + 1)
-        ) {
-            res = 1;
-        }
-        f[i][j] = res;
-        return res == 1;
-    };
-    return dfs(0, 0);
-};
-```
 
-```js
-/**
- * @param {string} s
- * @param {string} p
- * @return {boolean}
- */
-var isMatch = function (s, p) {
-    const m = s.length;
-    const n = p.length;
-    const f = Array.from({ length: m + 1 }, () => Array(n + 1).fill(false));
-    f[0][0] = true;
-    for (let i = 0; i <= m; ++i) {
-        for (let j = 1; j <= n; ++j) {
-            if (p[j - 1] === '*') {
-                f[i][j] = f[i][j - 2];
-                if (i && (p[j - 2] === '.' || p[j - 2] == s[i - 1])) {
-                    f[i][j] |= f[i - 1][j];
-                }
-            } else if (i && (p[j - 1] === '.' || p[j - 1] == s[i - 1])) {
-                f[i][j] = f[i - 1][j - 1];
-            }
-        }
-    }
-    return f[m][n];
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    private string s;
-    private string p;
-    private int m;
-    private int n;
-    private int[,] f;
 
-    public bool IsMatch(string s, string p) {
-        m = s.Length;
-        n = p.Length;
-        f = new int[m + 1, n + 1];
-        this.s = s;
-        this.p = p;
-        return dfs(0, 0);
-    }
 
-    private bool dfs(int i, int j) {
-        if (j >= n) {
-            return i == m;
-        }
-        if (f[i, j] != 0) {
-            return f[i, j] == 1;
-        }
-        int res = -1;
-        if (j + 1 < n && p[j + 1] == '*') {
-            if (dfs(i, j + 2) || (i < m && (s[i] == p[j] || p[j] == '.') && dfs(i + 1, j))) {
-                res = 1;
-            }
-        } else if (i < m && (s[i] == p[j] || p[j] == '.') && dfs(i + 1, j + 1)) {
-            res = 1;
-        }
-        f[i, j] = res;
-        return res == 1;
-    }
-}
-```
 
-```cs
-public class Solution {
-    public bool IsMatch(string s, string p) {
-        int m = s.Length, n = p.Length;
-        bool[,] f = new bool[m + 1, n + 1];
-        f[0, 0] = true;
-        for (int i = 0; i <= m; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                if (p[j - 1] == '*') {
-                    f[i, j] = f[i, j - 2];
-                    if (i > 0 && (p[j - 2] == '.' || p[j - 2] == s[i - 1])) {
-                        f[i, j] |= f[i - 1, j];
-                    }
-                } else if (i > 0 && (p[j - 1] == '.' || p[j - 1] == s[i - 1])) {
-                    f[i, j] = f[i - 1, j - 1];
-                }
-            }
-        }
-        return f[m, n];
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -430,4 +182,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -71,27 +71,7 @@ BFS 最短路模型。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def nearestExit(self, maze: List[List[str]], entrance: List[int]) -> int:
-        m, n = len(maze), len(maze[0])
-        i, j = entrance
-        q = deque([(i, j)])
-        maze[i][j] = '+'
-        ans = 0
-        while q:
-            ans += 1
-            for _ in range(len(q)):
-                i, j = q.popleft()
-                for a, b in [[0, -1], [0, 1], [-1, 0], [1, 0]]:
-                    x, y = i + a, j + b
-                    if 0 <= x < m and 0 <= y < n and maze[x][y] == '.':
-                        if x == 0 or x == m - 1 or y == 0 or y == n - 1:
-                            return ans
-                        q.append((x, y))
-                        maze[x][y] = '+'
-        return -1
-```
+
 
 ### **Java**
 
@@ -129,66 +109,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int nearestExit(vector<vector<char>>& maze, vector<int>& entrance) {
-        int m = maze.size(), n = maze[0].size();
-        queue<vector<int>> q {{entrance}};
-        maze[entrance[0]][entrance[1]] = '+';
-        int ans = 0;
-        vector<int> dirs = {-1, 0, 1, 0, -1};
-        while (!q.empty()) {
-            ++ans;
-            for (int k = q.size(); k > 0; --k) {
-                auto p = q.front();
-                q.pop();
-                for (int l = 0; l < 4; ++l) {
-                    int x = p[0] + dirs[l], y = p[1] + dirs[l + 1];
-                    if (x >= 0 && x < m && y >= 0 && y < n && maze[x][y] == '.') {
-                        if (x == 0 || x == m - 1 || y == 0 || y == n - 1) return ans;
-                        q.push({x, y});
-                        maze[x][y] = '+';
-                    }
-                }
-            }
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func nearestExit(maze [][]byte, entrance []int) int {
-	m, n := len(maze), len(maze[0])
-	q := [][]int{entrance}
-	maze[entrance[0]][entrance[1]] = '+'
-	ans := 0
-	dirs := []int{-1, 0, 1, 0, -1}
-	for len(q) > 0 {
-		ans++
-		for k := len(q); k > 0; k-- {
-			p := q[0]
-			q = q[1:]
-			for l := 0; l < 4; l++ {
-				x, y := p[0]+dirs[l], p[1]+dirs[l+1]
-				if x >= 0 && x < m && y >= 0 && y < n && maze[x][y] == '.' {
-					if x == 0 || x == m-1 || y == 0 || y == n-1 {
-						return ans
-					}
-					q = append(q, []int{x, y})
-					maze[x][y] = '+'
-				}
-			}
-		}
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -196,4 +123,4 @@ func nearestExit(maze [][]byte, entrance []int) int {
 
 ```
 
-<!-- tabs:end -->
+

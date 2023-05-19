@@ -89,30 +89,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumTotalDistance(self, robot: List[int], factory: List[List[int]]) -> int:
-        @cache
-        def dfs(i, j):
-            if i == len(robot):
-                return 0
-            if j == len(factory):
-                return inf
-            ans = dfs(i, j + 1)
-            t = 0
-            for k in range(factory[j][1]):
-                if i + k == len(robot):
-                    break
-                t += abs(robot[i + k] - factory[j][0])
-                ans = min(ans, t + dfs(i + k + 1, j + 1))
-            return ans
 
-        robot.sort()
-        factory.sort()
-        ans = dfs(0, 0)
-        dfs.cache_clear()
-        return ans
-```
 
 ### **Java**
 
@@ -158,92 +135,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using ll = long long;
 
-class Solution {
-public:
-    long long minimumTotalDistance(vector<int>& robot, vector<vector<int>>& factory) {
-        sort(robot.begin(), robot.end());
-        sort(factory.begin(), factory.end());
-        vector<vector<ll>> f(robot.size(), vector<ll>(factory.size()));
-        function<ll(int i, int j)> dfs = [&](int i, int j) -> ll {
-            if (i == robot.size()) return 0;
-            if (j == factory.size()) return 1e15;
-            if (f[i][j]) return f[i][j];
-            ll ans = dfs(i, j + 1);
-            ll t = 0;
-            for (int k = 0; k < factory[j][1]; ++k) {
-                if (i + k >= robot.size()) break;
-                t += abs(robot[i + k] - factory[j][0]);
-                ans = min(ans, t + dfs(i + k + 1, j + 1));
-            }
-            f[i][j] = ans;
-            return ans;
-        };
-        return dfs(0, 0);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumTotalDistance(robot []int, factory [][]int) int64 {
-	sort.Ints(robot)
-	sort.Slice(factory, func(i, j int) bool { return factory[i][0] < factory[j][0] })
-	f := make([][]int, len(robot))
-	for i := range f {
-		f[i] = make([]int, len(factory))
-	}
-	var dfs func(i, j int) int
-	dfs = func(i, j int) int {
-		if i == len(robot) {
-			return 0
-		}
-		if j == len(factory) {
-			return 1e15
-		}
-		if f[i][j] != 0 {
-			return f[i][j]
-		}
-		ans := dfs(i, j+1)
-		t := 0
-		for k := 0; k < factory[j][1]; k++ {
-			if i+k >= len(robot) {
-				break
-			}
-			t += abs(robot[i+k] - factory[j][0])
-			ans = min(ans, t+dfs(i+k+1, j+1))
-		}
-		f[i][j] = ans
-		return ans
-	}
-	return int64(dfs(0, 0))
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -251,4 +153,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

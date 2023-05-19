@@ -99,37 +99,7 @@ findElements.find(5); // return True
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class FindElements:
 
-    def __init__(self, root: Optional[TreeNode]):
-        def dfs(root):
-            self.vis.add(root.val)
-            if root.left:
-                root.left.val = root.val * 2 + 1
-                dfs(root.left)
-            if root.right:
-                root.right.val = root.val * 2 + 2
-                dfs(root.right)
-
-        root.val = 0
-        self.vis = set()
-        dfs(root)
-
-    def find(self, target: int) -> bool:
-        return target in self.vis
-
-
-# Your FindElements object will be instantiated and called as such:
-# obj = FindElements(root)
-# param_1 = obj.find(target)
-```
 
 ### **Java**
 
@@ -183,97 +153,13 @@ class FindElements {
  */
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class FindElements {
-public:
-    FindElements(TreeNode* root) {
-        root->val = 0;
-        function<void(TreeNode*)> dfs = [&](TreeNode* root) {
-            vis.insert(root->val);
-            if (root->left) {
-                root->left->val = root->val * 2 + 1;
-                dfs(root->left);
-            }
-            if (root->right) {
-                root->right->val = root->val * 2 + 2;
-                dfs(root->right);
-            }
-        };
-        dfs(root);
-    }
 
-    bool find(int target) {
-        return vis.count(target);
-    }
 
-private:
-    unordered_set<int> vis;
-};
 
-/**
- * Your FindElements object will be instantiated and called as such:
- * FindElements* obj = new FindElements(root);
- * bool param_1 = obj->find(target);
- */
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-type FindElements struct {
-	vis map[int]bool
-}
 
-func Constructor(root *TreeNode) FindElements {
-	root.Val = 0
-	vis := map[int]bool{}
-	var dfs func(*TreeNode)
-	dfs = func(root *TreeNode) {
-		vis[root.Val] = true
-		if root.Left != nil {
-			root.Left.Val = root.Val*2 + 1
-			dfs(root.Left)
-		}
-		if root.Right != nil {
-			root.Right.Val = root.Val*2 + 2
-			dfs(root.Right)
-		}
-	}
-	dfs(root)
-	return FindElements{vis}
-}
-
-func (this *FindElements) Find(target int) bool {
-	return this.vis[target]
-}
-
-/**
- * Your FindElements object will be instantiated and called as such:
- * obj := Constructor(root);
- * param_1 := obj.Find(target);
- */
-```
 
 ### **...**
 
@@ -281,4 +167,4 @@ func (this *FindElements) Find(target int) bool {
 
 ```
 
-<!-- tabs:end -->
+

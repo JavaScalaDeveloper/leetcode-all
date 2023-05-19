@@ -62,29 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def maxPathSum(self, root: TreeNode) -> int:
-        ans = -inf
 
-        def dfs(node: TreeNode) -> int:
-            if not node:
-                return 0
-            left = max(0, dfs(node.left))
-            right = max(0, dfs(node.right))
-            nonlocal ans
-            ans = max(ans, node.val + left + right)
-            return node.val + max(left, right)
-
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -126,77 +104,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func maxPathSum(root *TreeNode) int {
-	ans := math.MinInt32
 
-	var dfs func(*TreeNode) int
-	dfs = func(node *TreeNode) int {
-		if node == nil {
-			return 0
-		}
-		left := max(0, dfs(node.Left))
-		right := max(0, dfs(node.Right))
-		ans = max(ans, node.Val+left+right)
-		return node.Val + max(left, right)
-	}
 
-	dfs(root)
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int maxPathSum(TreeNode* root) {
-        int ans = INT_MIN;
 
-        function<int(TreeNode*)> dfs = [&](TreeNode* node) {
-            if (node == nullptr) {
-                return 0;
-            }
-            int left = max(0, dfs(node->left));
-            int right = max(0, dfs(node->right));
-            ans = max(ans, node->val + left + right);
-            return node->val + max(left, right);
-        };
-
-        dfs(root);
-        return ans;
-    }
-};
-```
 
 ### **...**
 
@@ -204,4 +118,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

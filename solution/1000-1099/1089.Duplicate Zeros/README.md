@@ -62,29 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def duplicateZeros(self, arr: List[int]) -> None:
-        """
-        Do not return anything, modify arr in-place instead.
-        """
-        n = len(arr)
-        i, k = -1, 0
-        while k < n:
-            i += 1
-            k += 1 if arr[i] else 2
-        j = n - 1
-        if k == n + 1:
-            arr[j] = 0
-            i, j = i - 1, j - 1
-        while ~j:
-            if arr[i] == 0:
-                arr[j] = arr[j - 1] = arr[i]
-                j -= 1
-            else:
-                arr[j] = arr[i]
-            i, j = i - 1, j - 1
-```
+
 
 ### **Java**
 
@@ -116,60 +94,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    void duplicateZeros(vector<int>& arr) {
-        int n = arr.size();
-        int i = -1, k = 0;
-        while (k < n) {
-            ++i;
-            k += arr[i] ? 1 : 2;
-        }
-        int j = n - 1;
-        if (k == n + 1) {
-            arr[j--] = 0;
-            --i;
-        }
-        while (~j) {
-            arr[j] = arr[i];
-            if (arr[i] == 0) arr[--j] = arr[i];
-            --i;
-            --j;
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func duplicateZeros(arr []int) {
-	n := len(arr)
-	i, k := -1, 0
-	for k < n {
-		i, k = i+1, k+1
-		if arr[i] == 0 {
-			k++
-		}
-	}
-	j := n - 1
-	if k == n+1 {
-		arr[j] = 0
-		i, j = i-1, j-1
-	}
-	for j >= 0 {
-		arr[j] = arr[i]
-		if arr[i] == 0 {
-			j--
-			arr[j] = arr[i]
-		}
-		i, j = i-1, j-1
-	}
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -200,35 +131,9 @@ void duplicateZeros(int* arr, int arrSize){
 }
 ```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn duplicate_zeros(arr: &mut Vec<i32>) {
-        let n = arr.len();
-        let mut i = 0;
-        let mut j = 0;
-        while j < n {
-            if arr[i] == 0 {
-                j += 1;
-            }
-            j += 1;
-            i += 1;
-        }
-        while i > 0 {
-            if arr[i - 1] == 0 {
-                if j <= n {
-                    arr[j - 1] = arr[i - 1];
-                }
-                j -= 1;
-            }
-            arr[j - 1] = arr[i - 1];
-            i -= 1;
-            j -= 1;
-        }
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -236,4 +141,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -60,32 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -> int:
-        def quick_sort(left, right, k):
-            if left == right:
-                return nums[left]
-            i, j = left - 1, right + 1
-            x = nums[(left + right) >> 1]
-            while i < j:
-                while 1:
-                    i += 1
-                    if nums[i] >= x:
-                        break
-                while 1:
-                    j -= 1
-                    if nums[j] <= x:
-                        break
-                if i < j:
-                    nums[i], nums[j] = nums[j], nums[i]
-            if j < k:
-                return quick_sort(j + 1, right, k)
-            return quick_sort(left, j, k)
 
-        n = len(nums)
-        return quick_sort(0, n - 1, n - k)
-```
 
 ### **Java**
 
@@ -123,165 +98,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findKthLargest(vector<int>& nums, int k) {
-        int n = nums.size();
-        return quickSort(nums, 0, n - 1, n - k);
-    }
 
-    int quickSort(vector<int>& nums, int left, int right, int k) {
-        if (left == right) return nums[left];
-        int i = left - 1, j = right + 1;
-        int x = nums[left + right >> 1];
-        while (i < j) {
-            while (nums[++i] < x)
-                ;
-            while (nums[--j] > x)
-                ;
-            if (i < j) swap(nums[i], nums[j]);
-        }
-        return j < k ? quickSort(nums, j + 1, right, k) : quickSort(nums, left, j, k);
-    }
-};
-```
 
-### **Go**
 
-```go
-func findKthLargest(nums []int, k int) int {
-	n := len(nums)
-	return quickSort(nums, 0, n-1, n-k)
-}
 
-func quickSort(nums []int, left, right, k int) int {
-	if left == right {
-		return nums[left]
-	}
-	i, j := left-1, right+1
-	x := nums[(left+right)>>1]
-	for i < j {
-		for {
-			i++
-			if nums[i] >= x {
-				break
-			}
-		}
-		for {
-			j--
-			if nums[j] <= x {
-				break
-			}
-		}
-		if i < j {
-			nums[i], nums[j] = nums[j], nums[i]
-		}
-	}
-	if j < k {
-		return quickSort(nums, j+1, right, k)
-	}
-	return quickSort(nums, left, j, k)
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function findKthLargest(nums: number[], k: number): number {
-    const n = nums.length;
-    const swap = (i: number, j: number) => {
-        [nums[i], nums[j]] = [nums[j], nums[i]];
-    };
-    const sort = (l: number, r: number) => {
-        if (l + 1 > k || l >= r) {
-            return;
-        }
-        swap(l, l + Math.floor(Math.random() * (r - l)));
-        const num = nums[l];
-        let mark = l;
-        for (let i = l + 1; i < r; i++) {
-            if (nums[i] > num) {
-                mark++;
-                swap(i, mark);
-            }
-        }
-        swap(l, mark);
 
-        sort(l, mark);
-        sort(mark + 1, r);
-    };
-    sort(0, n);
-    return nums[k - 1];
-}
-```
 
-### **Rust**
 
-```rust
-use rand::Rng;
 
-impl Solution {
-    fn sort(nums: &mut Vec<i32>, l: usize, r: usize, k: usize) {
-        if l + 1 > k || l >= r {
-            return;
-        }
-        nums.swap(l, rand::thread_rng().gen_range(l, r));
-        let num = nums[l];
-        let mut mark = l;
-        for i in l..r {
-            if nums[i] > num {
-                mark += 1;
-                nums.swap(i, mark);
-            }
-        }
-        nums.swap(l, mark);
 
-        Self::sort(nums, l, mark, k);
-        Self::sort(nums, mark + 1, r, k);
-    }
 
-    pub fn find_kth_largest(mut nums: Vec<i32>, k: i32) -> i32 {
-        let n = nums.len();
-        let k = k as usize;
-        Self::sort(&mut nums, 0, n, k);
-        nums[k - 1]
-    }
-}
-```
 
-```rust
-use rand::Rng;
-
-impl Solution {
-    pub fn find_kth_largest(mut nums: Vec<i32>, k: i32) -> i32 {
-        let k = k as usize;
-        let n = nums.len();
-        let mut l = 0;
-        let mut r = n;
-        while l <= k - 1 && l < r {
-            nums.swap(l, rand::thread_rng().gen_range(l, r));
-            let num = nums[l];
-            let mut mark = l;
-            for i in l..r {
-                if nums[i] > num {
-                    mark += 1;
-                    nums.swap(i, mark);
-                }
-            }
-            nums.swap(l, mark);
-            if mark + 1 <= k {
-                l = mark + 1;
-            } else {
-                r = mark;
-            }
-        }
-        nums[k - 1]
-    }
-}
-```
 
 ### **...**
 
@@ -289,4 +122,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

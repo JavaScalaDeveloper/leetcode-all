@@ -46,22 +46,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def generateParenthesis(self, n: int) -> List[str]:
-        def dfs(left, right, t):
-            if left == n and right == n:
-                ans.append(t)
-                return
-            if left < n:
-                dfs(left + 1, right, t + '(')
-            if right < left:
-                dfs(left, right + 1, t + ')')
 
-        ans = []
-        dfs(0, 0, '')
-        return ans
-```
 
 ### **Java**
 
@@ -92,96 +77,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function generateParenthesis(n: number): string[] {
-    let ans = [];
-    let dfs = function (left, right, t) {
-        if (left == n && right == n) {
-            ans.push(t);
-            return;
-        }
-        if (left < n) {
-            dfs(left + 1, right, t + '(');
-        }
-        if (right < left) {
-            dfs(left, right + 1, t + ')');
-        }
-    };
-    dfs(0, 0, '');
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> generateParenthesis(int n) {
-        vector<string> ans;
-        dfs(0, 0, n, "", ans);
-        return ans;
-    }
 
-    void dfs(int left, int right, int n, string t, vector<string>& ans) {
-        if (left == n && right == n) {
-            ans.push_back(t);
-            return;
-        }
-        if (left < n) dfs(left + 1, right, n, t + "(", ans);
-        if (right < left) dfs(left, right + 1, n, t + ")", ans);
-    }
-};
-```
 
-### **Go**
 
-```go
-func generateParenthesis(n int) []string {
-	var ans []string
-	var dfs func(left, right int, t string)
-	dfs = func(left, right int, t string) {
-		if left == n && right == n {
-			ans = append(ans, t)
-			return
-		}
-		if left < n {
-			dfs(left+1, right, t+"(")
-		}
-		if right < left {
-			dfs(left, right+1, t+")")
-		}
-	}
-	dfs(0, 0, "")
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {string[]}
- */
-var generateParenthesis = function (n) {
-    let ans = [];
-    let dfs = function (left, right, t) {
-        if (left == n && right == n) {
-            ans.push(t);
-            return;
-        }
-        if (left < n) {
-            dfs(left + 1, right, t + '(');
-        }
-        if (right < left) {
-            dfs(left, right + 1, t + ')');
-        }
-    };
-    dfs(0, 0, '');
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -189,4 +97,4 @@ var generateParenthesis = function (n) {
 
 ```
 
-<!-- tabs:end -->
+

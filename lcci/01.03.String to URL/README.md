@@ -45,17 +45,9 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def replaceSpaces(self, S: str, length: int) -> str:
-        return S[:length].replace(' ', '%20')
-```
 
-```python
-class Solution:
-    def replaceSpaces(self, S: str, length: int) -> str:
-        return ''.join(['%20' if c == ' ' else c for c in S[:length]])
-```
+
+
 
 ### **Java**
 
@@ -80,75 +72,23 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} S
- * @param {number} length
- * @return {string}
- */
-var replaceSpaces = function (S, length) {
-    return encodeURI(S.substring(0, length));
-};
-```
 
-### **Go**
 
-```go
-func replaceSpaces(S string, length int) string {
-	// return url.PathEscape(S[:length])
-	j := len(S)
-	b := []byte(S)
-	for i := length - 1; i >= 0; i-- {
-		if b[i] == ' ' {
-			b[j-1] = '0'
-			b[j-2] = '2'
-			b[j-3] = '%'
-			j -= 3
-		} else {
-			b[j-1] = b[i]
-			j--
-		}
-	}
-	return string(b[j:])
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function replaceSpaces(S: string, length: number): string {
-    return S.slice(0, length).replace(/\s/g, '%20');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn replace_spaces(s: String, length: i32) -> String {
-        s[..length as usize].replace(' ', "%20")
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn replace_spaces(s: String, length: i32) -> String {
-        s.chars()
-            .take(length as usize)
-            .map(|c| {
-                if c == ' ' {
-                    "%20".to_string()
-                } else {
-                    c.to_string()
-                }
-            })
-            .collect()
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -156,4 +96,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

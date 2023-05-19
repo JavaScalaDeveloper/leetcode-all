@@ -65,20 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestDistancePair(self, nums: List[int], k: int) -> int:
-        def count(dist):
-            cnt = 0
-            for i, b in enumerate(nums):
-                a = b - dist
-                j = bisect_left(nums, a, 0, i)
-                cnt += i - j
-            return cnt
 
-        nums.sort()
-        return bisect_left(range(nums[-1] - nums[0]), k, key=count)
-```
 
 ### **Java**
 
@@ -122,98 +109,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function smallestDistancePair(nums: number[], k: number): number {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    let left = 0,
-        right = nums[n - 1] - nums[0];
-    while (left < right) {
-        let mid = (left + right) >> 1;
-        let count = 0,
-            i = 0;
-        for (let j = 0; j < n; j++) {
-            // 索引[i, j]距离nums[j]的距离<=mid
-            while (nums[j] - nums[i] > mid) {
-                i++;
-            }
-            count += j - i;
-        }
-        if (count >= k) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int smallestDistancePair(vector<int>& nums, int k) {
-        sort(nums.begin(), nums.end());
-        int left = 0, right = nums.back() - nums.front();
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (count(mid, k, nums) >= k)
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return left;
-    }
 
-    int count(int dist, int k, vector<int>& nums) {
-        int cnt = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            int target = nums[i] - dist;
-            int j = lower_bound(nums.begin(), nums.end(), target) - nums.begin();
-            cnt += i - j;
-        }
-        return cnt;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestDistancePair(nums []int, k int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	left, right := 0, nums[n-1]-nums[0]
-	count := func(dist int) int {
-		cnt := 0
-		for i, v := range nums {
-			target := v - dist
-			left, right := 0, i
-			for left < right {
-				mid := (left + right) >> 1
-				if nums[mid] >= target {
-					right = mid
-				} else {
-					left = mid + 1
-				}
-			}
-			cnt += i - left
-		}
-		return cnt
-	}
-	for left < right {
-		mid := (left + right) >> 1
-		if count(mid) >= k {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -221,4 +125,4 @@ func smallestDistancePair(nums []int, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

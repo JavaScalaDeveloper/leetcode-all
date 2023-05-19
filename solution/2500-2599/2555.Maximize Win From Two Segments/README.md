@@ -65,18 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximizeWin(self, prizePositions: List[int], k: int) -> int:
-        n = len(prizePositions)
-        f = [0] * (n + 1)
-        ans = 0
-        for i, x in enumerate(prizePositions, 1):
-            j = bisect_left(prizePositions, x - k)
-            ans = max(ans, f[j] + i - j)
-            f[i] = max(f[i - 1], i - j)
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,47 +101,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximizeWin(vector<int>& prizePositions, int k) {
-        int n = prizePositions.size();
-        vector<int> f(n + 1);
-        int ans = 0;
-        for (int i = 1; i <= n; ++i) {
-            int x = prizePositions[i - 1];
-            int j = lower_bound(prizePositions.begin(), prizePositions.end(), x - k) - prizePositions.begin();
-            ans = max(ans, f[j] + i - j);
-            f[i] = max(f[i - 1], i - j);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximizeWin(prizePositions []int, k int) (ans int) {
-	n := len(prizePositions)
-	f := make([]int, n+1)
-	for i, x := range prizePositions {
-		j := sort.Search(n, func(h int) bool { return prizePositions[h] >= x-k })
-		ans = max(ans, f[j]+i-j+1)
-		f[i+1] = max(f[i], i-j+1)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -160,4 +115,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

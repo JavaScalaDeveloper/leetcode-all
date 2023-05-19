@@ -67,44 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.children: List[Trie | None] = [None] * 26
-        self.ref: int = -1
 
-    def insert(self, w: str, i: int):
-        node = self
-        for c in w:
-            idx = ord(c) - ord("a")
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-        node.ref = i
-
-    def search(self, w: str) -> int:
-        node = self
-        for c in w:
-            idx = ord(c) - ord("a")
-            if node.children[idx] is None:
-                return -1
-            node = node.children[idx]
-            if node.ref != -1:
-                return node.ref
-        return -1
-
-
-class Solution:
-    def replaceWords(self, dictionary: List[str], sentence: str) -> str:
-        trie = Trie()
-        for i, w in enumerate(dictionary):
-            trie.insert(w, i)
-        ans = []
-        for w in sentence.split():
-            idx = trie.search(w)
-            ans.append(dictionary[idx] if idx != -1 else w)
-        return " ".join(ans)
-```
 
 ### **Java**
 
@@ -179,178 +142,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Trie {
-private:
-    Trie* children[26];
-    int ref;
 
-public:
-    Trie(): ref(-1) {
-        memset(children, 0, sizeof(children));
-    }
 
-    void insert(const string& w, int i) {
-        Trie* node = this;
-        for (auto& c : w) {
-            int idx = c - 'a';
-            if (!node->children[idx]) {
-                node->children[idx] = new Trie();
-            }
-            node = node->children[idx];
-        }
-        node->ref = i;
-    }
 
-    int search(const string& w) {
-        Trie* node = this;
-        for (auto& c : w) {
-            int idx = c - 'a';
-            if (!node->children[idx]) {
-                return -1;
-            }
-            node = node->children[idx];
-            if (node->ref != -1) {
-                return node->ref;
-            }
-        }
-        return -1;
-    }
-};
 
-class Solution {
-public:
-    string replaceWords(vector<string>& dictionary, string sentence) {
-        Trie* trie = new Trie();
-        for (int i = 0; i < dictionary.size(); ++i) {
-            trie->insert(dictionary[i], i);
-        }
-        stringstream ss(sentence);
-        string w;
-        string ans;
-        while (ss >> w) {
-            int idx = trie->search(w);
-            ans += (idx == -1 ? w : dictionary[idx]) + " ";
-        }
-        ans.pop_back();
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-type Trie struct {
-	children [26]*Trie
-	ref      int
-}
-
-func newTrie() *Trie {
-	return &Trie{ref: -1}
-}
-
-func (this *Trie) insert(w string, i int) {
-	node := this
-	for _, c := range w {
-		idx := c - 'a'
-		if node.children[idx] == nil {
-			node.children[idx] = newTrie()
-		}
-		node = node.children[idx]
-	}
-	node.ref = i
-}
-
-func (this *Trie) search(w string) int {
-	node := this
-	for _, c := range w {
-		idx := c - 'a'
-		if node.children[idx] == nil {
-			return -1
-		}
-		node = node.children[idx]
-		if node.ref != -1 {
-			return node.ref
-		}
-	}
-	return -1
-}
-
-func replaceWords(dictionary []string, sentence string) string {
-	trie := newTrie()
-	for i, w := range dictionary {
-		trie.insert(w, i)
-	}
-	ans := strings.Builder{}
-	for _, w := range strings.Split(sentence, " ") {
-		if idx := trie.search(w); idx != -1 {
-			ans.WriteString(dictionary[idx])
-		} else {
-			ans.WriteString(w)
-		}
-		ans.WriteByte(' ')
-	}
-	return ans.String()[:ans.Len()-1]
-}
-```
 
 ### **TypeScript**
 
-```ts
-class Trie {
-    private children: Trie[];
-    private ref: number;
 
-    constructor() {
-        this.children = new Array<Trie>(26);
-        this.ref = -1;
-    }
-
-    public insert(w: string, i: number) {
-        let node: Trie = this;
-        for (const c of w) {
-            const idx = c.charCodeAt(0) - 97;
-            if (!node.children[idx]) {
-                node.children[idx] = new Trie();
-            }
-            node = node.children[idx];
-        }
-        node.ref = i;
-    }
-
-    public search(w: string): number {
-        let node: Trie = this;
-        for (const c of w) {
-            const idx = c.charCodeAt(0) - 97;
-            if (!node.children[idx]) {
-                return -1;
-            }
-            node = node.children[idx];
-            if (node.ref !== -1) {
-                return node.ref;
-            }
-        }
-        return -1;
-    }
-}
-
-function replaceWords(dictionary: string[], sentence: string): string {
-    const trie = new Trie();
-    for (let i = 0; i < dictionary.length; i++) {
-        trie.insert(dictionary[i], i);
-    }
-    return sentence
-        .split(' ')
-        .map(w => {
-            const idx = trie.search(w);
-            return idx !== -1 ? dictionary[idx] : w;
-        })
-        .join(' ');
-}
-```
 
 ### **...**
 
@@ -358,4 +160,4 @@ function replaceWords(dictionary: string[], sentence: string): string {
 
 ```
 
-<!-- tabs:end -->
+

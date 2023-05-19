@@ -63,25 +63,7 @@ DFS。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numsSameConsecDiff(self, n: int, k: int) -> List[int]:
-        ans = []
 
-        def dfs(n, k, t):
-            if n == 0:
-                ans.append(t)
-                return
-            last = t % 10
-            if last + k <= 9:
-                dfs(n - 1, k, t * 10 + last + k)
-            if last - k >= 0 and k != 0:
-                dfs(n - 1, k, t * 10 + last - k)
-
-        for i in range(1, 10):
-            dfs(n - 1, k, i)
-        return ans
-```
 
 ### **Java**
 
@@ -117,57 +99,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> ans;
 
-    vector<int> numsSameConsecDiff(int n, int k) {
-        for (int i = 1; i < 10; ++i)
-            dfs(n - 1, k, i);
-        return ans;
-    }
 
-    void dfs(int n, int k, int t) {
-        if (n == 0) {
-            ans.push_back(t);
-            return;
-        }
-        int last = t % 10;
-        if (last + k <= 9) dfs(n - 1, k, t * 10 + last + k);
-        if (last - k >= 0 && k != 0) dfs(n - 1, k, t * 10 + last - k);
-    }
-};
-```
 
-### **Go**
 
-```go
-func numsSameConsecDiff(n int, k int) []int {
-	var ans []int
-	var dfs func(n, k, t int)
-	dfs = func(n, k, t int) {
-		if n == 0 {
-			ans = append(ans, t)
-			return
-		}
-		last := t % 10
-		if last+k <= 9 {
-			dfs(n-1, k, t*10+last+k)
-		}
-		if last-k >= 0 && k != 0 {
-			dfs(n-1, k, t*10+last-k)
-		}
-	}
 
-	for i := 1; i < 10; i++ {
-		dfs(n-1, k, i)
-	}
-	return ans
-}
-```
+
 
 ### **...**
 
@@ -175,4 +113,4 @@ func numsSameConsecDiff(n int, k int) []int {
 
 ```
 
-<!-- tabs:end -->
+

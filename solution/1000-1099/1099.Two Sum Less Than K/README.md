@@ -67,32 +67,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def twoSumLessThanK(self, nums: List[int], k: int) -> int:
-        nums.sort()
-        ans = -1
-        for i, x in enumerate(nums):
-            j = bisect_left(nums, k - x, lo=i + 1) - 1
-            if i < j:
-                ans = max(ans, x + nums[j])
-        return ans
-```
 
-```python
-class Solution:
-    def twoSumLessThanK(self, nums: List[int], k: int) -> int:
-        nums.sort()
-        ans = -1
-        i, j = 0, len(nums) - 1
-        while i < j:
-            if (t := nums[i] + nums[j]) < k:
-                ans = max(ans, t)
-                i += 1
-            else:
-                j -= 1
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -147,85 +124,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int twoSumLessThanK(vector<int>& nums, int k) {
-        sort(nums.begin(), nums.end());
-        int ans = -1, n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            int j = lower_bound(nums.begin() + i + 1, nums.end(), k - nums[i]) - nums.begin() - 1;
-            if (i < j) {
-                ans = max(ans, nums[i] + nums[j]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int twoSumLessThanK(vector<int>& nums, int k) {
-        sort(nums.begin(), nums.end());
-        int ans = -1;
-        int i = 0, j = nums.size() - 1;
-        while (i < j) {
-            int t = nums[i] + nums[j];
-            if (t < k) {
-                ans = max(ans, t);
-                ++i;
-            } else {
-                --j;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func twoSumLessThanK(nums []int, k int) int {
-	sort.Ints(nums)
-	ans := -1
-	for i, x := range nums {
-		j := sort.SearchInts(nums[i+1:], k-x) + i
-		if v := nums[i] + nums[j]; i < j && ans < v {
-			ans = v
-		}
-	}
-	return ans
-}
-```
 
-```go
-func twoSumLessThanK(nums []int, k int) int {
-	sort.Ints(nums)
-	ans := -1
-	i, j := 0, len(nums)-1
-	for i < j {
-		if t := nums[i] + nums[j]; t < k {
-			ans = max(ans, t)
-			i++
-		} else {
-			j--
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -233,4 +142,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

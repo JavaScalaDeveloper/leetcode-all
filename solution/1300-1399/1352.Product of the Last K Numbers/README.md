@@ -78,27 +78,7 @@ productOfNumbers.getProduct(2); // 返回 32 。最后 2 个数字的乘积是 4
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class ProductOfNumbers:
 
-    def __init__(self):
-        self.s = [1]
-
-    def add(self, num: int) -> None:
-        if num == 0:
-            self.s = [1]
-            return
-        self.s.append(self.s[-1] * num)
-
-    def getProduct(self, k: int) -> int:
-        return 0 if len(self.s) <= k else self.s[-1] // self.s[-k - 1]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)
-```
 
 ### **Java**
 
@@ -135,75 +115,13 @@ class ProductOfNumbers {
  */
 ```
 
-### **C++**
 
-```cpp
-class ProductOfNumbers {
-public:
-    ProductOfNumbers() {
-        s.push_back(1);
-    }
 
-    void add(int num) {
-        if (num == 0) {
-            s.clear();
-            s.push_back(1);
-            return;
-        }
-        s.push_back(s.back() * num);
-    }
 
-    int getProduct(int k) {
-        int n = s.size();
-        return n <= k ? 0 : s.back() / s[n - k - 1];
-    }
 
-private:
-    vector<int> s;
-};
 
-/**
- * Your ProductOfNumbers object will be instantiated and called as such:
- * ProductOfNumbers* obj = new ProductOfNumbers();
- * obj->add(num);
- * int param_2 = obj->getProduct(k);
- */
-```
 
-### **Go**
 
-```go
-type ProductOfNumbers struct {
-	s []int
-}
-
-func Constructor() ProductOfNumbers {
-	return ProductOfNumbers{[]int{1}}
-}
-
-func (this *ProductOfNumbers) Add(num int) {
-	if num == 0 {
-		this.s = []int{1}
-		return
-	}
-	this.s = append(this.s, this.s[len(this.s)-1]*num)
-}
-
-func (this *ProductOfNumbers) GetProduct(k int) int {
-	n := len(this.s)
-	if n <= k {
-		return 0
-	}
-	return this.s[len(this.s)-1] / this.s[len(this.s)-k-1]
-}
-
-/**
- * Your ProductOfNumbers object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Add(num);
- * param_2 := obj.GetProduct(k);
- */
-```
 
 ### **...**
 
@@ -211,4 +129,4 @@ func (this *ProductOfNumbers) GetProduct(k int) int {
 
 ```
 
-<!-- tabs:end -->
+

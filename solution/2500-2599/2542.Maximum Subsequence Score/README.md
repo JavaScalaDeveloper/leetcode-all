@@ -69,20 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxScore(self, nums1: List[int], nums2: List[int], k: int) -> int:
-        nums = sorted(zip(nums2, nums1), reverse=True)
-        q = []
-        ans = s = 0
-        for a, b in nums:
-            s += b
-            heappush(q, b)
-            if len(q) == k:
-                ans = max(ans, s * a)
-                s -= heappop(q)
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,77 +99,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long maxScore(vector<int>& nums1, vector<int>& nums2, int k) {
-        int n = nums1.size();
-        vector<pair<int, int>> nums(n);
-        for (int i = 0; i < n; ++i) {
-            nums[i] = {-nums2[i], nums1[i]};
-        }
-        sort(nums.begin(), nums.end());
-        priority_queue<int, vector<int>, greater<int>> q;
-        long long ans = 0, s = 0;
-        for (auto& [a, b] : nums) {
-            s += b;
-            q.push(b);
-            if (q.size() == k) {
-                ans = max(ans, s * -a);
-                s -= q.top();
-                q.pop();
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxScore(nums1 []int, nums2 []int, k int) int64 {
-	type pair struct{ a, b int }
-	nums := []pair{}
-	for i, a := range nums1 {
-		b := nums2[i]
-		nums = append(nums, pair{a, b})
-	}
-	sort.Slice(nums, func(i, j int) bool { return nums[i].b > nums[j].b })
-	q := hp{}
-	var ans, s int
-	for _, e := range nums {
-		a, b := e.a, e.b
-		s += a
-		heap.Push(&q, a)
-		if q.Len() == k {
-			ans = max(ans, s*b)
-			s -= heap.Pop(&q).(int)
-		}
-	}
-	return int64(ans)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h hp) Less(i, j int) bool  { return h.IntSlice[i] < h.IntSlice[j] }
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-```
+
 
 ### **...**
 
@@ -190,4 +113,4 @@ func (h *hp) Pop() interface{} {
 
 ```
 
-<!-- tabs:end -->
+

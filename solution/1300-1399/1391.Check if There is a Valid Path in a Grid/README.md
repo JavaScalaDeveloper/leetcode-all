@@ -85,61 +85,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 <!-- tabs:start -->
 
@@ -147,56 +101,7 @@ d[find(a)] = distance
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def hasValidPath(self, grid: List[List[int]]) -> bool:
-        m, n = len(grid), len(grid[0])
-        p = list(range(m * n))
 
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
-
-        def left(i, j):
-            if j > 0 and grid[i][j - 1] in (1, 4, 6):
-                p[find(i * n + j)] = find(i * n + j - 1)
-
-        def right(i, j):
-            if j < n - 1 and grid[i][j + 1] in (1, 3, 5):
-                p[find(i * n + j)] = find(i * n + j + 1)
-
-        def up(i, j):
-            if i > 0 and grid[i - 1][j] in (2, 3, 4):
-                p[find(i * n + j)] = find((i - 1) * n + j)
-
-        def down(i, j):
-            if i < m - 1 and grid[i + 1][j] in (2, 5, 6):
-                p[find(i * n + j)] = find((i + 1) * n + j)
-
-        for i in range(m):
-            for j in range(n):
-                e = grid[i][j]
-                if e == 1:
-                    left(i, j)
-                    right(i, j)
-                elif e == 2:
-                    up(i, j)
-                    down(i, j)
-                elif e == 3:
-                    left(i, j)
-                    down(i, j)
-                elif e == 4:
-                    right(i, j)
-                    down(i, j)
-                elif e == 5:
-                    left(i, j)
-                    up(i, j)
-                else:
-                    right(i, j)
-                    up(i, j)
-        return find(0) == find(m * n - 1)
-```
 
 ### **Java**
 
@@ -277,134 +182,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    bool hasValidPath(vector<vector<int>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
-        p.resize(m * n);
-        for (int i = 0; i < p.size(); ++i) p[i] = i;
-        auto left = [&](int i, int j) {
-            if (j > 0 && (grid[i][j - 1] == 1 || grid[i][j - 1] == 4 || grid[i][j - 1] == 6)) {
-                p[find(i * n + j)] = find(i * n + j - 1);
-            }
-        };
-        auto right = [&](int i, int j) {
-            if (j < n - 1 && (grid[i][j + 1] == 1 || grid[i][j + 1] == 3 || grid[i][j + 1] == 5)) {
-                p[find(i * n + j)] = find(i * n + j + 1);
-            }
-        };
-        auto up = [&](int i, int j) {
-            if (i > 0 && (grid[i - 1][j] == 2 || grid[i - 1][j] == 3 || grid[i - 1][j] == 4)) {
-                p[find(i * n + j)] = find((i - 1) * n + j);
-            }
-        };
-        auto down = [&](int i, int j) {
-            if (i < m - 1 && (grid[i + 1][j] == 2 || grid[i + 1][j] == 5 || grid[i + 1][j] == 6)) {
-                p[find(i * n + j)] = find((i + 1) * n + j);
-            }
-        };
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                int e = grid[i][j];
-                if (e == 1) {
-                    left(i, j);
-                    right(i, j);
-                } else if (e == 2) {
-                    up(i, j);
-                    down(i, j);
-                } else if (e == 3) {
-                    left(i, j);
-                    down(i, j);
-                } else if (e == 4) {
-                    right(i, j);
-                    down(i, j);
-                } else if (e == 5) {
-                    left(i, j);
-                    up(i, j);
-                } else {
-                    right(i, j);
-                    up(i, j);
-                }
-            }
-        }
-        return find(0) == find(m * n - 1);
-    }
 
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
-```go
-func hasValidPath(grid [][]int) bool {
-	m, n := len(grid), len(grid[0])
-	p := make([]int, m*n)
-	for i := range p {
-		p[i] = i
-	}
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	left := func(i, j int) {
-		if j > 0 && (grid[i][j-1] == 1 || grid[i][j-1] == 4 || grid[i][j-1] == 6) {
-			p[find(i*n+j)] = find(i*n + j - 1)
-		}
-	}
-	right := func(i, j int) {
-		if j < n-1 && (grid[i][j+1] == 1 || grid[i][j+1] == 3 || grid[i][j+1] == 5) {
-			p[find(i*n+j)] = find(i*n + j + 1)
-		}
-	}
-	up := func(i, j int) {
-		if i > 0 && (grid[i-1][j] == 2 || grid[i-1][j] == 3 || grid[i-1][j] == 4) {
-			p[find(i*n+j)] = find((i-1)*n + j)
-		}
-	}
-	down := func(i, j int) {
-		if i < m-1 && (grid[i+1][j] == 2 || grid[i+1][j] == 5 || grid[i+1][j] == 6) {
-			p[find(i*n+j)] = find((i+1)*n + j)
-		}
-	}
-	for i, row := range grid {
-		for j, e := range row {
-			if e == 1 {
-				left(i, j)
-				right(i, j)
-			} else if e == 2 {
-				up(i, j)
-				down(i, j)
-			} else if e == 3 {
-				left(i, j)
-				down(i, j)
-			} else if e == 4 {
-				right(i, j)
-				down(i, j)
-			} else if e == 5 {
-				left(i, j)
-				up(i, j)
-			} else {
-				right(i, j)
-				up(i, j)
-			}
-		}
-	}
-	return find(0) == find(m*n-1)
-}
-```
+
+
 
 ### **...**
 
@@ -412,4 +196,4 @@ func hasValidPath(grid [][]int) bool {
 
 ```
 
-<!-- tabs:end -->
+

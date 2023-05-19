@@ -61,19 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        left, right = 1, 10**6
-        while left < right:
-            mid = (left + right) >> 1
-            s = sum((v + mid - 1) // mid for v in nums)
-            if s <= threshold:
-                right = mid
-            else:
-                left = mid + 1
-        return left
-```
+
 
 ### **Java**
 
@@ -100,96 +88,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int smallestDivisor(vector<int>& nums, int threshold) {
-        int left = 1, right = 1e6;
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            int s = 0;
-            for (int& v : nums) s += (v + mid - 1) / mid;
-            if (s <= threshold)
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestDivisor(nums []int, threshold int) int {
-	left, right := 1, 1000000
-	for left < right {
-		mid := (left + right) >> 1
-		s := 0
-		for _, v := range nums {
-			s += (v + mid - 1) / mid
-		}
-		if s <= threshold {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} threshold
- * @return {number}
- */
-var smallestDivisor = function (nums, threshold) {
-    let left = 1,
-        right = 1000000;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        let s = 0;
-        for (let v of nums) {
-            s += Math.ceil(v / mid);
-        }
-        if (s <= threshold) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function smallestDivisor(nums: number[], threshold: number): number {
-    let left = 1,
-        right = 1000000;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        let s = 0;
-        for (let v of nums) {
-            s += Math.ceil(v / mid);
-        }
-        if (s <= threshold) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-```
+
 
 ### **...**
 
@@ -197,4 +110,4 @@ function smallestDivisor(nums: number[], threshold: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -56,21 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def temperatureTrend(self, temperatureA: List[int], temperatureB: List[int]) -> int:
-        ans = f = 0
-        n = len(temperatureA)
-        for i in range(n - 1):
-            x = temperatureA[i + 1] - temperatureA[i]
-            y = temperatureB[i + 1] - temperatureB[i]
-            if x == y == 0 or x * y > 0:
-                f += 1
-                ans = max(ans, f)
-            else:
-                f = 0
-        return ans
-```
+
 
 ### **Java**
 
@@ -94,52 +80,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int temperatureTrend(vector<int>& temperatureA, vector<int>& temperatureB) {
-        int ans = 0, f = 0;
-        for (int i = 0; i < temperatureA.size() - 1; ++i) {
-            int x = temperatureA[i + 1] - temperatureA[i];
-            int y = temperatureB[i + 1] - temperatureB[i];
-            if ((x == 0 && y == 0) || x * y > 0) {
-                ans = max(ans, ++f);
-            } else {
-                f = 0;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func temperatureTrend(temperatureA []int, temperatureB []int) int {
-	ans, f := 0, 0
-	for i := range temperatureA[1:] {
-		x := temperatureA[i+1] - temperatureA[i]
-		y := temperatureB[i+1] - temperatureB[i]
-		if (x == 0 && y == 0) || x*y > 0 {
-			f++
-			ans = max(ans, f)
-		} else {
-			f = 0
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -147,4 +94,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

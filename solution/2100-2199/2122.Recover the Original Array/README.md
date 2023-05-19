@@ -74,33 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def recoverArray(self, nums: List[int]) -> List[int]:
-        nums.sort()
-        n = len(nums)
-        for i in range(1, n):
-            d = nums[i] - nums[0]
-            if d == 0 or d % 2 == 1:
-                continue
-            vis = [False] * n
-            vis[i] = True
-            ans = [(nums[0] + nums[i]) >> 1]
-            l, r = 1, i + 1
-            while r < n:
-                while l < n and vis[l]:
-                    l += 1
-                while r < n and nums[r] - nums[l] < d:
-                    r += 1
-                if r == n or nums[r] - nums[l] > d:
-                    break
-                vis[r] = True
-                ans.append((nums[l] + nums[r]) >> 1)
-                l, r = l + 1, r + 1
-            if len(ans) == (n >> 1):
-                return ans
-        return []
-```
+
 
 ### **Java**
 
@@ -146,75 +120,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> recoverArray(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        for (int i = 1, n = nums.size(); i < n; ++i) {
-            int d = nums[i] - nums[0];
-            if (d == 0 || d % 2 == 1) continue;
-            vector<bool> vis(n);
-            vis[i] = true;
-            vector<int> ans;
-            ans.push_back((nums[0] + nums[i]) >> 1);
-            for (int l = 1, r = i + 1; r < n; ++l, ++r) {
-                while (l < n && vis[l]) ++l;
-                while (r < n && nums[r] - nums[l] < d) ++r;
-                if (r == n || nums[r] - nums[l] > d) break;
-                vis[r] = true;
-                ans.push_back((nums[l] + nums[r]) >> 1);
-            }
-            if (ans.size() == (n >> 1)) return ans;
-        }
-        return {};
-    }
-};
-```
 
-### **Go**
 
-```go
-func recoverArray(nums []int) []int {
-	sort.Ints(nums)
-	for i, n := 1, len(nums); i < n; i++ {
-		d := nums[i] - nums[0]
-		if d == 0 || d%2 == 1 {
-			continue
-		}
-		vis := make([]bool, n)
-		vis[i] = true
-		ans := []int{(nums[0] + nums[i]) >> 1}
-		for l, r := 1, i+1; r < n; l, r = l+1, r+1 {
-			for l < n && vis[l] {
-				l++
-			}
-			for r < n && nums[r]-nums[l] < d {
-				r++
-			}
-			if r == n || nums[r]-nums[l] > d {
-				break
-			}
-			vis[r] = true
-			ans = append(ans, (nums[l]+nums[r])>>1)
-		}
-		if len(ans) == (n >> 1) {
-			return ans
-		}
-	}
-	return []int{}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -222,4 +140,4 @@ func recoverArray(nums []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

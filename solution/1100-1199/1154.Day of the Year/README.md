@@ -58,14 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def dayOfYear(self, date: str) -> int:
-        y, m, d = (int(s) for s in date.split('-'))
-        v = 29 if y % 400 == 0 or (y % 4 == 0 and y % 100) else 28
-        days = [31, v, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-        return sum(days[:m-1]) + d
-```
+
 
 ### **Java**
 
@@ -88,61 +81,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int dayOfYear(string date) {
-        int y = stoi(date.substr(0, 4));
-        int m = stoi(date.substr(5, 2));
-        int d = stoi(date.substr(8));
-        int v = y % 400 == 0 || (y % 4 == 0 && y % 100) ? 29 : 28;
-        int days[] = {31, v, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        int ans = d;
-        for (int i = 0; i < m - 1; ++i) {
-            ans += days[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func dayOfYear(date string) (ans int) {
-	y, _ := strconv.Atoi(date[:4])
-	m, _ := strconv.Atoi(date[5:7])
-	d, _ := strconv.Atoi(date[8:])
-	days := []int{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-	if y%400 == 0 || (y%4 == 0 && y%100 != 0) {
-		days[1] = 29
-	}
-	ans += d
-	for _, v := range days[:m-1] {
-		ans += v
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} date
- * @return {number}
- */
-var dayOfYear = function (date) {
-    const y = +date.slice(0, 4);
-    const m = +date.slice(5, 7);
-    const d = +date.slice(8);
-    const v = y % 400 == 0 || (y % 4 == 0 && y % 100) ? 29 : 28;
-    const days = [31, v, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    return days.slice(0, m - 1).reduce((a, b) => a + b, d);
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -150,4 +99,4 @@ var dayOfYear = function (date) {
 
 ```
 
-<!-- tabs:end -->
+

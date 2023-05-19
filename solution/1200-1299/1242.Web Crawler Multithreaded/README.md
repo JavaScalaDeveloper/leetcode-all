@@ -112,9 +112,7 @@ startUrl = &quot;http://news.google.com&quot;
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -130,4 +128,4 @@ startUrl = &quot;http://news.google.com&quot;
 
 ```
 
-<!-- tabs:end -->
+

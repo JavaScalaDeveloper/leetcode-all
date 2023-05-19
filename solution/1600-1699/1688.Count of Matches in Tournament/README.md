@@ -64,11 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfMatches(self, n: int) -> int:
-        return n - 1
-```
+
 
 ### **Java**
 
@@ -82,44 +78,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfMatches(int n) {
-        return n - 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfMatches(n int) int {
-	return n - 1
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var numberOfMatches = function (n) {
-    return n - 1;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numberOfMatches(n: number): number {
-    return n - 1;
-}
-```
+
 
 ### **...**
 
@@ -127,4 +100,4 @@ function numberOfMatches(n: number): number {
 
 ```
 
-<!-- tabs:end -->
+

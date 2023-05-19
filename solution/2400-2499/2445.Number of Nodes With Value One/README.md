@@ -71,23 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfNodes(self, n: int, queries: List[int]) -> int:
-        def dfs(i):
-            if i > n:
-                return
-            tree[i] ^= 1
-            dfs(i << 1)
-            dfs(i << 1 | 1)
 
-        tree = [0] * (n + 1)
-        cnt = Counter(queries)
-        for i, v in cnt.items():
-            if v & 1:
-                dfs(i)
-        return sum(tree)
-```
 
 ### **Java**
 
@@ -126,67 +110,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfNodes(int n, vector<int>& queries) {
-        vector<int> tree(n + 1);
-        vector<int> cnt(n + 1);
-        for (int v : queries) ++cnt[v];
-        function<void(int)> dfs = [&](int i) {
-            if (i > n) return;
-            tree[i] ^= 1;
-            dfs(i << 1);
-            dfs(i << 1 | 1);
-        };
-        for (int i = 0; i < n + 1; ++i) {
-            if (cnt[i] & 1) {
-                dfs(i);
-            }
-        }
-        return accumulate(tree.begin(), tree.end(), 0);
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfNodes(n int, queries []int) int {
-	tree := make([]int, n+1)
-	cnt := make([]int, n+1)
-	for _, v := range queries {
-		cnt[v]++
-	}
-	var dfs func(int)
-	dfs = func(i int) {
-		if i > n {
-			return
-		}
-		tree[i] ^= 1
-		dfs(i << 1)
-		dfs(i<<1 | 1)
-	}
-	for i, v := range cnt {
-		if v%2 == 1 {
-			dfs(i)
-		}
-	}
-	ans := 0
-	for _, v := range tree {
-		ans += v
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -194,4 +128,4 @@ func numberOfNodes(n int, queries []int) int {
 
 ```
 
-<!-- tabs:end -->
+

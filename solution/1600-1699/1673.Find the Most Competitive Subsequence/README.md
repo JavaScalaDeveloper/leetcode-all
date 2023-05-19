@@ -57,18 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mostCompetitive(self, nums: List[int], k: int) -> List[int]:
-        stk = []
-        n = len(nums)
-        for i, v in enumerate(nums):
-            while stk and stk[-1] > v and len(stk) + n - i > k:
-                stk.pop()
-            if len(stk) < k:
-                stk.append(v)
-        return stk
-```
+
 
 ### **Java**
 
@@ -96,44 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> mostCompetitive(vector<int>& nums, int k) {
-        vector<int> stk;
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            while (stk.size() && stk.back() > nums[i] && stk.size() + n - i > k) {
-                stk.pop_back();
-            }
-            if (stk.size() < k) {
-                stk.push_back(nums[i]);
-            }
-        }
-        return stk;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mostCompetitive(nums []int, k int) []int {
-	stk := []int{}
-	n := len(nums)
-	for i, v := range nums {
-		for len(stk) > 0 && stk[len(stk)-1] > v && len(stk)+n-i > k {
-			stk = stk[:len(stk)-1]
-		}
-		if len(stk) < k {
-			stk = append(stk, v)
-		}
-	}
-	return stk
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -141,4 +99,4 @@ func mostCompetitive(nums []int, k int) []int {
 
 ```
 
-<!-- tabs:end -->
+

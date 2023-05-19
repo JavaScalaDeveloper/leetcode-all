@@ -64,23 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getHint(self, secret: str, guess: str) -> str:
-        x = y = 0
-        cnt1 = [0] * 10
-        cnt2 = [0] * 10
-        for i in range(len(secret)):
-            if secret[i] == guess[i]:
-                x += 1
-            else:
-                cnt1[int(secret[i])] += 1
-                cnt2[int(guess[i])] += 1
 
-        for i in range(10):
-            y += min(cnt1[i], cnt2[i])
-        return f'{x}A{y}B'
-```
 
 ### **Java**
 
@@ -109,87 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string getHint(string secret, string guess) {
-        int x = 0, y = 0;
-        vector<int> cnt1(10);
-        vector<int> cnt2(10);
-        for (int i = 0; i < secret.size(); ++i) {
-            int a = secret[i] - '0', b = guess[i] - '0';
-            if (a == b)
-                ++x;
-            else {
-                ++cnt1[a];
-                ++cnt2[b];
-            }
-        }
-        for (int i = 0; i < 10; ++i) y += min(cnt1[i], cnt2[i]);
-        return to_string(x) + "A" + to_string(y) + "B";
-    }
-};
-```
 
-### **Go**
 
-```go
-func getHint(secret string, guess string) string {
-	x, y := 0, 0
-	cnt1 := make([]int, 10)
-	cnt2 := make([]int, 10)
-	for i := 0; i < len(secret); i++ {
-		a, b := secret[i]-'0', guess[i]-'0'
-		if a == b {
-			x++
-		} else {
-			cnt1[a]++
-			cnt2[b]++
-		}
-	}
-	for i := 0; i < 10; i++ {
-		y += min(cnt1[i], cnt2[i])
-	}
-	return fmt.Sprintf("%dA%dB", x, y)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $secret
-     * @param String $guess
-     * @return String
-     */
-    function getHint($secret, $guess) {
-        $cntA = 0;
-        $cntB = 0;
-        $len = strlen($secret);
-        for ($i = 0; $i < $len; $i++) {
-            if ($secret[$i] == $guess[$i]) $cntA++;
-            else $hashtable[$secret[$i]] += 1;
-        }
-        for ($i = 0; $i < $len; $i++) {
-            if ($secret[$i] != $guess[$i] && $hashtable[$guess[$i]] > 0) {
-                $cntB++;
-                $hashtable[$guess[$i]] -= 1;
-            }
-        }
-        return $cntA."A".$cntB."B";
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -197,4 +111,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

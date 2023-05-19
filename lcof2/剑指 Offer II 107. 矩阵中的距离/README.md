@@ -61,27 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
-        m, n = len(mat), len(mat[0])
-        ans = [[-1] * n for _ in range(m)]
-        q = deque()
-        for i, row in enumerate(mat):
-            for j, v in enumerate(row):
-                if v == 0:
-                    ans[i][j] = 0
-                    q.append((i, j))
-        dirs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-        while q:
-            i, j = q.popleft()
-            for a, b in dirs:
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n and ans[x][y] == -1:
-                    ans[x][y] = ans[i][j] + 1
-                    q.append((x, y))
-        return ans
-```
+
 
 ### **Java**
 
@@ -122,78 +102,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
-        int m = mat.size(), n = mat[0].size();
-        vector<vector<int>> ans(m, vector<int>(n, -1));
-        queue<pair<int, int>> q;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (mat[i][j] == 0) {
-                    ans[i][j] = 0;
-                    q.emplace(i, j);
-                }
-            }
-        }
-        vector<int> dirs = {-1, 0, 1, 0, -1};
-        while (!q.empty()) {
-            auto p = q.front();
-            q.pop();
-            for (int i = 0; i < 4; ++i) {
-                int x = p.first + dirs[i];
-                int y = p.second + dirs[i + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n && ans[x][y] == -1) {
-                    ans[x][y] = ans[p.first][p.second] + 1;
-                    q.emplace(x, y);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func updateMatrix(mat [][]int) [][]int {
-	m, n := len(mat), len(mat[0])
-	ans := make([][]int, m)
-	for i := range ans {
-		ans[i] = make([]int, n)
-		for j := range ans[i] {
-			ans[i][j] = -1
-		}
-	}
-	type pair struct{ x, y int }
-	var q []pair
-	for i, row := range mat {
-		for j, v := range row {
-			if v == 0 {
-				ans[i][j] = 0
-				q = append(q, pair{i, j})
-			}
-		}
-	}
-	dirs := []int{-1, 0, 1, 0, -1}
-	for len(q) > 0 {
-		p := q[0]
-		q = q[1:]
-		for i := 0; i < 4; i++ {
-			x, y := p.x+dirs[i], p.y+dirs[i+1]
-			if x >= 0 && x < m && y >= 0 && y < n && ans[x][y] == -1 {
-				ans[x][y] = ans[p.x][p.y] + 1
-				q = append(q, pair{x, y})
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -201,4 +116,4 @@ func updateMatrix(mat [][]int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

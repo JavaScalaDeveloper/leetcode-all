@@ -53,16 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isArmstrong(self, n: int) -> bool:
-        k = len(str(n))
-        s, x = 0, n
-        while x:
-            s += (x % 10)**k
-            x //= 10
-        return s == n
-```
+
 
 ### **Java**
 
@@ -81,67 +72,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isArmstrong(int n) {
-        int k = to_string(n).size();
-        int s = 0;
-        for (int x = n; x; x /= 10) {
-            s += pow(x % 10, k);
-        }
-        return s == n;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isArmstrong(n int) bool {
-	k := 0
-	for x := n; x > 0; x /= 10 {
-		k++
-	}
-	s := 0
-	for x := n; x > 0; x /= 10 {
-		s += int(math.Pow(float64(x%10), float64(k)))
-	}
-	return s == n
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {boolean}
- */
-var isArmstrong = function (n) {
-    const k = String(n).length;
-    let s = 0;
-    for (let x = n; x; x = Math.floor(x / 10)) {
-        s += Math.pow(x % 10, k);
-    }
-    return s == n;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isArmstrong(n: number): boolean {
-    const k = String(n).length;
-    let s = 0;
-    for (let x = n; x; x = Math.floor(x / 10)) {
-        s += Math.pow(x % 10, k);
-    }
-    return s == n;
-}
-```
+
 
 ### **...**
 
@@ -149,4 +94,4 @@ function isArmstrong(n: number): boolean {
 
 ```
 
-<!-- tabs:end -->
+

@@ -62,26 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumRobots(
-        self, chargeTimes: List[int], runningCosts: List[int], budget: int
-    ) -> int:
-        q = deque()
-        ans = j = s = 0
-        for i, (a, b) in enumerate(zip(chargeTimes, runningCosts)):
-            while q and chargeTimes[q[-1]] <= a:
-                q.pop()
-            q.append(i)
-            s += b
-            while q and chargeTimes[q[0]] + (i - j + 1) * s > budget:
-                if q[0] == j:
-                    q.popleft()
-                s -= runningCosts[j]
-                j += 1
-            ans = max(ans, i - j + 1)
-        return ans
-```
+
 
 ### **Java**
 
@@ -115,71 +96,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumRobots(vector<int>& chargeTimes, vector<int>& runningCosts, long long budget) {
-        deque<int> q;
-        long long s = 0;
-        int ans = 0, j = 0, n = chargeTimes.size();
-        for (int i = 0; i < n; ++i) {
-            int a = chargeTimes[i], b = runningCosts[i];
-            while (!q.empty() && chargeTimes[q.back()] <= a) q.pop_back();
-            q.push_back(i);
-            s += b;
-            while (!q.empty() && chargeTimes[q.front()] + (i - j + 1) * s > budget) {
-                if (q.front() == j) {
-                    q.pop_front();
-                }
-                s -= runningCosts[j++];
-            }
-            ans = max(ans, i - j + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumRobots(chargeTimes []int, runningCosts []int, budget int64) int {
-	s := int64(0)
-	ans, j := 0, 0
-	q := []int{}
-	for i, a := range chargeTimes {
-		for len(q) > 0 && chargeTimes[q[len(q)-1]] <= a {
-			q = q[:len(q)-1]
-		}
-		q = append(q, i)
-		s += int64(runningCosts[i])
-		for len(q) > 0 && int64(chargeTimes[q[0]])+int64(i-j+1)*s > budget {
-			if q[0] == j {
-				q = q[1:]
-			}
-			s -= int64(runningCosts[j])
-			j++
-		}
-		ans = max(ans, i-j+1)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -188,4 +115,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

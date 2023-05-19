@@ -65,23 +65,7 @@ def backtrack(未探索区域, res, path):
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
-        res = []
 
-        def dfs(i, n, t):
-            res.append(t.copy())
-            if i == n:
-                return
-            for j in range(i, n):
-                t.append(nums[j])
-                dfs(j + 1, n, t)
-                t.pop()
-
-        dfs(0, len(nums), [])
-        return res
-```
 
 ### **Java**
 
@@ -109,96 +93,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> subsets(vector<int>& nums) {
-        vector<vector<int>> res;
-        vector<int> t;
-        dfs(0, nums, t, res);
-        return res;
-    }
 
-    void dfs(int i, vector<int>& nums, vector<int> t, vector<vector<int>>& res) {
-        res.push_back(t);
-        if (i == nums.size()) return;
-        for (int j = i; j < nums.size(); ++j) {
-            t.push_back(nums[j]);
-            dfs(j + 1, nums, t, res);
-            t.pop_back();
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func subsets(nums []int) [][]int {
-	var res [][]int
-	var t []int
-	dfs(0, nums, t, &res)
-	return res
-}
 
-func dfs(i int, nums, t []int, res *[][]int) {
-	cp := make([]int, len(t))
-	copy(cp, t)
-	*res = append(*res, cp)
-	if i == len(nums) {
-		return
-	}
-	for j := i; j < len(nums); j++ {
-		t = append(t, nums[j])
-		dfs(j+1, nums, t, res)
-		t = t[:len(t)-1]
-	}
-}
-```
+
+
 
 ### **TypeScipt**
 
-```ts
-function subsets(nums: number[]): number[][] {
-    const n = nums.length;
-    const ans = [];
-    const dfs = (i: number, t: number[]) => {
-        ans.push([...t]);
-        while (i < n) {
-            t.push(nums[i++]);
-            dfs(i, t);
-            t.pop();
-        }
-    };
-    dfs(0, []);
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    fn dfs(mut i: usize, t: &mut Vec<i32>, ans: &mut Vec<Vec<i32>>, nums: &Vec<i32>) {
-        ans.push(t.clone());
-        while i < nums.len() {
-            t.push(nums[i]);
-            i += 1;
-            Self::dfs(i, t, ans, nums);
-            t.pop();
-        }
-    }
 
-    pub fn subsets(nums: Vec<i32>) -> Vec<Vec<i32>> {
-        let mut ans = Vec::new();
-        let mut t = Vec::new();
-        Self::dfs(0, &mut t, &mut ans, &nums);
-        ans
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -206,4 +115,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

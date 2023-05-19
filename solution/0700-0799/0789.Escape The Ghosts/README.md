@@ -68,12 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def escapeGhosts(self, ghosts: List[List[int]], target: List[int]) -> bool:
-        tx, ty = target
-        return all(abs(tx - x) + abs(ty - y) > abs(tx) + abs(ty) for x, y in ghosts)
-```
+
 
 ### **Java**
 
@@ -94,62 +89,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool escapeGhosts(vector<vector<int>>& ghosts, vector<int>& target) {
-        int tx = target[0], ty = target[1];
-        for (auto& g : ghosts) {
-            int x = g[0], y = g[1];
-            if (abs(tx - x) + abs(ty - y) <= abs(tx) + abs(ty)) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func escapeGhosts(ghosts [][]int, target []int) bool {
-	tx, ty := target[0], target[1]
-	for _, g := range ghosts {
-		x, y := g[0], g[1]
-		if abs(tx-x)+abs(ty-y) <= abs(tx)+abs(ty) {
-			return false
-		}
-	}
-	return true
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function escapeGhosts(ghosts: number[][], target: number[]): boolean {
-    const [tx, ty] = target;
-    for (const [x, y] of ghosts) {
-        if (
-            Math.abs(tx - x) + Math.abs(ty - y) <=
-            Math.abs(tx) + Math.abs(ty)
-        ) {
-            return false;
-        }
-    }
-    return true;
-}
-```
+
 
 ### **...**
 
@@ -157,4 +107,4 @@ function escapeGhosts(ghosts: number[][], target: number[]): boolean {
 
 ```
 
-<!-- tabs:end -->
+

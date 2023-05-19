@@ -67,18 +67,7 @@ nums 中的所有元素都有用到，并且每一行都由不同的整数组成
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMatrix(self, nums: List[int]) -> List[List[int]]:
-        cnt = Counter(nums)
-        ans = []
-        for x, v in cnt.items():
-            for i in range(v):
-                if len(ans) <= i:
-                    ans.append([])
-                ans[i].append(x)
-        return ans
-```
+
 
 ### **Java**
 
@@ -107,74 +96,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> findMatrix(vector<int>& nums) {
-        vector<vector<int>> ans;
-        int n = nums.size();
-        vector<int> cnt(n + 1);
-        for (int& x : nums) {
-            ++cnt[x];
-        }
-        for (int x = 1; x <= n; ++x) {
-            int v = cnt[x];
-            for (int j = 0; j < v; ++j) {
-                if (ans.size() <= j) {
-                    ans.push_back({});
-                }
-                ans[j].push_back(x);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMatrix(nums []int) (ans [][]int) {
-	n := len(nums)
-	cnt := make([]int, n+1)
-	for _, x := range nums {
-		cnt[x]++
-	}
-	for x, v := range cnt {
-		for j := 0; j < v; j++ {
-			if len(ans) <= j {
-				ans = append(ans, []int{})
-			}
-			ans[j] = append(ans[j], x)
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findMatrix(nums: number[]): number[][] {
-    const ans: number[][] = [];
-    const n = nums.length;
-    const cnt: number[] = new Array(n + 1).fill(0);
-    for (const x of nums) {
-        ++cnt[x];
-    }
-    for (let x = 1; x <= n; ++x) {
-        for (let j = 0; j < cnt[x]; ++j) {
-            if (ans.length <= j) {
-                ans.push([]);
-            }
-            ans[j].push(x);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -182,4 +114,4 @@ function findMatrix(nums: number[]): number[][] {
 
 ```
 
-<!-- tabs:end -->
+

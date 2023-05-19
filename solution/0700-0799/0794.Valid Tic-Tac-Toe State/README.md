@@ -77,27 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def validTicTacToe(self, board: List[str]) -> bool:
-        def win(x):
-            for i in range(3):
-                if all(board[i][j] == x for j in range(3)):
-                    return True
-                if all(board[j][i] == x for j in range(3)):
-                    return True
-            if all(board[i][i] == x for i in range(3)):
-                return True
-            return all(board[i][2 - i] == x for i in range(3))
 
-        x = sum(board[i][j] == 'X' for i in range(3) for j in range(3))
-        o = sum(board[i][j] == 'O' for i in range(3) for j in range(3))
-        if x != o and x - 1 != o:
-            return False
-        if win('X') and x - 1 != o:
-            return False
-        return not (win('O') and x != o)
-```
 
 ### **Java**
 
@@ -148,112 +128,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool validTicTacToe(vector<string>& board) {
-        auto count = [&](char x) {
-            int ans = 0;
-            for (auto& row : board) for (auto& c : row) ans += c == x;
-            return ans;
-        };
-        auto win = [&](char x) {
-            for (int i = 0; i < 3; ++i) {
-                if (board[i][0] == x && board[i][1] == x && board[i][2] == x) return true;
-                if (board[0][i] == x && board[1][i] == x && board[2][i] == x) return true;
-            }
-            if (board[0][0] == x && board[1][1] == x && board[2][2] == x) return true;
-            return board[0][2] == x && board[1][1] == x && board[2][0] == x;
-        };
-        int x = count('X'), o = count('O');
-        if (x != o && x - 1 != o) return false;
-        if (win('X') && x - 1 != o) return false;
-        return !(win('O') && x != o);
-    }
-};
-```
 
-### **Go**
 
-```go
-func validTicTacToe(board []string) bool {
-	var x, o int
-	for _, row := range board {
-		for _, c := range row {
-			if c == 'X' {
-				x++
-			} else if c == 'O' {
-				o++
-			}
-		}
-	}
-	win := func(x byte) bool {
-		for i := 0; i < 3; i++ {
-			if board[i][0] == x && board[i][1] == x && board[i][2] == x {
-				return true
-			}
-			if board[0][i] == x && board[1][i] == x && board[2][i] == x {
-				return true
-			}
-		}
-		if board[0][0] == x && board[1][1] == x && board[2][2] == x {
-			return true
-		}
-		return board[0][2] == x && board[1][1] == x && board[2][0] == x
-	}
-	if x != o && x-1 != o {
-		return false
-	}
-	if win('X') && x-1 != o {
-		return false
-	}
-	return !(win('O') && x != o)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string[]} board
- * @return {boolean}
- */
-var validTicTacToe = function (board) {
-    function count(x) {
-        let cnt = 0;
-        for (const row of board) {
-            for (const c of row) {
-                cnt += c == x;
-            }
-        }
-        return cnt;
-    }
-    function win(x) {
-        for (let i = 0; i < 3; ++i) {
-            if (board[i][0] == x && board[i][1] == x && board[i][2] == x) {
-                return true;
-            }
-            if (board[0][i] == x && board[1][i] == x && board[2][i] == x) {
-                return true;
-            }
-        }
-        if (board[0][0] == x && board[1][1] == x && board[2][2] == x) {
-            return true;
-        }
-        return board[0][2] == x && board[1][1] == x && board[2][0] == x;
-    }
-    const [x, o] = [count('X'), count('O')];
-    if (x != o && x - 1 != o) {
-        return false;
-    }
-    if (win('X') && x - 1 != o) {
-        return false;
-    }
-    return !(win('O') && x != o);
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -261,4 +146,4 @@ var validTicTacToe = function (board) {
 
 ```
 
-<!-- tabs:end -->
+

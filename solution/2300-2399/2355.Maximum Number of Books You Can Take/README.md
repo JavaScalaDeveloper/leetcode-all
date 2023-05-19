@@ -86,31 +86,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumBooks(self, books: List[int]) -> int:
-        nums = [v - i for i, v in enumerate(books)]
-        n = len(nums)
-        left = [-1] * n
-        stk = []
-        for i, v in enumerate(nums):
-            while stk and nums[stk[-1]] >= v:
-                stk.pop()
-            if stk:
-                left[i] = stk[-1]
-            stk.append(i)
-        ans = 0
-        dp = [0] * n
-        dp[0] = books[0]
-        for i, v in enumerate(books):
-            j = left[i]
-            cnt = min(v, i - j)
-            u = v - cnt + 1
-            s = (u + v) * cnt // 2
-            dp[i] = s + (0 if j == -1 else dp[j])
-            ans = max(ans, dp[i])
-        return ans
-```
+
 
 ### **Java**
 
@@ -153,99 +129,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using ll = long long;
 
-class Solution {
-public:
-    long long maximumBooks(vector<int>& books) {
-        int n = books.size();
-        vector<int> nums(n);
-        for (int i = 0; i < n; ++i) nums[i] = books[i] - i;
-        vector<int> left(n, -1);
-        stack<int> stk;
-        for (int i = 0; i < n; ++i) {
-            while (!stk.empty() && nums[stk.top()] >= nums[i]) stk.pop();
-            if (!stk.empty()) left[i] = stk.top();
-            stk.push(i);
-        }
-        vector<ll> dp(n);
-        dp[0] = books[0];
-        ll ans = 0;
-        for (int i = 0; i < n; ++i) {
-            int v = books[i];
-            int j = left[i];
-            int cnt = min(v, i - j);
-            int u = v - cnt + 1;
-            ll s = 1ll * (u + v) * cnt / 2;
-            dp[i] = s + (j == -1 ? 0 : dp[j]);
-            ans = max(ans, dp[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumBooks(books []int) int64 {
-	n := len(books)
-	nums := make([]int, n)
-	left := make([]int, n)
-	for i, v := range books {
-		nums[i] = v - i
-		left[i] = -1
-	}
-	stk := []int{}
-	for i, v := range nums {
-		for len(stk) > 0 && nums[stk[len(stk)-1]] >= v {
-			stk = stk[:len(stk)-1]
-		}
-		if len(stk) > 0 {
-			left[i] = stk[len(stk)-1]
-		}
-		stk = append(stk, i)
-	}
-	dp := make([]int, n)
-	dp[0] = books[0]
-	ans := 0
-	for i, v := range books {
-		j := left[i]
-		cnt := min(v, i-j)
-		u := v - cnt + 1
-		s := (u + v) * cnt / 2
-		dp[i] = s
-		if j != -1 {
-			dp[i] += dp[j]
-		}
-		ans = max(ans, dp[i])
-	}
-	return int64(ans)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -253,4 +147,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

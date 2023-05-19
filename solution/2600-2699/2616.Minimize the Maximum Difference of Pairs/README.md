@@ -61,22 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimizeMax(self, nums: List[int], p: int) -> int:
-        def check(diff: int) -> bool:
-            cnt = i = 0
-            while i < len(nums) - 1:
-                if nums[i + 1] - nums[i] <= diff:
-                    cnt += 1
-                    i += 2
-                else:
-                    i += 1
-            return cnt >= p
 
-        nums.sort()
-        return bisect_left(range(nums[-1] - nums[0] + 1), True, key=check)
-```
 
 ### **Java**
 
@@ -112,57 +97,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimizeMax(vector<int>& nums, int p) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        int l = 0, r = nums[n - 1] - nums[0] + 1;
-        auto check = [&](int diff) -> bool {
-            int cnt = 0;
-            for (int i = 0; i < n - 1; ++i) {
-                if (nums[i + 1] - nums[i] <= diff) {
-                    ++cnt;
-                    ++i;
-                }
-            }
-            return cnt >= p;
-        };
-        while (l < r) {
-            int mid = (l + r) >> 1;
-            if (check(mid)) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimizeMax(nums []int, p int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	r := nums[n-1] - nums[0] + 1
-	return sort.Search(r, func(diff int) bool {
-		cnt := 0
-		for i := 0; i < n-1; i++ {
-			if nums[i+1]-nums[i] <= diff {
-				cnt++
-				i++
-			}
-		}
-		return cnt >= p
-	})
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -170,4 +111,4 @@ func minimizeMax(nums []int, p int) int {
 
 ```
 
-<!-- tabs:end -->
+

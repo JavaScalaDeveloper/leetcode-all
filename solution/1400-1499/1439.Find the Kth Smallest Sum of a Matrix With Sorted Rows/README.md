@@ -76,16 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kthSmallest(self, mat: List[List[int]], k: int) -> int:
-        pre = [0]
-        for cur in mat:
-            t = [a + b for a in pre for b in cur[:k]]
-            t.sort()
-            pre = t[:k]
-        return pre[k - 1]
-```
+
 
 ### **Java**
 
@@ -116,77 +107,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int kthSmallest(vector<vector<int>>& mat, int k) {
-        int pre[k];
-        int cur[mat[0].size() * k];
-        memset(pre, 0, sizeof pre);
-        int size = 1;
-        for (auto& row : mat) {
-            int i = 0;
-            for (int j = 0; j < size; ++j) {
-                for (int& v : row) {
-                    cur[i++] = pre[j] + v;
-                }
-            }
-            sort(cur, cur + i);
-            size = min(i, k);
-            for (int j = 0; j < size; ++j) {
-                pre[j] = cur[j];
-            }
-        }
-        return pre[k - 1];
-    }
-};
-```
 
-### **Go**
 
-```go
-func kthSmallest(mat [][]int, k int) int {
-	pre := []int{0}
-	for _, row := range mat {
-		cur := []int{}
-		for _, a := range pre {
-			for _, b := range row {
-				cur = append(cur, a+b)
-			}
-		}
-		sort.Ints(cur)
-		pre = cur[:min(k, len(cur))]
-	}
-	return pre[k-1]
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function kthSmallest(mat: number[][], k: number): number {
-    let pre: number[] = [0];
-    for (const cur of mat) {
-        const next: number[] = [];
-        for (const a of pre) {
-            for (const b of cur) {
-                next.push(a + b);
-            }
-        }
-        pre = next.sort((a, b) => a - b).slice(0, k);
-    }
-    return pre[k - 1];
-}
-```
+
 
 ### **...**
 
@@ -194,4 +125,4 @@ function kthSmallest(mat: number[][], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -61,23 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def monotoneIncreasingDigits(self, n: int) -> int:
-        s = list(str(n))
-        i = 1
-        while i < len(s) and s[i - 1] <= s[i]:
-            i += 1
-        if i < len(s):
-            while i and s[i - 1] > s[i]:
-                s[i - 1] = str(int(s[i - 1]) - 1)
-                i -= 1
-            i += 1
-            while i < len(s):
-                s[i] = '9'
-                i += 1
-        return int(''.join(s))
-```
+
 
 ### **Java**
 
@@ -104,50 +88,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int monotoneIncreasingDigits(int n) {
-        string s = to_string(n);
-        int i = 1;
-        for (; i < s.size() && s[i - 1] <= s[i]; ++i);
-        if (i < s.size()) {
-            for (; i > 0 && s[i - 1] > s[i]; --i) {
-                --s[i - 1];
-            }
-            ++i;
-            for (; i < s.size(); ++i) {
-                s[i] = '9';
-            }
-        }
-        return stoi(s);
-    }
-};
-```
 
-### **Go**
 
-```go
-func monotoneIncreasingDigits(n int) int {
-	s := []byte(strconv.Itoa(n))
-	i := 1
-	for ; i < len(s) && s[i-1] <= s[i]; i++ {
-	}
-	if i < len(s) {
-		for ; i > 0 && s[i-1] > s[i]; i-- {
-			s[i-1]--
-		}
-		i++
-		for ; i < len(s); i++ {
-			s[i] = '9'
-		}
-	}
-	ans, _ := strconv.Atoi(string(s))
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -155,4 +102,4 @@ func monotoneIncreasingDigits(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

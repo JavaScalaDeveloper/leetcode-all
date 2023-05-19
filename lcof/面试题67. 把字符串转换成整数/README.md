@@ -76,36 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def strToInt(self, str: str) -> int:
-        if not str:
-            return 0
-        n = len(str)
-        if n == 0:
-            return 0
-        i = 0
-        while str[i] == ' ':
-            i += 1
-            # 仅包含空格
-            if i == n:
-                return 0
-        sign = -1 if str[i] == '-' else 1
-        if str[i] in ['-', '+']:
-            i += 1
-        res, flag = 0, (2**31 - 1) // 10
-        while i < n:
-            # 非数字，跳出循环体
-            if not str[i].isdigit():
-                break
-            c = int(str[i])
-            # 溢出判断
-            if res > flag or (res == flag and c > 7):
-                return 2**31 - 1 if sign > 0 else -(2**31)
-            res = res * 10 + c
-            i += 1
-        return sign * res
-```
+
 
 ### **Java**
 
@@ -139,144 +110,17 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} str
- * @return {number}
- */
-var strToInt = function (str) {
-    let res = '';
-    let l = 1;
-    for (let i = 0; i < str.length; i++) {
-        if (l && str[i] === ' ') continue;
-        if (l && (str[i] === '+' || str[i] === '-')) {
-            l = 0;
-            res += str[i];
-            continue;
-        }
-        if (str[i].match(/[0-9]/)) {
-            l = 0;
-            res += str[i];
-        } else break;
-    }
-    res = isNaN(+res) ? 0 : +res;
-    if (res > 2147483647) return 2147483647;
-    if (res < -2147483648) return -2147483648;
-    return res;
-};
-```
 
-### **Go**
 
-```go
-func strToInt(str string) int {
-	n, sign, i, x := len(str), 1, 0, 0
 
-	// 去除开头的空格
-	for i < n && str[i] == ' ' {
-		i++
-	}
 
-	// 如果只有空格
-	if i == n {
-		return 0
-	}
 
-	// 负数
-	if str[i] == '-' {
-		sign = -1
-	}
 
-	// 跳过符号
-	if str[i] == '-' || str[i] == '+' {
-		i++
-	}
 
-	// 如果符号后紧跟的不是数字
-	if i == n || str[i] < '0' || str[i] > '9' {
-		return 0
-	}
 
-	// golang 在 64 位平台下 int 就是 int64，所以不用对 x 进行特殊处理
-	for ; i < n && str[i] >= '0' && str[i] <= '9'; i++ {
-		x = x*10 + int(str[i]) - '0'
-		if x > math.MaxInt32 {
-			break
-		}
-	}
 
-	if x > math.MaxInt32 {
-		if sign == 1 {
-			return math.MaxInt32
-		}
-		return math.MinInt32
-	}
-	return sign * x
-}
-```
 
-### **C#**
-
-```cs
-public class Solution {
-    public int StrToInt(string str) {
-        if (string.IsNullOrWhiteSpace(str))
-        {
-            return 0;
-        }
-
-        str = str.Trim();
-        int currentIndex = 0;
-        bool minus = false;
-        if (str[currentIndex] == '+')
-        {
-            minus = false;
-            currentIndex++;
-        }
-        else if (str[currentIndex] == '-')
-        {
-            minus = true;
-            currentIndex++;
-        }
-
-        long result = 0;
-        for (; currentIndex < str.Length; currentIndex++)
-        {
-            if (!char.IsDigit(str[currentIndex]))
-            {
-                break;
-            }
-
-            if (minus && result - 1 > int.MaxValue)
-            {
-                return int.MinValue;
-            }
-            else if (!minus && result > int.MaxValue)
-            {
-                return int.MaxValue;
-            }
-
-            result = result * 10 + (str[currentIndex] - '0');
-        }
-
-        if (minus && result - 1 > int.MaxValue)
-        {
-            return int.MinValue;
-        }
-        else if (!minus && result > int.MaxValue)
-        {
-            return int.MaxValue;
-        }
-        else
-        {
-            return (minus ? -1 : 1) * (int)result;
-        }
-
-    }
-}
-```
 
 ### **...**
 
@@ -284,4 +128,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

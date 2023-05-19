@@ -71,15 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def zeroFilledSubarray(self, nums: List[int]) -> int:
-        ans = cnt = 0
-        for v in nums:
-            cnt = 0 if v else cnt + 1
-            ans += cnt
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,53 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long zeroFilledSubarray(vector<int>& nums) {
-        long long ans = 0;
-        int cnt = 0;
-        for (int& v : nums) {
-            cnt = v ? 0 : cnt + 1;
-            ans += cnt;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func zeroFilledSubarray(nums []int) (ans int64) {
-	cnt := 0
-	for _, v := range nums {
-		if v != 0 {
-			cnt = 0
-		} else {
-			cnt++
-		}
-		ans += int64(cnt)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function zeroFilledSubarray(nums: number[]): number {
-    let ans = 0;
-    let cnt = 0;
-    for (const v of nums) {
-        cnt = v ? 0 : cnt + 1;
-        ans += cnt;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -153,4 +109,4 @@ function zeroFilledSubarray(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

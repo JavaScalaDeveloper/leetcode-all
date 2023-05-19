@@ -65,11 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def expectNumber(self, scores: List[int]) -> int:
-        return len(set(scores))
-```
+
 
 ### **Java**
 
@@ -87,29 +83,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int expectNumber(vector<int>& scores) {
-        unordered_set<int> s(scores.begin(), scores.end());
-        return s.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func expectNumber(scores []int) int {
-	s := map[int]struct{}{}
-	for _, x := range scores {
-		s[x] = struct{}{}
-	}
-	return len(s)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -117,4 +97,4 @@ func expectNumber(scores []int) int {
 
 ```
 
-<!-- tabs:end -->
+

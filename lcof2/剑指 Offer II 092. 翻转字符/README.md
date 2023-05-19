@@ -61,20 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minFlipsMonoIncr(self, s: str) -> int:
-        n = len(s)
-        left, right = [0] * (n + 1), [0] * (n + 1)
-        ans = 0x3F3F3F3F
-        for i in range(1, n + 1):
-            left[i] = left[i - 1] + (1 if s[i - 1] == '1' else 0)
-        for i in range(n - 1, -1, -1):
-            right[i] = right[i + 1] + (1 if s[i] == '0' else 0)
-        for i in range(0, n + 1):
-            ans = min(ans, left[i] + right[i])
-        return ans
-```
+
 
 ### **Java**
 
@@ -101,61 +88,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minFlipsMonoIncr(string s) {
-        int n = s.size();
-        vector<int> left(n + 1, 0), right(n + 1, 0);
-        int ans = INT_MAX;
-        for (int i = 1; i <= n; ++i) {
-            left[i] = left[i - 1] + (s[i - 1] == '1');
-        }
-        for (int i = n - 1; i >= 0; --i) {
-            right[i] = right[i + 1] + (s[i] == '0');
-        }
-        for (int i = 0; i <= n; i++) {
-            ans = min(ans, left[i] + right[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minFlipsMonoIncr(s string) int {
-	n := len(s)
-	left, right := make([]int, n+1), make([]int, n+1)
-	ans := math.MaxInt32
-	for i := 1; i <= n; i++ {
-		left[i] = left[i-1]
-		if s[i-1] == '1' {
-			left[i]++
-		}
-	}
-	for i := n - 1; i >= 0; i-- {
-		right[i] = right[i+1]
-		if s[i] == '0' {
-			right[i]++
-		}
-	}
-	for i := 0; i <= n; i++ {
-		ans = min(ans, left[i]+right[i])
-	}
-	return ans
-}
 
-func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
-```
+
+
+
 
 ### **...**
 
@@ -163,4 +102,4 @@ func min(x, y int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -66,61 +66,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 <!-- tabs:start -->
 
@@ -128,26 +82,7 @@ d[find(a)] = distance
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def containsCycle(self, grid: List[List[str]]) -> bool:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        m, n = len(grid), len(grid[0])
-        p = list(range(m * n))
-        for i in range(m):
-            for j in range(n):
-                for a, b in [[0, 1], [1, 0]]:
-                    x, y = i + a, j + b
-                    if x < m and y < n and grid[x][y] == grid[i][j]:
-                        if find(x * n + y) == find(i * n + j):
-                            return True
-                        p[find(x * n + y)] = find(i * n + j)
-        return False
-```
 
 ### **Java**
 
@@ -191,108 +126,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    bool containsCycle(vector<vector<char>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        p.resize(m * n);
-        for (int i = 0; i < p.size(); ++i) p[i] = i;
-        vector<int> dirs = {0, 1, 0};
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                for (int k = 0; k < 2; ++k) {
-                    int x = i + dirs[k], y = j + dirs[k + 1];
-                    if (x < m && y < n && grid[x][y] == grid[i][j]) {
-                        if (find(x * n + y) == find(i * n + j)) return 1;
-                        p[find(x * n + y)] = find(i * n + j);
-                    }
-                }
-            }
-        }
-        return 0;
-    }
 
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
-```go
-func containsCycle(grid [][]byte) bool {
-	m, n := len(grid), len(grid[0])
-	p := make([]int, m*n)
-	for i := range p {
-		p[i] = i
-	}
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	dirs := []int{1, 0, 1}
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			for k := 0; k < 2; k++ {
-				x, y := i+dirs[k], j+dirs[k+1]
-				if x < m && y < n && grid[x][y] == grid[i][j] {
-					if find(x*n+y) == find(i*n+j) {
-						return true
-					}
-					p[find(x*n+y)] = find(i*n + j)
-				}
-			}
-		}
-	}
-	return false
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {character[][]} grid
- * @return {boolean}
- */
-var containsCycle = function (grid) {
-    const m = grid.length;
-    const n = grid[0].length;
-    let p = Array.from({ length: m * n }, (_, i) => i);
-    function find(x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
-        }
-        return p[x];
-    }
-    const dirs = [0, 1, 0];
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            for (let k = 0; k < 2; ++k) {
-                const x = i + dirs[k];
-                const y = j + dirs[k + 1];
-                if (x < m && y < n && grid[x][y] == grid[i][j]) {
-                    if (find(x * n + y) == find(i * n + j)) {
-                        return true;
-                    }
-                    p[find(x * n + y)] = find(i * n + j);
-                }
-            }
-        }
-    }
-    return false;
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -300,4 +144,4 @@ var containsCycle = function (grid) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -55,36 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class MaxQueue:
-    def __init__(self):
-        self.q1 = deque()
-        self.q2 = deque()
 
-    def max_value(self) -> int:
-        return -1 if not self.q2 else self.q2[0]
-
-    def push_back(self, value: int) -> None:
-        while self.q2 and self.q2[-1] < value:
-            self.q2.pop()
-        self.q1.append(value)
-        self.q2.append(value)
-
-    def pop_front(self) -> int:
-        if not self.q1:
-            return -1
-        ans = self.q1.popleft()
-        if self.q2[0] == ans:
-            self.q2.popleft()
-        return ans
-
-
-# Your MaxQueue object will be instantiated and called as such:
-# obj = MaxQueue()
-# param_1 = obj.max_value()
-# obj.push_back(value)
-# param_3 = obj.pop_front()
-```
 
 ### **Java**
 
@@ -131,296 +102,29 @@ class MaxQueue {
  */
 ```
 
-### **C++**
 
-```cpp
-class MaxQueue {
-public:
-    MaxQueue() {
 
-    }
 
-    int max_value() {
-        return q2.empty() ? -1 : q2.front();
-    }
 
-    void push_back(int value) {
-        while (!q2.empty() && q2.back() < value) {
-            q2.pop_back();
-        }
-        q1.push(value);
-        q2.push_back(value);
-    }
 
-    int pop_front() {
-        if (q1.empty()) {
-            return -1;
-        }
-        int ans = q1.front();
-        q1.pop();
-        if (q2.front() == ans) {
-            q2.pop_front();
-        }
-        return ans;
-    }
 
-private:
-    queue<int> q1;
-    deque<int> q2;
-};
 
-/**
- * Your MaxQueue object will be instantiated and called as such:
- * MaxQueue* obj = new MaxQueue();
- * int param_1 = obj->max_value();
- * obj->push_back(value);
- * int param_3 = obj->pop_front();
- */
-```
 
-### **Go**
 
-```go
-type MaxQueue struct {
-	q1, q2 []int
-}
 
-func Constructor() MaxQueue {
-	return MaxQueue{[]int{}, []int{}}
-}
 
-func (this *MaxQueue) Max_value() int {
-	if len(this.q2) == 0 {
-		return -1
-	}
-	return this.q2[0]
-}
-
-func (this *MaxQueue) Push_back(value int) {
-	for len(this.q2) > 0 && this.q2[len(this.q2)-1] < value {
-		this.q2 = this.q2[:len(this.q2)-1]
-	}
-	this.q1 = append(this.q1, value)
-	this.q2 = append(this.q2, value)
-}
-
-func (this *MaxQueue) Pop_front() int {
-	if len(this.q1) == 0 {
-		return -1
-	}
-	ans := this.q1[0]
-	this.q1 = this.q1[1:]
-	if this.q2[0] == ans {
-		this.q2 = this.q2[1:]
-	}
-	return ans
-}
-
-/**
- * Your MaxQueue object will be instantiated and called as such:
- * obj := Constructor();
- * param_1 := obj.Max_value();
- * obj.Push_back(value);
- * param_3 := obj.Pop_front();
- */
-```
-
-### **JavaScript**
-
-```js
-var MaxQueue = function () {
-    this.q1 = [];
-    this.q2 = [];
-};
-
-/**
- * @return {number}
- */
-MaxQueue.prototype.max_value = function () {
-    return this.q2.length ? this.q2[0] : -1;
-};
-
-/**
- * @param {number} value
- * @return {void}
- */
-MaxQueue.prototype.push_back = function (value) {
-    while (this.q2.length && this.q2[this.q2.length - 1] < value) {
-        this.q2.pop();
-    }
-    this.q1.push(value);
-    this.q2.push(value);
-};
-
-/**
- * @return {number}
- */
-MaxQueue.prototype.pop_front = function () {
-    if (!this.q1.length) {
-        return -1;
-    }
-    const ans = this.q1.shift();
-    if (this.q2[0] == ans) {
-        this.q2.shift();
-    }
-    return ans;
-};
-
-/**
- * Your MaxQueue object will be instantiated and called as such:
- * var obj = new MaxQueue()
- * var param_1 = obj.max_value()
- * obj.push_back(value)
- * var param_3 = obj.pop_front()
- */
-```
 
 ### **TypeScript**
 
-```ts
-class MaxQueue {
-    private queue: number[];
-    private deque: number[];
 
-    constructor() {
-        this.queue = [];
-        this.deque = [];
-    }
 
-    max_value(): number {
-        return this.deque[0] ?? -1;
-    }
 
-    push_back(value: number): void {
-        this.queue.push(value);
-        while (
-            this.deque.length !== 0 &&
-            this.deque[this.deque.length - 1] < value
-        ) {
-            this.deque.pop();
-        }
-        this.deque.push(value);
-    }
 
-    pop_front(): number {
-        const res = this.queue.shift();
-        if (res === this.deque[0]) {
-            this.deque.shift();
-        }
-        return res ?? -1;
-    }
-}
 
-/**
- * Your MaxQueue object will be instantiated and called as such:
- * var obj = new MaxQueue()
- * var param_1 = obj.max_value()
- * obj.push_back(value)
- * var param_3 = obj.pop_front()
- */
-```
 
-### **Rust**
 
-```rust
-use std::collections::VecDeque;
-struct MaxQueue {
-    queue: VecDeque<i32>,
-    deque: VecDeque<i32>,
-}
 
-/**
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
-impl MaxQueue {
-    fn new() -> Self {
-        Self {
-            queue: VecDeque::new(),
-            deque: VecDeque::new(),
-        }
-    }
 
-    fn max_value(&self) -> i32 {
-        *self.deque.front().unwrap_or(&-1)
-    }
-
-    fn push_back(&mut self, value: i32) {
-        self.queue.push_back(value);
-        while !self.deque.is_empty() && *self.deque.back().unwrap() < value {
-            self.deque.pop_back();
-        }
-        self.deque.push_back(value);
-    }
-
-    fn pop_front(&mut self) -> i32 {
-        if self.queue.is_empty() {
-            return -1;
-        }
-        let res = self.queue.pop_front().unwrap();
-        if res == self.deque[0] {
-            self.deque.pop_front();
-        }
-        res
-    }
-}
-
-/**
- * Your MaxQueue object will be instantiated and called as such:
- * let obj = MaxQueue::new();
- * let ret_1: i32 = obj.max_value();
- * obj.push_back(value);
- * let ret_3: i32 = obj.pop_front();
- */
-```
-
-### **C#**
-
-```cs
-public class MaxQueue {
-    LinkedList<int> mvq;
-    Queue<int> q;
-
-    public MaxQueue() {
-        mvq = new LinkedList<int>();
-        q = new Queue<int>();
-    }
-
-    public int Max_value() {
-        if (mvq.Count == 0) {
-            return -1;
-        }
-        return mvq.First.Value;
-    }
-
-    public void Push_back(int value) {
-        q.Enqueue(value);
-        while (mvq.Count > 0 && mvq.Last.Value < value) {
-            mvq.RemoveLast();
-        }
-        mvq.AddLast(value);
-    }
-
-    public int Pop_front() {
-        if (q.Count == 0) {
-            return -1;
-        }
-        int v = q.Dequeue();
-        if (mvq.First.Value == v) {
-            mvq.RemoveFirst();
-        }
-        return v;
-    }
-}
-
-/**
- * Your MaxQueue object will be instantiated and called as such:
- * MaxQueue obj = new MaxQueue();
- * int param_1 = obj.Max_value();
- * obj.Push_back(value);
- * int param_3 = obj.Pop_front();
- */
-```
 
 ### **...**
 
@@ -428,4 +132,4 @@ public class MaxQueue {
 
 ```
 
-<!-- tabs:end -->
+

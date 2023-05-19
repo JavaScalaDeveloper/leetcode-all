@@ -67,47 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.children = [None] * 26
-        self.is_end = False
 
-    def insert(self, w):
-        node = self
-        for c in w:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-        node.is_end = True
-
-
-class Solution:
-    def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
-        def dfs(w):
-            if not w:
-                return True
-            node = trie
-            for i, c in enumerate(w):
-                idx = ord(c) - ord('a')
-                if node.children[idx] is None:
-                    return False
-                node = node.children[idx]
-                if node.is_end and dfs(w[i + 1 :]):
-                    return True
-            return False
-
-        trie = Trie()
-        ans = []
-        words.sort(key=lambda x: len(x))
-        for w in words:
-            if dfs(w):
-                ans.append(w)
-            else:
-                trie.insert(w)
-        return ans
-```
 
 ### **Java**
 
@@ -167,114 +127,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Trie {
-public:
-    vector<Trie*> children;
-    bool isEnd;
-    Trie()
-        : children(26)
-        , isEnd(false) { }
 
-    void insert(string w) {
-        Trie* node = this;
-        for (char c : w) {
-            c -= 'a';
-            if (!node->children[c]) node->children[c] = new Trie();
-            node = node->children[c];
-        }
-        node->isEnd = true;
-    }
-};
 
-class Solution {
-public:
-    Trie* trie = new Trie();
 
-    vector<string> findAllConcatenatedWordsInADict(vector<string>& words) {
-        sort(words.begin(), words.end(), [&](const string& a, const string& b) {
-            return a.size() < b.size();
-        });
-        vector<string> ans;
-        for (auto& w : words) {
-            if (dfs(w))
-                ans.push_back(w);
-            else
-                trie->insert(w);
-        }
-        return ans;
-    }
 
-    bool dfs(string w) {
-        if (w == "") return true;
-        Trie* node = trie;
-        for (int i = 0; i < w.size(); ++i) {
-            int idx = w[i] - 'a';
-            if (!node->children[idx]) return false;
-            node = node->children[idx];
-            if (node->isEnd && dfs(w.substr(i + 1))) return true;
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-type Trie struct {
-	children [26]*Trie
-	isEnd    bool
-}
-
-func newTrie() *Trie {
-	return &Trie{}
-}
-func (this *Trie) insert(word string) {
-	node := this
-	for _, c := range word {
-		c -= 'a'
-		if node.children[c] == nil {
-			node.children[c] = newTrie()
-		}
-		node = node.children[c]
-	}
-	node.isEnd = true
-}
-
-func findAllConcatenatedWordsInADict(words []string) (ans []string) {
-	sort.Slice(words, func(i, j int) bool { return len(words[i]) < len(words[j]) })
-	trie := newTrie()
-	var dfs func(string) bool
-	dfs = func(w string) bool {
-		if w == "" {
-			return true
-		}
-		node := trie
-		for i, c := range w {
-			c -= 'a'
-			if node.children[c] == nil {
-				return false
-			}
-			node = node.children[c]
-			if node.isEnd && dfs(w[i+1:]) {
-				return true
-			}
-		}
-		return false
-	}
-	for _, w := range words {
-		if dfs(w) {
-			ans = append(ans, w)
-		} else {
-			trie.insert(w)
-		}
-	}
-	return
-}
-```
 
 ### **...**
 
@@ -282,4 +141,4 @@ func findAllConcatenatedWordsInADict(words []string) (ans []string) {
 
 ```
 
-<!-- tabs:end -->
+

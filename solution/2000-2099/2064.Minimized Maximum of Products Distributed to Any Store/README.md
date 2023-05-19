@@ -82,14 +82,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimizedMaximum(self, n: int, quantities: List[int]) -> int:
-        def check(x):
-            return sum((v + x - 1) // x for v in quantities) <= n
 
-        return 1 + bisect_left(range(1, 10**6), True, key=check)
-```
 
 ### **Java**
 
@@ -116,66 +109,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimizedMaximum(int n, vector<int>& quantities) {
-        int left = 1, right = 1e5;
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            int cnt = 0;
-            for (int& v : quantities) {
-                cnt += (v + mid - 1) / mid;
-            }
-            if (cnt <= n) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimizedMaximum(n int, quantities []int) int {
-	return 1 + sort.Search(1e5, func(x int) bool {
-		x++
-		cnt := 0
-		for _, v := range quantities {
-			cnt += (v + x - 1) / x
-		}
-		return cnt <= n
-	})
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimizedMaximum(n: number, quantities: number[]): number {
-    let left = 1;
-    let right = 1e5;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        let cnt = 0;
-        for (const v of quantities) {
-            cnt += Math.ceil(v / mid);
-        }
-        if (cnt <= n) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-```
+
 
 ### **...**
 
@@ -183,4 +127,4 @@ function minimizedMaximum(n: number, quantities: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

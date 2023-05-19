@@ -87,23 +87,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxDiff(self, num: int) -> int:
-        a, b = str(num), str(num)
-        for c in a:
-            if c != "9":
-                a = a.replace(c, "9")
-                break
-        if b[0] != "1":
-            b = b.replace(b[0], "1")
-        else:
-            for c in b[1:]:
-                if c not in "01":
-                    b = b.replace(c, "0")
-                    break
-        return int(a) - int(b)
-```
+
 
 ### **Java**
 
@@ -135,67 +119,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxDiff(int num) {
-        auto replace = [](string& s, char a, char b) {
-            for (auto& c : s) {
-                if (c == a) {
-                    c = b;
-                }
-            }
-        };
-        string a = to_string(num);
-        string b = a;
-        for (int i = 0; i < a.size(); ++i) {
-            if (a[i] != '9') {
-                replace(a, a[i], '9');
-                break;
-            }
-        }
-        if (b[0] != '1') {
-            replace(b, b[0], '1');
-        } else {
-            for (int i = 1; i < b.size(); ++i) {
-                if (b[i] != '0' && b[i] != '1') {
-                    replace(b, b[i], '0');
-                    break;
-                }
-            }
-        }
-        return stoi(a) - stoi(b);
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxDiff(num int) int {
-	a, b := num, num
-	s := strconv.Itoa(num)
-	for i := range s {
-		if s[i] != '9' {
-			a, _ = strconv.Atoi(strings.ReplaceAll(s, string(s[i]), "9"))
-			break
-		}
-	}
-	if s[0] > '1' {
-		b, _ = strconv.Atoi(strings.ReplaceAll(s, string(s[0]), "1"))
-	} else {
-		for i := 1; i < len(s); i++ {
-			if s[i] != '0' && s[i] != '1' {
-				b, _ = strconv.Atoi(strings.ReplaceAll(s, string(s[i]), "0"))
-				break
-			}
-		}
-	}
-	return a - b
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -203,4 +133,4 @@ func maxDiff(num int) int {
 
 ```
 
-<!-- tabs:end -->
+

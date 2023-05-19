@@ -48,11 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestEvenMultiple(self, n: int) -> int:
-        return n if n % 2 == 0 else n * 2
-```
+
 
 ### **Java**
 
@@ -66,27 +62,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int smallestEvenMultiple(int n) {
-        return n % 2 == 0 ? n : n * 2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestEvenMultiple(n int) int {
-	if n%2 == 0 {
-		return n
-	}
-	return n * 2
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -98,24 +80,11 @@ int smallestEvenMultiple(int n) {
 
 ### **TypeScript**
 
-```ts
-function smallestEvenMultiple(n: number): number {
-    return n % 2 === 0 ? n : n * 2;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn smallest_even_multiple(n: i32) -> i32 {
-        if n % 2 == 0 {
-            return n;
-        }
-        n * 2
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -123,4 +92,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

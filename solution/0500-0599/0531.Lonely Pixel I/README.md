@@ -50,25 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findLonelyPixel(self, picture: List[List[str]]) -> int:
-        m, n = len(picture), len(picture[0])
-        rows, cols = [0] * m, [0] * n
-        for i in range(m):
-            for j in range(n):
-                if picture[i][j] == 'B':
-                    rows[i] += 1
-                    cols[j] += 1
-        res = 0
-        for i in range(m):
-            if rows[i] == 1:
-                for j in range(n):
-                    if picture[i][j] == 'B' and cols[j] == 1:
-                        res += 1
-                        break
-        return res
-```
+
 
 ### **Java**
 
@@ -104,68 +86,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findLonelyPixel(vector<vector<char>>& picture) {
-        int m = picture.size(), n = picture[0].size();
-        vector<int> rows(m);
-        vector<int> cols(n);
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (picture[i][j] == 'B') {
-                    ++rows[i];
-                    ++cols[j];
-                }
-            }
-        }
-        int res = 0;
-        for (int i = 0; i < m; ++i) {
-            if (rows[i] == 1) {
-                for (int j = 0; j < n; ++j) {
-                    if (picture[i][j] == 'B' && cols[j] == 1) {
-                        ++res;
-                        break;
-                    }
-                }
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findLonelyPixel(picture [][]byte) int {
-	m, n := len(picture), len(picture[0])
-	rows := make([]int, m)
-	cols := make([]int, n)
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if picture[i][j] == 'B' {
-				rows[i]++
-				cols[j]++
-			}
-		}
-	}
-	res := 0
-	for i := 0; i < m; i++ {
-		if rows[i] == 1 {
-			for j := 0; j < n; j++ {
-				if picture[i][j] == 'B' && cols[j] == 1 {
-					res++
-					break
-				}
-			}
-		}
-	}
-	return res
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -173,4 +100,4 @@ func findLonelyPixel(picture [][]byte) int {
 
 ```
 
-<!-- tabs:end -->
+

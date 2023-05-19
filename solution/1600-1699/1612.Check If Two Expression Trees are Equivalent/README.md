@@ -74,53 +74,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class Node(object):
-#     def __init__(self, val=" ", left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def checkEquivalence(self, root1: 'Node', root2: 'Node') -> bool:
-        def dfs(root, v):
-            if root is None:
-                return
-            if root.val != '+':
-                cnt[root.val] += v
-            dfs(root.left, v)
-            dfs(root.right, v)
 
-        cnt = Counter()
-        dfs(root1, 1)
-        dfs(root2, -1)
-        return all(x == 0 for x in cnt.values())
-```
 
-```python
-# Definition for a binary tree node.
-# class Node(object):
-#     def __init__(self, val=" ", left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def checkEquivalence(self, root1: 'Node', root2: 'Node') -> bool:
-        def dfs(root):
-            cnt = [0] * 26
-            if root is None:
-                return cnt
-            if root.val in '+-':
-                l, r = dfs(root.left), dfs(root.right)
-                k = 1 if root.val == '+' else -1
-                for i in range(26):
-                    cnt[i] += l[i] + r[i] * k
-            else:
-                cnt[ord(root.val) - ord('a')] += 1
-            return cnt
 
-        return dfs(root1) == dfs(root2)
-```
 
 ### **Java**
 
@@ -217,164 +173,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct Node {
- *     char val;
- *     Node *left;
- *     Node *right;
- *     Node() : val(' '), left(nullptr), right(nullptr) {}
- *     Node(char x) : val(x), left(nullptr), right(nullptr) {}
- *     Node(char x, Node *left, Node *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool checkEquivalence(Node* root1, Node* root2) {
-        int cnt[26]{};
-        function<void(Node*, int)> dfs = [&](Node* root, int v) {
-            if (!root) {
-                return;
-            }
-            if (root->val != '+') {
-                cnt[root->val - 'a'] += v;
-            }
-            dfs(root->left, v);
-            dfs(root->right, v);
-        };
-        dfs(root1, 1);
-        dfs(root2, -1);
-        for (int& x : cnt) {
-            if (x) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct Node {
- *     char val;
- *     Node *left;
- *     Node *right;
- *     Node() : val(' '), left(nullptr), right(nullptr) {}
- *     Node(char x) : val(x), left(nullptr), right(nullptr) {}
- *     Node(char x, Node *left, Node *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool checkEquivalence(Node* root1, Node* root2) {
-        function<vector<int>(Node*)> dfs = [&](Node* root) -> vector<int> {
-            vector<int> cnt(26);
-            if (!root) {
-                return cnt;
-            }
-            if (root->val == '+' || root->val == '-') {
-                auto l = dfs(root->left);
-                auto r = dfs(root->right);
-                int k = root->val == '+' ? 1 : -1;
-                for (int i = 0; i < 26; ++i) {
-                    cnt[i] += l[i] + r[i] * k;
-                }
-            } else {
-                cnt[root->val - 'a']++;
-            }
-            return cnt;
-        };
-        return dfs(root1) == dfs(root2);
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function Node(val, left, right) {
- *     this.val = (val===undefined ? " " : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {Node} root1
- * @param {Node} root2
- * @return {boolean}
- */
-var checkEquivalence = function (root1, root2) {
-    const cnt = new Array(26).fill(0);
-    const dfs = (root, v) => {
-        if (!root) {
-            return;
-        }
-        if (root.val !== '+') {
-            cnt[root.val.charCodeAt(0) - 'a'.charCodeAt(0)] += v;
-        }
-        dfs(root.left, v);
-        dfs(root.right, v);
-    };
-    dfs(root1, 1);
-    dfs(root2, -1);
-    for (const x of cnt) {
-        if (x) {
-            return false;
-        }
-    }
-    return true;
-};
-```
 
-```js
-/**
- * Definition for a binary tree node.
- * function Node(val, left, right) {
- *     this.val = (val===undefined ? " " : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {Node} root1
- * @param {Node} root2
- * @return {boolean}
- */
-var checkEquivalence = function (root1, root2) {
-    const dfs = root => {
-        const cnt = new Array(26).fill(0);
-        if (!root) {
-            return cnt;
-        }
-        if (root.val === '+' || root.val === '-') {
-            const l = dfs(root.left);
-            const r = dfs(root.right);
-            const k = root.val === '+' ? 1 : -1;
-            for (let i = 0; i < 26; ++i) {
-                cnt[i] = l[i] + k * r[i];
-            }
-        } else {
-            cnt[root.val.charCodeAt(0) - 'a'.charCodeAt(0)]++;
-        }
-        return cnt;
-    };
-    const cnt1 = dfs(root1);
-    const cnt2 = dfs(root2);
-    for (let i = 0; i < 26; ++i) {
-        if (cnt1[i] !== cnt2[i]) {
-            return false;
-        }
-    }
-    return true;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -382,4 +191,4 @@ var checkEquivalence = function (root1, root2) {
 
 ```
 
-<!-- tabs:end -->
+

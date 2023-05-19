@@ -62,17 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countCharacters(self, words: List[str], chars: str) -> int:
-        cnt = Counter(chars)
-        ans = 0
-        for w in words:
-            wc = Counter(w)
-            if all(cnt[c] >= v for c, v in wc.items()):
-                ans += len(w)
-        return ans
-```
+
 
 ### **Java**
 
@@ -105,119 +95,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countCharacters(vector<string>& words, string chars) {
-        int cnt[26]{};
-        for (char& c : chars) {
-            ++cnt[c - 'a'];
-        }
-        int ans = 0;
-        for (auto& w : words) {
-            int wc[26]{};
-            bool ok = true;
-            for (auto& c : w) {
-                int i = c - 'a';
-                if (++wc[i] > cnt[i]) {
-                    ok = false;
-                    break;
-                }
-            }
-            if (ok) {
-                ans += w.size();
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countCharacters(words []string, chars string) (ans int) {
-	cnt := [26]int{}
-	for _, c := range chars {
-		cnt[c-'a']++
-	}
-	for _, w := range words {
-		wc := [26]int{}
-		ok := true
-		for _, c := range w {
-			c -= 'a'
-			wc[c]++
-			if wc[c] > cnt[c] {
-				ok = false
-				break
-			}
-		}
-		if ok {
-			ans += len(w)
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countCharacters(words: string[], chars: string): number {
-    const idx = (c: string) => c.charCodeAt(0) - 'a'.charCodeAt(0);
-    const cnt = new Array(26).fill(0);
-    for (const c of chars) {
-        cnt[idx(c)]++;
-    }
-    let ans = 0;
-    for (const w of words) {
-        const wc = new Array(26).fill(0);
-        let ok = true;
-        for (const c of w) {
-            if (++wc[idx(c)] > cnt[idx(c)]) {
-                ok = false;
-                break;
-            }
-        }
-        if (ok) {
-            ans += w.length;
-        }
-    }
-    return ans;
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String[] $words
-     * @param String $chars
-     * @return Integer
-     */
-    function countCharacters($words, $chars) {
-        $sum = 0;
-        for ($i = 0; $i < strlen($chars); $i++) {
-            $hashtable[$chars[$i]] += 1;
-        }
-        for ($j = 0; $j < count($words); $j++) {
-            $tmp = $hashtable;
-            $sum += strlen($words[$j]);
-            for ($k = 0; $k < strlen($words[$j]); $k++) {
-                if (!isset($tmp[$words[$j][$k]]) || $tmp[$words[$j][$k]] === 0) {
-                    $sum -= strlen($words[$j]);
-                    break;
-                }
-                $tmp[$words[$j][$k]] -= 1;
-            }
-        }
-        return $sum;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -225,4 +117,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

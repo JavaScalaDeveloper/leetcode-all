@@ -78,44 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxFrequency(self, nums: List[int], k: int) -> int:
-        nums.sort()
-        l, r, n = 0, 1, len(nums)
-        ans, window = 1, 0
-        while r < n:
-            window += (nums[r] - nums[r - 1]) * (r - l)
-            while window > k:
-                window -= nums[r] - nums[l]
-                l += 1
-            r += 1
-            ans = max(ans, r - l)
-        return ans
-```
 
-```python
-class Solution:
-    def maxFrequency(self, nums: List[int], k: int) -> int:
-        def check(cnt):
-            for i in range(n + 1 - cnt):
-                j = i + cnt - 1
-                if nums[j] * cnt - (s[j + 1] - s[i]) <= k:
-                    return True
-            return False
 
-        nums.sort()
-        s = list(accumulate(nums, initial=0))
-        n = len(nums)
-        left, right = 1, n
-        while left < right:
-            mid = (left + right + 1) >> 1
-            if check(mid):
-                left = mid
-            else:
-                right = mid - 1
-        return left
-```
+
 
 ### **Java**
 
@@ -179,226 +144,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxFrequency(vector<int>& nums, int k) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        int ans = 1;
-        long long window = 0;
-        for (int l = 0, r = 1; r < n; ++r) {
-            window += 1LL * (nums[r] - nums[r - 1]) * (r - l);
-            while (window > k) {
-                window -= (nums[r] - nums[l++]);
-            }
-            ans = max(ans, r - l + 1);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maxFrequency(vector<int>& nums, int k) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        long long s[n + 1];
-        s[0] = 0;
-        for (int i = 0; i < n; ++i) {
-            s[i + 1] = s[i] + nums[i];
-        }
-        int left = 1, right = n;
-        auto check = [&](int cnt) {
-            for (int i = 0; i < n + 1 - cnt; ++i) {
-                int j = i + cnt - 1;
-                if (1LL * nums[j] * cnt - (s[j + 1] - s[i]) <= k) {
-                    return true;
-                }
-            }
-            return false;
-        };
-        while (left < right) {
-            int mid = (left + right + 1) >> 1;
-            if (check(mid)) {
-                left = mid;
-            } else {
-                right = mid - 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxFrequency(nums []int, k int) int {
-	sort.Ints(nums)
-	ans, window := 1, 0
-	for l, r := 0, 1; r < len(nums); r++ {
-		window += (nums[r] - nums[r-1]) * (r - l)
-		for window > k {
-			window -= nums[r] - nums[l]
-			l++
-		}
-		ans = max(ans, r-l+1)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func maxFrequency(nums []int, k int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	s := make([]int, n+1)
-	for i, x := range nums {
-		s[i+1] = s[i] + x
-	}
-	left, right := 1, n
-	check := func(cnt int) bool {
-		for i := 0; i < n+1-cnt; i++ {
-			j := i + cnt - 1
-			if nums[j]*cnt-(s[j+1]-s[i]) <= k {
-				return true
-			}
-		}
-		return false
-	}
-	for left < right {
-		mid := (left + right + 1) >> 1
-		if check(mid) {
-			left = mid
-		} else {
-			right = mid - 1
-		}
-	}
-	return left
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {number}
- */
-var maxFrequency = function (nums, k) {
-    nums.sort((a, b) => a - b);
-    let ans = 1;
-    let window = 0;
-    const n = nums.length;
-    for (let l = 0, r = 1; r < n; ++r) {
-        window += (nums[r] - nums[r - 1]) * (r - l);
-        while (window > k) {
-            window -= nums[r] - nums[l++];
-        }
-        ans = Math.max(ans, r - l + 1);
-    }
-    return ans;
-};
-```
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {number}
- */
-var maxFrequency = function (nums, k) {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    const s = new Array(n + 1).fill(0);
-    for (let i = 0; i < n; ++i) {
-        s[i + 1] = s[i] + nums[i];
-    }
-    const check = cnt => {
-        for (let i = 0; i < n + 1 - cnt; ++i) {
-            const j = i + cnt - 1;
-            if (nums[j] * cnt - (s[j + 1] - s[i]) <= k) {
-                return true;
-            }
-        }
-        return false;
-    };
-    let left = 1;
-    let right = n;
-    while (left < right) {
-        const mid = (left + right + 1) >> 1;
-        if (check(mid)) {
-            left = mid;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return left;
-};
-```
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxFrequency(nums: number[], k: number): number {
-    nums.sort((a, b) => a - b);
-    let ans = 1;
-    let window = 0;
-    const n = nums.length;
-    for (let l = 0, r = 1; r < n; ++r) {
-        window += (nums[r] - nums[r - 1]) * (r - l);
-        while (window > k) {
-            window -= nums[r] - nums[l++];
-        }
-        ans = Math.max(ans, r - l + 1);
-    }
-    return ans;
-}
-```
 
-```ts
-function maxFrequency(nums: number[], k: number): number {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    const s = new Array(n + 1).fill(0);
-    for (let i = 0; i < n; ++i) {
-        s[i + 1] = s[i] + nums[i];
-    }
-    const check = (cnt: number) => {
-        for (let i = 0; i < n + 1 - cnt; ++i) {
-            const j = i + cnt - 1;
-            if (nums[j] * cnt - (s[j + 1] - s[i]) <= k) {
-                return true;
-            }
-        }
-        return false;
-    };
-    let left = 1;
-    let right = n;
-    while (left < right) {
-        const mid = (left + right + 1) >> 1;
-        if (check(mid)) {
-            left = mid;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return left;
-}
-```
+
+
 
 ### **...**
 
@@ -406,4 +174,4 @@ function maxFrequency(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

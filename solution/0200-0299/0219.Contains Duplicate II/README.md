@@ -60,16 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        d = {}
-        for i, x in enumerate(nums):
-            if x in d and i - d[x] <= k:
-                return True
-            d[x] = i
-        return False
-```
+
 
 ### **Java**
 
@@ -90,70 +81,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool containsNearbyDuplicate(vector<int>& nums, int k) {
-        unordered_map<int, int> d;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (d.count(nums[i]) && i - d[nums[i]] <= k) {
-                return true;
-            }
-            d[nums[i]] = i;
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func containsNearbyDuplicate(nums []int, k int) bool {
-	d := map[int]int{}
-	for i, x := range nums {
-		if j, ok := d[x]; ok && i-j <= k {
-			return true
-		}
-		d[x] = i
-	}
-	return false
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool ContainsNearbyDuplicate(int[] nums, int k) {
-        var d = new Dictionary<int, int>();
-        for (int i = 0; i < nums.Length; ++i) {
-            if (d.ContainsKey(nums[i]) && i - d[nums[i]] <= k) {
-                return true;
-            }
-            d[nums[i]] = i;
-        }
-        return false;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function containsNearbyDuplicate(nums: number[], k: number): boolean {
-    const d: Map<number, number> = new Map();
-    for (let i = 0; i < nums.length; ++i) {
-        if (d.has(nums[i]) && i - d.get(nums[i])! <= k) {
-            return true;
-        }
-        d.set(nums[i], i);
-    }
-    return false;
-}
-```
+
 
 ### **...**
 
@@ -161,4 +103,4 @@ function containsNearbyDuplicate(nums: number[], k: number): boolean {
 
 ```
 
-<!-- tabs:end -->
+

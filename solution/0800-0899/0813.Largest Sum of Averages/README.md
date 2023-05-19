@@ -68,25 +68,7 @@ nums 的最优分组是[9], [1, 2, 3], [9]. 得到的分数是 9 + (1 + 2 + 3) /
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestSumOfAverages(self, nums: List[int], k: int) -> float:
-        @cache
-        def dfs(i, k):
-            if i == n:
-                return 0
-            if k == 1:
-                return (s[-1] - s[i]) / (n - i)
-            ans = 0
-            for j in range(i, n):
-                t = (s[j + 1] - s[i]) / (j - i + 1) + dfs(j + 1, k - 1)
-                ans = max(ans, t)
-            return ans
 
-        n = len(nums)
-        s = list(accumulate(nums, initial=0))
-        return dfs(0, k)
-```
 
 ### **Java**
 
@@ -128,66 +110,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double largestSumOfAverages(vector<int>& nums, int k) {
-        int n = nums.size();
-        int s[n + 1];
-        double f[n][k + 1];
-        s[0] = 0;
-        memset(f, 0, sizeof f);
-        for (int i = 0; i < n; ++i) s[i + 1] = s[i] + nums[i];
-        function<double(int, int)> dfs = [&](int i, int k) -> double {
-            if (i == n) return 0;
-            if (k == 1) return (s[n] - s[i]) * 1.0 / (n - i);
-            if (f[i][k]) return f[i][k];
-            double ans = 0;
-            for (int j = i; j < n; ++j) {
-                double t = (s[j + 1] - s[i]) * 1.0 / (j - i + 1) + dfs(j + 1, k - 1);
-                ans = max(ans, t);
-            }
-            return f[i][k] = ans;
-        };
-        return dfs(0, k);
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestSumOfAverages(nums []int, k int) float64 {
-	n := len(nums)
-	s := make([]int, n+1)
-	f := [110][110]float64{}
-	for i, v := range nums {
-		s[i+1] = s[i] + v
-	}
-	var dfs func(i, k int) float64
-	dfs = func(i, k int) float64 {
-		if i == n {
-			return 0
-		}
-		if k == 1 {
-			return float64(s[n]-s[i]) / float64(n-i)
-		}
-		if f[i][k] > 0 {
-			return f[i][k]
-		}
-		var ans float64
-		for j := i; j < n; j++ {
-			t := float64(s[j+1]-s[i])/float64(j-i+1) + dfs(j+1, k-1)
-			ans = math.Max(ans, t)
-		}
-		f[i][k] = ans
-		return ans
-	}
-	return dfs(0, k)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -195,4 +124,4 @@ func largestSumOfAverages(nums []int, k int) float64 {
 
 ```
 
-<!-- tabs:end -->
+

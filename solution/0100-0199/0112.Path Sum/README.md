@@ -64,25 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
-        def dfs(root, s):
-            if root is None:
-                return False
-            s += root.val
-            if root.left is None and root.right is None and s == targetSum:
-                return True
-            return dfs(root.left, s) or dfs(root.right, s)
 
-        return dfs(root, 0)
-```
 
 ### **Java**
 
@@ -122,160 +104,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool hasPathSum(TreeNode* root, int targetSum) {
-        function<bool(TreeNode*, int)> dfs = [&](TreeNode* root, int s) -> int {
-            if (!root) return false;
-            s += root->val;
-            if (!root->left && !root->right && s == targetSum) return true;
-            return dfs(root->left, s) || dfs(root->right, s);
-        };
-        return dfs(root, 0);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func hasPathSum(root *TreeNode, targetSum int) bool {
-	var dfs func(*TreeNode, int) bool
-	dfs = func(root *TreeNode, s int) bool {
-		if root == nil {
-			return false
-		}
-		s += root.Val
-		if root.Left == nil && root.Right == nil && s == targetSum {
-			return true
-		}
-		return dfs(root.Left, s) || dfs(root.Right, s)
-	}
-	return dfs(root, 0)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
-    if (root == null) {
-        return false;
-    }
-    const { val, left, right } = root;
-    if (left == null && right == null) {
-        return targetSum - val === 0;
-    }
-    return (
-        hasPathSum(left, targetSum - val) || hasPathSum(right, targetSum - val)
-    );
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    pub fn has_path_sum(root: Option<Rc<RefCell<TreeNode>>>, target_sum: i32) -> bool {
-        match root {
-            None => false,
-            Some(node) => {
-                let mut node = node.borrow_mut();
-                // 确定叶结点身份
-                if node.left.is_none() && node.right.is_none() {
-                    return target_sum - node.val == 0;
-                }
-                let val = node.val;
-                Self::has_path_sum(node.left.take(), target_sum - val)
-                    || Self::has_path_sum(node.right.take(), target_sum - val)
-            }
-        }
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @param {number} targetSum
- * @return {boolean}
- */
-var hasPathSum = function (root, targetSum) {
-    function dfs(root, s) {
-        if (!root) return false;
-        s += root.val;
-        if (!root.left && !root.right && s == targetSum) return true;
-        return dfs(root.left, s) || dfs(root.right, s);
-    }
-    return dfs(root, 0);
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -283,4 +130,4 @@ var hasPathSum = function (root, targetSum) {
 
 ```
 
-<!-- tabs:end -->
+

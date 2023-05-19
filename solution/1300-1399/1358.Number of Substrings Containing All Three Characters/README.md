@@ -59,16 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfSubstrings(self, s: str) -> int:
-        d = {"a": -1, "b": -1, "c": -1}
-        ans = 0
-        for i, c in enumerate(s):
-            d[c] = i
-            ans += min(d["a"], d["b"], d["c"]) + 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -89,42 +80,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfSubstrings(string s) {
-        int d[3] = {-1, -1, -1};
-        int ans = 0;
-        for (int i = 0; i < s.size(); ++i) {
-            d[s[i] - 'a'] = i;
-            ans += min(d[0], min(d[1], d[2])) + 1;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfSubstrings(s string) (ans int) {
-	d := [3]int{-1, -1, -1}
-	for i, c := range s {
-		d[c-'a'] = i
-		ans += min(d[0], min(d[1], d[2])) + 1
-	}
-	return
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -132,4 +94,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

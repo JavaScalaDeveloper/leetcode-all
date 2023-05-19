@@ -67,12 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def putMarbles(self, weights: List[int], k: int) -> int:
-        arr = sorted(a + b for a, b in pairwise(weights))
-        return sum(arr[len(arr) - k + 1 :]) - sum(arr[: k - 1])
-```
+
 
 ### **Java**
 
@@ -97,62 +92,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long putMarbles(vector<int>& weights, int k) {
-        int n = weights.size();
-        vector<int> arr(n - 1);
-        for (int i = 0; i < n - 1; ++i) {
-            arr[i] = weights[i] + weights[i + 1];
-        }
-        sort(arr.begin(), arr.end());
-        long long ans = 0;
-        for (int i = 0; i < k - 1; ++i) {
-            ans -= arr[i];
-            ans += arr[n - 2 - i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func putMarbles(weights []int, k int) (ans int64) {
-	n := len(weights)
-	arr := make([]int, n-1)
-	for i, w := range weights[:n-1] {
-		arr[i] = w + weights[i+1]
-	}
-	sort.Ints(arr)
-	for i := 0; i < k-1; i++ {
-		ans += int64(arr[n-2-i] - arr[i])
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function putMarbles(weights: number[], k: number): number {
-    const n = weights.length;
-    const arr: number[] = [];
-    for (let i = 0; i < n - 1; ++i) {
-        arr.push(weights[i] + weights[i + 1]);
-    }
-    arr.sort((a, b) => a - b);
-    let ans = 0;
-    for (let i = 0; i < k - 1; ++i) {
-        ans += arr[n - i - 2] - arr[i];
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -160,4 +110,4 @@ function putMarbles(weights: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

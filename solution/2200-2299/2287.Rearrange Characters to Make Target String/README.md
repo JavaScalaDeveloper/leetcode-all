@@ -68,13 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rearrangeCharacters(self, s: str, target: str) -> int:
-        cnt1 = Counter(s)
-        cnt2 = Counter(target)
-        return min(cnt1[c] // v for c, v in cnt2.items())
-```
+
 
 ### **Java**
 
@@ -102,105 +96,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int rearrangeCharacters(string s, string target) {
-        int cnt1[26]{};
-        int cnt2[26]{};
-        for (char& c : s) {
-            ++cnt1[c - 'a'];
-        }
-        for (char& c : target) {
-            ++cnt2[c - 'a'];
-        }
-        int ans = 100;
-        for (int i = 0; i < 26; ++i) {
-            if (cnt2[i]) {
-                ans = min(ans, cnt1[i] / cnt2[i]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func rearrangeCharacters(s string, target string) int {
-	var cnt1, cnt2 [26]int
-	for _, c := range s {
-		cnt1[c-'a']++
-	}
-	for _, c := range target {
-		cnt2[c-'a']++
-	}
-	ans := 100
-	for i, v := range cnt2 {
-		if v > 0 {
-			ans = min(ans, cnt1[i]/v)
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function rearrangeCharacters(s: string, target: string): number {
-    const idx = (s: string) => s.charCodeAt(0) - 97;
-    const cnt1 = new Array(26).fill(0);
-    const cnt2 = new Array(26).fill(0);
-    for (const c of s) {
-        ++cnt1[idx(c)];
-    }
-    for (const c of target) {
-        ++cnt2[idx(c)];
-    }
-    let ans = 100;
-    for (let i = 0; i < 26; ++i) {
-        if (cnt2[i]) {
-            ans = Math.min(ans, Math.floor(cnt1[i] / cnt2[i]));
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn rearrange_characters(s: String, target: String) -> i32 {
-        let mut count1 = [0; 26];
-        let mut count2 = [0; 26];
-        for c in s.as_bytes() {
-            count1[(c - b'a') as usize] += 1;
-        }
-        for c in target.as_bytes() {
-            count2[(c - b'a') as usize] += 1;
-        }
-        let mut ans = i32::MAX;
-        for i in 0..26 {
-            if count2[i] != 0 {
-                ans = ans.min(count1[i] / count2[i]);
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -232,4 +142,4 @@ int rearrangeCharacters(char *s, char *target) {
 
 ```
 
-<!-- tabs:end -->
+

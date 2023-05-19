@@ -57,28 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shortestWordDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
-        ans = len(wordsDict)
-        if word1 == word2:
-            j = -1
-            for i, w in enumerate(wordsDict):
-                if w == word1:
-                    if j != -1:
-                        ans = min(ans, i - j)
-                    j = i
-        else:
-            i = j = -1
-            for k, w in enumerate(wordsDict):
-                if w == word1:
-                    i = k
-                if w == word2:
-                    j = k
-                if i != -1 and j != -1:
-                    ans = min(ans, abs(i - j))
-        return ans
-```
+
 
 ### **Java**
 
@@ -115,87 +94,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int shortestWordDistance(vector<string>& wordsDict, string word1, string word2) {
-        int n = wordsDict.size();
-        int ans = n;
-        if (word1 == word2) {
-            for (int i = 0, j = -1; i < n; ++i) {
-                if (wordsDict[i] == word1) {
-                    if (j != -1) {
-                        ans = min(ans, i - j);
-                    }
-                    j = i;
-                }
-            }
-        } else {
-            for (int k = 0, i = -1, j = -1; k < n; ++k) {
-                if (wordsDict[k] == word1) {
-                    i = k;
-                }
-                if (wordsDict[k] == word2) {
-                    j = k;
-                }
-                if (i != -1 && j != -1) {
-                    ans = min(ans, abs(i - j));
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func shortestWordDistance(wordsDict []string, word1 string, word2 string) int {
-	ans := len(wordsDict)
-	if word1 == word2 {
-		j := -1
-		for i, w := range wordsDict {
-			if w == word1 {
-				if j != -1 {
-					ans = min(ans, i-j)
-				}
-				j = i
-			}
-		}
-	} else {
-		i, j := -1, -1
-		for k, w := range wordsDict {
-			if w == word1 {
-				i = k
-			}
-			if w == word2 {
-				j = k
-			}
-			if i != -1 && j != -1 {
-				ans = min(ans, abs(i-j))
-			}
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
 
 ### **...**
 
@@ -203,4 +108,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

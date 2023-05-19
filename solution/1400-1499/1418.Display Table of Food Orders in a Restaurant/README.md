@@ -66,26 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
-        tables = set()
-        foods = set()
-        mp = Counter()
-        for _, table, food in orders:
-            tables.add(int(table))
-            foods.add(food)
-            mp[f'{table}.{food}'] += 1
-        foods = sorted(list(foods))
-        tables = sorted(list(tables))
-        res = [['Table'] + foods]
-        for table in tables:
-            t = [str(table)]
-            for food in foods:
-                t.append(str(mp[f'{table}.{food}']))
-            res.append(t)
-        return res
-```
+
 
 ### **Java**
 
@@ -127,89 +108,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<string>> displayTable(vector<vector<string>>& orders) {
-        unordered_set<int> tables;
-        unordered_set<string> foods;
-        unordered_map<string, int> mp;
-        for (auto& order : orders) {
-            int table = stoi(order[1]);
-            string food = order[2];
-            tables.insert(table);
-            foods.insert(food);
-            ++mp[order[1] + "." + food];
-        }
-        vector<int> t;
-        t.assign(tables.begin(), tables.end());
-        sort(t.begin(), t.end());
-        vector<string> f;
-        f.assign(foods.begin(), foods.end());
-        sort(f.begin(), f.end());
-        vector<vector<string>> res;
-        vector<string> title;
-        title.push_back("Table");
-        for (auto e : f) title.push_back(e);
-        res.push_back(title);
-        for (int table : t) {
-            vector<string> tmp;
-            tmp.push_back(to_string(table));
-            for (string food : f) {
-                tmp.push_back(to_string(mp[to_string(table) + "." + food]));
-            }
-            res.push_back(tmp);
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func displayTable(orders [][]string) [][]string {
-	tables := make(map[int]bool)
-	foods := make(map[string]bool)
-	mp := make(map[string]int)
-	for _, order := range orders {
-		table, food := order[1], order[2]
-		t, _ := strconv.Atoi(table)
-		tables[t] = true
-		foods[food] = true
-		key := table + "." + food
-		mp[key] += 1
-	}
-	var t []int
-	var f []string
-	for i := range tables {
-		t = append(t, i)
-	}
-	for i := range foods {
-		f = append(f, i)
-	}
-	sort.Ints(t)
-	sort.Strings(f)
-	var res [][]string
-	var title []string
-	title = append(title, "Table")
-	for _, e := range f {
-		title = append(title, e)
-	}
-	res = append(res, title)
-	for _, table := range t {
-		var tmp []string
-		tmp = append(tmp, strconv.Itoa(table))
-		for _, food := range f {
-			tmp = append(tmp, strconv.Itoa(mp[strconv.Itoa(table)+"."+food]))
-		}
-		res = append(res, tmp)
-	}
-	return res
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -217,4 +122,4 @@ func displayTable(orders [][]string) [][]string {
 
 ```
 
-<!-- tabs:end -->
+

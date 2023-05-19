@@ -62,17 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def lengthOfLastWord(self, s: str) -> int:
-        i = len(s) - 1
-        while i >= 0 and s[i] == ' ':
-            i -= 1
-        j = i
-        while j >= 0 and s[j] != ' ':
-            j -= 1
-        return i - j
-```
+
 
 ### **Java**
 
@@ -94,133 +84,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int lengthOfLastWord(string s) {
-        int i = s.size() - 1;
-        while (~i && s[i] == ' ') {
-            --i;
-        }
-        int j = i;
-        while (~j && s[j] != ' ') {
-            --j;
-        }
-        return i - j;
-    }
-};
-```
 
-### **Go**
 
-```go
-func lengthOfLastWord(s string) int {
-	i := len(s) - 1
-	for i >= 0 && s[i] == ' ' {
-		i--
-	}
-	j := i
-	for j >= 0 && s[j] != ' ' {
-		j--
-	}
-	return i - j
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {number}
- */
-var lengthOfLastWord = function (s) {
-    let i = s.length - 1;
-    while (i >= 0 && s[i] === ' ') {
-        --i;
-    }
-    let j = i;
-    while (j >= 0 && s[j] !== ' ') {
-        --j;
-    }
-    return i - j;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function lengthOfLastWord(s: string): number {
-    let i = s.length - 1;
-    while (i >= 0 && s[i] === ' ') {
-        --i;
-    }
-    let j = i;
-    while (j >= 0 && s[j] !== ' ') {
-        --j;
-    }
-    return i - j;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int LengthOfLastWord(string s) {
-        int i = s.Length - 1;
-        while (i >= 0 && s[i] == ' ') {
-            --i;
-        }
-        int j = i;
-        while (j >= 0 && s[j] != ' ') {
-            --j;
-        }
-        return i - j;
-    }
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn length_of_last_word(s: String) -> i32 {
-        let s = s.trim_end();
-        let n = s.len();
-        for (i, c) in s.char_indices().rev() {
-            if c == ' ' {
-                return (n - i - 1) as i32;
-            }
-        }
-        n as i32
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @return Integer
-     */
-    function lengthOfLastWord($s) {
-        $count = 0;
-        while ($s[strlen($s) - 1] == " ") {
-            $s = substr($s, 0, -1);
-        }
-        while (strlen($s) != 0 && $s[strlen($s) - 1] != " ") {
-            $count++;
-            $s = substr($s, 0, -1);
-        }
-        return $count;
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -228,4 +118,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -74,44 +74,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def prefixCount(self, words: List[str], pref: str) -> int:
-        return sum(w.startswith(pref) for w in words)
-```
-
-```python
-class Trie:
-    def __init__(self):
-        self.children = [None] * 26
-        self.cnt = 0
-
-    def insert(self, w):
-        node = self
-        for c in w:
-            i = ord(c) - ord('a')
-            if node.children[i] is None:
-                node.children[i] = Trie()
-            node = node.children[i]
-            node.cnt += 1
-
-    def search(self, pref):
-        node = self
-        for c in pref:
-            i = ord(c) - ord('a')
-            if node.children[i] is None:
-                return 0
-            node = node.children[i]
-        return node.cnt
 
 
-class Solution:
-    def prefixCount(self, words: List[str], pref: str) -> int:
-        tree = Trie()
-        for w in words:
-            tree.insert(w)
-        return tree.search(pref)
-```
+
 
 ### **Java**
 
@@ -172,138 +137,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int prefixCount(vector<string>& words, string pref) {
-        int ans = 0;
-        for (auto& w : words) ans += w.find(pref) == 0;
-        return ans;
-    }
-};
-```
 
-```cpp
-class Trie {
-public:
-    Trie(): children(26), cnt(0) {}
 
-    void insert(string w) {
-        Trie* node = this;
-        for (auto& c : w) {
-            int i = c - 'a';
-            if (!node->children[i]) {
-                node->children[i] = new Trie();
-            }
-            node = node->children[i];
-            ++node->cnt;
-        }
-    }
 
-    int search(string pref) {
-        Trie* node = this;
-        for (auto& c : pref) {
-            int i = c - 'a';
-            if (!node->children[i]) {
-                return 0;
-            }
-            node = node->children[i];
-        }
-        return node->cnt;
-    }
 
-private:
-    vector<Trie*> children;
-    int cnt;
-};
 
-class Solution {
-public:
-    int prefixCount(vector<string>& words, string pref) {
-        Trie* tree = new Trie();
-        for (auto& w : words) {
-            tree->insert(w);
-        }
-        return tree->search(pref);
-    }
-};
-```
 
-### **Go**
 
-```go
-func prefixCount(words []string, pref string) (ans int) {
-	for _, w := range words {
-		if strings.HasPrefix(w, pref) {
-			ans++
-		}
-	}
-	return
-}
-```
 
-```go
-type Trie struct {
-	children [26]*Trie
-	cnt      int
-}
 
-func newTrie() *Trie {
-	return &Trie{}
-}
 
-func (this *Trie) insert(w string) {
-	node := this
-	for _, c := range w {
-		c -= 'a'
-		if node.children[c] == nil {
-			node.children[c] = newTrie()
-		}
-		node = node.children[c]
-		node.cnt++
-	}
-}
-
-func (this *Trie) search(pref string) int {
-	node := this
-	for _, c := range pref {
-		c -= 'a'
-		if node.children[c] == nil {
-			return 0
-		}
-		node = node.children[c]
-	}
-	return node.cnt
-}
-
-func prefixCount(words []string, pref string) int {
-	tree := newTrie()
-	for _, w := range words {
-		tree.insert(w)
-	}
-	return tree.search(pref)
-}
-```
 
 ### **TypeScript**
 
-```ts
-function prefixCount(words: string[], pref: string): number {
-    return words.reduce((r, s) => (r += s.startsWith(pref) ? 1 : 0), 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn prefix_count(words: Vec<String>, pref: String) -> i32 {
-        words.iter().filter(|s| s.starts_with(&pref)).count() as i32
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -326,4 +178,4 @@ int prefixCount(char **words, int wordsSize, char *pref) {
 
 ```
 
-<!-- tabs:end -->
+

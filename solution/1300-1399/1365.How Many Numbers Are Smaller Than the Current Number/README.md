@@ -71,22 +71,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-        arr = sorted(nums)
-        return [bisect_left(arr, x) for x in nums]
-```
 
-```python
-class Solution:
-    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-        cnt = [0] * 102
-        for x in nums:
-            cnt[x + 1] += 1
-        s = list(accumulate(cnt))
-        return [s[x] for x in nums]
-```
+
+
 
 ### **Java**
 
@@ -138,114 +125,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
-        vector<int> arr = nums;
-        sort(arr.begin(), arr.end());
-        for (int i = 0; i < nums.size(); ++i) {
-            nums[i] = lower_bound(arr.begin(), arr.end(), nums[i]) - arr.begin();
-        }
-        return nums;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
-        int cnt[102]{};
-        for (int& x : nums) {
-            ++cnt[x + 1];
-        }
-        for (int i = 1; i < 102; ++i) {
-            cnt[i] += cnt[i - 1];
-        }
-        vector<int> ans;
-        for (int& x : nums) {
-            ans.push_back(cnt[x]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallerNumbersThanCurrent(nums []int) (ans []int) {
-	arr := make([]int, len(nums))
-	copy(arr, nums)
-	sort.Ints(arr)
-	for i, x := range nums {
-		nums[i] = sort.SearchInts(arr, x)
-	}
-	return nums
-}
-```
 
-```go
-func smallerNumbersThanCurrent(nums []int) (ans []int) {
-	cnt := [102]int{}
-	for _, x := range nums {
-		cnt[x+1]++
-	}
-	for i := 1; i < len(cnt); i++ {
-		cnt[i] += cnt[i-1]
-	}
-	for _, x := range nums {
-		ans = append(ans, cnt[x])
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function smallerNumbersThanCurrent(nums: number[]): number[] {
-    const search = (nums: number[], x: number) => {
-        let l = 0,
-            r = nums.length;
-        while (l < r) {
-            const mid = (l + r) >> 1;
-            if (nums[mid] >= x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    };
-    const arr = nums.slice().sort((a, b) => a - b);
-    for (let i = 0; i < nums.length; ++i) {
-        nums[i] = search(arr, nums[i]);
-    }
-    return nums;
-}
-```
 
-```ts
-function smallerNumbersThanCurrent(nums: number[]): number[] {
-    const cnt: number[] = new Array(102).fill(0);
-    for (const x of nums) {
-        ++cnt[x + 1];
-    }
-    for (let i = 1; i < cnt.length; ++i) {
-        cnt[i] += cnt[i - 1];
-    }
-    const n = nums.length;
-    const ans: number[] = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        ans[i] = cnt[nums[i]];
-    }
-    return ans;
-}
-```
+
+
 
 ### **...**
 
@@ -253,4 +149,4 @@ function smallerNumbersThanCurrent(nums: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

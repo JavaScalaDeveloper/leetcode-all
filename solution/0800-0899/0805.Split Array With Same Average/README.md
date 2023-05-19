@@ -96,28 +96,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def splitArraySameAverage(self, nums: List[int]) -> bool:
-        n = len(nums)
-        if n == 1:
-            return False
-        s = sum(nums)
-        for i, v in enumerate(nums):
-            nums[i] = v * n - s
-        m = n >> 1
-        vis = set()
-        for i in range(1, 1 << m):
-            t = sum(v for j, v in enumerate(nums[:m]) if i >> j & 1)
-            if t == 0:
-                return True
-            vis.add(t)
-        for i in range(1, 1 << (n - m)):
-            t = sum(v for j, v in enumerate(nums[m:]) if i >> j & 1)
-            if t == 0 or (i != (1 << (n - m)) - 1 and -t in vis):
-                return True
-        return False
-```
+
 
 ### **Java**
 
@@ -164,77 +143,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool splitArraySameAverage(vector<int>& nums) {
-        int n = nums.size();
-        if (n == 1) return false;
-        int s = accumulate(nums.begin(), nums.end(), 0);
-        for (int& v : nums) v = v * n - s;
-        int m = n >> 1;
-        unordered_set<int> vis;
-        for (int i = 1; i < 1 << m; ++i) {
-            int t = 0;
-            for (int j = 0; j < m; ++j) if (i >> j & 1) t += nums[j];
-            if (t == 0) return true;
-            vis.insert(t);
-        }
-        for (int i = 1; i < 1 << (n - m); ++i) {
-            int t = 0;
-            for (int j = 0; j < (n - m); ++j) if (i >> j & 1) t += nums[m + j];
-            if (t == 0 || (i != (1 << (n - m)) - 1 && vis.count(-t))) return true;
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func splitArraySameAverage(nums []int) bool {
-	n := len(nums)
-	if n == 1 {
-		return false
-	}
-	s := 0
-	for _, v := range nums {
-		s += v
-	}
-	for i, v := range nums {
-		nums[i] = v*n - s
-	}
-	m := n >> 1
-	vis := map[int]bool{}
-	for i := 1; i < 1<<m; i++ {
-		t := 0
-		for j, v := range nums[:m] {
-			if (i >> j & 1) == 1 {
-				t += v
-			}
-		}
-		if t == 0 {
-			return true
-		}
-		vis[t] = true
-	}
-	for i := 1; i < 1<<(n-m); i++ {
-		t := 0
-		for j, v := range nums[m:] {
-			if (i >> j & 1) == 1 {
-				t += v
-			}
-		}
-		if t == 0 || (i != (1<<(n-m))-1 && vis[-t]) {
-			return true
-		}
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -242,4 +157,4 @@ func splitArraySameAverage(nums []int) bool {
 
 ```
 
-<!-- tabs:end -->
+

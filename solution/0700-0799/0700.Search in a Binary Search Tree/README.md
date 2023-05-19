@@ -49,23 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def searchBST(self, root: TreeNode, val: int) -> TreeNode:
-        if root is None or root.val == val:
-            return root
-        return (
-            self.searchBST(root.right, val)
-            if root.val < val
-            else self.searchBST(root.left, val)
-        )
-```
+
 
 ### **Java**
 
@@ -97,50 +81,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* searchBST(TreeNode* root, int val) {
-        if (!root || root->val == val) return root;
-        return root->val < val ? searchBST(root->right, val) : searchBST(root->left, val);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func searchBST(root *TreeNode, val int) *TreeNode {
-	if root == nil || root.Val == val {
-		return root
-	}
-	if root.Val < val {
-		return searchBST(root.Right, val)
-	}
-	return searchBST(root.Left, val)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -148,4 +95,4 @@ func searchBST(root *TreeNode, val int) *TreeNode {
 
 ```
 
-<!-- tabs:end -->
+

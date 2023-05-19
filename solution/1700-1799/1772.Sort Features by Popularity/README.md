@@ -63,16 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sortFeatures(self, features: List[str], responses: List[str]) -> List[str]:
-        cnt = Counter()
-        for r in responses:
-            ws = set(r.split())
-            for s in ws:
-                cnt[s] += 1
-        return sorted(features, key=lambda x: -cnt[x])
-```
+
 
 ### **Java**
 
@@ -109,70 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> sortFeatures(vector<string>& features, vector<string>& responses) {
-        unordered_map<string, int> cnt;
-        for (auto& r : responses) {
-            stringstream ss(r);
-            string t;
-            unordered_set<string> ws;
-            while (ss >> t) {
-                ws.insert(t);
-            }
-            for (auto& w : ws) {
-                cnt[w]++;
-            }
-        }
-        int n = features.size();
-        vector<int> idx(n);
-        iota(idx.begin(), idx.end(), 0);
-        sort(idx.begin(), idx.end(), [&](int i, int j) -> bool {
-            int d = cnt[features[i]] - cnt[features[j]];
-            return d > 0 || (d == 0 && i < j);
-        });
-        vector<string> ans(n);
-        for (int i = 0; i < n; ++i) {
-            ans[i] = features[idx[i]];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sortFeatures(features []string, responses []string) []string {
-	cnt := map[string]int{}
-	for _, r := range responses {
-		ws := map[string]bool{}
-		for _, s := range strings.Split(r, " ") {
-			ws[s] = true
-		}
-		for w := range ws {
-			cnt[w]++
-		}
-	}
-	n := len(features)
-	idx := make([]int, n)
-	for i := range idx {
-		idx[i] = i
-	}
-	sort.Slice(idx, func(i, j int) bool {
-		d := cnt[features[idx[i]]] - cnt[features[idx[j]]]
-		return d > 0 || (d == 0 && idx[i] < idx[j])
-	})
-	ans := make([]string, n)
-	for i := range ans {
-		ans[i] = features[idx[i]]
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -180,4 +114,4 @@ func sortFeatures(features []string, responses []string) []string {
 
 ```
 
-<!-- tabs:end -->
+

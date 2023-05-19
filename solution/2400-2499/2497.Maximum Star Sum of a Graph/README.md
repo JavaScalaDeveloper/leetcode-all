@@ -76,19 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxStarSum(self, vals: List[int], edges: List[List[int]], k: int) -> int:
-        g = defaultdict(list)
-        for a, b in edges:
-            if vals[b] > 0:
-                g[a].append(vals[b])
-            if vals[a] > 0:
-                g[b].append(vals[a])
-        for bs in g.values():
-            bs.sort(reverse=True)
-        return max(v + sum(g[i][:k]) for i, v in enumerate(vals))
-```
+
 
 ### **Java**
 
@@ -125,73 +113,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxStarSum(vector<int>& vals, vector<vector<int>>& edges, int k) {
-        int n = vals.size();
-        vector<vector<int>> g(n);
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            if (vals[b] > 0) g[a].emplace_back(vals[b]);
-            if (vals[a] > 0) g[b].emplace_back(vals[a]);
-        }
-        for (auto& e : g) sort(e.rbegin(), e.rend());
-        int ans = INT_MIN;
-        for (int i = 0; i < n; ++i) {
-            int v = vals[i];
-            for (int j = 0; j < min((int) g[i].size(), k); ++j) v += g[i][j];
-            ans = max(ans, v);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxStarSum(vals []int, edges [][]int, k int) (ans int) {
-	n := len(vals)
-	g := make([][]int, n)
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		if vals[b] > 0 {
-			g[a] = append(g[a], vals[b])
-		}
-		if vals[a] > 0 {
-			g[b] = append(g[b], vals[a])
-		}
-	}
-	for _, e := range g {
-		sort.Sort(sort.Reverse(sort.IntSlice(e)))
-	}
-	ans = math.MinInt32
-	for i, v := range vals {
-		for j := 0; j < min(len(g[i]), k); j++ {
-			v += g[i][j]
-		}
-		ans = max(ans, v)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -199,4 +127,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

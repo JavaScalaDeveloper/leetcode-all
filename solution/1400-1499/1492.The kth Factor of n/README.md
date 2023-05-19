@@ -76,37 +76,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kthFactor(self, n: int, k: int) -> int:
-        for i in range(1, n + 1):
-            if n % i == 0:
-                k -= 1
-                if k == 0:
-                    return i
-        return -1
-```
 
-```python
-class Solution:
-    def kthFactor(self, n: int, k: int) -> int:
-        i = 1
-        while i * i < n:
-            if n % i == 0:
-                k -= 1
-                if k == 0:
-                    return i
-            i += 1
-        if i * i != n:
-            i -= 1
-        while i:
-            if (n % (n // i)) == 0:
-                k -= 1
-                if k == 0:
-                    return n // i
-            i -= 1
-        return -1
-```
+
+
 
 ### **Java**
 
@@ -147,72 +119,15 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int kthFactor(int n, int k) {
-        int i = 1;
-        for (; i < n / i; ++i) {
-            if (n % i == 0 && (--k == 0)) {
-                return i;
-            }
-        }
-        if (i * i != n) {
-            --i;
-        }
-        for (; i > 0; --i) {
-            if (n % (n / i) == 0 && (--k == 0)) {
-                return n / i;
-            }
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func kthFactor(n int, k int) int {
-	for i := 1; i <= n; i++ {
-		if n%i == 0 {
-			k--
-			if k == 0 {
-				return i
-			}
-		}
-	}
-	return -1
-}
-```
 
-```go
-func kthFactor(n int, k int) int {
-	i := 1
-	for ; i < n/i; i++ {
-		if n%i == 0 {
-			k--
-			if k == 0 {
-				return i
-			}
-		}
-	}
-	if i*i != n {
-		i--
-	}
-	for ; i > 0; i-- {
-		if n%(n/i) == 0 {
-			k--
-			if k == 0 {
-				return n / i
-			}
-		}
-	}
-	return -1
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -220,4 +135,4 @@ func kthFactor(n int, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

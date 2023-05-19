@@ -69,51 +69,9 @@ Python 中可以直接 `chr(257)` 作为字符串的分隔符，这样就可以�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Codec:
-    def encode(self, strs: List[str]) -> str:
-        """Encodes a list of strings to a single string.
-        """
-        return chr(257).join(strs)
-
-    def decode(self, s: str) -> List[str]:
-        """Decodes a single string to a list of strings.
-        """
-        return s.split(chr(257))
 
 
-# Your Codec object will be instantiated and called as such:
-# codec = Codec()
-# codec.decode(codec.encode(strs))
-```
 
-```python
-class Codec:
-    def encode(self, strs: List[str]) -> str:
-        """Encodes a list of strings to a single string.
-        """
-        ans = []
-        for s in strs:
-            ans.append('{:4}'.format(len(s)) + s)
-        return ''.join(ans)
-
-    def decode(self, s: str) -> List[str]:
-        """Decodes a single string to a list of strings.
-        """
-        ans = []
-        i, n = 0, len(s)
-        while i < n:
-            size = int(s[i: i + 4])
-            i += 4
-            ans.append(s[i: i + size])
-            i += size
-        return ans
-
-
-# Your Codec object will be instantiated and called as such:
-# codec = Codec()
-# codec.decode(codec.encode(strs))
-```
 
 ### **Java**
 
@@ -149,78 +107,13 @@ public class Codec {
 // codec.decode(codec.encode(strs));
 ```
 
-### **C++**
 
-```cpp
-class Codec {
-public:
 
-    // Encodes a list of strings to a single string.
-    string encode(vector<string>& strs) {
-        string ans;
-        for (string s : strs) {
-            int size = s.size();
-            ans += string((const char*)& size, sizeof(size));
-            ans += s;
-        }
-        return ans;
-    }
 
-    // Decodes a single string to a list of strings.
-    vector<string> decode(string s) {
-        vector<string> ans;
-        int i = 0, n = s.size();
-        int size = 0;
-        while (i < n) {
-            memcpy(&size, s.data() + i, sizeof(size));
-            i += sizeof(size);
-            ans.push_back(s.substr(i, size));
-            i += size;
-        }
-        return ans;
-    }
-};
 
-// Your Codec object will be instantiated and called as such:
-// Codec codec;
-// codec.decode(codec.encode(strs));
-```
 
-### **Go**
 
-```go
-type Codec struct {
-}
 
-// Encodes a list of strings to a single string.
-func (codec *Codec) Encode(strs []string) string {
-	ans := &bytes.Buffer{}
-	for _, s := range strs {
-		t := fmt.Sprintf("%04d", len(s))
-		ans.WriteString(t)
-		ans.WriteString(s)
-	}
-	return ans.String()
-}
-
-// Decodes a single string to a list of strings.
-func (codec *Codec) Decode(strs string) []string {
-	ans := []string{}
-	i, n := 0, len(strs)
-	for i < n {
-		t := strs[i : i+4]
-		i += 4
-		size, _ := strconv.Atoi(t)
-		ans = append(ans, strs[i:i+size])
-		i += size
-	}
-	return ans
-}
-
-// Your Codec object will be instantiated and called as such:
-// var codec Codec
-// codec.Decode(codec.Encode(strs));
-```
 
 ### **...**
 
@@ -228,4 +121,4 @@ func (codec *Codec) Decode(strs string) []string {
 
 ```
 
-<!-- tabs:end -->
+

@@ -86,27 +86,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rotateTheBox(self, box: List[List[str]]) -> List[List[str]]:
-        m, n = len(box), len(box[0])
-        ans = [[None] * m for _ in range(n)]
-        for i in range(m):
-            for j in range(n):
-                ans[j][m - i - 1] = box[i][j]
-        for j in range(m):
-            q = deque()
-            for i in range(n - 1, -1, -1):
-                if ans[i][j] == '*':
-                    q.clear()
-                elif ans[i][j] == '.':
-                    q.append(i)
-                elif q:
-                    ans[q.popleft()][j] = '#'
-                    ans[i][j] = '.'
-                    q.append(i)
-        return ans
-```
+
 
 ### **Java**
 
@@ -141,72 +121,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<char>> rotateTheBox(vector<vector<char>>& box) {
-        int m = box.size(), n = box[0].size();
-        vector<vector<char>> ans(n, vector<char>(m));
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                ans[j][m - i - 1] = box[i][j];
-            }
-        }
-        for (int j = 0; j < m; ++j) {
-            queue<int> q;
-            for (int i = n - 1; ~i; --i) {
-                if (ans[i][j] == '*') {
-                    queue<int> t;
-                    swap(t, q);
-                } else if (ans[i][j] == '.') {
-                    q.push(i);
-                } else if (!q.empty()) {
-                    ans[q.front()][j] = '#';
-                    q.pop();
-                    ans[i][j] = '.';
-                    q.push(i);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func rotateTheBox(box [][]byte) [][]byte {
-	m, n := len(box), len(box[0])
-	ans := make([][]byte, n)
-	for i := range ans {
-		ans[i] = make([]byte, m)
-	}
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			ans[j][m-i-1] = box[i][j]
-		}
-	}
-	for j := 0; j < m; j++ {
-		q := []int{}
-		for i := n - 1; i >= 0; i-- {
-			if ans[i][j] == '*' {
-				q = []int{}
-			} else if ans[i][j] == '.' {
-				q = append(q, i)
-			} else if len(q) > 0 {
-				ans[q[0]][j] = '#'
-				q = q[1:]
-				ans[i][j] = '.'
-				q = append(q, i)
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -214,4 +135,4 @@ func rotateTheBox(box [][]byte) [][]byte {
 
 ```
 
-<!-- tabs:end -->
+

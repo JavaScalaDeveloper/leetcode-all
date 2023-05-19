@@ -121,32 +121,7 @@ undergroundSystem.getAverageTime("Leyton", "Paradise"); // 返回 6.66667 ，(5 
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class UndergroundSystem:
 
-    def __init__(self):
-        self.ts = {}
-        self.d = {}
-
-    def checkIn(self, id: int, stationName: str, t: int) -> None:
-        self.ts[id] = (t, stationName)
-
-    def checkOut(self, id: int, stationName: str, t: int) -> None:
-        t0, station = self.ts[id]
-        x = self.d.get((station, stationName), (0, 0))
-        self.d[(station, stationName)] = (x[0] + t - t0, x[1] + 1)
-
-    def getAverageTime(self, startStation: str, endStation: str) -> float:
-        x = self.d[(startStation, endStation)]
-        return x[0] / x[1]
-
-
-# Your UndergroundSystem object will be instantiated and called as such:
-# obj = UndergroundSystem()
-# obj.checkIn(id,stationName,t)
-# obj.checkOut(id,stationName,t)
-# param_3 = obj.getAverageTime(startStation,endStation)
-```
 
 ### **Java**
 
@@ -190,97 +165,13 @@ class UndergroundSystem {
  */
 ```
 
-### **C++**
 
-```cpp
-class UndergroundSystem {
-public:
-    UndergroundSystem() {
-    }
 
-    void checkIn(int id, string stationName, int t) {
-        ts[id] = {stationName, t};
-    }
 
-    void checkOut(int id, string stationName, int t) {
-        auto [station, t0] = ts[id];
-        auto key = station + "-" + stationName;
-        auto [tot, cnt] = d[key];
-        d[key] = {tot + t - t0, cnt + 1};
-    }
 
-    double getAverageTime(string startStation, string endStation) {
-        auto [tot, cnt] = d[startStation + "-" + endStation];
-        return (double) tot / cnt;
-    }
 
-private:
-    unordered_map<int, pair<string, int>> ts;
-    unordered_map<string, pair<int, int>> d;
-};
 
-/**
- * Your UndergroundSystem object will be instantiated and called as such:
- * UndergroundSystem* obj = new UndergroundSystem();
- * obj->checkIn(id,stationName,t);
- * obj->checkOut(id,stationName,t);
- * double param_3 = obj->getAverageTime(startStation,endStation);
- */
-```
 
-### **Go**
-
-```go
-type UndergroundSystem struct {
-	ts map[int]pair
-	d  map[station][2]int
-}
-
-func Constructor() UndergroundSystem {
-	return UndergroundSystem{
-		ts: make(map[int]pair),
-		d:  make(map[station][2]int),
-	}
-}
-
-func (this *UndergroundSystem) CheckIn(id int, stationName string, t int) {
-	this.ts[id] = pair{t, stationName}
-}
-
-func (this *UndergroundSystem) CheckOut(id int, stationName string, t int) {
-	p := this.ts[id]
-	s := station{p.a, stationName}
-	if _, ok := this.d[s]; !ok {
-		this.d[s] = [2]int{t - p.t, 1}
-	} else {
-		this.d[s] = [2]int{this.d[s][0] + t - p.t, this.d[s][1] + 1}
-	}
-
-}
-
-func (this *UndergroundSystem) GetAverageTime(startStation string, endStation string) float64 {
-	s := station{startStation, endStation}
-	return float64(this.d[s][0]) / float64(this.d[s][1])
-}
-
-type station struct {
-	a string
-	b string
-}
-
-type pair struct {
-	t int
-	a string
-}
-
-/**
- * Your UndergroundSystem object will be instantiated and called as such:
- * obj := Constructor();
- * obj.CheckIn(id,stationName,t);
- * obj.CheckOut(id,stationName,t);
- * param_3 := obj.GetAverageTime(startStation,endStation);
- */
-```
 
 ### **...**
 
@@ -288,4 +179,4 @@ type pair struct {
 
 ```
 
-<!-- tabs:end -->
+

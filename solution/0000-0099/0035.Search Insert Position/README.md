@@ -60,24 +60,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
-        left, right = 0, len(nums)
-        while left < right:
-            mid = (left + right) >> 1
-            if nums[mid] >= target:
-                right = mid
-            else:
-                left = mid + 1
-        return left
-```
 
-```python
-class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
-        return bisect_left(nums, target)
-```
+
+
 
 ### **Java**
 
@@ -100,100 +85,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int searchInsert(vector<int>& nums, int target) {
-        int left = 0, right = nums.size();
-        while (left < right) {
-            int mid = left + right >> 1;
-            if (nums[mid] >= target)
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return left;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int searchInsert(vector<int>& nums, int target) {
-        return lower_bound(nums.begin(), nums.end(), target) - nums.begin();
-    }
-};
-```
 
-### **Go**
 
-```go
-func searchInsert(nums []int, target int) int {
-	left, right := 0, len(nums)
-	for left < right {
-		mid := (left + right) >> 1
-		if nums[mid] >= target {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
-```
 
-```go
-func searchInsert(nums []int, target int) int {
-	return sort.Search(len(nums), func(i int) bool { return nums[i] >= target })
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var searchInsert = function (nums, target) {
-    let left = 0;
-    let right = nums.length;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        if (nums[mid] >= target) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-};
-```
 
-### **Rust**
 
-```rust
-use std::cmp::Ordering;
-impl Solution {
-    pub fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
-        let mut left = 0;
-        let mut right = nums.len();
-        while left < right {
-            let mid = left + (right - left) / 2;
-            match nums[mid].cmp(&target) {
-                Ordering::Less => left = mid + 1,
-                Ordering::Greater => right = mid,
-                Ordering::Equal => return mid as i32,
-            }
-        }
-        left as i32
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -201,4 +111,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

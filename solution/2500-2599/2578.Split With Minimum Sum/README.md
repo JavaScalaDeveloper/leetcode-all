@@ -76,31 +76,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def splitNum(self, num: int) -> int:
-        cnt = Counter()
-        n = 0
-        while num:
-            cnt[num % 10] += 1
-            num //= 10
-            n += 1
-        ans = [0] * 2
-        j = 0
-        for i in range(n):
-            while cnt[j] == 0:
-                j += 1
-            cnt[j] -= 1
-            ans[i & 1] = ans[i & 1] * 10 + j
-        return sum(ans)
-```
 
-```python
-class Solution:
-    def splitNum(self, num: int) -> int:
-        s = sorted(str(num))
-        return int(''.join(s[::2])) + int(''.join(s[1::2]))
-```
+
+
 
 ### **Java**
 
@@ -142,113 +120,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int splitNum(int num) {
-        int cnt[10]{};
-        int n = 0;
-        for (; num; num /= 10) {
-            ++cnt[num % 10];
-            ++n;
-        }
-        int ans[2]{};
-        for (int i = 0, j = 0; i < n; ++i) {
-            while (cnt[j] == 0) {
-                ++j;
-            }
-            --cnt[j];
-            ans[i & 1] = ans[i & 1] * 10 + j;
-        }
-        return ans[0] + ans[1];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int splitNum(int num) {
-        string s = to_string(num);
-        sort(s.begin(), s.end());
-        int ans[2]{};
-        for (int i = 0; i < s.size(); ++i) {
-            ans[i & 1] = ans[i & 1] * 10 + s[i] - '0';
-        }
-        return ans[0] + ans[1];
-    }
-};
-```
 
-### **Go**
 
-```go
-func splitNum(num int) int {
-	cnt := [10]int{}
-	n := 0
-	for ; num > 0; num /= 10 {
-		cnt[num%10]++
-		n++
-	}
-	ans := [2]int{}
-	for i, j := 0, 0; i < n; i++ {
-		for cnt[j] == 0 {
-			j++
-		}
-		cnt[j]--
-		ans[i&1] = ans[i&1]*10 + j
-	}
-	return ans[0] + ans[1]
-}
-```
 
-```go
-func splitNum(num int) int {
-	s := []byte(strconv.Itoa(num))
-	sort.Slice(s, func(i, j int) bool { return s[i] < s[j] })
-	ans := [2]int{}
-	for i, c := range s {
-		ans[i&1] = ans[i&1]*10 + int(c-'0')
-	}
-	return ans[0] + ans[1]
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function splitNum(num: number): number {
-    const cnt = new Array(10).fill(0);
-    let n = 0;
-    for (; num > 0; num = Math.floor(num / 10)) {
-        ++cnt[num % 10];
-        ++n;
-    }
-    const ans = new Array(2).fill(0);
-    for (let i = 0, j = 0; i < n; ++i) {
-        while (cnt[j] === 0) {
-            ++j;
-        }
-        --cnt[j];
-        ans[i & 1] = ans[i & 1] * 10 + j;
-    }
-    return ans[0] + ans[1];
-}
-```
 
-```ts
-function splitNum(num: number): number {
-    const s: string[] = String(num).split('');
-    s.sort();
-    const ans: number[] = new Array(2).fill(0);
-    for (let i = 0; i < s.length; ++i) {
-        ans[i & 1] = ans[i & 1] * 10 + Number(s[i]);
-    }
-    return ans[0] + ans[1];
-}
-```
+
+
 
 ### **...**
 
@@ -256,4 +144,4 @@ function splitNum(num: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -46,20 +46,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxmiumScore(self, cards: List[int], cnt: int) -> int:
-        cards.sort(reverse=True)
-        t = cards[:cnt]
-        ans = sum(t)
-        if ans % 2 == 0:
-            return ans
-        a = min([v for v in t if v & 1], default=inf)
-        b = min([v for v in t if v % 2 == 0], default=inf)
-        c = max([v for v in cards[cnt:] if v % 2 == 0], default=-inf)
-        d = max([v for v in cards[cnt:] if v & 1], default=-inf)
-        return max(ans - a + c, ans - b + d, 0)
-```
+
 
 ### **Java**
 
@@ -101,83 +88,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxmiumScore(vector<int>& cards, int cnt) {
-        sort(cards.begin(), cards.end());
-        reverse(cards.begin(), cards.end());
-        int ans = 0, n = cards.size();
-        for (int i = 0; i < cnt; ++i) ans += cards[i];
-        if (ans % 2 == 0) return ans;
-        int inf = 0x3f3f3f3f;
-        int a = inf, b = inf, c = -inf, d = -inf;
-        for (int i = 0; i < cnt; ++i) {
-            int v = cards[i];
-            if (v % 2 == 1)
-                a = min(a, v);
-            else
-                b = min(b, v);
-        }
-        for (int i = cnt; i < n; ++i) {
-            int v = cards[i];
-            if (v % 2 == 0)
-                c = max(c, v);
-            else
-                d = max(d, v);
-        }
-        return max(0, max(ans - a + c, ans - b + d));
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxmiumScore(cards []int, cnt int) int {
-	ans := 0
-	sort.Slice(cards, func(i, j int) bool { return cards[i] > cards[j] })
-	for _, v := range cards[:cnt] {
-		ans += v
-	}
-	if ans%2 == 0 {
-		return ans
-	}
-	inf := 0x3f3f3f3f
-	a, b, c, d := inf, inf, -inf, -inf
-	for _, v := range cards[:cnt] {
-		if v%2 == 1 {
-			a = min(a, v)
-		} else {
-			b = min(b, v)
-		}
-	}
-	for _, v := range cards[cnt:] {
-		if v%2 == 0 {
-			c = max(c, v)
-		} else {
-			d = max(d, v)
-		}
-	}
-	return max(0, max(ans-a+c, ans-b+d))
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -185,4 +102,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

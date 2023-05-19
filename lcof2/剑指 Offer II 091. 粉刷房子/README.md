@@ -55,17 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minCost(self, costs: List[List[int]]) -> int:
-        r, g, b = 0, 0, 0
-        for cost in costs:
-            _r, _g, _b = r, g, b
-            r = min(_g, _b) + cost[0]
-            g = min(_r, _b) + cost[1]
-            b = min(_r, _g) + cost[2]
-        return min(r, g, b)
-```
+
 
 ### **Java**
 
@@ -86,79 +76,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minCost(vector<vector<int>>& costs) {
-        int r = 0, g = 0, b = 0;
-        for (auto& cost : costs) {
-            int _r = r, _g = g, _b = b;
-            r = min(_g, _b) + cost[0];
-            g = min(_r, _b) + cost[1];
-            b = min(_r, _g) + cost[2];
-        }
-        return min(r, min(g, b));
-    }
-};
-```
 
-### **Go**
 
-```go
-func minCost(costs [][]int) int {
-	r, g, b := 0, 0, 0
-	for _, cost := range costs {
-		_r, _g, _b := r, g, b
-		r = min(_g, _b) + cost[0]
-		g = min(_r, _b) + cost[1]
-		b = min(_r, _g) + cost[2]
-	}
-	return min(r, min(g, b))
-}
 
-func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minCost(costs: number[][]): number {
-    let [r, g, b] = [0, 0, 0];
-    for (const [_r, _g, _b] of costs) {
-        [r, g, b] = [
-            _r + Math.min(g, b),
-            _g + Math.min(r, b),
-            _b + Math.min(r, g),
-        ];
-    }
-    return Math.min(r, g, b);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_cost(costs: Vec<Vec<i32>>) -> i32 {
-        let mut dp = [0, 0, 0];
-        for cost in costs.iter() {
-            dp = [
-                cost[0] + dp[1].min(dp[2]),
-                cost[1] + dp[0].min(dp[2]),
-                cost[2] + dp[0].min(dp[1]),
-            ];
-        }
-        *dp.iter().min().unwrap()
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -166,4 +98,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

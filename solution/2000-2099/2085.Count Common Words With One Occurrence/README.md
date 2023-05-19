@@ -65,13 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countWords(self, words1: List[str], words2: List[str]) -> int:
-        cnt1 = Counter(words1)
-        cnt2 = Counter(words2)
-        return sum(cnt2[k] == 1 for k, v in cnt1.items() if v == 1)
-```
+
 
 ### **Java**
 
@@ -101,44 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countWords(vector<string>& words1, vector<string>& words2) {
-        unordered_map<string, int> cnt1;
-        unordered_map<string, int> cnt2;
-        for (auto& w : words1) cnt1[w]++;
-        for (auto& w : words2) cnt2[w]++;
-        int ans = 0;
-        for (auto& w : words1) ans += (cnt1[w] == 1 && cnt2[w] == 1);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countWords(words1 []string, words2 []string) int {
-	cnt1 := map[string]int{}
-	cnt2 := map[string]int{}
-	for _, w := range words1 {
-		cnt1[w]++
-	}
-	for _, w := range words2 {
-		cnt2[w]++
-	}
-	ans := 0
-	for _, w := range words1 {
-		if cnt1[w] == 1 && cnt2[w] == 1 {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -146,4 +109,4 @@ func countWords(words1 []string, words2 []string) int {
 
 ```
 
-<!-- tabs:end -->
+

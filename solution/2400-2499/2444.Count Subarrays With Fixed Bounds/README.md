@@ -67,21 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:
-        j1 = j2 = k = -1
-        ans = 0
-        for i, v in enumerate(nums):
-            if v < minK or v > maxK:
-                k = i
-            if v == minK:
-                j1 = i
-            if v == maxK:
-                j2 = i
-            ans += max(0, min(j1, j2) - k)
-        return ans
-```
+
 
 ### **Java**
 
@@ -109,60 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long countSubarrays(vector<int>& nums, int minK, int maxK) {
-        long long ans = 0;
-        int j1 = -1, j2 = -1, k = -1;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] < minK || nums[i] > maxK) k = i;
-            if (nums[i] == minK) j1 = i;
-            if (nums[i] == maxK) j2 = i;
-            ans += max(0, min(j1, j2) - k);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSubarrays(nums []int, minK int, maxK int) int64 {
-	ans := 0
-	j1, j2, k := -1, -1, -1
-	for i, v := range nums {
-		if v < minK || v > maxK {
-			k = i
-		}
-		if v == minK {
-			j1 = i
-		}
-		if v == maxK {
-			j2 = i
-		}
-		ans += max(0, min(j1, j2)-k)
-	}
-	return int64(ans)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **C**
 
@@ -194,55 +133,11 @@ long long countSubarrays(int *nums, int numsSize, int minK, int maxK) {
 
 ### **TypeScript**
 
-```ts
-function countSubarrays(nums: number[], minK: number, maxK: number): number {
-    let res = 0;
-    let minIndex = -1;
-    let maxIndex = -1;
-    let k = -1;
-    nums.forEach((num, i) => {
-        if (num === minK) {
-            minIndex = i;
-        }
-        if (num === maxK) {
-            maxIndex = i;
-        }
-        if (num < minK || num > maxK) {
-            k = i;
-        }
-        res += Math.max(Math.min(minIndex, maxIndex) - k, 0);
-    });
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn count_subarrays(nums: Vec<i32>, min_k: i32, max_k: i32) -> i64 {
-        let mut res = 0;
-        let mut min_index = -1;
-        let mut max_index = -1;
-        let mut k = -1;
-        for i in 0..nums.len() {
-            let num = nums[i];
-            let i = i as i64;
-            if num == min_k {
-                min_index = i;
-            }
-            if num == max_k {
-                max_index = i;
-            }
-            if num < min_k || num > max_k {
-                k = i;
-            }
-            res += 0.max(min_index.min(max_index) - k);
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -250,4 +145,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

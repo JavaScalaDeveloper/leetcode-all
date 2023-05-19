@@ -67,30 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxCompatibilitySum(self, students: List[List[int]], mentors: List[List[int]]) -> int:
-        def dfs(i, t):
-            if i == m:
-                nonlocal ans
-                ans = max(ans, t)
-                return
-            for j in range(m):
-                if not vis[j]:
-                    vis[j] = True
-                    dfs(i + 1, t + g[i][j])
-                    vis[j] = False
 
-        m = len(students)
-        g = [[0] * m for _ in range(m)]
-        for i in range(m):
-            for j in range(m):
-                g[i][j] = sum(a == b for a, b in zip(students[i], mentors[j]))
-        vis = [False] * m
-        ans = 0
-        dfs(0, 0)
-        return ans
-```
 
 ### **Java**
 
@@ -134,87 +111,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxCompatibilitySum(vector<vector<int>>& students, vector<vector<int>>& mentors) {
-        int m = students.size();
-        int n = students[0].size();
-        int g[m][m];
-        memset(g, 0, sizeof g);
-        bool vis[m];
-        memset(vis, 0, sizeof vis);
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < m; ++j) {
-                for (int k = 0; k < n; ++k) {
-                    g[i][j] += students[i][k] == mentors[j][k];
-                }
-            }
-        }
-        int ans = 0;
-        function<void(int, int)> dfs = [&](int i, int t) {
-            if (i == m) {
-                ans = max(ans, t);
-                return;
-            }
-            for (int j = 0; j < m; ++j) {
-                if (!vis[j]) {
-                    vis[j] = true;
-                    dfs(i + 1, t + g[i][j]);
-                    vis[j] = false;
-                }
-            }
-        };
-        dfs(0, 0);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxCompatibilitySum(students [][]int, mentors [][]int) (ans int) {
-	m, n := len(students), len(students[0])
-	g := make([][]int, m)
-	vis := make([]bool, m)
-	for i := range g {
-		g[i] = make([]int, m)
-		for j := range g {
-			for k := 0; k < n; k++ {
-				if students[i][k] == mentors[j][k] {
-					g[i][j]++
-				}
-			}
-		}
-	}
-	var dfs func(int, int)
-	dfs = func(i, t int) {
-		if i == m {
-			ans = max(ans, t)
-			return
-		}
-		for j := 0; j < m; j++ {
-			if !vis[j] {
-				vis[j] = true
-				dfs(i+1, t+g[i][j])
-				vis[j] = false
-			}
-		}
-	}
-	dfs(0, 0)
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -222,4 +125,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -77,35 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxProfit(self, inventory: List[int], orders: int) -> int:
-        inventory.sort(reverse=True)
-        mod = 10**9 + 7
-        ans = i = 0
-        n = len(inventory)
-        while orders > 0:
-            while i < n and inventory[i] >= inventory[0]:
-                i += 1
-            nxt = 0
-            if i < n:
-                nxt = inventory[i]
-            cnt = i
-            x = inventory[0] - nxt
-            tot = cnt * x
-            if tot > orders:
-                decr = orders // cnt
-                a1, an = inventory[0] - decr + 1, inventory[0]
-                ans += (a1 + an) * decr // 2 * cnt
-                ans += (inventory[0] - decr) * (orders % cnt)
-            else:
-                a1, an = nxt + 1, inventory[0]
-                ans += (a1 + an) * x // 2 * cnt
-                inventory[0] = nxt
-            orders -= tot
-            ans %= mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -151,78 +123,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProfit(vector<int>& inventory, int orders) {
-        long ans = 0, mod = 1e9 + 7;
-        int i = 0, n = inventory.size();
-        sort(inventory.rbegin(), inventory.rend());
-        while (orders > 0) {
-            while (i < n && inventory[i] >= inventory[0]) {
-                ++i;
-            }
-            int nxt = i < n ? inventory[i] : 0;
-            int cnt = i;
-            long x = inventory[0] - nxt;
-            long tot = cnt * x;
-            if (tot > orders) {
-                int decr = orders / cnt;
-                long a1 = inventory[0] - decr + 1, an = inventory[0];
-                ans += (a1 + an) * decr / 2 * cnt;
-                ans += (a1 - 1) * (orders % cnt);
-            } else {
-                long a1 = nxt + 1, an = inventory[0];
-                ans += (a1 + an) * x / 2 * cnt;
-                inventory[0] = nxt;
-            }
-            orders -= tot;
-            ans %= mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxProfit(inventory []int, orders int) int {
-	var mod int = 1e9 + 7
-	i, n, ans := 0, len(inventory), 0
-	sort.Ints(inventory)
-	for i, j := 0, n-1; i < j; i, j = i+1, j-1 {
-		inventory[i], inventory[j] = inventory[j], inventory[i]
-	}
-	for orders > 0 {
-		for i < n && inventory[i] >= inventory[0] {
-			i++
-		}
-		nxt := 0
-		if i < n {
-			nxt = inventory[i]
-		}
-		cnt := i
-		x := inventory[0] - nxt
-		tot := cnt * x
-		if tot > orders {
-			decr := orders / cnt
-			a1, an := inventory[0]-decr+1, inventory[0]
-			ans += (a1 + an) * decr / 2 * cnt
-			ans += (a1 - 1) * (orders % cnt)
-		} else {
-			a1, an := nxt+1, inventory[0]
-			ans += (a1 + an) * x / 2 * cnt
-			inventory[0] = nxt
-		}
-		orders -= tot
-		ans %= mod
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -230,4 +137,4 @@ func maxProfit(inventory []int, orders int) int {
 
 ```
 
-<!-- tabs:end -->
+

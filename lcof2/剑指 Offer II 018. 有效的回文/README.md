@@ -47,21 +47,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isPalindrome(self, s: str) -> bool:
-        i, j = 0, len(s) - 1
-        while i < j:
-            while i < j and not s[i].isalnum():
-                i += 1
-            while i < j and not s[j].isalnum():
-                j -= 1
-            if s[i].lower() != s[j].lower():
-                return False
-            i += 1
-            j -= 1
-        return True
-```
+
 
 ### **Java**
 
@@ -89,90 +75,19 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func isPalindrome(s string) bool {
-	i, j := 0, len(s)-1
-	for i < j {
-		for i < j && !isalnum(s[i]) {
-			i++
-		}
-		for i < j && !isalnum(s[j]) {
-			j--
-		}
-		if tolower(s[i]) != tolower(s[j]) {
-			return false
-		}
-		i++
-		j--
-	}
-	return true
-}
 
-func tolower(b byte) byte {
-	if b >= 'A' && b <= 'Z' {
-		return b - 'A' + 'a'
-	}
-	return b
-}
 
-func isalnum(b byte) bool {
-	return b >= '0' && b <= '9' ||
-		b >= 'a' && b <= 'z' ||
-		b >= 'A' && b <= 'Z'
-}
-```
 
 ### **TypeScript**
 
-```ts
-function isPalindrome(s: string): boolean {
-    const str = s.replace(/[^a-zA-Z0-9]/g, '');
-    let l = 0;
-    let r = str.length - 1;
-    while (l < r) {
-        if (str[l].toLocaleLowerCase() !== str[r].toLocaleLowerCase()) {
-            return false;
-        }
-        l++;
-        r--;
-    }
-    return true;
-}
-```
 
-### **Rust**
+
+
 
 使用 `is_alphabetic()` 与 `is_numeric()` 过滤字符
 
-```rust
-impl Solution {
-    pub fn is_palindrome(s: String) -> bool {
-        let ss: Vec<char> = s.chars().collect();
-        let mut l = 0;
-        let mut r = ss.len() - 1;
-        while l < r {
-            while l < r && !(ss[l].is_alphabetic() || ss[l].is_numeric()) {
-                l += 1;
-            }
-            while l < r && !(ss[r].is_alphabetic() || ss[r].is_numeric()) {
-                r -= 1;
-            }
-            if ss[l].to_ascii_lowercase() != ss[r].to_ascii_lowercase() {
-                return false;
-            }
-            // 防止 usize 破界
-            if r == 0 {
-                return true;
-            }
-            l += 1;
-            r -= 1;
-        }
-        true
-    }
-}
-```
+
 
 ### **...**
 
@@ -180,4 +95,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

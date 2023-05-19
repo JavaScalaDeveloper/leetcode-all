@@ -80,21 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kIncreasing(self, arr: List[int], k: int) -> int:
-        def lis(arr):
-            t = []
-            for x in arr:
-                idx = bisect_right(t, x)
-                if idx == len(t):
-                    t.append(x)
-                else:
-                    t[idx] = x
-            return len(arr) - len(t)
 
-        return sum(lis(arr[i::k]) for i in range(k))
-```
 
 ### **Java**
 
@@ -143,85 +129,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int kIncreasing(vector<int>& arr, int k) {
-        int ans = 0, n = arr.size();
-        for (int i = 0; i < k; ++i) {
-            vector<int> t;
-            for (int j = i; j < n; j += k) t.push_back(arr[j]);
-            ans += lis(t);
-        }
-        return ans;
-    }
 
-    int lis(vector<int>& arr) {
-        vector<int> t;
-        for (int x : arr) {
-            auto it = upper_bound(t.begin(), t.end(), x);
-            if (it == t.end())
-                t.push_back(x);
-            else
-                *it = x;
-        }
-        return arr.size() - t.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func kIncreasing(arr []int, k int) int {
-	searchRight := func(arr []int, x int) int {
-		left, right := 0, len(arr)
-		for left < right {
-			mid := (left + right) >> 1
-			if arr[mid] > x {
-				right = mid
-			} else {
-				left = mid + 1
-			}
-		}
-		return left
-	}
 
-	lis := func(arr []int) int {
-		var t []int
-		for _, x := range arr {
-			idx := searchRight(t, x)
-			if idx == len(t) {
-				t = append(t, x)
-			} else {
-				t[idx] = x
-			}
-		}
-		return len(arr) - len(t)
-	}
 
-	n := len(arr)
-	ans := 0
-	for i := 0; i < k; i++ {
-		var t []int
-		for j := i; j < n; j += k {
-			t = append(t, arr[j])
-		}
-		ans += lis(t)
-	}
-	return ans
-}
-```
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -229,4 +149,4 @@ func kIncreasing(arr []int, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

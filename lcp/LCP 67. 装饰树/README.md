@@ -61,27 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def expandBinaryTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-        def dfs(root):
-            if root is None:
-                return None
-            l, r = dfs(root.left), dfs(root.right)
-            if l:
-                root.left = TreeNode(-1, l)
-            if r:
-                root.right = TreeNode(-1, None, r)
-            return root
 
-        return dfs(root)
-```
 
 ### **Java**
 
@@ -125,71 +105,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* expandBinaryTree(TreeNode* root) {
-        function<TreeNode*(TreeNode*)> dfs = [&](TreeNode* root) -> TreeNode* {
-            if (!root) {
-                return nullptr;
-            }
-            TreeNode* l = dfs(root->left);
-            TreeNode* r = dfs(root->right);
-            if (l) {
-                root->left = new TreeNode(-1, l, nullptr);
-            }
-            if (r) {
-                root->right = new TreeNode(-1, nullptr, r);
-            }
-            return root;
-        };
-        return dfs(root);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func expandBinaryTree(root *TreeNode) *TreeNode {
-	var dfs func(*TreeNode) *TreeNode
-	dfs = func(root *TreeNode) *TreeNode {
-		if root == nil {
-			return root
-		}
-		l, r := dfs(root.Left), dfs(root.Right)
-		if l != nil {
-			root.Left = &TreeNode{-1, l, nil}
-		}
-		if r != nil {
-			root.Right = &TreeNode{-1, nil, r}
-		}
-		return root
-	}
-	return dfs(root)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -197,4 +119,4 @@ func expandBinaryTree(root *TreeNode) *TreeNode {
 
 ```
 
-<!-- tabs:end -->
+

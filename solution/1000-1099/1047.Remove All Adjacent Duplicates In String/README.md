@@ -49,17 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeDuplicates(self, s: str) -> str:
-        stk = []
-        for c in s:
-            if stk and stk[-1] == c:
-                stk.pop()
-            else:
-                stk.append(c)
-        return ''.join(stk)
-```
+
 
 ### **Java**
 
@@ -81,78 +71,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string removeDuplicates(string s) {
-        string stk;
-        for (char c : s) {
-            if (!stk.empty() && stk[stk.size() - 1] == c) {
-                stk.pop_back();
-            } else {
-                stk += c;
-            }
-        }
-        return stk;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeDuplicates(s string) string {
-	stk := []rune{}
-	for _, c := range s {
-		if len(stk) > 0 && stk[len(stk)-1] == c {
-			stk = stk[:len(stk)-1]
-		} else {
-			stk = append(stk, c)
-		}
-	}
-	return string(stk)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {string}
- */
-var removeDuplicates = function (s) {
-    const stk = [];
-    for (const c of s) {
-        if (stk.length && stk[stk.length - 1] == c) {
-            stk.pop();
-        } else {
-            stk.push(c);
-        }
-    }
-    return stk.join('');
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn remove_duplicates(s: String) -> String {
-        let mut stack = Vec::new();
-        for c in s.chars() {
-            if !stack.is_empty() && *stack.last().unwrap() == c {
-                stack.pop();
-            } else {
-                stack.push(c);
-            }
-        }
-        stack.into_iter().collect()
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **C**
 
@@ -180,4 +113,4 @@ char *removeDuplicates(char *s) {
 
 ```
 
-<!-- tabs:end -->
+

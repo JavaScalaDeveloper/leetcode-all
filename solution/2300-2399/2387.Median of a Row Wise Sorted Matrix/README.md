@@ -59,16 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def matrixMedian(self, grid: List[List[int]]) -> int:
-        def count(x):
-            return sum(bisect_right(row, x) for row in grid)
 
-        m, n = len(grid), len(grid[0])
-        target = (m * n + 1) >> 1
-        return bisect_left(range(10**6 + 1), target, key=count)
-```
 
 ### **Java**
 
@@ -113,76 +104,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int matrixMedian(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        int left = 0, right = 1e6 + 1;
-        int target = (m * n + 1) >> 1;
-        auto count = [&](int x) {
-            int cnt = 0;
-            for (auto& row : grid) {
-                cnt += (upper_bound(row.begin(), row.end(), x) - row.begin());
-            }
-            return cnt;
-        };
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (count(mid) >= target) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func matrixMedian(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
 
-	count := func(x int) int {
-		cnt := 0
-		for _, row := range grid {
-			left, right := 0, n
-			for left < right {
-				mid := (left + right) >> 1
-				if row[mid] > x {
-					right = mid
-				} else {
-					left = mid + 1
-				}
-			}
-			cnt += left
-		}
-		return cnt
-	}
-	left, right := 0, 1000010
-	target := (m*n + 1) >> 1
-	for left < right {
-		mid := (left + right) >> 1
-		if count(mid) >= target {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -191,4 +123,4 @@ func matrixMedian(grid [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

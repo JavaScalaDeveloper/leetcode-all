@@ -86,18 +86,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def waysToMakeFair(self, nums: List[int]) -> int:
-        s1, s2 = sum(nums[::2]), sum(nums[1::2])
-        ans = t1 = t2 = 0
-        for i, v in enumerate(nums):
-            ans += i % 2 == 0 and t2 + s1 - t1 - v == t1 + s2 - t2
-            ans += i % 2 == 1 and t2 + s1 - t1 == t1 + s2 - t2 - v
-            t1 += v if i % 2 == 0 else 0
-            t2 += v if i % 2 == 1 else 0
-        return ans
-```
+
 
 ### **Java**
 
@@ -126,89 +115,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int waysToMakeFair(vector<int>& nums) {
-        int s1 = 0, s2 = 0;
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            s1 += i % 2 == 0 ? nums[i] : 0;
-            s2 += i % 2 == 1 ? nums[i] : 0;
-        }
-        int t1 = 0, t2 = 0;
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            int v = nums[i];
-            ans += i % 2 == 0 && t2 + s1 - t1 - v == t1 + s2 - t2;
-            ans += i % 2 == 1 && t2 + s1 - t1 == t1 + s2 - t2 - v;
-            t1 += i % 2 == 0 ? v : 0;
-            t2 += i % 2 == 1 ? v : 0;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func waysToMakeFair(nums []int) (ans int) {
-	var s1, s2, t1, t2 int
-	for i, v := range nums {
-		if i%2 == 0 {
-			s1 += v
-		} else {
-			s2 += v
-		}
-	}
-	for i, v := range nums {
-		if i%2 == 0 && t2+s1-t1-v == t1+s2-t2 {
-			ans++
-		}
-		if i%2 == 1 && t2+s1-t1 == t1+s2-t2-v {
-			ans++
-		}
-		if i%2 == 0 {
-			t1 += v
-		} else {
-			t2 += v
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var waysToMakeFair = function (nums) {
-    let [s1, s2, t1, t2] = [0, 0, 0, 0];
-    const n = nums.length;
-    for (let i = 0; i < n; ++i) {
-        if (i % 2 == 0) {
-            s1 += nums[i];
-        } else {
-            s2 += nums[i];
-        }
-    }
-    let ans = 0;
-    for (let i = 0; i < n; ++i) {
-        const v = nums[i];
-        ans += i % 2 == 0 && t2 + s1 - t1 - v == t1 + s2 - t2;
-        ans += i % 2 == 1 && t2 + s1 - t1 == t1 + s2 - t2 - v;
-        t1 += i % 2 == 0 ? v : 0;
-        t2 += i % 2 == 1 ? v : 0;
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -216,4 +133,4 @@ var waysToMakeFair = function (nums) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -53,20 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkPartitioning(self, s: str) -> bool:
-        n = len(s)
-        g = [[True] * n for _ in range(n)]
-        for i in range(n - 1, -1, -1):
-            for j in range(i + 1, n):
-                g[i][j] = s[i] == s[j] and (i + 1 == j or g[i + 1][j - 1])
-        for i in range(n - 2):
-            for j in range(i + 1, n - 1):
-                if g[0][i] and g[i + 1][j] and g[j + 1][-1]:
-                    return True
-        return False
-```
+
 
 ### **Java**
 
@@ -97,58 +84,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkPartitioning(string s) {
-        int n = s.size();
-        vector<vector<bool>> g(n, vector<bool>(n, true));
-        for (int i = n - 1; i >= 0; --i) {
-            for (int j = i + 1; j < n; ++j) {
-                g[i][j] = s[i] == s[j] && (i + 1 == j || g[i + 1][j - 1]);
-            }
-        }
-        for (int i = 0; i < n - 2; ++i) {
-            for (int j = i + 1; j < n - 1; ++j) {
-                if (g[0][i] && g[i + 1][j] && g[j + 1][n - 1]) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkPartitioning(s string) bool {
-	n := len(s)
-	g := make([][]bool, n)
-	for i := range g {
-		g[i] = make([]bool, n)
-		for j := range g[i] {
-			g[i][j] = true
-		}
-	}
-	for i := n - 1; i >= 0; i-- {
-		for j := i + 1; j < n; j++ {
-			g[i][j] = s[i] == s[j] && (i+1 == j || g[i+1][j-1])
-		}
-	}
-	for i := 0; i < n-2; i++ {
-		for j := i + 1; j < n-1; j++ {
-			if g[0][i] && g[i+1][j] && g[j+1][n-1] {
-				return true
-			}
-		}
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -156,4 +98,4 @@ func checkPartitioning(s string) bool {
 
 ```
 
-<!-- tabs:end -->
+

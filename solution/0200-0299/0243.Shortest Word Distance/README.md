@@ -51,20 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shortestDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
-        i = j = -1
-        ans = inf
-        for k, w in enumerate(wordsDict):
-            if w == word1:
-                i = k
-            if w == word2:
-                j = k
-            if i != -1 and j != -1:
-                ans = min(ans, abs(i - j))
-        return ans
-```
+
 
 ### **Java**
 
@@ -90,63 +77,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int shortestDistance(vector<string>& wordsDict, string word1, string word2) {
-        int ans = INT_MAX;
-        for (int k = 0, i = -1, j = -1; k < wordsDict.size(); ++k) {
-            if (wordsDict[k] == word1) {
-                i = k;
-            }
-            if (wordsDict[k] == word2) {
-                j = k;
-            }
-            if (i != -1 && j != -1) {
-                ans = min(ans, abs(i - j));
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func shortestDistance(wordsDict []string, word1 string, word2 string) int {
-	ans := 0x3f3f3f3f
-	i, j := -1, -1
-	for k, w := range wordsDict {
-		if w == word1 {
-			i = k
-		}
-		if w == word2 {
-			j = k
-		}
-		if i != -1 && j != -1 {
-			ans = min(ans, abs(i-j))
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
 
 ### **...**
 
@@ -154,4 +91,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

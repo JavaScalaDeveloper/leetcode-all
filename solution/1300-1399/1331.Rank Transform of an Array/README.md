@@ -64,12 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def arrayRankTransform(self, arr: List[int]) -> List[int]:
-        t = sorted(set(arr))
-        return [bisect_right(t, x) for x in arr]
-```
+
 
 ### **Java**
 
@@ -96,76 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> arrayRankTransform(vector<int>& arr) {
-        vector<int> t = arr;
-        sort(t.begin(), t.end());
-        t.erase(unique(t.begin(), t.end()), t.end());
-        vector<int> ans;
-        for (int x : arr) {
-            ans.push_back(upper_bound(t.begin(), t.end(), x) - t.begin());
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func arrayRankTransform(arr []int) (ans []int) {
-	t := make([]int, len(arr))
-	copy(t, arr)
-	sort.Ints(t)
-	m := 0
-	for i, x := range t {
-		if i == 0 || x != t[i-1] {
-			t[m] = x
-			m++
-		}
-	}
-	t = t[:m]
-	for _, x := range arr {
-		ans = append(ans, sort.SearchInts(t, x)+1)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function arrayRankTransform(arr: number[]): number[] {
-    const t = [...arr].sort((a, b) => a - b);
-    let m = 0;
-    for (let i = 0; i < t.length; ++i) {
-        if (i === 0 || t[i] !== t[i - 1]) {
-            t[m++] = t[i];
-        }
-    }
-    const search = (t: number[], right: number, x: number) => {
-        let left = 0;
-        while (left < right) {
-            const mid = (left + right) >> 1;
-            if (t[mid] > x) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    };
-    const ans: number[] = [];
-    for (const x of arr) {
-        ans.push(search(t, m, x));
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -173,4 +109,4 @@ function arrayRankTransform(arr: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

@@ -70,11 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findLUSlength(self, a: str, b: str) -> int:
-        return -1 if a == b else max(len(a), len(b))
-```
+
 
 ### **Java**
 
@@ -90,49 +86,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function findLUSlength(a: string, b: string): number {
-    return a != b ? Math.max(a.length, b.length) : -1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn find_lu_slength(a: String, b: String) -> i32 {
-        if a == b {
-            return -1;
-        }
-        a.len().max(b.len()) as i32
-    }
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findLUSlength(string a, string b) {
-        return a == b ? -1 : max(a.size(), b.size());
-    }
-};
-```
 
-### **Go**
 
-```go
-func findLUSlength(a string, b string) int {
-	if a == b {
-		return -1
-	}
-	if len(a) > len(b) {
-		return len(a)
-	}
-	return len(b)
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -140,4 +106,4 @@ func findLUSlength(a string, b string) int {
 
 ```
 
-<!-- tabs:end -->
+

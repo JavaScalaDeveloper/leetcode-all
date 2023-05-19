@@ -66,28 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestCycle(self, edges: List[int]) -> int:
-        n = len(edges)
-        vis = [False] * n
-        ans = -1
-        for i in range(n):
-            if vis[i]:
-                continue
-            j = i
-            cycle = []
-            while j != -1 and not vis[j]:
-                vis[j] = True
-                cycle.append(j)
-                j = edges[j]
-            if j == -1:
-                continue
-            m = len(cycle)
-            k = next((k for k in range(m) if cycle[k] == j), inf)
-            ans = max(ans, m - k)
-        return ans
-```
+
 
 ### **Java**
 
@@ -124,107 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestCycle(vector<int>& edges) {
-        int n = edges.size();
-        vector<bool> vis(n);
-        int ans = -1;
-        for (int i = 0; i < n; ++i) {
-            if (vis[i]) {
-                continue;
-            }
-            int j = i;
-            vector<int> cycle;
-            for (; j != -1 && !vis[j]; j = edges[j]) {
-                vis[j] = true;
-                cycle.push_back(j);
-            }
-            if (j == -1) {
-                continue;
-            }
-            for (int k = 0; k < cycle.size(); ++k) {
-                if (cycle[k] == j) {
-                    ans = max(ans, (int) cycle.size() - k);
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestCycle(edges []int) int {
-	vis := make([]bool, len(edges))
-	ans := -1
-	for i := range edges {
-		if vis[i] {
-			continue
-		}
-		j := i
-		cycle := []int{}
-		for ; j != -1 && !vis[j]; j = edges[j] {
-			vis[j] = true
-			cycle = append(cycle, j)
-		}
-		if j == -1 {
-			continue
-		}
-		for k := range cycle {
-			if cycle[k] == j {
-				ans = max(ans, len(cycle)-k)
-				break
-			}
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function longestCycle(edges: number[]): number {
-    const n = edges.length;
-    const vis = new Array(n).fill(false);
-    let ans = -1;
-    for (let i = 0; i < n; ++i) {
-        if (vis[i]) {
-            continue;
-        }
-        let j = i;
-        const cycle: number[] = [];
-        for (; j != -1 && !vis[j]; j = edges[j]) {
-            vis[j] = true;
-            cycle.push(j);
-        }
-        if (j == -1) {
-            continue;
-        }
-        for (let k = 0; k < cycle.length; ++k) {
-            if (cycle[k] == j) {
-                ans = Math.max(ans, cycle.length - k);
-                break;
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -232,4 +121,4 @@ function longestCycle(edges: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

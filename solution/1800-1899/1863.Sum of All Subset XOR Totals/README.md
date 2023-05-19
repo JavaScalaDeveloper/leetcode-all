@@ -74,21 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def subsetXORSum(self, nums: List[int]) -> int:
-        def dfs(nums, depth, prev):
-            self.res += prev
-            for num in nums[depth:]:
-                prev ^= num
-                depth += 1
-                dfs(nums, depth, prev)
-                prev ^= num
 
-        self.res = 0
-        dfs(nums, 0, 0)
-        return self.res
-```
 
 ### **Java**
 
@@ -114,31 +100,9 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var subsetXORSum = function (nums) {
-    let res = [];
-    let prev = 0;
-    dfs(nums, 0, prev, res);
-    return res.reduce((a, c) => a + c, 0);
-};
 
-function dfs(nums, depth, prev, res) {
-    res.push(prev);
-    for (let i = depth; i < nums.length; i++) {
-        prev ^= nums[i];
-        depth++;
-        dfs(nums, depth, prev, res);
-        // bracktrack
-        prev ^= nums[i];
-    }
-}
-```
+
 
 ### **...**
 
@@ -146,4 +110,4 @@ function dfs(nums, depth, prev, res) {
 
 ```
 
-<!-- tabs:end -->
+

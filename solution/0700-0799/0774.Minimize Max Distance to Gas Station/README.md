@@ -56,21 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minmaxGasDist(self, stations: List[int], k: int) -> float:
-        def check(x):
-            return sum(int((b - a) / x) for a, b in pairwise(stations)) <= k
 
-        left, right = 0, 1e8
-        while right - left > 1e-6:
-            mid = (left + right) / 2
-            if check(mid):
-                right = mid
-            else:
-                left = mid
-        return left
-```
 
 ### **Java**
 
@@ -101,56 +87,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double minmaxGasDist(vector<int>& stations, int k) {
-        double left = 0, right = 1e8;
-        auto check = [&](double x) {
-            int s = 0;
-            for (int i = 0; i < stations.size() - 1; ++i) {
-                s += (int) ((stations[i + 1] - stations[i]) / x);
-            }
-            return s <= k;
-        };
-        while (right - left > 1e-6) {
-            double mid = (left + right) / 2.0;
-            if (check(mid)) {
-                right = mid;
-            } else {
-                left = mid;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minmaxGasDist(stations []int, k int) float64 {
-	check := func(x float64) bool {
-		s := 0
-		for i, v := range stations[:len(stations)-1] {
-			s += int(float64(stations[i+1]-v) / x)
-		}
-		return s <= k
-	}
-	var left, right float64 = 0, 1e8
-	for right-left > 1e-6 {
-		mid := (left + right) / 2.0
-		if check(mid) {
-			right = mid
-		} else {
-			left = mid
-		}
-	}
-	return left
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -158,4 +101,4 @@ func minmaxGasDist(stations []int, k int) float64 {
 
 ```
 
-<!-- tabs:end -->
+

@@ -51,34 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def isSubtree(self, root: TreeNode, subRoot: TreeNode) -> bool:
-        def dfs(root1, root2):
-            if root1 is None and root2 is None:
-                return True
-            if root1 is None or root2 is None:
-                return False
-            return (
-                root1.val == root2.val
-                and dfs(root1.left, root2.left)
-                and dfs(root1.right, root2.right)
-            )
 
-        if root is None:
-            return False
-        return (
-            dfs(root, subRoot)
-            or self.isSubtree(root.left, subRoot)
-            or self.isSubtree(root.right, subRoot)
-        )
-```
 
 ### **Java**
 
@@ -122,200 +95,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool isSubtree(TreeNode* root, TreeNode* subRoot) {
-        if (!root) return 0;
-        return dfs(root, subRoot) || isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
-    }
 
-    bool dfs(TreeNode* root1, TreeNode* root2) {
-        if (!root1 && !root2) return 1;
-        if (!root1 || !root2) return 0;
-        return root1->val == root2->val && dfs(root1->left, root2->left) && dfs(root1->right, root2->right);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func isSubtree(root *TreeNode, subRoot *TreeNode) bool {
-	if root == nil {
-		return false
-	}
-	var dfs func(root1, root2 *TreeNode) bool
-	dfs = func(root1, root2 *TreeNode) bool {
-		if root1 == nil && root2 == nil {
-			return true
-		}
-		if root1 == nil || root2 == nil {
-			return false
-		}
-		return root1.Val == root2.Val && dfs(root1.Left, root2.Left) && dfs(root1.Right, root2.Right)
-	}
-	return dfs(root, subRoot) || isSubtree(root.Left, subRoot) || isSubtree(root.Right, subRoot)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @param {TreeNode} subRoot
- * @return {boolean}
- */
-var isSubtree = function (root, subRoot) {
-    if (!root) return false;
-    let dfs = function (root1, root2) {
-        if (!root1 && !root2) {
-            return true;
-        }
-        if (!root1 || !root2) {
-            return false;
-        }
-        return (
-            root1.val == root2.val &&
-            dfs(root1.left, root2.left) &&
-            dfs(root1.right, root2.right)
-        );
-    };
-    return (
-        dfs(root, subRoot) ||
-        isSubtree(root.left, subRoot) ||
-        isSubtree(root.right, subRoot)
-    );
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-const dfs = (root: TreeNode | null, subRoot: TreeNode | null) => {
-    if (root == null && subRoot == null) {
-        return true;
-    }
-    if (root == null || subRoot == null || root.val !== subRoot.val) {
-        return false;
-    }
-    return dfs(root.left, subRoot.left) && dfs(root.right, subRoot.right);
-};
 
-function isSubtree(root: TreeNode | null, subRoot: TreeNode | null): boolean {
-    if (root == null) {
-        return false;
-    }
-    return (
-        dfs(root, subRoot) ||
-        isSubtree(root.left, subRoot) ||
-        isSubtree(root.right, subRoot)
-    );
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    fn dfs(root: &Option<Rc<RefCell<TreeNode>>>, sub_root: &Option<Rc<RefCell<TreeNode>>>) -> bool {
-        if root.is_none() && sub_root.is_none() {
-            return true;
-        }
-        if root.is_none() || sub_root.is_none() {
-            return false;
-        }
-        let root = root.as_ref().unwrap().borrow();
-        let sub_root = sub_root.as_ref().unwrap().borrow();
-        root.val == sub_root.val
-            && Self::dfs(&root.left, &sub_root.left)
-            && Self::dfs(&root.right, &sub_root.right)
-    }
 
-    fn help(
-        root: &Option<Rc<RefCell<TreeNode>>>,
-        sub_root: &Option<Rc<RefCell<TreeNode>>>,
-    ) -> bool {
-        if root.is_none() {
-            return false;
-        }
-        Self::dfs(root, sub_root)
-            || Self::help(&root.as_ref().unwrap().borrow().left, sub_root)
-            || Self::help(&root.as_ref().unwrap().borrow().right, sub_root)
-    }
-
-    pub fn is_subtree(
-        root: Option<Rc<RefCell<TreeNode>>>,
-        sub_root: Option<Rc<RefCell<TreeNode>>>,
-    ) -> bool {
-        Self::help(&root, &sub_root)
-    }
-}
-```
 
 ### **...**
 
@@ -323,4 +121,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

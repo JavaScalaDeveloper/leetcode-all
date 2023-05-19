@@ -58,22 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def diStringMatch(self, s: str) -> List[int]:
-        n = len(s)
-        low, high = 0, n
-        ans = []
-        for i in range(n):
-            if s[i] == 'I':
-                ans.append(low)
-                low += 1
-            else:
-                ans.append(high)
-                high -= 1
-        ans.append(low)
-        return ans
-```
+
 
 ### **Java**
 
@@ -98,92 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> diStringMatch(string s) {
-        int n = s.size();
-        int low = 0, high = n;
-        vector<int> ans(n + 1);
-        for (int i = 0; i < n; ++i) {
-            if (s[i] == 'I') {
-                ans[i] = low++;
-            } else {
-                ans[i] = high--;
-            }
-        }
-        ans[n] = low;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func diStringMatch(s string) []int {
-	n := len(s)
-	low, high := 0, n
-	var ans []int
-	for i := 0; i < n; i++ {
-		if s[i] == 'I' {
-			ans = append(ans, low)
-			low++
-		} else {
-			ans = append(ans, high)
-			high--
-		}
-	}
-	ans = append(ans, low)
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function diStringMatch(s: string): number[] {
-    const n = s.length;
-    const res = new Array(n + 1);
-    let low = 0;
-    let high = n;
-    for (let i = 0; i < n; i++) {
-        if (s[i] === 'I') {
-            res[i] = low++;
-        } else {
-            res[i] = high--;
-        }
-    }
-    res[n] = low;
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn di_string_match(s: String) -> Vec<i32> {
-        let s = s.as_bytes();
-        let n = s.len();
-        let mut res = Vec::with_capacity(n + 1);
-        let (mut low, mut high) = (-1, (n + 1) as i32);
-        for i in 0..n {
-            res.push(if s[i] == b'I' {
-                low += 1;
-                low
-            } else {
-                high -= 1;
-                high
-            });
-        }
-        res.push(low + 1);
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -191,4 +105,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

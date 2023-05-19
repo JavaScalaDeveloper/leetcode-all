@@ -86,40 +86,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sellingWood(self, m: int, n: int, prices: List[List[int]]) -> int:
-        @cache
-        def dfs(h, w):
-            ans = d[h].get(w, 0)
-            for i in range(1, h // 2 + 1):
-                ans = max(ans, dfs(i, w) + dfs(h - i, w))
-            for i in range(1, w // 2 + 1):
-                ans = max(ans, dfs(h, i) + dfs(h, w - i))
-            return ans
 
-        d = defaultdict(dict)
-        for h, w, p in prices:
-            d[h][w] = p
-        return dfs(m, n)
-```
 
-```python
-class Solution:
-    def sellingWood(self, m: int, n: int, prices: List[List[int]]) -> int:
-        d = defaultdict(dict)
-        for h, w, p in prices:
-            d[h][w] = p
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
-        for i in range(1, m + 1):
-            for j in range(1, n + 1):
-                dp[i][j] = d[i].get(j, 0)
-                for k in range(1, i):
-                    dp[i][j] = max(dp[i][j], dp[k][j] + dp[i - k][j])
-                for k in range(1, j):
-                    dp[i][j] = max(dp[i][j], dp[i][k] + dp[i][j - k])
-        return dp[-1][-1]
-```
+
 
 ### **Java**
 
@@ -184,132 +153,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using ll = long long;
 
-class Solution {
-public:
-    long long sellingWood(int m, int n, vector<vector<int>>& prices) {
-        vector<vector<ll>> memo(m + 1, vector<ll>(n + 1, -1));
-        vector<vector<int>> d(m + 1, vector<int>(n + 1));
-        for (auto& p : prices) d[p[0]][p[1]] = p[2];
-        return dfs(m, n, d, memo);
-    }
 
-    ll dfs(int m, int n, vector<vector<int>>& d, vector<vector<ll>>& memo) {
-        if (memo[m][n] != -1) return memo[m][n];
-        ll ans = d[m][n];
-        for (int i = 1; i < m / 2 + 1; ++i) ans = max(ans, dfs(i, n, d, memo) + dfs(m - i, n, d, memo));
-        for (int i = 1; i < n / 2 + 1; ++i) ans = max(ans, dfs(m, i, d, memo) + dfs(m, n - i, d, memo));
-        memo[m][n] = ans;
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    long long sellingWood(int m, int n, vector<vector<int>>& prices) {
-        vector<vector<int>> d(m + 1, vector<int>(n + 1));
-        vector<vector<long long>> dp(m + 1, vector<long long>(n + 1));
-        for (auto& p : prices) d[p[0]][p[1]] = p[2];
-        for (int i = 1; i <= m; ++i)
-        {
-            for (int j = 1; j <= n; ++j)
-            {
-                dp[i][j] = d[i][j];
-                for (int k = 1; k < i; ++k) dp[i][j] = max(dp[i][j], dp[k][j] + dp[i - k][j]);
-                for (int k = 1; k < j; ++k) dp[i][j] = max(dp[i][j], dp[i][k] + dp[i][j - k]);
-            }
-        }
-        return dp[m][n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func sellingWood(m int, n int, prices [][]int) int64 {
-	memo := make([][]int, m+1)
-	d := make([][]int, m+1)
-	for i := range memo {
-		memo[i] = make([]int, n+1)
-		d[i] = make([]int, n+1)
-		for j := range memo[i] {
-			memo[i][j] = -1
-		}
-	}
-	for _, p := range prices {
-		d[p[0]][p[1]] = p[2]
-	}
-	var dfs func(int, int) int
-	dfs = func(m, n int) int {
-		if memo[m][n] != -1 {
-			return memo[m][n]
-		}
-		ans := d[m][n]
-		for i := 1; i < m/2+1; i++ {
-			ans = max(ans, dfs(i, n)+dfs(m-i, n))
-		}
-		for i := 1; i < n/2+1; i++ {
-			ans = max(ans, dfs(m, i)+dfs(m, n-i))
-		}
-		memo[m][n] = ans
-		return ans
-	}
-	return int64(dfs(m, n))
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func sellingWood(m int, n int, prices [][]int) int64 {
-	d := make([][]int, m+1)
-	dp := make([][]int, m+1)
-	for i := range d {
-		d[i] = make([]int, n+1)
-		dp[i] = make([]int, n+1)
-	}
-	for _, p := range prices {
-		d[p[0]][p[1]] = p[2]
-	}
-	for i := 1; i <= m; i++ {
-		for j := 1; j <= n; j++ {
-			dp[i][j] = d[i][j]
-			for k := 1; k < i; k++ {
-				dp[i][j] = max(dp[i][j], dp[k][j]+dp[i-k][j])
-			}
-			for k := 1; k < j; k++ {
-				dp[i][j] = max(dp[i][j], dp[i][k]+dp[i][j-k])
-			}
-		}
-	}
-	return int64(dp[m][n])
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -317,4 +175,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

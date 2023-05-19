@@ -60,12 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestRangeI(self, nums: List[int], k: int) -> int:
-        mx, mi = max(nums), min(nums)
-        return max(0, mx - mi - k * 2)
-```
+
 
 ### **Java**
 
@@ -85,67 +80,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int smallestRangeI(vector<int>& nums, int k) {
-        int mx = *max_element(nums.begin(), nums.end());
-        int mi = *min_element(nums.begin(), nums.end());
-        return max(0, mx - mi - k * 2);
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestRangeI(nums []int, k int) int {
-	mx, mi := 0, 10000
-	for _, v := range nums {
-		mx = max(mx, v)
-		mi = min(mi, v)
-	}
-	return max(0, mx-mi-k*2)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function smallestRangeI(nums: number[], k: number): number {
-    const max = nums.reduce((r, v) => Math.max(r, v));
-    const min = nums.reduce((r, v) => Math.min(r, v));
-    return Math.max(max - min - k * 2, 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn smallest_range_i(nums: Vec<i32>, k: i32) -> i32 {
-        let max = nums.iter().max().unwrap();
-        let min = nums.iter().min().unwrap();
-        0.max(max - min - k * 2)
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -153,4 +102,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

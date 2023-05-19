@@ -86,29 +86,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int]) -> int:
-        ans = n = len(nums)
-        nums = sorted(set(nums))
-        for i, v in enumerate(nums):
-            j = bisect_right(nums, v + n - 1)
-            ans = min(ans, n - (j - i))
-        return ans
-```
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int]) -> int:
-        n = len(nums)
-        nums = sorted(set(nums))
-        ans, j = n, 0
-        for i, v in enumerate(nums):
-            while j < len(nums) and nums[j] - v <= n - 1:
-                j += 1
-            ans = min(ans, n - (j - i))
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -170,101 +150,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int m = unique(nums.begin(), nums.end()) - nums.begin();
-        int n = nums.size();
-        int ans = n;
-        for (int i = 0; i < m; ++i) {
-            int j = upper_bound(nums.begin() + i, nums.begin() + m, nums[i] + n - 1) - nums.begin();
-            ans = min(ans, n - (j - i));
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int m = unique(nums.begin(), nums.end()) - nums.begin();
-        int n = nums.size();
-        int ans = n;
-        for (int i = 0, j = 0; i < m; ++i) {
-            while (j < m && nums[j] - nums[i] <= n - 1) {
-                ++j;
-            }
-            ans = min(ans, n - (j - i));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(nums []int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	m := 1
-	for i := 1; i < n; i++ {
-		if nums[i] != nums[i-1] {
-			nums[m] = nums[i]
-			m++
-		}
-	}
-	ans := n
-	for i := 0; i < m; i++ {
-		j := sort.Search(m, func(k int) bool { return nums[k] > nums[i]+n-1 })
-		ans = min(ans, n-(j-i))
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func minOperations(nums []int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	m := 1
-	for i := 1; i < n; i++ {
-		if nums[i] != nums[i-1] {
-			nums[m] = nums[i]
-			m++
-		}
-	}
-	ans := n
-	for i, j := 0, 0; i < m; i++ {
-		for j < m && nums[j]-nums[i] <= n-1 {
-			j++
-		}
-		ans = min(ans, n-(j-i))
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -272,4 +168,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

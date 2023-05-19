@@ -58,11 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getConcatenation(self, nums: List[int]) -> List[int]:
-        return nums + nums
-```
+
 
 ### **Java**
 
@@ -81,59 +77,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> getConcatenation(vector<int>& nums) {
-        for (int i = 0, n = nums.size(); i < n; ++i) {
-            nums.push_back(nums[i]);
-        }
-        return nums;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getConcatenation(nums []int) []int {
-	return append(nums, nums...)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var getConcatenation = function (nums) {
-    let ans = nums.slice();
-    ans.splice(nums.length, 0, ...nums);
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getConcatenation(nums: number[]): number[] {
-    return [...nums, ...nums];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn get_concatenation(nums: Vec<i32>) -> Vec<i32> {
-        nums.repeat(2)
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -157,4 +119,4 @@ int *getConcatenation(int *nums, int numsSize, int *returnSize) {
 
 ```
 
-<!-- tabs:end -->
+

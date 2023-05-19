@@ -54,21 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def subsequenceSumOr(self, nums: List[int]) -> int:
-        cnt = [0] * 64
-        ans = 0
-        for v in nums:
-            for i in range(31):
-                if (v >> i) & 1:
-                    cnt[i] += 1
-        for i in range(63):
-            if cnt[i]:
-                ans |= 1 << i
-            cnt[i + 1] += cnt[i] // 2
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,54 +83,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long subsequenceSumOr(vector<int>& nums) {
-        vector<long long> cnt(64);
-        long long ans = 0;
-        for (int v : nums) {
-            for (int i = 0; i < 31; ++i) {
-                if (v >> i & 1) {
-                    ++cnt[i];
-                }
-            }
-        }
-        for (int i = 0; i < 63; ++i) {
-            if (cnt[i]) {
-                ans |= 1ll << i;
-            }
-            cnt[i + 1] += cnt[i] / 2;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func subsequenceSumOr(nums []int) int64 {
-	cnt := make([]int, 64)
-	ans := 0
-	for _, v := range nums {
-		for i := 0; i < 31; i++ {
-			if v>>i&1 == 1 {
-				cnt[i]++
-			}
-		}
-	}
-	for i := 0; i < 63; i++ {
-		if cnt[i] > 0 {
-			ans |= 1 << i
-		}
-		cnt[i+1] += cnt[i] / 2
-	}
-	return int64(ans)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -152,4 +97,4 @@ func subsequenceSumOr(nums []int) int64 {
 
 ```
 
-<!-- tabs:end -->
+

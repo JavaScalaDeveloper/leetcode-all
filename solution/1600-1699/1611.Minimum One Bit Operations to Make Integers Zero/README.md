@@ -67,37 +67,13 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumOneBitOperations(self, n: int) -> int:
-        if n <= 1:
-            return n
-        for i in range(64):
-            if (n >> i) == 1:
-                base = 1 << i
-                break
-        return 2*base-1 - self.minimumOneBitOperations(n-base)
-```
 
-### **Go**
+
+
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```go
-func minimumOneBitOperations(n int) int {
-	if n <= 1 {
-		return n
-	}
-	base := 0
-	for i := 0; i < 64; i++ {
-		if (n >> i) == 1 {
-			base = 1 << i
-			break
-		}
-	}
-	return (base << 1) - 1 - minimumOneBitOperations(n-base)
-}
-```
+
 
 ### **...**
 
@@ -105,4 +81,4 @@ func minimumOneBitOperations(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

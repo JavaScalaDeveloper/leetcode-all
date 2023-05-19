@@ -75,32 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def queensAttacktheKing(
-        self, queens: List[List[int]], king: List[int]
-    ) -> List[List[int]]:
-        n = 8
-        s = {(i, j) for i, j in queens}
-        ans = []
-        for a, b in [
-            [-1, 0],
-            [1, 0],
-            [0, -1],
-            [0, 1],
-            [1, 1],
-            [1, -1],
-            [-1, 1],
-            [-1, -1],
-        ]:
-            x, y = king
-            while 0 <= x + a < n and 0 <= y + b < n:
-                x, y = x + a, y + b
-                if (x, y) in s:
-                    ans.append([x, y])
-                    break
-        return ans
-```
+
 
 ### **Java**
 
@@ -140,59 +115,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> queensAttacktheKing(vector<vector<int>>& queens, vector<int>& king) {
-        unordered_set<int> s;
-        int n = 8;
-        for (auto& queen : queens) s.insert(queen[0] * n + queen[1]);
-        vector<vector<int>> dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
-        vector<vector<int>> ans;
-        for (auto& dir : dirs) {
-            int x = king[0], y = king[1];
-            int a = dir[0], b = dir[1];
-            while (x + a >= 0 && x + a < n && y + b >= 0 && y + b < n) {
-                x += a;
-                y += b;
-                if (s.count(x * n + y)) {
-                    ans.push_back({x, y});
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func queensAttacktheKing(queens [][]int, king []int) [][]int {
-	s := make(map[int]bool)
-	n := 8
-	for _, queen := range queens {
-		s[queen[0]*n+queen[1]] = true
-	}
-	dirs := [8][2]int{{0, -1}, {0, 1}, {1, 0}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}}
-	var ans [][]int
-	for _, dir := range dirs {
-		x, y := king[0], king[1]
-		a, b := dir[0], dir[1]
-		for x+a >= 0 && x+a < n && y+b >= 0 && y+b < n {
-			x, y = x+a, y+b
-			if s[x*n+y] {
-				ans = append(ans, []int{x, y})
-				break
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -200,4 +129,4 @@ func queensAttacktheKing(queens [][]int, king []int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

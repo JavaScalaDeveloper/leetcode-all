@@ -93,30 +93,9 @@ Alice 先开始，只能拿前 5 颗或后 5 颗石子 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def stoneGame(self, piles: List[int]) -> bool:
-        @cache
-        def dfs(i: int, j: int) -> int:
-            if i > j:
-                return 0
-            return max(piles[i] - dfs(i + 1, j), piles[j] - dfs(i, j - 1))
 
-        return dfs(0, len(piles) - 1) > 0
-```
 
-```python
-class Solution:
-    def stoneGame(self, piles: List[int]) -> bool:
-        n = len(piles)
-        f = [[0] * n for _ in range(n)]
-        for i, x in enumerate(piles):
-            f[i][i] = x
-        for i in range(n - 2, -1, -1):
-            for j in range(i + 1, n):
-                f[i][j] = max(piles[i] - f[i + 1][j], piles[j] - f[i][j - 1])
-        return f[0][n - 1] > 0
-```
+
 
 ### **Java**
 
@@ -164,140 +143,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool stoneGame(vector<int>& piles) {
-        int n = piles.size();
-        int f[n][n];
-        memset(f, 0, sizeof(f));
-        function<int(int, int)> dfs = [&](int i, int j) -> int {
-            if (i > j) {
-                return 0;
-            }
-            if (f[i][j]) {
-                return f[i][j];
-            }
-            return f[i][j] = max(piles[i] - dfs(i + 1, j), piles[j] - dfs(i, j - 1));
-        };
-        return dfs(0, n - 1) > 0;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool stoneGame(vector<int>& piles) {
-        int n = piles.size();
-        int f[n][n];
-        memset(f, 0, sizeof(f));
-        for (int i = 0; i < n; ++i) {
-            f[i][i] = piles[i];
-        }
-        for (int i = n - 2; ~i; --i) {
-            for (int j = i + 1; j < n; ++j) {
-                f[i][j] = max(piles[i] - f[i + 1][j], piles[j] - f[i][j - 1]);
-            }
-        }
-        return f[0][n - 1] > 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func stoneGame(piles []int) bool {
-	n := len(piles)
-	f := make([][]int, n)
-	for i := range f {
-		f[i] = make([]int, n)
-	}
-	var dfs func(i, j int) int
-	dfs = func(i, j int) int {
-		if i > j {
-			return 0
-		}
-		if f[i][j] == 0 {
-			f[i][j] = max(piles[i]-dfs(i+1, j), piles[j]-dfs(i, j-1))
-		}
-		return f[i][j]
-	}
-	return dfs(0, n-1) > 0
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func stoneGame(piles []int) bool {
-	n := len(piles)
-	f := make([][]int, n)
-	for i, x := range piles {
-		f[i] = make([]int, n)
-		f[i][i] = x
-	}
-	for i := n - 2; i >= 0; i-- {
-		for j := i + 1; j < n; j++ {
-			f[i][j] = max(piles[i]-f[i+1][j], piles[j]-f[i][j-1])
-		}
-	}
-	return f[0][n-1] > 0
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function stoneGame(piles: number[]): boolean {
-    const n = piles.length;
-    const f: number[][] = new Array(n).fill(0).map(() => new Array(n).fill(0));
-    const dfs = (i: number, j: number): number => {
-        if (i > j) {
-            return 0;
-        }
-        if (f[i][j] === 0) {
-            f[i][j] = Math.max(
-                piles[i] - dfs(i + 1, j),
-                piles[j] - dfs(i, j - 1),
-            );
-        }
-        return f[i][j];
-    };
-    return dfs(0, n - 1) > 0;
-}
-```
 
-```ts
-function stoneGame(piles: number[]): boolean {
-    const n = piles.length;
-    const f: number[][] = new Array(n).fill(0).map(() => new Array(n).fill(0));
-    for (let i = 0; i < n; ++i) {
-        f[i][i] = piles[i];
-    }
-    for (let i = n - 2; i >= 0; --i) {
-        for (let j = i + 1; j < n; ++j) {
-            f[i][j] = Math.max(piles[i] - f[i + 1][j], piles[j] - f[i][j - 1]);
-        }
-    }
-    return f[0][n - 1] > 0;
-}
-```
+
+
 
 ### **...**
 
@@ -305,4 +167,4 @@ function stoneGame(piles: number[]): boolean {
 
 ```
 
-<!-- tabs:end -->
+

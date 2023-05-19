@@ -76,22 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countPaths(self, grid: List[List[int]]) -> int:
-        @cache
-        def dfs(i: int, j: int) -> int:
-            ans = 1
-            for a, b in pairwise((-1, 0, 1, 0, -1)):
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n and grid[i][j] < grid[x][y]:
-                    ans = (ans + dfs(x, y)) % mod
-            return ans
 
-        mod = 10**9 + 7
-        m, n = len(grid), len(grid[0])
-        return sum(dfs(i, j) for i in range(m) for j in range(n)) % mod
-```
 
 ### **Java**
 
@@ -136,107 +121,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countPaths(vector<vector<int>>& grid) {
-        const int mod = 1e9 + 7;
-        int m = grid.size(), n = grid[0].size();
-        int f[m][n];
-        memset(f, 0, sizeof(f));
-        function<int(int, int)> dfs = [&](int i, int j) -> int {
-            if (f[i][j]) {
-                return f[i][j];
-            }
-            int ans = 1;
-            int dirs[5] = {-1, 0, 1, 0, -1};
-            for (int k = 0; k < 4; ++k) {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n && grid[i][j] < grid[x][y]) {
-                    ans = (ans + dfs(x, y)) % mod;
-                }
-            }
-            return f[i][j] = ans;
-        };
-        int ans = 0;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                ans = (ans + dfs(i, j)) % mod;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countPaths(grid [][]int) (ans int) {
-	const mod = 1e9 + 7
-	m, n := len(grid), len(grid[0])
-	f := make([][]int, m)
-	for i := range f {
-		f[i] = make([]int, n)
-	}
-	var dfs func(int, int) int
-	dfs = func(i, j int) int {
-		if f[i][j] != 0 {
-			return f[i][j]
-		}
-		f[i][j] = 1
-		dirs := [5]int{-1, 0, 1, 0, -1}
-		for k := 0; k < 4; k++ {
-			x, y := i+dirs[k], j+dirs[k+1]
-			if x >= 0 && x < m && y >= 0 && y < n && grid[i][j] < grid[x][y] {
-				f[i][j] = (f[i][j] + dfs(x, y)) % mod
-			}
-		}
-		return f[i][j]
-	}
-	for i, row := range grid {
-		for j := range row {
-			ans = (ans + dfs(i, j)) % mod
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countPaths(grid: number[][]): number {
-    const mod = 1e9 + 7;
-    const m = grid.length;
-    const n = grid[0].length;
-    const f = new Array(m).fill(0).map(() => new Array(n).fill(0));
-    const dfs = (i: number, j: number): number => {
-        if (f[i][j]) {
-            return f[i][j];
-        }
-        let ans = 1;
-        const dirs: number[] = [-1, 0, 1, 0, -1];
-        for (let k = 0; k < 4; ++k) {
-            const x = i + dirs[k];
-            const y = j + dirs[k + 1];
-            if (x >= 0 && x < m && y >= 0 && y < n && grid[i][j] < grid[x][y]) {
-                ans = (ans + dfs(x, y)) % mod;
-            }
-        }
-        return (f[i][j] = ans);
-    };
-    let ans = 0;
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            ans = (ans + dfs(i, j)) % mod;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -244,4 +139,4 @@ function countPaths(grid: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

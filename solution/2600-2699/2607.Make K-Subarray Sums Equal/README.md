@@ -93,18 +93,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makeSubKSumEqual(self, arr: List[int], k: int) -> int:
-        n = len(arr)
-        g = gcd(n, k)
-        ans = 0
-        for i in range(g):
-            t = sorted(arr[i:n:g])
-            mid = t[len(t) >> 1]
-            ans += sum(abs(x - mid) for x in t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -136,94 +125,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long makeSubKSumEqual(vector<int>& arr, int k) {
-        int n = arr.size();
-        int g = gcd(n, k);
-        long long ans = 0;
-        for (int i = 0; i < g; ++i) {
-            vector<int> t;
-            for (int j = i; j < n; j += g) {
-                t.push_back(arr[j]);
-            }
-            sort(t.begin(), t.end());
-            int mid = t[t.size() / 2];
-            for (int x : t) {
-                ans += abs(x - mid);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func makeSubKSumEqual(arr []int, k int) (ans int64) {
-	n := len(arr)
-	g := gcd(n, k)
-	for i := 0; i < g; i++ {
-		t := []int{}
-		for j := i; j < n; j += g {
-			t = append(t, arr[j])
-		}
-		sort.Ints(t)
-		mid := t[len(t)/2]
-		for _, x := range t {
-			ans += int64(abs(x - mid))
-		}
-	}
-	return
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function makeSubKSumEqual(arr: number[], k: number): number {
-    const n = arr.length;
-    const g = gcd(n, k);
-    let ans = 0;
-    for (let i = 0; i < g; ++i) {
-        const t: number[] = [];
-        for (let j = i; j < n; j += g) {
-            t.push(arr[j]);
-        }
-        t.sort((a, b) => a - b);
-        const mid = t[t.length >> 1];
-        for (const x of t) {
-            ans += Math.abs(x - mid);
-        }
-    }
-    return ans;
-}
 
-function gcd(a: number, b: number): number {
-    if (b === 0) {
-        return a;
-    }
-    return gcd(b, a % b);
-}
-```
 
 ### **...**
 
@@ -231,4 +143,4 @@ function gcd(a: number, b: number): number {
 
 ```
 
-<!-- tabs:end -->
+

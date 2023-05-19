@@ -66,20 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def splitLoopedString(self, strs: List[str]) -> str:
-        strs = [s[::-1] if s[::-1] > s else s for s in strs]
-        ans = ''.join(strs)
-        for i, s in enumerate(strs):
-            t = ''.join(strs[i + 1:]) + ''.join(strs[: i])
-            for j in range(len(s)):
-                a = s[j:]
-                b = s[:j]
-                ans = max(ans, a + t + b)
-                ans = max(ans, b[::-1] + t + a[::-1])
-        return ans
-```
+
 
 ### **Java**
 
@@ -129,89 +116,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string splitLoopedString(vector<string>& strs) {
-        for (auto& s : strs) {
-            string t{s.rbegin(), s.rend()};
-            s = max(s, t);
-        }
-        int n = strs.size();
-        string ans = "";
-        for (int i = 0; i < strs.size(); ++i) {
-            auto& s = strs[i];
-            string t;
-            for (int j = i + 1; j < n; ++j) {
-                t += strs[j];
-            }
-            for (int j = 0; j < i; ++j) {
-                t += strs[j];
-            }
-            for (int j = 0; j < s.size(); ++j) {
-                auto a = s.substr(j);
-                auto b = s.substr(0, j);
-                auto cur = a + t + b;
-                if (ans < cur) {
-                    ans = cur;
-                }
-                reverse(a.begin(), a.end());
-                reverse(b.begin(), b.end());
-                cur = b + t + a;
-                if (ans < cur) {
-                    ans = cur;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func splitLoopedString(strs []string) (ans string) {
-	for i, s := range strs {
-		t := reverse(s)
-		if s < t {
-			strs[i] = t
-		}
-	}
-	for i, s := range strs {
-		sb := &strings.Builder{}
-		for _, w := range strs[i+1:] {
-			sb.WriteString(w)
-		}
-		for _, w := range strs[:i] {
-			sb.WriteString(w)
-		}
-		t := sb.String()
-		for j := 0; j < len(s); j++ {
-			a, b := s[j:], s[0:j]
-			cur := a + t + b
-			if ans < cur {
-				ans = cur
-			}
-			cur = reverse(b) + t + reverse(a)
-			if ans < cur {
-				ans = cur
-			}
-		}
-	}
-	return ans
-}
 
-func reverse(s string) string {
-	t := []byte(s)
-	for i, j := 0, len(t)-1; i < j; i, j = i+1, j-1 {
-		t[i], t[j] = t[j], t[i]
-	}
-	return string(t)
-}
-```
+
+
+
 
 ### **...**
 
@@ -219,4 +130,4 @@ func reverse(s string) string {
 
 ```
 
-<!-- tabs:end -->
+

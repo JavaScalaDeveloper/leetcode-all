@@ -57,12 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        mx = max(candies)
-        return [candy + extraCandies >= mx for candy in candies]
-```
+
 
 ### **Java**
 
@@ -84,64 +79,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
-        int mx = *max_element(candies.begin(), candies.end());
-        vector<bool> res;
-        for (int candy : candies) {
-            res.push_back(candy + extraCandies >= mx);
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func kidsWithCandies(candies []int, extraCandies int) []bool {
-	mx := 0
-	for _, candy := range candies {
-		mx = max(mx, candy)
-	}
-	var res []bool
-	for _, candy := range candies {
-		res = append(res, candy+extraCandies >= mx)
-	}
-	return res
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
-    const max = candies.reduce((r, v) => Math.max(r, v));
-    return candies.map(v => v + extraCandies >= max);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn kids_with_candies(candies: Vec<i32>, extra_candies: i32) -> Vec<bool> {
-        let max = *candies.iter().max().unwrap();
-        candies.iter().map(|v| v + extra_candies >= max).collect()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -170,4 +122,4 @@ bool *kidsWithCandies(int *candies, int candiesSize, int extraCandies, int *retu
 
 ```
 
-<!-- tabs:end -->
+

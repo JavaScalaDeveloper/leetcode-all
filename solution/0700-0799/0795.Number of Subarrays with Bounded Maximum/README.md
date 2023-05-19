@@ -75,40 +75,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numSubarrayBoundedMax(self, nums: List[int], left: int, right: int) -> int:
-        def f(x):
-            cnt = t = 0
-            for v in nums:
-                t = 0 if v > x else t + 1
-                cnt += t
-            return cnt
 
-        return f(right) - f(left - 1)
-```
 
-```python
-class Solution:
-    def numSubarrayBoundedMax(self, nums: List[int], left: int, right: int) -> int:
-        n = len(nums)
-        l, r = [-1] * n, [n] * n
-        stk = []
-        for i, v in enumerate(nums):
-            while stk and nums[stk[-1]] <= v:
-                stk.pop()
-            if stk:
-                l[i] = stk[-1]
-            stk.append(i)
-        stk = []
-        for i in range(n - 1, -1, -1):
-            while stk and nums[stk[-1]] < nums[i]:
-                stk.pop()
-            if stk:
-                r[i] = stk[-1]
-            stk.append(i)
-        return sum((i - l[i]) * (r[i] - i) for i, v in enumerate(nums) if left <= v <= right)
-```
+
 
 ### **Java**
 
@@ -172,113 +141,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numSubarrayBoundedMax(vector<int>& nums, int left, int right) {
-        auto f = [&](int x) {
-            int cnt = 0, t = 0;
-            for (int& v : nums) {
-                t = v > x ? 0 : t + 1;
-                cnt += t;
-            }
-            return cnt;
-        };
-        return f(right) - f(left -1);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int numSubarrayBoundedMax(vector<int>& nums, int left, int right) {
-        int n = nums.size();
-        vector<int> l(n, -1);
-        vector<int> r(n, n);
-        stack<int> stk;
-        for (int i = 0; i < n; ++i) {
-            int v = nums[i];
-            while (!stk.empty() && nums[stk.top()] <= v) stk.pop();
-            if (!stk.empty()) l[i] = stk.top();
-            stk.push(i);
-        }
-        stk = stack<int>();
-        for (int i = n - 1; ~i; --i) {
-            int v = nums[i];
-            while (!stk.empty() && nums[stk.top()] < v) stk.pop();
-            if (!stk.empty()) r[i] = stk.top();
-            stk.push(i);
-        }
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            if (left <= nums[i] && nums[i] <= right) {
-                ans += (i - l[i]) * (r[i] - i);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numSubarrayBoundedMax(nums []int, left int, right int) int {
-	f := func(x int) (cnt int) {
-		t := 0
-		for _, v := range nums {
-			t++
-			if v > x {
-				t = 0
-			}
-			cnt += t
-		}
-		return
-	}
-	return f(right) - f(left-1)
-}
-```
 
-```go
-func numSubarrayBoundedMax(nums []int, left int, right int) (ans int) {
-	n := len(nums)
-	l := make([]int, n)
-	r := make([]int, n)
-	for i := range l {
-		l[i], r[i] = -1, n
-	}
-	stk := []int{}
-	for i, v := range nums {
-		for len(stk) > 0 && nums[stk[len(stk)-1]] <= v {
-			stk = stk[:len(stk)-1]
-		}
-		if len(stk) > 0 {
-			l[i] = stk[len(stk)-1]
-		}
-		stk = append(stk, i)
-	}
-	stk = []int{}
-	for i := n - 1; i >= 0; i-- {
-		v := nums[i]
-		for len(stk) > 0 && nums[stk[len(stk)-1]] < v {
-			stk = stk[:len(stk)-1]
-		}
-		if len(stk) > 0 {
-			r[i] = stk[len(stk)-1]
-		}
-		stk = append(stk, i)
-	}
-	for i, v := range nums {
-		if left <= v && v <= right {
-			ans += (i - l[i]) * (r[i] - i)
-		}
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -286,4 +159,4 @@ func numSubarrayBoundedMax(nums []int, left int, right int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

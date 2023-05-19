@@ -66,16 +66,7 @@ nums 的数字和是 1 + 2 + 3 + 4 = 10 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def differenceOfSum(self, nums: List[int]) -> int:
-        a, b = sum(nums), 0
-        for x in nums:
-            while x:
-                b += x % 10
-                x //= 10
-        return abs(a - b)
-```
+
 
 ### **Java**
 
@@ -96,79 +87,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int differenceOfSum(vector<int>& nums) {
-        int a = 0, b = 0;
-        for (int x : nums) {
-            a += x;
-            for (; x; x /= 10) {
-                b += x % 10;
-            }
-        }
-        return abs(a - b);
-    }
-};
-```
 
-### **Go**
 
-```go
-func differenceOfSum(nums []int) int {
-	a, b := 0, 0
-	for _, x := range nums {
-		a += x
-		for ; x > 0; x /= 10 {
-			b += x % 10
-		}
-	}
-	return abs(a - b)
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function differenceOfSum(nums: number[]): number {
-    return nums.reduce((r, v) => {
-        r += v;
-        while (v !== 0) {
-            r -= v % 10;
-            v = Math.floor(v / 10);
-        }
-        return r;
-    }, 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn difference_of_sum(nums: Vec<i32>) -> i32 {
-        let mut ans = 0;
-        for &num in nums.iter() {
-            let mut num = num;
-            ans += num;
-            while num != 0 {
-                ans -= num % 10;
-                num /= 10;
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -192,4 +125,4 @@ int differenceOfSum(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

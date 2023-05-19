@@ -81,32 +81,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
-class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        def dfs(root, p, q):
-            if root is None:
-                return False
-            l = dfs(root.left, p, q)
-            r = dfs(root.right, p, q)
-            nonlocal ans
-            if l and r:
-                ans = root
-            if (l or r) and (root.val == p.val or root.val == q.val):
-                ans = root
-            return l or r or root.val == p.val or root.val == q.val
-
-        ans = None
-        dfs(root, p, q)
-        return ans
-```
 
 ### **Java**
 
@@ -147,44 +122,9 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        dfs(root, p, q);
-        return ans;
-    }
 
-private:
-    TreeNode* ans = nullptr;
 
-    bool dfs(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if (!root) {
-            return false;
-        }
-        bool l = dfs(root->left, p, q);
-        bool r = dfs(root->right, p, q);
-        if (l && r) {
-            ans = root;
-        }
-        if ((l || r) && (root->val == p->val || root->val == q->val)) {
-            ans = root;
-        }
-        return l || r || root->val == p->val || root->val == q->val;
-    }
-};
-```
 
 ### **...**
 
@@ -192,4 +132,4 @@ private:
 
 ```
 
-<!-- tabs:end -->
+

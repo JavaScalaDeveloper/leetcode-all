@@ -73,15 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countPoints(self, rings: str) -> int:
-        mp = defaultdict(set)
-        for i in range(1, len(rings), 2):
-            c = int(rings[i])
-            mp[c].add(rings[i - 1])
-        return sum(len(v) == 3 for v in mp.values())
-```
+
 
 ### **Java**
 
@@ -106,81 +98,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countPoints(string rings) {
-        unordered_map<int, unordered_set<char>> mp;
-        for (int i = 1; i < rings.size(); i += 2) {
-            int c = rings[i] - '0';
-            mp[c].insert(rings[i - 1]);
-        }
-        int ans = 0;
-        for (int i = 0; i < 10; ++i)
-            if (mp[i].size() == 3)
-                ++ans;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countPoints(rings string) int {
-	mp := make(map[byte]map[byte]bool)
-	for i := 1; i < len(rings); i += 2 {
-		c := rings[i]
-		if len(mp[c]) == 0 {
-			mp[c] = make(map[byte]bool)
-		}
-		mp[c][rings[i-1]] = true
-	}
-	ans := 0
-	for _, v := range mp {
-		if len(v) == 3 {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countPoints(rings: string): number {
-    const helper = (c: string) => c.charCodeAt(0) - 'A'.charCodeAt(0);
-    const n = rings.length;
-    const target = (1 << helper('R')) + (1 << helper('G')) + (1 << helper('B'));
-    const count = new Array(10).fill(0);
-    for (let i = 0; i < n; i += 2) {
-        count[rings[i + 1]] |= 1 << helper(rings[i]);
-    }
-    return count.reduce((r, v) => (r += v === target ? 1 : 0), 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn count_points(rings: String) -> i32 {
-        let rings = rings.as_bytes();
-        let target = (1 << b'R' - b'A') + (1 << b'G' - b'A') + (1 << b'B' - b'A');
-        let n = rings.len();
-        let mut count = [0; 10];
-        let mut i = 0;
-        while i < n {
-            count[(rings[i + 1] - b'0') as usize] |= 1 << rings[i] - b'A';
-            i += 2;
-        }
-        count.iter().filter(|&v| *v == target).count() as i32
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -207,4 +139,4 @@ int countPoints(char *rings) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -70,37 +70,11 @@
 
 二分查找：
 
-```python
-class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        m, n = len(matrix), len(matrix[0])
-        left, right = 0, m * n - 1
-        while left < right:
-            mid = (left + right) >> 1
-            x, y = divmod(mid, n)
-            if matrix[x][y] >= target:
-                right = mid
-            else:
-                left = mid + 1
-        return matrix[left // n][left % n] == target
-```
+
 
 从左下角或右上角搜索：
 
-```python
-class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        m, n = len(matrix), len(matrix[0])
-        i, j = m - 1, 0
-        while i >= 0 and j < n:
-            if matrix[i][j] == target:
-                return True
-            if matrix[i][j] > target:
-                i -= 1
-            else:
-                j += 1
-        return False
-```
+
 
 ### **Java**
 
@@ -148,212 +122,45 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 二分查找：
 
-```cpp
-class Solution {
-public:
-    bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        int m = matrix.size(), n = matrix[0].size();
-        int left = 0, right = m * n - 1;
-        while (left < right) {
-            int mid = left + right >> 1;
-            int x = mid / n, y = mid % n;
-            if (matrix[x][y] >= target) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return matrix[left / n][left % n] == target;
-    }
-};
-```
+
 
 从左下角或右上角搜索：
 
-```cpp
-class Solution {
-public:
-    bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        int m = matrix.size(), n = matrix[0].size();
-        for (int i = m - 1, j = 0; i >= 0 && j < n;)
-        {
-            if (matrix[i][j] == target) return true;
-            if (matrix[i][j] > target) --i;
-            else ++j;
-        }
-        return false;
-    }
-};
-```
 
-### **JavaScript**
+
+
 
 二分查找：
 
-```js
-/**
- * @param {number[][]} matrix
- * @param {number} target
- * @return {boolean}
- */
-var searchMatrix = function (matrix, target) {
-    const m = matrix.length,
-        n = matrix[0].length;
-    let left = 0,
-        right = m * n - 1;
-    while (left < right) {
-        const mid = (left + right + 1) >> 1;
-        const x = Math.floor(mid / n);
-        const y = mid % n;
-        if (matrix[x][y] <= target) {
-            left = mid;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return matrix[Math.floor(left / n)][left % n] == target;
-};
-```
+
 
 从左下角或右上角搜索：
 
-```js
-/**
- * @param {number[][]} matrix
- * @param {number} target
- * @return {boolean}
- */
-var searchMatrix = function (matrix, target) {
-    const m = matrix.length,
-        n = matrix[0].length;
-    for (let i = m - 1, j = 0; i >= 0 && j < n; ) {
-        if (matrix[i][j] == target) {
-            return true;
-        }
-        if (matrix[i][j] > target) {
-            --i;
-        } else {
-            ++j;
-        }
-    }
-    return false;
-};
-```
 
-### **Go**
+
+
 
 二分查找：
 
-```go
-func searchMatrix(matrix [][]int, target int) bool {
-	m, n := len(matrix), len(matrix[0])
-	left, right := 0, m*n-1
-	for left < right {
-		mid := (left + right) >> 1
-		x, y := mid/n, mid%n
-		if matrix[x][y] >= target {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return matrix[left/n][left%n] == target
-}
-```
+
 
 从左下角或右上角搜索：
 
-```go
-func searchMatrix(matrix [][]int, target int) bool {
-	m, n := len(matrix), len(matrix[0])
-	for i, j := m-1, 0; i >= 0 && j < n; {
-		if matrix[i][j] == target {
-			return true
-		}
-		if matrix[i][j] > target {
-			i--
-		} else {
-			j++
-		}
-	}
-	return false
-}
-```
+
 
 ### **TypeScript**
 
-```ts
-function searchMatrix(matrix: number[][], target: number): boolean {
-    const m = matrix.length;
-    const n = matrix[0].length;
-    let left = 0;
-    let right = m * n;
-    while (left < right) {
-        const mid = (left + right) >>> 1;
-        const i = Math.floor(mid / n);
-        const j = mid % n;
-        if (matrix[i][j] === target) {
-            return true;
-        }
 
-        if (matrix[i][j] < target) {
-            left = mid + 1;
-        } else {
-            right = mid;
-        }
-    }
-    return false;
-}
-```
 
-### **Rust**
 
-```rust
-use std::cmp::Ordering;
-impl Solution {
-    pub fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {
-        let m = matrix.len();
-        let n = matrix[0].len();
-        let mut i = 0;
-        let mut j = n;
-        while i < m && j > 0 {
-            match matrix[i][j - 1].cmp(&target) {
-                Ordering::Equal => return true,
-                Ordering::Less => i += 1,
-                Ordering::Greater => j -= 1,
-            }
-        }
-        false
-    }
-}
-```
 
-```rust
-use std::cmp::Ordering;
-impl Solution {
-    pub fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {
-        let m = matrix.len();
-        let n = matrix[0].len();
-        let mut left = 0;
-        let mut right = m * n;
-        while left < right {
-            let mid = left + (right - left) / 2;
-            let i = mid / n;
-            let j = mid % n;
-            match matrix[i][j].cmp(&target) {
-                Ordering::Equal => return true,
-                Ordering::Less => left = mid + 1,
-                Ordering::Greater => right = mid,
-            }
-        }
-        false
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -361,4 +168,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

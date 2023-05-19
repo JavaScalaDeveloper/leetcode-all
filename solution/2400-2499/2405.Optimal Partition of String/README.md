@@ -60,31 +60,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def partitionString(self, s: str) -> int:
-        ss = set()
-        ans = 1
-        for c in s:
-            if c in ss:
-                ans += 1
-                ss = set()
-            ss.add(c)
-        return ans
-```
 
-```python
-class Solution:
-    def partitionString(self, s: str) -> int:
-        ans, v = 1, 0
-        for c in s:
-            i = ord(c) - ord('a')
-            if (v >> i) & 1:
-                v = 0
-                ans += 1
-            v |= 1 << i
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -125,113 +103,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int partitionString(string s) {
-        unordered_set<char> ss;
-        int ans = 1;
-        for (char c : s) {
-            if (ss.count(c)) {
-                ++ans;
-                ss.clear();
-            }
-            ss.insert(c);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int partitionString(string s) {
-        int ans = 1;
-        int v = 0;
-        for (char c : s) {
-            int i = c - 'a';
-            if ((v >> i) & 1) {
-                v = 0;
-                ++ans;
-            }
-            v |= 1 << i;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func partitionString(s string) int {
-	ss := map[rune]bool{}
-	ans := 1
-	for _, c := range s {
-		if ss[c] {
-			ans++
-			ss = map[rune]bool{}
-		}
-		ss[c] = true
-	}
-	return ans
-}
-```
 
-```go
-func partitionString(s string) int {
-	ans, v := 1, 0
-	for _, c := range s {
-		i := int(c - 'a')
-		if v>>i&1 == 1 {
-			v = 0
-			ans++
-		}
-		v |= 1 << i
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function partitionString(s: string): number {
-    const set = new Set();
-    let res = 1;
-    for (const c of s) {
-        if (set.has(c)) {
-            res++;
-            set.clear();
-        }
-        set.add(c);
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn partition_string(s: String) -> i32 {
-        let mut set = HashSet::new();
-        let mut res = 1;
-        for c in s.as_bytes().iter() {
-            if set.contains(c) {
-                res += 1;
-                set.clear();
-            }
-            set.insert(c);
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -239,4 +129,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

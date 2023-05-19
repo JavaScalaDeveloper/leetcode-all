@@ -57,26 +57,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def lastRemaining(self, n: int, m: int) -> int:
-        def f(n, m):
-            if n == 1:
-                return 0
-            x = f(n - 1, m)
-            return (m + x) % n
 
-        return f(n, m)
-```
 
-```python
-class Solution:
-    def lastRemaining(self, n: int, m: int) -> int:
-        f = 0
-        for i in range(2, n + 1):
-            f = (f + m) % i
-        return f
-```
+
 
 ### **Java**
 
@@ -110,94 +93,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int lastRemaining(int n, int m) {
-        return f(n, m);
-    }
 
-    int f(int n, int m) {
-        if (n == 1) {
-            return 0;
-        }
-        int x = f(n - 1, m);
-        return (m + x) % n;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int lastRemaining(int n, int m) {
-        int f = 0;
-        for (int i = 2; i <= n; ++i) {
-            f = (f + m) % i;
-        }
-        return f;
-    }
-};
-```
 
-### **Go**
 
-```go
-func lastRemaining(n int, m int) int {
-	var f func(n, m int) int
-	f = func(n, m int) int {
-		if n == 1 {
-			return 0
-		}
-		x := f(n-1, m)
-		return (m + x) % n
-	}
-	return f(n, m)
-}
-```
 
-```go
-func lastRemaining(n int, m int) int {
-	f := 0
-	for i := 2; i <= n; i++ {
-		f = (f + m) % i
-	}
-	return f
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @param {number} m
- * @return {number}
- */
-var lastRemaining = function (n, m) {
-    let f = 0;
-    for (let i = 2; i <= n; ++i) {
-        f = (f + m) % i;
-    }
-    return f;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int LastRemaining(int n, int m) {
-        int f = 0;
-        for (int i = 2; i < n + 1; i++) {
-            f = (f + m) % i;
-        }
-        return f;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -205,4 +119,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

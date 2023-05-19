@@ -68,12 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def destCity(self, paths: List[List[str]]) -> str:
-        s = {a for a, _ in paths}
-        return next(b for _, b in paths if b not in s)
-```
+
 
 ### **Java**
 
@@ -96,94 +91,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string destCity(vector<vector<string>>& paths) {
-        unordered_set<string> s;
-        for (auto& p : paths) {
-            s.insert(p[0]);
-        }
-        for (auto& p : paths) {
-            if (!s.count(p[1])) {
-                return p[1];
-            }
-        }
-        return "";
-    }
-};
-```
 
-### **Go**
 
-```go
-func destCity(paths [][]string) string {
-	s := map[string]bool{}
-	for _, p := range paths {
-		s[p[0]] = true
-	}
-	for _, p := range paths {
-		if !s[p[1]] {
-			return p[1]
-		}
-	}
-	return ""
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string[][]} paths
- * @return {string}
- */
-var destCity = function (paths) {
-    const s = new Set();
-    for (const [a, _] of paths) {
-        s.add(a);
-    }
-    for (const [_, b] of paths) {
-        if (!s.has(b)) {
-            return b;
-        }
-    }
-    return '';
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function destCity(paths: string[][]): string {
-    const set = new Set(paths.map(([a]) => a));
-    for (const [_, b] of paths) {
-        if (!set.has(b)) {
-            return b;
-        }
-    }
-    return '';
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn dest_city(paths: Vec<Vec<String>>) -> String {
-        let set = paths.iter().map(|v| &v[0]).collect::<HashSet<&String>>();
-        for path in paths.iter() {
-            if !set.contains(&path[1]) {
-                return path[1].clone();
-            }
-        }
-        String::new()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -211,4 +137,4 @@ char *destCity(char ***paths, int pathsSize, int *pathsColSize) {
 
 ```
 
-<!-- tabs:end -->
+

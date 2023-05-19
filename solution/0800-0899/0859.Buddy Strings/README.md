@@ -72,18 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def buddyStrings(self, s: str, goal: str) -> bool:
-        m, n = len(s), len(goal)
-        if m != n:
-            return False
-        cnt1, cnt2 = Counter(s), Counter(goal)
-        if cnt1 != cnt2:
-            return False
-        diff = sum(s[i] != goal[i] for i in range(n))
-        return diff == 2 or (diff == 0 and any(v > 1 for v in cnt1.values()))
-```
+
 
 ### **Java**
 
@@ -121,90 +110,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool buddyStrings(string s, string goal) {
-        int m = s.size(), n = goal.size();
-        if (m != n) return false;
-        int diff = 0;
-        vector<int> cnt1(26);
-        vector<int> cnt2(26);
-        for (int i = 0; i < n; ++i) {
-            ++cnt1[s[i] - 'a'];
-            ++cnt2[goal[i] - 'a'];
-            if (s[i] != goal[i]) ++diff;
-        }
-        bool f = false;
-        for (int i = 0; i < 26; ++i) {
-            if (cnt1[i] != cnt2[i]) return false;
-            if (cnt1[i] > 1) f = true;
-        }
-        return diff == 2 || (diff == 0 && f);
-    }
-};
-```
 
-### **Go**
 
-```go
-func buddyStrings(s string, goal string) bool {
-	m, n := len(s), len(goal)
-	if m != n {
-		return false
-	}
-	diff := 0
-	cnt1 := make([]int, 26)
-	cnt2 := make([]int, 26)
-	for i := 0; i < n; i++ {
-		cnt1[s[i]-'a']++
-		cnt2[goal[i]-'a']++
-		if s[i] != goal[i] {
-			diff++
-		}
-	}
-	f := false
-	for i := 0; i < 26; i++ {
-		if cnt1[i] != cnt2[i] {
-			return false
-		}
-		if cnt1[i] > 1 {
-			f = true
-		}
-	}
-	return diff == 2 || (diff == 0 && f)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function buddyStrings(s: string, goal: string): boolean {
-    const m = s.length;
-    const n = goal.length;
-    if (m != n) {
-        return false;
-    }
-    const cnt1 = new Array(26).fill(0);
-    const cnt2 = new Array(26).fill(0);
-    let diff = 0;
-    for (let i = 0; i < n; ++i) {
-        cnt1[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
-        cnt2[goal.charCodeAt(i) - 'a'.charCodeAt(0)]++;
-        if (s[i] != goal[i]) {
-            ++diff;
-        }
-    }
-    for (let i = 0; i < 26; ++i) {
-        if (cnt1[i] != cnt2[i]) {
-            return false;
-        }
-    }
-    return diff == 2 || (diff == 0 && cnt1.some(v => v > 1));
-}
-```
+
 
 ### **...**
 
@@ -212,4 +128,4 @@ function buddyStrings(s: string, goal: string): boolean {
 
 ```
 
-<!-- tabs:end -->
+

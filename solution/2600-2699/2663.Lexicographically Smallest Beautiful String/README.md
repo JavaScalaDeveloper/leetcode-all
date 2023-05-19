@@ -72,28 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestBeautifulString(self, s: str, k: int) -> str:
-        n = len(s)
-        cs = list(s)
-        for i in range(n - 1, -1, -1):
-            p = ord(cs[i]) - ord('a') + 1
-            for j in range(p, k):
-                c = chr(ord('a') + j)
-                if (i > 0 and cs[i - 1] == c) or (i > 1 and cs[i - 2] == c):
-                    continue
-                cs[i] = c
-                for l in range(i + 1, n):
-                    for m in range(k):
-                        c = chr(ord('a') + m)
-                        if (l > 0 and cs[l - 1] == c) or (l > 1 and cs[l - 2] == c):
-                            continue
-                        cs[l] = c
-                        break
-                return ''.join(cs)
-        return ''
-```
+
 
 ### **Java**
 
@@ -130,103 +109,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string smallestBeautifulString(string s, int k) {
-        int n = s.size();
-        for (int i = n - 1; i >= 0; --i) {
-            int p = s[i] - 'a' + 1;
-            for (int j = p; j < k; ++j) {
-                char c = (char) ('a' + j);
-                if ((i > 0 && s[i - 1] == c) || (i > 1 && s[i - 2] == c)) {
-                    continue;
-                }
-                s[i] = c;
-                for (int l = i + 1; l < n; ++l) {
-                    for (int m = 0; m < k; ++m) {
-                        c = (char) ('a' + m);
-                        if ((l > 0 && s[l - 1] == c) || (l > 1 && s[l - 2] == c)) {
-                            continue;
-                        }
-                        s[l] = c;
-                        break;
-                    }
-                }
-                return s;
-            }
-        }
-        return "";
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestBeautifulString(s string, k int) string {
-	cs := []byte(s)
-	n := len(cs)
-	for i := n - 1; i >= 0; i-- {
-		p := int(cs[i] - 'a' + 1)
-		for j := p; j < k; j++ {
-			c := byte('a' + j)
-			if (i > 0 && cs[i-1] == c) || (i > 1 && cs[i-2] == c) {
-				continue
-			}
-			cs[i] = c
-			for l := i + 1; l < n; l++ {
-				for m := 0; m < k; m++ {
-					c = byte('a' + m)
-					if (l > 0 && cs[l-1] == c) || (l > 1 && cs[l-2] == c) {
-						continue
-					}
-					cs[l] = c
-					break
-				}
-			}
-			return string(cs)
-		}
-	}
-	return ""
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function smallestBeautifulString(s: string, k: number): string {
-    const cs: string[] = s.split('');
-    const n = cs.length;
-    for (let i = n - 1; i >= 0; --i) {
-        const p = cs[i].charCodeAt(0) - 97 + 1;
-        for (let j = p; j < k; ++j) {
-            let c = String.fromCharCode(j + 97);
-            if ((i > 0 && cs[i - 1] === c) || (i > 1 && cs[i - 2] === c)) {
-                continue;
-            }
-            cs[i] = c;
-            for (let l = i + 1; l < n; ++l) {
-                for (let m = 0; m < k; ++m) {
-                    c = String.fromCharCode(m + 97);
-                    if (
-                        (l > 0 && cs[l - 1] === c) ||
-                        (l > 1 && cs[l - 2] === c)
-                    ) {
-                        continue;
-                    }
-                    cs[l] = c;
-                    break;
-                }
-            }
-            return cs.join('');
-        }
-    }
-    return '';
-}
-```
+
 
 ### **...**
 
@@ -234,4 +127,4 @@ function smallestBeautifulString(s: string, k: number): string {
 
 ```
 
-<!-- tabs:end -->
+

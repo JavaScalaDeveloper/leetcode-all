@@ -97,9 +97,7 @@ videoSharingPlatform.getViews(0);            // 没有视频与 videoId 0 相关
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -111,9 +109,7 @@ videoSharingPlatform.getViews(0);            // 没有视频与 videoId 0 相关
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -121,4 +117,4 @@ videoSharingPlatform.getViews(0);            // 没有视频与 videoId 0 相关
 
 ```
 
-<!-- tabs:end -->
+

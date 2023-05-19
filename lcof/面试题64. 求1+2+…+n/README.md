@@ -34,11 +34,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def sumNums(self, n: int) -> int:
-        return n and (n + self.sumNums(n - 1))
-```
+
 
 ### **Java**
 
@@ -52,81 +48,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int sumNums(int n) {
-        n && (n += sumNums(n - 1));
-        return n;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var sumNums = function (n) {
-    return (n ** 2 + n) >> 1;
-};
-```
 
-### **Go**
 
-```go
-func sumNums(n int) int {
-	s := 0
-	var sum func(int) bool
-	sum = func(n int) bool {
-		s += n
-		return n > 0 && sum(n-1)
-	}
-	sum(n)
-	return s
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-var sumNums = function (n: number): number {
-    return n && n + sumNums(n - 1);
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sum_nums(mut n: i32) -> i32 {
-        n != 0 && (n += Solution::sum_nums(n - 1), true).1;
-        n
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int result;
-    public int SumNums(int n) {
-        helper(n);
-        return result;
-    }
 
-    public bool helper(int n) {
-        result += n;
-        return n == 0 || helper(n - 1);
-    }
-}
 
-```
+
+
+
 
 ### **...**
 
@@ -134,4 +78,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -58,31 +58,7 @@ DFS 回溯，或者状态压缩。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countArrangement(self, n: int) -> int:
-        def dfs(i):
-            nonlocal ans, n
-            if i == n + 1:
-                ans += 1
-                return
-            for j in match[i]:
-                if not vis[j]:
-                    vis[j] = True
-                    dfs(i + 1)
-                    vis[j] = False
 
-        ans = 0
-        vis = [False] * (n + 1)
-        match = defaultdict(list)
-        for i in range(1, n + 1):
-            for j in range(1, n + 1):
-                if j % i == 0 or i % j == 0:
-                    match[i].append(j)
-
-        dfs(1)
-        return ans
-```
 
 ### **Java**
 
@@ -152,148 +128,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int n;
-    int ans;
-    vector<bool> vis;
-    unordered_map<int, vector<int>> match;
 
-    int countArrangement(int n) {
-        this->n = n;
-        this->ans = 0;
-        vis.resize(n + 1);
-        for (int i = 1; i <= n; ++i)
-            for (int j = 1; j <= n; ++j)
-                if (i % j == 0 || j % i == 0)
-                    match[i].push_back(j);
-        dfs(1);
-        return ans;
-    }
 
-    void dfs(int i) {
-        if (i == n + 1) {
-            ++ans;
-            return;
-        }
-        for (int j : match[i]) {
-            if (!vis[j]) {
-                vis[j] = true;
-                dfs(i + 1);
-                vis[j] = false;
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func countArrangement(n int) int {
-	ans := 0
-	match := make(map[int][]int)
-	for i := 1; i <= n; i++ {
-		for j := 1; j <= n; j++ {
-			if i%j == 0 || j%i == 0 {
-				match[i] = append(match[i], j)
-			}
-		}
-	}
-	vis := make([]bool, n+1)
 
-	var dfs func(i int)
-	dfs = func(i int) {
-		if i == n+1 {
-			ans++
-			return
-		}
-		for _, j := range match[i] {
-			if !vis[j] {
-				vis[j] = true
-				dfs(i + 1)
-				vis[j] = false
-			}
-		}
-	}
 
-	dfs(1)
-	return ans
-}
-```
 
 ### **TypeScript**
 
-```ts
-function countArrangement(n: number): number {
-    const vis = new Array(n + 1).fill(0);
-    const match = Array.from({ length: n + 1 }, () => []);
-    for (let i = 1; i <= n; i++) {
-        for (let j = 1; j <= n; j++) {
-            if (i % j === 0 || j % i === 0) {
-                match[i].push(j);
-            }
-        }
-    }
 
-    let res = 0;
-    const dfs = (i: number, n: number) => {
-        if (i === n + 1) {
-            res++;
-            return;
-        }
-        for (const j of match[i]) {
-            if (!vis[j]) {
-                vis[j] = true;
-                dfs(i + 1, n);
-                vis[j] = false;
-            }
-        }
-    };
-    dfs(1, n);
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    fn dfs(i: usize, n: usize, mat: &Vec<Vec<usize>>, vis: &mut Vec<bool>, res: &mut i32) {
-        if i == n + 1 {
-            *res += 1;
-            return;
-        }
-        for &j in mat[i].iter() {
-            if !vis[j] {
-                vis[j] = true;
-                Self::dfs(i + 1, n, mat, vis, res);
-                vis[j] = false;
-            }
-        }
-    }
 
-    pub fn count_arrangement(n: i32) -> i32 {
-        let n = n as usize;
-        let mut vis = vec![false; n + 1];
-        let mut mat = vec![Vec::new(); n + 1];
-        for i in 1..=n {
-            for j in 1..=n {
-                if i % j == 0 || j % i == 0 {
-                    mat[i].push(j);
-                }
-            }
-        }
 
-        let mut res = 0;
-        Self::dfs(1, n, &mat, &mut vis, &mut res);
-        res
-    }
-}
-```
 
 ### **...**
 
@@ -301,4 +150,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

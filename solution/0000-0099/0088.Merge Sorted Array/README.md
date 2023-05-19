@@ -76,20 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        k = m + n - 1
-        i, j = m - 1, n - 1
-        while j >= 0:
-            if i >= 0 and nums1[i] > nums2[j]:
-                nums1[k] = nums1[i]
-                i -= 1
-            else:
-                nums1[k] = nums2[j]
-                j -= 1
-            k -= 1
-```
+
 
 ### **Java**
 
@@ -105,118 +92,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-        for (int i = m - 1, j = n - 1, k = m + n - 1; ~j; --k) {
-            nums1[k] = i >= 0 && nums1[i] > nums2[j] ? nums1[i--] : nums2[j--];
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func merge(nums1 []int, m int, nums2 []int, n int) {
-	for i, j, k := m-1, n-1, m+n-1; j >= 0; k-- {
-		if i >= 0 && nums1[i] > nums2[j] {
-			nums1[k] = nums1[i]
-			i--
-		} else {
-			nums1[k] = nums2[j]
-			j--
-		}
-	}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- Do not return anything, modify nums1 in-place instead.
- */
-function merge(nums1: number[], m: number, nums2: number[], n: number): void {
-    for (let i = m - 1, j = n - 1, k = m + n - 1; j >= 0; --k) {
-        nums1[k] = i >= 0 && nums1[i] > nums2[j] ? nums1[i--] : nums2[j--];
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
- */
-var merge = function (nums1, m, nums2, n) {
-    for (let i = m - 1, j = n - 1, k = m + n - 1; j >= 0; --k) {
-        nums1[k] = i >= 0 && nums1[i] > nums2[j] ? nums1[i--] : nums2[j--];
-    }
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn merge(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
-        let (mut m, mut n) = (m as usize, n as usize);
-        for i in (0..m + n).rev() {
-            nums1[i] = match (m == 0, n == 0) {
-                (true, false) => {
-                    n -= 1;
-                    nums2[n]
-                }
-                (false, true) => {
-                    m -= 1;
-                    nums1[m]
-                }
-                (_, _) => {
-                    if nums1[m - 1] > nums2[n - 1] {
-                        m -= 1;
-                        nums1[m]
-                    } else {
-                        n -= 1;
-                        nums2[n]
-                    }
-                }
-            }
-        }
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums1
-     * @param Integer $m
-     * @param Integer[] $nums2
-     * @param Integer $n
-     * @return NULL
-     */
-    function merge(&$nums1, $m, $nums2, $n) {
-        while (count($nums1) > $m) {
-            array_pop($nums1);
-        }
-        for ($i = 0; $i < $n; $i++) {
-            array_push($nums1, $nums2[$i]);
-        }
-        asort($nums1);
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -224,4 +122,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

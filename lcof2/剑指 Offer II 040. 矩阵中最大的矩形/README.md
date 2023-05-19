@@ -79,43 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximalRectangle(self, matrix: List[List[str]]) -> int:
-        if not matrix:
-            return 0
-        heights = [0] * len(matrix[0])
-        ans = 0
-        for row in matrix:
-            for j, v in enumerate(row):
-                if v == "1":
-                    heights[j] += 1
-                else:
-                    heights[j] = 0
-            ans = max(ans, self.largestRectangleArea(heights))
-        return ans
 
-    def largestRectangleArea(self, heights: List[int]) -> int:
-        n = len(heights)
-        stk = []
-        left = [-1] * n
-        right = [n] * n
-        for i, h in enumerate(heights):
-            while stk and heights[stk[-1]] >= h:
-                stk.pop()
-            if stk:
-                left[i] = stk[-1]
-            stk.append(i)
-        stk = []
-        for i in range(n - 1, -1, -1):
-            h = heights[i]
-            while stk and heights[stk[-1]] >= h:
-                stk.pop()
-            if stk:
-                right[i] = stk[-1]
-            stk.append(i)
-        return max(h * (right[i] - left[i] - 1) for i, h in enumerate(heights))
-```
 
 ### **Java**
 
@@ -164,140 +128,20 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 -   首先在柱状图中求最大矩形面积可以通过单调栈，维护每一列的左边第一个比它小的位置 $L$，和右边第一个比它小的位置 $R$，就能得到以这一列为高的最大矩形面积为 $(R-L-1)*h$。
 -   考虑每一行作为底边的柱状图中，能够得到的最大的矩形面积。再对每一行的最大面积取 $max$ 就是最终的答案。
 -   柱状图中每一列的高可以通过类似前缀和的方式去维护。
 -   假设矩阵大小为 $n*m$，那么时间复杂为 $O(nm)$，空间复杂度为 $O(m)$。
 
-```cpp
-class Solution {
-public:
-    int h[210];
-    int l[210], r[210];
-    int maximalRectangle(vector<string>& matrix) {
-        int n = matrix.size();
-        if (n == 0) return 0;
-        int m = matrix[0].size();
-        int ans = 0;
-        stack<int> st;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                h[j] = (matrix[i][j] == '1' ? h[j] + 1 : 0);
-                while (st.size() && h[j] <= h[st.top()]) {
-                    ans = max(ans, (j - l[st.top()] - 1) * h[st.top()]);
-                    st.pop();
-                }
-                if (st.size())
-                    l[j] = st.top();
-                else
-                    l[j] = -1;
-                st.push(j);
-            }
-            while (st.size()) {
-                ans = max(ans, (m - 1 - l[st.top()]) * h[st.top()]);
-                st.pop();
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maximalRectangle(vector<string>& matrix) {
-        if (matrix.empty()) return 0;
-        int n = matrix[0].size();
-        vector<int> heights(n);
-        int ans = 0;
-        for (auto& row : matrix) {
-            for (int j = 0; j < n; ++j) {
-                if (row[j] == '1') ++heights[j];
-                else heights[j] = 0;
-            }
-            ans = max(ans, largestRectangleArea(heights));
-        }
-        return ans;
-    }
 
-    int largestRectangleArea(vector<int>& heights) {
-        int res = 0, n = heights.size();
-        stack<int> stk;
-        vector<int> left(n, -1);
-        vector<int> right(n, n);
-        for (int i = 0; i < n; ++i) {
-            while (!stk.empty() && heights[stk.top()] >= heights[i]) {
-                right[stk.top()] = i;
-                stk.pop();
-            }
-            if (!stk.empty()) left[i] = stk.top();
-            stk.push(i);
-        }
-        for (int i = 0; i < n; ++i)
-            res = max(res, heights[i] * (right[i] - left[i] - 1));
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximalRectangle(matrix []string) int {
-	if len(matrix) == 0 {
-		return 0
-	}
-	n := len(matrix[0])
-	heights := make([]int, n)
-	ans := 0
-	for _, row := range matrix {
-		for j, v := range row {
-			if v == '1' {
-				heights[j]++
-			} else {
-				heights[j] = 0
-			}
-		}
-		ans = max(ans, largestRectangleArea(heights))
-	}
-	return ans
-}
 
-func largestRectangleArea(heights []int) int {
-	res, n := 0, len(heights)
-	var stk []int
-	left, right := make([]int, n), make([]int, n)
-	for i := range right {
-		right[i] = n
-	}
-	for i, h := range heights {
-		for len(stk) > 0 && heights[stk[len(stk)-1]] >= h {
-			right[stk[len(stk)-1]] = i
-			stk = stk[:len(stk)-1]
-		}
-		if len(stk) > 0 {
-			left[i] = stk[len(stk)-1]
-		} else {
-			left[i] = -1
-		}
-		stk = append(stk, i)
-	}
-	for i, h := range heights {
-		res = max(res, h*(right[i]-left[i]-1))
-	}
-	return res
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **...**
 
@@ -305,4 +149,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

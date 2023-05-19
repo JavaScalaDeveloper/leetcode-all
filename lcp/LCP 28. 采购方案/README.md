@@ -43,20 +43,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def purchasePlans(self, nums: List[int], target: int) -> int:
-        nums.sort()
-        i, j = 0, len(nums) - 1
-        res = 0
-        while i < j:
-            if nums[i] + nums[j] > target:
-                j -= 1
-            else:
-                res += j - i
-                i += 1
-        return res % 1000000007
-```
+
 
 ### **Java**
 
@@ -80,41 +67,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int purchasePlans(vector<int>& nums, int target) {
-        const int MOD = 1000000007;
-        sort(nums.begin(), nums.end());
-        int res = 0;
-        for (int i = 0, j = nums.size() - 1; i < j; ++i) {
-            while (i < j && nums[i] + nums[j] > target) --j;
-            if (i < j) res = (res + j - i) % MOD;
-        }
-        return res % MOD;
-    }
-};
-```
 
-### **Go**
 
-```go
-func purchasePlans(nums []int, target int) int {
-	sort.Ints(nums)
-	res, mod := 0, 1000000007
-	for i, j := 0, len(nums)-1; i < j; i++ {
-		for i < j && nums[i]+nums[j] > target {
-			j--
-		}
-		if i < j {
-			res = (res + j - i) % mod
-		}
-	}
-	return res
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -122,4 +81,4 @@ func purchasePlans(nums []int, target int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -71,13 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def twoCitySchedCost(self, costs: List[List[int]]) -> int:
-        costs.sort(key=lambda x: x[0] - x[1])
-        n = len(costs) >> 1
-        return sum(costs[i][0] + costs[i + n][1] for i in range(n))
-```
+
 
 ### **Java**
 
@@ -97,53 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int twoCitySchedCost(vector<vector<int>>& costs) {
-        sort(costs.begin(), costs.end(), [](const vector<int>& a, const vector<int>& b) {
-            return a[0] - a[1] < b[0] - b[1];
-        });
-        int n = costs.size() / 2;
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            ans += costs[i][0] + costs[i + n][1];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func twoCitySchedCost(costs [][]int) (ans int) {
-	sort.Slice(costs, func(i, j int) bool {
-		return costs[i][0]-costs[i][1] < costs[j][0]-costs[j][1]
-	})
-	n := len(costs) >> 1
-	for i, a := range costs[:n] {
-		ans += a[0] + costs[i+n][1]
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function twoCitySchedCost(costs: number[][]): number {
-    costs.sort((a, b) => a[0] - a[1] - (b[0] - b[1]));
-    const n = costs.length >> 1;
-    let ans = 0;
-    for (let i = 0; i < n; ++i) {
-        ans += costs[i][0] + costs[i + n][1];
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -151,4 +109,4 @@ function twoCitySchedCost(costs: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

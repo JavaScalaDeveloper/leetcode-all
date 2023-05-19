@@ -71,11 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfCuts(self, n: int) -> int:
-        return n if n > 1 and n % 2 else n >> 1
-```
+
 
 ### **Java**
 
@@ -89,27 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfCuts(int n) {
-        return n > 1 && n % 2 == 1 ? n : n >> 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfCuts(n int) int {
-	if n > 1 && n%2 == 1 {
-		return n
-	}
-	return n >> 1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -117,4 +99,4 @@ func numberOfCuts(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

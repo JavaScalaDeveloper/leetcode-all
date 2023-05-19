@@ -71,16 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def combinationSum4(self, nums: List[int], target: int) -> int:
-        f = [1] + [0] * target
-        for i in range(1, target + 1):
-            for x in nums:
-                if i >= x:
-                    f[i] += f[i - x]
-        return f[target]
-```
+
 
 ### **Java**
 
@@ -103,101 +94,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int combinationSum4(vector<int>& nums, int target) {
-        int f[target + 1];
-        memset(f, 0, sizeof(f));
-        f[0] = 1;
-        for (int i = 1; i <= target; ++i) {
-            for (int x : nums) {
-                if (i >= x && f[i - x] < INT_MAX - f[i]) {
-                    f[i] += f[i - x];
-                }
-            }
-        }
-        return f[target];
-    }
-};
-```
 
-### **Go**
 
-```go
-func combinationSum4(nums []int, target int) int {
-	f := make([]int, target+1)
-	f[0] = 1
-	for i := 1; i <= target; i++ {
-		for _, x := range nums {
-			if i >= x {
-				f[i] += f[i-x]
-			}
-		}
-	}
-	return f[target]
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var combinationSum4 = function (nums, target) {
-    const f = new Array(target + 1).fill(0);
-    f[0] = 1;
-    for (let i = 1; i <= target; ++i) {
-        for (const x of nums) {
-            if (i >= x) {
-                f[i] += f[i - x];
-            }
-        }
-    }
-    return f[target];
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function combinationSum4(nums: number[], target: number): number {
-    const f: number[] = new Array(target + 1).fill(0);
-    f[0] = 1;
-    for (let i = 1; i <= target; ++i) {
-        for (const x of nums) {
-            if (i >= x) {
-                f[i] += f[i - x];
-            }
-        }
-    }
-    return f[target];
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int CombinationSum4(int[] nums, int target) {
-        int[] f = new int[target + 1];
-        f[0] = 1;
-        for (int i = 1; i <= target; ++i) {
-            foreach (int x in nums) {
-                if (i >= x) {
-                    f[i] += f[i - x];
-                }
-            }
-        }
-        return f[target];
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -205,4 +120,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

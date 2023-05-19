@@ -66,19 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def printVertically(self, s: str) -> List[str]:
-        words = s.split()
-        n = max(len(w) for w in words)
-        ans = []
-        for j in range(n):
-            t = [w[j] if j < len(w) else ' ' for w in words]
-            while t[-1] == ' ':
-                t.pop()
-            ans.append(''.join(t))
-        return ans
-```
+
 
 ### **Java**
 
@@ -108,69 +96,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> printVertically(string s) {
-        stringstream ss(s);
-        vector<string> words;
-        string word;
-        int n = 0;
-        while (ss >> word) {
-            words.emplace_back(word);
-            n = max(n, (int) word.size());
-        }
-        vector<string> ans;
-        for (int j = 0; j < n; ++j) {
-            string t;
-            for (auto& w : words) {
-                t += j < w.size() ? w[j] : ' ';
-            }
-            while (t.size() && t.back() == ' ') {
-                t.pop_back();
-            }
-            ans.emplace_back(t);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func printVertically(s string) (ans []string) {
-	words := strings.Split(s, " ")
-	n := 0
-	for _, w := range words {
-		n = max(n, len(w))
-	}
-	for j := 0; j < n; j++ {
-		t := []byte{}
-		for _, w := range words {
-			if j < len(w) {
-				t = append(t, w[j])
-			} else {
-				t = append(t, ' ')
-			}
-		}
-		for len(t) > 0 && t[len(t)-1] == ' ' {
-			t = t[:len(t)-1]
-		}
-		ans = append(ans, string(t))
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -178,4 +110,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -75,26 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumCost(self, start: List[int], target: List[int], specialRoads: List[List[int]]) -> int:
-        def dist(x1: int, y1: int, x2: int, y2: int) -> int:
-            return abs(x1 - x2) + abs(y1 - y2)
 
-        q = [(0, start[0], start[1])]
-        vis = set()
-        ans = inf
-        while q:
-            d, x, y = heappop(q)
-            if (x, y) in vis:
-                continue
-            vis.add((x, y))
-            ans = min(ans, d + dist(x, y, *target))
-            vis.add((x, y))
-            for x1, y1, x2, y2, cost in specialRoads:
-                heappush(q, (d + dist(x, y, x1, y1) + cost, x2, y2))
-        return ans
-```
 
 ### **Java**
 
@@ -132,192 +113,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumCost(vector<int>& start, vector<int>& target, vector<vector<int>>& specialRoads) {
-        auto dist = [](int x1, int y1, int x2, int y2) {
-            return abs(x1 - x2) + abs(y1 - y2);
-        };
-        int ans = 1 << 30;
-        int n = 1e6;
-        priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, greater<tuple<int, int, int>>> pq;
-        pq.push({0, start[0], start[1]});
-        unordered_set<long long> vis;
-        while (!pq.empty()) {
-            auto [d, x, y] = pq.top();
-            pq.pop();
-            long long k = 1LL * x * n + y;
-            if (vis.count(k)) {
-                continue;
-            }
-            vis.insert(k);
-            ans = min(ans, d + dist(x, y, target[0], target[1]));
-            for (auto& r : specialRoads) {
-                int x1 = r[0], y1 = r[1], x2 = r[2], y2 = r[3], cost = r[4];
-                pq.push({d + dist(x, y, x1, y1) + cost, x2, y2});
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumCost(start []int, target []int, specialRoads [][]int) int {
-	ans := 1 << 30
-	const n int = 1e6
-	pq := hp{{0, start[0], start[1]}}
-	vis := map[int]bool{}
-	for len(pq) > 0 {
-		p := pq[0]
-		heap.Pop(&pq)
-		d, x, y := p.d, p.x, p.y
-		if vis[x*n+y] {
-			continue
-		}
-		vis[x*n+y] = true
-		ans = min(ans, d+dist(x, y, target[0], target[1]))
-		for _, r := range specialRoads {
-			x1, y1, x2, y2, cost := r[0], r[1], r[2], r[3], r[4]
-			heap.Push(&pq, tuple{d + dist(x, y, x1, y1) + cost, x2, y2})
-		}
-	}
-	return ans
-}
 
-func dist(x1, y1, x2, y2 int) int {
-	return abs(x1-x2) + abs(y1-y2)
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
 
-func min(a, b int) int {
-	if a > b {
-		return b
-	}
-	return a
-}
 
-type tuple struct {
-	d, x, y int
-}
-type hp []tuple
-
-func (h hp) Len() int            { return len(h) }
-func (h hp) Less(i, j int) bool  { return h[i].d < h[j].d }
-func (h hp) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
-func (h *hp) Push(v interface{}) { *h = append(*h, v.(tuple)) }
-func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
-```
 
 ### **TypeScript**
 
-```ts
-function minimumCost(
-    start: number[],
-    target: number[],
-    specialRoads: number[][],
-): number {
-    const dist = (x1: number, y1: number, x2: number, y2: number): number => {
-        return Math.abs(x1 - x2) + Math.abs(y1 - y2);
-    };
-    const q = new Heap<[number, number, number]>((a, b) => a[0] - b[0]);
-    q.push([0, start[0], start[1]]);
-    const n = 1000000;
-    const vis: Set<number> = new Set();
-    let ans = 1 << 30;
-    while (q.size()) {
-        const [d, x, y] = q.pop();
-        const k = x * n + y;
-        if (vis.has(k)) {
-            continue;
-        }
-        vis.add(k);
-        ans = Math.min(ans, d + dist(x, y, target[0], target[1]));
-        for (const [x1, y1, x2, y2, cost] of specialRoads) {
-            q.push([d + dist(x, y, x1, y1) + cost, x2, y2]);
-        }
-    }
-    return ans;
-}
 
-type Compare<T> = (lhs: T, rhs: T) => number;
-
-class Heap<T = number> {
-    data: Array<T | null>;
-    lt: (i: number, j: number) => boolean;
-    constructor();
-    constructor(data: T[]);
-    constructor(compare: Compare<T>);
-    constructor(data: T[], compare: Compare<T>);
-    constructor(data: T[] | Compare<T>, compare?: (lhs: T, rhs: T) => number);
-    constructor(
-        data: T[] | Compare<T> = [],
-        compare: Compare<T> = (lhs: T, rhs: T) =>
-            lhs < rhs ? -1 : lhs > rhs ? 1 : 0,
-    ) {
-        if (typeof data === 'function') {
-            compare = data;
-            data = [];
-        }
-        this.data = [null, ...data];
-        this.lt = (i, j) => compare(this.data[i]!, this.data[j]!) < 0;
-        for (let i = this.size(); i > 0; i--) this.heapify(i);
-    }
-
-    size(): number {
-        return this.data.length - 1;
-    }
-
-    push(v: T): void {
-        this.data.push(v);
-        let i = this.size();
-        while (i >> 1 !== 0 && this.lt(i, i >> 1)) this.swap(i, (i >>= 1));
-    }
-
-    pop(): T {
-        this.swap(1, this.size());
-        const top = this.data.pop();
-        this.heapify(1);
-        return top!;
-    }
-
-    top(): T {
-        return this.data[1]!;
-    }
-    heapify(i: number): void {
-        while (true) {
-            let min = i;
-            const [l, r, n] = [i * 2, i * 2 + 1, this.data.length];
-            if (l < n && this.lt(l, min)) min = l;
-            if (r < n && this.lt(r, min)) min = r;
-            if (min !== i) {
-                this.swap(i, min);
-                i = min;
-            } else break;
-        }
-    }
-
-    clear(): void {
-        this.data = [null];
-    }
-
-    private swap(i: number, j: number): void {
-        const d = this.data;
-        [d[i], d[j]] = [d[j], d[i]];
-    }
-}
-```
 
 ### **...**
 
@@ -325,4 +131,4 @@ class Heap<T = number> {
 
 ```
 
-<!-- tabs:end -->
+

@@ -87,37 +87,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfGoodPaths(self, vals: List[int], edges: List[List[int]]) -> int:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        g = defaultdict(list)
-        for a, b in edges:
-            g[a].append(b)
-            g[b].append(a)
-
-        n = len(vals)
-        p = list(range(n))
-        size = defaultdict(Counter)
-        for i, v in enumerate(vals):
-            size[i][v] = 1
-
-        ans = n
-        for v, a in sorted(zip(vals, range(n))):
-            for b in g[a]:
-                if vals[b] > v:
-                    continue
-                pa, pb = find(a), find(b)
-                if pa != pb:
-                    ans += size[pa][v] * size[pb][v]
-                    p[pa] = pb
-                    size[pb][v] += size[pa][v]
-        return ans
-```
 
 ### **Java**
 
@@ -173,111 +143,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfGoodPaths(vector<int>& vals, vector<vector<int>>& edges) {
-        int n = vals.size();
-        vector<int> p(n);
-        iota(p.begin(), p.end(), 0);
-        function<int(int)> find;
-        find = [&](int x) {
-            if (p[x] != x) {
-                p[x] = find(p[x]);
-            }
-            return p[x];
-        };
-        vector<vector<int>> g(n);
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            g[a].push_back(b);
-            g[b].push_back(a);
-        }
-        unordered_map<int, unordered_map<int, int>> size;
-        vector<pair<int, int>> arr(n);
-        for (int i = 0; i < n; ++i) {
-            arr[i] = {vals[i], i};
-            size[i][vals[i]] = 1;
-        }
-        sort(arr.begin(), arr.end());
-        int ans = n;
-        for (auto [v, a] : arr) {
-            for (int b : g[a]) {
-                if (vals[b] > v) {
-                    continue;
-                }
-                int pa = find(a), pb = find(b);
-                if (pa != pb) {
-                    ans += size[pa][v] * size[pb][v];
-                    p[pa] = pb;
-                    size[pb][v] += size[pa][v];
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfGoodPaths(vals []int, edges [][]int) int {
-	n := len(vals)
-	p := make([]int, n)
-	size := map[int]map[int]int{}
-	type pair struct{ v, i int }
-	arr := make([]pair, n)
-	for i, v := range vals {
-		p[i] = i
-		if size[i] == nil {
-			size[i] = map[int]int{}
-		}
-		size[i][v] = 1
-		arr[i] = pair{v, i}
-	}
 
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
 
-	sort.Slice(arr, func(i, j int) bool { return arr[i].v < arr[j].v })
-	g := make([][]int, n)
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-	}
-	ans := n
-	for _, e := range arr {
-		v, a := e.v, e.i
-		for _, b := range g[a] {
-			if vals[b] > v {
-				continue
-			}
-			pa, pb := find(a), find(b)
-			if pa != pb {
-				ans += size[pb][v] * size[pa][v]
-				p[pa] = pb
-				size[pb][v] += size[pa][v]
-			}
-		}
-	}
-	return ans
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -285,4 +161,4 @@ func numberOfGoodPaths(vals []int, edges [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

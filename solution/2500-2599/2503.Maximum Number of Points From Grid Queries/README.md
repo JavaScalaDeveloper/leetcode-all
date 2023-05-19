@@ -70,63 +70,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxPoints(self, grid: List[List[int]], queries: List[int]) -> List[int]:
-        m, n = len(grid), len(grid[0])
-        qs = sorted((v, i) for i, v in enumerate(queries))
-        ans = [0] * len(qs)
-        q = [(grid[0][0], 0, 0)]
-        cnt = 0
-        vis = [[False] * n for _ in range(m)]
-        vis[0][0] = True
-        for v, k in qs:
-            while q and q[0][0] < v:
-                _, i, j = heappop(q)
-                cnt += 1
-                for a, b in pairwise((-1, 0, 1, 0, -1)):
-                    x, y = i + a, j + b
-                    if 0 <= x < m and 0 <= y < n and not vis[x][y]:
-                        heappush(q, (grid[x][y], x, y))
-                        vis[x][y] = True
-            ans[k] = cnt
-        return ans
-```
 
-```python
-class Solution:
-    def maxPoints(self, grid: List[List[int]], queries: List[int]) -> List[int]:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        def union(a, b):
-            pa, pb = find(a), find(b)
-            if pa == pb:
-                return
-            p[pa] = pb
-            size[pb] += size[pa]
 
-        m, n = len(grid), len(grid[0])
-        arr = sorted((grid[i][j], i, j) for i in range(m) for j in range(n))
-        k = len(queries)
-        ans = [0] * k
-        p = list(range(m * n))
-        size = [1] * len(p)
-        j = 0
-        for i, v in sorted(enumerate(queries), key=lambda x: x[1]):
-            while j < len(arr) and arr[j][0] < v:
-                _, a, b = arr[j]
-                for x, y in pairwise((-1, 0, 1, 0, -1)):
-                    c, d = a + x, b + y
-                    if 0 <= c < m and 0 <= d < n and grid[c][d] < v:
-                        union(a * n + b, c * n + d)
-                j += 1
-            if grid[0][0] < v:
-                ans[i] = size[find(0)]
-        return ans
-```
 
 ### **Java**
 
@@ -170,96 +116,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int dirs[5] = {-1, 0, 1, 0, -1};
 
-    vector<int> maxPoints(vector<vector<int>>& grid, vector<int>& queries) {
-        int k = queries.size();
-        vector<pair<int, int>> qs(k);
-        for (int i = 0; i < k; ++i) qs[i] = {queries[i], i};
-        sort(qs.begin(), qs.end());
-        vector<int> ans(k);
-        int m = grid.size(), n = grid[0].size();
-        bool vis[m][n];
-        memset(vis, 0, sizeof vis);
-        vis[0][0] = true;
-        priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, greater<tuple<int, int, int>>> q;
-        q.push({grid[0][0], 0, 0});
-        int cnt = 0;
-        for (auto& e : qs) {
-            int v = e.first;
-            k = e.second;
-            while (!q.empty() && get<0>(q.top()) < v) {
-                auto [_, i, j] = q.top();
-                q.pop();
-                ++cnt;
-                for (int h = 0; h < 4; ++h) {
-                    int x = i + dirs[h], y = j + dirs[h + 1];
-                    if (x >= 0 && x < m && y >= 0 && y < n && !vis[x][y]) {
-                        vis[x][y] = true;
-                        q.push({grid[x][y], x, y});
-                    }
-                }
-            }
-            ans[k] = cnt;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxPoints(grid [][]int, queries []int) []int {
-	k := len(queries)
-	qs := make([]pair, k)
-	for i, v := range queries {
-		qs[i] = pair{v, i}
-	}
-	sort.Slice(qs, func(i, j int) bool { return qs[i].v < qs[j].v })
-	ans := make([]int, k)
-	m, n := len(grid), len(grid[0])
-	q := hp{}
-	heap.Push(&q, tuple{grid[0][0], 0, 0})
-	dirs := []int{-1, 0, 1, 0, -1}
-	vis := map[int]bool{0: true}
-	cnt := 0
-	for _, e := range qs {
-		v := e.v
-		k = e.i
-		for len(q) > 0 && q[0].v < v {
-			p := heap.Pop(&q).(tuple)
-			i, j := p.i, p.j
-			cnt++
-			for h := 0; h < 4; h++ {
-				x, y := i+dirs[h], j+dirs[h+1]
-				if x >= 0 && x < m && y >= 0 && y < n && !vis[x*n+y] {
-					vis[x*n+y] = true
-					heap.Push(&q, tuple{grid[x][y], x, y})
-				}
-			}
-		}
-		ans[k] = cnt
-	}
-	return ans
-}
 
-type pair struct{ v, i int }
 
-type tuple struct{ v, i, j int }
-type hp []tuple
 
-func (h hp) Len() int            { return len(h) }
-func (h hp) Less(i, j int) bool  { return h[i].v < h[j].v }
-func (h hp) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
-func (h *hp) Push(v interface{}) { *h = append(*h, v.(tuple)) }
-func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
-```
 
 ### **...**
 
@@ -267,4 +130,4 @@ func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1];
 
 ```
 
-<!-- tabs:end -->
+

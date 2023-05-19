@@ -81,39 +81,9 @@ OR 运算节点的值为 True OR False = True 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def evaluateTree(self, root: Optional[TreeNode]) -> bool:
-        def dfs(root):
-            if root.left is None and root.right is None:
-                return bool(root.val)
-            l, r = dfs(root.left), dfs(root.right)
-            return (l or r) if root.val == 2 else (l and r)
 
-        return dfs(root)
-```
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def evaluateTree(self, root: Optional[TreeNode]) -> bool:
-        if root.left is None:
-            return bool(root.val)
-        l = self.evaluateTree(root.left)
-        r = self.evaluateTree(root.right)
-        return l or r if root.val == 2 else l and r
-```
+
 
 ### **Java**
 
@@ -181,177 +151,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool evaluateTree(TreeNode* root) {
-        return dfs(root);
-    }
 
-    bool dfs(TreeNode* root) {
-        if (!root->left && !root->right) return root->val;
-        bool l = dfs(root->left), r = dfs(root->right);
-        if (root->val == 2) return l || r;
-        return l && r;
-    }
-};
-```
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool evaluateTree(TreeNode* root) {
-        if (!root->left) {
-            return root->val;
-        }
-        bool l = evaluateTree(root->left);
-        bool r = evaluateTree(root->right);
-        return root->val == 2 ? l or r : l and r;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func evaluateTree(root *TreeNode) bool {
-	var dfs func(*TreeNode) bool
-	dfs = func(root *TreeNode) bool {
-		if root.Left == nil && root.Right == nil {
-			return root.Val == 1
-		}
-		l, r := dfs(root.Left), dfs(root.Right)
-		if root.Val == 2 {
-			return l || r
-		}
-		return l && r
-	}
-	return dfs(root)
-}
-```
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func evaluateTree(root *TreeNode) bool {
-	if root.Left == nil {
-		return root.Val == 1
-	}
-	l, r := evaluateTree(root.Left), evaluateTree(root.Right)
-	if root.Val == 2 {
-		return l || r
-	}
-	return l && r
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function evaluateTree(root: TreeNode | null): boolean {
-    const { val, left, right } = root;
-    if (left == null) {
-        return val === 1;
-    }
-    if (val === 2) {
-        return evaluateTree(left) || evaluateTree(right);
-    }
-    return evaluateTree(left) && evaluateTree(right);
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    fn dfs(root: &Option<Rc<RefCell<TreeNode>>>) -> bool {
-        let root = root.as_ref().unwrap().as_ref().borrow();
-        if root.left.is_none() {
-            return root.val == 1;
-        }
-        if root.val == 2 {
-            return Self::dfs(&root.left) || Self::dfs(&root.right);
-        }
-        Self::dfs(&root.left) && Self::dfs(&root.right)
-    }
 
-    pub fn evaluate_tree(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
-        Self::dfs(&root)
-    }
-}
-```
+
 
 ### **C**
 
@@ -381,4 +199,4 @@ bool evaluateTree(struct TreeNode *root) {
 
 ```
 
-<!-- tabs:end -->
+

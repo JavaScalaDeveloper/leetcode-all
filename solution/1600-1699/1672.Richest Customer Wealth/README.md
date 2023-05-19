@@ -65,11 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumWealth(self, accounts: List[List[int]]) -> int:
-        return max(sum(v) for v in accounts)
-```
+
 
 ### **Java**
 
@@ -92,67 +88,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumWealth(vector<vector<int>>& accounts) {
-        int ans = 0;
-        for (auto& v : accounts) {
-            ans = max(ans, accumulate(v.begin(), v.end(), 0));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumWealth(accounts [][]int) int {
-    ans := 0
-    for _, e := range accounts {
-        s := 0
-        for _, v := range e {
-            s += v
-        }
-        if ans < s {
-            ans = s
-        }
-    }
-    return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumWealth(accounts: number[][]): number {
-    return accounts.reduce(
-        (r, v) =>
-            Math.max(
-                r,
-                v.reduce((r, v) => r + v),
-            ),
-        0,
-    );
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn maximum_wealth(accounts: Vec<Vec<i32>>) -> i32 {
-        accounts
-            .iter()
-            .map(|v| v.iter().sum())
-            .max()
-            .unwrap()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -189,26 +139,9 @@ class Solution {
 }
 ```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[][] $accounts
-     * @return Integer
-     */
-    function maximumWealth($accounts) {
-        $rs = 0;
-        for ($i = 0; $i < count($accounts); $i++) {
-            $sum = 0;
-            for ($j = 0; $j < count($accounts[$i]); $j++)
-                $sum += $accounts[$i][$j];
-            if ($sum > $rs) $rs = $sum;
-        }
-        return $rs;
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -216,4 +149,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

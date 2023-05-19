@@ -74,28 +74,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxPalindromes(self, s: str, k: int) -> int:
-        @cache
-        def dfs(i):
-            if i >= n:
-                return 0
-            ans = dfs(i + 1)
-            for j in range(i + k - 1, n):
-                if dp[i][j]:
-                    ans = max(ans, 1 + dfs(j + 1))
-            return ans
 
-        n = len(s)
-        dp = [[True] * n for _ in range(n)]
-        for i in range(n - 1, -1, -1):
-            for j in range(i + 1, n):
-                dp[i][j] = s[i] == s[j] and dp[i + 1][j - 1]
-        ans = dfs(0)
-        dfs.cache_clear()
-        return ans
-```
 
 ### **Java**
 
@@ -146,89 +125,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxPalindromes(string s, int k) {
-        int n = s.size();
-        vector<vector<bool>> dp(n, vector<bool>(n, true));
-        vector<int> f(n, -1);
-        for (int i = n - 1; i >= 0; --i) {
-            for (int j = i + 1; j < n; ++j) {
-                dp[i][j] = s[i] == s[j] && dp[i + 1][j - 1];
-            }
-        }
-        function<int(int)> dfs = [&](int i) -> int {
-            if (i >= n) return 0;
-            if (f[i] != -1) return f[i];
-            int ans = dfs(i + 1);
-            for (int j = i + k - 1; j < n; ++j) {
-                if (dp[i][j]) {
-                    ans = max(ans, 1 + dfs(j + 1));
-                }
-            }
-            f[i] = ans;
-            return ans;
-        };
-        return dfs(0);
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxPalindromes(s string, k int) int {
-	n := len(s)
-	dp := make([][]bool, n)
-	f := make([]int, n)
-	for i := 0; i < n; i++ {
-		dp[i] = make([]bool, n)
-		f[i] = -1
-		for j := 0; j < n; j++ {
-			dp[i][j] = true
-		}
-	}
-	for i := n - 1; i >= 0; i-- {
-		for j := i + 1; j < n; j++ {
-			dp[i][j] = s[i] == s[j] && dp[i+1][j-1]
-		}
-	}
-	var dfs func(int) int
-	dfs = func(i int) int {
-		if i >= n {
-			return 0
-		}
-		if f[i] != -1 {
-			return f[i]
-		}
-		ans := dfs(i + 1)
-		for j := i + k - 1; j < n; j++ {
-			if dp[i][j] {
-				ans = max(ans, 1+dfs(j+1))
-			}
-		}
-		f[i] = ans
-		return ans
-	}
-	return dfs(0)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -236,4 +143,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

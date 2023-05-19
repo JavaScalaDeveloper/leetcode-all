@@ -84,39 +84,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findScore(self, nums: List[int]) -> int:
-        n = len(nums)
-        vis = [False] * n
-        q = [(x, i) for i, x in enumerate(nums)]
-        heapify(q)
-        ans = 0
-        while q:
-            x, i = heappop(q)
-            ans += x
-            vis[i] = True
-            for j in (i - 1, i + 1):
-                if 0 <= j < n:
-                    vis[j] = True
-            while q and vis[q[0][1]]:
-                heappop(q)
-        return ans
-```
 
-```python
-class Solution:
-    def findScore(self, nums: List[int]) -> int:
-        n = len(nums)
-        vis = [False] * (n + 2)
-        idx = sorted(range(n), key=lambda i: (nums[i], i))
-        ans = 0
-        for i in idx:
-            if not vis[i + 1]:
-                ans += nums[i]
-                vis[i] = vis[i + 2] = True
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -173,181 +143,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long findScore(vector<int>& nums) {
-        int n = nums.size();
-        vector<bool> vis(n);
-        using pii = pair<int, int>;
-        priority_queue<pii, vector<pii>, greater<pii>> q;
-        for (int i = 0; i < n; ++i) {
-            q.emplace(nums[i], i);
-        }
-        long long ans = 0;
-        while (!q.empty()) {
-            auto [x, i] = q.top();
-            q.pop();
-            ans += x;
-            vis[i] = true;
-            if (i + 1 < n) {
-                vis[i + 1] = true;
-            }
-            if (i - 1 >= 0) {
-                vis[i - 1] = true;
-            }
-            while (!q.empty() && vis[q.top().second]) {
-                q.pop();
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    long long findScore(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> idx(n);
-        iota(idx.begin(), idx.end(), 0);
-        sort(idx.begin(), idx.end(), [&](int i, int j) {
-            return nums[i] < nums[j] || (nums[i] == nums[j] && i < j);
-        });
-        long long ans = 0;
-        vector<bool> vis(n + 2);
-        for (int i : idx) {
-            if (!vis[i + 1]) {
-                ans += nums[i];
-                vis[i] = vis[i + 2] = true;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findScore(nums []int) (ans int64) {
-	h := hp{}
-	for i, x := range nums {
-		heap.Push(&h, pair{x, i})
-	}
-	n := len(nums)
-	vis := make([]bool, n)
-	for len(h) > 0 {
-		p := heap.Pop(&h).(pair)
-		x, i := p.x, p.i
-		ans += int64(x)
-		vis[i] = true
-		for _, j := range []int{i - 1, i + 1} {
-			if j >= 0 && j < n {
-				vis[j] = true
-			}
-		}
-		for len(h) > 0 && vis[h[0].i] {
-			heap.Pop(&h)
-		}
-	}
-	return
-}
 
-type pair struct{ x, i int }
-type hp []pair
 
-func (h hp) Len() int            { return len(h) }
-func (h hp) Less(i, j int) bool  { return h[i].x < h[j].x || (h[i].x == h[j].x && h[i].i < h[j].i) }
-func (h hp) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
-func (h *hp) Push(v interface{}) { *h = append(*h, v.(pair)) }
-func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
-```
 
-```go
-func findScore(nums []int) (ans int64) {
-	n := len(nums)
-	idx := make([]int, n)
-	for i := range idx {
-		idx[i] = i
-	}
-	sort.Slice(idx, func(i, j int) bool {
-		i, j = idx[i], idx[j]
-		return nums[i] < nums[j] || (nums[i] == nums[j] && i < j)
-	})
-	vis := make([]bool, n+2)
-	for _, i := range idx {
-		if !vis[i+1] {
-			ans += int64(nums[i])
-			vis[i], vis[i+2] = true, true
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-interface pair {
-    x: number;
-    i: number;
-}
 
-function findScore(nums: number[]): number {
-    const q = new PriorityQueue({
-        compare: (a: pair, b: pair) => (a.x === b.x ? a.i - b.i : a.x - b.x),
-    });
-    const n = nums.length;
-    const vis: boolean[] = new Array(n).fill(false);
-    for (let i = 0; i < n; ++i) {
-        q.enqueue({ x: nums[i], i });
-    }
-    let ans = 0;
-    while (!q.isEmpty()) {
-        const { x, i } = q.dequeue()!;
-        if (vis[i]) {
-            continue;
-        }
-        ans += x;
-        vis[i] = true;
-        if (i - 1 >= 0) {
-            vis[i - 1] = true;
-        }
-        if (i + 1 < n) {
-            vis[i + 1] = true;
-        }
-        while (!q.isEmpty() && vis[q.front()!.i]) {
-            q.dequeue();
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function findScore(nums: number[]): number {
-    const n = nums.length;
-    const idx: number[] = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        idx[i] = i;
-    }
-    idx.sort((i, j) => (nums[i] == nums[j] ? i - j : nums[i] - nums[j]));
-    const vis: boolean[] = new Array(n + 2).fill(false);
-    let ans = 0;
-    for (const i of idx) {
-        if (!vis[i + 1]) {
-            ans += nums[i];
-            vis[i] = true;
-            vis[i + 2] = true;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -355,4 +167,4 @@ function findScore(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

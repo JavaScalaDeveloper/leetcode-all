@@ -29,52 +29,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.children = [None] * 26
-        self.is_end = False
 
-    def insert(self, word):
-        node = self
-        for c in word:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-        node.is_end = True
-
-    def search(self, word):
-        node = self
-        for c in word:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                return False
-            node = node.children[idx]
-        return node.is_end
-
-
-class Solution:
-    def longestWord(self, words: List[str]) -> str:
-        def cmp(a, b):
-            if len(a) != len(b):
-                return len(a) - len(b)
-            return -1 if a > b else 1
-
-        def dfs(w):
-            return not w or any(
-                trie.search(w[:i]) and dfs(w[i:]) for i in range(1, len(w) + 1)
-            )
-
-        words.sort(key=cmp_to_key(cmp))
-        trie = Trie()
-        ans = ""
-        for w in words:
-            if dfs(w):
-                ans = w
-            trie.insert(w)
-        return ans
-```
 
 ### **Java**
 
@@ -144,72 +99,9 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-type Trie struct {
-	children [26]*Trie
-	isEnd    bool
-}
 
-func newTrie() *Trie {
-	return &Trie{}
-}
-func (this *Trie) insert(word string) {
-	node := this
-	for _, c := range word {
-		c -= 'a'
-		if node.children[c] == nil {
-			node.children[c] = newTrie()
-		}
-		node = node.children[c]
-	}
-	node.isEnd = true
-}
 
-func (this *Trie) search(word string) bool {
-	node := this
-	for _, c := range word {
-		c -= 'a'
-		if node.children[c] == nil {
-			return false
-		}
-		node = node.children[c]
-	}
-	return node.isEnd
-}
-
-func longestWord(words []string) string {
-	sort.Slice(words, func(i, j int) bool {
-		a, b := words[i], words[j]
-		if len(a) != len(b) {
-			return len(a) < len(b)
-		}
-		return a > b
-	})
-	trie := newTrie()
-	var dfs func(string) bool
-	dfs = func(w string) bool {
-		if len(w) == 0 {
-			return true
-		}
-		for i := 1; i <= len(w); i++ {
-			if trie.search(w[:i]) && dfs(w[i:]) {
-				return true
-			}
-		}
-		return false
-	}
-	ans := ""
-	for _, w := range words {
-		if dfs(w) {
-			ans = w
-		}
-		trie.insert(w)
-	}
-	return ans
-}
-```
 
 ### **...**
 
@@ -217,4 +109,4 @@ func longestWord(words []string) string {
 
 ```
 
-<!-- tabs:end -->
+

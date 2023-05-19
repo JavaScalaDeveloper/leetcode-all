@@ -77,11 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canWinNim(self, n: int) -> bool:
-        return n % 4 != 0
-```
+
 
 ### **Java**
 
@@ -97,40 +93,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function canWinNim(n: number): boolean {
-    return n % 4 != 0;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canWinNim(int n) {
-        return n % 4 != 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canWinNim(n int) bool {
-	return n%4 != 0
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn can_win_nim(n: i32) -> bool {
-        n % 4 != 0
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -138,4 +113,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

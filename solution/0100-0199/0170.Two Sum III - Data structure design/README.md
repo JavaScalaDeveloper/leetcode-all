@@ -70,28 +70,7 @@ twoSum.find(7);  // 没有两个整数加起来等于 7 ，返回 false</pre>
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class TwoSum:
-    def __init__(self):
-        self.cnt = Counter()
 
-    def add(self, number: int) -> None:
-        self.cnt[number] += 1
-
-    def find(self, value: int) -> bool:
-        for x, v in self.cnt.items():
-            y = value - x
-            if y in self.cnt:
-                if x != y or v > 1:
-                    return True
-        return False
-
-
-# Your TwoSum object will be instantiated and called as such:
-# obj = TwoSum()
-# obj.add(number)
-# param_2 = obj.find(value)
-```
 
 ### **Java**
 
@@ -130,75 +109,13 @@ class TwoSum {
  */
 ```
 
-### **C++**
 
-```cpp
-class TwoSum {
-public:
-    TwoSum() {
 
-    }
 
-    void add(int number) {
-        ++cnt[number];
-    }
 
-    bool find(int value) {
-        for (auto& [x, v] : cnt) {
-            long y = (long) value - x;
-            if (cnt.count(y)) {
-                if (x != y || v > 1) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
 
-private:
-    unordered_map<int, int> cnt;
-};
 
-/**
- * Your TwoSum object will be instantiated and called as such:
- * TwoSum* obj = new TwoSum();
- * obj->add(number);
- * bool param_2 = obj->find(value);
- */
-```
 
-### **Go**
-
-```go
-type TwoSum struct {
-	cnt map[int]int
-}
-
-func Constructor() TwoSum {
-	return TwoSum{map[int]int{}}
-}
-
-func (this *TwoSum) Add(number int) {
-	this.cnt[number]++
-}
-
-func (this *TwoSum) Find(value int) bool {
-	for x, v := range this.cnt {
-		y := value - x
-		if _, ok := this.cnt[y]; ok && (x != y || v > 1) {
-			return true
-		}
-	}
-	return false
-}
-
-/**
- * Your TwoSum object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Add(number);
- * param_2 := obj.Find(value);
- */
-```
 
 ### **...**
 
@@ -206,4 +123,4 @@ func (this *TwoSum) Find(value int) bool {
 
 ```
 
-<!-- tabs:end -->
+

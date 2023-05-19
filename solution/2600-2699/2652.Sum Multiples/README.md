@@ -59,11 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sumOfMultiples(self, n: int) -> int:
-        return sum(x for x in range(1, n + 1) if x % 3 == 0 or x % 5 == 0 or x % 7 == 0)
-```
+
 
 ### **Java**
 
@@ -83,49 +79,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int sumOfMultiples(int n) {
-        int ans = 0;
-        for (int x = 1; x <= n; ++x) {
-            if (x % 3 == 0 || x % 5 == 0 || x % 7 == 0) {
-                ans += x;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sumOfMultiples(n int) (ans int) {
-	for x := 1; x <= n; x++ {
-		if x%3 == 0 || x%5 == 0 || x%7 == 0 {
-			ans += x
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function sumOfMultiples(n: number): number {
-    let ans = 0;
-    for (let x = 1; x <= n; ++x) {
-        if (x % 3 === 0 || x % 5 === 0 || x % 7 === 0) {
-            ans += x;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -133,4 +97,4 @@ function sumOfMultiples(n: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -68,11 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def vowelStrings(self, words: List[str], left: int, right: int) -> int:
-        return sum(w[0] in 'aeiou' and w[-1] in 'aeiou' for w in words[left: right + 1])
-```
+
 
 ### **Java**
 
@@ -97,56 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int vowelStrings(vector<string>& words, int left, int right) {
-        auto check = [](char c) -> bool {
-            return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
-        };
-        int ans = 0;
-        for (int i = left; i <= right; ++i) {
-            auto w = words[i];
-            ans += check(w[0]) && check(w[w.size() - 1]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func vowelStrings(words []string, left int, right int) (ans int) {
-	check := func(c byte) bool {
-		return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
-	}
-	for _, w := range words[left : right+1] {
-		if check(w[0]) && check(w[len(w)-1]) {
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function vowelStrings(words: string[], left: number, right: number): number {
-    let ans = 0;
-    const check: string[] = ['a', 'e', 'i', 'o', 'u'];
-    for (let i = left; i <= right; ++i) {
-        var w = words[i];
-        if (check.includes(w[0]) && check.includes(w[w.length - 1])) {
-            ++ans;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -154,4 +111,4 @@ function vowelStrings(words: string[], left: number, right: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -81,69 +81,7 @@ fileSystem.readContentFromFile("/a/b/c/d"); // 返回 "hello"</pre>
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.name = None
-        self.isFile = False
-        self.content = []
-        self.children = {}
 
-    def insert(self, path, isFile):
-        node = self
-        ps = path.split('/')
-        for p in ps[1:]:
-            if p not in node.children:
-                node.children[p] = Trie()
-            node = node.children[p]
-        node.isFile = isFile
-        if isFile:
-            node.name = ps[-1]
-        return node
-
-    def search(self, path):
-        node = self
-        if path == '/':
-            return node
-        ps = path.split('/')
-        for p in ps[1:]:
-            if p not in node.children:
-                return None
-            node = node.children[p]
-        return node
-
-
-class FileSystem:
-    def __init__(self):
-        self.root = Trie()
-
-    def ls(self, path: str) -> List[str]:
-        node = self.root.search(path)
-        if node is None:
-            return []
-        if node.isFile:
-            return [node.name]
-        return sorted(node.children.keys())
-
-    def mkdir(self, path: str) -> None:
-        self.root.insert(path, False)
-
-    def addContentToFile(self, filePath: str, content: str) -> None:
-        node = self.root.insert(filePath, True)
-        node.content.append(content)
-
-    def readContentFromFile(self, filePath: str) -> str:
-        node = self.root.search(filePath)
-        return ''.join(node.content)
-
-
-# Your FileSystem object will be instantiated and called as such:
-# obj = FileSystem()
-# param_1 = obj.ls(path)
-# obj.mkdir(path)
-# obj.addContentToFile(filePath,content)
-# param_4 = obj.readContentFromFile(filePath)
-```
 
 ### **Java**
 
@@ -235,101 +173,9 @@ class FileSystem {
  */
 ```
 
-### **Go**
 
-```go
-type Trie struct {
-	name     string
-	isFile   bool
-	content  strings.Builder
-	children map[string]*Trie
-}
 
-func newTrie() *Trie {
-	m := map[string]*Trie{}
-	return &Trie{children: m}
-}
 
-func (this *Trie) insert(path string, isFile bool) *Trie {
-	node := this
-	ps := strings.Split(path, "/")
-	for _, p := range ps[1:] {
-		if _, ok := node.children[p]; !ok {
-			node.children[p] = newTrie()
-		}
-		node, _ = node.children[p]
-	}
-	node.isFile = isFile
-	if isFile {
-		node.name = ps[len(ps)-1]
-	}
-	return node
-}
-
-func (this *Trie) search(path string) *Trie {
-	if path == "/" {
-		return this
-	}
-	node := this
-	ps := strings.Split(path, "/")
-	for _, p := range ps[1:] {
-		if _, ok := node.children[p]; !ok {
-			return nil
-		}
-		node, _ = node.children[p]
-	}
-	return node
-}
-
-type FileSystem struct {
-	root *Trie
-}
-
-func Constructor() FileSystem {
-	root := newTrie()
-	return FileSystem{root}
-}
-
-func (this *FileSystem) Ls(path string) []string {
-	var ans []string
-	node := this.root.search(path)
-	if node == nil {
-		return ans
-	}
-	if node.isFile {
-		ans = append(ans, node.name)
-		return ans
-	}
-	for v := range node.children {
-		ans = append(ans, v)
-	}
-	sort.Strings(ans)
-	return ans
-}
-
-func (this *FileSystem) Mkdir(path string) {
-	this.root.insert(path, false)
-}
-
-func (this *FileSystem) AddContentToFile(filePath string, content string) {
-	node := this.root.insert(filePath, true)
-	node.content.WriteString(content)
-}
-
-func (this *FileSystem) ReadContentFromFile(filePath string) string {
-	node := this.root.search(filePath)
-	return node.content.String()
-}
-
-/**
- * Your FileSystem object will be instantiated and called as such:
- * obj := Constructor();
- * param_1 := obj.Ls(path);
- * obj.Mkdir(path);
- * obj.AddContentToFile(filePath,content);
- * param_4 := obj.ReadContentFromFile(filePath);
- */
-```
 
 ### **...**
 
@@ -337,4 +183,4 @@ func (this *FileSystem) ReadContentFromFile(filePath string) string {
 
 ```
 
-<!-- tabs:end -->
+

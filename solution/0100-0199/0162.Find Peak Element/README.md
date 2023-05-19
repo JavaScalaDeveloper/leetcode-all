@@ -54,18 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findPeakElement(self, nums: List[int]) -> int:
-        left, right = 0, len(nums) - 1
-        while left < right:
-            mid = (left + right) >> 1
-            if nums[mid] > nums[mid + 1]:
-                right = mid
-            else:
-                left = mid + 1
-        return left
-```
+
 
 ### **Java**
 
@@ -90,58 +79,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function findPeakElement(nums: number[]): number {
-    let left = 0,
-        right = nums.length - 1;
-    while (left < right) {
-        let mid: number = (left + right) >> 1;
-        if (nums[mid] <= nums[mid + 1]) {
-            left = mid + 1;
-        } else {
-            right = mid;
-        }
-    }
-    return left;
-}
-```
 
-### **Go**
 
-```go
-func findPeakElement(nums []int) int {
-	left, right := 0, len(nums)-1
-	for left < right {
-		mid := (left + right) >> 1
-		if nums[mid] > nums[mid+1] {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findPeakElement(vector<int>& nums) {
-        int left = 0, right = nums.size() - 1;
-        while (left < right) {
-            int mid = left + right >> 1;
-            if (nums[mid] > nums[mid + 1]) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -149,4 +95,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

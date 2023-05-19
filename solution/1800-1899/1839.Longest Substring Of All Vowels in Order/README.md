@@ -71,25 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestBeautifulSubstring(self, word: str) -> int:
-        arr = []
-        n = len(word)
-        i = 0
-        while i < n:
-            j = i
-            while j < n and word[j] == word[i]:
-                j += 1
-            arr.append((word[i], j - i))
-            i = j
-        ans = 0
-        for i in range(len(arr) - 4):
-            a, b, c, d, e = arr[i : i + 5]
-            if a[0] + b[0] + c[0] + d[0] + e[0] == "aeiou":
-                ans = max(ans, a[1] + b[1] + c[1] + d[1] + e[1])
-        return ans
-```
+
 
 ### **Java**
 
@@ -131,71 +113,13 @@ class Node {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestBeautifulSubstring(string word) {
-        vector<pair<char, int>> arr;
-        int n = word.size();
-        for (int i = 0; i < n;) {
-            int j = i;
-            while (j < n && word[j] == word[i]) ++j;
-            arr.push_back({word[i], j - i});
-            i = j;
-        }
-        int ans = 0;
-        for (int i = 0; i < (int) arr.size() - 4; ++i) {
-            auto& [a, v1] = arr[i];
-            auto& [b, v2] = arr[i + 1];
-            auto& [c, v3] = arr[i + 2];
-            auto& [d, v4] = arr[i + 3];
-            auto& [e, v5] = arr[i + 4];
-            if (a == 'a' && b == 'e' && c == 'i' && d == 'o' && e == 'u') {
-                ans = max(ans, v1 + v2 + v3 + v4 + v5);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestBeautifulSubstring(word string) (ans int) {
-	arr := []pair{}
-	n := len(word)
-	for i := 0; i < n; {
-		j := i
-		for j < n && word[j] == word[i] {
-			j++
-		}
-		arr = append(arr, pair{word[i], j - i})
-		i = j
-	}
-	for i := 0; i < len(arr)-4; i++ {
-		a, b, c, d, e := arr[i], arr[i+1], arr[i+2], arr[i+3], arr[i+4]
-		if a.c == 'a' && b.c == 'e' && c.c == 'i' && d.c == 'o' && e.c == 'u' {
-			ans = max(ans, a.v+b.v+c.v+d.v+e.v)
-		}
-	}
-	return
-}
 
-type pair struct {
-	c byte
-	v int
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -203,4 +127,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

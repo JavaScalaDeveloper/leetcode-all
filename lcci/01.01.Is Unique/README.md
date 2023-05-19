@@ -43,17 +43,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isUnique(self, astr: str) -> bool:
-        mask = 0
-        for c in astr:
-            i = ord(c) - ord('a')
-            if (mask >> i) & 1:
-                return False
-            mask |= 1 << i
-        return True
-```
+
 
 ### **Java**
 
@@ -75,76 +65,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isUnique(string astr) {
-        int mask = 0;
-        for (char c : astr) {
-            int i = c - 'a';
-            if (mask >> i & 1) {
-                return false;
-            }
-            mask |= 1 << i;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isUnique(astr string) bool {
-	mask := 0
-	for _, c := range astr {
-		i := c - 'a'
-		if mask>>i&1 == 1 {
-			return false
-		}
-		mask |= 1 << i
-	}
-	return true
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} astr
- * @return {boolean}
- */
-var isUnique = function (astr) {
-    let mask = 0;
-    for (const c of astr) {
-        const i = c.charCodeAt() - 'a'.charCodeAt();
-        if ((mask >> i) & 1) {
-            return false;
-        }
-        mask |= 1 << i;
-    }
-    return true;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isUnique(astr: string): boolean {
-    let mask = 0;
-    for (let j = 0; j < astr.length; ++j) {
-        const i = astr.charCodeAt(j) - 'a'.charCodeAt(0);
-        if ((mask >> i) & 1) {
-            return false;
-        }
-        mask |= 1 << i;
-    }
-    return true;
-}
-```
+
 
 ### **...**
 
@@ -152,4 +87,4 @@ function isUnique(astr: string): boolean {
 
 ```
 
-<!-- tabs:end -->
+

@@ -48,27 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def addBinary(self, a: str, b: str) -> str:
-        x, y = len(a) - 1, len(b) - 1
-        arr = []
-        carry = 0
-        while x >= 0 or y >= 0:
-            if x >= 0:
-                if a[x] == '1':
-                    carry += 1
-                x -= 1
-            if y >= 0:
-                if b[y] == '1':
-                    carry += 1
-                y -= 1
-            arr.append(chr((carry & 1) + ord('0')))
-            carry >>= 1
-        if carry == 1:
-            arr.append('1')
-        return ''.join(reversed(arr))
-```
+
 
 ### **Java**
 
@@ -104,67 +84,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func addBinary(a string, b string) string {
-	x, y := len(a)-1, len(b)-1
-	var builder strings.Builder
-	carry := 0
-	for x >= 0 || y >= 0 {
-		if x >= 0 {
-			if a[x] == '1' {
-				carry += 1
-			}
-			x--
-		}
-		if y >= 0 {
-			if b[y] == '1' {
-				carry += 1
-			}
-			y--
-		}
-		builder.WriteRune(rune(carry&1 + '0'))
-		carry >>= 1
-	}
-	if carry == 1 {
-		builder.WriteRune('1')
-	}
-	bytes := []byte(builder.String())
-	for i, j := 0, len(bytes)-1; i < j; i, j = i+1, j-1 {
-		bytes[i], bytes[j] = bytes[j], bytes[i]
-	}
-	return string(bytes)
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string addBinary(string a, string b) {
-        string res;
-        int carry = 0;
 
-        int i = a.size() - 1;
-        int j = b.size() - 1;
 
-        while (i >= 0 || j >= 0) {
-            int digitA = i >= 0 ? a.at(i--) - '0' : 0;
-            int digitB = j >= 0 ? b.at(j--) - '0' : 0;
-            int sum = digitA + digitB + carry;
-            carry = sum >= 2 ? 1 : 0;
-            sum = sum >= 2 ? sum - 2 : sum;
-            res += to_string(sum);
-        }
 
-        if (carry == 1) res.push_back('1');
-        reverse(res.begin(), res.end());
-        return res;
-    }
-};
-```
+
 
 ### **...**
 
@@ -172,4 +98,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

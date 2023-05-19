@@ -67,29 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def alphabetBoardPath(self, target: str) -> str:
-        i = j = 0
-        ans = []
-        for c in target:
-            v = ord(c) - ord("a")
-            x, y = v // 5, v % 5
-            while j > y:
-                j -= 1
-                ans.append("L")
-            while i > x:
-                i -= 1
-                ans.append("U")
-            while j < y:
-                j += 1
-                ans.append("R")
-            while i < x:
-                i += 1
-                ans.append("D")
-            ans.append("!")
-        return "".join(ans)
-```
+
 
 ### **Java**
 
@@ -126,70 +104,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string alphabetBoardPath(string target) {
-        string ans;
-        int i = 0, j = 0;
-        for (char& c : target) {
-            int v = c - 'a';
-            int x = v / 5, y = v % 5;
-            while (j > y) {
-                --j;
-                ans += 'L';
-            }
-            while (i > x) {
-                --i;
-                ans += 'U';
-            }
-            while (j < y) {
-                ++j;
-                ans += 'R';
-            }
-            while (i < x) {
-                ++i;
-                ans += 'D';
-            }
-            ans += '!';
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func alphabetBoardPath(target string) string {
-	ans := []byte{}
-	var i, j int
-	for _, c := range target {
-		v := int(c - 'a')
-		x, y := v/5, v%5
-		for j > y {
-			j--
-			ans = append(ans, 'L')
-		}
-		for i > x {
-			i--
-			ans = append(ans, 'U')
-		}
-		for j < y {
-			j++
-			ans = append(ans, 'R')
-		}
-		for i < x {
-			i++
-			ans = append(ans, 'D')
-		}
-		ans = append(ans, '!')
-	}
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -197,4 +118,4 @@ func alphabetBoardPath(target string) string {
 
 ```
 
-<!-- tabs:end -->
+

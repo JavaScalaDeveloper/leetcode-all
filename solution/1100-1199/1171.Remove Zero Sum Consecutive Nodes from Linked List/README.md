@@ -66,28 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def removeZeroSumSublists(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        dummy = ListNode(next=head)
-        last = {}
-        s, cur = 0, dummy
-        while cur:
-            s += cur.val
-            last[s] = cur
-            cur = cur.next
-        s, cur = 0, dummy
-        while cur:
-            s += cur.val
-            cur.next = last[s].next
-            cur = cur.next
-        return dummy.next
-```
+
 
 ### **Java**
 
@@ -127,73 +106,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* removeZeroSumSublists(ListNode* head) {
-        ListNode* dummy = new ListNode(0, head);
-        unordered_map<int, ListNode*> last;
-        ListNode* cur = dummy;
-        int s = 0;
-        while (cur) {
-            s += cur->val;
-            last[s] = cur;
-            cur = cur->next;
-        }
-        s = 0;
-        cur = dummy;
-        while (cur) {
-            s += cur->val;
-            cur->next = last[s]->next;
-            cur = cur->next;
-        }
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func removeZeroSumSublists(head *ListNode) *ListNode {
-	dummy := &ListNode{0, head}
-	last := map[int]*ListNode{}
-	cur := dummy
-	s := 0
-	for cur != nil {
-		s += cur.Val
-		last[s] = cur
-		cur = cur.Next
-	}
-	s = 0
-	cur = dummy
-	for cur != nil {
-		s += cur.Val
-		cur.Next = last[s].Next
-		cur = cur.Next
-	}
-	return dummy.Next
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -201,4 +120,4 @@ func removeZeroSumSublists(head *ListNode) *ListNode {
 
 ```
 
-<!-- tabs:end -->
+

@@ -65,27 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def distributeCookies(self, cookies: List[int], k: int) -> int:
-        def dfs(i):
-            if i >= len(cookies):
-                nonlocal ans
-                ans = max(cnt)
-                return
-            for j in range(k):
-                if cnt[j] + cookies[i] >= ans or (j and cnt[j] == cnt[j - 1]):
-                    continue
-                cnt[j] += cookies[i]
-                dfs(i + 1)
-                cnt[j] -= cookies[i]
 
-        ans = inf
-        cnt = [0] * k
-        cookies.sort(reverse=True)
-        dfs(0)
-        return ans
-```
 
 ### **Java**
 
@@ -132,98 +112,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int distributeCookies(vector<int>& cookies, int k) {
-        sort(cookies.rbegin(), cookies.rend());
-        int cnt[k];
-        memset(cnt, 0, sizeof cnt);
-        int n = cookies.size();
-        int ans = 1 << 30;
-        function<void(int)> dfs = [&](int i) {
-            if (i >= n) {
-                ans = *max_element(cnt, cnt + k);
-                return;
-            }
-            for (int j = 0; j < k; ++j) {
-                if (cnt[j] + cookies[i] >= ans || (j && cnt[j] == cnt[j - 1])) {
-                    continue;
-                }
-                cnt[j] += cookies[i];
-                dfs(i + 1);
-                cnt[j] -= cookies[i];
-            }
-        };
-        dfs(0);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func distributeCookies(cookies []int, k int) int {
-	sort.Sort(sort.Reverse(sort.IntSlice(cookies)))
-	cnt := make([]int, k)
-	ans := 1 << 30
-	var dfs func(int)
-	dfs = func(i int) {
-		if i >= len(cookies) {
-			ans = 0
-			for _, v := range cnt {
-				ans = max(ans, v)
-			}
-			return
-		}
-		for j := 0; j < k; j++ {
-			if cnt[j]+cookies[i] >= ans || (j > 0 && cnt[j] == cnt[j-1]) {
-				continue
-			}
-			cnt[j] += cookies[i]
-			dfs(i + 1)
-			cnt[j] -= cookies[i]
-		}
-	}
-	dfs(0)
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function distributeCookies(cookies: number[], k: number): number {
-    const cnt = new Array(k).fill(0);
-    let ans = 1 << 30;
-    const dfs = (i: number) => {
-        if (i >= cookies.length) {
-            ans = Math.max(...cnt);
-            return;
-        }
-        for (let j = 0; j < k; ++j) {
-            if (cnt[j] + cookies[i] >= ans || (j && cnt[j] == cnt[j - 1])) {
-                continue;
-            }
-            cnt[j] += cookies[i];
-            dfs(i + 1);
-            cnt[j] -= cookies[i];
-        }
-    };
-    dfs(0);
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -231,4 +130,4 @@ function distributeCookies(cookies: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

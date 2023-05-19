@@ -43,32 +43,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
-
-class Solution:
-    def convertBiNode(self, root: TreeNode) -> TreeNode:
-        def dfs(root):
-            if root is None:
-                return
-            nonlocal prev
-            dfs(root.left)
-            prev.right = root
-            root.left = None
-            prev = root
-            dfs(root.right)
-
-        dummy = TreeNode(val=0, right=root)
-        prev = dummy
-        dfs(root)
-        return dummy.right
-```
 
 ### **Java**
 
@@ -107,69 +82,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* prev;
 
-    TreeNode* convertBiNode(TreeNode* root) {
-        TreeNode* dummy = new TreeNode(0, nullptr, root);
-        prev = dummy;
-        dfs(root);
-        return dummy->right;
-    }
 
-    void dfs(TreeNode* root) {
-        if (!root) return;
-        dfs(root->left);
-        prev->right = root;
-        root->left = nullptr;
-        prev = root;
-        dfs(root->right);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func convertBiNode(root *TreeNode) *TreeNode {
-	dummy := &TreeNode{Val: 0, Right: root}
-	prev := dummy
-	var dfs func(root *TreeNode)
-	dfs = func(root *TreeNode) {
-		if root == nil {
-			return
-		}
-		dfs(root.Left)
-		prev.Right = root
-		root.Left = nil
-		prev = root
-		dfs(root.Right)
-	}
-	dfs(root)
-	return dummy.Right
-}
-```
+
+
 
 ### **...**
 
@@ -177,4 +96,4 @@ func convertBiNode(root *TreeNode) *TreeNode {
 
 ```
 
-<!-- tabs:end -->
+

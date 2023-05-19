@@ -49,17 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def diagonalSort(self, mat: List[List[int]]) -> List[List[int]]:
-        m, n = len(mat), len(mat[0])
-        for k in range(min(m, n) - 1):
-            for i in range(m - 1):
-                for j in range(n - 1):
-                    if mat[i][j] > mat[i + 1][j + 1]:
-                        mat[i][j], mat[i + 1][j + 1] = mat[i + 1][j + 1], mat[i][j]
-        return mat
-```
+
 
 ### **Java**
 
@@ -85,40 +75,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {
-        int m = mat.size(), n = mat[0].size();
-        for (int k = 0; k < min(m, n) - 1; ++k)
-            for (int i = 0; i < m - 1; ++i)
-                for (int j = 0; j < n - 1; ++j)
-                    if (mat[i][j] > mat[i + 1][j + 1])
-                        swap(mat[i][j], mat[i + 1][j + 1]);
-        return mat;
-    }
-};
-```
 
-### **Go**
 
-```go
-func diagonalSort(mat [][]int) [][]int {
-	m, n := len(mat), len(mat[0])
-	for k := 0; k < m-1 && k < n-1; k++ {
-		for i := 0; i < m-1; i++ {
-			for j := 0; j < n-1; j++ {
-				if mat[i][j] > mat[i+1][j+1] {
-					mat[i][j], mat[i+1][j+1] = mat[i+1][j+1], mat[i][j]
-				}
-			}
-		}
-	}
-	return mat
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -126,4 +89,4 @@ func diagonalSort(mat [][]int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

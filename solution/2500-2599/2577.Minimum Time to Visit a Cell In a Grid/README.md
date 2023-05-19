@@ -78,30 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumTime(self, grid: List[List[int]]) -> int:
-        if grid[0][1] > 1 and grid[1][0] > 1:
-            return -1
-        m, n = len(grid), len(grid[0])
-        dist = [[inf] * n for _ in range(m)]
-        dist[0][0] = 0
-        q = [(0, 0, 0)]
-        dirs = (-1, 0, 1, 0, -1)
-        while 1:
-            t, i, j = heappop(q)
-            if i == m - 1 and j == n - 1:
-                return t
-            for a, b in pairwise(dirs):
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n:
-                    nt = t + 1
-                    if nt < grid[x][y]:
-                        nt = grid[x][y] + (grid[x][y] - nt) % 2
-                    if nt < dist[x][y]:
-                        dist[x][y] = nt
-                        heappush(q, (nt, x, y))
-```
+
 
 ### **Java**
 
@@ -146,97 +123,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumTime(vector<vector<int>>& grid) {
-        if (grid[0][1] > 1 && grid[1][0] > 1) {
-            return -1;
-        }
-        int m = grid.size(), n = grid[0].size();
-        int dist[m][n];
-        memset(dist, 0x3f, sizeof dist);
-        dist[0][0] = 0;
-        using tii = tuple<int, int, int>;
-        priority_queue<tii, vector<tii>, greater<tii>> pq;
-        pq.emplace(0, 0, 0);
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        while (1) {
-            auto [t, i, j] = pq.top();
-            pq.pop();
-            if (i == m - 1 && j == n - 1) {
-                return t;
-            }
-            for (int k = 0; k < 4; ++k) {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n) {
-                    int nt = t + 1;
-                    if (nt < grid[x][y]) {
-                        nt = grid[x][y] + (grid[x][y] - nt) % 2;
-                    }
-                    if (nt < dist[x][y]) {
-                        dist[x][y] = nt;
-                        pq.emplace(nt, x, y);
-                    }
-                }
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumTime(grid [][]int) int {
-	if grid[0][1] > 1 && grid[1][0] > 1 {
-		return -1
-	}
-	m, n := len(grid), len(grid[0])
-	dist := make([][]int, m)
-	for i := range dist {
-		dist[i] = make([]int, n)
-		for j := range dist[i] {
-			dist[i][j] = 1 << 30
-		}
-	}
-	dist[0][0] = 0
-	pq := hp{}
-	heap.Push(&pq, tuple{0, 0, 0})
-	dirs := [5]int{-1, 0, 1, 0, -1}
-	for {
-		p := heap.Pop(&pq).(tuple)
-		i, j := p.i, p.j
-		if i == m-1 && j == n-1 {
-			return p.t
-		}
-		for k := 0; k < 4; k++ {
-			x, y := i+dirs[k], j+dirs[k+1]
-			if x >= 0 && x < m && y >= 0 && y < n {
-				nt := p.t + 1
-				if nt < grid[x][y] {
-					nt = grid[x][y] + (grid[x][y]-nt)%2
-				}
-				if nt < dist[x][y] {
-					dist[x][y] = nt
-					heap.Push(&pq, tuple{nt, x, y})
-				}
-			}
-		}
-	}
-}
 
-type tuple struct{ t, i, j int }
-type hp []tuple
 
-func (h hp) Len() int            { return len(h) }
-func (h hp) Less(i, j int) bool  { return h[i].t < h[j].t }
-func (h hp) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
-func (h *hp) Push(v interface{}) { *h = append(*h, v.(tuple)) }
-func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
-```
+
+
 
 ### **...**
 
@@ -244,4 +137,4 @@ func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1];
 
 ```
 
-<!-- tabs:end -->
+

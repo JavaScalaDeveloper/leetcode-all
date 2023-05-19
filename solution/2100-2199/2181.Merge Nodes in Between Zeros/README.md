@@ -60,27 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def mergeNodes(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        dummy = tail = ListNode()
-        s = 0
-        cur = head.next
-        while cur:
-            if cur.val != 0:
-                s += cur.val
-            else:
-                tail.next = ListNode(s)
-                tail = tail.next
-                s = 0
-            cur = cur.next
-        return dummy.next
-```
+
 
 ### **Java**
 
@@ -116,135 +96,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* mergeNodes(ListNode* head) {
-        ListNode* dummy = new ListNode();
-        ListNode* tail = dummy;
-        int s = 0;
-        for (ListNode* cur = head->next; cur; cur = cur->next) {
-            if (cur->val)
-                s += cur->val;
-            else {
-                tail->next = new ListNode(s);
-                tail = tail->next;
-                s = 0;
-            }
-        }
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func mergeNodes(head *ListNode) *ListNode {
-	dummy := &ListNode{}
-	tail := dummy
-	s := 0
-	for cur := head.Next; cur != nil; cur = cur.Next {
-		if cur.Val != 0 {
-			s += cur.Val
-		} else {
-			tail.Next = &ListNode{Val: s}
-			tail = tail.Next
-			s = 0
-		}
-	}
-	return dummy.Next
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function mergeNodes(head: ListNode | null): ListNode | null {
-    const dummy = new ListNode();
-    let cur = dummy;
-    let sum = 0;
-    while (head) {
-        if (head.val === 0 && sum !== 0) {
-            cur.next = new ListNode(sum);
-            cur = cur.next;
-            sum = 0;
-        }
-        sum += head.val;
-        head = head.next;
-    }
-    return dummy.next;
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for singly-linked list.
-// #[derive(PartialEq, Eq, Clone, Debug)]
-// pub struct ListNode {
-//   pub val: i32,
-//   pub next: Option<Box<ListNode>>
-// }
-//
-// impl ListNode {
-//   #[inline]
-//   fn new(val: i32) -> Self {
-//     ListNode {
-//       next: None,
-//       val
-//     }
-//   }
-// }
-impl Solution {
-    pub fn merge_nodes(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let mut dummy = Box::new(ListNode::new(-1));
-        let mut cur = &mut dummy;
-        let mut sum = 0;
-        while let Some(node) = head {
-            if node.val == 0 && sum != 0 {
-                cur.next = Some(Box::new(ListNode::new(sum)));
-                cur = cur.as_mut().next.as_mut().unwrap();
-                sum = 0;
-            }
-            sum += node.val;
-            head = node.next;
-        }
-        dummy.next.take()
-    }
-}
-```
+
+
 
 ### **C**
 
@@ -283,4 +149,4 @@ struct ListNode *mergeNodes(struct ListNode *head) {
 
 ```
 
-<!-- tabs:end -->
+

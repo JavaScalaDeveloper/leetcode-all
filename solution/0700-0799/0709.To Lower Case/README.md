@@ -56,11 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def toLowerCase(self, s: str) -> str:
-        return "".join([chr(ord(c) | 32) if c.isupper() else c for c in s])
-```
+
 
 ### **Java**
 
@@ -80,70 +76,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string toLowerCase(string s) {
-        for (char& c : s) {
-            if (c >= 'A' && c <= 'Z') {
-                c |= 32;
-            }
-        }
-        return s;
-    }
-};
-```
 
-### **Go**
 
-```go
-func toLowerCase(s string) string {
-	cs := []byte(s)
-	for i, c := range cs {
-		if c >= 'A' && c <= 'Z' {
-			cs[i] |= 32
-		}
-	}
-	return string(cs)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function toLowerCase(s: string): string {
-    return s.toLowerCase();
-}
-```
 
-```ts
-function toLowerCase(s: string): string {
-    return [...s].map(c => String.fromCharCode(c.charCodeAt(0) | 32)).join('');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn to_lower_case(s: String) -> String {
-        s.to_ascii_lowercase()
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn to_lower_case(s: String) -> String {
-        s.as_bytes()
-            .iter()
-            .map(|&c| char::from(if c >= b'A' && c <= b'Z' { c | 32 } else { c }))
-            .collect()
-    }
-}
-```
+
+
+
+
+
 
 ### **C**
 
@@ -165,4 +116,4 @@ char *toLowerCase(char *s) {
 
 ```
 
-<!-- tabs:end -->
+

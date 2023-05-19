@@ -61,17 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def majorityElement(self, nums: List[int]) -> int:
-        cnt = m = 0
-        for x in nums:
-            if cnt == 0:
-                m, cnt = x, 1
-            else:
-                cnt += 1 if m == x else -1
-        return m
-```
+
 
 ### **Java**
 
@@ -94,151 +84,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int majorityElement(vector<int>& nums) {
-        int cnt = 0, m = 0;
-        for (int& x : nums) {
-            if (cnt == 0) {
-                m = x;
-                cnt = 1;
-            } else {
-                cnt += m == x ? 1 : -1;
-            }
-        }
-        return m;
-    }
-};
-```
 
-### **Go**
 
-```go
-func majorityElement(nums []int) int {
-	var cnt, m int
-	for _, x := range nums {
-		if cnt == 0 {
-			m, cnt = x, 1
-		} else {
-			if m == x {
-				cnt++
-			} else {
-				cnt--
-			}
-		}
-	}
-	return m
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function majorityElement(nums: number[]): number {
-    let cnt: number = 0;
-    let m: number = 0;
-    for (const x of nums) {
-        if (cnt === 0) {
-            m = x;
-            cnt = 1;
-        } else {
-            cnt += m === x ? 1 : -1;
-        }
-    }
-    return m;
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var majorityElement = function (nums) {
-    let cnt = 0;
-    let m = 0;
-    for (const x of nums) {
-        if (cnt === 0) {
-            m = x;
-            cnt = 1;
-        } else {
-            cnt += m === x ? 1 : -1;
-        }
-    }
-    return m;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MajorityElement(int[] nums) {
-        int cnt = 0, m = 0;
-        foreach (int x in nums) {
-            if (cnt == 0) {
-                m = x;
-                cnt = 1;
-            } else {
-                cnt += m == x ? 1 : -1;
-            }
-        }
-        return m;
-    }
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn majority_element(nums: Vec<i32>) -> i32 {
-        let mut m = 0;
-        let mut cnt = 0;
-        for &x in nums.iter() {
-            if cnt == 0 {
-                m = x;
-                cnt = 1;
-            } else {
-                cnt += if m == x { 1 } else { -1 };
-            }
-        }
-        m
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
 
-    /**
-     * @param Integer[] $nums
-     * @return Integer
-     */
-    function majorityElement($nums) {
-        $m = 0;
-        $cnt = 0;
-        foreach ($nums as $x) {
-            if ($cnt == 0) {
-                $m = $x;
-            }
-            if ($m == $x) {
-                $cnt++;
-            } else {
-                $cnt--;
-            }
-        }
-        return $m;
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -246,4 +118,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

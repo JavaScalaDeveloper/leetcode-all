@@ -71,26 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxDistance(self, grid: List[List[int]]) -> int:
-        n = len(grid)
-        q = deque((i, j) for i in range(n) for j in range(n) if grid[i][j])
-        ans = -1
-        if len(q) in (0, n * n):
-            return ans
-        dirs = (-1, 0, 1, 0, -1)
-        while q:
-            for _ in range(len(q)):
-                i, j = q.popleft()
-                for a, b in pairwise(dirs):
-                    x, y = i + a, j + b
-                    if 0 <= x < n and 0 <= y < n and grid[x][y] == 0:
-                        grid[x][y] = 1
-                        q.append((x, y))
-            ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -131,116 +112,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxDistance(vector<vector<int>>& grid) {
-        int n = grid.size();
-        queue<pair<int, int>> q;
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j]) {
-                    q.emplace(i, j);
-                }
-            }
-        }
-        int ans = -1;
-        if (q.empty() || q.size() == n * n) {
-            return ans;
-        }
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        while (!q.empty()) {
-            for (int m = q.size(); m; --m) {
-                auto [i, j] = q.front();
-                q.pop();
-                for (int k = 0; k < 4; ++k) {
-                    int x = i + dirs[k], y = j + dirs[k + 1];
-                    if (x >= 0 && x < n && y >= 0 && y < n && !grid[x][y]) {
-                        grid[x][y] = 1;
-                        q.emplace(x, y);
-                    }
-                }
-            }
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxDistance(grid [][]int) int {
-	n := len(grid)
-	q := [][2]int{}
-	for i, row := range grid {
-		for j, v := range row {
-			if v == 1 {
-				q = append(q, [2]int{i, j})
-			}
-		}
-	}
-	ans := -1
-	if len(q) == 0 || len(q) == n*n {
-		return ans
-	}
-	dirs := [5]int{-1, 0, 1, 0, -1}
-	for len(q) > 0 {
-		for i := len(q); i > 0; i-- {
-			p := q[0]
-			q = q[1:]
-			for k := 0; k < 4; k++ {
-				x, y := p[0]+dirs[k], p[1]+dirs[k+1]
-				if x >= 0 && x < n && y >= 0 && y < n && grid[x][y] == 0 {
-					grid[x][y] = 1
-					q = append(q, [2]int{x, y})
-				}
-			}
-		}
-		ans++
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxDistance(grid: number[][]): number {
-    const n = grid.length;
-    const q: [number, number][] = [];
-    for (let i = 0; i < n; ++i) {
-        for (let j = 0; j < n; ++j) {
-            if (grid[i][j] === 1) {
-                q.push([i, j]);
-            }
-        }
-    }
-    let ans = -1;
-    if (q.length === 0 || q.length === n * n) {
-        return ans;
-    }
-    const dirs: number[] = [-1, 0, 1, 0, -1];
-    while (q.length > 0) {
-        for (let m = q.length; m; --m) {
-            const [i, j] = q.shift()!;
-            for (let k = 0; k < 4; ++k) {
-                const x = i + dirs[k];
-                const y = j + dirs[k + 1];
-                if (x >= 0 && x < n && y >= 0 && y < n && grid[x][y] === 0) {
-                    grid[x][y] = 1;
-                    q.push([x, y]);
-                }
-            }
-        }
-        ++ans;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -248,4 +130,4 @@ function maxDistance(grid: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

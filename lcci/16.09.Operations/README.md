@@ -34,9 +34,7 @@ operations.divide(5, -2); //返回-2
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -52,4 +50,4 @@ operations.divide(5, -2); //返回-2
 
 ```
 
-<!-- tabs:end -->
+

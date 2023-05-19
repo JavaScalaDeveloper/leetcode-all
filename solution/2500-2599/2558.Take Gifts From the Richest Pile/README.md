@@ -71,15 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def pickGifts(self, gifts: List[int], k: int) -> int:
-        h = [-v for v in gifts]
-        heapify(h)
-        for _ in range(k):
-            heapreplace(h, -int(sqrt(-h[0])))
-        return -sum(h)
-```
+
 
 ### **Java**
 
@@ -104,45 +96,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long pickGifts(vector<int>& gifts, int k) {
-        make_heap(gifts.begin(), gifts.end());
-        while (k--) {
-            pop_heap(gifts.begin(), gifts.end());
-            gifts.back() = sqrt(gifts.back());
-            push_heap(gifts.begin(), gifts.end());
-        }
-        return accumulate(gifts.begin(), gifts.end(), 0LL);
-    }
-};
-```
 
-### **Go**
 
-```go
-func pickGifts(gifts []int, k int) (ans int64) {
-	h := &hp{gifts}
-	heap.Init(h)
-	for ; k > 0; k-- {
-		gifts[0] = int(math.Sqrt(float64(gifts[0])))
-		heap.Fix(h, 0)
-	}
-	for _, x := range gifts {
-		ans += int64(x)
-	}
-	return
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h hp) Less(i, j int) bool { return h.IntSlice[i] > h.IntSlice[j] }
-func (hp) Pop() (_ interface{}) { return }
-func (hp) Push(interface{})     {}
-```
+
+
 
 ### **...**
 
@@ -150,4 +110,4 @@ func (hp) Push(interface{})     {}
 
 ```
 
-<!-- tabs:end -->
+

@@ -60,19 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def increasingTriplet(self, nums: List[int]) -> bool:
-        mi, mid = inf, inf
-        for num in nums:
-            if num > mid:
-                return True
-            if num <= mi:
-                mi = num
-            else:
-                mid = num
-        return False
-```
+
 
 ### **Java**
 
@@ -125,87 +113,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function increasingTriplet(nums: number[]): boolean {
-    let n = nums.length;
-    if (n < 3) return false;
-    let min = nums[0],
-        mid = Number.MAX_SAFE_INTEGER;
-    for (let num of nums) {
-        if (num <= min) {
-            min = num;
-        } else if (num <= mid) {
-            mid = num;
-        } else if (num > mid) {
-            return true;
-        }
-    }
-    return false;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool increasingTriplet(vector<int>& nums) {
-        int mi = INT_MAX, mid = INT_MAX;
-        for (int num : nums) {
-            if (num > mid) return true;
-            if (num <= mi)
-                mi = num;
-            else
-                mid = num;
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func increasingTriplet(nums []int) bool {
-	min, mid := math.MaxInt32, math.MaxInt32
-	for _, num := range nums {
-		if num > mid {
-			return true
-		}
-		if num <= min {
-			min = num
-		} else {
-			mid = num
-		}
-	}
-	return false
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn increasing_triplet(nums: Vec<i32>) -> bool {
-        let n = nums.len();
-        if n < 3 {
-            return false;
-        }
-        let mut min = i32::MAX;
-        let mut mid = i32::MAX;
-        for num in nums.into_iter() {
-            if num <= min {
-                min = num;
-            } else if num <= mid {
-                mid = num;
-            } else {
-                return true;
-            }
-        }
-        false
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -213,4 +133,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

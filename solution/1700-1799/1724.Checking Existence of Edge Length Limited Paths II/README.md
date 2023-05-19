@@ -63,9 +63,7 @@ distanceLimitedPathsExist.query(0, 5, 6); // 返回 false。从 0 到 5 之间�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -81,4 +79,4 @@ distanceLimitedPathsExist.query(0, 5, 6); // 返回 false。从 0 到 5 之间�
 
 ```
 
-<!-- tabs:end -->
+

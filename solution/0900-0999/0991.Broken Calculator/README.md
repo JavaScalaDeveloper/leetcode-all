@@ -65,19 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def brokenCalc(self, startValue: int, target: int) -> int:
-        ans = 0
-        while startValue < target:
-            if target & 1:
-                target += 1
-            else:
-                target >>= 1
-            ans += 1
-        ans += startValue - target
-        return ans
-```
+
 
 ### **Java**
 
@@ -101,43 +89,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int brokenCalc(int startValue, int target) {
-        int ans = 0;
-        while (startValue < target) {
-            if (target & 1) {
-                target++;
-            } else {
-                target >>= 1;
-            }
-            ++ans;
-        }
-        ans += startValue - target;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func brokenCalc(startValue int, target int) (ans int) {
-	for startValue < target {
-		if target&1 == 1 {
-			target++
-		} else {
-			target >>= 1
-		}
-		ans++
-	}
-	ans += startValue - target
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -145,4 +103,4 @@ func brokenCalc(startValue int, target int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

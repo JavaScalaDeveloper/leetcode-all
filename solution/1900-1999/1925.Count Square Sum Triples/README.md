@@ -44,18 +44,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countTriples(self, n: int) -> int:
-        res = 0
-        for a in range(1, n + 1):
-            for b in range(1, n + 1):
-                t = a**2 + b**2
-                c = int(sqrt(t))
-                if c <= n and c**2 == t:
-                    res += 1
-        return res
-```
+
 
 ### **Java**
 
@@ -79,44 +68,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countTriples(int n) {
-        int res = 0;
-        for (int a = 1; a <= n; ++a) {
-            for (int b = 1; b <= n; ++b) {
-                int t = a * a + b * b;
-                int c = (int)sqrt(t);
-                if (c <= n && c * c == t) {
-                    ++res;
-                }
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countTriples(n int) int {
-	res := 0
-	for a := 1; a <= n; a++ {
-		for b := 1; b <= n; b++ {
-			t := a*a + b*b
-			c := int(math.Sqrt(float64(t)))
-			if c <= n && c*c == t {
-				res++
-			}
-		}
-	}
-	return res
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -124,4 +82,4 @@ func countTriples(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

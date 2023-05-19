@@ -83,4 +83,4 @@ FROM Stocks
 GROUP BY stock_name;
 ```
 
-<!-- tabs:end -->
+

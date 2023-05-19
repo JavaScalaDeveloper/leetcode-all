@@ -60,45 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumDifference(self, nums: List[int]) -> int:
-        n = len(nums) >> 1
-        f = defaultdict(set)
-        g = defaultdict(set)
-        for i in range(1 << n):
-            s = cnt = 0
-            s1 = cnt1 = 0
-            for j in range(n):
-                if (i & (1 << j)) != 0:
-                    s += nums[j]
-                    cnt += 1
-                    s1 += nums[n + j]
-                    cnt1 += 1
-                else:
-                    s -= nums[j]
-                    s1 -= nums[n + j]
-            f[cnt].add(s)
-            g[cnt1].add(s1)
 
-        ans = inf
-        for i in range(n + 1):
-            fi, gi = sorted(list(f[i])), sorted(list(g[n - i]))
-            # min(abs(f[i] + g[n - i]))
-            for a in fi:
-                left, right = 0, len(gi) - 1
-                b = -a
-                while left < right:
-                    mid = (left + right) >> 1
-                    if gi[mid] >= b:
-                        right = mid
-                    else:
-                        left = mid + 1
-                ans = min(ans, abs(a + gi[left]))
-                if left > 0:
-                    ans = min(ans, abs(a + gi[left - 1]))
-        return ans
-```
 
 ### **Java**
 
@@ -155,121 +117,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumDifference(vector<int>& nums) {
-        int n = nums.size() >> 1;
-        vector<vector<int>> f(n + 1), g(n + 1);
-        for (int i = 0; i < (1 << n); ++i) {
-            int s = 0, cnt = 0;
-            int s1 = 0, cnt1 = 0;
-            for (int j = 0; j < n; ++j) {
-                if (i & (1 << j)) {
-                    s += nums[j];
-                    ++cnt;
-                    s1 += nums[n + j];
-                    ++cnt1;
-                } else {
-                    s -= nums[j];
-                    s1 -= nums[n + j];
-                }
-            }
-            f[cnt].push_back(s);
-            g[cnt1].push_back(s1);
-        }
-        for (int i = 0; i <= n; ++i) {
-            sort(f[i].begin(), f[i].end());
-            sort(g[i].begin(), g[i].end());
-        }
-        int ans = INT_MAX;
-        for (int i = 0; i <= n; ++i) {
-            for (int a : f[i]) {
-                int left = 0, right = g[n - i].size() - 1;
-                int b = -a;
-                while (left < right) {
-                    int mid = (left + right) >> 1;
-                    if (g[n - i][mid] >= b)
-                        right = mid;
-                    else
-                        left = mid + 1;
-                }
-                ans = min(ans, abs(a + g[n - i][left]));
-                if (left > 0) ans = min(ans, abs(a + g[n - i][left - 1]));
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumDifference(nums []int) int {
-	n := len(nums) >> 1
-	f := make([][]int, n+1)
-	g := make([][]int, n+1)
-	for i := 0; i < (1 << n); i++ {
-		s, cnt := 0, 0
-		s1, cnt1 := 0, 0
-		for j := 0; j < n; j++ {
-			if (i & (1 << j)) != 0 {
-				s += nums[j]
-				cnt++
-				s1 += nums[n+j]
-				cnt1++
-			} else {
-				s -= nums[j]
-				s1 -= nums[n+j]
-			}
-		}
-		f[cnt] = append(f[cnt], s)
-		g[cnt1] = append(g[cnt1], s1)
-	}
 
-	for i := 0; i <= n; i++ {
-		sort.Ints(f[i])
-		sort.Ints(g[i])
-	}
-	ans := 1 << 30
-	for i := 0; i <= n; i++ {
-		for _, a := range f[i] {
-			left, right := 0, len(g[n-i])-1
-			b := -a
-			for left < right {
-				mid := (left + right) >> 1
-				if g[n-i][mid] >= b {
-					right = mid
-				} else {
-					left = mid + 1
-				}
-			}
-			ans = min(ans, abs(a+g[n-i][left]))
-			if left > 0 {
-				ans = min(ans, abs(a+g[n-i][left-1]))
-			}
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x > 0 {
-		return x
-	}
-	return -x
-}
-```
+
 
 ### **...**
 
@@ -277,4 +131,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

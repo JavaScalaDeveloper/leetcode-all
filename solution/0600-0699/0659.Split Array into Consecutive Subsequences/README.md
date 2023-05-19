@@ -83,17 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isPossible(self, nums: List[int]) -> bool:
-        d = defaultdict(list)
-        for v in nums:
-            if h := d[v - 1]:
-                heappush(d[v], heappop(h) + 1)
-            else:
-                heappush(d[v], 1)
-        return all(not v or v and v[0] > 2 for v in d.values())
-```
+
 
 ### **Java**
 
@@ -124,71 +114,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isPossible(vector<int>& nums) {
-        unordered_map<int, priority_queue<int, vector<int>, greater<int>>> d;
-        for (int v : nums) {
-            if (d.count(v - 1)) {
-                auto& q = d[v - 1];
-                d[v].push(q.top() + 1);
-                q.pop();
-                if (q.empty()) {
-                    d.erase(v - 1);
-                }
-            } else {
-                d[v].push(1);
-            }
-        }
-        for (auto& [_, v] : d) {
-            if (v.top() < 3) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isPossible(nums []int) bool {
-	d := map[int]*hp{}
-	for _, v := range nums {
-		if d[v] == nil {
-			d[v] = new(hp)
-		}
-		if h := d[v-1]; h != nil {
-			heap.Push(d[v], heap.Pop(h).(int)+1)
-			if h.Len() == 0 {
-				delete(d, v-1)
-			}
-		} else {
-			heap.Push(d[v], 1)
-		}
-	}
-	for _, q := range d {
-		if q.IntSlice[0] < 3 {
-			return false
-		}
-	}
-	return true
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-```
+
+
 
 ### **...**
 
@@ -196,4 +128,4 @@ func (h *hp) Pop() interface{} {
 
 ```
 
-<!-- tabs:end -->
+

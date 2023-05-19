@@ -78,37 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeInvalidParentheses(self, s: str) -> List[str]:
-        def dfs(i, l, r, lcnt, rcnt, t):
-            if i == n:
-                if l == 0 and r == 0:
-                    ans.add(t)
-                return
-            if n - i < l + r or lcnt < rcnt:
-                return
-            if s[i] == '(' and l:
-                dfs(i + 1, l - 1, r, lcnt, rcnt, t)
-            elif s[i] == ')' and r:
-                dfs(i + 1, l, r - 1, lcnt, rcnt, t)
-            dfs(i + 1, l, r, lcnt + (s[i] == '('),
-                rcnt + (s[i] == ')'), t + s[i])
 
-        l = r = 0
-        for c in s:
-            if c == '(':
-                l += 1
-            elif c == ')':
-                if l:
-                    l -= 1
-                else:
-                    r += 1
-        ans = set()
-        n = len(s)
-        dfs(0, l, r, 0, 0, '')
-        return list(ans)
-```
 
 ### **Java**
 
@@ -163,103 +133,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> removeInvalidParentheses(string s) {
-        unordered_set<string> ans;
-        int l = 0, r = 0, n = s.size();
-        for (char& c : s) {
-            if (c == '(') {
-                ++l;
-            } else if (c == ')') {
-                if (l) {
-                    --l;
-                } else {
-                    ++r;
-                }
-            }
-        }
-        function<void(int, int, int, int, int, string)> dfs;
-        dfs = [&](int i, int l, int r, int lcnt, int rcnt, string t) {
-            if (i == n) {
-                if (l == 0 && r == 0) {
-                    ans.insert(t);
-                }
-                return;
-            }
-            if (n - i < l + r || lcnt < rcnt) {
-                return;
-            }
-            if (s[i] == '(' && l) {
-                dfs(i + 1, l - 1, r, lcnt, rcnt, t);
-            }
-            if (s[i] == ')' && r) {
-                dfs(i + 1, l, r - 1, lcnt, rcnt, t);
-            }
-            int x = s[i] == '(' ? 1 : 0;
-            int y = s[i] == ')' ? 1 : 0;
-            dfs(i + 1, l, r, lcnt + x, rcnt + y, t + s[i]);
-        };
 
-        dfs(0, l, r, 0, 0, "");
-        return vector<string>(ans.begin(), ans.end());
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeInvalidParentheses(s string) []string {
-	vis := map[string]bool{}
-	l, r, n := 0, 0, len(s)
-	for _, c := range s {
-		if c == '(' {
-			l++
-		} else if c == ')' {
-			if l > 0 {
-				l--
-			} else {
-				r++
-			}
-		}
-	}
-	var dfs func(i, l, r, lcnt, rcnt int, t string)
-	dfs = func(i, l, r, lcnt, rcnt int, t string) {
-		if i == n {
-			if l == 0 && r == 0 {
-				vis[t] = true
-			}
-			return
-		}
-		if n-i < l+r || lcnt < rcnt {
-			return
-		}
-		if s[i] == '(' && l > 0 {
-			dfs(i+1, l-1, r, lcnt, rcnt, t)
-		}
-		if s[i] == ')' && r > 0 {
-			dfs(i+1, l, r-1, lcnt, rcnt, t)
-		}
-		x, y := 0, 0
-		if s[i] == '(' {
-			x = 1
-		} else if s[i] == ')' {
-			y = 1
-		}
-		dfs(i+1, l, r, lcnt+x, rcnt+y, t+string(s[i]))
-	}
-	dfs(0, l, r, 0, 0, "")
-	ans := make([]string, 0, len(vis))
-	for v := range vis {
-		ans = append(ans, v)
-	}
-	return ans
-}
-```
+
+
+
 
 ### **...**
 
@@ -267,4 +147,4 @@ func removeInvalidParentheses(s string) []string {
 
 ```
 
-<!-- tabs:end -->
+

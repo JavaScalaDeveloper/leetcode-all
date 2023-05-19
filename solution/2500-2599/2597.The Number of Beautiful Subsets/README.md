@@ -64,25 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def beautifulSubsets(self, nums: List[int], k: int) -> int:
-        def dfs(i: int) -> None:
-            nonlocal ans
-            if i >= len(nums):
-                ans += 1
-                return
-            dfs(i + 1)
-            if cnt[nums[i] + k] == 0 and cnt[nums[i] - k] == 0:
-                cnt[nums[i]] += 1
-                dfs(i + 1)
-                cnt[nums[i]] -= 1
 
-        ans = -1
-        cnt = Counter()
-        dfs(0)
-        return ans
-```
 
 ### **Java**
 
@@ -119,88 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int beautifulSubsets(vector<int>& nums, int k) {
-        int ans = -1;
-        int cnt[1010]{};
-        int n = nums.size();
 
-        function<void(int)> dfs = [&](int i) {
-            if (i >= n) {
-                ++ans;
-                return;
-            }
-            dfs(i + 1);
-            bool ok1 = nums[i] + k >= 1010 || cnt[nums[i] + k] == 0;
-            bool ok2 = nums[i] - k < 0 || cnt[nums[i] - k] == 0;
-            if (ok1 && ok2) {
-                ++cnt[nums[i]];
-                dfs(i + 1);
-                --cnt[nums[i]];
-            }
-        };
-        dfs(0);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func beautifulSubsets(nums []int, k int) int {
-	ans := -1
-	n := len(nums)
-	cnt := [1010]int{}
-	var dfs func(int)
-	dfs = func(i int) {
-		if i >= n {
-			ans++
-			return
-		}
-		dfs(i + 1)
-		ok1 := nums[i]+k >= len(cnt) || cnt[nums[i]+k] == 0
-		ok2 := nums[i]-k < 0 || cnt[nums[i]-k] == 0
-		if ok1 && ok2 {
-			cnt[nums[i]]++
-			dfs(i + 1)
-			cnt[nums[i]]--
-		}
-	}
-	dfs(0)
-	return ans
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function beautifulSubsets(nums: number[], k: number): number {
-    let ans: number = -1;
-    const cnt: number[] = new Array(1010).fill(0);
-    const n: number = nums.length;
-    const dfs = (i: number) => {
-        if (i >= n) {
-            ++ans;
-            return;
-        }
-        dfs(i + 1);
-        const ok1: boolean = nums[i] + k >= 1010 || cnt[nums[i] + k] === 0;
-        const ok2: boolean = nums[i] - k < 0 || cnt[nums[i] - k] === 0;
-        if (ok1 && ok2) {
-            ++cnt[nums[i]];
-            dfs(i + 1);
-            --cnt[nums[i]];
-        }
-    };
-    dfs(0);
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -208,4 +119,4 @@ function beautifulSubsets(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

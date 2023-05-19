@@ -64,14 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def fourSumCount(
-        self, nums1: List[int], nums2: List[int], nums3: List[int], nums4: List[int]
-    ) -> int:
-        cnt = Counter(a + b for a in nums1 for b in nums2)
-        return sum(cnt[-(c + d)] for c in nums3 for d in nums4)
-```
+
 
 ### **Java**
 
@@ -97,74 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int fourSumCount(vector<int>& nums1, vector<int>& nums2, vector<int>& nums3, vector<int>& nums4) {
-        unordered_map<int, int> cnt;
-        for (int a : nums1) {
-            for (int b : nums2) {
-                ++cnt[a + b];
-            }
-        }
-        int ans = 0;
-        for (int c : nums3) {
-            for (int d : nums4) {
-                ans += cnt[-(c + d)];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func fourSumCount(nums1 []int, nums2 []int, nums3 []int, nums4 []int) (ans int) {
-	cnt := map[int]int{}
-	for _, a := range nums1 {
-		for _, b := range nums2 {
-			cnt[a+b]++
-		}
-	}
-	for _, c := range nums3 {
-		for _, d := range nums4 {
-			ans += cnt[-(c + d)]
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function fourSumCount(
-    nums1: number[],
-    nums2: number[],
-    nums3: number[],
-    nums4: number[],
-): number {
-    const cnt: Map<number, number> = new Map();
-    for (const a of nums1) {
-        for (const b of nums2) {
-            const x = a + b;
-            cnt.set(x, (cnt.get(x) || 0) + 1);
-        }
-    }
-    let ans = 0;
-    for (const c of nums3) {
-        for (const d of nums4) {
-            const x = c + d;
-            ans += cnt.get(-x) || 0;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -172,4 +108,4 @@ function fourSumCount(
 
 ```
 
-<!-- tabs:end -->
+

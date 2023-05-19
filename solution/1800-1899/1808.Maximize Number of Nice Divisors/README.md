@@ -71,18 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxNiceDivisors(self, primeFactors: int) -> int:
-        mod = 10**9 + 7
-        if primeFactors < 4:
-            return primeFactors
-        if primeFactors % 3 == 0:
-            return pow(3, primeFactors // 3, mod) % mod
-        if primeFactors % 3 == 1:
-            return 4 * pow(3, primeFactors // 3 - 1, mod) % mod
-        return 2 * pow(3, primeFactors // 3, mod) % mod
-```
+
 
 ### **Java**
 
@@ -118,68 +107,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxNiceDivisors(int primeFactors) {
-        if (primeFactors < 4) {
-            return primeFactors;
-        }
-        const int mod = 1e9 + 7;
-        if (primeFactors % 3 == 0) {
-            return qmi(3, primeFactors / 3, mod);
-        }
-        if (primeFactors % 3 == 1) {
-            return 4 * qmi(3, primeFactors / 3 - 1, mod) % mod;
-        }
-        return 2 * qmi(3, primeFactors / 3, mod) % mod;
-    }
 
-    long qmi(long a, long k, long p) {
-        long res = 1;
-        while (k != 0) {
-            if ((k & 1) == 1) {
-                res = res * a % p;
-            }
-            k >>= 1;
-            a = a * a % p;
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxNiceDivisors(primeFactors int) int {
-	if primeFactors < 4 {
-		return primeFactors
-	}
-	const mod int = 1e9 + 7
-	if primeFactors%3 == 0 {
-		return qmi(3, primeFactors/3, mod)
-	}
-	if primeFactors%3 == 1 {
-		return 4 * qmi(3, primeFactors/3-1, mod) % mod
-	}
-	return 2 * qmi(3, primeFactors/3, mod) % mod
-}
 
-func qmi(a, k, p int) int {
-	res := 1
-	for k != 0 {
-		if k&1 == 1 {
-			res = res * a % p
-		}
-		k >>= 1
-		a = a * a % p
-	}
-	return res
-}
-```
+
+
 
 ### **...**
 
@@ -187,4 +121,4 @@ func qmi(a, k, p int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -79,18 +79,7 @@ divisors[1] 的可整除性得分为 0 ，因为 nums 中没有任何数字能�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxDivScore(self, nums: List[int], divisors: List[int]) -> int:
-        ans, mx = divisors[0], 0
-        for div in divisors:
-            cnt = sum(x % div == 0 for x in nums)
-            if mx < cnt:
-                mx, ans = cnt, div
-            elif mx == cnt and ans > div:
-                ans = div
-        return ans
-```
+
 
 ### **Java**
 
@@ -120,71 +109,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxDivScore(vector<int>& nums, vector<int>& divisors) {
-        int ans = divisors[0];
-        int mx = 0;
-        for (int div : divisors) {
-            int cnt = 0;
-            for (int x : nums) {
-                cnt += x % div == 0;
-            }
-            if (mx < cnt) {
-                mx = cnt;
-                ans = div;
-            } else if (mx == cnt) {
-                ans = min(ans, div);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxDivScore(nums []int, divisors []int) int {
-	ans, mx := divisors[0], 0
-	for _, div := range divisors {
-		cnt := 0
-		for _, x := range nums {
-			if x%div == 0 {
-				cnt++
-			}
-		}
-		if mx < cnt {
-			ans, mx = div, cnt
-		} else if mx == cnt && ans > div {
-			ans = div
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxDivScore(nums: number[], divisors: number[]): number {
-    let ans: number = divisors[0];
-    let mx: number = 0;
-    for (const div of divisors) {
-        const cnt = nums.reduce((a, b) => a + (b % div == 0 ? 1 : 0), 0);
-        if (mx < cnt) {
-            mx = cnt;
-            ans = div;
-        } else if (mx === cnt && ans > div) {
-            ans = div;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -192,4 +127,4 @@ function maxDivScore(nums: number[], divisors: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

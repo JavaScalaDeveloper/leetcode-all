@@ -63,23 +63,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findTheDifference(self, s: str, t: str) -> str:
-        cnt = Counter(s)
-        for c in t:
-            cnt[c] -= 1
-            if cnt[c] < 0:
-                return c
-```
 
-```python
-class Solution:
-    def findTheDifference(self, s: str, t: str) -> str:
-        a = sum(ord(c) for c in s)
-        b = sum(ord(c) for c in t)
-        return chr(b - a)
-```
+
+
 
 ### **Java**
 
@@ -116,91 +102,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    char findTheDifference(string s, string t) {
-        int cnt[26] = {0};
-        for (char& c : s) ++cnt[c - 'a'];
-        for (char& c : t) if (--cnt[c - 'a'] < 0) return c;
-        return ' ';
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    char findTheDifference(string s, string t) {
-        int a = 0, b = 0;
-        for (char& c : s) a += c;
-        for (char& c : t) b += c;
-        return b - a;
-    }
-};
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findTheDifference(s: string, t: string): string {
-    const n = s.length;
-    const count = new Array(26).fill(0);
-    for (let i = 0; i < n; i++) {
-        count[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
-        count[t.charCodeAt(i) - 'a'.charCodeAt(0)]--;
-    }
-    count[t.charCodeAt(n) - 'a'.charCodeAt(0)]--;
-    return String.fromCharCode(
-        'a'.charCodeAt(0) + count.findIndex(v => v !== 0),
-    );
-}
-```
 
-```ts
-function findTheDifference(s: string, t: string): string {
-    return String.fromCharCode(
-        [...t].reduce((r, v) => r + v.charCodeAt(0), 0) -
-            [...s].reduce((r, v) => r + v.charCodeAt(0), 0),
-    );
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn find_the_difference(s: String, t: String) -> char {
-        let s = s.as_bytes();
-        let t = t.as_bytes();
-        let n = s.len();
-        let mut count = [0; 26];
-        for i in 0..n {
-            count[(s[i] - b'a') as usize] += 1;
-            count[(t[i] - b'a') as usize] -= 1;
-        }
-        count[(t[n] - b'a') as usize] -= 1;
-        char::from(b'a' + count.iter().position(|&v| v != 0).unwrap() as u8)
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn find_the_difference(s: String, t: String) -> char {
-        let mut ans = 0;
-        for c in s.as_bytes() {
-            ans ^= c;
-        }
-        for c in t.as_bytes() {
-            ans ^= c;
-        }
-        char::from(ans)
-    }
-}
-```
+
+
+
+
+
 
 ### **C**
 
@@ -236,36 +154,11 @@ char findTheDifference(char *s, char *t) {
 }
 ```
 
-### **Go**
 
-```go
-func findTheDifference(s, t string) byte {
-	cnt := [26]int{}
-	for _, ch := range s {
-		cnt[ch-'a']++
-	}
-	for i := 0; ; i++ {
-		ch := t[i]
-		cnt[ch-'a']--
-		if cnt[ch-'a'] < 0 {
-			return ch
-		}
-	}
-}
-```
 
-```go
-func findTheDifference(s string, t string) byte {
-	ss := 0
-	for _, c := range s {
-		ss -= int(c)
-	}
-	for _, c := range t {
-		ss += int(c)
-	}
-	return byte(ss)
-}
-```
+
+
+
 
 ### **...**
 
@@ -273,4 +166,4 @@ func findTheDifference(s string, t string) byte {
 
 ```
 
-<!-- tabs:end -->
+

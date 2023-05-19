@@ -52,28 +52,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:
-        d1, d2 = ListNode(), ListNode()
-        t1, t2 = d1, d2
-        while head:
-            if head.val < x:
-                t1.next = head
-                t1 = t1.next
-            else:
-                t2.next = head
-                t2 = t2.next
-            head = head.next
-        t1.next = d2.next
-        t2.next = None
-        return d1.next
-```
+
 
 ### **Java**
 
@@ -112,107 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* partition(ListNode* head, int x) {
-        ListNode* d1 = new ListNode();
-        ListNode* d2 = new ListNode();
-        ListNode* t1 = d1;
-        ListNode* t2 = d2;
-        while (head) {
-            if (head->val < x) {
-                t1->next = head;
-                t1 = t1->next;
-            } else {
-                t2->next = head;
-                t2 = t2->next;
-            }
-            head = head->next;
-        }
-        t1->next = d2->next;
-        t2->next = nullptr;
-        return d1->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func partition(head *ListNode, x int) *ListNode {
-	d1, d2 := &ListNode{}, &ListNode{}
-	t1, t2 := d1, d2
-	for head != nil {
-		if head.Val < x {
-			t1.Next = head
-			t1 = t1.Next
-		} else {
-			t2.Next = head
-			t2 = t2.Next
-		}
-		head = head.Next
-	}
-	t1.Next = d2.Next
-	t2.Next = nil
-	return d1.Next
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} head
- * @param {number} x
- * @return {ListNode}
- */
-var partition = function (head, x) {
-    const d1 = new ListNode();
-    const d2 = new ListNode();
-    let t1 = d1,
-        t2 = d2;
-    while (head) {
-        if (head.val < x) {
-            t1.next = head;
-            t1 = t1.next;
-        } else {
-            t2.next = head;
-            t2 = t2.next;
-        }
-        head = head.next;
-    }
-    t1.next = d2.next;
-    t2.next = null;
-    return d1.next;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -220,4 +109,4 @@ var partition = function (head, x) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -77,33 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minCostToSupplyWater(
-        self, n: int, wells: List[int], pipes: List[List[int]]
-    ) -> int:
-        for i, w in enumerate(wells):
-            pipes.append([0, i + 1, w])
-        pipes.sort(key=lambda x: x[2])
 
-        p = list(range(n + 1))
-
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
-
-        res = 0
-        for u, v, w in pipes:
-            if find(u) == find(v):
-                continue
-            p[find(u)] = find(v)
-            res += w
-            n -= 1
-            if n == 0:
-                break
-        return res
-```
 
 ### **Java**
 
@@ -151,76 +125,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    int minCostToSupplyWater(int n, vector<int>& wells, vector<vector<int>>& pipes) {
-        p.resize(n + 1);
-        for (int i = 0; i < p.size(); ++i) p[i] = i;
-        for (int i = 0; i < n; ++i) pipes.push_back({0, i + 1, wells[i]});
-        sort(pipes.begin(), pipes.end(), [](const auto& a, const auto& b) {
-            return a[2] < b[2];
-        });
-        int res = 0;
-        for (auto e : pipes) {
-            if (find(e[0]) == find(e[1])) continue;
-            p[find(e[0])] = find(e[1]);
-            res += e[2];
-            --n;
-            if (n == 0) break;
-        }
-        return res;
-    }
 
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
-```go
-var p []int
 
-func minCostToSupplyWater(n int, wells []int, pipes [][]int) int {
-	p = make([]int, n+1)
-	for i := 0; i < len(p); i++ {
-		p[i] = i
-	}
-	for i, w := range wells {
-		pipes = append(pipes, []int{0, i + 1, w})
-	}
-	sort.Slice(pipes, func(i, j int) bool {
-		return pipes[i][2] < pipes[j][2]
-	})
-	res := 0
-	for _, e := range pipes {
-		if find(e[0]) == find(e[1]) {
-			continue
-		}
-		p[find(e[0])] = find(e[1])
-		res += e[2]
-		n--
-		if n == 0 {
-			break
-		}
-	}
-	return res
-}
 
-func find(x int) int {
-	if p[x] != x {
-		p[x] = find(p[x])
-	}
-	return p[x]
-}
-```
 
 ### **...**
 
@@ -228,4 +139,4 @@ func find(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

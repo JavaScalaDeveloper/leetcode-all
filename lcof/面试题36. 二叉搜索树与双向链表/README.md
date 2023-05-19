@@ -52,40 +52,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-"""
 
-
-class Solution:
-    def treeToDoublyList(self, root: "Node") -> "Node":
-        def dfs(root):
-            if root is None:
-                return
-            dfs(root.left)
-            nonlocal head, pre
-            if pre:
-                pre.right = root
-            else:
-                head = root
-            root.left = pre
-            pre = root
-            dfs(root.right)
-
-        if root is None:
-            return None
-        head = pre = None
-        dfs(root)
-        head.left = pre
-        pre.right = head
-        return head
-```
 
 ### **Java**
 
@@ -143,200 +110,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    Node* left;
-    Node* right;
 
-    Node() {}
 
-    Node(int _val) {
-        val = _val;
-        left = NULL;
-        right = NULL;
-    }
 
-    Node(int _val, Node* _left, Node* _right) {
-        val = _val;
-        left = _left;
-        right = _right;
-    }
-};
-*/
-class Solution {
-public:
-    Node* treeToDoublyList(Node* root) {
-        if (!root) {
-            return nullptr;
-        }
-        Node* pre = nullptr;
-        Node* head = nullptr;
-        function<void(Node*)> dfs = [&](Node* root) {
-            if (!root) {
-                return;
-            }
-            dfs(root->left);
-            if (pre) {
-                pre->right = root;
-            } else {
-                head = root;
-            }
-            root->left = pre;
-            pre = root;
-            dfs(root->right);
-        };
 
-        dfs(root);
-        head->left = pre;
-        pre->right = head;
-        return head;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Left *Node
- *     Right *Node
- * }
- */
 
-func treeToDoublyList(root *Node) *Node {
-	if root == nil {
-		return nil
-	}
-	var head, pre *Node
-	var dfs func(*Node)
-	dfs = func(root *Node) {
-		if root == nil {
-			return
-		}
-		dfs(root.Left)
-		if pre != nil {
-			pre.Right = root
-		} else {
-			head = root
-		}
-		root.Left = pre
-		pre = root
-		dfs(root.Right)
-	}
-	dfs(root)
-	head.Left = pre
-	pre.Right = head
-	return head
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * // Definition for a Node.
- * function Node(val,left,right) {
- *    this.val = val;
- *    this.left = left;
- *    this.right = right;
- * };
- */
-/**
- * @param {Node} root
- * @return {Node}
- */
-var treeToDoublyList = function (root) {
-    if (!root) {
-        return null;
-    }
-    let head = null;
-    let pre = null;
-    const dfs = root => {
-        if (!root) {
-            return;
-        }
-        dfs(root.left);
-        if (pre) {
-            pre.right = root;
-        } else {
-            head = root;
-        }
-        root.left = pre;
-        pre = root;
-        dfs(root.right);
-    };
-    dfs(root);
-    head.left = pre;
-    pre.right = head;
-    return head;
-};
-```
 
-### **C#**
 
-```cs
-/*
-// Definition for a Node.
-public class Node {
-    public int val;
-    public Node left;
-    public Node right;
 
-    public Node() {}
 
-    public Node(int _val) {
-        val = _val;
-        left = null;
-        right = null;
-    }
 
-    public Node(int _val,Node _left,Node _right) {
-        val = _val;
-        left = _left;
-        right = _right;
-    }
-}
-*/
-
-public class Solution {
-    private Node head;
-    private Node pre;
-
-    public Node TreeToDoublyList(Node root) {
-        if (root == null) {
-            return null;
-        }
-        dfs(root);
-        head.left = pre;
-        pre.right = head;
-        return head;
-    }
-
-    private void dfs(Node root) {
-        if (root == null) {
-            return;
-        }
-        dfs(root.left);
-        if (pre != null) {
-            pre.right = root;
-        } else {
-            head = root;
-        }
-        root.left = pre;
-        pre = root;
-        dfs(root.right);
-    }
-}
-```
 
 ### **...**
 
@@ -344,4 +132,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

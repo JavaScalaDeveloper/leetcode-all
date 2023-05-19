@@ -71,35 +71,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countPairs(self, deliciousness: List[int]) -> int:
-        mod = 10**9 + 7
-        mx = max(deliciousness) << 1
-        cnt = Counter()
-        ans = 0
-        for d in deliciousness:
-            s = 1
-            while s <= mx:
-                ans = (ans + cnt[s - d]) % mod
-                s <<= 1
-            cnt[d] += 1
-        return ans
-```
 
-```python
-class Solution:
-    def countPairs(self, deliciousness: List[int]) -> int:
-        mod = 10**9 + 7
-        cnt = Counter(deliciousness)
-        ans = 0
-        for i in range(22):
-            s = 1 << i
-            for a, m in cnt.items():
-                if (b := s - a) in cnt:
-                    ans += m * (m - 1) if a == b else m * cnt[b]
-        return (ans >> 1) % mod
-```
+
+
 
 ### **Java**
 
@@ -151,103 +125,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int countPairs(vector<int>& deliciousness) {
-        int mx = *max_element(deliciousness.begin(), deliciousness.end()) << 1;
-        unordered_map<int, int> cnt;
-        int ans = 0;
-        for (auto& d : deliciousness) {
-            for (int s = 1; s <= mx; s <<= 1) {
-                ans = (ans + cnt[s - d]) % mod;
-            }
-            ++cnt[d];
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int countPairs(vector<int>& deliciousness) {
-        unordered_map<int, int> cnt;
-        for (int& d : deliciousness) ++cnt[d];
-        long long ans = 0;
-        for (int i = 0; i < 22; ++i) {
-            int s = 1 << i;
-            for (auto& [a, m] : cnt) {
-                int b = s - a;
-                if (!cnt.count(b)) continue;
-                ans += 1ll * m * (a == b ? (m - 1) : cnt[b]);
-            }
-        }
-        ans >>= 1;
-        return ans % mod;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countPairs(deliciousness []int) (ans int) {
-	mx := 0
-	for _, d := range deliciousness {
-		mx = max(mx, d)
-	}
-	mx <<= 1
-	const mod int = 1e9 + 7
-	cnt := map[int]int{}
-	for _, d := range deliciousness {
-		for s := 1; s <= mx; s <<= 1 {
-			ans = (ans + cnt[s-d]) % mod
-		}
-		cnt[d]++
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func countPairs(deliciousness []int) (ans int) {
-    cnt := map[int]int{}
-    for _, d := range deliciousness {
-        cnt[d]++
-    }
-    const mod int = 1e9 + 7
-    for i := 0; i < 22; i++ {
-        s := 1 << i
-        for a, m := range cnt {
-            b := s - a
-            if n, ok := cnt[b]; ok {
-                if a == b {
-                    ans += m * (m - 1)
-                } else {
-                    ans += m * n
-                }
-            }
-        }
-    }
-    ans >>= 1
-    return ans % mod
-}
-```
+
+
+
 
 ### **...**
 
@@ -255,4 +143,4 @@ func countPairs(deliciousness []int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

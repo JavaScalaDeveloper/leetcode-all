@@ -71,16 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def discountPrices(self, sentence: str, discount: int) -> str:
-        ans = []
-        for w in sentence.split():
-            if w[0] == '$' and w[1:].isdigit():
-                w = f'${int(w[1:]) * (1 - discount / 100):.2f}'
-            ans.append(w)
-        return ' '.join(ans)
-```
+
 
 ### **Java**
 
@@ -113,74 +104,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string discountPrices(string sentence, int discount) {
-        istringstream is(sentence);
-        string w;
-        string ans;
-        auto check = [](string s) {
-            if (s[0] != '$' || s.size() == 1) {
-                return false;
-            }
-            for (int i = 1; i < s.size(); ++i) {
-                if (!isdigit(s[i])) {
-                    return false;
-                }
-            }
-            return true;
-        };
-        while (is >> w) {
-            if (check(w)) {
-                long long v = stoll(w.substr(1)) * (100 - discount);
-                char t[20];
-                sprintf(t, "$%lld.%02lld", v / 100, v % 100);
-                ans += t;
-            } else {
-                ans += w;
-            }
-            ans += ' ';
-        }
-        ans.pop_back();
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func discountPrices(sentence string, discount int) string {
-	words := strings.Split(sentence, " ")
-	for i, w := range words {
-		if w[0] == '$' {
-			if v, err := strconv.Atoi(w[1:]); err == nil {
-				words[i] = fmt.Sprintf("$%.2f", float64(v*(100-discount))/100)
-			}
-		}
-	}
-	return strings.Join(words, " ")
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function discountPrices(sentence: string, discount: number): string {
-    const sell = (100 - discount) / 100;
-    let reg = new RegExp(/^(\$)(([1-9]\d*\.?\d*)|(0\.\d*))$/g);
-    let arr = sentence.split(' ').map(d => {
-        if (!reg.test(d)) return d;
-        return d.replace(reg, (s, $1, $2) => {
-            return `$${(sell * $2).toFixed(2)}`;
-        });
-    });
-    return arr.join(' ');
-}
-```
+
 
 ### **...**
 
@@ -188,4 +122,4 @@ function discountPrices(sentence: string, discount: number): string {
 
 ```
 
-<!-- tabs:end -->
+

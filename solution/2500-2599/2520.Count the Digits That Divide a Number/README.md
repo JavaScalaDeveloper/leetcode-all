@@ -58,15 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countDigits(self, num: int) -> int:
-        ans, x = 0, num
-        while x:
-            x, val = divmod(x, 10)
-            ans += num % val == 0
-        return ans
-```
+
 
 ### **Java**
 
@@ -86,69 +78,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countDigits(int num) {
-        int ans = 0;
-        for (int x = num; x > 0; x /= 10) {
-            if (num % (x % 10) == 0) {
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countDigits(num int) (ans int) {
-	for x := num; x > 0; x /= 10 {
-		if num%(x%10) == 0 {
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countDigits(num: number): number {
-    let ans = 0;
-    let cur = num;
-    while (cur !== 0) {
-        if (num % (cur % 10) === 0) {
-            ans++;
-        }
-        cur = Math.floor(cur / 10);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn count_digits(num: i32) -> i32 {
-        let mut ans = 0;
-        let mut cur = num;
-        while cur != 0 {
-            if num % (cur % 10) == 0 {
-                ans += 1;
-            }
-            cur /= 10;
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -172,4 +116,4 @@ int countDigits(int num) {
 
 ```
 
-<!-- tabs:end -->
+

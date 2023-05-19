@@ -59,22 +59,7 @@ nums 中所有元素的乘积是：2 * 4 * 8 * 16 = 1024 = 2<sup>10</sup> 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def distinctPrimeFactors(self, nums: List[int]) -> int:
-        s = set()
-        for n in nums:
-            i = 2
-            while i <= n // i:
-                if n % i == 0:
-                    s.add(i)
-                    while n % i == 0:
-                        n //= i
-                i += 1
-            if n > 1:
-                s.add(n)
-        return len(s)
-```
+
 
 ### **Java**
 
@@ -102,52 +87,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int distinctPrimeFactors(vector<int>& nums) {
-        unordered_set<int> s;
-        for (int& n :nums) {
-            for (int i = 2; i <= n / i; ++i) {
-                if (n % i == 0) {
-                    s.insert(i);
-                    while (n % i == 0) {
-                        n /= i;
-                    }
-                }
-            }
-            if (n > 1) {
-                s.insert(n);
-            }
-        }
-        return s.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func distinctPrimeFactors(nums []int) int {
-	s := map[int]bool{}
-	for _, n := range nums {
-		for i := 2; i <= n/i; i++ {
-			if n%i == 0 {
-				s[i] = true
-				for n%i == 0 {
-					n /= i
-				}
-			}
-		}
-		if n > 1 {
-			s[n] = true
-		}
-	}
-	return len(s)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -155,4 +101,4 @@ func distinctPrimeFactors(nums []int) int {
 
 ```
 
-<!-- tabs:end -->
+

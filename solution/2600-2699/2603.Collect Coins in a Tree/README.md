@@ -78,30 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def collectTheCoins(self, coins: List[int], edges: List[List[int]]) -> int:
-        g = defaultdict(set)
-        for a, b in edges:
-            g[a].add(b)
-            g[b].add(a)
-        n = len(coins)
-        q = deque(i for i in range(n) if len(g[i]) == 1 and coins[i] == 0)
-        while q:
-            i = q.popleft()
-            for j in g[i]:
-                g[j].remove(i)
-                if coins[j] == 0 and len(g[j]) == 1:
-                    q.append(j)
-            g[i].clear()
-        for k in range(2):
-            q = [i for i in range(n) if len(g[i]) == 1]
-            for i in q:
-                for j in g[i]:
-                    g[j].remove(i)
-                g[i].clear()
-        return sum(len(g[a]) > 0 and len(g[b]) > 0 for a, b in edges) * 2
-```
+
 
 ### **Java**
 
@@ -160,167 +137,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int collectTheCoins(vector<int>& coins, vector<vector<int>>& edges) {
-        int n = coins.size();
-        unordered_set<int> g[n];
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            g[a].insert(b);
-            g[b].insert(a);
-        }
-        queue<int> q;
-        for (int i = 0; i < n; ++i) {
-            if (coins[i] == 0 && g[i].size() == 1) {
-                q.push(i);
-            }
-        }
-        while (!q.empty()) {
-            int i = q.front();
-            q.pop();
-            for (int j : g[i]) {
-                g[j].erase(i);
-                if (coins[j] == 0 && g[j].size() == 1) {
-                    q.push(j);
-                }
-            }
-            g[i].clear();
-        }
-        for (int k = 0; k < 2; ++k) {
-            vector<int> q;
-            for (int i = 0; i < n; ++i) {
-                if (g[i].size() == 1) {
-                    q.push_back(i);
-                }
-            }
-            for (int i : q) {
-                for (int j : g[i]) {
-                    g[j].erase(i);
-                }
-                g[i].clear();
-            }
-        }
-        int ans = 0;
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            if (g[a].size() && g[b].size()) {
-                ans += 2;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func collectTheCoins(coins []int, edges [][]int) int {
-	n := len(coins)
-	g := make([]map[int]bool, n)
-	for i := range g {
-		g[i] = map[int]bool{}
-	}
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		g[a][b] = true
-		g[b][a] = true
-	}
-	q := []int{}
-	for i, c := range coins {
-		if c == 0 && len(g[i]) == 1 {
-			q = append(q, i)
-		}
-	}
-	for len(q) > 0 {
-		i := q[0]
-		q = q[1:]
-		for j := range g[i] {
-			delete(g[j], i)
-			if coins[j] == 0 && len(g[j]) == 1 {
-				q = append(q, j)
-			}
-		}
-		g[i] = map[int]bool{}
-	}
-	for k := 0; k < 2; k++ {
-		q := []int{}
-		for i := range coins {
-			if len(g[i]) == 1 {
-				q = append(q, i)
-			}
-		}
-		for _, i := range q {
-			for j := range g[i] {
-				delete(g[j], i)
-			}
-			g[i] = map[int]bool{}
-		}
-	}
-	ans := 0
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		if len(g[a]) > 0 && len(g[b]) > 0 {
-			ans += 2
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function collectTheCoins(coins: number[], edges: number[][]): number {
-    const n = coins.length;
-    const g: Set<number>[] = new Array(n).fill(0).map(() => new Set<number>());
-    for (const [a, b] of edges) {
-        g[a].add(b);
-        g[b].add(a);
-    }
-    let q: number[] = [];
-    for (let i = 0; i < n; ++i) {
-        if (coins[i] === 0 && g[i].size === 1) {
-            q.push(i);
-        }
-    }
-    while (q.length) {
-        const i = q.pop()!;
-        for (const j of g[i]) {
-            g[j].delete(i);
-            if (coins[j] === 0 && g[j].size === 1) {
-                q.push(j);
-            }
-        }
-        g[i].clear();
-    }
-    q = [];
-    for (let k = 0; k < 2; ++k) {
-        for (let i = 0; i < n; ++i) {
-            if (g[i].size === 1) {
-                q.push(i);
-            }
-        }
-        for (const i of q) {
-            for (const j of g[i]) {
-                g[j].delete(i);
-            }
-            g[i].clear();
-        }
-    }
-    let ans = 0;
-    for (const [a, b] of edges) {
-        if (g[a].size > 0 && g[b].size > 0) {
-            ans += 2;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -328,4 +155,4 @@ function collectTheCoins(coins: number[], edges: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

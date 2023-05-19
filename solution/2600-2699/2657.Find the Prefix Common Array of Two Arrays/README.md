@@ -65,19 +65,7 @@ i = 2：1，2 和 3 是两个数组的前缀公共元素，所以 C[2] = 3 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
-        ans = []
-        cnt1 = Counter()
-        cnt2 = Counter()
-        for a, b in zip(A, B):
-            cnt1[a] += 1
-            cnt2[b] += 1
-            t = sum(min(v, cnt2[x]) for x, v in cnt1.items())
-            ans.append(t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -102,72 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findThePrefixCommonArray(vector<int>& A, vector<int>& B) {
-        int n = A.size();
-        vector<int> ans(n);
-        vector<int> cnt1(n + 1), cnt2(n + 1);
-        for (int i = 0; i < n; ++i) {
-            ++cnt1[A[i]];
-            ++cnt2[B[i]];
-            for (int j = 1; j <= n; ++j) {
-                ans[i] += min(cnt1[j], cnt2[j]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findThePrefixCommonArray(A []int, B []int) []int {
-	n := len(A)
-	cnt1 := make([]int, n+1)
-	cnt2 := make([]int, n+1)
-	ans := make([]int, n)
-	for i, a := range A {
-		b := B[i]
-		cnt1[a]++
-		cnt2[b]++
-		for j := 1; j <= n; j++ {
-			ans[i] += min(cnt1[j], cnt2[j])
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findThePrefixCommonArray(A: number[], B: number[]): number[] {
-    const n = A.length;
-    const cnt1: number[] = new Array(n + 1).fill(0);
-    const cnt2: number[] = new Array(n + 1).fill(0);
-    const ans: number[] = new Array(n).fill(0);
-    for (let i = 0; i < n; ++i) {
-        ++cnt1[A[i]];
-        ++cnt2[B[i]];
-        for (let j = 1; j <= n; ++j) {
-            ans[i] += Math.min(cnt1[j], cnt2[j]);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -175,4 +108,4 @@ function findThePrefixCommonArray(A: number[], B: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

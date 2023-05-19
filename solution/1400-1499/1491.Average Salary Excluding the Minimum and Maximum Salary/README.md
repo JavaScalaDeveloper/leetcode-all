@@ -69,12 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def average(self, salary: List[int]) -> float:
-        s = sum(salary) - min(salary) - max(salary)
-        return s / (len(salary) - 2)
-```
+
 
 ### **Java**
 
@@ -96,89 +91,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double average(vector<int>& salary) {
-        int s = 0;
-        int mi = 1e7, mx = 0;
-        for (int v : salary) {
-            s += v;
-            mi = min(mi, v);
-            mx = max(mx, v);
-        }
-        s -= (mi + mx);
-        return (double) s / (salary.size() - 2);
-    }
-};
-```
 
-### **Go**
 
-```go
-func average(salary []int) float64 {
-	s := 0
-	mi, mx := 10000000, 0
-	for _, v := range salary {
-		s += v
-		mi = min(mi, v)
-		mx = max(mx, v)
-	}
-	s -= (mi + mx)
-	return float64(s) / float64(len(salary)-2)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function average(salary: number[]): number {
-    let max = -Infinity;
-    let min = Infinity;
-    let sum = 0;
-    for (const v of salary) {
-        sum += v;
-        max = Math.max(max, v);
-        min = Math.min(min, v);
-    }
-    return (sum - max - min) / (salary.length - 2);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn average(salary: Vec<i32>) -> f64 {
-        let n = salary.len() as i32;
-        let mut min = i32::MAX;
-        let mut max = i32::MIN;
-        let mut sum = 0;
-        for &num in salary.iter() {
-            min = min.min(num);
-            max = max.max(num);
-            sum += num;
-        }
-        f64::from(sum - min - max) / f64::from(n - 2)
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -199,26 +126,9 @@ double average(int* salary, int salarySize) {
 }
 ```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $salary
-     * @return Float
-     */
-    function average($salary) {
-        $max = $sum = 0;
-        $min = 10 ** 6;
-        for ($i = 0; $i < count($salary); $i++) {
-            $min = min($min, $salary[$i]);
-            $max = max($max, $salary[$i]);
-            $sum += $salary[$i];
-        }
-        return ($sum - $max - $min) / (count($salary) - 2);
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -226,4 +136,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

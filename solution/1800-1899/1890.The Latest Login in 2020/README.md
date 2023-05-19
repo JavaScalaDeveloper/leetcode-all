@@ -81,4 +81,4 @@ WHERE YEAR(time_stamp) = 2020
 GROUP BY user_id;
 ```
 
-<!-- tabs:end -->
+

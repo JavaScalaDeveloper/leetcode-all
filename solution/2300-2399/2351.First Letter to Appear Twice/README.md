@@ -69,26 +69,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def repeatedCharacter(self, s: str) -> str:
-        cnt = Counter()
-        for c in s:
-            cnt[c] += 1
-            if cnt[c] == 2:
-                return c
-```
 
-```python
-class Solution:
-    def repeatedCharacter(self, s: str) -> str:
-        mask = 0
-        for c in s:
-            i = ord(c) - ord('a')
-            if mask >> i & 1:
-                return c
-            mask |= 1 << i
-```
+
+
 
 ### **Java**
 
@@ -123,124 +106,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    char repeatedCharacter(string s) {
-        int cnt[26]{};
-        for (int i = 0; ; ++i) {
-            if (++cnt[s[i] - 'a'] == 2) {
-                return s[i];
-            }
-        }
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    char repeatedCharacter(string s) {
-        int mask = 0;
-        for (int i = 0; ; ++i) {
-            if (mask >> (s[i] - 'a') & 1) {
-                return s[i];
-            }
-            mask |= 1 << (s[i] - 'a');
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func repeatedCharacter(s string) byte {
-	cnt := [26]int{}
-	for i := 0; ; i++ {
-		cnt[s[i]-'a']++
-		if cnt[s[i]-'a'] == 2 {
-			return s[i]
-		}
-	}
-}
-```
 
-```go
-func repeatedCharacter(s string) byte {
-	mask := 0
-	for i := 0; ; i++ {
-		if mask>>(s[i]-'a')&1 == 1 {
-			return s[i]
-		}
-		mask |= 1 << (s[i] - 'a')
-	}
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function repeatedCharacter(s: string): string {
-    const vis = new Array(26).fill(false);
-    for (const c of s) {
-        const i = c.charCodeAt(0) - 'a'.charCodeAt(0);
-        if (vis[i]) {
-            return c;
-        }
-        vis[i] = true;
-    }
-    return ' ';
-}
-```
 
-```ts
-function repeatedCharacter(s: string): string {
-    let mask = 0;
-    for (const c of s) {
-        const i = c.charCodeAt(0) - 'a'.charCodeAt(0);
-        if (mask & (1 << i)) {
-            return c;
-        }
-        mask |= 1 << i;
-    }
-    return ' ';
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn repeated_character(s: String) -> char {
-        let mut vis = [false; 26];
-        for &c in s.as_bytes() {
-            if vis[(c - b'a') as usize] {
-                return c as char;
-            }
-            vis[(c - b'a') as usize] = true;
-        }
-        ' '
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn repeated_character(s: String) -> char {
-        let mut mask = 0;
-        for &c in s.as_bytes() {
-            if mask & 1 << (c - b'a') as i32 != 0 {
-                return c as char;
-            }
-            mask |= 1 << (c - b'a') as i32;
-        }
-        ' '
-    }
-}
-```
+
+
+
+
+
 
 ### **C**
 
@@ -270,22 +158,9 @@ char repeatedCharacter(char *s) {
 }
 ```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @return String
-     */
-    function repeatedCharacter($s) {
-        for ($i = 0;; $i++) {
-            $hashtable[$s[$i]] += 1;
-            if ($hashtable[$s[$i]] == 2) return $s[$i];
-        }
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -293,4 +168,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

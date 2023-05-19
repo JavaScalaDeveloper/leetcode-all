@@ -51,22 +51,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shuffle(self, nums: List[int], n: int) -> List[int]:
-        ans = []
-        for i in range(n):
-            ans.append(nums[i])
-            ans.append(nums[i + n])
-        return ans
-```
 
-```python
-class Solution:
-    def shuffle(self, nums: List[int], n: int) -> List[int]:
-        nums[::2], nums[1::2] = nums[:n], nums[n:]
-        return nums
-```
+
+
 
 ### **Java**
 
@@ -87,44 +74,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function shuffle(nums: number[], n: number): number[] {
-    let ans = [];
-    for (let i = 0; i < n; i++) {
-        ans.push(nums[i], nums[n + i]);
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> shuffle(vector<int>& nums, int n) {
-        vector<int> ans;
-        for (int i = 0; i < n; ++i) {
-            ans.push_back(nums[i]);
-            ans.push_back(nums[i + n]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func shuffle(nums []int, n int) []int {
-	var ans []int
-	for i := 0; i < n; i++ {
-		ans = append(ans, nums[i])
-		ans = append(ans, nums[i+n])
-	}
-	return ans
-}
-```
+
+
+
+
+
 
 ### **C**
 
@@ -143,45 +101,11 @@ int *shuffle(int *nums, int numsSize, int n, int *returnSize) {
 }
 ```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn shuffle(nums: Vec<i32>, n: i32) -> Vec<i32> {
-        let n = n as usize;
-        let mut res = Vec::new();
-        for i in 0..n {
-            res.push(nums[i]);
-            res.push(nums[n + i]);
-        }
-        res
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn shuffle(mut nums: Vec<i32>, n: i32) -> Vec<i32> {
-        let n = n as usize;
-        for i in 0..n * 2 {
-            let mut j = i;
-            while nums[i] > 0 {
-                j = if j < n {
-                    2 * j
-                } else {
-                    2 * (j - n) + 1
-                };
-                nums.swap(i, j);
-                nums[j] *= -1;
-            }
-        }
-        for i in 0..n * 2 {
-            nums[i] *= -1;
-        }
-        nums
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -189,4 +113,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

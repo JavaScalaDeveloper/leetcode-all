@@ -75,34 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
-
-class Solution:
-    def getTargetCopy(
-        self, original: TreeNode, cloned: TreeNode, target: TreeNode
-    ) -> TreeNode:
-        res = None
-
-        def dfs(original, cloned):
-            nonlocal res
-            if cloned is None:
-                return
-            if original == target:
-                res = cloned
-                return
-            dfs(original.left, cloned.left)
-            dfs(original.right, cloned.right)
-
-        dfs(original, cloned)
-        return res
-```
 
 ### **Java**
 
@@ -142,74 +115,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 
-class Solution {
-public:
-    TreeNode* res;
 
-    TreeNode* getTargetCopy(TreeNode* original, TreeNode* cloned, TreeNode* target) {
-        dfs(original, cloned, target);
-        return res;
-    }
-
-    void dfs(TreeNode* original, TreeNode* cloned, TreeNode* target) {
-        if (!cloned) return;
-        if (original == target) {
-            res = cloned;
-            return;
-        }
-        dfs(original->left, cloned->left, target);
-        dfs(original->right, cloned->right, target);
-    }
-};
-```
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function getTargetCopy(
-    original: TreeNode | null,
-    cloned: TreeNode | null,
-    target: TreeNode | null,
-): TreeNode | null {
-    if (cloned === null) {
-        return null;
-    }
-    if (cloned.val === target.val) {
-        return cloned;
-    }
-    return (
-        getTargetCopy(original, cloned.left, target) ||
-        getTargetCopy(original, cloned.right, target)
-    );
-}
-```
 
 ### **...**
 
@@ -217,4 +129,4 @@ function getTargetCopy(
 
 ```
 
-<!-- tabs:end -->
+

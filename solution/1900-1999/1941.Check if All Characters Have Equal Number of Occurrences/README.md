@@ -46,12 +46,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def areOccurrencesEqual(self, s: str) -> bool:
-        cnt = Counter(s)
-        return len(set(cnt.values())) == 1
-```
+
 
 ### **Java**
 
@@ -80,40 +75,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool areOccurrencesEqual(string s) {
-        vector<int> cnt(26);
-        for (char& c : s) ++cnt[c - 'a'];
-        unordered_set<int> ss;
-        for (int& v : cnt)
-            if (v) ss.insert(v);
-        return ss.size() == 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func areOccurrencesEqual(s string) bool {
-	cnt := make([]int, 26)
-	for _, c := range s {
-		cnt[c-'a']++
-	}
-	ss := map[int]bool{}
-	for _, v := range cnt {
-		if v == 0 {
-			continue
-		}
-		ss[v] = true
-	}
-	return len(ss) == 1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -121,4 +89,4 @@ func areOccurrencesEqual(s string) bool {
 
 ```
 
-<!-- tabs:end -->
+

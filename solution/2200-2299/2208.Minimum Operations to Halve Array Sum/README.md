@@ -61,21 +61,7 @@ nums 的和减小了 31 - 14.5 = 16.5 ，减小的部分超过了初始数组和
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def halveArray(self, nums: List[int]) -> int:
-        s = sum(nums) / 2
-        h = []
-        for v in nums:
-            heappush(h, -v)
-        ans = 0
-        while s > 0:
-            t = -heappop(h) / 2
-            s -= t
-            heappush(h, -t)
-            ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -103,63 +89,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int halveArray(vector<int>& nums) {
-        priority_queue<double> q;
-        long long s = 0;
-        for (int& v : nums) {
-            s += v;
-            q.push(v);
-        }
-        double d = s / 2.0;
-        int ans = 0;
-        while (d > 0) {
-            double t = q.top() / 2;
-            q.pop();
-            d -= t;
-            q.push(t);
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func halveArray(nums []int) (ans int) {
-    half := 0
-    for i := range nums {
-        nums[i] <<= 20
-        half += nums[i]
-    }
-    h := hp{nums}
-    heap.Init(&h)
-    for half >>= 1; half > 0; ans++ {
-        half -= h.IntSlice[0] >> 1
-        h.IntSlice[0] >>= 1
-        heap.Fix(&h, 0)
-    }
-    return
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h hp) Less(i, j int) bool { return h.IntSlice[i] > h.IntSlice[j] }
-func (hp) Push(interface{})     {}
-func (hp) Pop() (_ interface{}) { return }
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -167,4 +107,4 @@ func (hp) Pop() (_ interface{}) { return }
 
 ```
 
-<!-- tabs:end -->
+

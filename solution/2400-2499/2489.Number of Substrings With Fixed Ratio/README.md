@@ -86,20 +86,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def fixedRatio(self, s: str, num1: int, num2: int) -> int:
-        n0 = n1 = 0
-        ans = 0
-        cnt = Counter({0: 1})
-        for c in s:
-            n0 += c == '0'
-            n1 += c == '1'
-            x = n1 * num1 - n0 * num2
-            ans += cnt[x]
-            cnt[x] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -124,50 +111,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using ll = long long;
 
-class Solution {
-public:
-    long long fixedRatio(string s, int num1, int num2) {
-        ll n0 = 0, n1 = 0;
-        ll ans = 0;
-        unordered_map<ll, ll> cnt;
-        cnt[0] = 1;
-        for (char& c : s) {
-            n0 += c == '0';
-            n1 += c == '1';
-            ll x = n1 * num1 - n0 * num2;
-            ans += cnt[x];
-            ++cnt[x];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func fixedRatio(s string, num1 int, num2 int) int64 {
-	n0, n1 := 0, 0
-	ans := 0
-	cnt := map[int]int{0: 1}
-	for _, c := range s {
-		if c == '0' {
-			n0++
-		} else {
-			n1++
-		}
-		x := n1*num1 - n0*num2
-		ans += cnt[x]
-		cnt[x]++
-	}
-	return int64(ans)
-}
-```
+
+
+
 
 ### **...**
 
@@ -175,4 +125,4 @@ func fixedRatio(s string, num1 int, num2 int) int64 {
 
 ```
 
-<!-- tabs:end -->
+

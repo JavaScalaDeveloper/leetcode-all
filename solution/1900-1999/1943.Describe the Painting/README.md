@@ -92,19 +92,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def splitPainting(self, segments: List[List[int]]) -> List[List[int]]:
-        d = defaultdict(int)
-        for l, r, c in segments:
-            d[l] += c
-            d[r] -= c
-        s = sorted([[k, v] for k, v in d.items()])
-        n = len(s)
-        for i in range(1, n):
-            s[i][1] += s[i - 1][1]
-        return [[s[i][0], s[i + 1][0], s[i][1]] for i in range(n - 1) if s[i][1]]
-```
+
 
 ### **Java**
 
@@ -139,34 +127,9 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<long long>> splitPainting(vector<vector<int>>& segments) {
-        map<int, long long> d;
-        for (auto& e : segments) {
-            int l = e[0], r = e[1], c = e[2];
-            d[l] += c;
-            d[r] -= c;
-        }
-        vector<vector<long long>> ans;
-        long long i, j, cur = 0;
-        for (auto& it : d) {
-            if (it == *d.begin())
-                i = it.first;
-            else {
-                j = it.first;
-                if (cur > 0) ans.push_back({i, j, cur});
-                i = j;
-            }
-            cur += it.second;
-        }
-        return ans;
-    }
-};
-```
+
+
 
 ### **...**
 
@@ -174,4 +137,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

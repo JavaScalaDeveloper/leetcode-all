@@ -44,34 +44,11 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def findRepeatNumber(self, nums: List[int]) -> int:
-        for a, b in pairwise(sorted(nums)):
-            if a == b:
-                return a
-```
 
-```python
-class Solution:
-    def findRepeatNumber(self, nums: List[int]) -> int:
-        vis = set()
-        for v in nums:
-            if v in vis:
-                return v
-            vis.add(v)
-```
 
-```python
-class Solution:
-    def findRepeatNumber(self, nums: List[int]) -> int:
-        for i, v in enumerate(nums):
-            while v != i:
-                if nums[v] == v:
-                    return v
-                nums[i], nums[v] = nums[v], nums[i]
-                v = nums[i]
-```
+
+
+
 
 ### **Java**
 
@@ -119,167 +96,37 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findRepeatNumber(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        for (int i = 0; ; ++i) {
-            if (nums[i] == nums[i + 1]) {
-                return nums[i];
-            }
-        }
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int findRepeatNumber(vector<int>& nums) {
-        unordered_set<int> vis;
-        for (int i = 0; ; ++i) {
-            if (vis.count(nums[i])) {
-                return nums[i];
-            }
-            vis.insert(nums[i]);
-        }
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int findRepeatNumber(vector<int>& nums) {
-        for (int i = 0; ; ++i) {
-            while (nums[i] != i) {
-                int j = nums[i];
-                if (nums[j] == j) {
-                    return j;
-                }
-                swap(nums[i], nums[j]);
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func findRepeatNumber(nums []int) int {
-	sort.Ints(nums)
-	for i := 0; ; i++ {
-		if nums[i] == nums[i+1] {
-			return nums[i]
-		}
-	}
-}
-```
 
-```go
-func findRepeatNumber(nums []int) int {
-	vis := map[int]bool{}
-	for i := 0; ; i++ {
-		if vis[nums[i]] {
-			return nums[i]
-		}
-		vis[nums[i]] = true
-	}
-}
-```
 
-```go
-func findRepeatNumber(nums []int) int {
-	for i := 0; ; i++ {
-		for nums[i] != i {
-			j := nums[i]
-			if nums[j] == j {
-				return j
-			}
-			nums[i], nums[j] = nums[j], nums[i]
-		}
-	}
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var findRepeatNumber = function (nums) {
-    for (let i = 0; ; ++i) {
-        while (nums[i] != i) {
-            const j = nums[i];
-            if (nums[j] == j) {
-                return j;
-            }
-            [nums[i], nums[j]] = [nums[j], nums[i]];
-        }
-    }
-};
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findRepeatNumber(nums: number[]): number {
-    for (let i = 0; ; ++i) {
-        while (nums[i] != i) {
-            const j = nums[i];
-            if (nums[j] == j) {
-                return j;
-            }
-            [nums[i], nums[j]] = [nums[j], nums[i]];
-        }
-    }
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn find_repeat_number(mut nums: Vec<i32>) -> i32 {
-        for i in 0..nums.len() {
-            while i as i32 != nums[i] {
-                let j = nums[i] as usize;
-                if nums[i] == nums[j] {
-                    return nums[i];
-                }
-                nums.swap(i, j);
-            }
-        }
-        -1
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int FindRepeatNumber(int[] nums) {
-        for (int i = 0; ; ++i) {
-            while (nums[i] != i) {
-                int j = nums[i];
-                if (nums[j] == j) {
-                    return j;
-                }
-                int t = nums[i];
-                nums[i] = nums[j];
-                nums[j] = t;
-            }
-        }
-    }
-}
-```
+
+
+
+
+
 
 ### **Kotlin**
 
@@ -311,4 +158,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

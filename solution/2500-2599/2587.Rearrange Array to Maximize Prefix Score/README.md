@@ -57,17 +57,7 @@ prefix = [2,5,6,5,2,2,-1] ，分数为 6 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxScore(self, nums: List[int]) -> int:
-        nums.sort(reverse=True)
-        s = 0
-        for i, x in enumerate(nums):
-            s += x
-            if s <= 0:
-                return i
-        return len(nums)
-```
+
 
 ### **Java**
 
@@ -90,59 +80,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxScore(vector<int>& nums) {
-        sort(nums.rbegin(), nums.rend());
-        long long s = 0;
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            s += nums[i];
-            if (s <= 0) {
-                return i;
-            }
-        }
-        return n;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxScore(nums []int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	s := 0
-	for i := range nums {
-		s += nums[n-i-1]
-		if s <= 0 {
-			return i
-		}
-	}
-	return n
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxScore(nums: number[]): number {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    let s = 0;
-    for (let i = 0; i < n; ++i) {
-        s += nums[n - i - 1];
-        if (s <= 0) {
-            return i;
-        }
-    }
-    return n;
-}
-```
+
 
 ### **...**
 
@@ -150,4 +98,4 @@ function maxScore(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

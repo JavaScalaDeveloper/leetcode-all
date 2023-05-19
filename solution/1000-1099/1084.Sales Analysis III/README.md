@@ -100,4 +100,4 @@ GROUP BY  p.product_id
 HAVING SUM(s.sale_date < '2019-01-01') = 0 AND SUM(s.sale_date > '2019-03-31') = 0;
 ```
 
-<!-- tabs:end -->
+

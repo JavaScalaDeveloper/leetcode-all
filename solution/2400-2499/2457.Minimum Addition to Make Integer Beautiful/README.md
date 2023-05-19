@@ -64,26 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makeIntegerBeautiful(self, n: int, target: int) -> int:
-        def f(x):
-            v = 0
-            while x:
-                v += x % 10
-                x //= 10
-            return v
 
-        x = 0
-        while f(n + x) > target:
-            y = n + x
-            p = 10
-            while y % 10 == 0:
-                y //= 10
-                p *= 10
-            x = (y // 10 + 1) * p - n
-        return x
-```
 
 ### **Java**
 
@@ -116,68 +97,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using ll = long long;
 
-class Solution {
-public:
-    long long makeIntegerBeautiful(long long n, int target) {
-        auto f = [](ll x) {
-            int v = 0;
-            while (x) {
-                v += x % 10;
-                x /= 10;
-            }
-            return v;
-        };
-        ll x = 0;
-        while (f(n + x) > target) {
-            ll y = n + x;
-            ll p = 10;
-            while (y % 10 == 0) {
-                y /= 10;
-                p *= 10;
-            }
-            x = (y / 10 + 1) * p - n;
-        }
-        return x;
-    }
-};
-```
 
-### **Go**
 
-```go
-func makeIntegerBeautiful(n int64, target int) int64 {
-	f := func(x int64) int {
-		v := 0
-		for x > 0 {
-			v += int(x % 10)
-			x /= 10
-		}
-		return v
-	}
-	var x int64
-	for f(n+x) > target {
-		y := n + x
-		var p int64 = 10
-		for y%10 == 0 {
-			y /= 10
-			p *= 10
-		}
-		x = (y/10+1)*p - n
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -185,4 +115,4 @@ func makeIntegerBeautiful(n int64, target int) int64 {
 
 ```
 
-<!-- tabs:end -->
+

@@ -65,14 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumValue(self, strs: List[str]) -> int:
-        def f(s):
-            return int(s) if all(c.isdigit() for c in s) else len(s)
 
-        return max(f(s) for s in strs)
-```
 
 ### **Java**
 
@@ -99,77 +92,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumValue(vector<string>& strs) {
-        auto f = [](string& s) {
-            int n = s.size(), m = 0;
-            for (char& c : s) {
-                if (!isdigit(c)) return n;
-                m = m * 10 + (c - '0');
-            }
-            return m;
-        };
-        int ans = 0;
-        for (auto& s : strs) ans = max(ans, f(s));
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumValue(strs []string) (ans int) {
-	f := func(s string) int {
-		n, m := len(s), 0
-		for _, c := range s {
-			if c >= 'a' && c <= 'z' {
-				return n
-			}
-			m = m*10 + int(c-'0')
-		}
-		return m
-	}
-	for _, s := range strs {
-		if t := f(s); ans < t {
-			ans = t
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumValue(strs: string[]): number {
-    let ans = 0;
-    for (const s of strs) {
-        const num = Number(s);
-        ans = Math.max(ans, Number.isNaN(num) ? s.length : num);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn maximum_value(strs: Vec<String>) -> i32 {
-        let mut ans = 0;
-        for s in strs.iter() {
-            let num = s.parse().unwrap_or(s.len());
-            ans = ans.max(num);
-        }
-        ans as i32
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -204,4 +141,4 @@ int maximumValue(char **strs, int strsSize) {
 
 ```
 
-<!-- tabs:end -->
+

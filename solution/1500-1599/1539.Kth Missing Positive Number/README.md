@@ -57,20 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findKthPositive(self, arr: List[int], k: int) -> int:
-        if arr[0] > k:
-            return k
-        left, right = 0, len(arr)
-        while left < right:
-            mid = (left + right) >> 1
-            if arr[mid] - mid - 1 >= k:
-                right = mid
-            else:
-                left = mid + 1
-        return arr[left - 1] + k - (arr[left - 1] - (left - 1) - 1)
-```
+
 
 ### **Java**
 
@@ -96,45 +83,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findKthPositive(vector<int>& arr, int k) {
-        if (arr[0] > k) return k;
-        int left = 0, right = arr.size();
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (arr[mid] - mid - 1 >= k)
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return arr[left - 1] + k - (arr[left - 1] - (left - 1) - 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func findKthPositive(arr []int, k int) int {
-	if arr[0] > k {
-		return k
-	}
-	left, right := 0, len(arr)
-	for left < right {
-		mid := (left + right) >> 1
-		if arr[mid]-mid-1 >= k {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return arr[left-1] + k - (arr[left-1] - (left - 1) - 1)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -142,4 +97,4 @@ func findKthPositive(arr []int, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

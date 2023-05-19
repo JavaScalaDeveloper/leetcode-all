@@ -72,28 +72,7 @@ timeMap.get("foo", 5);         // 返回 "bar2"
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class TimeMap:
 
-    def __init__(self):
-        self.ktv = defaultdict(list)
-
-    def set(self, key: str, value: str, timestamp: int) -> None:
-        self.ktv[key].append((timestamp, value))
-
-    def get(self, key: str, timestamp: int) -> str:
-        if key not in self.ktv:
-            return ''
-        tv = self.ktv[key]
-        i = bisect_right(tv, (timestamp, chr(127)))
-        return tv[i - 1][1] if i else ''
-
-
-# Your TimeMap object will be instantiated and called as such:
-# obj = TimeMap()
-# obj.set(key,value,timestamp)
-# param_2 = obj.get(key,timestamp)
-```
 
 ### **Java**
 
@@ -128,74 +107,13 @@ class TimeMap {
  */
 ```
 
-### **C++**
 
-```cpp
-class TimeMap {
-public:
-    TimeMap() {
 
-    }
 
-    void set(string key, string value, int timestamp) {
-        ktv[key].emplace_back(timestamp, value);
-    }
 
-    string get(string key, int timestamp) {
-        auto& pairs = ktv[key];
-        pair<int, string> p = {timestamp, string({127})};
-        auto i = upper_bound(pairs.begin(), pairs.end(), p);
-        return i == pairs.begin() ? "" : (i - 1)->second;
-    }
 
-private:
-    unordered_map<string, vector<pair<int, string>>> ktv;
-};
 
-/**
- * Your TimeMap object will be instantiated and called as such:
- * TimeMap* obj = new TimeMap();
- * obj->set(key,value,timestamp);
- * string param_2 = obj->get(key,timestamp);
- */
-```
 
-### **Go**
-
-```go
-type TimeMap struct {
-	ktv map[string][]pair
-}
-
-func Constructor() TimeMap {
-	return TimeMap{map[string][]pair{}}
-}
-
-func (this *TimeMap) Set(key string, value string, timestamp int) {
-	this.ktv[key] = append(this.ktv[key], pair{timestamp, value})
-}
-
-func (this *TimeMap) Get(key string, timestamp int) string {
-	pairs := this.ktv[key]
-	i := sort.Search(len(pairs), func(i int) bool { return pairs[i].t > timestamp })
-	if i > 0 {
-		return pairs[i-1].v
-	}
-	return ""
-}
-
-type pair struct {
-	t int
-	v string
-}
-
-/**
- * Your TimeMap object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Set(key,value,timestamp);
- * param_2 := obj.Get(key,timestamp);
- */
-```
 
 ### **...**
 
@@ -203,4 +121,4 @@ type pair struct {
 
 ```
 
-<!-- tabs:end -->
+

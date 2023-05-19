@@ -54,30 +54,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findLengthOfLCIS(self, nums: List[int]) -> int:
-        res, n = 1, len(nums)
-        i = 0
-        while i < n:
-            j = i + 1
-            while j < n and nums[j] > nums[j - 1]:
-                j += 1
-            res = max(res, j - i)
-            i = j
-        return res
-```
 
-```python
-class Solution:
-    def findLengthOfLCIS(self, nums: List[int]) -> int:
-        n = len(nums)
-        res = f = 1
-        for i in range(1, n):
-            f = 1 + (f if nums[i - 1] < nums[i] else 0)
-            res = max(res, f)
-        return res
-```
+
+
 
 ### **Java**
 
@@ -115,83 +94,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findLengthOfLCIS(vector<int>& nums) {
-        int res = 1;
-        for (int i = 1, f = 1; i < nums.size(); ++i) {
-            f = 1 + (nums[i - 1] < nums[i] ? f : 0);
-            res = max(res, f);
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findLengthOfLCIS(nums []int) int {
-	res, f := 1, 1
-	for i := 1; i < len(nums); i++ {
-		if nums[i-1] < nums[i] {
-			f += 1
-			res = max(res, f)
-		} else {
-			f = 1
-		}
-	}
-	return res
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findLengthOfLCIS(nums: number[]): number {
-    const n = nums.length;
-    let res = 1;
-    let i = 0;
-    for (let j = 1; j < n; j++) {
-        if (nums[j - 1] >= nums[j]) {
-            res = Math.max(res, j - i);
-            i = j;
-        }
-    }
-    return Math.max(res, n - i);
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums
-     * @return Integer
-     */
-    function findLengthOfLCIS($nums) {
-        $tmp = $max = 1;
-        for ($i = 0; $i < count($nums) - 1; $i++) {
-            if ($nums[$i] < $nums[$i + 1]) {
-                $tmp++;
-                $max = max($max, $tmp);
-            } else $tmp = 1;
-        }
-        return $max;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -199,4 +116,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

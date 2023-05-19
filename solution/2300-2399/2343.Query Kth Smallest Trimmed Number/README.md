@@ -86,17 +86,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestTrimmedNumbers(
-        self, nums: List[str], queries: List[List[int]]
-    ) -> List[int]:
-        ans = []
-        for k, trim in queries:
-            t = sorted((v[-trim:], i) for i, v in enumerate(nums))
-            ans.append(t[k - 1][1])
-        return ans
-```
+
 
 ### **Java**
 
@@ -125,54 +115,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> smallestTrimmedNumbers(vector<string>& nums, vector<vector<int>>& queries) {
-        int n = nums.size();
-        vector<pair<string, int>> t(n);
-        vector<int> ans;
-        for (auto& q : queries) {
-            int k = q[0], trim = q[1];
-            for (int j = 0; j < n; ++j) {
-                t[j] = {nums[j].substr(nums[j].size() - trim), j};
-            }
-            sort(t.begin(), t.end());
-            ans.push_back(t[k - 1].second);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestTrimmedNumbers(nums []string, queries [][]int) []int {
-	type pair struct {
-		s string
-		i int
-	}
-	ans := make([]int, len(queries))
-	t := make([]pair, len(nums))
-	for i, q := range queries {
-		for j, s := range nums {
-			t[j] = pair{s[len(s)-q[1]:], j}
-		}
-		sort.Slice(t, func(i, j int) bool { a, b := t[i], t[j]; return a.s < b.s || a.s == b.s && a.i < b.i })
-		ans[i] = t[q[0]-1].i
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -180,4 +133,4 @@ func smallestTrimmedNumbers(nums []string, queries [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -102,21 +102,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumGood(self, statements: List[List[int]]) -> int:
-        def check(mask):
-            cnt = 0
-            for i, s in enumerate(statements):
-                if (mask >> i) & 1:
-                    for j, v in enumerate(s):
-                        if v < 2 and ((mask >> j) & 1) != v:
-                            return 0
-                    cnt += 1
-            return cnt
 
-        return max(check(mask) for mask in range(1, 1 << len(statements)))
-```
 
 ### **Java**
 
@@ -151,95 +137,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumGood(vector<vector<int>>& statements) {
-        int ans = 0;
-        for (int mask = 1; mask < 1 << statements.size(); ++mask) ans = max(ans, check(mask, statements));
-        return ans;
-    }
 
-    int check(int mask, vector<vector<int>>& statements) {
-        int cnt = 0;
-        int n = statements.size();
-        for (int i = 0; i < n; ++i) {
-            if ((mask >> i) & 1) {
-                for (int j = 0; j < n; ++j) {
-                    int v = statements[i][j];
-                    if (v < 2 && ((mask >> j) & 1) != v) return 0;
-                }
-                ++cnt;
-            }
-        }
-        return cnt;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumGood(statements [][]int) int {
-	n := len(statements)
-	check := func(mask int) int {
-		cnt := 0
-		for i, s := range statements {
-			if ((mask >> i) & 1) == 1 {
-				for j, v := range s {
-					if v < 2 && ((mask>>j)&1) != v {
-						return 0
-					}
-				}
-				cnt++
-			}
-		}
-		return cnt
-	}
-	ans := 0
-	for mask := 1; mask < 1<<n; mask++ {
-		ans = max(ans, check(mask))
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumGood(statements: number[][]): number {
-    const n = statements.length;
-    function check(mask) {
-        let cnt = 0;
-        for (let i = 0; i < n; ++i) {
-            if ((mask >> i) & 1) {
-                for (let j = 0; j < n; ++j) {
-                    const v = statements[i][j];
-                    if (v < 2 && ((mask >> j) & 1) != v) {
-                        return 0;
-                    }
-                }
-                ++cnt;
-            }
-        }
-        return cnt;
-    }
-    let ans = 0;
-    for (let mask = 1; mask < 1 << n; ++mask) {
-        ans = Math.max(ans, check(mask));
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -247,4 +155,4 @@ function maximumGood(statements: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

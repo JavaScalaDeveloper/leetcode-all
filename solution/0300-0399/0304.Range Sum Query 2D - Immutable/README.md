@@ -81,30 +81,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class NumMatrix:
-    def __init__(self, matrix: List[List[int]]):
-        m, n = len(matrix), len(matrix[0])
-        self.s = [[0] * (n + 1) for _ in range(m + 1)]
-        for i, row in enumerate(matrix):
-            for j, v in enumerate(row):
-                self.s[i + 1][j + 1] = (
-                    self.s[i][j + 1] + self.s[i + 1][j] - self.s[i][j] + v
-                )
 
-    def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:
-        return (
-            self.s[row2 + 1][col2 + 1]
-            - self.s[row2 + 1][col1]
-            - self.s[row1][col2 + 1]
-            + self.s[row1][col1]
-        )
-
-
-# Your NumMatrix object will be instantiated and called as such:
-# obj = NumMatrix(matrix)
-# param_1 = obj.sumRegion(row1,col1,row2,col2)
-```
 
 ### **Java**
 
@@ -136,148 +113,21 @@ class NumMatrix {
  */
 ```
 
-### **C++**
 
-```cpp
-class NumMatrix {
-public:
-    vector<vector<int>> s;
 
-    NumMatrix(vector<vector<int>>& matrix) {
-        int m = matrix.size(), n = matrix[0].size();
-        s.resize(m + 1, vector<int>(n + 1));
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                s[i + 1][j + 1] = s[i + 1][j] + s[i][j + 1] - s[i][j] + matrix[i][j];
-            }
-        }
-    }
 
-    int sumRegion(int row1, int col1, int row2, int col2) {
-        return s[row2 + 1][col2 + 1] - s[row2 + 1][col1] - s[row1][col2 + 1] + s[row1][col1];
-    }
-};
 
-/**
- * Your NumMatrix object will be instantiated and called as such:
- * NumMatrix* obj = new NumMatrix(matrix);
- * int param_1 = obj->sumRegion(row1,col1,row2,col2);
- */
-```
 
-### **Go**
 
-```go
-type NumMatrix struct {
-	s [][]int
-}
 
-func Constructor(matrix [][]int) NumMatrix {
-	m, n := len(matrix), len(matrix[0])
-	s := make([][]int, m+1)
-	for i := range s {
-		s[i] = make([]int, n+1)
-	}
-	for i, row := range matrix {
-		for j, v := range row {
-			s[i+1][j+1] = s[i+1][j] + s[i][j+1] - s[i][j] + v
-		}
-	}
-	return NumMatrix{s}
-}
 
-func (this *NumMatrix) SumRegion(row1 int, col1 int, row2 int, col2 int) int {
-	return this.s[row2+1][col2+1] - this.s[row2+1][col1] - this.s[row1][col2+1] + this.s[row1][col1]
-}
 
-/**
- * Your NumMatrix object will be instantiated and called as such:
- * obj := Constructor(matrix);
- * param_1 := obj.SumRegion(row1,col1,row2,col2);
- */
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} matrix
- */
-var NumMatrix = function (matrix) {
-    const m = matrix.length;
-    const n = matrix[0].length;
-    this.s = new Array(m + 1).fill(0).map(() => new Array(n + 1).fill(0));
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            this.s[i + 1][j + 1] =
-                this.s[i + 1][j] +
-                this.s[i][j + 1] -
-                this.s[i][j] +
-                matrix[i][j];
-        }
-    }
-};
-
-/**
- * @param {number} row1
- * @param {number} col1
- * @param {number} row2
- * @param {number} col2
- * @return {number}
- */
-NumMatrix.prototype.sumRegion = function (row1, col1, row2, col2) {
-    return (
-        this.s[row2 + 1][col2 + 1] -
-        this.s[row2 + 1][col1] -
-        this.s[row1][col2 + 1] +
-        this.s[row1][col1]
-    );
-};
-
-/**
- * Your NumMatrix object will be instantiated and called as such:
- * var obj = new NumMatrix(matrix)
- * var param_1 = obj.sumRegion(row1,col1,row2,col2)
- */
-```
 
 ### **TypeScript**
 
-```ts
-class NumMatrix {
-    private s: number[][];
 
-    constructor(matrix: number[][]) {
-        const m = matrix.length;
-        const n = matrix[0].length;
-        this.s = new Array(m + 1).fill(0).map(() => new Array(n + 1).fill(0));
-        for (let i = 0; i < m; ++i) {
-            for (let j = 0; j < n; ++j) {
-                this.s[i + 1][j + 1] =
-                    this.s[i + 1][j] +
-                    this.s[i][j + 1] -
-                    this.s[i][j] +
-                    matrix[i][j];
-            }
-        }
-    }
-
-    sumRegion(row1: number, col1: number, row2: number, col2: number): number {
-        return (
-            this.s[row2 + 1][col2 + 1] -
-            this.s[row2 + 1][col1] -
-            this.s[row1][col2 + 1] +
-            this.s[row1][col1]
-        );
-    }
-}
-
-/**
- * Your NumMatrix object will be instantiated and called as such:
- * var obj = new NumMatrix(matrix)
- * var param_1 = obj.sumRegion(row1,col1,row2,col2)
- */
-```
 
 ### **...**
 
@@ -285,4 +135,4 @@ class NumMatrix {
 
 ```
 
-<!-- tabs:end -->
+

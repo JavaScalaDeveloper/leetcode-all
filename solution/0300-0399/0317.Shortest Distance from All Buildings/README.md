@@ -76,44 +76,7 @@ BFS。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shortestDistance(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        q = deque()
-        total = 0
-        cnt = [[0] * n for _ in range(m)]
-        dist = [[0] * n for _ in range(m)]
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j] == 1:
-                    total += 1
-                    q.append((i, j))
-                    d = 0
-                    vis = set()
-                    while q:
-                        d += 1
-                        for _ in range(len(q)):
-                            r, c = q.popleft()
-                            for a, b in [[0, 1], [0, -1], [1, 0], [-1, 0]]:
-                                x, y = r + a, c + b
-                                if (
-                                    0 <= x < m
-                                    and 0 <= y < n
-                                    and grid[x][y] == 0
-                                    and (x, y) not in vis
-                                ):
-                                    cnt[x][y] += 1
-                                    dist[x][y] += d
-                                    q.append((x, y))
-                                    vis.add((x, y))
-        ans = inf
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j] == 0 and cnt[i][j] == total:
-                    ans = min(ans, dist[i][j])
-        return -1 if ans == inf else ans
-```
+
 
 ### **Java**
 
@@ -169,114 +132,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int shortestDistance(vector<vector<int>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
-        typedef pair<int, int> pii;
-        queue<pii> q;
-        int total = 0;
-        vector<vector<int>> cnt(m, vector<int>(n));
-        vector<vector<int>> dist(m, vector<int>(n));
-        vector<int> dirs = {-1, 0, 1, 0, -1};
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j] == 1) {
-                    ++total;
-                    q.push({i, j});
-                    vector<vector<bool>> vis(m, vector<bool>(n));
-                    int d = 0;
-                    while (!q.empty()) {
-                        ++d;
-                        for (int k = q.size(); k > 0; --k) {
-                            auto p = q.front();
-                            q.pop();
-                            for (int l = 0; l < 4; ++l) {
-                                int x = p.first + dirs[l];
-                                int y = p.second + dirs[l + 1];
-                                if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == 0 && !vis[x][y]) {
-                                    ++cnt[x][y];
-                                    dist[x][y] += d;
-                                    q.push({x, y});
-                                    vis[x][y] = true;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        int ans = INT_MAX;
-        for (int i = 0; i < m; ++i)
-            for (int j = 0; j < n; ++j)
-                if (grid[i][j] == 0 && cnt[i][j] == total)
-                    ans = min(ans, dist[i][j]);
-        return ans == INT_MAX ? -1 : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func shortestDistance(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	var q [][]int
-	total := 0
-	cnt := make([][]int, m)
-	dist := make([][]int, m)
-	for i := range cnt {
-		cnt[i] = make([]int, n)
-		dist[i] = make([]int, n)
-	}
-	dirs := []int{-1, 0, 1, 0, -1}
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if grid[i][j] == 1 {
-				total++
-				q = append(q, []int{i, j})
-				vis := make([]bool, m*n)
-				d := 0
-				for len(q) > 0 {
-					d++
-					for k := len(q); k > 0; k-- {
-						p := q[0]
-						q = q[1:]
-						for l := 0; l < 4; l++ {
-							x, y := p[0]+dirs[l], p[1]+dirs[l+1]
-							if x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == 0 && !vis[x*n+y] {
-								cnt[x][y]++
-								dist[x][y] += d
-								q = append(q, []int{x, y})
-								vis[x*n+y] = true
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 
-	ans := math.MaxInt32
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if grid[i][j] == 0 && cnt[i][j] == total {
-				if ans > dist[i][j] {
-					ans = dist[i][j]
-				}
-			}
-		}
-	}
-	if ans == math.MaxInt32 {
-		return -1
-	}
-	return ans
-}
-```
+
+
+
 
 ### **...**
 
@@ -284,4 +146,4 @@ func shortestDistance(grid [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

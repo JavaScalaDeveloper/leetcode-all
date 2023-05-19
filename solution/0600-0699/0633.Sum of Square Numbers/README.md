@@ -49,20 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def judgeSquareSum(self, c: int) -> bool:
-        a, b = 0, int(sqrt(c))
-        while a <= b:
-            s = a**2 + b**2
-            if s == c:
-                return True
-            if s < c:
-                a += 1
-            else:
-                b -= 1
-        return False
-```
+
 
 ### **Java**
 
@@ -90,84 +77,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function judgeSquareSum(c: number): boolean {
-    let a = 0,
-        b = Math.floor(Math.sqrt(c));
-    while (a <= b) {
-        let sum = a ** 2 + b ** 2;
-        if (sum == c) return true;
-        if (sum < c) {
-            ++a;
-        } else {
-            --b;
-        }
-    }
-    return false;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool judgeSquareSum(int c) {
-        long a = 0, b = (long)sqrt(c);
-        while (a <= b) {
-            long s = a * a + b * b;
-            if (s == c) return true;
-            if (s < c)
-                ++a;
-            else
-                --b;
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func judgeSquareSum(c int) bool {
-	a, b := 0, int(math.Sqrt(float64(c)))
-	for a <= b {
-		s := a*a + b*b
-		if s == c {
-			return true
-		}
-		if s < c {
-			a++
-		} else {
-			b--
-		}
-	}
-	return false
-}
-```
 
-### **Rust**
 
-```rust
-use std::cmp::Ordering;
-impl Solution {
-    pub fn judge_square_sum(c: i32) -> bool {
-        let c = c as i64;
-        let mut left = 0;
-        let mut right = (c as f64).sqrt() as i64;
-        while left <= right {
-            let num = left * left + right * right;
-            match num.cmp(&c) {
-                Ordering::Less => left += 1,
-                Ordering::Greater => right -= 1,
-                Ordering::Equal => return true,
-            }
-        }
-        false
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -175,4 +97,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

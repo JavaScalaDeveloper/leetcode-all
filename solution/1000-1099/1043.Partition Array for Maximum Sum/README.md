@@ -69,18 +69,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
-        n = len(arr)
-        f = [0] * (n + 1)
-        for i in range(1, n + 1):
-            mx = 0
-            for j in range(i, max(0, i - k), -1):
-                mx = max(mx, arr[j - 1])
-                f[i] = max(f[i], f[j - 1] + mx * (i - j + 1))
-        return f[n]
-```
+
 
 ### **Java**
 
@@ -103,67 +92,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxSumAfterPartitioning(vector<int>& arr, int k) {
-        int n = arr.size();
-        int f[n + 1];
-        memset(f, 0, sizeof(f));
-        for (int i = 1; i <= n; ++i) {
-            int mx = 0;
-            for (int j = i; j > max(0, i - k); --j) {
-                mx = max(mx, arr[j - 1]);
-                f[i] = max(f[i], f[j - 1] + mx * (i - j + 1));
-            }
-        }
-        return f[n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxSumAfterPartitioning(arr []int, k int) int {
-	n := len(arr)
-	f := make([]int, n+1)
-	for i := 1; i <= n; i++ {
-		mx := 0
-		for j := i; j > max(0, i-k); j-- {
-			mx = max(mx, arr[j-1])
-			f[i] = max(f[i], f[j-1]+mx*(i-j+1))
-		}
-	}
-	return f[n]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxSumAfterPartitioning(arr: number[], k: number): number {
-    const n: number = arr.length;
-    const f: number[] = new Array(n + 1).fill(0);
-    for (let i = 1; i <= n; ++i) {
-        let mx: number = 0;
-        for (let j = i; j > Math.max(0, i - k); --j) {
-            mx = Math.max(mx, arr[j - 1]);
-            f[i] = Math.max(f[i], f[j - 1] + mx * (i - j + 1));
-        }
-    }
-    return f[n];
-}
-```
+
 
 ### **...**
 
@@ -171,4 +110,4 @@ function maxSumAfterPartitioning(arr: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

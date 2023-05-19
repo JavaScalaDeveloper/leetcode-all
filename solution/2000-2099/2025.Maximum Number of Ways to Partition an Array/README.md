@@ -78,31 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def waysToPartition(self, nums: List[int], k: int) -> int:
-        n = len(nums)
-        s = [nums[0]] * n
-        right = defaultdict(int)
-        for i in range(1, n):
-            s[i] = s[i - 1] + nums[i]
-            right[s[i - 1]] += 1
 
-        ans = 0
-        if s[-1] % 2 == 0:
-            ans = right[s[-1] // 2]
-
-        left = defaultdict(int)
-        for v, x in zip(s, nums):
-            d = k - x
-            if (s[-1] + d) % 2 == 0:
-                t = left[(s[-1] + d) // 2] + right[(s[-1] - d) // 2]
-                if ans < t:
-                    ans = t
-            left[v] += 1
-            right[v] -= 1
-        return ans
-```
 
 ### **Java**
 
@@ -139,69 +115,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int waysToPartition(vector<int>& nums, int k) {
-        int n = nums.size();
-        long long s[n];
-        s[0] = nums[0];
-        unordered_map<long long, int> right;
-        for (int i = 0; i < n - 1; ++i) {
-            right[s[i]]++;
-            s[i + 1] = s[i] + nums[i + 1];
-        }
-        int ans = 0;
-        if (s[n - 1] % 2 == 0) {
-            ans = right[s[n - 1] / 2];
-        }
-        unordered_map<long long, int> left;
-        for (int i = 0; i < n; ++i) {
-            int d = k - nums[i];
-            if ((s[n - 1] + d) % 2 == 0) {
-                int t = left[(s[n - 1] + d) / 2] + right[(s[n - 1] - d) / 2];
-                ans = max(ans, t);
-            }
-            left[s[i]]++;
-            right[s[i]]--;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func waysToPartition(nums []int, k int) (ans int) {
-	n := len(nums)
-	s := make([]int, n)
-	s[0] = nums[0]
-	right := map[int]int{}
-	for i := range nums[:n-1] {
-		right[s[i]]++
-		s[i+1] = s[i] + nums[i+1]
-	}
-	if s[n-1]%2 == 0 {
-		ans = right[s[n-1]/2]
-	}
-	left := map[int]int{}
-	for i, x := range nums {
-		d := k - x
-		if (s[n-1]+d)%2 == 0 {
-			t := left[(s[n-1]+d)/2] + right[(s[n-1]-d)/2]
-			if ans < t {
-				ans = t
-			}
-		}
-		left[s[i]]++
-		right[s[i]]--
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -209,4 +129,4 @@ func waysToPartition(nums []int, k int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

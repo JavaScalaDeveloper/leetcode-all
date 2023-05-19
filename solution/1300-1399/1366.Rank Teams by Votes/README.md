@@ -92,16 +92,7 @@ C 队获得两票「排位第一」，两票「排位第二」，两票「排位
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rankTeams(self, votes: List[str]) -> str:
-        n = len(votes[0])
-        cnt = defaultdict(lambda: [0] * n)
-        for vote in votes:
-            for i, c in enumerate(vote):
-                cnt[c][i] += 1
-        return "".join(sorted(votes[0], key=lambda x: (cnt[x], -ord(x)), reverse=True))
-```
+
 
 ### **Java**
 
@@ -140,59 +131,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string rankTeams(vector<string>& votes) {
-        int n = votes[0].size();
-        int cnt[26][n];
-        memset(cnt, 0, sizeof cnt);
-        for (auto& vote : votes) {
-            for (int i = 0; i < n; ++i) {
-                cnt[vote[i] - 'A'][i]++;
-            }
-        }
-        string ans = votes[0];
-        sort(ans.begin(), ans.end(), [&](auto& a, auto& b) {
-            int i = a - 'A', j = b - 'A';
-            for (int k = 0; k < n; ++k) {
-                if (cnt[i][k] != cnt[j][k]) {
-                    return cnt[i][k] > cnt[j][k];
-                }
-            }
-            return a < b;
-        });
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func rankTeams(votes []string) string {
-	cnt := [26][26]int{}
-	for _, vote := range votes {
-		for i, c := range vote {
-			cnt[c-'A'][i]++
-		}
-	}
-	ans := []byte(votes[0])
-	sort.Slice(ans, func(i, j int) bool {
-		cnt1, cnt2 := cnt[ans[i]-'A'], cnt[ans[j]-'A']
-		for k, a := range cnt1 {
-			b := cnt2[k]
-			if a != b {
-				return a > b
-			}
-		}
-		return ans[i] < ans[j]
-	})
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -200,4 +145,4 @@ func rankTeams(votes []string) string {
 
 ```
 
-<!-- tabs:end -->
+

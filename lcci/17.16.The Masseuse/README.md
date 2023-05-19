@@ -61,14 +61,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def massage(self, nums: List[int]) -> int:
-        f = g = 0
-        for x in nums:
-            f, g = g + x, max(f, g)
-        return max(f, g)
-```
+
 
 ### **Java**
 
@@ -89,58 +82,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int massage(vector<int>& nums) {
-        int f = 0, g = 0;
-        for (int& x : nums) {
-            int ff = g + x;
-            int gg = max(f, g);
-            f = ff;
-            g = gg;
-        }
-        return max(f, g);
-    }
-};
-```
 
-### **Go**
 
-```go
-func massage(nums []int) int {
-	f, g := 0, 0
-	for _, x := range nums {
-		f, g = g+x, max(f, g)
-	}
-	return max(f, g)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function massage(nums: number[]): number {
-    let f = 0,
-        g = 0;
-    for (const x of nums) {
-        const ff = g + x;
-        const gg = Math.max(f, g);
-        f = ff;
-        g = gg;
-    }
-    return Math.max(f, g);
-}
-```
+
 
 ### **...**
 
@@ -148,4 +100,4 @@ function massage(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

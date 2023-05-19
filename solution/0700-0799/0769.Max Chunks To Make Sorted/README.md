@@ -72,31 +72,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxChunksToSorted(self, arr: List[int]) -> int:
-        mx = ans = 0
-        for i, v in enumerate(arr):
-            mx = max(mx, v)
-            if i == mx:
-                ans += 1
-        return ans
-```
 
-```python
-class Solution:
-    def maxChunksToSorted(self, arr: List[int]) -> int:
-        stk = []
-        for v in arr:
-            if not stk or v >= stk[-1]:
-                stk.append(v)
-            else:
-                mx = stk.pop()
-                while stk and stk[-1] > v:
-                    stk.pop()
-                stk.append(mx)
-        return len(stk)
-```
+
+
 
 ### **Java**
 
@@ -137,84 +115,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxChunksToSorted(vector<int>& arr) {
-        int ans = 0, mx = 0;
-        for (int i = 0; i < arr.size(); ++i) {
-            mx = max(mx, arr[i]);
-            ans += i == mx;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maxChunksToSorted(vector<int>& arr) {
-        stack<int> stk;
-        for (int v : arr) {
-            if (stk.empty() || v >= stk.top()) {
-                stk.push(v);
-            } else {
-                int mx = stk.top();
-                stk.pop();
-                while (!stk.empty() && stk.top() > v) {
-                    stk.pop();
-                }
-                stk.push(mx);
-            }
-        }
-        return stk.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxChunksToSorted(arr []int) int {
-	ans, mx := 0, 0
-	for i, v := range arr {
-		mx = max(mx, v)
-		if i == mx {
-			ans++
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func maxChunksToSorted(arr []int) int {
-	stk := []int{}
-	for _, v := range arr {
-		if len(stk) == 0 || v >= stk[len(stk)-1] {
-			stk = append(stk, v)
-		} else {
-			mx := stk[len(stk)-1]
-			stk = stk[:len(stk)-1]
-			for len(stk) > 0 && stk[len(stk)-1] > v {
-				stk = stk[:len(stk)-1]
-			}
-			stk = append(stk, mx)
-		}
-	}
-	return len(stk)
-}
-```
+
+
+
+
+
 
 ### **C**
 
@@ -236,38 +147,11 @@ int maxChunksToSorted(int *arr, int arrSize) {
 
 ### **TypeScript**
 
-```ts
-function maxChunksToSorted(arr: number[]): number {
-    const n = arr.length;
-    let ans = 0;
-    let max = 0;
-    for (let i = 0; i < n; i++) {
-        max = Math.max(arr[i], max);
-        if (max == i) {
-            ans++;
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_chunks_to_sorted(arr: Vec<i32>) -> i32 {
-        let mut res = 0;
-        let mut max = 0;
-        for i in 0..arr.len() {
-            max = max.max(arr[i]);
-            if max == i as i32 {
-                res += 1;
-            }
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -275,4 +159,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

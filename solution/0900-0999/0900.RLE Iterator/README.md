@@ -62,29 +62,7 @@ rLEIterator.next(2); // 耗去序列的 2 个项，返回 -1。 这是由于第�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class RLEIterator:
-    def __init__(self, encoding: List[int]):
-        self.encoding = encoding
-        self.i = 0
-        self.curr = 0
 
-    def next(self, n: int) -> int:
-        while self.i < len(self.encoding):
-            if self.curr + n > self.encoding[self.i]:
-                n -= self.encoding[self.i] - self.curr
-                self.curr = 0
-                self.i += 2
-            else:
-                self.curr += n
-                return self.encoding[self.i + 1]
-        return -1
-
-
-# Your RLEIterator object will be instantiated and called as such:
-# obj = RLEIterator(encoding)
-# param_1 = obj.next(n)
-```
 
 ### **Java**
 
@@ -124,76 +102,13 @@ class RLEIterator {
  */
 ```
 
-### **C++**
 
-```cpp
-class RLEIterator {
-public:
-    vector<int> encoding;
-    int curr;
-    int i;
 
-    RLEIterator(vector<int>& encoding) {
-        this->encoding = encoding;
-        this->curr = 0;
-        this->i = 0;
-    }
 
-    int next(int n) {
-        while (i < encoding.size()) {
-            if (curr + n > encoding[i]) {
-                n -= encoding[i] - curr;
-                curr = 0;
-                i += 2;
-            } else {
-                curr += n;
-                return encoding[i + 1];
-            }
-        }
-        return -1;
-    }
-};
 
-/**
- * Your RLEIterator object will be instantiated and called as such:
- * RLEIterator* obj = new RLEIterator(encoding);
- * int param_1 = obj->next(n);
- */
-```
 
-### **Go**
 
-```go
-type RLEIterator struct {
-	encoding []int
-	curr     int
-	i        int
-}
 
-func Constructor(encoding []int) RLEIterator {
-	return RLEIterator{encoding: encoding, curr: 0, i: 0}
-}
-
-func (this *RLEIterator) Next(n int) int {
-	for this.i < len(this.encoding) {
-		if this.curr+n > this.encoding[this.i] {
-			n -= this.encoding[this.i] - this.curr
-			this.curr = 0
-			this.i += 2
-		} else {
-			this.curr += n
-			return this.encoding[this.i+1]
-		}
-	}
-	return -1
-}
-
-/**
- * Your RLEIterator object will be instantiated and called as such:
- * obj := Constructor(encoding);
- * param_1 := obj.Next(n);
- */
-```
 
 ### **...**
 
@@ -201,4 +116,4 @@ func (this *RLEIterator) Next(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

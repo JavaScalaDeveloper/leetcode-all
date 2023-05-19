@@ -81,14 +81,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canConstruct(self, s: str, k: int) -> bool:
-        if len(s) < k:
-            return False
-        cnt = Counter(s)
-        return sum(v & 1 for v in cnt.values()) <= k
-```
+
 
 ### **Java**
 
@@ -114,65 +107,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canConstruct(string s, int k) {
-        if (s.size() < k) {
-            return false;
-        }
-        int cnt[26]{};
-        for (char& c : s) {
-            ++cnt[c - 'a'];
-        }
-        int x = 0;
-        for (int v : cnt) {
-            x += v & 1;
-        }
-        return x <= k;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canConstruct(s string, k int) bool {
-	if len(s) < k {
-		return false
-	}
-	cnt := [26]int{}
-	for _, c := range s {
-		cnt[c-'a']++
-	}
-	x := 0
-	for _, v := range cnt {
-		x += v & 1
-	}
-	return x <= k
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function canConstruct(s: string, k: number): boolean {
-    if (s.length < k) {
-        return false;
-    }
-    const cnt: number[] = new Array(26).fill(0);
-    for (const c of s) {
-        ++cnt[c.charCodeAt(0) - 'a'.charCodeAt(0)];
-    }
-    let x = 0;
-    for (const v of cnt) {
-        x += v & 1;
-    }
-    return x <= k;
-}
-```
+
 
 ### **...**
 
@@ -180,4 +125,4 @@ function canConstruct(s: string, k: number): boolean {
 
 ```
 
-<!-- tabs:end -->
+

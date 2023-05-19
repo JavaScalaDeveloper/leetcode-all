@@ -77,28 +77,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def heightChecker(self, heights: List[int]) -> int:
-        expected = sorted(heights)
-        return sum(a != b for a, b in zip(heights, expected))
-```
 
-```python
-class Solution:
-    def heightChecker(self, heights: List[int]) -> int:
-        cnt = [0] * 101
-        for h in heights:
-            cnt[h] += 1
-        ans = i = 0
-        for j in range(1, 101):
-            while cnt[j]:
-                cnt[j] -= 1
-                if heights[i] != j:
-                    ans += 1
-                i += 1
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -141,77 +122,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int heightChecker(vector<int>& heights) {
-        vector<int> expected = heights;
-        sort(expected.begin(), expected.end());
-        int ans = 0;
-        for (int i = 0; i < heights.size(); ++i) ans += heights[i] != expected[i];
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int heightChecker(vector<int>& heights) {
-        vector<int> cnt(101);
-        for (int& h : heights) ++cnt[h];
-        int ans = 0;
-        for (int i = 0, j = 0; i < 101; ++i)
-        {
-            while (cnt[i])
-            {
-                --cnt[i];
-                if (heights[j++] != i) ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func heightChecker(heights []int) int {
-	expected := make([]int, len(heights))
-	copy(expected, heights)
-	sort.Ints(expected)
-	ans := 0
-	for i, v := range heights {
-		if v != expected[i] {
-			ans++
-		}
-	}
-	return ans
-}
-```
 
-```go
-func heightChecker(heights []int) int {
-	cnt := make([]int, 101)
-	for _, h := range heights {
-		cnt[h]++
-	}
-	ans := 0
-	for i, j := 0, 0; i < 101; i++ {
-		for cnt[i] > 0 {
-			cnt[i]--
-			if heights[j] != i {
-				ans++
-			}
-			j++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -219,4 +140,4 @@ func heightChecker(heights []int) int {
 
 ```
 
-<!-- tabs:end -->
+

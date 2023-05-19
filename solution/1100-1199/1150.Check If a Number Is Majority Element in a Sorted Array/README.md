@@ -64,21 +64,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isMajorityElement(self, nums: List[int], target: int) -> bool:
-        left = bisect_left(nums, target)
-        right = bisect_right(nums, target)
-        return right - left > len(nums) // 2
-```
 
-```python
-class Solution:
-    def isMajorityElement(self, nums: List[int], target: int) -> bool:
-        left = bisect_left(nums, target)
-        right = left + len(nums) // 2
-        return right < len(nums) and nums[right] == target
-```
+
+
 
 ### **Java**
 
@@ -131,95 +119,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isMajorityElement(vector<int>& nums, int target) {
-        auto left = lower_bound(nums.begin(), nums.end(), target);
-        auto right = upper_bound(nums.begin(), nums.end(), target);
-        return right - left > nums.size() / 2;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool isMajorityElement(vector<int>& nums, int target) {
-        int n = nums.size();
-        int left = lower_bound(nums.begin(), nums.end(), target) - nums.begin();
-        int right = left + n / 2;
-        return right < n && nums[right] == target;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isMajorityElement(nums []int, target int) bool {
-	n := len(nums)
-	left := sort.Search(n, func(i int) bool { return nums[i] >= target })
-	right := sort.Search(n, func(i int) bool { return nums[i] > target })
-	return right-left > n/2
-}
-```
 
-```go
-func isMajorityElement(nums []int, target int) bool {
-	n := len(nums)
-	left := sort.Search(n, func(i int) bool { return nums[i] >= target })
-	right := left + n/2
-	return right < n && nums[right] == target
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isMajorityElement(nums: number[], target: number): boolean {
-    const search = (x: number) => {
-        let left = 0;
-        let right = nums.length;
-        while (left < right) {
-            const mid = (left + right) >> 1;
-            if (nums[mid] >= x) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    };
-    const left = search(target);
-    const right = search(target + 1);
-    return right - left > nums.length >> 1;
-}
-```
 
-```ts
-function isMajorityElement(nums: number[], target: number): boolean {
-    const search = (x: number) => {
-        let left = 0;
-        let right = n;
-        while (left < right) {
-            const mid = (left + right) >> 1;
-            if (nums[mid] >= x) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    };
-    const n = nums.length;
-    const left = search(target);
-    const right = left + (n >> 1);
-    return right < n && nums[right] === target;
-}
-```
+
+
 
 ### **...**
 
@@ -227,4 +143,4 @@ function isMajorityElement(nums: number[], target: number): boolean {
 
 ```
 
-<!-- tabs:end -->
+

@@ -80,21 +80,7 @@ u [a]
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countVowelPermutation(self, n: int) -> int:
-        dp = (1, 1, 1, 1, 1)
-        MOD = 1000000007
-        for _ in range(n - 1):
-            dp = (
-                (dp[1] + dp[2] + dp[4]) % MOD,
-                (dp[0] + dp[2]) % MOD,
-                (dp[1] + dp[3]) % MOD,
-                dp[2],
-                (dp[2] + dp[3]) % MOD,
-            )
-        return sum(dp) % MOD
-```
+
 
 ### **Java**
 
@@ -125,78 +111,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countVowelPermutation(int n) {
-        using ll = long long;
-        const ll mod = 1e9 + 7;
-        vector<ll> dp(5, 1);
-        vector<ll> t(5);
-        for (int i = 0; i < n - 1; ++i) {
-            t[0] = (dp[1] + dp[2] + dp[4]) % mod;
-            t[1] = (dp[0] + dp[2]) % mod;
-            t[2] = (dp[1] + dp[3]) % mod;
-            t[3] = dp[2];
-            t[4] = (dp[2] + dp[3]) % mod;
-            dp = t;
-        }
-        return accumulate(dp.begin(), dp.end(), 0LL) % mod;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countVowelPermutation(n int) int {
-	const mod int = 1e9 + 7
-	dp := [5]int{1, 1, 1, 1, 1}
-	for i := 0; i < n-1; i++ {
-		dp = [5]int{
-			(dp[1] + dp[2] + dp[4]) % mod,
-			(dp[0] + dp[2]) % mod,
-			(dp[1] + dp[3]) % mod,
-			dp[2],
-			(dp[2] + dp[3]) % mod,
-		}
-	}
-	ans := 0
-	for _, v := range dp {
-		ans = (ans + v) % mod
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var countVowelPermutation = function (n) {
-    const mod = 1000000007;
-    const dp = new Array(5).fill(1);
-    const t = new Array(5).fill(0);
-    for (let i = 0; i < n - 1; ++i) {
-        t[0] = (dp[1] + dp[2] + dp[4]) % mod;
-        t[1] = (dp[0] + dp[2]) % mod;
-        t[2] = (dp[1] + dp[3]) % mod;
-        t[3] = dp[2];
-        t[4] = (dp[2] + dp[3]) % mod;
-        dp.splice(0, 5, ...t);
-    }
-    let ans = 0;
-    for (let i = 0; i < 5; ++i) {
-        ans = (ans + dp[i]) % mod;
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -204,4 +129,4 @@ var countVowelPermutation = function (n) {
 
 ```
 
-<!-- tabs:end -->
+

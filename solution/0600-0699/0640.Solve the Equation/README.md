@@ -66,35 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def solveEquation(self, equation: str) -> str:
-        def f(s):
-            x = y = 0
-            if s[0] != '-':
-                s = '+' + s
-            i, n = 0, len(s)
-            while i < n:
-                sign = 1 if s[i] == '+' else -1
-                i += 1
-                j = i
-                while j < n and s[j] not in '+-':
-                    j += 1
-                v = s[i:j]
-                if v[-1] == 'x':
-                    x += sign * (int(v[:-1]) if len(v) > 1 else 1)
-                else:
-                    y += sign * int(v)
-                i = j
-            return x, y
 
-        a, b = equation.split('=')
-        x1, y1 = f(a)
-        x2, y2 = f(b)
-        if x1 == x2:
-            return 'Infinite solutions' if y1 == y2 else 'No solution'
-        return f'x={(y2 - y1) // (x1 - x2)}'
-```
 
 ### **Java**
 
@@ -139,116 +111,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func solveEquation(equation string) string {
-	f := func(s string) []int {
-		x, y := 0, 0
-		if s[0] != '-' {
-			s = "+" + s
-		}
-		i, n := 0, len(s)
-		for i < n {
-			sign := 1
-			if s[i] == '-' {
-				sign = -1
-			}
-			i++
-			j := i
-			for j < n && s[j] != '+' && s[j] != '-' {
-				j++
-			}
-			v := s[i:j]
-			if s[j-1] == 'x' {
-				a := 1
-				if len(v) > 1 {
-					a, _ = strconv.Atoi(v[:len(v)-1])
-				}
-				x += sign * a
-			} else {
-				a, _ := strconv.Atoi(v)
-				y += sign * a
-			}
-			i = j
-		}
-		return []int{x, y}
-	}
 
-	es := strings.Split(equation, "=")
-	a, b := f(es[0]), f(es[1])
-	x1, y1 := a[0], a[1]
-	x2, y2 := b[0], b[1]
-	if x1 == x2 {
-		if y1 == y2 {
-			return "Infinite solutions"
-		} else {
-			return "No solution"
-		}
-	}
-	return fmt.Sprintf("x=%d", (y2-y1)/(x1-x2))
-}
-```
+
 
 ### **TypeScript**
 
-```ts
-function solveEquation(equation: string): string {
-    const [left, right] = equation.split('=');
-    const createExpr = (s: string) => {
-        let x = 0;
-        let n = 0;
-        let i = 0;
-        let sym = 1;
-        let cur = 0;
-        let isX = false;
-        for (const c of s) {
-            if (c === '+' || c === '-') {
-                if (isX) {
-                    if (i === 0 && cur === 0) {
-                        cur = 1;
-                    }
-                    x += cur * sym;
-                } else {
-                    n += cur * sym;
-                }
-                isX = false;
-                cur = 0;
-                i = 0;
-                if (c === '+') {
-                    sym = 1;
-                } else {
-                    sym = -1;
-                }
-            } else if (c === 'x') {
-                isX = true;
-            } else {
-                i++;
-                cur *= 10;
-                cur += Number(c);
-            }
-        }
-        if (isX) {
-            if (i === 0 && cur === 0) {
-                cur = 1;
-            }
-            x += cur * sym;
-        } else {
-            n += cur * sym;
-        }
-        return [x, n];
-    };
-    const lExpr = createExpr(left);
-    const rExpr = createExpr(right);
-    if (lExpr[0] === rExpr[0]) {
-        if (lExpr[1] !== rExpr[1]) {
-            return 'No solution';
-        }
-        return 'Infinite solutions';
-    }
-    return `x=${(lExpr[1] - rExpr[1]) / (rExpr[0] - lExpr[0])}`;
-}
-```
+
 
 ### **...**
 
@@ -256,4 +125,4 @@ function solveEquation(equation: string): string {
 
 ```
 
-<!-- tabs:end -->
+

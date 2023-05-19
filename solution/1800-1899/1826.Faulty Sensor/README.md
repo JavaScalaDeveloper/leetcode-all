@@ -74,22 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def badSensor(self, sensor1: List[int], sensor2: List[int]) -> int:
-        i, n = 0, len(sensor1)
-        while i < n - 1:
-            if sensor1[i] != sensor2[i]:
-                break
-            i += 1
-        while i < n - 1:
-            if sensor1[i + 1] != sensor2[i]:
-                return 1
-            if sensor1[i] != sensor2[i + 1]:
-                return 2
-            i += 1
-        return -1
-```
+
 
 ### **Java**
 
@@ -115,42 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int badSensor(vector<int>& sensor1, vector<int>& sensor2) {
-        int i = 0;
-        int n = sensor1.size();
-        for (; i < n - 1 && sensor1[i] == sensor2[i]; ++i) { }
-        for (; i < n - 1; ++i) {
-            if (sensor1[i + 1] != sensor2[i]) return 1;
-            if (sensor1[i] != sensor2[i + 1]) return 2;
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func badSensor(sensor1 []int, sensor2 []int) int {
-	i, n := 0, len(sensor1)
-	for ; i < n-1 && sensor1[i] == sensor2[i]; i++ {
-	}
-	for ; i < n-1; i++ {
-		if sensor1[i+1] != sensor2[i] {
-			return 1
-		}
-		if sensor1[i] != sensor2[i+1] {
-			return 2
-		}
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -158,4 +114,4 @@ func badSensor(sensor1 []int, sensor2 []int) int {
 
 ```
 
-<!-- tabs:end -->
+

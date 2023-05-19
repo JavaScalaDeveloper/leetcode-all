@@ -64,34 +64,7 @@ BFS。设 time 记录骨牌翻倒或者确定不翻倒的时间，翻倒的骨�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def pushDominoes(self, dominoes: str) -> str:
-        n = len(dominoes)
-        q = deque()
-        time = [-1] * n
-        force = defaultdict(list)
-        for i, f in enumerate(dominoes):
-            if f != '.':
-                q.append(i)
-                time[i] = 0
-                force[i].append(f)
-        ans = ['.'] * n
-        while q:
-            i = q.popleft()
-            if len(force[i]) == 1:
-                ans[i] = f = force[i][0]
-                j = i - 1 if f == 'L' else i + 1
-                if 0 <= j < n:
-                    t = time[i]
-                    if time[j] == -1:
-                        q.append(j)
-                        time[j] = t + 1
-                        force[j].append(f)
-                    elif time[j] == t + 1:
-                        force[j].append(f)
-        return ''.join(ans)
-```
+
 
 ### **Java**
 
@@ -143,137 +116,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function pushDominoes(dominoes: string): string {
-    const n = dominoes.length;
-    const map = {
-        L: -1,
-        R: 1,
-        '.': 0,
-    };
-    let ans = new Array(n).fill(0);
-    let visited = new Array(n).fill(0);
-    let queue = [];
-    let depth = 1;
-    for (let i = 0; i < n; i++) {
-        let cur = map[dominoes.charAt(i)];
-        if (cur) {
-            queue.push(i);
-            visited[i] = depth;
-            ans[i] = cur;
-        }
-    }
-    while (queue.length) {
-        depth++;
-        let nextLevel = [];
-        for (let i of queue) {
-            const dx = ans[i];
-            let x = i + dx;
-            if (x >= 0 && x < n && [0, depth].includes(visited[x])) {
-                ans[x] += dx;
-                visited[x] = depth;
-                nextLevel.push(x);
-            }
-        }
-        queue = nextLevel;
-    }
-    return ans
-        .map(d => {
-            if (!d) return '.';
-            else if (d < 0) return 'L';
-            else return 'R';
-        })
-        .join('');
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string pushDominoes(string dominoes) {
-        int n = dominoes.size();
-        queue<int> q;
-        vector<int> time(n, -1);
-        vector<string> force(n);
-        for (int i = 0; i < n; i++) {
-            if (dominoes[i] == '.') continue;
-            q.emplace(i);
-            time[i] = 0;
-            force[i].push_back(dominoes[i]);
-        }
 
-        string ans(n, '.');
-        while (!q.empty()) {
-            int i = q.front();
-            q.pop();
-            if (force[i].size() == 1) {
-                char f = force[i][0];
-                ans[i] = f;
-                int j = (f == 'L') ? (i - 1) : (i + 1);
-                if (j >= 0 && j < n) {
-                    int t = time[i];
-                    if (time[j] == -1) {
-                        q.emplace(j);
-                        time[j] = t + 1;
-                        force[j].push_back(f);
-                    } else if (time[j] == t + 1)
-                        force[j].push_back(f);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func pushDominoes(dominoes string) string {
-	n := len(dominoes)
-	q := []int{}
-	time := make([]int, n)
-	for i := range time {
-		time[i] = -1
-	}
-	force := make([][]byte, n)
-	for i, c := range dominoes {
-		if c != '.' {
-			q = append(q, i)
-			time[i] = 0
-			force[i] = append(force[i], byte(c))
-		}
-	}
 
-	ans := bytes.Repeat([]byte{'.'}, n)
-	for len(q) > 0 {
-		i := q[0]
-		q = q[1:]
-		if len(force[i]) > 1 {
-			continue
-		}
-		f := force[i][0]
-		ans[i] = f
-		j := i - 1
-		if f == 'R' {
-			j = i + 1
-		}
-		if 0 <= j && j < n {
-			t := time[i]
-			if time[j] == -1 {
-				q = append(q, j)
-				time[j] = t + 1
-				force[j] = append(force[j], f)
-			} else if time[j] == t+1 {
-				force[j] = append(force[j], f)
-			}
-		}
-	}
-	return string(ans)
-}
-```
+
+
+
 
 ### **...**
 
@@ -281,4 +132,4 @@ func pushDominoes(dominoes string) string {
 
 ```
 
-<!-- tabs:end -->
+

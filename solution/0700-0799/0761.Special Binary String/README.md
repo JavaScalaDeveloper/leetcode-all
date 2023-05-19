@@ -54,23 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makeLargestSpecial(self, s: str) -> str:
-        if s == '':
-            return ''
-        ans = []
-        cnt = 0
-        i = j = 0
-        while i < len(s):
-            cnt += 1 if s[i] == '1' else -1
-            if cnt == 0:
-                ans.append('1' + self.makeLargestSpecial(s[j + 1 : i]) + '0')
-                j = i + 1
-            i += 1
-        ans.sort(reverse=True)
-        return ''.join(ans)
-```
+
 
 ### **Java**
 
@@ -98,52 +82,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string makeLargestSpecial(string s) {
-        if (s == "") return s;
-        vector<string> ans;
-        int cnt = 0;
-        for (int i = 0, j = 0; i < s.size(); ++i) {
-            cnt += s[i] == '1' ? 1 : -1;
-            if (cnt == 0) {
-                ans.push_back("1" + makeLargestSpecial(s.substr(j + 1, i - j - 1)) + "0");
-                j = i + 1;
-            }
-        }
-        sort(ans.begin(), ans.end(), greater<string> {});
-        return accumulate(ans.begin(), ans.end(), ""s);
-    }
-};
-```
 
-### **Go**
 
-```go
-func makeLargestSpecial(s string) string {
-	if s == "" {
-		return ""
-	}
-	ans := sort.StringSlice{}
-	cnt := 0
-	for i, j := 0, 0; i < len(s); i++ {
-		if s[i] == '1' {
-			cnt++
-		} else {
-			cnt--
-		}
-		if cnt == 0 {
-			ans = append(ans, "1"+makeLargestSpecial(s[j+1:i])+"0")
-			j = i + 1
-		}
-	}
-	sort.Sort(sort.Reverse(ans))
-	return strings.Join(ans, "")
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -151,4 +96,4 @@ func makeLargestSpecial(s string) string {
 
 ```
 
-<!-- tabs:end -->
+

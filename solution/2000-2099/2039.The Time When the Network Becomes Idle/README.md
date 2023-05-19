@@ -94,29 +94,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def networkBecomesIdle(self, edges: List[List[int]], patience: List[int]) -> int:
-        g = defaultdict(list)
-        for u, v in edges:
-            g[u].append(v)
-            g[v].append(u)
-        q = deque([0])
-        vis = {0}
-        ans = step = 0
-        while q:
-            step += 1
-            for _ in range(len(q)):
-                u = q.popleft()
-                for v in g[u]:
-                    if v in vis:
-                        continue
-                    vis.add(v)
-                    q.append(v)
-                    d, t = step * 2, patience[v]
-                    ans = max(ans, (d - 1) // t * t + d + 1)
-        return ans
-```
+
 
 ### **Java**
 
@@ -160,83 +138,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int networkBecomesIdle(vector<vector<int>>& edges, vector<int>& patience) {
-        int n = patience.size();
-        vector<vector<int>> g(n);
-        vector<bool> vis(n);
-        for (auto& e : edges) {
-            int u = e[0], v = e[1];
-            g[u].push_back(v);
-            g[v].push_back(u);
-        }
-        queue<int> q {{0}};
-        vis[0] = true;
-        int ans = 0, step = 0;
-        while (!q.empty()) {
-            ++step;
-            for (int i = q.size(); i > 0; --i) {
-                int u = q.front();
-                q.pop();
-                for (int v : g[u]) {
-                    if (vis[v]) continue;
-                    vis[v] = true;
-                    q.push(v);
-                    int d = step * 2, t = patience[v];
-                    ans = max(ans, (d - 1) / t * t + d + 1);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func networkBecomesIdle(edges [][]int, patience []int) int {
-	n := len(patience)
-	g := make([][]int, n)
-	vis := make([]bool, n)
-	for _, e := range edges {
-		u, v := e[0], e[1]
-		g[u] = append(g[u], v)
-		g[v] = append(g[v], u)
-	}
-	q := []int{0}
-	vis[0] = true
-	ans, step := 0, 0
-	for len(q) > 0 {
-		step++
-		for i := len(q); i > 0; i-- {
-			u := q[0]
-			q = q[1:]
-			for _, v := range g[u] {
-				if vis[v] {
-					continue
-				}
-				vis[v] = true
-				q = append(q, v)
-				d, t := step*2, patience[v]
-				ans = max(ans, (d-1)/t*t+d+1)
-			}
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -244,4 +152,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

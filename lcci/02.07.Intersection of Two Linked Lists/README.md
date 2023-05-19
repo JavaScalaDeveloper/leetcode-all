@@ -23,22 +23,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
 
-
-class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
-        cur1, cur2 = headA, headB
-        while cur1 != cur2:
-            cur1 = headB if cur1 is None else cur1.next
-            cur2 = headA if cur2 is None else cur2.next
-        return cur1
-```
 
 ### **Java**
 
@@ -68,85 +53,17 @@ public class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
-        ListNode* cur1 = headA;
-        ListNode* cur2 = headB;
-        while (cur1 != cur2) {
-            cur1 = cur1 ? cur1->next : headB;
-            cur2 = cur2 ? cur2->next : headA;
-        }
-        return cur1;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
 
-/**
- * @param {ListNode} headA
- * @param {ListNode} headB
- * @return {ListNode}
- */
-var getIntersectionNode = function (headA, headB) {
-    let cur1 = headA;
-    let cur2 = headB;
-    while (cur1 != cur2) {
-        cur1 = cur1 ? cur1.next : headB;
-        cur2 = cur2 ? cur2.next : headA;
-    }
-    return cur1;
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
- func getIntersectionNode(headA, headB *ListNode) *ListNode {
-    cur1, cur2 := headA, headB
-    for cur1 != cur2 {
-        if cur1 == nil {
-            cur1 = headB
-        } else {
-            cur1 = cur1.Next
-        }
-        if cur2 == nil {
-            cur2 = headA
-        } else {
-            cur2 = cur2.Next
-        }
-    }
-    return cur1
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -154,4 +71,4 @@ var getIntersectionNode = function (headA, headB) {
 
 ```
 
-<!-- tabs:end -->
+

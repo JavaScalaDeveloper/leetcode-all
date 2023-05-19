@@ -42,26 +42,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        n = len(nums)
-        dp = [0] * n
-        dp[0] = nums[0]
-        for i in range(1, n):
-            dp[i] = max(dp[i - 1], 0) + nums[i]
-        return max(dp)
-```
 
-```python
-class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        ans = s = -inf
-        for v in nums:
-            s = max(s, 0) + v
-            ans = max(ans, s)
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -81,117 +64,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxSubArray(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> dp(n);
-        dp[0] = nums[0];
-        int ans = dp[0];
-        for (int i = 1; i < n; ++i) {
-            dp[i] = max(dp[i - 1], 0) + nums[i];
-            ans = max(ans, dp[i]);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maxSubArray(vector<int>& nums) {
-        int s = INT_MIN, ans = INT_MIN;
-        for (int v : nums) {
-            s = max(s, 0) + v;
-            ans = max(ans, s);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxSubArray(nums []int) int {
-	n := len(nums)
-	dp := make([]int, n)
-	dp[0] = nums[0]
-	ans := dp[0]
-	for i := 1; i < n; i++ {
-		dp[i] = max(dp[i-1], 0) + nums[i]
-		ans = max(ans, dp[i])
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func maxSubArray(nums []int) int {
-	inf := math.MinInt32
-	ans, s := inf, inf
-	for _, v := range nums {
-		s = max(s, 0) + v
-		ans = max(ans, s)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var maxSubArray = function (nums) {
-    const n = nums.length;
-    const dp = new Array(n).fill(0);
-    dp[0] = nums[0];
-    let ans = dp[0];
-    for (let i = 1; i < n; ++i) {
-        dp[i] = Math.max(dp[i - 1], 0) + nums[i];
-        ans = Math.max(ans, dp[i]);
-    }
-    return ans;
-};
-```
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var maxSubArray = function (nums) {
-    const inf = -Infinity;
-    let s = inf;
-    let ans = inf;
-    for (const v of nums) {
-        s = Math.max(s, 0) + v;
-        ans = Math.max(ans, s);
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -200,4 +89,4 @@ var maxSubArray = function (nums) {
 
 ```
 
-<!-- tabs:end -->
+

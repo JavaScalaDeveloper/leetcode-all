@@ -41,87 +41,19 @@ public class ShellSort {
 }
 ```
 
-### **JavaScript**
 
-```js
-function shellSort(arr) {
-    var len = arr.length;
-    var gapSize = Math.floor(len / 2);
-    while (gapSize > 0) {
-        for (var i = gapSize; i < len; i++) {
-            var temp = arr[i];
-            var j = i;
 
-            while (j >= gapSize && arr[j - gapSize] > temp) {
-                arr[j] = arr[j - gapSize];
-                j -= gapSize;
-            }
-            arr[j] = temp;
-        }
-        gapSize = Math.floor(gapSize / 2);
-    }
-    return arr;
-}
 
-let arr = [6, 3, 2, 1, 5];
-console.log(shellSort(arr));
-```
 
-### **Go**
 
-```go
-package main
 
-import "fmt"
 
-func shellSort(nums []int) {
-	n := len(nums)
-	for gap := n / 2; gap > 0; gap /= 2 {
-		for i := gap; i < n; i++ {
-			j, num := i-gap, nums[i]
-			for ; j >= 0 && nums[j] > num; j -= gap {
-				nums[j+gap] = nums[j]
-			}
-			nums[j+gap] = num
-		}
-	}
-}
 
-func main() {
-	nums := []int{1, 2, 7, 9, 5, 8}
-	shellSort(nums)
-	fmt.Println(nums)
-}
-```
 
-### **Rust**
 
-```rust
-fn shell_sort(nums: &mut Vec<i32>) {
-    let n = nums.len();
-    let mut gap = n / 2;
-    while gap > 0 {
-        for i in gap..n {
-            let mut j = i - gap;
-            let temp = nums[i];
-            while j >= 0 as usize && nums[j] > temp {
-                nums[j + gap] = nums[j];
-                j -= gap;
-            }
-            nums[j + gap] = temp;
-        }
-        gap /= 2;
-    }
-}
 
-fn main() {
-    let mut nums = vec![1, 2, 7, 9, 5, 8];
-    shell_sort(&mut nums);
-    println!("{:?}", nums);
-}
-```
 
-<!-- tabs:end -->
+
 
 ## 算法分析
 

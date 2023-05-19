@@ -66,16 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def alternateDigitSum(self, n: int) -> int:
-        ans, sign = 0, 1
-        for c in str(n):
-            x = int(c)
-            ans += sign * x
-            sign *= -1
-        return ans
-```
+
 
 ### **Java**
 
@@ -95,68 +86,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int alternateDigitSum(int n) {
-        int ans = 0, sign = 1;
-        for (char c : to_string(n)) {
-            int x = c - '0';
-            ans += sign * x;
-            sign *= -1;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func alternateDigitSum(n int) int {
-	ans, sign := 0, 1
-	for _, c := range strconv.Itoa(n) {
-		x := int(c - '0')
-		ans += sign * x
-		sign *= -1
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function alternateDigitSum(n: number): number {
-    let ans = 0;
-    let sign = 1;
-    while (n) {
-        ans += (n % 10) * sign;
-        sign = -sign;
-        n = Math.floor(n / 10);
-    }
-    return ans * -sign;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn alternate_digit_sum(mut n: i32) -> i32 {
-        let mut ans = 0;
-        let mut sign = 1;
-        while n != 0 {
-            ans += (n % 10) * sign;
-            sign = -sign;
-            n /= 10;
-        }
-        ans * -sign
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -179,4 +123,4 @@ int alternateDigitSum(int n) {
 
 ```
 
-<!-- tabs:end -->
+

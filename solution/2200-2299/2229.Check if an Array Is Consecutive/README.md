@@ -63,13 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isConsecutive(self, nums: List[int]) -> bool:
-        mi, mx = min(nums), max(nums)
-        n = len(nums)
-        return len(set(nums)) == n and mx == mi + n - 1
-```
+
 
 ### **Java**
 
@@ -92,55 +86,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isConsecutive(vector<int>& nums) {
-        unordered_set<int> s(nums.begin(), nums.end());
-        int mi = *min_element(nums.begin(), nums.end());
-        int mx = *max_element(nums.begin(), nums.end());
-        int n = nums.size();
-        return s.size() == n && mx == mi + n - 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isConsecutive(nums []int) bool {
-	s := make(map[int]bool)
-	mi, mx := nums[0], nums[0]
-	for _, v := range nums {
-		s[v] = true
-		mi = min(mi, v)
-		mx = max(mx, v)
-	}
-	return len(s) == len(nums) && mx == mi+len(nums)-1
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -148,4 +104,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

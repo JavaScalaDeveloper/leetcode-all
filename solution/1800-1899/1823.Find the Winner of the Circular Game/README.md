@@ -70,14 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findTheWinner(self, n: int, k: int) -> int:
-        if n == 1:
-            return 1
-        ans = (k + self.findTheWinner(n - 1, k)) % n
-        return n if ans == 0 else ans
-```
+
 
 ### **Java**
 
@@ -95,73 +88,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findTheWinner(int n, int k) {
-        if (n == 1) return 1;
-        int ans = (findTheWinner(n - 1, k) + k) % n;
-        return ans == 0 ? n : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findTheWinner(n int, k int) int {
-	if n == 1 {
-		return 1
-	}
-	ans := (findTheWinner(n-1, k) + k) % n
-	if ans == 0 {
-		return n
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-class LinkNode {
-    public val: number;
-    public next: LinkNode;
 
-    constructor(val: number = 0, next?: LinkNode) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
-function findTheWinner(n: number, k: number): number {
-    if (k === 1) {
-        return n;
-    }
-    const dummy = new LinkNode(0);
-    let cur = dummy;
-    for (let i = 1; i <= n; i++) {
-        cur.next = new LinkNode(i);
-        cur = cur.next;
-    }
-    cur.next = dummy.next;
-
-    cur = dummy;
-    let count = 0;
-    while (cur.next != cur) {
-        count++;
-        if (count === k) {
-            cur.next = cur.next.next;
-            count = 0;
-        } else {
-            cur = cur.next;
-        }
-    }
-    return cur.val;
-}
-```
 
 ### **...**
 
@@ -169,4 +106,4 @@ function findTheWinner(n: number, k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

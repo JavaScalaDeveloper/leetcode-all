@@ -82,23 +82,7 @@ return sign * cnt
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def divide(self, a: int, b: int) -> int:
-        INT_MAX = (1 << 31) - 1
-        INT_MIN = -(1 << 31)
-        sign = -1 if a * b < 0 else 1
-        a = abs(a)
-        b = abs(b)
-        tot = 0
-        while a >= b:
-            cnt = 0
-            while a >= (b << (cnt + 1)):
-                cnt += 1
-            tot += 1 << cnt
-            a -= b << cnt
-        return sign * tot if INT_MIN <= sign * tot <= INT_MAX else INT_MAX
-```
+
 
 ### **Java**
 
@@ -138,74 +122,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func divide(a int, b int) int {
-	sign := 1
-	if a*b < 0 {
-		sign = -1
-	}
 
-	a = abs(a)
-	b = abs(b)
 
-	tot := 0
-	for a >= b {
-		cnt := 0
-		for a >= (b << (cnt + 1)) {
-			cnt++
-		}
-		tot += 1 << cnt
-		a -= b << cnt
-	}
 
-	ans := sign * tot
-	if ans >= math.MinInt32 && ans <= math.MaxInt32 {
-		return ans
-	}
-	return math.MaxInt32
-}
 
-func abs(a int) int {
-	if a < 0 {
-		return -a
-	}
-	return a
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int divide(int a, int b) {
-        int sign = 1;
-        if (a < 0 ^ b < 0) {
-            sign = -1;
-        }
-
-        auto x = abs(static_cast<long long>(a));
-        auto y = abs(static_cast<long long>(b));
-        auto tot = 0ll;
-        while (x >= y) {
-            int cnt = 0;
-            while (x >= (y << (cnt + 1))) {
-                ++cnt;
-            }
-            tot += 1ll << cnt;
-            x -= y << cnt;
-        }
-
-        auto ans = sign * tot;
-        if (ans >= INT32_MIN && ans <= INT32_MAX) {
-            return static_cast<int>(ans);
-        }
-        return INT32_MAX;
-    }
-};
-```
 
 ### **...**
 
@@ -213,4 +136,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

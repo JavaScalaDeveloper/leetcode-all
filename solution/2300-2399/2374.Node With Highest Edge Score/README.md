@@ -67,18 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def edgeScore(self, edges: List[int]) -> int:
-        cnt = Counter()
-        for i, v in enumerate(edges):
-            cnt[v] += i
-        ans = 0
-        for i in range(len(edges)):
-            if cnt[ans] < cnt[i]:
-                ans = i
-        return ans
-```
+
 
 ### **Java**
 
@@ -103,65 +92,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int edgeScore(vector<int>& edges) {
-        int n = edges.size();
-        vector<long long> cnt(n);
-        for (int i = 0; i < n; ++i) {
-            cnt[edges[i]] += i;
-        }
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            if (cnt[ans] < cnt[i]) {
-                ans = i;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func edgeScore(edges []int) int {
-	n := len(edges)
-	cnt := make([]int, n)
-	for i, v := range edges {
-		cnt[v] += i
-	}
-	ans := 0
-	for i, v := range cnt {
-		if cnt[ans] < v {
-			ans = i
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function edgeScore(edges: number[]): number {
-    const n = edges.length;
-    const sum = new Array(n).fill(0);
-    for (let i = 0; i < n; i++) {
-        sum[edges[i]] += i;
-    }
-    let res = 0;
-    for (let i = 0; i < n; i++) {
-        if (sum[res] < sum[i]) {
-            res = i;
-        }
-    }
-    return res;
-}
-```
+
 
 ### **...**
 
@@ -170,4 +111,4 @@ function edgeScore(edges: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

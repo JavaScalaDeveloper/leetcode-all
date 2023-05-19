@@ -65,61 +65,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 <!-- tabs:start -->
 
@@ -127,23 +81,7 @@ d[find(a)] = distance
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        n = len(s)
-        p = list(range(n))
-        for a, b in pairs:
-            p[find(a)] = find(b)
-        mp = defaultdict(list)
-        for i, c in enumerate(s):
-            heappush(mp[find(i)], c)
-        return ''.join(heappop(mp[find(i)]) for i in range(n))
-```
 
 ### **Java**
 
@@ -182,72 +120,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    string smallestStringWithSwaps(string s, vector<vector<int>>& pairs) {
-        int n = s.length();
-        p.resize(n);
-        for (int i = 0; i < n; ++i) p[i] = i;
-        for (auto& pair : pairs) p[find(pair[0])] = find(pair[1]);
-        unordered_map<int, vector<char>> mp;
-        for (int i = 0; i < n; ++i) mp[find(i)].push_back(s[i]);
-        for (auto& [k, v] : mp) sort(v.rbegin(), v.rend());
-        string ans;
-        for (int i = 0; i < n; ++i) {
-            ans.push_back(mp[find(i)].back());
-            mp[find(i)].pop_back();
-        }
-        return ans;
-    }
 
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestStringWithSwaps(s string, pairs [][]int) string {
-	n := len(s)
-	p := make([]int, n)
-	for i := range p {
-		p[i] = i
-	}
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	for _, pair := range pairs {
-		p[find(pair[0])] = find(pair[1])
-	}
-	mp := make(map[int][]rune)
-	for i, c := range s {
-		mp[find(i)] = append(mp[find(i)], c)
-	}
-	for _, v := range mp {
-		sort.Slice(v, func(i, j int) bool {
-			return v[i] < v[j]
-		})
-	}
-	var ans []rune
-	for i := 0; i < n; i++ {
-		ans = append(ans, mp[find(i)][0])
-		mp[find(i)] = mp[find(i)][1:]
-	}
-	return string(ans)
-}
-```
+
+
 
 ### **...**
 
@@ -255,4 +134,4 @@ func smallestStringWithSwaps(s string, pairs [][]int) string {
 
 ```
 
-<!-- tabs:end -->
+

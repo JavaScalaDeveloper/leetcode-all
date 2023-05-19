@@ -65,42 +65,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeDuplicates(self, s: str, k: int) -> str:
-        t = []
-        i, n = 0, len(s)
-        while i < n:
-            j = i
-            while j < n and s[j] == s[i]:
-                j += 1
-            cnt = j - i
-            cnt %= k
-            if t and t[-1][0] == s[i]:
-                t[-1][1] = (t[-1][1] + cnt) % k
-                if t[-1][1] == 0:
-                    t.pop()
-            elif cnt:
-                t.append([s[i], cnt])
-            i = j
-        ans = [c * v for c, v in t]
-        return "".join(ans)
-```
 
-```python
-class Solution:
-    def removeDuplicates(self, s: str, k: int) -> str:
-        stk = []
-        for c in s:
-            if stk and stk[-1][0] == c:
-                stk[-1][1] = (stk[-1][1] + 1) % k
-                if stk[-1][1] == 0:
-                    stk.pop()
-            else:
-                stk.append([c, 1])
-        ans = [c * v for c, v in stk]
-        return "".join(ans)
-```
+
+
 
 ### **Java**
 
@@ -134,61 +101,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string removeDuplicates(string s, int k) {
-        vector<pair<char, int>> stk;
-        for (char& c : s) {
-            if (stk.size() && stk.back().first == c) {
-                stk.back().second = (stk.back().second + 1) % k;
-                if (stk.back().second == 0) {
-                    stk.pop_back();
-                }
-            } else {
-                stk.push_back({c, 1});
-            }
-        }
-        string ans;
-        for (auto [c, v] : stk) {
-            ans += string(v, c);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeDuplicates(s string, k int) string {
-    stk := []pair{}
-    for _, c := range s {
-        if len(stk) > 0 && stk[len(stk)-1].c == c {
-            stk[len(stk)-1].v = (stk[len(stk)-1].v + 1) % k
-            if stk[len(stk)-1].v == 0 {
-                stk = stk[:len(stk)-1]
-            }
-        } else {
-            stk = append(stk, pair{c, 1})
-        }
-    }
-    ans := []rune{}
-    for _, e := range stk {
-        for i := 0; i < e.v; i++ {
-            ans = append(ans, e.c)
-        }
-    }
-    return string(ans)
-}
 
-type pair struct {
-    c rune
-    v int
-}
-```
+
+
+
 
 ### **...**
 
@@ -196,4 +115,4 @@ type pair struct {
 
 ```
 
-<!-- tabs:end -->
+

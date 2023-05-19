@@ -68,21 +68,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestAltitude(self, gain: List[int]) -> int:
-        return max(accumulate(gain, initial=0))
-```
 
-```python
-class Solution:
-    def largestAltitude(self, gain: List[int]) -> int:
-        ans = h = 0
-        for v in gain:
-            h += v
-            ans = max(ans, h)
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -101,67 +89,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int largestAltitude(vector<int>& gain) {
-        int ans = 0, h = 0;
-        for (int v : gain) h += v, ans = max(ans, h);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestAltitude(gain []int) (ans int) {
-	h := 0
-	for _, v := range gain {
-		h += v
-		if ans < h {
-			ans = h
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} gain
- * @return {number}
- */
-var largestAltitude = function (gain) {
-    let ans = 0;
-    let h = 0;
-    for (const v of gain) {
-        h += v;
-        ans = Math.max(ans, h);
-    }
-    return ans;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn largest_altitude(gain: Vec<i32>) -> i32 {
-        let mut ans = 0;
-        let mut h = 0;
-        for v in gain.iter() {
-            h += v;
-            ans = ans.max(h);
-        }
-        ans
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **C**
 
@@ -185,4 +127,4 @@ int largestAltitude(int *gain, int gainSize) {
 
 ```
 
-<!-- tabs:end -->
+

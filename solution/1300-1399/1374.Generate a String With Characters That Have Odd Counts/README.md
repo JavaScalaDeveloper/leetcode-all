@@ -58,11 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def generateTheString(self, n: int) -> str:
-        return 'a' * n if n & 1 else 'a' * (n - 1) + 'b'
-```
+
 
 ### **Java**
 
@@ -76,46 +72,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string generateTheString(int n) {
-        string ans(n, 'a');
-        if (n % 2 == 0) {
-            ans[0] = 'b';
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func generateTheString(n int) string {
-	ans := strings.Repeat("a", n-1)
-	if n%2 == 0 {
-		ans += "b"
-	} else {
-		ans += "a"
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function generateTheString(n: number): string {
-    const ans = Array(n).fill('a');
-    if (n % 2 === 0) {
-        ans[0] = 'b';
-    }
-    return ans.join('');
-}
-```
+
 
 ### **...**
 
@@ -123,4 +90,4 @@ function generateTheString(n: number): string {
 
 ```
 
-<!-- tabs:end -->
+

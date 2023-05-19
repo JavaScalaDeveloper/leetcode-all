@@ -64,20 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        ans = [0] * n
-        left = right = 1
-        for i, x in enumerate(nums):
-            ans[i] = left
-            left *= x
-        for i in range(n - 1, -1, -1):
-            ans[i] *= right
-            right *= nums[i]
-        return ans
-```
+
 
 ### **Java**
 
@@ -101,133 +88,31 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> productExceptSelf(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> ans(n);
-        for (int i = 0, left = 1; i < n; ++i) {
-            ans[i] = left;
-            left *= nums[i];
-        }
-        for (int i = n - 1, right = 1; ~i; --i) {
-            ans[i] *= right;
-            right *= nums[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func productExceptSelf(nums []int) []int {
-	n := len(nums)
-	ans := make([]int, n)
-	left, right := 1, 1
-	for i, x := range nums {
-		ans[i] = left
-		left *= x
-	}
-	for i := n - 1; i >= 0; i-- {
-		ans[i] *= right
-		right *= nums[i]
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var productExceptSelf = function (nums) {
-    const n = nums.length;
-    const ans = new Array(n);
-    for (let i = 0, left = 1; i < n; ++i) {
-        ans[i] = left;
-        left *= nums[i];
-    }
-    for (let i = n - 1, right = 1; i >= 0; --i) {
-        ans[i] *= right;
-        right *= nums[i];
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function productExceptSelf(nums: number[]): number[] {
-    const n = nums.length;
-    const ans: number[] = new Array(n);
-    for (let i = 0, left = 1; i < n; ++i) {
-        ans[i] = left;
-        left *= nums[i];
-    }
-    for (let i = n - 1, right = 1; i >= 0; --i) {
-        ans[i] *= right;
-        right *= nums[i];
-    }
-    return ans;
-}
-```
 
-```ts
-function productExceptSelf(nums: number[]): number[] {
-    return nums.map((_, i) =>
-        nums.reduce((pre, val, j) => pre * (i === j ? 1 : val), 1),
-    );
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
-        let n = nums.len();
-        let mut ans = vec![1; n];
-        for i in 1..n {
-            ans[i] = ans[i - 1] * nums[i - 1];
-        }
-        let mut r = 1;
-        for i in (0..n).rev() {
-            ans[i] *= r;
-            r *= nums[i];
-        }
-        ans
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[] ProductExceptSelf(int[] nums) {
-        int n = nums.Length;
-        int[] ans = new int[n];
-        for (int i = 0, left = 1; i < n; ++i) {
-            ans[i] = left;
-            left *= nums[i];
-        }
-        for (int i = n - 1, right = 1; i >= 0; --i) {
-            ans[i] *= right;
-            right *= nums[i];
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -235,4 +120,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

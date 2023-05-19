@@ -95,28 +95,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minCost(self, nums: List[int], k: int) -> int:
-        @cache
-        def dfs(i):
-            if i >= n:
-                return 0
-            cnt = Counter()
-            one = 0
-            ans = inf
-            for j in range(i, n):
-                cnt[nums[j]] += 1
-                if cnt[nums[j]] == 1:
-                    one += 1
-                elif cnt[nums[j]] == 2:
-                    one -= 1
-                ans = min(ans, k + j - i + 1 - one + dfs(j + 1))
-            return ans
 
-        n = len(nums)
-        return dfs(0)
-```
 
 ### **Java**
 
@@ -160,113 +139,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minCost(vector<int>& nums, int k) {
-        int n = nums.size();
-        int f[n];
-        memset(f, 0, sizeof f);
-        function<int(int)> dfs = [&](int i) {
-            if (i >= n) {
-                return 0;
-            }
-            if (f[i]) {
-                return f[i];
-            }
-            int cnt[n];
-            memset(cnt, 0, sizeof cnt);
-            int one = 0;
-            int ans = 1 << 30;
-            for (int j = i; j < n; ++j) {
-                int x = ++cnt[nums[j]];
-                if (x == 1) {
-                    ++one;
-                } else if (x == 2) {
-                    --one;
-                }
-                ans = min(ans, k + j - i + 1 - one + dfs(j + 1));
-            }
-            return f[i] = ans;
-        };
-        return dfs(0);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minCost(nums []int, k int) int {
-	n := len(nums)
-	f := make([]int, n)
-	var dfs func(int) int
-	dfs = func(i int) int {
-		if i >= n {
-			return 0
-		}
-		if f[i] > 0 {
-			return f[i]
-		}
-		ans, one := 1<<30, 0
-		cnt := make([]int, n)
-		for j := i; j < n; j++ {
-			cnt[nums[j]]++
-			x := cnt[nums[j]]
-			if x == 1 {
-				one++
-			} else if x == 2 {
-				one--
-			}
-			ans = min(ans, k+j-i+1-one+dfs(j+1))
-		}
-		f[i] = ans
-		return ans
-	}
-	return dfs(0)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minCost(nums: number[], k: number): number {
-    const n = nums.length;
-    const f = new Array(n).fill(0);
-    const dfs = (i: number) => {
-        if (i >= n) {
-            return 0;
-        }
-        if (f[i]) {
-            return f[i];
-        }
-        const cnt = new Array(n).fill(0);
-        let one = 0;
-        let ans = 1 << 30;
-        for (let j = i; j < n; ++j) {
-            const x = ++cnt[nums[j]];
-            if (x == 1) {
-                ++one;
-            } else if (x == 2) {
-                --one;
-            }
-            ans = Math.min(ans, k + j - i + 1 - one + dfs(j + 1));
-        }
-        f[i] = ans;
-        return f[i];
-    };
-    return dfs(0);
-}
-```
+
 
 ### **...**
 
@@ -274,4 +157,4 @@ function minCost(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

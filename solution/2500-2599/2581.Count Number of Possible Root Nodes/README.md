@@ -100,40 +100,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rootCount(
-        self, edges: List[List[int]], guesses: List[List[int]], k: int
-    ) -> int:
-        def dfs1(i, fa):
-            nonlocal cnt
-            for j in g[i]:
-                if j != fa:
-                    cnt += gs[(i, j)]
-                    dfs1(j, i)
 
-        def dfs2(i, fa):
-            nonlocal ans, cnt
-            ans += cnt >= k
-            for j in g[i]:
-                if j != fa:
-                    cnt -= gs[(i, j)]
-                    cnt += gs[(j, i)]
-                    dfs2(j, i)
-                    cnt -= gs[(j, i)]
-                    cnt += gs[(i, j)]
-
-        g = defaultdict(list)
-        for a, b in edges:
-            g[a].append(b)
-            g[b].append(a)
-        gs = Counter((u, v) for u, v in guesses)
-        cnt = 0
-        dfs1(0, -1)
-        ans = 0
-        dfs2(0, -1)
-        return ans
-```
 
 ### **Java**
 
@@ -197,111 +164,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int rootCount(vector<vector<int>>& edges, vector<vector<int>>& guesses, int k) {
-        int n = edges.size() + 1;
-        vector<vector<int>> g(n);
-        unordered_map<long long, int> gs;
-        auto f = [&](int i, int j) {
-            return 1LL * i * n + j;
-        };
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            g[a].push_back(b);
-            g[b].push_back(a);
-        }
-        for (auto& e : guesses) {
-            int a = e[0], b = e[1];
-            gs[f(a, b)]++;
-        }
-        int ans = 0;
-        int cnt = 0;
 
-        function<void(int, int)> dfs1 = [&](int i, int fa) {
-            for (int& j : g[i]) {
-                if (j != fa) {
-                    cnt += gs[f(i, j)];
-                    dfs1(j, i);
-                }
-            }
-        };
 
-        function<void(int, int)> dfs2 = [&](int i, int fa) {
-            ans += cnt >= k;
-            for (int& j : g[i]) {
-                if (j != fa) {
-                    int a = gs[f(i, j)];
-                    int b = gs[f(j, i)];
-                    cnt -= a;
-                    cnt += b;
-                    dfs2(j, i);
-                    cnt -= b;
-                    cnt += a;
-                }
-            }
-        };
-        dfs1(0, -1);
-        dfs2(0, -1);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func rootCount(edges [][]int, guesses [][]int, k int) (ans int) {
-	n := len(edges) + 1
-	g := make([][]int, n)
-	gs := map[int]int{}
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-	}
-	f := func(i, j int) int {
-		return i*n + j
-	}
-	for _, e := range guesses {
-		a, b := e[0], e[1]
-		gs[f(a, b)]++
-	}
 
-	cnt := 0
-	var dfs1 func(i, fa int)
-	var dfs2 func(i, fa int)
-	dfs1 = func(i, fa int) {
-		for _, j := range g[i] {
-			if j != fa {
-				cnt += gs[f(i, j)]
-				dfs1(j, i)
-			}
-		}
-	}
-	dfs2 = func(i, fa int) {
-		if cnt >= k {
-			ans++
-		}
-		for _, j := range g[i] {
-			if j != fa {
-				a, b := gs[f(i, j)], gs[f(j, i)]
-				cnt -= a
-				cnt += b
-				dfs2(j, i)
-				cnt -= b
-				cnt += a
-			}
-		}
-	}
-	dfs1(0, -1)
-	dfs2(0, -1)
-	return
-}
-```
+
 
 ### **...**
 
@@ -309,4 +178,4 @@ func rootCount(edges [][]int, guesses [][]int, k int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

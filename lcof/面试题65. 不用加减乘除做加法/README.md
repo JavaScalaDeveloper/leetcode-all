@@ -56,15 +56,7 @@
 
 由于 Python `int` 是无限长整型，左移不会自动溢出，因此需要特殊处理。
 
-```python
-class Solution:
-    def add(self, a: int, b: int) -> int:
-        a, b = a & 0xFFFFFFFF, b & 0xFFFFFFFF
-        while b:
-            c = ((a & b) << 1) & 0xFFFFFFFF
-            a, b = a ^ b, c
-        return a if a < 0x80000000 else ~(a ^ 0xFFFFFFFF)
-```
+
 
 ### **Java**
 
@@ -94,77 +86,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int add(int a, int b) {
-        while (b) {
-            unsigned int c = (unsigned int)(a & b) << 1;
-            a = a ^ b;
-            b = c;
-        }
-        return a;
-    }
-};
-```
 
-### **Go**
 
-```go
-func add(a int, b int) int {
-	if b == 0 {
-		return a
-	}
-	return add(a^b, (a&b)<<1)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} a
- * @param {number} b
- * @return {number}
- */
-var add = function (a, b) {
-    if (b == 0) {
-        return a;
-    }
-    return add(a ^ b, (a & b) << 1);
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int Add(int a, int b) {
-        while (b != 0) {
-            int c = (a & b) << 1;
-            a = a ^ b;
-            b = c;
-        }
 
-        return a;
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function add(a: number, b: number): number {
-    while (b) {
-        const c = (a & b) << 1;
-        a ^= b;
-        b = c;
-    }
-    return a;
-}
-```
+
 
 ### **...**
 
@@ -172,4 +112,4 @@ function add(a: number, b: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -56,19 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def hIndex(self, citations: List[int]) -> int:
-        n = len(citations)
-        left, right = 0, n
-        while left < right:
-            mid = (left + right + 1) >> 1
-            if citations[n - mid] >= mid:
-                left = mid
-            else:
-                right = mid - 1
-        return left
-```
+
 
 ### **Java**
 
@@ -92,62 +80,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int hIndex(vector<int>& citations) {
-        int n = citations.size();
-        int left = 0, right = n;
-        while (left < right) {
-            int mid = (left + right + 1) >> 1;
-            if (citations[n - mid] >= mid)
-                left = mid;
-            else
-                right = mid - 1;
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func hIndex(citations []int) int {
-	n := len(citations)
-	left, right := 0, n
-	for left < right {
-		mid := (left + right + 1) >> 1
-		if citations[n-mid] >= mid {
-			left = mid
-		} else {
-			right = mid - 1
-		}
-	}
-	return left
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function hIndex(citations: number[]): number {
-    const n = citations.length;
-    let left = 0,
-        right = n;
-    while (left < right) {
-        const mid = (left + right + 1) >> 1;
-        if (citations[n - mid] >= mid) {
-            left = mid;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return left;
-}
-```
+
 
 ### **...**
 
@@ -155,4 +98,4 @@ function hIndex(citations: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

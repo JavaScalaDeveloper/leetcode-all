@@ -64,31 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# """
-# This is ArrayReader's API interface.
-# You should not implement it, or speculate about its implementation
-# """
-# class ArrayReader:
-#    def get(self, index: int) -> int:
 
-
-class Solution:
-    def search(self, reader, target):
-        """
-        :type reader: ArrayReader
-        :type target: int
-        :rtype: int
-        """
-        left, right = 0, 20000
-        while left < right:
-            mid = (left + right) >> 1
-            if reader.get(mid) >= target:
-                right = mid
-            else:
-                left = mid + 1
-        return left if reader.get(left) == target else -1
-```
 
 ### **Java**
 
@@ -119,63 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * // This is the ArrayReader's API interface.
- * // You should not implement it, or speculate about its implementation
- * class ArrayReader {
- *   public:
- *     int get(int index);
- * };
- */
 
-class Solution {
-public:
-    int search(const ArrayReader& reader, int target) {
-        int left = 0, right = 20000;
-        while (left < right) {
-            int mid = left + right >> 1;
-            if (reader.get(mid) >= target) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return reader.get(left) == target ? left : -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * // This is the ArrayReader's API interface.
- * // You should not implement it, or speculate about its implementation
- * type ArrayReader struct {
- * }
- *
- * func (this *ArrayReader) get(index int) int {}
- */
 
-func search(reader ArrayReader, target int) int {
-	left, right := 0, 20000
-	for left < right {
-		mid := (left + right) >> 1
-		if reader.get(mid) >= target {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	if reader.get(left) == target {
-		return left
-	}
-	return -1
-}
-```
+
+
 
 ### **...**
 
@@ -183,4 +109,4 @@ func search(reader ArrayReader, target int) int {
 
 ```
 
-<!-- tabs:end -->
+

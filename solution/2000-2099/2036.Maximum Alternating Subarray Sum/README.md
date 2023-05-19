@@ -78,16 +78,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumAlternatingSubarraySum(self, nums: List[int]) -> int:
-        ans = nums[0]
-        a, b = nums[0], -inf
-        for v in nums[1:]:
-            a, b = max(v, b + v), a - v
-            ans = max(ans, a, b)
-        return ans
-```
+
 
 ### **Java**
 
@@ -109,49 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using ll = long long;
 
-class Solution {
-public:
-    long long maximumAlternatingSubarraySum(vector<int>& nums) {
-        ll ans = nums[0];
-        ll a = nums[0], b = -(1 << 30);
-        for (int i = 1; i < nums.size(); ++i) {
-            ll c = a, d = b;
-            a = max(1ll * nums[i], d + nums[i]);
-            b = c - nums[i];
-            ans = max(ans, max(a, b));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumAlternatingSubarraySum(nums []int) int64 {
-	ans := nums[0]
-	a, b := nums[0], -(1 << 30)
-	for _, v := range nums[1:] {
-		c, d := a, b
-		a = max(v, d+v)
-		b = c - v
-		ans = max(ans, max(a, b))
-	}
-	return int64(ans)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -159,4 +114,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

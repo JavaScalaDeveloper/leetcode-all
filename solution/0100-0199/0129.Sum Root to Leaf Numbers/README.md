@@ -79,25 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def sumNumbers(self, root: Optional[TreeNode]) -> int:
-        def dfs(root, s):
-            if root is None:
-                return 0
-            s = s * 10 + root.val
-            if root.left is None and root.right is None:
-                return s
-            return dfs(root.left, s) + dfs(root.right, s)
 
-        return dfs(root, 0)
-```
 
 ### **Java**
 
@@ -137,60 +119,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int sumNumbers(TreeNode* root) {
-        function<int(TreeNode*, int)> dfs = [&](TreeNode* root, int s) -> int {
-            if (!root) return 0;
-            s = s * 10 + root->val;
-            if (!root->left && !root->right) return s;
-            return dfs(root->left, s) + dfs(root->right, s);
-        };
-        return dfs(root, 0);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func sumNumbers(root *TreeNode) int {
-	var dfs func(*TreeNode, int) int
-	dfs = func(root *TreeNode, s int) int {
-		if root == nil {
-			return 0
-		}
-		s = s*10 + root.Val
-		if root.Left == nil && root.Right == nil {
-			return s
-		}
-		return dfs(root.Left, s) + dfs(root.Right, s)
-	}
-	return dfs(root, 0)
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -222,99 +157,15 @@ int sumNumbers(struct TreeNode *root) {
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function sumNumbers(root: TreeNode | null): number {
-    function dfs(root: TreeNode | null, s: number): number {
-        if (!root) return 0;
-        s = s * 10 + root.val;
-        if (!root.left && !root.right) return s;
-        return dfs(root.left, s) + dfs(root.right, s);
-    }
-    return dfs(root, 0);
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    fn dfs(node: &Option<Rc<RefCell<TreeNode>>>, mut num: i32) -> i32 {
-        if node.is_none() {
-            return 0;
-        }
-        let node = node.as_ref().unwrap().borrow();
-        num = num * 10 + node.val;
-        if node.left.is_none() && node.right.is_none() {
-            return num;
-        }
-        Self::dfs(&node.left, num) + Self::dfs(&node.right, num)
-    }
 
-    pub fn sum_numbers(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        Self::dfs(&root, 0)
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-var sumNumbers = function (root) {
-    function dfs(root, s) {
-        if (!root) return 0;
-        s = s * 10 + root.val;
-        if (!root.left && !root.right) return s;
-        return dfs(root.left, s) + dfs(root.right, s);
-    }
-    return dfs(root, 0);
-};
-```
+
+
+
 
 ### **...**
 
@@ -322,4 +173,4 @@ var sumNumbers = function (root) {
 
 ```
 
-<!-- tabs:end -->
+

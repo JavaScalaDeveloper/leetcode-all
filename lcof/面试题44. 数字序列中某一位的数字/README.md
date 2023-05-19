@@ -53,33 +53,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findNthDigit(self, n: int) -> int:
-        k, cnt = 1, 9
-        while k * cnt < n:
-            n -= k * cnt
-            k += 1
-            cnt *= 10
-        num = 10 ** (k - 1) + (n - 1) // k
-        idx = (n - 1) % k
-        return int(str(num)[idx])
-```
 
-```python
-class Solution:
-    def findNthDigit(self, n: int) -> int:
-        if n < 10:
-            return n
-        n -= 10
-        k, p = 2, 10
-        while n >= 9 * k * p:
-            n -= 9 * k * p
-            k += 1
-            p *= 10
-        x = p + n // k
-        return int(str(x)[n % k])
-```
+
+
 
 ### **Java**
 
@@ -120,116 +96,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findNthDigit(int n) {
-        int k = 1, cnt = 9;
-        while (1ll * k * cnt < n) {
-            n -= k * cnt;
-            ++k;
-            cnt *= 10;
-        }
-        int num = pow(10, k - 1) + (n - 1) / k;
-        int idx = (n - 1) % k;
-        return to_string(num)[idx] - '0';
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int findNthDigit(int n) {
-        if (n < 10) {
-            return n;
-        }
-        n -= 10;
-        int k = 2, p = 10;
-        while (n >= 9ll * k * p) {
-            n -= 9 * k * p;
-            ++k;
-            p *= 10;
-        }
-        int x = p + n / k;
-        return to_string(x)[n % k] - '0';
-    }
-};
-```
 
-### **Go**
 
-```go
-func findNthDigit(n int) int {
-	k, cnt := 1, 9
-	for k*cnt < n {
-		n -= k * cnt
-		k++
-		cnt *= 10
-	}
-	num := int(math.Pow10(k-1)) + (n-1)/k
-	idx := (n - 1) % k
-	return int(strconv.Itoa(num)[idx] - '0')
-}
-```
 
-```go
-func findNthDigit(n int) int {
-	if n < 10 {
-		return n
-	}
-	n -= 10
-	k, p := 2, 10
-	for n >= 9*k*p {
-		n -= 9 * k * p
-		k++
-		p *= 10
-	}
-	x := p + n/k
-	return int(strconv.Itoa(x)[n%k] - '0')
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var findNthDigit = function (n) {
-    let k = 1,
-        cnt = 9;
-    while (k * cnt < n) {
-        n -= k * cnt;
-        ++k;
-        cnt *= 10;
-    }
-    const num = Math.pow(10, k - 1) + (n - 1) / k;
-    const idx = (n - 1) % k;
-    return num.toString()[idx];
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int FindNthDigit(int n) {
-        int k = 1, cnt = 9;
-        while ((long) k * cnt < n) {
-            n -= k * cnt;
-            ++k;
-            cnt *= 10;
-        }
-        int num = (int) Math.Pow(10, k - 1) + (n - 1) / k;
-        int idx = (n - 1) % k;
-        return num.ToString()[idx] - '0';
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -237,4 +122,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

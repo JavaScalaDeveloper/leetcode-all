@@ -65,15 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getMinDistance(self, nums: List[int], target: int, start: int) -> int:
-        ans = inf
-        for i, x in enumerate(nums):
-            if x == target:
-                ans = min(ans, abs(i - start))
-        return ans
-```
+
 
 ### **Java**
 
@@ -94,44 +86,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int getMinDistance(vector<int>& nums, int target, int start) {
-        int n = nums.size();
-        int ans = n;
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] == target) {
-                ans = min(ans, abs(i - start));
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getMinDistance(nums []int, target int, start int) int {
-	ans := 1 << 30
-	for i, x := range nums {
-		if t := abs(i - start); x == target && t < ans {
-			ans = t
-		}
-	}
-	return ans
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **...**
 
@@ -139,4 +100,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

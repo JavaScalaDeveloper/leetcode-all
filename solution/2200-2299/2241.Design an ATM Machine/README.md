@@ -74,33 +74,7 @@ atm.withdraw(550);        // 返回 [0,1,0,0,1] ，机器会返回 1 张 $50 的
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class ATM:
-    def __init__(self):
-        self.cnt = [0] * 5
-        self.d = [20, 50, 100, 200, 500]
 
-    def deposit(self, banknotesCount: List[int]) -> None:
-        for i, v in enumerate(banknotesCount):
-            self.cnt[i] += v
-
-    def withdraw(self, amount: int) -> List[int]:
-        ans = [0] * 5
-        for i in range(4, -1, -1):
-            ans[i] = min(amount // self.d[i], self.cnt[i])
-            amount -= ans[i] * self.d[i]
-        if amount > 0:
-            return [-1]
-        for i, v in enumerate(ans):
-            self.cnt[i] -= v
-        return ans
-
-
-# Your ATM object will be instantiated and called as such:
-# obj = ATM()
-# obj.deposit(banknotesCount)
-# param_2 = obj.withdraw(amount)
-```
 
 ### **Java**
 
@@ -144,102 +118,17 @@ class ATM {
  */
 ```
 
-### **C++**
 
-```cpp
-class ATM {
-public:
-    ATM() {
 
-    }
 
-    void deposit(vector<int> banknotesCount) {
-        for (int i = 0; i < banknotesCount.size(); ++i) {
-            cnt[i] += banknotesCount[i];
-        }
-    }
 
-    vector<int> withdraw(int amount) {
-        vector<int> ans(5);
-        for (int i = 4; ~i; --i) {
-            ans[i] = min(1ll * amount / d[i], cnt[i]);
-            amount -= ans[i] * d[i];
-        }
-        if (amount > 0) {
-            return {-1};
-        }
-        for (int i = 0; i < 5; ++i) {
-            cnt[i] -= ans[i];
-        }
-        return ans;
-    }
 
-private:
-    long long cnt[5] = {0};
-    int d[5] = {20, 50, 100, 200, 500};
-};
 
-/**
- * Your ATM object will be instantiated and called as such:
- * ATM* obj = new ATM();
- * obj->deposit(banknotesCount);
- * vector<int> param_2 = obj->withdraw(amount);
- */
-```
 
-### **Go**
-
-```go
-type ATM struct {
-	d   [5]int
-	cnt [5]int
-}
-
-func Constructor() ATM {
-	return ATM{[5]int{20, 50, 100, 200, 500}, [5]int{}}
-}
-
-func (this *ATM) Deposit(banknotesCount []int) {
-	for i, v := range banknotesCount {
-		this.cnt[i] += v
-	}
-}
-
-func (this *ATM) Withdraw(amount int) []int {
-	ans := make([]int, 5)
-	for i := 4; i >= 0; i-- {
-		ans[i] = min(amount/this.d[i], this.cnt[i])
-		amount -= ans[i] * this.d[i]
-	}
-	if amount > 0 {
-		return []int{-1}
-	}
-	for i, v := range ans {
-		this.cnt[i] -= v
-	}
-	return ans
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-/**
- * Your ATM object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Deposit(banknotesCount);
- * param_2 := obj.Withdraw(amount);
- */
-```
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -247,4 +136,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

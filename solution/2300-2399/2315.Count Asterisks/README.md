@@ -66,17 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countAsterisks(self, s: str) -> int:
-        ans, ok = 0, 1
-        for c in s:
-            if c == "*":
-                ans += ok
-            elif c == "|":
-                ok ^= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,76 +89,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countAsterisks(string s) {
-        int ans = 0, ok = 1;
-        for (char& c : s) {
-            if (c == '*') {
-                ans += ok;
-            } else if (c == '|') {
-                ok ^= 1;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countAsterisks(s string) (ans int) {
-	ok := 1
-	for _, c := range s {
-		if c == '*' {
-			ans += ok
-		} else if c == '|' {
-			ok ^= 1
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countAsterisks(s: string): number {
-    let ans = 0;
-    let ok = 1;
-    for (const c of s) {
-        if (c === '*') {
-            ans += ok;
-        } else if (c === '|') {
-            ok ^= 1;
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn count_asterisks(s: String) -> i32 {
-        let mut ans = 0;
-        let mut ok = 1;
-        for &c in s.as_bytes() {
-            if c == b'*' {
-                ans += ok
-            } else if c == b'|' {
-                ok ^= 1
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -187,23 +122,9 @@ int countAsterisks(char * s){
 }
 ```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int CountAsterisks(string s) {
-        int ans = 0, ok = 1;
-        foreach (char c in s) {
-            if (c == '*') {
-                ans += ok;
-            } else if (c == '|') {
-                ok ^= 1;
-            }
-        }
-        return ans;
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -211,4 +132,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

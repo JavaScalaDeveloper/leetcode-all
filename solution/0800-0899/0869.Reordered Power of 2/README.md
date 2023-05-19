@@ -47,23 +47,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reorderedPowerOf2(self, n: int) -> bool:
-        def convert(n):
-            cnt = [0] * 10
-            while n:
-                n, v = divmod(n, 10)
-                cnt[v] += 1
-            return cnt
 
-        i, s = 1, convert(n)
-        while i <= 10**9:
-            if convert(i) == s:
-                return True
-            i <<= 1
-        return False
-```
 
 ### **Java**
 
@@ -91,47 +75,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool reorderedPowerOf2(int n) {
-        vector<int> s = convert(n);
-        for (int i = 1; i <= pow(10, 9); i <<= 1)
-            if (s == convert(i))
-                return true;
-        return false;
-    }
 
-    vector<int> convert(int n) {
-        vector<int> cnt(10);
-        for (; n; n /= 10) ++cnt[n % 10];
-        return cnt;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reorderedPowerOf2(n int) bool {
-	convert := func(n int) []byte {
-		cnt := make([]byte, 10)
-		for ; n > 0; n /= 10 {
-			cnt[n%10]++
-		}
-		return cnt
-	}
-	s := convert(n)
-	for i := 1; i <= 1e9; i <<= 1 {
-		if bytes.Equal(s, convert(i)) {
-			return true
-		}
-	}
-	return false
-}
-```
+
+
+
 
 ### **...**
 
@@ -139,4 +89,4 @@ func reorderedPowerOf2(n int) bool {
 
 ```
 
-<!-- tabs:end -->
+

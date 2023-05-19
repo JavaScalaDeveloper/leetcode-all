@@ -84,12 +84,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isCircularSentence(self, sentence: str) -> bool:
-        sentence = sentence.split()
-        return all(s[0] == sentence[i - 1][-1] for i, s in enumerate(sentence))
-```
+
 
 ### **Java**
 
@@ -112,100 +107,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isCircularSentence(string sentence) {
-        if (sentence[0] != sentence[sentence.size() - 1]) return false;
-        istringstream is(sentence);
-        vector<string> ss;
-        string s;
-        while (is >> s) ss.emplace_back(s);
-        for (int i = 1; i < ss.size(); ++i) {
-            if (ss[i][0] != ss[i - 1][ss[i - 1].size() - 1]) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isCircularSentence(sentence string) bool {
-	if sentence[0] != sentence[len(sentence)-1] {
-		return false
-	}
-	ss := strings.Split(sentence, " ")
-	for i := 1; i < len(ss); i++ {
-		if ss[i][0] != ss[i-1][len(ss[i-1])-1] {
-			return false
-		}
-	}
-	return true
-}
-```
 
-### **JavaScript**
 
-```js
-var isCircularSentence = function (sentence) {
-    const words = sentence.split(' ');
-    const post = words[0].charCodeAt(0);
-    let prev = words[0].charCodeAt(words[0].length - 1);
-    const n = words.length;
-    for (let i = 1; i < n; i++) {
-        let cur = words[i];
-        if (cur.charCodeAt(0) !== prev) {
-            return false;
-        }
-        prev = cur.charCodeAt(cur.length - 1);
-    }
-    return post === prev;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isCircularSentence(sentence: string): boolean {
-    const ss = sentence.split(' ');
-    const n = ss.length;
-    if (ss[0][0] !== ss[n - 1][ss[n - 1].length - 1]) {
-        return false;
-    }
-    for (let i = 0; i < n - 1; i++) {
-        if (ss[i][ss[i].length - 1] !== ss[i + 1][0]) {
-            return false;
-        }
-    }
-    return true;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn is_circular_sentence(sentence: String) -> bool {
-        let ss: Vec<String> = sentence.split(' ').map(String::from).collect();
-        let n = ss.len();
-        if ss[0].as_bytes()[0] != ss[n - 1].as_bytes()[ss[n - 1].len() - 1] {
-            return false;
-        }
-        for i in 1..n {
-            if ss[i - 1].as_bytes()[ss[i - 1].len() - 1] != ss[i].as_bytes()[0] {
-                return false;
-            }
-        }
-        return true;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -213,4 +133,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

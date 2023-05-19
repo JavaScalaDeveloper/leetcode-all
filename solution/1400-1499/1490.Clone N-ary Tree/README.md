@@ -70,23 +70,7 @@ class Node {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val=None, children=None):
-        self.val = val
-        self.children = children if children is not None else []
-"""
 
-
-class Solution:
-    def cloneTree(self, root: 'Node') -> 'Node':
-        if root is None:
-            return None
-        children = [self.cloneTree(child) for child in root.children]
-        return Node(root.val, children)
-```
 
 ### **Java**
 
@@ -130,66 +114,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    vector<Node*> children;
 
-    Node() {}
 
-    Node(int _val) {
-        val = _val;
-    }
 
-    Node(int _val, vector<Node*> _children) {
-        val = _val;
-        children = _children;
-    }
-};
-*/
 
-class Solution {
-public:
-    Node* cloneTree(Node* root) {
-        if (!root) {
-            return root;
-        }
-        vector<Node*> children;
-        for (Node* child : root->children) {
-            children.emplace_back(cloneTree(child));
-        }
-        return new Node(root->val, children);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Children []*Node
- * }
- */
-
-func cloneTree(root *Node) *Node {
-	if root == nil {
-		return nil
-	}
-	children := []*Node{}
-	for _, child := range root.Children {
-		children = append(children, cloneTree(child))
-	}
-	return &Node{root.Val, children}
-}
-```
 
 ### **...**
 
@@ -197,4 +128,4 @@ func cloneTree(root *Node) *Node {
 
 ```
 
-<!-- tabs:end -->
+

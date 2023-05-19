@@ -66,12 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMaxK(self, nums: List[int]) -> int:
-        s = set(nums)
-        return max((x for x in s if -x in s), default=-1)
-```
+
 
 ### **Java**
 
@@ -95,74 +90,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findMaxK(vector<int>& nums) {
-        unordered_set<int> s(nums.begin(), nums.end());
-        int ans = -1;
-        for (int x : s) {
-            if (s.count(-x)) {
-                ans = max(ans, x);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMaxK(nums []int) int {
-	ans := -1
-	s := map[int]bool{}
-	for _, x := range nums {
-		s[x] = true
-	}
-	for x := range s {
-		if s[-x] && ans < x {
-			ans = x
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findMaxK(nums: number[]): number {
-    let ans = -1;
-    const s = new Set(nums);
-    for (const x of s) {
-        if (s.has(-x)) {
-            ans = Math.max(ans, x);
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn find_max_k(nums: Vec<i32>) -> i32 {
-        let s = nums.into_iter().collect::<HashSet<i32>>();
-        let mut ans = -1;
-        for &x in s.iter() {
-            if s.contains(&(-x)) {
-                ans = ans.max(x);
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -170,4 +112,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

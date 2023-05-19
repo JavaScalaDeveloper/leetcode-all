@@ -61,24 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findStrobogrammatic(self, n: int) -> List[str]:
-        def dfs(u):
-            if u == 0:
-                return ['']
-            if u == 1:
-                return ['0', '1', '8']
-            ans = []
-            for v in dfs(u - 2):
-                for l, r in ('11', '88', '69', '96'):
-                    ans.append(l + v + r)
-                if u != n:
-                    ans.append('0' + v + '0')
-            return ans
 
-        return dfs(n)
-```
 
 ### **Java**
 
@@ -115,56 +98,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const vector<pair<char, char>> pairs = {{'1', '1'}, {'8', '8'}, {'6', '9'}, {'9', '6'}};
 
-    vector<string> findStrobogrammatic(int n) {
-        function<vector<string>(int)> dfs = [&](int u) {
-            if (u == 0) return vector<string>{""};
-            if (u == 1) return vector<string>{"0", "1", "8"};
-            vector<string> ans;
-            for (auto& v : dfs(u - 2)) {
-                for (auto& [l, r] : pairs) ans.push_back(l + v + r);
-                if (u != n) ans.push_back('0' + v + '0');
-            }
-            return ans;
-        };
-        return dfs(n);
-    }
-};
-```
 
-### **Go**
 
-```go
-func findStrobogrammatic(n int) []string {
-	var dfs func(int) []string
-	dfs = func(u int) []string {
-		if u == 0 {
-			return []string{""}
-		}
-		if u == 1 {
-			return []string{"0", "1", "8"}
-		}
-		var ans []string
-		pairs := [][]string{{"1", "1"}, {"8", "8"}, {"6", "9"}, {"9", "6"}}
-		for _, v := range dfs(u - 2) {
-			for _, p := range pairs {
-				ans = append(ans, p[0]+v+p[1])
-			}
-			if u != n {
-				ans = append(ans, "0"+v+"0")
-			}
-		}
-		return ans
-	}
-	return dfs(n)
-}
-```
+
+
+
 
 ### **...**
 
@@ -172,4 +112,4 @@ func findStrobogrammatic(n int) []string {
 
 ```
 
-<!-- tabs:end -->
+

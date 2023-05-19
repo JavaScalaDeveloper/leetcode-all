@@ -58,27 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def findSecondMinimumValue(self, root: Optional[TreeNode]) -> int:
-        def dfs(root):
-            if root:
-                dfs(root.left)
-                dfs(root.right)
-                nonlocal ans, v
-                if root.val > v:
-                    ans = root.val if ans == -1 else min(ans, root.val)
 
-        ans, v = -1, root.val
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -120,103 +100,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int ans = -1;
 
-    int findSecondMinimumValue(TreeNode* root) {
-        dfs(root, root->val);
-        return ans;
-    }
 
-    void dfs(TreeNode* root, int val) {
-        if (!root) return;
-        dfs(root->left, val);
-        dfs(root->right, val);
-        if (root->val > val) ans = ans == -1 ? root->val : min(ans, root->val);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func findSecondMinimumValue(root *TreeNode) int {
-	ans, v := -1, root.Val
-	var dfs func(*TreeNode)
-	dfs = func(root *TreeNode) {
-		if root == nil {
-			return
-		}
-		dfs(root.Left)
-		dfs(root.Right)
-		if root.Val > v {
-			if ans == -1 || ans > root.Val {
-				ans = root.Val
-			}
-		}
-	}
-	dfs(root)
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-var findSecondMinimumValue = function (root) {
-    let ans = -1;
-    const v = root.val;
-    function dfs(root) {
-        if (!root) {
-            return;
-        }
-        dfs(root.left);
-        dfs(root.right);
-        if (root.val > v) {
-            if (ans == -1 || ans > root.val) {
-                ans = root.val;
-            }
-        }
-    }
-    dfs(root);
-    return ans;
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -224,4 +118,4 @@ var findSecondMinimumValue = function (root) {
 
 ```
 
-<!-- tabs:end -->
+

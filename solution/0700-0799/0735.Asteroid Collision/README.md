@@ -64,22 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def asteroidCollision(self, asteroids: List[int]) -> List[int]:
-        ans = []
-        for a in asteroids:
-            if a > 0:
-                ans.append(a)
-            else:
-                while ans and 0 < ans[-1] < -a:
-                    ans.pop()
-                if ans and ans[-1] == -a:
-                    ans.pop()
-                elif not ans or ans[-1] < -a:
-                    ans.append(a)
-        return ans
-```
+
 
 ### **Java**
 
@@ -108,54 +93,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> asteroidCollision(vector<int>& asteroids) {
-        vector<int> ans;
-        for (int a : asteroids) {
-            if (a > 0) {
-                ans.push_back(a);
-            } else {
-                while (!ans.empty() && ans.back() > 0 && ans.back() < -a) {
-                    ans.pop_back();
-                }
-                if (!ans.empty() && ans.back() == -a) {
-                    ans.pop_back();
-                } else if (ans.empty() || ans.back() < -a) {
-                    ans.push_back(a);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func asteroidCollision(asteroids []int) []int {
-	var ans []int
-	for _, a := range asteroids {
-		if a > 0 {
-			ans = append(ans, a)
-		} else {
-			for len(ans) > 0 && ans[len(ans)-1] > 0 && ans[len(ans)-1] < -a {
-				ans = ans[:len(ans)-1]
-			}
-			if len(ans) > 0 && ans[len(ans)-1] == -a {
-				ans = ans[:len(ans)-1]
-			} else if len(ans) == 0 || ans[len(ans)-1] < -a {
-				ans = append(ans, a)
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -163,4 +107,4 @@ func asteroidCollision(asteroids []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -57,24 +57,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def halvesAreAlike(self, s: str) -> bool:
-        cnt, n = 0, len(s) >> 1
-        vowels = set('aeiouAEIOU')
-        for i in range(n):
-            cnt += s[i] in vowels
-            cnt -= s[i + n] in vowels
-        return cnt == 0
-```
 
-```python
-class Solution:
-    def halvesAreAlike(self, s: str) -> bool:
-        vowels = set('aeiouAEIOU')
-        a, b = s[:len(s) >> 1], s[len(s) >> 1:]
-        return sum(c in vowels for c in a) == sum(c in vowels for c in b)
-```
+
+
 
 ### **Java**
 
@@ -96,120 +81,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool halvesAreAlike(string s) {
-        unordered_set<char> vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
-        int cnt = 0, n = s.size() / 2;
-        for (int i = 0; i < n; ++i) {
-            cnt += vowels.count(s[i]);
-            cnt -= vowels.count(s[i + n]);
-        }
-        return cnt == 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func halvesAreAlike(s string) bool {
-	vowels := map[byte]bool{}
-	for _, c := range "aeiouAEIOU" {
-		vowels[byte(c)] = true
-	}
-	cnt, n := 0, len(s)>>1
-	for i := 0; i < n; i++ {
-		if vowels[s[i]] {
-			cnt++
-		}
-		if vowels[s[i+n]] {
-			cnt--
-		}
-	}
-	return cnt == 0
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function halvesAreAlike(s: string): boolean {
-    const set = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
-    const n = s.length >> 1;
-    let count = 0;
-    for (let i = 0; i < n; i++) {
-        set.has(s[i]) && count++;
-        set.has(s[n + i]) && count--;
-    }
-    return count === 0;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn halves_are_alike(s: String) -> bool {
-        let set: HashSet<&u8> = [b'a', b'e', b'i', b'o', b'u', b'A', b'E', b'I', b'O', b'U']
-            .into_iter()
-            .collect();
-        let s = s.as_bytes();
-        let n = s.len() >> 1;
-        let mut count = 0;
-        for i in 0..n {
-            if set.contains(&s[i]) {
-                count += 1;
-            }
-            if set.contains(&s[n + i]) {
-                count -= 1;
-            }
-        }
-        count == 0
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @return Boolean
-     */
-    function halvesAreAlike($s) {
-        $cnt = 0;
-        for ($i = 0; $i < strlen($s) / 2; $i++) {
-            if (strpos("aeiouAEIOU", $s[$i]) !== false) $cnt++;
-            if (strpos("aeiouAEIOU", $s[strlen($s) / 2 + $i]) !== false) $cnt--;
-        }
-        return $cnt == 0;
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {boolean}
- */
-var halvesAreAlike = function (s) {
-    const str = 'aeiouAEIOU';
-    let cnt = 0;
-    for (let i = 0; i < s.length / 2; i++) {
-        if (str.indexOf(s[i]) > -1) cnt++;
-        if (str.indexOf(s[s.length - 1 - i]) > -1) cnt--;
-    }
-    return cnt === 0;
-};
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -217,4 +111,4 @@ var halvesAreAlike = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -75,28 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def equalCountSubstrings(self, s: str, count: int) -> int:
-        ans = 0
-        for x in range(1, 27):
-            m = count * x
-            if m > len(s):
-                break
-            cnt = Counter()
-            y = 0
-            for i, c in enumerate(s):
-                cnt[c] += 1
-                y += cnt[c] == count
-                y -= cnt[c] == count + 1
-                j = i - m
-                if j >= 0:
-                    cnt[s[j]] -= 1
-                    y += cnt[s[j]] == count
-                    y -= cnt[s[j]] == count - 1
-                ans += x == y
-        return ans
-```
+
 
 ### **Java**
 
@@ -141,110 +120,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int equalCountSubstrings(string s, int count) {
-        int ans = 0;
-        int n = s.size();
-        int cnt[26];
-        for (int x = 1; x < 27 && count * x <= n; ++x) {
-            int m = count * x;
-            memset(cnt, 0, sizeof cnt);
-            int y = 0;
-            for (int i = 0; i < n; ++i) {
-                int a = s[i] - 'a';
-                ++cnt[a];
-                y += cnt[a] == count;
-                y -= cnt[a] == count + 1;
-                int j = i - m;
-                if (j >= 0) {
-                    int b = s[j] - 'a';
-                    --cnt[b];
-                    y += cnt[b] == count;
-                    y -= cnt[b] == count - 1;
-                }
-                ans += x == y;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func equalCountSubstrings(s string, count int) (ans int) {
-	n := len(s)
-	for x := 1; x < 27 && x*count <= n; x++ {
-		m := x * count
-		y := 0
-		cnt := [26]int{}
-		for i, c := range s {
-			a := c - 'a'
-			cnt[a]++
-			if cnt[a] == count {
-				y++
-			}
-			if cnt[a] == count+1 {
-				y--
-			}
-			j := i - m
-			if j >= 0 {
-				b := s[j] - 'a'
-				cnt[b]--
-				if cnt[b] == count {
-					y++
-				}
-				if cnt[b] == count-1 {
-					y--
-				}
-			}
-			if x == y {
-				ans++
-			}
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @param {number} count
- * @return {number}
- */
-var equalCountSubstrings = function (s, count) {
-    let ans = 0;
-    const n = s.length;
-    for (let x = 1; x <= 26 && x * count <= n; ++x) {
-        const m = x * count;
-        const cnt = new Array(26).fill(0);
-        let y = 0;
-        for (let i = 0; i < n; ++i) {
-            const a = s.charCodeAt(i) - 'a'.charCodeAt(0);
-            ++cnt[a];
-            y += cnt[a] == count;
-            y -= cnt[a] == count + 1;
-            const j = i - m;
-            if (j >= 0) {
-                const b = s.charCodeAt(j) - 'a'.charCodeAt(0);
-                --cnt[b];
-                y += cnt[b] == count;
-                y -= cnt[b] == count - 1;
-            }
-            ans += x == y;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -252,4 +138,4 @@ var equalCountSubstrings = function (s, count) {
 
 ```
 
-<!-- tabs:end -->
+

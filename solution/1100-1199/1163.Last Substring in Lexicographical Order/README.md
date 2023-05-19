@@ -62,23 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def lastSubstring(self, s: str) -> str:
-        i, j, k = 0, 1, 0
-        while j + k < len(s):
-            if s[i + k] == s[j + k]:
-                k += 1
-            elif s[i + k] < s[j + k]:
-                i += k + 1
-                k = 0
-                if i >= j:
-                    j = i + 1
-            else:
-                j += k + 1
-                k = 0
-        return s[i:]
-```
+
 
 ### **Java**
 
@@ -109,79 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string lastSubstring(string s) {
-        int n = s.size();
-        int i = 0;
-        for (int j = 1, k = 0; j + k < n;) {
-            if (s[i + k] == s[j + k]) {
-                ++k;
-            } else if (s[i + k] < s[j + k]) {
-                i += k + 1;
-                k = 0;
-                if (i >= j) {
-                    j = i + 1;
-                }
-            } else {
-                j += k + 1;
-                k = 0;
-            }
-        }
-        return s.substr(i);
-    }
-};
-```
 
-### **Go**
 
-```go
-func lastSubstring(s string) string {
-	i, n := 0, len(s)
-	for j, k := 1, 0; j+k < n; {
-		if s[i+k] == s[j+k] {
-			k++
-		} else if s[i+k] < s[j+k] {
-			i += k + 1
-			k = 0
-			if i >= j {
-				j = i + 1
-			}
-		} else {
-			j += k + 1
-			k = 0
-		}
-	}
-	return s[i:]
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function lastSubstring(s: string): string {
-    const n = s.length;
-    let i = 0;
-    for (let j = 1, k = 0; j + k < n; ) {
-        if (s[i + k] === s[j + k]) {
-            ++k;
-        } else if (s[i + k] < s[j + k]) {
-            i += k + 1;
-            k = 0;
-            if (i >= j) {
-                j = i + 1;
-            }
-        } else {
-            j += k + 1;
-            k = 0;
-        }
-    }
-    return s.slice(i);
-}
-```
+
 
 ### **...**
 
@@ -189,4 +111,4 @@ function lastSubstring(s: string): string {
 
 ```
 
-<!-- tabs:end -->
+

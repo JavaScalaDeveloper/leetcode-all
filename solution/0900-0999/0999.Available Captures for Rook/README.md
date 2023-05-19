@@ -83,25 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numRookCaptures(self, board: List[List[str]]) -> int:
-        ans = 0
-        dirs = (-1, 0, 1, 0, -1)
-        for i in range(8):
-            for j in range(8):
-                if board[i][j] == "R":
-                    for a, b in pairwise(dirs):
-                        x, y = i, j
-                        while 0 <= x + a < 8 and 0 <= y + b < 8:
-                            x, y = x + a, y + b
-                            if board[x][y] == "p":
-                                ans += 1
-                                break
-                            if board[x][y] == "B":
-                                break
-        return ans
-```
+
 
 ### **Java**
 
@@ -136,62 +118,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numRookCaptures(vector<vector<char>>& board) {
-        int ans = 0;
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        for (int i = 0; i < 8; ++i) {
-            for (int j = 0; j < 8; ++j) {
-                if (board[i][j] == 'R') {
-                    for (int k = 0; k < 4; ++k) {
-                        int x = i, y = j;
-                        int a = dirs[k], b = dirs[k + 1];
-                        while (x + a >= 0 && x + a < 8 && y + b >= 0 && y + b < 8 && board[x + a][y + b] != 'B') {
-                            x += a;
-                            y += b;
-                            if (board[x][y] == 'p') {
-                                ++ans;
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numRookCaptures(board [][]byte) (ans int) {
-	dirs := [5]int{-1, 0, 1, 0, -1}
-	for i := 0; i < 8; i++ {
-		for j := 0; j < 8; j++ {
-			if board[i][j] == 'R' {
-				for k := 0; k < 4; k++ {
-					x, y := i, j
-					a, b := dirs[k], dirs[k+1]
-					for x+a >= 0 && x+a < 8 && y+b >= 0 && y+b < 8 && board[x+a][y+b] != 'B' {
-						x, y = x+a, y+b
-						if board[x][y] == 'p' {
-							ans++
-							break
-						}
-					}
-				}
-			}
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -199,4 +132,4 @@ func numRookCaptures(board [][]byte) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

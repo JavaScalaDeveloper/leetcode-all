@@ -83,25 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def removeLeafNodes(
-        self, root: Optional[TreeNode], target: int
-    ) -> Optional[TreeNode]:
-        if root is None:
-            return None
-        root.left = self.removeLeafNodes(root.left, target)
-        root.right = self.removeLeafNodes(root.right, target)
-        if root.left is None and root.right is None and root.val == target:
-            return None
-        return root
-```
+
 
 ### **Java**
 
@@ -138,92 +120,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* removeLeafNodes(TreeNode* root, int target) {
-        if (!root) {
-            return nullptr;
-        }
-        root->left = removeLeafNodes(root->left, target);
-        root->right = removeLeafNodes(root->right, target);
-        if (!root->left && !root->right && root->val == target) {
-            return nullptr;
-        }
-        return root;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func removeLeafNodes(root *TreeNode, target int) *TreeNode {
-	if root == nil {
-		return nil
-	}
-	root.Left = removeLeafNodes(root.Left, target)
-	root.Right = removeLeafNodes(root.Right, target)
-	if root.Left == nil && root.Right == nil && root.Val == target {
-		return nil
-	}
-	return root
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function removeLeafNodes(
-    root: TreeNode | null,
-    target: number,
-): TreeNode | null {
-    if (!root) {
-        return null;
-    }
-    root.left = removeLeafNodes(root.left, target);
-    root.right = removeLeafNodes(root.right, target);
-    if (!root.left && !root.right && root.val == target) {
-        return null;
-    }
-    return root;
-}
-```
 
 ### **...**
 
@@ -231,4 +138,4 @@ function removeLeafNodes(
 
 ```
 
-<!-- tabs:end -->
+

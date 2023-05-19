@@ -102,51 +102,9 @@ firstUnique.showFirstUnique(); // 返回 -1
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class FirstUnique:
-
-    def __init__(self, nums: List[int]):
-        self.cnt = Counter(nums)
-        self.unique = OrderedDict({v: 1 for v in nums if self.cnt[v] == 1})
-
-    def showFirstUnique(self) -> int:
-        return -1 if not self.unique else next(v for v in self.unique.keys())
-
-    def add(self, value: int) -> None:
-        self.cnt[value] += 1
-        if self.cnt[value] == 1:
-            self.unique[value] = 1
-        elif value in self.unique:
-            self.unique.pop(value)
-
-# Your FirstUnique object will be instantiated and called as such:
-# obj = FirstUnique(nums)
-# param_1 = obj.showFirstUnique()
-# obj.add(value)
-```
-
-```python
-class FirstUnique:
-
-    def __init__(self, nums: List[int]):
-        self.cnt = Counter(nums)
-        self.q = deque(nums)
-
-    def showFirstUnique(self) -> int:
-        while self.q and self.cnt[self.q[0]] != 1:
-            self.q.popleft()
-        return -1 if not self.q else self.q[0]
-
-    def add(self, value: int) -> None:
-        self.cnt[value] += 1
-        self.q.append(value)
 
 
-# Your FirstUnique object will be instantiated and called as such:
-# obj = FirstUnique(nums)
-# param_1 = obj.showFirstUnique()
-# obj.add(value)
-```
+
 
 ### **Java**
 
@@ -223,79 +181,13 @@ class FirstUnique {
  */
 ```
 
-### **C++**
 
-```cpp
-class FirstUnique {
-public:
-    FirstUnique(vector<int>& nums) {
-        for (int& v : nums) {
-            ++cnt[v];
-            q.push_back(v);
-        }
-    }
 
-    int showFirstUnique() {
-        while (q.size() && cnt[q.front()] != 1) q.pop_front();
-        return q.size() ? q.front() : -1;
-    }
 
-    void add(int value) {
-        ++cnt[value];
-        q.push_back(value);
-    }
 
-private:
-    unordered_map<int, int> cnt;
-    deque<int> q;
-};
 
-/**
- * Your FirstUnique object will be instantiated and called as such:
- * FirstUnique* obj = new FirstUnique(nums);
- * int param_1 = obj->showFirstUnique();
- * obj->add(value);
- */
-```
 
-### **Go**
 
-```go
-type FirstUnique struct {
-	cnt map[int]int
-	q   []int
-}
-
-func Constructor(nums []int) FirstUnique {
-	cnt := map[int]int{}
-	for _, v := range nums {
-		cnt[v]++
-	}
-	return FirstUnique{cnt, nums}
-}
-
-func (this *FirstUnique) ShowFirstUnique() int {
-	for len(this.q) > 0 && this.cnt[this.q[0]] != 1 {
-		this.q = this.q[1:]
-	}
-	if len(this.q) > 0 {
-		return this.q[0]
-	}
-	return -1
-}
-
-func (this *FirstUnique) Add(value int) {
-	this.cnt[value]++
-	this.q = append(this.q, value)
-}
-
-/**
- * Your FirstUnique object will be instantiated and called as such:
- * obj := Constructor(nums);
- * param_1 := obj.ShowFirstUnique();
- * obj.Add(value);
- */
-```
 
 ### **...**
 
@@ -303,4 +195,4 @@ func (this *FirstUnique) Add(value int) {
 
 ```
 
-<!-- tabs:end -->
+

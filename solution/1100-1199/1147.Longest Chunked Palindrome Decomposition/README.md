@@ -84,75 +84,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestDecomposition(self, text: str) -> int:
-        n = len(text)
-        if n < 2:
-            return n
-        for i in range(n // 2 + 1):
-            if text[:i] == text[-i:]:
-                return 2 + self.longestDecomposition(text[i:-i])
-        return 1
-```
-
-```python
-class Solution:
-    def longestDecomposition(self, text: str) -> int:
-        ans = 0
-        i, j = 0, len(text) - 1
-        while i <= j:
-            k = 1
-            ok = False
-            while i + k - 1 < j - k + 1:
-                if text[i: i + k] == text[j - k + 1: j + 1]:
-                    ans += 2
-                    i += k
-                    j -= k
-                    ok = True
-                    break
-                k += 1
-            if not ok:
-                ans += 1
-                break
-        return ans
-```
-
-```python
-class Solution:
-    def longestDecomposition(self, text: str) -> int:
-        def get(l, r):
-            return (h[r] - h[l - 1] * p[r - l + 1]) % mod
-
-        n = len(text)
-        base = 131
-        mod = int(1e9) + 7
-        h = [0] * (n + 10)
-        p = [1] * (n + 10)
-        for i, c in enumerate(text):
-            t = ord(c) - ord('a') + 1
-            h[i + 1] = (h[i] * base) % mod + t
-            p[i + 1] = (p[i] * base) % mod
 
 
-        ans = 0
-        i, j = 0, n - 1
-        while i <= j:
-            k = 1
-            ok = False
-            while i + k - 1 < j - k + 1:
-                if get(i + 1, i + k) == get(j - k + 2, j + 1):
-                    ans += 2
-                    i += k
-                    j -= k
-                    ok = True
-                    break
-                k += 1
-            if not ok:
-                ans += 1
-                break
-        return ans
-```
+
+
+
 
 ### **Java**
 
@@ -251,214 +187,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestDecomposition(string text) {
-        int n = text.size();
-        if (n < 2) return n;
-        for (int i = 1; i <= n >> 1; ++i) {
-            if (text.substr(0, i) == text.substr(n - i)) {
-                return 2 + longestDecomposition(text.substr(i, n - i - i));
-            }
-        }
-        return 1;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int longestDecomposition(string text) {
-        int ans = 0;
-        auto check = [&](int i, int j, int k) -> bool {
-            while (k--) {
-                if (text[i++] != text[j++]) {
-                    return false;
-                }
-            }
-            return true;
-        };
-        for (int i = 0, j = text.size() - 1; i <= j;) {
-            bool ok = false;
-            for (int k = 1; i + k - 1 < j - k + 1; ++k) {
-                if (check(i, j - k + 1, k)) {
-                    ans += 2;
-                    i += k;
-                    j -= k;
-                    ok = true;
-                    break;
-                }
-            }
-            if (!ok) {
-                ans += 1;
-                break;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int longestDecomposition(string text) {
-        using ull = unsigned long long;
-        int n = text.size();
-        int base = 131;
-        ull p[n + 10];
-        ull h[n + 10];
-        p[0] = 1;
-        h[0] = 0;
-        for (int i = 0; i < n; ++i) {
-            int t = text[i] - 'a' + 1;
-            p[i + 1] = p[i] * base;
-            h[i + 1] = h[i] * base + t;
-        }
 
-        int ans = 0;
-        auto get = [&](int l, int r) {
-            return h[r] - h[l - 1] * p[r - l + 1];
-        };
-        for (int i = 0, j = n - 1; i <= j;) {
-            bool ok = false;
-            for (int k = 1; i + k - 1 < j - k + 1; ++k) {
-                if (get(i + 1, i + k) == get(j - k + 2, j + 1)) {
-                    ans += 2;
-                    i += k;
-                    j -= k;
-                    ok = true;
-                    break;
-                }
-            }
-            if (!ok) {
-                ++ans;
-                break;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestDecomposition(text string) int {
-	n := len(text)
-	if n < 2 {
-		return n
-	}
-	for i := 1; i <= n>>1; i++ {
-		if text[:i] == text[n-i:] {
-			return 2 + longestDecomposition(text[i:n-i])
-		}
-	}
-	return 1
-}
-```
 
-```go
-func longestDecomposition(text string) (ans int) {
-	for i, j := 0, len(text)-1; i <= j; {
-		ok := false
-		for k := 1; i+k-1 < j-k+1; k++ {
-			if text[i:i+k] == text[j-k+1:j+1] {
-				ans += 2
-				i += k
-				j -= k
-				ok = true
-				break
-			}
-		}
-		if !ok {
-			ans++
-			break
-		}
-	}
-	return
-}
-```
 
-```go
-func longestDecomposition(text string) (ans int) {
-	n := len(text)
-	base := 131
-	h := make([]int, n+10)
-	p := make([]int, n+10)
-	p[0] = 1
-	for i, c := range text {
-		t := int(c-'a') + 1
-		p[i+1] = p[i] * base
-		h[i+1] = h[i]*base + t
-	}
-	get := func(l, r int) int {
-		return h[r] - h[l-1]*p[r-l+1]
-	}
 
-	for i, j := 0, n-1; i <= j; {
-		ok := false
-		for k := 1; i+k-1 < j-k+1; k++ {
-			if get(i+1, i+k) == get(j-k+2, j+1) {
-				ans += 2
-				i += k
-				j -= k
-				ok = true
-				break
-			}
-		}
-		if !ok {
-			ans++
-			break
-		}
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function longestDecomposition(text: string): number {
-    const n: number = text.length;
-    if (n < 2) {
-        return n;
-    }
-    for (let i: number = 1; i <= n >> 1; i++) {
-        if (text.slice(0, i) === text.slice(n - i)) {
-            return 2 + longestDecomposition(text.slice(i, n - i));
-        }
-    }
-    return 1;
-}
-```
 
-```ts
-function longestDecomposition(text: string): number {
-    let ans = 0;
-    for (let i = 0, j = text.length - 1; i <= j; ) {
-        let ok = false;
-        for (let k = 1; i + k - 1 < j - k + 1; ++k) {
-            if (text.slice(i, i + k) === text.slice(j - k + 1, j + 1)) {
-                ans += 2;
-                i += k;
-                j -= k;
-                ok = true;
-                break;
-            }
-        }
-        if (!ok) {
-            ++ans;
-            break;
-        }
-    }
-    return ans;
-}
-```
+
+
 
 ### **...**
 
@@ -466,4 +215,4 @@ function longestDecomposition(text: string): number {
 
 ```
 
-<!-- tabs:end -->
+

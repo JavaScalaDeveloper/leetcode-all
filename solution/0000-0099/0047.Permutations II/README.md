@@ -63,29 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
-        def dfs(i: int):
-            if i == n:
-                ans.append(t[:])
-                return
-            for j in range(n):
-                if vis[j] or (j and nums[j] == nums[j - 1] and not vis[j - 1]):
-                    continue
-                t[i] = nums[j]
-                vis[j] = True
-                dfs(i + 1)
-                vis[j] = False
 
-        n = len(nums)
-        nums.sort()
-        ans = []
-        t = [0] * n
-        vis = [False] * n
-        dfs(0)
-        return ans
-```
 
 ### **Java**
 
@@ -125,165 +103,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> permuteUnique(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        vector<vector<int>> ans;
-        vector<int> t(n);
-        vector<bool> vis(n);
-        function<void(int)> dfs = [&](int i) {
-            if (i == n) {
-                ans.emplace_back(t);
-                return;
-            }
-            for (int j = 0; j < n; ++j) {
-                if (vis[j] || (j && nums[j] == nums[j - 1] && !vis[j - 1])) {
-                    continue;
-                }
-                t[i] = nums[j];
-                vis[j] = true;
-                dfs(i + 1);
-                vis[j] = false;
-            }
-        };
-        dfs(0);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func permuteUnique(nums []int) (ans [][]int) {
-	sort.Ints(nums)
-	n := len(nums)
-	t := make([]int, n)
-	vis := make([]bool, n)
-	var dfs func(int)
-	dfs = func(i int) {
-		if i == n {
-			cp := make([]int, n)
-			copy(cp, t)
-			ans = append(ans, cp)
-			return
-		}
-		for j := 0; j < n; j++ {
-			if vis[j] || (j > 0 && nums[j] == nums[j-1] && !vis[j-1]) {
-				continue
-			}
-			vis[j] = true
-			t[i] = nums[j]
-			dfs(i + 1)
-			vis[j] = false
-		}
-	}
-	dfs(0)
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function permuteUnique(nums: number[]): number[][] {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    const ans: number[][] = [];
-    const t: number[] = new Array(n);
-    const vis: boolean[] = new Array(n);
-    const dfs = (i: number) => {
-        if (i === n) {
-            ans.push(t.slice());
-            return;
-        }
-        for (let j = 0; j < n; ++j) {
-            if (vis[j] || (j > 0 && nums[j] === nums[j - 1] && !vis[j - 1])) {
-                continue;
-            }
-            t[i] = nums[j];
-            vis[j] = true;
-            dfs(i + 1);
-            vis[j] = false;
-        }
-    };
-    dfs(0);
-    return ans;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    private List<IList<int>> ans = new List<IList<int>>();
-    private List<int> t = new List<int>();
-    private int[] nums;
-    private bool[] vis;
 
-    public IList<IList<int>> PermuteUnique(int[] nums) {
-        Array.Sort(nums);
-        int n = nums.Length;
-        vis = new bool[n];
-        this.nums = nums;
-        dfs(0);
-        return ans;
-    }
 
-    private void dfs(int i) {
-        if (i == nums.Length) {
-            ans.Add(new List<int>(t));
-            return;
-        }
-        for (int j = 0; j < nums.Length; ++j) {
-            if (vis[j] || (j > 0 && nums[j] == nums[j - 1] && !vis[j - 1])) {
-                continue;
-            }
-            vis[j] = true;
-            t.Add(nums[j]);
-            dfs(i + 1);
-            t.RemoveAt(t.Count - 1);
-            vis[j] = false;
-        }
-    }
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    fn dfs(i: usize, nums: &mut Vec<i32>, res: &mut Vec<Vec<i32>>) {
-        let n = nums.len();
-        if i == n {
-            res.push(nums.clone());
-            return;
-        }
-        let mut set = HashSet::new();
-        for j in i..n {
-            if set.contains(&nums[j]) {
-                continue;
-            }
-            set.insert(nums[j]);
-            nums.swap(i, j);
-            Self::dfs(i + 1, nums, res);
-            nums.swap(i, j);
-        }
-    }
 
-    pub fn permute_unique(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
-        let mut res = vec![];
-        Self::dfs(0, &mut nums, &mut res);
-        res
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -291,4 +129,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -62,78 +62,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
 
-class Solution:
-    def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
-        def parents(root, prev):
-            nonlocal p
-            if root is None:
-                return
-            p[root] = prev
-            parents(root.left, root)
-            parents(root.right, root)
 
-        def dfs(root, k):
-            nonlocal ans, vis
-            if root is None or root.val in vis:
-                return
-            vis.add(root.val)
-            if k == 0:
-                ans.append(root.val)
-                return
-            dfs(root.left, k - 1)
-            dfs(root.right, k - 1)
-            dfs(p[root], k - 1)
-
-        p = {}
-        parents(root, None)
-        ans = []
-        vis = set()
-        dfs(target, k)
-        return ans
-```
-
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution:
-    def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
-        def dfs1(root, fa):
-            if root is None:
-                return
-            p[root] = fa
-            dfs1(root.left, root)
-            dfs1(root.right, root)
-
-        def dfs2(root, fa, k):
-            if root is None:
-                return
-            if k == 0:
-                ans.append(root.val)
-                return
-            for nxt in (root.left, root.right, p[root]):
-                if nxt != fa:
-                    dfs2(nxt, root, k - 1)
-
-        p = {}
-        dfs1(root, None)
-        ans = []
-        dfs2(target, None, k)
-        return ans
-```
 
 ### **Java**
 
@@ -188,94 +119,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    unordered_map<TreeNode*, TreeNode*> p;
-    unordered_set<int> vis;
-    vector<int> ans;
 
-    vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
-        parents(root, nullptr);
-        dfs(target, k);
-        return ans;
-    }
 
-    void parents(TreeNode* root, TreeNode* prev) {
-        if (!root) return;
-        p[root] = prev;
-        parents(root->left, root);
-        parents(root->right, root);
-    }
 
-    void dfs(TreeNode* root, int k) {
-        if (!root || vis.count(root->val)) return;
-        vis.insert(root->val);
-        if (k == 0) {
-            ans.push_back(root->val);
-            return;
-        }
-        dfs(root->left, k - 1);
-        dfs(root->right, k - 1);
-        dfs(p[root], k - 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func distanceK(root *TreeNode, target *TreeNode, k int) []int {
-	p := make(map[*TreeNode]*TreeNode)
-	vis := make(map[int]bool)
-	var ans []int
-	var parents func(root, prev *TreeNode)
-	parents = func(root, prev *TreeNode) {
-		if root == nil {
-			return
-		}
-		p[root] = prev
-		parents(root.Left, root)
-		parents(root.Right, root)
-	}
-	parents(root, nil)
-	var dfs func(root *TreeNode, k int)
-	dfs = func(root *TreeNode, k int) {
-		if root == nil || vis[root.Val] {
-			return
-		}
-		vis[root.Val] = true
-		if k == 0 {
-			ans = append(ans, root.Val)
-			return
-		}
-		dfs(root.Left, k-1)
-		dfs(root.Right, k-1)
-		dfs(p[root], k-1)
-	}
-	dfs(target, k)
-	return ans
-}
-```
+
 
 ### **...**
 
@@ -283,4 +133,4 @@ func distanceK(root *TreeNode, target *TreeNode, k int) []int {
 
 ```
 
-<!-- tabs:end -->
+

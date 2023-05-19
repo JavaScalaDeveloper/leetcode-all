@@ -55,12 +55,7 @@ nums2 中的每个整数都在 nums1 中出现，因此，answer[1] = [] 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
-        s1, s2 = set(nums1), set(nums2)
-        return [list(s1 - s2), list(s2 - s1)]
-```
+
 
 ### **Java**
 
@@ -100,168 +95,31 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums1
- * @param {number[]} nums2
- * @return {number[][]}
- */
-var findDifference = function (nums1, nums2) {
-    let ans1 = new Set(nums1),
-        ans2 = new Set(nums2);
-    for (let num of nums1) {
-        ans2.delete(num);
-    }
-    for (let num of nums2) {
-        ans1.delete(num);
-    }
-    return [Array.from(ans1), Array.from(ans2)];
-};
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function findDifference(nums1: number[], nums2: number[]): number[][] {
-    return [
-        [...new Set<number>(nums1.filter(v => !nums2.includes(v)))],
-        [...new Set<number>(nums2.filter(v => !nums1.includes(v)))],
-    ];
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2) {
-        unordered_set<int> s1(nums1.begin(), nums1.end());
-        unordered_set<int> s2(nums2.begin(), nums2.end());
-        vector<vector<int>> ans(2);
-        for (int v : s1)
-            if (!s2.count(v))
-                ans[0].push_back(v);
-        for (int v : s2)
-            if (!s1.count(v))
-                ans[1].push_back(v);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findDifference(nums1 []int, nums2 []int) [][]int {
-	s1, s2 := make(map[int]bool), make(map[int]bool)
-	for _, v := range nums1 {
-		s1[v] = true
-	}
-	for _, v := range nums2 {
-		s2[v] = true
-	}
-	ans := make([][]int, 2)
-	for v := range s1 {
-		if !s2[v] {
-			ans[0] = append(ans[0], v)
-		}
-	}
-	for v := range s2 {
-		if !s1[v] {
-			ans[1] = append(ans[1], v)
-		}
-	}
-	return ans
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn find_difference(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<Vec<i32>> {
-        vec![
-            nums1
-                .iter()
-                .filter_map(|&v| if nums2.contains(&v) { None } else { Some(v) })
-                .collect::<HashSet<i32>>()
-                .into_iter()
-                .collect(),
-            nums2
-                .iter()
-                .filter_map(|&v| if nums1.contains(&v) { None } else { Some(v) })
-                .collect::<HashSet<i32>>()
-                .into_iter()
-                .collect(),
-        ]
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn find_difference(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<Vec<i32>> {
-        const N: usize = 2001;
-        let to_index = |i| i as usize + 1000;
 
-        let mut is_in_nums1 = [false; N];
-        let mut is_in_nums2 = [false; N];
-        let mut res1 = vec![];
-        let mut res2 = vec![];
-        for &num in nums1.iter() {
-            is_in_nums1[to_index(num)] = true;
-        }
-        for &num in nums2.iter() {
-            is_in_nums2[to_index(num)] = true;
-            if !is_in_nums1[to_index(num)] {
-                res2.push(num);
-                is_in_nums1[to_index(num)] = true;
-            }
-        }
-        for &num in nums1.iter() {
-            if !is_in_nums2[to_index(num)] {
-                res1.push(num);
-                is_in_nums2[to_index(num)] = true;
-            }
-        }
-        vec![res1, res2]
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums1
-     * @param Integer[] $nums2
-     * @return Integer[][]
-     */
-    function findDifference($nums1, $nums2) {
-        $rs = [ [] , [] ];
-        $hashtable1 = array_flip(array_unique($nums1));
-        $hashtable2 = array_flip(array_unique($nums2));
-        for ($m = 0; $m < count($nums1); $m++) {
-            if (!isset($hashtable2[$nums1[$m]])) {
-                $rs[0][$m] = $nums1[$m];
-                $hashtable2[$nums1[$m]] = 1;
-            }
-        }
-        for ($n = 0; $n < count($nums2); $n++) {
-            if (!isset($hashtable1[$nums2[$n]])) {
-                $rs[1][$n] = $nums2[$n];
-                $hashtable1[$nums2[$n]] = 1;
-            }
-        }
-        return $rs;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -269,4 +127,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -82,31 +82,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def largestValues(self, root: TreeNode) -> List[int]:
-        if root is None:
-            return []
-        q = deque([root])
-        ans = []
-        while q:
-            t = -inf
-            for _ in range(len(q)):
-                node = q.popleft()
-                t = max(t, node.val)
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
-            ans.append(t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -155,84 +131,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<int> largestValues(TreeNode* root) {
-        if (!root) return {};
-        queue<TreeNode*> q {{root}};
-        vector<int> ans;
-        while (!q.empty()) {
-            int t = INT_MIN;
-            for (int i = q.size(); i > 0; --i) {
-                auto node = q.front();
-                q.pop();
-                t = max(t, node->val);
-                if (node->left) q.push(node->left);
-                if (node->right) q.push(node->right);
-            }
-            ans.push_back(t);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func largestValues(root *TreeNode) []int {
-	var ans []int
-	if root == nil {
-		return ans
-	}
-	var q = []*TreeNode{root}
-	for len(q) > 0 {
-		t := math.MinInt32
-		for i := len(q); i > 0; i-- {
-			node := q[0]
-			q = q[1:]
-			t = max(t, node.Val)
-			if node.Left != nil {
-				q = append(q, node.Left)
-			}
-			if node.Right != nil {
-				q = append(q, node.Right)
-			}
-		}
-		ans = append(ans, t)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -240,4 +145,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

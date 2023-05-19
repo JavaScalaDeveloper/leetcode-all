@@ -61,17 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def nearestValidPoint(self, x: int, y: int, points: List[List[int]]) -> int:
-        ans, mi = -1, inf
-        for i, (a, b) in enumerate(points):
-            if a == x or b == y:
-                d = abs(a - x) + abs(b - y)
-                if mi > d:
-                    ans, mi = i, d
-        return ans
-```
+
 
 ### **Java**
 
@@ -96,96 +86,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int nearestValidPoint(int x, int y, vector<vector<int>>& points) {
-        int ans = -1, mi = 1e6;
-        for (int i = 0; i < points.size(); ++i) {
-            int a = points[i][0], b = points[i][1];
-            if (a == x || b == y) {
-                int d = abs(a - x) + abs(b - y);
-                if (d < mi) {
-                    mi = d;
-                    ans = i;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func nearestValidPoint(x int, y int, points [][]int) int {
-	ans, mi := -1, 1000000
-	for i, p := range points {
-		a, b := p[0], p[1]
-		if a == x || b == y {
-			d := abs(a-x) + abs(b-y)
-			if d < mi {
-				ans, mi = i, d
-			}
-		}
-	}
-	return ans
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function nearestValidPoint(x: number, y: number, points: number[][]): number {
-    let res = -1;
-    let midDif = Infinity;
-    points.forEach(([px, py], i) => {
-        if (px != x && py != y) {
-            return;
-        }
-        const dif = Math.abs(px - x) + Math.abs(py - y);
-        if (dif < midDif) {
-            midDif = dif;
-            res = i;
-        }
-    });
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn nearest_valid_point(x: i32, y: i32, points: Vec<Vec<i32>>) -> i32 {
-        let n = points.len();
-        let mut min_dif = i32::MAX;
-        let mut res = -1;
-        for i in 0..n {
-            let (p_x, p_y) = (points[i][0], points[i][1]);
-            if p_x != x && p_y != y {
-                continue;
-            }
-            let dif = (p_x - x).abs() + (p_y - y).abs();
-            if dif < min_dif {
-                min_dif = dif;
-                res = i as i32;
-            }
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -214,4 +129,4 @@ int nearestValidPoint(int x, int y, int **points, int pointsSize, int *pointsCol
 
 ```
 
-<!-- tabs:end -->
+

@@ -58,11 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkOnesSegment(self, s: str) -> bool:
-        return '01' not in s
-```
+
 
 ### **Java**
 
@@ -76,55 +72,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkOnesSegment(string s) {
-        return s.find("01") == -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkOnesSegment(s string) bool {
-	return !strings.Contains(s, "01")
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function checkOnesSegment(s: string): boolean {
-    let pre = s[0];
-    for (const c of s) {
-        if (pre !== c && c === '1') {
-            return false;
-        }
-        pre = c;
-    }
-    return true;
-}
-```
 
-```ts
-function checkOnesSegment(s: string): boolean {
-    return !s.includes('01');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn check_ones_segment(s: String) -> bool {
-        !s.contains("01")
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -132,4 +96,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

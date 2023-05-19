@@ -79,69 +79,9 @@ struct Node {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
-        self.val = val
-        self.left = left
-        self.right = right
-        self.next = next
-"""
 
 
-class Solution:
-    def connect(self, root: "Node") -> "Node":
-        if root is None:
-            return root
-        q = deque([root])
-        while q:
-            p = None
-            for _ in range(len(q)):
-                node = q.popleft()
-                if p:
-                    p.next = node
-                p = node
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
-        return root
-```
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
-        self.val = val
-        self.left = left
-        self.right = right
-        self.next = next
-"""
-
-class Solution:
-    def connect(self, root: 'Node') -> 'Node':
-        def modify(curr):
-            nonlocal prev, next
-            if curr is None:
-                return
-            next = next or curr
-            if prev:
-                prev.next = curr
-            prev = curr
-
-        node = root
-        while node:
-            prev = next = None
-            while node:
-                modify(node.left)
-                modify(node.right)
-                node = node.next
-            node = next
-        return root
-```
 
 ### **Java**
 
@@ -256,274 +196,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    Node* left;
-    Node* right;
-    Node* next;
 
-    Node() : val(0), left(NULL), right(NULL), next(NULL) {}
 
-    Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
 
-    Node(int _val, Node* _left, Node* _right, Node* _next)
-        : val(_val), left(_left), right(_right), next(_next) {}
-};
-*/
 
-class Solution {
-public:
-    Node* connect(Node* root) {
-        if (!root) {
-            return root;
-        }
-        queue<Node*> q{{root}};
-        while (!q.empty()) {
-            Node* p = nullptr;
-            for (int n = q.size(); n; --n) {
-                Node* node = q.front();
-                q.pop();
-                if (p) {
-                    p->next = node;
-                }
-                p = node;
-                if (node->left) {
-                    q.push(node->left);
-                }
-                if (node->right) {
-                    q.push(node->right);
-                }
-            }
-        }
-        return root;
-    }
-};
-```
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    Node* left;
-    Node* right;
-    Node* next;
 
-    Node() : val(0), left(NULL), right(NULL), next(NULL) {}
 
-    Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
 
-    Node(int _val, Node* _left, Node* _right, Node* _next)
-        : val(_val), left(_left), right(_right), next(_next) {}
-};
-*/
 
-class Solution {
-public:
-    Node* connect(Node* root) {
-        Node* node = root;
-        Node* prev = nullptr;
-        Node* next = nullptr;
-        auto modify = [&](Node* curr) {
-            if (!curr) {
-                return;
-            }
-            if (!next) {
-                next = curr;
-            }
-            if (prev) {
-                prev->next = curr;
-            }
-            prev = curr;
-        };
-        while (node) {
-            prev = next = nullptr;
-            while (node) {
-                modify(node->left);
-                modify(node->right);
-                node = node->next;
-            }
-            node = next;
-        }
-        return root;
-    }
-};
-```
 
-### **Go**
-
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Left *Node
- *     Right *Node
- *     Next *Node
- * }
- */
-
-func connect(root *Node) *Node {
-	if root == nil {
-		return root
-	}
-	q := []*Node{root}
-	for len(q) > 0 {
-		var p *Node
-		for n := len(q); n > 0; n-- {
-			node := q[0]
-			q = q[1:]
-			if p != nil {
-				p.Next = node
-			}
-			p = node
-			if node.Left != nil {
-				q = append(q, node.Left)
-			}
-			if node.Right != nil {
-				q = append(q, node.Right)
-			}
-		}
-	}
-	return root
-}
-```
-
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Left *Node
- *     Right *Node
- *     Next *Node
- * }
- */
-
-func connect(root *Node) *Node {
-	node := root
-	var prev, next *Node
-	modify := func(curr *Node) {
-		if curr == nil {
-			return
-		}
-		if next == nil {
-			next = curr
-		}
-		if prev != nil {
-			prev.Next = curr
-		}
-		prev = curr
-	}
-	for node != nil {
-		prev, next = nil, nil
-		for node != nil {
-			modify(node.Left)
-			modify(node.Right)
-			node = node.Next
-		}
-		node = next
-	}
-	return root
-}
-```
 
 ### **TypeScript**
 
 BFS:
 
-```ts
-/**
- * Definition for Node.
- * class Node {
- *     val: number
- *     left: Node | null
- *     right: Node | null
- *     next: Node | null
- *     constructor(val?: number, left?: Node, right?: Node, next?: Node) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function connect(root: Node | null): Node | null {
-    if (root == null) {
-        return root;
-    }
-    const queue = [root];
-    while (queue.length !== 0) {
-        const n = queue.length;
-        let pre = null;
-        for (let i = 0; i < n; i++) {
-            const node = queue.shift();
-            node.next = pre;
-            pre = node;
-            const { left, right } = node;
-            right && queue.push(right);
-            left && queue.push(left);
-        }
-    }
-    return root;
-}
-```
 
 DFS:
 
-```ts
-/**
- * Definition for Node.
- * class Node {
- *     val: number
- *     left: Node | null
- *     right: Node | null
- *     next: Node | null
- *     constructor(val?: number, left?: Node, right?: Node, next?: Node) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-const find = (root: Node | null): Node | null => {
-    if (root == null) {
-        return root;
-    }
-    const { left, right, next } = root;
-    return left || right || find(next);
-};
-
-function connect(root: Node | null): Node | null {
-    if (root == null) {
-        return root;
-    }
-    const { left, right, next } = root;
-    if (left != null) {
-        if (right != null) {
-            left.next = right;
-        } else {
-            left.next = find(next);
-        }
-    }
-    if (right != null) {
-        right.next = find(next);
-    }
-    connect(right);
-    connect(left);
-    return root;
-}
-```
 
 ### **...**
 
@@ -531,4 +224,4 @@ function connect(root: Node | null): Node | null {
 
 ```
 
-<!-- tabs:end -->
+

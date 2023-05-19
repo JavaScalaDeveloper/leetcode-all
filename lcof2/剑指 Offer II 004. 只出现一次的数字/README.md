@@ -52,19 +52,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        ans = 0
-        for i in range(32):
-            cnt = sum(num >> i & 1 for num in nums)
-            if cnt % 3:
-                if i == 31:
-                    ans -= 1 << i
-                else:
-                    ans |= 1 << i
-        return ans
-```
+
 
 ### **Java**
 
@@ -87,44 +75,15 @@ class Solution {
 }
 ```
 
-### **Go**
+
 
 需要注意 Golang 中的 `int` 在 64 位平台上相当于 `int64`
 
-```go
-func singleNumber(nums []int) int {
-	ans := int32(0)
-	for i := 0; i < 32; i++ {
-		cnt := int32(0)
-		for _, num := range nums {
-			cnt += int32(num) >> i & 1
-		}
-		cnt %= 3
-		ans |= cnt << i
-	}
-	return int(ans)
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int singleNumber(vector<int>& nums) {
-        int ans = 0;
-        for (int i = 0; i < 32; ++i) {
-            int cnt = 0;
-            for (int num : nums) {
-                cnt += ((num >> i) & 1);
-            }
-            cnt %= 3;
-            ans |= cnt << i;
-        }
-        return ans;
-    }
-};
-```
+
+
+
 
 ### **...**
 
@@ -132,4 +91,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

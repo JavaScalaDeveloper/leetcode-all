@@ -51,30 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def increasingBST(self, root: TreeNode) -> TreeNode:
-        def dfs(root):
-            if root is None:
-                return
-            nonlocal prev
-            dfs(root.left)
-            prev.right = root
-            root.left = None
-            prev = root
-            dfs(root.right)
 
-        dummy = TreeNode(val=0, right=root)
-        prev = dummy
-        dfs(root)
-        return dummy.right
-```
 
 ### **Java**
 
@@ -118,71 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* prev;
 
-    TreeNode* increasingBST(TreeNode* root) {
-        TreeNode* dummy = new TreeNode(0, nullptr, root);
-        prev = dummy;
-        dfs(root);
-        return dummy->right;
-    }
 
-    void dfs(TreeNode* root) {
-        if (!root) return;
-        dfs(root->left);
-        prev->right = root;
-        root->left = nullptr;
-        prev = root;
-        dfs(root->right);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func increasingBST(root *TreeNode) *TreeNode {
-	dummy := &TreeNode{Val: 0, Right: root}
-	prev := dummy
-	var dfs func(root *TreeNode)
-	dfs = func(root *TreeNode) {
-		if root == nil {
-			return
-		}
-		dfs(root.Left)
-		prev.Right = root
-		root.Left = nil
-		prev = root
-		dfs(root.Right)
-	}
-	dfs(root)
-	return dummy.Right
-}
-```
+
+
 
 ### **...**
 
@@ -190,4 +109,4 @@ func increasingBST(root *TreeNode) *TreeNode {
 
 ```
 
-<!-- tabs:end -->
+

@@ -62,20 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def modifyString(self, s: str) -> str:
-        s = list(s)
-        n = len(s)
-        for i in range(n):
-            if s[i] == "?":
-                for c in "abc":
-                    if (i and s[i - 1] == c) or (i + 1 < n and s[i + 1] == c):
-                        continue
-                    s[i] = c
-                    break
-        return "".join(s)
-```
+
 
 ### **Java**
 
@@ -102,73 +89,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string modifyString(string s) {
-        int n = s.size();
-        for (int i = 0; i < n; ++i) {
-            if (s[i] == '?') {
-                for (char c : "abc") {
-                    if ((i && s[i - 1] == c) || (i + 1 < n && s[i + 1] == c)) {
-                        continue;
-                    }
-                    s[i] = c;
-                    break;
-                }
-            }
-        }
-        return s;
-    }
-};
-```
 
-### **Go**
 
-```go
-func modifyString(s string) string {
-	n := len(s)
-	cs := []byte(s)
-	for i := range s {
-		if cs[i] == '?' {
-			for c := byte('a'); c <= byte('c'); c++ {
-				if (i > 0 && cs[i-1] == c) || (i+1 < n && cs[i+1] == c) {
-					continue
-				}
-				cs[i] = c
-				break
-			}
-		}
-	}
-	return string(cs)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function modifyString(s: string): string {
-    const cs = s.split('');
-    const n = s.length;
-    for (let i = 0; i < n; ++i) {
-        if (cs[i] === '?') {
-            for (const c of 'abc') {
-                if (
-                    (i > 0 && cs[i - 1] === c) ||
-                    (i + 1 < n && cs[i + 1] === c)
-                ) {
-                    continue;
-                }
-                cs[i] = c;
-                break;
-            }
-        }
-    }
-    return cs.join('');
-}
-```
+
 
 ### **...**
 
@@ -176,4 +107,4 @@ function modifyString(s: string): string {
 
 ```
 
-<!-- tabs:end -->
+

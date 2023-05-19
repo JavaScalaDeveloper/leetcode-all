@@ -76,16 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getMaximumConsecutive(self, coins: List[int]) -> int:
-        ans = 1
-        for v in sorted(coins):
-            if v > ans:
-                break
-            ans += v
-        return ans
-```
+
 
 ### **Java**
 
@@ -107,38 +98,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int getMaximumConsecutive(vector<int>& coins) {
-        sort(coins.begin(), coins.end());
-        int ans = 1;
-        for (int& v : coins) {
-            if (v > ans) break;
-            ans += v;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getMaximumConsecutive(coins []int) int {
-	sort.Ints(coins)
-	ans := 1
-	for _, v := range coins {
-		if v > ans {
-			break
-		}
-		ans += v
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -146,4 +112,4 @@ func getMaximumConsecutive(coins []int) int {
 
 ```
 
-<!-- tabs:end -->
+

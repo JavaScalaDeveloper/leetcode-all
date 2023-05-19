@@ -65,27 +65,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isMonotonic(self, nums: List[int]) -> bool:
-        isIncr = isDecr = False
-        for i, v in enumerate(nums[1:]):
-            if v < nums[i]:
-                isIncr = True
-            elif v > nums[i]:
-                isDecr = True
-            if isIncr and isDecr:
-                return False
-        return True
-```
 
-```python
-class Solution:
-    def isMonotonic(self, nums: List[int]) -> bool:
-        incr = all(a <= b for a, b in pairwise(nums))
-        decr = all(a >= b for a, b in pairwise(nums))
-        return incr or decr
-```
+
+
 
 ### **Java**
 
@@ -110,115 +92,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isMonotonic(vector<int>& nums) {
-        bool isIncr = false;
-        bool isDecr = false;
-        for (int i = 1; i < nums.size(); ++i) {
-            if (nums[i] < nums[i - 1]) isIncr = true;
-            if (nums[i] > nums[i - 1]) isDecr = true;
-            if (isIncr && isDecr) return false;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isMonotonic(nums []int) bool {
-	isIncr, isDecr := false, false
-	for i, v := range nums[1:] {
-		if v < nums[i] {
-			isIncr = true
-		} else if v > nums[i] {
-			isDecr = true
-		}
-		if isIncr && isDecr {
-			return false
-		}
-	}
-	return true
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {boolean}
- */
-var isMonotonic = function (nums) {
-    let isIncr = false;
-    let isDecr = false;
-    for (let i = 1; i < nums.length; ++i) {
-        if (nums[i] < nums[i - 1]) {
-            isIncr = true;
-        }
-        if (nums[i] > nums[i - 1]) {
-            isDecr = true;
-        }
-        if (isIncr && isDecr) {
-            return false;
-        }
-    }
-    return true;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isMonotonic(nums: number[]): boolean {
-    const n = nums.length;
-    let isOrder = false;
-    let isDecs = false;
-    for (let i = 1; i < n; i++) {
-        const pre = nums[i - 1];
-        const cur = nums[i];
-        if (pre < cur) {
-            isOrder = true;
-        } else if (pre > cur) {
-            isDecs = true;
-        }
-        if (isOrder && isDecs) {
-            return false;
-        }
-    }
-    return true;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn is_monotonic(nums: Vec<i32>) -> bool {
-        let n = nums.len();
-        let mut is_order = false;
-        let mut is_decs = false;
-        for i in 1..n {
-            let pre = nums[i - 1];
-            let cur = nums[i];
-            if pre < cur {
-                is_order = true;
-            } else if pre > cur {
-                is_decs = true;
-            }
-            if is_order && is_decs {
-                return false;
-            }
-        }
-        true
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -226,4 +118,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

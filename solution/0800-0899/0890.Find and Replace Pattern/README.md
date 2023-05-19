@@ -48,19 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
-        def match(s, t):
-            m1, m2 = [0] * 128, [0] * 128
-            for i, (a, b) in enumerate(zip(s, t), 1):
-                if m1[ord(a)] != m2[ord(b)]:
-                    return False
-                m1[ord(a)] = m2[ord(b)] = i
-            return True
 
-        return [word for word in words if match(word, pattern)]
-```
 
 ### **Java**
 
@@ -95,100 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> findAndReplacePattern(vector<string>& words, string pattern) {
-        vector<string> ans;
-        auto match = [](string& s, string& t) {
-            int m1[128] = {0};
-            int m2[128] = {0};
-            for (int i = 0; i < s.size(); ++i) {
-                if (m1[s[i]] != m2[t[i]]) return 0;
-                m1[s[i]] = i + 1;
-                m2[t[i]] = i + 1;
-            }
-            return 1;
-        };
-        for (auto& word : words) if (match(word, pattern)) ans.emplace_back(word);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findAndReplacePattern(words []string, pattern string) []string {
-	match := func(s, t string) bool {
-		m1, m2 := make([]int, 128), make([]int, 128)
-		for i := 0; i < len(s); i++ {
-			if m1[s[i]] != m2[t[i]] {
-				return false
-			}
-			m1[s[i]] = i + 1
-			m2[t[i]] = i + 1
-		}
-		return true
-	}
-	var ans []string
-	for _, word := range words {
-		if match(word, pattern) {
-			ans = append(ans, word)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findAndReplacePattern(words: string[], pattern: string): string[] {
-    return words.filter(word => {
-        const map1 = new Map<string, number>();
-        const map2 = new Map<string, number>();
-        for (let i = 0; i < word.length; i++) {
-            if (map1.get(word[i]) !== map2.get(pattern[i])) {
-                return false;
-            }
-            map1.set(word[i], i);
-            map2.set(pattern[i], i);
-        }
-        return true;
-    });
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn find_and_replace_pattern(words: Vec<String>, pattern: String) -> Vec<String> {
-        let pattern = pattern.as_bytes();
-        let n = pattern.len();
-        words
-            .into_iter()
-            .filter(|word| {
-                let word = word.as_bytes();
-                let mut map1 = HashMap::new();
-                let mut map2 = HashMap::new();
-                for i in 0..n {
-                    if map1.get(&word[i]).unwrap_or(&n) != map2.get(&pattern[i]).unwrap_or(&n) {
-                        return false;
-                    }
-                    map1.insert(word[i], i);
-                    map2.insert(pattern[i], i);
-                }
-                true
-            })
-            .collect()
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -196,4 +105,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

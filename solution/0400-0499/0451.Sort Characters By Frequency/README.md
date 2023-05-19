@@ -64,12 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def frequencySort(self, s: str) -> str:
-        cnt = Counter(s)
-        return ''.join(c * v for c, v in sorted(cnt.items(), key=lambda x: -x[1]))
-```
+
 
 ### **Java**
 
@@ -95,110 +90,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string frequencySort(string s) {
-        unordered_map<char, int> cnt;
-        for (char& c : s) {
-            ++cnt[c];
-        }
-        vector<char> cs;
-        for (auto& [c, _] : cnt) {
-            cs.push_back(c);
-        }
-        sort(cs.begin(), cs.end(), [&](char& a, char& b) {
-            return cnt[a] > cnt[b];
-        });
-        string ans;
-        for (char& c : cs) {
-            ans += string(cnt[c], c);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func frequencySort(s string) string {
-	cnt := map[byte]int{}
-	for i := range s {
-		cnt[s[i]]++
-	}
-	cs := make([]byte, 0, len(s))
-	for c := range cnt {
-		cs = append(cs, c)
-	}
-	sort.Slice(cs, func(i, j int) bool { return cnt[cs[i]] > cnt[cs[j]] })
-	ans := make([]byte, 0, len(s))
-	for _, c := range cs {
-		ans = append(ans, bytes.Repeat([]byte{c}, cnt[c])...)
-	}
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function frequencySort(s: string): string {
-    const cnt: Map<string, number> = new Map();
-    for (const c of s) {
-        cnt.set(c, (cnt.get(c) || 0) + 1);
-    }
-    const cs = Array.from(cnt.keys()).sort((a, b) => cnt.get(b)! - cnt.get(a)!);
-    const ans: string[] = [];
-    for (const c of cs) {
-        ans.push(c.repeat(cnt.get(c)!));
-    }
-    return ans.join('');
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn frequency_sort(s: String) -> String {
-        let mut cnt = HashMap::new();
-        for c in s.chars() {
-            cnt.insert(c, cnt.get(&c).unwrap_or(&0) + 1);
-        }
-        let mut cs = cnt.into_iter().collect::<Vec<(char, i32)>>();
-        cs.sort_unstable_by(|(_, a), (_, b)| b.cmp(&a));
-        cs.into_iter()
-            .map(|(c, v)| vec![c; v as usize].into_iter().collect::<String>())
-            .collect()
-    }
-}
-```
 
-### **PHP**
 
-```php
- class Solution {
-    /**
-     * @param String $s
-     * @return String
-     */
-    function frequencySort($s) {
-        for ($i = 0; $i < strlen($s); $i++) {
-            $hashtable[$s[$i]] += 1;
-        }
-        arsort($hashtable);
-        $keys = array_keys($hashtable);
-        for ($j = 0; $j < count($keys); $j++) {
-            $rs = $rs.str_repeat($keys[$j], $hashtable[$keys[$j]]);
-        }
-        return $rs;
-    }
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -206,4 +116,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

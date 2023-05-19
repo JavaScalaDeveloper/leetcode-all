@@ -63,30 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def maximumAverageSubtree(self, root: Optional[TreeNode]) -> float:
-        def dfs(root):
-            if root is None:
-                return 0, 0
-            ls, ln = dfs(root.left)
-            rs, rn = dfs(root.right)
-            s = root.val + ls + rs
-            n = 1 + ln + rn
-            nonlocal ans
-            ans = max(ans, s / n)
-            return s, n
 
-        ans = 0
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -130,68 +107,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    double maximumAverageSubtree(TreeNode* root) {
-        double ans = 0;
-        function<pair<int, int>(TreeNode*)> dfs = [&](TreeNode* root) -> pair<int, int> {
-            if (!root) {
-                return {0, 0};
-            }
-            auto [ls, ln] = dfs(root->left);
-            auto [rs, rn] = dfs(root->right);
-            int s = root->val + ls + rs;
-            int n = 1 + ln + rn;
-            ans = max(ans, s * 1.0 / n);
-            return {s, n};
-        };
-        dfs(root);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func maximumAverageSubtree(root *TreeNode) (ans float64) {
-	var dfs func(*TreeNode) [2]int
-	dfs = func(root *TreeNode) [2]int {
-		if root == nil {
-			return [2]int{}
-		}
-		l, r := dfs(root.Left), dfs(root.Right)
-		s := root.Val + l[0] + r[0]
-		n := 1 + l[1] + r[1]
-		ans = math.Max(ans, float64(s)/float64(n))
-		return [2]int{s, n}
-	}
-	dfs(root)
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -199,4 +121,4 @@ func maximumAverageSubtree(root *TreeNode) (ans float64) {
 
 ```
 
-<!-- tabs:end -->
+

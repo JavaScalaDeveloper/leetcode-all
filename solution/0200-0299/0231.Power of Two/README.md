@@ -81,19 +81,11 @@ $\texttt{n\&(-n)}$ 可以得到 $n$ 的最后一位 $1$ 表示的十进制数，
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isPowerOfTwo(self, n: int) -> bool:
-        return n > 0 and (n & (n - 1)) == 0
-```
+
 
 lowbit:
 
-```python
-class Solution:
-    def isPowerOfTwo(self, n: int) -> bool:
-        return n > 0 and n == n & (-n)
-```
+
 
 ### **Java**
 
@@ -117,83 +109,37 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isPowerOfTwo(int n) {
-        return n > 0 && (n & (n - 1)) == 0;
-    }
-};
-```
+
+
 
 lowbit:
 
-```cpp
-class Solution {
-public:
-    bool isPowerOfTwo(int n) {
-        return n > 0 && n == (n & (-n));
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {boolean}
- */
-var isPowerOfTwo = function (n) {
-    return n > 0 && (n & (n - 1)) == 0;
-};
-```
+
+
+
 
 lowbit:
 
-```js
-/**
- * @param {number} n
- * @return {boolean}
- */
-var isPowerOfTwo = function (n) {
-    return n > 0 && n == (n & -n);
-};
-```
 
-### **Go**
 
-```go
-func isPowerOfTwo(n int) bool {
-	return n > 0 && (n&(n-1)) == 0
-}
-```
+
+
+
 
 lowbit:
 
-```go
-func isPowerOfTwo(n int) bool {
-	return n > 0 && n == (n&(-n))
-}
-```
+
 
 ### **TypeScript**
 
-```ts
-function isPowerOfTwo(n: number): boolean {
-    return n > 0 && (n & (n - 1)) == 0;
-}
-```
+
 
 lowbit:
 
-```ts
-function isPowerOfTwo(n: number): boolean {
-    return n > 0 && (n & (n - 1)) == 0;
-}
-```
+
 
 ### **...**
 
@@ -201,4 +147,4 @@ function isPowerOfTwo(n: number): boolean {
 
 ```
 
-<!-- tabs:end -->
+

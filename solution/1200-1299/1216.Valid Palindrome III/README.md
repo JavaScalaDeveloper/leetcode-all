@@ -61,23 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isValidPalindrome(self, s: str, k: int) -> bool:
-        n = len(s)
-        f = [[0] * n for _ in range(n)]
-        for i in range(n):
-            f[i][i] = 1
-        for i in range(n - 2, -1, -1):
-            for j in range(i + 1, n):
-                if s[i] == s[j]:
-                    f[i][j] = f[i + 1][j - 1] + 2
-                else:
-                    f[i][j] = max(f[i + 1][j], f[i][j - 1])
-                if f[i][j] + k >= n:
-                    return True
-        return False
-```
+
 
 ### **Java**
 
@@ -108,67 +92,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isValidPalindrome(string s, int k) {
-        int n = s.length();
-        int f[n][n];
-        memset(f, 0, sizeof f);
-        for (int i = 0; i < n; ++i) {
-            f[i][i] = 1;
-        }
-        for (int i = n - 2; i >= 0; --i) {
-            for (int j = i + 1; j < n; ++j) {
-                if (s[i] == s[j]) {
-                    f[i][j] = f[i + 1][j - 1] + 2;
-                } else {
-                    f[i][j] = max(f[i + 1][j], f[i][j - 1]);
-                }
-                if (f[i][j] + k >= n) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isValidPalindrome(s string, k int) bool {
-	n := len(s)
-	f := make([][]int, n)
-	for i := range f {
-		f[i] = make([]int, n)
-		f[i][i] = 1
-	}
-	for i := n - 2; i >= 0; i-- {
-		for j := i + 1; j < n; j++ {
-			if s[i] == s[j] {
-				f[i][j] = f[i+1][j-1] + 2
-			} else {
-				f[i][j] = max(f[i+1][j], f[i][j-1])
-			}
-			if f[i][j]+k >= n {
-				return true
-			}
-		}
-	}
-	return false
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -176,4 +106,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

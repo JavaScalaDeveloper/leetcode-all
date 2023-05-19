@@ -73,22 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
-        cnt = Counter()
-        for a, b in matches:
-            if a not in cnt:
-                cnt[a] = 0
-            cnt[b] += 1
-        ans = [[], []]
-        for u, v in cnt.items():
-            if v < 2:
-                ans[v].append(u)
-        ans[0].sort()
-        ans[1].sort()
-        return ans
-```
+
 
 ### **Java**
 
@@ -120,58 +105,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> findWinners(vector<vector<int>>& matches) {
-        unordered_map<int, int> cnt;
-        for (auto& m : matches) {
-            int a = m[0], b = m[1];
-            if (!cnt.count(a)) cnt[a] = 0;
-            ++cnt[b];
-        }
-        vector<vector<int>> ans(2);
-        for (auto& [u, v] : cnt) {
-            if (v < 2) ans[v].push_back(u);
-        }
-        sort(ans[0].begin(), ans[0].end());
-        sort(ans[1].begin(), ans[1].end());
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findWinners(matches [][]int) [][]int {
-	cnt := map[int]int{}
-	for _, m := range matches {
-		a, b := m[0], m[1]
-		if _, ok := cnt[a]; !ok {
-			cnt[a] = 0
-		}
-		cnt[b]++
-	}
-	ans := make([][]int, 2)
-	for u, v := range cnt {
-		if v < 2 {
-			ans[v] = append(ans[v], u)
-		}
-	}
-	sort.Ints(ans[0])
-	sort.Ints(ans[1])
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -179,4 +123,4 @@ func findWinners(matches [][]int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

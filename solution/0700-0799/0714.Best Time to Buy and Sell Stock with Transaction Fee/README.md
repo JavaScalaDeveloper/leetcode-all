@@ -68,16 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxProfit(self, prices: List[int], fee: int) -> int:
-        # 持有，没持有
-        f1, f2 = -prices[0], 0
-        for price in prices[1:]:
-            f1 = max(f1, f2 - price)
-            f2 = max(f2, f1 + price - fee)
-        return f2
-```
+
 
 ### **Java**
 
@@ -96,41 +87,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProfit(vector<int>& prices, int fee) {
-        int f1 = -prices[0], f2 = 0;
-        for (int i = 1; i < prices.size(); ++i) {
-            f1 = max(f1, f2 - prices[i]);
-            f2 = max(f2, f1 + prices[i] - fee);
-        }
-        return f2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxProfit(prices []int, fee int) int {
-	f1, f2 := -prices[0], 0
-	for i := 1; i < len(prices); i++ {
-		f1 = max(f1, f2-prices[i])
-		f2 = max(f2, f1+prices[i]-fee)
-	}
-	return f2
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -138,4 +101,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

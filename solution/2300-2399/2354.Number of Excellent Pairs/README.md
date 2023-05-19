@@ -62,21 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countExcellentPairs(self, nums: List[int], k: int) -> int:
-        s = set(nums)
-        ans = 0
-        cnt = Counter()
-        for v in s:
-            cnt[v.bit_count()] += 1
-        for v in s:
-            t = v.bit_count()
-            for i, x in cnt.items():
-                if t + i >= k:
-                    ans += x
-        return ans
-```
+
 
 ### **Java**
 
@@ -108,60 +94,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long countExcellentPairs(vector<int>& nums, int k) {
-        unordered_set<int> s(nums.begin(), nums.end());
-        vector<int> cnt(32);
-        for (int v : s) ++cnt[__builtin_popcount(v)];
-        long long ans = 0;
-        for (int v : s) {
-            int t = __builtin_popcount(v);
-            for (int i = 0; i < 32; ++i) {
-                if (t + i >= k) {
-                    ans += cnt[i];
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countExcellentPairs(nums []int, k int) int64 {
-	s := map[int]bool{}
-	for _, v := range nums {
-		s[v] = true
-	}
-	cnt := make([]int, 32)
-	for v := range s {
-		t := bits.OnesCount(uint(v))
-		cnt[t]++
-	}
-	ans := 0
-	for v := range s {
-		t := bits.OnesCount(uint(v))
-		for i, x := range cnt {
-			if t+i >= k {
-				ans += x
-			}
-		}
-	}
-	return int64(ans)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -169,4 +112,4 @@ func countExcellentPairs(nums []int, k int) int64 {
 
 ```
 
-<!-- tabs:end -->
+

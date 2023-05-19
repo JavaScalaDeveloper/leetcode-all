@@ -50,15 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def selfDividingNumbers(self, left: int, right: int) -> List[int]:
-        return [
-            num
-            for num in range(left, right + 1)
-            if all(i != '0' and num % int(i) == 0 for i in str(num))
-        ]
-```
+
 
 ### **Java**
 
@@ -88,78 +80,17 @@ class Solution {
 }
 ```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn self_dividing_numbers(left: i32, right: i32) -> Vec<i32> {
-        let mut res = vec![];
-        for i in left..=right {
-            let mut num = i;
-            if loop {
-                if num == 0 {
-                    break true;
-                }
-                let j = num % 10;
-                if j == 0 || i % j != 0 {
-                    break false;
-                }
-                num /= 10;
-            } {
-                res.push(i);
-            }
-        }
-        res
-    }
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> selfDividingNumbers(int left, int right) {
-        vector<int> ans;
-        for (int i = left; i <= right; ++i)
-            if (check(i))
-                ans.push_back(i);
-        return ans;
-    }
 
-    bool check(int num) {
-        for (int t = num; t; t /= 10) {
-            int x = t % 10;
-            if (x == 0 || num % x) return false;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func selfDividingNumbers(left int, right int) []int {
-	check := func(num int) bool {
-		for t := num; t != 0; t /= 10 {
-			x := t % 10
-			if x == 0 || num%x != 0 {
-				return false
-			}
-		}
-		return true
-	}
 
-	var ans []int
-	for i := left; i <= right; i++ {
-		if check(i) {
-			ans = append(ans, i)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -167,4 +98,4 @@ func selfDividingNumbers(left int, right int) []int {
 
 ```
 
-<!-- tabs:end -->
+

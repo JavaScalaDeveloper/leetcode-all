@@ -154,4 +154,4 @@ FROM
     (SELECT COUNT(1) cnt FROM California WHERE score >= 90) n2;
 ```
 
-<!-- tabs:end -->
+

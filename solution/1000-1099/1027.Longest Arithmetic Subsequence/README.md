@@ -72,19 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestArithSeqLength(self, nums: List[int]) -> int:
-        n = len(nums)
-        f = [[1] * 1001 for _ in range(n)]
-        ans = 0
-        for i in range(1, n):
-            for k in range(i):
-                j = nums[i] - nums[k] + 500
-                f[i][j] = max(f[i][j], f[k][j] + 1)
-                ans = max(ans, f[i][j])
-        return ans
-```
+
 
 ### **Java**
 
@@ -108,75 +96,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestArithSeqLength(vector<int>& nums) {
-        int n = nums.size();
-        int f[n][1001];
-        memset(f, 0, sizeof(f));
-        int ans = 0;
-        for (int i = 1; i < n; ++i) {
-            for (int k = 0; k < i; ++k) {
-                int j = nums[i] - nums[k] + 500;
-                f[i][j] = max(f[i][j], f[k][j] + 1);
-                ans = max(ans, f[i][j]);
-            }
-        }
-        return ans + 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestArithSeqLength(nums []int) int {
-	n := len(nums)
-	f := make([][]int, n)
-	for i := range f {
-		f[i] = make([]int, 1001)
-	}
-	ans := 0
-	for i := 1; i < n; i++ {
-		for k := 0; k < i; k++ {
-			j := nums[i] - nums[k] + 500
-			f[i][j] = max(f[i][j], f[k][j]+1)
-			ans = max(ans, f[i][j])
-		}
-	}
-	return ans + 1
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function longestArithSeqLength(nums: number[]): number {
-    const n = nums.length;
-    let ans = 0;
-    const f: number[][] = Array.from({ length: n }, () =>
-        new Array(1001).fill(0),
-    );
-    for (let i = 1; i < n; ++i) {
-        for (let k = 0; k < i; ++k) {
-            const j = nums[i] - nums[k] + 500;
-            f[i][j] = Math.max(f[i][j], f[k][j] + 1);
-            ans = Math.max(ans, f[i][j]);
-        }
-    }
-    return ans + 1;
-}
-```
+
 
 ### **...**
 
@@ -184,4 +114,4 @@ function longestArithSeqLength(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

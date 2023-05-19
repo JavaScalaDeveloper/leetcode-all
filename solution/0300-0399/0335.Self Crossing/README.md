@@ -72,25 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isSelfCrossing(self, distance: List[int]) -> bool:
-        d = distance
-        for i in range(3, len(d)):
-            if d[i] >= d[i - 2] and d[i - 1] <= d[i - 3]:
-                return True
-            if i >= 4 and d[i - 1] == d[i - 3] and d[i] + d[i - 4] >= d[i - 2]:
-                return True
-            if (
-                i >= 5
-                and d[i - 2] >= d[i - 4]
-                and d[i - 1] <= d[i - 3]
-                and d[i] >= d[i - 2] - d[i - 4]
-                and d[i - 1] + d[i - 5] >= d[i - 3]
-            ):
-                return True
-        return False
-```
+
 
 ### **Java**
 
@@ -117,42 +99,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isSelfCrossing(vector<int>& distance) {
-        vector<int> d = distance;
-        for (int i = 3; i < d.size(); ++i) {
-            if (d[i] >= d[i - 2] && d[i - 1] <= d[i - 3]) return true;
-            if (i >= 4 && d[i - 1] == d[i - 3] && d[i] + d[i - 4] >= d[i - 2]) return true;
-            if (i >= 5 && d[i - 2] >= d[i - 4] && d[i - 1] <= d[i - 3] && d[i] >= d[i - 2] - d[i - 4] && d[i - 1] + d[i - 5] >= d[i - 3]) return true;
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isSelfCrossing(distance []int) bool {
-	d := distance
-	for i := 3; i < len(d); i++ {
-		if d[i] >= d[i-2] && d[i-1] <= d[i-3] {
-			return true
-		}
-		if i >= 4 && d[i-1] == d[i-3] && d[i]+d[i-4] >= d[i-2] {
-			return true
-		}
-		if i >= 5 && d[i-2] >= d[i-4] && d[i-1] <= d[i-3] && d[i] >= d[i-2]-d[i-4] && d[i-1]+d[i-5] >= d[i-3] {
-			return true
-		}
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -160,4 +113,4 @@ func isSelfCrossing(distance []int) bool {
 
 ```
 
-<!-- tabs:end -->
+

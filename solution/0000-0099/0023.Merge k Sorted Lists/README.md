@@ -71,35 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
-        n = len(lists)
-        if n == 0:
-            return None
-        for i in range(n - 1):
-            lists[i + 1] = self.mergeTwoLists(lists[i], lists[i + 1])
-        return lists[-1]
 
-    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        dummy = ListNode()
-        cur = dummy
-        while l1 and l2:
-            if l1.val <= l2.val:
-                cur.next = l1
-                l1 = l1.next
-            else:
-                cur.next = l2
-                l2 = l2.next
-            cur = cur.next
-        cur.next = l1 or l2
-        return dummy.next
-```
 
 ### **Java**
 
@@ -147,133 +119,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* mergeKLists(vector<ListNode*>& lists) {
-        int n = lists.size();
-        if (n == 0) return nullptr;
-        for (int i = 1; i < n; ++i) lists[i] = mergeTwoLists(lists[i - 1], lists[i]);
-        return lists[n - 1];
-    }
 
-private:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        ListNode* dummy = new ListNode();
-        ListNode* cur = dummy;
-        while (l1 && l2) {
-            if (l1->val <= l2->val) {
-                cur->next = l1;
-                l1 = l1->next;
-            } else {
-                cur->next = l2;
-                l2 = l2->next;
-            }
-            cur = cur->next;
-        }
-        cur->next = l1 ? l1 : l2;
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func mergeKLists(lists []*ListNode) *ListNode {
-    n := len(lists)
-    if n == 0 {
-        return nil
-    }
-    for i := 1; i < n; i++ {
-        lists[i] = mergeTwoLists(lists[i-1], lists[i])
-    }
-    return lists[n-1]
-}
 
- func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-    dummy := &ListNode{}
-    cur := dummy
-    for l1 != nil && l2 != nil {
-        if l1.Val <= l2.Val {
-            cur.Next = l1
-            l1 = l1.Next
-        } else {
-            cur.Next = l2
-            l2 = l2.Next
-        }
-        cur = cur.Next
-    }
-    if l1 != nil {
-        cur.Next = l1
-    } else if l2 != nil {
-        cur.Next = l2
-    }
-    return dummy.Next
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode[]} lists
- * @return {ListNode}
- */
-var mergeKLists = function (lists) {
-    const n = lists.length;
-    if (n == 0) {
-        return null;
-    }
-    for (let i = 1; i < n; ++i) {
-        lists[i] = mergeTwoLists(lists[i - 1], lists[i]);
-    }
-    return lists[n - 1];
-};
 
-function mergeTwoLists(l1, l2) {
-    const dummy = new ListNode();
-    let cur = dummy;
-    while (l1 && l2) {
-        if (l1.val <= l2.val) {
-            cur.next = l1;
-            l1 = l1.next;
-        } else {
-            cur.next = l2;
-            l2 = l2.next;
-        }
-        cur = cur.next;
-    }
-    cur.next = l1 || l2;
-    return dummy.next;
-}
-```
+
+
+
 
 ### **Ruby**
 
@@ -316,161 +172,17 @@ def merge_two_lists(l1, l2)
 end
 ```
 
-### **C#**
 
-```cs
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int val=0, ListNode next=null) {
- *         this.val = val;
- *         this.next = next;
- *     }
- * }
- */
-public class Solution {
-    public ListNode MergeKLists(ListNode[] lists) {
-        int n = lists.Length;
-        if (n == 0) {
-            return null;
-        }
-        for (int i = 1; i < n; ++i) {
-            lists[i] = MergeTwoLists(lists[i - 1], lists[i]);
-        }
-        return lists[n - 1];
-    }
 
-    private ListNode MergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode dummy = new ListNode();
-        ListNode cur = dummy;
-        while (l1 != null && l2 != null) {
-            if (l1.val <= l2.val) {
-                cur.next = l1;
-                l1 = l1.next;
-            } else {
-                cur.next = l2;
-                l2 = l2.next;
-            }
-            cur = cur.next;
-        }
-        cur.next = l1 == null ? l2 : l1;
-        return dummy.next;
-    }
-}
-```
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
-    const n = lists.length;
-    const dfs = (start: number, end: number) => {
-        if (end - start <= 1) {
-            return lists[start] ?? null;
-        }
 
-        const mid = (start + end) >> 1;
-        let left = dfs(start, mid);
-        let right = dfs(mid, end);
 
-        const dummy = new ListNode();
-        let cur = dummy;
-        while (left || right) {
-            let next: ListNode;
-            if (
-                (left ?? { val: Infinity }).val <
-                (right ?? { val: Infinity }).val
-            ) {
-                next = left;
-                left = left.next;
-            } else {
-                next = right;
-                right = right.next;
-            }
-            cur.next = next;
-            cur = next;
-        }
-        return dummy.next;
-    };
-    return dfs(0, n);
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for singly-linked list.
-// #[derive(PartialEq, Eq, Clone, Debug)]
-// pub struct ListNode {
-//   pub val: i32,
-//   pub next: Option<Box<ListNode>>
-// }
-//
-// impl ListNode {
-//   #[inline]
-//   fn new(val: i32) -> Self {
-//     ListNode {
-//       next: None,
-//       val
-//     }
-//   }
-// }
-impl Solution {
-    pub fn merge_k_lists(mut lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
-        let n = lists.len();
-        Self::dfs(&mut lists, 0, n)
-    }
-
-    fn dfs(
-        lists: &mut Vec<Option<Box<ListNode>>>,
-        start: usize,
-        end: usize,
-    ) -> Option<Box<ListNode>> {
-        if end - start <= 1 {
-            if lists.get(start).is_some() {
-                return lists[start].take();
-            }
-            return None;
-        }
-        let mid = start + (end - start) / 2;
-        let mut left = Self::dfs(lists, start, mid);
-        let mut right = Self::dfs(lists, mid, end);
-        let mut dummy = Box::new(ListNode::new(0));
-        let mut cur = &mut dummy;
-        while left.is_some() || right.is_some() {
-            let mut next = None;
-            if left.is_some()
-                && (right.is_none() || left.as_ref().unwrap().val < right.as_ref().unwrap().val)
-            {
-                let t = left.as_mut().unwrap().next.take();
-                next = left.take();
-                left = t;
-            } else {
-                let t = right.as_mut().unwrap().next.take();
-                next = right.take();
-                right = t;
-            }
-            cur.next = next;
-            cur = cur.next.as_mut().unwrap();
-        }
-        dummy.next
-    }
-}
-```
 
 ### **...**
 
@@ -478,4 +190,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

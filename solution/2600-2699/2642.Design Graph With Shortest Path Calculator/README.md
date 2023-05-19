@@ -71,39 +71,7 @@ g.shortestPath(0, 3); // 返回 6 。从 0 到 3 的最短路径为 0 -&gt; 1 -&
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Graph:
 
-    def __init__(self, n: int, edges: List[List[int]]):
-        self.n = n
-        self.g = [[inf] * n for _ in range(n)]
-        for f, t, c in edges:
-            self.g[f][t] = c
-
-    def addEdge(self, edge: List[int]) -> None:
-        f, t, c = edge
-        self.g[f][t] = c
-
-    def shortestPath(self, node1: int, node2: int) -> int:
-        dist = [inf] * self.n
-        dist[node1] = 0
-        vis = [False] * self.n
-        for _ in range(self.n):
-            t = -1
-            for j in range(self.n):
-                if not vis[j] and (t == -1 or dist[t] > dist[j]):
-                    t = j
-            vis[t] = True
-            for j in range(self.n):
-                dist[j] = min(dist[j], dist[t] + self.g[t][j])
-        return -1 if dist[node2] == inf else dist[node2]
-
-
-# Your Graph object will be instantiated and called as such:
-# obj = Graph(n, edges)
-# obj.addEdge(edge)
-# param_2 = obj.shortestPath(node1,node2)
-```
 
 ### **Java**
 
@@ -161,175 +129,17 @@ class Graph {
  */
 ```
 
-### **C++**
 
-```cpp
-class Graph {
-public:
-    Graph(int n, vector<vector<int>>& edges) {
-        this->n = n;
-        g = vector<vector<int>>(n, vector<int>(n, inf));
-        for (auto& e : edges) {
-            int f = e[0], t = e[1], c = e[2];
-            g[f][t] = c;
-        }
-    }
 
-    void addEdge(vector<int> edge) {
-        int f = edge[0], t = edge[1], c = edge[2];
-        g[f][t] = c;
-    }
 
-    int shortestPath(int node1, int node2) {
-        vector<bool> vis(n);
-        vector<int> dist(n, inf);
-        dist[node1] = 0;
-        for (int i = 0; i < n; ++i) {
-            int t = -1;
-            for (int j = 0; j < n; ++j) {
-                if (!vis[j] && (t == -1 || dist[t] > dist[j])) {
-                    t = j;
-                }
-            }
-            vis[t] = true;
-            for (int j = 0; j < n; ++j) {
-                dist[j] = min(dist[j], dist[t] + g[t][j]);
-            }
-        }
-        return dist[node2] >= inf ? -1 : dist[node2];
-    }
 
-private:
-    vector<vector<int>> g;
-    int n;
-    const int inf = 1 << 29;
-};
 
-/**
- * Your Graph object will be instantiated and called as such:
- * Graph* obj = new Graph(n, edges);
- * obj->addEdge(edge);
- * int param_2 = obj->shortestPath(node1,node2);
- */
-```
 
-### **Go**
 
-```go
-const inf = 1 << 29
-
-type Graph struct {
-	g [][]int
-}
-
-func Constructor(n int, edges [][]int) Graph {
-	g := make([][]int, n)
-	for i := range g {
-		g[i] = make([]int, n)
-		for j := range g[i] {
-			g[i][j] = inf
-		}
-	}
-	for _, e := range edges {
-		f, t, c := e[0], e[1], e[2]
-		g[f][t] = c
-	}
-	return Graph{g}
-}
-
-func (this *Graph) AddEdge(edge []int) {
-	f, t, c := edge[0], edge[1], edge[2]
-	this.g[f][t] = c
-}
-
-func (this *Graph) ShortestPath(node1 int, node2 int) int {
-	n := len(this.g)
-	dist := make([]int, n)
-	for i := range dist {
-		dist[i] = inf
-	}
-	vis := make([]bool, n)
-	dist[node1] = 0
-	for i := 0; i < n; i++ {
-		t := -1
-		for j := 0; j < n; j++ {
-			if !vis[j] && (t == -1 || dist[t] > dist[j]) {
-				t = j
-			}
-		}
-		vis[t] = true
-		for j := 0; j < n; j++ {
-			dist[j] = min(dist[j], dist[t]+this.g[t][j])
-		}
-	}
-	if dist[node2] >= inf {
-		return -1
-	}
-	return dist[node2]
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-/**
- * Your Graph object will be instantiated and called as such:
- * obj := Constructor(n, edges);
- * obj.AddEdge(edge);
- * param_2 := obj.ShortestPath(node1,node2);
- */
-```
 
 ### **TypeScript**
 
-```ts
-class Graph {
-    private g: number[][] = [];
-    private inf: number = 1 << 29;
 
-    constructor(n: number, edges: number[][]) {
-        this.g = Array.from({ length: n }, () => Array(n).fill(this.inf));
-        for (const [f, t, c] of edges) {
-            this.g[f][t] = c;
-        }
-    }
-
-    addEdge(edge: number[]): void {
-        const [f, t, c] = edge;
-        this.g[f][t] = c;
-    }
-
-    shortestPath(node1: number, node2: number): number {
-        const n = this.g.length;
-        const dist: number[] = new Array(n).fill(this.inf);
-        dist[node1] = 0;
-        const vis: boolean[] = new Array(n).fill(false);
-        for (let i = 0; i < n; ++i) {
-            let t = -1;
-            for (let j = 0; j < n; ++j) {
-                if (!vis[j] && (t === -1 || dist[j] < dist[t])) {
-                    t = j;
-                }
-            }
-            vis[t] = true;
-            for (let j = 0; j < n; ++j) {
-                dist[j] = Math.min(dist[j], dist[t] + this.g[t][j]);
-            }
-        }
-        return dist[node2] >= this.inf ? -1 : dist[node2];
-    }
-}
-
-/**
- * Your Graph object will be instantiated and called as such:
- * var obj = new Graph(n, edges)
- * obj.addEdge(edge)
- * var param_2 = obj.shortestPath(node1,node2)
- */
-```
 
 ### **...**
 
@@ -337,4 +147,4 @@ class Graph {
 
 ```
 
-<!-- tabs:end -->
+

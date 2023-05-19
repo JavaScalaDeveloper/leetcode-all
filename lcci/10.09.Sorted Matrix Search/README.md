@@ -36,22 +36,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        if not matrix or not matrix[0]:
-            return False
-        m, n = len(matrix), len(matrix[0])
-        i, j = m - 1, 0
-        while i >= 0 and j < n:
-            if matrix[i][j] == target:
-                return True
-            if matrix[i][j] > target:
-                i -= 1
-            else:
-                j += 1
-        return False
-```
+
 
 ### **Java**
 
@@ -80,49 +65,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        if (matrix.size() == 0 || matrix[0].size() == 0) return false;
-        int m = matrix.size(), n = matrix[0].size();
-        int i = m - 1, j = 0;
-        while (i >= 0 && j < n) {
-            if (matrix[i][j] == target) return true;
-            if (matrix[i][j] > target)
-                --i;
-            else
-                ++j;
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func searchMatrix(matrix [][]int, target int) bool {
-	if len(matrix) == 0 || len(matrix[0]) == 0 {
-		return false
-	}
-	m, n := len(matrix), len(matrix[0])
-	i, j := m-1, 0
-	for i >= 0 && j < n {
-		if matrix[i][j] == target {
-			return true
-		}
-		if matrix[i][j] > target {
-			i--
-		} else {
-			j++
-		}
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -130,4 +79,4 @@ func searchMatrix(matrix [][]int, target int) bool {
 
 ```
 
-<!-- tabs:end -->
+

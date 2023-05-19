@@ -56,18 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minSetSize(self, arr: List[int]) -> int:
-        cnt = Counter(arr)
-        ans = m = 0
-        for _, v in cnt.most_common():
-            m += v
-            ans += 1
-            if m * 2 >= len(arr):
-                break
-        return ans
-```
+
 
 ### **Java**
 
@@ -100,89 +89,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minSetSize(vector<int>& arr) {
-        int mx = *max_element(arr.begin(), arr.end());
-        int cnt[mx + 1];
-        memset(cnt, 0, sizeof(cnt));
-        for (int& x : arr) {
-            ++cnt[x];
-        }
-        sort(cnt, cnt + mx + 1, greater<int>());
-        int ans = 0;
-        int m = 0;
-        for (int& x : cnt) {
-            if (x) {
-                m += x;
-                ++ans;
-                if (m * 2 >= arr.size()) {
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minSetSize(arr []int) (ans int) {
-	mx := 0
-	for _, x := range arr {
-		mx = max(mx, x)
-	}
-	cnt := make([]int, mx+1)
-	for _, x := range arr {
-		cnt[x]++
-	}
-	sort.Ints(cnt)
-	for i, m := mx, 0; ; i-- {
-		if cnt[i] > 0 {
-			m += cnt[i]
-			ans++
-			if m >= len(arr)/2 {
-				return
-			}
-		}
-	}
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minSetSize(arr: number[]): number {
-    const counter = new Map<number, number>();
-    for (const v of arr) {
-        counter.set(v, (counter.get(v) ?? 0) + 1);
-    }
-    const t = Array.from(counter.values());
-    t.sort((a, b) => b - a);
-    let ans = 0;
-    let n = 0;
-    for (const cnt of t) {
-        n += cnt;
-        ++ans;
-        if (n * 2 >= arr.length) {
-            break;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -190,4 +107,4 @@ function minSetSize(arr: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -54,29 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def longestUnivaluePath(self, root: TreeNode) -> int:
-        def dfs(root):
-            if root is None:
-                return 0
-            left, right = dfs(root.left), dfs(root.right)
-            left = left + 1 if root.left and root.left.val == root.val else 0
-            right = right + 1 if root.right and root.right.val == root.val else 0
-            nonlocal ans
-            ans = max(ans, left + right)
-            return max(left, right)
 
-        ans = 0
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -121,84 +99,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int ans;
 
-    int longestUnivaluePath(TreeNode* root) {
-        ans = 0;
-        dfs(root);
-        return ans;
-    }
 
-    int dfs(TreeNode* root) {
-        if (!root) return 0;
-        int left = dfs(root->left), right = dfs(root->right);
-        left = root->left && root->left->val == root->val ? left + 1 : 0;
-        right = root->right && root->right->val == root->val ? right + 1 : 0;
-        ans = max(ans, left + right);
-        return max(left, right);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func longestUnivaluePath(root *TreeNode) int {
-	ans := 0
-	var dfs func(root *TreeNode) int
-	dfs = func(root *TreeNode) int {
-		if root == nil {
-			return 0
-		}
-		left, right := dfs(root.Left), dfs(root.Right)
-		if root.Left != nil && root.Left.Val == root.Val {
-			left++
-		} else {
-			left = 0
-		}
-		if root.Right != nil && root.Right.Val == root.Val {
-			right++
-		} else {
-			right = 0
-		}
-		ans = max(ans, left+right)
-		return max(left, right)
-	}
-	dfs(root)
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **C**
 
@@ -237,136 +144,17 @@ int longestUnivaluePath(struct TreeNode *root) {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-var longestUnivaluePath = function (root) {
-    let ans = 0;
-    let dfs = function (root) {
-        if (!root) {
-            return 0;
-        }
-        let left = dfs(root.left),
-            right = dfs(root.right);
-        left = root.left?.val == root.val ? left + 1 : 0;
-        right = root.right?.val == root.val ? right + 1 : 0;
-        ans = Math.max(ans, left + right);
-        return Math.max(left, right);
-    };
-    dfs(root);
-    return ans;
-};
-```
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function longestUnivaluePath(root: TreeNode | null): number {
-    if (root == null) {
-        return 0;
-    }
 
-    let res = 0;
-    const dfs = (root: TreeNode | null, target: number) => {
-        if (root == null) {
-            return 0;
-        }
 
-        const { val, left, right } = root;
 
-        let l = dfs(left, val);
-        let r = dfs(right, val);
-        res = Math.max(res, l + r);
-        if (val === target) {
-            return Math.max(l, r) + 1;
-        }
-        return 0;
-    };
-    dfs(root, root.val);
-    return res;
-}
-```
 
-### **Rust**
-
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    fn dfs(root: &Option<Rc<RefCell<TreeNode>>>, target: i32, res: &mut i32) -> i32 {
-        if root.is_none() {
-            return 0;
-        }
-
-        let root = root.as_ref().unwrap().as_ref().borrow();
-        let left = Self::dfs(&root.left, root.val, res);
-        let right = Self::dfs(&root.right, root.val, res);
-        *res = (*res).max(left + right);
-        if root.val == target {
-            return left.max(right) + 1;
-        }
-        0
-    }
-
-    pub fn longest_univalue_path(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        if root.is_none() {
-            return 0;
-        }
-
-        let mut res = 0;
-        Self::dfs(
-            &root,
-            root.as_ref().unwrap().as_ref().borrow().val,
-            &mut res,
-        );
-        res
-    }
-}
-```
 
 ### **...**
 
@@ -374,4 +162,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

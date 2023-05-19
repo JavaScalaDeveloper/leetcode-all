@@ -55,13 +55,7 @@ banned = [&quot;hit&quot;]
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
-        s = set(banned)
-        p = Counter(re.findall('[a-z]+', paragraph.lower()))
-        return next(word for word, _ in p.most_common() if word not in s)
-```
+
 
 ### **Java**
 
@@ -103,114 +97,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function mostCommonWord(paragraph: string, banned: string[]): string {
-    const s = paragraph.toLocaleLowerCase();
-    const map = new Map<string, number>();
-    const set = new Set<string>(banned);
-    for (const word of s.split(/[^A-z]/)) {
-        if (word === '' || set.has(word)) {
-            continue;
-        }
-        map.set(word, (map.get(word) ?? 0) + 1);
-    }
-    return [...map.entries()].reduce(
-        (r, v) => (v[1] > r[1] ? v : r),
-        ['', 0],
-    )[0];
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::{HashMap, HashSet};
-impl Solution {
-    pub fn most_common_word(mut paragraph: String, banned: Vec<String>) -> String {
-        paragraph.make_ascii_lowercase();
-        let banned: HashSet<&str> = banned.iter().map(String::as_str).collect();
-        let mut map = HashMap::new();
-        for word in paragraph.split(|c| !matches!(c, 'a'..='z')) {
-            if word.is_empty() || banned.contains(word) {
-                continue;
-            }
-            let val = map.get(&word).unwrap_or(&0) + 1;
-            map.insert(word, val);
-        }
-        map.into_iter()
-            .max_by_key(|&(_, v)| v)
-            .unwrap()
-            .0
-            .to_string()
-    }
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string mostCommonWord(string paragraph, vector<string>& banned) {
-        unordered_set<string> s(banned.begin(), banned.end());
-        unordered_map<string, int> counter;
-        string ans;
-        for (int i = 0, mx = 0, n = paragraph.size(); i < n;) {
-            if (!isalpha(paragraph[i]) && (++i > 0)) continue;
-            int j = i;
-            string word;
-            while (j < n && isalpha(paragraph[j])) {
-                word.push_back(tolower(paragraph[j]));
-                ++j;
-            }
-            i = j + 1;
-            if (s.count(word)) continue;
-            ++counter[word];
-            if (counter[word] > mx) {
-                ans = word;
-                mx = counter[word];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mostCommonWord(paragraph string, banned []string) string {
-	s := make(map[string]bool)
-	for _, w := range banned {
-		s[w] = true
-	}
-	counter := make(map[string]int)
-	var ans string
-	for i, mx, n := 0, 0, len(paragraph); i < n; {
-		if !unicode.IsLetter(rune(paragraph[i])) {
-			i++
-			continue
-		}
-		j := i
-		var word []byte
-		for j < n && unicode.IsLetter(rune(paragraph[j])) {
-			word = append(word, byte(unicode.ToLower(rune(paragraph[j]))))
-			j++
-		}
-		i = j + 1
-		t := string(word)
-		if s[t] {
-			continue
-		}
-		counter[t]++
-		if counter[t] > mx {
-			ans = t
-			mx = counter[t]
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -218,4 +117,4 @@ func mostCommonWord(paragraph string, banned []string) string {
 
 ```
 
-<!-- tabs:end -->
+

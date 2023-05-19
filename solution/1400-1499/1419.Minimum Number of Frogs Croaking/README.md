@@ -74,27 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
-        if len(croakOfFrogs) % 5 != 0:
-            return -1
-        idx = {c: i for i, c in enumerate('croak')}
-        cnt = [0] * 5
-        ans = x = 0
-        for i in map(idx.get, croakOfFrogs):
-            cnt[i] += 1
-            if i == 0:
-                x += 1
-                ans = max(ans, x)
-            else:
-                if cnt[i - 1] == 0:
-                    return -1
-                cnt[i - 1] -= 1
-                if i == 4:
-                    x -= 1
-        return -1 if x else ans
-```
+
 
 ### **Java**
 
@@ -133,115 +113,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minNumberOfFrogs(string croakOfFrogs) {
-        int n = croakOfFrogs.size();
-        if (n % 5 != 0) {
-            return -1;
-        }
-        int idx[26]{};
-        string s = "croak";
-        for (int i = 0; i < 5; ++i) {
-            idx[s[i] - 'a'] = i;
-        }
-        int cnt[5]{};
-        int ans = 0, x = 0;
-        for (char& c : croakOfFrogs) {
-            int i = idx[c - 'a'];
-            ++cnt[i];
-            if (i == 0) {
-                ans = max(ans, ++x);
-            } else {
-                if (--cnt[i - 1] < 0) {
-                    return -1;
-                }
-                if (i == 4) {
-                    --x;
-                }
-            }
-        }
-        return x > 0 ? -1 : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minNumberOfFrogs(croakOfFrogs string) int {
-	n := len(croakOfFrogs)
-	if n%5 != 0 {
-		return -1
-	}
-	idx := [26]int{}
-	for i, c := range "croak" {
-		idx[c-'a'] = i
-	}
-	cnt := [5]int{}
-	ans, x := 0, 0
-	for _, c := range croakOfFrogs {
-		i := idx[c-'a']
-		cnt[i]++
-		if i == 0 {
-			x++
-			ans = max(ans, x)
-		} else {
-			cnt[i-1]--
-			if cnt[i-1] < 0 {
-				return -1
-			}
-			if i == 4 {
-				x--
-			}
-		}
-	}
-	if x > 0 {
-		return -1
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minNumberOfFrogs(croakOfFrogs: string): number {
-    const n = croakOfFrogs.length;
-    if (n % 5 !== 0) {
-        return -1;
-    }
-    const idx = (c: string): number => 'croak'.indexOf(c);
-    const cnt: number[] = [0, 0, 0, 0, 0];
-    let ans = 0;
-    let x = 0;
-    for (const c of croakOfFrogs) {
-        const i = idx(c);
-        ++cnt[i];
-        if (i === 0) {
-            ans = Math.max(ans, ++x);
-        } else {
-            if (--cnt[i - 1] < 0) {
-                return -1;
-            }
-            if (i === 4) {
-                --x;
-            }
-        }
-    }
-    return x > 0 ? -1 : ans;
-}
-```
+
 
 ### **...**
 
@@ -249,4 +131,4 @@ function minNumberOfFrogs(croakOfFrogs: string): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -71,15 +71,7 @@ nums 的 MEX 是 2 。可以证明 2 是可以取到的最大 MEX 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findSmallestInteger(self, nums: List[int], value: int) -> int:
-        cnt = Counter(x % value for x in nums)
-        for i in range(len(nums) + 1):
-            if cnt[i % value] == 0:
-                return i
-            cnt[i % value] -= 1
-```
+
 
 ### **Java**
 
@@ -101,58 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findSmallestInteger(vector<int>& nums, int value) {
-        int cnt[value];
-        memset(cnt, 0, sizeof(cnt));
-        for (int x : nums) {
-            ++cnt[(x % value + value) % value];
-        }
-        for (int i = 0;; ++i) {
-            if (cnt[i % value]-- == 0) {
-                return i;
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func findSmallestInteger(nums []int, value int) int {
-	cnt := make([]int, value)
-	for _, x := range nums {
-		cnt[(x%value+value)%value]++
-	}
-	for i := 0; ; i++ {
-		if cnt[i%value] == 0 {
-			return i
-		}
-		cnt[i%value]--
-	}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findSmallestInteger(nums: number[], value: number): number {
-    const cnt: number[] = new Array(value).fill(0);
-    for (const x of nums) {
-        ++cnt[((x % value) + value) % value];
-    }
-    for (let i = 0; ; ++i) {
-        if (cnt[i % value]-- === 0) {
-            return i;
-        }
-    }
-}
-```
+
 
 ### **...**
 
@@ -160,4 +111,4 @@ function findSmallestInteger(nums: number[], value: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -69,22 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedList
 
-
-class Solution:
-    def longestSubarray(self, nums: List[int], limit: int) -> int:
-        sl = SortedList()
-        ans = j = 0
-        for i, v in enumerate(nums):
-            sl.add(v)
-            while sl[-1] - sl[0] > limit:
-                sl.remove(nums[j])
-                j += 1
-            ans = max(ans, i - j + 1)
-        return ans
-```
 
 ### **Java**
 
@@ -111,192 +96,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestSubarray(vector<int>& nums, int limit) {
-        multiset<int> s;
-        int ans = 0, j = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            s.insert(nums[i]);
-            while (*s.rbegin() - *s.begin() > limit) {
-                s.erase(s.find(nums[j++]));
-            }
-            ans = max(ans, i - j + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestSubarray(nums []int, limit int) (ans int) {
-	tm := treemap.NewWithIntComparator()
-	j := 0
-	for i, v := range nums {
-		if x, ok := tm.Get(v); ok {
-			tm.Put(v, x.(int)+1)
-		} else {
-			tm.Put(v, 1)
-		}
-		for {
-			a, _ := tm.Min()
-			b, _ := tm.Max()
-			if b.(int)-a.(int) > limit {
-				if x, _ := tm.Get(nums[j]); x.(int) == 1 {
-					tm.Remove(nums[j])
-				} else {
-					tm.Put(nums[j], x.(int)-1)
-				}
-				j++
-			} else {
-				break
-			}
-		}
-		ans = max(ans, i-j+1)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-````ts
-function longestSubarray(nums: number[], limit: number): number {
-    const ts = new TreapMultiSet<number>();
-    let ans = 0;
-    let j = 0;
-    for (let i = 0; i < nums.length; ++i) {
-        ts.add(nums[i]);
-        while (ts.last() - ts.first() > limit) {
-            ts.delete(nums[j++]);
-        }
-        ans = Math.max(ans, i - j + 1);
-    }
-    return ans;
-}
-
-type CompareFunction<T, R extends 'number' | 'boolean'> = (
-    a: T,
-    b: T,
-) => R extends 'number' ? number : boolean;
-
-interface ITreapMultiSet<T> extends Iterable<T> {
-    add: (...value: T[]) => this;
-    has: (value: T) => boolean;
-    delete: (value: T) => void;
-
-    bisectLeft: (value: T) => number;
-    bisectRight: (value: T) => number;
-
-    indexOf: (value: T) => number;
-    lastIndexOf: (value: T) => number;
-
-    at: (index: number) => T | undefined;
-    first: () => T | undefined;
-    last: () => T | undefined;
-
-    lower: (value: T) => T | undefined;
-    higher: (value: T) => T | undefined;
-    floor: (value: T) => T | undefined;
-    ceil: (value: T) => T | undefined;
-
-    shift: () => T | undefined;
-    pop: (index?: number) => T | undefined;
-
-    count: (value: T) => number;
-
-    keys: () => IterableIterator<T>;
-    values: () => IterableIterator<T>;
-    rvalues: () => IterableIterator<T>;
-    entries: () => IterableIterator<[number, T]>;
-
-    readonly size: number;
-}
-
-class TreapNode<T = number> {
-    value: T;
-    count: number;
-    size: number;
-    priority: number;
-    left: TreapNode<T> | null;
-    right: TreapNode<T> | null;
-
-    constructor(value: T) {
-        this.value = value;
-        this.count = 1;
-        this.size = 1;
-        this.priority = Math.random();
-        this.left = null;
-        this.right = null;
-    }
-
-    static getSize(node: TreapNode<any> | null): number {
-        return node?.size ?? 0;
-    }
-
-    static getFac(node: TreapNode<any> | null): number {
-        return node?.priority ?? 0;
-    }
-
-    pushUp(): void {
-        let tmp = this.count;
-        tmp += TreapNode.getSize(this.left);
-        tmp += TreapNode.getSize(this.right);
-        this.size = tmp;
-    }
-
-    rotateRight(): TreapNode<T> {
-        // eslint-disable-next-line @typescript-eslint/no-this-alias
-        let node: TreapNode<T> = this;
-        const left = node.left;
-        node.left = left?.right ?? null;
-        left && (left.right = node);
-        left && (node = left);
-        node.right?.pushUp();
-        node.pushUp();
-        return node;
-    }
-
-    rotateLeft(): TreapNode<T> {
-        // eslint-disable-next-line @typescript-eslint/no-this-alias
-        let node: TreapNode<T> = this;
-        const right = node.right;
-        node.right = right?.left ?? null;
-        right && (right.left = node);
-        right && (node = right);
-        node.left?.pushUp();
-        node.pushUp();
-        return node;
-    }
-}
-
-class TreapMultiSet<T = number> implements ITreapMultiSet<T> {
-    private readonly root: TreapNode<T>;
-    private readonly compareFn: CompareFunction<T, 'number'>;
-    private readonly leftBound: T;
-    private readonly rightBound: T;
-
-    /**
-   *
-   * @param compareFn A compare function which returns boolean or number
-   * @param leftBound defalut value is `-Infinity`
-   * @param rightBound defalut value is `Infinity`
-   * @description
-   * create a `MultiSet`, compare elements using `compareFn`, which is increasing order by default.
-   * @example
-   * ```ts
+`ts
    * interface Person {
         name: string
         age: number
@@ -886,4 +696,4 @@ class TreapMultiSet<T = number> implements ITreapMultiSet<T> {
 
 ```
 
-<!-- tabs:end -->
+

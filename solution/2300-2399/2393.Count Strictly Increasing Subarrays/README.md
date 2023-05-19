@@ -65,33 +65,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSubarrays(self, nums: List[int]) -> int:
-        ans = i = 0
-        while i < len(nums):
-            j = i + 1
-            while j < len(nums) and nums[j] > nums[j - 1]:
-                j += 1
-            cnt = j - i
-            ans += (1 + cnt) * cnt // 2
-            i = j
-        return ans
-```
 
-```python
-class Solution:
-    def countSubarrays(self, nums: List[int]) -> int:
-        ans = pre = cnt = 0
-        for x in nums:
-            if pre < x:
-                cnt += 1
-            else:
-                cnt = 1
-            pre = x
-            ans += cnt
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -135,120 +111,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long countSubarrays(vector<int>& nums) {
-        long long ans = 0;
-        int i = 0, n = nums.size();
-        while (i < n) {
-            int j = i + 1;
-            while (j < n && nums[j] > nums[j - 1]) {
-                ++j;
-            }
-            int cnt = j - i;
-            ans += 1ll * (1 + cnt) * cnt / 2;
-            i = j;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    long long countSubarrays(vector<int>& nums) {
-        long long ans = 0;
-        int pre = 0, cnt = 0;
-        for (int x : nums) {
-            if (pre < x) {
-                ++cnt;
-            } else {
-                cnt = 1;
-            }
-            ans += cnt;
-            pre = x;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSubarrays(nums []int) int64 {
-	ans := 0
-	i, n := 0, len(nums)
-	for i < n {
-		j := i + 1
-		for j < n && nums[j] > nums[j-1] {
-			j++
-		}
-		cnt := j - i
-		ans += (1 + cnt) * cnt / 2
-		i = j
-	}
-	return int64(ans)
-}
-```
 
-```go
-func countSubarrays(nums []int) (ans int64) {
-	pre, cnt := 0, 0
-	for _, x := range nums {
-		if pre < x {
-			cnt++
-		} else {
-			cnt = 1
-		}
-		ans += int64(cnt)
-		pre = x
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countSubarrays(nums: number[]): number {
-    let ans = 0;
-    let i = 0;
-    const n = nums.length;
-    while (i < n) {
-        let j = i + 1;
-        while (j < n && nums[j] > nums[j - 1]) {
-            ++j;
-        }
-        const cnt = j - i;
-        ans += ((1 + cnt) * cnt) / 2;
-        i = j;
-    }
-    return ans;
-}
-```
 
-```ts
-function countSubarrays(nums: number[]): number {
-    let ans = 0;
-    let pre = 0;
-    let cnt = 0;
-    for (const x of nums) {
-        if (pre < x) {
-            ++cnt;
-        } else {
-            cnt = 1;
-        }
-        ans += cnt;
-        pre = x;
-    }
-    return ans;
-}
-```
+
+
 
 ### **...**
 
@@ -257,4 +136,4 @@ function countSubarrays(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

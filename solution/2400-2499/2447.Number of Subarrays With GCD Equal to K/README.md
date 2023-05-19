@@ -59,17 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def subarrayGCD(self, nums: List[int], k: int) -> int:
-        ans = 0
-        for i in range(len(nums)):
-            g = 0
-            for x in nums[i:]:
-                g = gcd(g, x)
-                ans += g == k
-        return ans
-```
+
 
 ### **Java**
 
@@ -98,72 +88,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int subarrayGCD(vector<int>& nums, int k) {
-        int n = nums.size();
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            int g = 0;
-            for (int j = i; j < n; ++j) {
-                g = gcd(g, nums[j]);
-                ans += g == k;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func subarrayGCD(nums []int, k int) (ans int) {
-	for i := range nums {
-		g := 0
-		for _, x := range nums[i:] {
-			g = gcd(g, x)
-			if g == k {
-				ans++
-			}
-		}
-	}
-	return
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function subarrayGCD(nums: number[], k: number): number {
-    let ans = 0;
-    const n = nums.length;
-    for (let i = 0; i < n; ++i) {
-        let g = 0;
-        for (let j = i; j < n; ++j) {
-            g = gcd(g, nums[j]);
-            if (g === k) {
-                ++ans;
-            }
-        }
-    }
-    return ans;
-}
 
-function gcd(a: number, b: number): number {
-    return b === 0 ? a : gcd(b, a % b);
-}
-```
 
 ### **...**
 
@@ -171,4 +106,4 @@ function gcd(a: number, b: number): number {
 
 ```
 
-<!-- tabs:end -->
+

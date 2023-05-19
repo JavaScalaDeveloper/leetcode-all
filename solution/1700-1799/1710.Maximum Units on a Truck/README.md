@@ -74,34 +74,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) -> int:
-        ans = 0
-        for a, b in sorted(boxTypes, key=lambda x: -x[1]):
-            ans += b * min(truckSize, a)
-            truckSize -= a
-            if truckSize <= 0:
-                break
-        return ans
-```
 
-```python
-class Solution:
-    def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) -> int:
-        cnt = [0] * 1001
-        for a, b in boxTypes:
-            cnt[b] += a
-        ans = 0
-        for b in range(1000, 0, -1):
-            a = cnt[b]
-            if a:
-                ans += b * min(truckSize, a)
-                truckSize -= a
-                if truckSize <= 0:
-                    break
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -146,155 +121,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumUnits(vector<vector<int>>& boxTypes, int truckSize) {
-        sort(boxTypes.begin(), boxTypes.end(), [](auto& a, auto& b) { return a[1] > b[1]; });
-        int ans = 0;
-        for (auto& e : boxTypes) {
-            int a = e[0], b = e[1];
-            ans += b * min(truckSize, a);
-            truckSize -= a;
-            if (truckSize <= 0) break;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maximumUnits(vector<vector<int>>& boxTypes, int truckSize) {
-        int cnt[1001] = {0};
-        for (auto& e : boxTypes) {
-            int a = e[0], b = e[1];
-            cnt[b] += a;
-        }
-        int ans = 0;
-        for (int b = 1000; b > 0 && truckSize > 0; --b) {
-            int a = cnt[b];
-            if (a) {
-                ans += b * min(truckSize, a);
-                truckSize -= a;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumUnits(boxTypes [][]int, truckSize int) (ans int) {
-	sort.Slice(boxTypes, func(i, j int) bool { return boxTypes[i][1] > boxTypes[j][1] })
-	for _, e := range boxTypes {
-		a, b := e[0], e[1]
-		ans += b * min(truckSize, a)
-		truckSize -= a
-		if truckSize <= 0 {
-			break
-		}
-	}
-	return
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func maximumUnits(boxTypes [][]int, truckSize int) (ans int) {
-	cnt := [1001]int{}
-	for _, e := range boxTypes {
-		a, b := e[0], e[1]
-		cnt[b] += a
-	}
-	for b := 1000; b > 0 && truckSize > 0; b-- {
-		a := cnt[b]
-		if a > 0 {
-			ans += b * min(truckSize, a)
-			truckSize -= a
-		}
-	}
-	return
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumUnits(boxTypes: number[][], truckSize: number): number {
-    boxTypes.sort((a, b) => b[1] - a[1]);
-    let sum = 0;
-    let ans = 0;
-    for (const [count, size] of boxTypes) {
-        if (sum + count < truckSize) {
-            ans += size * count;
-            sum += count;
-        } else {
-            ans += (truckSize - sum) * size;
-            break;
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function maximumUnits(boxTypes: number[][], truckSize: number): number {
-    const cnt = new Array(1001).fill(0);
-    for (const [a, b] of boxTypes) {
-        cnt[b] += a;
-    }
-    let ans = 0;
-    for (let b = 1000; b > 0 && truckSize > 0; --b) {
-        const a = cnt[b];
-        if (a > 0) {
-            ans += b * Math.min(truckSize, a);
-            truckSize -= a;
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn maximum_units(mut box_types: Vec<Vec<i32>>, truck_size: i32) -> i32 {
-        box_types.sort_by(|a, b| b[1].cmp(&a[1]));
-        let mut sum = 0;
-        let mut ans = 0;
-        for box_type in box_types.iter() {
-            if sum + box_type[0] < truck_size {
-                sum += box_type[0];
-                ans += box_type[0] * box_type[1];
-            } else {
-                ans += (truck_size - sum) * box_type[1];
-                break;
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -302,4 +149,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

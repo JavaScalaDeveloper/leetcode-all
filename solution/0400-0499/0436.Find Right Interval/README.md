@@ -63,20 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
-        for i, v in enumerate(intervals):
-            v.append(i)
-        intervals.sort()
-        n = len(intervals)
-        ans = [-1] * n
-        for _, e, i in intervals:
-            j = bisect_left(intervals, [e])
-            if j < n:
-                ans[i] = intervals[j][2]
-        return ans
-```
+
 
 ### **Java**
 
@@ -111,101 +98,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findRightInterval(vector<vector<int>>& intervals) {
-        int n = intervals.size();
-        vector<pair<int, int>> starts;
-        for (int i = 0; i < n; ++i) {
-            starts.emplace_back(make_pair(intervals[i][0], i));
-        }
-        sort(starts.begin(), starts.end());
-        vector<int> res;
-        for (auto interval : intervals) {
-            int left = 0, right = n - 1;
-            int end = interval[1];
-            while (left < right) {
-                int mid = left + right >> 1;
-                if (starts[mid].first >= end)
-                    right = mid;
-                else
-                    left = mid + 1;
-            }
-            res.push_back(starts[left].first < end ? -1 : starts[left].second);
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findRightInterval(intervals [][]int) []int {
-	n := len(intervals)
-	starts := make([][]int, n)
-	for i := 0; i < n; i++ {
-		starts[i] = make([]int, 2)
-		starts[i][0] = intervals[i][0]
-		starts[i][1] = i
-	}
-	sort.Slice(starts, func(i, j int) bool {
-		return starts[i][0] < starts[j][0]
-	})
-	var res []int
-	for _, interval := range intervals {
-		left, right, end := 0, n-1, interval[1]
-		for left < right {
-			mid := (left + right) >> 1
-			if starts[mid][0] >= end {
-				right = mid
-			} else {
-				left = mid + 1
-			}
-		}
-		val := -1
-		if starts[left][0] >= end {
-			val = starts[left][1]
-		}
-		res = append(res, val)
-	}
-	return res
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findRightInterval(intervals: number[][]): number[] {
-    const n = intervals.length;
-    const starts = Array.from({ length: n }).map(() => new Array<number>(2));
-    for (let i = 0; i < n; i++) {
-        starts[i][0] = intervals[i][0];
-        starts[i][1] = i;
-    }
-    starts.sort((a, b) => a[0] - b[0]);
 
-    return intervals.map(([_, target]) => {
-        let left = 0;
-        let right = n;
-        while (left < right) {
-            const mid = (left + right) >>> 1;
-            if (starts[mid][0] < target) {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-        if (left >= n) {
-            return -1;
-        }
-        return starts[left][1];
-    });
-}
-```
 
 ### **...**
 
@@ -213,4 +116,4 @@ function findRightInterval(intervals: number[][]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

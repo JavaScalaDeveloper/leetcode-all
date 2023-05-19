@@ -97,14 +97,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numOfBurgers(self, tomatoSlices: int, cheeseSlices: int) -> List[int]:
-        k = 4 * cheeseSlices - tomatoSlices
-        y = k // 2
-        x = cheeseSlices - y
-        return [] if k % 2 or y < 0 or x < 0 else [x, y]
-```
+
 
 ### **Java**
 
@@ -121,33 +114,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> numOfBurgers(int tomatoSlices, int cheeseSlices) {
-        int k = 4 * cheeseSlices - tomatoSlices;
-        int y = k / 2;
-        int x = cheeseSlices - y;
-        return k % 2 || x < 0 || y < 0 ? vector<int>{} : vector<int>{x, y};
-    }
-};
-```
 
-### **Go**
 
-```go
-func numOfBurgers(tomatoSlices int, cheeseSlices int) []int {
-	k := 4*cheeseSlices - tomatoSlices
-	y := k / 2
-	x := cheeseSlices - y
-	if k%2 != 0 || x < 0 || y < 0 {
-		return []int{}
-	}
-	return []int{x, y}
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -155,4 +128,4 @@ func numOfBurgers(tomatoSlices int, cheeseSlices int) []int {
 
 ```
 
-<!-- tabs:end -->
+

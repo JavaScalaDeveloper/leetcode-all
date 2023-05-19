@@ -85,19 +85,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def magicalString(self, n: int) -> int:
-        s = [1, 2, 2]
-        i = 2
-        while len(s) < n:
-            pre = s[-1]
-            cur = 3 - pre
-            # cur 表示这一组的数字，s[i] 表示这一组数字出现的次数
-            s += [cur] * s[i]
-            i += 1
-        return s[:n].count(1)
-```
+
 
 ### **Java**
 
@@ -125,84 +113,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int magicalString(int n) {
-        vector<int> s = {1, 2, 2};
-        for (int i = 2; s.size() < n; ++i) {
-            int pre = s.back();
-            int cur = 3 - pre;
-            for (int j = 0; j < s[i]; ++j) {
-                s.emplace_back(cur);
-            }
-        }
-        return count(s.begin(), s.begin() + n, 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func magicalString(n int) (ans int) {
-	s := []int{1, 2, 2}
-	for i := 2; len(s) < n; i++ {
-		pre := s[len(s)-1]
-		cur := 3 - pre
-		for j := 0; j < s[i]; j++ {
-			s = append(s, cur)
-		}
-	}
-	for _, c := range s[:n] {
-		if c == 1 {
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function magicalString(n: number): number {
-    const cs = [...'1221121'];
-    let i = 5;
-    while (cs.length < n) {
-        const c = cs[cs.length - 1];
-        cs.push(c === '1' ? '2' : '1');
-        if (cs[i] !== '1') {
-            cs.push(c === '1' ? '2' : '1');
-        }
-        i++;
-    }
-    return cs.slice(0, n).reduce((r, c) => r + (c === '1' ? 1 : 0), 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn magical_string(n: i32) -> i32 {
-        let n = n as usize;
-        let mut s = String::from("1221121");
-        let mut i = 5;
-        while s.len() < n {
-            let c = s.as_bytes()[s.len() - 1];
-            s.push(if c == b'1' { '2' } else { '1' });
-            if s.as_bytes()[i] != b'1' {
-                s.push(if c == b'1' { '2' } else { '1' });
-            }
-            i += 1;
-        }
-        s.as_bytes()[0..n].iter().filter(|&v| v == &b'1').count() as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -210,4 +135,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

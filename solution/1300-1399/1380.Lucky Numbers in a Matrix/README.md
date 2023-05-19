@@ -65,13 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:
-        rows = {min(row) for row in matrix}
-        cols = {max(col) for col in zip(*matrix)}
-        return list(rows & cols)
-```
+
 
 ### **Java**
 
@@ -103,129 +97,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> luckyNumbers(vector<vector<int>>& matrix) {
-        int m = matrix.size(), n = matrix[0].size();
-        vector<int> rows(m, INT_MAX);
-        vector<int> cols(n);
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                rows[i] = min(rows[i], matrix[i][j]);
-                cols[j] = max(cols[j], matrix[i][j]);
-            }
-        }
-        vector<int> ans;
-        for (int i = 0; i < m; ++i)
-            for (int j = 0; j < n; ++j)
-                if (rows[i] == cols[j])
-                    ans.push_back(matrix[i][j]);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func luckyNumbers (matrix [][]int) []int {
-    m, n := len(matrix), len(matrix[0])
-    rows, cols := make([]int, m), make([]int, n)
-    for i := range rows {
-        rows[i] = math.MaxInt32
-    }
-    for i, row := range matrix {
-        for j, v := range row {
-            rows[i] = min(rows[i], v)
-            cols[j] = max(cols[j], v)
-        }
-    }
-    var ans []int
-    for i, row := range matrix {
-        for j, v := range row {
-            if rows[i] == cols[j] {
-                ans = append(ans, v)
-            }
-        }
-    }
-    return ans
-}
 
-func min(a, b int) int {
-    if a < b {
-        return a
-    }
-    return b
-}
 
-func max(a, b int) int {
-    if a > b {
-        return a
-    }
-    return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function luckyNumbers(matrix: number[][]): number[] {
-    const m = matrix.length;
-    const n = matrix[0].length;
-    const col = new Array(n).fill(0);
-    const res = [];
-    for (let j = 0; j < n; j++) {
-        for (let i = 0; i < m; i++) {
-            col[j] = Math.max(col[j], matrix[i][j]);
-        }
-    }
-    for (let x = 0; x < m; x++) {
-        let i = 0;
-        for (let y = 1; y < n; y++) {
-            if (matrix[x][i] > matrix[x][y]) {
-                i = y;
-            }
-        }
-        if (matrix[x][i] === col[i]) {
-            res.push(col[i]);
-        }
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn lucky_numbers(matrix: Vec<Vec<i32>>) -> Vec<i32> {
-        let m = matrix.len();
-        let n = matrix[0].len();
-        let mut res = vec![];
-        let mut col = vec![0; n];
-        for j in 0..n {
-            for i in 0..m {
-                col[j] = col[j].max(matrix[i][j]);
-            }
-        }
-        for x in 0..m {
-            let mut i = 0;
-            for y in 1..n {
-                if matrix[x][y] < matrix[x][i] {
-                    i = y;
-                }
-            }
-            if matrix[x][i] == col[i] {
-                res.push(col[i]);
-            }
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -233,4 +119,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

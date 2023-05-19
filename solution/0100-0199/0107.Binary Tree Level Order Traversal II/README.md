@@ -52,31 +52,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
-        ans = []
-        if root is None:
-            return ans
-        q = deque([root])
-        while q:
-            t = []
-            for _ in range(len(q)):
-                node = q.popleft()
-                t.append(node.val)
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
-            ans.append(t)
-        return ans[::-1]
-```
+
 
 ### **Java**
 
@@ -125,111 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<vector<int>> levelOrderBottom(TreeNode* root) {
-        vector<vector<int>> ans;
-        if (!root) return ans;
-        queue<TreeNode*> q{{root}};
-        while (!q.empty()) {
-            vector<int> t;
-            for (int i = q.size(); i; --i) {
-                auto node = q.front();
-                q.pop();
-                t.emplace_back(node->val);
-                if (node->left) q.push(node->left);
-                if (node->right) q.push(node->right);
-            }
-            ans.emplace_back(t);
-        }
-        reverse(ans.begin(), ans.end());
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func levelOrderBottom(root *TreeNode) [][]int {
-	ans := [][]int{}
-	if root == nil {
-		return ans
-	}
-	q := []*TreeNode{root}
-	for len(q) > 0 {
-		var t []int
-		for i := len(q); i > 0; i-- {
-			node := q[0]
-			q = q[1:]
-			t = append(t, node.Val)
-			if node.Left != nil {
-				q = append(q, node.Left)
-			}
-			if node.Right != nil {
-				q = append(q, node.Right)
-			}
-		}
-		ans = append([][]int{t}, ans...)
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number[][]}
- */
-var levelOrderBottom = function (root) {
-    let ans = [];
-    if (!root) return ans;
-    let q = [root];
-    while (q.length) {
-        let t = [];
-        for (let i = q.length; i > 0; --i) {
-            const node = q.shift();
-            t.push(node.val);
-            if (node.left) q.push(node.left);
-            if (node.right) q.push(node.right);
-        }
-        ans.unshift(t);
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -237,4 +119,4 @@ var levelOrderBottom = function (root) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -81,20 +81,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMaximalUncoveredRanges(self, n: int, ranges: List[List[int]]) -> List[List[int]]:
-        ranges.sort()
-        last = -1
-        ans = []
-        for l, r in ranges:
-            if last + 1 < l:
-                ans.append([last + 1, l - 1])
-            last = max(last, r)
-        if last + 1 < n:
-            ans.append([last + 1, n - 1])
-        return ans
-```
+
 
 ### **Java**
 
@@ -121,57 +108,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> findMaximalUncoveredRanges(int n, vector<vector<int>>& ranges) {
-        sort(ranges.begin(), ranges.end(), [](const vector<int>& a, const vector<int>& b) {
-            return a[0] < b[0];
-        });
-        int last = -1;
-        vector<vector<int>> ans;
-        for (auto& range : ranges) {
-            int l = range[0], r = range[1];
-            if (last + 1 < l) {
-                ans.push_back({last + 1, l - 1});
-            }
-            last = max(last, r);
-        }
-        if (last + 1 < n) {
-            ans.push_back({last + 1, n - 1});
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMaximalUncoveredRanges(n int, ranges [][]int) (ans [][]int) {
-	sort.Slice(ranges, func(i, j int) bool { return ranges[i][0] < ranges[j][0] })
-	last := -1
-	for _, r := range ranges {
-		if last+1 < r[0] {
-			ans = append(ans, []int{last + 1, r[0] - 1})
-		}
-		last = max(last, r[1])
-	}
-	if last+1 < n {
-		ans = append(ans, []int{last + 1, n - 1})
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -179,4 +122,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

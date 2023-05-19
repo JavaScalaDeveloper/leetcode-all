@@ -68,17 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kItemsWithMaximumSum(self, numOnes: int, numZeros: int, numNegOnes: int, k: int) -> int:
-        if numOnes >= k:
-            return k
-        k -= numOnes
-        if numZeros >= k:
-            return numOnes
-        k -= numZeros
-        return numOnes - k
-```
+
 
 ### **Java**
 
@@ -100,61 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int kItemsWithMaximumSum(int numOnes, int numZeros, int numNegOnes, int k) {
-        if (numOnes >= k) {
-            return k;
-        }
-        k -= numOnes;
-        if (numZeros >= k) {
-            return numOnes;
-        }
-        k -= numZeros;
-        return numOnes - k;
-    }
-};
-```
 
-### **Go**
 
-```go
-func kItemsWithMaximumSum(numOnes int, numZeros int, numNegOnes int, k int) int {
-	if numOnes >= k {
-		return k
-	}
-	k -= numOnes
-	if numZeros >= k {
-		return numOnes
-	}
-	k -= numZeros
-	return numOnes - k
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function kItemsWithMaximumSum(
-    numOnes: number,
-    numZeros: number,
-    numNegOnes: number,
-    k: number,
-): number {
-    if (numOnes >= k) {
-        return k;
-    }
-    k -= numOnes;
-    if (numZeros >= k) {
-        return numOnes;
-    }
-    k -= numZeros;
-    return numOnes - k;
-}
-```
+
 
 ### **...**
 
@@ -162,4 +108,4 @@ function kItemsWithMaximumSum(
 
 ```
 
-<!-- tabs:end -->
+

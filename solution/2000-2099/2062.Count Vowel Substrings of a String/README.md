@@ -79,28 +79,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countVowelSubstrings(self, word: str) -> int:
-        n = len(word)
-        s = set('aeiou')
-        return sum(set(word[i:j]) == s for i in range(n) for j in range(i + 1, n + 1))
-```
 
-```python
-class Solution:
-    def countVowelSubstrings(self, word: str) -> int:
-        s = set('aeiou')
-        ans, n = 0, len(word)
-        for i in range(n):
-            t = set()
-            for c in word[i:]:
-                if c not in s:
-                    break
-                t.add(c)
-                ans += len(t) == 5
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -133,78 +114,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countVowelSubstrings(string word) {
-        int ans = 0;
-        int n = word.size();
-        for (int i = 0; i < n; ++i) {
-            unordered_set<char> t;
-            for (int j = i; j < n; ++j) {
-                char c = word[j];
-                if (!isVowel(c)) break;
-                t.insert(c);
-                ans += t.size() == 5;
-            }
-        }
-        return ans;
-    }
 
-    bool isVowel(char c) {
-        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
-    }
-};
-```
 
-### **Go**
 
-```go
-func countVowelSubstrings(word string) int {
-	ans, n := 0, len(word)
-	for i := range word {
-		t := map[byte]bool{}
-		for j := i; j < n; j++ {
-			c := word[j]
-			if !(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-				break
-			}
-			t[c] = true
-			if len(t) == 5 {
-				ans++
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countVowelSubstrings(word: string): number {
-    let ans = 0;
-    const n = word.length;
-    for (let i = 0; i < n; ++i) {
-        const t = new Set<string>();
-        for (let j = i; j < n; ++j) {
-            const c = word[j];
-            if (
-                !(c === 'a' || c === 'e' || c === 'i' || c === 'o' || c === 'u')
-            ) {
-                break;
-            }
-            t.add(c);
-            if (t.size === 5) {
-                ans++;
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -212,4 +132,4 @@ function countVowelSubstrings(word: string): number {
 
 ```
 
-<!-- tabs:end -->
+

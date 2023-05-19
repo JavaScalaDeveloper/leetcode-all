@@ -74,22 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestSubarrays(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        ans = [1] * n
-        f = [-1] * 32
-        for i in range(n - 1, -1, -1):
-            t = 1
-            for j in range(32):
-                if (nums[i] >> j) & 1:
-                    f[j] = i
-                elif f[j] != -1:
-                    t = max(t, f[j] - i + 1)
-            ans[i] = t
-        return ans
-```
+
 
 ### **Java**
 
@@ -118,68 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> smallestSubarrays(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> f(32, -1);
-        vector<int> ans(n);
-        for (int i = n - 1; ~i; --i) {
-            int t = 1;
-            for (int j = 0; j < 32; ++j) {
-                if ((nums[i] >> j) & 1) {
-                    f[j] = i;
-                } else if (f[j] != -1) {
-                    t = max(t, f[j] - i + 1);
-                }
-            }
-            ans[i] = t;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestSubarrays(nums []int) []int {
-	n := len(nums)
-	f := make([]int, 32)
-	for i := range f {
-		f[i] = -1
-	}
-	ans := make([]int, n)
-	for i := n - 1; i >= 0; i-- {
-		t := 1
-		for j := 0; j < 32; j++ {
-			if ((nums[i] >> j) & 1) == 1 {
-				f[j] = i
-			} else if f[j] != -1 {
-				t = max(t, f[j]-i+1)
-			}
-		}
-		ans[i] = t
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -188,4 +122,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

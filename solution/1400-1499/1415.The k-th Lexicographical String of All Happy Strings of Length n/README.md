@@ -77,22 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getHappyString(self, n: int, k: int) -> str:
-        def dfs(t):
-            if len(t) == n:
-                ans.append(t)
-                return
-            for c in 'abc':
-                if t and t[-1] == c:
-                    continue
-                dfs(t + c)
 
-        ans = []
-        dfs('')
-        return '' if len(ans) < k else ans[k - 1]
-```
 
 ### **Java**
 
@@ -122,31 +107,9 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> ans;
-    string getHappyString(int n, int k) {
-        dfs("", n);
-        return ans.size() < k ? "" : ans[k - 1];
-    }
 
-    void dfs(string t, int n) {
-        if (t.size() == n) {
-            ans.push_back(t);
-            return;
-        }
-        for (int c = 'a'; c <= 'c'; ++c) {
-            if (t.size() && t.back() == c) continue;
-            t.push_back(c);
-            dfs(t, n);
-            t.pop_back();
-        }
-    }
-};
-```
+
 
 ### **...**
 
@@ -154,4 +117,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

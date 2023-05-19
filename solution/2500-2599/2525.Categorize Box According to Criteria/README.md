@@ -73,17 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def categorizeBox(self, length: int, width: int, height: int, mass: int) -> str:
-        v = length * width * height
-        bulky = int(any(x >= 10000 for x in (
-            length, width, height)) or v >= 10**9)
-        heavy = int(mass >= 100)
-        i = heavy << 1 | bulky
-        d = ['Neither', 'Bulky', 'Heavy', 'Both']
-        return d[i]
-```
+
 
 ### **Java**
 
@@ -102,38 +92,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string categorizeBox(int length, int width, int height, int mass) {
-        long v = (long) length * width * height;
-        int bulky = length >= 10000 || width >= 10000 || height >= 10000 || v >= 1000000000 ? 1 : 0;
-        int heavy = mass >= 100 ? 1 : 0;
-        string d[4] = {"Neither", "Bulky", "Heavy", "Both"};
-        int i = heavy << 1 | bulky;
-        return d[i];
-    }
-};
-```
 
-### **Go**
 
-```go
-func categorizeBox(length int, width int, height int, mass int) string {
-	v := length * width * height
-	i := 0
-	if length >= 10000 || width >= 10000 || height >= 10000 || v >= 1000000000 {
-		i |= 1
-	}
-	if mass >= 100 {
-		i |= 2
-	}
-	d := [4]string{"Neither", "Bulky", "Heavy", "Both"}
-	return d[i]
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -141,4 +106,4 @@ func categorizeBox(length int, width int, height int, mass int) string {
 
 ```
 
-<!-- tabs:end -->
+

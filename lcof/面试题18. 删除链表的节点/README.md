@@ -47,22 +47,7 @@
 
 ### **Python3**
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-class Solution:
-    def deleteNode(self, head: ListNode, val: int) -> ListNode:
-        dummy = cur = ListNode(0, head)
-        while cur.next:
-            if cur.next.val == val:
-                cur.next = cur.next.next
-                break
-            cur = cur.next
-        return dummy.next
-```
+
 
 ### **Java**
 
@@ -89,139 +74,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    ListNode* deleteNode(ListNode* head, int val) {
-        ListNode* dummy = new ListNode(0, head);
-        for (ListNode* cur = dummy; cur->next; cur = cur->next) {
-            if (cur->next->val == val) {
-                cur->next = cur->next->next;
-                break;
-            }
-        }
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func deleteNode(head *ListNode, val int) *ListNode {
-	dummy := &ListNode{0, head}
-	for cur := dummy; cur.Next != nil; cur = cur.Next {
-		if cur.Next.Val == val {
-			cur.Next = cur.Next.Next
-			break
-		}
-	}
-	return dummy.Next
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
- * @param {ListNode} head
- * @param {number} val
- * @return {ListNode}
- */
-var deleteNode = function (head, val) {
-    const dummy = new ListNode(0, head);
-    for (let cur = dummy; cur.next; cur = cur.next) {
-        if (cur.next.val == val) {
-            cur.next = cur.next.next;
-            break;
-        }
-    }
-    return dummy.next;
-};
-```
 
-### **Rust**
 
-```rust
-// Definition for singly-linked list.
-// #[derive(PartialEq, Eq, Clone, Debug)]
-// pub struct ListNode {
-//   pub val: i32,
-//   pub next: Option<Box<ListNode>>
-// }
-//
-// impl ListNode {
-//   #[inline]
-//   fn new(val: i32) -> Self {
-//     ListNode {
-//       next: None,
-//       val
-//     }
-//   }
-// }
-impl Solution {
-    pub fn delete_node(mut head: Option<Box<ListNode>>, val: i32) -> Option<Box<ListNode>> {
-        let mut cur = &mut head;
-        while let Some(node) = cur {
-            if node.val == val {
-                *cur = node.next.take();
-                break;
-            }
-            cur = &mut cur.as_mut().unwrap().next;
-        }
-        head
-    }
-}
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int x) { val = x; }
- * }
- */
-public class Solution {
-    public ListNode DeleteNode(ListNode head, int val) {
-        ListNode dummy = new ListNode(0, head);
-        for (ListNode cur = dummy; cur.next != null; cur = cur.next) {
-            if (cur.next.val == val) {
-                cur.next = cur.next.next;
-                break;
-            }
-        }
-        return dummy.next;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -229,4 +100,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

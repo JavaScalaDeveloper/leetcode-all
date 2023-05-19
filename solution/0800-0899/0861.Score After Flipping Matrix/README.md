@@ -63,20 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def matrixScore(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        for i in range(m):
-            if grid[i][0] == 0:
-                for j in range(n):
-                    grid[i][j] ^= 1
-        ans = 0
-        for j in range(n):
-            cnt = sum(grid[i][j] for i in range(m))
-            ans += max(cnt, m - cnt) * (1 << (n - j - 1))
-        return ans
-```
+
 
 ### **Java**
 
@@ -106,84 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int matrixScore(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        for (int i = 0; i < m; ++i) {
-            if (grid[i][0] == 0) {
-                for (int j = 0; j < n; ++j) {
-                    grid[i][j] ^= 1;
-                }
-            }
-        }
-        int ans = 0;
-        for (int j = 0; j < n; ++j) {
-            int cnt = 0;
-            for (int i = 0; i < m; ++i) {
-                cnt += grid[i][j];
-            }
-            ans += max(cnt, m - cnt) * (1 << (n - j - 1));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func matrixScore(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	for i := 0; i < m; i++ {
-		if grid[i][0] == 0 {
-			for j := 0; j < n; j++ {
-				grid[i][j] ^= 1
-			}
-		}
-	}
-	ans := 0
-	for j := 0; j < n; j++ {
-		cnt := 0
-		for i := 0; i < m; i++ {
-			cnt += grid[i][j]
-		}
-		if cnt < m-cnt {
-			cnt = m - cnt
-		}
-		ans += cnt * (1 << (n - j - 1))
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function matrixScore(grid: number[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    for (let i = 0; i < m; ++i) {
-        if (grid[i][0] == 0) {
-            for (let j = 0; j < n; ++j) {
-                grid[i][j] ^= 1;
-            }
-        }
-    }
-    let ans = 0;
-    for (let j = 0; j < n; ++j) {
-        let cnt = 0;
-        for (let i = 0; i < m; ++i) {
-            cnt += grid[i][j];
-        }
-        ans += Math.max(cnt, m - cnt) * (1 << (n - j - 1));
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -191,4 +111,4 @@ function matrixScore(grid: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

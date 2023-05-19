@@ -45,13 +45,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def search(self, nums: List[int], target: int) -> int:
-        l = bisect_left(nums, target)
-        r = bisect_right(nums, target)
-        return r - l
-```
+
 
 ### **Java**
 
@@ -78,104 +72,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int search(vector<int>& nums, int target) {
-        auto l = lower_bound(nums.begin(), nums.end(), target);
-        auto r = upper_bound(nums.begin(), nums.end(), target);
-        return r - l;
-    }
-};
-```
 
-### **Go**
 
-```go
-func search(nums []int, target int) int {
-	l := sort.Search(len(nums), func(i int) bool { return nums[i] >= target })
-	r := sort.Search(len(nums), func(i int) bool { return nums[i] > target })
-	return r - l
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var search = function (nums, target) {
-    const search = x => {
-        let l = 0;
-        let r = nums.length;
-        while (l < r) {
-            const mid = (l + r) >> 1;
-            if (nums[mid] >= x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    };
-    const l = search(target);
-    const r = search(target + 1);
-    return r - l;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn search(nums: Vec<i32>, target: i32) -> i32 {
-        let search = |x| {
-            let mut l = 0;
-            let mut r = nums.len();
-            while l < r  {
-                let mid = l + (r - l) / 2;
-                if nums[mid] >= x {
-                    r = mid;
-                } else {
-                    l = mid + 1
-                }
-            }
-            l as i32
-        };
-        search(target + 1) - search(target)
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int Search(int[] nums, int target) {
-        int l = search(nums, target);
-        int r = search(nums, target + 1);
-        return r - l;
-    }
 
-    private int search(int[] nums, int x) {
-        int l = 0, r = nums.Length;
-        while (l < r) {
-            int mid = (l + r) >> 1;
-            if (nums[mid] >= x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -183,4 +98,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

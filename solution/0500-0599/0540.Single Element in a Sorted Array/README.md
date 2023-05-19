@@ -87,19 +87,7 @@ return nums[l]
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def singleNonDuplicate(self, nums: List[int]) -> int:
-        left, right = 0, len(nums) - 1
-        while left < right:
-            mid = (left + right) >> 1
-            # Equals to: if (mid % 2 == 0 and nums[mid] != nums[mid + 1]) or (mid % 2 == 1 and nums[mid] != nums[mid - 1]):
-            if nums[mid] != nums[mid ^ 1]:
-                right = mid
-            else:
-                left = mid + 1
-        return nums[left]
-```
+
 
 ### **Java**
 
@@ -126,21 +114,7 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function singleNonDuplicate(nums: number[]): number {
-    let left = 0,
-        right = nums.length - 1;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        if (nums[mid] != nums[mid ^ 1]) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return nums[left];
-}
-```
+
 
 ### **C**
 
@@ -160,61 +134,17 @@ int singleNonDuplicate(int* nums, int numsSize) {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int singleNonDuplicate(vector<int>& nums) {
-        int left = 0, right = nums.size() - 1;
-        while (left < right) {
-            int mid = left + right >> 1;
-            if (nums[mid] != nums[mid ^ 1])
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return nums[left];
-    }
-};
-```
 
-### **Go**
 
-```go
-func singleNonDuplicate(nums []int) int {
-	left, right := 0, len(nums)-1
-	for left < right {
-		mid := (left + right) >> 1
-		if nums[mid] != nums[mid^1] {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return nums[left]
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn single_non_duplicate(nums: Vec<i32>) -> i32 {
-        let mut l = 0;
-        let mut r = nums.len() - 1;
-        while l < r {
-            let mid = l + r >> 1;
-            if nums[mid] == nums[mid ^ 1] {
-                l = mid + 1;
-            } else {
-                r = mid;
-            }
-        }
-        nums[l]
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -222,4 +152,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

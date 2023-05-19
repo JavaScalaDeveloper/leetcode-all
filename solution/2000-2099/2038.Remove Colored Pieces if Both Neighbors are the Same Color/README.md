@@ -89,18 +89,7 @@ ABBBB<strong><em>B</em></strong>BBAA -&gt; ABBBBBBAA
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def winnerOfGame(self, colors: str) -> bool:
-        a = b = 0
-        for c, v in groupby(colors):
-            m = len(list(v)) - 2
-            if m > 0 and c == 'A':
-                a += m
-            elif m > 0 and c == 'B':
-                b += m
-        return a > b
-```
+
 
 ### **Java**
 
@@ -129,54 +118,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool winnerOfGame(string colors) {
-        int n = colors.size();
-        int a = 0, b = 0;
-        for (int i = 0, j = 0; i < n; i = j) {
-            while (j < n && colors[j] == colors[i]) {
-                ++j;
-            }
-            int m = j - i - 2;
-            if (m > 0) {
-                if (colors[i] == 'A') {
-                    a += m;
-                } else {
-                    b += m;
-                }
-            }
-        }
-        return a > b;
-    }
-};
-```
 
-### **Go**
 
-```go
-func winnerOfGame(colors string) bool {
-	n := len(colors)
-	a, b := 0, 0
-	for i, j := 0, 0; i < n; i = j {
-		for j < n && colors[j] == colors[i] {
-			j++
-		}
-		m := j - i - 2
-		if m > 0 {
-			if colors[i] == 'A' {
-				a += m
-			} else {
-				b += m
-			}
-		}
-	}
-	return a > b
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -184,4 +132,4 @@ func winnerOfGame(colors string) bool {
 
 ```
 
-<!-- tabs:end -->
+

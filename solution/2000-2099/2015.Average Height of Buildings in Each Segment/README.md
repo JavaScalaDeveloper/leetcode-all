@@ -93,30 +93,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def averageHeightOfBuildings(self, buildings: List[List[int]]) -> List[List[int]]:
-        height = defaultdict(int)
-        cnt = defaultdict(int)
-        for s, e, h in buildings:
-            cnt[s] += 1
-            cnt[e] -= 1
-            height[s] += h
-            height[e] -= h
-        ans = []
-        i = h = n = 0
-        for j in sorted(cnt.keys()):
-            if n:
-                t = [i, j, h // n]
-                if ans and ans[-1][1] == i and ans[-1][2] == t[-1]:
-                    ans[-1][1] = j
-                else:
-                    ans.append(t)
-            i = j
-            h += height[j]
-            n += cnt[j]
-        return ans
-```
+
 
 ### **Java**
 
@@ -159,74 +136,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> averageHeightOfBuildings(vector<vector<int>>& buildings) {
-        map<int, int> height, cnt;
-        for (auto& v : buildings) {
-            int s = v[0], e = v[1], h = v[2];
-            cnt[s]++, cnt[e]--;
-            height[s] += h, height[e] -= h;
-        }
-        vector<vector<int>> ans;
-        int i = 0, h = 0, n = 0;
-        for (auto& [j, _] : cnt) {
-            if (n) {
-                vector<int> t = {i, j, h / n};
-                if (ans.size() && ans.back()[1] == i && ans.back()[2] == t[2]) {
-                    ans.back()[1] = j;
-                } else {
-                    ans.push_back(t);
-                }
-            }
-            i = j;
-            h += height[j];
-            n += cnt[j];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func averageHeightOfBuildings(buildings [][]int) [][]int {
-	height := make(map[int]int)
-	cnt := make(map[int]int)
-	for _, v := range buildings {
-		s, e, h := v[0], v[1], v[2]
-		cnt[s]++
-		cnt[e]--
-		height[s] += h
-		height[e] -= h
-	}
-	keys := make([]int, len(cnt))
-	for k := range cnt {
-		keys = append(keys, k)
-	}
-	sort.Ints(keys)
-	i, h, n := 0, 0, 0
-	ans := [][]int{}
-	for _, j := range keys {
-		if n > 0 {
-			t := []int{i, j, h / n}
-			if len(ans) > 0 && ans[len(ans)-1][1] == i && ans[len(ans)-1][2] == t[2] {
-				ans[len(ans)-1][1] = j
-			} else {
-				ans = append(ans, t)
-			}
-		}
-		i = j
-		h += height[j]
-		n += cnt[j]
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -234,4 +150,4 @@ func averageHeightOfBuildings(buildings [][]int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -46,30 +46,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def binaryTreePaths(self, root: TreeNode) -> List[str]:
-        def dfs(root):
-            if root is None:
-                return
-            t.append(str(root.val))
-            if root.left is None and root.right is None:
-                ans.append('->'.join(t))
-            dfs(root.left)
-            dfs(root.right)
-            t.pop()
 
-        t = []
-        ans = []
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -119,104 +96,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function binaryTreePaths(root: TreeNode | null): string[] {
-    let ans = [];
-    let t = [];
-    function dfs(root) {
-        if (!root) return;
-        t.push(String(root.val));
-        if (!root.left && !root.right) ans.push(t.join('->'));
-        dfs(root.left);
-        dfs(root.right);
-        t.pop();
-    }
-    dfs(root);
-    return ans;
-}
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func binaryTreePaths(root *TreeNode) []string {
-	var ans []string
-	var t []string
-	var dfs func(root *TreeNode)
-	dfs = func(root *TreeNode) {
-		if root == nil {
-			return
-		}
-		t = append(t, strconv.Itoa(root.Val))
-		if root.Left == nil && root.Right == nil {
-			ans = append(ans, strings.Join(t, "->"))
-		}
-		dfs(root.Left)
-		dfs(root.Right)
-		t = t[:len(t)-1]
-	}
-	dfs(root)
-	return ans
-}
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<string> ans;
 
-    vector<string> binaryTreePaths(TreeNode* root) {
-        dfs(root, "");
-        return ans;
-    }
 
-    void dfs(TreeNode* root, string t) {
-        t += to_string(root->val);
-        if (!root->left && !root->right) {
-            ans.push_back(t);
-            return;
-        }
-        t += "->";
-        if (root->left) dfs(root->left, t);
-        if (root->right) dfs(root->right, t);
-    }
-};
-```
+
+
 
 ### **...**
 
@@ -224,4 +112,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

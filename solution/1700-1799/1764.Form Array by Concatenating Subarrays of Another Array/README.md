@@ -73,20 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canChoose(self, groups: List[List[int]], nums: List[int]) -> bool:
-        n, m = len(groups), len(nums)
-        i = j = 0
-        while i < n and j < m:
-            g = groups[i]
-            if g == nums[j : j + len(g)]:
-                j += len(g)
-                i += 1
-            else:
-                j += 1
-        return i == n
-```
+
 
 ### **Java**
 
@@ -121,64 +108,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canChoose(vector<vector<int>>& groups, vector<int>& nums) {
-        auto check = [&](vector<int>& a, vector<int>& b, int j) {
-            int m = a.size(), n = b.size();
-            int i = 0;
-            for (; i < m && j < n; ++i, ++j) {
-                if (a[i] != b[j]) {
-                    return false;
-                }
-            }
-            return i == m;
-        };
-        int n = groups.size(), m = nums.size();
-        int i = 0;
-        for (int j = 0; i < n && j < m;) {
-            if (check(groups[i], nums, j)) {
-                j += groups[i].size();
-                ++i;
-            } else {
-                ++j;
-            }
-        }
-        return i == n;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canChoose(groups [][]int, nums []int) bool {
-	check := func(a, b []int, j int) bool {
-		m, n := len(a), len(b)
-		i := 0
-		for ; i < m && j < n; i, j = i+1, j+1 {
-			if a[i] != b[j] {
-				return false
-			}
-		}
-		return i == m
-	}
-	n, m := len(groups), len(nums)
-	i := 0
-	for j := 0; i < n && j < m; {
-		if check(groups[i], nums, j) {
-			j += len(groups[i])
-			i++
-		} else {
-			j++
-		}
-	}
-	return i == n
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -186,4 +122,4 @@ func canChoose(groups [][]int, nums []int) bool {
 
 ```
 
-<!-- tabs:end -->
+

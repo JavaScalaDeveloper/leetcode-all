@@ -36,15 +36,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def firstUniqChar(self, s: str) -> str:
-        cnt = Counter(s)
-        for c in s:
-            if cnt[c] == 1:
-                return c
-        return " "
-```
+
 
 ### **Java**
 
@@ -66,119 +58,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    char firstUniqChar(string s) {
-        int cnt[26]{};
-        for (char& c : s) {
-            ++cnt[c - 'a'];
-        }
-        for (char&c : s) {
-            if (cnt[c - 'a'] == 1) {
-                return c;
-            }
-        }
-        return ' ';
-    }
-};
-```
 
-### **Go**
 
-```go
-func firstUniqChar(s string) byte {
-	cnt := [26]int{}
-	for _, c := range s {
-		cnt[c-'a']++
-	}
-	for _, c := range s {
-		if cnt[c-'a'] == 1 {
-			return byte(c)
-		}
-	}
-	return ' '
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {character}
- */
-var firstUniqChar = function (s) {
-    const cnt = new Array(26).fill(0);
-    for (const c of s) {
-        cnt[c.charCodeAt(0) - 97]++;
-    }
-    for (const c of s) {
-        if (cnt[c.charCodeAt(0) - 97] === 1) {
-            return c;
-        }
-    }
-    return ' ';
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function firstUniqChar(s: string): string {
-    const map = new Map();
-    for (const c of s) {
-        map.set(c, !map.has(c));
-    }
-    for (const c of s) {
-        if (map.get(c)) {
-            return c;
-        }
-    }
-    return ' ';
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn first_uniq_char(s: String) -> char {
-        let mut map = HashMap::new();
-        for c in s.as_bytes() {
-            map.insert(c, !map.contains_key(c));
-        }
-        for c in s.as_bytes() {
-            if map[c] {
-                return char::from(*c);
-            }
-        }
-        ' '
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public char FirstUniqChar(string s) {
-        var cnt = new int[26];
-        foreach(var c in s) {
-            cnt[c - 'a'] ++;
-        }
-        foreach(var c in s) {
-            if (cnt[c - 'a'] == 1) {
-                return c;
-            }
-        }
-        return ' ';
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -186,4 +88,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

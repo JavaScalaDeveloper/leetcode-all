@@ -65,24 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def peopleAwareOfSecret(self, n: int, delay: int, forget: int) -> int:
-        m = (n << 1) + 10
-        d = [0] * m
-        cnt = [0] * m
-        cnt[1] = 1
-        for i in range(1, n + 1):
-            if cnt[i]:
-                d[i] += cnt[i]
-                d[i + forget] -= cnt[i]
-                nxt = i + delay
-                while nxt < i + forget:
-                    cnt[nxt] += cnt[i]
-                    nxt += 1
-        mod = 10**9 + 7
-        return sum(d[: n + 1]) % mod
-```
+
 
 ### **Java**
 
@@ -117,90 +100,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using ll = long long;
-const int mod = 1e9 + 7;
 
-class Solution {
-public:
-    int peopleAwareOfSecret(int n, int delay, int forget) {
-        int m = (n << 1) + 10;
-        vector<ll> d(m);
-        vector<ll> cnt(m);
-        cnt[1] = 1;
-        for (int i = 1; i <= n; ++i) {
-            if (!cnt[i]) continue;
-            d[i] = (d[i] + cnt[i]) % mod;
-            d[i + forget] = (d[i + forget] - cnt[i] + mod) % mod;
-            int nxt = i + delay;
-            while (nxt < i + forget) {
-                cnt[nxt] = (cnt[nxt] + cnt[i]) % mod;
-                ++nxt;
-            }
-        }
-        int ans = 0;
-        for (int i = 1; i <= n; ++i) ans = (ans + d[i]) % mod;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func peopleAwareOfSecret(n int, delay int, forget int) int {
-	m := (n << 1) + 10
-	d := make([]int, m)
-	cnt := make([]int, m)
-	mod := int(1e9) + 7
-	cnt[1] = 1
-	for i := 1; i <= n; i++ {
-		if cnt[i] == 0 {
-			continue
-		}
-		d[i] = (d[i] + cnt[i]) % mod
-		d[i+forget] = (d[i+forget] - cnt[i] + mod) % mod
-		nxt := i + delay
-		for nxt < i+forget {
-			cnt[nxt] = (cnt[nxt] + cnt[i]) % mod
-			nxt++
-		}
-	}
-	ans := 0
-	for i := 1; i <= n; i++ {
-		ans = (ans + d[i]) % mod
-	}
-	return ans
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function peopleAwareOfSecret(n: number, delay: number, forget: number): number {
-    let dp = new Array(n + 1).fill(0n);
-    dp[1] = 1n;
-    for (let i = 2; i <= n; i++) {
-        let pre = 0n;
-        for (let j = i - forget + 1; j <= i - delay; j++) {
-            if (j > 0) {
-                pre += dp[j];
-            }
-        }
-        dp[i] = pre;
-    }
-    let pre = 0n;
-    let i = n + 1;
-    for (let j = i - forget; j < i; j++) {
-        if (j > 0) {
-            pre += dp[j];
-        }
-    }
-    return Number(pre % BigInt(10 ** 9 + 7));
-}
-```
+
 
 ### **...**
 
@@ -208,4 +118,4 @@ function peopleAwareOfSecret(n: number, delay: number, forget: number): number {
 
 ```
 
-<!-- tabs:end -->
+

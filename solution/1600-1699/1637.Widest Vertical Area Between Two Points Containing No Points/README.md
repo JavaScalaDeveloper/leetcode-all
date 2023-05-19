@@ -78,35 +78,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxWidthOfVerticalArea(self, points: List[List[int]]) -> int:
-        points.sort()
-        return max(b[0] - a[0] for a, b in pairwise(points))
-```
 
-```python
-class Solution:
-    def maxWidthOfVerticalArea(self, points: List[List[int]]) -> int:
-        nums = [x for x, _ in points]
-        n = len(nums)
-        mi, mx = min(nums), max(nums)
-        bucket_size = max(1, (mx - mi) // (n - 1))
-        bucket_count = (mx - mi) // bucket_size + 1
-        buckets = [[inf, -inf] for _ in range(bucket_count)]
-        for x in nums:
-            i = (x - mi) // bucket_size
-            buckets[i][0] = min(buckets[i][0], x)
-            buckets[i][1] = max(buckets[i][1], x)
-        ans = 0
-        prev = inf
-        for curmin, curmax in buckets:
-            if curmin > curmax:
-                continue
-            ans = max(ans, curmin - prev)
-            prev = curmax
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -165,225 +139,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxWidthOfVerticalArea(vector<vector<int>>& points) {
-        sort(points.begin(), points.end());
-        int ans = 0;
-        for (int i = 0; i < points.size() - 1; ++i) {
-            ans = max(ans, points[i + 1][0] - points[i][0]);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maxWidthOfVerticalArea(vector<vector<int>>& points) {
-        int n = points.size();
-        vector<int> nums;
-        for (auto& p : points) {
-            nums.push_back(p[0]);
-        }
-        const int inf = 1 << 30;
-        int mi = inf, mx = -inf;
-        for (int v : nums) {
-            mi = min(mi, v);
-            mx = max(mx, v);
-        }
-        int bucketSize = max(1, (mx - mi) / (n - 1));
-        int bucketCount = (mx - mi) / bucketSize + 1;
-        vector<pair<int, int>> buckets(bucketCount, {inf, -inf});
-        for (int v : nums) {
-            int i = (v - mi) / bucketSize;
-            buckets[i].first = min(buckets[i].first, v);
-            buckets[i].second = max(buckets[i].second, v);
-        }
-        int ans = 0;
-        int prev = inf;
-        for (auto [curmin, curmax] : buckets) {
-            if (curmin > curmax) continue;
-            ans = max(ans, curmin - prev);
-            prev = curmax;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxWidthOfVerticalArea(points [][]int) (ans int) {
-	sort.Slice(points, func(i, j int) bool { return points[i][0] < points[j][0] })
-	for i, p := range points[1:] {
-		ans = max(ans, p[0]-points[i][0])
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func maxWidthOfVerticalArea(points [][]int) (ans int) {
-	n := len(points)
-	nums := make([]int, 0, n)
-	for _, p := range points {
-		nums = append(nums, p[0])
-	}
-	const inf = 1 << 30
-	mi, mx := inf, -inf
-	for _, v := range nums {
-		mi = min(mi, v)
-		mx = max(mx, v)
-	}
-	bucketSize := max(1, (mx-mi)/(n-1))
-	bucketCount := (mx-mi)/bucketSize + 1
-	buckets := make([][]int, bucketCount)
-	for i := range buckets {
-		buckets[i] = []int{inf, -inf}
-	}
-	for _, v := range nums {
-		i := (v - mi) / bucketSize
-		buckets[i][0] = min(buckets[i][0], v)
-		buckets[i][1] = max(buckets[i][1], v)
-	}
-	prev := inf
-	for _, bucket := range buckets {
-		if bucket[0] > bucket[1] {
-			continue
-		}
-		ans = max(ans, bucket[0]-prev)
-		prev = bucket[1]
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxWidthOfVerticalArea(points: number[][]): number {
-    points.sort((a, b) => a[0] - b[0]);
-    let ans = 0;
-    for (let i = 1; i < points.length; ++i) {
-        ans = Math.max(ans, points[i][0] - points[i - 1][0]);
-    }
-    return ans;
-}
-```
 
-```ts
-function maxWidthOfVerticalArea(points: number[][]): number {
-    const nums: number[] = points.map(point => point[0]);
-    const inf = 1 << 30;
-    const n = nums.length;
-    let mi = inf;
-    let mx = -inf;
-    for (const x of nums) {
-        mi = Math.min(mi, x);
-        mx = Math.max(mx, x);
-    }
-    const bucketSize = Math.max(1, Math.floor((mx - mi) / (n - 1)));
-    const bucketCount = Math.floor((mx - mi) / bucketSize) + 1;
-    const buckets = new Array(bucketCount).fill(0).map(() => [inf, -inf]);
-    for (const x of nums) {
-        const i = Math.floor((x - mi) / bucketSize);
-        buckets[i][0] = Math.min(buckets[i][0], x);
-        buckets[i][1] = Math.max(buckets[i][1], x);
-    }
-    let prev = inf;
-    let ans = 0;
-    for (const [left, right] of buckets) {
-        if (left > right) {
-            continue;
-        }
-        ans = Math.max(ans, left - prev);
-        prev = right;
-    }
-    return ans;
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} points
- * @return {number}
- */
-var maxWidthOfVerticalArea = function (points) {
-    points.sort((a, b) => a[0] - b[0]);
-    let ans = 0;
-    let px = points[0][0];
-    for (const [x, _] of points) {
-        ans = Math.max(ans, x - px);
-        px = x;
-    }
-    return ans;
-};
-```
 
-```js
-/**
- * @param {number[][]} points
- * @return {number}
- */
-var maxWidthOfVerticalArea = function (points) {
-    const nums = points.map(point => point[0]);
-    const inf = 1 << 30;
-    const n = nums.length;
-    let mi = inf;
-    let mx = -inf;
-    for (const x of nums) {
-        mi = Math.min(mi, x);
-        mx = Math.max(mx, x);
-    }
-    const bucketSize = Math.max(1, Math.floor((mx - mi) / (n - 1)));
-    const bucketCount = Math.floor((mx - mi) / bucketSize) + 1;
-    const buckets = new Array(bucketCount).fill(0).map(() => [inf, -inf]);
-    for (const x of nums) {
-        const i = Math.floor((x - mi) / bucketSize);
-        buckets[i][0] = Math.min(buckets[i][0], x);
-        buckets[i][1] = Math.max(buckets[i][1], x);
-    }
-    let prev = inf;
-    let ans = 0;
-    for (const [left, right] of buckets) {
-        if (left > right) {
-            continue;
-        }
-        ans = Math.max(ans, left - prev);
-        prev = right;
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -391,4 +169,4 @@ var maxWidthOfVerticalArea = function (points) {
 
 ```
 
-<!-- tabs:end -->
+

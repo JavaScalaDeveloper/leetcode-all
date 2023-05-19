@@ -53,17 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def trap(self, height: List[int]) -> int:
-        n = len(height)
-        left = [height[0]] * n
-        right = [height[-1]] * n
-        for i in range(1, n):
-            left[i] = max(left[i - 1], height[i])
-            right[n - i - 1] = max(right[n - i], height[n - i - 1])
-        return sum(min(l, r) - h for l, r, h in zip(left, right, height))
-```
+
 
 ### **Java**
 
@@ -90,103 +80,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int trap(vector<int>& height) {
-        int n = height.size();
-        int left[n], right[n];
-        left[0] = height[0];
-        right[n - 1] = height[n - 1];
-        for (int i = 1; i < n; ++i) {
-            left[i] = max(left[i - 1], height[i]);
-            right[n - i - 1] = max(right[n - i], height[n - i - 1]);
-        }
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            ans += min(left[i], right[i]) - height[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func trap(height []int) (ans int) {
-	n := len(height)
-	left := make([]int, n)
-	right := make([]int, n)
-	left[0], right[n-1] = height[0], height[n-1]
-	for i := 1; i < n; i++ {
-		left[i] = max(left[i-1], height[i])
-		right[n-i-1] = max(right[n-i], height[n-i-1])
-	}
-	for i, h := range height {
-		ans += min(left[i], right[i]) - h
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function trap(height: number[]): number {
-    const n = height.length;
-    const left: number[] = new Array(n).fill(height[0]);
-    const right: number[] = new Array(n).fill(height[n - 1]);
-    for (let i = 1; i < n; ++i) {
-        left[i] = Math.max(left[i - 1], height[i]);
-        right[n - i - 1] = Math.max(right[n - i], height[n - i - 1]);
-    }
-    let ans = 0;
-    for (let i = 0; i < n; ++i) {
-        ans += Math.min(left[i], right[i]) - height[i];
-    }
-    return ans;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int Trap(int[] height) {
-        int n = height.Length;
-        int[] left = new int[n];
-        int[] right = new int[n];
-        left[0] = height[0];
-        right[n - 1] = height[n - 1];
-        for (int i = 1; i < n; ++i) {
-            left[i] = Math.Max(left[i - 1], height[i]);
-            right[n - i - 1] = Math.Max(right[n - i], height[n - i - 1]);
-        }
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            ans += Math.Min(left[i], right[i]) - height[i];
-        }
-        return ans;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -194,4 +102,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -51,31 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestSubstring(self, s: str, k: int) -> int:
-        def dfs(l, r):
-            cnt = Counter(s[l: r + 1])
-            split = next((c for c, v in cnt.items() if v < k), '')
-            if not split:
-                return r - l + 1
-            i = l
-            ans = 0
-            while i <= r:
-                while i <= r and s[i] == split:
-                    i += 1
-                if i >= r:
-                    break
-                j = i
-                while j <= r and s[j] != split:
-                    j += 1
-                t = dfs(i, j - 1)
-                ans = max(ans, t)
-                i = j
-            return ans
 
-        return dfs(0, len(s) - 1)
-```
 
 ### **Java**
 
@@ -129,100 +105,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestSubstring(string s, int k) {
-        function<int(int, int)> dfs = [&](int l, int r) -> int {
-            int cnt[26] = {0};
-            for (int i = l; i <= r; ++i) {
-                cnt[s[i] - 'a']++;
-            }
-            char split = 0;
-            for (int i = 0; i < 26; ++i) {
-                if (cnt[i] > 0 && cnt[i] < k) {
-                    split = 'a' + i;
-                    break;
-                }
-            }
-            if (split == 0) {
-                return r - l + 1;
-            }
-            int i = l;
-            int ans = 0;
-            while (i <= r) {
-                while (i <= r && s[i] == split) {
-                    ++i;
-                }
-                if (i >= r) {
-                    break;
-                }
-                int j = i;
-                while (j <= r && s[j] != split) {
-                    ++j;
-                }
-                int t = dfs(i, j - 1);
-                ans = max(ans, t);
-                i = j;
-            }
-            return ans;
-        };
-        return dfs(0, s.size() - 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestSubstring(s string, k int) int {
-	var dfs func(l, r int) int
-	dfs = func(l, r int) int {
-		cnt := [26]int{}
-		for i := l; i <= r; i++ {
-			cnt[s[i]-'a']++
-		}
-		var split byte
-		for i, v := range cnt {
-			if v > 0 && v < k {
-				split = byte(i + 'a')
-				break
-			}
-		}
-		if split == 0 {
-			return r - l + 1
-		}
-		i := l
-		ans := 0
-		for i <= r {
-			for i <= r && s[i] == split {
-				i++
-			}
-			if i > r {
-				break
-			}
-			j := i
-			for j <= r && s[j] != split {
-				j++
-			}
-			t := dfs(i, j-1)
-			ans = max(ans, t)
-			i = j
-		}
-		return ans
-	}
-	return dfs(0, len(s)-1)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -230,4 +119,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

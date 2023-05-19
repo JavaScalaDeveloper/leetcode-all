@@ -78,25 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumPartition(self, s: str, k: int) -> int:
-        @cache
-        def dfs(i):
-            if i >= n:
-                return 0
-            res, v = inf, 0
-            for j in range(i, n):
-                v = v * 10 + int(s[j])
-                if v > k:
-                    break
-                res = min(res, dfs(j + 1))
-            return res + 1
 
-        n = len(s)
-        ans = dfs(0)
-        return ans if ans < inf else -1
-```
 
 ### **Java**
 
@@ -140,74 +122,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumPartition(string s, int k) {
-        int n = s.size();
-        int f[n];
-        memset(f, 0, sizeof f);
-        const int inf = 1 << 30;
-        function<int(int)> dfs = [&](int i) -> int {
-            if (i >= n) return 0;
-            if (f[i]) return f[i];
-            int res = inf;
-            long v = 0;
-            for (int j = i; j < n; ++j) {
-                v = v * 10 + (s[j] - '0');
-                if (v > k) break;
-                res = min(res, dfs(j + 1));
-            }
-            return f[i] = res + 1;
-        };
-        int ans = dfs(0);
-        return ans < inf ? ans : -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumPartition(s string, k int) int {
-	n := len(s)
-	f := make([]int, n)
-	const inf int = 1 << 30
-	var dfs func(int) int
-	dfs = func(i int) int {
-		if i >= n {
-			return 0
-		}
-		if f[i] > 0 {
-			return f[i]
-		}
-		res, v := inf, 0
-		for j := i; j < n; j++ {
-			v = v*10 + int(s[j]-'0')
-			if v > k {
-				break
-			}
-			res = min(res, dfs(j+1))
-		}
-		f[i] = res + 1
-		return f[i]
-	}
-	ans := dfs(0)
-	if ans < inf {
-		return ans
-	}
-	return -1
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -215,4 +136,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -49,17 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minNumber(self, nums: List[int]) -> str:
-        def cmp(a, b):
-            x, y = a + b, b + a
-            return -1 if x < y else 1
 
-        ans = [str(x) for x in nums]
-        ans.sort(key=cmp_to_key(cmp))
-        return "".join(ans)
-```
 
 ### **Java**
 
@@ -77,93 +67,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string minNumber(vector<int>& nums) {
-        vector<string> arr;
-        for (int& x : nums) {
-            arr.emplace_back(to_string(x));
-        }
-        sort(arr.begin(), arr.end(), [](const auto& a, const auto& b) {
-            return a + b < b + a;
-        });
-        string ans;
-        for (auto& x : arr) {
-            ans += x;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minNumber(nums []int) string {
-	arr := []string{}
-	for _, x := range nums {
-		arr = append(arr, strconv.Itoa(x))
-	}
-	sort.Slice(arr, func(i, j int) bool { return arr[i]+arr[j] < arr[j]+arr[i] })
-	return strings.Join(arr, "")
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {string}
- */
-var minNumber = function (nums) {
-    nums.sort((a, b) => {
-        const x = a + '' + b;
-        const y = b + '' + a;
-        return x < y ? -1 : 1;
-    });
-    return nums.join('');
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minNumber(nums: number[]): string {
-    return nums
-        .sort((a, b) => Number(`${a}${b}`) - Number(`${b}${a}`))
-        .join('');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_number(mut nums: Vec<i32>) -> String {
-        nums.sort_by(|a, b| format!("{}{}", a, b).cmp(&format!("{}{}", b, a)));
-        nums.iter().map(|num| num.to_string()).collect()
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public string MinNumber(int[] nums) {
-        List<string> ans = new List<string>();
-        foreach (int x in nums) {
-            ans.Add(x.ToString());
-        }
-        ans.Sort((a, b) => (a + b).CompareTo(b + a));
-        return string.Join("", ans);
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -171,4 +97,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

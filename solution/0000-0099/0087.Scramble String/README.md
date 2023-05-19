@@ -100,43 +100,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isScramble(self, s1: str, s2: str) -> bool:
-        @cache
-        def dfs(i: int, j: int, k: int) -> bool:
-            if k == 1:
-                return s1[i] == s2[j]
-            for h in range(1, k):
-                if dfs(i, j, h) and dfs(i + h, j + h, k - h):
-                    return True
-                if dfs(i + h, j, k - h) and dfs(i, j + k - h, h):
-                    return True
-            return False
 
-        return dfs(0, 0, len(s1))
-```
 
-```python
-class Solution:
-    def isScramble(self, s1: str, s2: str) -> bool:
-        n = len(s1)
-        f = [[[False] * (n + 1) for _ in range(n)] for _ in range(n)]
-        for i in range(n):
-            for j in range(n):
-                f[i][j][1] = s1[i] == s2[j]
-        for k in range(2, n + 1):
-            for i in range(n - k + 1):
-                for j in range(n - k + 1):
-                    for h in range(1, k):
-                        if f[i][j][h] and f[i + h][j + h][k - h]:
-                            f[i][j][k] = True
-                            break
-                        if f[i + h][j][k - h] and f[i][j + k - h][h]:
-                            f[i][j][k] = True
-                            break
-        return f[0][0][n]
-```
+
 
 ### **Java**
 
@@ -207,261 +173,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isScramble(string s1, string s2) {
-        int n = s1.size();
-        int f[n][n][n + 1];
-        memset(f, -1, sizeof(f));
-        function<bool(int, int, int)> dfs = [&](int i, int j, int k) -> int {
-            if (f[i][j][k] != -1) {
-                return f[i][j][k] == 1;
-            }
-            if (k == 1) {
-                return s1[i] == s2[j];
-            }
-            for (int h = 1; h < k; ++h) {
-                if (dfs(i, j, h) && dfs(i + h, j + h, k - h)) {
-                    return f[i][j][k] = true;
-                }
-                if (dfs(i + h, j, k - h) && dfs(i, j + k - h, h)) {
-                    return f[i][j][k] = true;
-                }
-            }
-            return f[i][j][k] = false;
-        };
-        return dfs(0, 0, n);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool isScramble(string s1, string s2) {
-        int n = s1.length();
-        bool f[n][n][n + 1];
-        memset(f, false, sizeof(f));
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                f[i][j][1] = s1[i] == s2[j];
-            }
-        }
-        for (int k = 2; k <= n; ++k) {
-            for (int i = 0; i <= n - k; ++i) {
-                for (int j = 0; j <= n - k; ++j) {
-                    for (int h = 1; h < k; ++h) {
-                        if () {
-                            f[i][j][k] = true;
-                            break;
-                        }
-                        if (f[i + h][j][k - h] && f[i][j + k - h][h]) {
-                            f[i][j][k] = true;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        return f[0][0][n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func isScramble(s1 string, s2 string) bool {
-	n := len(s1)
-	f := make([][][]int, n)
-	for i := range f {
-		f[i] = make([][]int, n)
-		for j := range f[i] {
-			f[i][j] = make([]int, n+1)
-		}
-	}
-	var dfs func(i, j, k int) bool
-	dfs = func(i, j, k int) bool {
-		if k == 1 {
-			return s1[i] == s2[j]
-		}
-		if f[i][j][k] != 0 {
-			return f[i][j][k] == 1
-		}
-		f[i][j][k] = 2
-		for h := 1; h < k; h++ {
-			if (dfs(i, j, h) && dfs(i+h, j+h, k-h)) || (dfs(i+h, j, k-h) && dfs(i, j+k-h, h)) {
-				f[i][j][k] = 1
-				return true
-			}
-		}
-		return false
-	}
-	return dfs(0, 0, n)
-}
-```
 
-```go
-func isScramble(s1 string, s2 string) bool {
-	n := len(s1)
-	f := make([][][]bool, n)
-	for i := range f {
-		f[i] = make([][]bool, n)
-		for j := 0; j < n; j++ {
-			f[i][j] = make([]bool, n+1)
-			f[i][j][1] = s1[i] == s2[j]
-		}
-	}
-	for k := 2; k <= n; k++ {
-		for i := 0; i <= n-k; i++ {
-			for j := 0; j <= n-k; j++ {
-				for h := 1; h < k; h++ {
-					if (f[i][j][h] && f[i+h][j+h][k-h]) || (f[i+h][j][k-h] && f[i][j+k-h][h]) {
-						f[i][j][k] = true
-						break
-					}
-				}
-			}
-		}
-	}
-	return f[0][0][n]
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isScramble(s1: string, s2: string): boolean {
-    const n = s1.length;
-    const f = new Array(n)
-        .fill(0)
-        .map(() => new Array(n).fill(0).map(() => new Array(n + 1).fill(-1)));
-    const dfs = (i: number, j: number, k: number): boolean => {
-        if (f[i][j][k] !== -1) {
-            return f[i][j][k] === 1;
-        }
-        if (k === 1) {
-            return s1[i] === s2[j];
-        }
-        for (let h = 1; h < k; ++h) {
-            if (dfs(i, j, h) && dfs(i + h, j + h, k - h)) {
-                return Boolean((f[i][j][k] = 1));
-            }
-            if (dfs(i + h, j, k - h) && dfs(i, j + k - h, h)) {
-                return Boolean((f[i][j][k] = 1));
-            }
-        }
-        return Boolean((f[i][j][k] = 0));
-    };
-    return dfs(0, 0, n);
-}
-```
 
-```ts
-function isScramble(s1: string, s2: string): boolean {
-    const n = s1.length;
-    const f = new Array(n)
-        .fill(0)
-        .map(() =>
-            new Array(n).fill(0).map(() => new Array(n + 1).fill(false)),
-        );
-    for (let i = 0; i < n; ++i) {
-        for (let j = 0; j < n; ++j) {
-            f[i][j][1] = s1[i] === s2[j];
-        }
-    }
-    for (let k = 2; k <= n; ++k) {
-        for (let i = 0; i <= n - k; ++i) {
-            for (let j = 0; j <= n - k; ++j) {
-                for (let h = 1; h < k; ++h) {
-                    if (f[i][j][h] && f[i + h][j + h][k - h]) {
-                        f[i][j][k] = true;
-                        break;
-                    }
-                    if (f[i + h][j][k - h] && f[i][j + k - h][h]) {
-                        f[i][j][k] = true;
-                        break;
-                    }
-                }
-            }
-        }
-    }
-    return f[0][0][n];
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    private string s1;
-    private string s2;
-    private int[,,] f;
 
-    public bool IsScramble(string s1, string s2) {
-        int n = s1.Length;
-        this.s1 = s1;
-        this.s2 = s2;
-        f = new int[n, n, n + 1];
-        return dfs(0, 0, n);
-    }
 
-    private bool dfs(int i, int j, int k) {
-        if (f[i, j, k] != 0) {
-            return f[i, j, k] == 1;
-        }
-        if (k == 1) {
-            return s1[i] == s2[j];
-        }
-        for (int h = 1; h < k; ++h) {
-            if (dfs(i, j, h) && dfs(i + h, j + h, k - h)) {
-                f[i, j, k] = 1;
-                return true;
-            }
-            if (dfs(i, j + k - h, h) && dfs(i + h, j, k - h)) {
-                f[i, j, k] = 1;
-                return true;
-            }
-        }
-        f[i, j, k] = -1;
-        return false;
-    }
-}
-```
 
-```cs
-public class Solution {
-    public bool IsScramble(string s1, string s2) {
-        int n = s1.Length;
-        bool[,,] f = new bool[n, n, n + 1];
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++ j) {
-                f[i, j, 1] = s1[i] == s2[j];
-            }
-        }
-        for (int k = 2; k <= n; ++k) {
-            for (int i = 0; i <= n - k; ++i) {
-                for (int j = 0; j <= n - k; ++j) {
-                    for (int h = 1; h < k; ++h) {
-                        if (f[i, j, h] && f[i + h, j + h, k - h]) {
-                            f[i, j, k] = true;
-                            break;
-                        }
-                        if (f[i, j + k - h, h] && f[i + h, j, k - h]) {
-                            f[i, j, k] = true;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        return f[0, 0, n];
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -469,4 +203,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

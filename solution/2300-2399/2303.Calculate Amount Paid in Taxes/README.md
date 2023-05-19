@@ -80,15 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def calculateTax(self, brackets: List[List[int]], income: int) -> float:
-        ans = prev = 0
-        for upper, percent in brackets:
-            ans += max(0, min(income, upper) - prev) * percent
-            prev = upper
-        return ans / 100
-```
+
 
 ### **Java**
 
@@ -108,83 +100,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double calculateTax(vector<vector<int>>& brackets, int income) {
-        int ans = 0, prev = 0;
-        for (auto& e : brackets) {
-            int upper = e[0], percent = e[1];
-            ans += max(0, min(income, upper) - prev) * percent;
-            prev = upper;
-        }
-        return ans / 100.0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func calculateTax(brackets [][]int, income int) float64 {
-	var ans, prev int
-	for _, e := range brackets {
-		upper, percent := e[0], e[1]
-		ans += max(0, min(income, upper)-prev) * percent
-		prev = upper
-	}
-	return float64(ans) / 100.0
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn calculate_tax(brackets: Vec<Vec<i32>>, income: i32) -> f64 {
-        let mut res = 0f64;
-        let mut pre = 0i32;
-        for bracket in brackets.iter() {
-            res += f64::from(income.min(bracket[0]) - pre) * f64::from(bracket[1]) * 0.01;
-            if income <= bracket[0] {
-                break;
-            }
-            pre = bracket[0];
-        }
-        res
-    }
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function calculateTax(brackets: number[][], income: number): number {
-    let ans = 0;
-    let prev = 0;
-    for (const [upper, percent] of brackets) {
-        ans += Math.max(0, Math.min(income, upper) - prev) * percent;
-        prev = upper;
-    }
-    return ans / 100;
-}
-```
+
 
 ### **...**
 
@@ -192,4 +122,4 @@ function calculateTax(brackets: number[][], income: number): number {
 
 ```
 
-<!-- tabs:end -->
+

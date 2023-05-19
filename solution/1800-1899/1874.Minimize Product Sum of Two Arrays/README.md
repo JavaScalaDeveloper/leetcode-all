@@ -50,16 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minProductSum(self, nums1: List[int], nums2: List[int]) -> int:
-        nums1.sort()
-        nums2.sort()
-        n, res = len(nums1), 0
-        for i in range(n):
-            res += nums1[i] * nums2[n - i - 1]
-        return res
-```
+
 
 ### **Java**
 
@@ -79,36 +70,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minProductSum(vector<int>& nums1, vector<int>& nums2) {
-        sort(nums1.begin(), nums1.end());
-        sort(nums2.begin(), nums2.end());
-        int n = nums1.size(), res = 0;
-        for (int i = 0; i < n; ++i) {
-            res += nums1[i] * nums2[n - i - 1];
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minProductSum(nums1 []int, nums2 []int) int {
-	sort.Ints(nums1)
-	sort.Ints(nums2)
-	res, n := 0, len(nums1)
-	for i, num := range nums1 {
-		res += num * nums2[n-i-1]
-	}
-	return res
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -116,4 +84,4 @@ func minProductSum(nums1 []int, nums2 []int) int {
 
 ```
 
-<!-- tabs:end -->
+

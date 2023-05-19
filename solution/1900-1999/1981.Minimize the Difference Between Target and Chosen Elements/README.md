@@ -93,14 +93,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimizeTheDifference(self, mat: List[List[int]], target: int) -> int:
-        f = {0}
-        for row in mat:
-            f = set(a + b for a in f for b in row)
-        return min(abs(v - target) for v in f)
-```
+
 
 ### **Java**
 
@@ -157,82 +150,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimizeTheDifference(vector<vector<int>>& mat, int target) {
-        vector<int> f = {1};
-        for (auto& row : mat) {
-            int mx = *max_element(row.begin(), row.end());
-            vector<int> g(f.size() + mx);
-            for (int x : row) {
-                for (int j = x; j < f.size() + x; ++j) {
-                    g[j] |= f[j - x];
-                }
-            }
-            f = move(g);
-        }
-        int ans = 1 << 30;
-        for (int j = 0; j < f.size(); ++j) {
-            if (f[j]) {
-                ans = min(ans, abs(j - target));
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimizeTheDifference(mat [][]int, target int) int {
-	f := []int{1}
-	for _, row := range mat {
-		mx := 0
-		for _, x := range row {
-			mx = max(mx, x)
-		}
-		g := make([]int, len(f)+mx)
-		for _, x := range row {
-			for j := x; j < len(f)+x; j++ {
-				g[j] |= f[j-x]
-			}
-		}
-		f = g
-	}
-	ans := 1 << 30
-	for j, v := range f {
-		if v == 1 {
-			ans = min(ans, abs(j-target))
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
 
 ### **...**
 
@@ -240,4 +164,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

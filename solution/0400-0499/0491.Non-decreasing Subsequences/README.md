@@ -52,25 +52,7 @@ DFS 递归枚举每个数字选中或不选中，这里需要满足两个条件�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findSubsequences(self, nums: List[int]) -> List[List[int]]:
-        def dfs(u, last, t):
-            if u == len(nums):
-                if len(t) > 1:
-                    ans.append(t[:])
-                return
-            if nums[u] >= last:
-                t.append(nums[u])
-                dfs(u + 1, nums[u], t)
-                t.pop()
-            if nums[u] != last:
-                dfs(u + 1, last, t)
 
-        ans = []
-        dfs(0, -1000, [])
-        return ans
-```
 
 ### **Java**
 
@@ -107,62 +89,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> findSubsequences(vector<int>& nums) {
-        vector<vector<int>> ans;
-        vector<int> t;
-        dfs(0, -1000, t, nums, ans);
-        return ans;
-    }
 
-    void dfs(int u, int last, vector<int>& t, vector<int>& nums, vector<vector<int>>& ans) {
-        if (u == nums.size()) {
-            if (t.size() > 1) ans.push_back(t);
-            return;
-        }
-        if (nums[u] >= last) {
-            t.push_back(nums[u]);
-            dfs(u + 1, nums[u], t, nums, ans);
-            t.pop_back();
-        }
-        if (nums[u] != last) dfs(u + 1, last, t, nums, ans);
-    }
-};
-```
 
-### **Go**
 
-```go
-func findSubsequences(nums []int) [][]int {
-	var ans [][]int
-	var dfs func(u, last int, t []int)
-	dfs = func(u, last int, t []int) {
-		if u == len(nums) {
-			if len(t) > 1 {
-				cp := make([]int, len(t))
-				copy(cp, t)
-				ans = append(ans, cp)
-			}
-			return
-		}
-		if nums[u] >= last {
-			t = append(t, nums[u])
-			dfs(u+1, nums[u], t)
-			t = t[:len(t)-1]
-		}
-		if nums[u] != last {
-			dfs(u+1, last, t)
-		}
-	}
-	var t []int
-	dfs(0, -1000, t)
-	return ans
-}
-```
+
+
+
 
 ### **...**
 
@@ -170,4 +103,4 @@ func findSubsequences(nums []int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

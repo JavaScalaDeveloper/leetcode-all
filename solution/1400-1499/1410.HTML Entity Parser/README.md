@@ -80,31 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def entityParser(self, text: str) -> str:
-        d = {
-            '&quot;': '"',
-            '&apos;': "'",
-            '&amp;': "&",
-            "&gt;": '>',
-            "&lt;": '<',
-            "&frasl;": '/',
-        }
-        i, n = 0, len(text)
-        ans = []
-        while i < n:
-            for l in range(1, 8):
-                j = i + l
-                if text[i:j] in d:
-                    ans.append(d[text[i:j]])
-                    i = j
-                    break
-            else:
-                ans.append(text[i])
-                i += 1
-        return ''.join(ans)
-```
+
 
 ### **Java**
 
@@ -146,41 +122,9 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string entityParser(string text) {
-        unordered_map<string, string> d;
-        d["&quot;"] = "\"";
-        d["&apos;"] = "'";
-        d["&amp;"] = "&";
-        d["&gt;"] = ">";
-        d["&lt;"] = "<";
-        d["&frasl;"] = "/";
-        string ans = "";
-        int i = 0, n = text.size();
-        while (i < n) {
-            bool find = false;
-            for (int l = 1; l < 8; ++l) {
-                int j = i + l;
-                if (j <= n) {
-                    string t = text.substr(i, l);
-                    if (d.count(t)) {
-                        ans += d[t];
-                        i = j;
-                        find = true;
-                        break;
-                    }
-                }
-            }
-            if (!find) ans += text[i++];
-        }
-        return ans;
-    }
-};
-```
+
+
 
 ### **...**
 
@@ -188,4 +132,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

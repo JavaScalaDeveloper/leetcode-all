@@ -71,21 +71,9 @@ s 中的单词为 ["What", "is" "the", "solution", "to", "this", "problem"]
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def truncateSentence(self, s: str, k: int) -> str:
-        return ' '.join(s.split()[:k])
-```
 
-```python
-class Solution:
-    def truncateSentence(self, s: str, k: int) -> str:
-        for i, c in enumerate(s):
-            k -= c == ' '
-            if k == 0:
-                return s[:i]
-        return s
-```
+
+
 
 ### **Java**
 
@@ -104,55 +92,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string truncateSentence(string s, int k) {
-        for (int i = 0; i < s.size(); ++i) {
-            if (s[i] == ' ' && (--k) == 0) {
-                return s.substr(0, i);
-            }
-        }
-        return s;
-    }
-};
-```
 
-### **Go**
 
-```go
-func truncateSentence(s string, k int) string {
-	for i, c := range s {
-		if c == ' ' {
-			k--
-		}
-		if k == 0 {
-			return s[:i]
-		}
-	}
-	return s
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @param {number} k
- * @return {string}
- */
-var truncateSentence = function (s, k) {
-    for (let i = 0; i < s.length; ++i) {
-        if (s[i] == ' ' && --k == 0) {
-            return s.slice(0, i);
-        }
-    }
-    return s;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -160,4 +110,4 @@ var truncateSentence = function (s, k) {
 
 ```
 
-<!-- tabs:end -->
+

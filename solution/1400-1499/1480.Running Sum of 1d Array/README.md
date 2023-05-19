@@ -55,11 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def runningSum(self, nums: List[int]) -> List[int]:
-        return list(accumulate(nums))
-```
+
 
 ### **Java**
 
@@ -76,68 +72,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> runningSum(vector<int>& nums) {
-        for (int i = 1; i < nums.size(); ++i) nums[i] += nums[i - 1];
-        return nums;
-    }
-};
-```
 
-### **Go**
 
-```go
-func runningSum(nums []int) []int {
-	for i := 1; i < len(nums); i++ {
-		nums[i] += nums[i-1]
-	}
-	return nums
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function runningSum(nums: number[]): number[] {
-    for (let i = 1; i < nums.length; ++i) {
-        nums[i] += nums[i - 1];
-    }
-    return nums;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[] RunningSum(int[] nums) {
-        for (int i = 1; i < nums.Length; ++i) {
-            nums[i] += nums[i - 1];
-        }
-        return nums;
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums
-     * @return Integer[]
-     */
-    function runningSum($nums) {
-        for ($i = 1; $i < count($nums); $i++)
-            $nums[$i] += $nums[$i - 1];
-        return $nums;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -145,4 +98,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

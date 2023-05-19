@@ -55,18 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMinDifference(self, timePoints: List[str]) -> int:
-        if len(timePoints) > 24 * 60:
-            return 0
-        mins = sorted(int(t[:2]) * 60 + int(t[3:]) for t in timePoints)
-        mins.append(mins[0] + 24 * 60)
-        res = mins[-1]
-        for i in range(1, len(mins)):
-            res = min(res, mins[i] - mins[i - 1])
-        return res
-```
+
 
 ### **Java**
 
@@ -94,57 +83,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findMinDifference(vector<string>& timePoints) {
-        if (timePoints.size() > 24 * 60)
-            return 0;
-        vector<int> mins;
-        for (auto t : timePoints)
-            mins.push_back(stoi(t.substr(0, 2)) * 60 + stoi(t.substr(3)));
-        sort(mins.begin(), mins.end());
-        mins.push_back(mins[0] + 24 * 60);
-        int res = 24 * 60;
-        for (int i = 1; i < mins.size(); ++i)
-            res = min(res, mins[i] - mins[i - 1]);
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMinDifference(timePoints []string) int {
-	if len(timePoints) > 24*60 {
-		return 0
-	}
-	var mins []int
-	for _, t := range timePoints {
-		time := strings.Split(t, ":")
-		h, _ := strconv.Atoi(time[0])
-		m, _ := strconv.Atoi(time[1])
-		mins = append(mins, h*60+m)
-	}
-	sort.Ints(mins)
-	mins = append(mins, mins[0]+24*60)
-	res := 24 * 60
-	for i := 1; i < len(mins); i++ {
-		res = min(res, mins[i]-mins[i-1])
-	}
-	return res
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -152,4 +97,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

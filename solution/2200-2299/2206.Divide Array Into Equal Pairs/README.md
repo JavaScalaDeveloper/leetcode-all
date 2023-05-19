@@ -60,12 +60,7 @@ nums 可以划分成 (2, 2) ，(3, 3) 和 (2, 2) ，满足所有要求。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def divideArray(self, nums: List[int]) -> bool:
-        cnt = Counter(nums)
-        return all(v % 2 == 0 for v in cnt.values())
-```
+
 
 ### **Java**
 
@@ -88,44 +83,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool divideArray(vector<int>& nums) {
-        vector<int> cnt(510);
-        for (int& v : nums) ++cnt[v];
-        for (int& v : cnt)
-            if (v % 2)
-                return false;
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func divideArray(nums []int) bool {
-	cnt := make([]int, 510)
-	for _, v := range nums {
-		cnt[v]++
-	}
-	for _, v := range cnt {
-		if v%2 == 1 {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -133,4 +101,4 @@ func divideArray(nums []int) bool {
 
 ```
 
-<!-- tabs:end -->
+

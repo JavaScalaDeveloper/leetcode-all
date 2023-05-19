@@ -77,16 +77,7 @@ arr 中最大元素为 3 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumElementAfterDecrementingAndRearranging(self, arr: List[int]) -> int:
-        arr.sort()
-        arr[0] = 1
-        for i in range(1, len(arr)):
-            d = max(0, arr[i] - arr[i - 1] - 1)
-            arr[i] -= d
-        return max(arr)
-```
+
 
 ### **Java**
 
@@ -108,47 +99,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumElementAfterDecrementingAndRearranging(vector<int>& arr) {
-        sort(arr.begin(), arr.end());
-        arr[0] = 1;
-        int ans = 1;
-        for (int i = 1; i < arr.size(); ++i) {
-            int d = max(0, arr[i] - arr[i - 1] - 1);
-            arr[i] -= d;
-            ans = max(ans, arr[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumElementAfterDecrementingAndRearranging(arr []int) int {
-	sort.Ints(arr)
-	ans := 1
-	arr[0] = 1
-	for i := 1; i < len(arr); i++ {
-		d := max(0, arr[i]-arr[i-1]-1)
-		arr[i] -= d
-		ans = max(ans, arr[i])
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -156,4 +113,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

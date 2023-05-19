@@ -50,19 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def commonChars(self, words: List[str]) -> List[str]:
-        cnt = Counter(words[0])
-        for w in words:
-            ccnt = Counter(w)
-            for c in cnt.keys():
-                cnt[c] = min(cnt[c], ccnt[c])
-        ans = []
-        for c, v in cnt.items():
-            ans.extend([c] * v)
-        return ans
-```
+
 
 ### **Java**
 
@@ -93,91 +81,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> commonChars(vector<string>& words) {
-        int cnt[26];
-        memset(cnt, 0x3f, sizeof(cnt));
-        for (auto& w : words) {
-            int ccnt[26]{};
-            for (char& c : w) {
-                ++ccnt[c - 'a'];
-            }
-            for (int i = 0; i < 26; ++i) {
-                cnt[i] = min(cnt[i], ccnt[i]);
-            }
-        }
-        vector<string> ans;
-        for (int i = 0; i < 26; ++i) {
-            while (cnt[i]--) {
-                ans.emplace_back(1, i + 'a');
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func commonChars(words []string) (ans []string) {
-	cnt := [26]int{}
-	for i := range cnt {
-		cnt[i] = 1 << 30
-	}
-	for _, w := range words {
-		ccnt := [26]int{}
-		for _, c := range w {
-			ccnt[c-'a']++
-		}
-		for i, v := range cnt {
-			cnt[i] = min(v, ccnt[i])
-		}
-	}
-	for i, v := range cnt {
-		for v > 0 {
-			ans = append(ans, string(i+'a'))
-			v--
-		}
-	}
-	return
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function commonChars(words: string[]): string[] {
-    const freq: number[] = new Array(26).fill(10000);
-    for (const word of words) {
-        const t: number[] = new Array(26).fill(0);
-        for (const c of word.split('')) {
-            ++t[c.charCodeAt(0) - 'a'.charCodeAt(0)];
-        }
-        for (let i = 0; i < 26; ++i) {
-            freq[i] = Math.min(freq[i], t[i]);
-        }
-    }
-    const res: string[] = [];
-    for (let i = 0; i < 26; ++i) {
-        while (freq[i]-- > 0) {
-            res.push(String.fromCharCode(i + 'a'.charCodeAt(0)));
-        }
-    }
-    return res;
-}
-```
+
 
 ### **...**
 
@@ -185,4 +99,4 @@ function commonChars(words: string[]): string[] {
 
 ```
 
-<!-- tabs:end -->
+

@@ -71,21 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def areSentencesSimilar(self, sentence1: str, sentence2: str) -> bool:
-        words1, words2 = sentence1.split(), sentence2.split()
-        m, n = len(words1), len(words2)
-        if m < n:
-            words1, words2 = words2, words1
-            m, n = n, m
-        i = j = 0
-        while i < n and words1[i] == words2[i]:
-            i += 1
-        while j < n and words1[m - 1 - j] == words2[n - 1 - j]:
-            j += 1
-        return i + j >= n
-```
+
 
 ### **Java**
 
@@ -114,59 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool areSentencesSimilar(string sentence1, string sentence2) {
-        auto words1 = split(sentence1, ' ');
-        auto words2 = split(sentence2, ' ');
-        if (words1.size() < words2.size()) {
-            swap(words1, words2);
-        }
-        int m = words1.size(), n = words2.size();
-        int i = 0, j = 0;
-        while (i < n && words1[i] == words2[i]) {
-            ++i;
-        }
-        while (j < n && words1[m - 1 - j] == words2[n - 1 - j]) {
-            ++j;
-        }
-        return i + j >= n;
-    }
 
-    vector<string> split(string& s, char delim) {
-        stringstream ss(s);
-        string item;
-        vector<string> res;
-        while (getline(ss, item, delim)) {
-            res.emplace_back(item);
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func areSentencesSimilar(sentence1 string, sentence2 string) bool {
-	words1, words2 := strings.Fields(sentence1), strings.Fields(sentence2)
-	if len(words1) < len(words2) {
-		words1, words2 = words2, words1
-	}
-	m, n := len(words1), len(words2)
-	i, j := 0, 0
-	for i < n && words1[i] == words2[i] {
-		i++
-	}
-	for j < n && words1[m-1-j] == words2[n-1-j] {
-		j++
-	}
-	return i+j >= n
-}
-```
+
+
+
 
 ### **...**
 
@@ -174,4 +114,4 @@ func areSentencesSimilar(sentence1 string, sentence2 string) bool {
 
 ```
 
-<!-- tabs:end -->
+

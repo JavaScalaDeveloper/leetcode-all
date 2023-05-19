@@ -75,22 +75,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def knightProbability(self, n: int, k: int, row: int, column: int) -> float:
-        f = [[[0] * n for _ in range(n)] for _ in range(k + 1)]
-        for i in range(n):
-            for j in range(n):
-                f[0][i][j] = 1
-        for h in range(1, k + 1):
-            for i in range(n):
-                for j in range(n):
-                    for a, b in pairwise((-2, -1, 2, 1, -2, 1, 2, -1, -2)):
-                        x, y = i + a, j + b
-                        if 0 <= x < n and 0 <= y < n:
-                            f[h][i][j] += f[h - 1][x][y] / 8
-        return f[k][row][column]
-```
+
 
 ### **Java**
 
@@ -123,102 +108,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double knightProbability(int n, int k, int row, int column) {
-        double f[k + 1][n][n];
-        memset(f, 0, sizeof(f));
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                f[0][i][j] = 1;
-            }
-        }
-        int dirs[9] = {-2, -1, 2, 1, -2, 1, 2, -1, -2};
-        for (int h = 1; h <= k; ++h) {
-            for (int i = 0; i < n; ++i) {
-                for (int j = 0; j < n; ++j) {
-                    for (int p = 0; p < 8; ++p) {
-                        int x = i + dirs[p], y = j + dirs[p + 1];
-                        if (x >= 0 && x < n && y >= 0 && y < n) {
-                            f[h][i][j] += f[h - 1][x][y] / 8;
-                        }
-                    }
-                }
-            }
-        }
-        return f[k][row][column];
-    }
-};
-```
 
-### **Go**
 
-```go
-func knightProbability(n int, k int, row int, column int) float64 {
-	f := make([][][]float64, k+1)
-	for h := range f {
-		f[h] = make([][]float64, n)
-		for i := range f[h] {
-			f[h][i] = make([]float64, n)
-			for j := range f[h][i] {
-				f[0][i][j] = 1
-			}
-		}
-	}
-	dirs := [9]int{-2, -1, 2, 1, -2, 1, 2, -1, -2}
-	for h := 1; h <= k; h++ {
-		for i := 0; i < n; i++ {
-			for j := 0; j < n; j++ {
-				for p := 0; p < 8; p++ {
-					x, y := i+dirs[p], j+dirs[p+1]
-					if x >= 0 && x < n && y >= 0 && y < n {
-						f[h][i][j] += f[h-1][x][y] / 8
-					}
-				}
-			}
-		}
-	}
-	return f[k][row][column]
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function knightProbability(
-    n: number,
-    k: number,
-    row: number,
-    column: number,
-): number {
-    const f = new Array(k + 1)
-        .fill(0)
-        .map(() => new Array(n).fill(0).map(() => new Array(n).fill(0)));
-    for (let i = 0; i < n; ++i) {
-        for (let j = 0; j < n; ++j) {
-            f[0][i][j] = 1;
-        }
-    }
-    const dirs = [-2, -1, 2, 1, -2, 1, 2, -1, -2];
-    for (let h = 1; h <= k; ++h) {
-        for (let i = 0; i < n; ++i) {
-            for (let j = 0; j < n; ++j) {
-                for (let p = 0; p < 8; ++p) {
-                    const x = i + dirs[p];
-                    const y = j + dirs[p + 1];
-                    if (x >= 0 && x < n && y >= 0 && y < n) {
-                        f[h][i][j] += f[h - 1][x][y] / 8;
-                    }
-                }
-            }
-        }
-    }
-    return f[k][row][column];
-}
-```
+
 
 ### **...**
 
@@ -226,4 +126,4 @@ function knightProbability(
 
 ```
 
-<!-- tabs:end -->
+

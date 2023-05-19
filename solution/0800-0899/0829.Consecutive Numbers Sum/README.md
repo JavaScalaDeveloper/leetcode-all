@@ -61,17 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def consecutiveNumbersSum(self, n: int) -> int:
-        n <<= 1
-        ans, k = 0, 1
-        while k * (k + 1) <= n:
-            if n % k == 0 and (n // k + 1 - k) % 2 == 0:
-                ans += 1
-            k += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -93,38 +83,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int consecutiveNumbersSum(int n) {
-        n <<= 1;
-        int ans = 0;
-        for (int k = 1; k * (k + 1) <= n; ++k) {
-            if (n % k == 0 && (n / k + 1 - k) % 2 == 0) {
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func consecutiveNumbersSum(n int) int {
-	n <<= 1
-	ans := 0
-	for k := 1; k*(k+1) <= n; k++ {
-		if n%k == 0 && (n/k+1-k)%2 == 0 {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -132,4 +97,4 @@ func consecutiveNumbersSum(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

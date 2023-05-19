@@ -78,23 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
 
-
-class Solution:
-    def hasCycle(self, head: ListNode) -> bool:
-        slow = fast = head
-        while fast and fast.next:
-            slow, fast = slow.next, fast.next.next
-            if slow == fast:
-                return True
-        return False
-```
 
 ### **Java**
 
@@ -128,143 +112,23 @@ public class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    bool hasCycle(ListNode* head) {
-        ListNode* slow = head;
-        ListNode* fast = head;
-        while (fast && fast->next) {
-            slow = slow->next;
-            fast = fast->next->next;
-            if (slow == fast) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
 
-/**
- * @param {ListNode} head
- * @return {boolean}
- */
-var hasCycle = function (head) {
-    let slow = head;
-    let fast = head;
-    while (fast && fast.next) {
-        slow = slow.next;
-        fast = fast.next.next;
-        if (slow == fast) {
-            return true;
-        }
-    }
-    return false;
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func hasCycle(head *ListNode) bool {
-    slow, fast := head, head
-    for fast != nil && fast.Next != nil {
-        slow, fast = slow.Next, fast.Next.Next
-        if slow == fast {
-            return true
-        }
-    }
-    return false
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function hasCycle(head: ListNode | null): boolean {
-    const set = new Set<ListNode>();
-    let node = head;
-    while (node != null) {
-        if (set.has(node)) {
-            return true;
-        }
-        set.add(node);
-        node = node.next;
-    }
-    return false;
-}
-```
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function hasCycle(head: ListNode | null): boolean {
-    if (head == null) {
-        return false;
-    }
-    let slow = head;
-    let fast = head.next;
-    while (fast != null && fast.next != null) {
-        if (slow == fast) {
-            return true;
-        }
-        slow = slow.next;
-        fast = fast.next.next;
-    }
-    return false;
-}
-```
 
 ### **...**
 
@@ -272,4 +136,4 @@ function hasCycle(head: ListNode | null): boolean {
 
 ```
 
-<!-- tabs:end -->
+

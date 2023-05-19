@@ -51,26 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def findTarget(self, root: TreeNode, k: int) -> bool:
-        def find(root):
-            if not root:
-                return False
-            if k - root.val in nodes:
-                return True
-            nodes.add(root.val)
-            return find(root.left) or find(root.right)
 
-        nodes = set()
-        return find(root)
-```
 
 ### **Java**
 
@@ -115,93 +96,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function findTarget(root: TreeNode | null, k: number): boolean {
-    let nodes: Set<number> = new Set();
-    return find(root, k, nodes);
-}
 
-function find(root: TreeNode | null, k: number, nodes: Set<number>): boolean {
-    if (!root) return false;
-    if (nodes.has(k - root.val)) return true;
-    nodes.add(root.val);
-    return find(root.left, k, nodes) || find(root.right, k, nodes);
-}
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    unordered_set<int> nodes;
 
-    bool findTarget(TreeNode* root, int k) {
-        return find(root, k);
-    }
 
-    bool find(TreeNode* root, int k) {
-        if (!root) return false;
-        if (nodes.count(k - root->val)) return true;
-        nodes.insert(root->val);
-        return find(root->left, k) || find(root->right, k);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func findTarget(root *TreeNode, k int) bool {
-	nodes := make(map[int]bool)
 
-	var find func(root *TreeNode, k int) bool
-	find = func(root *TreeNode, k int) bool {
-		if root == nil {
-			return false
-		}
-		if nodes[k-root.Val] {
-			return true
-		}
-		nodes[root.Val] = true
-		return find(root.Left, k) || find(root.Right, k)
-	}
-	return find(root, k)
-}
-```
 
 ### **...**
 
@@ -209,4 +112,4 @@ func findTarget(root *TreeNode, k int) bool {
 
 ```
 
-<!-- tabs:end -->
+

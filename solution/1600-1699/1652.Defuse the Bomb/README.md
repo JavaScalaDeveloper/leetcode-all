@@ -99,38 +99,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def decrypt(self, code: List[int], k: int) -> List[int]:
-        n = len(code)
-        ans = [0] * n
-        if k == 0:
-            return ans
-        for i in range(n):
-            if k > 0:
-                for j in range(i + 1, i + k + 1):
-                    ans[i] += code[j % n]
-            else:
-                for j in range(i + k, i):
-                    ans[i] += code[(j + n) % n]
-        return ans
-```
 
-```python
-class Solution:
-    def decrypt(self, code: List[int], k: int) -> List[int]:
-        n = len(code)
-        ans = [0] * n
-        if k == 0:
-            return ans
-        s = list(accumulate(code + code, initial=0))
-        for i in range(n):
-            if k > 0:
-                ans[i] = s[i + k + 1] - s[i + 1]
-            else:
-                ans[i] = s[i + n] - s[i + k + n]
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -184,139 +155,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> decrypt(vector<int>& code, int k) {
-        int n = code.size();
-        vector<int> ans(n);
-        if (k == 0) {
-            return ans;
-        }
-        for (int i = 0; i < n; ++i) {
-            if (k > 0) {
-                for (int j = i + 1; j < i + k + 1; ++j) {
-                    ans[i] += code[j % n];
-                }
-            } else {
-                for (int j = i + k; j < i; ++j) {
-                    ans[i] += code[(j + n) % n];
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> decrypt(vector<int>& code, int k) {
-        int n = code.size();
-        vector<int> ans(n);
-        if (k == 0) {
-            return ans;
-        }
-        vector<int> s(n << 1 | 1);
-        for (int i = 0; i < n << 1; ++i) {
-            s[i + 1] = s[i] + code[i % n];
-        }
-        for (int i = 0; i < n; ++i) {
-            if (k > 0) {
-                ans[i] = s[i + k + 1] - s[i + 1];
-            } else {
-                ans[i] = s[i + n] - s[i + k + n];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func decrypt(code []int, k int) []int {
-	n := len(code)
-	ans := make([]int, n)
-	if k == 0 {
-		return ans
-	}
-	for i := 0; i < n; i++ {
-		if k > 0 {
-			for j := i + 1; j < i+k+1; j++ {
-				ans[i] += code[j%n]
-			}
-		} else {
-			for j := i + k; j < i; j++ {
-				ans[i] += code[(j+n)%n]
-			}
-		}
-	}
-	return ans
-}
-```
 
-```go
-func decrypt(code []int, k int) []int {
-	n := len(code)
-	ans := make([]int, n)
-	if k == 0 {
-		return ans
-	}
-	s := make([]int, n<<1|1)
-	for i := 0; i < n<<1; i++ {
-		s[i+1] = s[i] + code[i%n]
-	}
-	for i := range code {
-		if k > 0 {
-			ans[i] = s[i+k+1] - s[i+1]
-		} else {
-			ans[i] = s[i+n] - s[i+k+n]
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function decrypt(code: number[], k: number): number[] {
-    const n = code.length;
-    if (k === 0) {
-        return code.fill(0);
-    }
-    const isPrefix = k < 0;
-    if (isPrefix) {
-        k *= -1;
-    }
-    const map = new Map<number, [number, number]>();
-    let prefix = 0;
-    let suffix = 0;
-    for (let i = 1; i <= k; i++) {
-        prefix += code[n - i];
-        suffix += code[i];
-    }
-    map.set(0, [prefix, suffix]);
 
-    for (let i = 1; i < n; i++) {
-        let [p, s] = map.get(i - 1);
-        p -= code[n - k - 1 + i] ?? code[i - k - 1];
-        p += code[i - 1];
-        s -= code[i];
-        s += code[i + k] ?? code[i + k - n];
-        map.set(i, [p, s]);
-    }
-    for (let i = 0; i < n; i++) {
-        code[i] = map.get(i)[Number(!isPrefix)];
-    }
-    return code;
-}
-```
 
 ### **...**
 
@@ -324,4 +177,4 @@ function decrypt(code: number[], k: number): number[] {
 
 ```
 
-<!-- tabs:end -->
+

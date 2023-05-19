@@ -70,18 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isValid(self, s: str) -> bool:
-        stk = []
-        d = {'()', '[]', '{}'}
-        for c in s:
-            if c in '({[':
-                stk.append(c)
-            elif not stk or stk.pop() + c not in d:
-                return False
-        return not stk
-```
+
 
 ### **Java**
 
@@ -107,81 +96,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isValid(string s) {
-        string stk;
-        for (char c : s) {
-            if (c == '(' || c == '{' || c == '[')
-                stk.push_back(c);
-            else if (stk.empty() || !match(stk.back(), c))
-                return false;
-            else
-                stk.pop_back();
-        }
-        return stk.empty();
-    }
 
-    bool match(char l, char r) {
-        return (l == '(' && r == ')') || (l == '[' && r == ']') || (l == '{' && r == '}');
-    }
-};
-```
 
-### **Go**
 
-```go
-func isValid(s string) bool {
-	stk := []rune{}
-	for _, c := range s {
-		if c == '(' || c == '{' || c == '[' {
-			stk = append(stk, c)
-		} else if len(stk) == 0 || !match(stk[len(stk)-1], c) {
-			return false
-		} else {
-			stk = stk[:len(stk)-1]
-		}
-	}
-	return len(stk) == 0
-}
 
-func match(l, r rune) bool {
-	return (l == '(' && r == ')') || (l == '[' && r == ']') || (l == '{' && r == '}')
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {boolean}
- */
-var isValid = function (s) {
-    let stk = [];
-    for (const c of s) {
-        if (c == '(' || c == '{' || c == '[') {
-            stk.push(c);
-        } else if (stk.length == 0 || !match(stk[stk.length - 1], c)) {
-            return false;
-        } else {
-            stk.pop();
-        }
-    }
-    return stk.length == 0;
-};
 
-function match(l, r) {
-    return (
-        (l == '(' && r == ')') ||
-        (l == '[' && r == ']') ||
-        (l == '{' && r == '}')
-    );
-}
-```
+
+
+
 
 ### **Ruby**
 
@@ -212,49 +137,11 @@ end
 
 ### **TypeScript**
 
-```ts
-const map = new Map([
-    ['(', ')'],
-    ['[', ']'],
-    ['{', '}'],
-]);
 
-function isValid(s: string): boolean {
-    const stack = [];
-    for (const c of s) {
-        if (map.has(c)) {
-            stack.push(map.get(c));
-        } else if (stack.pop() !== c) {
-            return false;
-        }
-    }
-    return stack.length === 0;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
 
-impl Solution {
-    pub fn is_valid(s: String) -> bool {
-        let mut map = HashMap::new();
-        map.insert('(', ')');
-        map.insert('[', ']');
-        map.insert('{', '}');
-        let mut stack = vec![];
-        for c in s.chars() {
-            if map.contains_key(&c) {
-                stack.push(map[&c]);
-            } else if stack.pop().unwrap_or(' ') != c {
-                return false;
-            }
-        }
-        stack.len() == 0
-    }
-}
-```
+
 
 ### **...**
 
@@ -262,4 +149,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

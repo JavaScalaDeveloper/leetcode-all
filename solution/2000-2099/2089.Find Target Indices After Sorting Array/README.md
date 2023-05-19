@@ -70,12 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def targetIndices(self, nums: List[int], target: int) -> List[int]:
-        nums.sort()
-        return [i for i, v in enumerate(nums) if v == target]
-```
+
 
 ### **Java**
 
@@ -96,52 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> targetIndices(vector<int>& nums, int target) {
-        sort(nums.begin(), nums.end());
-        vector<int> ans;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] == target) {
-                ans.push_back(i);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func targetIndices(nums []int, target int) (ans []int) {
-	sort.Ints(nums)
-	for i, v := range nums {
-		if v == target {
-			ans = append(ans, i)
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function targetIndices(nums: number[], target: number): number[] {
-    nums.sort((a, b) => a - b);
-    let ans: number[] = [];
-    for (let i = 0; i < nums.length; ++i) {
-        if (nums[i] == target) {
-            ans.push(i);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -149,4 +109,4 @@ function targetIndices(nums: number[], target: number): number[] {
 
 ```
 
-<!-- tabs:end -->
+

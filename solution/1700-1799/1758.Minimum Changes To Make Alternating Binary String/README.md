@@ -62,12 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, s: str) -> int:
-        cnt = sum(c != '01'[i & 1] for i, c in enumerate(s))
-        return min(cnt, len(s) - cnt)
-```
+
 
 ### **Java**
 
@@ -85,69 +80,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperations(string s) {
-        int cnt = 0, n = s.size();
-        for (int i = 0; i < n; ++i) cnt += s[i] != "01"[i & 1];
-        return min(cnt, n - cnt);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(s string) int {
-	cnt := 0
-	for i, c := range s {
-		if c != []rune("01")[i&1] {
-			cnt++
-		}
-	}
-	return min(cnt, len(s)-cnt)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minOperations(s: string): number {
-    const n = s.length;
-    let count = 0;
-    for (let i = 0; i < n; i++) {
-        count += s[i] !== '01'[i & 1] ? 1 : 0;
-    }
-    return Math.min(count, n - count);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_operations(s: String) -> i32 {
-        let n = s.len();
-        let s = s.as_bytes();
-        let cs = [b'0', b'1'];
-        let mut count = 0;
-        for i in 0..n {
-            count += if s[i] != cs[i & 1] { 1 } else { 0 };
-        }
-        count.min(n - count) as i32
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -170,4 +117,4 @@ int minOperations(char *s) {
 
 ```
 
-<!-- tabs:end -->
+

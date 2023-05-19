@@ -73,15 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumBinaryString(self, binary: str) -> str:
-        k = binary.find('0')
-        if k == -1:
-            return binary
-        k += binary[k + 1:].count('0')
-        return '1' * k + '0' + '1' * (len(binary) - k - 1)
-```
+
 
 ### **Java**
 
@@ -108,46 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string maximumBinaryString(string binary) {
-        int k = binary.find('0');
-        if (k == binary.npos) return binary;
-        int n = binary.size();
-        for (int i = k + 1; i < n; ++i) {
-            if (binary[i] == '0') {
-                ++k;
-            }
-        }
-        return string(k, '1') + '0' + string(n - k - 1, '1');
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumBinaryString(binary string) string {
-	k := strings.IndexByte(binary, '0')
-	if k == -1 {
-		return binary
-	}
-	for _, c := range binary[k+1:] {
-		if c == '0' {
-			k++
-		}
-	}
-	ans := []byte(binary)
-	for i := range ans {
-		ans[i] = '1'
-	}
-	ans[k] = '0'
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -155,4 +114,4 @@ func maximumBinaryString(binary string) string {
 
 ```
 
-<!-- tabs:end -->
+

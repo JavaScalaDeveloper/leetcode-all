@@ -29,23 +29,7 @@
 
 ### **Python3**
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
 
-
-class Solution:
-    def getKthFromEnd(self, head: ListNode, k: int) -> ListNode:
-        slow = fast = head
-        for _ in range(k):
-            fast = fast.next
-        while fast:
-            slow, fast = slow.next, fast.next
-        return slow
-```
 
 ### **Java**
 
@@ -73,144 +57,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    ListNode* getKthFromEnd(ListNode* head, int k) {
-        ListNode *slow = head, *fast = head;
-        while (k--) {
-            fast = fast->next;
-        }
-        while (fast) {
-            slow = slow->next;
-            fast = fast->next;
-        }
-        return slow;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func getKthFromEnd(head *ListNode, k int) *ListNode {
-	slow, fast := head, head
-	for ; k > 0; k-- {
-		fast = fast.Next
-	}
-	for fast != nil {
-		slow, fast = slow.Next, fast.Next
-	}
-	return slow
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
- * @param {ListNode} head
- * @param {number} k
- * @return {ListNode}
- */
-var getKthFromEnd = function (head, k) {
-    let fast = head;
-    while (k--) {
-        fast = fast.next;
-    }
-    let slow = head;
-    while (fast) {
-        slow = slow.next;
-        fast = fast.next;
-    }
-    return slow;
-};
-```
 
-### **Rust**
 
-```rust
-// Definition for singly-linked list.
-// #[derive(PartialEq, Eq, Clone, Debug)]
-// pub struct ListNode {
-//   pub val: i32,
-//   pub next: Option<Box<ListNode>>
-// }
-//
-// impl ListNode {
-//   #[inline]
-//   fn new(val: i32) -> Self {
-//     ListNode {
-//       next: None,
-//       val
-//     }
-//   }
-// }
-impl Solution {
-    pub fn get_kth_from_end(head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
-        let mut fast = &head;
-        for _ in 0..k {
-            fast = &fast.as_ref().unwrap().next;
-        }
-        let mut slow = &head;
-        while let (Some(nf), Some(ns)) = (fast, slow) {
-            fast = &nf.next;
-            slow = &ns.next;
-        }
-        slow.to_owned()
-    }
-}
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int x) { val = x; }
- * }
- */
-public class Solution {
-    public ListNode GetKthFromEnd(ListNode head, int k) {
-        ListNode fast = head, slow = head;
-        while (k-- > 0) {
-            fast = fast.next;
-        }
-        while (fast != null) {
-            slow = slow.next;
-            fast = fast.next;
-        }
-        return slow;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -218,4 +83,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

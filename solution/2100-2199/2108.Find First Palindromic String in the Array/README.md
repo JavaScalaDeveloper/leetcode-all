@@ -62,11 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def firstPalindrome(self, words: List[str]) -> str:
-        return next((w for w in words if w == w[::-1]), "")
-```
+
 
 ### **Java**
 
@@ -91,93 +87,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string firstPalindrome(vector<string>& words) {
-        for (auto& w : words) {
-            bool ok = true;
-            for (int i = 0, j = w.size() - 1; i < j; ++i, --j) {
-                if (w[i] != w[j]) {
-                    ok = false;
-                }
-            }
-            if (ok) {
-                return w;
-            }
-        }
-        return "";
-    }
-};
-```
 
-### **Go**
 
-```go
-func firstPalindrome(words []string) string {
-	for _, w := range words {
-		ok := true
-		for i, j := 0, len(w)-1; i < j && ok; i, j = i+1, j-1 {
-			if w[i] != w[j] {
-				ok = false
-			}
-		}
-		if ok {
-			return w
-		}
-	}
-	return ""
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function firstPalindrome(words: string[]): string {
-    for (const word of words) {
-        let left = 0;
-        let right = word.length - 1;
-        while (left < right) {
-            if (word[left] !== word[right]) {
-                break;
-            }
-            left++;
-            right--;
-        }
-        if (left >= right) {
-            return word;
-        }
-    }
-    return '';
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn first_palindrome(words: Vec<String>) -> String {
-        for word in words.iter() {
-            let s = word.as_bytes();
-            let mut left = 0;
-            let mut right = s.len() - 1;
-            while (left < right) {
-                if (s[left] != s[right]) {
-                    break;
-                }
-                left += 1;
-                right -= 1;
-            }
-            if left >= right {
-                return word.clone();
-            }
-        }
-        String::new()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -207,4 +131,4 @@ char *firstPalindrome(char **words, int wordsSize) {
 
 ```
 
-<!-- tabs:end -->
+

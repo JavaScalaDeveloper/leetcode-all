@@ -74,26 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestSumAfterKNegations(self, nums: List[int], k: int) -> int:
-        cnt = Counter(nums)
-        for x in range(-100, 0):
-            if cnt[x]:
-                m = min(cnt[x], k)
-                cnt[x] -= m
-                cnt[-x] += m
-                k -= m
-                if k == 0:
-                    break
-        if k & 1 and cnt[0] == 0:
-            for x in range(1, 101):
-                if cnt[x]:
-                    cnt[x] -= 1
-                    cnt[-x] += 1
-                    break
-        return sum(x * v for x, v in cnt.items())
-```
+
 
 ### **Java**
 
@@ -132,113 +113,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int largestSumAfterKNegations(vector<int>& nums, int k) {
-        unordered_map<int, int> cnt;
-        for (int& x : nums) {
-            ++cnt[x];
-        }
-        for (int x = -100; x < 0 && k > 0; ++x) {
-            if (cnt[x]) {
-                int m = min(cnt[x], k);
-                cnt[x] -= m;
-                cnt[-x] += m;
-                k -= m;
-            }
-        }
-        if ((k & 1) && !cnt[0]) {
-            for (int x = 1; x <= 100; ++x) {
-                if (cnt[x]) {
-                    --cnt[x];
-                    ++cnt[-x];
-                    break;
-                }
-            }
-        }
-        int ans = 0;
-        for (auto& [x, v] : cnt) {
-            ans += x * v;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestSumAfterKNegations(nums []int, k int) (ans int) {
-	cnt := map[int]int{}
-	for _, x := range nums {
-		cnt[x]++
-	}
-	for x := -100; x < 0 && k > 0; x++ {
-		if cnt[x] > 0 {
-			m := min(k, cnt[x])
-			cnt[x] -= m
-			cnt[-x] += m
-			k -= m
-		}
-	}
-	if k&1 == 1 && cnt[0] == 0 {
-		for x := 1; x <= 100; x++ {
-			if cnt[x] > 0 {
-				cnt[x]--
-				cnt[-x]++
-				break
-			}
-		}
-	}
-	for x, v := range cnt {
-		ans += x * v
-	}
-	return
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function largestSumAfterKNegations(nums: number[], k: number): number {
-    const cnt: Map<number, number> = new Map();
-    for (const x of nums) {
-        cnt.set(x, (cnt.get(x) || 0) + 1);
-    }
-    for (let x = -100; x < 0 && k > 0; ++x) {
-        if (cnt.get(x)! > 0) {
-            const m = Math.min(cnt.get(x) || 0, k);
-            cnt.set(x, (cnt.get(x) || 0) - m);
-            cnt.set(-x, (cnt.get(-x) || 0) + m);
-            k -= m;
-        }
-    }
-    if ((k & 1) === 1 && (cnt.get(0) || 0) === 0) {
-        for (let x = 1; x <= 100; ++x) {
-            if (cnt.get(x)! > 0) {
-                cnt.set(x, (cnt.get(x) || 0) - 1);
-                cnt.set(-x, (cnt.get(-x) || 0) + 1);
-                break;
-            }
-        }
-    }
-    let ans = 0;
-    for (const [key, value] of cnt.entries()) {
-        ans += key * value;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -246,4 +131,4 @@ function largestSumAfterKNegations(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

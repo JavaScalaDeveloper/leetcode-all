@@ -67,20 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfWays(self, startPos: int, endPos: int, k: int) -> int:
-        @cache
-        def dfs(i: int, j: int) -> int:
-            if i > j or j < 0:
-                return 0
-            if j == 0:
-                return 1 if i == 0 else 0
-            return (dfs(i + 1, j - 1) + dfs(abs(i - 1), j - 1)) % mod
 
-        mod = 10**9 + 7
-        return dfs(abs(startPos - endPos), k)
-```
 
 ### **Java**
 
@@ -113,96 +100,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numberOfWays(int startPos, int endPos, int k) {
-        const int mod = 1e9 + 7;
-        int f[k + 1][k + 1];
-        memset(f, -1, sizeof(f));
-        function<int(int, int)> dfs = [&](int i, int j) -> int {
-            if (i > j || j < 0) {
-                return 0;
-            }
-            if (j == 0) {
-                return i == 0 ? 1 : 0;
-            }
-            if (f[i][j] != -1) {
-                return f[i][j];
-            }
-            f[i][j] = (dfs(i + 1, j - 1) + dfs(abs(i - 1), j - 1)) % mod;
-            return f[i][j];
-        };
-        return dfs(abs(startPos - endPos), k);
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfWays(startPos int, endPos int, k int) int {
-	const mod = 1e9 + 7
-	f := make([][]int, k+1)
-	for i := range f {
-		f[i] = make([]int, k+1)
-		for j := range f[i] {
-			f[i][j] = -1
-		}
-	}
-	var dfs func(i, j int) int
-	dfs = func(i, j int) int {
-		if i > j || j < 0 {
-			return 0
-		}
-		if j == 0 {
-			if i == 0 {
-				return 1
-			}
-			return 0
-		}
-		if f[i][j] != -1 {
-			return f[i][j]
-		}
-		f[i][j] = (dfs(i+1, j-1) + dfs(abs(i-1), j-1)) % mod
-		return f[i][j]
-	}
-	return dfs(abs(startPos-endPos), k)
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numberOfWays(startPos: number, endPos: number, k: number): number {
-    const mod = 10 ** 9 + 7;
-    const f = new Array(k + 1).fill(0).map(() => new Array(k + 1).fill(-1));
-    const dfs = (i: number, j: number): number => {
-        if (i > j || j < 0) {
-            return 0;
-        }
-        if (j === 0) {
-            return i === 0 ? 1 : 0;
-        }
-        if (f[i][j] !== -1) {
-            return f[i][j];
-        }
-        f[i][j] = dfs(i + 1, j - 1) + dfs(Math.abs(i - 1), j - 1);
-        f[i][j] %= mod;
-        return f[i][j];
-    };
-    return dfs(Math.abs(startPos - endPos), k);
-}
-```
+
 
 ### **...**
 
@@ -211,4 +119,4 @@ function numberOfWays(startPos: number, endPos: number, k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

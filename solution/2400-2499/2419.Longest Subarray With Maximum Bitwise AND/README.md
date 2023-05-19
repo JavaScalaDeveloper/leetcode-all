@@ -71,19 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestSubarray(self, nums: List[int]) -> int:
-        mx = max(nums)
-        ans = cnt = 0
-        for v in nums:
-            if v == mx:
-                cnt += 1
-                ans = max(ans, cnt)
-            else:
-                cnt = 0
-        return ans
-```
+
 
 ### **Java**
 
@@ -110,60 +98,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestSubarray(vector<int>& nums) {
-        int mx = *max_element(nums.begin(), nums.end());
-        int ans = 0, cnt = 0;
-        for (int v : nums) {
-            if (v == mx) {
-                ++cnt;
-                ans = max(ans, cnt);
-            } else {
-                cnt = 0;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestSubarray(nums []int) int {
-	mx := 0
-	for _, v := range nums {
-		mx = max(mx, v)
-	}
-	ans, cnt := 0, 0
-	for _, v := range nums {
-		if v == mx {
-			cnt++
-			ans = max(ans, cnt)
-		} else {
-			cnt = 0
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -171,4 +116,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

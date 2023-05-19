@@ -88,28 +88,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxOutput(self, n: int, edges: List[List[int]], price: List[int]) -> int:
-        def dfs(i, fa):
-            a, b = price[i], 0
-            for j in g[i]:
-                if j != fa:
-                    c, d = dfs(j, i)
-                    nonlocal ans
-                    ans = max(ans, a + d, b + c)
-                    a = max(a, price[i] + c)
-                    b = max(b, price[i] + d)
-            return a, b
 
-        g = defaultdict(list)
-        for a, b in edges:
-            g[a].append(b)
-            g[b].append(a)
-        ans = 0
-        dfs(0, -1)
-        return ans
-```
 
 ### **Java**
 
@@ -150,76 +129,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long maxOutput(int n, vector<vector<int>>& edges, vector<int>& price) {
-        vector<vector<int>> g(n);
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            g[a].push_back(b);
-            g[b].push_back(a);
-        }
-        using ll = long long;
-        using pll = pair<ll, ll>;
-        ll ans = 0;
-        function<pll(int, int)> dfs = [&](int i, int fa) {
-            ll a = price[i], b = 0;
-            for (int j : g[i]) {
-                if (j != fa) {
-                    auto [c, d] = dfs(j, i);
-                    ans = max({ans, a + d, b + c});
-                    a = max(a, price[i] + c);
-                    b = max(b, price[i] + d);
-                }
-            }
-            return pll{a, b};
-        };
-        dfs(0, -1);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxOutput(n int, edges [][]int, price []int) int64 {
-	g := make([][]int, n)
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-	}
-	type pair struct{ a, b int }
-	ans := 0
-	var dfs func(i, fa int) pair
-	dfs = func(i, fa int) pair {
-		a, b := price[i], 0
-		for _, j := range g[i] {
-			if j != fa {
-				e := dfs(j, i)
-				c, d := e.a, e.b
-				ans = max(ans, max(a+d, b+c))
-				a = max(a, price[i]+c)
-				b = max(b, price[i]+d)
-			}
-		}
-		return pair{a, b}
-	}
-	dfs(0, -1)
-	return int64(ans)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -227,4 +143,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

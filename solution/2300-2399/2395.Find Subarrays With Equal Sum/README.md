@@ -63,16 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findSubarrays(self, nums: List[int]) -> bool:
-        vis = set()
-        for a, b in pairwise(nums):
-            if (x := a + b) in vis:
-                return True
-            vis.add(x)
-        return False
-```
+
 
 ### **Java**
 
@@ -92,74 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool findSubarrays(vector<int>& nums) {
-        unordered_set<int> vis;
-        for (int i = 1; i < nums.size(); ++i) {
-            int x = nums[i - 1] + nums[i];
-            if (vis.count(x)) {
-                return true;
-            }
-            vis.insert(x);
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findSubarrays(nums []int) bool {
-	vis := map[int]bool{}
-	for i, b := range nums[1:] {
-		x := nums[i] + b
-		if vis[x] {
-			return true
-		}
-		vis[x] = true
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findSubarrays(nums: number[]): boolean {
-    const vis: Set<number> = new Set<number>();
-    for (let i = 1; i < nums.length; ++i) {
-        const x = nums[i - 1] + nums[i];
-        if (vis.has(x)) {
-            return true;
-        }
-        vis.add(x);
-    }
-    return false;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn find_subarrays(nums: Vec<i32>) -> bool {
-        let n = nums.len();
-        let mut set = HashSet::new();
-        for i in 1..n {
-            if !set.insert(nums[i - 1] + nums[i]) {
-                return true;
-            }
-        }
-        false
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -183,4 +121,4 @@ bool findSubarrays(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

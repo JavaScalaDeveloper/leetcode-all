@@ -70,18 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def distMoney(self, money: int, children: int) -> int:
-        if money < children:
-            return -1
-        if money > 8 * children:
-            return children - 1
-        if money == 8 * children - 4:
-            return children - 2
-        # money-8x >= children-x, x <= (money-children)/7
-        return (money - children) // 7
-```
+
 
 ### **Java**
 
@@ -105,61 +94,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int distMoney(int money, int children) {
-        if (money < children) {
-            return -1;
-        }
-        if (money > 8 * children) {
-            return children - 1;
-        }
-        if (money == 8 * children - 4) {
-            return children - 2;
-        }
-        // money-8x >= children-x, x <= (money-children)/7
-        return (money - children) / 7;
-    }
-};
-```
 
-### **Go**
 
-```go
-func distMoney(money int, children int) int {
-	if money < children {
-		return -1
-	}
-	if money > 8*children {
-		return children - 1
-	}
-	if money == 8*children-4 {
-		return children - 2
-	}
-	// money-8x >= children-x, x <= (money-children)/7
-	return (money - children) / 7
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function distMoney(money: number, children: number): number {
-    if (money < children) {
-        return -1;
-    }
-    if (money > 8 * children) {
-        return children - 1;
-    }
-    if (money === 8 * children - 4) {
-        return children - 2;
-    }
-    return Math.floor((money - children) / 7);
-}
-```
+
 
 ### **...**
 
@@ -167,4 +112,4 @@ function distMoney(money: number, children: number): number {
 
 ```
 
-<!-- tabs:end -->
+

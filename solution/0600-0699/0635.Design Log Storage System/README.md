@@ -71,32 +71,7 @@ logSystem.retrieve("2016:01:01:01:01:01", "2017:01:01:23:00:00", "Hour");
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class LogSystem:
-    def __init__(self):
-        self.logs = []
-        self.d = {
-            "Year": 4,
-            "Month": 7,
-            "Day": 10,
-            "Hour": 13,
-            "Minute": 16,
-            "Second": 19,
-        }
 
-    def put(self, id: int, timestamp: str) -> None:
-        self.logs.append((id, timestamp))
-
-    def retrieve(self, start: str, end: str, granularity: str) -> List[int]:
-        i = self.d[granularity]
-        return [id for id, ts in self.logs if start[:i] <= ts[:i] <= end[:i]]
-
-
-# Your LogSystem object will be instantiated and called as such:
-# obj = LogSystem()
-# obj.put(id,timestamp)
-# param_2 = obj.retrieve(start,end,granularity)
-```
 
 ### **Java**
 
@@ -153,99 +128,13 @@ class Log {
  */
 ```
 
-### **C++**
 
-```cpp
-class LogSystem {
-public:
-    LogSystem() {
-        d["Year"] = 4;
-        d["Month"] = 7;
-        d["Day"] = 10;
-        d["Hour"] = 13;
-        d["Minute"] = 16;
-        d["Second"] = 19;
-    }
 
-    void put(int id, string timestamp) {
-        logs.push_back({id, timestamp});
-    }
 
-    vector<int> retrieve(string start, string end, string granularity) {
-        vector<int> ans;
-        int i = d[granularity];
-        auto s = start.substr(0, i);
-        auto e = end.substr(0, i);
-        for (auto& [id, ts] : logs) {
-            auto t = ts.substr(0, i);
-            if (s <= t && t <= e) {
-                ans.emplace_back(id);
-            }
-        }
-        return ans;
-    }
 
-private:
-    vector<pair<int, string>> logs;
-    unordered_map<string, int> d;
-};
 
-/**
- * Your LogSystem object will be instantiated and called as such:
- * LogSystem* obj = new LogSystem();
- * obj->put(id,timestamp);
- * vector<int> param_2 = obj->retrieve(start,end,granularity);
- */
-```
 
-### **Go**
 
-```go
-type LogSystem struct {
-	logs []pair
-	d    map[string]int
-}
-
-func Constructor() LogSystem {
-	d := map[string]int{
-		"Year":   4,
-		"Month":  7,
-		"Day":    10,
-		"Hour":   13,
-		"Minute": 16,
-		"Second": 19,
-	}
-	return LogSystem{[]pair{}, d}
-}
-
-func (this *LogSystem) Put(id int, timestamp string) {
-	this.logs = append(this.logs, pair{id, timestamp})
-}
-
-func (this *LogSystem) Retrieve(start string, end string, granularity string) (ans []int) {
-	i := this.d[granularity]
-	s, e := start[:i], end[:i]
-	for _, log := range this.logs {
-		t := log.ts[:i]
-		if s <= t && t <= e {
-			ans = append(ans, log.id)
-		}
-	}
-	return
-}
-
-type pair struct {
-	id int
-	ts string
-}
-
-/**
- * Your LogSystem object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Put(id,timestamp);
- * param_2 := obj.Retrieve(start,end,granularity);
- */
-```
 
 ### **...**
 
@@ -253,4 +142,4 @@ type pair struct {
 
 ```
 
-<!-- tabs:end -->
+

@@ -56,19 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestContinuousSubstring(self, s: str) -> int:
-        ans = 0
-        i, j = 0, 1
-        while j < len(s):
-            ans = max(ans, j - i)
-            if ord(s[j]) - ord(s[j - 1]) != 1:
-                i = j
-            j += 1
-        ans = max(ans, j - i)
-        return ans
-```
+
 
 ### **Java**
 
@@ -91,49 +79,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestContinuousSubstring(string s) {
-        int ans = 0;
-        int i = 0, j = 1;
-        for (; j < s.size(); ++j) {
-            ans = max(ans, j - i);
-            if (s[j] - s[j - 1] != 1) {
-                i = j;
-            }
-        }
-        ans = max(ans, j - i);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestContinuousSubstring(s string) int {
-	ans := 0
-	i, j := 0, 1
-	for ; j < len(s); j++ {
-		ans = max(ans, j-i)
-		if s[j]-s[j-1] != 1 {
-			i = j
-		}
-	}
-	ans = max(ans, j-i)
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **C**
 
@@ -156,40 +108,11 @@ int longestContinuousSubstring(char *s) {
 
 ### **TypeScript**
 
-```ts
-function longestContinuousSubstring(s: string): number {
-    const n = s.length;
-    let res = 1;
-    let i = 0;
-    for (let j = 1; j < n; j++) {
-        if (s[j].charCodeAt(0) - s[j - 1].charCodeAt(0) !== 1) {
-            res = Math.max(res, j - i);
-            i = j;
-        }
-    }
-    return Math.max(res, n - i);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn longest_continuous_substring(s: String) -> i32 {
-        let s = s.as_bytes();
-        let n = s.len();
-        let mut res = 1;
-        let mut i = 0;
-        for j in 1..n {
-            if s[j] - s[j - 1] != 1 {
-                res = res.max(j - i);
-                i = j;
-            }
-        }
-        res.max(n - i) as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -197,4 +120,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

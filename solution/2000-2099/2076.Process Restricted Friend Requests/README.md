@@ -80,36 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def friendRequests(
-        self, n: int, restrictions: List[List[int]], requests: List[List[int]]
-    ) -> List[bool]:
-        p = list(range(n))
 
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
-
-        ans = []
-        i = 0
-        for u, v in requests:
-            if find(u) == find(v):
-                ans.append(True)
-            else:
-                valid = True
-                for x, y in restrictions:
-                    if (find(u) == find(x) and find(v) == find(y)) or (
-                        find(u) == find(y) and find(v) == find(x)
-                    ):
-                        valid = False
-                        break
-                ans.append(valid)
-                if valid:
-                    p[find(u)] = find(v)
-        return ans
-```
 
 ### **Java**
 
@@ -160,84 +131,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    vector<bool> friendRequests(int n, vector<vector<int>>& restrictions, vector<vector<int>>& requests) {
-        p.resize(n);
-        for (int i = 0; i < n; ++i) p[i] = i;
-        vector<bool> ans;
-        for (auto& req : requests) {
-            int u = req[0], v = req[1];
-            if (find(u) == find(v))
-                ans.push_back(true);
-            else {
-                bool valid = true;
-                for (auto& res : restrictions) {
-                    int x = res[0], y = res[1];
-                    if ((find(u) == find(x) && find(v) == find(y)) || (find(u) == find(y) && find(v) == find(x))) {
-                        valid = false;
-                        break;
-                    }
-                }
-                ans.push_back(valid);
-                if (valid) p[find(u)] = find(v);
-            }
-        }
-        return ans;
-    }
 
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
-```go
-var p []int
 
-func friendRequests(n int, restrictions [][]int, requests [][]int) []bool {
-	p = make([]int, n)
-	for i := 0; i < n; i++ {
-		p[i] = i
-	}
-	var ans []bool
-	for _, req := range requests {
-		u, v := req[0], req[1]
-		if find(u) == find(v) {
-			ans = append(ans, true)
-		} else {
-			valid := true
-			for _, res := range restrictions {
-				x, y := res[0], res[1]
-				if (find(u) == find(x) && find(v) == find(y)) || (find(u) == find(y) && find(v) == find(x)) {
-					valid = false
-					break
-				}
-			}
-			ans = append(ans, valid)
-			if valid {
-				p[find(u)] = find(v)
-			}
-		}
-	}
-	return ans
-}
 
-func find(x int) int {
-	if p[x] != x {
-		p[x] = find(p[x])
-	}
-	return p[x]
-}
-```
 
 ### **...**
 
@@ -245,4 +145,4 @@ func find(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

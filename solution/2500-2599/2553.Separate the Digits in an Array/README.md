@@ -61,18 +61,7 @@ answer = [7,1,3,9] 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def separateDigits(self, nums: List[int]) -> List[int]:
-        ans = []
-        for x in nums:
-            t = []
-            while x:
-                t.append(x % 10)
-                x //= 10
-            ans.extend(t[::-1])
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,82 +88,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> separateDigits(vector<int>& nums) {
-        vector<int> ans;
-        for (int x : nums) {
-            vector<int> t;
-            for (; x; x /= 10) {
-                t.push_back(x % 10);
-            }
-            while (t.size()) {
-                ans.push_back(t.back());
-                t.pop_back();
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func separateDigits(nums []int) (ans []int) {
-	for _, x := range nums {
-		t := []int{}
-		for ; x > 0; x /= 10 {
-			t = append(t, x%10)
-		}
-		for i, j := 0, len(t)-1; i < j; i, j = i+1, j-1 {
-			t[i], t[j] = t[j], t[i]
-		}
-		ans = append(ans, t...)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function separateDigits(nums: number[]): number[] {
-    const ans: number[] = [];
-    for (let num of nums) {
-        const t: number[] = [];
-        while (num) {
-            t.push(num % 10);
-            num = Math.floor(num / 10);
-        }
-        ans.push(...t.reverse());
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn separate_digits(nums: Vec<i32>) -> Vec<i32> {
-        let mut ans = Vec::new();
-        for &num in nums.iter() {
-            let mut num = num;
-            let mut t = Vec::new();
-            while num != 0 {
-                t.push(num % 10);
-                num /= 10;
-            }
-            t.into_iter().rev().for_each(|v| ans.push(v));
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -210,4 +138,4 @@ int *separateDigits(int *nums, int numsSize, int *returnSize) {
 
 ```
 
-<!-- tabs:end -->
+

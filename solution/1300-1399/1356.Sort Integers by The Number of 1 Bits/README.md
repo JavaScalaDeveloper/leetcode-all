@@ -75,11 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sortByBits(self, arr: List[int]) -> List[int]:
-        return sorted(arr, key=lambda x: (x.bit_count(), x))
-```
+
 
 ### **Java**
 
@@ -121,94 +117,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> sortByBits(vector<int>& arr) {
-        for (int& v : arr) {
-            v += __builtin_popcount(v) * 100000;
-        }
-        sort(arr.begin(), arr.end());
-        for (int& v : arr) {
-            v %= 100000;
-        }
-        return arr;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> sortByBits(vector<int>& arr) {
-        sort(arr.begin(), arr.end(), [&](auto& a, auto& b) -> bool {
-            int x = __builtin_popcount(a), y = __builtin_popcount(b);
-            return x < y || (x == y && a < b);
-        });
-        return arr;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sortByBits(arr []int) []int {
-	for i, v := range arr {
-		arr[i] += bits.OnesCount(uint(v)) * 100000
-	}
-	sort.Ints(arr)
-	for i := range arr {
-		arr[i] %= 100000
-	}
-	return arr
-}
-```
 
-```go
-func sortByBits(arr []int) []int {
-	sort.Slice(arr, func(i, j int) bool {
-		a, b := bits.OnesCount(uint(arr[i])), bits.OnesCount(uint(arr[j]))
-		return a < b || (a == b && arr[i] < arr[j])
-	})
-	return arr
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function sortByBits(arr: number[]): number[] {
-    const countOnes = (n: number) => {
-        let res = 0;
-        while (n) {
-            n &= n - 1;
-            res++;
-        }
-        return res;
-    };
-    return arr.sort((a, b) => countOnes(a) - countOnes(b) || a - b);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sort_by_bits(mut arr: Vec<i32>) -> Vec<i32> {
-        arr.sort_by(|a, b| {
-            let res = a.count_ones().cmp(&b.count_ones());
-            if res == std::cmp::Ordering::Equal {
-                return a.cmp(&b);
-            }
-            res
-        });
-        arr
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -248,4 +175,4 @@ int *sortByBits(int *arr, int arrSize, int *returnSize) {
 
 ```
 
-<!-- tabs:end -->
+

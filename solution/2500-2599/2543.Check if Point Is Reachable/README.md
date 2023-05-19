@@ -65,12 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isReachable(self, targetX: int, targetY: int) -> bool:
-        x = gcd(targetX, targetY)
-        return x & (x - 1) == 0
-```
+
 
 ### **Java**
 
@@ -89,46 +84,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isReachable(int targetX, int targetY) {
-        int x = gcd(targetX, targetY);
-        return (x & (x - 1)) == 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isReachable(targetX int, targetY int) bool {
-	x := gcd(targetX, targetY)
-	return x&(x-1) == 0
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isReachable(targetX: number, targetY: number): boolean {
-    const x = gcd(targetX, targetY);
-    return (x & (x - 1)) === 0;
-}
 
-function gcd(a: number, b: number): number {
-    return b == 0 ? a : gcd(b, a % b);
-}
-```
 
 ### **...**
 
@@ -136,4 +102,4 @@ function gcd(a: number, b: number): number {
 
 ```
 
-<!-- tabs:end -->
+

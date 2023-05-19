@@ -68,16 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfSubstrings(self, s: str) -> int:
-        cnt = Counter()
-        ans = 0
-        for c in s:
-            cnt[c] += 1
-            ans += cnt[c]
-        return ans
-```
+
 
 ### **Java**
 
@@ -98,35 +89,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long numberOfSubstrings(string s) {
-        int cnt[26]{};
-        long long ans = 0;
-        for (char& c : s) {
-            ans += ++cnt[c - 'a'];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfSubstrings(s string) (ans int64) {
-	cnt := [26]int{}
-	for _, c := range s {
-		c -= 'a'
-		cnt[c]++
-		ans += int64(cnt[c])
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -134,4 +103,4 @@ func numberOfSubstrings(s string) (ans int64) {
 
 ```
 
-<!-- tabs:end -->
+

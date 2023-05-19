@@ -54,23 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def freqAlphabets(self, s: str) -> str:
-        def get(s):
-            return chr(ord('a') + int(s) - 1)
 
-        i, n = 0, len(s)
-        res = []
-        while i < n:
-            if i + 2 < n and s[i + 2] == '#':
-                res.append(get(s[i : i + 2]))
-                i += 3
-            else:
-                res.append(get(s[i]))
-                i += 1
-        return ''.join(res)
-```
 
 ### **Java**
 
@@ -101,50 +85,11 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function freqAlphabets(s: string): string {
-    const n = s.length;
-    const ans = [];
-    let i = 0;
-    while (i < n) {
-        if (s[i + 2] == '#') {
-            ans.push(s.slice(i, i + 2));
-            i += 3;
-        } else {
-            ans.push(s[i]);
-            i += 1;
-        }
-    }
-    return ans
-        .map(c => String.fromCharCode('a'.charCodeAt(0) + Number(c) - 1))
-        .join('');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn freq_alphabets(s: String) -> String {
-        let s = s.as_bytes();
-        let n = s.len();
-        let mut res = String::new();
-        let mut i = 0;
-        while i < n {
-            let code: u8;
-            if s.get(i + 2).is_some() && s[i + 2] == b'#' {
-                code = (s[i] - b'0') * 10 + s[i + 1];
-                i += 3;
-            } else {
-                code = s[i];
-                i += 1;
-            }
-            res.push(char::from('a' as u8 + code - b'1'));
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -176,4 +121,4 @@ char *freqAlphabets(char *s) {
 
 ```
 
-<!-- tabs:end -->
+

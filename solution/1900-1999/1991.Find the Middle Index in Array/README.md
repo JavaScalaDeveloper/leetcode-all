@@ -93,17 +93,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMiddleIndex(self, nums: List[int]) -> int:
-        left, right = 0, sum(nums)
-        for i, x in enumerate(nums):
-            right -= x
-            if left == right:
-                return i
-            left += x
-        return -1
-```
+
 
 ### **Java**
 
@@ -125,81 +115,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findMiddleIndex(vector<int>& nums) {
-        int left = 0, right = accumulate(nums.begin(), nums.end(), 0);
-        for (int i = 0; i < nums.size(); ++i) {
-            right -= nums[i];
-            if (left == right) {
-                return i;
-            }
-            left += nums[i];
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMiddleIndex(nums []int) int {
-	s := 0
-	for _, num := range nums {
-		s += num
-	}
-	total := 0
-	for i, num := range nums {
-		total += num
-		if total-num == s-total {
-			return i
-		}
-	}
-	return -1
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var findMiddleIndex = function (nums) {
-    let left = 0,
-        right = nums.reduce((a, b) => a + b);
-    for (let i = 0; i < nums.length; ++i) {
-        right -= nums[i];
-        if (left == right) {
-            return i;
-        }
-        left += nums[i];
-    }
-    return -1;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findMiddleIndex(nums: number[]): number {
-    let left = 0,
-        right = nums.reduce((a, b) => a + b);
-    for (let i = 0; i < nums.length; ++i) {
-        right -= nums[i];
-        if (left == right) {
-            return i;
-        }
-        left += nums[i];
-    }
-    return -1;
-}
-```
+
 
 ### **...**
 
@@ -207,4 +137,4 @@ function findMiddleIndex(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

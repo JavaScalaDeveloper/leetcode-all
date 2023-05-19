@@ -76,24 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSubarrays(self, nums: List[int], k: int) -> int:
-        i = nums.index(k)
-        cnt = Counter()
-        ans = 1
-        x = 0
-        for v in nums[i + 1:]:
-            x += 1 if v > k else -1
-            ans += 0 <= x <= 1
-            cnt[x] += 1
-        x = 0
-        for j in range(i - 1, -1, -1):
-            x += 1 if nums[j] > k else -1
-            ans += 0 <= x <= 1
-            ans += cnt[-x] + cnt[-x + 1]
-        return ans
-```
+
 
 ### **Java**
 
@@ -129,99 +112,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countSubarrays(vector<int>& nums, int k) {
-        int n = nums.size();
-        int i = find(nums.begin(), nums.end(), k) - nums.begin();
-        int cnt[n << 1 | 1];
-        memset(cnt, 0, sizeof(cnt));
-        int ans = 1;
-        int x = 0;
-        for (int j = i + 1; j < n; ++j) {
-            x += nums[j] > k ? 1 : -1;
-            if (x >= 0 && x <= 1) {
-                ++ans;
-            }
-            ++cnt[x + n];
-        }
-        x = 0;
-        for (int j = i - 1; ~j; --j) {
-            x += nums[j] > k ? 1 : -1;
-            if (x >= 0 && x <= 1) {
-                ++ans;
-            }
-            ans += cnt[-x + n] + cnt[-x + 1 + n];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSubarrays(nums []int, k int) int {
-    i, n := 0, len(nums)
-    for nums[i] != k {
-        i++
-    }
-    ans := 1
-    cnt := make([]int, n << 1 | 1)
-    x := 0
-    for j := i + 1; j < n; j++ {
-        if nums[j] > k {
-            x++
-        } else {
-            x--
-        }
-        if x >= 0 && x <= 1 {
-            ans++
-        }
-        cnt[x + n]++
-    }
-    x = 0
-    for j := i - 1; j >= 0; j-- {
-        if nums[j] > k {
-            x++
-        } else {
-            x--
-        }
-        if x >= 0 && x <= 1 {
-            ans++
-        }
-        ans += cnt[-x + n] + cnt[-x + 1 + n]
-    }
-    return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countSubarrays(nums: number[], k: number): number {
-    const i = nums.indexOf(k);
-    const n = nums.length;
-    const cnt = new Array((n << 1) | 1).fill(0);
-    let ans = 1;
-    let x = 0;
-    for (let j = i + 1; j < n; ++j) {
-        x += nums[j] > k ? 1 : -1;
-        ans += x >= 0 && x <= 1 ? 1 : 0;
-        ++cnt[x + n];
-    }
-    x = 0;
-    for (let j = i - 1; ~j; --j) {
-        x += nums[j] > k ? 1 : -1;
-        ans += x >= 0 && x <= 1 ? 1 : 0;
-        ans += cnt[-x + n] + cnt[-x + 1 + n];
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -229,4 +130,4 @@ function countSubarrays(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -59,20 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def matchPlayersAndTrainers(self, players: List[int], trainers: List[int]) -> int:
-        players.sort()
-        trainers.sort()
-        ans = j = 0
-        for p in players:
-            while j < len(trainers) and trainers[j] < p:
-                j += 1
-            if j < len(trainers):
-                ans += 1
-                j += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,54 +86,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int matchPlayersAndTrainers(vector<int>& players, vector<int>& trainers) {
-        sort(players.begin(), players.end());
-        sort(trainers.begin(), trainers.end());
-        int ans = 0, j = 0;
-        for (int p : players) {
-            while (j < trainers.size() && trainers[j] < p) {
-                ++j;
-            }
-            if (j < trainers.size()) {
-                ++ans;
-                ++j;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func matchPlayersAndTrainers(players []int, trainers []int) int {
-	sort.Ints(players)
-	sort.Ints(trainers)
-	ans, j := 0, 0
-	for _, p := range players {
-		for j < len(trainers) && trainers[j] < p {
-			j++
-		}
-		if j < len(trainers) {
-			ans++
-			j++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -155,4 +105,4 @@ func matchPlayersAndTrainers(players []int, trainers []int) int {
 
 ```
 
-<!-- tabs:end -->
+

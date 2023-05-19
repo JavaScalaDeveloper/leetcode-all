@@ -62,17 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countOperations(self, num1: int, num2: int) -> int:
-        ans = 0
-        while num1 and num2:
-            if num1 >= num2:
-                num1, num2 = num2, num1
-            num2 -= num1
-            ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,49 +87,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function countOperations(num1: number, num2: number): number {
-    let ans = 0;
-    while (num1 && num2) {
-        [num1, num2] = [Math.min(num1, num2), Math.abs(num1 - num2)];
-        ans++;
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countOperations(int num1, int num2) {
-        int ans = 0;
-        while (num1 && num2) {
-            if (num1 > num2) swap(num1, num2);
-            num2 -= num1;
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countOperations(num1 int, num2 int) int {
-	ans := 0
-	for num1 != 0 && num2 != 0 {
-		if num1 > num2 {
-			num1, num2 = num2, num1
-		}
-		num2 -= num1
-		ans++
-	}
-	return ans
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -147,4 +103,4 @@ func countOperations(num1 int, num2 int) int {
 
 ```
 
-<!-- tabs:end -->
+

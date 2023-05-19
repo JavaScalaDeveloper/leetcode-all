@@ -96,19 +96,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def restoreMatrix(self, rowSum: List[int], colSum: List[int]) -> List[List[int]]:
-        m, n = len(rowSum), len(colSum)
-        ans = [[0] * n for _ in range(m)]
-        for i in range(m):
-            for j in range(n):
-                x = min(rowSum[i], colSum[j])
-                ans[i][j] = x
-                rowSum[i] -= x
-                colSum[j] -= x
-        return ans
-```
+
 
 ### **Java**
 
@@ -133,97 +121,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> restoreMatrix(vector<int>& rowSum, vector<int>& colSum) {
-        int m = rowSum.size(), n = colSum.size();
-        vector<vector<int>> ans(m, vector<int>(n));
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                int x = min(rowSum[i], colSum[j]);
-                ans[i][j] = x;
-                rowSum[i] -= x;
-                colSum[j] -= x;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func restoreMatrix(rowSum []int, colSum []int) [][]int {
-	m, n := len(rowSum), len(colSum)
-	ans := make([][]int, m)
-	for i := range ans {
-		ans[i] = make([]int, n)
-	}
-	for i := range rowSum {
-		for j := range colSum {
-			x := min(rowSum[i], colSum[j])
-			ans[i][j] = x
-			rowSum[i] -= x
-			colSum[j] -= x
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} rowSum
- * @param {number[]} colSum
- * @return {number[][]}
- */
-var restoreMatrix = function (rowSum, colSum) {
-    const m = rowSum.length;
-    const n = colSum.length;
-    const ans = Array.from(new Array(m), () => new Array(n).fill(0));
-    for (let i = 0; i < m; i++) {
-        for (let j = 0; j < n; j++) {
-            const x = Math.min(rowSum[i], colSum[j]);
-            ans[i][j] = x;
-            rowSum[i] -= x;
-            colSum[j] -= x;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function restoreMatrix(rowSum: number[], colSum: number[]): number[][] {
-    const m = rowSum.length;
-    const n = colSum.length;
-    const ans = Array.from(new Array(m), () => new Array(n).fill(0));
-    for (let i = 0; i < m; i++) {
-        for (let j = 0; j < n; j++) {
-            const x = Math.min(rowSum[i], colSum[j]);
-            ans[i][j] = x;
-            rowSum[i] -= x;
-            colSum[j] -= x;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -231,4 +143,4 @@ function restoreMatrix(rowSum: number[], colSum: number[]): number[][] {
 
 ```
 
-<!-- tabs:end -->
+

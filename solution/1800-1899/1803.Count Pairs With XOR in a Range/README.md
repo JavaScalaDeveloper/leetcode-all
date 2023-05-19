@@ -84,46 +84,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.children = [None] * 2
-        self.cnt = 0
 
-    def insert(self, x):
-        node = self
-        for i in range(15, -1, -1):
-            v = x >> i & 1
-            if node.children[v] is None:
-                node.children[v] = Trie()
-            node = node.children[v]
-            node.cnt += 1
-
-    def search(self, x, limit):
-        node = self
-        ans = 0
-        for i in range(15, -1, -1):
-            if node is None:
-                return ans
-            v = x >> i & 1
-            if limit >> i & 1:
-                if node.children[v]:
-                    ans += node.children[v].cnt
-                node = node.children[v ^ 1]
-            else:
-                node = node.children[v]
-        return ans
-
-
-class Solution:
-    def countPairs(self, nums: List[int], low: int, high: int) -> int:
-        ans = 0
-        tree = Trie()
-        for x in nums:
-            ans += tree.search(x, high + 1) - tree.search(x, low)
-            tree.insert(x)
-        return ans
-```
 
 ### **Java**
 
@@ -177,110 +138,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Trie {
-public:
-    Trie(): children(2), cnt(0) {}
 
-    void insert(int x) {
-        Trie* node = this;
-        for (int i = 15; ~i; --i) {
-            int v = x >> i & 1;
-            if (!node->children[v]) {
-                node->children[v] = new Trie();
-            }
-            node = node->children[v];
-            ++node->cnt;
-        }
-    }
 
-    int search(int x, int limit) {
-        Trie* node = this;
-        int ans = 0;
-        for (int i = 15; ~i && node; --i) {
-            int v = x >> i & 1;
-            if (limit >> i & 1) {
-                if (node->children[v]) {
-                    ans += node->children[v]->cnt;
-                }
-                node = node->children[v ^ 1];
-            } else {
-                node = node->children[v];
-            }
-        }
-        return ans;
-    }
 
-private:
-    vector<Trie*> children;
-    int cnt;
-};
 
-class Solution {
-public:
-    int countPairs(vector<int>& nums, int low, int high) {
-        Trie* tree = new Trie();
-        int ans = 0;
-        for (int& x : nums) {
-            ans += tree->search(x, high + 1) - tree->search(x, low);
-            tree->insert(x);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-type Trie struct {
-	children [2]*Trie
-	cnt      int
-}
-
-func newTrie() *Trie {
-	return &Trie{}
-}
-
-func (this *Trie) insert(x int) {
-	node := this
-	for i := 15; i >= 0; i-- {
-		v := (x >> i) & 1
-		if node.children[v] == nil {
-			node.children[v] = newTrie()
-		}
-		node = node.children[v]
-		node.cnt++
-	}
-}
-
-func (this *Trie) search(x, limit int) (ans int) {
-	node := this
-	for i := 15; i >= 0 && node != nil; i-- {
-		v := (x >> i) & 1
-		if (limit >> i & 1) == 1 {
-			if node.children[v] != nil {
-				ans += node.children[v].cnt
-			}
-			node = node.children[v^1]
-		} else {
-			node = node.children[v]
-		}
-	}
-	return
-}
-
-func countPairs(nums []int, low int, high int) (ans int) {
-	tree := newTrie()
-	for _, x := range nums {
-		ans += tree.search(x, high+1) - tree.search(x, low)
-		tree.insert(x)
-	}
-	return
-}
-```
 
 ### **...**
 
@@ -288,4 +152,4 @@ func countPairs(nums []int, low int, high int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

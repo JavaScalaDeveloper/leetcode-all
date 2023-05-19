@@ -64,22 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def addMinimum(self, word: str) -> int:
-        s = 'abc'
-        ans, n = 0, len(word)
-        i = j = 0
-        while j < n:
-            if word[j] != s[i]:
-                ans += 1
-            else:
-                j += 1
-            i = (i + 1) % 3
-        if word[-1] != 'c':
-            ans += 1 if word[-1] == 'b' else 2
-        return ans
-```
+
 
 ### **Java**
 
@@ -105,73 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int addMinimum(string word) {
-        string s = "abc";
-        int ans = 0, n = word.size();
-        for (int i = 0, j = 0; j < n; i = (i + 1) % 3) {
-            if (word[j] != s[i]) {
-                ++ans;
-            } else {
-                ++j;
-            }
-        }
-        if (word[n - 1] != 'c') {
-            ans += word[n - 1] == 'b' ? 1 : 2;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func addMinimum(word string) (ans int) {
-	s := "abc"
-	n := len(word)
-	for i, j := 0, 0; j < n; i = (i + 1) % 3 {
-		if word[j] != s[i] {
-			ans++
-		} else {
-			j++
-		}
-	}
-	if word[n-1] == 'b' {
-		ans++
-	} else if word[n-1] == 'a' {
-		ans += 2
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function addMinimum(word: string): number {
-    const s: string = 'abc';
-    let ans: number = 0;
-    const n: number = word.length;
-    for (let i = 0, j = 0; j < n; i = (i + 1) % 3) {
-        if (word[j] !== s[i]) {
-            ++ans;
-        } else {
-            ++j;
-        }
-    }
-    if (word[n - 1] === 'b') {
-        ++ans;
-    } else if (word[n - 1] === 'a') {
-        ans += 2;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -179,4 +108,4 @@ function addMinimum(word: string): number {
 
 ```
 
-<!-- tabs:end -->
+

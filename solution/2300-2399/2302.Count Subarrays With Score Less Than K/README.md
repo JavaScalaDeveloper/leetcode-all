@@ -78,35 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSubarrays(self, nums: List[int], k: int) -> int:
-        s = list(accumulate(nums, initial=0))
-        ans = 0
-        for i in range(1, len(s)):
-            left, right = 0, i
-            while left < right:
-                mid = (left + right + 1) >> 1
-                if (s[i] - s[i - mid]) * mid < k:
-                    left = mid
-                else:
-                    right = mid - 1
-            ans += left
-        return ans
-```
 
-```python
-class Solution:
-    def countSubarrays(self, nums: List[int], k: int) -> int:
-        ans = s = j = 0
-        for i, v in enumerate(nums):
-            s += v
-            while s * (i - j + 1) >= k:
-                s -= nums[j]
-                j += 1
-            ans += i - j + 1
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -154,98 +128,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long countSubarrays(vector<int>& nums, long long k) {
-        int n = nums.size();
-        long long s[n + 1];
-        s[0] = 0;
-        for (int i = 0; i < n; ++i) {
-            s[i + 1] = s[i] + nums[i];
-        }
-        long long ans = 0;
-        for (int i = 1; i <= n; ++i) {
-            int left = 0, right = i;
-            while (left < right) {
-                int mid = (left + right + 1) >> 1;
-                if ((s[i] - s[i - mid]) * mid < k) {
-                    left = mid;
-                } else {
-                    right = mid - 1;
-                }
-            }
-            ans += left;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    long long countSubarrays(vector<int>& nums, long long k) {
-        long long ans = 0, s = 0;
-        for (int i = 0, j = 0; i < nums.size(); ++i) {
-            s += nums[i];
-            while (s * (i - j + 1) >= k) {
-                s -= nums[j++];
-            }
-            ans += i - j + 1;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSubarrays(nums []int, k int64) (ans int64) {
-	n := len(nums)
-	s := make([]int64, n+1)
-	for i, v := range nums {
-		s[i+1] = s[i] + int64(v)
-	}
-	for i := 1; i <= n; i++ {
-		left, right := 0, i
-		for left < right {
-			mid := (left + right + 1) >> 1
-			if (s[i]-s[i-mid])*int64(mid) < k {
-				left = mid
-			} else {
-				right = mid - 1
-			}
-		}
-		ans += int64(left)
-	}
-	return
-}
-```
 
-```go
-func countSubarrays(nums []int, k int64) (ans int64) {
-	s, j := 0, 0
-	for i, v := range nums {
-		s += v
-		for int64(s*(i-j+1)) >= k {
-			s -= nums[j]
-			j++
-		}
-		ans += int64(i - j + 1)
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -253,4 +150,4 @@ func countSubarrays(nums []int, k int64) (ans int64) {
 
 ```
 
-<!-- tabs:end -->
+

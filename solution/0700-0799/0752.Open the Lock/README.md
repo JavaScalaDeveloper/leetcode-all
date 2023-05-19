@@ -76,30 +76,7 @@ BFS 最小步数模型。
 3. 每次搜索时，优先选择元素数量较少的队列进行搜索扩展，如果在扩展过程中，搜索到另一个方向已经访问过的节点，说明找到了最短路径；
 4. 只要其中一个队列为空，说明当前方向的搜索已经进行不下去了，说明起点到终点不连通，无需继续搜索。
 
-    ```python
-
-    while q1 and q2:
-        if len(q1) <= len(q2):
-            # 优先选择较少元素的队列进行扩展
-            extend(m1, m2, q1)
-        else:
-            extend(m2, m1, q2)
-
-    def extend(m1, m2, q):
-        # 新一轮扩展
-        for _ in range(len(q)):
-            p = q.popleft()
-            step = m1[p]
-            for t in next(p):
-                if t in m1:
-                    # 此前已经访问过
-                    continue
-                if t in m2:
-                    # 另一个方向已经搜索过，说明找到了一条最短的连通路径
-                    return step + 1 + m2[t]
-                q.append(t)
-                m1[t] = step + 1
-    ```
+    
 
 **方法三：A\*算法**
 
@@ -119,136 +96,15 @@ A\* 算法主要思想如下：
 
 朴素 BFS：
 
-```python
-class Solution:
-    def openLock(self, deadends: List[str], target: str) -> int:
-        def next(s):
-            res = []
-            s = list(s)
-            for i in range(4):
-                c = s[i]
-                s[i] = '9' if c == '0' else str(int(c) - 1)
-                res.append(''.join(s))
-                s[i] = '0' if c == '9' else str(int(c) + 1)
-                res.append(''.join(s))
-                s[i] = c
-            return res
 
-        if target == '0000':
-            return 0
-        s = set(deadends)
-        if '0000' in s:
-            return -1
-        q = deque([('0000')])
-        s.add('0000')
-        ans = 0
-        while q:
-            ans += 1
-            for _ in range(len(q)):
-                p = q.popleft()
-                for t in next(p):
-                    if t == target:
-                        return ans
-                    if t not in s:
-                        q.append(t)
-                        s.add(t)
-        return -1
-```
 
 双向 BFS 优化搜索：
 
-```python
-class Solution:
-    def openLock(self, deadends: List[str], target: str) -> int:
-        def next(s):
-            res = []
-            s = list(s)
-            for i in range(4):
-                c = s[i]
-                s[i] = '9' if c == '0' else str(int(c) - 1)
-                res.append(''.join(s))
-                s[i] = '0' if c == '9' else str(int(c) + 1)
-                res.append(''.join(s))
-                s[i] = c
-            return res
 
-        def extend(m1, m2, q):
-            for _ in range(len(q)):
-                p = q.popleft()
-                step = m1[p]
-                for t in next(p):
-                    if t in s or t in m1:
-                        continue
-                    if t in m2:
-                        return step + 1 + m2[t]
-                    m1[t] = step + 1
-                    q.append(t)
-            return -1
-
-        def bfs():
-            m1, m2 = {"0000": 0}, {target: 0}
-            q1, q2 = deque([('0000')]), deque([(target)])
-            while q1 and q2:
-                t = extend(m1, m2, q1) if len(q1) <= len(q2) else extend(m2, m1, q2)
-                if t != -1:
-                    return t
-            return -1
-
-        if target == '0000':
-            return 0
-        s = set(deadends)
-        if '0000' in s:
-            return -1
-        return bfs()
-```
 
 A\* 算法：
 
-```python
-class Solution:
-    def openLock(self, deadends: List[str], target: str) -> int:
-        def next(s):
-            res = []
-            s = list(s)
-            for i in range(4):
-                c = s[i]
-                s[i] = '9' if c == '0' else str(int(c) - 1)
-                res.append(''.join(s))
-                s[i] = '0' if c == '9' else str(int(c) + 1)
-                res.append(''.join(s))
-                s[i] = c
-            return res
 
-        def f(s):
-            ans = 0
-            for i in range(4):
-                a = ord(s[i]) - ord('0')
-                b =ord(target[i]) - ord('0')
-                if a > b:
-                    a, b = b, a
-                ans += min(b - a, a + 10 - b)
-            return ans
-
-        if target == '0000':
-            return 0
-        s = set(deadends)
-        if '0000' in s:
-            return -1
-        start = '0000'
-        q = [(f(start), start)]
-        dist = {start: 0}
-        while q:
-            _, state = heappop(q)
-            if state == target:
-                return dist[state]
-            for t in next(state):
-                if t in s:
-                    continue
-                if t not in dist or dist[t] > dist[state] + 1:
-                    dist[t] = dist[state] + 1
-                    heappush(q, (dist[t] + f(t), t))
-        return -1
-```
 
 ### **Java**
 
@@ -453,323 +309,29 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 朴素 BFS：
 
-```cpp
-class Solution {
-public:
-    int openLock(vector<string>& deadends, string target) {
-        unordered_set<string> s(deadends.begin(), deadends.end());
-        if (s.count("0000")) return -1;
-        if (target == "0000") return 0;
-        queue<string> q {{"0000"}};
-        s.insert("0000");
-        int ans = 0;
-        while (!q.empty()) {
-            ++ans;
-            for (int n = q.size(); n > 0; --n) {
-                string p = q.front();
-                q.pop();
-                for (string t : next(p)) {
-                    if (target == t) return ans;
-                    if (!s.count(t)) {
-                        q.push(t);
-                        s.insert(t);
-                    }
-                }
-            }
-        }
-        return -1;
-    }
 
-    vector<string> next(string& t) {
-        vector<string> res;
-        for (int i = 0; i < 4; ++i) {
-            char c = t[i];
-            t[i] = c == '0' ? '9' : (char)(c - 1);
-            res.push_back(t);
-            t[i] = c == '9' ? '0' : (char)(c + 1);
-            res.push_back(t);
-            t[i] = c;
-        }
-        return res;
-    }
-};
-```
 
 双向 BFS 优化搜索：
 
-```cpp
-class Solution {
-public:
-    unordered_set<string> s;
-    string start;
-    string target;
 
-    int openLock(vector<string>& deadends, string target) {
-        if (target == "0000") return 0;
-        for (auto d : deadends) s.insert(d);
-        if (s.count("0000")) return -1;
-        this->start = "0000";
-        this->target = target;
-        return bfs();
-    }
-
-    int bfs() {
-        unordered_map<string, int> m1;
-        unordered_map<string, int> m2;
-        m1[start] = 0;
-        m2[target] = 0;
-        queue<string> q1{{start}};
-        queue<string> q2{{target}};
-        while (!q1.empty() && !q2.empty())
-        {
-            int t = q1.size() <= q2.size() ? extend(m1, m2, q1) : extend(m2, m1, q2);
-            if (t != -1) return t;
-        }
-        return -1;
-    }
-
-    int extend(unordered_map<string, int>& m1, unordered_map<string, int>& m2, queue<string>& q) {
-        for (int n = q.size(); n > 0; --n)
-        {
-            string p = q.front();
-            int step = m1[p];
-            q.pop();
-            for (string t : next(p))
-            {
-                if (s.count(t) || m1.count(t)) continue;
-                if (m2.count(t)) return step + 1 + m2[t];
-                m1[t] = step + 1;
-                q.push(t);
-            }
-        }
-        return -1;
-    }
-
-    vector<string> next(string& t) {
-        vector<string> res;
-        for (int i = 0; i < 4; ++i)
-        {
-            char c = t[i];
-            t[i] = c == '0' ? '9' : (char) (c - 1);
-            res.push_back(t);
-            t[i] = c == '9' ? '0' : (char) (c + 1);
-            res.push_back(t);
-            t[i] = c;
-        }
-        return res;
-    }
-};
-```
 
 A\* 算法：
 
-```cpp
-class Solution {
-public:
-    string target;
 
-    int openLock(vector<string>& deadends, string target) {
-        if (target == "0000") return 0;
-        unordered_set<string> s(deadends.begin(), deadends.end());
-        if (s.count("0000")) return -1;
-        string start = "0000";
-        this->target = target;
-        typedef pair<int , string> PIS;
-        priority_queue<PIS, vector<PIS>, greater<PIS>> q;
-        unordered_map<string, int> dist;
-        dist[start] = 0;
-        q.push({f(start), start});
-        while (!q.empty())
-        {
-            PIS t = q.top();
-            q.pop();
-            string state = t.second;
-            int step = dist[state];
-            if (state == target) return step;
-            for (string& t : next(state))
-            {
-                if (s.count(t)) continue;
-                if (!dist.count(t) || dist[t] > step + 1)
-                {
-                    dist[t] = step + 1;
-                    q.push({step + 1 + f(t), t});
-                }
-            }
-        }
-        return -1;
-    }
 
-    int f(string s) {
-        int ans = 0;
-        for (int i = 0; i < 4; ++i)
-        {
-            int a = s[i] - '0';
-            int b = target[i] - '0';
-            if (a < b)
-            {
-                int t = a;
-                a = b;
-                b = t;
-            }
-            ans += min(b - a, a + 10 - b);
-        }
-        return ans;
-    }
 
-    vector<string> next(string& t) {
-        vector<string> res;
-        for (int i = 0; i < 4; ++i)
-        {
-            char c = t[i];
-            t[i] = c == '0' ? '9' : (char) (c - 1);
-            res.push_back(t);
-            t[i] = c == '9' ? '0' : (char) (c + 1);
-            res.push_back(t);
-            t[i] = c;
-        }
-        return res;
-    }
-};
-```
-
-### **Go**
 
 朴素 BFS：
 
-```go
-func openLock(deadends []string, target string) int {
-	if target == "0000" {
-		return 0
-	}
-	s := make(map[string]bool)
-	for _, d := range deadends {
-		s[d] = true
-	}
-	if s["0000"] {
-		return -1
-	}
-	q := []string{"0000"}
-	s["0000"] = true
-	ans := 0
-	next := func(t string) []string {
-		s := []byte(t)
-		var res []string
-		for i, b := range s {
-			s[i] = b - 1
-			if s[i] < '0' {
-				s[i] = '9'
-			}
-			res = append(res, string(s))
-			s[i] = b + 1
-			if s[i] > '9' {
-				s[i] = '0'
-			}
-			res = append(res, string(s))
-			s[i] = b
-		}
-		return res
-	}
-	for len(q) > 0 {
-		ans++
-		for n := len(q); n > 0; n-- {
-			p := q[0]
-			q = q[1:]
-			for _, t := range next(p) {
-				if target == t {
-					return ans
-				}
-				if !s[t] {
-					q = append(q, t)
-					s[t] = true
-				}
-			}
-		}
-	}
-	return -1
-}
-```
+
 
 双向 BFS 优化搜索：
 
-```go
-func openLock(deadends []string, target string) int {
-	if target == "0000" {
-		return 0
-	}
-	s := make(map[string]bool)
-	for _, d := range deadends {
-		s[d] = true
-	}
-	if s["0000"] {
-		return -1
-	}
-	next := func(t string) []string {
-		s := []byte(t)
-		var res []string
-		for i, b := range s {
-			s[i] = b - 1
-			if s[i] < '0' {
-				s[i] = '9'
-			}
-			res = append(res, string(s))
-			s[i] = b + 1
-			if s[i] > '9' {
-				s[i] = '0'
-			}
-			res = append(res, string(s))
-			s[i] = b
-		}
-		return res
-	}
 
-	extend := func(m1, m2 map[string]int, q *[]string) int {
-		for n := len(*q); n > 0; n-- {
-			p := (*q)[0]
-			*q = (*q)[1:]
-			step, _ := m1[p]
-			for _, t := range next(p) {
-				if s[t] {
-					continue
-				}
-				if _, ok := m1[t]; ok {
-					continue
-				}
-				if v, ok := m2[t]; ok {
-					return step + 1 + v
-				}
-				m1[t] = step + 1
-				*q = append(*q, t)
-			}
-		}
-		return -1
-	}
-
-	bfs := func() int {
-		q1 := []string{"0000"}
-		q2 := []string{target}
-		m1 := map[string]int{"0000": 0}
-		m2 := map[string]int{target: 0}
-		for len(q1) > 0 && len(q2) > 0 {
-			t := -1
-			if len(q1) <= len(q2) {
-				t = extend(m1, m2, &q1)
-			} else {
-				t = extend(m2, m1, &q2)
-			}
-			if t != -1 {
-				return t
-			}
-		}
-		return -1
-	}
-
-	return bfs()
-}
-```
 
 ### **...**
 
@@ -777,4 +339,4 @@ func openLock(deadends []string, target string) int {
 
 ```
 
-<!-- tabs:end -->
+

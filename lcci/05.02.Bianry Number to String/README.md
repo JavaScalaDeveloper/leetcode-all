@@ -53,17 +53,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def printBin(self, num: float) -> str:
-        ans = '0.'
-        while len(ans) < 32 and num:
-            num *= 2
-            x = int(num)
-            ans += str(x)
-            num -= x
-        return 'ERROR' if num else ans
-```
+
 
 ### **Java**
 
@@ -84,42 +74,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string printBin(double num) {
-        string ans = "0.";
-        while (ans.size() < 32 && num != 0) {
-            num *= 2;
-            int x = (int) num;
-            ans.push_back('0' + x);
-            num -= x;
-        }
-        return num != 0 ? "ERROR" : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func printBin(num float64) string {
-	ans := &strings.Builder{}
-	ans.WriteString("0.")
-	for ans.Len() < 32 && num != 0 {
-		num *= 2
-		x := byte(num)
-		ans.WriteByte('0' + x)
-		num -= float64(x)
-	}
-	if num != 0 {
-		return "ERROR"
-	}
-	return ans.String()
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -127,4 +88,4 @@ func printBin(num float64) string {
 
 ```
 
-<!-- tabs:end -->
+

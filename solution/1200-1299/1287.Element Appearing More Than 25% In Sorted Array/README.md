@@ -38,15 +38,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findSpecialInteger(self, arr: List[int]) -> int:
-        n = len(arr)
-        for i, val in enumerate(arr):
-            if val == arr[i + (n >> 2)]:
-                return val
-        return 0
-```
+
 
 ### **Java**
 
@@ -66,69 +58,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findSpecialInteger(vector<int>& arr) {
-        int n = arr.size();
-        for (int i = 0; i < n; ++i)
-            if (arr[i] == arr[i + (n >> 2)]) return arr[i];
-        return 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findSpecialInteger(arr []int) int {
-	n := len(arr)
-	for i, val := range arr {
-		if val == arr[i+(n>>2)] {
-			return val
-		}
-	}
-	return 0
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} arr
- * @return {number}
- */
-var findSpecialInteger = function (arr) {
-    const n = arr.length;
-    for (let i = 0; i < n; ++i) {
-        if (arr[i] == arr[i + (n >> 2)]) {
-            return arr[i];
-        }
-    }
-    return 0;
-};
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $arr
-     * @return Integer
-     */
-    function findSpecialInteger($arr) {
-        $len = count($arr);
-        for ($i = 0; $i < $len; $i++) {
-            if ($arr[$i] == $arr[$i + ($len >> 2)]) return $arr[$i];
-        }
-        return -1;
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -136,4 +80,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

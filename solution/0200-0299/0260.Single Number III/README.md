@@ -54,20 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def singleNumber(self, nums: List[int]) -> List[int]:
-        eor = 0
-        for x in nums:
-            eor ^= x
-        lowbit = eor & (-eor)
-        ans = [0, 0]
-        for x in nums:
-            if (x & lowbit) == 0:
-                ans[0] ^= x
-        ans[1] = eor ^ ans[0]
-        return ans
-```
+
 
 ### **Java**
 
@@ -93,67 +80,17 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var singleNumber = function (nums) {
-    let eor = 0;
-    for (const x of nums) {
-        eor ^= x;
-    }
-    const lowbit = eor & -eor;
-    let ans = [0];
-    for (const x of nums) {
-        if ((x & lowbit) == 0) {
-            ans[0] ^= x;
-        }
-    }
-    ans.push(eor ^ ans[0]);
-    return ans;
-};
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> singleNumber(vector<int>& nums) {
-        long long eor = 0;
-        for (int x : nums) eor ^= x;
-        int lowbit = eor & (-eor);
-        vector<int> ans(2);
-        for (int x : nums)
-            if ((x & lowbit) == 0) ans[0] ^= x;
-        ans[1] = eor ^ ans[0];
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func singleNumber(nums []int) []int {
-	eor := 0
-	for _, x := range nums {
-		eor ^= x
-	}
-	lowbit := eor & (-eor)
-	ans := make([]int, 2)
-	for _, x := range nums {
-		if (x & lowbit) == 0 {
-			ans[0] ^= x
-		}
-	}
-	ans[1] = eor ^ ans[0]
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -161,4 +98,4 @@ func singleNumber(nums []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

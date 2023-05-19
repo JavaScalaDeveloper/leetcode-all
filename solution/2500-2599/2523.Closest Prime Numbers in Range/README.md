@@ -62,31 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def closestPrimes(self, left: int, right: int) -> List[int]:
-        cnt = 0
-        st = [False] * (right + 1)
-        prime = [0] * (right + 1)
-        for i in range(2, right + 1):
-            if not st[i]:
-                prime[cnt] = i
-                cnt += 1
-            j = 0
-            while prime[j] <= right // i:
-                st[prime[j] * i] = 1
-                if i % prime[j] == 0:
-                    break
-                j += 1
-        p = [v for v in prime[:cnt] if left <= v <= right]
-        mi = inf
-        ans = [-1, -1]
-        for a, b in pairwise(p):
-            if (d := b - a) < mi:
-                mi = d
-                ans = [a, b]
-        return ans
-```
+
 
 ### **Java**
 
@@ -136,95 +112,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> closestPrimes(int left, int right) {
-        int cnt = 0;
-        bool st[right + 1];
-        memset(st, 0, sizeof st);
-        int prime[right + 1];
-        for (int i = 2; i <= right; ++i) {
-            if (!st[i]) {
-                prime[cnt++] = i;
-            }
-            for (int j = 0; prime[j] <= right / i; ++j) {
-                st[prime[j] * i] = true;
-                if (i % prime[j] == 0) {
-                    break;
-                }
-            }
-        }
-        int i = -1, j = -1;
-        for (int k = 0; k < cnt; ++k) {
-            if (prime[k] >= left && prime[k] <= right) {
-                if (i == -1) {
-                    i = k;
-                }
-                j = k;
-            }
-        }
-        vector<int> ans = {-1, -1};
-        if (i == j || i == -1) return ans;
-        int mi = 1 << 30;
-        for (int k = i; k < j; ++k) {
-            int d = prime[k + 1] - prime[k];
-            if (d < mi) {
-                mi = d;
-                ans[0] = prime[k];
-                ans[1] = prime[k + 1];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func closestPrimes(left int, right int) []int {
-	cnt := 0
-	st := make([]bool, right+1)
-	prime := make([]int, right+1)
-	for i := 2; i <= right; i++ {
-		if !st[i] {
-			prime[cnt] = i
-			cnt++
-		}
-		for j := 0; prime[j] <= right/i; j++ {
-			st[prime[j]*i] = true
-			if i%prime[j] == 0 {
-				break
-			}
-		}
-	}
-	i, j := -1, -1
-	for k := 0; k < cnt; k++ {
-		if prime[k] >= left && prime[k] <= right {
-			if i == -1 {
-				i = k
-			}
-			j = k
-		}
-	}
-	ans := []int{-1, -1}
-	if i == j || i == -1 {
-		return ans
-	}
-	mi := 1 << 30
-	for k := i; k < j; k++ {
-		d := prime[k+1] - prime[k]
-		if d < mi {
-			mi = d
-			ans[0], ans[1] = prime[k], prime[k+1]
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -232,4 +126,4 @@ func closestPrimes(left int, right int) []int {
 
 ```
 
-<!-- tabs:end -->
+

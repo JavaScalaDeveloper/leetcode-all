@@ -63,20 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makePrefSumNonNegative(self, nums: List[int]) -> int:
-        h = []
-        ans = s = 0
-        for x in nums:
-            s += x
-            if x < 0:
-                heappush(h, x)
-            while s < 0:
-                s -= heappop(h)
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -103,82 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int makePrefSumNonNegative(vector<int>& nums) {
-        priority_queue<int, vector<int>, greater<int>> pq;
-        int ans = 0;
-        long long s = 0;
-        for (int& x : nums) {
-            s += x;
-            if (x < 0) {
-                pq.push(x);
-            }
-            while (s < 0) {
-                s -= pq.top();
-                pq.pop();
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func makePrefSumNonNegative(nums []int) (ans int) {
-	pq := hp{}
-	s := 0
-	for _, x := range nums {
-		s += x
-		if x < 0 {
-			heap.Push(&pq, x)
-		}
-		for s < 0 {
-			s -= heap.Pop(&pq).(int)
-			ans++
-		}
-	}
-	return ans
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h hp) Less(i, j int) bool  { return h.IntSlice[i] < h.IntSlice[j] }
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function makePrefSumNonNegative(nums: number[]): number {
-    const pq = new MinPriorityQueue();
-    let ans = 0;
-    let s = 0;
-    for (const x of nums) {
-        s += x;
-        if (x < 0) {
-            pq.enqueue(x);
-        }
-        while (s < 0) {
-            s -= pq.dequeue().element;
-            ++ans;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -186,4 +108,4 @@ function makePrefSumNonNegative(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

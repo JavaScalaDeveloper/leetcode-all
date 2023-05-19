@@ -79,18 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numOfSubarrays(self, arr: List[int]) -> int:
-        mod = 10**9 + 7
-        cnt = [1, 0]
-        ans = s = 0
-        for x in arr:
-            s += x
-            ans = (ans + cnt[s & 1 ^ 1]) % mod
-            cnt[s & 1] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,57 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numOfSubarrays(vector<int>& arr) {
-        const int mod = 1e9 + 7;
-        int cnt[2] = {1, 0};
-        int ans = 0, s = 0;
-        for (int x : arr) {
-            s += x;
-            ans = (ans + cnt[s & 1 ^ 1]) % mod;
-            ++cnt[s & 1];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numOfSubarrays(arr []int) (ans int) {
-	const mod int = 1e9 + 7
-	cnt := [2]int{1, 0}
-	s := 0
-	for _, x := range arr {
-		s += x
-		ans = (ans + cnt[s&1^1]) % mod
-		cnt[s&1]++
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numOfSubarrays(arr: number[]): number {
-    let ans = 0;
-    let s = 0;
-    const cnt: number[] = [1, 0];
-    const mod = 1e9 + 7;
-    for (const x of arr) {
-        s += x;
-        ans = (ans + cnt[(s & 1) ^ 1]) % mod;
-        cnt[s & 1]++;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -170,4 +119,4 @@ function numOfSubarrays(arr: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

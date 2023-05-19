@@ -68,18 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shiftGrid(self, grid: List[List[int]], k: int) -> List[List[int]]:
-        m, n = len(grid), len(grid[0])
-        k %= m * n
-        t = [grid[i][j] for i in range(m) for j in range(n)]
-        t = t[-k:] + t[:-k]
-        for i in range(m):
-            for j in range(n):
-                grid[i][j] = t[i * n + j]
-        return grid
-```
+
 
 ### **Java**
 
@@ -111,61 +100,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function shiftGrid(grid: number[][], k: number): number[][] {
-    const m = grid.length,
-        n = grid[0].length;
-    const size = m * n;
-    k = k % size;
-    if (k == 0 || size <= 1) return grid;
-    let arr = grid.flat();
-    if (size <= 1) return grid;
-    let ans = Array.from({ length: m }, v => new Array(n));
-    for (let i = 0, j = size - k; i < size; i++) {
-        ans[Math.floor(i / n)][i % n] = arr[j];
-        j = j == size - 1 ? 0 : j + 1;
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> shiftGrid(vector<vector<int>>& grid, int k) {
-        int m = grid.size(), n = grid[0].size();
-        vector<vector<int>> ans(m, vector<int>(n));
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                int t = (i * n + j + k) % (m * n);
-                ans[t / n][t % n] = grid[i][j];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func shiftGrid(grid [][]int, k int) [][]int {
-	m, n := len(grid), len(grid[0])
-	ans := make([][]int, m)
-	for i := range ans {
-		ans[i] = make([]int, n)
-	}
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			t := (i*n + j + k) % (m * n)
-			ans[t/n][t%n] = grid[i][j]
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -173,4 +116,4 @@ func shiftGrid(grid [][]int, k int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -61,16 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def evenProduct(self, nums: List[int]) -> int:
-        ans, last = 0, -1
-        for i, v in enumerate(nums):
-            if v % 2 == 0:
-                last = i
-            ans += last + 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -92,39 +83,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long evenProduct(vector<int>& nums) {
-        long long ans = 0;
-        int last = -1;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] % 2 == 0) {
-                last = i;
-            }
-            ans += last + 1;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func evenProduct(nums []int) int64 {
-	ans, last := 0, -1
-	for i, v := range nums {
-		if v%2 == 0 {
-			last = i
-		}
-		ans += last + 1
-	}
-	return int64(ans)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -132,4 +97,4 @@ func evenProduct(nums []int) int64 {
 
 ```
 
-<!-- tabs:end -->
+

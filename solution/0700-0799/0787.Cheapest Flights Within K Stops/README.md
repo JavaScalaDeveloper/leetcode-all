@@ -68,42 +68,9 @@ src = 0, dst = 2, k = 0
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findCheapestPrice(
-        self, n: int, flights: List[List[int]], src: int, dst: int, k: int
-    ) -> int:
-        INF = 0x3F3F3F3F
-        dist = [INF] * n
-        dist[src] = 0
-        for _ in range(k + 1):
-            backup = dist.copy()
-            for f, t, p in flights:
-                dist[t] = min(dist[t], backup[f] + p)
-        return -1 if dist[dst] == INF else dist[dst]
-```
 
-```python
-class Solution:
-    def findCheapestPrice(self, n: int, flights: List[List[int]], src: int, dst: int, k: int) -> int:
-        @cache
-        def dfs(u, k):
-            if u == dst:
-                return 0
-            if k <= 0:
-                return inf
-            k -= 1
-            ans = inf
-            for v, p in g[u]:
-                ans = min(ans, dfs(v, k) + p)
-            return ans
 
-        g = defaultdict(list)
-        for u, v, p in flights:
-            g[u].append((v, p))
-        ans = dfs(src, k + 1)
-        return -1 if ans >= inf else ans
-```
+
 
 ### **Java**
 
@@ -174,143 +141,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
-        const int inf = 0x3f3f3f3f;
-        vector<int> dist(n, inf);
-        vector<int> backup;
-        dist[src] = 0;
-        for (int i = 0; i < k + 1; ++i) {
-            backup = dist;
-            for (auto& e : flights) {
-                int f = e[0], t = e[1], p = e[2];
-                dist[t] = min(dist[t], backup[f] + p);
-            }
-        }
-        return dist[dst] == inf ? -1 : dist[dst];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> memo;
-    vector<vector<int>> g;
-    int dst;
-    int inf = 1e6;
 
-    int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
-        n += 10;
-        memo.resize(n, vector<int>(n, -1));
-        g.resize(n, vector<int>(n));
-        for (auto& e : flights) g[e[0]][e[1]] = e[2];
-        this->dst = dst;
-        int ans = dfs(src, k + 1);
-        return ans >= inf ? -1 : ans;
-    }
 
-    int dfs(int u, int k) {
-        if (memo[u][k] != -1) return memo[u][k];
-        if (u == dst) return 0;
-        if (k <= 0) return inf;
-        int ans = inf;
-        for (int v = 0; v < g[u].size(); ++v)
-            if (g[u][v] > 0)
-                ans = min(ans, dfs(v, k - 1) + g[u][v]);
-        memo[u][k] = ans;
-        return memo[u][k];
-    }
-};
-```
 
-### **Go**
 
-```go
-func findCheapestPrice(n int, flights [][]int, src int, dst int, k int) int {
-	const inf = 0x3f3f3f3f
-	dist := make([]int, n)
-	backup := make([]int, n)
-	for i := range dist {
-		dist[i] = inf
-	}
-	dist[src] = 0
-	for i := 0; i < k+1; i++ {
-		copy(backup, dist)
-		for _, e := range flights {
-			f, t, p := e[0], e[1], e[2]
-			dist[t] = min(dist[t], backup[f]+p)
-		}
-	}
-	if dist[dst] == inf {
-		return -1
-	}
-	return dist[dst]
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func findCheapestPrice(n int, flights [][]int, src int, dst int, k int) int {
-	n += 10
-	memo := make([][]int, n)
-	g := make([][]int, n)
-	for i := range memo {
-		memo[i] = make([]int, n)
-		g[i] = make([]int, n)
-		for j := range memo[i] {
-			memo[i][j] = -1
-		}
-	}
 
-	for _, e := range flights {
-		g[e[0]][e[1]] = e[2]
-	}
-	inf := int(1e6)
-	var dfs func(u, k int) int
-	dfs = func(u, k int) int {
-		if memo[u][k] != -1 {
-			return memo[u][k]
-		}
-		if u == dst {
-			return 0
-		}
-		if k <= 0 {
-			return inf
-		}
-		ans := inf
-		for v, p := range g[u] {
-			if p > 0 {
-				ans = min(ans, dfs(v, k-1)+p)
-			}
-		}
-		memo[u][k] = ans
-		return ans
-	}
-	ans := dfs(src, k+1)
-	if ans >= inf {
-		return -1
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **...**
 
@@ -318,4 +159,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

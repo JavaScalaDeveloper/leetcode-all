@@ -78,24 +78,7 @@ Flood fill 算法是从一个区域中提取若干个连通的点与其他相邻
 -   `find(x)` 函数用于查找 $x$ 所在集合的祖宗节点
 -   `union(a, b)` 函数用于合并 $a$ 和 $b$ 所在的集合
 
-```python
-p = list(range(n))
-size = [1] * n
 
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-def union(a, b):
-    pa, pb = find(a), find(b)
-    if pa == pb:
-        return
-    p[pa] = pb
-    size[pb] += size[pa]
-```
 
 时间复杂度 $O(m\times n\times \alpha(m\times n))$。其中 $m$ 和 $n$ 分别为网格的行数和列数。
 
@@ -107,76 +90,15 @@ def union(a, b):
 
 DFS - Flood Fill 算法：
 
-```python
-class Solution:
-    def numIslands(self, grid: List[List[str]]) -> int:
-        def dfs(i, j):
-            grid[i][j] = '0'
-            for a, b in pairwise(dirs):
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n and grid[x][y] == '1':
-                    dfs(x, y)
 
-        ans = 0
-        dirs = (-1, 0, 1, 0, -1)
-        m, n = len(grid), len(grid[0])
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j] == '1':
-                    dfs(i, j)
-                    ans += 1
-        return ans
-```
 
 BFS - Flood Fill 算法：
 
-```python
-class Solution:
-    def numIslands(self, grid: List[List[str]]) -> int:
-        def bfs(i, j):
-            grid[i][j] = '0'
-            q = deque([(i, j)])
-            while q:
-                i, j = q.popleft()
-                for a, b in pairwise(dirs):
-                    x, y = i + a, j + b
-                    if 0 <= x < m and 0 <= y < n and grid[x][y] == '1':
-                        q.append((x, y))
-                        grid[x][y] = 0
 
-        ans = 0
-        dirs = (-1, 0, 1, 0, -1)
-        m, n = len(grid), len(grid[0])
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j] == '1':
-                    bfs(i, j)
-                    ans += 1
-        return ans
-```
 
 并查集：
 
-```python
-class Solution:
-    def numIslands(self, grid: List[List[str]]) -> int:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        dirs = (0, 1, 0)
-        m, n = len(grid), len(grid[0])
-        p = list(range(m * n))
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j] == '1':
-                    for a, b in pairwise(dirs):
-                        x, y = i + a, j + b
-                        if x < m and y < n and grid[x][y] == '1':
-                            p[find(i * n + j)] = find(x * n + y)
-        return sum(grid[i][j] == '1' and i * n + j == find(i * n + j) for i in range(m) for j in range(n))
-```
 
 ### **Java**
 
@@ -311,468 +233,61 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 DFS - Flood Fill 算法：
 
-```cpp
-class Solution {
-public:
-    int numIslands(vector<vector<char>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
-        int ans = 0;
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        function<void(int, int)> dfs = [&](int i, int j) {
-            grid[i][j] = '0';
-            for (int k = 0; k < 4; ++k) {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < grid.size() && y >= 0 && y < grid[0].size() && grid[x][y] == '1') {
-                    dfs(x, y);
-                }
-            }
-        };
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j] == '1') {
-                    dfs(i, j);
-                    ++ans;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
+
 
 BFS - Flood Fill 算法：
 
-```cpp
-class Solution {
-public:
-    int numIslands(vector<vector<char>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
-        int ans = 0;
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        function<void(int, int)> bfs = [&](int i, int j) {
-            grid[i][j] = '0';
-            queue<pair<int, int>> q;
-            q.push({i, j});
-            vector<int> dirs = {-1, 0, 1, 0, -1};
-            while (!q.empty()) {
-                auto [a, b] = q.front();
-                q.pop();
-                for (int k = 0; k < 4; ++k) {
-                    int x = a + dirs[k];
-                    int y = b + dirs[k + 1];
-                    if (x >= 0 && x < grid.size() && y >= 0 && y < grid[0].size() && grid[x][y] == '1') {
-                        q.push({x, y});
-                        grid[x][y] = '0';
-                    }
-                }
-            }
-        };
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j] == '1') {
-                    bfs(i, j);
-                    ++ans;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
+
 
 并查集：
 
-```cpp
-class Solution {
-public:
-    int numIslands(vector<vector<char>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
-        vector<int> p(m * n);
-        iota(p.begin(), p.end(), 0);
-        function<int(int)> find = [&](int x) -> int {
-            if (p[x] != x) {
-                p[x] = find(p[x]);
-            }
-            return p[x];
-        };
-        int dirs[3] = {1, 0, 1};
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j] == '1') {
-                    for (int k = 0; k < 2; ++k) {
-                        int x = i + dirs[k];
-                        int y = j + dirs[k + 1];
-                        if (x < m && y < n && grid[x][y] == '1') {
-                            p[find(x * n + y)] = find(i * n + j);
-                        }
-                    }
-                }
-            }
-        }
-        int ans = 0;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                ans += grid[i][j] == '1' && i * n + j == find(i * n + j);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
+
+
 
 DFS - Flood Fill 算法：
 
-```go
-func numIslands(grid [][]byte) int {
-	m, n := len(grid), len(grid[0])
-	var dfs func(i, j int)
-	dfs = func(i, j int) {
-		grid[i][j] = '0'
-		dirs := []int{-1, 0, 1, 0, -1}
-		for k := 0; k < 4; k++ {
-			x, y := i+dirs[k], j+dirs[k+1]
-			if x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == '1' {
-				dfs(x, y)
-			}
-		}
-	}
-	ans := 0
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if grid[i][j] == '1' {
-				dfs(i, j)
-				ans++
-			}
-		}
-	}
-	return ans
-}
-```
+
 
 BFS - Flood Fill 算法：
 
-```go
-func numIslands(grid [][]byte) int {
-	m, n := len(grid), len(grid[0])
-	bfs := func(i, j int) {
-		grid[i][j] = '0'
-		q := [][]int{[]int{i, j}}
-		dirs := []int{-1, 0, 1, 0, -1}
-		for len(q) > 0 {
-			p := q[0]
-			q = q[1:]
-			for k := 0; k < 4; k++ {
-				x, y := p[0]+dirs[k], p[1]+dirs[k+1]
-				if x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == '1' {
-					q = append(q, []int{x, y})
-					grid[x][y] = '0'
-				}
-			}
-		}
-	}
-	ans := 0
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if grid[i][j] == '1' {
-				bfs(i, j)
-				ans++
-			}
-		}
-	}
-	return ans
-}
-```
+
 
 并查集：
 
-```go
-func numIslands(grid [][]byte) int {
-	m, n := len(grid), len(grid[0])
-	p := make([]int, m*n)
-	for i := range p {
-		p[i] = i
-	}
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	dirs := []int{1, 0, 1}
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if grid[i][j] == '1' {
-				for k := 0; k < 2; k++ {
-					x, y := i+dirs[k], j+dirs[k+1]
-					if x < m && y < n && grid[x][y] == '1' {
-						p[find(x*n+y)] = find(i*n + j)
-					}
-				}
-			}
-		}
-	}
-	ans := 0
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if grid[i][j] == '1' && i*n+j == find(i*n+j) {
-				ans++
-			}
-		}
-	}
-	return ans
-}
-```
+
 
 ### **TypeScript**
 
 DFS - Flood Fill 算法：
 
-```ts
-function numIslands(grid: string[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    let ans = 0;
-    function dfs(i, j) {
-        grid[i][j] = '0';
-        const dirs = [-1, 0, 1, 0, -1];
-        for (let k = 0; k < 4; ++k) {
-            const x = i + dirs[k];
-            const y = j + dirs[k + 1];
-            if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == '1') {
-                dfs(x, y);
-            }
-        }
-    }
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            if (grid[i][j] == '1') {
-                dfs(i, j);
-                ++ans;
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 BFS - Flood Fill 算法：
 
-```ts
-function numIslands(grid: string[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    let ans = 0;
-    function bfs(i, j) {
-        grid[i][j] = '0';
-        let q = [[i, j]];
-        const dirs = [-1, 0, 1, 0, -1];
-        while (q.length) {
-            [i, j] = q.shift();
-            for (let k = 0; k < 4; ++k) {
-                const x = i + dirs[k];
-                const y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == '1') {
-                    q.push([x, y]);
-                    grid[x][y] = '0';
-                }
-            }
-        }
-    }
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            if (grid[i][j] == '1') {
-                bfs(i, j);
-                ++ans;
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 并查集：
 
-```ts
-function numIslands(grid: string[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    let p = [];
-    for (let i = 0; i < m * n; ++i) {
-        p.push(i);
-    }
-    function find(x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
-        }
-        return p[x];
-    }
-    const dirs = [1, 0, 1];
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            if (grid[i][j] == '1') {
-                for (let k = 0; k < 2; ++k) {
-                    const x = i + dirs[k];
-                    const y = j + dirs[k + 1];
-                    if (x < m && y < n && grid[x][y] == '1') {
-                        p[find(i * n + j)] = find(x * n + y);
-                    }
-                }
-            }
-        }
-    }
-    let ans = 0;
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            if (grid[i][j] == '1' && i * n + j == find(i * n + j)) {
-                ++ans;
-            }
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
+
+
 
 DFS - Flood Fill 算法：
 
-```rust
-const DIRS: [i32; 5] = [-1, 0, 1, 0, -1];
 
-impl Solution {
-    pub fn num_islands(grid: Vec<Vec<char>>) -> i32 {
-        fn dfs(grid: &mut Vec<Vec<char>>, i: usize, j: usize) {
-            grid[i][j] = '0';
-            for k in 0..4 {
-                let x = i as i32 + DIRS[k];
-                let y = j as i32 + DIRS[k + 1];
-                if x >= 0
-                    && (x as usize) < grid.len()
-                    && y >= 0
-                    && (y as usize) < grid[0].len()
-                    && grid[x as usize][y as usize] == '1'
-                {
-                    dfs(grid, x as usize, y as usize);
-                }
-            }
-        }
-
-        let mut grid = grid;
-        let mut ans = 0;
-        for i in 0..grid.len() {
-            for j in 0..grid[0].len() {
-                if grid[i][j] == '1' {
-                    dfs(&mut grid, i, j);
-                    ans += 1;
-                }
-            }
-        }
-        ans
-    }
-}
-```
 
 BFS - Flood Fill 算法：
 
-```rust
-use std::collections::VecDeque;
 
-const DIRS: [i32; 5] = [-1, 0, 1, 0, -1];
-
-impl Solution {
-    pub fn num_islands(grid: Vec<Vec<char>>) -> i32 {
-        fn bfs(grid: &mut Vec<Vec<char>>, i: usize, j: usize) {
-            grid[i][j] = '0';
-            let mut queue = VecDeque::from([(i, j)]);
-            while !queue.is_empty() {
-                let (i, j) = queue.pop_front().unwrap();
-                for k in 0..4 {
-                    let x = i as i32 + DIRS[k];
-                    let y = j as i32 + DIRS[k + 1];
-                    if x >= 0
-                        && (x as usize) < grid.len()
-                        && y >= 0
-                        && (y as usize) < grid[0].len()
-                        && grid[x as usize][y as usize] == '1'
-                    {
-                        grid[x as usize][y as usize] = '0';
-                        queue.push_back((x as usize, y as usize));
-                    }
-                }
-            }
-        }
-
-        let mut grid = grid;
-        let mut ans = 0;
-        for i in 0..grid.len() {
-            for j in 0..grid[0].len() {
-                if grid[i][j] == '1' {
-                    bfs(&mut grid, i, j);
-                    ans += 1;
-                }
-            }
-        }
-        ans
-    }
-}
-```
 
 并查集：
 
-```rust
-const DIRS: [usize; 3] = [1, 0, 1];
 
-impl Solution {
-    pub fn num_islands(grid: Vec<Vec<char>>) -> i32 {
-        let m = grid.len();
-        let n = grid[0].len();
-        let mut p: Vec<i32> = (0..(m * n) as i32).collect();
-
-        fn find(p: &mut Vec<i32>, x: usize) -> i32 {
-            if p[x] != x as i32 {
-                p[x] = find(p, p[x] as usize);
-            }
-            p[x]
-        }
-
-        for i in 0..m {
-            for j in 0..n {
-                if grid[i][j] == '1' {
-                    for k in 0..2 {
-                        let x = i + DIRS[k];
-                        let y = j + DIRS[k + 1];
-                        if x < m && y < n && grid[x][y] == '1' {
-                            let f1 = find(&mut p, x * n + y);
-                            let f2 = find(&mut p, i * n + j);
-                            p[f1 as usize] = f2;
-                        }
-                    }
-                }
-            }
-        }
-
-        let mut ans = 0;
-        for i in 0..m {
-            for j in 0..n {
-                if grid[i][j] == '1' && p[i * n + j] == (i * n + j) as i32 {
-                    ans += 1;
-                }
-            }
-        }
-        ans
-    }
-}
-```
 
 ### **...**
 
@@ -780,4 +295,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

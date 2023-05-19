@@ -63,23 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minMoves(self, nums: List[int], k: int) -> int:
-        arr = [i for i, x in enumerate(nums) if x]
-        s = list(accumulate(arr, initial=0))
-        ans = inf
-        x = (k + 1) // 2
-        y = k - x
-        for i in range(x - 1, len(arr) - y):
-            j = arr[i]
-            ls = s[i + 1] - s[i + 1 - x]
-            rs = s[i + 1 + y] - s[i + 1]
-            a = (j + j - x + 1) * x // 2 - ls
-            b = rs - (j + 1 + j + y) * y // 2
-            ans = min(ans, a + b)
-        return ans
-```
+
 
 ### **Java**
 
@@ -116,75 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minMoves(vector<int>& nums, int k) {
-        vector<int> arr;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i]) {
-                arr.push_back(i);
-            }
-        }
-        int m = arr.size();
-        long s[m + 1];
-        s[0] = 1;
-        for (int i = 0; i < m; ++i) {
-            s[i + 1] = s[i] + arr[i];
-        }
-        long ans = 1L << 60;
-        int x = (k + 1) / 2;
-        int y = k - x;
-        for (int i = x - 1; i < m - y; ++i) {
-            int j = arr[i];
-            int ls = s[i + 1] - s[i + 1 - x];
-            int rs = s[i + 1 + y] - s[i + 1];
-            long a = (j + j - x + 1L) * x / 2 - ls;
-            long b = rs - (j + 1L + j + y) * y / 2;
-            ans = min(ans, a + b);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minMoves(nums []int, k int) int {
-	arr := []int{}
-	for i, x := range nums {
-		if x != 0 {
-			arr = append(arr, i)
-		}
-	}
-	s := make([]int, len(arr)+1)
-	for i, x := range arr {
-		s[i+1] = s[i] + x
-	}
-	ans := 1 << 60
-	x := (k + 1) / 2
-	y := k - x
-	for i := x - 1; i < len(arr)-y; i++ {
-		j := arr[i]
-		ls := s[i+1] - s[i+1-x]
-		rs := s[i+1+y] - s[i+1]
-		a := (j+j-x+1)*x/2 - ls
-		b := rs - (j+1+j+y)*y/2
-		ans = min(ans, a+b)
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -192,4 +114,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

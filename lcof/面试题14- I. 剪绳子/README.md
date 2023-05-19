@@ -48,27 +48,9 @@ $$
 
 ### **Python3**
 
-```python
-class Solution:
-    def cuttingRope(self, n: int) -> int:
-        dp = [1] * (n + 1)
-        for i in range(2, n + 1):
-            for j in range(1, i):
-                dp[i] = max(dp[i], dp[i - j] * j, (i - j) * j)
-        return dp[n]
-```
 
-```python
-class Solution:
-    def cuttingRope(self, n: int) -> int:
-        if n < 4:
-            return n - 1
-        if n % 3 == 0:
-            return pow(3, n // 3)
-        if n % 3 == 1:
-            return pow(3, n // 3 - 1) * 4
-        return pow(3, n // 3) * 2
-```
+
+
 
 ### **Java**
 
@@ -104,151 +86,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int cuttingRope(int n) {
-        vector<int> dp(n + 1);
-        dp[1] = 1;
-        for (int i = 2; i <= n; ++i) {
-            for (int j = 1; j < i; ++j) {
-                dp[i] = max(max(dp[i], dp[i - j] * j), (i - j) * j);
-            }
-        }
-        return dp[n];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int cuttingRope(int n) {
-        if (n < 4) {
-            return n - 1;
-        }
-        if (n % 3 == 0) {
-            return pow(3, n / 3);
-        }
-        if (n % 3 == 1) {
-            return pow(3, n / 3 - 1) * 4;
-        }
-        return pow(3, n / 3) * 2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func cuttingRope(n int) int {
-    dp := make([]int, n+1)
-	dp[1] = 1
-	for i := 2; i <= n; i++ {
-		for j := 1; j < i; j++ {
-			dp[i] = max(max(dp[i], dp[i-j]*j), (i-j)*j)
-		}
-	}
-	return dp[n]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func cuttingRope(n int) int {
-	if n < 4 {
-		return n - 1
-	}
-	if n%3 == 0 {
-		return int(math.Pow(3, float64(n/3)))
-	}
-	if n%3 == 1 {
-		return int(math.Pow(3, float64(n/3-1))) * 4
-	}
-	return int(math.Pow(3, float64(n/3))) * 2
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var cuttingRope = function (n) {
-    if (n < 4) {
-        return n - 1;
-    }
-    const m = Math.floor(n / 3);
-    if (n % 3 == 0) {
-        return 3 ** m;
-    }
-    if (n % 3 == 1) {
-        return 3 ** (m - 1) * 4;
-    }
-    return 3 ** m * 2;
-};
-```
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function cuttingRope(n: number): number {
-    if (n < 4) {
-        return n - 1;
-    }
-    const m = Math.floor(n / 3);
-    if (n % 3 == 0) {
-        return 3 ** m;
-    }
-    if (n % 3 == 1) {
-        return 3 ** (m - 1) * 4;
-    }
-    return 3 ** m * 2;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn cutting_rope(n: i32) -> i32 {
-        if n < 4 {
-            return n - 1;
-        }
-        let count = (n - 2) / 3;
-        3i32.pow(count as u32) * (n - count * 3)
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int CuttingRope(int n) {
-        if (n < 4) {
-            return n - 1;
-        }
-        if (n % 3 == 0) {
-            return (int) Math.Pow(3, n / 3);
-        }
-        if (n % 3 == 1) {
-            return (int) Math.Pow(3, n / 3 - 1) * 4;
-        }
-        return (int) Math.Pow(3, n / 3) * 2;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -256,4 +120,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

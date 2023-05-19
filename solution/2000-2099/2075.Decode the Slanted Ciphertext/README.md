@@ -85,18 +85,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def decodeCiphertext(self, encodedText: str, rows: int) -> str:
-        ans = []
-        cols = len(encodedText) // rows
-        for j in range(cols):
-            x, y = 0, j
-            while x < rows and y < cols:
-                ans.append(encodedText[x * cols + y])
-                x, y = x + 1, y + 1
-        return ''.join(ans).rstrip()
-```
+
 
 ### **Java**
 
@@ -122,35 +111,11 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function decodeCiphertext(encodedText: string, rows: number): string {
-    const cols = Math.ceil(encodedText.length / rows);
-    let ans = [];
-    for (let k = 0; k <= cols; k++) {
-        for (let i = 0, j = k; i < rows && j < cols; i++, j++) {
-            ans.push(encodedText.charAt(i * cols + j));
-        }
-    }
-    return ans.join('').trimEnd();
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string decodeCiphertext(string encodedText, int rows) {
-        string ans;
-        int cols = encodedText.size() / rows;
-        for (int j = 0; j < cols; ++j)
-            for (int x = 0, y = j; x < rows && y < cols; ++x, ++y)
-                ans += encodedText[x * cols + y];
-        while (ans.back() == ' ') ans.pop_back();
-        return ans;
-    }
-};
-```
+
+
+
 
 ### **...**
 
@@ -158,4 +123,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

@@ -63,35 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findValidSplit(self, nums: List[int]) -> int:
-        first = {}
-        n = len(nums)
-        last = list(range(n))
-        for i, x in enumerate(nums):
-            j = 2
-            while j <= x // j:
-                if x % j == 0:
-                    if j in first:
-                        last[first[j]] = i
-                    else:
-                        first[j] = i
-                    while x % j == 0:
-                        x //= j
-                j += 1
-            if x > 1:
-                if x in first:
-                    last[first[x]] = i
-                else:
-                    first[x] = i
-        mx = last[0]
-        for i, x in enumerate(last):
-            if mx < i:
-                return mx
-            mx = max(mx, x)
-        return -1
-```
+
 
 ### **Java**
 
@@ -140,98 +112,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findValidSplit(vector<int>& nums) {
-        unordered_map<int, int> first;
-        int n = nums.size();
-        vector<int> last(n);
-        iota(last.begin(), last.end(), 0);
-        for (int i = 0; i < n; ++i) {
-            int x = nums[i];
-            for (int j = 2; j <= x / j; ++j) {
-                if (x % j == 0) {
-                    if (first.count(j)) {
-                        last[first[j]] = i;
-                    } else {
-                        first[j] = i;
-                    }
-                    while (x % j == 0) {
-                        x /= j;
-                    }
-                }
-            }
-            if (x > 1) {
-                if (first.count(x)) {
-                    last[first[x]] = i;
-                } else {
-                    first[x] = i;
-                }
-            }
-        }
-        int mx = last[0];
-        for (int i = 0; i < n; ++i) {
-            if (mx < i) {
-                return mx;
-            }
-            mx = max(mx, last[i]);
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findValidSplit(nums []int) int {
-	first := map[int]int{}
-	n := len(nums)
-	last := make([]int, n)
-	for i := range last {
-		last[i] = i
-	}
-	for i, x := range nums {
-		for j := 2; j <= x/j; j++ {
-			if x%j == 0 {
-				if k, ok := first[j]; ok {
-					last[k] = i
-				} else {
-					first[j] = i
-				}
-				for x%j == 0 {
-					x /= j
-				}
-			}
-		}
-		if x > 1 {
-			if k, ok := first[x]; ok {
-				last[k] = i
-			} else {
-				first[x] = i
-			}
-		}
-	}
-	mx := last[0]
-	for i, x := range last {
-		if mx < i {
-			return mx
-		}
-		mx = max(mx, x)
-	}
-	return -1
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -239,4 +126,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

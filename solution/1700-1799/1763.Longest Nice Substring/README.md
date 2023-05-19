@@ -78,36 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestNiceSubstring(self, s: str) -> str:
-        n = len(s)
-        ans = ''
-        for i in range(n):
-            ss = set()
-            for j in range(i, n):
-                ss.add(s[j])
-                if all(c.lower() in ss and c.upper() in ss for c in ss) and len(ans) < j - i + 1:
-                    ans = s[i: j + 1]
-        return ans
-```
 
-```python
-class Solution:
-    def longestNiceSubstring(self, s: str) -> str:
-        n = len(s)
-        ans = ''
-        for i in range(n):
-            lower = upper = 0
-            for j in range(i, n):
-                if s[j].islower():
-                    lower |= 1 << (ord(s[j]) - ord('a'))
-                else:
-                    upper |= 1 << (ord(s[j]) - ord('A'))
-                if lower == upper and len(ans) < j - i + 1:
-                    ans = s[i: j + 1]
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -168,140 +141,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string longestNiceSubstring(string s) {
-        int n = s.size();
-        int k = -1, mx = 0;
-        for (int i = 0; i < n; ++i) {
-            unordered_set<char> ss;
-            for (int j = i; j < n; ++j) {
-                ss.insert(s[j]);
-                bool ok = true;
-                for (auto& a : ss) {
-                    char b = a ^ 32;
-                    if (!(ss.count(a) && ss.count(b))) {
-                        ok = false;
-                        break;
-                    }
-                }
-                if (ok && mx < j - i + 1) {
-                    mx = j - i + 1;
-                    k = i;
-                }
-            }
-        }
-        return k == -1 ? "" : s.substr(k, mx);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    string longestNiceSubstring(string s) {
-        int n = s.size();
-        int k = -1, mx = 0;
-        for (int i = 0; i < n; ++i) {
-            int lower = 0, upper = 0;
-            for (int j = i; j < n; ++j) {
-                char c = s[j];
-                if (islower(c)) lower |= 1 << (c - 'a');
-                else upper |= 1 << (c - 'A');
-                if (lower == upper && mx < j - i + 1) {
-                    mx = j - i + 1;
-                    k = i;
-                }
-            }
-        }
-        return k == -1 ? "" : s.substr(k, mx);
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestNiceSubstring(s string) string {
-	n := len(s)
-	k, mx := -1, 0
-	for i := 0; i < n; i++ {
-		ss := map[byte]bool{}
-		for j := i; j < n; j++ {
-			ss[s[j]] = true
-			ok := true
-			for a := range ss {
-				b := a ^ 32
-				if !(ss[a] && ss[b]) {
-					ok = false
-					break
-				}
-			}
-			if ok && mx < j-i+1 {
-				mx = j - i + 1
-				k = i
-			}
-		}
-	}
-	if k < 0 {
-		return ""
-	}
-	return s[k : k+mx]
-}
-```
 
-```go
-func longestNiceSubstring(s string) string {
-	n := len(s)
-	k, mx := -1, 0
-	for i := 0; i < n; i++ {
-		var lower, upper int
-		for j := i; j < n; j++ {
-			if unicode.IsLower(rune(s[j])) {
-				lower |= 1 << (s[j] - 'a')
-			} else {
-				upper |= 1 << (s[j] - 'A')
-			}
-			if lower == upper && mx < j-i+1 {
-				mx = j - i + 1
-				k = i
-			}
-		}
-	}
-	if k < 0 {
-		return ""
-	}
-	return s[k : k+mx]
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function longestNiceSubstring(s: string): string {
-    const n = s.length;
-    let ans = '';
-    for (let i = 0; i < n; i++) {
-        let lower = 0,
-            upper = 0;
-        for (let j = i; j < n; j++) {
-            const c = s.charCodeAt(j);
-            if (c > 96) {
-                lower |= 1 << (c - 97);
-            } else {
-                upper |= 1 << (c - 65);
-            }
-            if (lower == upper && j - i + 1 > ans.length) {
-                ans = s.substring(i, j + 1);
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -309,4 +163,4 @@ function longestNiceSubstring(s: string): string {
 
 ```
 
-<!-- tabs:end -->
+

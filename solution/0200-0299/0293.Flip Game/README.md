@@ -47,18 +47,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def generatePossibleNextMoves(self, currentState: str) -> List[str]:
-        s = list(currentState)
-        ans = []
-        for i, c in enumerate(s[:-1]):
-            if c == "+" and s[i + 1] == "+":
-                s[i] = s[i + 1] = "-"
-                ans.append("".join(s))
-                s[i] = s[i + 1] = "+"
-        return ans
-```
+
 
 ### **Java**
 
@@ -83,43 +72,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> generatePossibleNextMoves(string currentState) {
-        vector<string> ans;
-        for (int i = 0; i < currentState.size() - 1; ++i) {
-            if (currentState[i] == '+' && currentState[i + 1] == '+') {
-                currentState[i] = '-';
-                currentState[i + 1] = '-';
-                ans.push_back(currentState);
-                currentState[i] = '+';
-                currentState[i + 1] = '+';
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func generatePossibleNextMoves(currentState string) []string {
-	ans := []string{}
-	cs := []byte(currentState)
-	for i, c := range cs[1:] {
-		if c == '+' && cs[i] == '+' {
-			cs[i], cs[i+1] = '-', '-'
-			ans = append(ans, string(cs))
-			cs[i], cs[i+1] = '+', '+'
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -127,4 +86,4 @@ func generatePossibleNextMoves(currentState string) []string {
 
 ```
 
-<!-- tabs:end -->
+

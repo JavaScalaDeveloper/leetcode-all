@@ -64,20 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumBags(
-        self, capacity: List[int], rocks: List[int], additionalRocks: int
-    ) -> int:
-        d = [a - b for a, b in zip(capacity, rocks)]
-        d.sort()
-        ans = 0
-        for v in d:
-            if v <= additionalRocks:
-                ans += 1
-                additionalRocks -= v
-        return ans
-```
+
 
 ### **Java**
 
@@ -106,94 +93,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumBags(vector<int>& capacity, vector<int>& rocks, int additionalRocks) {
-        int n = capacity.size();
-        vector<int> d(n);
-        for (int i = 0; i < n; ++i) d[i] = capacity[i] - rocks[i];
-        sort(d.begin(), d.end());
-        int ans = 0;
-        for (int& v : d) {
-            if (v > additionalRocks) break;
-            ++ans;
-            additionalRocks -= v;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumBags(capacity []int, rocks []int, additionalRocks int) int {
-	n := len(capacity)
-	d := make([]int, n)
-	for i, v := range capacity {
-		d[i] = v - rocks[i]
-	}
-	sort.Ints(d)
-	ans := 0
-	for _, v := range d {
-		if v > additionalRocks {
-			break
-		}
-		ans++
-		additionalRocks -= v
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumBags(
-    capacity: number[],
-    rocks: number[],
-    additionalRocks: number,
-): number {
-    const n = capacity.length;
-    const diffs = capacity.map((c, i) => c - rocks[i]);
-    diffs.sort((a, b) => a - b);
-    let ans = 0;
-    for (
-        let i = 0;
-        i < n && (diffs[i] === 0 || diffs[i] <= additionalRocks);
-        i++
-    ) {
-        ans++;
-        additionalRocks -= diffs[i];
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn maximum_bags(capacity: Vec<i32>, rocks: Vec<i32>, mut additional_rocks: i32) -> i32 {
-        let n = capacity.len();
-        let mut diffs = vec![0; n];
-        for i in 0..n {
-            diffs[i] = capacity[i] - rocks[i];
-        }
-        diffs.sort();
-        for i in 0..n {
-            if diffs[i] > additional_rocks {
-                return i as i32;
-            }
-            additional_rocks -= diffs[i];
-        }
-        n as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -201,4 +115,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

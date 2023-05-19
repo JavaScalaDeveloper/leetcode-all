@@ -76,25 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxScoreIndices(self, nums: List[int]) -> List[int]:
-        left, right = 0, sum(nums)
-        mx = right
-        ans = [0]
-        for i, num in enumerate(nums):
-            if num == 0:
-                left += 1
-            else:
-                right -= 1
-            t = left + right
-            if mx == t:
-                ans.append(i + 1)
-            elif mx < t:
-                mx = t
-                ans = [i + 1]
-        return ans
-```
+
 
 ### **Java**
 
@@ -138,88 +120,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function maxScoreIndices(nums: number[]): number[] {
-    const n = nums.length;
-    const total = nums.reduce((a, c) => a + c, 0);
-    let left = 0,
-        right = total;
-    let record: Array<number> = [total];
-    for (const num of nums) {
-        if (num == 0) {
-            left++;
-        } else {
-            right--;
-        }
-        record.push(left + right);
-    }
-    const max = Math.max(...record);
-    let ans: Array<number> = [];
-    for (let i = 0; i <= n; i++) {
-        if (record[i] == max) {
-            ans.push(i);
-        }
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> maxScoreIndices(vector<int>& nums) {
-        int left = 0, right = accumulate(nums.begin(), nums.end(), 0);
-        int mx = right;
-        vector<int> ans;
-        ans.push_back(0);
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] == 0)
-                ++left;
-            else
-                --right;
-            int t = left + right;
-            if (mx == t)
-                ans.push_back(i + 1);
-            else if (mx < t) {
-                mx = t;
-                ans.clear();
-                ans.push_back(i + 1);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxScoreIndices(nums []int) []int {
-	left, right := 0, 0
-	for _, num := range nums {
-		right += num
-	}
-	mx := right
-	ans := []int{0}
-	for i, num := range nums {
-		if num == 0 {
-			left++
-		} else {
-			right--
-		}
-		t := left + right
-		if mx == t {
-			ans = append(ans, i+1)
-		} else if mx < t {
-			mx = t
-			ans = []int{i + 1}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -227,4 +136,4 @@ func maxScoreIndices(nums []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

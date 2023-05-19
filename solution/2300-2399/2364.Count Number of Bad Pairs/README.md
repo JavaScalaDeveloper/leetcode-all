@@ -62,16 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countBadPairs(self, nums: List[int]) -> int:
-        cnt = Counter()
-        ans = 0
-        for i, x in enumerate(nums):
-            ans += i - cnt[i - x]
-            cnt[i - x] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -92,52 +83,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long countBadPairs(vector<int>& nums) {
-        unordered_map<int, int> cnt;
-        long long ans = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            int x = i - nums[i];
-            ans += i - cnt[x];
-            ++cnt[x];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countBadPairs(nums []int) (ans int64) {
-	cnt := map[int]int{}
-	for i, x := range nums {
-		x = i - x
-		ans += int64(i - cnt[x])
-		cnt[x]++
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countBadPairs(nums: number[]): number {
-    const cnt = new Map<number, number>();
-    let ans = 0;
-    for (let i = 0; i < nums.length; ++i) {
-        const x = i - nums[i];
-        ans += i - (cnt.get(x) ?? 0);
-        cnt.set(x, (cnt.get(x) ?? 0) + 1);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -145,4 +101,4 @@ function countBadPairs(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

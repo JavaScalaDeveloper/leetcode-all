@@ -66,20 +66,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def xorOperation(self, n: int, start: int) -> int:
-        ans = 0
-        for i in range(n):
-            ans ^= start + 2 * i
-        return ans
-```
 
-```python
-class Solution:
-    def xorOperation(self, n: int, start: int) -> int:
-        return reduce(xor, ((start + 2 * i) for i in range(n)))
-```
+
+
 
 ### **Java**
 
@@ -97,31 +86,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int xorOperation(int n, int start) {
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            ans ^= start + 2 * i;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func xorOperation(n int, start int) (ans int) {
-	for i := 0; i < n; i++ {
-		ans ^= start + 2*i
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -129,4 +100,4 @@ func xorOperation(n int, start int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

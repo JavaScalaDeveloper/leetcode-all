@@ -47,11 +47,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def percentageLetter(self, s: str, letter: str) -> int:
-        return s.count(letter) * 100 // len(s)
-```
+
 
 ### **Java**
 
@@ -71,61 +67,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int percentageLetter(string s, char letter) {
-        int cnt = 0;
-        for (char& c : s) cnt += c == letter;
-        return cnt * 100 / s.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func percentageLetter(s string, letter byte) int {
-	cnt := 0
-	for i := range s {
-		if s[i] == letter {
-			cnt++
-		}
-	}
-	return cnt * 100 / len(s)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function percentageLetter(s: string, letter: string): number {
-    let count = 0;
-    let total = s.length;
-    for (let i of s) {
-        if (i === letter) count++;
-    }
-    return Math.floor((count / total) * 100);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn percentage_letter(s: String, letter: char) -> i32 {
-        let mut count = 0;
-        for c in s.chars() {
-            if c == letter {
-                count += 1;
-            }
-        }
-        (count * 100 / s.len()) as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -133,4 +89,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

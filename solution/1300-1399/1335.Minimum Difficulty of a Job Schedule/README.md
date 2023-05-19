@@ -87,20 +87,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
-        n = len(jobDifficulty)
-        f = [[inf] * (d + 1) for _ in range(n + 1)]
-        f[0][0] = 0
-        for i in range(1, n + 1):
-            for j in range(1, min(d + 1, i + 1)):
-                mx = 0
-                for k in range(i, 0, -1):
-                    mx = max(mx, jobDifficulty[k - 1])
-                    f[i][j] = min(f[i][j], f[k - 1][j - 1] + mx)
-        return -1 if f[n][d] >= inf else f[n][d]
-```
+
 
 ### **Java**
 
@@ -130,96 +117,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minDifficulty(vector<int>& jobDifficulty, int d) {
-        int n = jobDifficulty.size();
-        int f[n + 1][d + 1];
-        memset(f, 0x3f, sizeof(f));
-        f[0][0] = 0;
-        for (int i = 1; i <= n; ++i) {
-            for (int j = 1; j <= min(d, i); ++j) {
-                int mx = 0;
-                for (int k = i; k; --k) {
-                    mx = max(mx, jobDifficulty[k - 1]);
-                    f[i][j] = min(f[i][j], f[k - 1][j - 1] + mx);
-                }
-            }
-        }
-        return f[n][d] == 0x3f3f3f3f ? -1 : f[n][d];
-    }
-};
-```
 
-### **Go**
 
-```go
-func minDifficulty(jobDifficulty []int, d int) int {
-	n := len(jobDifficulty)
-	f := make([][]int, n+1)
-	const inf = 1 << 30
-	for i := range f {
-		f[i] = make([]int, d+1)
-		for j := range f[i] {
-			f[i][j] = inf
-		}
-	}
-	f[0][0] = 0
-	for i := 1; i <= n; i++ {
-		for j := 1; j <= min(d, i); j++ {
-			mx := 0
-			for k := i; k > 0; k-- {
-				mx = max(mx, jobDifficulty[k-1])
-				f[i][j] = min(f[i][j], f[k-1][j-1]+mx)
-			}
-		}
-	}
-	if f[n][d] == inf {
-		return -1
-	}
-	return f[n][d]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function minDifficulty(jobDifficulty: number[], d: number): number {
-    const n = jobDifficulty.length;
-    const inf = 1 << 30;
-    const f: number[][] = new Array(n + 1)
-        .fill(0)
-        .map(() => new Array(d + 1).fill(inf));
-    f[0][0] = 0;
-    for (let i = 1; i <= n; ++i) {
-        for (let j = 1; j <= Math.min(d, i); ++j) {
-            let mx = 0;
-            for (let k = i; k > 0; --k) {
-                mx = Math.max(mx, jobDifficulty[k - 1]);
-                f[i][j] = Math.min(f[i][j], f[k - 1][j - 1] + mx);
-            }
-        }
-    }
-    return f[n][d] < inf ? f[n][d] : -1;
-}
-```
+
 
 ### **...**
 
@@ -227,4 +135,4 @@ function minDifficulty(jobDifficulty: number[], d: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -74,24 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def upsideDownBinaryTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-        if root is None or root.left is None:
-            return root
-        new_root = self.upsideDownBinaryTree(root.left)
-        root.left.right = root
-        root.left.left = root.right
-        root.left = None
-        root.right = None
-        return new_root
-```
+
 
 ### **Java**
 
@@ -128,57 +111,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* upsideDownBinaryTree(TreeNode* root) {
-        if (!root || !root->left) return root;
-        TreeNode* newRoot = upsideDownBinaryTree(root->left);
-        root->left->right = root;
-        root->left->left = root->right;
-        root->left = nullptr;
-        root->right = nullptr;
-        return newRoot;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func upsideDownBinaryTree(root *TreeNode) *TreeNode {
-	if root == nil || root.Left == nil {
-		return root
-	}
-	newRoot := upsideDownBinaryTree(root.Left)
-	root.Left.Right = root
-	root.Left.Left = root.Right
-	root.Left = nil
-	root.Right = nil
-	return newRoot
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -186,4 +125,4 @@ func upsideDownBinaryTree(root *TreeNode) *TreeNode {
 
 ```
 
-<!-- tabs:end -->
+

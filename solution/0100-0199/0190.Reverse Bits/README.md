@@ -55,15 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reverseBits(self, n: int) -> int:
-        res = 0
-        for i in range(32):
-            res |= (n & 1) << (31 - i)
-            n >>= 1
-        return res
-```
+
 
 ### **Java**
 
@@ -83,67 +75,21 @@ public class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    uint32_t reverseBits(uint32_t n) {
-        uint32_t res = 0;
-        for (int i = 0; i < 32; ++i) {
-            res |= ((n & 1) << (31 - i));
-            n >>= 1;
-        }
-        return res;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n - a positive integer
- * @return {number} - a positive integer
- */
-var reverseBits = function (n) {
-    let res = 0;
-    for (let i = 0; i < 32 && n > 0; ++i) {
-        res |= (n & 1) << (31 - i);
-        n >>>= 1;
-    }
-    // 无符号右移
-    return res >>> 0;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn reverse_bits(mut x: u32) -> u32 {
-        let mut res = 0;
-        for _ in 0..32 {
-            res = (res << 1) | (x & 1);
-            x >>= 1;
-        }
-        res
-    }
-}
-```
 
-### **Go**
 
-```go
-func reverseBits(num uint32) uint32 {
-	var ans uint32 = 0
-	for i := 0; i < 32; i++ {
-		ans |= (num & 1) << (31 - i)
-		num >>= 1
-	}
-	return ans
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -151,4 +97,4 @@ func reverseBits(num uint32) uint32 {
 
 ```
 
-<!-- tabs:end -->
+

@@ -71,35 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def maxProduct(self, root: Optional[TreeNode]) -> int:
-        def sum(root: Optional[TreeNode]) -> int:
-            if root is None:
-                return 0
-            return root.val + sum(root.left) + sum(root.right)
 
-        def dfs(root: Optional[TreeNode]) -> int:
-            if root is None:
-                return 0
-            t = root.val + dfs(root.left) + dfs(root.right)
-            nonlocal ans, s
-            if t < s:
-                ans = max(ans, t * (s - t))
-            return t
-
-        mod = 10**9 + 7
-        s = sum(root)
-        ans = 0
-        dfs(root)
-        return ans % mod
-```
 
 ### **Java**
 
@@ -152,139 +124,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int maxProduct(TreeNode* root) {
-        using ll = long long;
-        ll ans = 0;
-        const int mod = 1e9 + 7;
 
-        function<ll(TreeNode*)> sum = [&](TreeNode* root) -> ll {
-            if (!root) {
-                return 0;
-            }
-            return root->val + sum(root->left) + sum(root->right);
-        };
 
-        ll s = sum(root);
 
-        function<ll(TreeNode*)> dfs = [&](TreeNode* root) -> ll {
-            if (!root) {
-                return 0;
-            }
-            ll t = root->val + dfs(root->left) + dfs(root->right);
-            if (t < s) {
-                ans = max(ans, t * (s - t));
-            }
-            return t;
-        };
 
-        dfs(root);
-        return ans % mod;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func maxProduct(root *TreeNode) (ans int) {
-	const mod = 1e9 + 7
-	var sum func(*TreeNode) int
-	sum = func(root *TreeNode) int {
-		if root == nil {
-			return 0
-		}
-		return root.Val + sum(root.Left) + sum(root.Right)
-	}
-	s := sum(root)
-	var dfs func(*TreeNode) int
-	dfs = func(root *TreeNode) int {
-		if root == nil {
-			return 0
-		}
-		t := root.Val + dfs(root.Left) + dfs(root.Right)
-		if t < s {
-			ans = max(ans, t*(s-t))
-		}
-		return t
-	}
-	dfs(root)
-	ans %= mod
-	return
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function maxProduct(root: TreeNode | null): number {
-    const sum = (root: TreeNode | null): number => {
-        if (!root) {
-            return 0;
-        }
-        return root.val + sum(root.left) + sum(root.right);
-    };
-    const s = sum(root);
-    let ans = 0;
-    const mod = 1e9 + 7;
-    const dfs = (root: TreeNode | null): number => {
-        if (!root) {
-            return 0;
-        }
-        const t = root.val + dfs(root.left) + dfs(root.right);
-        if (t < s) {
-            ans = Math.max(ans, t * (s - t));
-        }
-        return t;
-    };
-    dfs(root);
-    return ans % mod;
-}
-```
 
 ### **...**
 
@@ -292,4 +142,4 @@ function maxProduct(root: TreeNode | null): number {
 
 ```
 
-<!-- tabs:end -->
+

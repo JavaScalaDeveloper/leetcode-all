@@ -60,25 +60,9 @@ n 循环右移直至为 0，依次检测 n 的二进制位是否交替出现。�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def hasAlternatingBits(self, n: int) -> bool:
-        prev = -1
-        while n:
-            curr = n & 1
-            if prev == curr:
-                return False
-            prev = curr
-            n >>= 1
-        return True
-```
 
-```python
-class Solution:
-    def hasAlternatingBits(self, n: int) -> bool:
-        n ^= (n >> 1)
-        return (n & (n + 1)) == 0
-```
+
+
 
 ### **Java**
 
@@ -110,86 +94,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool hasAlternatingBits(int n) {
-        int prev = -1;
-        while (n) {
-            int curr = n & 1;
-            if (prev == curr) return false;
-            prev = curr;
-            n >>= 1;
-        }
-        return true;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool hasAlternatingBits(int n) {
-        n ^= (n >> 1);
-        return (n & ((long) n + 1)) == 0;
-    }
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn has_alternating_bits(mut n: i32) -> bool {
-        let u = n & 3;
-        if u != 1 && u != 2 {
-            return false;
-        }
-        while n != 0 {
-            if (n & 3) != u {
-                return false
-            }
-            n >>= 2;
-        }
-        true
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn has_alternating_bits(n: i32) -> bool {
-        let t = n ^ (n >> 1);
-        (t & (t + 1)) == 0
-    }
-}
-```
 
-### **Go**
 
-```go
-func hasAlternatingBits(n int) bool {
-	prev := -1
-	for n != 0 {
-		curr := n & 1
-		if prev == curr {
-			return false
-		}
-		prev = curr
-		n >>= 1
-	}
-	return true
-}
-```
 
-```go
-func hasAlternatingBits(n int) bool {
-	n ^= (n >> 1)
-	return (n & (n + 1)) == 0
-}
-```
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -197,4 +118,4 @@ func hasAlternatingBits(n int) bool {
 
 ```
 
-<!-- tabs:end -->
+

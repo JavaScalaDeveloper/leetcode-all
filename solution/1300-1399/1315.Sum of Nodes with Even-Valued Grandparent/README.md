@@ -46,32 +46,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def sumEvenGrandparent(self, root: TreeNode) -> int:
-        self.res = 0
 
-        def dfs(g, p):
-            if p is None:
-                return
-            if g.val % 2 == 0:
-                if p.left:
-                    self.res += p.left.val
-                if p.right:
-                    self.res += p.right.val
-            dfs(p, p.left)
-            dfs(p, p.right)
-
-        dfs(root, root.left)
-        dfs(root, root.right)
-        return self.res
-```
 
 ### **Java**
 
@@ -121,80 +96,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int res;
 
-    int sumEvenGrandparent(TreeNode* root) {
-        res = 0;
-        dfs(root, root->left);
-        dfs(root, root->right);
-        return res;
-    }
 
-    void dfs(TreeNode* g, TreeNode* p) {
-        if (!p) return;
-        if (g->val % 2 == 0) {
-            if (p->left) res += p->left->val;
-            if (p->right) res += p->right->val;
-        }
-        dfs(p, p->left);
-        dfs(p, p->right);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
 
-var res int
 
-func sumEvenGrandparent(root *TreeNode) int {
-	res = 0
-	dfs(root, root.Left)
-	dfs(root, root.Right)
-	return res
-}
-
-func dfs(g, p *TreeNode) {
-	if p == nil {
-		return
-	}
-	if g.Val%2 == 0 {
-		if p.Left != nil {
-			res += p.Left.Val
-		}
-		if p.Right != nil {
-			res += p.Right.Val
-		}
-	}
-	dfs(p, p.Left)
-	dfs(p, p.Right)
-}
-```
 
 ### **...**
 
@@ -202,4 +110,4 @@ func dfs(g, p *TreeNode) {
 
 ```
 
-<!-- tabs:end -->
+

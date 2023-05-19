@@ -62,19 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findDuplicate(self, nums: List[int]) -> int:
-        left, right = 1, len(nums) - 1
-        while left < right:
-            mid = (left + right) >> 1
-            cnt = sum(v <= mid for v in nums)
-            if cnt > mid:
-                right = mid
-            else:
-                left = mid + 1
-        return left
-```
+
 
 ### **Java**
 
@@ -103,103 +91,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findDuplicate(vector<int>& nums) {
-        int left = 1, right = nums.size() - 1;
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            int cnt = 0;
-            for (int& v : nums)
-                if (v <= mid)
-                    ++cnt;
-            if (cnt > mid)
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findDuplicate(nums []int) int {
-	left, right := 1, len(nums)-1
-	for left < right {
-		mid := (left + right) >> 1
-		cnt := 0
-		for _, v := range nums {
-			if v <= mid {
-				cnt++
-			}
-		}
-		if cnt > mid {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var findDuplicate = function (nums) {
-    let left = 1,
-        right = nums.length - 1;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        let cnt = 0;
-        for (let v of nums) {
-            if (v <= mid) {
-                ++cnt;
-            }
-        }
-        if (cnt > mid) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findDuplicate(nums: number[]): number {
-    let left = 1,
-        right = nums.length - 1;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        let cnt = 0;
-        for (let v of nums) {
-            if (v <= mid) {
-                ++cnt;
-            }
-        }
-        if (cnt > mid) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-```
+
 
 ### **...**
 
@@ -207,4 +113,4 @@ function findDuplicate(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

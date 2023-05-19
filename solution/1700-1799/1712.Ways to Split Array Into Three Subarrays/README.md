@@ -75,18 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def waysToSplit(self, nums: List[int]) -> int:
-        mod = 10**9 + 7
-        s = list(accumulate(nums))
-        ans, n = 0, len(nums)
-        for i in range(n - 2):
-            j = bisect_left(s, s[i] << 1, i + 1, n - 1)
-            k = bisect_right(s, (s[-1] + s[i]) >> 1, j, n - 1)
-            ans += k - j
-        return ans % mod
-```
+
 
 ### **Java**
 
@@ -126,82 +115,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int waysToSplit(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> s(n, nums[0]);
-        for (int i = 1; i < n; ++i) s[i] = s[i - 1] + nums[i];
-        int ans = 0;
-        for (int i = 0; i < n - 2; ++i) {
-            int j = lower_bound(s.begin() + i + 1, s.begin() + n - 1, s[i] << 1) - s.begin();
-            int k = upper_bound(s.begin() + j, s.begin() + n - 1, (s[n - 1] + s[i]) >> 1) - s.begin();
-            ans = (ans + k - j) % mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func waysToSplit(nums []int) (ans int) {
-	const mod int = 1e9 + 7
-	n := len(nums)
-	s := make([]int, n)
-	s[0] = nums[0]
-	for i := 1; i < n; i++ {
-		s[i] = s[i-1] + nums[i]
-	}
-	for i := 0; i < n-2; i++ {
-		j := sort.Search(n-1, func(h int) bool { return h > i && s[h] >= (s[i]<<1) })
-		k := sort.Search(n-1, func(h int) bool { return h >= j && s[h] > (s[n-1]+s[i])>>1 })
-		ans = (ans + k - j) % mod
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var waysToSplit = function (nums) {
-    const mod = 1e9 + 7;
-    const n = nums.length;
-    const s = new Array(n).fill(nums[0]);
-    for (let i = 1; i < n; ++i) {
-        s[i] = s[i - 1] + nums[i];
-    }
-    function search(s, x, left, right) {
-        while (left < right) {
-            const mid = (left + right) >> 1;
-            if (s[mid] >= x) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-    let ans = 0;
-    for (let i = 0; i < n - 2; ++i) {
-        const j = search(s, s[i] << 1, i + 1, n - 1);
-        const k = search(s, ((s[n - 1] + s[i]) >> 1) + 1, j, n - 1);
-        ans = (ans + k - j) % mod;
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -209,4 +133,4 @@ var waysToSplit = function (nums) {
 
 ```
 
-<!-- tabs:end -->
+

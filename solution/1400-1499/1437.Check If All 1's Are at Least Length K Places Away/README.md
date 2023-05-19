@@ -66,17 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kLengthApart(self, nums: List[int], k: int) -> bool:
-        j = -inf
-        for i, x in enumerate(nums):
-            if x:
-                if i - j - 1 < k:
-                    return False
-                j = i
-        return True
-```
+
 
 ### **Java**
 
@@ -99,59 +89,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool kLengthApart(vector<int>& nums, int k) {
-        int j = -(k + 1);
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] == 1) {
-                if (i - j - 1 < k) {
-                    return false;
-                }
-                j = i;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func kLengthApart(nums []int, k int) bool {
-	j := -(k + 1)
-	for i, x := range nums {
-		if x == 1 {
-			if i-j-1 < k {
-				return false
-			}
-			j = i
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function kLengthApart(nums: number[], k: number): boolean {
-    let j = -(k + 1);
-    for (let i = 0; i < nums.length; ++i) {
-        if (nums[i] === 1) {
-            if (i - j - 1 < k) {
-                return false;
-            }
-            j = i;
-        }
-    }
-    return true;
-}
-```
+
 
 ### **...**
 
@@ -159,4 +107,4 @@ function kLengthApart(nums: number[], k: number): boolean {
 
 ```
 
-<!-- tabs:end -->
+

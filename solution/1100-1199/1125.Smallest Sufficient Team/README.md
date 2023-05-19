@@ -80,36 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestSufficientTeam(
-        self, req_skills: List[str], people: List[List[str]]
-    ) -> List[int]:
-        d = {s: i for i, s in enumerate(req_skills)}
-        m, n = len(req_skills), len(people)
-        p = [0] * n
-        for i, ss in enumerate(people):
-            for s in ss:
-                p[i] |= 1 << d[s]
-        f = [inf] * (1 << m)
-        g = [0] * (1 << m)
-        h = [0] * (1 << m)
-        f[0] = 0
-        for i in range(1 << m):
-            if f[i] == inf:
-                continue
-            for j in range(n):
-                if f[i] + 1 < f[i | p[j]]:
-                    f[i | p[j]] = f[i] + 1
-                    g[i | p[j]] = j
-                    h[i | p[j]] = i
-        i = (1 << m) - 1
-        ans = []
-        while i:
-            ans.append(g[i])
-            i = h[i]
-        return ans
-```
+
 
 ### **Java**
 
@@ -157,135 +128,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> smallestSufficientTeam(vector<string>& req_skills, vector<vector<string>>& people) {
-        unordered_map<string, int> d;
-        int m = req_skills.size(), n = people.size();
-        for (int i = 0; i < m; ++i) {
-            d[req_skills[i]] = i;
-        }
-        int p[n];
-        memset(p, 0, sizeof(p));
-        for (int i = 0; i < n; ++i) {
-            for (auto& s : people[i]) {
-                p[i] |= 1 << d[s];
-            }
-        }
-        int f[1 << m];
-        int g[1 << m];
-        int h[1 << m];
-        memset(f, 63, sizeof(f));
-        f[0] = 0;
-        for (int i = 0; i < 1 << m; ++i) {
-            if (f[i] == 0x3f3f3f3f) {
-                continue;
-            }
-            for (int j = 0; j < n; ++j) {
-                if (f[i] + 1 < f[i | p[j]]) {
-                    f[i | p[j]] = f[i] + 1;
-                    g[i | p[j]] = j;
-                    h[i | p[j]] = i;
-                }
-            }
-        }
-        vector<int> ans;
-        for (int i = (1 << m) - 1; i; i = h[i]) {
-            ans.push_back(g[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestSufficientTeam(req_skills []string, people [][]string) (ans []int) {
-	d := map[string]int{}
-	for i, s := range req_skills {
-		d[s] = i
-	}
-	m, n := len(req_skills), len(people)
-	p := make([]int, n)
-	for i, ss := range people {
-		for _, s := range ss {
-			p[i] |= 1 << d[s]
-		}
-	}
-	const inf = 1 << 30
-	f := make([]int, 1<<m)
-	g := make([]int, 1<<m)
-	h := make([]int, 1<<m)
-	for i := range f {
-		f[i] = inf
-	}
-	f[0] = 0
-	for i := range f {
-		if f[i] == inf {
-			continue
-		}
-		for j := 0; j < n; j++ {
-			if f[i]+1 < f[i|p[j]] {
-				f[i|p[j]] = f[i] + 1
-				g[i|p[j]] = j
-				h[i|p[j]] = i
-			}
-		}
-	}
-	for i := 1<<m - 1; i != 0; i = h[i] {
-		ans = append(ans, g[i])
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function smallestSufficientTeam(
-    req_skills: string[],
-    people: string[][],
-): number[] {
-    const d: Map<string, number> = new Map();
-    const m = req_skills.length;
-    const n = people.length;
-    for (let i = 0; i < m; ++i) {
-        d.set(req_skills[i], i);
-    }
-    const p: number[] = new Array(n).fill(0);
-    for (let i = 0; i < n; ++i) {
-        for (const s of people[i]) {
-            p[i] |= 1 << d.get(s)!;
-        }
-    }
-    const inf = 1 << 30;
-    const f: number[] = new Array(1 << m).fill(inf);
-    const g: number[] = new Array(1 << m).fill(0);
-    const h: number[] = new Array(1 << m).fill(0);
-    f[0] = 0;
-    for (let i = 0; i < 1 << m; ++i) {
-        if (f[i] === inf) {
-            continue;
-        }
-        for (let j = 0; j < n; ++j) {
-            if (f[i] + 1 < f[i | p[j]]) {
-                f[i | p[j]] = f[i] + 1;
-                g[i | p[j]] = j;
-                h[i | p[j]] = i;
-            }
-        }
-    }
-    const ans: number[] = [];
-    for (let i = (1 << m) - 1; i; i = h[i]) {
-        ans.push(g[i]);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -293,4 +146,4 @@ function smallestSufficientTeam(
 
 ```
 
-<!-- tabs:end -->
+

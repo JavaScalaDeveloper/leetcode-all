@@ -166,29 +166,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestGoodBase(self, n: str) -> str:
-        def cal(k, m):
-            p = s = 1
-            for i in range(m):
-                p *= k
-                s += p
-            return s
 
-        num = int(n)
-        for m in range(63, 1, -1):
-            l, r = 2, num - 1
-            while l < r:
-                mid = (l + r) >> 1
-                if cal(mid, m) >= num:
-                    r = mid
-                else:
-                    l = mid + 1
-            if cal(l, m) == num:
-                return str(l)
-        return str(num - 1)
-```
 
 ### **Java**
 
@@ -238,29 +216,9 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string smallestGoodBase(string n) {
-        long v = stol(n);
-        int mx = floor(log(v) / log(2));
-        for (int m = mx; m > 1; --m) {
-            int k = pow(v, 1.0 / m);
-            long mul = 1, s = 1;
-            for (int i = 0; i < m; ++i) {
-                mul *= k;
-                s += mul;
-            }
-            if (s == v) {
-                return to_string(k);
-            }
-        }
-        return to_string(v - 1);
-    }
-};
-```
+
+
 
 ### **...**
 
@@ -268,4 +226,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

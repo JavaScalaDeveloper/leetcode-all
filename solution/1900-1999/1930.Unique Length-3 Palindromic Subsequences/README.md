@@ -78,16 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countPalindromicSubsequence(self, s: str) -> int:
-        ans = 0
-        for c in ascii_lowercase:
-            l, r = s.find(c), s.rfind(c)
-            if r - l > 1:
-                ans += len(set(s[l + 1: r]))
-        return ans
-```
+
 
 ### **Java**
 
@@ -110,39 +101,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countPalindromicSubsequence(string s) {
-        int ans = 0;
-        for (char c = 'a'; c <= 'z'; ++c) {
-            int l = s.find_first_of(c), r = s.find_last_of(c);
-            unordered_set<char> cs;
-            for (int i = l + 1; i < r; ++i) cs.insert(s[i]);
-            ans += cs.size();
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countPalindromicSubsequence(s string) (ans int) {
-	for c := 'a'; c <= 'z'; c++ {
-		l, r := strings.Index(s, string(c)), strings.LastIndex(s, string(c))
-		cs := map[byte]struct{}{}
-		for i := l + 1; i < r; i++ {
-			cs[s[i]] = struct{}{}
-		}
-		ans += len(cs)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -150,4 +115,4 @@ func countPalindromicSubsequence(s string) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -89,30 +89,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canBeValid(self, s: str, locked: str) -> bool:
-        n = len(s)
-        if n & 1:
-            return False
-        x = 0
-        for i in range(n):
-            if s[i] == '(' or locked[i] == '0':
-                x += 1
-            elif x:
-                x -= 1
-            else:
-                return False
-        x = 0
-        for i in range(n - 1, -1, -1):
-            if s[i] == ')' or locked[i] == '0':
-                x += 1
-            elif x:
-                x -= 1
-            else:
-                return False
-        return True
-```
+
 
 ### **Java**
 
@@ -150,80 +127,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canBeValid(string s, string locked) {
-        int n = s.size();
-        if (n & 1) {
-            return false;
-        }
-        int x = 0;
-        for (int i = 0; i < n; ++i) {
-            if (s[i] == '(' || locked[i] == '0') {
-                ++x;
-            } else if (x) {
-                --x;
-            } else {
-                return false;
-            }
-        }
-        x = 0;
-        for (int i = n - 1; i >= 0; --i) {
-            if (s[i] == ')' || locked[i] == '0') {
-                ++x;
-            } else if (x) {
-                --x;
-            } else {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canBeValid(s string, locked string) bool {
-	n := len(s)
-	if n%2 == 1 {
-		return false
-	}
-	x := 0
-	for i := range s {
-		if s[i] == '(' || locked[i] == '0' {
-			x++
-		} else if x > 0 {
-			x--
-		} else {
-			return false
-		}
-	}
-	x = 0
-	for i := n - 1; i >= 0; i-- {
-		if s[i] == ')' || locked[i] == '0' {
-			x++
-		} else if x > 0 {
-			x--
-		} else {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -231,4 +147,4 @@ func canBeValid(s string, locked string) bool {
 
 ```
 
-<!-- tabs:end -->
+

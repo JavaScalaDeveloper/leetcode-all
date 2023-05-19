@@ -49,19 +49,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxNumberOfApples(self, weight: List[int]) -> int:
-        weight.sort()
-        ans = 0
-        t = 0
-        for v in weight:
-            if t + v > 5000:
-                break
-            t += v
-            ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -84,40 +72,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxNumberOfApples(vector<int>& weight) {
-        sort(weight.begin(), weight.end());
-        int ans = 0, t = 0;
-        for (int v : weight) {
-            if (t + v > 5000) break;
-            t += v;
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxNumberOfApples(weight []int) int {
-	sort.Ints(weight)
-	ans, t := 0, 0
-	for _, v := range weight {
-		if t+v > 5000 {
-			break
-		}
-		t += v
-		ans++
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -125,4 +86,4 @@ func maxNumberOfApples(weight []int) int {
 
 ```
 
-<!-- tabs:end -->
+

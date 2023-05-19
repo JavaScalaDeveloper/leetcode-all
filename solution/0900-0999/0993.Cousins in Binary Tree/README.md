@@ -83,59 +83,11 @@
 
 BFS：
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def isCousins(self, root: Optional[TreeNode], x: int, y: int) -> bool:
-        q = deque([(root, None)])
-        d = 0
-        p1 = p2 = None
-        d1 = d2 = 0
-        while q:
-            for _ in range(len(q)):
-                node, fa = q.popleft()
-                if node.val == x:
-                    p1, d1 = fa, d
-                if node.val == y:
-                    p2, d2 = fa, d
-                if node.left:
-                    q.append((node.left, node))
-                if node.right:
-                    q.append((node.right, node))
-            d += 1
-        return p1 != p2 and d1 == d2
-```
+
 
 DFS：
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def isCousins(self, root: Optional[TreeNode], x: int, y: int) -> bool:
-        def dfs(root, fa, d):
-            if root is None:
-                return
-            if root.val == x:
-                t[0] = (fa, d)
-            if root.val == y:
-                t[1] = (fa, d)
-            dfs(root.left, root, d + 1)
-            dfs(root.right, root, d + 1)
 
-        t = [None, None]
-        dfs(root, None, 0)
-        return t[0][0] != t[1][0] and t[0][1] == t[1][1]
-```
 
 ### **Java**
 
@@ -240,171 +192,25 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 BFS：
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool isCousins(TreeNode* root, int x, int y) {
-        TreeNode* p1 = nullptr;
-        TreeNode* p2 = nullptr;
-        int d1 = 0, d2 = 0;
-        queue<pair<TreeNode*, TreeNode*>> q;
-        q.emplace(root, nullptr);
-        int d = 0;
-        while (!q.empty()) {
-            for (int n = q.size(); n; --n) {
-                auto [node, fa] = q.front();
-                q.pop();
-                if (node->val == x) {
-                    p1 = fa;
-                    d1 = d;
-                }
-                if (node->val == y) {
-                    p2 = fa;
-                    d2 = d;
-                }
-                if (node->left) {
-                    q.emplace(node->left, node);
-                }
-                if (node->right) {
-                    q.emplace(node->right, node);
-                }
-            }
-            ++d;
-        }
-        return p1 != p2 && d1 == d2;
-    }
-};
-```
+
 
 DFS：
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool isCousins(TreeNode* root, int x, int y) {
-        TreeNode* p1, *p2;
-        int d1, d2;
-        function<void(TreeNode*, TreeNode*, int)> dfs = [&](TreeNode* root, TreeNode* fa, int d) {
-            if (!root) {
-                return;
-            }
-            if (root->val == x) {
-                p1 = fa;
-                d1 = d;
-            }
-            if (root->val == y) {
-                p2 = fa;
-                d2 = d;
-            }
-            dfs(root->left, root, d + 1);
-            dfs(root->right, root, d + 1);
-        };
-        dfs(root, nullptr, 0);
-        return p1 != p2 && d1 == d2;
-    }
-};
-```
 
-### **Go**
+
+
 
 BFS：
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func isCousins(root *TreeNode, x int, y int) bool {
-	type pair struct{ node, fa *TreeNode }
-	q := []pair{pair{root, nil}}
-	var p1, p2 *TreeNode
-	var d, d1, d2 int
-	for len(q) > 0 {
-		for n := len(q); n > 0; n-- {
-			p := q[0]
-			q = q[1:]
-			node, fa := p.node, p.fa
-			if node.Val == x {
-				p1, d1 = fa, d
-			}
-			if node.Val == y {
-				p2, d2 = fa, d
-			}
-			if node.Left != nil {
-				q = append(q, pair{node.Left, node})
-			}
-			if node.Right != nil {
-				q = append(q, pair{node.Right, node})
-			}
-		}
-		d++
-	}
-	return p1 != p2 && d1 == d2
-}
-```
+
 
 DFS：
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func isCousins(root *TreeNode, x int, y int) bool {
-	var p1, p2 *TreeNode
-	var d1, d2 int
-	var dfs func(*TreeNode, *TreeNode, int)
-	dfs = func(root *TreeNode, fa *TreeNode, d int) {
-		if root == nil {
-			return
-		}
-		if root.Val == x {
-			p1, d1 = fa, d
-		}
-		if root.Val == y {
-			p2, d2 = fa, d
-		}
-		dfs(root.Left, root, d+1)
-		dfs(root.Right, root, d+1)
-	}
-	dfs(root, nil, 0)
-	return p1 != p2 && d1 == d2
-}
-```
+
 
 ### **...**
 
@@ -412,4 +218,4 @@ func isCousins(root *TreeNode, x int, y int) bool {
 
 ```
 
-<!-- tabs:end -->
+

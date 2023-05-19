@@ -52,45 +52,11 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def getLeastNumbers(self, arr: List[int], k: int) -> List[int]:
-        arr.sort()
-        return arr[:k]
-```
 
-```python
-class Solution:
-    def getLeastNumbers(self, arr: List[int], k: int) -> List[int]:
-        h = []
-        for x in arr:
-            heappush(h, -x)
-            if len(h) > k:
-                heappop(h)
-        return [-x for x in h]
-```
 
-```python
-class Solution:
-    def getLeastNumbers(self, arr: List[int], k: int) -> List[int]:
-        def quick_sort(l, r):
-            i, j = l, r
-            while i < j:
-                while i < j and arr[j] >= arr[l]:
-                    j -= 1
-                while i < j and arr[i] <= arr[l]:
-                    i += 1
-                arr[i], arr[j] = arr[j], arr[i]
-            arr[i], arr[l] = arr[l], arr[i]
-            if k < i:
-                return quick_sort(l, i - 1)
-            if k > i:
-                return quick_sort(i + 1, r)
-            return arr[:k]
 
-        n = len(arr)
-        return arr if k == n else quick_sort(0, n - 1)
-```
+
+
 
 ### **Java**
 
@@ -167,250 +133,37 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> getLeastNumbers(vector<int>& arr, int k) {
-        sort(arr.begin(), arr.end());
-        return vector<int>(arr.begin(), arr.begin() + k);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> getLeastNumbers(vector<int>& arr, int k) {
-        priority_queue<int> q;
-        for (int& x : arr) {
-            q.push(x);
-            if (q.size() > k) {
-                q.pop();
-            }
-        }
-        vector<int> ans(k);
-        for (int i = 0; i < k; ++i) {
-            ans[i] = q.top();
-            q.pop();
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> getLeastNumbers(vector<int>& arr, int k) {
-        int n = arr.size();
-        function<vector<int>(int, int)> quickSort = [&](int l, int r) -> vector<int> {
-            int i = l, j = r;
-            while (i < j) {
-                while (i < j && arr[j] >= arr[l]) {
-                    --j;
-                }
-                while (i < j && arr[i] <= arr[l]) {
-                    ++i;
-                }
-                swap(arr[i], arr[j]);
-            }
-            swap(arr[i], arr[l]);
-            if (k < i) {
-                return quickSort(l, i - 1);
-            }
-            if (k > i) {
-                return quickSort(i + 1, r);
-            }
-            return vector<int>(arr.begin(), arr.begin() + k);
-        };
-        return k == n ? arr : quickSort(0, n - 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func getLeastNumbers(arr []int, k int) []int {
-	sort.Ints(arr)
-	return arr[:k]
-}
-```
 
-```go
-func getLeastNumbers(arr []int, k int) (ans []int) {
-	q := hp{}
-	for _, x := range arr {
-		heap.Push(&q, x)
-		if q.Len() > k {
-			heap.Pop(&q)
-		}
-	}
-	for i := 0; i < k; i++ {
-		ans = append(ans, heap.Pop(&q).(int))
-	}
-	return
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h hp) Less(i, j int) bool  { return h.IntSlice[i] > h.IntSlice[j] }
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-func (h *hp) push(v int) { heap.Push(h, v) }
-func (h *hp) pop() int   { return heap.Pop(h).(int) }
-```
 
-```go
-func getLeastNumbers(arr []int, k int) []int {
-	n := len(arr)
-	if k == n {
-		return arr
-	}
-	var quickSort func(l, r int) []int
-	quickSort = func(l, r int) []int {
-		i, j := l, r
-		for i < j {
-			for i < j && arr[j] >= arr[l] {
-				j--
-			}
-			for i < j && arr[i] <= arr[l] {
-				i++
-			}
-			arr[i], arr[j] = arr[j], arr[i]
-		}
-		arr[i], arr[l] = arr[l], arr[i]
-		if k < i {
-			return quickSort(l, i-1)
-		}
-		if k > i {
-			return quickSort(i+1, r)
-		}
-		return arr[:k]
-	}
-	return quickSort(0, n-1)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} arr
- * @param {number} k
- * @return {number[]}
- */
-var getLeastNumbers = function (arr, k) {
-    // 排序
-    // return arr.sort((a,b)=>a-b).slice(0,k)
-    // ==========================================
-    // 快排思想
-    let left = 0;
-    let right = arr.length - 1;
-    while (left < right) {
-        let i = partition(left, right);
-        if (i <= k) {
-            left = i + 1;
-        }
-        if (i >= k) {
-            right = i - 1;
-        }
-    }
-    function partition(left, right) {
-        let pivot = arr[left];
-        while (left < right) {
-            while (left < right && arr[right] >= pivot) {
-                right--;
-            }
-            arr[left] = arr[right];
-            while (left < right && arr[left] <= pivot) {
-                left++;
-            }
-            arr[right] = arr[left];
-        }
-        arr[left] = pivot;
-        return left;
-    }
-    return arr.slice(0, k);
-};
-```
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getLeastNumbers(arr: number[], k: number): number[] {
-    let start = 0;
-    let end = arr.length;
-    while (start < end && end > k) {
-        const index = start + Math.floor(Math.random() * (end - start));
-        [arr[start], arr[index]] = [arr[index], arr[start]];
-        const num = arr[start];
-        let mark = start;
-        for (let i = start + 1; i < end; i++) {
-            if (arr[i] < num) {
-                mark++;
-                [arr[i], arr[mark]] = [arr[mark], arr[i]];
-            }
-        }
-        [arr[start], arr[mark]] = [arr[mark], arr[start]];
 
-        if (mark >= k) {
-            end = mark;
-        } else {
-            start = mark + 1;
-        }
-    }
-    return arr.slice(0, k);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn get_least_numbers(mut arr: Vec<i32>, k: i32) -> Vec<i32> {
-        let k = k as usize;
-        let mut start = 0;
-        let mut end = arr.len();
-        while start < end && end > k {
-            let num = arr[start];
-            let mut mark = start;
-            for i in (start + 1)..end {
-                if arr[i] < num {
-                    mark += 1;
-                    arr.swap(i, mark);
-                }
-            }
-            arr.swap(start, mark);
 
-            if mark <= k {
-                start = mark + 1;
-            } else {
-                end = mark
-            }
-        }
-        arr[0..k].to_vec()
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[] GetLeastNumbers(int[] arr, int k) {
-        Array.Sort(arr);
-        return arr[..k];
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -418,4 +171,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

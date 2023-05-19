@@ -72,36 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shortestBridge(self, grid: List[List[int]]) -> int:
-        def dfs(i, j):
-            q.append((i, j))
-            grid[i][j] = 2
-            for a, b in pairwise(dirs):
-                x, y = i + a, j + b
-                if 0 <= x < n and 0 <= y < n and grid[x][y] == 1:
-                    dfs(x, y)
 
-        n = len(grid)
-        dirs = (-1, 0, 1, 0, -1)
-        q = deque()
-        i, j = next((i, j) for i in range(n) for j in range(n) if grid[i][j])
-        dfs(i, j)
-        ans = 0
-        while 1:
-            for _ in range(len(q)):
-                i, j = q.popleft()
-                for a, b in pairwise(dirs):
-                    x, y = i + a, j + b
-                    if 0 <= x < n and 0 <= y < n:
-                        if grid[x][y] == 1:
-                            return ans
-                        if grid[x][y] == 0:
-                            grid[x][y] = 2
-                            q.append((x, y))
-            ans += 1
-```
 
 ### **Java**
 
@@ -160,106 +131,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const static inline vector<int> dirs = {-1, 0, 1, 0, -1};
 
-    int shortestBridge(vector<vector<int>>& grid) {
-        int n = grid.size();
-        queue<pair<int, int>> q;
-        function<void(int, int)> dfs = [&](int i, int j) {
-            grid[i][j] = 2;
-            q.emplace(i, j);
-            for (int k = 0; k < 4; ++k) {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < n && y >= 0 && y < n && grid[x][y] == 1) {
-                    dfs(x, y);
-                }
-            }
-        };
-        for (int i = 0, x = 1; i < n && x; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j]) {
-                    dfs(i, j);
-                    x = 0;
-                    break;
-                }
-            }
-        }
-        int ans = 0;
-        while (1) {
-            for (int h = q.size(); h; --h) {
-                auto [i, j] = q.front();
-                q.pop();
-                for (int k = 0; k < 4; ++k) {
-                    int x = i + dirs[k], y = j + dirs[k + 1];
-                    if (x >= 0 && x < n && y >= 0 && y < n) {
-                        if (grid[x][y] == 1) return ans;
-                        if (grid[x][y] == 0) {
-                            grid[x][y] = 2;
-                            q.emplace(x, y);
-                        }
-                    }
-                }
-            }
-            ++ans;
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func shortestBridge(grid [][]int) (ans int) {
-	n := len(grid)
-	dirs := []int{-1, 0, 1, 0, -1}
-	type pair struct{ i, j int }
-	q := []pair{}
-	var dfs func(int, int)
-	dfs = func(i, j int) {
-		grid[i][j] = 2
-		q = append(q, pair{i, j})
-		for k := 0; k < 4; k++ {
-			x, y := i+dirs[k], j+dirs[k+1]
-			if x >= 0 && x < n && y >= 0 && y < n && grid[x][y] == 1 {
-				dfs(x, y)
-			}
-		}
-	}
-	for i, x := 0, 1; i < n && x == 1; i++ {
-		for j := 0; j < n; j++ {
-			if grid[i][j] == 1 {
-				dfs(i, j)
-				x = 0
-				break
-			}
-		}
-	}
-	for {
-		for i := len(q); i > 0; i-- {
-			p := q[0]
-			q = q[1:]
-			for k := 0; k < 4; k++ {
-				x, y := p.i+dirs[k], p.j+dirs[k+1]
-				if x >= 0 && x < n && y >= 0 && y < n {
-					if grid[x][y] == 1 {
-						return
-					}
-					if grid[x][y] == 0 {
-						grid[x][y] = 2
-						q = append(q, pair{x, y})
-					}
-				}
-			}
-		}
-		ans++
-	}
-}
-```
+
+
+
 
 ### **...**
 
@@ -267,4 +145,4 @@ func shortestBridge(grid [][]int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

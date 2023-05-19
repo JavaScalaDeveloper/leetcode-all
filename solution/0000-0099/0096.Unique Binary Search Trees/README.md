@@ -44,16 +44,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numTrees(self, n: int) -> int:
-        dp = [0] * (n + 1)
-        dp[0] = 1
-        for i in range(1, n + 1):
-            for j in range(i):
-                dp[i] += dp[j] * dp[i - j - 1]
-        return dp[-1]
-```
+
 
 ### **Java**
 
@@ -74,38 +65,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numTrees(int n) {
-        vector<int> dp(n + 1);
-        dp[0] = 1;
-        for (int i = 1; i <= n; ++i) {
-            for (int j = 0; j < i; ++j) {
-                dp[i] += dp[j] * dp[i - j - 1];
-            }
-        }
-        return dp[n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func numTrees(n int) int {
-	dp := make([]int, n+1)
-	dp[0] = 1
-	for i := 1; i <= n; i++ {
-		for j := 0; j < i; j++ {
-			dp[i] += dp[j] * dp[i-j-1]
-		}
-	}
-	return dp[n]
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -113,4 +79,4 @@ func numTrees(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

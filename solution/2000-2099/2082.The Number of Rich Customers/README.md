@@ -74,4 +74,4 @@ WHERE
     amount > 500;
 ```
 
-<!-- tabs:end -->
+

@@ -51,21 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isStraight(self, nums: List[int]) -> bool:
-        vis = set()
-        mi, mx = inf, -inf
-        for x in nums:
-            if x == 0:
-                continue
-            if x in vis:
-                return False
-            vis.add(x)
-            mi = min(mi, x)
-            mx = max(mx, x)
-        return mx - mi <= 4
-```
+
 
 ### **Java**
 
@@ -92,149 +78,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isStraight(vector<int>& nums) {
-        bool vis[14]{};
-        int mi = 20, mx = -1;
-        for (int& x : nums) {
-            if (x == 0) {
-                continue;
-            }
-            if (vis[x]) {
-                return false;
-            }
-            vis[x] = true;
-            mi = min(mi, x);
-            mx = max(mx, x);
-        }
-        return mx - mi <= 4;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isStraight(nums []int) bool {
-	vis := map[int]bool{}
-	mi, mx := 20, -1
-	for _, x := range nums {
-		if x == 0 {
-			continue
-		}
-		if vis[x] {
-			return false
-		}
-		vis[x] = true
-		mi = min(mi, x)
-		mx = max(mx, x)
-	}
-	return mx-mi <= 4
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {boolean}
- */
-var isStraight = function (nums) {
-    const vis = new Array(14).fill(false);
-    let mi = 20;
-    let mx = -1;
-    for (const x of nums) {
-        if (x == 0) {
-            continue;
-        }
-        if (vis[x]) {
-            return false;
-        }
-        vis[x] = true;
-        mi = Math.min(mi, x);
-        mx = Math.max(mx, x);
-    }
-    return mx - mi <= 4;
-};
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isStraight(nums: number[]): boolean {
-    nums.sort((a, b) => a - b);
-    let j = 0;
-    for (let i = 0; i < 4; i++) {
-        if (nums[i] === 0) {
-            j++;
-        } else if (nums[i] === nums[i + 1]) {
-            return false;
-        }
-    }
-    return nums[4] - nums[j] <= 4;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn is_straight(mut nums: Vec<i32>) -> bool {
-        nums.sort();
-        let mut j = 0;
-        for i in 0..4 {
-            if nums[i] == 0 {
-                j += 1;
-            } else if nums[i] == nums[i + 1] {
-                return false;
-            }
-        }
-        nums[4] - nums[j] <= 4
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool IsStraight(int[] nums) {
-        bool[] vis = new bool[14];
-        int mi = 20, mx = -1;
-        foreach(int x in nums) {
-            if (x == 0) {
-                continue;
-            }
-            if (vis[x]) {
-                return false;
-            }
-            vis[x] = true;
-            mi = Math.Min(mi, x);
-            mx = Math.Max(mx, x);
-        }
-        return mx - mi <= 4;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -242,4 +108,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -37,11 +37,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def exchangeBits(self, num: int) -> int:
-        return ((num & 0x55555555) << 1) | ((num & 0xAAAAAAAA) >> 1)
-```
+
 
 ### **Java**
 
@@ -55,45 +51,17 @@ class Solution {
 }
 ```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn exchange_bits(mut num: i32) -> i32 {
-        let mut res = 0;
-        let mut i = 0;
-        while num != 0 {
-            let a = num & 1;
-            num >>= 1;
-            let b = num & 1;
-            num >>= 1;
-            res |= a << i + 1;
-            res |= b << i;
-            i += 2;
-        }
-        res
-    }
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int exchangeBits(int num) {
-        return ((num & 0x55555555) << 1) | ((num & 0xaaaaaaaa)) >> 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func exchangeBits(num int) int {
-	return ((num & 0x55555555) << 1) | (num&0xaaaaaaaa)>>1
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -101,4 +69,4 @@ func exchangeBits(num int) int {
 
 ```
 
-<!-- tabs:end -->
+

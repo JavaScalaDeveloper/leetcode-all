@@ -63,30 +63,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isIsomorphic(self, s: str, t: str) -> bool:
-        d1 = {}
-        d2 = {}
-        for a, b in zip(s, t):
-            if (a in d1 and d1[a] != b) or (b in d2 and d2[b] != a):
-                return False
-            d1[a] = b
-            d2[b] = a
-        return True
-```
 
-```python
-class Solution:
-    def isIsomorphic(self, s: str, t: str) -> bool:
-        d1, d2 = [0] * 256, [0] * 256
-        for i, (a, b) in enumerate(zip(s, t), 1):
-            a, b = ord(a), ord(b)
-            if d1[a] != d2[b]:
-                return False
-            d1[a] = d2[b] = i
-        return True
-```
+
+
 
 ### **Java**
 
@@ -133,109 +112,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isIsomorphic(string s, string t) {
-        int d1[256]{};
-        int d2[256]{};
-        int n = s.size();
-        for (int i = 0; i < n; ++i) {
-            char a = s[i], b = t[i];
-            if (d1[a] != d2[b]) {
-                return false;
-            }
-            d1[a] = d2[b] = i + 1;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isIsomorphic(s string, t string) bool {
-	d1 := [256]int{}
-	d2 := [256]int{}
-	for i := range s {
-		if d1[s[i]] != d2[t[i]] {
-			return false
-		}
-		d1[s[i]] = i + 1
-		d2[t[i]] = i + 1
-	}
-	return true
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool IsIsomorphic(string s, string t) {
-        int[] d1 = new int[256];
-        int[] d2 = new int[256];
-        for (int i = 0; i < s.Length; ++i) {
-            var a = s[i];
-            var b = t[i];
-            if (d1[a] != d2[b]) {
-                return false;
-            }
-            d1[a] = i + 1;
-            d2[b] = i + 1;
-        }
-        return true;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isIsomorphic(s: string, t: string): boolean {
-    const d1: number[] = new Array(256).fill(0);
-    const d2: number[] = new Array(256).fill(0);
-    for (let i = 0; i < s.length; ++i) {
-        const a = s.charCodeAt(i);
-        const b = t.charCodeAt(i);
-        if (d1[a] !== d2[b]) {
-            return false;
-        }
-        d1[a] = i + 1;
-        d2[b] = i + 1;
-    }
-    return true;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    fn help(s: &[u8], t: &[u8]) -> bool {
-        let mut map = HashMap::new();
-        for i in 0..s.len() {
-            if map.contains_key(&s[i]) {
-                if map.get(&s[i]).unwrap() != &t[i] {
-                    return false;
-                }
-            } else {
-                map.insert(s[i], t[i]);
-            }
-        }
-        true
-    }
 
-    pub fn is_isomorphic(s: String, t: String) -> bool {
-        let (s, t) = (s.as_bytes(), t.as_bytes());
-        Self::help(s, t) && Self::help(t, s)
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -243,4 +138,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

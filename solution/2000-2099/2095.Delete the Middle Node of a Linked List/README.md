@@ -72,22 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        dummy = ListNode(next=head)
-        slow, fast = dummy, head
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
-        slow.next = slow.next.next
-        return dummy.next
-```
+
 
 ### **Java**
 
@@ -122,81 +107,15 @@ class Solution {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function deleteMiddle(head: ListNode | null): ListNode | null {
-    if (!head || !head.next) return null;
-    let fast = head.next,
-        slow = head;
-    while (fast.next && fast.next.next) {
-        slow = slow.next;
-        fast = fast.next.next;
-    }
-    slow.next = slow.next.next;
-    return head;
-}
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* deleteMiddle(ListNode* head) {
-        ListNode* dummy = new ListNode(0, head);
-        ListNode* slow = dummy;
-        ListNode* fast = head;
-        while (fast && fast->next) {
-            slow = slow->next;
-            fast = fast->next->next;
-        }
-        slow->next = slow->next->next;
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func deleteMiddle(head *ListNode) *ListNode {
-	dummy := &ListNode{Val: 0, Next: head}
-	slow, fast := dummy, dummy.Next
-	for fast != nil && fast.Next != nil {
-		slow, fast = slow.Next, fast.Next.Next
-	}
-	slow.Next = slow.Next.Next
-	return dummy.Next
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -204,4 +123,4 @@ func deleteMiddle(head *ListNode) *ListNode {
 
 ```
 
-<!-- tabs:end -->
+

@@ -56,19 +56,7 @@ S = &quot;bbbcccdddaaa&quot;
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfLines(self, widths: List[int], s: str) -> List[int]:
-        last, row = 0, 1
-        for c in s:
-            w = widths[ord(c) - ord('a')]
-            if last + w <= 100:
-                last += w
-            else:
-                row += 1
-                last = w
-        return [row, last]
-```
+
 
 ### **Java**
 
@@ -94,66 +82,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int MAX_WIDTH = 100;
 
-    vector<int> numberOfLines(vector<int>& widths, string s) {
-        int last = 0, row = 1;
-        for (char c : s) {
-            int w = widths[c - 'a'];
-            if (last + w <= MAX_WIDTH)
-                last += w;
-            else {
-                ++row;
-                last = w;
-            }
-        }
-        return {row, last};
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfLines(widths []int, s string) []int {
-	last, row := 0, 1
-	for _, c := range s {
-		w := widths[c-'a']
-		if last+w <= 100 {
-			last += w
-		} else {
-			row++
-			last = w
-		}
-	}
-	return []int{row, last}
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn number_of_lines(widths: Vec<i32>, s: String) -> Vec<i32> {
-        let mut count = 1;
-        let mut sum = 0;
-        for c in s.as_bytes() {
-            let width = widths[(c - b'a') as usize];
-            if sum + width > 100 {
-                sum = 0;
-                count += 1;
-            }
-            sum += width;
-        }
-        vec![count, sum]
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -161,4 +100,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

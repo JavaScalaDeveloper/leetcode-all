@@ -71,12 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countPrimeSetBits(self, left: int, right: int) -> int:
-        primes = {2, 3, 5, 7, 11, 13, 17, 19}
-        return sum(i.bit_count() in primes for i in range(left, right + 1))
-```
+
 
 ### **Java**
 
@@ -98,34 +93,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countPrimeSetBits(int left, int right) {
-        unordered_set<int> primes {2, 3, 5, 7, 11, 13, 17, 19};
-        int ans = 0;
-        for (int i = left; i <= right; ++i) ans += primes.count(__builtin_popcount(i));
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countPrimeSetBits(left int, right int) (ans int) {
-	primes := map[int]int{}
-	for _, v := range []int{2, 3, 5, 7, 11, 13, 17, 19} {
-		primes[v] = 1
-	}
-	for i := left; i <= right; i++ {
-		ans += primes[bits.OnesCount(uint(i))]
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -133,4 +107,4 @@ func countPrimeSetBits(left int, right int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

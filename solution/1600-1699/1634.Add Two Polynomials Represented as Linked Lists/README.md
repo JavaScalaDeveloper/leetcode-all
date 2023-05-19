@@ -86,36 +86,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for polynomial singly-linked list.
-# class PolyNode:
-#     def __init__(self, x=0, y=0, next=None):
-#         self.coefficient = x
-#         self.power = y
-#         self.next = next
 
-
-class Solution:
-    def addPoly(self, poly1: "PolyNode", poly2: "PolyNode") -> "PolyNode":
-        dummy = curr = PolyNode()
-        while poly1 and poly2:
-            if poly1.power > poly2.power:
-                curr.next = poly1
-                poly1 = poly1.next
-                curr = curr.next
-            elif poly1.power < poly2.power:
-                curr.next = poly2
-                poly2 = poly2.next
-                curr = curr.next
-            else:
-                if c := poly1.coefficient + poly2.coefficient:
-                    curr.next = PolyNode(c, poly1.power)
-                    curr = curr.next
-                poly1 = poly1.next
-                poly2 = poly2.next
-        curr.next = poly1 or poly2
-        return dummy.next
-```
 
 ### **Java**
 
@@ -169,149 +140,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for polynomial singly-linked list->
- * struct PolyNode {
- *     int coefficient, power;
- *     PolyNode *next;
- *     PolyNode(): coefficient(0), power(0), next(nullptr) {};
- *     PolyNode(int x, int y): coefficient(x), power(y), next(nullptr) {};
- *     PolyNode(int x, int y, PolyNode* next): coefficient(x), power(y), next(next) {};
- * };
- */
 
-class Solution {
-public:
-    PolyNode* addPoly(PolyNode* poly1, PolyNode* poly2) {
-        PolyNode* dummy = new PolyNode();
-        PolyNode* curr = dummy;
-        while (poly1 && poly2) {
-            if (poly1->power > poly2->power) {
-                curr->next = poly1;
-                poly1 = poly1->next;
-                curr = curr->next;
-            } else if (poly1->power < poly2->power) {
-                curr->next = poly2;
-                poly2 = poly2->next;
-                curr = curr->next;
-            } else {
-                int c = poly1->coefficient + poly2->coefficient;
-                if (c != 0) {
-                    curr->next = new PolyNode(c, poly1->power);
-                    curr = curr->next;
-                }
-                poly1 = poly1->next;
-                poly2 = poly2->next;
-            }
-        }
-        if (!poly1) {
-            curr->next = poly2;
-        }
-        if (!poly2) {
-            curr->next = poly1;
-        }
-        return dummy->next;
-    }
-};
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for polynomial singly-linked list.
- * public class PolyNode {
- *     public int coefficient, power;
- *     public PolyNode next;
- *
- *     public PolyNode(int x=0, int y=0, PolyNode next=null) {
- *         this.coefficient = x;
- *         this.power = y;
- *         this.next = next;
- *     }
- * }
- */
 
-public class Solution {
-    public PolyNode AddPoly(PolyNode poly1, PolyNode poly2) {
-        PolyNode dummy = new PolyNode();
-        PolyNode curr = dummy;
-        while (poly1 != null && poly2 != null) {
-            if (poly1.power > poly2.power) {
-                curr.next = poly1;
-                poly1 = poly1.next;
-                curr = curr.next;
-            } else if (poly1.power < poly2.power) {
-                curr.next = poly2;
-                poly2 = poly2.next;
-                curr = curr.next;
-            } else {
-                int c = poly1.coefficient + poly2.coefficient;
-                if (c != 0) {
-                    curr.next = new PolyNode(c, poly1.power);
-                    curr = curr.next;
-                }
-                poly1 = poly1.next;
-                poly2 = poly2.next;
-            }
-        }
-        if (poly1 == null) {
-            curr.next = poly2;
-        }
-        if (poly2 == null) {
-            curr.next = poly1;
-        }
-        return dummy.next;
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for polynomial singly-linked list.
- * function PolyNode(x=0, y=0, next=null) {
- *     this.coefficient = x;
- *     this.power = y;
- *     this.next = next;
- * }
- */
 
-/**
- * @param {PolyNode} poly1
- * @param {PolyNode} poly2
- * @return {PolyNode}
- */
-var addPoly = function (poly1, poly2) {
-    const dummy = new PolyNode();
-    let curr = dummy;
-    while (poly1 && poly2) {
-        if (poly1.power > poly2.power) {
-            curr.next = poly1;
-            poly1 = poly1.next;
-            curr = curr.next;
-        } else if (poly1.power < poly2.power) {
-            curr.next = poly2;
-            poly2 = poly2.next;
-            curr = curr.next;
-        } else {
-            const c = poly1.coefficient + poly2.coefficient;
-            if (c != 0) {
-                curr.next = new PolyNode(c, poly1.power);
-                curr = curr.next;
-            }
-            poly1 = poly1.next;
-            poly2 = poly2.next;
-        }
-    }
-    curr.next = poly1 || poly2;
-    return dummy.next;
-};
-```
+
+
+
 
 ### **...**
 
@@ -319,4 +158,4 @@ var addPoly = function (poly1, poly2) {
 
 ```
 
-<!-- tabs:end -->
+

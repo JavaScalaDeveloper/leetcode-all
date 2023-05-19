@@ -88,21 +88,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def waysToReachTarget(self, target: int, types: List[List[int]]) -> int:
-        n = len(types)
-        mod = 10**9 + 7
-        f = [[0] * (target + 1) for _ in range(n + 1)]
-        f[0][0] = 1
-        for i in range(1, n + 1):
-            count, marks = types[i - 1]
-            for j in range(target + 1):
-                for k in range(count + 1):
-                    if j >= k * marks:
-                        f[i][j] = (f[i][j] + f[i - 1][j - k * marks]) % mod
-        return f[n][target]
-```
+
 
 ### **Java**
 
@@ -130,80 +116,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int waysToReachTarget(int target, vector<vector<int>>& types) {
-        int n = types.size();
-        const int mod = 1e9 + 7;
-        int f[n + 1][target + 1];
-        memset(f, 0, sizeof(f));
-        f[0][0] = 1;
-        for (int i = 1; i <= n; ++i) {
-            int count = types[i - 1][0], marks = types[i - 1][1];
-            for (int j = 0; j <= target; ++j) {
-                for (int k = 0; k <= count; ++k) {
-                    if (j >= k * marks) {
-                        f[i][j] = (f[i][j] + f[i - 1][j - k * marks]) % mod;
-                    }
-                }
-            }
-        }
-        return f[n][target];
-    }
-};
-```
 
-### **Go**
 
-```go
-func waysToReachTarget(target int, types [][]int) int {
-	n := len(types)
-	f := make([][]int, n+1)
-	for i := range f {
-		f[i] = make([]int, target+1)
-	}
-	f[0][0] = 1
-	const mod = 1e9 + 7
-	for i := 1; i <= n; i++ {
-		count, marks := types[i-1][0], types[i-1][1]
-		for j := 0; j <= target; j++ {
-			for k := 0; k <= count; k++ {
-				if j >= k*marks {
-					f[i][j] = (f[i][j] + f[i-1][j-k*marks]) % mod
-				}
-			}
-		}
-	}
-	return f[n][target]
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function waysToReachTarget(target: number, types: number[][]): number {
-    const n = types.length;
-    const mod = 10 ** 9 + 7;
-    const f: number[][] = Array.from({ length: n + 1 }, () =>
-        Array(target + 1).fill(0),
-    );
-    f[0][0] = 1;
-    for (let i = 1; i <= n; ++i) {
-        const [count, marks] = types[i - 1];
-        for (let j = 0; j <= target; ++j) {
-            for (let k = 0; k <= count; ++k) {
-                if (j >= k * marks) {
-                    f[i][j] = (f[i][j] + f[i - 1][j - k * marks]) % mod;
-                }
-            }
-        }
-    }
-    return f[n][target];
-}
-```
+
 
 ### **...**
 
@@ -211,4 +134,4 @@ function waysToReachTarget(target: number, types: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

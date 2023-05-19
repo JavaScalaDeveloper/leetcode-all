@@ -84,16 +84,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getLastMoment(self, n: int, left: List[int], right: List[int]) -> int:
-        ans = 0
-        for x in left:
-            ans = max(ans, x)
-        for x in right:
-            ans = max(ans, n - x)
-        return ans
-```
+
 
 ### **Java**
 
@@ -114,59 +105,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int getLastMoment(int n, vector<int>& left, vector<int>& right) {
-        int ans = 0;
-        for (int& x : left) {
-            ans = max(ans, x);
-        }
-        for (int& x : right) {
-            ans = max(ans, n - x);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getLastMoment(n int, left []int, right []int) (ans int) {
-	for _, x := range left {
-		ans = max(ans, x)
-	}
-	for _, x := range right {
-		ans = max(ans, n-x)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getLastMoment(n: number, left: number[], right: number[]): number {
-    let ans = 0;
-    for (const x of left) {
-        ans = Math.max(ans, x);
-    }
-    for (const x of right) {
-        ans = Math.max(ans, n - x);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -174,4 +123,4 @@ function getLastMoment(n: number, left: number[], right: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

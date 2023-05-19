@@ -98,55 +98,7 @@ trie.countWordsStartingWith("app"); // 返回 0
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self):
-        self.children = [None] * 26
-        self.v = self.pv = 0
 
-    def insert(self, word: str) -> None:
-        node = self
-        for c in word:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-            node = node.children[idx]
-            node.pv += 1
-        node.v += 1
-
-    def countWordsEqualTo(self, word: str) -> int:
-        node = self.search(word)
-        return 0 if node is None else node.v
-
-    def countWordsStartingWith(self, prefix: str) -> int:
-        node = self.search(prefix)
-        return 0 if node is None else node.pv
-
-    def erase(self, word: str) -> None:
-        node = self
-        for c in word:
-            idx = ord(c) - ord('a')
-            node = node.children[idx]
-            node.pv -= 1
-        node.v -= 1
-
-    def search(self, word):
-        node = self
-        for c in word:
-            idx = ord(c) - ord('a')
-            if node.children[idx] is None:
-                return None
-            node = node.children[idx]
-        return node
-
-
-# Your Trie object will be instantiated and called as such:
-# obj = Trie()
-# obj.insert(word)
-# param_2 = obj.countWordsEqualTo(word)
-# param_3 = obj.countWordsStartingWith(prefix)
-# obj.erase(word)
-```
 
 ### **Java**
 
@@ -217,148 +169,13 @@ class Trie {
  */
 ```
 
-### **C++**
 
-```cpp
-class Trie {
-public:
-    Trie()
-        : children(26)
-        , v(0)
-        , pv(0) {
-    }
 
-    void insert(string word) {
-        Trie* node = this;
-        for (char c : word) {
-            c -= 'a';
-            if (!node->children[c]) {
-                node->children[c] = new Trie();
-            }
-            node = node->children[c];
-            ++node->pv;
-        }
-        ++node->v;
-    }
 
-    int countWordsEqualTo(string word) {
-        Trie* node = search(word);
-        return node ? node->v : 0;
-    }
 
-    int countWordsStartingWith(string prefix) {
-        Trie* node = search(prefix);
-        return node ? node->pv : 0;
-    }
 
-    void erase(string word) {
-        Trie* node = this;
-        for (char c : word) {
-            c -= 'a';
-            node = node->children[c];
-            --node->pv;
-        }
-        --node->v;
-    }
 
-private:
-    vector<Trie*> children;
-    int v, pv;
 
-    Trie* search(string& word) {
-        Trie* node = this;
-        for (char c : word) {
-            c -= 'a';
-            if (!node->children[c]) {
-                return nullptr;
-            }
-            node = node->children[c];
-        }
-        return node;
-    }
-};
-
-/**
- * Your Trie object will be instantiated and called as such:
- * Trie* obj = new Trie();
- * obj->insert(word);
- * int param_2 = obj->countWordsEqualTo(word);
- * int param_3 = obj->countWordsStartingWith(prefix);
- * obj->erase(word);
- */
-```
-
-### **Go**
-
-```go
-type Trie struct {
-	children [26]*Trie
-	v        int
-	pv       int
-}
-
-func Constructor() (_ Trie) { return }
-
-func (this *Trie) Insert(word string) {
-	node := this
-	for _, c := range word {
-		c -= 'a'
-		if node.children[c] == nil {
-			node.children[c] = &Trie{}
-		}
-		node = node.children[c]
-		node.pv++
-	}
-	node.v++
-}
-
-func (this *Trie) CountWordsEqualTo(word string) int {
-	node := this.search(word)
-	if node == nil {
-		return 0
-	}
-	return node.v
-}
-
-func (this *Trie) CountWordsStartingWith(prefix string) int {
-	node := this.search(prefix)
-	if node == nil {
-		return 0
-	}
-	return node.pv
-}
-
-func (this *Trie) Erase(word string) {
-	node := this
-	for _, c := range word {
-		c -= 'a'
-		node = node.children[c]
-		node.pv--
-	}
-	node.v--
-}
-
-func (this *Trie) search(word string) *Trie {
-	node := this
-	for _, c := range word {
-		c -= 'a'
-		if node.children[c] == nil {
-			return nil
-		}
-		node = node.children[c]
-	}
-	return node
-}
-
-/**
- * Your Trie object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Insert(word);
- * param_2 := obj.CountWordsEqualTo(word);
- * param_3 := obj.CountWordsStartingWith(prefix);
- * obj.Erase(word);
- */
-```
 
 ### **...**
 
@@ -366,4 +183,4 @@ func (this *Trie) search(word string) *Trie {
 
 ```
 
-<!-- tabs:end -->
+

@@ -65,35 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def findLeaves(self, root: TreeNode) -> List[List[int]]:
-        def dfs(root, prev, t):
-            if root is None:
-                return
-            if root.left is None and root.right is None:
-                t.append(root.val)
-                if prev.left == root:
-                    prev.left = None
-                else:
-                    prev.right = None
-            dfs(root.left, root, t)
-            dfs(root.right, root, t)
 
-        res = []
-        prev = TreeNode(left=root)
-        while prev.left:
-            t = []
-            dfs(prev.left, prev, t)
-            res.append(t)
-        return res
-```
 
 ### **Java**
 
@@ -145,90 +117,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<vector<int>> findLeaves(TreeNode* root) {
-        vector<vector<int>> res;
-        TreeNode* prev = new TreeNode(0, root, nullptr);
-        while (prev->left) {
-            vector<int> t;
-            dfs(prev->left, prev, t);
-            res.push_back(t);
-        }
-        return res;
-    }
 
-    void dfs(TreeNode* root, TreeNode* prev, vector<int>& t) {
-        if (!root) return;
-        if (!root->left && !root->right) {
-            t.push_back(root->val);
-            if (prev->left == root)
-                prev->left = nullptr;
-            else
-                prev->right = nullptr;
-        }
-        dfs(root->left, root, t);
-        dfs(root->right, root, t);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func findLeaves(root *TreeNode) [][]int {
-	prev := &TreeNode{
-		Val:   0,
-		Left:  root,
-		Right: nil,
-	}
-	var res [][]int
-	for prev.Left != nil {
-		var t []int
-		dfs(prev.Left, prev, &t)
-		res = append(res, t)
-	}
-	return res
-}
 
-func dfs(root, prev *TreeNode, t *[]int) {
-	if root == nil {
-		return
-	}
-	if root.Left == nil && root.Right == nil {
-		*t = append(*t, root.Val)
-		if prev.Left == root {
-			prev.Left = nil
-		} else {
-			prev.Right = nil
-		}
-	}
-	dfs(root.Left, root, t)
-	dfs(root.Right, root, t)
-}
-```
+
+
 
 ### **...**
 
@@ -236,4 +131,4 @@ func dfs(root, prev *TreeNode, t *[]int) {
 
 ```
 
-<!-- tabs:end -->
+

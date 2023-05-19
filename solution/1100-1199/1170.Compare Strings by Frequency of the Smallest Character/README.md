@@ -63,20 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numSmallerByFrequency(self, queries: List[str], words: List[str]) -> List[int]:
-        def f(s):
-            cnt = Counter(s)
-            for c in ascii_lowercase:
-                if cnt[c]:
-                    return cnt[c]
 
-        arr = [f(s) for s in words]
-        arr.sort()
-        n = len(arr)
-        return [n - bisect_right(arr, f(q)) for q in queries]
-```
 
 ### **Java**
 
@@ -128,68 +115,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> numSmallerByFrequency(vector<string>& queries, vector<string>& words) {
-        auto f = [](string& s) {
-            int cnt[26] = {0};
-            for (char& c : s) {
-                cnt[c - 'a']++;
-            }
-            for (int i = 0; i < 26; ++i) {
-                if (cnt[i]) {
-                    return cnt[i];
-                }
-            }
-            return 0;
-        };
-        vector<int> arr;
-        for (auto& s : words) {
-            arr.emplace_back(f(s));
-        }
-        sort(arr.begin(), arr.end());
-        vector<int> ans;
-        for (auto& q : queries) {
-            int x = f(q);
-            ans.emplace_back(arr.end() - upper_bound(arr.begin(), arr.end(), x));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numSmallerByFrequency(queries []string, words []string) (ans []int) {
-	f := func(s string) int {
-		cnt := [26]int{}
-		for _, c := range s {
-			cnt[c-'a']++
-		}
-		for _, v := range cnt {
-			if v > 0 {
-				return v
-			}
-		}
-		return 0
-	}
-	arr := []int{}
-	for _, s := range words {
-		arr = append(arr, f(s))
-	}
-	sort.Ints(arr)
-	n := len(arr)
-	for _, q := range queries {
-		x := f(q)
-		ans = append(ans, n-sort.Search(n, func(i int) bool { return arr[i] > x }))
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -197,4 +129,4 @@ func numSmallerByFrequency(queries []string, words []string) (ans []int) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -56,21 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxProduct(self, words: List[str]) -> int:
-        n = len(words)
-        mask = [0] * n
-        for i, word in enumerate(words):
-            for ch in word:
-                mask[i] |= 1 << (ord(ch) - ord('a'))
-        ans = 0
-        for i in range(n - 1):
-            for j in range(i + 1, n):
-                if mask[i] & mask[j] == 0:
-                    ans = max(ans, len(words[i]) * len(words[j]))
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,56 +85,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func maxProduct(words []string) int {
-	n := len(words)
-	mask := make([]int32, n)
-	for i, word := range words {
-		for _, r := range word {
-			mask[i] |= 1 << (r - 'a')
-		}
-	}
-	ans := 0
-	for i := 0; i < n-1; i++ {
-		for j := i + 1; j < n; j++ {
-			if mask[i]&mask[j] == 0 {
-				ans = max(ans, len(words[i])*len(words[j]))
-			}
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProduct(vector<string>& words) {
-        int n = words.size();
-        vector<int> mask(n);
-        for (int i = 0; i < n; ++i)
-            for (char ch : words[i])
-                mask[i] |= 1 << (ch - 'a');
-        int ans = 0;
-        for (int i = 0; i < n - 1; ++i)
-            for (int j = i + 1; j < n; ++j)
-                if (!(mask[i] & mask[j]))
-                    ans = max(ans, (int)words[i].size() * (int)words[j].size());
-        return ans;
-    }
-};
-```
+
+
+
 
 ### **...**
 
@@ -156,4 +99,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

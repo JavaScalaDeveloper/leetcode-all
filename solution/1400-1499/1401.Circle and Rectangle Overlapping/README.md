@@ -61,29 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkOverlap(
-        self,
-        radius: int,
-        xCenter: int,
-        yCenter: int,
-        x1: int,
-        y1: int,
-        x2: int,
-        y2: int,
-    ) -> bool:
-        dx = dy = 0
-        if x1 > xCenter:
-            dx = xCenter - x1
-        elif x2 < xCenter:
-            dx = xCenter - x2
-        if y1 > yCenter:
-            dy = yCenter - y1
-        elif y2 < yCenter:
-            dy = yCenter - y2
-        return dx * dx + dy * dy <= radius * radius
-```
+
 
 ### **Java**
 
@@ -100,37 +78,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {
-        int dx = x1 > xCenter ? x1 - xCenter : (x2 < xCenter ? xCenter - x2 : 0);
-        int dy = y1 > yCenter ? y1 - yCenter : (y2 < yCenter ? yCenter - y2 : 0);
-        return dx * dx + dy * dy <= radius * radius;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkOverlap(radius int, xCenter int, yCenter int, x1 int, y1 int, x2 int, y2 int) bool {
-	dx, dy := 0, 0
-	if x1 > xCenter {
-		dx = x1 - xCenter
-	} else if x2 < xCenter {
-		dx = x2 - xCenter
-	}
-	if y1 > yCenter {
-		dy = y1 - yCenter
-	} else if y2 < yCenter {
-		dy = y2 - yCenter
-	}
-	return dx*dx+dy*dy <= radius*radius
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -138,4 +92,4 @@ func checkOverlap(radius int, xCenter int, yCenter int, x1 int, y1 int, x2 int, 
 
 ```
 
-<!-- tabs:end -->
+

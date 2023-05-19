@@ -38,20 +38,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findSwapValues(self, array1: List[int], array2: List[int]) -> List[int]:
-        diff = sum(array1) - sum(array2)
-        if diff & 1:
-            return []
-        diff >>= 1
-        s = set(array2)
-        for a in array1:
-            b = a - diff
-            if b in s:
-                return [a, b]
-        return []
-```
+
 
 ### **Java**
 
@@ -85,62 +72,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findSwapValues(vector<int>& array1, vector<int>& array2) {
-        int s1 = 0, s2 = 0;
-        unordered_set<int> s;
-        for (int a : array1) s1 += a;
-        for (int b : array2) {
-            s2 += b;
-            s.insert(b);
-        }
-        int diff = s1 - s2;
-        if (diff & 1) {
-            return {};
-        }
-        diff >>= 1;
-        for (int a : array1) {
-            int b = a - diff;
-            if (s.count(b)) {
-                return {a, b};
-            }
-        }
-        return {};
-    }
-};
-```
 
-### **Go**
 
-```go
-func findSwapValues(array1 []int, array2 []int) []int {
-	s1, s2 := 0, 0
-	for _, a := range array1 {
-		s1 += a
-	}
-	s := make(map[int]bool)
-	for _, b := range array2 {
-		s2 += b
-		s[b] = true
-	}
-	diff := s1 - s2
-	if (diff & 1) == 1 {
-		return []int{}
-	}
-	diff >>= 1
-	for _, a := range array1 {
-		b := a - diff
-		if s[b] {
-			return []int{a, b}
-		}
-	}
-	return []int{}
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -148,4 +86,4 @@ func findSwapValues(array1 []int, array2 []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

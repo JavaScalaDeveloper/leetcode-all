@@ -60,15 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def firstUniqChar(self, s: str) -> int:
-        cnt = Counter(s)
-        for i, c in enumerate(s):
-            if cnt[c] == 1:
-                return i
-        return -1
-```
+
 
 ### **Java**
 
@@ -92,103 +84,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int firstUniqChar(string s) {
-        int cnt[26]{};
-        for (char& c : s) {
-            ++cnt[c - 'a'];
-        }
-        int n = s.size();
-        for (int i = 0; i < n; ++i) {
-            if (cnt[s[i] - 'a'] == 1) {
-                return i;
-            }
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func firstUniqChar(s string) int {
-	cnt := [26]int{}
-	for _, c := range s {
-		cnt[c-'a']++
-	}
-	for i, c := range s {
-		if cnt[c-'a'] == 1 {
-			return i
-		}
-	}
-	return -1
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {number}
- */
-var firstUniqChar = function (s) {
-    const cnt = new Array(26).fill(0);
-    for (const c of s) {
-        ++cnt[c.charCodeAt() - 'a'.charCodeAt()];
-    }
-    for (let i = 0; i < s.length; ++i) {
-        if (cnt[s[i].charCodeAt() - 'a'.charCodeAt()] === 1) {
-            return i;
-        }
-    }
-    return -1;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function firstUniqChar(s: string): number {
-    const cnt = new Array(26).fill(0);
-    for (const c of s) {
-        cnt[c.charCodeAt(0) - 97]++;
-    }
-    for (let i = 0; i < s.length; i++) {
-        if (cnt[s.charCodeAt(i) - 97] === 1) {
-            return i;
-        }
-    }
-    return -1;
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @return Integer
-     */
-    function firstUniqChar($s) {
-        for ($i = 0; $i < strlen($s); $i++) {
-            $hashtable[$s[$i]]++;
-        }
-        for ($i = 0; $i < strlen($s); $i++) {
-            if ($hashtable[$s[$i]] == 1) {
-                return $i;
-            }
-        }
-        return -1;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -196,4 +110,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -60,16 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minFlips(self, a: int, b: int, c: int) -> int:
-        ans = 0
-        for i in range(30):
-            x, y, z = a >> i & 1, b >> i & 1, c >> i & 1
-            if x | y != z:
-                ans += 2 if x == 1 and y == 1 else 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -90,41 +81,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minFlips(int a, int b, int c) {
-        int ans = 0;
-        for (int i = 0; i < 30; ++i) {
-            int x = a >> i & 1, y = b >> i & 1, z = c >> i & 1;
-            if ((x | y) != z) {
-                ans += x == 1 && y == 1 ? 2 : 1;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minFlips(a int, b int, c int) (ans int) {
-	for i := 0; i < 30; i++ {
-		x, y, z := a>>i&1, b>>i&1, c>>i&1
-		if (x | y) != z {
-			if x == 1 && y == 1 {
-				ans += 2
-			} else {
-				ans++
-			}
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -132,4 +95,4 @@ func minFlips(a int, b int, c int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

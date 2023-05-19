@@ -79,29 +79,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
-        target.sort()
-        arr.sort()
-        return target == arr
-```
 
-```python
-class Solution:
-    def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
-        return Counter(target) == Counter(arr)
-```
 
-```python
-class Solution:
-    def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
-        cnt = [0] * 1001
-        for a, b in zip(target, arr):
-            cnt[a] += 1
-            cnt[b] -= 1
-        return all(v == 0 for v in cnt)
-```
+
+
+
 
 ### **Java**
 
@@ -150,93 +132,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canBeEqual(vector<int>& target, vector<int>& arr) {
-        sort(target.begin(), target.end());
-        sort(arr.begin(), arr.end());
-        return target == arr;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool canBeEqual(vector<int>& target, vector<int>& arr) {
-        vector<int> cnt1(1001);
-        vector<int> cnt2(1001);
-        for (int& v : target) ++cnt1[v];
-        for (int& v : arr) ++cnt2[v];
-        return cnt1 == cnt2;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool canBeEqual(vector<int>& target, vector<int>& arr) {
-        vector<int> cnt(1001);
-        for (int& v : target) ++cnt[v];
-        for (int& v : arr) if (--cnt[v] < 0) return false;
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canBeEqual(target []int, arr []int) bool {
-	sort.Ints(target)
-	sort.Ints(arr)
-	for i, v := range target {
-		if v != arr[i] {
-			return false
-		}
-	}
-	return true
-}
-```
 
-```go
-func canBeEqual(target []int, arr []int) bool {
-	cnt1 := make([]int, 1001)
-	cnt2 := make([]int, 1001)
-	for _, v := range target {
-		cnt1[v]++
-	}
-	for _, v := range arr {
-		cnt2[v]++
-	}
-	for i, v := range cnt1 {
-		if v != cnt2[i] {
-			return false
-		}
-	}
-	return true
-}
-```
 
-```go
-func canBeEqual(target []int, arr []int) bool {
-	cnt := make([]int, 1001)
-	for _, v := range target {
-		cnt[v]++
-	}
-	for _, v := range arr {
-		cnt[v]--
-		if cnt[v] < 0 {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
+
+
+
+
 
 ### **C**
 
@@ -258,57 +168,15 @@ bool canBeEqual(int* target, int targetSize, int* arr, int arrSize){
 
 ### **TypeScript**
 
-```ts
-function canBeEqual(target: number[], arr: number[]): boolean {
-    target.sort((a, b) => a - b);
-    arr.sort((a, b) => a - b);
-    const n = arr.length;
-    for (let i = 0; i < n; i++) {
-        if (target[i] !== arr[i]) {
-            return false;
-        }
-    }
-    return true;
-}
-```
 
-```ts
-function canBeEqual(target: number[], arr: number[]): boolean {
-    const n = target.length;
-    const count = new Array(1001).fill(0);
-    for (let i = 0; i < n; i++) {
-        count[target[i]]++;
-        count[arr[i]]--;
-    }
-    return count.every(v => v === 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn can_be_equal(mut target: Vec<i32>, mut arr: Vec<i32>) -> bool {
-        target.sort();
-        arr.sort();
-        target == arr
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn can_be_equal(mut target: Vec<i32>, mut arr: Vec<i32>) -> bool {
-        let n = target.len();
-        let mut count = [0; 1001];
-        for i in 0..n {
-            count[target[i] as usize] += 1;
-            count[arr[i] as usize] -= 1;
-        }
-        count.iter().all(|v| *v == 0)
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -316,4 +184,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

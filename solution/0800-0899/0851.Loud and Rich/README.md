@@ -71,27 +71,7 @@ answer[7] = 7，
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def loudAndRich(self, richer: List[List[int]], quiet: List[int]) -> List[int]:
-        def dfs(i: int):
-            if ans[i] != -1:
-                return
-            ans[i] = i
-            for j in g[i]:
-                dfs(j)
-                if quiet[ans[j]] < quiet[ans[i]]:
-                    ans[i] = ans[j]
 
-        g = defaultdict(list)
-        for a, b in richer:
-            g[b].append(a)
-        n = len(quiet)
-        ans = [-1] * n
-        for i in range(n):
-            dfs(i)
-        return ans
-```
 
 ### **Java**
 
@@ -135,100 +115,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> loudAndRich(vector<vector<int>>& richer, vector<int>& quiet) {
-        int n = quiet.size();
-        vector<vector<int>> g(n);
-        for (auto& r : richer) {
-            g[r[1]].push_back(r[0]);
-        }
-        vector<int> ans(n, -1);
-        function<void(int)> dfs = [&](int i) {
-            if (ans[i] != -1) {
-                return;
-            }
-            ans[i] = i;
-            for (int j : g[i]) {
-                dfs(j);
-                if (quiet[ans[j]] < quiet[ans[i]]) {
-                    ans[i] = ans[j];
-                }
-            }
-        };
-        for (int i = 0; i < n; ++i) {
-            dfs(i);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func loudAndRich(richer [][]int, quiet []int) []int {
-	n := len(quiet)
-	g := make([][]int, n)
-	ans := make([]int, n)
-	for i := range g {
-		ans[i] = -1
-	}
-	for _, r := range richer {
-		a, b := r[0], r[1]
-		g[b] = append(g[b], a)
-	}
-	var dfs func(int)
-	dfs = func(i int) {
-		if ans[i] != -1 {
-			return
-		}
-		ans[i] = i
-		for _, j := range g[i] {
-			dfs(j)
-			if quiet[ans[j]] < quiet[ans[i]] {
-				ans[i] = ans[j]
-			}
-		}
-	}
-	for i := range ans {
-		dfs(i)
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function loudAndRich(richer: number[][], quiet: number[]): number[] {
-    const n = quiet.length;
-    const g: number[][] = new Array(n).fill(0).map(() => []);
-    for (const [a, b] of richer) {
-        g[b].push(a);
-    }
-    const ans: number[] = new Array(n).fill(-1);
-    const dfs = (i: number) => {
-        if (ans[i] != -1) {
-            return ans;
-        }
-        ans[i] = i;
-        for (const j of g[i]) {
-            dfs(j);
-            if (quiet[ans[j]] < quiet[ans[i]]) {
-                ans[i] = ans[j];
-            }
-        }
-    };
-    for (let i = 0; i < n; ++i) {
-        dfs(i);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -236,4 +133,4 @@ function loudAndRich(richer: number[][], quiet: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

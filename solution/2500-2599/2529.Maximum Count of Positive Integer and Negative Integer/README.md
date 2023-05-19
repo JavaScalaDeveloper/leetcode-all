@@ -76,21 +76,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumCount(self, nums: List[int]) -> int:
-        a = sum(v > 0 for v in nums)
-        b = sum(v < 0 for v in nums)
-        return max(a, b)
-```
 
-```python
-class Solution:
-    def maximumCount(self, nums: List[int]) -> int:
-        a = len(nums) - bisect_left(nums, 1)
-        b = bisect_left(nums, 0)
-        return max(a, b)
-```
+
+
 
 ### **Java**
 
@@ -136,156 +124,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumCount(vector<int>& nums) {
-        int a = 0, b = 0;
-        for (int& v : nums) {
-            if (v > 0) {
-                ++a;
-            }
-            if (v < 0) {
-                ++b;
-            }
-        }
-        return max(a, b);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int maximumCount(vector<int>& nums) {
-        int a = nums.end() - lower_bound(nums.begin(), nums.end(), 1);
-        int b = lower_bound(nums.begin(), nums.end(), 0) - nums.begin();
-        return max(a, b);
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumCount(nums []int) int {
-	a, b := 0, 0
-	for _, v := range nums {
-		if v > 0 {
-			a++
-		}
-		if v < 0 {
-			b++
-		}
-	}
-	return max(a, b)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func maximumCount(nums []int) int {
-	a := len(nums) - sort.SearchInts(nums, 1)
-	b := sort.SearchInts(nums, 0)
-	return max(a, b)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumCount(nums: number[]): number {
-    const count = [0, 0];
-    for (const num of nums) {
-        if (num < 0) {
-            count[0]++;
-        } else if (num > 0) {
-            count[1]++;
-        }
-    }
-    return Math.max(...count);
-}
-```
 
-```ts
-function maximumCount(nums: number[]): number {
-    const search = (target: number) => {
-        let left = 0;
-        let right = n;
-        while (left < right) {
-            const mid = (left + right) >>> 1;
-            if (nums[mid] < target) {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-        return left;
-    };
-    const n = nums.length;
-    const i = search(0);
-    const j = search(1);
-    return Math.max(i, n - j);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn maximum_count(nums: Vec<i32>) -> i32 {
-        let mut count = [0, 0];
-        for &num in nums.iter() {
-            if num < 0 {
-                count[0] += 1;
-            } else if num > 0 {
-                count[1] += 1;
-            }
-        }
-        *count.iter().max().unwrap()
-    }
-}
-```
 
-```rust
-impl Solution {
-    fn search(nums: &Vec<i32>, target: i32) -> usize {
-        let mut left = 0;
-        let mut right = nums.len();
-        while left < right {
-            let mid = (left + right) >> 1;
-            if nums[mid] < target {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-        left
-    }
 
-    pub fn maximum_count(nums: Vec<i32>) -> i32 {
-        let n = nums.len();
-        let i = Self::search(&nums, 0);
-        let j = Self::search(&nums, 1);
-        i.max(n - j) as i32
-    }
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -335,4 +196,4 @@ int maximumCount(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

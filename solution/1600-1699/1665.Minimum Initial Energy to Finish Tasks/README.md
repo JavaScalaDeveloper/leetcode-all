@@ -103,17 +103,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumEffort(self, tasks: List[List[int]]) -> int:
-        ans = cur = 0
-        for a, m in sorted(tasks, key=lambda x: x[0] - x[1]):
-            if cur < m:
-                ans += m - cur
-                cur = m
-            cur -= a
-        return ans
-```
+
 
 ### **Java**
 
@@ -137,62 +127,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumEffort(vector<vector<int>>& tasks) {
-        sort(tasks.begin(), tasks.end(), [&](const auto& a, const auto& b) { return a[0] - a[1] < b[0] - b[1]; });
-        int ans = 0, cur = 0;
-        for (auto& task : tasks) {
-            int a = task[0], m = task[1];
-            if (cur < m) {
-                ans += m - cur;
-                cur = m;
-            }
-            cur -= a;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumEffort(tasks [][]int) (ans int) {
-	sort.Slice(tasks, func(i, j int) bool { return tasks[i][0]-tasks[i][1] < tasks[j][0]-tasks[j][1] })
-	cur := 0
-	for _, task := range tasks {
-		a, m := task[0], task[1]
-		if cur < m {
-			ans += m - cur
-			cur = m
-		}
-		cur -= a
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumEffort(tasks: number[][]): number {
-    tasks.sort((a, b) => a[0] - a[1] - (b[0] - b[1]));
-    let ans = 0;
-    let cur = 0;
-    for (const [a, m] of tasks) {
-        if (cur < m) {
-            ans += m - cur;
-            cur = m;
-        }
-        cur -= a;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -200,4 +145,4 @@ function minimumEffort(tasks: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

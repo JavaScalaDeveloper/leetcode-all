@@ -73,40 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-"""
 
-
-class Solution:
-    def treeToDoublyList(self, root: 'Optional[Node]') -> 'Optional[Node]':
-        def dfs(root):
-            if root is None:
-                return
-            nonlocal prev, head
-            dfs(root.left)
-            if prev:
-                prev.right = root
-                root.left = prev
-            else:
-                head = root
-            prev = root
-            dfs(root.right)
-
-        if root is None:
-            return None
-        head = prev = None
-        dfs(root)
-        prev.right = head
-        head.left = prev
-        return head
-```
 
 ### **Java**
 
@@ -167,141 +134,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    Node* left;
-    Node* right;
 
-    Node() {}
 
-    Node(int _val) {
-        val = _val;
-        left = NULL;
-        right = NULL;
-    }
 
-    Node(int _val, Node* _left, Node* _right) {
-        val = _val;
-        left = _left;
-        right = _right;
-    }
-};
-*/
 
-class Solution {
-public:
-    Node* prev;
-    Node* head;
 
-    Node* treeToDoublyList(Node* root) {
-        if (!root) return nullptr;
-        prev = nullptr;
-        head = nullptr;
-        dfs(root);
-        prev->right = head;
-        head->left = prev;
-        return head;
-    }
 
-    void dfs(Node* root) {
-        if (!root) return;
-        dfs(root->left);
-        if (prev) {
-            prev->right = root;
-            root->left = prev;
-        } else
-            head = root;
-        prev = root;
-        dfs(root->right);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Left *Node
- *     Right *Node
- * }
- */
 
-func treeToDoublyList(root *Node) *Node {
-	if root == nil {
-		return root
-	}
-	var prev, head *Node
 
-	var dfs func(root *Node)
-	dfs = func(root *Node) {
-		if root == nil {
-			return
-		}
-		dfs(root.Left)
-		if prev != nil {
-			prev.Right = root
-			root.Left = prev
-		} else {
-			head = root
-		}
-		prev = root
-		dfs(root.Right)
-	}
-	dfs(root)
-	prev.Right = head
-	head.Left = prev
-	return head
-}
-```
-
-### **JavaScript**
-
-```js
-/**
- * // Definition for a Node.
- * function Node(val, left, right) {
- *      this.val = val;
- *      this.left = left;
- *      this.right = right;
- *  };
- */
-
-/**
- * @param {Node} root
- * @return {Node}
- */
-var treeToDoublyList = function (root) {
-    if (!root) return root;
-    let prev = null;
-    let head = null;
-
-    function dfs(root) {
-        if (!root) return;
-        dfs(root.left);
-        if (prev) {
-            prev.right = root;
-            root.left = prev;
-        } else {
-            head = root;
-        }
-        prev = root;
-        dfs(root.right);
-    }
-    dfs(root);
-    prev.right = head;
-    head.left = prev;
-    return head;
-};
-```
 
 ### **...**
 
@@ -309,4 +152,4 @@ var treeToDoublyList = function (root) {
 
 ```
 
-<!-- tabs:end -->
+

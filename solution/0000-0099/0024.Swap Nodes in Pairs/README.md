@@ -60,24 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def swapPairs(self, head: ListNode) -> ListNode:
-        dummy = ListNode(next=head)
-        pre, cur = dummy, head
-        while cur and cur.next:
-            t = cur.next
-            cur.next = t.next
-            t.next = cur
-            pre.next = t
-            pre, cur = cur, cur.next
-        return dummy.next
-```
+
 
 ### **Java**
 
@@ -111,114 +94,23 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-var swapPairs = function (head) {
-    const dummy = new ListNode(0, head);
-    let pre = dummy;
-    let cur = head;
-    while (cur && cur.next) {
-        const t = cur.next;
-        cur.next = t.next;
-        t.next = cur;
-        pre.next = t;
-        pre = cur;
-        cur = cur.next;
-    }
-    return dummy.next;
-};
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* swapPairs(ListNode* head) {
-        ListNode* dummy = new ListNode(0, head);
-        ListNode *pre = dummy, *cur = head;
-        while (cur != nullptr && cur->next != nullptr) {
-            ListNode* t = cur->next;
-            cur->next = t->next;
-            t->next = cur;
-            pre->next = t;
-            pre = cur;
-            cur = cur->next;
-        }
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
+
+
+
+
+
 
 迭代：
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func swapPairs(head *ListNode) *ListNode {
-    dummy := &ListNode{0, head}
-    pre, cur := dummy, head
-    for cur != nil && cur.Next != nil {
-        t := cur.Next
-        cur.Next = t.Next
-        t.Next = cur
-        pre.Next = t
-        pre = cur
-        cur = cur.Next
-    }
-    return dummy.Next
-}
-```
+
 
 递归：
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func swapPairs(head *ListNode) *ListNode {
-	if head == nil || head.Next == nil {
-		return head
-	}
-	res := swapPairs(head.Next.Next)
-	p := head.Next
-	p.Next, head.Next = head, res
-	return p
-}
-```
+
 
 ### **Ruby**
 
@@ -251,69 +143,11 @@ end
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function swapPairs(head: ListNode | null): ListNode | null {
-    const dummy = new ListNode(0, head);
-    let cur = dummy;
-    while (cur.next != null && cur.next.next != null) {
-        const a = cur.next;
-        const b = cur.next.next;
-        [a.next, b.next, cur.next] = [b.next, a, b];
-        cur = cur.next.next;
-    }
-    return dummy.next;
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for singly-linked list.
-// #[derive(PartialEq, Eq, Clone, Debug)]
-// pub struct ListNode {
-//   pub val: i32,
-//   pub next: Option<Box<ListNode>>
-// }
-//
-// impl ListNode {
-//   #[inline]
-//   fn new(val: i32) -> Self {
-//     ListNode {
-//       next: None,
-//       val
-//     }
-//   }
-// }
-impl Solution {
-    pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let mut dummy = Some(Box::new(ListNode { val: 0, next: head }));
-        let mut cur = dummy.as_mut().unwrap();
-        while cur.next.is_some() && cur.next.as_ref().unwrap().next.is_some() {
-            cur.next = {
-                let mut b = cur.next.as_mut().unwrap().next.take();
-                cur.next.as_mut().unwrap().next = b.as_mut().unwrap().next.take();
-                let a = cur.next.take();
-                b.as_mut().unwrap().next = a;
-                b
-            };
-            cur = cur.next.as_mut().unwrap().next.as_mut().unwrap();
-        }
-        dummy.unwrap().next
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -321,4 +155,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

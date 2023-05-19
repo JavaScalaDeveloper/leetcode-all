@@ -48,17 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def subtractProductAndSum(self, n: int) -> int:
-        s, p = 0, 1
-        while n:
-            t = n % 10
-            n //= 10
-            s += t
-            p *= t
-        return p - s
-```
+
 
 ### **Java**
 
@@ -79,72 +69,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int subtractProductAndSum(int n) {
-        int s = 0, p = 1;
-        while (n) {
-            int t = n % 10;
-            n /= 10;
-            s += t;
-            p *= t;
-        }
-        return p - s;
-    }
-};
-```
 
-### **Go**
 
-```go
-func subtractProductAndSum(n int) int {
-	s, p := 0, 1
-	for n != 0 {
-		t := n % 10
-		n /= 10
-		s += t
-		p *= t
-	}
-	return p - s
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function subtractProductAndSum(n: number): number {
-    let p = 1;
-    let s = 0;
-    while (n) {
-        const num = n % 10;
-        n = Math.floor(n / 10);
-        p *= num;
-        s += num;
-    }
-    return p - s;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn subtract_product_and_sum(mut n: i32) -> i32 {
-        let mut p = 1;
-        let mut s = 0;
-        while n != 0 {
-            let num = n % 10;
-            n /= 10;
-            p *= num;
-            s += num;
-        }
-        p - s
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -168,4 +107,4 @@ int subtractProductAndSum(int n) {
 
 ```
 
-<!-- tabs:end -->
+

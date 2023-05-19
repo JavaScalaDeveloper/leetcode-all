@@ -71,25 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countUnguarded(
-        self, m: int, n: int, guards: List[List[int]], walls: List[List[int]]
-    ) -> int:
-        g = [[0] * n for _ in range(m)]
-        for i, j in guards:
-            g[i][j] = 2
-        for i, j in walls:
-            g[i][j] = 2
-        dirs = (-1, 0, 1, 0, -1)
-        for i, j in guards:
-            for a, b in pairwise(dirs):
-                x, y = i, j
-                while 0 <= x + a < m and 0 <= y + b < n and g[x + a][y + b] < 2:
-                    x, y = x + a, y + b
-                    g[x][y] = 1
-        return sum(v == 0 for row in g for v in row)
-```
+
 
 ### **Java**
 
@@ -130,82 +112,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countUnguarded(int m, int n, vector<vector<int>>& guards, vector<vector<int>>& walls) {
-        int g[m][n];
-        memset(g, 0, sizeof(g));
-        for (auto& e : guards) {
-            g[e[0]][e[1]] = 2;
-        }
-        for (auto& e : walls) {
-            g[e[0]][e[1]] = 2;
-        }
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        for (auto& e : guards) {
-            for (int k = 0; k < 4; ++k) {
-                int x = e[0], y = e[1];
-                int a = dirs[k], b = dirs[k + 1];
-                while (x + a >= 0 && x + a < m && y + b >= 0 && y + b < n && g[x + a][y + b] < 2) {
-                    x += a;
-                    y += b;
-                    g[x][y] = 1;
-                }
-            }
-        }
-        int ans = 0;
-        for (auto& row : g) {
-            ans += count(row, row + n, 0);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countUnguarded(m int, n int, guards [][]int, walls [][]int) (ans int) {
-	g := make([][]int, m)
-	for i := range g {
-		g[i] = make([]int, n)
-	}
-	for _, e := range guards {
-		g[e[0]][e[1]] = 2
-	}
-	for _, e := range walls {
-		g[e[0]][e[1]] = 2
-	}
-	dirs := [5]int{-1, 0, 1, 0, -1}
-	for _, e := range guards {
-		for k := 0; k < 4; k++ {
-			x, y := e[0], e[1]
-			a, b := dirs[k], dirs[k+1]
-			for x+a >= 0 && x+a < m && y+b >= 0 && y+b < n && g[x+a][y+b] < 2 {
-				x, y = x+a, y+b
-				g[x][y] = 1
-			}
-		}
-	}
-	for _, row := range g {
-		for _, v := range row {
-			if v == 0 {
-				ans++
-			}
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -213,4 +130,4 @@ func countUnguarded(m int, n int, guards [][]int, walls [][]int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

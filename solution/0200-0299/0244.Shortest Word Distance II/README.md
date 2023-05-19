@@ -60,30 +60,7 @@ wordDistance.shortest("makes", "coding");    // 返回 1</pre>
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class WordDistance:
-    def __init__(self, wordsDict: List[str]):
-        self.d = defaultdict(list)
-        for i, w in enumerate(wordsDict):
-            self.d[w].append(i)
 
-    def shortest(self, word1: str, word2: str) -> int:
-        a, b = self.d[word1], self.d[word2]
-        ans = inf
-        i = j = 0
-        while i < len(a) and j < len(b):
-            ans = min(ans, abs(a[i] - b[j]))
-            if a[i] <= b[j]:
-                i += 1
-            else:
-                j += 1
-        return ans
-
-
-# Your WordDistance object will be instantiated and called as such:
-# obj = WordDistance(wordsDict)
-# param_1 = obj.shortest(word1,word2)
-```
 
 ### **Java**
 
@@ -122,92 +99,13 @@ class WordDistance {
  */
 ```
 
-### **C++**
 
-```cpp
-class WordDistance {
-public:
-    WordDistance(vector<string>& wordsDict) {
-        for (int i = 0; i < wordsDict.size(); ++i) {
-            d[wordsDict[i]].push_back(i);
-        }
-    }
 
-    int shortest(string word1, string word2) {
-        auto a = d[word1], b = d[word2];
-        int i = 0, j = 0;
-        int ans = INT_MAX;
-        while (i < a.size() && j < b.size()) {
-            ans = min(ans, abs(a[i] - b[j]));
-            if (a[i] <= b[j]) {
-                ++i;
-            } else {
-                ++j;
-            }
-        }
-        return ans;
-    }
-private:
-    unordered_map<string, vector<int>> d;
-};
 
-/**
- * Your WordDistance object will be instantiated and called as such:
- * WordDistance* obj = new WordDistance(wordsDict);
- * int param_1 = obj->shortest(word1,word2);
- */
-```
 
-### **Go**
 
-```go
-type WordDistance struct {
-	d map[string][]int
-}
 
-func Constructor(wordsDict []string) WordDistance {
-	d := map[string][]int{}
-	for i, w := range wordsDict {
-		d[w] = append(d[w], i)
-	}
-	return WordDistance{d}
-}
 
-func (this *WordDistance) Shortest(word1 string, word2 string) int {
-	a, b := this.d[word1], this.d[word2]
-	ans := 0x3f3f3f3f
-	i, j := 0, 0
-	for i < len(a) && j < len(b) {
-		ans = min(ans, abs(a[i]-b[j]))
-		if a[i] <= b[j] {
-			i++
-		} else {
-			j++
-		}
-	}
-	return ans
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-
-/**
- * Your WordDistance object will be instantiated and called as such:
- * obj := Constructor(wordsDict);
- * param_1 := obj.Shortest(word1,word2);
- */
-```
 
 ### **...**
 
@@ -215,4 +113,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

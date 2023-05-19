@@ -27,14 +27,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def swapNumbers(self, numbers: List[int]) -> List[int]:
-        numbers[0] ^= numbers[1]
-        numbers[1] ^= numbers[0]
-        numbers[0] ^= numbers[1]
-        return numbers
-```
+
 
 ### **Java**
 
@@ -53,46 +46,17 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function swapNumbers(numbers: number[]): number[] {
-    numbers[0] ^= numbers[1];
-    numbers[1] ^= numbers[0];
-    numbers[0] ^= numbers[1];
-    return numbers;
-}
-```
 
-```ts
-function swapNumbers(numbers: number[]): number[] {
-    [numbers[0], numbers[1]] = [numbers[1], numbers[0]];
-    return numbers;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> swapNumbers(vector<int>& numbers) {
-        numbers[0] ^= numbers[1];
-        numbers[1] ^= numbers[0];
-        numbers[0] ^= numbers[1];
-        return numbers;
-    }
-};
-```
 
-### **Go**
 
-```go
-func swapNumbers(numbers []int) []int {
-	numbers[0] ^= numbers[1]
-	numbers[1] ^= numbers[0]
-	numbers[0] ^= numbers[1]
-	return numbers
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -100,4 +64,4 @@ func swapNumbers(numbers []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

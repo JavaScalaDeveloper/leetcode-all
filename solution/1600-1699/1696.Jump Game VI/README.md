@@ -72,21 +72,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxResult(self, nums: List[int], k: int) -> int:
-        n = len(nums)
-        f = [0] * n
-        q = deque([0])
-        for i in range(n):
-            if i - q[0] > k:
-                q.popleft()
-            f[i] = nums[i] + f[q[0]]
-            while q and f[q[-1]] <= f[i]:
-                q.pop()
-            q.append(i)
-        return f[-1]
-```
+
 
 ### **Java**
 
@@ -114,47 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxResult(vector<int>& nums, int k) {
-        int n = nums.size();
-        int f[n];
-        f[0] = 0;
-        deque<int> q = {0};
-        for (int i = 0; i < n; ++i) {
-            if (i - q.front() > k) q.pop_front();
-            f[i] = nums[i] + f[q.front()];
-            while (!q.empty() && f[q.back()] <= f[i]) q.pop_back();
-            q.push_back(i);
-        }
-        return f[n - 1];
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxResult(nums []int, k int) int {
-	n := len(nums)
-	f := make([]int, n)
-	q := []int{0}
-	for i, v := range nums {
-		if i-q[0] > k {
-			q = q[1:]
-		}
-		f[i] = v + f[q[0]]
-		for len(q) > 0 && f[q[len(q)-1]] <= f[i] {
-			q = q[:len(q)-1]
-		}
-		q = append(q, i)
-	}
-	return f[n-1]
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -162,4 +114,4 @@ func maxResult(nums []int, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -53,33 +53,7 @@ findMedian() -&gt; 2
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class MedianFinder:
 
-    def __init__(self):
-        """
-        initialize your data structure here.
-        """
-        self.h1 = []
-        self.h2 = []
-
-    def addNum(self, num: int) -> None:
-        heappush(self.h1, num)
-        heappush(self.h2, -heappop(self.h1))
-        if len(self.h2) - len(self.h1) > 1:
-            heappush(self.h1, -heappop(self.h2))
-
-    def findMedian(self) -> float:
-        if len(self.h2) > len(self.h1):
-            return -self.h2[0]
-        return (self.h1[0] - self.h2[0]) / 2
-
-
-# Your MedianFinder object will be instantiated and called as such:
-# obj = MedianFinder()
-# obj.addNum(num)
-# param_2 = obj.findMedian()
-```
 
 ### **Java**
 
@@ -118,92 +92,13 @@ class MedianFinder {
  */
 ```
 
-### **C++**
 
-```cpp
-class MedianFinder {
-public:
-    /** initialize your data structure here. */
-    MedianFinder() {
 
-    }
 
-    void addNum(int num) {
-        q1.push(num);
-        q2.push(q1.top());
-        q1.pop();
-        if (q2.size() - q1.size() > 1) {
-            q1.push(q2.top());
-            q2.pop();
-        }
-    }
 
-    double findMedian() {
-        if (q2.size() > q1.size()) {
-            return q2.top();
-        }
-        return (double) (q1.top() + q2.top()) / 2;
-    }
 
-private:
-    priority_queue<int, vector<int>, greater<int>> q1;
-    priority_queue<int> q2;
-};
 
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * MedianFinder* obj = new MedianFinder();
- * obj->addNum(num);
- * double param_2 = obj->findMedian();
- */
-```
 
-### **Go**
-
-```go
-type MedianFinder struct {
-	q1 hp
-	q2 hp
-}
-
-/** initialize your data structure here. */
-func Constructor() MedianFinder {
-	return MedianFinder{hp{}, hp{}}
-}
-
-func (this *MedianFinder) AddNum(num int) {
-	heap.Push(&this.q1, num)
-	heap.Push(&this.q2, -heap.Pop(&this.q1).(int))
-	if this.q2.Len()-this.q1.Len() > 1 {
-		heap.Push(&this.q1, -heap.Pop(&this.q2).(int))
-	}
-}
-
-func (this *MedianFinder) FindMedian() float64 {
-	if this.q2.Len() > this.q1.Len() {
-		return -float64(this.q2.IntSlice[0])
-	}
-	return float64(this.q1.IntSlice[0]-this.q2.IntSlice[0]) / 2.0
-}
-
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * obj := Constructor();
- * obj.AddNum(num);
- * param_2 := obj.FindMedian();
- */
-
-type hp struct{ sort.IntSlice }
-
-func (h hp) Less(i, j int) bool  { return h.IntSlice[i] < h.IntSlice[j] }
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-```
 
 ### **...**
 
@@ -211,4 +106,4 @@ func (h *hp) Pop() interface{} {
 
 ```
 
-<!-- tabs:end -->
+

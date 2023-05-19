@@ -68,17 +68,7 @@ ID=2 的用户执行操作的分钟分别是：2 和 3 。因此，该用户的�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findingUsersActiveMinutes(self, logs: List[List[int]], k: int) -> List[int]:
-        d = defaultdict(set)
-        for i, t in logs:
-            d[i].add(t)
-        ans = [0] * k
-        for ts in d.values():
-            ans[len(ts) - 1] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -101,45 +91,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findingUsersActiveMinutes(vector<vector<int>>& logs, int k) {
-        unordered_map<int, unordered_set<int>> d;
-        for (auto& log : logs) {
-            int i = log[0], t = log[1];
-            d[i].insert(t);
-        }
-        vector<int> ans(k);
-        for (auto& [_, ts] : d) {
-            ++ans[ts.size() - 1];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findingUsersActiveMinutes(logs [][]int, k int) []int {
-	d := map[int]map[int]bool{}
-	for _, log := range logs {
-		i, t := log[0], log[1]
-		if _, ok := d[i]; !ok {
-			d[i] = make(map[int]bool)
-		}
-		d[i][t] = true
-	}
-	ans := make([]int, k)
-	for _, ts := range d {
-		ans[len(ts)-1]++
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -147,4 +105,4 @@ func findingUsersActiveMinutes(logs [][]int, k int) []int {
 
 ```
 
-<!-- tabs:end -->
+

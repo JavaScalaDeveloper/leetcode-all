@@ -74,63 +74,9 @@ A\* 算法主要步骤如下：
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kSimilarity(self, s1: str, s2: str) -> int:
-        def next(s):
-            i = 0
-            while s[i] == s2[i]:
-                i += 1
-            res = []
-            for j in range(i + 1, n):
-                if s[j] == s2[i] and s[j] != s2[j]:
-                    res.append(s2[: i + 1] + s[i + 1 : j] + s[i] + s[j + 1 :])
-            return res
 
-        q = deque([s1])
-        vis = {s1}
-        ans, n = 0, len(s1)
-        while 1:
-            for _ in range(len(q)):
-                s = q.popleft()
-                if s == s2:
-                    return ans
-                for nxt in next(s):
-                    if nxt not in vis:
-                        vis.add(nxt)
-                        q.append(nxt)
-            ans += 1
-```
 
-```python
-class Solution:
-    def kSimilarity(self, s1: str, s2: str) -> int:
-        def f(s):
-            cnt = sum(c != s2[i] for i, c in enumerate(s))
-            return (cnt + 1) >> 1
 
-        def next(s):
-            i = 0
-            while s[i] == s2[i]:
-                i += 1
-            res = []
-            for j in range(i + 1, n):
-                if s[j] == s2[i] and s[j] != s2[j]:
-                    res.append(s2[: i + 1] + s[i + 1 : j] + s[i] + s[j + 1 :])
-            return res
-
-        q = [(f(s1), s1)]
-        dist = {s1: 0}
-        n = len(s1)
-        while 1:
-            _, s = heappop(q)
-            if s == s2:
-                return dist[s]
-            for nxt in next(s):
-                if nxt not in dist or dist[nxt] > dist[s] + 1:
-                    dist[nxt] = dist[s] + 1
-                    heappush(q, (dist[nxt] + f(nxt), nxt))
-```
 
 ### **Java**
 
@@ -243,193 +189,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int kSimilarity(string s1, string s2) {
-        queue<string> q{{s1}};
-        unordered_set<string> vis{{s1}};
-        int ans = 0;
-        while (1) {
-            for (int i = q.size(); i; --i) {
-                auto s = q.front();
-                q.pop();
-                if (s == s2) {
-                    return ans;
-                }
-                for (auto& nxt : next(s, s2)) {
-                    if (!vis.count(nxt)) {
-                        vis.insert(nxt);
-                        q.push(nxt);
-                    }
-                }
-            }
-            ++ans;
-        }
-    }
 
-    vector<string> next(string& s, string& s2) {
-        int i = 0, n = s.size();
-        for (; s[i] == s2[i]; ++i) {}
-        vector<string> res;
-        for (int j = i + 1; j < n; ++j) {
-            if (s[j] == s2[i] && s[j] != s2[j]) {
-                swap(s[i], s[j]);
-                res.push_back(s);
-                swap(s[i], s[j]);
-            }
-        }
-        return res;
-    }
-};
-```
 
-```cpp
-using pis = pair<int, string>;
 
-class Solution {
-public:
-    int kSimilarity(string s1, string s2) {
-        priority_queue<pis, vector<pis>, greater<pis>> q;
-        q.push({f(s1, s2), s1});
-        unordered_map<string, int> dist;
-        dist[s1] = 0;
-        while (1) {
-            auto [_, s] = q.top();
-            q.pop();
-            if (s == s2) {
-                return dist[s];
-            }
-            for (auto& nxt : next(s, s2)) {
-                if (!dist.count(nxt) || dist[nxt] > dist[s] + 1) {
-                    dist[nxt] = dist[s] + 1;
-                    q.push({dist[nxt] + f(nxt, s2), nxt});
-                }
-            }
-        }
-    }
 
-    int f(string& s, string& s2) {
-        int cnt = 0;
-        for (int i = 0; i < s.size(); ++i) {
-            cnt += s[i] != s2[i];
-        }
-        return (cnt + 1) >> 1;
-    }
 
-    vector<string> next(string& s, string& s2) {
-        int i = 0, n = s.size();
-        for (; s[i] == s2[i]; ++i) {}
-        vector<string> res;
-        for (int j = i + 1; j < n; ++j) {
-            if (s[j] == s2[i] && s[j] != s2[j]) {
-                swap(s[i], s[j]);
-                res.push_back(s);
-                swap(s[i], s[j]);
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func kSimilarity(s1 string, s2 string) int {
-	next := func(s string) []string {
-		i := 0
-		res := []string{}
-		for ; s[i] == s2[i]; i++ {
-		}
-		for j := i + 1; j < len(s1); j++ {
-			if s[j] == s2[i] && s[j] != s2[j] {
-				res = append(res, s[:i]+string(s[j])+s[i+1:j]+string(s[i])+s[j+1:])
-			}
-		}
-		return res
-	}
 
-	q := []string{s1}
-	vis := map[string]bool{s1: true}
-	ans := 0
-	for {
-		for i := len(q); i > 0; i-- {
-			s := q[0]
-			q = q[1:]
-			if s == s2 {
-				return ans
-			}
-			for _, nxt := range next(s) {
-				if !vis[nxt] {
-					vis[nxt] = true
-					q = append(q, nxt)
-				}
-			}
-		}
-		ans++
-	}
-}
-```
 
-```go
-func kSimilarity(s1 string, s2 string) int {
-	next := func(s string) []string {
-		i := 0
-		res := []string{}
-		for ; s[i] == s2[i]; i++ {
-		}
-		for j := i + 1; j < len(s1); j++ {
-			if s[j] == s2[i] && s[j] != s2[j] {
-				res = append(res, s[:i]+string(s[j])+s[i+1:j]+string(s[i])+s[j+1:])
-			}
-		}
-		return res
-	}
 
-	f := func(s string) int {
-		cnt := 0
-		for i := range s {
-			if s[i] != s2[i] {
-				cnt++
-			}
-		}
-		return (cnt + 1) >> 1
-	}
-
-	q := hp{pair{f(s1), s1}}
-	dist := map[string]int{s1: 0}
-	for {
-		s := heap.Pop(&q).(pair).s
-		if s == s2 {
-			return dist[s]
-		}
-		for _, nxt := range next(s) {
-			if v, ok := dist[nxt]; !ok || v > dist[s]+1 {
-				dist[nxt] = dist[s] + 1
-				heap.Push(&q, pair{dist[nxt] + f(nxt), nxt})
-			}
-		}
-	}
-}
-
-type pair struct {
-	v int
-	s string
-}
-type hp []pair
-
-func (h hp) Len() int { return len(h) }
-func (h hp) Less(i, j int) bool {
-	a, b := h[i], h[j]
-	return a.v < b.v
-}
-func (h hp) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
-func (h *hp) Push(v interface{}) { *h = append(*h, v.(pair)) }
-func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
-```
 
 ### **...**
 
@@ -437,4 +207,4 @@ func (h *hp) Pop() interface{}   { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1];
 
 ```
 
-<!-- tabs:end -->
+

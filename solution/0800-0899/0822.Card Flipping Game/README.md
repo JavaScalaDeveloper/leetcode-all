@@ -50,16 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def flipgame(self, fronts: List[int], backs: List[int]) -> int:
-        same = {a for a, b in zip(fronts, backs) if a == b}
-        ans = 9999
-        for x in chain(fronts, backs):
-            if x not in same:
-                ans = min(ans, x)
-        return ans % 9999
-```
+
 
 ### **Java**
 
@@ -91,60 +82,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int flipgame(vector<int>& fronts, vector<int>& backs) {
-        unordered_set<int> s;
-        int n = fronts.size();
-        for (int i = 0; i < n; ++i)
-            if (fronts[i] == backs[i])
-                s.insert(fronts[i]);
-        int ans = 9999;
-        for (int& v : fronts)
-            if (!s.count(v))
-                ans = min(ans, v);
-        for (int& v : backs)
-            if (!s.count(v))
-                ans = min(ans, v);
-        return ans % 9999;
-    }
-};
-```
 
-### **Go**
 
-```go
-func flipgame(fronts []int, backs []int) int {
-	s := map[int]bool{}
-	for i, v := range fronts {
-		if v == backs[i] {
-			s[v] = true
-		}
-	}
-	ans := 9999
-	for _, v := range fronts {
-		if !s[v] {
-			ans = min(ans, v)
-		}
-	}
-	for _, v := range backs {
-		if !s[v] {
-			ans = min(ans, v)
-		}
-	}
-	return ans % 9999
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -152,4 +96,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

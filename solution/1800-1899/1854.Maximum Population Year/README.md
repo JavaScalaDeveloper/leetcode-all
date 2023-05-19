@@ -56,22 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumPopulation(self, logs: List[List[int]]) -> int:
-        d = [0] * 101
-        offset = 1950
-        for a, b in logs:
-            a, b = a - offset, b - offset
-            d[a] += 1
-            d[b] -= 1
-        s = mx = j = 0
-        for i, x in enumerate(d):
-            s += x
-            if mx < s:
-                mx, j = s, i
-        return j + offset
-```
+
 
 ### **Java**
 
@@ -102,106 +87,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumPopulation(vector<vector<int>>& logs) {
-        int d[101]{};
-        const int offset = 1950;
-        for (auto& log : logs) {
-            int a = log[0] - offset;
-            int b = log[1] - offset;
-            ++d[a];
-            --d[b];
-        }
-        int s = 0, mx = 0;
-        int j = 0;
-        for (int i = 0; i < 101; ++i) {
-            s += d[i];
-            if (mx < s) {
-                mx = s;
-                j = i;
-            }
-        }
-        return j + offset;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumPopulation(logs [][]int) int {
-	d := [101]int{}
-	offset := 1950
-	for _, log := range logs {
-		a, b := log[0]-offset, log[1]-offset
-		d[a]++
-		d[b]--
-	}
-	var s, mx, j int
-	for i, x := range d {
-		s += x
-		if mx < s {
-			mx = s
-			j = i
-		}
-	}
-	return j + offset
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} logs
- * @return {number}
- */
-var maximumPopulation = function (logs) {
-    const d = new Array(101).fill(0);
-    const offset = 1950;
-    for (let [a, b] of logs) {
-        a -= offset;
-        b -= offset;
-        d[a]++;
-        d[b]--;
-    }
-    let j = 0;
-    for (let i = 0, s = 0, mx = 0; i < 101; ++i) {
-        s += d[i];
-        if (mx < s) {
-            mx = s;
-            j = i;
-        }
-    }
-    return j + offset;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumPopulation(logs: number[][]): number {
-    const d: number[] = new Array(101).fill(0);
-    const offset = 1950;
-    for (const [birth, death] of logs) {
-        d[birth - offset]++;
-        d[death - offset]--;
-    }
-    let j = 0;
-    for (let i = 0, s = 0, mx = 0; i < d.length; ++i) {
-        s += d[i];
-        if (mx < s) {
-            mx = s;
-            j = i;
-        }
-    }
-    return j + offset;
-}
-```
+
 
 ### **...**
 
@@ -209,4 +109,4 @@ function maximumPopulation(logs: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

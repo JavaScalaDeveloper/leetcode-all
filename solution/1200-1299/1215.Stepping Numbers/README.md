@@ -40,26 +40,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSteppingNumbers(self, low: int, high: int) -> List[int]:
-        ans = []
-        if low == 0:
-            ans.append(0)
-        q = deque(range(1, 10))
-        while q:
-            v = q.popleft()
-            if v > high:
-                break
-            if v >= low:
-                ans.append(v)
-            x = v % 10
-            if x:
-                q.append(v * 10 + x - 1)
-            if x < 9:
-                q.append(v * 10 + x + 1)
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,59 +78,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> countSteppingNumbers(int low, int high) {
-        vector<int> ans;
-        if (low == 0) ans.push_back(0);
-        queue<long long> q;
-        for (int i = 1; i < 10; ++i) q.push(i);
-        while (!q.empty()) {
-            int v = q.front();
-            q.pop();
-            if (v > high) break;
-            if (v >= low) ans.push_back(v);
-            int x = v % 10;
-            if (x) q.push(1ll * v * 10 + x - 1);
-            if (x < 9) q.push(1ll * v * 10 + x + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSteppingNumbers(low int, high int) []int {
-	ans := []int{}
-	if low == 0 {
-		ans = append(ans, 0)
-	}
-	q := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	for len(q) > 0 {
-		v := q[0]
-		q = q[1:]
-		if v > high {
-			break
-		}
-		if v >= low {
-			ans = append(ans, v)
-		}
-		x := v % 10
-		if x > 0 {
-			q = append(q, v*10+x-1)
-		}
-		if x < 9 {
-			q = append(q, v*10+x+1)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -157,4 +92,4 @@ func countSteppingNumbers(low int, high int) []int {
 
 ```
 
-<!-- tabs:end -->
+

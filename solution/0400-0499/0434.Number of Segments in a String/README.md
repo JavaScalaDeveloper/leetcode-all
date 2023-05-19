@@ -39,21 +39,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSegments(self, s: str) -> int:
-        return len(s.split())
-```
 
-```python
-class Solution:
-    def countSegments(self, s: str) -> int:
-        ans = 0
-        for i, c in enumerate(s):
-            if c != ' ' and (i == 0 or s[i - 1] == ' '):
-                ans += 1
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -87,79 +75,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countSegments(string s) {
-        int ans = 0;
-        istringstream ss(s);
-        while (ss >> s) ++ans;
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int countSegments(string s) {
-        int ans = 0;
-        for (int i = 0; i < s.size(); ++i) {
-            if (s[i] != ' ' && (i == 0 || s[i - 1] == ' ')) {
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSegments(s string) int {
-	ans := 0
-	for _, t := range strings.Split(s, " ") {
-		if len(t) > 0 {
-			ans++
-		}
-	}
-	return ans
-}
-```
 
-```go
-func countSegments(s string) int {
-	ans := 0
-	for i, c := range s {
-		if c != ' ' && (i == 0 || s[i-1] == ' ') {
-			ans++
-		}
-	}
-	return ans
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @return Integer
-     */
-    function countSegments($s) {
-        $arr = explode(" ", $s);
-        $cnt = 0;
-        for ($i = 0; $i < count($arr); $i++) {
-            if (strlen($arr[$i]) != 0) $cnt++;
-        }
-        return $cnt;
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -167,4 +97,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

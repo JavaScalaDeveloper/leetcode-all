@@ -62,15 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def strStr(self, haystack: str, needle: str) -> int:
-        n, m = len(haystack), len(needle)
-        for i in range(n-m+1):
-            if haystack[i:i+m] == needle:
-                return i
-        return -1
-```
+
 
 ### **Java**
 
@@ -108,267 +100,41 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-private:
-    vector<int> Next(string str) {
-        vector<int> n(str.length());
-        n[0] = -1;
-        int i = 0, pre = -1;
-        int len = str.length();
-        while (i < len) {
-            while (pre >= 0 && str[i] != str[pre])
-                pre = n[pre];
-            ++i, ++pre;
-            if (i >= len)
-                break;
-            if (str[i] == str[pre])
-                n[i] = n[pre];
-            else
-                n[i] = pre;
-        }
-        return n;
-    }
 
-public:
-    int strStr(string haystack, string needle) {
-        if (0 == needle.length())
-            return 0;
 
-        vector<int> n(Next(needle));
 
-        int len = haystack.length() - needle.length() + 1;
-        for (int i = 0; i < len; ++i) {
-            int j = 0, k = i;
-            while (j < needle.length() && k < haystack.length()) {
-                if (haystack[k] != needle[j]) {
-                    if (n[j] >= 0) {
-                        j = n[j];
-                        continue;
-                    } else
-                        break;
-                }
-                ++k, ++j;
-            }
-            if (j >= needle.length())
-                return k - j;
-        }
 
-        return -1;
-    }
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int StrStr(string haystack, string needle) {
-        for (var i = 0; i < haystack.Length - needle.Length + 1; ++i)
-        {
-            var j = 0;
-            for (; j < needle.Length; ++j)
-            {
-                if (haystack[i + j] != needle[j]) break;
-            }
-            if (j == needle.Length) return i;
-        }
-        return -1;
-    }
-}
-```
 
-### **Go**
+
 
 遍历：
 
-```go
-func strStr(haystack string, needle string) int {
-	n, m := len(haystack), len(needle)
-	for i := 0; i <= n-m; i++ {
-		if haystack[i:i+m] == needle {
-			return i
-		}
-	}
-	return -1
-}
-```
+
 
 Rabin-Karp 字符串匹配算法：
 
-```go
-func strStr(haystack string, needle string) int {
-	n, m := len(haystack), len(needle)
-	sha, target, left, right, mod := 0, 0, 0, 0, 1<<31-1
-	multi := 1
-	for i := 0; i < m; i++ {
-		target = (target*256%mod + int(needle[i])) % mod
-	}
-	for i := 1; i < m; i++ {
-		multi = multi * 256 % mod
-	}
 
-	for ; right < n; right++ {
-		sha = (sha*256%mod + int(haystack[right])) % mod
-		if right-left+1 < m {
-			continue
-		}
-		// 此时 left~right 的长度已经为 needle 的长度 m 了，只需要比对 sha 值与 target 是否一致即可
-		// 为避免 hash 冲突，还需要确保 haystack[left:right+1] 与 needle 相同
-		if sha == target && haystack[left:right+1] == needle {
-			return left
-		}
-		// 未匹配成功，left 右移一位
-		sha = (sha - (int(haystack[left])*multi)%mod + mod) % mod
-		left++
-	}
-	return -1
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} haystack
- * @param {string} needle
- * @return {number}
- */
-var strStr = function (haystack, needle) {
-    const slen = haystack.length;
-    const plen = needle.length;
-    if (slen == plen) {
-        return haystack == needle ? 0 : -1;
-    }
-    for (let i = 0; i <= slen - plen; i++) {
-        let j;
-        for (j = 0; j < plen; j++) {
-            if (haystack[i + j] != needle[j]) {
-                break;
-            }
-        }
-        if (j == plen) return i;
-    }
-    return -1;
-};
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function strStr(haystack: string, needle: string): number {
-    const m = haystack.length;
-    const n = needle.length;
-    for (let i = 0; i <= m - n; i++) {
-        let isEqual = true;
-        for (let j = 0; j < n; j++) {
-            if (haystack[i + j] !== needle[j]) {
-                isEqual = false;
-                break;
-            }
-        }
-        if (isEqual) {
-            return i;
-        }
-    }
-    return -1;
-}
-```
 
-```ts
-function strStr(haystack: string, needle: string): number {
-    const m = haystack.length;
-    const n = needle.length;
-    const next = new Array(n).fill(0);
-    let j = 0;
-    for (let i = 1; i < n; i++) {
-        while (j > 0 && needle[i] !== needle[j]) {
-            j = next[j - 1];
-        }
-        if (needle[i] === needle[j]) {
-            j++;
-        }
-        next[i] = j;
-    }
-    j = 0;
-    for (let i = 0; i < m; i++) {
-        while (j > 0 && haystack[i] !== needle[j]) {
-            j = next[j - 1];
-        }
-        if (haystack[i] === needle[j]) {
-            j++;
-        }
-        if (j === n) {
-            return i - n + 1;
-        }
-    }
-    return -1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn str_str(haystack: String, needle: String) -> i32 {
-        let haystack = haystack.as_bytes();
-        let needle = needle.as_bytes();
-        let m = haystack.len();
-        let n = needle.len();
-        let mut next = vec![0; n];
-        let mut j = 0;
-        for i in 1..n {
-            while j > 0 && needle[i] != needle[j] {
-                j = next[j - 1];
-            }
-            if needle[i] == needle[j] {
-                j += 1;
-            }
-            next[i] = j;
-        }
-        j = 0;
-        for i in 0..m {
-            while j > 0 && haystack[i] != needle[j] {
-                j = next[j - 1];
-            }
-            if haystack[i] == needle[j] {
-                j += 1;
-            }
-            if j == n {
-                return (i - n + 1) as i32;
-            }
-        }
-        -1
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $haystack
-     * @param String $needle
-     * @return Integer
-     */
-    function strStr($haystack, $needle) {
-        $strNew = str_replace($needle, "+", $haystack);
-        $cnt = substr_count($strNew, "+");
-        if ($cnt > 0) {
-            for ($i = 0; $i < strlen($strNew); $i++) {
-                if ($strNew[$i] == "+") {
-                    return $i;
-                }
-            }
-        } else {
-            return -1;
-        }
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -376,4 +142,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

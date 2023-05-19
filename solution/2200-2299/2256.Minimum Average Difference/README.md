@@ -64,21 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumAverageDifference(self, nums: List[int]) -> int:
-        s = list(accumulate(nums))
-        ans, n = 0, len(nums)
-        mi = inf
-        for i in range(n):
-            a = s[i] // (i + 1)
-            b = 0 if i == n - 1 else (s[-1] - s[i]) // (n - i - 1)
-            t = abs(a - b)
-            if mi > t:
-                ans = i
-                mi = t
-        return ans
-```
+
 
 ### **Java**
 
@@ -109,74 +95,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-typedef long long ll;
 
-class Solution {
-public:
-    int minimumAverageDifference(vector<int>& nums) {
-        int n = nums.size();
-        vector<ll> s(n);
-        s[0] = nums[0];
-        for (int i = 1; i < n; ++i) s[i] = s[i - 1] + nums[i];
-        int ans = 0;
-        ll mi = LONG_MAX;
-        for (int i = 0; i < n; ++i) {
-            ll a = s[i] / (i + 1);
-            ll b = i == n - 1 ? 0 : (s[n - 1] - s[i]) / (n - i - 1);
-            ll t = abs(a - b);
-            if (mi > t) {
-                ans = i;
-                mi = t;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumAverageDifference(nums []int) int {
-	n := len(nums)
-	s := make([]int, n)
-	s[0] = nums[0]
-	for i := 1; i < n; i++ {
-		s[i] = s[i-1] + nums[i]
-	}
-	ans := 0
-	mi := math.MaxInt32
-	for i := 0; i < n; i++ {
-		a := s[i] / (i + 1)
-		b := 0
-		if i != n-1 {
-			b = (s[n-1] - s[i]) / (n - i - 1)
-		}
-		t := abs(a - b)
-		if mi > t {
-			ans = i
-			mi = t
-		}
-	}
-	return ans
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -184,4 +113,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

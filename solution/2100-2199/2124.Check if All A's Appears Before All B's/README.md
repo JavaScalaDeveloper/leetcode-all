@@ -63,11 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkString(self, s: str) -> bool:
-        return "ba" not in s
-```
+
 
 ### **Java**
 
@@ -81,30 +77,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkString(string s) {
-        return s.find("ba") == string::npos;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkString(s string) bool {
-	return !strings.Contains(s, "ba")
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -112,4 +95,4 @@ func checkString(s string) bool {
 
 ```
 
-<!-- tabs:end -->
+

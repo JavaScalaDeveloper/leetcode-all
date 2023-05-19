@@ -55,22 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countBattleships(self, board: List[List[str]]) -> int:
-        m, n = len(board), len(board[0])
-        ans = 0
-        for i in range(m):
-            for j in range(n):
-                if board[i][j] == '.':
-                    continue
-                if i > 0 and board[i - 1][j] == 'X':
-                    continue
-                if j > 0 and board[i][j - 1] == 'X':
-                    continue
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -100,50 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countBattleships(vector<vector<char>>& board) {
-        int m = board.size(), n = board[0].size();
-        int ans = 0;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (board[i][j] == '.') continue;
-                if (i > 0 && board[i - 1][j] == 'X') continue;
-                if (j > 0 && board[i][j - 1] == 'X') continue;
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countBattleships(board [][]byte) int {
-	m, n := len(board), len(board[0])
-	ans := 0
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if board[i][j] == '.' {
-				continue
-			}
-			if i > 0 && board[i-1][j] == 'X' {
-				continue
-			}
-			if j > 0 && board[i][j-1] == 'X' {
-				continue
-			}
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -151,4 +99,4 @@ func countBattleships(board [][]byte) int {
 
 ```
 
-<!-- tabs:end -->
+

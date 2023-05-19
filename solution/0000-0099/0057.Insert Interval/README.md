@@ -88,49 +88,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def insert(
-        self, intervals: List[List[int]], newInterval: List[int]
-    ) -> List[List[int]]:
-        def merge(intervals):
-            intervals.sort()
-            ans = []
-            st, ed = intervals[0]
-            for s, e in intervals[1:]:
-                if ed < s:
-                    ans.append([st, ed])
-                    st, ed = s, e
-                else:
-                    ed = max(ed, e)
-            ans.append([st, ed])
-            return ans
 
-        intervals.append(newInterval)
-        return merge(intervals)
-```
 
-```python
-class Solution:
-    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-        st, ed = newInterval
-        ans = []
-        insert = False
-        for s, e in intervals:
-            if ed < s:
-                if not insert:
-                    ans.append([st, ed])
-                    insert = True
-                ans.append([s, e])
-            elif e < st:
-                ans.append([s, e])
-            else:
-                st = min(st, s)
-                ed = max(ed, e)
-        if not insert:
-            ans.append([st, ed])
-        return ans
-```
+
 
 ### **Java**
 
@@ -165,162 +125,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
-        intervals.push_back(newInterval);
-        return merge(intervals);
-    }
 
-    vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end());
-        int st = intervals[0][0], ed = intervals[0][1];
-        vector<vector<int>> ans;
-        for (int i = 1; i < intervals.size(); ++i) {
-            if (ed < intervals[i][0]) {
-                ans.push_back({st, ed});
-                st = intervals[i][0];
-                ed = intervals[i][1];
-            } else {
-                ed = max(ed, intervals[i][1]);
-            }
-        }
-        ans.push_back({st, ed});
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
-        vector<vector<int>> ans;
-        int st = newInterval[0], ed = newInterval[1];
-        bool insert = false;
-        for (auto& interval : intervals) {
-            int s = interval[0], e = interval[1];
-            if (ed < s) {
-                if (!insert) {
-                    ans.push_back({st, ed});
-                    insert = true;
-                }
-                ans.push_back(interval);
-            } else if (e < st) {
-                ans.push_back(interval);
-            } else {
-                st = min(st, s);
-                ed = max(ed, e);
-            }
-        }
-        if (!insert) {
-            ans.push_back({st, ed});
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func insert(intervals [][]int, newInterval []int) [][]int {
-	intervals = append(intervals, newInterval)
-	return merge(intervals)
-}
 
-func merge(intervals [][]int) [][]int {
-	sort.Slice(intervals, func(i, j int) bool {
-		return intervals[i][0] < intervals[j][0]
-	})
-	st, ed := intervals[0][0], intervals[0][1]
-	var ans [][]int
-	for _, e := range intervals[1:] {
-		if ed < e[0] {
-			ans = append(ans, []int{st, ed})
-			st, ed = e[0], e[1]
-		} else if ed < e[1] {
-			ed = e[1]
-		}
-	}
-	ans = append(ans, []int{st, ed})
-	return ans
-}
-```
 
-```go
-func insert(intervals [][]int, newInterval []int) (ans [][]int) {
-	st, ed := newInterval[0], newInterval[1]
-	insert := false
-	for _, interval := range intervals {
-		s, e := interval[0], interval[1]
-		if ed < s {
-			if !insert {
-				ans = append(ans, []int{st, ed})
-				insert = true
-			}
-			ans = append(ans, interval)
-		} else if e < st {
-			ans = append(ans, interval)
-		} else {
-			st = min(st, s)
-			ed = max(ed, e)
-		}
-	}
-	if !insert {
-		ans = append(ans, []int{st, ed})
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[][] Insert(int[][] intervals, int[] newInterval) {
-        var ans = new List<int[]>();
-        int st = newInterval[0], ed = newInterval[1];
-        bool insert = false;
-        foreach (var interval in intervals) {
-            int s = interval[0], e = interval[1];
-            if (ed < s) {
-                if (!insert) {
-                    ans.Add(new int[]{st, ed});
-                    insert = true;
-                }
-                ans.Add(interval);
-            } else if (st > e) {
-                ans.Add(interval);
-            } else {
-                st = Math.Min(st, s);
-                ed = Math.Max(ed, e);
-            }
-        }
-        if (!insert) {
-            ans.Add(new int[]{st, ed});
-        }
-        return ans.ToArray();
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -328,4 +147,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

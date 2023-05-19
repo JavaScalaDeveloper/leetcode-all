@@ -79,18 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def buildArray(self, target: List[int], n: int) -> List[str]:
-        cur, ans = 0, []
-        for v in target:
-            cur += 1
-            while cur < v:
-                ans.extend(['Push', 'Pop'])
-                cur += 1
-            ans.append('Push')
-        return ans
-```
+
 
 ### **Java**
 
@@ -113,41 +102,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> buildArray(vector<int>& target, int n) {
-        int cur = 0;
-        vector<string> ans;
-        for (int& v : target) {
-            while (++cur < v) {
-                ans.emplace_back("Push");
-                ans.emplace_back("Pop");
-            }
-            ans.emplace_back("Push");
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func buildArray(target []int, n int) []string {
-	cur := 0
-	ans := []string{}
-	for _, v := range target {
-		for cur = cur + 1; cur < v; cur++ {
-			ans = append(ans, "Push", "Pop")
-		}
-		ans = append(ans, "Push")
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -176,40 +137,11 @@ char **buildArray(int *target, int targetSize, int n, int *returnSize) {
 
 ### **TypeScript**
 
-```ts
-function buildArray(target: number[], n: number): string[] {
-    const res = [];
-    let cur = 0;
-    for (const num of target) {
-        while (++cur < num) {
-            res.push('Push', 'Pop');
-        }
-        res.push('Push');
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn build_array(target: Vec<i32>, n: i32) -> Vec<String> {
-        let mut res = Vec::new();
-        let mut cur = 1;
-        for &num in target.iter() {
-            while cur < num {
-                res.push("Push");
-                res.push("Pop");
-                cur += 1;
-            }
-            res.push("Push");
-            cur += 1;
-        }
-        res.into_iter().map(String::from).collect()
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -217,4 +149,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

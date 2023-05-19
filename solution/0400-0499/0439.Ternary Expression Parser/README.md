@@ -74,29 +74,7 @@ or "(F ? 1 : (T ? 4 : 5))" --&gt; "(T ? 4 : 5)" --&gt; "4"
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def parseTernary(self, expression: str) -> str:
-        stk = []
-        cond = False
-        for c in expression[::-1]:
-            if c == ':':
-                continue
-            if c == '?':
-                cond = True
-            else:
-                if cond:
-                    if c == 'T':
-                        x = stk.pop()
-                        stk.pop()
-                        stk.append(x)
-                    else:
-                        stk.pop()
-                    cond = False
-                else:
-                    stk.append(c)
-        return stk[0]
-```
+
 
 ### **Java**
 
@@ -134,73 +112,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string parseTernary(string expression) {
-        string stk;
-        bool cond = false;
-        reverse(expression.begin(), expression.end());
-        for (char& c : expression) {
-            if (c == ':') {
-                continue;
-            }
-            if (c == '?') {
-                cond = true;
-            } else {
-                if (cond) {
-                    if (c == 'T') {
-                        char x = stk.back();
-                        stk.pop_back();
-                        stk.pop_back();
-                        stk.push_back(x);
-                    } else {
-                        stk.pop_back();
-                    }
-                    cond = false;
-                } else {
-                    stk.push_back(c);
-                }
-            }
-        }
-        return {stk[0]};
-    }
-};
-```
 
-### **Go**
 
-```go
-func parseTernary(expression string) string {
-	stk := []byte{}
-	cond := false
-	for i := len(expression) - 1; i >= 0; i-- {
-		c := expression[i]
-		if c == ':' {
-			continue
-		}
-		if c == '?' {
-			cond = true
-		} else {
-			if cond {
-				if c == 'T' {
-					x := stk[len(stk)-1]
-					stk = stk[:len(stk)-2]
-					stk = append(stk, x)
-				} else {
-					stk = stk[:len(stk)-1]
-				}
-				cond = false
-			} else {
-				stk = append(stk, c)
-			}
-		}
-	}
-	return string(stk[0])
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -208,4 +126,4 @@ func parseTernary(expression string) string {
 
 ```
 
-<!-- tabs:end -->
+

@@ -63,18 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestSubsequence(self, s: str, k: int) -> int:
-        ans = v = 0
-        for c in s[::-1]:
-            if c == "0":
-                ans += 1
-            elif ans < 30 and (v | 1 << ans) <= k:
-                v |= 1 << ans
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,99 +86,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestSubsequence(string s, int k) {
-        int ans = 0, v = 0;
-        for (int i = s.size() - 1; ~i; --i) {
-            if (s[i] == '0') {
-                ++ans;
-            } else if (ans < 30 && (v | 1 << ans) <= k) {
-                v |= 1 << ans;
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestSubsequence(s string, k int) (ans int) {
-	for i, v := len(s)-1, 0; i >= 0; i-- {
-		if s[i] == '0' {
-			ans++
-		} else if ans < 30 && (v|1<<ans) <= k {
-			v |= 1 << ans
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function longestSubsequence(s: string, k: number): number {
-    let ans = 0;
-    for (let i = s.length - 1, v = 0; ~i; --i) {
-        if (s[i] == '0') {
-            ++ans;
-        } else if (ans < 30 && (v | (1 << ans)) <= k) {
-            v |= 1 << ans;
-            ++ans;
-        }
-    }
-    return ans;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int LongestSubsequence(string s, int k) {
-        int ans = 0, v = 0;
-        for (int i = s.Length - 1; i >= 0; --i) {
-            if (s[i] == '0') {
-                ++ans;
-            } else if (ans < 30 && (v | 1 << ans) <= k) {
-                v |= 1 << ans;
-                ++ans;
-            }
-        }
-        return ans;
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @param {number} k
- * @return {number}
- */
-var longestSubsequence = function (s, k) {
-    let ans = 0;
-    for (let i = s.length - 1, v = 0; ~i; --i) {
-        if (s[i] == '0') {
-            ++ans;
-        } else if (ans < 30 && (v | (1 << ans)) <= k) {
-            v |= 1 << ans;
-            ++ans;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -197,4 +112,4 @@ var longestSubsequence = function (s, k) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -68,25 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findOriginalArray(self, changed: List[int]) -> List[int]:
-        n = len(changed)
-        if n & 1:
-            return []
-        cnt = Counter(changed)
-        changed.sort()
-        ans = []
-        for x in changed:
-            if cnt[x] == 0:
-                continue
-            if cnt[x * 2] <= 0:
-                return []
-            ans.append(x)
-            cnt[x] -= 1
-            cnt[x * 2] -= 1
-        return ans if len(ans) == n // 2 else []
-```
+
 
 ### **Java**
 
@@ -122,98 +104,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findOriginalArray(vector<int>& changed) {
-        int n = changed.size();
-        if (n & 1) {
-            return {};
-        }
-        sort(changed.begin(), changed.end());
-        vector<int> cnt(changed.back() + 1);
-        for (int& x : changed) {
-            ++cnt[x];
-        }
-        vector<int> ans;
-        for (int& x : changed) {
-            if (cnt[x] == 0) {
-                continue;
-            }
-            if (x * 2 >= cnt.size() || cnt[x * 2] <= 0) {
-                return {};
-            }
-            ans.push_back(x);
-            --cnt[x];
-            --cnt[x * 2];
-        }
-        return ans.size() == n / 2 ? ans : vector<int>();
-    }
-};
-```
 
-### **Go**
 
-```go
-func findOriginalArray(changed []int) []int {
-	n := len(changed)
-	ans := []int{}
-	if n&1 == 1 {
-		return ans
-	}
-	sort.Ints(changed)
-	cnt := make([]int, changed[n-1]+1)
-	for _, x := range changed {
-		cnt[x]++
-	}
-	for _, x := range changed {
-		if cnt[x] == 0 {
-			continue
-		}
-		if x*2 >= len(cnt) || cnt[x*2] <= 0 {
-			return []int{}
-		}
-		ans = append(ans, x)
-		cnt[x]--
-		cnt[x*2]--
-	}
-	if len(ans) != n/2 {
-		return []int{}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findOriginalArray(changed: number[]): number[] {
-    const n = changed.length;
-    if (n & 1) {
-        return [];
-    }
-    const cnt = new Map<number, number>();
-    for (const x of changed) {
-        cnt.set(x, (cnt.get(x) || 0) + 1);
-    }
-    changed.sort((a, b) => a - b);
-    const ans: number[] = [];
-    for (const x of changed) {
-        if (cnt.get(x) == 0) {
-            continue;
-        }
-        if ((cnt.get(x * 2) || 0) <= 0) {
-            return [];
-        }
-        ans.push(x);
-        cnt.set(x, (cnt.get(x) || 0) - 1);
-        cnt.set(x * 2, (cnt.get(x * 2) || 0) - 1);
-    }
-    return ans.length == n / 2 ? ans : [];
-}
-```
+
 
 ### **...**
 
@@ -221,4 +122,4 @@ function findOriginalArray(changed: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

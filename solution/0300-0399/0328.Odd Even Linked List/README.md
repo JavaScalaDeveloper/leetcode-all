@@ -62,26 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if head is None:
-            return None
-        a = head
-        b = c = head.next
-        while b and b.next:
-            a.next = b.next
-            a = a.next
-            b.next = a.next
-            b = b.next
-        a.next = c
-        return head
-```
+
 
 ### **Java**
 
@@ -117,96 +98,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* oddEvenList(ListNode* head) {
-        if (!head) {
-            return nullptr;
-        }
-        ListNode *a = head;
-        ListNode *b = head->next, *c = b;
-        while (b && b->next) {
-            a->next = b->next;
-            a = a->next;
-            b->next = a->next;
-            b = b->next;
-        }
-        a->next = c;
-        return head;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func oddEvenList(head *ListNode) *ListNode {
-	if head == nil {
-		return nil
-	}
-	a := head
-	b, c := head.Next, head.Next
-	for b != nil && b.Next != nil {
-		a.Next = b.Next
-		a = a.Next
-		b.Next = a.Next
-		b = b.Next
-	}
-	a.Next = c
-	return head
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function oddEvenList(head: ListNode | null): ListNode | null {
-    if (!head) {
-        return null;
-    }
-    let [a, b, c] = [head, head.next, head.next];
-    while (b && b.next) {
-        a.next = b.next;
-        a = a.next;
-        b.next = a.next;
-        b = b.next;
-    }
-    a.next = c;
-    return head;
-}
-```
 
 ### **...**
 
@@ -214,4 +116,4 @@ function oddEvenList(head: ListNode | null): ListNode | null {
 
 ```
 
-<!-- tabs:end -->
+

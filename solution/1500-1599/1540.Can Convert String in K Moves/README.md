@@ -79,20 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canConvertString(self, s: str, t: str, k: int) -> bool:
-        if len(s) != len(t):
-            return False
-        cnt = [0] * 26
-        for a, b in zip(s, t):
-            x = (ord(b) - ord(a) + 26) % 26
-            cnt[x] += 1
-        for i in range(1, 26):
-            if i + 26 * (cnt[i] - 1) > k:
-                return False
-        return True
-```
+
 
 ### **Java**
 
@@ -119,50 +106,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canConvertString(string s, string t, int k) {
-        if (s.size() != t.size()) {
-            return false;
-        }
-        int cnt[26]{};
-        for (int i = 0; i < s.size(); ++i) {
-            int x = (t[i] - s[i] + 26) % 26;
-            ++cnt[x];
-        }
-        for (int i = 1; i < 26; ++i) {
-            if (i + 26 * (cnt[i] - 1) > k) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canConvertString(s string, t string, k int) bool {
-	if len(s) != len(t) {
-		return false
-	}
-	cnt := [26]int{}
-	for i := range s {
-		x := (t[i] - s[i] + 26) % 26
-		cnt[x]++
-	}
-	for i := 1; i < 26; i++ {
-		if i+26*(cnt[i]-1) > k {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -170,4 +120,4 @@ func canConvertString(s string, t string, k int) bool {
 
 ```
 
-<!-- tabs:end -->
+

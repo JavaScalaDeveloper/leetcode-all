@@ -74,13 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:
-        return sum(
-            max(abs(p1[0] - p2[0]), abs(p1[1] - p2[1])) for p1, p2 in pairwise(points)
-        )
-```
+
 
 ### **Java**
 
@@ -100,80 +94,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minTimeToVisitAllPoints(vector<vector<int>>& points) {
-        int ans = 0;
-        for (int i = 1; i < points.size(); ++i) {
-            int dx = abs(points[i][0] - points[i - 1][0]);
-            int dy = abs(points[i][1] - points[i - 1][1]);
-            ans += max(dx, dy);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minTimeToVisitAllPoints(points [][]int) (ans int) {
-	for i, p := range points[1:] {
-		dx := abs(p[0] - points[i][0])
-		dy := abs(p[1] - points[i][1])
-		ans += max(dx, dy)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function minTimeToVisitAllPoints(points: number[][]): number {
-    let ans = 0;
-    for (let i = 1; i < points.length; i++) {
-        let dx = Math.abs(points[i][0] - points[i - 1][0]),
-            dy = Math.abs(points[i][1] - points[i - 1][1]);
-        ans += Math.max(dx, dy);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_time_to_visit_all_points(points: Vec<Vec<i32>>) -> i32 {
-        let n = points.len();
-        let mut ans = 0;
-        for i in 1..n {
-            let x = (points[i - 1][0] - points[i][0]).abs();
-            let y = (points[i - 1][1] - points[i][1]).abs();
-            ans += x.max(y);
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -197,4 +132,4 @@ int minTimeToVisitAllPoints(int **points, int pointsSize, int *pointsColSize) {
 
 ```
 
-<!-- tabs:end -->
+

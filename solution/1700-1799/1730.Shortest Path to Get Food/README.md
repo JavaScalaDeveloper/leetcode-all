@@ -75,29 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getFood(self, grid: List[List[str]]) -> int:
-        m, n = len(grid), len(grid[0])
-        i, j = next((i, j) for i in range(m)
-                    for j in range(n) if grid[i][j] == '*')
-        q = deque([(i, j)])
-        dirs = (-1, 0, 1, 0, -1)
-        ans = 0
-        while q:
-            ans += 1
-            for _ in range(len(q)):
-                i, j = q.popleft()
-                for a, b in pairwise(dirs):
-                    x, y = i + a, j + b
-                    if 0 <= x < m and 0 <= y < n:
-                        if grid[x][y] == '#':
-                            return ans
-                        if grid[x][y] == 'O':
-                            grid[x][y] = 'X'
-                            q.append((x, y))
-        return -1
-```
+
 
 ### **Java**
 
@@ -144,132 +122,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const static inline vector<int> dirs = {-1, 0, 1, 0, -1};
 
-    int getFood(vector<vector<char>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        queue<pair<int, int>> q;
-        for (int i = 0, x = 1; i < m && x == 1; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j] == '*') {
-                    q.emplace(i, j);
-                    x = 0;
-                    break;
-                }
-            }
-        }
-        int ans = 0;
-        while (!q.empty()) {
-            ++ans;
-            for (int t = q.size(); t; --t) {
-                auto [i, j] = q.front();
-                q.pop();
-                for (int k = 0; k < 4; ++k) {
-                    int x = i + dirs[k], y = j + dirs[k + 1];
-                    if (x >= 0 && x < m && y >= 0 && y < n) {
-                        if (grid[x][y] == '#') return ans;
-                        if (grid[x][y] == 'O') {
-                            grid[x][y] = 'X';
-                            q.emplace(x, y);
-                        }
-                    }
-                }
-            }
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getFood(grid [][]byte) (ans int) {
-	m, n := len(grid), len(grid[0])
-	dirs := []int{-1, 0, 1, 0, -1}
-	type pair struct{ i, j int }
-	q := []pair{}
-	for i, x := 0, 1; i < m && x == 1; i++ {
-		for j := 0; j < n; j++ {
-			if grid[i][j] == '*' {
-				q = append(q, pair{i, j})
-				x = 0
-				break
-			}
-		}
-	}
-	for len(q) > 0 {
-		ans++
-		for t := len(q); t > 0; t-- {
-			p := q[0]
-			q = q[1:]
-			for k := 0; k < 4; k++ {
-				x, y := p.i+dirs[k], p.j+dirs[k+1]
-				if x >= 0 && x < m && y >= 0 && y < n {
-					if grid[x][y] == '#' {
-						return ans
-					}
-					if grid[x][y] == 'O' {
-						grid[x][y] = 'X'
-						q = append(q, pair{x, y})
-					}
-				}
-			}
-		}
-	}
-	return -1
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {character[][]} grid
- * @return {number}
- */
-var getFood = function (grid) {
-    const m = grid.length;
-    const n = grid[0].length;
-    const dirs = [-1, 0, 1, 0, -1];
-    const q = [];
-    for (let i = 0, x = 1; i < m && x == 1; ++i) {
-        for (let j = 0; j < n; ++j) {
-            if (grid[i][j] == '*') {
-                q.push([i, j]);
-                x = 0;
-                break;
-            }
-        }
-    }
-    let ans = 0;
-    while (q.length) {
-        ++ans;
-        for (let t = q.length; t > 0; --t) {
-            const [i, j] = q.shift();
-            for (let k = 0; k < 4; ++k) {
-                const x = i + dirs[k];
-                const y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n) {
-                    if (grid[x][y] == '#') {
-                        return ans;
-                    }
-                    if (grid[x][y] == 'O') {
-                        grid[x][y] = 'X';
-                        q.push([x, y]);
-                    }
-                }
-            }
-        }
-    }
-    return -1;
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -277,4 +140,4 @@ var getFood = function (grid) {
 
 ```
 
-<!-- tabs:end -->
+

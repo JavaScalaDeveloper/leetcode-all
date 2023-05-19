@@ -62,22 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minTime(self, time: List[int], m: int) -> int:
-        def check(t):
-            s = mx = 0
-            d = 1
-            for x in time:
-                s += x
-                mx = max(mx, x)
-                if s - mx > t:
-                    d += 1
-                    s = mx = x
-            return d <= m
 
-        return bisect_left(range(sum(time)), True, key=check)
-```
 
 ### **Java**
 
@@ -118,73 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minTime(vector<int>& time, int m) {
-        int left = 0, right = 0;
-        for (int x : time) {
-            right += x;
-        }
-        auto check = [&](int t) -> bool {
-            int s = 0, mx = 0;
-            int d = 1;
-            for (int x : time) {
-                s += x;
-                mx = max(mx, x);
-                if (s - mx > t) {
-                    s = x;
-                    mx = x;
-                    ++d;
-                }
-            }
-            return d <= m;
-        };
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (check(mid)) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minTime(time []int, m int) int {
-	right := 0
-	for _, x := range time {
-		right += x
-	}
-	return sort.Search(right, func(t int) bool {
-		s, mx := 0, 0
-		d := 1
-		for _, x := range time {
-			s += x
-			mx = max(mx, x)
-			if s-mx > t {
-				s, mx = x, x
-				d++
-			}
-		}
-		return d <= m
-	})
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -192,4 +117,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

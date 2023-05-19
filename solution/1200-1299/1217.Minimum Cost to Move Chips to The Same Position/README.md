@@ -75,13 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minCostToMoveChips(self, position: List[int]) -> int:
-        a = sum(p % 2 for p in position)
-        b = len(position) - a
-        return min(a, b)
-```
+
 
 ### **Java**
 
@@ -100,52 +94,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minCostToMoveChips(vector<int>& position) {
-        int a = 0;
-        for (auto& p : position) a += p & 1;
-        int b = position.size() - a;
-        return min(a, b);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minCostToMoveChips(position []int) int {
-	a := 0
-	for _, p := range position {
-		a += p & 1
-	}
-	b := len(position) - a
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} position
- * @return {number}
- */
-var minCostToMoveChips = function (position) {
-    let a = 0;
-    for (let v of position) {
-        a += v % 2;
-    }
-    let b = position.length - a;
-    return Math.min(a, b);
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -153,4 +112,4 @@ var minCostToMoveChips = function (position) {
 
 ```
 
-<!-- tabs:end -->
+

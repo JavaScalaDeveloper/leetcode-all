@@ -57,29 +57,7 @@ string ans = obj.decode(tiny); // 返回解密后得到的原本的 URL 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Codec:
-    def __init__(self):
-        self.m = defaultdict()
-        self.idx = 0
-        self.domain = 'https://tinyurl.com/'
 
-    def encode(self, longUrl: str) -> str:
-        """Encodes a URL to a shortened URL."""
-        self.idx += 1
-        self.m[str(self.idx)] = longUrl
-        return f'{self.domain}{self.idx}'
-
-    def decode(self, shortUrl: str) -> str:
-        """Decodes a shortened URL to its original URL."""
-        idx = shortUrl.split('/')[-1]
-        return self.m[idx]
-
-
-# Your Codec object will be instantiated and called as such:
-# codec = Codec()
-# codec.decode(codec.encode(url))
-```
 
 ### **Java**
 
@@ -110,69 +88,13 @@ public class Codec {
 // codec.decode(codec.encode(url));
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    // Encodes a URL to a shortened URL.
-    string encode(string longUrl) {
-        string v = to_string(++idx);
-        m[v] = longUrl;
-        return domain + v;
-    }
 
-    // Decodes a shortened URL to its original URL.
-    string decode(string shortUrl) {
-        int i = shortUrl.rfind('/') + 1;
-        return m[shortUrl.substr(i, shortUrl.size() - i)];
-    }
 
-private:
-    unordered_map<string, string> m;
-    int idx = 0;
-    string domain = "https://tinyurl.com/";
-};
 
-// Your Solution object will be instantiated and called as such:
-// Solution solution;
-// solution.decode(solution.encode(url));
-```
 
-### **Go**
 
-```go
-type Codec struct {
-	m   map[int]string
-	idx int
-}
 
-func Constructor() Codec {
-	m := map[int]string{}
-	return Codec{m, 0}
-}
-
-// Encodes a URL to a shortened URL.
-func (this *Codec) encode(longUrl string) string {
-	this.idx++
-	this.m[this.idx] = longUrl
-	return "https://tinyurl.com/" + strconv.Itoa(this.idx)
-}
-
-// Decodes a shortened URL to its original URL.
-func (this *Codec) decode(shortUrl string) string {
-	i := strings.LastIndexByte(shortUrl, '/')
-	v, _ := strconv.Atoi(shortUrl[i+1:])
-	return this.m[v]
-}
-
-/**
- * Your Codec object will be instantiated and called as such:
- * obj := Constructor();
- * url := obj.encode(longUrl);
- * ans := obj.decode(url);
- */
-```
 
 ### **...**
 
@@ -180,4 +102,4 @@ func (this *Codec) decode(shortUrl string) string {
 
 ```
 
-<!-- tabs:end -->
+

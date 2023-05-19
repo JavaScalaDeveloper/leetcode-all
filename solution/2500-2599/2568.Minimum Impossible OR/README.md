@@ -55,12 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minImpossibleOR(self, nums: List[int]) -> int:
-        s = set(nums)
-        return next(1 << i for i in range(32) if 1 << i not in s)
-```
+
 
 ### **Java**
 
@@ -82,53 +77,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minImpossibleOR(vector<int>& nums) {
-        unordered_set<int> s(nums.begin(), nums.end());
-        for (int i = 0;; ++i) {
-            if (!s.count(1 << i)) {
-                return 1 << i;
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func minImpossibleOR(nums []int) int {
-	s := map[int]bool{}
-	for _, x := range nums {
-		s[x] = true
-	}
-	for i := 0; ; i++ {
-		if !s[1<<i] {
-			return 1 << i
-		}
-	}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minImpossibleOR(nums: number[]): number {
-    const s: Set<number> = new Set();
-    for (const x of nums) {
-        s.add(x);
-    }
-    for (let i = 0; ; ++i) {
-        if (!s.has(1 << i)) {
-            return 1 << i;
-        }
-    }
-}
-```
+
 
 ### **...**
 
@@ -136,4 +95,4 @@ function minImpossibleOR(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

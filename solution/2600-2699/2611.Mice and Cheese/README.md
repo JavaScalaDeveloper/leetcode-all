@@ -73,23 +73,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def miceAndCheese(self, reward1: List[int], reward2: List[int], k: int) -> int:
-        n = len(reward1)
-        idx = sorted(
-            range(n), key=lambda i: reward1[i] - reward2[i], reverse=True)
-        return sum(reward1[i] for i in idx[:k]) + sum(reward2[i] for i in idx[k:])
-```
 
-```python
-class Solution:
-    def miceAndCheese(self, reward1: List[int], reward2: List[int], k: int) -> int:
-        for i, x in enumerate(reward2):
-            reward1[i] -= x
-        reward1.sort(reverse=True)
-        return sum(reward2) + sum(reward1[:k])
-```
+
+
 
 ### **Java**
 
@@ -134,124 +120,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int miceAndCheese(vector<int>& reward1, vector<int>& reward2, int k) {
-        int n = reward1.size();
-        vector<int> idx(n);
-        iota(idx.begin(), idx.end(), 0);
-        sort(idx.begin(), idx.end(), [&](int i, int j) { return reward1[j] - reward2[j] < reward1[i] - reward2[i]; });
-        int ans = 0;
-        for (int i = 0; i < k; ++i) {
-            ans += reward1[idx[i]];
-        }
-        for (int i = k; i < n; ++i) {
-            ans += reward2[idx[i]];
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int miceAndCheese(vector<int>& reward1, vector<int>& reward2, int k) {
-        int n = reward1.size();
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            ans += reward2[i];
-            reward1[i] -= reward2[i];
-        }
-        sort(reward1.rbegin(), reward1.rend());
-        ans += accumulate(reward1.begin(), reward1.begin() + k, 0);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func miceAndCheese(reward1 []int, reward2 []int, k int) (ans int) {
-	n := len(reward1)
-	idx := make([]int, n)
-	for i := range idx {
-		idx[i] = i
-	}
-	sort.Slice(idx, func(i, j int) bool {
-		i, j = idx[i], idx[j]
-		return reward1[j]-reward2[j] < reward1[i]-reward2[i]
-	})
-	for i := 0; i < k; i++ {
-		ans += reward1[idx[i]]
-	}
-	for i := k; i < n; i++ {
-		ans += reward2[idx[i]]
-	}
-	return
-}
-```
 
-```go
-func miceAndCheese(reward1 []int, reward2 []int, k int) (ans int) {
-	for i, x := range reward2 {
-		ans += x
-		reward1[i] -= x
-	}
-	sort.Ints(reward1)
-	n := len(reward1)
-	for i := 0; i < k; i++ {
-		ans += reward1[n-i-1]
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function miceAndCheese(
-    reward1: number[],
-    reward2: number[],
-    k: number,
-): number {
-    const n = reward1.length;
-    const idx = Array.from({ length: n }, (_, i) => i);
-    idx.sort((i, j) => reward1[j] - reward2[j] - (reward1[i] - reward2[i]));
-    let ans = 0;
-    for (let i = 0; i < k; ++i) {
-        ans += reward1[idx[i]];
-    }
-    for (let i = k; i < n; ++i) {
-        ans += reward2[idx[i]];
-    }
-    return ans;
-}
-```
 
-```ts
-function miceAndCheese(
-    reward1: number[],
-    reward2: number[],
-    k: number,
-): number {
-    const n = reward1.length;
-    let ans = 0;
-    for (let i = 0; i < n; ++i) {
-        ans += reward2[i];
-        reward1[i] -= reward2[i];
-    }
-    reward1.sort((a, b) => b - a);
-    for (let i = 0; i < k; ++i) {
-        ans += reward1[i];
-    }
-    return ans;
-}
-```
+
+
 
 ### **...**
 
@@ -259,4 +144,4 @@ function miceAndCheese(
 
 ```
 
-<!-- tabs:end -->
+

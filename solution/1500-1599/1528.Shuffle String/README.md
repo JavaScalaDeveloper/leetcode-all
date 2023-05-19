@@ -54,14 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def restoreString(self, s: str, indices: List[int]) -> str:
-        ans = [0] * len(s)
-        for i, c in enumerate(s):
-            ans[indices[i]] = c
-        return ''.join(ans)
-```
+
 
 ### **Java**
 
@@ -80,50 +73,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string restoreString(string s, vector<int>& indices) {
-        int n = s.size();
-        string ans(n, 0);
-        for (int i = 0; i < n; ++i) {
-            ans[indices[i]] = s[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func restoreString(s string, indices []int) string {
-	ans := make([]rune, len(s))
-	for i, c := range s {
-		ans[indices[i]] = c
-	}
-	return string(ans)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @param {number[]} indices
- * @return {string}
- */
-var restoreString = function (s, indices) {
-    let rs = [];
-    for (let i = 0; i < s.length; i++) {
-        rs[indices[i]] = s[i];
-    }
-    return rs.join("");
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -131,4 +91,4 @@ var restoreString = function (s, indices) {
 
 ```
 
-<!-- tabs:end -->
+

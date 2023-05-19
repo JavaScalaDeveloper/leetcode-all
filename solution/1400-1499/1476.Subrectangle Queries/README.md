@@ -100,29 +100,7 @@ subrectangleQueries.getValue(2, 2); // 返回 20
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class SubrectangleQueries:
-    def __init__(self, rectangle: List[List[int]]):
-        self.g = rectangle
-        self.ops = []
 
-    def updateSubrectangle(
-        self, row1: int, col1: int, row2: int, col2: int, newValue: int
-    ) -> None:
-        self.ops.append((row1, col1, row2, col2, newValue))
-
-    def getValue(self, row: int, col: int) -> int:
-        for r1, c1, r2, c2, v in self.ops[::-1]:
-            if r1 <= row <= r2 and c1 <= col <= c2:
-                return v
-        return self.g[row][col]
-
-
-# Your SubrectangleQueries object will be instantiated and called as such:
-# obj = SubrectangleQueries(rectangle)
-# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
-# param_2 = obj.getValue(row,col)
-```
 
 ### **Java**
 
@@ -159,114 +137,17 @@ class SubrectangleQueries {
  */
 ```
 
-### **C++**
 
-```cpp
-class SubrectangleQueries {
-public:
-    vector<vector<int>> g;
-    vector<vector<int>> ops;
 
-    SubrectangleQueries(vector<vector<int>>& rectangle) {
-        g = rectangle;
-    }
 
-    void updateSubrectangle(int row1, int col1, int row2, int col2, int newValue) {
-        ops.push_back({row1, col1, row2, col2, newValue});
-    }
 
-    int getValue(int row, int col) {
-        for (int i = ops.size() - 1; ~i; --i) {
-            auto op = ops[i];
-            if (op[0] <= row && row <= op[2] && op[1] <= col && col <= op[3]) {
-                return op[4];
-            }
-        }
-        return g[row][col];
-    }
-};
 
-/**
- * Your SubrectangleQueries object will be instantiated and called as such:
- * SubrectangleQueries* obj = new SubrectangleQueries(rectangle);
- * obj->updateSubrectangle(row1,col1,row2,col2,newValue);
- * int param_2 = obj->getValue(row,col);
- */
-```
 
-### **Go**
 
-```go
-type SubrectangleQueries struct {
-	g   [][]int
-	ops [][]int
-}
-
-func Constructor(rectangle [][]int) SubrectangleQueries {
-	return SubrectangleQueries{rectangle, [][]int{}}
-}
-
-func (this *SubrectangleQueries) UpdateSubrectangle(row1 int, col1 int, row2 int, col2 int, newValue int) {
-	this.ops = append(this.ops, []int{row1, col1, row2, col2, newValue})
-}
-
-func (this *SubrectangleQueries) GetValue(row int, col int) int {
-	for i := len(this.ops) - 1; i >= 0; i-- {
-		op := this.ops[i]
-		if op[0] <= row && row <= op[2] && op[1] <= col && col <= op[3] {
-			return op[4]
-		}
-	}
-	return this.g[row][col]
-}
-
-/**
- * Your SubrectangleQueries object will be instantiated and called as such:
- * obj := Constructor(rectangle);
- * obj.UpdateSubrectangle(row1,col1,row2,col2,newValue);
- * param_2 := obj.GetValue(row,col);
- */
-```
 
 ### **TypeScript**
 
-```ts
-class SubrectangleQueries {
-    g: number[][];
-    ops: number[][];
-    constructor(rectangle: number[][]) {
-        this.g = rectangle;
-        this.ops = [];
-    }
 
-    updateSubrectangle(
-        row1: number,
-        col1: number,
-        row2: number,
-        col2: number,
-        newValue: number,
-    ): void {
-        this.ops.push([row1, col1, row2, col2, newValue]);
-    }
-
-    getValue(row: number, col: number): number {
-        for (let i = this.ops.length - 1; ~i; --i) {
-            const [r1, c1, r2, c2, v] = this.ops[i];
-            if (r1 <= row && row <= r2 && c1 <= col && col <= c2) {
-                return v;
-            }
-        }
-        return this.g[row][col];
-    }
-}
-
-/**
- * Your SubrectangleQueries object will be instantiated and called as such:
- * var obj = new SubrectangleQueries(rectangle)
- * obj.updateSubrectangle(row1,col1,row2,col2,newValue)
- * var param_2 = obj.getValue(row,col)
- */
-```
 
 ### **...**
 
@@ -274,4 +155,4 @@ class SubrectangleQueries {
 
 ```
 
-<!-- tabs:end -->
+

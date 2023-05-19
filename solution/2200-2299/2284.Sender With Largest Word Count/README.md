@@ -70,18 +70,7 @@ Charlie 总共发出了 5 个单词。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestWordCount(self, messages: List[str], senders: List[str]) -> str:
-        cnt = Counter()
-        for msg, sender in zip(messages, senders):
-            cnt[sender] += msg.count(' ') + 1
-        ans = ''
-        for sender, v in cnt.items():
-            if cnt[ans] < v or (cnt[ans] == v and ans < sender):
-                ans = sender
-        return ans
-```
+
 
 ### **Java**
 
@@ -114,52 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string largestWordCount(vector<string>& messages, vector<string>& senders) {
-        unordered_map<string, int> cnt;
-        int n = senders.size();
-        for (int i = 0; i < n; ++i) {
-            int v = count(messages[i].begin(), messages[i].end(), ' ') + 1;
-            cnt[senders[i]] += v;
-        }
-        string ans = senders[0];
-        for (auto& [sender, v] : cnt) {
-            if (cnt[ans] < v || (cnt[ans] == v && ans < sender)) {
-                ans = sender;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestWordCount(messages []string, senders []string) (ans string) {
-	cnt := map[string]int{}
-	for i, msg := range messages {
-		v := strings.Count(msg, " ") + 1
-		cnt[senders[i]] += v
-	}
-	for sender, v := range cnt {
-		if cnt[ans] < v || (cnt[ans] == v && ans < sender) {
-			ans = sender
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -167,4 +121,4 @@ func largestWordCount(messages []string, senders []string) (ans string) {
 
 ```
 
-<!-- tabs:end -->
+

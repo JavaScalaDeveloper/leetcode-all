@@ -75,22 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestMerge(self, word1: str, word2: str) -> str:
-        i = j = 0
-        ans = []
-        while i < len(word1) and j < len(word2):
-            if word1[i:] > word2[j:]:
-                ans.append(word1[i])
-                i += 1
-            else:
-                ans.append(word2[j])
-                j += 1
-        ans.append(word1[i:])
-        ans.append(word2[j:])
-        return "".join(ans)
-```
+
 
 ### **Java**
 
@@ -113,93 +98,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string largestMerge(string word1, string word2) {
-        int m = word1.size(), n = word2.size();
-        int i = 0, j = 0;
-        string ans;
-        while (i < m && j < n) {
-            bool gt = word1.substr(i) > word2.substr(j);
-            ans += gt ? word1[i++] : word2[j++];
-        }
-        ans += word1.substr(i);
-        ans += word2.substr(j);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestMerge(word1 string, word2 string) string {
-	m, n := len(word1), len(word2)
-	i, j := 0, 0
-	var ans strings.Builder
-	for i < m && j < n {
-		if word1[i:] > word2[j:] {
-			ans.WriteByte(word1[i])
-			i++
-		} else {
-			ans.WriteByte(word2[j])
-			j++
-		}
-	}
-	ans.WriteString(word1[i:])
-	ans.WriteString(word2[j:])
-	return ans.String()
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function largestMerge(word1: string, word2: string): string {
-    const m = word1.length;
-    const n = word2.length;
-    let ans = '';
-    let i = 0;
-    let j = 0;
-    while (i < m && j < n) {
-        ans += word1.slice(i) > word2.slice(j) ? word1[i++] : word2[j++];
-    }
-    ans += word1.slice(i);
-    ans += word2.slice(j);
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn largest_merge(word1: String, word2: String) -> String {
-        let word1 = word1.as_bytes();
-        let word2 = word2.as_bytes();
-        let m = word1.len();
-        let n = word2.len();
-        let mut ans = String::new();
-        let mut i = 0;
-        let mut j = 0;
-        while i < m && j < n {
-            if word1[i..] > word2[j..] {
-                ans.push(word1[i] as char);
-                i += 1;
-            } else {
-                ans.push(word2[j] as char);
-                j += 1;
-            }
-        }
-        word1[i..].iter().for_each(|c| ans.push(*c as char));
-        word2[j..].iter().for_each(|c| ans.push(*c as char));
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -242,4 +155,4 @@ char *largestMerge(char *word1, char *word2) {
 
 ```
 
-<!-- tabs:end -->
+

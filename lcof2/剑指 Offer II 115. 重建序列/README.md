@@ -83,28 +83,7 @@ BFS 实现。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sequenceReconstruction(
-        self, nums: List[int], sequences: List[List[int]]
-    ) -> bool:
-        g = defaultdict(list)
-        indeg = [0] * len(nums)
-        for seq in sequences:
-            for a, b in pairwise(seq):
-                g[a - 1].append(b - 1)
-                indeg[b - 1] += 1
-        q = deque([i for i, v in enumerate(indeg) if v == 0])
-        while q:
-            if len(q) > 1:
-                return False
-            i = q.popleft()
-            for j in g[i]:
-                indeg[j] -= 1
-                if indeg[j] == 0:
-                    q.append(j)
-        return True
-```
+
 
 ### **Java**
 
@@ -146,73 +125,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool sequenceReconstruction(vector<int>& nums, vector<vector<int>>& sequences) {
-        int n = nums.size();
-        vector<vector<int>> g(n);
-        vector<int> indeg(n);
-        for (auto& seq : sequences) {
-            for (int i = 1; i < seq.size(); ++i) {
-                int a = seq[i - 1] - 1, b = seq[i] - 1;
-                g[a].push_back(b);
-                ++indeg[b];
-            }
-        }
-        queue<int> q;
-        for (int i = 0; i < n; ++i)
-            if (indeg[i] == 0) q.push(i);
-        while (!q.empty()) {
-            if (q.size() > 1) return false;
-            int i = q.front();
-            q.pop();
-            for (int j : g[i])
-                if (--indeg[j] == 0) q.push(j);
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sequenceReconstruction(nums []int, sequences [][]int) bool {
-	n := len(nums)
-	g := make([][]int, n)
-	indeg := make([]int, n)
-	for _, seq := range sequences {
-		for i := 1; i < len(seq); i++ {
-			a, b := seq[i-1]-1, seq[i]-1
-			g[a] = append(g[a], b)
-			indeg[b]++
-		}
-	}
-	q := []int{}
-	for i, v := range indeg {
-		if v == 0 {
-			q = append(q, i)
-		}
-	}
-	for len(q) > 0 {
-		if len(q) > 1 {
-			return false
-		}
-		i := q[0]
-		q = q[1:]
-		for _, j := range g[i] {
-			indeg[j]--
-			if indeg[j] == 0 {
-				q = append(q, j)
-			}
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -220,4 +139,4 @@ func sequenceReconstruction(nums []int, sequences [][]int) bool {
 
 ```
 
-<!-- tabs:end -->
+

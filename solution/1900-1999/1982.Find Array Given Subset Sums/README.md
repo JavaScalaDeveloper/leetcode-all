@@ -69,56 +69,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedList
 
 
-class Solution:
-    def recoverArray(self, n: int, sums: List[int]) -> List[int]:
-        m = -min(sums)
-        sl = SortedList(x + m for x in sums)
-        sl.remove(0)
-        ans = [sl[0]]
-        for i in range(1, n):
-            for j in range(1 << i):
-                if j >> (i - 1) & 1:
-                    s = sum(ans[k] for k in range(i) if j >> k & 1)
-                    sl.remove(s)
-            ans.append(sl[0])
-        for i in range(1 << n):
-            s = sum(ans[j] for j in range(n) if i >> j & 1)
-            if s == m:
-                for j in range(n):
-                    if i >> j & 1:
-                        ans[j] *= -1
-                break
-        return ans
-```
 
-```python
-class Solution:
-    def recoverArray(self, n: int, sums: List[int]) -> List[int]:
-        sums.sort()
-        ans = []
-        for i in range(n, 0, -1):
-            k = 1 << i
-            d = sums[k - 1] - sums[k - 2]
-            cnt = Counter(sums[:k])
-            sums1, sums2 = [], []
-            sign = 1
-            for s in sums[:k]:
-                if not cnt[s]:
-                    continue
-                cnt[s] -= 1
-                cnt[s + d] -= 1
-                sums1.append(s)
-                sums2.append(s + d)
-                if s + d == 0:
-                    sign = -1
-            ans.append(sign * d)
-            sums = sums1 if sign == 1 else sums2
-        return ans
-```
 
 ### **Java**
 
@@ -214,197 +167,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> recoverArray(int n, vector<int>& sums) {
-        int m = *min_element(sums.begin(), sums.end());
-        m = -m;
-        multiset<int> st;
-        for (int x : sums) {
-            st.insert(x + m);
-        }
-        st.erase(st.begin());
-        vector<int> ans;
-        ans.push_back(*st.begin());
-        for (int i = 1; i < n; ++i) {
-            for (int j = 0; j < 1 << i; ++j) {
-                if (j >> (i - 1) & 1) {
-                    int s = 0;
-                    for (int k = 0; k < i; ++k) {
-                        if (j >> k & 1) {
-                            s += ans[k];
-                        }
-                    }
-                    st.erase(st.find(s));
-                }
-            }
-            ans.push_back(*st.begin());
-        }
-        for (int i = 0; i < 1 << n; ++i) {
-            int s = 0;
-            for (int j = 0; j < n; ++j) {
-                if (i >> j & 1) {
-                    s += ans[j];
-                }
-            }
-            if (s == m) {
-                for (int j = 0; j < n; ++j) {
-                    if (i >> j & 1) {
-                        ans[j] = -ans[j];
-                    }
-                }
-                break;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> recoverArray(int n, vector<int>& sums) {
-        sort(sums.begin(), sums.end());
-        vector<int> ans(n);
-        unordered_map<int, int> cnt;
-        for (int i = n; i; --i) {
-            cnt.clear();
-            int k = 1 << i;
-            int d = sums[k - 1] - sums[k - 2];
-            for (int j = 0; j < k; ++j) {
-                cnt[sums[j]]++;
-            }
-            vector<int> sums1, sums2;
-            int sign = 1;
-            for (int j = 0; j < k; ++j) {
-                if (cnt[sums[j]] == 0) {
-                    continue;
-                }
-                --cnt[sums[j]];
-                --cnt[sums[j] + d];
-                sums1.push_back(sums[j]);
-                sums2.push_back(sums[j] + d);
-                if (sums2.back() == 0) {
-                    sign = -1;
-                }
-            }
-            ans[i - 1] = sign * d;
-            for (int j = 0; j < k / 2; ++j) {
-                sums[j] = sign == 1 ? sums1[j] : sums2[j];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func recoverArray(n int, sums []int) []int {
-	m := 0
-	for _, x := range sums {
-		m = min(m, x)
-	}
-	m = -m
-	rbt := redblacktree.NewWithIntComparator()
-	merge := func(key int, value int) {
-		if v, ok := rbt.Get(key); ok {
-			nxt := v.(int) + value
-			if nxt == 0 {
-				rbt.Remove(key)
-			} else {
-				rbt.Put(key, nxt)
-			}
-		} else {
-			rbt.Put(key, value)
-		}
-	}
-	for _, x := range sums {
-		merge(x+m, 1)
-	}
-	ans := make([]int, n)
-	merge(ans[0], -1)
-	ans[0] = rbt.Left().Key.(int)
-	for i := 1; i < n; i++ {
-		for j := 0; j < 1<<i; j++ {
-			if j>>(i-1)&1 == 1 {
-				s := 0
-				for k := 0; k < i; k++ {
-					if j>>k&1 == 1 {
-						s += ans[k]
-					}
-				}
-				merge(s, -1)
-			}
-		}
-		ans[i] = rbt.Left().Key.(int)
-	}
-	for i := 0; i < 1<<n; i++ {
-		s := 0
-		for j := 0; j < n; j++ {
-			if i>>j&1 == 1 {
-				s += ans[j]
-			}
-		}
-		if s == m {
-			for j := 0; j < n; j++ {
-				if i>>j&1 == 1 {
-					ans[j] = -ans[j]
-				}
-			}
-			break
-		}
-	}
-	return ans
 
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func recoverArray(n int, sums []int) (ans []int) {
-	sort.Ints(sums)
-	for i := n; i > 0; i-- {
-		k := 1 << i
-		d := sums[k-1] - sums[k-2]
-		cnt := map[int]int{}
-		for _, s := range sums[:k] {
-			cnt[s]++
-		}
-		sums1, sums2 := []int{}, []int{}
-		sign := 1
-		for _, s := range sums[:k] {
-			if cnt[s] == 0 {
-				continue
-			}
-			cnt[s]--
-			cnt[s+d]--
-			sums1 = append(sums1, s)
-			sums2 = append(sums2, s+d)
-			if s+d == 0 {
-				sign = -1
-			}
-		}
-		ans = append(ans, sign*d)
-		if sign == -1 {
-			sums1 = sums2
-		}
-		sums = sums1
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -412,4 +185,4 @@ func recoverArray(n int, sums []int) (ans []int) {
 
 ```
 
-<!-- tabs:end -->
+

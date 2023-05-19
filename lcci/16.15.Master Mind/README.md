@@ -37,13 +37,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def masterMind(self, solution: str, guess: str) -> List[int]:
-        x = sum(a == b for a, b in zip(solution, guess))
-        y = sum((Counter(solution) & Counter(guess)).values())
-        return [x, y - x]
-```
+
 
 ### **Java**
 
@@ -69,84 +63,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> masterMind(string solution, string guess) {
-        int x = 0, y = 0;
-        unordered_map<char, int> cnt1;
-        unordered_map<char, int> cnt2;
-        for (int i = 0; i < 4; ++i) {
-            x += solution[i] == guess[i];
-            cnt1[solution[i]]++;
-            cnt2[guess[i]]++;
-        }
-        for (char c : "RYGB") y += min(cnt1[c], cnt2[c]);
-        return vector<int>{x, y - x};
-    }
-};
-```
 
-### **Go**
 
-```go
-func masterMind(solution string, guess string) []int {
-	var x, y int
-	cnt1 := map[byte]int{}
-	cnt2 := map[byte]int{}
-	for i := range solution {
-		a, b := solution[i], guess[i]
-		if a == b {
-			x++
-		}
-		cnt1[a]++
-		cnt2[b]++
-	}
-	for _, c := range []byte("RYGB") {
-		y += min(cnt1[c], cnt2[c])
-	}
-	return []int{x, y - x}
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} solution
- * @param {string} guess
- * @return {number[]}
- */
-var masterMind = function (solution, guess) {
-    let counts1 = { R: 0, G: 0, B: 0, Y: 0 };
-    let counts2 = { R: 0, G: 0, B: 0, Y: 0 };
-    let res1 = 0;
-    for (let i = 0; i < solution.length; i++) {
-        let s1 = solution.charAt(i),
-            s2 = guess.charAt(i);
-        if (s1 == s2) {
-            res1++;
-        } else {
-            counts1[s1] += 1;
-            counts2[s2] += 1;
-        }
-    }
-    let res2 = ['R', 'G', 'B', 'Y'].reduce(
-        (a, c) => a + Math.min(counts1[c], counts2[c]),
-        0,
-    );
-    return [res1, res2];
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -154,4 +81,4 @@ var masterMind = function (solution, guess) {
 
 ```
 
-<!-- tabs:end -->
+

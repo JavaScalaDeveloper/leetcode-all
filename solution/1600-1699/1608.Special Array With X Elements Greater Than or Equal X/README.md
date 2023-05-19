@@ -77,27 +77,9 @@ x 不能取更大的值，因为 nums 中只有两个元素。</pre>
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def specialArray(self, nums: List[int]) -> int:
-        for x in range(1, len(nums) + 1):
-            cnt = sum(v >= x for v in nums)
-            if cnt == x:
-                return x
-        return -1
-```
 
-```python
-class Solution:
-    def specialArray(self, nums: List[int]) -> int:
-        nums.sort()
-        n = len(nums)
-        for x in range(1, n + 1):
-            cnt = n - bisect_left(nums, x)
-            if cnt == x:
-                return x
-        return -1
-```
+
+
 
 ### **Java**
 
@@ -147,169 +129,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int specialArray(vector<int>& nums) {
-        for (int x = 1; x <= nums.size(); ++x) {
-            int cnt = 0;
-            for (int v : nums) cnt += v >= x;
-            if (cnt == x) return x;
-        }
-        return -1;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int specialArray(vector<int>& nums) {
-        int n = nums.size();
-        sort(nums.begin(), nums.end());
-        for (int x = 1; x <= n; ++x) {
-            int cnt = n - (lower_bound(nums.begin(), nums.end(), x) - nums.begin());
-            if (cnt == x) return x;
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func specialArray(nums []int) int {
-	for x := 1; x <= len(nums); x++ {
-		cnt := 0
-		for _, v := range nums {
-			if v >= x {
-				cnt++
-			}
-		}
-		if cnt == x {
-			return x
-		}
-	}
-	return -1
-}
-```
 
-```go
-func specialArray(nums []int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	for x := 1; x <= n; x++ {
-		left, right := 0, n
-		for left < right {
-			mid := (left + right) >> 1
-			if nums[mid] >= x {
-				right = mid
-			} else {
-				left = mid + 1
-			}
-		}
-		cnt := n - left
-		if cnt == x {
-			return x
-		}
-	}
-	return -1
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function specialArray(nums: number[]): number {
-    const n = nums.length;
-    for (let i = 0; i <= n; i++) {
-        if (i === nums.reduce((r, v) => r + (v >= i ? 1 : 0), 0)) {
-            return i;
-        }
-    }
-    return -1;
-}
-```
 
-```ts
-function specialArray(nums: number[]): number {
-    const n = nums.length;
-    let left = 0;
-    let right = n + 1;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        const count = nums.reduce((r, v) => r + (v >= mid ? 1 : 0), 0);
 
-        if (count === mid) {
-            return mid;
-        }
 
-        if (count > mid) {
-            left = mid + 1;
-        } else {
-            right = mid;
-        }
-    }
-    return -1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn special_array(nums: Vec<i32>) -> i32 {
-        let n = nums.len() as i32;
-        for i in 0..=n {
-            let mut count = 0;
-            for &num in nums.iter() {
-                if num >= i {
-                    count += 1;
-                }
-            }
-            if count == i {
-                return i;
-            }
-        }
-        -1
-    }
-}
-```
 
-```rust
-use std::cmp::Ordering;
-impl Solution {
-    pub fn special_array(nums: Vec<i32>) -> i32 {
-        let n = nums.len() as i32;
-        let mut left = 0;
-        let mut right = n + 1;
-        while left < right {
-            let mid = left + (right - left) / 2;
-            let mut count = 0;
-            for &num in nums.iter() {
-                if num >= mid {
-                    count += 1;
-                }
-            }
-            match count.cmp(&mid) {
-                Ordering::Equal => {
-                    return mid;
-                }
-                Ordering::Less => {
-                    right = mid;
-                }
-                Ordering::Greater => {
-                    left = mid + 1;
-                }
-            }
-        }
-        -1
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -317,4 +159,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

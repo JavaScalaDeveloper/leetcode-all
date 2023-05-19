@@ -78,28 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumCost(self, n: int, highways: List[List[int]], discounts: int) -> int:
-        g = defaultdict(list)
-        for a, b, c in highways:
-            g[a].append((b, c))
-            g[b].append((a, c))
-        q = [(0, 0, 0)]
-        dist = [[inf] * (discounts + 1) for _ in range(n)]
-        while q:
-            cost, i, k = heappop(q)
-            if k > discounts:
-                continue
-            if i == n - 1:
-                return cost
-            if dist[i][k] > cost:
-                dist[i][k] = cost
-                for j, v in g[i]:
-                    heappush(q, (cost + v, j, k))
-                    heappush(q, (cost + v // 2, j, k + 1))
-        return -1
-```
+
 
 ### **Java**
 
@@ -144,44 +123,15 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumCost(int n, vector<vector<int>>& highways, int discounts) {
-        vector<vector<pair<int, int>>> g(n);
-        for (auto& e : highways) {
-            int a = e[0], b = e[1], c = e[2];
-            g[a].push_back({b, c});
-            g[b].push_back({a, c});
-        }
-        priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, greater<tuple<int, int, int>>> q;
-        q.push({0, 0, 0});
-        vector<vector<int>> dist(n, vector<int>(discounts + 1, INT_MAX));
-        while (!q.empty()) {
-            auto [cost, i, k] = q.top();
-            q.pop();
-            if (k > discounts || dist[i][k] <= cost) continue;
-            if (i == n - 1) return cost;
-            dist[i][k] = cost;
-            for (auto [j, v] : g[i]) {
-                q.push({cost + v, j, k});
-                q.push({cost + v / 2, j, k + 1});
-            }
-        }
-        return -1;
-    }
-};
-```
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -189,4 +139,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

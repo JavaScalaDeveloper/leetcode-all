@@ -85,18 +85,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def confusingNumber(self, n: int) -> bool:
-        x, y = n, 0
-        d = [0, 1, -1, -1, -1, -1, 9, -1, 8, 6]
-        while x:
-            x, v = divmod(x, 10)
-            if d[v] < 0:
-                return False
-            y = y * 10 + d[v]
-        return y != n
-```
+
 
 ### **Java**
 
@@ -120,44 +109,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool confusingNumber(int n) {
-        vector<int> d = {0, 1, -1, -1, -1, -1, 9, -1, 8, 6};
-        int x = n, y = 0;
-        while (x) {
-            int v = x % 10;
-            if (d[v] < 0) {
-                return false;
-            }
-            y = y * 10 + d[v];
-            x /= 10;
-        }
-        return y != n;
-    }
-};
-```
 
-### **Go**
 
-```go
-func confusingNumber(n int) bool {
-	d := []int{0, 1, -1, -1, -1, -1, 9, -1, 8, 6}
-	x, y := n, 0
-	for x > 0 {
-		v := x % 10
-		if d[v] < 0 {
-			return false
-		}
-		y = y*10 + d[v]
-		x /= 10
-	}
-	return y != n
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -165,4 +123,4 @@ func confusingNumber(n int) bool {
 
 ```
 
-<!-- tabs:end -->
+

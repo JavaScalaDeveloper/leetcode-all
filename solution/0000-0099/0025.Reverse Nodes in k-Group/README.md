@@ -64,39 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
-        def reverseList(head):
-            pre, p = None, head
-            while p:
-                q = p.next
-                p.next = pre
-                pre = p
-                p = q
-            return pre
 
-        dummy = ListNode(next=head)
-        pre = cur = dummy
-        while cur.next:
-            for _ in range(k):
-                cur = cur.next
-                if cur is None:
-                    return dummy.next
-            t = cur.next
-            cur.next = None
-            start = pre.next
-            pre.next = reverseList(start)
-            start.next = t
-            pre = start
-            cur = pre
-        return dummy.next
-```
 
 ### **Java**
 
@@ -150,232 +118,23 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
-    let dummy = new ListNode(0, head);
-    let pre = dummy;
-    // pre->head-> ... ->tail-> next
-    while (head != null) {
-        let tail = pre;
-        for (let i = 0; i < k; ++i) {
-            tail = tail.next;
-            if (tail == null) {
-                return dummy.next;
-            }
-        }
-        let t = tail.next;
-        [head, tail] = reverse(head, tail);
-        // set next
-        pre.next = head;
-        tail.next = t;
-        // set new pre and new head
-        pre = tail;
-        head = t;
-    }
-    return dummy.next;
-}
 
-function reverse(head: ListNode, tail: ListNode) {
-    let cur = head;
-    let pre = tail.next;
-    // head -> next -> ... -> tail -> pre
-    while (pre != tail) {
-        let t = cur.next;
-        cur.next = pre;
-        pre = cur;
-        cur = t;
-    }
-    return [tail, head];
-}
-```
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
-    if (k === 1) {
-        return head;
-    }
 
-    const dummy = new ListNode(0, head);
-    let root = dummy;
-    while (root != null) {
-        let pre = root;
-        let cur = root;
-
-        let count = 0;
-        while (count !== k) {
-            count++;
-            cur = cur.next;
-            if (cur == null) {
-                return dummy.next;
-            }
-        }
-
-        const nextRoot = pre.next;
-        pre.next = cur;
-
-        let node = nextRoot;
-        let next = node.next;
-        node.next = cur.next;
-        while (node != cur) {
-            [next.next, node, next] = [node, next, next.next];
-        }
-        root = nextRoot;
-    }
-
-    return dummy.next;
-}
-```
-
-### **Go**
 
 迭代：
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func reverseKGroup(head *ListNode, k int) *ListNode {
-	var dummy *ListNode = &ListNode{}
-	p, cur := dummy, head
-	for cur != nil {
-		start := cur
-		for i := 0; i < k; i++ {
-			if cur == nil {
-				p.Next = start
-				return dummy.Next
-			}
-			cur = cur.Next
-		}
-		p.Next, p = reverse(start, cur), start
-	}
-	return dummy.Next
-}
 
-func reverse(start, end *ListNode) *ListNode {
-	var pre *ListNode = nil
-	for start != end {
-		tmp := start.Next
-		start.Next, pre = pre, start
-		start = tmp
-	}
-	return pre
-}
-```
 
 递归：
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func reverseKGroup(head *ListNode, k int) *ListNode {
-	start, end := head, head
-	for i := 0; i < k; i++ {
-		if end == nil {
-			return head
-		}
-		end = end.Next
-	}
-	res := reverse(start, end)
-	start.Next = reverseKGroup(end, k)
-	return res
-}
 
-func reverse(start, end *ListNode) *ListNode {
-	var pre *ListNode = nil
-	for start != end {
-		tmp := start.Next
-		start.Next, pre = pre, start
-		start = tmp
-	}
-	return pre
-}
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int val=0, ListNode next=null) {
- *         this.val = val;
- *         this.next = next;
- *     }
- * }
- */
-public class Solution {
-    public ListNode ReverseKGroup(ListNode head, int k) {
-        ListNode dummy = new ListNode(0, head);
-        ListNode pre = dummy, cur = dummy;
-        while (cur.next != null)
-        {
-            for (int i = 0; i < k && cur != null; ++i)
-            {
-                cur = cur.next;
-            }
-            if (cur == null)
-            {
-                return dummy.next;
-            }
-            ListNode t = cur.next;
-            cur.next = null;
-            ListNode start = pre.next;
-            pre.next = ReverseList(start);
-            start.next = t;
-            pre = start;
-            cur = pre;
-        }
-        return dummy.next;
-    }
 
-    private ListNode ReverseList(ListNode head) {
-        ListNode pre = null, p = head;
-        while (p != null)
-        {
-            ListNode q = p.next;
-            p.next = pre;
-            pre = p;
-            p = q;
-        }
-        return pre;
-    }
-}
-```
+
 
 ### **...**
 
@@ -383,4 +142,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

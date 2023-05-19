@@ -57,28 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def minDiffInBST(self, root: Optional[TreeNode]) -> int:
-        def dfs(root):
-            if root is None:
-                return
-            dfs(root.left)
-            nonlocal ans, prev
-            ans = min(ans, abs(prev - root.val))
-            prev = root.val
-            dfs(root.right)
 
-        ans = prev = inf
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -124,83 +103,12 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    const int inf = INT_MAX;
-    int ans;
-    int prev;
 
-    int minDiffInBST(TreeNode* root) {
-        ans = inf, prev = inf;
-        dfs(root);
-        return ans;
-    }
 
-    void dfs(TreeNode* root) {
-        if (!root) return;
-        dfs(root->left);
-        ans = min(ans, abs(prev - root->val));
-        prev = root->val;
-        dfs(root->right);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func minDiffInBST(root *TreeNode) int {
-	inf := 0x3f3f3f3f
-	ans, prev := inf, inf
-	var dfs func(*TreeNode)
-	dfs = func(root *TreeNode) {
-		if root == nil {
-			return
-		}
-		dfs(root.Left)
-		ans = min(ans, abs(prev-root.Val))
-		prev = root.Val
-		dfs(root.Right)
-	}
-	dfs(root)
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
 
-<!-- tabs:end -->
+

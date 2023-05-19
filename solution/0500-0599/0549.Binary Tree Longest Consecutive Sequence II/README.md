@@ -58,39 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def longestConsecutive(self, root: TreeNode) -> int:
-        def dfs(root):
-            if root is None:
-                return [0, 0]
-            nonlocal ans
-            incr = decr = 1
-            i1, d1 = dfs(root.left)
-            i2, d2 = dfs(root.right)
-            if root.left:
-                if root.left.val + 1 == root.val:
-                    incr = i1 + 1
-                if root.left.val - 1 == root.val:
-                    decr = d1 + 1
-            if root.right:
-                if root.right.val + 1 == root.val:
-                    incr = max(incr, i2 + 1)
-                if root.right.val - 1 == root.val:
-                    decr = max(decr, d2 + 1)
-            ans = max(ans, incr + decr - 1)
-            return [incr, decr]
 
-        ans = 0
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -150,100 +118,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int ans;
 
-    int longestConsecutive(TreeNode* root) {
-        ans = 0;
-        dfs(root);
-        return ans;
-    }
 
-    vector<int> dfs(TreeNode* root) {
-        if (!root) return {0, 0};
-        int incr = 1, decr = 1;
-        auto left = dfs(root->left);
-        auto right = dfs(root->right);
-        if (root->left) {
-            if (root->left->val + 1 == root->val) incr = left[0] + 1;
-            if (root->left->val - 1 == root->val) decr = left[1] + 1;
-        }
-        if (root->right) {
-            if (root->right->val + 1 == root->val) incr = max(incr, right[0] + 1);
-            if (root->right->val - 1 == root->val) decr = max(decr, right[1] + 1);
-        }
-        ans = max(ans, incr + decr - 1);
-        return {incr, decr};
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func longestConsecutive(root *TreeNode) int {
-	ans := 0
-	var dfs func(root *TreeNode) []int
-	dfs = func(root *TreeNode) []int {
-		if root == nil {
-			return []int{0, 0}
-		}
-		incr, decr := 1, 1
-		left := dfs(root.Left)
-		right := dfs(root.Right)
-		if root.Left != nil {
-			if root.Left.Val+1 == root.Val {
-				incr = left[0] + 1
-			}
-			if root.Left.Val-1 == root.Val {
-				decr = left[1] + 1
-			}
-		}
-		if root.Right != nil {
-			if root.Right.Val+1 == root.Val {
-				incr = max(incr, right[0]+1)
-			}
-			if root.Right.Val-1 == root.Val {
-				decr = max(decr, right[1]+1)
-			}
-		}
-		ans = max(ans, incr+decr-1)
-		return []int{incr, decr}
-	}
-	dfs(root)
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **...**
 
@@ -251,4 +132,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

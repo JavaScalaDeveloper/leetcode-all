@@ -51,30 +51,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def supplyWagon(self, supplies: List[int]) -> List[int]:
-        for _ in range((len(supplies) + 1) >> 1):
-            n = len(supplies)
-            mi = inf
-            k = 0
-            for i in range(n - 1):
-                x = supplies[i] + supplies[i + 1]
-                if mi > x:
-                    mi = x
-                    k = i
-            t = []
-            i = 0
-            while i < n:
-                if i == k:
-                    t.append(mi)
-                    i += 2
-                else:
-                    t.append(supplies[i])
-                    i += 1
-            supplies = t
-        return supplies
-```
+
 
 ### **Java**
 
@@ -110,98 +87,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> supplyWagon(vector<int>& supplies) {
-        for (int h = (supplies.size() + 1) >> 1; h; --h) {
-            int n = supplies.size();
-            int mi = 1 << 30;
-            int k = 0;
-            for (int i = 0; i < n - 1; ++i) {
-                int x = supplies[i] + supplies[i + 1];
-                if (mi > x) {
-                    mi = x;
-                    k = i;
-                }
-            }
-            vector<int> t(n - 1);
-            for (int i = 0, j = 0; i < n; ++i, ++j) {
-                if (i == k) {
-                    t[j] = mi;
-                    ++i;
-                } else {
-                    t[j] = supplies[i];
-                }
-            }
-            supplies = move(t);
-        }
-        return supplies;
-    }
-};
-```
 
-### **Go**
 
-```go
-func supplyWagon(supplies []int) []int {
-	for h := (len(supplies) + 1) >> 1; h > 0; h-- {
-		n := len(supplies)
-		mi := 1 << 30
-		k := 0
-		for i := 0; i < n-1; i++ {
-			x := supplies[i] + supplies[i+1]
-			if mi > x {
-				mi = x
-				k = i
-			}
-		}
-		t := make([]int, n-1)
-		for i, j := 0, 0; i < n; i, j = i+1, j+1 {
-			if i == k {
-				t[j] = mi
-				i++
-			} else {
-				t[j] = supplies[i]
-			}
-		}
-		supplies = t
-	}
-	return supplies
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function supplyWagon(supplies: number[]): number[] {
-    for (let h = (supplies.length + 1) >> 1; h > 0; --h) {
-        const n = supplies.length;
-        let mi = 1 << 30;
-        let k = 0;
-        for (let i = 0; i < n - 1; ++i) {
-            const x = supplies[i] + supplies[i + 1];
-            if (mi > x) {
-                mi = x;
-                k = i;
-            }
-        }
-        const t: number[] = new Array(n - 1);
-        for (let i = 0, j = 0; i < n; ++i, ++j) {
-            if (i === k) {
-                t[j] = mi;
-                ++i;
-            } else {
-                t[j] = supplies[i];
-            }
-        }
-        supplies = t;
-    }
-    return supplies;
-}
-```
+
 
 ### **...**
 
@@ -209,4 +105,4 @@ function supplyWagon(supplies: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

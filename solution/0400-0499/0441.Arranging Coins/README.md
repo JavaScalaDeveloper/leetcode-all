@@ -56,24 +56,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def arrangeCoins(self, n: int) -> int:
-        return int(math.sqrt(2) * math.sqrt(n + 0.125) - 0.5)
-```
 
-```python
-class Solution:
-    def arrangeCoins(self, n: int) -> int:
-        left, right = 1, n
-        while left < right:
-            mid = (left + right + 1) >> 1
-            if (1 + mid) * mid // 2 <= n:
-                left = mid
-            else:
-                right = mid - 1
-        return left
-```
+
+
 
 ### **Java**
 
@@ -104,44 +89,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using LL = long;
 
-class Solution {
-public:
-    int arrangeCoins(int n) {
-        LL left = 1, right = n;
-        while (left < right) {
-            LL mid = left + right + 1 >> 1;
-            LL s = (1 + mid) * mid >> 1;
-            if (n < s)
-                right = mid - 1;
-            else
-                left = mid;
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func arrangeCoins(n int) int {
-	left, right := 1, n
-	for left < right {
-		mid := (left + right + 1) >> 1
-		if (1+mid)*mid/2 <= n {
-			left = mid
-		} else {
-			right = mid - 1
-		}
-	}
-	return left
-}
-```
+
+
+
 
 ### **...**
 
@@ -149,4 +103,4 @@ func arrangeCoins(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

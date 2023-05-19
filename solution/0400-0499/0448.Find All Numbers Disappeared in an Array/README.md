@@ -60,22 +60,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
-        s = set(nums)
-        return [x for x in range(1, len(nums) + 1) if x not in s]
-```
 
-```python
-class Solution:
-    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
-        for x in nums:
-            i = abs(x) - 1
-            if nums[i] > 0:
-                nums[i] *= -1
-        return [i + 1 for i in range(len(nums)) if nums[i] > 0]
-```
+
+
 
 ### **Java**
 
@@ -121,131 +108,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findDisappearedNumbers(vector<int>& nums) {
-        int n = nums.size();
-        bool s[n + 1];
-        memset(s, false, sizeof(s));
-        for (int& x : nums) {
-            s[x] = true;
-        }
-        vector<int> ans;
-        for (int i = 1; i <= n; ++i) {
-            if (!s[i]) {
-                ans.push_back(i);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> findDisappearedNumbers(vector<int>& nums) {
-        int n = nums.size();
-        for (int& x : nums) {
-            int i = abs(x) - 1;
-            if (nums[i] > 0) {
-                nums[i] = -nums[i];
-            }
-        }
-        vector<int> ans;
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] > 0) {
-                ans.push_back(i + 1);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findDisappearedNumbers(nums []int) (ans []int) {
-	n := len(nums)
-	s := make([]bool, n+1)
-	for _, x := range nums {
-		s[x] = true
-	}
-	for i := 1; i <= n; i++ {
-		if !s[i] {
-			ans = append(ans, i)
-		}
-	}
-	return
-}
-```
 
-```go
-func findDisappearedNumbers(nums []int) (ans []int) {
-	n := len(nums)
-	for _, x := range nums {
-		i := abs(x) - 1
-		if nums[i] > 0 {
-			nums[i] = -nums[i]
-		}
-	}
-	for i := 0; i < n; i++ {
-		if nums[i] > 0 {
-			ans = append(ans, i+1)
-		}
-	}
-	return
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findDisappearedNumbers(nums: number[]): number[] {
-    const n = nums.length;
-    const s: boolean[] = new Array(n + 1).fill(false);
-    for (const x of nums) {
-        s[x] = true;
-    }
-    const ans: number[] = [];
-    for (let i = 1; i <= n; ++i) {
-        if (!s[i]) {
-            ans.push(i);
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function findDisappearedNumbers(nums: number[]): number[] {
-    const n = nums.length;
-    for (const x of nums) {
-        const i = Math.abs(x) - 1;
-        if (nums[i] > 0) {
-            nums[i] *= -1;
-        }
-    }
-    const ans: number[] = [];
-    for (let i = 0; i < n; ++i) {
-        if (nums[i] > 0) {
-            ans.push(i + 1);
-        }
-    }
-    return ans;
-}
-```
+
+
 
 ### **...**
 
@@ -253,4 +132,4 @@ function findDisappearedNumbers(nums: number[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

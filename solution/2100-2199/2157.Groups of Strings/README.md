@@ -78,48 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def groupStrings(self, words: List[str]) -> List[int]:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        def union(a, b):
-            nonlocal mx, n
-            if b not in p:
-                return
-            pa, pb = find(a), find(b)
-            if pa == pb:
-                return
-            p[pa] = pb
-            size[pb] += size[pa]
-            mx = max(mx, size[pb])
-            n -= 1
-
-        p = {}
-        size = Counter()
-        n = len(words)
-        mx = 0
-        for word in words:
-            x = 0
-            for c in word:
-                x |= 1 << (ord(c) - ord('a'))
-            p[x] = x
-            size[x] += 1
-            mx = max(mx, size[x])
-            if size[x] > 1:
-                n -= 1
-        for x in p.keys():
-            for i in range(26):
-                union(x, x ^ (1 << i))
-                if (x >> i) & 1:
-                    for j in range(26):
-                        if ((x >> j) & 1) == 0:
-                            union(x, x ^ (1 << i) | (1 << j))
-        return [n, mx]
-```
 
 ### **Java**
 
@@ -187,124 +146,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int mx, n;
 
-    vector<int> groupStrings(vector<string>& words) {
-        unordered_map<int, int> p;
-        unordered_map<int, int> size;
-        mx = 0;
-        n = words.size();
-        for (auto& word : words) {
-            int x = 0;
-            for (auto& c : word) x |= 1 << (c - 'a');
-            p[x] = x;
-            ++size[x];
-            mx = max(mx, size[x]);
-            if (size[x] > 1) --n;
-        }
-        for (auto& [x, _] : p) {
-            for (int i = 0; i < 26; ++i) {
-                unite(x, x ^ (1 << i), p, size);
-                if ((x >> i) & 1) {
-                    for (int j = 0; j < 26; ++j) {
-                        if (((x >> j) & 1) == 0) unite(x, x ^ (1 << i) | (1 << j), p, size);
-                    }
-                }
-            }
-        }
-        return {n, mx};
-    }
 
-    int find(int x, unordered_map<int, int>& p) {
-        if (p[x] != x) p[x] = find(p[x], p);
-        return p[x];
-    }
 
-    void unite(int a, int b, unordered_map<int, int>& p, unordered_map<int, int>& size) {
-        if (!p.count(b)) return;
-        int pa = find(a, p), pb = find(b, p);
-        if (pa == pb) return;
-        p[pa] = pb;
-        size[pb] += size[pa];
-        mx = max(mx, size[pb]);
-        --n;
-    }
-};
-```
 
-### **Go**
 
-```go
-func groupStrings(words []string) []int {
-	p := map[int]int{}
-	size := map[int]int{}
-	mx, n := 0, len(words)
-	var find func(int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	union := func(a, b int) {
-		if _, ok := p[b]; !ok {
-			return
-		}
-		pa, pb := find(a), find(b)
-		if pa == pb {
-			return
-		}
-		p[pa] = pb
-		size[pb] += size[pa]
-		mx = max(mx, size[pb])
-		n--
-	}
 
-	for _, word := range words {
-		x := 0
-		for _, c := range word {
-			x |= 1 << (c - 'a')
-		}
-		p[x] = x
-		size[x]++
-		mx = max(mx, size[x])
-		if size[x] > 1 {
-			n--
-		}
-	}
-	for x := range p {
-		for i := 0; i < 26; i++ {
-			union(x, x^(1<<i))
-			if ((x >> i) & 1) != 0 {
-				for j := 0; j < 26; j++ {
-					if ((x >> j) & 1) == 0 {
-						union(x, x^(1<<i)|(1<<j))
-					}
-				}
-			}
-		}
-	}
-	return []int{n, mx}
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -312,4 +164,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

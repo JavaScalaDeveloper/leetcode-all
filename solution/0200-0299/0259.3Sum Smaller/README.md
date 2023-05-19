@@ -55,22 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def threeSumSmaller(self, nums: List[int], target: int) -> int:
-        nums.sort()
-        ans, n = 0, len(nums)
-        for i in range(n):
-            j, k = i + 1, n - 1
-            while j < k:
-                s = nums[i] + nums[j] + nums[k]
-                if s >= target:
-                    k -= 1
-                else:
-                    ans += k - j
-                    j += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,80 +84,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int threeSumSmaller(vector<int>& nums, int target) {
-        sort(nums.begin(), nums.end());
-        int ans = 0;
-        for (int i = 0, n = nums.size(); i < n; ++i) {
-            int j = i + 1, k = n - 1;
-            while (j < k) {
-                int s = nums[i] + nums[j] + nums[k];
-                if (s >= target)
-                    --k;
-                else {
-                    ans += k - j;
-                    ++j;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func threeSumSmaller(nums []int, target int) int {
-	sort.Ints(nums)
-	ans := 0
-	for i, n := 0, len(nums); i < n; i++ {
-		j, k := i+1, n-1
-		for j < k {
-			s := nums[i] + nums[j] + nums[k]
-			if s >= target {
-				k--
-			} else {
-				ans += k - j
-				j++
-			}
-		}
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var threeSumSmaller = function (nums, target) {
-    nums.sort((a, b) => a - b);
-    let ans = 0;
-    for (let i = 0, n = nums.length; i < n; ++i) {
-        let j = i + 1;
-        let k = n - 1;
-        while (j < k) {
-            s = nums[i] + nums[j] + nums[k];
-            if (s >= target) {
-                --k;
-            } else {
-                ans += k - j;
-                ++j;
-            }
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -180,4 +102,4 @@ var threeSumSmaller = function (nums, target) {
 
 ```
 
-<!-- tabs:end -->
+

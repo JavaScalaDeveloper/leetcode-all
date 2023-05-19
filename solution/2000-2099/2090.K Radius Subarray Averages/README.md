@@ -99,30 +99,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getAverages(self, nums: List[int], k: int) -> List[int]:
-        n = len(nums)
-        ans = [-1] * n
-        s = list(accumulate(nums, initial=0))
-        for i in range(n):
-            if i - k >= 0 and i + k < n:
-                ans[i] = (s[i + k + 1] - s[i - k]) // (k << 1 | 1)
-        return ans
-```
 
-```python
-class Solution:
-    def getAverages(self, nums: List[int], k: int) -> List[int]:
-        s = 0
-        ans = [-1] * len(nums)
-        for i, v in enumerate(nums):
-            s += v
-            if i >= k * 2:
-                ans[i - k] = s // (k * 2 + 1)
-                s -= nums[i - k * 2]
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -167,118 +146,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> getAverages(vector<int>& nums, int k) {
-        int n = nums.size();
-        long s[n + 1];
-        s[0] = 0;
-        for (int i = 0; i < n; ++i) {
-            s[i + 1] = s[i] + nums[i];
-        }
-        vector<int> ans(n, -1);
-        for (int i = 0; i < n; ++i) {
-            if (i - k >= 0 && i + k < n) {
-                ans[i] = (s[i + k + 1] - s[i - k]) / (k << 1 | 1);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> getAverages(vector<int>& nums, int k) {
-        int n = nums.size();
-        vector<int> ans(n, -1);
-        long s = 0;
-        for (int i = 0; i < n; ++i) {
-            s += nums[i];
-            if (i >= k * 2) {
-                ans[i - k] = s / (k * 2 + 1);
-                s -= nums[i - k * 2];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getAverages(nums []int, k int) []int {
-	n := len(nums)
-	s := make([]int, n+1)
-	for i, v := range nums {
-		s[i+1] = s[i] + v
-	}
-	ans := make([]int, n)
-	for i := 0; i < n; i++ {
-		ans[i] = -1
-		if i-k >= 0 && i+k < n {
-			ans[i] = (s[i+k+1] - s[i-k]) / (k<<1 | 1)
-		}
-	}
-	return ans
-}
-```
 
-```go
-func getAverages(nums []int, k int) []int {
-	ans := make([]int, len(nums))
-	s := 0
-	for i, v := range nums {
-		ans[i] = -1
-		s += v
-		if i >= k*2 {
-			ans[i-k] = s / (k*2 + 1)
-			s -= nums[i-k*2]
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getAverages(nums: number[], k: number): number[] {
-    const n = nums.length;
-    const s = new Array(n + 1).fill(0);
-    for (let i = 0; i < n; ++i) {
-        s[i + 1] = s[i] + nums[i];
-    }
-    const ans: number[] = new Array(n).fill(-1);
-    for (let i = 0; i < n; ++i) {
-        if (i - k >= 0 && i + k < n) {
-            ans[i] = Math.floor((s[i + k + 1] - s[i - k]) / ((k << 1) | 1));
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function getAverages(nums: number[], k: number): number[] {
-    const n = nums.length;
-    const ans: number[] = new Array(n).fill(-1);
-    let s = 0;
-    for (let i = 0; i < n; ++i) {
-        s += nums[i];
-        if (i >= k * 2) {
-            ans[i - k] = Math.floor(s / (k * 2 + 1));
-            s -= nums[i - k * 2];
-        }
-    }
-    return ans;
-}
-```
+
+
 
 ### **...**
 
@@ -286,4 +170,4 @@ function getAverages(nums: number[], k: number): number[] {
 
 ```
 
-<!-- tabs:end -->
+

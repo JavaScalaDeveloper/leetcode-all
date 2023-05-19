@@ -45,11 +45,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def game(self, guess: List[int], answer: List[int]) -> int:
-        return sum(1 for i in range(3) if guess[i] == answer[i])
-```
+
 
 ### **Java**
 
@@ -67,49 +63,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int game(vector<int>& guess, vector<int>& answer) {
-        int ans = 0;
-        for (int i = 0; i < 3; ++i) ans += guess[i] == answer[i];
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func game(guess []int, answer []int) int {
-	ans := 0
-	for i := 0; i < 3; i++ {
-		if guess[i] == answer[i] {
-			ans++
-		}
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} guess
- * @param {number[]} answer
- * @return {number}
- */
-var game = function (guess, answer) {
-    let ans = 0;
-    for (let i = 0; i < 3; ++i) {
-        ans += guess[i] === answer[i];
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **C**
 
@@ -131,4 +95,4 @@ int game(int* guess, int guessSize, int* answer, int answerSize) {
 
 ```
 
-<!-- tabs:end -->
+

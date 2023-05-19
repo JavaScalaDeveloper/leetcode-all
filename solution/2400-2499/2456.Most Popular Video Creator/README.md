@@ -73,26 +73,7 @@ id 为 "b" 和 "c" 的视频都满足播放量最高的条件。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mostPopularCreator(self, creators: List[str], ids: List[str], views: List[int]) -> List[List[str]]:
-        cnt = defaultdict(int)
-        d = {}
-        x = {}
-        for c, i, v in zip(creators, ids, views):
-            cnt[c] += v
-            if c not in d or d[c] < v or (d[c] == v and x[c] > i):
-                d[c], x[c] = v, i
-        ans = []
-        pre = -1
-        for a, b in cnt.items():
-            if b > pre:
-                ans = [[a, x[a]]]
-                pre = b
-            elif b == pre:
-                ans.append([a, x[a]])
-        return ans
-```
+
 
 ### **Java**
 
@@ -133,75 +114,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<string>> mostPopularCreator(vector<string>& creators, vector<string>& ids, vector<int>& views) {
-        unordered_map<string, long> cnt;
-        unordered_map<string, int> d;
-        unordered_map<string, string> x;
-        int n = ids.size();
-        for (int k = 0; k < n; ++k) {
-            auto c = creators[k];
-            auto i = ids[k];
-            int v = views[k];
-            cnt[c] += v;
-            if (!d.count(c) || d[c] < v || (d[c] == v && x[c] > i)) {
-                d[c] = v;
-                x[c] = i;
-            }
-        }
-        long pre = -1;
-        vector<vector<string>> ans;
-        for (auto& [a, b] : cnt) {
-            if (b > pre) {
-                ans.clear();
-                ans.push_back({a, x[a]});
-                pre = b;
-            } else if (b == pre) {
-                ans.push_back({a, x[a]});
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mostPopularCreator(creators []string, ids []string, views []int) (ans [][]string) {
-	cnt := map[string]int{}
-	d := map[string]int{}
-	x := map[string]string{}
-	for k, c := range creators {
-		i, v := ids[k], views[k]
-		cnt[c] += v
-		if t, ok := d[c]; !ok || t < v || (t == v && x[c] > i) {
-			d[c] = v
-			x[c] = i
-		}
-	}
-	pre := -1
-	for a, b := range cnt {
-		if b > pre {
-			ans = [][]string{[]string{a, x[a]}}
-			pre = b
-		} else if b == pre {
-			ans = append(ans, []string{a, x[a]})
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -209,4 +132,4 @@ func mostPopularCreator(creators []string, ids []string, views []int) (ans [][]s
 
 ```
 
-<!-- tabs:end -->
+

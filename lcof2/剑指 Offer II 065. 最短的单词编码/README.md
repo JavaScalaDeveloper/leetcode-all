@@ -65,58 +65,9 @@ words[2] = &quot;bell&quot; ，s 开始于 indices[2] = 5 到下一个 &#39;#&#3
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Trie:
-    def __init__(self) -> None:
-        self.children = [None] * 26
 
 
-class Solution:
-    def minimumLengthEncoding(self, words: List[str]) -> int:
-        root = Trie()
-        for w in words:
-            cur = root
-            for c in w[::-1]:
-                idx = ord(c) - ord("a")
-                if cur.children[idx] == None:
-                    cur.children[idx] = Trie()
-                cur = cur.children[idx]
-        return self.dfs(root, 1)
 
-    def dfs(self, cur: Trie, l: int) -> int:
-        isLeaf, ans = True, 0
-        for i in range(26):
-            if cur.children[i] != None:
-                isLeaf = False
-                ans += self.dfs(cur.children[i], l + 1)
-        if isLeaf:
-            ans += l
-        return ans
-```
-
-```python
-class Trie:
-    def __init__(self):
-        self.children = [None] * 26
-
-    def insert(self, w):
-        node = self
-        pref = True
-        for c in w:
-            idx = ord(c) - ord("a")
-            if node.children[idx] is None:
-                node.children[idx] = Trie()
-                pref = False
-            node = node.children[idx]
-        return 0 if pref else len(w) + 1
-
-
-class Solution:
-    def minimumLengthEncoding(self, words: List[str]) -> int:
-        words.sort(key=lambda x: -len(x))
-        trie = Trie()
-        return sum(trie.insert(w[::-1]) for w in words)
-```
 
 ### **Java**
 
@@ -192,155 +143,17 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-type trie struct {
-	children [26]*trie
-}
 
-func minimumLengthEncoding(words []string) int {
-	root := new(trie)
-	for _, w := range words {
-		cur := root
-		for i := len(w) - 1; i >= 0; i-- {
-			if cur.children[w[i]-'a'] == nil {
-				cur.children[w[i]-'a'] = new(trie)
-			}
-			cur = cur.children[w[i]-'a']
-		}
-	}
-	return dfs(root, 1)
-}
 
-func dfs(cur *trie, l int) int {
-	isLeaf, ans := true, 0
-	for i := 0; i < 26; i++ {
-		if cur.children[i] != nil {
-			isLeaf = false
-			ans += dfs(cur.children[i], l+1)
-		}
-	}
-	if isLeaf {
-		ans += l
-	}
-	return ans
-}
-```
 
-```go
-type Trie struct {
-	children [26]*Trie
-}
 
-func newTrie() *Trie {
-	return &Trie{}
-}
 
-func (this *Trie) insert(w string) int {
-	node := this
-	pref := true
-	for i := len(w) - 1; i >= 0; i-- {
-		idx := w[i] - 'a'
-		if node.children[idx] == nil {
-			pref = false
-			node.children[idx] = newTrie()
-		}
-		node = node.children[idx]
-	}
-	if pref {
-		return 0
-	}
-	return len(w) + 1
-}
 
-func minimumLengthEncoding(words []string) int {
-	sort.Slice(words, func(i, j int) bool { return len(words[i]) > len(words[j]) })
-	trie := newTrie()
-	ans := 0
-	for _, w := range words {
-		ans += trie.insert(w)
-	}
-	return ans
-}
-```
 
-### **C++**
 
-```cpp
-struct Trie {
-    Trie* children[26] = {nullptr};
-};
 
-class Solution {
-public:
-    int minimumLengthEncoding(vector<string>& words) {
-        auto root = new Trie();
-        for (auto& w : words) {
-            auto cur = root;
-            for (int i = w.size() - 1; i >= 0; --i) {
-                if (cur->children[w[i] - 'a'] == nullptr) {
-                    cur->children[w[i] - 'a'] = new Trie();
-                }
-                cur = cur->children[w[i] - 'a'];
-            }
-        }
-        return dfs(root, 1);
-    }
 
-private:
-    int dfs(Trie* cur, int l) {
-        bool isLeaf = true;
-        int ans = 0;
-        for (int i = 0; i < 26; ++i) {
-            if (cur->children[i] != nullptr) {
-                isLeaf = false;
-                ans += dfs(cur->children[i], l + 1);
-            }
-        }
-        if (isLeaf) {
-            ans += l;
-        }
-        return ans;
-    }
-};
-```
-
-```cpp
-class Trie {
-public:
-    vector<Trie*> children;
-    Trie() : children(26) {}
-
-    int insert(string w) {
-        Trie* node = this;
-        bool pref = true;
-        for (char c : w) {
-            c -= 'a';
-            if (!node->children[c]) {
-                pref = false;
-                node->children[c] = new Trie();
-            }
-            node = node->children[c];
-        }
-        return pref ? 0 : w.size() + 1;
-    }
-};
-
-class Solution {
-public:
-    int minimumLengthEncoding(vector<string>& words) {
-        sort(words.begin(), words.end(), [](string &a, string &b) {return a.size() > b.size();});
-        Trie* trie = new Trie();
-        int ans = 0;
-        for (auto& w : words) {
-            reverse(w.begin(), w.end());
-            ans += trie->insert(w);
-        }
-        return ans;
-    }
-};
-```
 
 ### **...**
 
@@ -348,4 +161,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

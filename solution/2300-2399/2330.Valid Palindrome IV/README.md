@@ -66,16 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makePalindrome(self, s: str) -> bool:
-        i, j = 0, len(s) - 1
-        cnt = 0
-        while i < j:
-            cnt += s[i] != s[j]
-            i, j = i + 1, j - 1
-        return cnt <= 2
-```
+
 
 ### **Java**
 
@@ -96,52 +87,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool makePalindrome(string s) {
-        int cnt = 0;
-        int i = 0, j = s.size() - 1;
-        for (; i < j; ++i, --j) {
-            cnt += s[i] != s[j];
-        }
-        return cnt <= 2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func makePalindrome(s string) bool {
-	cnt := 0
-	i, j := 0, len(s)-1
-	for ; i < j; i, j = i+1, j-1 {
-		if s[i] != s[j] {
-			cnt++
-		}
-	}
-	return cnt <= 2
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function makePalindrome(s: string): boolean {
-    let cnt = 0;
-    let i = 0;
-    let j = s.length - 1;
-    for (; i < j; ++i, --j) {
-        if (s[i] != s[j]) {
-            ++cnt;
-        }
-    }
-    return cnt <= 2;
-}
-```
+
 
 ### **...**
 
@@ -149,4 +105,4 @@ function makePalindrome(s: string): boolean {
 
 ```
 
-<!-- tabs:end -->
+

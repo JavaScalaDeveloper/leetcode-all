@@ -65,11 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSeniors(self, details: List[str]) -> int:
-        return sum(int(x[11:13]) > 60 for x in details)
-```
+
 
 ### **Java**
 
@@ -90,35 +86,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countSeniors(vector<string>& details) {
-        int ans = 0;
-        for (auto& x : details) {
-            int age = stoi(x.substr(11, 2));
-            ans += age > 60;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSeniors(details []string) (ans int) {
-	for _, x := range details {
-		age, _ := strconv.Atoi(x[11:13])
-		if age > 60 {
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -126,4 +100,4 @@ func countSeniors(details []string) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

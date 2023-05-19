@@ -70,15 +70,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countOrders(self, n: int) -> int:
-        mod = 10**9 + 7
-        f = 1
-        for i in range(2, n + 1):
-            f = (f * i * (2 * i - 1)) % mod
-        return f
-```
+
 
 ### **Java**
 
@@ -97,34 +89,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countOrders(int n) {
-        const int mod = 1e9 + 7;
-        long long f = 1;
-        for (int i = 2; i <= n; ++i) {
-            f = f * i * (2 * i - 1) % mod;
-        }
-        return f;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countOrders(n int) int {
-	const mod = 1e9 + 7
-	f := 1
-	for i := 2; i <= n; i++ {
-		f = f * i * (2*i - 1) % mod
-	}
-	return f
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -132,4 +103,4 @@ func countOrders(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

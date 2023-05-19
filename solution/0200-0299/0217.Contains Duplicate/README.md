@@ -63,17 +63,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        return any(a == b for a, b in pairwise(sorted(nums)))
-```
 
-```python
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        return len(set(nums)) < len(nums)
-```
+
+
 
 ### **Java**
 
@@ -107,118 +99,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool containsDuplicate(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        for (int i = 0; i < nums.size() - 1; ++i) {
-            if (nums[i] == nums[i + 1]) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool containsDuplicate(vector<int>& nums) {
-        unordered_set<int> s(nums.begin(), nums.end());
-        return s.size() < nums.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func containsDuplicate(nums []int) bool {
-	sort.Ints(nums)
-	for i, v := range nums[1:] {
-		if v == nums[i] {
-			return true
-		}
-	}
-	return false
-}
-```
 
-```go
-func containsDuplicate(nums []int) bool {
-    s := map[int]bool{}
-    for _, v := range nums {
-        if s[v] {
-            return true
-        }
-        s[v] = true
-    }
-    return false
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {boolean}
- */
-var containsDuplicate = function (nums) {
-    return new Set(nums).size !== nums.length;
-};
-```
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function containsDuplicate(nums: number[]): boolean {
-    nums.sort((a, b) => a - b);
-    const n = nums.length;
-    for (let i = 1; i < n; i++) {
-        if (nums[i - 1] === nums[i]) {
-            return true;
-        }
-    }
-    return false;
-}
-```
 
-```ts
-function containsDuplicate(nums: number[]): boolean {
-    return new Set<number>(nums).size !== nums.length;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn contains_duplicate(mut nums: Vec<i32>) -> bool {
-        nums.sort();
-        let n = nums.len();
-        for i in 1..n {
-            if nums[i - 1] == nums[i] {
-                return true
-            }
-        }
-        false
-    }
-}
-```
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn contains_duplicate(nums: Vec<i32>) -> bool {
-        nums.iter().collect::<HashSet<&i32>>().len() != nums.len()
-    }
-}
-```
+
+
+
+
+
 
 ### **C**
 
@@ -238,30 +145,13 @@ bool containsDuplicate(int *nums, int numsSize) {
 }
 ```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool ContainsDuplicate(int[] nums) {
-        return nums.Distinct().Count() < nums.Length;
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums
-     * @return Boolean
-     */
-    function containsDuplicate($nums) {
-        $numsUnique = array_unique($nums);
-        return count($nums) != count($numsUnique);
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -269,4 +159,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

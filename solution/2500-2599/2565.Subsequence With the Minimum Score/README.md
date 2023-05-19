@@ -76,36 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumScore(self, s: str, t: str) -> int:
-        def check(x):
-            for k in range(n):
-                i, j = k - 1, k + x
-                l = f[i] if i >= 0 else -1
-                r = g[j] if j < n else m + 1
-                if l < r:
-                    return True
-            return False
 
-        m, n = len(s), len(t)
-        f = [inf] * n
-        g = [-1] * n
-        i, j = 0, 0
-        while i < m and j < n:
-            if s[i] == t[j]:
-                f[j] = i
-                j += 1
-            i += 1
-        i, j = m - 1, n - 1
-        while i >= 0 and j >= 0:
-            if s[i] == t[j]:
-                g[j] = i
-                j -= 1
-            i -= 1
-
-        return bisect_left(range(n + 1), True, key=check)
-```
 
 ### **Java**
 
@@ -165,95 +136,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumScore(string s, string t) {
-        int m = s.size(), n = t.size();
-        vector<int> f(n, 1e6);
-        vector<int> g(n, -1);
-        for (int i = 0, j = 0; i < m && j < n; ++i) {
-            if (s[i] == t[j]) {
-                f[j] = i;
-                ++j;
-            }
-        }
-        for (int i = m - 1, j = n - 1; i >= 0 && j >= 0; --i) {
-            if (s[i] == t[j]) {
-                g[j] = i;
-                --j;
-            }
-        }
 
-        auto check = [&](int len) {
-            for (int k = 0; k < n; ++k) {
-                int i = k - 1, j = k + len;
-                int l = i >= 0 ? f[i] : -1;
-                int r = j < n ? g[j] : m + 1;
-                if (l < r) {
-                    return true;
-                }
-            }
-            return false;
-        };
 
-        int l = 0, r = n;
-        while (l < r) {
-            int mid = (l + r) >> 1;
-            if (check(mid)) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumScore(s string, t string) int {
-	m, n := len(s), len(t)
-	f := make([]int, n)
-	g := make([]int, n)
-	for i := range f {
-		f[i] = 1 << 30
-		g[i] = -1
-	}
-	for i, j := 0, 0; i < m && j < n; i++ {
-		if s[i] == t[j] {
-			f[j] = i
-			j++
-		}
-	}
-	for i, j := m-1, n-1; i >= 0 && j >= 0; i-- {
-		if s[i] == t[j] {
-			g[j] = i
-			j--
-		}
-	}
-	return sort.Search(n+1, func(x int) bool {
-		for k := 0; k < n; k++ {
-			i, j := k-1, k+x
-			l, r := -1, m+1
-			if i >= 0 {
-				l = f[i]
-			}
-			if j < n {
-				r = g[j]
-			}
-			if l < r {
-				return true
-			}
-		}
-		return false
-	})
-}
-```
+
+
 
 ### **...**
 
@@ -261,4 +150,4 @@ func minimumScore(s string, t string) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -48,14 +48,7 @@ B = [50, 12, 32, 46, 28]
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def anagramMappings(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        mapper = defaultdict(set)
-        for i, num in enumerate(nums2):
-            mapper[num].add(i)
-        return [mapper[num].pop() for num in nums1]
-```
+
 
 ### **Java**
 
@@ -85,4 +78,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

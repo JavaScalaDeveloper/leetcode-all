@@ -61,61 +61,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 <!-- tabs:start -->
 
@@ -123,32 +77,7 @@ d[find(a)] = distance
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numIslands2(self, m: int, n: int, positions: List[List[int]]) -> List[int]:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        grid = [[0] * n for _ in range(m)]
-        cnt = 0
-        p = list(range(m * n))
-        ans = []
-        for i, j in positions:
-            if grid[i][j] == 1:
-                ans.append(cnt)
-                continue
-            grid[i][j] = 1
-            cnt += 1
-            for a, b in [[0, -1], [0, 1], [1, 0], [-1, 0]]:
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n and grid[x][y] == 1 and find(i * n + j) != find(x * n + y):
-                    p[find(i * n + j)] = find(x * n + y)
-                    cnt -= 1
-            ans.append(cnt)
-        return ans
-```
 
 ### **Java**
 
@@ -199,89 +128,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    vector<int> numIslands2(int m, int n, vector<vector<int>>& positions) {
-        p.resize(m * n);
-        for (int i = 0; i < p.size(); ++i) p[i] = i;
-        vector<vector<int>> grid(m, vector<int>(n));
-        vector<int> ans;
-        int cnt = 0;
-        vector<int> dirs = {-1, 0, 1, 0, -1};
-        for (auto& pos : positions) {
-            int i = pos[0], j = pos[1];
-            if (grid[i][j] == 1) {
-                ans.push_back(cnt);
-                continue;
-            }
-            grid[i][j] = 1;
-            ++cnt;
-            for (int k = 0; k < 4; ++k) {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == 1 && find(x * n + y) != find(i * n + j)) {
-                    p[find(x * n + y)] = find(i * n + j);
-                    --cnt;
-                }
-            }
-            ans.push_back(cnt);
-        }
-        return ans;
-    }
 
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
-```go
-func numIslands2(m int, n int, positions [][]int) []int {
-	p := make([]int, m*n)
-	for i := 0; i < len(p); i++ {
-		p[i] = i
-	}
-	grid := make([][]int, m)
-	for i := 0; i < m; i++ {
-		grid[i] = make([]int, n)
-	}
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	var ans []int
-	cnt := 0
-	dirs := []int{-1, 0, 1, 0, -1}
-	for _, pos := range positions {
-		i, j := pos[0], pos[1]
-		if grid[i][j] == 1 {
-			ans = append(ans, cnt)
-			continue
-		}
-		grid[i][j] = 1
-		cnt++
-		for k := 0; k < 4; k++ {
-			x, y := i+dirs[k], j+dirs[k+1]
-			if x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == 1 && find(x*n+y) != find(i*n+j) {
-				p[find(x*n+y)] = find(i*n + j)
-				cnt--
-			}
-		}
-		ans = append(ans, cnt)
-	}
-	return ans
-}
-```
+
+
 
 ### **...**
 
@@ -289,4 +142,4 @@ func numIslands2(m int, n int, positions [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

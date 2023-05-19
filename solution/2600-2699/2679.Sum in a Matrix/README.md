@@ -60,14 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def matrixSum(self, nums: List[List[int]]) -> int:
-        for row in nums:
-            row.sort()
-        n = len(nums[0])
-        return sum(max(row[j] for row in nums) for j in range(n))
-```
+
 
 ### **Java**
 
@@ -92,52 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int matrixSum(vector<vector<int>>& nums) {
-        for (auto& row : nums) {
-            sort(row.begin(), row.end());
-        }
-        int ans = 0;
-        for (int j = 0; j < nums[0].size(); ++j) {
-            int mx = 0;
-            for (auto& row : nums) {
-                mx = max(mx, row[j]);
-            }
-            ans += mx;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func matrixSum(nums [][]int) (ans int) {
-	for _, row := range nums {
-		sort.Ints(row)
-	}
-	for i := 0; i < len(nums[0]); i++ {
-		mx := 0
-		for _, row := range nums {
-			mx = max(mx, row[i])
-		}
-		ans += mx
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -145,4 +99,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

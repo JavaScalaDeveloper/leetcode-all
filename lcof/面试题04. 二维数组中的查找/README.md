@@ -62,32 +62,9 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def findNumberIn2DArray(self, matrix: List[List[int]], target: int) -> bool:
-        for row in matrix:
-            j = bisect_left(row, target)
-            if j < len(matrix[0]) and row[j] == target:
-                return True
-        return False
-```
 
-```python
-class Solution:
-    def findNumberIn2DArray(self, matrix: List[List[int]], target: int) -> bool:
-        if not matrix or not matrix[0]:
-            return False
-        m, n = len(matrix), len(matrix[0])
-        i, j = m - 1, 0
-        while i >= 0 and j < n:
-            if matrix[i][j] == target:
-                return True
-            if matrix[i][j] > target:
-                i -= 1
-            else:
-                j += 1
-        return False
-```
+
+
 
 ### **Java**
 
@@ -127,176 +104,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
-        for (auto& row : matrix) {
-            int j = lower_bound(row.begin(), row.end(), target) - row.begin();
-            if (j < matrix[0].size() && row[j] == target) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
-        if (matrix.empty()) {
-            return false;
-        }
-        int m = matrix.size(), n = matrix[0].size();
-        int i = 0, j = n - 1;
-        while (i < m && j >= 0) {
-            if (matrix[i][j] == target) {
-                return true;
-            } else if (matrix[i][j] < target) {
-                ++i;
-            } else {
-                --j;
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findNumberIn2DArray(matrix [][]int, target int) bool {
-	for _, row := range matrix {
-		j := sort.SearchInts(row, target)
-		if j < len(matrix[0]) && row[j] == target {
-			return true
-		}
-	}
-	return false
-}
-```
 
-```go
-func findNumberIn2DArray(matrix [][]int, target int) bool {
-	if len(matrix) == 0 {
-		return false
-	}
-	m, n := len(matrix), len(matrix[0])
-	for i, j := 0, n-1; i < m && j >= 0; {
-		if matrix[i][j] == target {
-			return true
-		}
-		if matrix[i][j] < target {
-			i++
-		} else {
-			j--
-		}
-	}
-	return false
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} matrix
- * @param {number} target
- * @return {boolean}
- */
-var findNumberIn2DArray = function (matrix, target) {
-    if (matrix.length == 0 || matrix[0].length == 0) {
-        return false;
-    }
-    const m = matrix.length;
-    const n = matrix[0].length;
-    for (let i = 0, j = n - 1; i < m && j >= 0; ) {
-        if (matrix[i][j] == target) {
-            return true;
-        }
-        if (matrix[i][j] < target) {
-            ++i;
-        } else {
-            --j;
-        }
-    }
-    return false;
-};
-```
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findNumberIn2DArray(matrix: number[][], target: number): boolean {
-    if (matrix.length == 0 || matrix[0].length == 0) {
-        return false;
-    }
-    const m = matrix.length;
-    const n = matrix[0].length;
-    for (let i = 0, j = n - 1; i < m && j >= 0; ) {
-        if (matrix[i][j] == target) {
-            return true;
-        }
-        if (matrix[i][j] < target) {
-            ++i;
-        } else {
-            --j;
-        }
-    }
-    return false;
-}
-```
 
-### **Rust**
 
-```rust
-use std::cmp::Ordering;
-impl Solution {
-    pub fn find_number_in2_d_array(matrix: Vec<Vec<i32>>, target: i32) -> bool {
-        if matrix.len() == 0 || matrix[0].len() == 0 {
-            return false;
-        }
-        let (m, n) = (matrix.len(), matrix[0].len());
-        let (mut i, mut j) = (0, n);
-        while i < m && j > 0 {
-            match target.cmp(&matrix[i][j - 1]) {
-                Ordering::Less => j -= 1,
-                Ordering::Greater => i += 1,
-                Ordering::Equal => return true,
-            }
-        }
-        false
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool FindNumberIn2DArray(int[][] matrix, int target) {
-        if (matrix.Length == 0 || matrix[0].Length == 0) {
-            return false;
-        }
-        int i = 0, j = matrix[0].Length - 1;
-        while (i < matrix.Length && j >= 0) {
-            if (target == matrix[i][j]) {
-                return true;
-            } else if (target > matrix[i][j]) {
-                i += 1;
-            } else {
-                j -= 1;
-            }
-        }
-        return false;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -304,4 +138,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

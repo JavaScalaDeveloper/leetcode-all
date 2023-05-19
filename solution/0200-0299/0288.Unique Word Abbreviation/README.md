@@ -75,27 +75,7 @@ validWordAbbr.isUnique("cake"); // 返回 true，因为 "cake" 已经存在于�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class ValidWordAbbr:
-    def __init__(self, dictionary: List[str]):
-        self.words = defaultdict(set)
-        for word in dictionary:
-            abbr = self.word_abbr(word)
-            self.words[abbr].add(word)
 
-    def isUnique(self, word: str) -> bool:
-        abbr = self.word_abbr(word)
-        words = self.words[abbr]
-        return not words or (len(words) == 1 and word in words)
-
-    def word_abbr(self, s):
-        return s if len(s) < 3 else f'{s[0]}{len(s) - 2}{s[-1]}'
-
-
-# Your ValidWordAbbr object will be instantiated and called as such:
-# obj = ValidWordAbbr(dictionary)
-# param_1 = obj.isUnique(word)
-```
 
 ### **Java**
 
@@ -132,79 +112,13 @@ class ValidWordAbbr {
  */
 ```
 
-### **C++**
 
-```cpp
-class ValidWordAbbr {
-public:
-    unordered_map<string, unordered_set<string>> words;
 
-    ValidWordAbbr(vector<string>& dictionary) {
-        for (auto word : dictionary) {
-            auto abbr = wordAbbr(word);
-            words[abbr].insert(word);
-        }
-    }
 
-    bool isUnique(string word) {
-        auto abbr = wordAbbr(word);
-        if (!words.count(abbr)) return true;
-        auto vals = words[abbr];
-        return vals.size() == 1 && vals.count(word);
-    }
 
-    string wordAbbr(string s) {
-        int n = s.size();
-        return n < 3 ? s : s.substr(0, 1) + to_string(n - 2) + s.substr(n - 1, 1);
-    }
-};
 
-/**
- * Your ValidWordAbbr object will be instantiated and called as such:
- * ValidWordAbbr* obj = new ValidWordAbbr(dictionary);
- * bool param_1 = obj->isUnique(word);
- */
-```
 
-### **Go**
 
-```go
-type ValidWordAbbr struct {
-	words map[string]map[string]bool
-}
-
-func Constructor(dictionary []string) ValidWordAbbr {
-	words := make(map[string]map[string]bool)
-	for _, word := range dictionary {
-		abbr := wordAbbr(word)
-		if words[abbr] == nil {
-			words[abbr] = make(map[string]bool)
-		}
-		words[abbr][word] = true
-	}
-	return ValidWordAbbr{words}
-}
-
-func (this *ValidWordAbbr) IsUnique(word string) bool {
-	abbr := wordAbbr(word)
-	words := this.words[abbr]
-	return words == nil || (len(words) == 1 && words[word])
-}
-
-func wordAbbr(s string) string {
-	n := len(s)
-	if n <= 2 {
-		return s
-	}
-	return s[0:1] + strconv.Itoa(n-2) + s[n-1:]
-}
-
-/**
- * Your ValidWordAbbr object will be instantiated and called as such:
- * obj := Constructor(dictionary);
- * param_1 := obj.IsUnique(word);
- */
-```
 
 ### **...**
 
@@ -212,4 +126,4 @@ func wordAbbr(s string) string {
 
 ```
 
-<!-- tabs:end -->
+

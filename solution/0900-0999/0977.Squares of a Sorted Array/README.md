@@ -91,22 +91,7 @@ SORTED-SQUARES(A)
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sortedSquares(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        res = [0] * n
-        i, j, k = 0, n - 1, n - 1
-        while i <= j:
-            if nums[i] * nums[i] > nums[j] * nums[j]:
-                res[k] = nums[i] * nums[i]
-                i += 1
-            else:
-                res[k] = nums[j] * nums[j]
-                j -= 1
-            k -= 1
-        return res
-```
+
 
 ### **Java**
 
@@ -131,124 +116,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> sortedSquares(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> res(n);
-        for (int i = 0, j = n - 1, k = n - 1; i <= j;) {
-            if (nums[i] * nums[i] > nums[j] * nums[j]) {
-                res[k--] = nums[i] * nums[i];
-                ++i;
-            } else {
-                res[k--] = nums[j] * nums[j];
-                --j;
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sortedSquares(nums []int) []int {
-	n := len(nums)
-	res := make([]int, n)
-	for i, j, k := 0, n-1, n-1; i <= j; {
-		if nums[i]*nums[i] > nums[j]*nums[j] {
-			res[k] = nums[i] * nums[i]
-			i++
-		} else {
-			res[k] = nums[j] * nums[j]
-			j--
-		}
-		k--
-	}
-	return res
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var sortedSquares = function (nums) {
-    const n = nums.length;
-    const res = new Array(n);
-    for (let i = 0, j = n - 1, k = n - 1; i <= j; ) {
-        if (nums[i] * nums[i] > nums[j] * nums[j]) {
-            res[k--] = nums[i] * nums[i];
-            ++i;
-        } else {
-            res[k--] = nums[j] * nums[j];
-            --j;
-        }
-    }
-    return res;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sorted_squares(nums: Vec<i32>) -> Vec<i32> {
-        let n = nums.len();
-        let mut l = 0;
-        let mut r = n - 1;
-        let mut res = vec![0; n];
-        for i in (0..n).rev() {
-            let a = nums[l] * nums[l];
-            let b = nums[r] * nums[r];
-            if a < b {
-                res[i] = b;
-                r -= 1;
-            } else {
-                res[i] = a;
-                l += 1;
-            }
-        }
-        res
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums
-     * @return Integer[]
-     */
-    function sortedSquares($nums) {
-        $i = 0;
-        $j = $k = count($nums) - 1;
-        $rs = array_fill(0, count($nums), -1);
-        while ($i <= $j) {
-            $max1 = $nums[$i] * $nums[$i];
-            $max2 = $nums[$j] * $nums[$j];
-            if ($max1 > $max2) {
-                $rs[$k] = $max1;
-                $i++;
-            } else {
-                $rs[$k] = $max2;
-                $j--;
-            }
-            $k--;
-        }
-        return $rs;
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -256,4 +142,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

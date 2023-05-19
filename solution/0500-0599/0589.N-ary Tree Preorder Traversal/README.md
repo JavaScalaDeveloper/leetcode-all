@@ -53,29 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val=None, children=None):
-        self.val = val
-        self.children = children
-"""
 
-
-class Solution:
-    def preorder(self, root: 'Node') -> List[int]:
-        ans = []
-        if root is None:
-            return ans
-        stk = [root]
-        while stk:
-            node = stk.pop()
-            ans.append(node.val)
-            for child in node.children[::-1]:
-                stk.append(child)
-        return ans
-```
 
 ### **Java**
 
@@ -122,139 +100,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    vector<Node*> children;
 
-    Node() {}
 
-    Node(int _val) {
-        val = _val;
-    }
 
-    Node(int _val, vector<Node*> _children) {
-        val = _val;
-        children = _children;
-    }
-};
-*/
 
-class Solution {
-public:
-    vector<int> preorder(Node* root) {
-        if (!root) return {};
-        vector<int> ans;
-        stack<Node*> stk;
-        stk.push(root);
-        while (!stk.empty()) {
-            Node* node = stk.top();
-            ans.push_back(node->val);
-            stk.pop();
-            auto children = node->children;
-            for (int i = children.size() - 1; i >= 0; --i) stk.push(children[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Children []*Node
- * }
- */
-
-func preorder(root *Node) []int {
-	var ans []int
-	if root == nil {
-		return ans
-	}
-	stk := []*Node{root}
-	for len(stk) > 0 {
-		node := stk[len(stk)-1]
-		ans = append(ans, node.Val)
-		stk = stk[:len(stk)-1]
-		children := node.Children
-		for i := len(children) - 1; i >= 0; i-- {
-			stk = append(stk, children[i])
-		}
-	}
-	return ans
-}
-```
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for node.
- * class Node {
- *     val: number
- *     children: Node[]
- *     constructor(val?: number) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.children = []
- *     }
- * }
- */
 
-function preorder(root: Node | null): number[] {
-    const res = [];
-    if (root == null) {
-        return res;
-    }
-    const stack = [root];
-    while (stack.length !== 0) {
-        const { val, children } = stack.pop();
-        res.push(val);
-        const n = children.length;
-        for (let i = n - 1; i >= 0; i--) {
-            stack.push(children[i]);
-        }
-    }
-    return res;
-}
-```
 
-```ts
-/**
- * Definition for node.
- * class Node {
- *     val: number
- *     children: Node[]
- *     constructor(val?: number) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.children = []
- *     }
- * }
- */
 
-function preorder(root: Node | null): number[] {
-    const ans = [];
-    const dfs = (root: Node | null) => {
-        if (root == null) {
-            return;
-        }
-        ans.push(root.val);
-        for (const node of root.children) {
-            dfs(node);
-        }
-    };
-    dfs(root);
-    return ans;
-}
-```
 
 ### **C**
 
@@ -296,4 +154,4 @@ int *preorder(struct Node *root, int *returnSize) {
 
 ```
 
-<!-- tabs:end -->
+

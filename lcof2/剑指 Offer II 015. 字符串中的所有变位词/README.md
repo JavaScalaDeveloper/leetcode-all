@@ -56,28 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
-        m, n = len(s), len(p)
-        if n > m:
-            return []
-        window, ans = [0 for _ in range(26)], []
-        for i in range(n):
-            window[ord(p[i]) - ord('a')] += 1
-            window[ord(s[i]) - ord('a')] -= 1
-        if self.check(window):
-            ans.append(0)
-        for i in range(n, m):
-            window[ord(s[i]) - ord('a')] -= 1
-            window[ord(s[i - n]) - ord('a')] += 1
-            if self.check(window):
-                ans.append(i - n + 1)
-        return ans
 
-    def check(self, window: List[int]) -> bool:
-        return all([cnt == 0 for cnt in window])
-```
 
 ### **Java**
 
@@ -115,75 +94,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func findAnagrams(s string, p string) []int {
-	m, n := len(s), len(p)
-	if n > m {
-		return []int{}
-	}
-	ans := make([]int, 0)
-	window := make([]int, 26)
-	for i := 0; i < n; i++ {
-		window[p[i]-'a']++
-		window[s[i]-'a']--
-	}
-	if check(window) {
-		ans = append(ans, 0)
-	}
-	for i := n; i < m; i++ {
-		window[s[i]-'a']--
-		window[s[i-n]-'a']++
-		if check(window) {
-			ans = append(ans, i-n+1)
-		}
-	}
-	return ans
-}
 
-func check(window []int) bool {
-	for _, cnt := range window {
-		if cnt != 0 {
-			return false
-		}
-	}
-	return true
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findAnagrams(string s, string p) {
-        vector<int> res;
-        vector<int> hash(26, 0), zero(26, 0);
 
-        if (p.size() > s.size())
-            return res;
 
-        for (int i = 0; i < p.size(); i++) {
-            hash[p[i] - 'a']++;
-            hash[s[i] - 'a']--;
-        }
 
-        if (hash == zero)
-            res.push_back(0);
-
-        for (int i = p.size(); i < s.size(); i++) {
-            hash[s[i] - 'a']--;
-            hash[s[i - p.size()] - 'a']++;
-
-            if (hash == zero)
-                res.push_back(i - p.size() + 1);
-        }
-
-        return res;
-    }
-};
-```
 
 ### **...**
 
@@ -191,4 +108,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

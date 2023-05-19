@@ -86,24 +86,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxScore(self, edges: List[List[int]]) -> int:
-        def dfs(i):
-            a = b = t = 0
-            for j, w in g[i]:
-                x, y = dfs(j)
-                a += y
-                b += y
-                t = max(t, x - y + w)
-            b += t
-            return a, b
 
-        g = defaultdict(list)
-        for i, (p, w) in enumerate(edges[1:], 1):
-            g[p].append((i, w))
-        return dfs(0)[1]
-```
 
 ### **Java**
 
@@ -139,75 +122,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long maxScore(vector<vector<int>>& edges) {
-        int n = edges.size();
-        vector<vector<pair<int, int>>> g(n);
-        for (int i = 1; i < n; ++i) {
-            int p = edges[i][0], w = edges[i][1];
-            g[p].emplace_back(i, w);
-        }
-        using ll = long long;
-        using pll = pair<ll, ll>;
-        function<pll(int)> dfs = [&](int i) -> pll {
-            ll a = 0, b = 0, t = 0;
-            for (auto& [j, w] : g[i]) {
-                auto [x, y] = dfs(j);
-                a += y;
-                b += y;
-                t = max(t, x - y + w);
-            }
-            b += t;
-            return make_pair(a, b);
-        };
-        return dfs(0).second;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxScore(edges [][]int) int64 {
-	n := len(edges)
-	g := make([][][2]int, n)
-	for i := 1; i < n; i++ {
-		p, w := edges[i][0], edges[i][1]
-		g[p] = append(g[p], [2]int{i, w})
-	}
-	var dfs func(int) [2]int
-	dfs = func(i int) [2]int {
-		var a, b, t int
-		for _, e := range g[i] {
-			j, w := e[0], e[1]
-			s := dfs(j)
-			a += s[1]
-			b += s[1]
-			t = max(t, s[0]-s[1]+w)
-		}
-		b += t
-		return [2]int{a, b}
-	}
-	return int64(dfs(0)[1])
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -216,4 +141,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

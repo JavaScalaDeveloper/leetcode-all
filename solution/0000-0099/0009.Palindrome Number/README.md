@@ -85,17 +85,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        if x < 0 or (x and x % 10 == 0):
-            return False
-        y = 0
-        while y < x:
-            y = y * 10 + x % 10
-            x //= 10
-        return x in (y, y // 10)
-```
+
 
 ### **Java**
 
@@ -116,114 +106,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isPalindrome(int x) {
-        if (x < 0 || (x && x % 10 == 0)) {
-            return false;
-        }
-        int y = 0;
-        for (; y < x; x /= 10) {
-            y = y * 10 + x % 10;
-        }
-        return x == y || x == y / 10;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isPalindrome(x int) bool {
-	if x < 0 || (x > 0 && x%10 == 0) {
-		return false
-	}
-	y := 0
-	for ; y < x; x /= 10 {
-		y = y*10 + x%10
-	}
-	return x == y || x == y/10
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} x
- * @return {boolean}
- */
-var isPalindrome = function (x) {
-    if (x < 0 || (x > 0 && x % 10 === 0)) {
-        return false;
-    }
-    let y = 0;
-    for (; y < x; x = ~~(x / 10)) {
-        y = y * 10 + (x % 10);
-    }
-    return x === y || x === ~~(y / 10);
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isPalindrome(x: number): boolean {
-    if (x < 0 || (x > 0 && x % 10 === 0)) {
-        return false;
-    }
-    let y = 0;
-    for (; y < x; x = ~~(x / 10)) {
-        y = y * 10 + (x % 10);
-    }
-    return x === y || x === ~~(y / 10);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn is_palindrome(x: i32) -> bool {
-        if x < 0 {
-            return false;
-        }
-        let s = x.to_string();
-        let bs = s.as_bytes();
-        let n = bs.len();
-        let mut l = 0;
-        let mut r = n - 1;
-        while l < r {
-            if bs[l] != bs[r] {
-                return false;
-            }
-            l += 1;
-            r -= 1;
-        }
-        true
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn is_palindrome(mut x: i32) -> bool {
-        if x < 0 || (x % 10 == 0 && x != 0) {
-            return false;
-        }
-        let mut y = 0;
-        while x > y {
-            y *= 10;
-            y += x % 10;
-            x /= 10;
-        }
-        x == y || x == y / 10
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -231,4 +134,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

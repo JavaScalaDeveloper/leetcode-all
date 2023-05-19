@@ -58,27 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def plusOne(self, head: ListNode) -> ListNode:
-        dummy = ListNode(0, head)
-        target = dummy
-        while head:
-            if head.val != 9:
-                target = head
-            head = head.next
-        target.val += 1
-        target = target.next
-        while target:
-            target.val = 0
-            target = target.next
-        return dummy if dummy.val else dummy.next
-```
+
 
 ### **Java**
 
@@ -116,70 +96,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* plusOne(ListNode* head) {
-        ListNode* dummy = new ListNode(0, head);
-        ListNode* target = dummy;
-        while (head) {
-            if (head->val != 9) target = head;
-            head = head->next;
-        }
-        ++target->val;
-        target = target->next;
-        while (target) {
-            target->val = 0;
-            target = target->next;
-        }
-        return dummy->val == 1 ? dummy : dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func plusOne(head *ListNode) *ListNode {
-	dummy := &ListNode{0, head}
-	target := dummy
-	for head != nil {
-		if head.Val != 9 {
-			target = head
-		}
-		head = head.Next
-	}
-	target.Val++
-	target = target.Next
-	for target != nil {
-		target.Val = 0
-		target = target.Next
-	}
-	if dummy.Val == 1 {
-		return dummy
-	}
-	return dummy.Next
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -187,4 +110,4 @@ func plusOne(head *ListNode) *ListNode {
 
 ```
 
-<!-- tabs:end -->
+

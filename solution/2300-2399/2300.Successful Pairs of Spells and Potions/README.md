@@ -64,15 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def successfulPairs(
-        self, spells: List[int], potions: List[int], success: int
-    ) -> List[int]:
-        potions.sort()
-        m = len(potions)
-        return [m - bisect_left(potions, success / v) for v in spells]
-```
+
 
 ### **Java**
 
@@ -101,65 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(potions.begin(), potions.end());
-        vector<int> ans;
-        int m = potions.size();
-        for (int& v : spells) {
-            int i = lower_bound(potions.begin(), potions.end(), success * 1.0 / v) - potions.begin();
-            ans.push_back(m - i);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func successfulPairs(spells []int, potions []int, success int64) (ans []int) {
-	sort.Ints(potions)
-	m := len(potions)
-	for _, v := range spells {
-		i := sort.Search(m, func(i int) bool { return int64(potions[i]*v) >= success })
-		ans = append(ans, m-i)
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function successfulPairs(
-    spells: number[],
-    potions: number[],
-    success: number,
-): number[] {
-    potions.sort((a, b) => a - b);
-    const m = potions.length;
-    const ans: number[] = [];
-    for (const v of spells) {
-        let left = 0;
-        let right = m;
-        while (left < right) {
-            const mid = (left + right) >> 1;
-            if (v * potions[mid] >= success) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        ans.push(m - left);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -167,4 +111,4 @@ function successfulPairs(
 
 ```
 
-<!-- tabs:end -->
+

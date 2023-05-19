@@ -89,30 +89,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        ans = 0
-        for i in range(32):
-            cnt = sum(num >> i & 1 for num in nums)
-            if cnt % 3:
-                if i == 31:
-                    ans -= 1 << i
-                else:
-                    ans |= 1 << i
-        return ans
-```
 
-```python
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        a = b = 0
-        for c in nums:
-            aa = (~a & b & c) | (a & ~b & ~c)
-            bb = ~a & (b ^ c)
-            a, b = aa, bb
-        return b
-```
+
+
 
 ### **Java**
 
@@ -150,114 +129,29 @@ class Solution {
 }
 ```
 
-### **Go**
+
 
 需要注意 Golang 中的 `int` 在 64 位平台上相当于 `int64`
 
-```go
-func singleNumber(nums []int) int {
-	ans := int32(0)
-	for i := 0; i < 32; i++ {
-		cnt := int32(0)
-		for _, num := range nums {
-			cnt += int32(num) >> i & 1
-		}
-		cnt %= 3
-		ans |= cnt << i
-	}
-	return int(ans)
-}
-```
 
-```go
-func singleNumber(nums []int) int {
-	a, b := 0, 0
-	for _, c := range nums {
-		aa := (^a & b & c) | (a & ^b & ^c)
-		bb := ^a & (b ^ c)
-		a, b = aa, bb
-	}
-	return b
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int singleNumber(vector<int>& nums) {
-        int ans = 0;
-        for (int i = 0; i < 32; ++i) {
-            int cnt = 0;
-            for (int num : nums) {
-                cnt += ((num >> i) & 1);
-            }
-            cnt %= 3;
-            ans |= cnt << i;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int singleNumber(vector<int>& nums) {
-        int a = 0, b = 0;
-        for (int c : nums) {
-            int aa = (~a & b & c) | (a & ~b & ~c);
-            int bb = ~a & (b ^ c);
-            a = aa;
-            b = bb;
-        }
-        return b;
-    }
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function singleNumber(nums: number[]): number {
-    let ans = 0;
-    for (let i = 0; i < 32; i++) {
-        const count = nums.reduce((r, v) => r + ((v >> i) & 1), 0);
-        ans |= count % 3 << i;
-    }
-    return ans;
-}
-```
 
-```ts
-function singleNumber(nums: number[]): number {
-    let a = 0;
-    let b = 0;
-    for (const c of nums) {
-        const aa = (~a & b & c) | (a & ~b & ~c);
-        const bb = ~a & (b ^ c);
-        a = aa;
-        b = bb;
-    }
-    return b;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn single_number(nums: Vec<i32>) -> i32 {
-        let mut ans = 0;
-        for i in 0..32 {
-            let count = nums.iter().map(|v| v >> i & 1).sum::<i32>();
-            ans |= count % 3 << i;
-        }
-        ans
-    }
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -277,22 +171,9 @@ int singleNumber(int *nums, int numsSize) {
 }
 ```
 
-### **Swift**
 
-```swift
-class Solution {
-    func singleNumber(_ nums: [Int]) -> Int {
-        var a = nums.sorted()
-        var n = a.count
-        for i in stride(from: 0, through: n - 2, by: 3) {
-            if a[i] != a[i + 1] {
-                return a[i]
-            }
-        }
-        return a[n - 1]
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -300,4 +181,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

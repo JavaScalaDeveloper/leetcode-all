@@ -85,22 +85,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def balancedString(self, s: str) -> int:
-        cnt = Counter(s)
-        n = len(s)
-        if all(v <= n // 4 for v in cnt.values()):
-            return 0
-        ans, j = n, 0
-        for i, c in enumerate(s):
-            cnt[c] -= 1
-            while j <= i and all(v <= n // 4 for v in cnt.values()):
-                ans = min(ans, i - j + 1)
-                cnt[s[j]] += 1
-                j += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -132,68 +117,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int balancedString(string s) {
-        int cnt[4]{};
-        string t = "QWER";
-        int n = s.size();
-        for (char& c : s) {
-            cnt[t.find(c)]++;
-        }
-        int m = n / 4;
-        if (cnt[0] == m && cnt[1] == m && cnt[2] == m && cnt[3] == m) {
-            return 0;
-        }
-        int ans = n;
-        for (int i = 0, j = 0; i < n; ++i) {
-            cnt[t.find(s[i])]--;
-            while (j <= i && cnt[0] <= m && cnt[1] <= m && cnt[2] <= m && cnt[3] <= m) {
-                ans = min(ans, i - j + 1);
-                cnt[t.find(s[j++])]++;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func balancedString(s string) int {
-	cnt := [4]int{}
-	t := "QWER"
-	n := len(s)
-	for i := range s {
-		cnt[strings.IndexByte(t, s[i])]++
-	}
-	m := n / 4
-	if cnt[0] == m && cnt[1] == m && cnt[2] == m && cnt[3] == m {
-		return 0
-	}
-	ans := n
-	for i, j := 0, 0; i < n; i++ {
-		cnt[strings.IndexByte(t, s[i])]--
-		for j <= i && cnt[0] <= m && cnt[1] <= m && cnt[2] <= m && cnt[3] <= m {
-			ans = min(ans, i-j+1)
-			cnt[strings.IndexByte(t, s[j])]++
-			j++
-		}
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -201,4 +131,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -64,22 +64,7 @@ dataStream.consec(3); // 最后 k 个整数分别是 [4,4,3] 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class DataStream:
 
-    def __init__(self, value: int, k: int):
-        self.val, self.k = value, k
-        self.cnt = 0
-
-    def consec(self, num: int) -> bool:
-        self.cnt = 0 if num != self.val else self.cnt + 1
-        return self.cnt >= self.k
-
-
-# Your DataStream object will be instantiated and called as such:
-# obj = DataStream(value, k)
-# param_1 = obj.consec(num)
-```
 
 ### **Java**
 
@@ -109,59 +94,13 @@ class DataStream {
  */
 ```
 
-### **C++**
 
-```cpp
-class DataStream {
-public:
-    DataStream(int value, int k) {
-        val = value;
-        this->k = k;
-    }
 
-    bool consec(int num) {
-        cnt = num == val ? cnt + 1 : 0;
-        return cnt >= k;
-    }
 
-private:
-    int cnt = 0;
-    int val, k;
-};
 
-/**
- * Your DataStream object will be instantiated and called as such:
- * DataStream* obj = new DataStream(value, k);
- * bool param_1 = obj->consec(num);
- */
-```
 
-### **Go**
 
-```go
-type DataStream struct {
-	val, k, cnt int
-}
 
-func Constructor(value int, k int) DataStream {
-	return DataStream{value, k, 0}
-}
-
-func (this *DataStream) Consec(num int) bool {
-	if num == this.val {
-		this.cnt++
-	} else {
-		this.cnt = 0
-	}
-	return this.cnt >= this.k
-}
-
-/**
- * Your DataStream object will be instantiated and called as such:
- * obj := Constructor(value, k);
- * param_1 := obj.Consec(num);
- */
-```
 
 ### **...**
 
@@ -169,4 +108,4 @@ func (this *DataStream) Consec(num int) bool {
 
 ```
 
-<!-- tabs:end -->
+

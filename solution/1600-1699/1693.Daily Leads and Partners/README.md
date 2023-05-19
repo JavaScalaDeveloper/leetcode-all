@@ -81,4 +81,4 @@ GROUP BY date_id,
     make_name;
 ```
 
-<!-- tabs:end -->
+

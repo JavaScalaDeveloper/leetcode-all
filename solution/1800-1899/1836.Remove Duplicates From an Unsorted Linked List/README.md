@@ -58,29 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def deleteDuplicatesUnsorted(self, head: ListNode) -> ListNode:
-        cnt = Counter()
-        cur = head
-        while cur:
-            cnt[cur.val] += 1
-            cur = cur.next
-        dummy = ListNode(0, head)
-        pre, cur = dummy, head
-        while cur:
-            if cnt[cur.val] > 1:
-                pre.next = cur.next
-            else:
-                pre = cur
-            cur = cur.next
-        return dummy.next
-```
+
 
 ### **Java**
 
@@ -116,65 +94,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* deleteDuplicatesUnsorted(ListNode* head) {
-        unordered_map<int, int> cnt;
-        for (ListNode* cur = head; cur; cur = cur->next) {
-            cnt[cur->val]++;
-        }
-        ListNode* dummy = new ListNode(0, head);
-        for (ListNode *pre = dummy, *cur = head; cur; cur = cur->next) {
-            if (cnt[cur->val] > 1) {
-                pre->next = cur->next;
-            } else {
-                pre = cur;
-            }
-        }
-        return dummy->next;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func deleteDuplicatesUnsorted(head *ListNode) *ListNode {
-	cnt := map[int]int{}
-	for cur := head; cur != nil; cur = cur.Next {
-		cnt[cur.Val]++
-	}
-	dummy := &ListNode{0, head}
-	for pre, cur := dummy, head; cur != nil; cur = cur.Next {
-		if cnt[cur.Val] > 1 {
-			pre.Next = cur.Next
-		} else {
-			pre = cur
-		}
-	}
-	return dummy.Next
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -182,4 +108,4 @@ func deleteDuplicatesUnsorted(head *ListNode) *ListNode {
 
 ```
 
-<!-- tabs:end -->
+

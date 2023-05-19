@@ -56,16 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-        cnt = Counter(arr)
-        for i, v in enumerate(sorted(cnt.values())):
-            k -= v
-            if k < 0:
-                return len(cnt) - i
-        return 0
-```
+
 
 ### **Java**
 
@@ -91,77 +82,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findLeastNumOfUniqueInts(vector<int>& arr, int k) {
-        unordered_map<int, int> cnt;
-        for (int& x : arr) {
-            ++cnt[x];
-        }
-        vector<int> nums;
-        for (auto& [_, c] : cnt) {
-            nums.push_back(c);
-        }
-        sort(nums.begin(), nums.end());
-        for (int i = 0, m = nums.size(); i < m; ++i) {
-            k -= nums[i];
-            if (k < 0) {
-                return m - i;
-            }
-        }
-        return 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findLeastNumOfUniqueInts(arr []int, k int) int {
-	cnt := map[int]int{}
-	for _, x := range arr {
-		cnt[x]++
-	}
-	nums := make([]int, 0, len(cnt))
-	for _, v := range cnt {
-		nums = append(nums, v)
-	}
-	sort.Ints(nums)
-	for i, v := range nums {
-		k -= v
-		if k < 0 {
-			return len(nums) - i
-		}
-	}
-	return 0
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findLeastNumOfUniqueInts(arr: number[], k: number): number {
-    const cnt: Map<number, number> = new Map();
-    for (const x of arr) {
-        cnt.set(x, (cnt.get(x) || 0) + 1);
-    }
-    const nums: number[] = [];
-    for (const [_, v] of cnt) {
-        nums.push(v);
-    }
-    nums.sort((a, b) => a - b);
-    for (let i = 0; i < nums.length; ++i) {
-        k -= nums[i];
-        if (k < 0) {
-            return nums.length - i;
-        }
-    }
-    return 0;
-}
-```
+
 
 ### **...**
 
@@ -169,4 +100,4 @@ function findLeastNumOfUniqueInts(arr: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

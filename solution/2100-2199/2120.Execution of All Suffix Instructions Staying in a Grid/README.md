@@ -85,24 +85,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def executeInstructions(self, n: int, startPos: List[int], s: str) -> List[int]:
-        ans = []
-        m = len(s)
-        mp = {"L": [0, -1], "R": [0, 1], "U": [-1, 0], "D": [1, 0]}
-        for i in range(m):
-            x, y = startPos
-            t = 0
-            for j in range(i, m):
-                a, b = mp[s[j]]
-                if 0 <= x + a < n and 0 <= y + b < n:
-                    x, y, t = x + a, y + b, t + 1
-                else:
-                    break
-            ans.append(t)
-        return ans
-```
+
 
 ### **Java**
 
@@ -139,134 +122,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> executeInstructions(int n, vector<int>& startPos, string s) {
-        int m = s.size();
-        vector<int> ans(m);
-        unordered_map<char, vector<int>> mp;
-        mp['L'] = {0, -1};
-        mp['R'] = {0, 1};
-        mp['U'] = {-1, 0};
-        mp['D'] = {1, 0};
-        for (int i = 0; i < m; ++i) {
-            int x = startPos[0], y = startPos[1];
-            int t = 0;
-            for (int j = i; j < m; ++j) {
-                int a = mp[s[j]][0], b = mp[s[j]][1];
-                if (0 <= x + a && x + a < n && 0 <= y + b && y + b < n) {
-                    x += a;
-                    y += b;
-                    ++t;
-                } else
-                    break;
-            }
-            ans[i] = t;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func executeInstructions(n int, startPos []int, s string) []int {
-	m := len(s)
-	mp := make(map[byte][]int)
-	mp['L'] = []int{0, -1}
-	mp['R'] = []int{0, 1}
-	mp['U'] = []int{-1, 0}
-	mp['D'] = []int{1, 0}
-	ans := make([]int, m)
-	for i := 0; i < m; i++ {
-		x, y := startPos[0], startPos[1]
-		t := 0
-		for j := i; j < m; j++ {
-			a, b := mp[s[j]][0], mp[s[j]][1]
-			if 0 <= x+a && x+a < n && 0 <= y+b && y+b < n {
-				x += a
-				y += b
-				t++
-			} else {
-				break
-			}
-		}
-		ans[i] = t
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
-function executeInstructions(
-    n: number,
-    startPos: number[],
-    s: string,
-): number[] {
-    const m = s.length;
-    const ans = new Array(m);
-    for (let i = 0; i < m; i++) {
-        let [y, x] = startPos;
-        let j: number;
-        for (j = i; j < m; j++) {
-            const c = s[j];
-            if (c === 'U') {
-                y--;
-            } else if (c === 'D') {
-                y++;
-            } else if (c === 'L') {
-                x--;
-            } else {
-                x++;
-            }
-            if (y === -1 || y === n || x === -1 || x === n) {
-                break;
-            }
-        }
-        ans[i] = j - i;
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn execute_instructions(n: i32, start_pos: Vec<i32>, s: String) -> Vec<i32> {
-        let s = s.as_bytes();
-        let m = s.len();
-        let mut ans = vec![0; m];
-        for i in 0..m {
-            let mut y = start_pos[0];
-            let mut x = start_pos[1];
-            let mut j = i;
-            while j < m {
-                match s[j] {
-                    b'U' => y -= 1,
-                    b'D' => y += 1,
-                    b'L' => x -= 1,
-                    _ => x += 1,
-                }
-                if y == -1 || y == n || x == -1 || x == n {
-                    break;
-                }
-                j += 1;
-            }
-            ans[i] = (j - i) as i32;
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -308,4 +180,4 @@ int *executeInstructions(int n, int *startPos, int startPosSize, char *s, int *r
 
 ```
 
-<!-- tabs:end -->
+

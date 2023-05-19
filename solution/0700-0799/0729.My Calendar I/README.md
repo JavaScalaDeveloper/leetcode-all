@@ -55,26 +55,7 @@ myCalendar.book(20, 30); // return True ，这个日程安排可以添加到日�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedDict
 
-
-class MyCalendar:
-    def __init__(self):
-        self.sd = SortedDict()
-
-    def book(self, start: int, end: int) -> bool:
-        idx = self.sd.bisect_right(start)
-        if idx < len(self.sd) and end > self.sd.values()[idx]:
-            return False
-        self.sd[end] = start
-        return True
-
-
-# Your MyCalendar object will be instantiated and called as such:
-# obj = MyCalendar()
-# param_1 = obj.book(start,end)
-```
 
 ### **Java**
 
@@ -111,143 +92,21 @@ class MyCalendar {
  */
 ```
 
-### **Go**
-
-```go
-type MyCalendar struct {
-	rbt *redblacktree.Tree
-}
-
-func Constructor() MyCalendar {
-	return MyCalendar{
-		rbt: redblacktree.NewWithIntComparator(),
-	}
-}
-
-func (this *MyCalendar) Book(start int, end int) bool {
-	if p, ok := this.rbt.Floor(start); ok && p.Value.(int) > start {
-		return false
-	}
-	if p, ok := this.rbt.Ceiling(start); ok && p.Key.(int) < end {
-		return false
-	}
-	this.rbt.Put(start, end)
-	return true
-}
 
 
-/**
- * Your MyCalendar object will be instantiated and called as such:
- * obj := Constructor();
- * param_1 := obj.Book(start,end);
- */
-```
 
-### **C++**
 
-```cpp
-class MyCalendar {
-public:
-    map<int, int> m;
 
-    MyCalendar() {
-    }
 
-    bool book(int start, int end) {
-        ++m[start];
-        --m[end];
-        int s = 0;
-        for (auto& [k, v] : m) {
-            s += v;
-            if (s > 1) {
-                --m[start];
-                ++m[end];
-                return false;
-            }
-        }
-        return true;
-    }
-};
 
-/**
- * Your MyCalendar object will be instantiated and called as such:
- * MyCalendar* obj = new MyCalendar();
- * bool param_1 = obj->book(start,end);
- */
-```
 
 ### **TypeScript**
 
-```ts
-class MyCalendar {
-    private calendar: number[][];
 
-    constructor() {
-        this.calendar = [];
-    }
 
-    book(start: number, end: number): boolean {
-        for (const item of this.calendar) {
-            if (end <= item[0] || item[1] <= start) {
-                continue;
-            }
-            return false;
-        }
-        this.calendar.push([start, end]);
-        return true;
-    }
-}
 
-/**
- * Your MyCalendar object will be instantiated and called as such:
- * var obj = new MyCalendar()
- * var param_1 = obj.book(start,end)
- */
-```
 
-### **Rust**
 
-```rust
-use std::collections::BTreeMap;
-
-struct MyCalendar {
-    bt: BTreeMap<i32, i32>,
-}
-
-/**
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
-impl MyCalendar {
-    fn new() -> Self {
-        MyCalendar {
-            bt: BTreeMap::new(),
-        }
-    }
-
-    fn book(&mut self, start: i32, end: i32) -> bool {
-        if let Some((_, &val)) = self.bt.range(..=start).last() {
-            println!("{} {} {}", start, end, val);
-            if val > start {
-                return false;
-            }
-        }
-        if let Some((&key, _)) = self.bt.range(start..).next() {
-            if key < end {
-                return false;
-            }
-        }
-        self.bt.insert(start, end);
-        true
-    }
-}
-
-/**
- * Your MyCalendar object will be instantiated and called as such:
- * let obj = MyCalendar::new();
- * let ret_1: bool = obj.book(start, end);
- */
-```
 
 ### **...**
 
@@ -255,4 +114,4 @@ impl MyCalendar {
 
 ```
 
-<!-- tabs:end -->
+

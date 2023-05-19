@@ -92,17 +92,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def hardestWorker(self, n: int, logs: List[List[int]]) -> int:
-        last = mx = ans = 0
-        for uid, t in logs:
-            t -= last
-            if mx < t or (mx == t and ans > uid):
-                ans, mx = uid, t
-            last += t
-        return ans
-```
+
 
 ### **Java**
 
@@ -127,44 +117,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int hardestWorker(int n, vector<vector<int>>& logs) {
-        int ans = 0, mx = 0, last = 0;
-        for (auto& log : logs) {
-            int uid = log[0], t = log[1];
-            t -= last;
-            if (mx < t || (mx == t && ans > uid)) {
-                mx = t;
-                ans = uid;
-            }
-            last += t;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func hardestWorker(n int, logs [][]int) (ans int) {
-	var mx, last int
-	for _, log := range logs {
-		uid, t := log[0], log[1]
-		t -= last
-		if mx < t || (mx == t && uid < ans) {
-			mx = t
-			ans = uid
-		}
-		last += t
-	}
-	return
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -189,41 +148,11 @@ int hardestWorker(int n, int **logs, int logsSize, int *logsColSize) {
 
 ### **TypeScript**
 
-```ts
-function hardestWorker(n: number, logs: number[][]): number {
-    let [ans, mx, last] = [0, 0, 0];
-    for (let [uid, t] of logs) {
-        t -= last;
-        if (mx < t || (mx == t && ans > uid)) {
-            ans = uid;
-            mx = t;
-        }
-        last += t;
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn hardest_worker(n: i32, logs: Vec<Vec<i32>>) -> i32 {
-        let mut res = 0;
-        let mut max = 0;
-        let mut pre = 0;
-        for log in logs.iter() {
-            let t = log[1] - pre;
-            if t > max || t == max && res > log[0] {
-                res = log[0];
-                max = t;
-            }
-            pre = log[1];
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -231,4 +160,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

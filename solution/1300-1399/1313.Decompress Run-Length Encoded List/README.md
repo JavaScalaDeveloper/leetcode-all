@@ -50,14 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def decompressRLElist(self, nums: List[int]) -> List[int]:
-        res = []
-        for i in range(1, len(nums), 2):
-            res.extend([nums[i]] * nums[i - 1])
-        return res
-```
+
 
 ### **Java**
 
@@ -81,68 +74,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> decompressRLElist(vector<int>& nums) {
-        vector<int> res;
-        for (int i = 1; i < nums.size(); i += 2) {
-            for (int j = 0; j < nums[i - 1]; ++j) {
-                res.push_back(nums[i]);
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func decompressRLElist(nums []int) []int {
-	var res []int
-	for i := 1; i < len(nums); i += 2 {
-		for j := 0; j < nums[i-1]; j++ {
-			res = append(res, nums[i])
-		}
-	}
-	return res
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function decompressRLElist(nums: number[]): number[] {
-    let n = nums.length >> 1;
-    let ans = [];
-    for (let i = 0; i < n; i++) {
-        let freq = nums[2 * i],
-            val = nums[2 * i + 1];
-        ans.push(...new Array(freq).fill(val));
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn decompress_rl_elist(nums: Vec<i32>) -> Vec<i32> {
-        let n = nums.len() >> 1;
-        let mut ans = Vec::new();
-        for i in 0..n {
-            for _ in 0..nums[2 * i] {
-                ans.push(nums[2 * i + 1]);
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -172,4 +118,4 @@ int *decompressRLElist(int *nums, int numsSize, int *returnSize) {
 
 ```
 
-<!-- tabs:end -->
+

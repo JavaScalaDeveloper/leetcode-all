@@ -75,24 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getFactors(self, n: int) -> List[List[int]]:
-        def dfs(n, i):
-            if t:
-                ans.append(t + [n])
-            j = i
-            while j * j <= n:
-                if n % j == 0:
-                    t.append(j)
-                    dfs(n // j, j)
-                    t.pop()
-                j += 1
-        t = []
-        ans = []
-        dfs(n, 2)
-        return ans
-```
+
 
 ### **Java**
 
@@ -125,60 +108,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> getFactors(int n) {
-        vector<int> t;
-        vector<vector<int>> ans;
-        function<void(int, int)> dfs = [&](int n, int i) {
-            if (t.size()) {
-                vector<int> cp = t;
-                cp.emplace_back(n);
-                ans.emplace_back(cp);
-            }
-            for (int j = i; j <= n / j; ++j) {
-                if (n % j == 0) {
-                    t.emplace_back(j);
-                    dfs(n / j, j);
-                    t.pop_back();
-                }
-            }
-        };
-        dfs(n, 2);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getFactors(n int) [][]int {
-	t := []int{}
-	ans := [][]int{}
-	var dfs func(n, i int)
-	dfs = func(n, i int) {
-		if len(t) > 0 {
-			cp := make([]int, len(t))
-			copy(cp, t)
-			cp = append(cp, n)
-			ans = append(ans, cp)
-		}
-		for j := i; j <= n/j; j++ {
-			if n%j == 0 {
-				t = append(t, j)
-				dfs(n/j, j)
-				t = t[:len(t)-1]
-			}
-		}
-	}
-	dfs(n, 2)
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -186,4 +122,4 @@ func getFactors(n int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -70,25 +70,7 @@ DFS。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def sumNumbers(self, root: TreeNode) -> int:
-        def dfs(root, presum):
-            if root is None:
-                return 0
-            s = 10 * presum + root.val
-            if root.left is None and root.right is None:
-                return s
-            return dfs(root.left, s) + dfs(root.right, s)
 
-        return dfs(root, 0)
-```
 
 ### **Java**
 
@@ -128,58 +110,10 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int sumNumbers(TreeNode* root) {
-        return dfs(root, 0);
-    }
 
-    int dfs(TreeNode* root, int presum) {
-        if (!root) return 0;
-        int s = presum * 10 + root->val;
-        if (!root->left && !root->right) return s;
-        return dfs(root->left, s) + dfs(root->right, s);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func sumNumbers(root *TreeNode) int {
-    var dfs func(root *TreeNode, presum int) int
-    dfs = func(root *TreeNode, presum int) int {
-        if root == nil {
-            return 0
-        }
-        presum = presum * 10 + root.Val
-        if root.Left == nil && root.Right == nil {
-            return presum
-        }
-        return dfs(root.Left, presum) + dfs(root.Right, presum)
-    }
-    return dfs(root, 0)
-}
-```
+
+
+

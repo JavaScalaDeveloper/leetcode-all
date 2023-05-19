@@ -55,23 +55,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isThree(self, n: int) -> bool:
-        return sum(n % i == 0 for i in range(2, n)) == 1
-```
 
-```python
-class Solution:
-    def isThree(self, n: int) -> bool:
-        cnt = 0
-        i = 1
-        while i <= n // i:
-            if n % i == 0:
-                cnt += 1 if i == n // i else 2
-            i += 1
-        return cnt == 3
-```
+
+
 
 ### **Java**
 
@@ -105,99 +91,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isThree(int n) {
-        int cnt = 0;
-        for (int i = 2; i < n; ++i) {
-            cnt += n % i == 0;
-        }
-        return cnt == 1;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool isThree(int n) {
-        int cnt = 0;
-        for (int i = 1; i <= n / i; ++i) {
-            if (n % i == 0) {
-                cnt += n / i == i ? 1 : 2;
-            }
-        }
-        return cnt == 3;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isThree(n int) bool {
-	cnt := 0
-	for i := 2; i < n; i++ {
-		if n%i == 0 {
-			cnt++
-		}
-	}
-	return cnt == 1
-}
-```
 
-```go
-func isThree(n int) bool {
-	cnt := 0
-	for i := 1; i <= n/i; i++ {
-		if n%i == 0 {
-			if n/i == i {
-				cnt++
-			} else {
-				cnt += 2
-			}
-		}
-	}
-	return cnt == 3
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {boolean}
- */
-var isThree = function (n) {
-    let cnt = 0;
-    for (let i = 2; i < n; ++i) {
-        if (n % i == 0) {
-            ++cnt;
-        }
-    }
-    return cnt == 1;
-};
-```
 
-```js
-/**
- * @param {number} n
- * @return {boolean}
- */
-var isThree = function (n) {
-    let cnt = 0;
-    for (let i = 1; i <= n / i; ++i) {
-        if (n % i == 0) {
-            cnt += ~~(n / i) == i ? 1 : 2;
-        }
-    }
-    return cnt == 3;
-};
-```
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -205,4 +115,4 @@ var isThree = function (n) {
 
 ```
 
-<!-- tabs:end -->
+

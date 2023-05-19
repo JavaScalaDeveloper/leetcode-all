@@ -38,20 +38,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def pairSums(self, nums: List[int], target: int) -> List[List[int]]:
-        cnt = Counter()
-        ans = []
-        for x in nums:
-            y = target - x
-            if cnt[y]:
-                cnt[y] -= 1
-                ans.append([x, y])
-            else:
-                cnt[x] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -78,69 +65,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> pairSums(vector<int>& nums, int target) {
-        unordered_map<int, int> cnt;
-        vector<vector<int>> ans;
-        for (int x : nums) {
-            int y = target - x;
-            if (cnt[y]) {
-                --cnt[y];
-                ans.push_back({x, y});
-            } else {
-                ++cnt[x];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func pairSums(nums []int, target int) (ans [][]int) {
-	cnt := map[int]int{}
-	for _, x := range nums {
-		y := target - x
-		if cnt[y] > 0 {
-			cnt[y]--
-			ans = append(ans, []int{x, y})
-		} else {
-			cnt[x]++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function pairSums(nums: number[], target: number): number[][] {
-    const cnt = new Map();
-    const ans: number[][] = [];
-    for (const x of nums) {
-        const y = target - x;
-        if (cnt.has(y)) {
-            ans.push([x, y]);
-            const yCount = cnt.get(y) - 1;
-            if (yCount === 0) {
-                cnt.delete(y);
-            } else {
-                cnt.set(y, yCount);
-            }
-        } else {
-            cnt.set(x, (cnt.get(x) || 0) + 1);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -148,4 +83,4 @@ function pairSums(nums: number[], target: number): number[][] {
 
 ```
 
-<!-- tabs:end -->
+

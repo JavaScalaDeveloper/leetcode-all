@@ -68,29 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxMoves(self, grid: List[List[int]]) -> int:
-        dirs = ((-1, 1), (0, 1), (1, 1))
-        m, n = len(grid), len(grid[0])
-        q = deque((i, 0) for i in range(m))
-        dist = [[0] * n for _ in range(m)]
-        ans = 0
-        while q:
-            i, j = q.popleft()
-            for a, b in dirs:
-                x, y = i + a, j + b
-                if (
-                    0 <= x < m
-                    and 0 <= y < n
-                    and grid[x][y] > grid[i][j]
-                    and dist[x][y] < dist[i][j] + 1
-                ):
-                    dist[x][y] = dist[i][j] + 1
-                    ans = max(ans, dist[x][y])
-                    q.append((x, y))
-        return ans
-```
+
 
 ### **Java**
 
@@ -125,73 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxMoves(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        int dist[m][n];
-        memset(dist, 0, sizeof(dist));
-        int ans = 0;
-        queue<pair<int, int>> q;
-        for (int i = 0; i < m; ++i) {
-            q.emplace(i, 0);
-        }
-        int dirs[3][2] = {{-1, 1}, {0, 1}, {1, 1}};
-        while (!q.empty()) {
-            auto [i, j] = q.front();
-            q.pop();
-            for (int k = 0; k < 3; ++k) {
-                int x = i + dirs[k][0], y = j + dirs[k][1];
-                if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] > grid[i][j] && dist[x][y] < dist[i][j] + 1) {
-                    dist[x][y] = dist[i][j] + 1;
-                    ans = max(ans, dist[x][y]);
-                    q.emplace(x, y);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxMoves(grid [][]int) (ans int) {
-	m, n := len(grid), len(grid[0])
-	dist := make([][]int, m)
-	q := [][2]int{}
-	for i := range dist {
-		dist[i] = make([]int, n)
-		q = append(q, [2]int{i, 0})
-	}
-	dirs := [][2]int{{-1, 1}, {0, 1}, {1, 1}}
-	for len(q) > 0 {
-		p := q[0]
-		q = q[1:]
-		i, j := p[0], p[1]
-		for _, dir := range dirs {
-			x, y := i+dir[0], j+dir[1]
-			if 0 <= x && x < m && 0 <= y && y < n && grid[x][y] > grid[i][j] && dist[x][y] < dist[i][j]+1 {
-				dist[x][y] = dist[i][j] + 1
-				ans = max(ans, dist[x][y])
-				q = append(q, [2]int{x, y})
-			}
-		}
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -199,4 +117,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

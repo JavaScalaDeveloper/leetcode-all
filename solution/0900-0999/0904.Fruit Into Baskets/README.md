@@ -107,38 +107,9 @@ j   i
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def totalFruit(self, fruits: List[int]) -> int:
-        cnt = Counter()
-        ans = j = 0
-        for i, x in enumerate(fruits):
-            cnt[x] += 1
-            while len(cnt) > 2:
-                y = fruits[j]
-                cnt[y] -= 1
-                if cnt[y] == 0:
-                    cnt.pop(y)
-                j += 1
-            ans = max(ans, i - j + 1)
-        return ans
-```
 
-```python
-class Solution:
-    def totalFruit(self, fruits: List[int]) -> int:
-        cnt = Counter()
-        j = 0
-        for x in fruits:
-            cnt[x] += 1
-            if len(cnt) > 2:
-                y = fruits[j]
-                cnt[y] -= 1
-                if cnt[y] == 0:
-                    cnt.pop(y)
-                j += 1
-        return len(fruits) - j
-```
+
+
 
 ### **Java**
 
@@ -186,188 +157,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int totalFruit(vector<int>& fruits) {
-        unordered_map<int, int> cnt;
-        int ans = 0;
-        for (int i = 0, j = 0; i < fruits.size(); ++i) {
-            int x = fruits[i];
-            ++cnt[x];
-            while (cnt.size() > 2) {
-                int y = fruits[j++];
-                if (--cnt[y] == 0) cnt.erase(y);
-            }
-            ans = max(ans, i - j + 1);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int totalFruit(vector<int>& fruits) {
-        unordered_map<int, int> cnt;
-        int j = 0, n = fruits.size();
-        for (int& x : fruits) {
-            ++cnt[x];
-            if (cnt.size() > 2) {
-                int y = fruits[j++];
-                if (--cnt[y] == 0) cnt.erase(y);
-            }
-        }
-        return n - j;
-    }
-};
-```
 
-### **Go**
 
-```go
-func totalFruit(fruits []int) int {
-	cnt := map[int]int{}
-	ans, j := 0, 0
-	for i, x := range fruits {
-		cnt[x]++
-		for ; len(cnt) > 2; j++ {
-			y := fruits[j]
-			cnt[y]--
-			if cnt[y] == 0 {
-				delete(cnt, y)
-			}
-		}
-		ans = max(ans, i-j+1)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func totalFruit(fruits []int) int {
-	cnt := map[int]int{}
-	j := 0
-	for _, x := range fruits {
-		cnt[x]++
-		if len(cnt) > 2 {
-			y := fruits[j]
-			cnt[y]--
-			if cnt[y] == 0 {
-				delete(cnt, y)
-			}
-			j++
-		}
-	}
-	return len(fruits) - j
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function totalFruit(fruits: number[]): number {
-    const n = fruits.length;
-    const map = new Map<number, number>();
-    let res = 0;
-    let left = 0;
-    let right = 0;
-    while (right < n) {
-        map.set(fruits[right], (map.get(fruits[right]) ?? 0) + 1);
-        right++;
-        while (map.size > 2) {
-            const k = fruits[left++];
-            map.set(k, map.get(k) - 1);
-            if (map.get(k) === 0) {
-                map.delete(k);
-            }
-        }
-        res = Math.max(res, right - left);
-    }
-    return res;
-}
-```
 
-```ts
-function totalFruit(fruits: number[]): number {
-    const n = fruits.length;
-    const map = new Map<number, number>();
-    let i = 0;
-    for (const fruit of fruits) {
-        map.set(fruit, (map.get(fruit) ?? 0) + 1);
-        if (map.size > 2) {
-            const k = fruits[i++];
-            map.set(k, map.get(k) - 1);
-            if (map.get(k) == 0) {
-                map.delete(k);
-            }
-        }
-    }
-    return n - i;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn total_fruit(fruits: Vec<i32>) -> i32 {
-        let n = fruits.len();
-        let mut map = HashMap::new();
-        let mut res = 0;
-        let mut left = 0;
-        let mut right = 0;
-        while right < n {
-            *map.entry(fruits[right]).or_insert(0) += 1;
-            right += 1;
-            while map.len() > 2 {
-                let k = fruits[left];
-                map.insert(k, map[&k] - 1);
-                if map[&k] == 0 {
-                    map.remove(&k);
-                }
-                left += 1;
-            }
-            res = res.max(right - left);
-        }
-        res as i32
-    }
-}
-```
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn total_fruit(fruits: Vec<i32>) -> i32 {
-        let n = fruits.len();
-        let mut map = HashMap::new();
-        let mut i = 0;
-        for &fruit in fruits.iter() {
-            *map.entry(fruit).or_insert(0) += 1;
-            if map.len() > 2 {
-                let k = fruits[i];
-                map.insert(k, map[&k] - 1);
-                if map[&k] == 0 {
-                    map.remove(&k);
-                }
-                i += 1;
-            }
-        }
-        (n - i) as i32
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -375,4 +187,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

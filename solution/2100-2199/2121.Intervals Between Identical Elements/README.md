@@ -63,23 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getDistances(self, arr: List[int]) -> List[int]:
-        d = defaultdict(list)
-        n = len(arr)
-        for i, v in enumerate(arr):
-            d[v].append(i)
-        ans = [0] * n
-        for v in d.values():
-            m = len(v)
-            val = sum(v) - v[0] * m
-            for i, p in enumerate(v):
-                delta = v[i] - v[i - 1] if i >= 1 else 0
-                val += i * delta - (m - i) * delta
-                ans[p] = val
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,70 +96,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<long long> getDistances(vector<int>& arr) {
-        unordered_map<int, vector<int>> d;
-        int n = arr.size();
-        for (int i = 0; i < n; ++i) d[arr[i]].push_back(i);
-        vector<long long> ans(n);
-        for (auto& item : d) {
-            auto& v = item.second;
-            int m = v.size();
-            long long val = 0;
-            for (int e : v) val += e;
-            val -= m * v[0];
-            for (int i = 0; i < v.size(); ++i) {
-                int delta = i >= 1 ? v[i] - v[i - 1] : 0;
-                val += i * delta - (m - i) * delta;
-                ans[v[i]] = val;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getDistances(arr []int) []int64 {
-	d := make(map[int][]int)
-	n := len(arr)
-	for i, v := range arr {
-		d[v] = append(d[v], i)
-	}
-	ans := make([]int64, n)
-	for _, v := range d {
-		m := len(v)
-		val := 0
-		for _, e := range v {
-			val += e
-		}
-		val -= m * v[0]
-		for i, p := range v {
-			delta := 0
-			if i >= 1 {
-				delta = v[i] - v[i-1]
-			}
-			val += i*delta - (m-i)*delta
-			ans[p] = int64(val)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -183,4 +116,4 @@ func getDistances(arr []int) []int64 {
 
 ```
 
-<!-- tabs:end -->
+

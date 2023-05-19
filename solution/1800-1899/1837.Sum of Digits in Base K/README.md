@@ -53,15 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sumBase(self, n: int, k: int) -> int:
-        ans = 0
-        while n:
-            ans += n % k
-            n //= k
-        return ans
-```
+
 
 ### **Java**
 
@@ -80,79 +72,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int sumBase(int n, int k) {
-        int ans = 0;
-        while (n) {
-            ans += n % k;
-            n /= k;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sumBase(n int, k int) (ans int) {
-	for n > 0 {
-		ans += n % k
-		n /= k
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @param {number} k
- * @return {number}
- */
-var sumBase = function (n, k) {
-    let ans = 0;
-    while (n) {
-        ans += n % k;
-        n = Math.floor(n / k);
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function sumBase(n: number, k: number): number {
-    let ans = 0;
-    while (n) {
-        ans += n % k;
-        n = Math.floor(n / k);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sum_base(mut n: i32, k: i32) -> i32 {
-        let mut ans = 0;
-        while n != 0 {
-            ans += n % k;
-            n /= k;
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -173,4 +111,4 @@ int sumBase(int n, int k) {
 
 ```
 
-<!-- tabs:end -->
+

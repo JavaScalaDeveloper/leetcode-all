@@ -69,28 +69,7 @@ Kruskal 算法的基本思想是，每次从边集中选择一条最小的边，
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumCost(self, n: int, connections: List[List[int]]) -> int:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        connections.sort(key=lambda x: x[2])
-        p = list(range(n))
-        ans = 0
-        for x, y, cost in connections:
-            x, y = x - 1, y - 1
-            if find(x) == find(y):
-                continue
-            p[find(x)] = find(y)
-            ans += cost
-            n -= 1
-            if n == 1:
-                return ans
-        return -1
-```
 
 ### **Java**
 
@@ -130,99 +109,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumCost(int n, vector<vector<int>>& connections) {
-        vector<int> p(n);
-        iota(p.begin(), p.end(), 0);
-        sort(connections.begin(), connections.end(), [](auto& a, auto& b) { return a[2] < b[2]; });
-        int ans = 0;
-        function<int(int)> find = [&](int x) -> int {
-            if (p[x] != x) {
-                p[x] = find(p[x]);
-            }
-            return p[x];
-        };
-        for (auto& e : connections) {
-            int x = e[0] - 1, y = e[1] - 1, cost = e[2];
-            if (find(x) == find(y)) {
-                continue;
-            }
-            p[find(x)] = find(y);
-            ans += cost;
-            if (--n == 1) {
-                return ans;
-            }
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumCost(n int, connections [][]int) (ans int) {
-	p := make([]int, n)
-	for i := range p {
-		p[i] = i
-	}
-	sort.Slice(connections, func(i, j int) bool { return connections[i][2] < connections[j][2] })
-	var find func(int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	for _, e := range connections {
-		x, y, cost := e[0]-1, e[1]-1, e[2]
-		if find(x) == find(y) {
-			continue
-		}
-		p[find(x)] = find(y)
-		ans += cost
-		n--
-		if n == 1 {
-			return
-		}
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumCost(n: number, connections: number[][]): number {
-    const p = new Array(n);
-    for (let i = 0; i < n; ++i) {
-        p[i] = i;
-    }
-    const find = (x: number): number => {
-        if (p[x] !== x) {
-            p[x] = find(p[x]);
-        }
-        return p[x];
-    };
-    connections.sort((a, b) => a[2] - b[2]);
-    let ans = 0;
-    for (const [x, y, cost] of connections) {
-        if (find(x - 1) == find(y - 1)) {
-            continue;
-        }
-        p[find(x - 1)] = find(y - 1);
-        ans += cost;
-        if (--n == 1) {
-            return ans;
-        }
-    }
-    return -1;
-}
-```
+
 
 ### **...**
 
@@ -230,4 +127,4 @@ function minimumCost(n: number, connections: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

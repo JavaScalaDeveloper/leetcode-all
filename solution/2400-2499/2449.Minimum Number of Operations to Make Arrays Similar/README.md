@@ -82,13 +82,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makeSimilar(self, nums: List[int], target: List[int]) -> int:
-        nums.sort(key=lambda x: (x & 1, x))
-        target.sort(key=lambda x: (x & 1, x))
-        return sum(abs(a - b) for a, b in zip(nums, target)) // 4
-```
+
 
 ### **Java**
 
@@ -129,82 +123,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long makeSimilar(vector<int>& nums, vector<int>& target) {
-        sort(nums.begin(), nums.end());
-        sort(target.begin(), target.end());
-        vector<int> a1;
-        vector<int> a2;
-        vector<int> b1;
-        vector<int> b2;
-        for (int v : nums) {
-            if (v & 1)
-                a1.emplace_back(v);
-            else
-                a2.emplace_back(v);
-        }
-        for (int v : target) {
-            if (v & 1)
-                b1.emplace_back(v);
-            else
-                b2.emplace_back(v);
-        }
-        long long ans = 0;
-        for (int i = 0; i < a1.size(); ++i) ans += abs(a1[i] - b1[i]);
-        for (int i = 0; i < a2.size(); ++i) ans += abs(a2[i] - b2[i]);
-        return ans / 4;
-    }
-};
-```
 
-### **Go**
 
-```go
-func makeSimilar(nums []int, target []int) int64 {
-	sort.Ints(nums)
-	sort.Ints(target)
-	a1, a2, b1, b2 := []int{}, []int{}, []int{}, []int{}
-	for _, v := range nums {
-		if v%2 == 0 {
-			a1 = append(a1, v)
-		} else {
-			a2 = append(a2, v)
-		}
-	}
-	for _, v := range target {
-		if v%2 == 0 {
-			b1 = append(b1, v)
-		} else {
-			b2 = append(b2, v)
-		}
-	}
-	ans := 0
-	for i := 0; i < len(a1); i++ {
-		ans += abs(a1[i] - b1[i])
-	}
-	for i := 0; i < len(a2); i++ {
-		ans += abs(a2[i] - b2[i])
-	}
-	return int64(ans / 4)
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -212,4 +141,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -73,16 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def optimalDivision(self, nums: List[int]) -> str:
-        n = len(nums)
-        if n == 1:
-            return str(nums[0])
-        if n == 2:
-            return f'{nums[0]}/{nums[1]}'
-        return f'{nums[0]}/({"/".join(map(str, nums[1:]))})'
-```
+
 
 ### **Java**
 
@@ -108,83 +99,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string optimalDivision(vector<int>& nums) {
-        int n = nums.size();
-        if (n == 1) return to_string(nums[0]);
-        if (n == 2) return to_string(nums[0]) + "/" + to_string(nums[1]);
-        string ans = to_string(nums[0]) + "/(";
-        for (int i = 1; i < n - 1; i++) ans.append(to_string(nums[i]) + "/");
-        ans.append(to_string(nums[n - 1]) + ")");
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func optimalDivision(nums []int) string {
-	n := len(nums)
-	if n == 1 {
-		return strconv.Itoa(nums[0])
-	}
-	if n == 2 {
-		return fmt.Sprintf("%d/%d", nums[0], nums[1])
-	}
-	ans := &strings.Builder{}
-	ans.WriteString(fmt.Sprintf("%d/(", nums[0]))
-	for _, num := range nums[1 : n-1] {
-		ans.WriteString(strconv.Itoa(num))
-		ans.WriteByte('/')
-	}
-	ans.WriteString(fmt.Sprintf("%d)", nums[n-1]))
-	return ans.String()
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function optimalDivision(nums: number[]): string {
-    const n = nums.length;
-    const res = nums.join('/');
-    if (n > 2) {
-        const index = res.indexOf('/') + 1;
-        return `${res.slice(0, index)}(${res.slice(index)})`;
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn optimal_division(nums: Vec<i32>) -> String {
-        let n = nums.len();
-        match n {
-            1 => nums[0].to_string(),
-            2 => nums[0].to_string() + "/" + &nums[1].to_string(),
-            _ => {
-                let mut res = nums[0].to_string();
-                res.push_str("/(");
-                for i in 1..n {
-                    res.push_str(&nums[i].to_string());
-                    res.push('/');
-                }
-                res.pop();
-                res.push(')');
-                res
-            }
-        }
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -192,4 +121,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

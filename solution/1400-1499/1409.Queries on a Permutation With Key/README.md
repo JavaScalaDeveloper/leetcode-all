@@ -80,59 +80,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def processQueries(self, queries: List[int], m: int) -> List[int]:
-        p = list(range(1, m + 1))
-        ans = []
-        for v in queries:
-            j = p.index(v)
-            ans.append(j)
-            p.pop(j)
-            p.insert(0, v)
-        return ans
-```
 
-```python
-class BinaryIndexedTree:
-    def __init__(self, n):
-        self.n = n
-        self.c = [0] * (n + 1)
 
-    @staticmethod
-    def lowbit(x):
-        return x & -x
 
-    def update(self, x, delta):
-        while x <= self.n:
-            self.c[x] += delta
-            x += BinaryIndexedTree.lowbit(x)
-
-    def query(self, x):
-        s = 0
-        while x > 0:
-            s += self.c[x]
-            x -= BinaryIndexedTree.lowbit(x)
-        return s
-
-class Solution:
-    def processQueries(self, queries: List[int], m: int) -> List[int]:
-        n = len(queries)
-        pos = [0] * (m + 1)
-        tree = BinaryIndexedTree(m + n)
-        for i in range(1, m + 1):
-            pos[i] = n + i
-            tree.update(n + i, 1)
-
-        ans = []
-        for i, v in enumerate(queries):
-            j = pos[v]
-            tree.update(j, -1)
-            ans.append(tree.query(j))
-            pos[v] = n - i
-            tree.update(n - i, 1)
-        return ans
-```
 
 ### **Java**
 
@@ -213,164 +163,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> processQueries(vector<int>& queries, int m) {
-        vector<int> p(m);
-        iota(p.begin(), p.end(), 1);
-        vector<int> ans;
-        for (int v : queries) {
-            int j = 0;
-            for (int i = 0; i < m; ++i) {
-                if (p[i] == v) {
-                    j = i;
-                    break;
-                }
-            }
-            ans.push_back(j);
-            p.erase(p.begin() + j);
-            p.insert(p.begin(), v);
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class BinaryIndexedTree {
-public:
-    int n;
-    vector<int> c;
 
-    BinaryIndexedTree(int _n): n(_n), c(_n + 1){}
 
-    void update(int x, int delta) {
-        while (x <= n)
-        {
-            c[x] += delta;
-            x += lowbit(x);
-        }
-    }
 
-    int query(int x) {
-        int s = 0;
-        while (x > 0)
-        {
-            s += c[x];
-            x -= lowbit(x);
-        }
-        return s;
-    }
 
-    int lowbit(int x) {
-        return x & -x;
-    }
-};
 
-class Solution {
-public:
-    vector<int> processQueries(vector<int>& queries, int m) {
-        int n = queries.size();
-        vector<int> pos(m + 1);
-        BinaryIndexedTree* tree = new BinaryIndexedTree(m + n);
-        for (int i = 1; i <= m; ++i)
-        {
-            pos[i] = n + i;
-            tree->update(n + i, 1);
-        }
-        vector<int> ans;
-        for (int i = 0; i < n; ++i)
-        {
-            int v = queries[i];
-            int j = pos[v];
-            tree->update(j, -1);
-            ans.push_back(tree->query(j));
-            pos[v] = n - i;
-            tree->update(n - i, 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func processQueries(queries []int, m int) []int {
-	p := make([]int, m)
-	for i := range p {
-		p[i] = i + 1
-	}
-	ans := []int{}
-	for _, v := range queries {
-		j := 0
-		for i := range p {
-			if p[i] == v {
-				j = i
-				break
-			}
-		}
-		ans = append(ans, j)
-		p = append(p[:j], p[j+1:]...)
-		p = append([]int{v}, p...)
-	}
-	return ans
-}
-```
 
-```go
-type BinaryIndexedTree struct {
-	n int
-	c []int
-}
 
-func newBinaryIndexedTree(n int) *BinaryIndexedTree {
-	c := make([]int, n+1)
-	return &BinaryIndexedTree{n, c}
-}
-
-func (this *BinaryIndexedTree) lowbit(x int) int {
-	return x & -x
-}
-
-func (this *BinaryIndexedTree) update(x, delta int) {
-	for x <= this.n {
-		this.c[x] += delta
-		x += this.lowbit(x)
-	}
-}
-
-func (this *BinaryIndexedTree) query(x int) int {
-	s := 0
-	for x > 0 {
-		s += this.c[x]
-		x -= this.lowbit(x)
-	}
-	return s
-}
-
-func processQueries(queries []int, m int) []int {
-	n := len(queries)
-	pos := make([]int, m+1)
-	tree := newBinaryIndexedTree(m + n)
-	for i := 1; i <= m; i++ {
-		pos[i] = n + i
-		tree.update(n+i, 1)
-	}
-	ans := []int{}
-	for i, v := range queries {
-		j := pos[v]
-		tree.update(j, -1)
-		ans = append(ans, tree.query(j))
-		pos[v] = n - i
-		tree.update(n-i, 1)
-	}
-	return ans
-}
-```
 
 ### **...**
 
@@ -378,4 +181,4 @@ func processQueries(queries []int, m int) []int {
 
 ```
 
-<!-- tabs:end -->
+

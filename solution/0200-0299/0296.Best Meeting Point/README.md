@@ -67,23 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minTotalDistance(self, grid: List[List[int]]) -> int:
-        def f(arr, x):
-            return sum(abs(v - x) for v in arr)
 
-        rows, cols = [], []
-        for i, row in enumerate(grid):
-            for j, v in enumerate(row):
-                if v:
-                    rows.append(i)
-                    cols.append(j)
-        cols.sort()
-        i = rows[len(rows) >> 1]
-        j = cols[len(cols) >> 1]
-        return f(rows, i) + f(cols, j)
-```
 
 ### **Java**
 
@@ -119,71 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minTotalDistance(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<int> rows;
-        vector<int> cols;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j]) {
-                    rows.emplace_back(i);
-                    cols.emplace_back(j);
-                }
-            }
-        }
-        sort(cols.begin(), cols.end());
-        int i = rows[rows.size() / 2];
-        int j = cols[cols.size() / 2];
-        auto f = [](vector<int>& arr, int x) {
-            int s = 0;
-            for (int v : arr) {
-                s += abs(v - x);
-            }
-            return s;
-        };
-        return f(rows, i) + f(cols, j);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minTotalDistance(grid [][]int) int {
-	rows, cols := []int{}, []int{}
-	for i, row := range grid {
-		for j, v := range row {
-			if v == 1 {
-				rows = append(rows, i)
-				cols = append(cols, j)
-			}
-		}
-	}
-	sort.Ints(cols)
-	i := rows[len(rows)>>1]
-	j := cols[len(cols)>>1]
-	f := func(arr []int, x int) int {
-		s := 0
-		for _, v := range arr {
-			s += abs(v - x)
-		}
-		return s
-	}
-	return f(rows, i) + f(cols, j)
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **...**
 
@@ -191,4 +117,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -67,20 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
-        s = 0
-        mp = {0: -1}
-        for i, v in enumerate(nums):
-            s += v
-            r = s % k
-            if r in mp and i - mp[r] >= 2:
-                return True
-            if r not in mp:
-                mp[r] = i
-        return False
-```
+
 
 ### **Java**
 
@@ -107,45 +94,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkSubarraySum(vector<int>& nums, int k) {
-        unordered_map<int, int> mp;
-        mp[0] = -1;
-        int s = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            s += nums[i];
-            int r = s % k;
-            if (mp.count(r) && i - mp[r] >= 2) return true;
-            if (!mp.count(r)) mp[r] = i;
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkSubarraySum(nums []int, k int) bool {
-	mp := map[int]int{0: -1}
-	s := 0
-	for i, v := range nums {
-		s += v
-		r := s % k
-		if j, ok := mp[r]; ok && i-j >= 2 {
-			return true
-		}
-		if _, ok := mp[r]; !ok {
-			mp[r] = i
-		}
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -153,4 +108,4 @@ func checkSubarraySum(nums []int, k int) bool {
 
 ```
 
-<!-- tabs:end -->
+

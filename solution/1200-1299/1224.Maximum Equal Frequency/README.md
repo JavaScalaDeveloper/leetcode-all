@@ -62,26 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxEqualFreq(self, nums: List[int]) -> int:
-        cnt = Counter()
-        ccnt = Counter()
-        ans = mx = 0
-        for i, v in enumerate(nums, 1):
-            if v in cnt:
-                ccnt[cnt[v]] -= 1
-            cnt[v] += 1
-            mx = max(mx, cnt[v])
-            ccnt[cnt[v]] += 1
-            if mx == 1:
-                ans = i
-            elif ccnt[mx] * mx + ccnt[mx - 1] * (mx - 1) == i and ccnt[mx] == 1:
-                ans = i
-            elif ccnt[mx] * mx + 1 == i and ccnt[1] == 1:
-                ans = i
-        return ans
-```
+
 
 ### **Java**
 
@@ -118,106 +99,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxEqualFreq(vector<int>& nums) {
-        unordered_map<int, int> cnt;
-        unordered_map<int, int> ccnt;
-        int ans = 0, mx = 0;
-        for (int i = 1; i <= nums.size(); ++i) {
-            int v = nums[i - 1];
-            if (cnt[v]) --ccnt[cnt[v]];
-            ++cnt[v];
-            mx = max(mx, cnt[v]);
-            ++ccnt[cnt[v]];
-            if (mx == 1)
-                ans = i;
-            else if (ccnt[mx] * mx + ccnt[mx - 1] * (mx - 1) == i && ccnt[mx] == 1)
-                ans = i;
-            else if (ccnt[mx] * mx + 1 == i && ccnt[1] == 1)
-                ans = i;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxEqualFreq(nums []int) int {
-	cnt := map[int]int{}
-	ccnt := map[int]int{}
-	ans, mx := 0, 0
-	for i, v := range nums {
-		i++
-		if cnt[v] > 0 {
-			ccnt[cnt[v]]--
-		}
-		cnt[v]++
-		mx = max(mx, cnt[v])
-		ccnt[cnt[v]]++
-		if mx == 1 {
-			ans = i
-		} else if ccnt[mx]*mx+ccnt[mx-1]*(mx-1) == i && ccnt[mx] == 1 {
-			ans = i
-		} else if ccnt[mx]*mx+1 == i && ccnt[1] == 1 {
-			ans = i
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxEqualFreq(nums: number[]): number {
-    const n = nums.length;
-    const map = new Map();
-    for (const num of nums) {
-        map.set(num, (map.get(num) ?? 0) + 1);
-    }
 
-    for (let i = n - 1; i > 0; i--) {
-        for (const k of map.keys()) {
-            map.set(k, map.get(k) - 1);
-            let num = 0;
-            for (const v of map.values()) {
-                if (v !== 0) {
-                    num = v;
-                    break;
-                }
-            }
-            let isOk = true;
-            let sum = 1;
-            for (const v of map.values()) {
-                if (v !== 0 && v !== num) {
-                    isOk = false;
-                    break;
-                }
-                sum += v;
-            }
-            if (isOk) {
-                return sum;
-            }
-            map.set(k, map.get(k) + 1);
-        }
-        map.set(nums[i], map.get(nums[i]) - 1);
-    }
-    return 1;
-}
-```
 
 ### **...**
 
@@ -225,4 +117,4 @@ function maxEqualFreq(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

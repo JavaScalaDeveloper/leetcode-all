@@ -57,18 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumProduct(self, nums: List[int], k: int) -> int:
-        heapify(nums)
-        for _ in range(k):
-            heappush(nums, heappop(nums) + 1)
-        ans = 1
-        mod = 10**9 + 7
-        for v in nums:
-            ans = (ans * v) % mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -95,73 +84,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumProduct(vector<int>& nums, int k) {
-        int mod = 1e9 + 7;
-        make_heap(nums.begin(), nums.end(), greater<int>());
-        while (k--) {
-            pop_heap(nums.begin(), nums.end(), greater<int>());
-            ++nums.back();
-            push_heap(nums.begin(), nums.end(), greater<int>());
-        }
-        long long ans = 1;
-        for (int v : nums) ans = (ans * v) % mod;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumProduct(nums []int, k int) int {
-	h := hp{nums}
-	for heap.Init(&h); k > 0; k-- {
-		h.IntSlice[0]++
-		heap.Fix(&h, 0)
-	}
-	ans := 1
-	for _, v := range nums {
-		ans = (ans * v) % (1e9 + 7)
-	}
-	return ans
-}
 
-type hp struct{ sort.IntSlice }
 
-func (hp) Push(interface{})     {}
-func (hp) Pop() (_ interface{}) { return }
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {number}
- */
-var maximumProduct = function (nums, k) {
-    const n = nums.length;
-    let pq = new MinPriorityQueue();
-    for (let i = 0; i < n; i++) {
-        pq.enqueue(nums[i]);
-    }
-    for (let i = 0; i < k; i++) {
-        pq.enqueue(pq.dequeue().element + 1);
-    }
-    let ans = 1;
-    const limit = 10 ** 9 + 7;
-    for (let i = 0; i < n; i++) {
-        ans = (ans * pq.dequeue().element) % limit;
-    }
-    return ans;
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -169,4 +102,4 @@ var maximumProduct = function (nums, k) {
 
 ```
 
-<!-- tabs:end -->
+

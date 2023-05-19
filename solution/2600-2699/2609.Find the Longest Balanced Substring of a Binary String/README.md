@@ -78,41 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findTheLongestBalancedSubstring(self, s: str) -> int:
-        def check(i, j):
-            cnt = 0
-            for k in range(i, j + 1):
-                if s[k] == '1':
-                    cnt += 1
-                elif cnt:
-                    return False
-            return cnt * 2 == (j - i + 1)
 
-        n = len(s)
-        ans = 0
-        for i in range(n):
-            for j in range(i + 1, n):
-                if check(i, j):
-                    ans = max(ans, j - i + 1)
-        return ans
-```
 
-```python
-class Solution:
-    def findTheLongestBalancedSubstring(self, s: str) -> int:
-        ans = zero = one = 0
-        for c in s:
-            if c == '0':
-                if one:
-                    zero = one = 0
-                zero += 1
-            else:
-                one += 1
-                ans = max(ans, 2 * min(one, zero))
-        return ans
-```
+
 
 ### **Java**
 
@@ -168,172 +136,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findTheLongestBalancedSubstring(string s) {
-        int n = s.size();
-        int ans = 0;
-        auto check = [&](int i, int j) -> bool {
-            int cnt = 0;
-            for (int k = i; k <= j; ++k) {
-                if (s[k] == '1') {
-                    ++cnt;
-                } else if (cnt) {
-                    return false;
-                }
-            }
-            return cnt * 2 == j - i + 1;
-        };
-        for (int i = 0; i < n; ++i) {
-            for (int j = i + 1; j < n; ++j) {
-                if (check(i, j)) {
-                    ans = max(ans, j - i + 1);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int findTheLongestBalancedSubstring(string s) {
-        int zero = 0, one = 0;
-        int ans = 0;
-        for (char& c : s) {
-            if (c == '0') {
-                if (one > 0) {
-                    zero = 0;
-                    one = 0;
-                }
-                ++zero;
-            } else {
-                ans = max(ans, 2 * min(zero, ++one));
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findTheLongestBalancedSubstring(s string) (ans int) {
-	n := len(s)
-	check := func(i, j int) bool {
-		cnt := 0
-		for k := i; k <= j; k++ {
-			if s[k] == '1' {
-				cnt++
-			} else if cnt > 0 {
-				return false
-			}
-		}
-		return cnt*2 == j-i+1
-	}
-	for i := 0; i < n; i++ {
-		for j := i + 1; j < n; j++ {
-			if check(i, j) {
-				ans = max(ans, j-i+1)
-			}
-		}
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func findTheLongestBalancedSubstring(s string) (ans int) {
-	zero, one := 0, 0
-	for _, c := range s {
-		if c == '0' {
-			if one > 0 {
-				zero, one = 0, 0
-			}
-			zero++
-		} else {
-			one++
-			ans = max(ans, 2*min(zero, one))
-		}
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findTheLongestBalancedSubstring(s: string): number {
-    const n = s.length;
-    let ans = 0;
-    const check = (i: number, j: number): boolean => {
-        let cnt = 0;
-        for (let k = i; k <= j; ++k) {
-            if (s[k] === '1') {
-                ++cnt;
-            } else if (cnt > 0) {
-                return false;
-            }
-        }
-        return cnt * 2 === j - i + 1;
-    };
-    for (let i = 0; i < n; ++i) {
-        for (let j = i + 1; j < n; j += 2) {
-            if (check(i, j)) {
-                ans = Math.max(ans, j - i + 1);
-            }
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function findTheLongestBalancedSubstring(s: string): number {
-    let zero = 0;
-    let one = 0;
-    let ans = 0;
-    for (const c of s) {
-        if (c === '0') {
-            if (one > 0) {
-                zero = 0;
-                one = 0;
-            }
-            ++zero;
-        } else {
-            ans = Math.max(ans, 2 * Math.min(zero, ++one));
-        }
-    }
-    return ans;
-}
-```
+
+
 
 ### **...**
 
@@ -341,4 +160,4 @@ function findTheLongestBalancedSubstring(s: string): number {
 
 ```
 
-<!-- tabs:end -->
+

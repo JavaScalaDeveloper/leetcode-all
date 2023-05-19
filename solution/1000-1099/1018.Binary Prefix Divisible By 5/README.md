@@ -59,16 +59,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
-        ans = []
-        x = 0
-        for v in nums:
-            x = (x << 1 | v) % 5
-            ans.append(x == 0)
-        return ans
-```
+
 
 ### **Java**
 
@@ -88,49 +79,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<bool> prefixesDivBy5(vector<int>& nums) {
-        vector<bool> ans;
-        int x = 0;
-        for (int v : nums) {
-            x = (x << 1 | v) % 5;
-            ans.push_back(x == 0);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func prefixesDivBy5(nums []int) (ans []bool) {
-	x := 0
-	for _, v := range nums {
-		x = (x<<1 | v) % 5
-		ans = append(ans, x == 0)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function prefixesDivBy5(nums: number[]): boolean[] {
-    const ans: boolean[] = [];
-    let x = 0;
-    for (const v of nums) {
-        x = ((x << 1) | v) % 5;
-        ans.push(x === 0);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -138,4 +97,4 @@ function prefixesDivBy5(nums: number[]): boolean[] {
 
 ```
 
-<!-- tabs:end -->
+

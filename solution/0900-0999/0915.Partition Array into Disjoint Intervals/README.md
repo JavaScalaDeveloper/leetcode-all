@@ -66,19 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def partitionDisjoint(self, nums: List[int]) -> int:
-        n = len(nums)
-        mi = [inf] * (n + 1)
-        for i in range(n - 1, -1, -1):
-            mi[i] = min(nums[i], mi[i + 1])
-        mx = 0
-        for i, v in enumerate(nums, 1):
-            mx = max(mx, v)
-            if mx <= mi[i]:
-                return i
-```
+
 
 ### **Java**
 
@@ -106,61 +94,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int partitionDisjoint(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> mi(n + 1, INT_MAX);
-        for (int i = n - 1; ~i; --i) mi[i] = min(nums[i], mi[i + 1]);
-        int mx = 0;
-        for (int i = 1; i <= n; ++i) {
-            int v = nums[i - 1];
-            mx = max(mx, v);
-            if (mx <= mi[i]) return i;
-        }
-        return 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func partitionDisjoint(nums []int) int {
-	n := len(nums)
-	mi := make([]int, n+1)
-	mi[n] = nums[n-1]
-	for i := n - 1; i >= 0; i-- {
-		mi[i] = min(nums[i], mi[i+1])
-	}
-	mx := 0
-	for i := 1; i <= n; i++ {
-		v := nums[i-1]
-		mx = max(mx, v)
-		if mx <= mi[i] {
-			return i
-		}
-	}
-	return 0
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -168,4 +108,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

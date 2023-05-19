@@ -69,28 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countValidWords(self, sentence: str) -> int:
-        def check(token):
-            hyphen = False
-            for i, c in enumerate(token):
-                if c.isdigit() or (c in '!.,' and i < len(token) - 1):
-                    return False
-                if c == '-':
-                    if (
-                        hyphen
-                        or i == 0
-                        or i == len(token) - 1
-                        or not token[i - 1].islower()
-                        or not token[i + 1].islower()
-                    ):
-                        return False
-                    hyphen = True
-            return True
 
-        return sum(check(token) for token in sentence.split())
-```
 
 ### **Java**
 
@@ -134,44 +113,7 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function countValidWords(sentence: string): number {
-    let words = sentence.trim().split(/\s+/);
-    let ans = 0;
-    for (let word of words) {
-        if (isValied(word)) {
-            ans++;
-        }
-    }
-    return ans;
-}
 
-function isValied(str: string): boolean {
-    let n = str.length;
-    let hasLine = false;
-    for (let i = 0; i < n; i++) {
-        const char = str.charAt(i);
-        if (/^[0-9]$/.test(char)) {
-            return false;
-        }
-        if (char == '-') {
-            if (hasLine) return false;
-            else {
-                hasLine = true;
-            }
-            let pre = str.charAt(i - 1),
-                post = str.charAt(i + 1);
-            if (!/^[a-z]$/g.test(pre) || !/^[a-z]$/g.test(post)) {
-                return false;
-            }
-        }
-        if (/^[\!\.\,\s]$/.test(char) && i != n - 1) {
-            return false;
-        }
-    }
-    return true;
-}
-```
 
 ### **...**
 
@@ -179,4 +121,4 @@ function isValied(str: string): boolean {
 
 ```
 
-<!-- tabs:end -->
+

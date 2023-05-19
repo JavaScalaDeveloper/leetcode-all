@@ -80,20 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minPatches(self, nums: List[int], n: int) -> int:
-        x = 1
-        ans = i = 0
-        while x <= n:
-            if i < len(nums) and nums[i] <= x:
-                x += nums[i]
-                i += 1
-            else:
-                ans += 1
-                x <<= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -117,62 +104,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minPatches(vector<int>& nums, int n) {
-        long long x = 1;
-        int ans = 0;
-        for (int i = 0; x <= n;) {
-            if (i < nums.size() && nums[i] <= x) {
-                x += nums[i++];
-            } else {
-                ++ans;
-                x <<= 1;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minPatches(nums []int, n int) (ans int) {
-	x := 1
-	for i := 0; x <= n; {
-		if i < len(nums) && nums[i] <= x {
-			x += nums[i]
-			i++
-		} else {
-			ans++
-			x <<= 1
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minPatches(nums: number[], n: number): number {
-    let x = 1;
-    let ans = 0;
-    for (let i = 0; x <= n; ) {
-        if (i < nums.length && nums[i] <= x) {
-            x += nums[i++];
-        } else {
-            ++ans;
-            x *= 2;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -180,4 +122,4 @@ function minPatches(nums: number[], n: number): number {
 
 ```
 
-<!-- tabs:end -->
+

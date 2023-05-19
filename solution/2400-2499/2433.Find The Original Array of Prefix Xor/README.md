@@ -80,11 +80,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findArray(self, pref: List[int]) -> List[int]:
-        return [a ^ b for a, b in pairwise([0] + pref)]
-```
+
 
 ### **Java**
 
@@ -104,34 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findArray(vector<int>& pref) {
-        int n = pref.size();
-        vector<int> ans = {pref[0]};
-        for (int i = 1; i < n; ++i) {
-            ans.push_back(pref[i - 1] ^ pref[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findArray(pref []int) []int {
-	n := len(pref)
-	ans := []int{pref[0]}
-	for i := 1; i < n; i++ {
-		ans = append(ans, pref[i-1]^pref[i])
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -152,31 +127,11 @@ int *findArray(int *pref, int prefSize, int *returnSize) {
 
 ### **TypeScript**
 
-```ts
-function findArray(pref: number[]): number[] {
-    let ans = pref.slice();
-    for (let i = 1; i < pref.length; i++) {
-        ans[i] = pref[i - 1] ^ pref[i];
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn find_array(pref: Vec<i32>) -> Vec<i32> {
-        let n = pref.len();
-        let mut res = vec![0; n];
-        res[0] = pref[0];
-        for i in 1..n {
-            res[i] = pref[i] ^ pref[i - 1];
-        }
-        res
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -184,4 +139,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

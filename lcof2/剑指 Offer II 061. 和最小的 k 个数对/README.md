@@ -65,19 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def kSmallestPairs(
-        self, nums1: List[int], nums2: List[int], k: int
-    ) -> List[List[int]]:
-        hp = []
-        for x in nums1[:k]:
-            for y in nums2[:k]:
-                heappush(hp, (-(x + y), [x, y]))
-                if len(hp) > k:
-                    heappop(hp)
-        return [p for _, p in hp]
-```
+
 
 ### **Java**
 
@@ -101,63 +89,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-type pairHeap [][]int
 
-func (a pairHeap) Len() int            { return len(a) }
-func (a pairHeap) Swap(i, j int)       { a[i], a[j] = a[j], a[i] }
-func (a pairHeap) Less(i, j int) bool  { return a[i][0]+a[i][1] > a[j][0]+a[j][1] }
-func (a *pairHeap) Push(x interface{}) { *a = append(*a, x.([]int)) }
-func (a *pairHeap) Pop() interface{}   { l := len(*a); tmp := (*a)[l-1]; *a = (*a)[:l-1]; return tmp }
 
-func kSmallestPairs(nums1 []int, nums2 []int, k int) [][]int {
-	var hp pairHeap
-	for _, x := range nums1[:min(k, len(nums1))] {
-		for _, y := range nums2[:min(k, len(nums2))] {
-			heap.Push(&hp, []int{x, y})
-			if len(hp) > k {
-				heap.Pop(&hp)
-			}
-		}
-	}
-	return hp
-}
 
-func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
-        using pii = pair<int, int>;
-        auto cmp = [](pii p1, pii p2) { return p1.first + p1.second < p2.first + p2.second; };
-        priority_queue<pii, vector<pii>, decltype(cmp)> pq(cmp);
-        for (int i = 0; i < nums1.size() && i < k; ++i) {
-            for (int j = 0; j < nums2.size() && j < k; ++j) {
-                pq.push({nums1[i], nums2[j]});
-                if (pq.size() > k) pq.pop();
-            }
-        }
-        vector<vector<int>> ans;
-        while (!pq.empty()) {
-            pii p = pq.top();
-            pq.pop();
-            ans.push_back({p.first, p.second});
-        }
-        return ans;
-    }
-};
-```
+
 
 ### **...**
 
@@ -165,4 +103,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

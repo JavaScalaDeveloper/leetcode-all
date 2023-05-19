@@ -65,16 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canJump(self, nums: List[int]) -> bool:
-        mx = 0
-        for i, x in enumerate(nums):
-            if mx < i:
-                return False
-            mx = max(mx, i + x)
-        return True
-```
+
 
 ### **Java**
 
@@ -95,96 +86,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool canJump(vector<int>& nums) {
-        int mx = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (mx < i) {
-                return false;
-            }
-            mx = max(mx, i + nums[i]);
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func canJump(nums []int) bool {
-	mx := 0
-	for i, x := range nums {
-		if mx < i {
-			return false
-		}
-		mx = max(mx, i+x)
-	}
-	return true
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function canJump(nums: number[]): boolean {
-    let mx: number = 0;
-    for (let i = 0; i < nums.length; ++i) {
-        if (mx < i) {
-            return false;
-        }
-        mx = Math.max(mx, i + nums[i]);
-    }
-    return true;
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {boolean}
- */
-var canJump = function (nums) {
-    let mx = 0;
-    for (let i = 0; i < nums.length; ++i) {
-        if (mx < i) {
-            return false;
-        }
-        mx = Math.max(mx, i + nums[i]);
-    }
-    return true;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool CanJump(int[] nums) {
-        int mx = 0;
-        for (int i = 0; i < nums.Length; ++i) {
-            if (mx < i) {
-                return false;
-            }
-            mx = Math.Max(mx, i + nums[i]);
-        }
-        return true;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -192,4 +112,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

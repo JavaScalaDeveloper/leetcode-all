@@ -66,12 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumGroups(self, grades: List[int]) -> int:
-        n = len(grades)
-        return bisect_right(range(n + 1), n * 2, key=lambda x: x * x + x) - 1
-```
+
 
 ### **Java**
 
@@ -95,57 +90,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumGroups(vector<int>& grades) {
-        int n = grades.size();
-        int l = 0, r = n;
-        while (l < r) {
-            int mid = (l + r + 1) >> 1;
-            if (1LL * mid * mid + mid > n * 2LL) {
-                r = mid - 1;
-            } else {
-                l = mid;
-            }
-        }
-        return l;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumGroups(grades []int) int {
-	n := len(grades)
-	return sort.Search(n, func(k int) bool {
-		k++
-		return k*k+k > n*2
-	})
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumGroups(grades: number[]): number {
-    const n = grades.length;
-    let l = 1;
-    let r = n;
-    while (l < r) {
-        const mid = (l + r + 1) >> 1;
-        if (mid * mid + mid > n * 2) {
-            r = mid - 1;
-        } else {
-            l = mid;
-        }
-    }
-    return l;
-}
-```
+
 
 ### **...**
 
@@ -153,4 +108,4 @@ function maximumGroups(grades: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

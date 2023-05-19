@@ -75,32 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def stoneGameV(self, stoneValue: List[int]) -> int:
-        @cache
-        def dfs(i, j):
-            if i == j:
-                return 0
-            ans = a = 0
-            for k in range(i, j):
-                a += stoneValue[k]
-                b = s[j + 1] - s[i] - a
-                if a < b:
-                    if ans >= a * 2:
-                        continue
-                    ans = max(ans, a + dfs(i, k))
-                elif a > b:
-                    if ans >= b * 2:
-                        break
-                    ans = max(ans, b + dfs(k + 1, j))
-                else:
-                    ans = max(ans, a + dfs(i, k), b + dfs(k + 1, j))
-            return ans
 
-        s = list(accumulate(stoneValue, initial=0))
-        return dfs(0, len(stoneValue) - 1)
-```
 
 ### **Java**
 
@@ -155,105 +130,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int stoneGameV(vector<int>& stoneValue) {
-        int n = stoneValue.size();
-        int s[n + 1];
-        s[0] = 0;
-        for (int i = 1; i <= n; ++i) {
-            s[i] = s[i - 1] + stoneValue[i - 1];
-        }
-        int f[n][n];
-        memset(f, 0, sizeof(f));
-        function<int(int, int)> dfs = [&](int i, int j) -> int {
-            if (i == j) {
-                return 0;
-            }
-            if (f[i][j]) {
-                return f[i][j];
-            }
-            int ans = 0;
-            int a = 0;
-            for (int k = i; k < j; ++k) {
-                a += stoneValue[k];
-                int b = s[j + 1] - s[i] - a;
-                if (a < b) {
-                    if (ans >= a * 2) {
-                        continue;
-                    }
-                    ans = max(ans, a + dfs(i, k));
-                } else if (a > b) {
-                    if (ans >= b * 2) {
-                        break;
-                    }
-                    ans = max(ans, b + dfs(k + 1, j));
-                } else {
-                    ans = max({ans, a + dfs(i, k), b + dfs(k + 1, j)});
-                }
-            }
-            return f[i][j] = ans;
-        };
-        return dfs(0, n - 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func stoneGameV(stoneValue []int) int {
-	n := len(stoneValue)
-	s := make([]int, n+1)
-	for i, x := range stoneValue {
-		s[i+1] = s[i] + x
-	}
-	f := make([][]int, n)
-	for i := range f {
-		f[i] = make([]int, n)
-	}
-	var dfs func(i, j int) int
-	dfs = func(i, j int) int {
-		if i == j {
-			return 0
-		}
-		if f[i][j] != 0 {
-			return f[i][j]
-		}
-		ans, a := 0, 0
-		for k := i; k < j; k++ {
-			a += stoneValue[k]
-			b := s[j+1] - s[i] - a
-			if a < b {
-				if ans >= a*2 {
-					continue
-				}
-				ans = max(ans, a+dfs(i, k))
-			} else if a > b {
-				if ans >= b*2 {
-					break
-				}
-				ans = max(ans, b+dfs(k+1, j))
-			} else {
-				ans = max(ans, max(a+dfs(i, k), b+dfs(k+1, j)))
-			}
-		}
-		f[i][j] = ans
-		return ans
-	}
-	return dfs(0, n-1)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -261,4 +144,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

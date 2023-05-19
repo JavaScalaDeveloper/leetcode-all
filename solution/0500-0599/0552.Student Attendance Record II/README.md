@@ -95,56 +95,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkRecord(self, n: int) -> int:
-        @cache
-        def dfs(i, j, k):
-            if i >= n:
-                return 1
-            ans = 0
-            if j == 0:
-                ans += dfs(i + 1, j + 1, 0)
-            if k < 2:
-                ans += dfs(i + 1, j, k + 1)
-            ans += dfs(i + 1, j, 0)
-            return ans % mod
 
-        mod = 10**9 + 7
-        ans = dfs(0, 0, 0)
-        dfs.cache_clear()
-        return ans
-```
 
-```python
-class Solution:
-    def checkRecord(self, n: int) -> int:
-        mod = int(1e9 + 7)
-        dp = [[[0, 0, 0], [0, 0, 0]] for _ in range(n)]
 
-        # base case
-        dp[0][0][0] = dp[0][0][1] = dp[0][1][0] = 1
-
-        for i in range(1, n):
-            # A
-            dp[i][1][0] = (dp[i - 1][0][0] + dp[i - 1][0][1] + dp[i - 1][0][2]) % mod
-            # L
-            dp[i][0][1] = dp[i - 1][0][0]
-            dp[i][0][2] = dp[i - 1][0][1]
-            dp[i][1][1] = dp[i - 1][1][0]
-            dp[i][1][2] = dp[i - 1][1][1]
-            # P
-            dp[i][0][0] = (dp[i - 1][0][0] + dp[i - 1][0][1] + dp[i - 1][0][2]) % mod
-            dp[i][1][0] = (
-                dp[i][1][0] + dp[i - 1][1][0] + dp[i - 1][1][1] + dp[i - 1][1][2]
-            ) % mod
-
-        ans = 0
-        for j in range(2):
-            for k in range(3):
-                ans = (ans + dp[n - 1][j][k]) % mod
-        return ans
-```
 
 ### **Java**
 
@@ -217,154 +170,17 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func checkRecord(n int) int {
-	f := make([][][]int, n)
-	for i := range f {
-		f[i] = make([][]int, 2)
-		for j := range f[i] {
-			f[i][j] = make([]int, 3)
-			for k := range f[i][j] {
-				f[i][j][k] = -1
-			}
-		}
-	}
-	const mod = 1e9 + 7
-	var dfs func(i, j, k int) int
-	dfs = func(i, j, k int) int {
-		if i >= n {
-			return 1
-		}
-		if f[i][j][k] != -1 {
-			return f[i][j][k]
-		}
-		ans := dfs(i+1, j, 0)
-		if j == 0 {
-			ans = (ans + dfs(i+1, j+1, 0)) % mod
-		}
-		if k < 2 {
-			ans = (ans + dfs(i+1, j, k+1)) % mod
-		}
-		f[i][j][k] = ans
-		return ans
-	}
-	return dfs(0, 0, 0)
-}
-```
 
-```go
-const _mod int = 1e9 + 7
 
-func checkRecord(n int) int {
-	dp := make([][][]int, n)
-	for i := 0; i < n; i++ {
-		dp[i] = make([][]int, 2)
-		for j := 0; j < 2; j++ {
-			dp[i][j] = make([]int, 3)
-		}
-	}
 
-	// base case
-	dp[0][0][0] = 1
-	dp[0][0][1] = 1
-	dp[0][1][0] = 1
 
-	for i := 1; i < n; i++ {
-		// A
-		dp[i][1][0] = (dp[i-1][0][0] + dp[i-1][0][1] + dp[i-1][0][2]) % _mod
-		// L
-		dp[i][0][1] = dp[i-1][0][0]
-		dp[i][0][2] = dp[i-1][0][1]
-		dp[i][1][1] = dp[i-1][1][0]
-		dp[i][1][2] = dp[i-1][1][1]
-		// P
-		dp[i][0][0] = (dp[i-1][0][0] + dp[i-1][0][1] + dp[i-1][0][2]) % _mod
-		dp[i][1][0] = (dp[i][1][0] + dp[i-1][1][0] + dp[i-1][1][1] + dp[i-1][1][2]) % _mod
-	}
 
-	var ans int
-	for j := 0; j < 2; j++ {
-		for k := 0; k < 3; k++ {
-			ans = (ans + dp[n-1][j][k]) % _mod
-		}
-	}
-	return ans
-}
-```
 
-### **C++**
 
-```cpp
-int f[100010][2][3];
-const int mod = 1e9 + 7;
 
-class Solution {
-public:
-    int checkRecord(int n) {
-        this->n = n;
-        memset(f, -1, sizeof(f));
-        return dfs(0, 0, 0);
-    }
 
-    int dfs(int i, int j, int k) {
-        if (i >= n) {
-            return 1;
-        }
-        if (f[i][j][k] != -1) {
-            return f[i][j][k];
-        }
-        int ans = dfs(i + 1, j, 0);
-        if (j == 0) {
-            ans = (ans + dfs(i + 1, j + 1, 0)) % mod;
-        }
-        if (k < 2) {
-            ans = (ans + dfs(i + 1, j, k + 1)) % mod;
-        }
-        return f[i][j][k] = ans;
-    }
 
-private:
-    int n;
-};
-```
-
-```cpp
-constexpr int MOD = 1e9 + 7;
-
-class Solution {
-public:
-    int checkRecord(int n) {
-        using ll = long long;
-        vector<vector<vector<ll>>> dp(n, vector<vector<ll>>(2, vector<ll>(3)));
-
-        // base case
-        dp[0][0][0] = dp[0][0][1] = dp[0][1][0] = 1;
-
-        for (int i = 1; i < n; ++i) {
-            // A
-            dp[i][1][0] = (dp[i - 1][0][0] + dp[i - 1][0][1] + dp[i - 1][0][2]) % MOD;
-            // L
-            dp[i][0][1] = dp[i - 1][0][0];
-            dp[i][0][2] = dp[i - 1][0][1];
-            dp[i][1][1] = dp[i - 1][1][0];
-            dp[i][1][2] = dp[i - 1][1][1];
-            // P
-            dp[i][0][0] = (dp[i - 1][0][0] + dp[i - 1][0][1] + dp[i - 1][0][2]) % MOD;
-            dp[i][1][0] = (dp[i][1][0] + dp[i - 1][1][0] + dp[i - 1][1][1] + dp[i - 1][1][2]) % MOD;
-        }
-
-        ll ans = 0;
-        for (int j = 0; j < 2; ++j) {
-            for (int k = 0; k < 3; ++k) {
-                ans = (ans + dp[n - 1][j][k]) % MOD;
-            }
-        }
-        return ans;
-    }
-};
-```
 
 ### **...**
 
@@ -372,4 +188,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

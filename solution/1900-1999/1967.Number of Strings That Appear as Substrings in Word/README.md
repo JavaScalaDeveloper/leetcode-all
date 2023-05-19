@@ -74,11 +74,7 @@ patterns 中有 2 个字符串作为子字符串出现在 word 中。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numOfStrings(self, patterns: List[str], word: str) -> int:
-        return sum(p in word for p in patterns)
-```
+
 
 ### **Java**
 
@@ -98,47 +94,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numOfStrings(vector<string>& patterns, string word) {
-        int ans = 0;
-        for (auto& p : patterns) {
-            ans += word.find(p) != string::npos;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numOfStrings(patterns []string, word string) (ans int) {
-	for _, p := range patterns {
-		if strings.Contains(word, p) {
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numOfStrings(patterns: string[], word: string): number {
-    let ans = 0;
-    for (const p of patterns) {
-        if (word.includes(p)) {
-            ++ans;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -146,4 +112,4 @@ function numOfStrings(patterns: string[], word: string): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -58,34 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def fractionToDecimal(self, numerator: int, denominator: int) -> str:
-        if numerator == 0:
-            return '0'
-        res = []
-        neg = (numerator > 0) ^ (denominator > 0)
-        if neg:
-            res.append('-')
-        num, d = abs(numerator), abs(denominator)
-        res.append(str(num // d))
-        num %= d
-        if num == 0:
-            return ''.join(res)
-        res.append('.')
-        mp = {}
-        while num != 0:
-            mp[num] = len(res)
-            num *= 10
-            res.append(str(num // d))
-            num %= d
-            if num in mp:
-                idx = mp[num]
-                res.insert(idx, '(')
-                res.append(')')
-                break
-        return ''.join(res)
-```
+
 
 ### **Java**
 
@@ -126,86 +99,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using LL = long long;
 
-class Solution {
-public:
-    string fractionToDecimal(int numerator, int denominator) {
-        if (numerator == 0) return "0";
-        string res = "";
-        bool neg = (numerator > 0) ^ (denominator > 0);
-        if (neg) res += "-";
-        LL num = abs(numerator);
-        LL d = abs(denominator);
-        res += to_string(num / d);
-        num %= d;
-        if (num == 0) return res;
-        res += ".";
-        unordered_map<LL, int> mp;
-        while (num) {
-            mp[num] = res.size();
-            num *= 10;
-            res += to_string(num / d);
-            num %= d;
-            if (mp.count(num)) {
-                int idx = mp[num];
-                res.insert(idx, "(");
-                res += ")";
-                break;
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func fractionToDecimal(numerator int, denominator int) string {
-	if numerator == 0 {
-		return "0"
-	}
-	res := []byte{}
-	neg := numerator*denominator < 0
-	if neg {
-		res = append(res, '-')
-	}
-	num := abs(numerator)
-	d := abs(denominator)
-	res = append(res, strconv.Itoa(num/d)...)
-	num %= d
-	if num == 0 {
-		return string(res)
-	}
-	mp := make(map[int]int)
-	res = append(res, '.')
-	for num != 0 {
-		mp[num] = len(res)
-		num *= 10
-		res = append(res, strconv.Itoa(num/d)...)
-		num %= d
-		if mp[num] > 0 {
-			idx := mp[num]
-			res = append(res[:idx], append([]byte{'('}, res[idx:]...)...)
-			res = append(res, ')')
-			break
-		}
-	}
 
-	return string(res)
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
 
 ### **...**
 
@@ -213,4 +113,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

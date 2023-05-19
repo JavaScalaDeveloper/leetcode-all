@@ -83,39 +83,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minNumberOfHours(
-        self,
-        initialEnergy: int,
-        initialExperience: int,
-        energy: List[int],
-        experience: List[int],
-    ) -> int:
-        ans = 0
-        for a, b in zip(energy, experience):
-            if initialEnergy <= a:
-                ans += a - initialEnergy + 1
-                initialEnergy = a + 1
-            if initialExperience <= b:
-                ans += b - initialExperience + 1
-                initialExperience = b + 1
-            initialEnergy -= a
-            initialExperience += b
-        return ans
-```
 
-```python
-class Solution:
-    def minNumberOfHours(self, initialEnergy: int, initialExperience: int, energy: List[int], experience: List[int]) -> int:
-        ans = max(0, sum(energy) - initialEnergy + 1)
-        for x in experience:
-            if initialExperience <= x:
-                ans += x - initialExperience + 1
-                initialExperience = x + 1
-            initialExperience += x
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -165,167 +135,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minNumberOfHours(int initialEnergy, int initialExperience, vector<int>& energy, vector<int>& experience) {
-        int ans = 0;
-        for (int i = 0; i < energy.size(); ++i) {
-            int a = energy[i], b = experience[i];
-            if (initialEnergy <= a) {
-                ans += a - initialEnergy + 1;
-                initialEnergy = a + 1;
-            }
-            if (initialExperience <= b) {
-                ans += b - initialExperience + 1;
-                initialExperience = b + 1;
-            }
-            initialEnergy -= a;
-            initialExperience += b;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int minNumberOfHours(int initialEnergy, int initialExperience, vector<int>& energy, vector<int>& experience) {
-        int s = accumulate(energy.begin(), energy.end(), 0);
-        int ans = max(0, s - initialEnergy + 1);
-        for (int x : experience) {
-            if (initialExperience <= x) {
-                ans += x - initialExperience + 1;
-                initialExperience = x + 1;
-            }
-            initialExperience += x;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minNumberOfHours(initialEnergy int, initialExperience int, energy []int, experience []int) int {
-	ans := 0
-	for i, a := range energy {
-		b := experience[i]
-		if initialEnergy <= a {
-			ans += a - initialEnergy + 1
-			initialEnergy = a + 1
-		}
-		if initialExperience <= b {
-			ans += b - initialExperience + 1
-			initialExperience = b + 1
-		}
-		initialEnergy -= a
-		initialExperience += b
-	}
-	return ans
-}
-```
 
-```go
-func minNumberOfHours(initialEnergy int, initialExperience int, energy []int, experience []int) (ans int) {
-	s := 0
-	for _, x := range energy {
-		s += x
-	}
-	if y := s - initialEnergy + 1; y > 0 {
-		ans = y
-	}
-	for _, x := range experience {
-		if initialExperience <= x {
-			ans += x - initialExperience + 1
-			initialExperience = x + 1
-		}
-		initialExperience += x
-	}
-	return
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minNumberOfHours(
-    initialEnergy: number,
-    initialExperience: number,
-    energy: number[],
-    experience: number[],
-): number {
-    const n = energy.length;
-    let ans = 0;
-    for (let i = 0; i < n; i++) {
-        const minEnergy = energy[i];
-        const minExperience = experience[i];
-        if (initialEnergy <= minEnergy) {
-            const need = minEnergy - initialEnergy + 1;
-            ans += need;
-            initialEnergy += need;
-        }
-        if (initialExperience <= minExperience) {
-            const need = minExperience - initialExperience + 1;
-            ans += need;
-            initialExperience += need;
-        }
-        initialEnergy -= minEnergy;
-        initialExperience += minExperience;
-    }
-    return ans;
-}
-```
 
-```ts
-function minNumberOfHours(
-    initialEnergy: number,
-    initialExperience: number,
-    energy: number[],
-    experience: number[],
-): number {
-    let res = 0;
-    for (const v of experience) {
-        if (initialExperience <= v) {
-            res += v - initialExperience + 1;
-            initialExperience = v + 1;
-        }
-        initialExperience += v;
-    }
-    for (const v of energy) {
-        if (initialEnergy <= v) {
-            res += v - initialEnergy + 1;
-            initialEnergy = v + 1;
-        }
-        initialEnergy -= v;
-    }
-    return res;
-}
-```
 
-```ts
-function minNumberOfHours(
-    initialEnergy: number,
-    initialExperience: number,
-    energy: number[],
-    experience: number[],
-): number {
-    const s = energy.reduce((a, b) => a + b, 0);
-    let ans = Math.max(0, s - initialEnergy + 1);
-    for (const x of experience) {
-        if (initialExperience <= x) {
-            ans += x - initialExperience + 1;
-            initialExperience = x + 1;
-        }
-        initialExperience += x;
-    }
-    return ans;
-}
-```
+
+
+
 
 ### **C**
 
@@ -348,34 +176,9 @@ int minNumberOfHours(int initialEnergy, int initialExperience, int* energy, int 
 }
 ```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_number_of_hours(
-        mut initial_energy: i32,
-        mut initial_experience: i32,
-        energy: Vec<i32>,
-        experience: Vec<i32>,
-    ) -> i32 {
-        let n = energy.len();
-        let mut res = 0;
-        for i in 0..n {
-            if initial_energy <= energy[i] {
-                res += energy[i] - initial_energy + 1;
-                initial_energy = energy[i] + 1;
-            }
-            if initial_experience <= experience[i] {
-                res += experience[i] - initial_experience + 1;
-                initial_experience = experience[i] + 1;
-            }
-            initial_energy -= energy[i];
-            initial_experience += experience[i];
-        }
-        res
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -384,4 +187,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

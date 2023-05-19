@@ -86,26 +86,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxAlternatingSum(self, nums: List[int]) -> int:
-        n = len(nums)
-        f = [0] * (n + 1)
-        g = [0] * (n + 1)
-        for i, x in enumerate(nums, 1):
-            f[i] = max(g[i - 1] - x, f[i - 1])
-            g[i] = max(f[i - 1] + x, g[i - 1])
-        return max(f[n], g[n])
-```
 
-```python
-class Solution:
-    def maxAlternatingSum(self, nums: List[int]) -> int:
-        f = g = 0
-        for x in nums:
-            f, g = max(g - x, f), max(f + x, g)
-        return max(f, g)
-```
+
+
 
 ### **Java**
 
@@ -141,76 +124,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long maxAlternatingSum(vector<int>& nums) {
-        int n = nums.size();
-        vector<long long> f(n + 1), g(n + 1);
-        for (int i = 1; i <= n; ++i) {
-            f[i] = max(g[i - 1] - nums[i - 1], f[i - 1]);
-            g[i] = max(f[i - 1] + nums[i - 1], g[i - 1]);
-        }
-        return max(f[n], g[n]);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    long long maxAlternatingSum(vector<int>& nums) {
-        long long f = 0, g = 0;
-        for (int& x : nums) {
-            long ff = max(g - x, f), gg = max(f + x, g);
-            f = ff, g = gg;
-        }
-        return max(f, g);
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxAlternatingSum(nums []int) int64 {
-	n := len(nums)
-	f := make([]int, n+1)
-	g := make([]int, n+1)
-	for i, x := range nums {
-		i++
-		f[i] = max(g[i-1]-x, f[i-1])
-		g[i] = max(f[i-1]+x, g[i-1])
-	}
-	return int64(max(f[n], g[n]))
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func maxAlternatingSum(nums []int) int64 {
-	var f, g int
-	for _, x := range nums {
-		f, g = max(g-x, f), max(f+x, g)
-	}
-	return int64(max(f, g))
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -218,4 +142,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -88,31 +88,7 @@ nums[3] + nums[0] = 3 + 1 = 4.
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minMoves(self, nums: List[int], limit: int) -> int:
-        d = [0] * (limit * 2 + 2)
-        n = len(nums)
 
-        for i in range(n >> 1):
-            a, b = min(nums[i], nums[n - i - 1]), max(nums[i], nums[n - i - 1])
-
-            d[2] += 2
-            d[limit * 2 + 1] -= 2
-
-            d[a + 1] -= 1
-            d[b + limit + 1] += 1
-
-            d[a + b] -= 1
-            d[a + b + 1] += 1
-
-        ans, s = n, 0
-        for v in d[2: limit * 2 + 1]:
-            s += v
-            if ans > s:
-                ans = s
-        return ans
-```
 
 ### **Java**
 
@@ -148,80 +124,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minMoves(vector<int>& nums, int limit) {
-        int n = nums.size();
-        vector<int> d(limit * 2 + 2);
-        for (int i = 0; i < n >> 1; ++i) {
-            int a = min(nums[i], nums[n - i - 1]);
-            int b = max(nums[i], nums[n - i - 1]);
 
-            d[2] += 2;
-            d[limit * 2 + 1] -= 2;
 
-            d[a + 1] -= 1;
-            d[b + limit + 1] += 1;
 
-            d[a + b] -= 1;
-            d[a + b + 1] += 1;
-        }
-        int ans = n, s = 0;
-        for (int i = 2; i <= limit * 2; ++i) {
-            s += d[i];
-            if (ans > s) {
-                ans = s;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minMoves(nums []int, limit int) int {
-	d := make([]int, limit*2+2)
-	n := len(nums)
-	for i := 0; i < n>>1; i++ {
-		a, b := min(nums[i], nums[n-i-1]), max(nums[i], nums[n-i-1])
-		d[2] += 2
-		d[limit*2+1] -= 2
 
-		d[a+1] -= 1
-		d[b+limit+1] += 1
-
-		d[a+b] -= 1
-		d[a+b+1] += 1
-	}
-	ans, s := n, 0
-	for _, v := range d[2 : limit*2+1] {
-		s += v
-		if ans > s {
-			ans = s
-		}
-	}
-	return ans
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
 ### **...**
 
@@ -229,4 +138,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

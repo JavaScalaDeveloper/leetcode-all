@@ -51,21 +51,7 @@ HammingDistance(4, 14) + HammingDistance(4, 2) + HammingDistance(14, 2) = 2 + 2 
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def totalHammingDistance(self, nums: List[int]) -> int:
-        ans = 0
-        for i in range(31):
-            a = b = 0
-            for v in nums:
-                t = (v >> i) & 1
-                if t:
-                    a += 1
-                else:
-                    b += 1
-            ans += a * b
-        return ans
-```
+
 
 ### **Java**
 
@@ -89,44 +75,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int totalHammingDistance(vector<int>& nums) {
-        int ans = 0;
-        for (int i = 0; i < 31; ++i) {
-            int a = 0, b = 0;
-            for (int& v : nums) {
-                int t = (v >> i) & 1;
-                a += t;
-                b += t ^ 1;
-            }
-            ans += a * b;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func totalHammingDistance(nums []int) int {
-	ans := 0
-	for i := 0; i < 31; i++ {
-		a, b := 0, 0
-		for _, v := range nums {
-			t := (v >> i) & 1
-			a += t
-			b += t ^ 1
-		}
-		ans += a * b
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -134,4 +89,4 @@ func totalHammingDistance(nums []int) int {
 
 ```
 
-<!-- tabs:end -->
+

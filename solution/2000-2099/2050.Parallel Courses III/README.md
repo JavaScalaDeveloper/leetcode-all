@@ -77,32 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumTime(self, n: int, relations: List[List[int]], time: List[int]) -> int:
-        g = defaultdict(list)
-        indeg = [0] * n
-        for a, b in relations:
-            g[a - 1].append(b - 1)
-            indeg[b - 1] += 1
-        q = deque()
-        dp = [0] * n
-        ans = 0
-        for i, (v, t) in enumerate(zip(indeg, time)):
-            if v == 0:
-                q.append(i)
-                dp[i] = t
-                ans = max(ans, t)
-        while q:
-            i = q.popleft()
-            for j in g[i]:
-                dp[j] = max(dp[j], dp[i] + time[j])
-                ans = max(ans, dp[j])
-                indeg[j] -= 1
-                if indeg[j] == 0:
-                    q.append(j)
-        return ans
-```
+
 
 ### **Java**
 
@@ -145,87 +120,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumTime(int n, vector<vector<int>>& relations, vector<int>& time) {
-        vector<vector<int>> g(n);
-        vector<int> indeg(n);
-        for (auto& e : relations) {
-            int a = e[0] - 1, b = e[1] - 1;
-            g[a].push_back(b);
-            ++indeg[b];
-        }
-        queue<int> q;
-        vector<int> dp(n);
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            int v = indeg[i], t = time[i];
-            if (v == 0) {
-                q.push(i);
-                dp[i] = t;
-                ans = max(ans, t);
-            }
-        }
-        while (!q.empty()) {
-            int i = q.front();
-            q.pop();
-            for (int j : g[i]) {
-                if (--indeg[j] == 0) q.push(j);
-                dp[j] = max(dp[j], dp[i] + time[j]);
-                ans = max(ans, dp[j]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumTime(n int, relations [][]int, time []int) int {
-	g := make([][]int, n)
-	indeg := make([]int, n)
-	for _, e := range relations {
-		a, b := e[0]-1, e[1]-1
-		g[a] = append(g[a], b)
-		indeg[b]++
-	}
-	dp := make([]int, n)
-	q := []int{}
-	ans := 0
-	for i, v := range indeg {
-		if v == 0 {
-			q = append(q, i)
-			dp[i] = time[i]
-			ans = max(ans, time[i])
-		}
-	}
-	for len(q) > 0 {
-		i := q[0]
-		q = q[1:]
-		for _, j := range g[i] {
-			indeg[j]--
-			if indeg[j] == 0 {
-				q = append(q, j)
-			}
-			dp[j] = max(dp[j], dp[i]+time[j])
-			ans = max(ans, dp[j])
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -233,4 +134,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

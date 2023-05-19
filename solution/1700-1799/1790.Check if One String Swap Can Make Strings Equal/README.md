@@ -69,19 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def areAlmostEqual(self, s1: str, s2: str) -> bool:
-        cnt = 0
-        c1 = c2 = None
-        for a, b in zip(s1, s2):
-            if a != b:
-                cnt += 1
-                if cnt > 2 or (cnt == 2 and (a != c2 or b != c1)):
-                    return False
-                c1, c2 = a, b
-        return cnt != 1
-```
+
 
 ### **Java**
 
@@ -107,47 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool areAlmostEqual(string s1, string s2) {
-        int cnt = 0;
-        char c1 = 0, c2 = 0;
-        for (int i = 0; i < s1.size(); ++i) {
-            char a = s1[i], b = s2[i];
-            if (a != b) {
-                if (++cnt > 2 || (cnt == 2 && (a != c2 || b != c1))) {
-                    return false;
-                }
-                c1 = a, c2 = b;
-            }
-        }
-        return cnt != 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func areAlmostEqual(s1 string, s2 string) bool {
-	cnt := 0
-	var c1, c2 byte
-	for i := range s1 {
-		a, b := s1[i], s2[i]
-		if a != b {
-			cnt++
-			if cnt > 2 || (cnt == 2 && (a != c2 || b != c1)) {
-				return false
-			}
-			c1, c2 = a, b
-		}
-	}
-	return cnt != 1
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -180,47 +134,11 @@ bool areAlmostEqual(char *s1, char *s2) {
 
 ### **TypeScript**
 
-```ts
-function areAlmostEqual(s1: string, s2: string): boolean {
-    let c1, c2;
-    let cnt = 0;
-    for (let i = 0; i < s1.length; ++i) {
-        const a = s1.charAt(i);
-        const b = s2.charAt(i);
-        if (a != b) {
-            if (++cnt > 2 || (cnt == 2 && (a != c2 || b != c1))) {
-                return false;
-            }
-            c1 = a;
-            c2 = b;
-        }
-    }
-    return cnt != 1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn are_almost_equal(s1: String, s2: String) -> bool {
-        if s1 == s2 {
-            return true;
-        }
-        let (s1, s2) = (s1.as_bytes(), s2.as_bytes());
-        let mut idxs = vec![];
-        for i in 0..s1.len() {
-            if s1[i] != s2[i] {
-                idxs.push(i);
-            }
-        }
-        if idxs.len() != 2 {
-            return false;
-        }
-        s1[idxs[0]] == s2[idxs[1]] && s2[idxs[0]] == s1[idxs[1]]
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -228,4 +146,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

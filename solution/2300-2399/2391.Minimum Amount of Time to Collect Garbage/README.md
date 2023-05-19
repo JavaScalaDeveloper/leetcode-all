@@ -85,36 +85,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def garbageCollection(self, garbage: List[str], travel: List[int]) -> int:
-        ans = 0
-        last = {}
-        for i, s in enumerate(garbage):
-            ans += len(s)
-            for c in s:
-                last[c] = i
-        s = list(accumulate(travel, initial=0))
-        ans += sum(s[i] for i in last.values())
-        return ans
-```
 
-```python
-class Solution:
-    def garbageCollection(self, garbage: List[str], travel: List[int]) -> int:
-        def f(x: str) -> int:
-            ans = 0
-            st = 0
-            for i, s in enumerate(garbage):
-                if t := s.count(x):
-                    ans += t + st
-                    st = 0
-                if i < len(travel):
-                    st += travel[i]
-            return ans
 
-        return f('M') + f('P') + f('G')
-```
+
 
 ### **Java**
 
@@ -180,196 +153,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int garbageCollection(vector<string>& garbage, vector<int>& travel) {
-        int n = garbage.size(), m = travel.size();
-        int last[26]{};
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            ans += garbage[i].size();
-            for (char& c : garbage[i]) {
-                last[c - 'A'] = i;
-            }
-        }
-        int s[m + 1];
-        s[0] = 0;
-        for (int i = 1; i <= m; ++i) {
-            s[i] = s[i - 1] + travel[i - 1];
-        }
-        for (int i : last) {
-            ans += s[i];
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int garbageCollection(vector<string>& garbage, vector<int>& travel) {
-        auto f = [&](char x) {
-            int ans = 0, st = 0;
-            for (int i = 0; i < garbage.size(); ++i) {
-                int cnt = 0;
-                for (char& c : garbage[i]) {
-                    if (c == x) {
-                        ++cnt;
-                    }
-                }
-                if (cnt > 0) {
-                    ans += cnt + st;
-                    st = 0;
-                }
-                if (i < travel.size()) {
-                    st += travel[i];
-                }
-            }
-            return ans;
-        };
-        return f('M') + f('P') + f('G');
-    }
-};
-```
 
-### **Go**
 
-```go
-func garbageCollection(garbage []string, travel []int) (ans int) {
-	last := [26]int{}
-	for i, s := range garbage {
-		ans += len(s)
-		for _, c := range s {
-			last[c-'A'] = i
-		}
-	}
-	s := make([]int, len(travel)+1)
-	for i, x := range travel {
-		s[i+1] = s[i] + x
-	}
-	for _, i := range last {
-		ans += s[i]
-	}
-	return
-}
-```
 
-```go
-func garbageCollection(garbage []string, travel []int) (ans int) {
-	f := func(x rune) int {
-		ans, st := 0, 0
-		for i, s := range garbage {
-			cnt := strings.Count(s, string(x))
-			if cnt > 0 {
-				ans += cnt + st
-				st = 0
-			}
-			if i < len(travel) {
-				st += travel[i]
-			}
-		}
-		return ans
-	}
-	return f('M') + f('P') + f('G')
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function garbageCollection(garbage: string[], travel: number[]): number {
-    const n = garbage.length;
-    const m = travel.length;
-    let ans = 0;
-    const last = new Array(26).fill(0);
-    for (let i = 0; i < n; ++i) {
-        ans += garbage[i].length;
-        for (const c of garbage[i]) {
-            last[c.charCodeAt(0) - 'A'.charCodeAt(0)] = i;
-        }
-    }
-    const s = new Array(m + 1).fill(0);
-    for (let i = 1; i <= m; ++i) {
-        s[i] = s[i - 1] + travel[i - 1];
-    }
-    for (const i of last) {
-        ans += s[i];
-    }
-    return ans;
-}
-```
 
-```ts
-function garbageCollection(garbage: string[], travel: number[]): number {
-    const f = (x: string) => {
-        let ans = 0;
-        let st = 0;
-        for (let i = 0; i < garbage.length; ++i) {
-            let cnt = 0;
-            for (const c of garbage[i]) {
-                if (c === x) {
-                    ++cnt;
-                }
-            }
-            if (cnt > 0) {
-                ans += cnt + st;
-                st = 0;
-            }
-            if (i < travel.length) {
-                st += travel[i];
-            }
-        }
-        return ans;
-    };
-    return f('M') + f('P') + f('G');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn garbage_collection(garbage: Vec<String>, travel: Vec<i32>) -> i32 {
-        let n = garbage.len();
-        let cs = [b'M', b'P', b'G'];
-        let mut count = [0, 0, 0];
-        for s in garbage.iter() {
-            for c in s.as_bytes().iter() {
-                count[if c == &b'M' {
-                    0
-                } else if c == &b'P' {
-                    1
-                } else {
-                    2
-                }] += 1;
-            }
-        }
 
-        let mut res = 0;
-        for i in 0..3 {
-            for j in 0..n {
-                let s = &garbage[j];
-                for c in s.as_bytes().iter() {
-                    if c == &cs[i] {
-                        res += 1;
-                        count[i] -= 1;
-                    }
-                }
-                if count[i] == 0 {
-                    break;
-                }
 
-                res += travel[j];
-            }
-        }
-        res
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -377,4 +181,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

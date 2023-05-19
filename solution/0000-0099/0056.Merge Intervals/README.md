@@ -47,20 +47,7 @@
 
 模板如下：
 
-```python
-def merge(intervals):
-    ans = []
-    intervals.sort()
-    st, ed = intervals[0]
-    for s, e in intervals[1:]:
-        if ed < s:
-            ans.append([st, ed])
-            st, ed = s, e
-        else:
-            ed = max(ed, e)
-    ans.append([st, ed])
-    return ans
-```
+
 
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(\log n)$。其中 $n$ 为区间个数。
 
@@ -70,21 +57,7 @@ def merge(intervals):
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        intervals.sort()
-        ans = []
-        st, ed = intervals[0]
-        for s, e in intervals[1:]:
-            if ed < s:
-                ans.append([st, ed])
-                st, ed = s, e
-            else:
-                ed = max(ed, e)
-        ans.append([st, ed])
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,136 +85,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end());
-        int st = intervals[0][0], ed = intervals[0][1];
-        vector<vector<int>> ans;
-        for (int i = 1; i < intervals.size(); ++i) {
-            if (ed < intervals[i][0]) {
-                ans.push_back({st, ed});
-                st = intervals[i][0];
-                ed = intervals[i][1];
-            } else {
-                ed = max(ed, intervals[i][1]);
-            }
-        }
-        ans.push_back({st, ed});
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func merge(intervals [][]int) (ans [][]int) {
-	sort.Slice(intervals, func(i, j int) bool {
-		return intervals[i][0] < intervals[j][0]
-	})
-	st, ed := intervals[0][0], intervals[0][1]
-	for _, e := range intervals[1:] {
-		if ed < e[0] {
-			ans = append(ans, []int{st, ed})
-			st, ed = e[0], e[1]
-		} else if ed < e[1] {
-			ed = e[1]
-		}
-	}
-	ans = append(ans, []int{st, ed})
-	return ans
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[][] Merge(int[][] intervals) {
-        intervals = intervals.OrderBy(a => a[0]).ToArray();
-        int st = intervals[0][0], ed = intervals[0][1];
-        var ans = new List<int[]>();
-        for (int i = 1; i < intervals.Length; ++i) {
-            if (ed < intervals[i][0]) {
-                ans.Add(new int[] { st, ed });
-                st = intervals[i][0];
-                ed = intervals[i][1];
-            } else {
-                ed = Math.Max(ed, intervals[i][1]);
-            }
-        }
-        ans.Add(new int[] { st, ed });
-        return ans.ToArray();
-    }
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function merge(intervals: number[][]): number[][] {
-    intervals.sort((a, b) => a[0] - b[0]);
-    const ans: number[][] = [];
-    let [st, ed] = intervals[0];
-    for (const [s, e] of intervals.slice(1)) {
-        if (ed < s) {
-            ans.push([st, ed]);
-            [st, ed] = [s, e];
-        } else {
-            ed = Math.max(ed, e);
-        }
-    }
-    ans.push([st, ed]);
-    return ans;
-}
-```
 
-```ts
-function merge(intervals: number[][]): number[][] {
-    intervals.sort((a, b) => a[0] - b[0]);
-    const n = intervals.length;
-    const res = [];
-    let i = 0;
-    while (i < n) {
-        let [l, r] = intervals[i];
-        i++;
-        while (i < n && r >= intervals[i][0]) {
-            r = Math.max(r, intervals[i][1]);
-            i++;
-        }
-        res.push([l, r]);
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn merge(mut intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-        intervals.sort_unstable_by(|a, b| a[0].cmp(&b[0]));
-        let n = intervals.len();
-        let mut res = vec![];
-        let mut i = 0;
-        while i < n {
-            let l = intervals[i][0];
-            let mut r = intervals[i][1];
-            i += 1;
-            while i < n && r >= intervals[i][0] {
-                r = r.max(intervals[i][1]);
-                i += 1;
-            }
-            res.push(vec![l, r]);
-        }
-        res
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -249,4 +113,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

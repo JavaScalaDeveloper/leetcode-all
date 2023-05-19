@@ -59,14 +59,7 @@ F(n) = F(n - 1) + F(n - 2)，其中 n &gt; 1
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def fib(self, n: int) -> int:
-        a, b = 0, 1
-        for _ in range(n):
-            a, b = b, a + b
-        return a
-```
+
 
 ### **Java**
 
@@ -86,124 +79,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int fib(int n) {
-        int a = 0, b = 1;
-        while (n--) {
-            int c = a + b;
-            a = b;
-            b = c;
-        }
-        return a;
-    }
-};
-```
 
-### **Go**
 
-```go
-func fib(n int) int {
-	a, b := 0, 1
-	for i := 0; i < n; i++ {
-		a, b = b, a+b
-	}
-	return a
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var fib = function (n) {
-    let a = 0;
-    let b = 1;
-    while (n--) {
-        const c = a + b;
-        a = b;
-        b = c;
-    }
-    return a;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function fib(n: number): number {
-    let a = 0;
-    let b = 1;
-    for (let i = 0; i < n; i++) {
-        [a, b] = [b, a + b];
-    }
-    return a;
-}
-```
 
-```ts
-function fib(n: number): number {
-    if (n < 2) {
-        return n;
-    }
-    return fib(n - 1) + fib(n - 2);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn fib(n: i32) -> i32 {
-        let mut a = 0;
-        let mut b = 1;
-        for _ in 0..n {
-            let t = b;
-            b = a + b;
-            a = t
-        }
-        a
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn fib(n: i32) -> i32 {
-        if n < 2 {
-            return n;
-        }
-        Self::fib(n - 1) + Self::fib(n - 2)
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer $n
-     * @return Integer
-     */
-    function fib($n) {
-        if ($n == 0 || $n == 1) {
-            return $n;
-        }
-        $dp = [0, 1];
-        for ($i = 2; $i <= $n; $i++) {
-            $dp[$i] = $dp[$i - 2] + $dp[$i - 1];
-        }
-        return $dp[$n];
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -211,4 +113,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

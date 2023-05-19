@@ -67,61 +67,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 <!-- tabs:start -->
 
@@ -129,29 +83,7 @@ d[find(a)] = distance
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
-        def find(x):
-            if p[x] != x:
-                origin = p[x]
-                p[x] = find(p[x])
-                w[x] *= w[origin]
-            return p[x]
 
-        w = defaultdict(lambda: 1)
-        p = defaultdict()
-        for a, b in equations:
-            p[a], p[b] = a, b
-        for i, v in enumerate(values):
-            a, b = equations[i]
-            pa, pb = find(a), find(b)
-            if pa == pb:
-                continue
-            p[pa] = pb
-            w[pa] = w[b] * v / w[a]
-        return [-1 if c not in p or d not in p or find(c) != find(d) else w[c] / w[d] for c, d in queries]
-```
 
 ### **Java**
 
@@ -205,93 +137,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    unordered_map<string, string> p;
-    unordered_map<string, double> w;
 
-    vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {
-        int n = equations.size();
-        for (auto e : equations) {
-            p[e[0]] = e[0];
-            p[e[1]] = e[1];
-            w[e[0]] = 1.0;
-            w[e[1]] = 1.0;
-        }
-        for (int i = 0; i < n; ++i) {
-            vector<string> e = equations[i];
-            string a = e[0], b = e[1];
-            string pa = find(a), pb = find(b);
-            if (pa == pb) continue;
-            p[pa] = pb;
-            w[pa] = w[b] * values[i] / w[a];
-        }
-        int m = queries.size();
-        vector<double> ans(m);
-        for (int i = 0; i < m; ++i) {
-            string c = queries[i][0], d = queries[i][1];
-            ans[i] = p.find(c) == p.end() || p.find(d) == p.end() || find(c) != find(d) ? -1.0 : w[c] / w[d];
-        }
-        return ans;
-    }
 
-    string find(string x) {
-        if (p[x] != x) {
-            string origin = p[x];
-            p[x] = find(p[x]);
-            w[x] *= w[origin];
-        }
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
-```go
-func calcEquation(equations [][]string, values []float64, queries [][]string) []float64 {
-	p := make(map[string]string)
-	w := make(map[string]float64)
-	for _, e := range equations {
-		a, b := e[0], e[1]
-		p[a], p[b] = a, b
-		w[a], w[b] = 1.0, 1.0
-	}
 
-	var find func(x string) string
-	find = func(x string) string {
-		if p[x] != x {
-			origin := p[x]
-			p[x] = find(p[x])
-			w[x] *= w[origin]
-		}
-		return p[x]
-	}
 
-	for i, v := range values {
-		a, b := equations[i][0], equations[i][1]
-		pa, pb := find(a), find(b)
-		if pa == pb {
-			continue
-		}
-		p[pa] = pb
-		w[pa] = w[b] * v / w[a]
-	}
-	var ans []float64
-	for _, e := range queries {
-		c, d := e[0], e[1]
-		if p[c] == "" || p[d] == "" || find(c) != find(d) {
-			ans = append(ans, -1.0)
-		} else {
-			ans = append(ans, w[c]/w[d])
-		}
-	}
-	return ans
-}
-```
 
 ### **...**
 
@@ -299,4 +151,4 @@ func calcEquation(equations [][]string, values []float64, queries [][]string) []
 
 ```
 
-<!-- tabs:end -->
+

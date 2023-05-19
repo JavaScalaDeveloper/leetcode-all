@@ -62,17 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def matrixReshape(self, mat: List[List[int]], r: int, c: int) -> List[List[int]]:
-        m, n = len(mat), len(mat[0])
-        if m * n != r * c:
-            return mat
-        ans = [[0] * c for _ in range(r)]
-        for i in range(m * n):
-            ans[i // c][i % c] = mat[i // n][i % n]
-        return ans
-```
+
 
 ### **Java**
 
@@ -94,112 +84,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> matrixReshape(vector<vector<int>>& mat, int r, int c) {
-        int m = mat.size(), n = mat[0].size();
-        if (m * n != r * c) {
-            return mat;
-        }
-        vector<vector<int>> ans(r, vector<int>(c));
-        for (int i = 0; i < m * n; ++i) {
-            ans[i / c][i % c] = mat[i / n][i % n];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func matrixReshape(mat [][]int, r int, c int) [][]int {
-	m, n := len(mat), len(mat[0])
-	if m*n != r*c {
-		return mat
-	}
-	ans := make([][]int, r)
-	for i := range ans {
-		ans[i] = make([]int, c)
-	}
-	for i := 0; i < m*n; i++ {
-		ans[i/c][i%c] = mat[i/n][i%n]
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function matrixReshape(mat: number[][], r: number, c: number): number[][] {
-    let m = mat.length,
-        n = mat[0].length;
-    if (m * n != r * c) return mat;
-    let ans = Array.from({ length: r }, v => new Array(c).fill(0));
-    let k = 0;
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            ans[Math.floor(k / c)][k % c] = mat[i][j];
-            ++k;
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function matrixReshape(mat: number[][], r: number, c: number): number[][] {
-    const m = mat.length;
-    const n = mat[0].length;
-    if (m * n !== r * c) {
-        return mat;
-    }
-    const ans = Array.from({ length: r }, () => new Array(c).fill(0));
-    for (let i = 0; i < r * c; i++) {
-        ans[Math.floor(i / c)][i % c] = mat[Math.floor(i / n)][i % n];
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn matrix_reshape(mat: Vec<Vec<i32>>, r: i32, c: i32) -> Vec<Vec<i32>> {
-        let r = r as usize;
-        let c = c as usize;
-        let m = mat.len();
-        let n = mat[0].len();
-        if m * n != r * c {
-            return mat;
-        }
-        let mut i = 0;
-        let mut j = 0;
-        (0..r)
-            .into_iter()
-            .map(|_| {
-                (0..c)
-                    .into_iter()
-                    .map(|_| {
-                        let res = mat[i][j];
-                        j += 1;
-                        if j == n {
-                            j = 0;
-                            i += 1;
-                        }
-                        res
-                    })
-                    .collect()
-            })
-            .collect()
-    }
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -235,4 +136,4 @@ int **matrixReshape(int **mat, int matSize, int *matColSize, int r, int c, int *
 
 ```
 
-<!-- tabs:end -->
+

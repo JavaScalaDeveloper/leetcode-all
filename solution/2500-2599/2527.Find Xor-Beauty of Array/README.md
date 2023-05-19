@@ -77,11 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def xorBeauty(self, nums: List[int]) -> int:
-        return reduce(xor, nums)
-```
+
 
 ### **Java**
 
@@ -99,31 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int xorBeauty(vector<int>& nums) {
-        int ans = 0;
-        for (auto& x : nums) {
-            ans ^= x;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func xorBeauty(nums []int) (ans int) {
-	for _, x := range nums {
-		ans ^= x
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -131,4 +109,4 @@ func xorBeauty(nums []int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

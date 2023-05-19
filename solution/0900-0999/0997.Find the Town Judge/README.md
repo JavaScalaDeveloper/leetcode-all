@@ -76,19 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findJudge(self, n: int, trust: List[List[int]]) -> int:
-        cnt1 = [0] * (n + 1)
-        cnt2 = [0] * (n + 1)
-        for a, b in trust:
-            cnt1[a] += 1
-            cnt2[b] += 1
-        for i in range(1, n + 1):
-            if cnt1[i] == 0 and cnt2[i] == n - 1:
-                return i
-        return -1
-```
+
 
 ### **Java**
 
@@ -114,67 +102,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findJudge(int n, vector<vector<int>>& trust) {
-        vector<int> cnt1(n + 1);
-        vector<int> cnt2(n + 1);
-        for (auto& t : trust) {
-            int a = t[0], b = t[1];
-            ++cnt1[a];
-            ++cnt2[b];
-        }
-        for (int i = 1; i <= n; ++i) {
-            if (cnt1[i] == 0 && cnt2[i] == n - 1) {
-                return i;
-            }
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findJudge(n int, trust [][]int) int {
-	cnt1 := make([]int, n+1)
-	cnt2 := make([]int, n+1)
-	for _, t := range trust {
-		a, b := t[0], t[1]
-		cnt1[a]++
-		cnt2[b]++
-	}
-	for i := 1; i <= n; i++ {
-		if cnt1[i] == 0 && cnt2[i] == n-1 {
-			return i
-		}
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findJudge(n: number, trust: number[][]): number {
-    const cnt1: number[] = new Array(n + 1).fill(0);
-    const cnt2: number[] = new Array(n + 1).fill(0);
-    for (const [a, b] of trust) {
-        ++cnt1[a];
-        ++cnt2[b];
-    }
-    for (let i = 1; i <= n; ++i) {
-        if (cnt1[i] === 0 && cnt2[i] === n - 1) {
-            return i;
-        }
-    }
-    return -1;
-}
-```
+
 
 ### **...**
 
@@ -182,4 +120,4 @@ function findJudge(n: number, trust: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

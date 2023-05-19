@@ -107,48 +107,11 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
-        @cache
-        def dfs(i):
-            if i >= n:
-                return 0
-            _, e, p = jobs[i]
-            j = bisect_left(jobs, e, lo=i + 1, key=lambda x: x[0])
-            return max(dfs(i + 1), p + dfs(j))
 
-        jobs = sorted(zip(startTime, endTime, profit))
-        n = len(profit)
-        return dfs(0)
-```
 
-```python
-class Solution:
-    def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
-        @cache
-        def dfs(i: int) -> int:
-            if i >= n:
-                return 0
-            j = bisect_left(idx, endTime[idx[i]], key=lambda i: startTime[i])
-            return max(dfs(i + 1), profit[idx[i]] + dfs(j))
 
-        n = len(startTime)
-        idx = sorted(range(n), key=lambda i: startTime[i])
-        return dfs(0)
-```
 
-```python
-class Solution:
-    def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
-        jobs = sorted(zip(endTime, startTime, profit))
-        n = len(profit)
-        dp = [0] * (n + 1)
-        for i, (_, s, p) in enumerate(jobs):
-            j = bisect_right(jobs, s, hi=i, key=lambda x: x[0])
-            dp[i + 1] = max(dp[i], dp[j] + p)
-        return dp[n]
-```
+
 
 ### **Java**
 
@@ -232,150 +195,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
-        int n = profit.size();
-        vector<tuple<int, int, int>> jobs(n);
-        for (int i = 0; i < n; ++i) jobs[i] = {startTime[i], endTime[i], profit[i]};
-        sort(jobs.begin(), jobs.end());
-        vector<int> f(n);
-        function<int(int)> dfs = [&](int i) -> int {
-            if (i >= n) return 0;
-            if (f[i]) return f[i];
-            auto [_, e, p] = jobs[i];
-            tuple<int, int, int> t{e, 0, 0};
-            int j = lower_bound(jobs.begin() + i + 1, jobs.end(), t, [&](auto& l, auto& r) -> bool { return get<0>(l) < get<0>(r); }) - jobs.begin();
-            int ans = max(dfs(i + 1), p + dfs(j));
-            f[i] = ans;
-            return ans;
-        };
-        return dfs(0);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
-        int n = profit.size();
-        vector<tuple<int, int, int>> jobs(n);
-        for (int i = 0; i < n; ++i) jobs[i] = {endTime[i], startTime[i], profit[i]};
-        sort(jobs.begin(), jobs.end());
-        vector<int> dp(n + 1);
-        for (int i = 0; i < n; ++i) {
-            auto [_, s, p] = jobs[i];
-            int j = upper_bound(jobs.begin(), jobs.begin() + i, s, [&](int x, auto& job) -> bool { return x < get<0>(job); }) - jobs.begin();
-            dp[i + 1] = max(dp[i], dp[j] + p);
-        }
-        return dp[n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func jobScheduling(startTime []int, endTime []int, profit []int) int {
-	n := len(profit)
-	type tuple struct{ s, e, p int }
-	jobs := make([]tuple, n)
-	for i, p := range profit {
-		jobs[i] = tuple{startTime[i], endTime[i], p}
-	}
-	sort.Slice(jobs, func(i, j int) bool { return jobs[i].s < jobs[j].s })
-	f := make([]int, n)
-	var dfs func(int) int
-	dfs = func(i int) int {
-		if i >= n {
-			return 0
-		}
-		if f[i] != 0 {
-			return f[i]
-		}
-		j := sort.Search(n, func(j int) bool { return jobs[j].s >= jobs[i].e })
-		ans := max(dfs(i+1), jobs[i].p+dfs(j))
-		f[i] = ans
-		return ans
-	}
-	return dfs(0)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func jobScheduling(startTime []int, endTime []int, profit []int) int {
-	n := len(profit)
-	type tuple struct{ s, e, p int }
-	jobs := make([]tuple, n)
-	for i, p := range profit {
-		jobs[i] = tuple{startTime[i], endTime[i], p}
-	}
-	sort.Slice(jobs, func(i, j int) bool { return jobs[i].e < jobs[j].e })
-	dp := make([]int, n+1)
-	for i, job := range jobs {
-		j := sort.Search(i, func(k int) bool { return jobs[k].e > job.s })
-		dp[i+1] = max(dp[i], dp[j]+job.p)
-	}
-	return dp[n]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function jobScheduling(
-    startTime: number[],
-    endTime: number[],
-    profit: number[],
-): number {
-    const n = startTime.length;
-    const f = new Array(n).fill(0);
-    const idx = new Array(n).fill(0).map((_, i) => i);
-    idx.sort((i, j) => startTime[i] - startTime[j]);
-    const search = (x: number) => {
-        let l = 0;
-        let r = n;
-        while (l < r) {
-            const mid = (l + r) >> 1;
-            if (startTime[idx[mid]] >= x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    };
-    const dfs = (i: number): number => {
-        if (i >= n) {
-            return 0;
-        }
-        if (f[i] !== 0) {
-            return f[i];
-        }
-        const j = search(endTime[idx[i]]);
-        return (f[i] = Math.max(dfs(i + 1), dfs(j) + profit[idx[i]]));
-    };
-    return dfs(0);
-}
-```
+
 
 ### **...**
 
@@ -383,4 +217,4 @@ function jobScheduling(
 
 ```
 
-<!-- tabs:end -->
+

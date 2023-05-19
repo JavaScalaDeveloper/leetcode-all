@@ -75,32 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def treeDiameter(self, edges: List[List[int]]) -> int:
-        def dfs(u, t):
-            nonlocal ans, vis, d, next
-            if vis[u]:
-                return
-            vis[u] = True
-            for v in d[u]:
-                dfs(v, t + 1)
-            if ans < t:
-                ans = t
-                next = u
 
-        d = defaultdict(set)
-        vis = [False] * (len(edges) + 1)
-        for u, v in edges:
-            d[u].add(v)
-            d[v].add(u)
-        ans = 0
-        next = 0
-        dfs(edges[0][0], 0)
-        vis = [False] * (len(edges) + 1)
-        dfs(next, 0)
-        return ans
-```
 
 ### **Java**
 
@@ -145,78 +120,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    unordered_map<int, unordered_set<int>> g;
-    vector<bool> vis;
-    int ans;
-    int next;
 
-    int treeDiameter(vector<vector<int>>& edges) {
-        for (auto& e : edges) {
-            g[e[0]].insert(e[1]);
-            g[e[1]].insert(e[0]);
-        }
-        int n = edges.size();
-        ans = 0;
-        vis.resize(n + 1);
-        next = edges[0][0];
-        dfs(next, 0);
-        vis.assign(vis.size(), false);
-        dfs(next, 0);
-        return ans;
-    }
 
-    void dfs(int u, int t) {
-        if (vis[u]) return;
-        vis[u] = true;
-        if (ans < t) {
-            ans = t;
-            next = u;
-        }
-        for (int v : g[u]) dfs(v, t + 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func treeDiameter(edges [][]int) int {
-	n := len(edges)
-	g := make(map[int][]int)
-	for _, e := range edges {
-		g[e[0]] = append(g[e[0]], e[1])
-		g[e[1]] = append(g[e[1]], e[0])
-	}
-	vis := make(map[int]bool, n+1)
-	ans := 0
-	next := edges[0][0]
-	var dfs func(u, t int)
-	dfs = func(u, t int) {
-		if vis[u] {
-			return
-		}
-		vis[u] = true
-		if ans < t {
-			ans = t
-			next = u
-		}
-		if vs, ok := g[u]; ok {
-			for _, v := range vs {
-				dfs(v, t+1)
-			}
-		}
-	}
-	dfs(next, 0)
-	vis = make(map[int]bool, n+1)
-	dfs(next, 0)
-	return ans
-}
-```
+
+
 
 ### **...**
 
@@ -224,4 +134,4 @@ func treeDiameter(edges [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

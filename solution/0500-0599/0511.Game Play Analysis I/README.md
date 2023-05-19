@@ -66,4 +66,4 @@ FROM
 GROUP BY player_id;
 ```
 
-<!-- tabs:end -->
+

@@ -44,14 +44,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reverseString(self, s: List[str]) -> None:
-        """
-        Do not return anything, modify s in-place instead.
-        """
-        s[:] = s[::-1]
-```
+
 
 ### **Java**
 
@@ -69,58 +62,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    void reverseString(vector<char>& s) {
-        for (int i = 0, j = s.size() - 1; i < j; ++i, --j)
-            swap(s[i], s[j]);
-    }
-};
-```
 
-### **Go**
 
-```go
-func reverseString(s []byte) {
-	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
-		s[i], s[j] = s[j], s[i]
-	}
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {character[]} s
- * @return {void} Do not return anything, modify s in-place instead.
- */
-var reverseString = function (s) {
-    for (let i = 0, j = s.length - 1; i < j; ++i, --j) {
-        [s[i], s[j]] = [s[j], s[i]];
-    }
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn reverse_string(s: &mut Vec<char>) {
-        let n = s.len();
-        let mut l = 0;
-        let mut r = n - 1;
-        while l < r {
-            s.swap(l, r);
-            l += 1;
-            r -= 1;
-        }
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -128,4 +84,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

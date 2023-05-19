@@ -67,19 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def appendCharacters(self, s: str, t: str) -> int:
-        m, n = len(s), len(t)
-        i = 0
-        for j in range(n):
-            while i < m and s[i] != t[j]:
-                i += 1
-            if i == m:
-                return n - j
-            i += 1
-        return 0
-```
+
 
 ### **Java**
 
@@ -102,42 +90,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int appendCharacters(string s, string t) {
-        int m = s.size(), n = t.size();
-        for (int i = 0, j = 0; j < n; ++j) {
-            while (i < m && s[i] != t[j]) {
-                ++i;
-            }
-            if (i++ == m) {
-                return n - j;
-            }
-        }
-        return 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func appendCharacters(s string, t string) int {
-	m, n := len(s), len(t)
-	for i, j := 0, 0; j < n; i, j = i+1, j+1 {
-		for i < m && s[i] != t[j] {
-			i++
-		}
-		if i == m {
-			return n - j
-		}
-	}
-	return 0
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -145,4 +104,4 @@ func appendCharacters(s string, t string) int {
 
 ```
 
-<!-- tabs:end -->
+

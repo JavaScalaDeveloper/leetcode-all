@@ -92,27 +92,9 @@ s 中没有 "01" 存在，整个过程花费 0 秒。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def secondsToRemoveOccurrences(self, s: str) -> int:
-        ans = 0
-        while s.count('01'):
-            s = s.replace('01', '10')
-            ans += 1
-        return ans
-```
 
-```python
-class Solution:
-    def secondsToRemoveOccurrences(self, s: str) -> int:
-        ans = cnt = 0
-        for c in s:
-            if c == '0':
-                cnt += 1
-            elif cnt:
-                ans = max(ans + 1, cnt)
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -160,99 +142,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int secondsToRemoveOccurrences(string s) {
-        bool find = true;
-        int ans = 0;
-        while (find) {
-            find = false;
-            for (int i = 0; i < s.size() - 1; ++i) {
-                if (s[i] == '0' && s[i + 1] == '1') {
-                    swap(s[i], s[i + 1]);
-                    ++i;
-                    find = true;
-                }
-            }
-            if (find) {
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int secondsToRemoveOccurrences(string s) {
-        int ans = 0, cnt = 0;
-        for (char c : s) {
-            if (c == '0') {
-                ++cnt;
-            } else if (cnt) {
-                ans = max(ans + 1, cnt);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func secondsToRemoveOccurrences(s string) int {
-	cs := []byte(s)
-	ans := 0
-	find := true
-	for find {
-		find = false
-		for i := 0; i < len(cs)-1; i++ {
-			if cs[i] == '0' && cs[i+1] == '1' {
-				cs[i], cs[i+1] = cs[i+1], cs[i]
-				i++
-				find = true
-			}
-		}
-		if find {
-			ans++
-		}
-	}
-	return ans
-}
-```
 
-```go
-func secondsToRemoveOccurrences(s string) int {
-	ans, cnt := 0, 0
-	for _, c := range s {
-		if c == '0' {
-			cnt++
-		} else if cnt > 0 {
-			ans = max(ans+1, cnt)
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -261,4 +165,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

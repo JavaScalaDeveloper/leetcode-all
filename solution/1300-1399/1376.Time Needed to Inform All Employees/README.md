@@ -73,20 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-        def dfs(i: int) -> int:
-            ans = 0
-            for j in g[i]:
-                ans = max(ans, dfs(j) + informTime[i])
-            return ans
 
-        g = defaultdict(list)
-        for i, x in enumerate(manager):
-            g[x].append(i)
-        return dfs(headID)
-```
 
 ### **Java**
 
@@ -119,114 +106,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numOfMinutes(int n, int headID, vector<int>& manager, vector<int>& informTime) {
-        vector<vector<int>> g(n);
-        for (int i = 0; i < n; ++i) {
-            if (manager[i] >= 0) {
-                g[manager[i]].push_back(i);
-            }
-        }
-        function<int(int)> dfs = [&](int i) -> int {
-            int ans = 0;
-            for (int j : g[i]) {
-                ans = max(ans, dfs(j) + informTime[i]);
-            }
-            return ans;
-        };
-        return dfs(headID);
-    }
-};
-```
 
-### **Go**
 
-```go
-func numOfMinutes(n int, headID int, manager []int, informTime []int) int {
-	g := make([][]int, n)
-	for i, x := range manager {
-		if x != -1 {
-			g[x] = append(g[x], i)
-		}
-	}
-	var dfs func(int) int
-	dfs = func(i int) (ans int) {
-		for _, j := range g[i] {
-			ans = max(ans, dfs(j)+informTime[i])
-		}
-		return
-	}
-	return dfs(headID)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numOfMinutes(
-    n: number,
-    headID: number,
-    manager: number[],
-    informTime: number[],
-): number {
-    const g: number[][] = new Array(n).fill(0).map(() => []);
-    for (let i = 0; i < n; ++i) {
-        if (manager[i] !== -1) {
-            g[manager[i]].push(i);
-        }
-    }
-    const dfs = (i: number): number => {
-        let ans = 0;
-        for (const j of g[i]) {
-            ans = Math.max(ans, dfs(j) + informTime[i]);
-        }
-        return ans;
-    };
-    return dfs(headID);
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    private List<int>[] g;
-    private int[] informTime;
 
-    public int NumOfMinutes(int n, int headID, int[] manager, int[] informTime) {
-        g = new List<int>[n];
-        for (int i = 0; i < n; ++i) {
-            g[i] = new List<int>();
-        }
-        this.informTime = informTime;
-        for (int i = 0; i < n; ++i) {
-            if (manager[i] != -1) {
-                g[manager[i]].Add(i);
-            }
-        }
-        return dfs(headID);
-    }
 
-    private int dfs(int i) {
-        int ans = 0;
-        foreach (int j in g[i]) {
-            ans = Math.Max(ans, dfs(j) + informTime[i]);
-        }
-        return ans;
-    }
-}
-```
+
 
 ### **...**
 
@@ -234,4 +128,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

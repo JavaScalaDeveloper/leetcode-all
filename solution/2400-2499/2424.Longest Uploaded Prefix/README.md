@@ -68,26 +68,7 @@ server.longest();                    // 前缀 [1,2,3] 是最长上传前缀，�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class LUPrefix:
-    def __init__(self, n: int):
-        self.r = 0
-        self.s = set()
 
-    def upload(self, video: int) -> None:
-        self.s.add(video)
-        while self.r + 1 in self.s:
-            self.r += 1
-
-    def longest(self) -> int:
-        return self.r
-
-
-# Your LUPrefix object will be instantiated and called as such:
-# obj = LUPrefix(n)
-# obj.upload(video)
-# param_2 = obj.longest()
-```
 
 ### **Java**
 
@@ -121,75 +102,17 @@ class LUPrefix {
  */
 ```
 
-### **C++**
 
-```cpp
-class LUPrefix {
-public:
-    LUPrefix(int n) {
 
-    }
 
-    void upload(int video) {
-        s.insert(video);
-        while (s.count(r + 1)) {
-            ++r;
-        }
-    }
 
-    int longest() {
-        return r;
-    }
 
-private:
-    int r = 0;
-    unordered_set<int> s;
-};
 
-/**
- * Your LUPrefix object will be instantiated and called as such:
- * LUPrefix* obj = new LUPrefix(n);
- * obj->upload(video);
- * int param_2 = obj->longest();
- */
-```
 
-### **Go**
-
-```go
-type LUPrefix struct {
-	r int
-	s []bool
-}
-
-func Constructor(n int) LUPrefix {
-	return LUPrefix{0, make([]bool, n+1)}
-}
-
-func (this *LUPrefix) Upload(video int) {
-	this.s[video] = true
-	for this.r+1 < len(this.s) && this.s[this.r+1] {
-		this.r++
-	}
-}
-
-func (this *LUPrefix) Longest() int {
-	return this.r
-}
-
-/**
- * Your LUPrefix object will be instantiated and called as such:
- * obj := Constructor(n);
- * obj.Upload(video);
- * param_2 := obj.Longest();
- */
-```
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -197,4 +120,4 @@ func (this *LUPrefix) Longest() int {
 
 ```
 
-<!-- tabs:end -->
+

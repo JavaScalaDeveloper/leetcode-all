@@ -83,21 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shipWithinDays(self, weights: List[int], days: int) -> int:
-        def check(mx):
-            ws, cnt = 0, 1
-            for w in weights:
-                ws += w
-                if ws > mx:
-                    cnt += 1
-                    ws = w
-            return cnt <= days
 
-        left, right = max(weights), sum(weights) + 1
-        return left + bisect_left(range(left, right), True, key=check)
-```
 
 ### **Java**
 
@@ -136,100 +122,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int shipWithinDays(vector<int>& weights, int days) {
-        int left = 0, right = 0;
-        for (auto& w : weights) {
-            left = max(left, w);
-            right += w;
-        }
-        auto check = [&](int mx) {
-            int ws = 0, cnt = 1;
-            for (auto& w : weights) {
-                ws += w;
-                if (ws > mx) {
-                    ws = w;
-                    ++cnt;
-                }
-            }
-            return cnt <= days;
-        };
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (check(mid)) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func shipWithinDays(weights []int, days int) int {
-	var left, right int
-	for _, w := range weights {
-		if left < w {
-			left = w
-		}
-		right += w
-	}
-	return left + sort.Search(right, func(mx int) bool {
-		mx += left
-		ws, cnt := 0, 1
-		for _, w := range weights {
-			ws += w
-			if ws > mx {
-				ws = w
-				cnt++
-			}
-		}
-		return cnt <= days
-	})
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function shipWithinDays(weights: number[], days: number): number {
-    let left = 0;
-    let right = 0;
-    for (const w of weights) {
-        left = Math.max(left, w);
-        right += w;
-    }
-    const check = (mx: number) => {
-        let ws = 0;
-        let cnt = 1;
-        for (const w of weights) {
-            ws += w;
-            if (ws > mx) {
-                ws = w;
-                ++cnt;
-            }
-        }
-        return cnt <= days;
-    };
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        if (check(mid)) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-```
+
 
 ### **...**
 
@@ -237,4 +140,4 @@ function shipWithinDays(weights: number[], days: number): number {
 
 ```
 
-<!-- tabs:end -->
+

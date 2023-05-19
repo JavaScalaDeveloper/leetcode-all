@@ -79,24 +79,7 @@
 -   `find(x)` 函数用于查找 $x$ 所在集合的祖宗节点
 -   `union(a, b)` 函数用于合并 $a$ 和 $b$ 所在的集合
 
-```python [sol1-Python3 模板]
-p = list(range(n))
-size = [1] * n
 
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-def union(a, b):
-    pa, pb = find(a), find(b)
-    if pa == pb:
-        return
-    p[pa] = pb
-    size[pb] += size[pa]
-```
 
 ```java [sol1-Java 模板]
 int[] p = new int[n];
@@ -124,52 +107,9 @@ void union(int a, int b) {
 }
 ```
 
-```cpp [sol1-C++ 模板]
-vector<int> p(n);
-iota(p.begin(), p.end(), 0);
-vector<int> size(n, 1);
 
-int find(int x) {
-    if (p[x] != x) {
-        // 路径压缩
-        p[x] = find(p[x]);
-    }
-    return p[x];
-}
 
-void unite(int a, int b) {
-    int pa = find(a), pb = find(b);
-    if (pa == pb) return;
-    p[pa] = pb;
-    size[pb] += size[pa];
-}
-```
 
-```go [sol1-Go 模板]
-p := make([]int, n)
-size := make([]int, n)
-for i := range p {
-    p[i] = i
-    size[i] = 1
-}
-
-func find(x int) int {
-    if p[x] != x {
-        // 路径压缩
-        p[x] = find(p[x])
-    }
-    return p[x]
-}
-
-func union(a, b int) {
-    pa, pb := find(a), find(b)
-    if pa == pb {
-        return
-    }
-    p[pa] = pb
-    size[pb] += size[pa]
-}
-```
 
 <!-- tabs:start -->
 
@@ -177,26 +117,7 @@ func union(a, b int) {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def distanceLimitedPathsExist(self, n: int, edgeList: List[List[int]], queries: List[List[int]]) -> List[bool]:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        p = list(range(n))
-        edgeList.sort(key=lambda x: x[2])
-        j = 0
-        ans = [False] * len(queries)
-        for i, (a, b, limit) in sorted(enumerate(queries), key=lambda x: x[1][2]):
-            while j < len(edgeList) and edgeList[j][2] < limit:
-                u, v, _ = edgeList[j]
-                p[find(u)] = find(v)
-                j += 1
-            ans[i] = find(a) == find(b)
-        return ans
-```
 
 ### **Java**
 
@@ -241,75 +162,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<bool> distanceLimitedPathsExist(int n, vector<vector<int>>& edgeList, vector<vector<int>>& queries) {
-        vector<int> p(n);
-        iota(p.begin(), p.end(), 0);
-        sort(edgeList.begin(), edgeList.end(), [](auto& a, auto& b) { return a[2] < b[2]; });
-        function<int(int)> find = [&](int x) -> int {
-            if (p[x] != x) p[x] = find(p[x]);
-            return p[x];
-        };
-        int m = queries.size();
-        vector<bool> ans(m);
-        vector<int> qid(m);
-        iota(qid.begin(), qid.end(), 0);
-        sort(qid.begin(), qid.end(), [&](int i, int j) { return queries[i][2] < queries[j][2]; });
-        int j = 0;
-        for (int i : qid) {
-            int a = queries[i][0], b = queries[i][1], limit = queries[i][2];
-            while (j < edgeList.size() && edgeList[j][2] < limit) {
-                int u = edgeList[j][0], v = edgeList[j][1];
-                p[find(u)] = find(v);
-                ++j;
-            }
-            ans[i] = find(a) == find(b);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func distanceLimitedPathsExist(n int, edgeList [][]int, queries [][]int) []bool {
-	p := make([]int, n)
-	for i := range p {
-		p[i] = i
-	}
-	sort.Slice(edgeList, func(i, j int) bool { return edgeList[i][2] < edgeList[j][2] })
-	var find func(int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	m := len(queries)
-	qid := make([]int, m)
-	ans := make([]bool, m)
-	for i := range qid {
-		qid[i] = i
-	}
-	sort.Slice(qid, func(i, j int) bool { return queries[qid[i]][2] < queries[qid[j]][2] })
-	j := 0
-	for _, i := range qid {
-		a, b, limit := queries[i][0], queries[i][1], queries[i][2]
-		for j < len(edgeList) && edgeList[j][2] < limit {
-			u, v := edgeList[j][0], edgeList[j][1]
-			p[find(u)] = find(v)
-			j++
-		}
-		ans[i] = find(a) == find(b)
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -317,4 +176,4 @@ func distanceLimitedPathsExist(n int, edgeList [][]int, queries [][]int) []bool 
 
 ```
 
-<!-- tabs:end -->
+

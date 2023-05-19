@@ -74,15 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def addRungs(self, rungs: List[int], dist: int) -> int:
-        prev = res = 0
-        for rung in rungs:
-            res += (rung - prev - 1) // dist
-            prev = rung
-        return res
-```
+
 
 ### **Java**
 
@@ -107,4 +99,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

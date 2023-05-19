@@ -50,17 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
-        intervals.sort(key=lambda x: (x[0], -x[1]))
-        cnt, pre = 1, intervals[0]
-        for e in intervals[1:]:
-            if pre[1] < e[1]:
-                cnt += 1
-                pre = e
-        return cnt
-```
+
 
 ### **Java**
 
@@ -83,47 +73,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int removeCoveredIntervals(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end(), [](const vector<int>& a, const vector<int>& b) { return a[0] == b[0] ? b[1] < a[1] : a[0] < b[0]; });
-        int cnt = 1;
-        vector<int> pre = intervals[0];
-        for (int i = 1; i < intervals.size(); ++i) {
-            if (pre[1] < intervals[i][1]) {
-                ++cnt;
-                pre = intervals[i];
-            }
-        }
-        return cnt;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeCoveredIntervals(intervals [][]int) int {
-	sort.Slice(intervals, func(i, j int) bool {
-		if intervals[i][0] == intervals[j][0] {
-			return intervals[j][1] < intervals[i][1]
-		}
-		return intervals[i][0] < intervals[j][0]
-	})
-	cnt := 1
-	pre := intervals[0]
-	for i := 1; i < len(intervals); i++ {
-		if pre[1] < intervals[i][1] {
-			cnt++
-			pre = intervals[i]
-		}
-	}
-	return cnt
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -131,4 +87,4 @@ func removeCoveredIntervals(intervals [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

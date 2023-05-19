@@ -61,52 +61,9 @@ smallestInfiniteSet.popSmallest(); // 返回 5 ，并将其从集合中移除。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class SmallestInfiniteSet:
-    def __init__(self):
-        self.black = set()
-
-    def popSmallest(self) -> int:
-        i = 1
-        while i in self.black:
-            i += 1
-        self.black.add(i)
-        return i
-
-    def addBack(self, num: int) -> None:
-        self.black.discard(num)
 
 
-# Your SmallestInfiniteSet object will be instantiated and called as such:
-# obj = SmallestInfiniteSet()
-# param_1 = obj.popSmallest()
-# obj.addBack(num)
-```
 
-```python
-class SmallestInfiniteSet:
-
-    def __init__(self):
-        self.h = list(range(1, 1010))
-        self.s = set(self.h)
-        heapify(self.h)
-
-    def popSmallest(self) -> int:
-        ans = heappop(self.h)
-        self.s.discard(ans)
-        return ans
-
-    def addBack(self, num: int) -> None:
-        if num not in self.s:
-            self.s.add(num)
-            heappush(self.h, num)
-
-
-# Your SmallestInfiniteSet object will be instantiated and called as such:
-# obj = SmallestInfiniteSet()
-# param_1 = obj.popSmallest()
-# obj.addBack(num)
-```
 
 ### **Java**
 
@@ -174,232 +131,25 @@ class SmallestInfiniteSet {
  */
 ```
 
-### **C++**
 
-```cpp
-class SmallestInfiniteSet {
-public:
-    unordered_set<int> black;
 
-    SmallestInfiniteSet() {
-    }
 
-    int popSmallest() {
-        int i = 1;
-        for (; black.count(i); ++i)
-            ;
-        black.insert(i);
-        return i;
-    }
 
-    void addBack(int num) {
-        black.erase(num);
-    }
-};
 
-/**
- * Your SmallestInfiniteSet object will be instantiated and called as such:
- * SmallestInfiniteSet* obj = new SmallestInfiniteSet();
- * int param_1 = obj->popSmallest();
- * obj->addBack(num);
- */
-```
 
-```cpp
-class SmallestInfiniteSet {
-public:
-    priority_queue<int, vector<int>, greater<int>> pq;
-    unordered_set<int> s;
 
-    SmallestInfiniteSet() {
-        for (int i = 1; i < 1010; ++i)
-        {
-            pq.push(i);
-            s.insert(i);
-        }
-    }
 
-    int popSmallest() {
-        int ans = pq.top();
-        pq.pop();
-        s.erase(ans);
-        return ans;
-    }
 
-    void addBack(int num) {
-        if (!s.count(num))
-        {
-            s.insert(num);
-            pq.push(num);
-        }
-    }
-};
 
-/**
- * Your SmallestInfiniteSet object will be instantiated and called as such:
- * SmallestInfiniteSet* obj = new SmallestInfiniteSet();
- * int param_1 = obj->popSmallest();
- * obj->addBack(num);
- */
-```
 
-### **Go**
-
-```go
-type SmallestInfiniteSet struct {
-	black map[int]bool
-}
-
-func Constructor() SmallestInfiniteSet {
-	s := map[int]bool{}
-	return SmallestInfiniteSet{s}
-}
-
-func (this *SmallestInfiniteSet) PopSmallest() int {
-	i := 1
-	for ; this.black[i]; i++ {
-	}
-	this.black[i] = true
-	return i
-}
-
-func (this *SmallestInfiniteSet) AddBack(num int) {
-	this.black[num] = false
-}
-
-/**
- * Your SmallestInfiniteSet object will be instantiated and called as such:
- * obj := Constructor();
- * param_1 := obj.PopSmallest();
- * obj.AddBack(num);
- */
-```
-
-```go
-type SmallestInfiniteSet struct {
-	h *hp
-	s map[int]bool
-}
-
-func Constructor() SmallestInfiniteSet {
-	h := &hp{}
-	s := map[int]bool{}
-	for i := 1; i < 1010; i++ {
-		s[i] = true
-		h.push(i)
-	}
-	return SmallestInfiniteSet{h, s}
-}
-
-func (this *SmallestInfiniteSet) PopSmallest() int {
-	ans := this.h.pop()
-	this.s[ans] = false
-	return ans
-}
-
-func (this *SmallestInfiniteSet) AddBack(num int) {
-	if !this.s[num] {
-		this.s[num] = true
-		this.h.push(num)
-	}
-}
-
-type hp []int
-
-func (h hp) Len() int              { return len(h) }
-func (h hp) Less(i, j int) bool    { return h[i] < h[j] }
-func (h hp) Swap(i, j int)         { h[i], h[j] = h[j], h[i] }
-func (h *hp) Push(v interface{})   { *h = append(*h, v.(int)) }
-func (h *hp) Pop() (v interface{}) { a := *h; *h, v = a[:len(a)-1], a[len(a)-1]; return }
-func (h *hp) push(v int)           { heap.Push(h, v) }
-func (h *hp) pop() int             { return heap.Pop(h).(int) }
-func (h *hp) top() int             { a := *h; return a[0] }
-
-/**
- * Your SmallestInfiniteSet object will be instantiated and called as such:
- * obj := Constructor();
- * param_1 := obj.PopSmallest();
- * obj.AddBack(num);
- */
-```
 
 ### **TypeScript**
 
-```ts
-class SmallestInfiniteSet {
-    private hashMap: boolean[];
-
-    constructor() {
-        this.hashMap = new Array(1001).fill(true);
-    }
-
-    popSmallest(): number {
-        for (let i = 1; i <= 1001; i++) {
-            if (this.hashMap[i]) {
-                this.hashMap[i] = false;
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    addBack(num: number): void {
-        if (!this.hashMap[num]) {
-            this.hashMap[num] = true;
-        }
-    }
-}
-
-/**
- * Your SmallestInfiniteSet object will be instantiated and called as such:
- * var obj = new SmallestInfiniteSet()
- * var param_1 = obj.popSmallest()
- * obj.addBack(num)
- */
-```
-
-### **Rust**
-
-```rust
-struct SmallestInfiniteSet {
-    counter: [bool; 1000]
-}
 
 
-/**
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
-impl SmallestInfiniteSet {
 
-    fn new() -> Self {
-        Self {
-            counter: [true; 1000]
-        }
-    }
 
-    fn pop_smallest(&mut self) -> i32 {
-        for i in 0..1000 {
-            if self.counter[i] {
-                self.counter[i] = false;
-                return i as i32 + 1;
-            }
-        }
-        -1
-    }
 
-    fn add_back(&mut self, num: i32) {
-        self.counter[num as usize - 1] = true;
-    }
-}
-
-/**
- * Your SmallestInfiniteSet object will be instantiated and called as such:
- * let obj = SmallestInfiniteSet::new();
- * let ret_1: i32 = obj.pop_smallest();
- * obj.add_back(num);
- */
-```
 
 ### **...**
 
@@ -407,4 +157,4 @@ impl SmallestInfiniteSet {
 
 ```
 
-<!-- tabs:end -->
+

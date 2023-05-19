@@ -110,22 +110,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
 
-
-class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
-        a, b = headA, headB
-        while a != b:
-            a = a.next if a else headB
-            b = b.next if b else headA
-        return a
-```
 
 ### **Java**
 
@@ -155,141 +140,25 @@ public class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
-        ListNode *a = headA, *b = headB;
-        while (a != b) {
-            a = a ? a->next : headB;
-            b = b ? b->next : headA;
-        }
-        return a;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
 
-/**
- * @param {ListNode} headA
- * @param {ListNode} headB
- * @return {ListNode}
- */
-var getIntersectionNode = function (headA, headB) {
-    let a = headA;
-    let b = headB;
-    while (a != b) {
-        a = a ? a.next : headB;
-        b = b ? b.next : headA;
-    }
-    return a;
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
- func getIntersectionNode(headA, headB *ListNode) *ListNode {
-    a, b := headA, headB
-    for a != b {
-        if a == nil {
-            a = headB
-        } else {
-            a = a.Next
-        }
-        if b == nil {
-            b = headA
-        } else {
-            b = b.Next
-        }
-    }
-    return a
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
-function getIntersectionNode(
-    headA: ListNode | null,
-    headB: ListNode | null,
-): ListNode | null {
-    let a = headA;
-    let b = headB;
-    while (a != b) {
-        a = a ? a.next : headB;
-        b = b ? b.next : headA;
-    }
-    return a;
-}
-```
 
-### **Swift**
 
-```swift
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.next = nil
- *     }
- * }
- */
 
-class Solution {
-    func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
-        var a = headA
-        var b = headB
-        while a !== b {
-            a = a == nil ? headB : a?.next
-            b = b == nil ? headA : b?.next
-        }
-        return a
-    }
-}
-```
+
 
 ### **...**
 
@@ -297,4 +166,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

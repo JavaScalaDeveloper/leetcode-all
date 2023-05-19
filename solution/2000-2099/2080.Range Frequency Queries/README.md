@@ -56,25 +56,7 @@ rangeFreqQuery.query(0, 11, 33); // 返回 2 。33 在整个子数组中出现 2
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class RangeFreqQuery:
-    def __init__(self, arr: List[int]):
-        self.mp = defaultdict(list)
-        for i, x in enumerate(arr):
-            self.mp[x].append(i)
 
-    def query(self, left: int, right: int, value: int) -> int:
-        if value not in self.mp:
-            return 0
-        arr = self.mp[value]
-        l, r = bisect_right(arr, left - 1), bisect_right(arr, right)
-        return r - l
-
-
-# Your RangeFreqQuery object will be instantiated and called as such:
-# obj = RangeFreqQuery(arr)
-# param_1 = obj.query(left,right,value)
-```
 
 ### **Java**
 
@@ -121,61 +103,13 @@ class RangeFreqQuery {
  */
 ```
 
-### **C++**
 
-```cpp
-class RangeFreqQuery {
-public:
-    unordered_map<int, vector<int>> mp;
-    RangeFreqQuery(vector<int>& arr) {
-        for (int i = 0; i < arr.size(); ++i)
-            mp[arr[i]].push_back(i);
-    }
 
-    int query(int left, int right, int value) {
-        if (!mp.count(value)) return 0;
-        auto& arr = mp[value];
-        auto l = upper_bound(arr.begin(), arr.end(), left - 1);
-        auto r = upper_bound(arr.begin(), arr.end(), right);
-        return r - l;
-    }
-};
 
-/**
- * Your RangeFreqQuery object will be instantiated and called as such:
- * RangeFreqQuery* obj = new RangeFreqQuery(arr);
- * int param_1 = obj->query(left,right,value);
- */
-```
 
-### **Go**
 
-```go
-type RangeFreqQuery struct {
-	mp map[int][]int
-}
 
-func Constructor(arr []int) RangeFreqQuery {
-	mp := make(map[int][]int)
-	for i, v := range arr {
-		mp[v] = append(mp[v], i)
-	}
-	return RangeFreqQuery{mp}
-}
 
-func (this *RangeFreqQuery) Query(left int, right int, value int) int {
-	arr := this.mp[value]
-	l := sort.SearchInts(arr, left)
-	r := sort.SearchInts(arr, right+1)
-	return r - l
-}
-
-/**
- * Your RangeFreqQuery object will be instantiated and called as such:
- * obj := Constructor(arr);
- * param_1 := obj.Query(left,right,value);
- */
-```
 
 ### **...**
 
@@ -183,4 +117,4 @@ func (this *RangeFreqQuery) Query(left int, right int, value int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -77,19 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shareCandies(self, candies: List[int], k: int) -> int:
-        cnt = Counter(candies[k:])
-        ans = len(cnt)
-        for i in range(k, len(candies)):
-            cnt[candies[i]] -= 1
-            cnt[candies[i - k]] += 1
-            if cnt[candies[i]] == 0:
-                cnt.pop(candies[i])
-            ans = max(ans, len(cnt))
-        return ans
-```
+
 
 ### **Java**
 
@@ -116,63 +104,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int shareCandies(vector<int>& candies, int k) {
-        unordered_map<int, int> cnt;
-        int n = candies.size();
-        for (int i = k; i < n; ++i) {
-            ++cnt[candies[i]];
-        }
-        int ans = cnt.size();
-        for (int i = k; i < candies.size(); ++i) {
-            if (--cnt[candies[i]] == 0) {
-                cnt.erase(candies[i]);
-            }
-            ++cnt[candies[i - k]];
-            ans = max(ans, (int) cnt.size());
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func shareCandies(candies []int, k int) (ans int) {
-	cnt := map[int]int{}
-	for _, c := range candies[k:] {
-		cnt[c]++
-	}
-	ans = len(cnt)
-	for i := k; i < len(candies); i++ {
-		cnt[candies[i]]--
-		if cnt[candies[i]] == 0 {
-			delete(cnt, candies[i])
-		}
-		cnt[candies[i-k]]++
-		ans = max(ans, len(cnt))
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -180,4 +122,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

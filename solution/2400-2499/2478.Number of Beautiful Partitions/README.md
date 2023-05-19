@@ -93,25 +93,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def beautifulPartitions(self, s: str, k: int, minLength: int) -> int:
-        primes = '2357'
-        if s[0] not in primes or s[-1] in primes:
-            return 0
-        mod = 10**9 + 7
-        n = len(s)
-        f = [[0] * (k + 1) for _ in range(n + 1)]
-        g = [[0] * (k + 1) for _ in range(n + 1)]
-        f[0][0] = g[0][0] = 1
-        for i, c in enumerate(s, 1):
-            if i >= minLength and c not in primes and (i == n or s[i] in primes):
-                for j in range(1, k + 1):
-                    f[i][j] = g[i - minLength][j - 1]
-            for j in range(k + 1):
-                g[i][j] = (g[i - 1][j] + f[i][j]) % mod
-        return f[n][k]
-```
+
 
 ### **Java**
 
@@ -149,75 +131,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int beautifulPartitions(string s, int k, int minLength) {
-        int n = s.size();
-        auto prime = [](char c) {
-            return c == '2' || c == '3' || c == '5' || c == '7';
-        };
-        if (!prime(s[0]) || prime(s[n - 1])) return 0;
-        vector<vector<int>> f(n + 1, vector<int>(k + 1));
-        vector<vector<int>> g(n + 1, vector<int>(k + 1));
-        f[0][0] = g[0][0] = 1;
-        for (int i = 1; i <= n; ++i) {
-            if (i >= minLength && !prime(s[i - 1]) && (i == n || prime(s[i]))) {
-                for (int j = 1; j <= k; ++j) {
-                    f[i][j] = g[i - minLength][j - 1];
-                }
-            }
-            for (int j = 0; j <= k; ++j) {
-                g[i][j] = (g[i - 1][j] + f[i][j]) % mod;
-            }
-        }
-        return f[n][k];
-    }
-};
-```
 
-### **Go**
 
-```go
-func beautifulPartitions(s string, k int, minLength int) int {
-	prime := func(c byte) bool {
-		return c == '2' || c == '3' || c == '5' || c == '7'
-	}
-	n := len(s)
-	if !prime(s[0]) || prime(s[n-1]) {
-		return 0
-	}
-	const mod int = 1e9 + 7
-	f := make([][]int, n+1)
-	g := make([][]int, n+1)
-	for i := range f {
-		f[i] = make([]int, k+1)
-		g[i] = make([]int, k+1)
-	}
-	f[0][0], g[0][0] = 1, 1
-	for i := 1; i <= n; i++ {
-		if i >= minLength && !prime(s[i-1]) && (i == n || prime(s[i])) {
-			for j := 1; j <= k; j++ {
-				f[i][j] = g[i-minLength][j-1]
-			}
-		}
-		for j := 0; j <= k; j++ {
-			g[i][j] = (g[i-1][j] + f[i][j]) % mod
-		}
-	}
-	return f[n][k]
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -225,4 +149,4 @@ func beautifulPartitions(s string, k int, minLength int) int {
 
 ```
 
-<!-- tabs:end -->
+

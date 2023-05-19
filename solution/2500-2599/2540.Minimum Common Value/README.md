@@ -52,20 +52,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
-        i = j = 0
-        m, n = len(nums1), len(nums2)
-        while i < m and j < n:
-            if nums1[i] == nums2[j]:
-                return nums1[i]
-            if nums1[i] < nums2[j]:
-                i += 1
-            else:
-                j += 1
-        return -1
-```
+
 
 ### **Java**
 
@@ -90,92 +77,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int getCommon(vector<int>& nums1, vector<int>& nums2) {
-        int m = nums1.size(), n = nums2.size();
-        for (int i = 0, j = 0; i < m && j < n;) {
-            if (nums1[i] == nums2[j]) {
-                return nums1[i];
-            }
-            if (nums1[i] < nums2[j]) {
-                ++i;
-            } else {
-                ++j;
-            }
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func getCommon(nums1 []int, nums2 []int) int {
-	m, n := len(nums1), len(nums2)
-	for i, j := 0, 0; i < m && j < n; {
-		if nums1[i] == nums2[j] {
-			return nums1[i]
-		}
-		if nums1[i] < nums2[j] {
-			i++
-		} else {
-			j++
-		}
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function getCommon(nums1: number[], nums2: number[]): number {
-    const m = nums1.length;
-    const n = nums2.length;
-    let i = 0;
-    let j = 0;
-    while (i < m && j < n) {
-        if (nums1[i] === nums2[j]) {
-            return nums1[i];
-        }
-        if (nums1[i] < nums2[j]) {
-            i++;
-        } else {
-            j++;
-        }
-    }
-    return -1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn get_common(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {
-        let m = nums1.len();
-        let n = nums2.len();
-        let mut i = 0;
-        let mut j = 0;
-        while i < m && j < n {
-            if nums1[i] == nums2[j] {
-                return nums1[i];
-            }
-            if nums1[i] < nums2[j] {
-                i += 1;
-            } else {
-                j += 1;
-            }
-        }
-        -1
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -203,4 +119,4 @@ int getCommon(int *nums1, int nums1Size, int *nums2, int nums2Size) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -54,15 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxScoreSightseeingPair(self, values: List[int]) -> int:
-        ans, mx = 0, values[0]
-        for j in range(1, len(values)):
-            ans = max(ans, values[j] - j + mx)
-            mx = max(mx, values[j] + j)
-        return ans
-```
+
 
 ### **Java**
 
@@ -81,54 +73,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxScoreSightseeingPair(vector<int>& values) {
-        int ans = 0, mx = values[0];
-        for (int j = 1; j < values.size(); ++j) {
-            ans = max(ans, values[j] - j + mx);
-            mx = max(mx, values[j] + j);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxScoreSightseeingPair(values []int) (ans int) {
-	for j, mx := 1, values[0]; j < len(values); j++ {
-		ans = max(ans, values[j]-j+mx)
-		mx = max(mx, values[j]+j)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxScoreSightseeingPair(values: number[]): number {
-    let ans = 0;
-    let mx = values[0];
-    for (let j = 1; j < values.length; ++j) {
-        ans = Math.max(ans, values[j] - j + mx);
-        mx = Math.max(mx, values[j] + j);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -136,4 +91,4 @@ function maxScoreSightseeingPair(values: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

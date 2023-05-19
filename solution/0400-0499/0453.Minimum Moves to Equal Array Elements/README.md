@@ -75,11 +75,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minMoves(self, nums: List[int]) -> int:
-        return sum(nums) - min(nums) * len(nums)
-```
+
 
 ### **Java**
 
@@ -107,52 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minMoves(vector<int>& nums) {
-        int s = 0;
-        int mi = 1 << 30;
-        for (int x : nums) {
-            s += x;
-            mi = min(mi, x);
-        }
-        return s - mi * nums.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func minMoves(nums []int) int {
-	mi := 1 << 30
-	s := 0
-	for _, x := range nums {
-		s += x
-		if x < mi {
-			mi = x
-		}
-	}
-	return s - mi*len(nums)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minMoves(nums: number[]): number {
-    let mi = 1 << 30;
-    let s = 0;
-    for (const x of nums) {
-        s += x;
-        mi = Math.min(mi, x);
-    }
-    return s - mi * nums.length;
-}
-```
+
 
 ### **...**
 
@@ -160,4 +121,4 @@ function minMoves(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

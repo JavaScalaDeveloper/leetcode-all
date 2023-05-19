@@ -67,24 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countLargestGroup(self, n: int) -> int:
-        cnt = Counter()
-        ans = mx = 0
-        for i in range(1, n + 1):
-            s = 0
-            while i:
-                s += i % 10
-                i //= 10
-            cnt[s] += 1
-            if mx < cnt[s]:
-                mx = cnt[s]
-                ans = 1
-            elif mx == cnt[s]:
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -113,78 +96,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countLargestGroup(int n) {
-        int cnt[40]{};
-        int ans = 0, mx = 0;
-        for (int i = 1; i <= n; ++i) {
-            int s = 0;
-            for (int x = i; x; x /= 10) {
-                s += x % 10;
-            }
-            ++cnt[s];
-            if (mx < cnt[s]) {
-                mx = cnt[s];
-                ans = 1;
-            } else if (mx == cnt[s]) {
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countLargestGroup(n int) (ans int) {
-	cnt := [40]int{}
-	mx := 0
-	for i := 1; i <= n; i++ {
-		s := 0
-		for x := i; x > 0; x /= 10 {
-			s += x % 10
-		}
-		cnt[s]++
-		if mx < cnt[s] {
-			mx = cnt[s]
-			ans = 1
-		} else if mx == cnt[s] {
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countLargestGroup(n: number): number {
-    const cnt: number[] = new Array(40).fill(0);
-    let mx = 0;
-    let ans = 0;
-    for (let i = 1; i <= n; ++i) {
-        let s = 0;
-        for (let x = i; x; x = Math.floor(x / 10)) {
-            s += x % 10;
-        }
-        ++cnt[s];
-        if (mx < cnt[s]) {
-            mx = cnt[s];
-            ans = 1;
-        } else if (mx === cnt[s]) {
-            ++ans;
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -192,4 +114,4 @@ function countLargestGroup(n: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -55,22 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def killProcess(self, pid: List[int], ppid: List[int], kill: int) -> List[int]:
-        def dfs(u):
-            ans.append(u)
-            for v in g[u]:
-                dfs(v)
 
-        g = defaultdict(list)
-        n = len(pid)
-        for c, p in zip(pid, ppid):
-            g[p].append(c)
-        ans = []
-        dfs(kill)
-        return ans
-```
 
 ### **Java**
 
@@ -101,51 +86,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> killProcess(vector<int>& pid, vector<int>& ppid, int kill) {
-        unordered_map<int, vector<int>> g;
-        vector<int> ans;
-        int n = pid.size();
-        for (int i = 0; i < n; ++i) {
-            int c = pid[i], p = ppid[i];
-            g[p].push_back(c);
-        }
-        dfs(kill, g, ans);
-        return ans;
-    }
 
-    void dfs(int u, unordered_map<int, vector<int>>& g, vector<int>& ans) {
-        ans.push_back(u);
-        for (int v : g[u]) dfs(v, g, ans);
-    }
-};
-```
 
-### **Go**
 
-```go
-func killProcess(pid []int, ppid []int, kill int) []int {
-	g := make(map[int][]int)
-	for i, c := range pid {
-		p := ppid[i]
-		g[p] = append(g[p], c)
-	}
-	var ans []int
-	var dfs func(u int)
-	dfs = func(u int) {
-		ans = append(ans, u)
-		for _, v := range g[u] {
-			dfs(v)
-		}
-	}
-	dfs(kill)
-	return ans
-}
-```
+
+
+
 
 ### **...**
 
@@ -153,4 +100,4 @@ func killProcess(pid []int, ppid []int, kill int) []int {
 
 ```
 
-<!-- tabs:end -->
+

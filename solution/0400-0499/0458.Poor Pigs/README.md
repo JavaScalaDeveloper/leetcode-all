@@ -66,16 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def poorPigs(self, buckets: int, minutesToDie: int, minutesToTest: int) -> int:
-        base = minutesToTest // minutesToDie + 1
-        res, p = 0, 1
-        while p < buckets:
-            p *= base
-            res += 1
-        return res
-```
+
 
 ### **Java**
 
@@ -94,32 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int poorPigs(int buckets, int minutesToDie, int minutesToTest) {
-        int base = minutesToTest / minutesToDie + 1;
-        int res = 0;
-        for (int p = 1; p < buckets; p *= base) ++res;
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func poorPigs(buckets int, minutesToDie int, minutesToTest int) int {
-	base := minutesToTest/minutesToDie + 1
-	res := 0
-	for p := 1; p < buckets; p *= base {
-		res++
-	}
-	return res
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -127,4 +99,4 @@ func poorPigs(buckets int, minutesToDie int, minutesToTest int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -74,17 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumSwaps(self, nums: List[int]) -> int:
-        i = j = 0
-        for k, v in enumerate(nums):
-            if v < nums[i] or (v == nums[i] and k < i):
-                i = k
-            if v >= nums[j] or (v == nums[j] and k > j):
-                j = k
-        return 0 if i == j else i + len(nums) - 1 - j - (i > j)
-```
+
 
 ### **Java**
 
@@ -111,71 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumSwaps(vector<int>& nums) {
-        int n = nums.size();
-        int i = 0, j = 0;
-        for (int k = 0; k < n; ++k) {
-            if (nums[k] < nums[i] || (nums[k] == nums[i] && k < i)) {
-                i = k;
-            }
-            if (nums[k] > nums[j] || (nums[k] == nums[j] && k > j)) {
-                j = k;
-            }
-        }
-        if (i == j) {
-            return 0;
-        }
-        return i + n - 1 - j - (i > j);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumSwaps(nums []int) int {
-	var i, j int
-	for k, v := range nums {
-		if v < nums[i] || (v == nums[i] && k < i) {
-			i = k
-		}
-		if v > nums[j] || (v == nums[j] && k > j) {
-			j = k
-		}
-	}
-	if i == j {
-		return 0
-	}
-	if i < j {
-		return i + len(nums) - 1 - j
-	}
-	return i + len(nums) - 2 - j
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumSwaps(nums: number[]): number {
-    let i = 0;
-    let j = 0;
-    const n = nums.length;
-    for (let k = 0; k < n; ++k) {
-        if (nums[k] < nums[i] || (nums[k] == nums[i] && k < i)) {
-            i = k;
-        }
-        if (nums[k] > nums[j] || (nums[k] == nums[j] && k > j)) {
-            j = k;
-        }
-    }
-    return i == j ? 0 : i + n - 1 - j - (i > j ? 1 : 0);
-}
-```
+
 
 ### **...**
 
@@ -183,4 +119,4 @@ function minimumSwaps(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -74,14 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def leastInterval(self, tasks: List[str], n: int) -> int:
-        cnt = Counter(tasks)
-        x = max(cnt.values())
-        s = sum(v == x for v in cnt.values())
-        return max(len(tasks), (x - 1) * (n + 1) + s)
-```
+
 
 ### **Java**
 
@@ -108,75 +101,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int leastInterval(vector<char>& tasks, int n) {
-        vector<int> cnt(26);
-        int x = 0;
-        for (char c : tasks) {
-            c -= 'A';
-            ++cnt[c];
-            x = max(x, cnt[c]);
-        }
-        int s = 0;
-        for (int v : cnt) {
-            s += v == x;
-        }
-        return max((int) tasks.size(), (x - 1) * (n + 1) + s);
-    }
-};
-```
 
-### **Go**
 
-```go
-func leastInterval(tasks []byte, n int) int {
-	cnt := make([]int, 26)
-	x := 0
-	for _, c := range tasks {
-		c -= 'A'
-		cnt[c]++
-		x = max(x, cnt[c])
-	}
-	s := 0
-	for _, v := range cnt {
-		if v == x {
-			s++
-		}
-	}
-	return max(len(tasks), (x-1)*(n+1)+s)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int LeastInterval(char[] tasks, int n) {
-        int[] cnt = new int[26];
-        int x = 0;
-        foreach (char c in tasks) {
-            cnt[c - 'A']++;
-            x = Math.Max(x, cnt[c - 'A']);
-        }
-        int s = 0;
-        foreach (int v in cnt) {
-            s = v == x ? s + 1 : s;
-        }
-        return Math.Max(tasks.Length, (x - 1) * (n + 1) + s);
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -184,4 +119,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

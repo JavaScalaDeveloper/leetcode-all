@@ -55,31 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def averageOfSubtree(self, root: Optional[TreeNode]) -> int:
-        def dfs(root):
-            if root is None:
-                return 0, 0
-            ls, ln = dfs(root.left)
-            rs, rn = dfs(root.right)
-            s = ls + rs + root.val
-            n = ln + rn + 1
-            if s // n == root.val:
-                nonlocal ans
-                ans += 1
-            return s, n
 
-        ans = 0
-        dfs(root)
-        return ans
-```
 
 ### **Java**
 
@@ -126,78 +102,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int ans;
-    int averageOfSubtree(TreeNode* root) {
-        ans = 0;
-        dfs(root);
-        return ans;
-    }
 
-    vector<int> dfs(TreeNode* root) {
-        if (!root) return {0, 0};
-        auto l = dfs(root->left);
-        auto r = dfs(root->right);
-        int s = l[0] + r[0] + root->val;
-        int n = l[1] + r[1] + 1;
-        if (s / n == root->val) ++ans;
-        return {s, n};
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func averageOfSubtree(root *TreeNode) int {
-	ans := 0
-	var dfs func(*TreeNode) (int, int)
-	dfs = func(root *TreeNode) (int, int) {
-		if root == nil {
-			return 0, 0
-		}
-		ls, ln := dfs(root.Left)
-		rs, rn := dfs(root.Right)
-		s := ls + rs + root.Val
-		n := ln + rn + 1
-		if s/n == root.Val {
-			ans++
-		}
-		return s, n
-	}
-	dfs(root)
-	return ans
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -205,4 +120,4 @@ func averageOfSubtree(root *TreeNode) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -59,34 +59,7 @@ iterator.hasNext(); // 返回 false
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Vector2D:
-    def __init__(self, vec: List[List[int]]):
-        self.i = 0
-        self.j = 0
-        self.vec = vec
 
-    def next(self) -> int:
-        self.forward()
-        ans = self.vec[self.i][self.j]
-        self.j += 1
-        return ans
-
-    def hasNext(self) -> bool:
-        self.forward()
-        return self.i < len(self.vec)
-
-    def forward(self):
-        while self.i < len(self.vec) and self.j >= len(self.vec[self.i]):
-            self.i += 1
-            self.j = 0
-
-
-# Your Vector2D object will be instantiated and called as such:
-# obj = Vector2D(vec)
-# param_1 = obj.next()
-# param_2 = obj.hasNext()
-```
 
 ### **Java**
 
@@ -128,124 +101,17 @@ class Vector2D {
  */
 ```
 
-### **C++**
 
-```cpp
-class Vector2D {
-public:
-    Vector2D(vector<vector<int>>& vec) {
-        this->vec = move(vec);
-    }
 
-    int next() {
-        forward();
-        return vec[i][j++];
-    }
 
-    bool hasNext() {
-        forward();
-        return i < vec.size();
-    }
 
-private:
-    int i = 0;
-    int j = 0;
-    vector<vector<int>> vec;
 
-    void forward() {
-        while (i < vec.size() && j >= vec[i].size()) {
-            ++i;
-            j = 0;
-        }
-    }
-};
 
-/**
- * Your Vector2D object will be instantiated and called as such:
- * Vector2D* obj = new Vector2D(vec);
- * int param_1 = obj->next();
- * bool param_2 = obj->hasNext();
- */
-```
 
-### **Go**
-
-```go
-type Vector2D struct {
-	i, j int
-	vec  [][]int
-}
-
-func Constructor(vec [][]int) Vector2D {
-	return Vector2D{vec: vec}
-}
-
-func (this *Vector2D) Next() int {
-	this.forward()
-	ans := this.vec[this.i][this.j]
-	this.j++
-	return ans
-}
-
-func (this *Vector2D) HasNext() bool {
-	this.forward()
-	return this.i < len(this.vec)
-}
-
-func (this *Vector2D) forward() {
-	for this.i < len(this.vec) && this.j >= len(this.vec[this.i]) {
-		this.i++
-		this.j = 0
-	}
-}
-
-/**
- * Your Vector2D object will be instantiated and called as such:
- * obj := Constructor(vec);
- * param_1 := obj.Next();
- * param_2 := obj.HasNext();
- */
-```
 
 ### **TypeScript**
 
-```ts
-class Vector2D {
-    i: number;
-    j: number;
-    vec: number[][];
 
-    constructor(vec: number[][]) {
-        this.i = 0;
-        this.j = 0;
-        this.vec = vec;
-    }
-
-    next(): number {
-        this.forward();
-        return this.vec[this.i][this.j++];
-    }
-
-    hasNext(): boolean {
-        this.forward();
-        return this.i < this.vec.length;
-    }
-
-    forward(): void {
-        while (this.i < this.vec.length && this.j >= this.vec[this.i].length) {
-            ++this.i;
-            this.j = 0;
-        }
-    }
-}
-
-/**
- * Your Vector2D object will be instantiated and called as such:
- * var obj = new Vector2D(vec)
- * var param_1 = obj.next()
- * var param_2 = obj.hasNext()
- */
-```
 
 ### **...**
 
@@ -253,4 +119,4 @@ class Vector2D {
 
 ```
 
-<!-- tabs:end -->
+

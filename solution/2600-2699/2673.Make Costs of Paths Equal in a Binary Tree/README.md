@@ -68,21 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minIncrements(self, n: int, cost: List[int]) -> int:
-        def dfs(i: int) -> int:
-            if (i << 1) > n:
-                return cost[i - 1]
-            l, r = dfs(i << 1), dfs(i << 1 | 1)
-            nonlocal ans
-            ans += max(l, r) - min(l, r)
-            return cost[i - 1] + max(l, r)
 
-        ans = 0
-        dfs(1)
-        return ans
-```
 
 ### **Java**
 
@@ -113,77 +99,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minIncrements(int n, vector<int>& cost) {
-        int ans = 0;
-        function<int(int)> dfs = [&](int i) -> int {
-            if ((i << 1) > n) {
-                return cost[i - 1];
-            }
-            int l = dfs(i << 1);
-            int r = dfs(i << 1 | 1);
-            ans += max(l, r) - min(l, r);
-            return cost[i - 1] + max(l, r);
-        };
-        dfs(1);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minIncrements(n int, cost []int) (ans int) {
-	var dfs func(int) int
-	dfs = func(i int) int {
-		if (i << 1) > n {
-			return cost[i-1]
-		}
-		l, r := dfs(i<<1), dfs(i<<1|1)
-		ans += max(l, r) - min(l, r)
-		return cost[i-1] + max(l, r)
-	}
-	dfs(1)
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function minIncrements(n: number, cost: number[]): number {
-    let ans = 0;
-    const dfs = (i: number): number => {
-        if (i << 1 > n) {
-            return cost[i - 1];
-        }
-        const [a, b] = [dfs(i << 1), dfs((i << 1) | 1)];
-        ans += Math.max(a, b) - Math.min(a, b);
-        return cost[i - 1] + Math.max(a, b);
-    };
-    dfs(1);
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -191,4 +117,4 @@ function minIncrements(n: number, cost: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

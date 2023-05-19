@@ -63,23 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countGood(self, nums: List[int], k: int) -> int:
-        cnt = Counter()
-        ans = cur = 0
-        i = 0
-        for x in nums:
-            cur += cnt[x]
-            cnt[x] += 1
-            while cur - cnt[nums[i]] + 1 >= k:
-                cnt[nums[i]] -= 1
-                cur -= cnt[nums[i]]
-                i += 1
-            if cur >= k:
-                ans += i + 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -106,52 +90,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long countGood(vector<int>& nums, int k) {
-        unordered_map<int, int> cnt;
-        long long ans = 0;
-        long long cur = 0;
-        int i = 0;
-        for (int& x : nums) {
-            cur += cnt[x]++;
-            while (cur - cnt[nums[i]] + 1 >= k) {
-                cur -= --cnt[nums[i++]];
-            }
-            if (cur >= k) {
-                ans += i + 1;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countGood(nums []int, k int) int64 {
-	cnt := map[int]int{}
-	ans, cur := 0, 0
-	i := 0
-	for _, x := range nums {
-		cur += cnt[x]
-		cnt[x]++
-		for cur-cnt[nums[i]]+1 >= k {
-			cnt[nums[i]]--
-			cur -= cnt[nums[i]]
-			i++
-		}
-		if cur >= k {
-			ans += i + 1
-		}
-	}
-	return int64(ans)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -159,4 +104,4 @@ func countGood(nums []int, k int) int64 {
 
 ```
 
-<!-- tabs:end -->
+

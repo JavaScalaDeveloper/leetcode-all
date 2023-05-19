@@ -67,11 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def squareIsWhite(self, coordinates: str) -> bool:
-        return (ord(coordinates[0]) + ord(coordinates[1])) % 2 == 1
-```
+
 
 ### **Java**
 
@@ -85,57 +81,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool squareIsWhite(string coordinates) {
-        return (coordinates[0] + coordinates[1]) % 2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func squareIsWhite(coordinates string) bool {
-	return (coordinates[0]+coordinates[1])%2 == 1
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} coordinates
- * @return {boolean}
- */
-var squareIsWhite = function (coordinates) {
-    const x = coordinates.charAt(0).charCodeAt();
-    const y = coordinates.charAt(1).charCodeAt();
-    return (x + y) % 2 == 1;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function squareIsWhite(coordinates: string): boolean {
-    return ((coordinates.charCodeAt(0) + coordinates.charCodeAt(1)) & 1) === 1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn square_is_white(coordinates: String) -> bool {
-        let s = coordinates.as_bytes();
-        s[0] + s[1] & 1 == 1
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -151,4 +115,4 @@ bool squareIsWhite(char *coordinates) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -62,19 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numRescueBoats(self, people: List[int], limit: int) -> int:
-        people.sort()
-        ans = 0
-        i, j = 0, len(people) - 1
-        while i <= j:
-            if people[i] + people[j] <= limit:
-                i += 1
-            j -= 1
-            ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -96,40 +84,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numRescueBoats(vector<int>& people, int limit) {
-        sort(people.begin(), people.end());
-        int ans = 0;
-        for (int i = 0, j = people.size() - 1; i <= j; --j) {
-            if (people[i] + people[j] <= limit) {
-                ++i;
-            }
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numRescueBoats(people []int, limit int) int {
-	sort.Ints(people)
-	ans := 0
-	for i, j := 0, len(people)-1; i <= j; j-- {
-		if people[i]+people[j] <= limit {
-			i++
-		}
-		ans++
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -137,4 +98,4 @@ func numRescueBoats(people []int, limit int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -89,19 +89,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def getMoneyAmount(self, n: int) -> int:
-        dp = [[0] * (n + 10) for _ in range(n + 10)]
-        for l in range(2, n + 1):
-            for i in range(1, n - l + 2):
-                j = i + l - 1
-                dp[i][j] = inf
-                for k in range(i, j + 1):
-                    t = max(dp[i][k - 1], dp[k + 1][j]) + k
-                    dp[i][j] = min(dp[i][j], t)
-        return dp[1][n]
-```
+
 
 ### **Java**
 
@@ -126,63 +114,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int getMoneyAmount(int n) {
-        vector<vector<int>> dp(n + 10, vector<int>(n + 10));
-        for (int l = 2; l <= n; ++l) {
-            for (int i = 1; i + l - 1 <= n; ++i) {
-                int j = i + l - 1;
-                dp[i][j] = INT_MAX;
-                for (int k = i; k <= j; ++k) {
-                    int t = max(dp[i][k - 1], dp[k + 1][j]) + k;
-                    dp[i][j] = min(dp[i][j], t);
-                }
-            }
-        }
-        return dp[1][n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func getMoneyAmount(n int) int {
-	dp := make([][]int, n+10)
-	for i := 0; i < len(dp); i++ {
-		dp[i] = make([]int, n+10)
-	}
-	for l := 2; l <= n; l++ {
-		for i := 1; i+l-1 <= n; i++ {
-			j := i + l - 1
-			dp[i][j] = math.MaxInt32
-			for k := i; k <= j; k++ {
-				t := max(dp[i][k-1], dp[k+1][j]) + k
-				dp[i][j] = min(dp[i][j], t)
-			}
-		}
-	}
-	return dp[1][n]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -190,4 +128,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

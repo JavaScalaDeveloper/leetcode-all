@@ -83,72 +83,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
-        self.val = int(x)
-        self.next = next
-        self.random = random
-"""
 
 
-class Solution:
-    def copyRandomList(self, head: "Node") -> "Node":
-        d = {}
-        dummy = tail = Node(0)
-        cur = head
-        while cur:
-            tail.next = Node(cur.val)
-            tail = tail.next
-            d[cur] = tail
-            cur = cur.next
-        tail = dummy.next
-        cur = head
-        while cur:
-            tail.random = d.get(cur.random)
-            tail = tail.next
-            cur = cur.next
-        return dummy.next
-```
 
-```python
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
-        self.val = int(x)
-        self.next = next
-        self.random = random
-"""
-
-
-class Solution:
-    def copyRandomList(self, head: "Node") -> "Node":
-        if head is None:
-            return None
-        cur = head
-        while cur:
-            node = Node(cur.val, cur.next)
-            cur.next = node
-            cur = node.next
-
-        cur = head
-        while cur:
-            if cur.random:
-                cur.next.random = cur.random.next
-            cur = cur.next.next
-
-        ans = head.next
-        cur = head
-        while cur:
-            nxt = cur.next
-            if nxt:
-                cur.next = nxt.next
-            cur = nxt
-        return ans
-```
 
 ### **Java**
 
@@ -232,312 +169,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    Node* next;
-    Node* random;
 
-    Node(int _val) {
-        val = _val;
-        next = NULL;
-        random = NULL;
-    }
-};
-*/
-class Solution {
-public:
-    Node* copyRandomList(Node* head) {
-        unordered_map<Node*, Node*> d;
-        Node* dummy = new Node(0);
-        Node* tail = dummy;
-        for (auto cur = head; cur; cur = cur->next) {
-            tail->next = new Node(cur->val);
-            tail = tail->next;
-            d[cur] = tail;
-        }
-        tail = dummy->next;
-        for (auto cur = head; cur; cur = cur->next) {
-            tail->random = d[cur->random];
-            tail = tail->next;
-        }
-        return dummy->next;
-    }
-};
-```
 
-```cpp
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    Node* next;
-    Node* random;
 
-    Node(int _val) {
-        val = _val;
-        next = NULL;
-        random = NULL;
-    }
-};
-*/
-class Solution {
-public:
-    Node* copyRandomList(Node* head) {
-        if (!head) {
-            return nullptr;
-        }
-        for (Node* cur = head; cur; ) {
-            Node* node = new Node(cur->val);
-            node->next = cur->next;
-            cur->next = node;
-            cur = node->next;
-        }
-        for (Node* cur = head; cur; cur = cur->next->next) {
-            if (cur->random) {
-                cur->next->random = cur->random->next;
-            }
-        }
-        Node* ans = head->next;
-        for (Node* cur = head; cur; ) {
-            Node* nxt = cur->next;
-            if (nxt) {
-                cur->next = nxt->next;
-            }
-            cur = nxt;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Next *Node
- *     Random *Node
- * }
- */
 
-func copyRandomList(head *Node) *Node {
-	d := map[*Node]*Node{}
-	dummy := &Node{}
-	tail := dummy
-	for cur := head; cur != nil; cur = cur.Next {
-		tail.Next = &Node{Val: cur.Val}
-		tail = tail.Next
-		d[cur] = tail
-	}
-	tail = dummy.Next
-	for cur := head; cur != nil; cur = cur.Next {
-		tail.Random = d[cur.Random]
-		tail = tail.Next
-	}
-	return dummy.Next
-}
-```
 
-```go
-/**
- * Definition for a Node.
- * type Node struct {
- *     Val int
- *     Next *Node
- *     Random *Node
- * }
- */
 
-func copyRandomList(head *Node) *Node {
-	if head == nil {
-		return nil
-	}
-	for cur := head; cur != nil; {
-		node := &Node{cur.Val, cur.Next, nil}
-		cur.Next = node
-		cur = node.Next
-	}
-	for cur := head; cur != nil; cur = cur.Next.Next {
-		if cur.Random != nil {
-			cur.Next.Random = cur.Random.Next
-		}
-	}
-	ans := head.Next
-	for cur := head; cur != nil; {
-		nxt := cur.Next
-		if nxt != nil {
-			cur.Next = nxt.Next
-		}
-		cur = nxt
-	}
-	return ans
-}
-```
 
-### **C#**
 
-```cs
-/*
-// Definition for a Node.
-public class Node {
-    public int val;
-    public Node next;
-    public Node random;
 
-    public Node(int _val) {
-        val = _val;
-        next = null;
-        random = null;
-    }
-}
-*/
 
-public class Solution {
-    public Node CopyRandomList(Node head) {
-        Dictionary<Node, Node> d = new Dictionary<Node, Node>();
-        Node dummy = new Node(0);
-        Node tail = dummy;
-        for (Node cur = head; cur != null; cur = cur.next) {
-            tail.next = new Node(cur.val);
-            tail = tail.next;
-            d[cur] = tail;
-        }
-        tail = dummy.next;
-        for (Node cur = head; cur != null; cur = cur.next) {
-            tail.random = cur.random == null ? null : d[cur.random];
-            tail = tail.next;
-        }
-        return dummy.next;
-    }
-}
-```
 
-```cs
-/*
-// Definition for a Node.
-public class Node {
-    public int val;
-    public Node next;
-    public Node random;
 
-    public Node(int _val) {
-        val = _val;
-        next = null;
-        random = null;
-    }
-}
-*/
 
-public class Solution {
-    public Node CopyRandomList(Node head) {
-        if (head == null) {
-            return null;
-        }
-        for (Node cur = head; cur != null; ) {
-            Node node = new Node(cur.val, cur.next);
-            cur.next = node;
-            cur = node.next;
-        }
-        for (Node cur = head; cur != null; cur = cur.next.next) {
-            if (cur.random != null) {
-                cur.next.random = cur.random.next;
-            }
-        }
-        Node ans = head.next;
-        for (Node cur = head; cur != null; ) {
-            Node nxt = cur.next;
-            if (nxt != null) {
-                cur.next = nxt.next;
-            }
-            cur = nxt;
-        }
-        return ans;
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * // Definition for a Node.
- * function Node(val, next, random) {
- *    this.val = val;
- *    this.next = next;
- *    this.random = random;
- * };
- */
 
-/**
- * @param {Node} head
- * @return {Node}
- */
-var copyRandomList = function (head) {
-    const d = new Map();
-    const dummy = new Node(0);
-    let tail = dummy;
-    for (let cur = head; cur; cur = cur.next) {
-        tail.next = new Node(cur.val);
-        tail = tail.next;
-        d.set(cur, tail);
-    }
-    tail = dummy.next;
-    for (let cur = head; cur; cur = cur.next) {
-        tail.random = d.get(cur.random);
-        tail = tail.next;
-    }
-    return dummy.next;
-};
-```
 
-```js
-/**
- * // Definition for a Node.
- * function Node(val, next, random) {
- *    this.val = val;
- *    this.next = next;
- *    this.random = random;
- * };
- */
 
-/**
- * @param {Node} head
- * @return {Node}
- */
-var copyRandomList = function (head) {
-    if (!head) {
-        return null;
-    }
-    for (let cur = head; cur; ) {
-        const node = new Node(cur.val, cur.next, null);
-        cur.next = node;
-        cur = node.next;
-    }
-    for (let cur = head; cur; cur = cur.next.next) {
-        if (cur.random) {
-            cur.next.random = cur.random.next;
-        }
-    }
-    const ans = head.next;
-    for (let cur = head; cur; ) {
-        const nxt = cur.next;
-        if (nxt) {
-            cur.next = nxt.next;
-        }
-        cur = nxt;
-    }
-    return ans;
-};
-```
+
+
 
 ### **...**
 
@@ -545,4 +199,4 @@ var copyRandomList = function (head) {
 
 ```
 
-<!-- tabs:end -->
+

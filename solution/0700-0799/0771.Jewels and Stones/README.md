@@ -52,12 +52,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numJewelsInStones(self, jewels: str, stones: str) -> int:
-        s = set(jewels)
-        return sum(c in s for c in stones)
-```
+
 
 ### **Java**
 
@@ -79,80 +74,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numJewelsInStones(string jewels, string stones) {
-        int s[128] = {0};
-        for (char c : jewels) s[c] = 1;
-        int ans = 0;
-        for (char c : stones) ans += s[c];
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numJewelsInStones(jewels string, stones string) (ans int) {
-	s := make([]int, 128)
-	for _, c := range jewels {
-		s[c] = 1
-	}
-	for _, c := range stones {
-		ans += s[c]
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} jewels
- * @param {string} stones
- * @return {number}
- */
-var numJewelsInStones = function (jewels, stones) {
-    const s = new Set(jewels.split(''));
-    return stones.split('').reduce((prev, val) => prev + s.has(val), 0);
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numJewelsInStones(jewels: string, stones: string): number {
-    const set = new Set([...jewels]);
-    let ans = 0;
-    for (const c of stones) {
-        set.has(c) && ans++;
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashSet;
-impl Solution {
-    pub fn num_jewels_in_stones(jewels: String, stones: String) -> i32 {
-        let mut set = jewels.as_bytes().iter().collect::<HashSet<&u8>>();
-        let mut ans = 0;
-        for c in stones.as_bytes() {
-            if set.contains(c) {
-                ans += 1;
-            }
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -176,4 +116,4 @@ int numJewelsInStones(char *jewels, char *stones) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -58,17 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def evenOddBit(self, n: int) -> List[int]:
-        ans = [0, 0]
-        i = 0
-        while n:
-            ans[i] += n & 1
-            i ^= 1
-            n >>= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -86,44 +76,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> evenOddBit(int n) {
-        vector<int> ans(2);
-        for (int i = 0; n > 0; n >>= 1, i ^= 1) {
-            ans[i] += n & 1;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func evenOddBit(n int) []int {
-	ans := make([]int, 2)
-	for i := 0; n != 0; n, i = n>>1, i^1 {
-		ans[i] += n & 1
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function evenOddBit(n: number): number[] {
-    const ans = new Array(2).fill(0);
-    for (let i = 0; n > 0; n >>= 1, i ^= 1) {
-        ans[i] += n & 1;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -131,4 +94,4 @@ function evenOddBit(n: number): number[] {
 
 ```
 
-<!-- tabs:end -->
+

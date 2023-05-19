@@ -78,24 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findRotateSteps(self, ring: str, key: str) -> int:
-        m, n = len(key), len(ring)
-        pos = defaultdict(list)
-        for i, c in enumerate(ring):
-            pos[c].append(i)
-        f = [[inf] * n for _ in range(m)]
-        for j in pos[key[0]]:
-            f[0][j] = min(j, n - j) + 1
-        for i in range(1, m):
-            for j in pos[key[i]]:
-                for k in pos[key[i - 1]]:
-                    f[i][j] = min(
-                        f[i][j], f[i - 1][k] + min(abs(j - k), n - abs(j - k)) + 1
-                    )
-        return min(f[-1][j] for j in pos[key[-1]])
-```
+
 
 ### **Java**
 
@@ -135,85 +118,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findRotateSteps(string ring, string key) {
-        int m = key.size(), n = ring.size();
-        vector<int> pos[26];
-        for (int j = 0; j < n; ++j) {
-            pos[ring[j] - 'a'].push_back(j);
-        }
-        int f[m][n];
-        memset(f, 0x3f, sizeof(f));
-        for (int j : pos[key[0] - 'a']) {
-            f[0][j] = min(j, n - j) + 1;
-        }
-        for (int i = 1; i < m; ++i) {
-            for (int j : pos[key[i] - 'a']) {
-                for (int k : pos[key[i - 1] - 'a']) {
-                    f[i][j] = min(f[i][j], f[i - 1][k] + min(abs(j - k), n - abs(j -  k)) + 1);
-                }
-            }
-        }
-        int ans = 1 << 30;
-        for (int j : pos[key[m - 1] - 'a']) {
-            ans = min(ans, f[m - 1][j]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findRotateSteps(ring string, key string) int {
-	m, n := len(key), len(ring)
-	pos := [26][]int{}
-	for j, c := range ring {
-		pos[c-'a'] = append(pos[c-'a'], j)
-	}
-	f := make([][]int, m)
-	for i := range f {
-		f[i] = make([]int, n)
-		for j := range f[i] {
-			f[i][j] = 1 << 30
-		}
-	}
-	for _, j := range pos[key[0]-'a'] {
-		f[0][j] = min(j, n-j) + 1
-	}
-	for i := 1; i < m; i++ {
-		for _, j := range pos[key[i]-'a'] {
-			for _, k := range pos[key[i-1]-'a'] {
-				f[i][j] = min(f[i][j], f[i-1][k]+min(abs(j-k), n-abs(j-k))+1)
-			}
-		}
-	}
-	ans := 1 << 30
-	for _, j := range pos[key[m-1]-'a'] {
-		ans = min(ans, f[m-1][j])
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
 
 ### **...**
 
@@ -221,4 +132,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

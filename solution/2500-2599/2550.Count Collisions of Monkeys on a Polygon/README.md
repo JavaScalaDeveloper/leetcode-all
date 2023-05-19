@@ -70,12 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def monkeyMove(self, n: int) -> int:
-        mod = 10**9 + 7
-        return (pow(2, n, mod) - 2) % mod
-```
+
 
 ### **Java**
 
@@ -102,71 +97,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int monkeyMove(int n) {
-        const int mod = 1e9 + 7;
-        return (qmi(2, n, mod) - 2 + mod) % mod;
-    }
 
-    long qmi(long a, long k, long p) {
-        long res = 1;
-        while (k != 0) {
-            if ((k & 1) == 1) {
-                res = res * a % p;
-            }
-            k >>= 1;
-            a = a * a % p;
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func monkeyMove(n int) int {
-	const mod = 1e9 + 7
-	return (qmi(2, n, mod) - 2 + mod) % mod
-}
 
-func qmi(a, k, p int) int {
-	res := 1
-	for k != 0 {
-		if k&1 == 1 {
-			res = res * a % p
-		}
-		k >>= 1
-		a = a * a % p
-	}
-	return res
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function monkeyMove(n: number): number {
-    const mod = BigInt(10 ** 9 + 7);
-    return Number((qmi(2n, n, mod) - 2n + mod) % mod);
-}
 
-function qmi(a: bigint, k: number, p: bigint): bigint {
-    let res = 1n;
-    while (k) {
-        if ((k & 1) === 1) {
-            res = (res * a) % p;
-        }
-        k >>= 1;
-        a = (a * a) % p;
-    }
-    return res;
-}
-```
 
 ### **...**
 
@@ -174,4 +115,4 @@ function qmi(a: bigint, k: number, p: bigint): bigint {
 
 ```
 
-<!-- tabs:end -->
+

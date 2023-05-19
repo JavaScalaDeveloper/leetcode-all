@@ -65,19 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def partitionLabels(self, s: str) -> List[int]:
-        last = {c: i for i, c in enumerate(s)}
-        ans = []
-        left = right = 0
-        for i, c in enumerate(s):
-            right = max(right, last[c])
-            if i == right:
-                ans.append(right - left + 1)
-                left = right + 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -104,131 +92,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> partitionLabels(string s) {
-        int last[26] = {0};
-        int n = s.size();
-        for (int i = 0; i < n; ++i) last[s[i] - 'a'] = i;
-        vector<int> ans;
-        for (int i = 0, left = 0, right = 0; i < n; ++i) {
-            right = max(right, last[s[i] - 'a']);
-            if (i == right) {
-                ans.push_back(right - left + 1);
-                left = right + 1;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func partitionLabels(s string) []int {
-	last := make([]int, 26)
-	n := len(s)
-	for i := 0; i < n; i++ {
-		last[s[i]-'a'] = i
-	}
-	var ans []int
-	for i, left, right := 0, 0, 0; i < n; i++ {
-		right = max(right, last[s[i]-'a'])
-		if i == right {
-			ans = append(ans, right-left+1)
-			left = right + 1
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function partitionLabels(s: string): number[] {
-    const n = s.length;
-    let last = new Array(26);
-    for (let i = 0; i < n; i++) {
-        last[s.charCodeAt(i) - 'a'.charCodeAt(0)] = i;
-    }
-    let ans = [];
-    let left = 0,
-        right = 0;
-    for (let i = 0; i < n; i++) {
-        right = Math.max(right, last[s.charCodeAt(i) - 'a'.charCodeAt(0)]);
-        if (i == right) {
-            ans.push(right - left + 1);
-            left = right + 1;
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn partition_labels(s: String) -> Vec<i32> {
-        let n = s.len();
-        let bytes = s.as_bytes();
-        let mut inx_arr = [0; 26];
-        for i in 0..n {
-            inx_arr[(bytes[i] - b'a') as usize] = i;
-        }
-        let mut res = vec![];
-        let mut left = 0;
-        let mut right = 0;
-        for i in 0..n {
-            right = right.max(inx_arr[(bytes[i] - b'a') as usize]);
-            if right == i {
-                res.push((right - left + 1) as i32);
-                left = i + 1;
-            }
-        }
-        res
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {number[]}
- */
-var partitionLabels = function (s) {
-    const n = s.length;
-    let last = new Array(26);
-    for (let i = 0; i < n; i++) {
-        last[s.charCodeAt(i) - 'a'.charCodeAt(0)] = i;
-    }
-    let ans = [];
-    let left = 0,
-        right = 0;
-    for (let i = 0; i < n; i++) {
-        right = Math.max(right, last[s.charCodeAt(i) - 'a'.charCodeAt(0)]);
-        if (i == right) {
-            ans.push(right - left + 1);
-            left = right + 1;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -236,4 +118,4 @@ var partitionLabels = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

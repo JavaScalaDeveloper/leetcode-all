@@ -94,12 +94,7 @@ M             1000</pre>
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def romanToInt(self, s: str) -> int:
-        d = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-        return sum((-1 if d[a] < d[b] else 1) * d[a] for a, b in pairwise(s)) + d[s[-1]]
-```
+
 
 ### **Java**
 
@@ -125,136 +120,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int romanToInt(string s) {
-        unordered_map<char, int> nums{
-            {'I', 1},
-            {'V', 5},
-            {'X', 10},
-            {'L', 50},
-            {'C', 100},
-            {'D', 500},
-            {'M', 1000},
-        };
-        int ans = nums[s.back()];
-        for (int i = 0; i < s.size() - 1; ++i) {
-            int sign = nums[s[i]] < nums[s[i + 1]] ? -1 : 1;
-            ans += sign * nums[s[i]];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func romanToInt(s string) (ans int) {
-	d := map[byte]int{'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-	for i := 0; i < len(s)-1; i++ {
-		if d[s[i]] < d[s[i+1]] {
-			ans -= d[s[i]]
-		} else {
-			ans += d[s[i]]
-		}
-	}
-	ans += d[s[len(s)-1]]
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function romanToInt(s: string): number {
-    const d: Map<string, number> = new Map([
-        ['I', 1],
-        ['V', 5],
-        ['X', 10],
-        ['L', 50],
-        ['C', 100],
-        ['D', 500],
-        ['M', 1000],
-    ]);
-    let ans: number = d.get(s[s.length - 1])!;
-    for (let i = 0; i < s.length - 1; ++i) {
-        const sign = d.get(s[i])! < d.get(s[i + 1])! ? -1 : 1;
-        ans += sign * d.get(s[i])!;
-    }
-    return ans;
-}
-```
 
-### **JavaScript**
 
-```js
-const romanToInt = function (s) {
-    const d = {
-        I: 1,
-        V: 5,
-        X: 10,
-        L: 50,
-        C: 100,
-        D: 500,
-        M: 1000,
-    };
-    let ans = d[s[s.length - 1]];
-    for (let i = 0; i < s.length - 1; ++i) {
-        const sign = d[s[i]] < d[s[i + 1]] ? -1 : 1;
-        ans += sign * d[s[i]];
-    }
-    return ans;
-};
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int RomanToInt(string s) {
-        Dictionary<char, int> d = new Dictionary<char, int>();
-        d.Add('I', 1);
-        d.Add('V', 5);
-        d.Add('X', 10);
-        d.Add('L', 50);
-        d.Add('C', 100);
-        d.Add('D', 500);
-        d.Add('M', 1000);
-        int ans = d[s[s.Length - 1]];
-        for (int i = 0; i < s.Length - 1; ++i) {
-            int sign = d[s[i]] < d[s[i + 1]] ? -1 : 1;
-            ans += sign * d[s[i]];
-        }
-        return ans;
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @return Integer
-     */
-    function romanToInt($s) {
-        $hashmap = array('I' => 1, 'V' => 5, 'X' => 10, 'L' => 50, 'C' => 100, 'D' => 500, 'M' => 1000);
-        $rs = 0;
-        for ($i = 0; $i < strlen($s); $i++) {
-            $left = $hashmap[$s[$i]];
-            $right = $hashmap[$s[$i + 1]];
-            if ($left >= $right) $rs += $left;
-            else $rs -= $left;
-        }
-        return $rs;
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -262,4 +150,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

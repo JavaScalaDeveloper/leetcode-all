@@ -71,16 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def change(self, amount: int, coins: List[int]) -> int:
-        dp = [0] * (amount + 1)
-        dp[0] = 1
-        for coin in coins:
-            for j in range(coin, amount + 1):
-                dp[j] += dp[j - coin]
-        return dp[-1]
-```
+
 
 ### **Java**
 
@@ -153,51 +144,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function change(amount: number, coins: number[]): number {
-    let dp = new Array(amount + 1).fill(0);
-    dp[0] = 1;
-    for (let coin of coins) {
-        for (let i = coin; i <= amount; ++i) {
-            dp[i] += dp[i - coin];
-        }
-    }
-    return dp.pop();
-}
-```
 
-### **Go**
 
-```go
-func change(amount int, coins []int) int {
-	dp := make([]int, amount+1)
-	dp[0] = 1
-	for _, coin := range coins {
-		for j := coin; j <= amount; j++ {
-			dp[j] += dp[j-coin]
-		}
-	}
-	return dp[amount]
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int change(int amount, vector<int>& coins) {
-        vector<int> dp(amount + 1);
-        dp[0] = 1;
-        for (auto coin : coins) {
-            for (int j = coin; j <= amount; ++j) {
-                dp[j] += dp[j - coin];
-            }
-        }
-        return dp[amount];
-    }
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -205,4 +160,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

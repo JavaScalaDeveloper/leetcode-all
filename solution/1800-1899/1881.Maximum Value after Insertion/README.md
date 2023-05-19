@@ -57,20 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxValue(self, n: str, x: int) -> str:
-        if n[0] != '-':
-            for i, c in enumerate(n):
-                if int(c) < x:
-                    return n[:i] + str(x) + n[i:]
-            return n + str(x)
-        else:
-            for i, c in enumerate(n[1:]):
-                if int(c) > x:
-                    return n[: i + 1] + str(x) + n[i + 1 :]
-            return n + str(x)
-```
+
 
 ### **Java**
 
@@ -92,64 +79,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string maxValue(string n, int x) {
-        int i = 0;
-        if (n[0] != '-')
-            for (; i < n.size() && n[i] - '0' >= x; ++i)
-                ;
-        else
-            for (i = 1; i < n.size() && n[i] - '0' <= x; ++i)
-                ;
-        return n.substr(0, i) + to_string(x) + n.substr(i);
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxValue(n string, x int) string {
-	i := 0
-	y := byte('0' + x)
-	if n[0] != '-' {
-		for ; i < len(n) && n[i] >= y; i++ {
-		}
-	} else {
-		for i = 1; i < len(n) && n[i] <= y; i++ {
-		}
-	}
-	return n[:i] + string(y) + n[i:]
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} n
- * @param {number} x
- * @return {string}
- */
-var maxValue = function (n, x) {
-    let nums = [...n];
-    let sign = 1,
-        i = 0;
-    if (nums[0] == '-') {
-        sign = -1;
-        i++;
-    }
-    while (i < n.length && (nums[i] - x) * sign >= 0) {
-        i++;
-    }
-    nums.splice(i, 0, x);
-    return nums.join('');
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -157,4 +97,4 @@ var maxValue = function (n, x) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -64,22 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def transformArray(self, arr: List[int]) -> List[int]:
-        f = True
-        while f:
-            f = False
-            t = arr[:]
-            for i in range(1, len(t) - 1):
-                if t[i] > t[i - 1] and t[i] > t[i + 1]:
-                    arr[i] -= 1
-                    f = True
-                if t[i] < t[i - 1] and t[i] < t[i + 1]:
-                    arr[i] += 1
-                    f = True
-        return arr
-```
+
 
 ### **Java**
 
@@ -112,55 +97,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> transformArray(vector<int>& arr) {
-        bool f = true;
-        while (f) {
-            f = false;
-            vector<int> t = arr;
-            for (int i = 1; i < arr.size() - 1; ++i) {
-                if (t[i] > t[i - 1] && t[i] > t[i + 1]) {
-                    --arr[i];
-                    f = true;
-                }
-                if (t[i] < t[i - 1] && t[i] < t[i + 1]) {
-                    ++arr[i];
-                    f = true;
-                }
-            }
-        }
-        return arr;
-    }
-};
-```
 
-### **Go**
 
-```go
-func transformArray(arr []int) []int {
-	f := true
-	for f {
-		f = false
-		t := make([]int, len(arr))
-		copy(t, arr)
-		for i := 1; i < len(arr)-1; i++ {
-			if t[i] > t[i-1] && t[i] > t[i+1] {
-				arr[i]--
-				f = true
-			}
-			if t[i] < t[i-1] && t[i] < t[i+1] {
-				arr[i]++
-				f = true
-			}
-		}
-	}
-	return arr
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -168,4 +111,4 @@ func transformArray(arr []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

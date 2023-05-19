@@ -87,9 +87,7 @@ tracker.get();              // 从好到坏的景点为：branford, orlando, alp
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -103,9 +101,7 @@ tracker.get();              // 从好到坏的景点为：branford, orlando, alp
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -113,4 +109,4 @@ tracker.get();              // 从好到坏的景点为：branford, orlando, alp
 
 ```
 
-<!-- tabs:end -->
+

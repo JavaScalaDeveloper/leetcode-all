@@ -61,13 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumTime(self, jobs: List[int], workers: List[int]) -> int:
-        jobs.sort()
-        workers.sort()
-        return max((a + b - 1) // b for a, b in zip(jobs, workers))
-```
+
 
 ### **Java**
 
@@ -87,48 +81,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumTime(vector<int>& jobs, vector<int>& workers) {
-        sort(jobs.begin(), jobs.end());
-        sort(workers.begin(), workers.end());
-        int ans = 0;
-        for (int i = 0; i < jobs.size(); ++i) ans = max(ans, (jobs[i] + workers[i] - 1) / workers[i]);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumTime(jobs []int, workers []int) int {
-	sort.Ints(jobs)
-	sort.Ints(workers)
-	ans := 0
-	for i, a := range jobs {
-		b := workers[i]
-		ans = max(ans, (a+b-1)/b)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -136,4 +99,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

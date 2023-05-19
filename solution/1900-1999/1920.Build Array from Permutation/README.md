@@ -50,11 +50,7 @@ ans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]]
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def buildArray(self, nums: List[int]) -> List[int]:
-        return [nums[num] for num in nums]
-```
+
 
 ### **Java**
 
@@ -72,66 +68,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> buildArray(vector<int>& nums) {
-        vector<int> ans;
-        for (int& num : nums) {
-            ans.push_back(nums[num]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func buildArray(nums []int) []int {
-	ans := make([]int, len(nums))
-	for i, num := range nums {
-		ans[i] = nums[num]
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var buildArray = function (nums) {
-    let ans = [];
-    for (let i = 0; i < nums.length; ++i) {
-        ans[i] = nums[nums[i]];
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function buildArray(nums: number[]): number[] {
-    return nums.map(v => nums[v]);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn build_array(nums: Vec<i32>) -> Vec<i32> {
-        nums.iter().map(|&v| nums[v as usize]).collect()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -155,4 +110,4 @@ int *buildArray(int *nums, int numsSize, int *returnSize) {
 
 ```
 
-<!-- tabs:end -->
+

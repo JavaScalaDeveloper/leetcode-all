@@ -60,36 +60,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countSubstrings(self, s: str) -> int:
-        ans, n = 0, len(s)
-        for k in range(n * 2 - 1):
-            i, j = k // 2, (k + 1) // 2
-            while ~i and j < n and s[i] == s[j]:
-                ans += 1
-                i, j = i - 1, j + 1
-        return ans
-```
 
-```python
-class Solution:
-    def countSubstrings(self, s: str) -> int:
-        t = '^#' + '#'.join(s) + '#$'
-        n = len(t)
-        p = [0 for _ in range(n)]
-        pos, maxRight = 0, 0
-        ans = 0
-        for i in range(1, n - 1):
-            p[i] = min(maxRight - i, p[2 * pos - i]) if maxRight > i else 1
-            while t[i - p[i]] == t[i + p[i]]:
-                p[i] += 1
-            if i + p[i] > maxRight:
-                maxRight = i + p[i]
-                pos = i
-            ans += p[i] // 2
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -141,65 +114,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countSubstrings(string s) {
-        int ans = 0;
-        int n = s.size();
-        for (int k = 0; k < n * 2 - 1; ++k) {
-            int i = k / 2, j = (k + 1) / 2;
-            while (~i && j < n && s[i] == s[j]) {
-                ++ans;
-                --i;
-                ++j;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countSubstrings(s string) int {
-	ans, n := 0, len(s)
-	for k := 0; k < n*2-1; k++ {
-		i, j := k/2, (k+1)/2
-		for i >= 0 && j < n && s[i] == s[j] {
-			ans++
-			i, j = i-1, j+1
-		}
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {number}
- */
-var countSubstrings = function (s) {
-    let ans = 0;
-    const n = s.length;
-    for (let k = 0; k < n * 2 - 1; ++k) {
-        let i = k >> 1;
-        let j = (k + 1) >> 1;
-        while (~i && j < n && s[i] == s[j]) {
-            ++ans;
-            --i;
-            ++j;
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -207,4 +132,4 @@ var countSubstrings = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

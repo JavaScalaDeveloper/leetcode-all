@@ -73,72 +73,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumMinimumPath(self, grid: List[List[int]]) -> int:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        m, n = len(grid), len(grid[0])
-        p = list(range(m * n))
-        q = [(v, i, j) for i, row in enumerate(grid) for j, v in enumerate(row)]
-        q.sort()
-        ans = 0
-        vis = set()
-        dirs = (-1, 0, 1, 0, -1)
-        while find(0) != find(m * n - 1):
-            v, i, j = q.pop()
-            ans = v
-            vis.add((i, j))
-            for a, b in pairwise(dirs):
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n and (x, y) in vis:
-                    p[find(x * n + y)] = find(i * n + j)
-        return ans
-```
 
-```python
-class UnionFind:
-    def __init__(self, n):
-        self.p = list(range(n))
-        self.size = [1] * n
 
-    def find(self, x):
-        if self.p[x] != x:
-            self.p[x] = self.find(self.p[x])
-        return self.p[x]
-
-    def union(self, a, b):
-        pa, pb = self.find(a), self.find(b)
-        if pa != pb:
-            if self.size[pa] > self.size[pb]:
-                self.p[pb] = pa
-                self.size[pa] += self.size[pb]
-            else:
-                self.p[pa] = pb
-                self.size[pb] += self.size[pa]
-
-class Solution:
-    def maximumMinimumPath(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        uf = UnionFind(m * n)
-        q = [(v, i, j) for i, row in enumerate(grid) for j, v in enumerate(row)]
-        q.sort()
-        ans = 0
-        vis = set()
-        dirs = (-1, 0, 1, 0, -1)
-        while uf.find(0) != uf.find(m * n - 1):
-            v, i, j = q.pop()
-            ans = v
-            vis.add((i, j))
-            for a, b in pairwise(dirs):
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n and (x, y) in vis:
-                    uf.union(x * n + y, i * n + j)
-        return ans
-```
 
 ### **Java**
 
@@ -250,221 +187,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumMinimumPath(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<tuple<int, int, int>> q;
-        vector<int> p(m * n);
-        iota(p.begin(), p.end(), 0);
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                q.emplace_back(grid[i][j], i, j);
-            }
-        }
-        function<int(int)> find = [&](int x) {
-            return p[x] == x ? x : p[x] = find(p[x]);
-        };
-        sort(q.begin(), q.end(), greater<tuple<int, int, int>>());
-        int ans = 0;
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        bool vis[m][n];
-        memset(vis, false, sizeof(vis));
-        for (auto& [v, i, j] : q) {
-            vis[i][j] = true;
-            ans = v;
-            for (int k = 0; k < 4; ++k) {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n && vis[x][y]) {
-                    p[find(x * n + y)] = find(i * n + j);
-                }
-            }
-            if (find(0) == find(m * n - 1)) {
-                break;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class UnionFind {
-public:
-    UnionFind(int n) {
-        p = vector<int>(n);
-        size = vector<int>(n, 1);
-        iota(p.begin(), p.end(), 0);
-    }
 
-    void unite(int a, int b) {
-        int pa = find(a), pb = find(b);
-        if (pa != pb) {
-            if (size[pa] > size[pb]) {
-                p[pb] = pa;
-                size[pa] += size[pb];
-            } else {
-                p[pa] = pb;
-                size[pb] += size[pa];
-            }
-        }
-    }
 
-    int find(int x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
-        }
-        return p[x];
-    }
 
-private:
-    vector<int> p, size;
-};
 
-class Solution {
-public:
-    int maximumMinimumPath(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<tuple<int, int, int>> q;
-        UnionFind uf(m * n);
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                q.emplace_back(grid[i][j], i, j);
-            }
-        }
-        sort(q.begin(), q.end(), greater<tuple<int, int, int>>());
-        int ans = 0;
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        bool vis[m][n];
-        memset(vis, false, sizeof(vis));
-        for (auto& [v, i, j] : q) {
-            vis[i][j] = true;
-            ans = v;
-            for (int k = 0; k < 4; ++k) {
-                int x = i + dirs[k], y = j + dirs[k + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n && vis[x][y]) {
-                    uf.unite(x * n + y, i * n + j);
-                }
-            }
-            if (uf.find(0) == uf.find(m * n - 1)) {
-                break;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumMinimumPath(grid [][]int) (ans int) {
-	m, n := len(grid), len(grid[0])
-	p := make([]int, m*n)
-	vis := make([][]bool, m)
-	q := [][3]int{}
-	for i, row := range grid {
-		vis[i] = make([]bool, n)
-		for j, v := range row {
-			p[i*n+j] = i*n + j
-			q = append(q, [3]int{v, i, j})
-		}
-	}
-	sort.Slice(q, func(i, j int) bool { return q[i][0] > q[j][0] })
-	var find func(int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	dirs := [5]int{-1, 0, 1, 0, -1}
-	for _, t := range q {
-		v, i, j := t[0], t[1], t[2]
-		ans = v
-		vis[i][j] = true
-		for k := 0; k < 4; k++ {
-			x, y := i+dirs[k], j+dirs[k+1]
-			if 0 <= x && x < m && 0 <= y && y < n && vis[x][y] {
-				p[find(x*n+y)] = find(i*n + j)
-			}
-		}
-		if find(0) == find(m*n-1) {
-			break
-		}
-	}
-	return
-}
-```
 
-```go
-type unionFind struct {
-	p, size []int
-}
 
-func newUnionFind(n int) *unionFind {
-	p := make([]int, n)
-	size := make([]int, n)
-	for i := range p {
-		p[i] = i
-		size[i] = 1
-	}
-	return &unionFind{p, size}
-}
 
-func (uf *unionFind) find(x int) int {
-	if uf.p[x] != x {
-		uf.p[x] = uf.find(uf.p[x])
-	}
-	return uf.p[x]
-}
-
-func (uf *unionFind) union(a, b int) {
-	pa, pb := uf.find(a), uf.find(b)
-	if pa != pb {
-		if uf.size[pa] > uf.size[pb] {
-			uf.p[pb] = pa
-			uf.size[pa] += uf.size[pb]
-		} else {
-			uf.p[pa] = pb
-			uf.size[pb] += uf.size[pa]
-		}
-	}
-}
-
-func maximumMinimumPath(grid [][]int) (ans int) {
-	m, n := len(grid), len(grid[0])
-	uf := newUnionFind(m * n)
-	vis := make([][]bool, m)
-	q := [][3]int{}
-	for i, row := range grid {
-		vis[i] = make([]bool, n)
-		for j, v := range row {
-			q = append(q, [3]int{v, i, j})
-		}
-	}
-	sort.Slice(q, func(i, j int) bool { return q[i][0] > q[j][0] })
-	dirs := [5]int{-1, 0, 1, 0, -1}
-	for _, t := range q {
-		v, i, j := t[0], t[1], t[2]
-		ans = v
-		vis[i][j] = true
-		for k := 0; k < 4; k++ {
-			x, y := i+dirs[k], j+dirs[k+1]
-			if 0 <= x && x < m && 0 <= y && y < n && vis[x][y] {
-				uf.union(x*n+y, i*n+j)
-			}
-		}
-		if uf.find(0) == uf.find(m*n-1) {
-			break
-		}
-	}
-	return
-}
-```
 
 ### **...**
 
@@ -472,4 +205,4 @@ func maximumMinimumPath(grid [][]int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

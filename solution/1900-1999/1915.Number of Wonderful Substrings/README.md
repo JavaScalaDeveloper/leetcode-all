@@ -80,20 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def wonderfulSubstrings(self, word: str) -> int:
-        counter = Counter({0: 1})
-        state = 0
-        ans = 0
-        for c in word:
-            state ^= 1 << (ord(c) - ord('a'))
-            ans += counter[state]
-            for i in range(10):
-                ans += counter[state ^ (1 << i)]
-            counter[state] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -119,70 +106,17 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} word
- * @return {number}
- */
-var wonderfulSubstrings = function (word) {
-    let counter = new Array(1 << 10).fill(0);
-    counter[0] = 1;
-    let state = 0;
-    let ans = 0;
-    for (let c of word) {
-        state ^= 1 << (c.charCodeAt(0) - 'a'.charCodeAt(0));
-        ans += counter[state];
-        for (let i = 0; i < 10; ++i) {
-            ans += counter[state ^ (1 << i)];
-        }
-        ++counter[state];
-    }
-    return ans;
-};
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long wonderfulSubstrings(string word) {
-        vector<int> counter(1024);
-        counter[0] = 1;
-        long long ans = 0;
-        int state = 0;
-        for (char c : word) {
-            state ^= (1 << (c - 'a'));
-            ans += counter[state];
-            for (int i = 0; i < 10; ++i) ans += counter[state ^ (1 << i)];
-            ++counter[state];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func wonderfulSubstrings(word string) int64 {
-	counter := make([]int, 1024)
-	counter[0] = 1
-	state := 0
-	var ans int64
-	for _, c := range word {
-		state ^= (1 << (c - 'a'))
-		ans += int64(counter[state])
-		for i := 0; i < 10; i++ {
-			ans += int64(counter[state^(1<<i)])
-		}
-		counter[state]++
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -190,4 +124,4 @@ func wonderfulSubstrings(word string) int64 {
 
 ```
 
-<!-- tabs:end -->
+

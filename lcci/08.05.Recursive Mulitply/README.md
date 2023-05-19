@@ -80,9 +80,7 @@ MULTIPLY(A, B)
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -94,38 +92,13 @@ MULTIPLY(A, B)
 
 ### **TypeScript**
 
-```ts
-function multiply(A: number, B: number): number {
-    if (A === 0 || B === 0) {
-        return 0;
-    }
-    const [max, min] = [Math.max(A, B), Math.min(A, B)];
-    return max + multiply(max, min - 1);
-}
-```
 
-```ts
-function multiply(A: number, B: number): number {
-    const max = Math.max(A, B);
-    const min = Math.min(A, B);
-    const helper = (a: number, b: number) =>
-        (b & 1 ? a : 0) + (b > 1 ? helper(a + a, b >> 1) : 0);
-    return helper(max, min);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn multiply(a: i32, b: i32) -> i32 {
-        if a == 0 || b == 0 {
-            return 0;
-        }
-        a.max(b) + Self::multiply(a.max(b), a.min(b) - 1)
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -133,4 +106,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

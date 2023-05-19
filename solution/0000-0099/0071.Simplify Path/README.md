@@ -85,20 +85,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def simplifyPath(self, path: str) -> str:
-        stk = []
-        for s in path.split('/'):
-            if not s or s == '.':
-                continue
-            if s == '..':
-                if stk:
-                    stk.pop()
-            else:
-                stk.append(s)
-        return '/' + '/'.join(stk)
-```
+
 
 ### **Java**
 
@@ -123,113 +110,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string simplifyPath(string path) {
-        deque<string> stk;
-        stringstream ss(path);
-        string t;
-        while (getline(ss, t, '/')) {
-            if (t == "" || t == ".") {
-                continue;
-            }
-            if (t == "..") {
-                if (!stk.empty()) {
-                    stk.pop_back();
-                }
-            } else {
-                stk.push_back(t);
-            }
-        }
-        if (stk.empty()) {
-            return "/";
-        }
-        string ans;
-        for (auto& s : stk) {
-            ans += "/" + s;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func simplifyPath(path string) string {
-	var stk []string
-	for _, s := range strings.Split(path, "/") {
-		if s == "" || s == "." {
-			continue
-		}
-		if s == ".." {
-			if len(stk) > 0 {
-				stk = stk[0 : len(stk)-1]
-			}
-		} else {
-			stk = append(stk, s)
-		}
-	}
-	return "/" + strings.Join(stk, "/")
-}
-```
 
-```go
-func simplifyPath(path string) string {
-    return filepath.Clean(path)
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function simplifyPath(path: string): string {
-    const stk: string[] = [];
-    for (const s of path.split('/')) {
-        if (s === '' || s === '.') {
-            continue;
-        }
-        if (s === '..') {
-            if (stk.length) {
-                stk.pop();
-            }
-        } else {
-            stk.push(s);
-        }
-    }
-    return '/' + stk.join('/');
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public string SimplifyPath(string path) {
-        var stk = new Stack<string>();
-        foreach (var s in path.Split('/')) {
-            if (s == "" || s == ".") {
-                continue;
-            }
-            if (s == "..") {
-                if (stk.Count > 0) {
-                    stk.Pop();
-                }
-            } else {
-                stk.Push(s);
-            }
-        }
-        var sb = new StringBuilder();
-        while (stk.Count > 0) {
-            sb.Insert(0, "/" + stk.Pop());
-        }
-        return sb.Length == 0 ? "/" : sb.ToString();
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -237,4 +134,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

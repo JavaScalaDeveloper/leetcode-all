@@ -60,23 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxProfitAssignment(
-        self, difficulty: List[int], profit: List[int], worker: List[int]
-    ) -> int:
-        n = len(difficulty)
-        job = [(difficulty[i], profit[i]) for i in range(n)]
-        job.sort(key=lambda x: x[0])
-        worker.sort()
-        i = t = res = 0
-        for w in worker:
-            while i < n and job[i][0] <= w:
-                t = max(t, job[i][1])
-                i += 1
-            res += t
-        return res
-```
+
 
 ### **Java**
 
@@ -105,61 +89,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProfitAssignment(vector<int>& difficulty, vector<int>& profit, vector<int>& worker) {
-        int n = difficulty.size();
-        vector<pair<int, int>> job;
-        for (int i = 0; i < n; ++i) {
-            job.push_back({difficulty[i], profit[i]});
-        }
-        sort(job.begin(), job.end());
-        sort(worker.begin(), worker.end());
-        int i = 0, t = 0;
-        int res = 0;
-        for (auto w : worker) {
-            while (i < n && job[i].first <= w) {
-                t = max(t, job[i++].second);
-            }
-            res += t;
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxProfitAssignment(difficulty []int, profit []int, worker []int) int {
-	var job [][2]int
-	for i := range difficulty {
-		job = append(job, [2]int{difficulty[i], profit[i]})
-	}
 
-	sort.SliceStable(job, func(i, j int) bool { return job[i][0] <= job[j][0] })
-	sort.Ints(worker)
-	i, t, n, res := 0, 0, len(difficulty), 0
-	for _, w := range worker {
-		for i < n && job[i][0] <= w {
-			t = max(t, job[i][1])
-			i++
-		}
-		res += t
-	}
-	return res
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **...**
 
@@ -167,4 +103,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

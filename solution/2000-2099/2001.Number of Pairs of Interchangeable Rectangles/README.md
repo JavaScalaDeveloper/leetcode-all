@@ -63,18 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def interchangeableRectangles(self, rectangles: List[List[int]]) -> int:
-        ans = 0
-        cnt = Counter()
-        for w, h in rectangles:
-            g = gcd(w, h)
-            w, h = w // g, h // g
-            ans += cnt[(w, h)]
-            cnt[(w, h)] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -104,83 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long interchangeableRectangles(vector<vector<int>>& rectangles) {
-        long long ans = 0;
-        int n = rectangles.size();
-        unordered_map<long long, int> cnt;
-        for (auto& e : rectangles) {
-            int w = e[0], h = e[1];
-            int g = gcd(w, h);
-            w /= g;
-            h /= g;
-            long long x = 1ll * w * (n + 1) + h;
-            ans += cnt[x];
-            cnt[x]++;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func interchangeableRectangles(rectangles [][]int) int64 {
-	ans := 0
-	n := len(rectangles)
-	cnt := map[int]int{}
-	for _, e := range rectangles {
-		w, h := e[0], e[1]
-		g := gcd(w, h)
-		w, h = w/g, h/g
-		x := w*(n+1) + h
-		ans += cnt[x]
-		cnt[x]++
-	}
-	return int64(ans)
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} rectangles
- * @return {number}
- */
-var interchangeableRectangles = function (rectangles) {
-    const cnt = new Map();
-    let ans = 0;
-    for (let [w, h] of rectangles) {
-        const g = gcd(w, h);
-        w = Math.floor(w / g);
-        h = Math.floor(h / g);
-        const x = w * (rectangles.length + 1) + h;
-        ans += cnt.get(x) | 0;
-        cnt.set(x, (cnt.get(x) | 0) + 1);
-    }
-    return ans;
-};
 
-function gcd(a, b) {
-    if (b == 0) {
-        return a;
-    }
-    return gcd(b, a % b);
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -188,4 +111,4 @@ function gcd(a, b) {
 
 ```
 
-<!-- tabs:end -->
+

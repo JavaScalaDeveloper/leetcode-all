@@ -54,61 +54,15 @@
 
 模板 1——朴素并查集：
 
-```python
-# 初始化，p存储每个点的父节点
-p = list(range(n))
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-```
 
 模板 2——维护 size 的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，size只有当节点是祖宗节点时才有意义，表示祖宗节点所在集合中，点的数量
-p = list(range(n))
-size = [1] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        # 路径压缩
-        p[x] = find(p[x])
-    return p[x]
-
-# 合并a和b所在的两个集合
-if find(a) != find(b):
-    size[find(b)] += size[find(a)]
-    p[find(a)] = find(b)
-```
 
 模板 3——维护到祖宗节点距离的并查集：
 
-```python
-# 初始化，p存储每个点的父节点，d[x]存储x到p[x]的距离
-p = list(range(n))
-d = [0] * n
 
-# 返回x的祖宗节点
-def find(x):
-    if p[x] != x:
-        t = find(p[x])
-        d[x] += d[p[x]]
-        p[x] = t
-    return p[x]
-
-# 合并a和b所在的两个集合
-p[find(a)] = find(b)
-d[find(a)] = distance
-```
 
 对于本题，先遍历所有的边，如果边的两个节点已经属于同个集合，说明两个节点已经相连，若再将这条件加入集合中，就会出现环，因此可以直接返回这条边。
 
@@ -118,21 +72,7 @@ d[find(a)] = distance
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
-        def find(x):
-            if p[x] != x:
-                p[x] = find(p[x])
-            return p[x]
 
-        p = list(range(1010))
-        for a, b in edges:
-            if find(a) == find(b):
-                return [a, b]
-            p[find(a)] = find(b)
-        return []
-```
 
 ### **Java**
 
@@ -166,81 +106,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> p;
 
-    vector<int> findRedundantConnection(vector<vector<int>>& edges) {
-        p.resize(1010);
-        for (int i = 0; i < p.size(); ++i) p[i] = i;
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            if (find(a) == find(b)) return e;
-            p[find(a)] = find(b);
-        }
-        return {};
-    }
 
-    int find(int x) {
-        if (p[x] != x) p[x] = find(p[x]);
-        return p[x];
-    }
-};
-```
 
-### **Go**
 
-```go
-func findRedundantConnection(edges [][]int) []int {
-	p := make([]int, 1010)
-	for i := range p {
-		p[i] = i
-	}
-	var find func(x int) int
-	find = func(x int) int {
-		if p[x] != x {
-			p[x] = find(p[x])
-		}
-		return p[x]
-	}
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		if find(a) == find(b) {
-			return e
-		}
-		p[find(a)] = find(b)
-	}
-	return []int{}
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} edges
- * @return {number[]}
- */
-var findRedundantConnection = function (edges) {
-    let p = Array.from({ length: 1010 }, (_, i) => i);
-    function find(x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
-        }
-        return p[x];
-    }
-    for (let [a, b] of edges) {
-        if (find(a) == find(b)) {
-            return [a, b];
-        }
-        p[find(a)] = find(b);
-    }
-    return [];
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -248,4 +124,4 @@ var findRedundantConnection = function (edges) {
 
 ```
 
-<!-- tabs:end -->
+

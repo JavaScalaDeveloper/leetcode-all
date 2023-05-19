@@ -73,19 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        m, n = len(text1), len(text2)
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
-        for i in range(1, m + 1):
-            for j in range(1, n + 1):
-                if text1[i - 1] == text2[j - 1]:
-                    dp[i][j] = dp[i - 1][j - 1] + 1
-                else:
-                    dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
-        return dp[-1][-1]
-```
+
 
 ### **Java**
 
@@ -110,81 +98,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int longestCommonSubsequence(string text1, string text2) {
-        int m = text1.size(), n = text2.size();
-        vector<vector<int>> dp(m + 1, vector<int>(n + 1));
-        for (int i = 1; i <= m; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                if (text1[i - 1] == text2[j - 1]) {
-                    dp[i][j] = dp[i - 1][j - 1] + 1;
-                } else {
-                    dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
-                }
-            }
-        }
-        return dp[m][n];
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestCommonSubsequence(text1 string, text2 string) int {
-	m, n := len(text1), len(text2)
-	dp := make([][]int, m+1)
-	for i := 0; i <= m; i++ {
-		dp[i] = make([]int, n+1)
-	}
-	for i := 1; i <= m; i++ {
-		for j := 1; j <= n; j++ {
-			if text1[i-1] == text2[j-1] {
-				dp[i][j] = dp[i-1][j-1] + 1
-			} else {
-				dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-			}
-		}
-	}
-	return dp[m][n]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} text1
- * @param {string} text2
- * @return {number}
- */
-var longestCommonSubsequence = function (text1, text2) {
-    const m = text1.length;
-    const n = text2.length;
-    const dp = new Array(m + 1).fill(0).map(() => new Array(n + 1).fill(0));
-    for (let i = 1; i <= m; ++i) {
-        for (let j = 1; j <= n; ++j) {
-            if (text1[i - 1] == text2[j - 1]) {
-                dp[i][j] = dp[i - 1][j - 1] + 1;
-            } else {
-                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
-            }
-        }
-    }
-    return dp[m][n];
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -192,4 +116,4 @@ var longestCommonSubsequence = function (text1, text2) {
 
 ```
 
-<!-- tabs:end -->
+

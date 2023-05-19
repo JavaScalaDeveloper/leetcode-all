@@ -70,12 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximizeSum(self, nums: List[int], k: int) -> int:
-        x = max(nums)
-        return k * x + k * (k - 1) // 2
-```
+
 
 ### **Java**
 
@@ -93,45 +88,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximizeSum(vector<int>& nums, int k) {
-        int x = *max_element(nums.begin(), nums.end());
-        return k * x + k * (k - 1) / 2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximizeSum(nums []int, k int) int {
-	x := 0
-	for _, v := range nums {
-		x = max(x, v)
-	}
-	return k*x + k*(k-1)/2
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximizeSum(nums: number[], k: number): number {
-    const x = Math.max(...nums);
-    return k * x + (k * (k - 1)) / 2;
-}
-```
+
 
 ### **...**
 
@@ -139,4 +106,4 @@ function maximizeSum(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -62,24 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sumOfBeauties(self, nums: List[int]) -> int:
-        n = len(nums)
-        lmx = [0] * n
-        for i in range(1, n):
-            lmx[i] = max(lmx[i - 1], nums[i - 1])
-        rmi = [100001] * n
-        for i in range(n - 2, -1, -1):
-            rmi[i] = min(rmi[i + 1], nums[i + 1])
-        ans = 0
-        for i in range(1, n - 1):
-            if lmx[i] < nums[i] < rmi[i]:
-                ans += 2
-            elif nums[i - 1] < nums[i] < nums[i + 1]:
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -113,91 +96,15 @@ class Solution {
 
 ### \*\*TypeScript
 
-```ts
-function sumOfBeauties(nums: number[]): number {
-    let n = nums.length;
-    let prefix = new Array(n),
-        postfix = new Array(n);
-    prefix[0] = nums[0];
-    postfix[n - 1] = nums[n - 1];
-    for (let i = 1, j = n - 2; i < n; ++i, --j) {
-        prefix[i] = Math.max(nums[i], prefix[i - 1]);
-        postfix[j] = Math.min(nums[j], postfix[j + 1]);
-    }
-    let ans = 0;
-    for (let i = 1; i < n - 1; ++i) {
-        if (prefix[i - 1] < nums[i] && nums[i] < postfix[i + 1]) {
-            ans += 2;
-        } else if (nums[i - 1] < nums[i] && nums[i] < nums[i + 1]) {
-            ans += 1;
-        }
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int sumOfBeauties(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> lmx(n);
-        vector<int> rmi(n, 100001);
-        for (int i = 1; i < n; ++i) lmx[i] = max(lmx[i - 1], nums[i - 1]);
-        for (int i = n - 2; i >= 0; --i) rmi[i] = min(rmi[i + 1], nums[i + 1]);
-        int ans = 0;
-        for (int i = 1; i < n - 1; ++i) {
-            if (lmx[i] < nums[i] && nums[i] < rmi[i])
-                ans += 2;
-            else if (nums[i - 1] < nums[i] && nums[i] < nums[i + 1])
-                ans += 1;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sumOfBeauties(nums []int) int {
-	n := len(nums)
-	lmx := make([]int, n)
-	rmi := make([]int, n)
-	rmi[n-1] = 100001
-	for i := 1; i < n; i++ {
-		lmx[i] = max(lmx[i-1], nums[i-1])
-	}
-	for i := n - 2; i >= 0; i-- {
-		rmi[i] = min(rmi[i+1], nums[i+1])
-	}
-	ans := 0
-	for i := 1; i < n-1; i++ {
-		if lmx[i] < nums[i] && nums[i] < rmi[i] {
-			ans += 2
-		} else if nums[i-1] < nums[i] && nums[i] < nums[i+1] {
-			ans += 1
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -205,4 +112,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

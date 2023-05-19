@@ -94,39 +94,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countNumbersWithUniqueDigits(self, n: int) -> int:
-        if n == 0:
-            return 1
-        if n == 1:
-            return 10
-        ans, cur = 10, 9
-        for i in range(n - 1):
-            cur *= 9 - i
-            ans += cur
-        return ans
-```
 
-```python
-class Solution:
-    def countNumbersWithUniqueDigits(self, n: int) -> int:
-        @cache
-        def dfs(pos, mask, lead):
-            if pos <= 0:
-                return 1
-            ans = 0
-            for i in range(10):
-                if (mask >> i) & 1:
-                    continue
-                if i == 0 and lead:
-                    ans += dfs(pos - 1, mask, lead)
-                else:
-                    ans += dfs(pos - 1, mask | (1 << i), False)
-            return ans
 
-        return dfs(n, 0, True)
-```
+
 
 ### **Java**
 
@@ -188,114 +158,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countNumbersWithUniqueDigits(int n) {
-        if (n == 0) return 1;
-        if (n == 1) return 10;
-        int ans = 10;
-        for (int i = 0, cur = 9; i < n - 1; ++i) {
-            cur *= (9 - i);
-            ans += cur;
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int dp[10][1 << 11];
 
-    int countNumbersWithUniqueDigits(int n) {
-        memset(dp, -1, sizeof dp);
-        return dfs(n, 0, true);
-    }
 
-    int dfs(int pos, int mask, bool lead) {
-        if (pos <= 0) {
-            return 1;
-        }
-        if (!lead && dp[pos][mask] != -1) {
-            return dp[pos][mask];
-        }
-        int ans = 0;
-        for (int i = 0; i < 10; ++i) {
-            if ((mask >> i) & 1) continue;
-            if (i == 0 && lead) {
-                ans += dfs(pos - 1, mask, lead);
-            } else {
-                ans += dfs(pos - 1, mask | 1 << i, false);
-            }
-        }
-        if (!lead) {
-            dp[pos][mask] = ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countNumbersWithUniqueDigits(n int) int {
-	if n == 0 {
-		return 1
-	}
-	if n == 1 {
-		return 10
-	}
-	ans := 10
-	for i, cur := 0, 9; i < n-1; i++ {
-		cur *= (9 - i)
-		ans += cur
-	}
-	return ans
-}
-```
 
-```go
-func countNumbersWithUniqueDigits(n int) int {
-	dp := make([][]int, 10)
-	for i := range dp {
-		dp[i] = make([]int, 1<<11)
-		for j := range dp[i] {
-			dp[i][j] = -1
-		}
-	}
-	var dfs func(int, int, bool) int
-	dfs = func(pos, mask int, lead bool) int {
-		if pos <= 0 {
-			return 1
-		}
-		if !lead && dp[pos][mask] != -1 {
-			return dp[pos][mask]
-		}
-		ans := 0
-		for i := 0; i < 10; i++ {
-			if ((mask >> i) & 1) == 1 {
-				continue
-			}
-			if i == 0 && lead {
-				ans += dfs(pos-1, mask, lead)
-			} else {
-				ans += dfs(pos-1, mask|1<<i, false)
-			}
-		}
-		if !lead {
-			dp[pos][mask] = ans
-		}
-		return ans
-	}
 
-	return dfs(n, 0, true)
-}
-```
+
+
+
 
 ### **...**
 
@@ -303,4 +176,4 @@ func countNumbersWithUniqueDigits(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

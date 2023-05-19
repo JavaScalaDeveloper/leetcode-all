@@ -40,16 +40,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def waysToStep(self, n: int) -> int:
-        if n < 3:
-            return n
-        a, b, c = 1, 2, 4
-        for _ in range(4, n + 1):
-            a, b, c = b, c, (a + b + c) % 1000000007
-        return c
-```
+
 
 ### **Java**
 
@@ -73,24 +64,9 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var waysToStep = function (n) {
-    if (n < 3) return n;
-    let a = 1,
-        b = 2,
-        c = 4;
-    for (let i = 3; i < n; i++) {
-        [a, b, c] = [b, c, (a + b + c) % 1000000007];
-    }
-    return c;
-};
-```
+
+
 
 ### **C**
 
@@ -110,47 +86,12 @@ int waysToStep(int n) {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int waysToStep(int n) {
-        if (n < 3) {
-            return n;
-        }
-        int a = 1, b = 2, c = 4, i = 4;
-        while (i++ <= n) {
-            int t = ((a + b) % 1000000007 + c) % 1000000007;
-            a = b;
-            b = c;
-            c = t;
-        }
-        return c;
-    }
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn ways_to_step(n: i32) -> i32 {
-        let mut dp = [1, 2, 4];
-        let n = n as usize;
-        if n <= 3 {
-            return dp[n - 1];
-        }
-        for _ in 3..n {
-            dp = [
-                dp[1],
-                dp[2],
-                (((dp[0] + dp[1]) % 1000000007) + dp[2]) % 1000000007,
-            ];
-        }
-        dp[2]
-    }
-}
-```
 
-<!-- tabs:end -->
+
+
+
+
+

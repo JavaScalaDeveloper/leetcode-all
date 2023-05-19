@@ -78,23 +78,7 @@ DFS。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:
-        ans = []
 
-        def dfs(i, path):
-            if i == len(graph) - 1:
-                ans.append(path.copy())
-                return
-            for j in graph[i]:
-                path.append(j)
-                dfs(j, path)
-                path.pop(-1)
-
-        dfs(0, [0])
-        return ans
-```
 
 ### **Java**
 
@@ -128,61 +112,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> graph;
-    vector<vector<int>> ans;
 
-    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
-        this->graph = graph;
-        vector<int> path;
-        path.push_back(0);
-        dfs(0, path);
-        return ans;
-    }
 
-    void dfs(int i, vector<int> path) {
-        if (i == graph.size() - 1) {
-            ans.push_back(path);
-            return;
-        }
-        for (int j : graph[i]) {
-            path.push_back(j);
-            dfs(j, path);
-            path.pop_back();
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func allPathsSourceTarget(graph [][]int) [][]int {
-	var path []int
-	path = append(path, 0)
-	var ans [][]int
 
-	var dfs func(i int)
-	dfs = func(i int) {
-		if i == len(graph)-1 {
-			ans = append(ans, append([]int(nil), path...))
-			return
-		}
-		for _, j := range graph[i] {
-			path = append(path, j)
-			dfs(j)
-			path = path[:len(path)-1]
-		}
-	}
 
-	dfs(0)
-	return ans
-}
-```
 
 ### **...**
 
@@ -190,4 +126,4 @@ func allPathsSourceTarget(graph [][]int) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

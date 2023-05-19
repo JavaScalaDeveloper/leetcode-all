@@ -71,23 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def summaryRanges(self, nums: List[int]) -> List[str]:
-        def f(i: int, j: int) -> str:
-            return str(nums[i]) if i == j else f'{nums[i]}->{nums[j]}'
 
-        i = 0
-        n = len(nums)
-        ans = []
-        while i < n:
-            j = i
-            while j + 1 < n and nums[j + 1] == nums[j] + 1:
-                j += 1
-            ans.append(f(i, j))
-            i = j + 1
-        return ans
-```
 
 ### **Java**
 
@@ -113,90 +97,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> summaryRanges(vector<int>& nums) {
-        vector<string> ans;
-        auto f = [&](int i, int j) {
-            return i == j ? to_string(nums[i]) : to_string(nums[i]) + "->" + to_string(nums[j]);
-        };
-        for (int i = 0, j, n = nums.size(); i < n; i = j + 1) {
-            j = i;
-            while (j + 1 < n && nums[j + 1] == nums[j] + 1) {
-                ++j;
-            }
-            ans.emplace_back(f(i, j));
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func summaryRanges(nums []int) (ans []string) {
-	f := func(i, j int) string {
-		if i == j {
-			return strconv.Itoa(nums[i])
-		}
-		return strconv.Itoa(nums[i]) + "->" + strconv.Itoa(nums[j])
-	}
-	for i, j, n := 0, 0, len(nums); i < n; i = j + 1 {
-		j = i
-		for j+1 < n && nums[j+1] == nums[j]+1 {
-			j++
-		}
-		ans = append(ans, f(i, j))
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function summaryRanges(nums: number[]): string[] {
-    const f = (i: number, j: number): string => {
-        return i === j ? `${nums[i]}` : `${nums[i]}->${nums[j]}`;
-    };
-    const n = nums.length;
-    const ans: string[] = [];
-    for (let i = 0, j = 0; i < n; i = j + 1) {
-        j = i;
-        while (j + 1 < n && nums[j + 1] === nums[j] + 1) {
-            ++j;
-        }
-        ans.push(f(i, j));
-    }
-    return ans;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public IList<string> SummaryRanges(int[] nums) {
-        var ans = new List<string>();
-        for (int i = 0, j = 0, n = nums.Length; i < n; i = j + 1) {
-            j = i;
-            while (j + 1 < n && nums[j + 1] == nums[j] + 1) {
-                ++j;
-            }
-            ans.Add(f(nums, i, j));
-        }
-        return ans;
-    }
 
-    public string f(int[] nums, int i, int j) {
-        return i == j ? nums[i].ToString() : string.Format("{0}->{1}", nums[i], nums[j]);
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -204,4 +119,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

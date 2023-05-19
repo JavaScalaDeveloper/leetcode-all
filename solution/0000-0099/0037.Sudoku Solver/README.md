@@ -65,38 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def solveSudoku(self, board: List[List[str]]) -> None:
-        def dfs(k):
-            nonlocal ok
-            if k == len(t):
-                ok = True
-                return
-            i, j = t[k]
-            for v in range(9):
-                if row[i][v] == col[j][v] == block[i // 3][j // 3][v] == False:
-                    row[i][v] = col[j][v] = block[i // 3][j // 3][v] = True
-                    board[i][j] = str(v + 1)
-                    dfs(k + 1)
-                    row[i][v] = col[j][v] = block[i // 3][j // 3][v] = False
-                if ok:
-                    return
 
-        row = [[False] * 9 for _ in range(9)]
-        col = [[False] * 9 for _ in range(9)]
-        block = [[[False] * 9 for _ in range(3)] for _ in range(3)]
-        t = []
-        ok = False
-        for i in range(9):
-            for j in range(9):
-                if board[i][j] == '.':
-                    t.append((i, j))
-                else:
-                    v = int(board[i][j]) - 1
-                    row[i][v] = col[j][v] = block[i // 3][j // 3][v] = True
-        dfs(0)
-```
 
 ### **Java**
 
@@ -147,92 +116,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-using pii = pair<int, int>;
 
-class Solution {
-public:
-    void solveSudoku(vector<vector<char>>& board) {
-        bool row[9][9] = {false};
-        bool col[9][9] = {false};
-        bool block[3][3][9] = {false};
-        bool ok = false;
-        vector<pii> t;
-        for (int i = 0; i < 9; ++i) {
-            for (int j = 0; j < 9; ++j) {
-                if (board[i][j] == '.') {
-                    t.push_back({i, j});
-                } else {
-                    int v = board[i][j] - '1';
-                    row[i][v] = col[j][v] = block[i / 3][j / 3][v] = true;
-                }
-            }
-        }
-        function<void(int k)> dfs = [&](int k) {
-            if (k == t.size()) {
-                ok = true;
-                return;
-            }
-            int i = t[k].first, j = t[k].second;
-            for (int v = 0; v < 9; ++v) {
-                if (!row[i][v] && !col[j][v] && !block[i / 3][j / 3][v]) {
-                    row[i][v] = col[j][v] = block[i / 3][j / 3][v] = true;
-                    board[i][j] = v + '1';
-                    dfs(k + 1);
-                    row[i][v] = col[j][v] = block[i / 3][j / 3][v] = false;
-                }
-                if (ok) {
-                    return;
-                }
-            }
-        };
-        dfs(0);
-    }
-};
-```
 
-### **Go**
 
-```go
-func solveSudoku(board [][]byte) {
-	var row, col [9][9]bool
-	var block [3][3][9]bool
-	var t [][2]int
-	ok := false
-	for i := 0; i < 9; i++ {
-		for j := 0; j < 9; j++ {
-			if board[i][j] == '.' {
-				t = append(t, [2]int{i, j})
-			} else {
-				v := int(board[i][j] - '1')
-				row[i][v], col[j][v], block[i/3][j/3][v] = true, true, true
-			}
-		}
-	}
-	var dfs func(int)
-	dfs = func(k int) {
-		if k == len(t) {
-			ok = true
-			return
-		}
-		i, j := t[k][0], t[k][1]
-		for v := 0; v < 9; v++ {
-			if !row[i][v] && !col[j][v] && !block[i/3][j/3][v] {
-				row[i][v], col[j][v], block[i/3][j/3][v] = true, true, true
-				board[i][j] = byte(v + '1')
-				dfs(k + 1)
-				row[i][v], col[j][v], block[i/3][j/3][v] = false, false, false
-			}
-			if ok {
-				return
-			}
-		}
-	}
-	dfs(0)
-}
-```
+
+
+
 
 ### **...**
 
@@ -240,4 +130,4 @@ func solveSudoku(board [][]byte) {
 
 ```
 
-<!-- tabs:end -->
+

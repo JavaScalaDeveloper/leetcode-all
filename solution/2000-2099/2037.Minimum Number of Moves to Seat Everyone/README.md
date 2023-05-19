@@ -81,13 +81,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minMovesToSeat(self, seats: List[int], students: List[int]) -> int:
-        seats.sort()
-        students.sort()
-        return sum(abs(a - b) for a, b in zip(seats, students))
-```
+
 
 ### **Java**
 
@@ -107,75 +101,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minMovesToSeat(vector<int>& seats, vector<int>& students) {
-        sort(seats.begin(), seats.end());
-        sort(students.begin(), students.end());
-        int ans = 0;
-        for (int i = 0; i < seats.size(); ++i) {
-            ans += abs(seats[i] - students[i]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minMovesToSeat(seats []int, students []int) (ans int) {
-	sort.Ints(seats)
-	sort.Ints(students)
-	for i, a := range seats {
-		b := students[i]
-		ans += abs(a - b)
-	}
-	return
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minMovesToSeat(seats: number[], students: number[]): number {
-    seats.sort((a, b) => a - b);
-    students.sort((a, b) => a - b);
-    const n = seats.length;
-    let ans = 0;
-    for (let i = 0; i < n; i++) {
-        ans += Math.abs(seats[i] - students[i]);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_moves_to_seat(mut seats: Vec<i32>, mut students: Vec<i32>) -> i32 {
-        seats.sort();
-        students.sort();
-        let n = seats.len();
-        let mut ans = 0;
-        for i in 0..n {
-            ans += (seats[i] - students[i]).abs();
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -201,4 +141,4 @@ int minMovesToSeat(int *seats, int seatsSize, int *students, int studentsSize) {
 
 ```
 
-<!-- tabs:end -->
+

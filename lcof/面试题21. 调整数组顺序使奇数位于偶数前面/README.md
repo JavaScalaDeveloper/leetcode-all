@@ -36,16 +36,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def exchange(self, nums: List[int]) -> List[int]:
-        j = 0
-        for i, x in enumerate(nums):
-            if x & 1:
-                nums[i], nums[j] = nums[j], nums[i]
-                j += 1
-        return nums
-```
+
 
 ### **Java**
 
@@ -65,108 +56,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> exchange(vector<int>& nums) {
-        int j = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] & 1) {
-                swap(nums[i], nums[j++]);
-            }
-        }
-        return nums;
-    }
-};
-```
 
-### **Go**
 
-```go
-func exchange(nums []int) []int {
-	j := 0
-	for i, x := range nums {
-		if x&1 == 1 {
-			nums[i], nums[j] = nums[j], nums[i]
-			j++
-		}
-	}
-	return nums
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var exchange = function (nums) {
-    let j = 0;
-    for (let i = 0; i < nums.length; ++i) {
-        if (nums[i] & 1) {
-            const t = nums[i];
-            nums[i] = nums[j];
-            nums[j++] = t;
-        }
-    }
-    return nums;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function exchange(nums: number[]): number[] {
-    let j = 0;
-    for (let i = 0; i < nums.length; ++i) {
-        if (nums[i] & 1) {
-            const t = nums[i];
-            nums[i] = nums[j];
-            nums[j++] = t;
-        }
-    }
-    return nums;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn exchange(mut nums: Vec<i32>) -> Vec<i32> {
-        let mut j = 0;
-        for i in 0..nums.len() {
-            if nums[i] % 2 == 1 {
-                nums.swap(i, j);
-                j += 1;
-            }
-        }
-        nums
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int[] Exchange(int[] nums) {
-        int j = 0;
-        for (int i = 0; i < nums.Length; ++i) {
-            if (nums[i] % 2 == 1) {
-                int t = nums[i];
-                nums[i] = nums[j];
-                nums[j++] = t;
-            }
-        }
-        return nums;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -174,4 +86,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

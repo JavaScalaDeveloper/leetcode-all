@@ -71,14 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def repairCars(self, ranks: List[int], cars: int) -> int:
-        def check(t):
-            return sum(int(sqrt(t // r)) for r in ranks) >= cars
 
-        return bisect_left(range(ranks[0] * cars * cars), True, key=check)
-```
 
 ### **Java**
 
@@ -105,65 +98,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long repairCars(vector<int>& ranks, int cars) {
-        long long left = 0, right = 1LL * ranks[0] * cars * cars;
-        while (left < right) {
-            long long mid = (left + right) >> 1;
-            long long cnt = 0;
-            for (int r : ranks) {
-                cnt += sqrt(mid / r);
-            }
-            if (cnt >= cars) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func repairCars(ranks []int, cars int) int64 {
-	return int64(sort.Search(ranks[0]*cars*cars, func(t int) bool {
-		cnt := 0
-		for _, r := range ranks {
-			cnt += int(math.Sqrt(float64(t / r)))
-		}
-		return cnt >= cars
-	}))
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function repairCars(ranks: number[], cars: number): number {
-    let left = 0;
-    let right = ranks[0] * cars * cars;
-    while (left < right) {
-        const mid = left + Math.floor((right - left) / 2);
-        let cnt = 0;
-        for (const r of ranks) {
-            cnt += Math.floor(Math.sqrt(mid / r));
-        }
-        if (cnt >= cars) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-```
+
 
 ### **...**
 
@@ -171,4 +116,4 @@ function repairCars(ranks: number[], cars: number): number {
 
 ```
 
-<!-- tabs:end -->
+

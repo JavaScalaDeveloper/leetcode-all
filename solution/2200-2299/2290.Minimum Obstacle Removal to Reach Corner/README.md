@@ -76,28 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumObstacles(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        q = deque([(0, 0, 0)])
-        vis = set()
-        dirs = (-1, 0, 1, 0, -1)
-        while 1:
-            i, j, k = q.popleft()
-            if i == m - 1 and j == n - 1:
-                return k
-            if (i, j) in vis:
-                continue
-            vis.add((i, j))
-            for a, b in pairwise(dirs):
-                x, y = i + a, j + b
-                if 0 <= x < m and 0 <= y < n:
-                    if grid[x][y] == 0:
-                        q.appendleft((x, y, k))
-                    else:
-                        q.append((x, y, k + 1))
-```
+
 
 ### **Java**
 
@@ -136,110 +115,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumObstacles(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        deque<tuple<int, int, int>> q{{0, 0, 0}};
-        bool vis[m][n];
-        memset(vis, 0, sizeof vis);
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        while (1) {
-            auto [i, j, k] = q.front();
-            q.pop_front();
-            if (i == m - 1 && j == n - 1) {
-                return k;
-            }
-            if (vis[i][j]) {
-                continue;
-            }
-            vis[i][j] = true;
-            for (int h = 0; h < 4; ++h) {
-                int x = i + dirs[h], y = j + dirs[h + 1];
-                if (x >= 0 && x < m && y >= 0 && y < n) {
-                    if (grid[x][y] == 0) {
-                        q.push_front({x, y, k});
-                    } else {
-                        q.push_back({x, y, k + 1});
-                    }
-                }
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumObstacles(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	q := doublylinkedlist.New()
-	type tuple struct{ i, j, k int }
-	q.Add(tuple{0, 0, 0})
-	vis := make([][]bool, m)
-	for i := range vis {
-		vis[i] = make([]bool, n)
-	}
-	dirs := [5]int{-1, 0, 1, 0, -1}
-	for {
-		v, _ := q.Get(0)
-		p := v.(tuple)
-		q.Remove(0)
-		i, j, k := p.i, p.j, p.k
-		if i == m-1 && j == n-1 {
-			return k
-		}
-		if vis[i][j] {
-			continue
-		}
-		vis[i][j] = true
-		for h := 0; h < 4; h++ {
-			x, y := i+dirs[h], j+dirs[h+1]
-			if x >= 0 && x < m && y >= 0 && y < n {
-				if grid[x][y] == 0 {
-					q.Insert(0, tuple{x, y, k})
-				} else {
-					q.Add(tuple{x, y, k + 1})
-				}
-			}
-		}
-	}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumObstacles(grid: number[][]): number {
-    const m = grid.length,
-        n = grid[0].length;
-    const dirs = [
-        [0, 1],
-        [0, -1],
-        [1, 0],
-        [-1, 0],
-    ];
-    let ans = Array.from({ length: m }, v => new Array(n).fill(Infinity));
-    ans[0][0] = 0;
-    let deque = [[0, 0]];
-    while (deque.length) {
-        let [x, y] = deque.shift();
-        for (let [dx, dy] of dirs) {
-            let [i, j] = [x + dx, y + dy];
-            if (i < 0 || i > m - 1 || j < 0 || j > n - 1) continue;
-            const cost = grid[i][j];
-            if (ans[x][y] + cost >= ans[i][j]) continue;
-            ans[i][j] = ans[x][y] + cost;
-            deque.push([i, j]);
-        }
-    }
-    return ans[m - 1][n - 1];
-}
-```
+
 
 ### **...**
 
@@ -247,4 +133,4 @@ function minimumObstacles(grid: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

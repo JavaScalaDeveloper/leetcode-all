@@ -54,17 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        counter = Counter(nums1)
-        res = []
-        for num in nums2:
-            if counter[num] > 0:
-                res.append(num)
-                counter[num] -= 1
-        return res
-```
+
 
 ### **Java**
 
@@ -93,136 +83,29 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums1
- * @param {number[]} nums2
- * @return {number[]}
- */
-var intersect = function (nums1, nums2) {
-    const counter = {};
-    for (const num of nums1) {
-        counter[num] = (counter[num] || 0) + 1;
-    }
-    let res = [];
-    for (const num of nums2) {
-        if (counter[num] > 0) {
-            res.push(num);
-            counter[num] -= 1;
-        }
-    }
-    return res;
-};
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
-        unordered_map<int, int> counter;
-        for (int num : nums1) ++counter[num];
-        vector<int> res;
-        for (int num : nums2) {
-            if (counter[num] > 0) {
-                --counter[num];
-                res.push_back(num);
-            }
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func intersect(nums1 []int, nums2 []int) []int {
-	counter := make(map[int]int)
-	for _, num := range nums1 {
-		counter[num]++
-	}
-	var res []int
-	for _, num := range nums2 {
-		if counter[num] > 0 {
-			counter[num]--
-			res = append(res, num)
-		}
-	}
-	return res
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function intersect(nums1: number[], nums2: number[]): number[] {
-    const map = new Map<number, number>();
-    for (const num of nums1) {
-        map.set(num, (map.get(num) ?? 0) + 1);
-    }
 
-    const res = [];
-    for (const num of nums2) {
-        if (map.has(num) && map.get(num) !== 0) {
-            res.push(num);
-            map.set(num, map.get(num) - 1);
-        }
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
-impl Solution {
-    pub fn intersect(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
-        let mut map = HashMap::new();
-        for num in nums1.iter() {
-            *map.entry(num).or_insert(0) += 1;
-        }
 
-        let mut res = vec![];
-        for num in nums2.iter() {
-            if map.contains_key(num) && map.get(num).unwrap() != &0 {
-                map.insert(num, map.get(&num).unwrap() - 1);
-                res.push(*num);
-            }
-        }
-        res
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $nums1
-     * @param Integer[] $nums2
-     * @return Integer[]
-     */
-    function intersect($nums1, $nums2) {
-        $rs = [];
-        for ($i = 0; $i < count($nums1); $i++) {
-            $hashtable[$nums1[$i]] += 1;
-        }
-        for ($j = 0; $j < count($nums2); $j++) {
-            if (isset($hashtable[$nums2[$j]]) && $hashtable[$nums2[$j]] > 0) {
-                array_push($rs, $nums2[$j]);
-                $hashtable[$nums2[$j]] -= 1;
-            }
-        }
-        return $rs;
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -230,4 +113,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

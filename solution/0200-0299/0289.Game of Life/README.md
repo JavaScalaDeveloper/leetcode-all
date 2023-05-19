@@ -75,28 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def gameOfLife(self, board: List[List[int]]) -> None:
-        m, n = len(board), len(board[0])
-        for i in range(m):
-            for j in range(n):
-                live = -board[i][j]
-                for x in range(i - 1, i + 2):
-                    for y in range(j - 1, j + 2):
-                        if 0 <= x < m and 0 <= y < n and board[x][y] > 0:
-                            live += 1
-                if board[i][j] and (live < 2 or live > 3):
-                    board[i][j] = 2
-                if board[i][j] == 0 and live == 3:
-                    board[i][j] = -1
-        for i in range(m):
-            for j in range(n):
-                if board[i][j] == 2:
-                    board[i][j] = 0
-                elif board[i][j] == -1:
-                    board[i][j] = 1
-```
+
 
 ### **Java**
 
@@ -137,158 +116,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    void gameOfLife(vector<vector<int>>& board) {
-        int m = board.size(), n = board[0].size();
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                int live = -board[i][j];
-                for (int x = i - 1; x <= i + 1; ++x) {
-                    for (int y = j - 1; y <= j + 1; ++y) {
-                        if (x >= 0 && x < m && y >= 0 && y < n && board[x][y] > 0) {
-                            ++live;
-                        }
-                    }
-                }
-                if (board[i][j] == 1 && (live < 2 || live > 3)) {
-                    board[i][j] = 2;
-                }
-                if (board[i][j] == 0 && live == 3) {
-                    board[i][j] = -1;
-                }
-            }
-        }
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (board[i][j] == 2) {
-                    board[i][j] = 0;
-                } else if (board[i][j] == -1) {
-                    board[i][j] = 1;
-                }
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func gameOfLife(board [][]int) {
-	m, n := len(board), len(board[0])
-	for i := 0; i < m; i++ {
-		for j, v := range board[i] {
-			live := -v
-			for x := i - 1; x <= i+1; x++ {
-				for y := j - 1; y <= j+1; y++ {
-					if x >= 0 && x < m && y >= 0 && y < n && board[x][y] > 0 {
-						live++
-					}
-				}
-			}
-			if v == 1 && (live < 2 || live > 3) {
-				board[i][j] = 2
-			}
-			if v == 0 && live == 3 {
-				board[i][j] = -1
-			}
-		}
-	}
-	for i := 0; i < m; i++ {
-		for j, v := range board[i] {
-			if v == 2 {
-				board[i][j] = 0
-			}
-			if v == -1 {
-				board[i][j] = 1
-			}
-		}
-	}
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- Do not return anything, modify board in-place instead.
- */
-function gameOfLife(board: number[][]): void {
-    const m = board.length;
-    const n = board[0].length;
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            let live = -board[i][j];
-            for (let x = i - 1; x <= i + 1; ++x) {
-                for (let y = j - 1; y <= j + 1; ++y) {
-                    if (x >= 0 && x < m && y >= 0 && y < n && board[x][y] > 0) {
-                        ++live;
-                    }
-                }
-            }
-            if (board[i][j] === 1 && (live < 2 || live > 3)) {
-                board[i][j] = 2;
-            }
-            if (board[i][j] === 0 && live === 3) {
-                board[i][j] = -1;
-            }
-        }
-    }
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            if (board[i][j] === 2) {
-                board[i][j] = 0;
-            }
-            if (board[i][j] === -1) {
-                board[i][j] = 1;
-            }
-        }
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public void GameOfLife(int[][] board) {
-        int m = board.Length;
-        int n = board[0].Length;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                int live = -board[i][j];
-                for (int x = i - 1; x <= i + 1; ++x) {
-                    for (int y = j - 1; y <= j + 1; ++y) {
-                        if (x >= 0 && x < m && y >= 0 && y < n && board[x][y] > 0) {
-                            ++live;
-                        }
-                    }
-                }
-                if (board[i][j] == 1 && (live < 2 || live > 3)) {
-                    board[i][j] = 2;
-                }
-                if (board[i][j] == 0 && live == 3) {
-                    board[i][j] = -1;
-                }
-            }
-        }
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (board[i][j] == 2) {
-                    board[i][j] = 0;
-                }
-                if (board[i][j] == -1) {
-                    board[i][j] = 1;
-                }
-            }
-        }
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -296,4 +138,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -60,17 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countFairPairs(self, nums: List[int], lower: int, upper: int) -> int:
-        nums.sort()
-        ans = 0
-        for i, x in enumerate(nums):
-            j = bisect_left(nums, lower-x, lo=i + 1)
-            k = bisect_left(nums, upper-x+1, lo=i + 1)
-            ans += k - j
-        return ans
-```
+
 
 ### **Java**
 
@@ -105,37 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long countFairPairs(vector<int>& nums, int lower, int upper) {
-        long long ans = 0;
-        sort(nums.begin(), nums.end());
-        for (int i = 0; i < nums.size(); ++i) {
-            auto j = lower_bound(nums.begin() + i + 1, nums.end(), lower - nums[i]);
-            auto k = lower_bound(nums.begin() + i + 1, nums.end(), upper - nums[i] + 1);
-            ans += k - j;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countFairPairs(nums []int, lower int, upper int) (ans int64) {
-	sort.Ints(nums)
-	for i, x := range nums {
-		j := sort.Search(len(nums), func(h int) bool { return h > i && nums[h] >= lower-x })
-		k := sort.Search(len(nums), func(h int) bool { return h > i && nums[h] >= upper-x+1 })
-		ans += int64(k - j)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -143,4 +109,4 @@ func countFairPairs(nums []int, lower int, upper int) (ans int64) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -48,18 +48,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sortArrayByParity(self, nums: List[int]) -> List[int]:
-        i, j = 0, len(nums) - 1
-        while i < j:
-            if nums[i] & 1:
-                nums[i], nums[j] = nums[j], nums[i]
-                j -= 1
-            else:
-                i += 1
-        return nums
-```
+
 
 ### **Java**
 
@@ -83,78 +72,21 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var sortArrayByParity = function (nums) {
-    for (let i = 0, j = nums.length - 1; i < j; ) {
-        if (nums[i] & 1) {
-            [nums[i], nums[j]] = [nums[j], nums[i]];
-            --j;
-        } else {
-            ++i;
-        }
-    }
-    return nums;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sort_array_by_parity(mut nums: Vec<i32>) -> Vec<i32> {
-        let (mut l, mut r) = (0, nums.len() - 1);
-        while l < r {
-            while l < r && nums[l] & 1 == 0 {
-                l += 1;
-            }
-            while l < r && nums[r] & 1 == 1 {
-                r -= 1;
-            }
-            nums.swap(l, r);
-        }
-        nums
-    }
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> sortArrayByParity(vector<int>& nums) {
-        for (int i = 0, j = nums.size() - 1; i < j;) {
-            if (nums[i] & 1)
-                swap(nums[i], nums[j--]);
-            else
-                ++i;
-        }
-        return nums;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sortArrayByParity(nums []int) []int {
-	for i, j := 0, len(nums)-1; i < j; {
-		if nums[i]%2 == 1 {
-			nums[i], nums[j] = nums[j], nums[i]
-			j--
-		} else {
-			i++
-		}
-	}
-	return nums
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -162,4 +94,4 @@ func sortArrayByParity(nums []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

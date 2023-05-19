@@ -72,18 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumNumber(self, num: str, change: List[int]) -> str:
-        s = list(num)
-        for i, c in enumerate(s):
-            if change[int(c)] > int(c):
-                while i < len(s) and int(s[i]) <= change[int(s[i])]:
-                    s[i] = str(change[int(s[i])])
-                    i += 1
-                break
-        return ''.join(s)
-```
+
 
 ### **Java**
 
@@ -106,42 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string maximumNumber(string num, vector<int>& change) {
-        int n = num.size();
-        for (int i = 0; i < n; ++i) {
-            if (change[num[i] - '0'] > num[i] - '0') {
-                for (; i < n && change[num[i] - '0'] >= num[i] - '0'; ++i) {
-                    num[i] = change[num[i] - '0'] + '0';
-                }
-                break;
-            }
-        }
-        return num;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumNumber(num string, change []int) string {
-	s := []byte(num)
-	for i, c := range num {
-		if change[c-'0'] > int(c-'0') {
-			for ; i < len(s) && change[s[i]-'0'] >= int(s[i]-'0'); i++ {
-				s[i] = byte(change[s[i]-'0']) + '0'
-			}
-			break
-		}
-	}
-	return string(s)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -149,4 +109,4 @@ func maximumNumber(num string, change []int) string {
 
 ```
 
-<!-- tabs:end -->
+

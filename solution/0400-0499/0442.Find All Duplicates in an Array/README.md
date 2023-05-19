@@ -54,14 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findDuplicates(self, nums: List[int]) -> List[int]:
-        for i in range(len(nums)):
-            while nums[i] != nums[nums[i] - 1]:
-                nums[nums[i] - 1], nums[i] = nums[i], nums[nums[i] - 1]
-        return [v for i, v in enumerate(nums) if v != i + 1]
-```
+
 
 ### **Java**
 
@@ -93,47 +86,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findDuplicates(vector<int>& nums) {
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            while (nums[i] != nums[nums[i] - 1]) {
-                swap(nums[i], nums[nums[i] - 1]);
-            }
-        }
-        vector<int> ans;
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] != i + 1) {
-                ans.push_back(nums[i]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findDuplicates(nums []int) []int {
-	for i := range nums {
-		for nums[i] != nums[nums[i]-1] {
-			nums[i], nums[nums[i]-1] = nums[nums[i]-1], nums[i]
-		}
-	}
-	var ans []int
-	for i, v := range nums {
-		if v != i+1 {
-			ans = append(ans, v)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -141,4 +100,4 @@ func findDuplicates(nums []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

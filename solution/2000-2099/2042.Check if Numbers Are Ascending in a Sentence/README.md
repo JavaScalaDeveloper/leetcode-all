@@ -88,36 +88,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def areNumbersAscending(self, s: str) -> bool:
-        pre = 0
-        for t in s.split():
-            if t[0].isdigit():
-                if (cur := int(t)) <= pre:
-                    return False
-                pre = cur
-        return True
-```
 
-```python
-class Solution:
-    def areNumbersAscending(self, s: str) -> bool:
-        pre = i = 0
-        n = len(s)
-        while i < n:
-            if s[i].isdigit():
-                cur = 0
-                while i < n and s[i].isdigit():
-                    cur = cur * 10 + int(s[i])
-                    i += 1
-                if pre >= cur:
-                    return False
-                pre = cur
-            else:
-                i += 1
-        return True
-```
+
+
 
 ### **Java**
 
@@ -141,84 +114,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool areNumbersAscending(string s) {
-        int pre = 0;
-        istringstream is(s);
-        string t;
-        while (is >> t) {
-            if (isdigit(t[0])) {
-                int cur = stoi(t);
-                if (pre >= cur) {
-                    return false;
-                }
-                pre = cur;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func areNumbersAscending(s string) bool {
-	pre := 0
-	for _, t := range strings.Split(s, " ") {
-		if t[0] <= '9' {
-			cur, _ := strconv.Atoi(t)
-			if pre >= cur {
-				return false
-			}
-			pre = cur
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function areNumbersAscending(s: string): boolean {
-    let pre = -1;
-    for (const cur of s.split(' ')) {
-        if (cur[0] <= '9') {
-            const num = Number(cur);
-            if (num <= pre) {
-                return false;
-            }
-            pre = num;
-        }
-    }
-    return true;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn are_numbers_ascending(s: String) -> bool {
-        let mut pre = -1;
-        for cur in s.split(' ') {
-            if cur.as_bytes()[0] <= b'9' {
-                let num = cur.parse::<i32>().unwrap();
-                if num <= pre {
-                    return false;
-                }
-                pre = num;
-            }
-        }
-        true
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -252,4 +162,4 @@ bool areNumbersAscending(char *s) {
 
 ```
 
-<!-- tabs:end -->
+

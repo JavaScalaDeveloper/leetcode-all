@@ -55,21 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def fizzBuzz(self, n: int) -> List[str]:
-        ans = []
-        for i in range(1, n + 1):
-            if i % 15 == 0:
-                ans.append('FizzBuzz')
-            elif i % 3 == 0:
-                ans.append('Fizz')
-            elif i % 5 == 0:
-                ans.append('Buzz')
-            else:
-                ans.append(str(i))
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,72 +83,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> fizzBuzz(int n) {
-        vector<string> ans;
-        for (int i = 1; i <= n; ++i) {
-            string s = "";
-            if (i % 3 == 0) s += "Fizz";
-            if (i % 5 == 0) s += "Buzz";
-            if (s.size() == 0) s = to_string(i);
-            ans.push_back(s);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func fizzBuzz(n int) []string {
-	var ans []string
-	for i := 1; i <= n; i++ {
-		s := &strings.Builder{}
-		if i%3 == 0 {
-			s.WriteString("Fizz")
-		}
-		if i%5 == 0 {
-			s.WriteString("Buzz")
-		}
-		if s.Len() == 0 {
-			s.WriteString(strconv.Itoa(i))
-		}
-		ans = append(ans, s.String())
-	}
-	return ans
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer $n
-     * @return String[]
-     */
-    function fizzBuzz($n) {
-        $rs = [];
-        for ($i = 1; $i <= $n; $i++) {
-            if ($i % 3 != 0 && $i % 5 != 0) {
-                array_push($rs, strval($i));
-            } else if ($i % 3 == 0 && $i % 5 != 0) {
-                array_push($rs, "Fizz");
-            } else if ($i % 3 != 0 && $i % 5 == 0) {
-                array_push($rs, "Buzz");
-            } else {
-                array_push($rs, "FizzBuzz");
-            }
-        }
-        return $rs;
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -170,4 +101,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

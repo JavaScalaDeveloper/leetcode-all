@@ -67,23 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def diagonalPrime(self, nums: List[List[int]]) -> int:
-        def is_prime(x: int) -> bool:
-            if x < 2:
-                return False
-            return all(x % i for i in range(2, int(sqrt(x)) + 1))
 
-        n = len(nums)
-        ans = 0
-        for i, row in enumerate(nums):
-            if is_prime(row[i]):
-                ans = max(ans, row[i])
-            if is_prime(row[n - i - 1]):
-                ans = max(ans, row[n - i - 1])
-        return ans
-```
 
 ### **Java**
 
@@ -119,74 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int diagonalPrime(vector<vector<int>>& nums) {
-        int n = nums.size();
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            if (isPrime(nums[i][i])) {
-                ans = max(ans, nums[i][i]);
-            }
-            if (isPrime(nums[i][n - i - 1])) {
-                ans = max(ans, nums[i][n - i - 1]);
-            }
-        }
-        return ans;
-    }
 
-    bool isPrime(int x) {
-        if (x < 2) {
-            return false;
-        }
-        for (int i = 2; i <= x / i; ++i) {
-            if (x % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func diagonalPrime(nums [][]int) (ans int) {
-	n := len(nums)
-	for i, row := range nums {
-		if isPrime(row[i]) {
-			ans = max(ans, row[i])
-		}
-		if isPrime(row[n-i-1]) {
-			ans = max(ans, row[n-i-1])
-		}
-	}
-	return
-}
 
-func isPrime(x int) bool {
-	if x < 2 {
-		return false
-	}
-	for i := 2; i <= x/i; i++ {
-		if x%i == 0 {
-			return false
-		}
-	}
-	return true
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **...**
 
@@ -194,4 +117,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

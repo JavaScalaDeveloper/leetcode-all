@@ -83,37 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumTotalPrice(self, n: int, edges: List[List[int]], price: List[int], trips: List[List[int]]) -> int:
-        def dfs(i: int, fa: int, k: int) -> bool:
-            cnt[i] += 1
-            if i == k:
-                return True
-            ok = any(j != fa and dfs(j, i, k) for j in g[i])
-            if not ok:
-                cnt[i] -= 1
-            return ok
 
-        def dfs2(i: int, fa: int) -> (int, int):
-            a = cnt[i] * price[i]
-            b = a // 2
-            for j in g[i]:
-                if j != fa:
-                    x, y = dfs2(j, i)
-                    a += min(x, y)
-                    b += x
-            return a, b
-
-        g = [[] for _ in range(n)]
-        for a, b in edges:
-            g[a].append(b)
-            g[b].append(a)
-        cnt = Counter()
-        for start, end in trips:
-            dfs(start, -1, end)
-        return min(dfs2(0, -1))
-```
 
 ### **Java**
 
@@ -178,173 +148,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumTotalPrice(int n, vector<vector<int>>& edges, vector<int>& price, vector<vector<int>>& trips) {
-        vector<vector<int>> g(n);
-        vector<int> cnt(n);
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            g[a].push_back(b);
-            g[b].push_back(a);
-        }
-        function<bool(int, int, int)> dfs = [&](int i, int fa, int k) -> bool {
-            ++cnt[i];
-            if (i == k) {
-                return true;
-            }
-            bool ok = false;
-            for (int j : g[i]) {
-                if (j != fa) {
-                    ok = dfs(j, i, k);
-                    if (ok) {
-                        break;
-                    }
-                }
-            }
-            if (!ok) {
-                --cnt[i];
-            }
-            return ok;
-        };
-        function<pair<int, int>(int, int)> dfs2 = [&](int i, int fa) -> pair<int, int> {
-            int a = cnt[i] * price[i];
-            int b = a >> 1;
-            for (int j : g[i]) {
-                if (j != fa) {
-                    auto [x, y] = dfs2(j, i);
-                    a += min(x, y);
-                    b += x;
-                }
-            }
-            return {a, b};
-        };
-        for (auto& t : trips) {
-            int start = t[0], end = t[1];
-            dfs(start, -1, end);
-        }
-        auto [a, b] = dfs2(0, -1);
-        return min(a, b);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumTotalPrice(n int, edges [][]int, price []int, trips [][]int) int {
-	g := make([][]int, n)
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-	}
-	cnt := make([]int, n)
-	var dfs func(int, int, int) bool
-	dfs = func(i, fa, k int) bool {
-		cnt[i]++
-		if i == k {
-			return true
-		}
-		ok := false
-		for _, j := range g[i] {
-			if j != fa {
-				ok = dfs(j, i, k)
-				if ok {
-					break
-				}
-			}
-		}
-		if !ok {
-			cnt[i]--
-		}
-		return ok
-	}
-	for _, t := range trips {
-		start, end := t[0], t[1]
-		dfs(start, -1, end)
-	}
-	var dfs2 func(int, int) (int, int)
-	dfs2 = func(i, fa int) (int, int) {
-		a := price[i] * cnt[i]
-		b := a >> 1
-		for _, j := range g[i] {
-			if j != fa {
-				x, y := dfs2(j, i)
-				a += min(x, y)
-				b += x
-			}
-		}
-		return a, b
-	}
-	a, b := dfs2(0, -1)
-	return min(a, b)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumTotalPrice(
-    n: number,
-    edges: number[][],
-    price: number[],
-    trips: number[][],
-): number {
-    const g: number[][] = Array.from({ length: n }, () => []);
-    for (const [a, b] of edges) {
-        g[a].push(b);
-        g[b].push(a);
-    }
-    const cnt: number[] = new Array(n).fill(0);
-    const dfs = (i: number, fa: number, k: number): boolean => {
-        ++cnt[i];
-        if (i === k) {
-            return true;
-        }
-        let ok = false;
-        for (const j of g[i]) {
-            if (j !== fa) {
-                ok = dfs(j, i, k);
-                if (ok) {
-                    break;
-                }
-            }
-        }
-        if (!ok) {
-            --cnt[i];
-        }
-        return ok;
-    };
-    for (const [start, end] of trips) {
-        dfs(start, -1, end);
-    }
-    const dfs2 = (i: number, fa: number): number[] => {
-        let a: number = price[i] * cnt[i];
-        let b: number = a >> 1;
-        for (const j of g[i]) {
-            if (j !== fa) {
-                const [x, y] = dfs2(j, i);
-                a += Math.min(x, y);
-                b += x;
-            }
-        }
-        return [a, b];
-    };
-    const [a, b] = dfs2(0, -1);
-    return Math.min(a, b);
-}
-```
+
 
 ### **...**
 
@@ -352,4 +166,4 @@ function minimumTotalPrice(
 
 ```
 
-<!-- tabs:end -->
+

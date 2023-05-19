@@ -53,16 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def calculateTime(self, keyboard: str, word: str) -> int:
-        index = {c: i for i, c in enumerate(keyboard)}
-        res = t = 0
-        for c in word:
-            res += abs(index[c] - t)
-            t = index[c]
-        return res
-```
+
 
 ### **Java**
 
@@ -85,50 +76,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int calculateTime(string keyboard, string word) {
-        unordered_map<char, int> index;
-        for (int i = 0; i < keyboard.size(); ++i) {
-            index[keyboard[i]] = i;
-        }
-        int res = 0, t = 0;
-        for (char c : word) {
-            res += abs(index[c] - t);
-            t = index[c];
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func calculateTime(keyboard string, word string) int {
-	index := map[byte]int{}
-	for i := 0; i < len(keyboard); i++ {
-		index[keyboard[i]] = i
-	}
-	res := 0
-	t := 0
-	for i := 0; i < len(word); i++ {
-		res += abs(index[word[i]] - t)
-		t = index[word[i]]
-	}
-	return res
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **...**
 
@@ -136,4 +90,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -44,11 +44,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sum(self, num1: int, num2: int) -> int:
-        return num1 + num2
-```
+
 
 ### **Java**
 
@@ -64,48 +60,23 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function sum(num1: number, num2: number): number {
-    return num1 + num2;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int sum(int num1, int num2) {
-        return num1 + num2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sum(num1 int, num2 int) int {
-	return num1 + num2
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function sum(num1: number, num2: number): number {
-    return num1 + num2;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn sum(num1: i32, num2: i32) -> i32 {
-        num1 + num2
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -121,4 +92,4 @@ int sum(int num1, int num2) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -69,21 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def captureForts(self, forts: List[int]) -> int:
-        n = len(forts)
-        i = ans = 0
-        while i < n:
-            j = i + 1
-            if forts[i]:
-                while j < n and forts[j] == 0:
-                    j += 1
-                if j < n and forts[i] + forts[j] == 0:
-                    ans = max(ans, j - i - 1)
-            i = j
-        return ans
-```
+
 
 ### **Java**
 
@@ -111,107 +97,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int captureForts(vector<int>& forts) {
-        int n = forts.size();
-        int ans = 0, i = 0;
-        while (i < n) {
-            int j = i + 1;
-            if (forts[i] != 0) {
-                while (j < n && forts[j] == 0) {
-                    ++j;
-                }
-                if (j < n && forts[i] + forts[j] == 0) {
-                    ans = max(ans, j - i - 1);
-                }
-            }
-            i = j;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func captureForts(forts []int) (ans int) {
-	n := len(forts)
-	i := 0
-	for i < n {
-		j := i + 1
-		if forts[i] != 0 {
-			for j < n && forts[j] == 0 {
-				j++
-			}
-			if j < n && forts[i]+forts[j] == 0 {
-				ans = max(ans, j-i-1)
-			}
-		}
-		i = j
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function captureForts(forts: number[]): number {
-    const n = forts.length;
-    let ans = 0;
-    let i = 0;
-    while (i < n) {
-        let j = i + 1;
-        if (forts[i] !== 0) {
-            while (j < n && forts[j] === 0) {
-                j++;
-            }
-            if (j < n && forts[i] + forts[j] === 0) {
-                ans = Math.max(ans, j - i - 1);
-            }
-        }
-        i = j;
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn capture_forts(forts: Vec<i32>) -> i32 {
-        let n = forts.len();
-        let mut ans = 0;
-        let mut i = 0;
-        while i < n {
-            let mut j = i + 1;
-            if forts[i] != 0 {
-                while j < n && forts[j] == 0 {
-                    j += 1;
-                }
-                if j < n && forts[i] + forts[j] == 0 {
-                    ans = ans.max(j - i - 1);
-                }
-            }
-            i = j;
-        }
-        ans as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -219,4 +119,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -67,27 +67,7 @@ myHashMap.get(2);    // 返回 -1（未找到），myHashMap 现在为 [[1,1]]
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class MyHashMap:
-    def __init__(self):
-        self.data = [-1] * 1000001
 
-    def put(self, key: int, value: int) -> None:
-        self.data[key] = value
-
-    def get(self, key: int) -> int:
-        return self.data[key]
-
-    def remove(self, key: int) -> None:
-        self.data[key] = -1
-
-
-# Your MyHashMap object will be instantiated and called as such:
-# obj = MyHashMap()
-# obj.put(key,value)
-# param_2 = obj.get(key)
-# obj.remove(key)
-```
 
 ### **Java**
 
@@ -125,102 +105,14 @@ class MyHashMap {
 
 ### **TypeScript**
 
-```ts
-class MyHashMap {
-    data: Array<number>;
-    constructor() {
-        this.data = new Array(10 ** 6 + 1).fill(-1);
-    }
 
-    put(key: number, value: number): void {
-        this.data[key] = value;
-    }
 
-    get(key: number): number {
-        return this.data[key];
-    }
 
-    remove(key: number): void {
-        this.data[key] = -1;
-    }
-}
 
-/**
- * Your MyHashMap object will be instantiated and called as such:
- * var obj = new MyHashMap()
- * obj.put(key,value)
- * var param_2 = obj.get(key)
- * obj.remove(key)
- */
-```
 
-### **C++**
 
-```cpp
-class MyHashMap {
-public:
-    int data[1000001];
 
-    MyHashMap() {
-        memset(data, -1, sizeof data);
-    }
 
-    void put(int key, int value) {
-        data[key] = value;
-    }
 
-    int get(int key) {
-        return data[key];
-    }
 
-    void remove(int key) {
-        data[key] = -1;
-    }
-};
 
-/**
- * Your MyHashMap object will be instantiated and called as such:
- * MyHashMap* obj = new MyHashMap();
- * obj->put(key,value);
- * int param_2 = obj->get(key);
- * obj->remove(key);
- */
-```
-
-### **Go**
-
-```go
-type MyHashMap struct {
-	data []int
-}
-
-func Constructor() MyHashMap {
-	data := make([]int, 1000010)
-	for i := range data {
-		data[i] = -1
-	}
-	return MyHashMap{data}
-}
-
-func (this *MyHashMap) Put(key int, value int) {
-	this.data[key] = value
-}
-
-func (this *MyHashMap) Get(key int) int {
-	return this.data[key]
-}
-
-func (this *MyHashMap) Remove(key int) {
-	this.data[key] = -1
-}
-
-/**
- * Your MyHashMap object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Put(key,value);
- * param_2 := obj.Get(key);
- * obj.Remove(key);
- */
-```
-
-<!-- tabs:end -->

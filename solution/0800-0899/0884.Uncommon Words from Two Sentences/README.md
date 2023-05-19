@@ -60,12 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def uncommonFromSentences(self, s1: str, s2: str) -> List[str]:
-        cnt = Counter(s1.split()) + Counter(s2.split())
-        return [s for s, v in cnt.items() if v == 1]
-```
+
 
 ### **Java**
 
@@ -92,112 +87,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> uncommonFromSentences(string s1, string s2) {
-        unordered_map<string, int> cnt;
-        auto add = [&](string& s) {
-            stringstream ss(s);
-            string w;
-            while (ss >> w) ++cnt[move(w)];
-        };
-        add(s1);
-        add(s2);
-        vector<string> ans;
-        for (auto& [s, v] : cnt) if (v == 1) ans.emplace_back(s);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func uncommonFromSentences(s1 string, s2 string) (ans []string) {
-    cnt := map[string]int{}
-    for _, s := range strings.Split(s1, " ") {
-        cnt[s]++
-    }
-    for _, s := range strings.Split(s2, " ") {
-        cnt[s]++
-    }
-    for s, v := range cnt {
-        if v == 1 {
-            ans = append(ans, s)
-        }
-    }
-    return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function uncommonFromSentences(s1: string, s2: string): string[] {
-    const cnt: Map<string, number> = new Map();
-    for (const s of [...s1.split(' '), ...s2.split(' ')]) {
-        cnt.set(s, (cnt.get(s) || 0) + 1);
-    }
-    const ans: Array<string> = [];
-    for (const [s, v] of cnt.entries()) {
-        if (v == 1) {
-            ans.push(s);
-        }
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-use std::collections::HashMap;
 
-impl Solution {
-    pub fn uncommon_from_sentences(s1: String, s2: String) -> Vec<String> {
-        let mut map = HashMap::new();
-        for s in s1.split(' ') {
-            map.insert(s, !map.contains_key(s));
-        }
-        for s in s2.split(' ') {
-            map.insert(s, !map.contains_key(s));
-        }
-        let mut res = Vec::new();
-        for (k, v) in map {
-            if v {
-                res.push(String::from(k))
-            }
-        }
-        res
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s1
- * @param {string} s2
- * @return {string[]}
- */
-var uncommonFromSentences = function (s1, s2) {
-    const cnt = new Map();
-    for (const s of [...s1.split(' '), ...s2.split(' ')]) {
-        cnt.set(s, (cnt.get(s) || 0) + 1);
-    }
-    const ans = [];
-    for (const [s, v] of cnt.entries()) {
-        if (v == 1) {
-            ans.push(s);
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -205,4 +113,4 @@ var uncommonFromSentences = function (s1, s2) {
 
 ```
 
-<!-- tabs:end -->
+

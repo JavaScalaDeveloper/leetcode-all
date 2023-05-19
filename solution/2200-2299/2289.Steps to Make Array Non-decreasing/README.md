@@ -53,18 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def totalSteps(self, nums: List[int]) -> int:
-        stk = []
-        ans, n = 0, len(nums)
-        dp = [0] * n
-        for i in range(n - 1, -1, -1):
-            while stk and nums[i] > nums[stk[-1]]:
-                dp[i] = max(dp[i] + 1, dp[stk.pop()])
-            stk.append(i)
-        return max(dp)
-```
+
 
 ### **Java**
 
@@ -89,73 +78,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int totalSteps(vector<int>& nums) {
-        stack<int> stk;
-        int ans = 0, n = nums.size();
-        vector<int> dp(n);
-        for (int i = n - 1; i >= 0; --i) {
-            while (!stk.empty() && nums[i] > nums[stk.top()]) {
-                dp[i] = max(dp[i] + 1, dp[stk.top()]);
-                ans = max(ans, dp[i]);
-                stk.pop();
-            }
-            stk.push(i);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func totalSteps(nums []int) int {
-	stk := []int{}
-	ans, n := 0, len(nums)
-	dp := make([]int, n)
-	for i := n - 1; i >= 0; i-- {
-		for len(stk) > 0 && nums[i] > nums[stk[len(stk)-1]] {
-			dp[i] = max(dp[i]+1, dp[stk[len(stk)-1]])
-			stk = stk[:len(stk)-1]
-			ans = max(ans, dp[i])
-		}
-		stk = append(stk, i)
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function totalSteps(nums: number[]): number {
-    let ans = 0;
-    let stack = [];
-    for (let num of nums) {
-        let max = 0;
-        while (stack.length && stack[0][0] <= num) {
-            max = Math.max(stack[0][1], max);
-            stack.shift();
-        }
-        if (stack.length) max++;
-        ans = Math.max(max, ans);
-        stack.unshift([num, max]);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -163,4 +96,4 @@ function totalSteps(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -82,34 +82,7 @@ foodRatings.highestRated("japanese"); // 返回 "ramen"
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedSet
 
-
-class FoodRatings:
-    def __init__(self, foods: List[str], cuisines: List[str], ratings: List[int]):
-        self.mp = {}
-        self.t = defaultdict(lambda: SortedSet(key=lambda x: (-x[0], x[1])))
-
-        for a, b, c in zip(foods, cuisines, ratings):
-            self.mp[a] = (b, c)
-            self.t[b].add((c, a))
-
-    def changeRating(self, food: str, newRating: int) -> None:
-        b, c = self.mp[food]
-        self.mp[food] = (b, newRating)
-        self.t[b].remove((c, food))
-        self.t[b].add((newRating, food))
-
-    def highestRated(self, cuisine: str) -> str:
-        return self.t[cuisine][0][1]
-
-
-# Your FoodRatings object will be instantiated and called as such:
-# obj = FoodRatings(foods, cuisines, ratings)
-# obj.changeRating(food,newRating)
-# param_2 = obj.highestRated(cuisine)
-```
 
 ### **Java**
 
@@ -119,51 +92,13 @@ class FoodRatings:
 
 ```
 
-### **C++**
 
-```cpp
-using pis = pair<int, string>;
 
-class FoodRatings {
-    map<string, pis> mp;
-    map<string, set<pis>> t;
 
-public:
-    FoodRatings(vector<string>& foods, vector<string>& cuisines, vector<int>& ratings) {
-        int n = foods.size();
-        for (int i = 0; i < n; ++i) {
-            string a = foods[i], b = cuisines[i];
-            int c = ratings[i];
-            mp[a] = pis(c, b);
-            t[b].insert(pis(-c, a));
-        }
-    }
-
-    void changeRating(string food, int newRating) {
-        pis& p = mp[food];
-        t[p.second].erase(pis(-p.first, food));
-        p.first = newRating;
-        t[p.second].insert(pis(-p.first, food));
-    }
-
-    string highestRated(string cuisine) {
-        return t[cuisine].begin()->second;
-    }
-};
-
-/**
- * Your FoodRatings object will be instantiated and called as such:
- * FoodRatings* obj = new FoodRatings(foods, cuisines, ratings);
- * obj->changeRating(food,newRating);
- * string param_2 = obj->highestRated(cuisine);
- */
-```
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -171,4 +106,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

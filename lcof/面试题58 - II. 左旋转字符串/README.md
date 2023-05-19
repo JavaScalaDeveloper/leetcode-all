@@ -38,11 +38,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def reverseLeftWords(self, s: str, n: int) -> str:
-        return s[n:] + s[:n]
-```
+
 
 ### **Java**
 
@@ -54,70 +50,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string reverseLeftWords(string s, int n) {
-        return s.substr(n) + s.substr(0, n);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    string reverseLeftWords(string s, int n) {
-        reverse(s.begin(), s.begin() + n);
-        reverse(s.begin() + n, s.end());
-        reverse(s.begin(), s.end());
-        return s;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @param {number} n
- * @return {string}
- */
-var reverseLeftWords = function (s, n) {
-    return s.substring(n) + s.substring(0, n);
-};
-```
 
-### **Go**
 
-```go
-func reverseLeftWords(s string, n int) string {
-	return s[n:] + s[:n]
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn reverse_left_words(s: String, n: i32) -> String {
-        let n = n as usize;
-        String::from(&s[n..]) + &s[..n]
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public string ReverseLeftWords(string s, int n) {
-        return s.Substring(n) + s.Substring(0, n);
-    }
-}
-```
+
+
+
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -125,4 +78,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

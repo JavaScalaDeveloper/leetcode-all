@@ -62,24 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxNonOverlapping(self, nums: List[int], target: int) -> int:
-        i, n = 0, len(nums)
-        ans = 0
-        while i < n:
-            s = 0
-            seen = {0}
-            while i < n:
-                s += nums[i]
-                if s - target in seen:
-                    ans += 1
-                    break
-                i += 1
-                seen.add(s)
-            i += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -110,56 +93,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxNonOverlapping(vector<int>& nums, int target) {
-        int i = 0, n = nums.size();
-        int ans = 0;
-        while (i < n) {
-            int s = 0;
-            unordered_set<int> seen;
-            seen.insert(0);
-            while (i < n) {
-                s += nums[i];
-                if (seen.count(s - target)) {
-                    ++ans;
-                    break;
-                }
-                ++i;
-                seen.insert(s);
-            }
-            ++i;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxNonOverlapping(nums []int, target int) int {
-	i, n, ans := 0, len(nums), 0
-	for i < n {
-		s := 0
-		seen := map[int]bool{0: true}
-		for i < n {
-			s += nums[i]
-			if seen[s-target] {
-				ans++
-				break
-			}
-			seen[s] = true
-			i++
-		}
-		i++
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -167,4 +107,4 @@ func maxNonOverlapping(nums []int, target int) int {
 
 ```
 
-<!-- tabs:end -->
+

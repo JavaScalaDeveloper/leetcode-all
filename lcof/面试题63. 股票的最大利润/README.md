@@ -42,15 +42,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        mi, ans = inf, 0
-        for x in prices:
-            ans = max(ans, x - mi)
-            mi = min(mi, x)
-        return ans
-```
+
 
 ### **Java**
 
@@ -67,112 +59,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-        int mi = 1 << 30, ans = 0;
-        for (int& x : prices) {
-            ans = max(ans, x - mi);
-            mi = min(mi, x);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxProfit(prices []int) (ans int) {
-	mi := 1 << 30
-	for _, x := range prices {
-		ans = max(ans, x-mi)
-		mi = min(mi, x)
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} prices
- * @return {number}
- */
-var maxProfit = function (prices) {
-    let mi = 1 << 30;
-    let ans = 0;
-    for (const x of prices) {
-        ans = Math.max(ans, x - mi);
-        mi = Math.min(mi, x);
-    }
-    return ans;
-};
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxProfit(prices: number[]): number {
-    let res = 0;
-    let min = Infinity;
-    for (const price of prices) {
-        res = Math.max(res, price - min);
-        min = Math.min(min, price);
-    }
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn max_profit(prices: Vec<i32>) -> i32 {
-        let mut res = 0;
-        let mut min = i32::MAX;
-        for price in prices {
-            res = res.max(price - min);
-            min = min.min(price);
-        }
-        res
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MaxProfit(int[] prices) {
-        int mi = 1 << 30;
-        int ans = 0;
-        foreach(int x in prices) {
-            ans = Math.Max(ans, x - mi);
-            mi = Math.Min(mi, x);
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -180,4 +89,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -73,18 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minSteps(self, s: str, t: str) -> int:
-        cnt = Counter(s)
-        ans = 0
-        for c in t:
-            if cnt[c] > 0:
-                cnt[c] -= 1
-            else:
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -108,63 +97,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minSteps(string s, string t) {
-        int cnt[26]{};
-        for (char& c : s) ++cnt[c - 'a'];
-        int ans = 0;
-        for (char& c : t) {
-            ans += --cnt[c - 'a'] < 0;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minSteps(s string, t string) (ans int) {
-	cnt := [26]int{}
-	for _, c := range s {
-		cnt[c-'a']++
-	}
-	for _, c := range t {
-		cnt[c-'a']--
-		if cnt[c-'a'] < 0 {
-			ans++
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @param {string} t
- * @return {number}
- */
-var minSteps = function (s, t) {
-    const cnt = new Array(26).fill(0);
-    for (const c of s) {
-        const i = c.charCodeAt(0) - 'a'.charCodeAt(0);
-        ++cnt[i];
-    }
-    let ans = 0;
-    for (const c of t) {
-        const i = c.charCodeAt(0) - 'a'.charCodeAt(0);
-        ans += --cnt[i] < 0;
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -172,4 +115,4 @@ var minSteps = function (s, t) {
 
 ```
 
-<!-- tabs:end -->
+

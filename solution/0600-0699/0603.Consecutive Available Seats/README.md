@@ -72,4 +72,4 @@ WHERE  ( ( c1.seat_id = c2.seat_id + 1 )
 GROUP BY seat_id;
 ```
 
-<!-- tabs:end -->
+

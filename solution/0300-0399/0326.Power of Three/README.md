@@ -74,21 +74,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isPowerOfThree(self, n: int) -> bool:
-        while n > 2:
-            if n % 3:
-                return False
-            n //= 3
-        return n == 1
-```
 
-```python
-class Solution:
-    def isPowerOfThree(self, n: int) -> bool:
-        return n > 0 and 1162261467 % n == 0
-```
+
+
 
 ### **Java**
 
@@ -116,71 +104,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isPowerOfThree(int n) {
-        while (n > 2) {
-            if (n % 3) {
-                return false;
-            }
-            n /= 3;
-        }
-        return n == 1;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool isPowerOfThree(int n) {
-        return n > 0 && 1162261467 % n == 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isPowerOfThree(n int) bool {
-	for n > 2 {
-		if n%3 != 0 {
-			return false
-		}
-		n /= 3
-	}
-	return n == 1
-}
-```
 
-```go
-func isPowerOfThree(n int) bool {
-	return n > 0 && 1162261467%n == 0
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isPowerOfThree(n: number): boolean {
-    return n > 0 && 1162261467 % n == 0;
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {boolean}
- */
-var isPowerOfThree = function (n) {
-    return n > 0 && 1162261467 % n == 0;
-};
-```
+
+
+
 
 ### **...**
 
@@ -188,4 +130,4 @@ var isPowerOfThree = function (n) {
 
 ```
 
-<!-- tabs:end -->
+

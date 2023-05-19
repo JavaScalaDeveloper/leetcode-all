@@ -68,24 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestValsFromLabels(
-        self, values: List[int], labels: List[int], numWanted: int, useLimit: int
-    ) -> int:
-        arr = list(zip(values, labels))
-        arr.sort(reverse=True)
-        cnt = Counter()
-        ans = num = 0
-        for v, l in arr:
-            if cnt[l] < useLimit:
-                cnt[l] += 1
-                num += 1
-                ans += v
-            if num == numWanted:
-                break
-        return ans
-```
+
 
 ### **Java**
 
@@ -116,58 +99,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int largestValsFromLabels(vector<int>& values, vector<int>& labels, int numWanted, int useLimit) {
-        int n = values.size();
-        vector<pair<int, int>> p;
-        for (int i = 0; i < n; ++i) p.emplace_back(values[i], labels[i]);
-        sort(p.begin(), p.end());
-        unordered_map<int, int> counter;
-        int ans = 0, num = 0;
-        for (int i = n - 1; i >= 0 && num < numWanted; --i) {
-            int v = p[i].first, l = p[i].second;
-            if (counter[l] < useLimit) {
-                ++counter[l];
-                ++num;
-                ans += v;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestValsFromLabels(values []int, labels []int, numWanted int, useLimit int) int {
-	var p [][]int
-	for i, v := range values {
-		p = append(p, []int{v, labels[i]})
-	}
-	sort.Slice(p, func(i, j int) bool {
-		return p[i][0] > p[j][0]
-	})
-	counter := make(map[int]int)
-	ans, num := 0, 0
-	for _, t := range p {
-		if num >= numWanted {
-			break
-		}
-		v, l := t[0], t[1]
-		if counter[l] < useLimit {
-			counter[l]++
-			num++
-			ans += v
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -175,4 +113,4 @@ func largestValsFromLabels(values []int, labels []int, numWanted int, useLimit i
 
 ```
 
-<!-- tabs:end -->
+

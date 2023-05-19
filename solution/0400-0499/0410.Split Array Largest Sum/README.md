@@ -66,21 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def splitArray(self, nums: List[int], k: int) -> int:
-        def check(mx):
-            s, cnt = inf, 0
-            for x in nums:
-                s += x
-                if s > mx:
-                    s = x
-                    cnt += 1
-            return cnt <= k
 
-        left, right = max(nums), sum(nums)
-        return left + bisect_left(range(left, right + 1), True, key=check)
-```
 
 ### **Java**
 
@@ -119,105 +105,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int splitArray(vector<int>& nums, int k) {
-        int left = 0, right = 0;
-        for (int& x : nums) {
-            left = max(left, x);
-            right += x;
-        }
-        auto check = [&](int mx) {
-            int s = 1 << 30, cnt = 0;
-            for (int& x : nums) {
-                s += x;
-                if (s > mx) {
-                    s = x;
-                    ++cnt;
-                }
-            }
-            return cnt <= k;
-        };
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (check(mid)) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func splitArray(nums []int, k int) int {
-	left, right := 0, 0
-	for _, x := range nums {
-		left = max(left, x)
-		right += x
-	}
-	return left + sort.Search(right-left, func(mx int) bool {
-		mx += left
-		s, cnt := 1<<30, 0
-		for _, x := range nums {
-			s += x
-			if s > mx {
-				s = x
-				cnt++
-			}
-		}
-		return cnt <= k
-	})
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function splitArray(nums: number[], k: number): number {
-    let left = 0;
-    let right = 0;
-    for (const x of nums) {
-        left = Math.max(left, x);
-        right += x;
-    }
-    const check = (mx: number) => {
-        let s = 1 << 30;
-        let cnt = 0;
-        for (const x of nums) {
-            s += x;
-            if (s > mx) {
-                s = x;
-                ++cnt;
-            }
-        }
-        return cnt <= k;
-    };
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        if (check(mid)) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-```
+
 
 ### **...**
 
@@ -225,4 +123,4 @@ function splitArray(nums: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

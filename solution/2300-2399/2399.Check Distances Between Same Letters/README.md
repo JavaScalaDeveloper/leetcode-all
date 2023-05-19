@@ -65,16 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkDistances(self, s: str, distance: List[int]) -> bool:
-        d = defaultdict(int)
-        for i, c in enumerate(s, 1):
-            if d[c] and i - d[c] - 1 != distance[ord(c) - ord('a')]:
-                return False
-            d[c] = i
-        return True
-```
+
 
 ### **Java**
 
@@ -96,40 +87,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkDistances(string s, vector<int>& distance) {
-        int d[26]{};
-        for (int i = 1; i <= s.size(); ++i) {
-            int j = s[i - 1] - 'a';
-            if (d[j] && i - d[j] - 1 != distance[j]) {
-                return false;
-            }
-            d[j] = i;
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkDistances(s string, distance []int) bool {
-	d := [26]int{}
-	for i, c := range s {
-		c -= 'a'
-		if d[c] > 0 && i-d[c] != distance[c] {
-			return false
-		}
-		d[c] = i + 1
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -150,41 +114,11 @@ bool checkDistances(char *s, int *distance, int distanceSize) {
 
 ### **TypeScript**
 
-```ts
-function checkDistances(s: string, distance: number[]): boolean {
-    const n = s.length;
-    const d: number[] = new Array(26).fill(0);
-    for (let i = 1; i <= n; ++i) {
-        const j = s.charCodeAt(i - 1) - 97;
-        if (d[j] && i - d[j] - 1 !== distance[j]) {
-            return false;
-        }
-        d[j] = i;
-    }
-    return true;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn check_distances(s: String, distance: Vec<i32>) -> bool {
-        let n = s.len();
-        let s = s.as_bytes();
-        let mut d = [0; 26];
-        for i in 0..n {
-            let j = (s[i] - b'a') as usize;
-            let i = i as i32;
-            if d[j] > 0 && i - d[j] != distance[j] {
-                return false;
-            }
-            d[j] = i + 1;
-        }
-        true
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -193,4 +127,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

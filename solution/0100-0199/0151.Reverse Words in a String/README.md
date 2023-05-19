@@ -78,28 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reverseWords(self, s: str) -> str:
-        return ' '.join(reversed(s.split()))
-```
 
-```python
-class Solution:
-    def reverseWords(self, s: str) -> str:
-        ans = []
-        i, n = 0, len(s)
-        while i < n:
-            while i < n and s[i] == ' ':
-                i += 1
-            if i < n:
-                j = i
-                while j < n and s[j] != ' ':
-                    j += 1
-                ans.append(s[i: j])
-                i = j
-        return ' '.join(ans[::-1])
-```
+
+
 
 ### **Java**
 
@@ -140,80 +121,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string reverseWords(string s) {
-        int i = 0;
-        int j = 0;
-        int n = s.size();
-        while (i < n) {
-            while (i < n && s[i] == ' ') {
-                ++i;
-            }
-            if (i < n) {
-                if (j != 0) {
-                    s[j++] = ' ';
-                }
-                int k = i;
-                while (k < n && s[k] != ' ') {
-                    s[j++] = s[k++];
-                }
-                reverse(s.begin() + j - (k - i), s.begin() + j);
-                i = k;
-            }
-        }
-        s.erase(s.begin() + j, s.end());
-        reverse(s.begin(), s.end());
-        return s;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reverseWords(s string) string {
-	words := strings.Split(s, " ")
-	var ans []string
-	for i := len(words) - 1; i >= 0; i-- {
-		if words[i] != "" {
-			ans = append(ans, words[i])
-		}
-	}
-	return strings.Join(ans, " ")
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public string ReverseWords(string s) {
-         return string.Join(" ", s.Trim().Split(" ").Where(word => !string.IsNullOrEmpty(word) && !string.IsNullOrEmpty(word.Trim())).Reverse());
-    }
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function reverseWords(s: string): string {
-    return s.trim().split(/\s+/).reverse().join(' ');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn reverse_words(s: String) -> String {
-        s.split_whitespace().rev().collect::<Vec<&str>>().join(" ")
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -221,4 +147,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

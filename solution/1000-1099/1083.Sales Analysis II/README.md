@@ -91,4 +91,4 @@ GROUP BY  buyer_id
 HAVING SUM(S8) > 0 AND SUM(iPhone) = 0;
 ```
 
-<!-- tabs:end -->
+

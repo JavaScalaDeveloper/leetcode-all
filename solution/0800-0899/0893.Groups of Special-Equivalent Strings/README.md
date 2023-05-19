@@ -69,12 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numSpecialEquivGroups(self, words: List[str]) -> int:
-        s = {''.join(sorted(word[::2]) + sorted(word[1::2])) for word in words}
-        return len(s)
-```
+
 
 ### **Java**
 
@@ -115,55 +110,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numSpecialEquivGroups(vector<string>& words) {
-        unordered_set<string> s;
-        for (auto& word : words) {
-            string a = "", b = "";
-            for (int i = 0; i < word.size(); ++i) {
-                if (i & 1)
-                    a += word[i];
-                else
-                    b += word[i];
-            }
-            sort(a.begin(), a.end());
-            sort(b.begin(), b.end());
-            s.insert(a + b);
-        }
-        return s.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func numSpecialEquivGroups(words []string) int {
-	s := map[string]bool{}
-	for _, word := range words {
-		a, b := []rune{}, []rune{}
-		for i, c := range word {
-			if i&1 == 1 {
-				a = append(a, c)
-			} else {
-				b = append(b, c)
-			}
-		}
-		sort.Slice(a, func(i, j int) bool {
-			return a[i] < a[j]
-		})
-		sort.Slice(b, func(i, j int) bool {
-			return b[i] < b[j]
-		})
-		s[string(a)+string(b)] = true
-	}
-	return len(s)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -171,4 +124,4 @@ func numSpecialEquivGroups(words []string) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -81,16 +81,7 @@ for (int i = 0; i < len; i++) {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
-        k = 0
-        for x in nums:
-            if x != val:
-                nums[k] = x
-                k += 1
-        return k
-```
+
 
 ### **Java**
 
@@ -110,107 +101,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int removeElement(vector<int>& nums, int val) {
-        int k = 0;
-        for (int x : nums) {
-            if (x != val) {
-                nums[k++] = x;
-            }
-        }
-        return k;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeElement(nums []int, val int) int {
-	k := 0
-	for _, x := range nums {
-		if x != val {
-			nums[k] = x
-			k++
-		}
-	}
-	return k
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function removeElement(nums: number[], val: number): number {
-    let k: number = 0;
-    for (const x of nums) {
-        if (x !== val) {
-            nums[k++] = x;
-        }
-    }
-    return k;
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} val
- * @return {number}
- */
-var removeElement = function (nums, val) {
-    let k = 0;
-    for (const x of nums) {
-        if (x !== val) {
-            nums[k++] = x;
-        }
-    }
-    return k;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
-        let mut k = 0;
-        for i in 0..nums.len() {
-            if nums[i] != val {
-                nums[k] = nums[i];
-                k += 1;
-            }
-        }
-        k as i32
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
 
-    /**
-     * @param Integer[] $nums
-     * @param Integer $val
-     * @return Integer
-     */
-    function removeElement(&$nums, $val) {
-        for ($i = count($nums) - 1; $i >= 0; $i--) {
-            if ($nums[$i] == $val) {
-                array_splice($nums, $i, 1);
-            }
-        }
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -218,4 +131,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

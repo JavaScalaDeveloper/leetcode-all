@@ -54,21 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findLongestSubarray(self, array: List[str]) -> List[str]:
-        vis = {0: -1}
-        s = mx = k = 0
-        for i, x in enumerate(array):
-            s += 1 if x.isalpha() else -1
-            if s in vis:
-                if mx < i - (j := vis[s]):
-                    mx = i - j
-                    k = j + 1
-            else:
-                vis[s] = i
-        return array[k: k + mx]
-```
+
 
 ### **Java**
 
@@ -99,80 +85,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> findLongestSubarray(vector<string>& array) {
-        unordered_map<int, int> vis{{0, -1}};
-        int s = 0, mx = 0, k = 0;
-        for (int i = 0; i < array.size(); ++i) {
-            s += array[i][0] >= 'A' ? 1 : -1;
-            if (vis.count(s)) {
-                int j = vis[s];
-                if (mx < i - j) {
-                    mx = i - j;
-                    k = j + 1;
-                }
-            } else {
-                vis[s] = i;
-            }
-        }
-        return vector<string>(array.begin() + k, array.begin() + k + mx);
-    }
-};
-```
 
-### **Go**
 
-```go
-func findLongestSubarray(array []string) []string {
-	vis := map[int]int{0: -1}
-	var s, mx, k int
-	for i, x := range array {
-		if x[0] >= 'A' {
-			s++
-		} else {
-			s--
-		}
-		if j, ok := vis[s]; ok {
-			if mx < i-j {
-				mx = i - j
-				k = j + 1
-			}
-		} else {
-			vis[s] = i
-		}
-	}
-	return array[k : k+mx]
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findLongestSubarray(array: string[]): string[] {
-    const vis = new Map();
-    vis.set(0, -1);
-    let s = 0,
-        mx = 0,
-        k = 0;
-    for (let i = 0; i < array.length; ++i) {
-        s += array[i] >= 'A' ? 1 : -1;
-        if (vis.has(s)) {
-            const j = vis.get(s);
-            if (mx < i - j) {
-                mx = i - j;
-                k = j + 1;
-            }
-        } else {
-            vis.set(s, i);
-        }
-    }
-    return array.slice(k, k + mx);
-}
-```
+
 
 ### **...**
 
@@ -180,4 +103,4 @@ function findLongestSubarray(array: string[]): string[] {
 
 ```
 
-<!-- tabs:end -->
+

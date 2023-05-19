@@ -58,14 +58,7 @@ T_4 = 1 + 1 + 2 = 4
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def tribonacci(self, n: int) -> int:
-        a, b, c = 0, 1, 1
-        for _ in range(n):
-            a, b, c = b, c, a + b + c
-        return a
-```
+
 
 ### **Java**
 
@@ -86,79 +79,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int tribonacci(int n) {
-        long long a = 0, b = 1, c = 1;
-        while (n--) {
-            long long d = a + b + c;
-            a = b;
-            b = c;
-            c = d;
-        }
-        return (int)a;
-    }
-};
-```
 
-### **Go**
 
-```go
-func tribonacci(n int) int {
-	a, b, c := 0, 1, 1
-	for i := 0; i < n; i++ {
-		a, b, c = b, c, a+b+c
-	}
-	return a
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var tribonacci = function (n) {
-    let a = 0;
-    let b = 1;
-    let c = 1;
-    while (n--) {
-        let d = a + b + c;
-        a = b;
-        b = c;
-        c = d;
-    }
-    return a;
-};
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer $n
-     * @return Integer
-     */
-    function tribonacci($n) {
-        if ($n == 0) {
-            return 0;
-        } else if ($n == 1 || $n == 2) {
-            return 1;
-        }
-        $dp = [0, 1, 1];
-        for ($i = 3; $i <= $n; $i++) {
-            $dp[$i] = $dp[$i - 1] + $dp[$i - 2] + $dp[$i - 3];
-        }
-        return $dp[$n];
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -166,4 +101,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

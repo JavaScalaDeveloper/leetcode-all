@@ -55,21 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minNumBooths(self, demand: List[str]) -> int:
-        cnt = Counter()
-        ans = 0
-        for s in demand:
-            for c in s:
-                if cnt[c]:
-                    cnt[c] -= 1
-                else:
-                    ans += 1
-            for c in s:
-                cnt[c] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,51 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minNumBooths(vector<string>& demand) {
-        int cnt[26]{};
-        int ans = 0;
-        for (auto& s : demand) {
-            for (char& c : s) {
-                if (cnt[c - 'a']) {
-                    --cnt[c - 'a'];
-                } else {
-                    ++ans;
-                }
-            }
-            for (char& c : s) {
-                ++cnt[c - 'a'];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minNumBooths(demand []string) (ans int) {
-	cnt := [26]int{}
-	for _, s := range demand {
-		for _, c := range s {
-			if cnt[c-'a'] > 0 {
-				cnt[c-'a']--
-			} else {
-				ans++
-			}
-		}
-		for _, c := range s {
-			cnt[c-'a']++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -151,4 +99,4 @@ func minNumBooths(demand []string) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

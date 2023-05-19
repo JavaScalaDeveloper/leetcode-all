@@ -62,23 +62,7 @@
 
 ### **Python3**
 
-```python
-class Solution:
-    def exist(self, board: List[List[str]], word: str) -> bool:
-        def dfs(i, j, k):
-            if k == len(word):
-                return True
-            if i < 0 or i >= m or j < 0 or j >= n or board[i][j] != word[k]:
-                return False
-            board[i][j] = ""
-            dirs = (-1, 0, 1, 0, -1)
-            ans = any(dfs(i + a, j + b, k + 1) for a, b in pairwise(dirs))
-            board[i][j] = word[k]
-            return ans
 
-        m, n = len(board), len(board[0])
-        return any(dfs(i, j, 0) for i in range(m) for j in range(n))
-```
 
 ### **Java**
 
@@ -123,232 +107,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool exist(vector<vector<char>>& board, string word) {
-        int m = board.size(), n = board[0].size();
-        int dirs[5] = {-1, 0, 1, 0, -1};
-        function<bool(int, int, int)> dfs = [&](int i, int j, int k) -> bool {
-            if (k == word.size()) {
-                return true;
-            }
-            if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] != word[k]) {
-                return false;
-            }
-            board[i][j] = '.';
-            bool ans = 0;
-            for (int l = 0; l < 4; ++l) {
-                ans |= dfs(i + dirs[l], j + dirs[l + 1], k + 1);
-            }
-            board[i][j] = word[k];
-            return ans;
-        };
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (dfs(i, j, 0)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func exist(board [][]byte, word string) bool {
-	m, n := len(board), len(board[0])
-	var dfs func(i, j, k int) bool
-	dfs = func(i, j, k int) bool {
-		if k == len(word) {
-			return true
-		}
-		if i < 0 || i >= m || j < 0 || j >= n || board[i][j] != word[k] {
-			return false
-		}
-		board[i][j] = ' '
-		dirs := []int{-1, 0, 1, 0, -1}
-		ans := false
-		for l := 0; l < 4; l++ {
-			ans = ans || dfs(i+dirs[l], j+dirs[l+1], k+1)
-		}
-		board[i][j] = word[k]
-		return ans
-	}
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
-			if dfs(i, j, 0) {
-				return true
-			}
-		}
-	}
-	return false
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {character[][]} board
- * @param {string} word
- * @return {boolean}
- */
-var exist = function (board, word) {
-    const m = board.length;
-    const n = board[0].length;
-    const dirs = [-1, 0, 1, 0, -1];
-    const dfs = (i, j, k) => {
-        if (k == word.length) {
-            return true;
-        }
-        if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] != word[k]) {
-            return false;
-        }
-        board[i][j] = ' ';
-        let ans = false;
-        for (let l = 0; l < 4; ++l) {
-            ans = ans || dfs(i + dirs[l], j + dirs[l + 1], k + 1);
-        }
-        board[i][j] = word[k];
-        return ans;
-    };
-    for (let i = 0; i < m; ++i) {
-        for (let j = 0; j < n; ++j) {
-            if (dfs(i, j, 0)) {
-                return true;
-            }
-        }
-    }
-    return false;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function exist(board: string[][], word: string): boolean {
-    const m = board.length;
-    const n = board[0].length;
-    const dfs = (i: number, j: number, k: number) => {
-        if ((board[i] ?? [])[j] !== word[k]) {
-            return false;
-        }
-        if (++k === word.length) {
-            return true;
-        }
-        const temp = board[i][j];
-        board[i][j] = ' ';
-        if (
-            dfs(i + 1, j, k) ||
-            dfs(i, j + 1, k) ||
-            dfs(i - 1, j, k) ||
-            dfs(i, j - 1, k)
-        ) {
-            return true;
-        }
-        board[i][j] = temp;
-        return false;
-    };
-    for (let i = 0; i < m; i++) {
-        for (let j = 0; j < n; j++) {
-            if (dfs(i, j, 0)) {
-                return true;
-            }
-        }
-    }
-    return false;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    fn dfs(board: &mut Vec<Vec<char>>, chars: &Vec<char>, i: usize, j: usize, mut k: usize) -> bool {
-        if board[i][j] != chars[k] {
-            return false;
-        }
-        k += 1;
-        if k == chars.len() {
-            return true;
-        }
-        let temp = board[i][j];
-        board[i][j] = ' ';
-        if i != 0 && Self::dfs(board, chars, i - 1, j, k)
-            || j != 0 && Self::dfs(board, chars, i, j - 1, k)
-            || i != board.len() - 1 && Self::dfs(board, chars, i + 1, j, k)
-            || j != board[0].len() - 1 && Self::dfs(board, chars, i, j + 1, k)
-        {
-            return true;
-        }
-        board[i][j] = temp;
-        false
-    }
 
-    pub fn exist(mut board: Vec<Vec<char>>, word: String) -> bool {
-        let m = board.len();
-        let n = board[0].len();
-        let chars = word.chars().collect::<Vec<char>>();
-        for i in 0..m {
-            for j in 0..n {
-                if Self::dfs(&mut board, &chars, i, j, 0) {
-                    return true;
-                }
-            }
-        }
-        false
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    private char[][] board;
-    private string word;
-    private int m;
-    private int n;
 
-    public bool Exist(char[][] board, string word) {
-        m = board.Length;
-        n = board[0].Length;
-        this.board = board;
-        this.word = word;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (dfs(i, j, 0)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
 
-    private bool dfs(int i, int j, int k) {
-        if (k == word.Length) {
-            return true;
-        }
-        if (i < 0 || i >= m || j < 0 || j >= n || word[k] != board[i][j]) {
-            return false;
-        }
-        board[i][j] = ' ';
-        int[] dirs = {-1, 0, 1, 0, -1};
-        bool ans = false;
-        for (int l = 0; l < 4; ++l) {
-            ans = ans || dfs(i + dirs[l], j + dirs[l + 1], k + 1);
-        }
-        board[i][j] = word[k];
-        return ans;
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -356,4 +137,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

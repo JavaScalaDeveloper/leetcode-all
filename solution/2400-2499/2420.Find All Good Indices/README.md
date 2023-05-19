@@ -68,20 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def goodIndices(self, nums: List[int], k: int) -> List[int]:
-        n = len(nums)
-        decr = [1] * (n + 1)
-        incr = [1] * (n + 1)
-        for i in range(2, n - 1):
-            if nums[i - 1] <= nums[i - 2]:
-                decr[i] = decr[i - 1] + 1
-        for i in range(n - 3, -1, -1):
-            if nums[i + 1] <= nums[i + 2]:
-                incr[i] = incr[i + 1] + 1
-        return [i for i in range(k, n - k) if decr[i] >= k and incr[i] >= k]
-```
+
 
 ### **Java**
 
@@ -116,72 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> goodIndices(vector<int>& nums, int k) {
-        int n = nums.size();
-        vector<int> decr(n, 1);
-        vector<int> incr(n, 1);
-        for (int i = 2; i < n; ++i) {
-            if (nums[i - 1] <= nums[i - 2]) {
-                decr[i] = decr[i - 1] + 1;
-            }
-        }
-        for (int i = n - 3; ~i; --i) {
-            if (nums[i + 1] <= nums[i + 2]) {
-                incr[i] = incr[i + 1] + 1;
-            }
-        }
-        vector<int> ans;
-        for (int i = k; i < n - k; ++i) {
-            if (decr[i] >= k && incr[i] >= k) {
-                ans.push_back(i);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func goodIndices(nums []int, k int) []int {
-	n := len(nums)
-	decr := make([]int, n)
-	incr := make([]int, n)
-	for i := range decr {
-		decr[i] = 1
-		incr[i] = 1
-	}
-	for i := 2; i < n; i++ {
-		if nums[i-1] <= nums[i-2] {
-			decr[i] = decr[i-1] + 1
-		}
-	}
-	for i := n - 3; i >= 0; i-- {
-		if nums[i+1] <= nums[i+2] {
-			incr[i] = incr[i+1] + 1
-		}
-	}
-	ans := []int{}
-	for i := k; i < n-k; i++ {
-		if decr[i] >= k && incr[i] >= k {
-			ans = append(ans, i)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -189,4 +121,4 @@ func goodIndices(nums []int, k int) []int {
 
 ```
 
-<!-- tabs:end -->
+

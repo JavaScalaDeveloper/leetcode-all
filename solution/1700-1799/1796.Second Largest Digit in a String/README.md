@@ -67,32 +67,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def secondHighest(self, s: str) -> int:
-        a = b = -1
-        for c in s:
-            if c.isdigit():
-                v = int(c)
-                if v > a:
-                    a, b = v, a
-                elif b < v < a:
-                    b = v
-        return b
-```
 
-```python
-class Solution:
-    def secondHighest(self, s: str) -> int:
-        mask = reduce(or_, (1 << int(c) for c in s if c.isdigit()), 0)
-        cnt = 0
-        for i in range(9, -1, -1):
-            if (mask >> i) & 1:
-                cnt += 1
-            if cnt == 2:
-                return i
-        return -1
-```
+
+
 
 ### **Java**
 
@@ -139,121 +116,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int secondHighest(string s) {
-        int a = -1, b = -1;
-        for (char& c : s) {
-            if (isdigit(c)) {
-                int v = c - '0';
-                if (v > a) {
-                    b = a, a = v;
-                } else if (v > b && v < a) {
-                    b = v;
-                }
-            }
-        }
-        return b;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int secondHighest(string s) {
-        int mask = 0;
-        for (char& c : s) if (isdigit(c)) mask |= 1 << c - '0';
-        for (int i = 9, cnt = 0; ~i; --i) if (mask >> i & 1 && ++cnt == 2) return i;
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func secondHighest(s string) int {
-	a, b := -1, -1
-	for _, c := range s {
-		if c >= '0' && c <= '9' {
-			v := int(c - '0')
-			if v > a {
-				b, a = a, v
-			} else if v > b && v < a {
-				b = v
-			}
-		}
-	}
-	return b
-}
-```
 
-```go
-func secondHighest(s string) int {
-	mask := 0
-	for _, c := range s {
-		if c >= '0' && c <= '9' {
-			mask |= 1 << int(c-'0')
-		}
-	}
-	for i, cnt := 9, 0; i >= 0; i-- {
-		if mask>>i&1 == 1 {
-			cnt++
-			if cnt == 2 {
-				return i
-			}
-		}
-	}
-	return -1
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function secondHighest(s: string): number {
-    let first = -1;
-    let second = -1;
-    for (const c of s) {
-        if (c >= '0' && c <= '9') {
-            const num = c.charCodeAt(0) - '0'.charCodeAt(0);
-            if (first < num) {
-                [first, second] = [num, first];
-            } else if (first !== num && second < num) {
-                second = num;
-            }
-        }
-    }
-    return second;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn second_highest(s: String) -> i32 {
-        let mut first = -1;
-        let mut second = -1;
-        for c in s.as_bytes() {
-            if char::is_digit(*c as char, 10) {
-                let num = (c - b'0') as i32;
-                if first < num {
-                    second = first;
-                    first = num;
-                } else if num < first && second < num {
-                    second = num;
-                }
-            }
-        }
-        second
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -282,4 +163,4 @@ int secondHighest(char *s) {
 
 ```
 
-<!-- tabs:end -->
+

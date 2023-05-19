@@ -76,17 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def beautifulSubarrays(self, nums: List[int]) -> int:
-        cnt = Counter({0: 1})
-        ans = mask = 0
-        for x in nums:
-            mask ^= x
-            ans += cnt[mask]
-            cnt[mask] += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -109,56 +99,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long beautifulSubarrays(vector<int>& nums) {
-        unordered_map<int, int> cnt{{0, 1}};
-        long long ans = 0;
-        int mask = 0;
-        for (int x : nums) {
-            mask ^= x;
-            ans += cnt[mask];
-            ++cnt[mask];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func beautifulSubarrays(nums []int) (ans int64) {
-	cnt := map[int]int{0: 1}
-	mask := 0
-	for _, x := range nums {
-		mask ^= x
-		ans += int64(cnt[mask])
-		cnt[mask]++
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function beautifulSubarrays(nums: number[]): number {
-    const cnt = new Map();
-    cnt.set(0, 1);
-    let ans = 0;
-    let mask = 0;
-    for (const x of nums) {
-        mask ^= x;
-        ans += cnt.get(mask) || 0;
-        cnt.set(mask, (cnt.get(mask) || 0) + 1);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -166,4 +117,4 @@ function beautifulSubarrays(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

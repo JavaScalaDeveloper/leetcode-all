@@ -77,19 +77,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sumOfPower(self, nums: List[int]) -> int:
-        mod = 10**9 + 7
-        nums.sort()
-        ans = 0
-        p = 0
-        for x in nums[::-1]:
-            ans = (ans + (x * x % mod) * x) % mod
-            ans = (ans + x * p) % mod
-            p = (p * 2 + x * x) % mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,41 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int sumOfPower(vector<int>& nums) {
-        const int mod = 1e9 + 7;
-        sort(nums.rbegin(), nums.rend());
-        long long ans = 0, p = 0;
-        for (long long x : nums) {
-            ans = (ans + (x * x % mod) * x) % mod;
-            ans = (ans + x * p % mod) % mod;
-            p = (p * 2 + x * x % mod) % mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sumOfPower(nums []int) (ans int) {
-	const mod = 1e9 + 7
-	sort.Ints(nums)
-	p := 0
-	for i := len(nums) - 1; i >= 0; i-- {
-		x := nums[i]
-		ans = (ans + (x*x%mod)*x) % mod
-		ans = (ans + x*p%mod) % mod
-		p = (p*2 + x*x%mod) % mod
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -154,4 +114,4 @@ func sumOfPower(nums []int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

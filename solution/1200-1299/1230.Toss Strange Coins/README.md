@@ -64,32 +64,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def probabilityOfHeads(self, prob: List[float], target: int) -> float:
-        n = len(prob)
-        f = [[0] * (target + 1) for _ in range(n + 1)]
-        f[0][0] = 1
-        for i, p in enumerate(prob, 1):
-            for j in range(min(i, target) + 1):
-                f[i][j] = (1 - p) * f[i - 1][j]
-                if j:
-                    f[i][j] += p * f[i - 1][j - 1]
-        return f[n][target]
-```
 
-```python
-class Solution:
-    def probabilityOfHeads(self, prob: List[float], target: int) -> float:
-        f = [0] * (target + 1)
-        f[0] = 1
-        for p in prob:
-            for j in range(target, -1, -1):
-                f[j] *= (1 - p)
-                if j:
-                    f[j] += p * f[j - 1]
-        return f[target]
-```
+
+
 
 ### **Java**
 
@@ -132,121 +109,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double probabilityOfHeads(vector<double>& prob, int target) {
-        int n = prob.size();
-        double f[n + 1][target + 1];
-        memset(f, 0, sizeof(f));
-        f[0][0] = 1;
-        for (int i = 1; i <= n; ++i) {
-            for (int j = 0; j <= min(i, target); ++j) {
-                f[i][j] = (1 - prob[i - 1]) * f[i - 1][j];
-                if (j > 0) {
-                    f[i][j] += prob[i - 1] * f[i - 1][j - 1];
-                }
-            }
-        }
-        return f[n][target];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    double probabilityOfHeads(vector<double>& prob, int target) {
-        double f[target + 1];
-        memset(f, 0, sizeof(f));
-        f[0] = 1;
-        for (double p : prob) {
-            for (int j = target; j >= 0; --j) {
-                f[j] *= (1 - p);
-                if (j > 0) {
-                    f[j] += p * f[j - 1];
-                }
-            }
-        }
-        return f[target];
-    }
-};
-```
 
-### **Go**
 
-```go
-func probabilityOfHeads(prob []float64, target int) float64 {
-	n := len(prob)
-	f := make([][]float64, n+1)
-	for i := range f {
-		f[i] = make([]float64, target+1)
-	}
-	f[0][0] = 1
-	for i := 1; i <= n; i++ {
-		for j := 0; j <= i && j <= target; j++ {
-			f[i][j] = (1 - prob[i-1]) * f[i-1][j]
-			if j > 0 {
-				f[i][j] += prob[i-1] * f[i-1][j-1]
-			}
-		}
-	}
-	return f[n][target]
-}
-```
 
-```go
-func probabilityOfHeads(prob []float64, target int) float64 {
-	f := make([]float64, target+1)
-	f[0] = 1
-	for _, p := range prob {
-		for j := target; j >= 0; j-- {
-			f[j] *= (1 - p)
-			if j > 0 {
-				f[j] += p * f[j-1]
-			}
-		}
-	}
-	return f[target]
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function probabilityOfHeads(prob: number[], target: number): number {
-    const n = prob.length;
-    const f = new Array(n + 1).fill(0).map(() => new Array(target + 1).fill(0));
-    f[0][0] = 1;
-    for (let i = 1; i <= n; ++i) {
-        for (let j = 0; j <= target; ++j) {
-            f[i][j] = f[i - 1][j] * (1 - prob[i - 1]);
-            if (j) {
-                f[i][j] += f[i - 1][j - 1] * prob[i - 1];
-            }
-        }
-    }
-    return f[n][target];
-}
-```
 
-```ts
-function probabilityOfHeads(prob: number[], target: number): number {
-    const f = new Array(target + 1).fill(0);
-    f[0] = 1;
-    for (const p of prob) {
-        for (let j = target; j >= 0; --j) {
-            f[j] *= 1 - p;
-            if (j > 0) {
-                f[j] += f[j - 1] * p;
-            }
-        }
-    }
-    return f[target];
-}
-```
+
+
 
 ### **...**
 
@@ -254,4 +133,4 @@ function probabilityOfHeads(prob: number[], target: number): number {
 
 ```
 
-<!-- tabs:end -->
+

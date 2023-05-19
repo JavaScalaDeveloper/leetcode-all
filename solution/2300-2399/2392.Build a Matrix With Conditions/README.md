@@ -81,39 +81,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def buildMatrix(self, k: int, rowConditions: List[List[int]], colConditions: List[List[int]]) -> List[List[int]]:
-        def f(cond):
-            g = defaultdict(list)
-            indeg = [0] * (k + 1)
-            for a, b in cond:
-                g[a].append(b)
-                indeg[b] += 1
-            q = deque([i for i, v in enumerate(indeg[1:], 1) if v == 0])
-            res = []
-            while q:
-                for _ in range(len(q)):
-                    i = q.popleft()
-                    res.append(i)
-                    for j in g[i]:
-                        indeg[j] -= 1
-                        if indeg[j] == 0:
-                            q.append(j)
-            return None if len(res) != k else res
 
-        row = f(rowConditions)
-        col = f(colConditions)
-        if row is None or col is None:
-            return []
-        ans = [[0] * k for _ in range(k)]
-        m = [0] * (k + 1)
-        for i, v in enumerate(col):
-            m[v] = i
-        for i, v in enumerate(row):
-            ans[i][m[v]] = v
-        return ans
-```
 
 ### **Java**
 
@@ -173,169 +141,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int k;
 
-    vector<vector<int>> buildMatrix(int k, vector<vector<int>>& rowConditions, vector<vector<int>>& colConditions) {
-        this->k = k;
-        auto row = f(rowConditions);
-        auto col = f(colConditions);
-        if (row.empty() || col.empty()) return {};
-        vector<vector<int>> ans(k, vector<int>(k));
-        vector<int> m(k + 1);
-        for (int i = 0; i < k; ++i) {
-            m[col[i]] = i;
-        }
-        for (int i = 0; i < k; ++i) {
-            ans[i][m[row[i]]] = row[i];
-        }
-        return ans;
-    }
 
-    vector<int> f(vector<vector<int>>& cond) {
-        vector<vector<int>> g(k + 1);
-        vector<int> indeg(k + 1);
-        for (auto& e : cond) {
-            int a = e[0], b = e[1];
-            g[a].push_back(b);
-            ++indeg[b];
-        }
-        queue<int> q;
-        for (int i = 1; i < k + 1; ++i) {
-            if (!indeg[i]) {
-                q.push(i);
-            }
-        }
-        vector<int> res;
-        while (!q.empty()) {
-            for (int n = q.size(); n; --n) {
-                int i = q.front();
-                res.push_back(i);
-                q.pop();
-                for (int j : g[i]) {
-                    if (--indeg[j] == 0) {
-                        q.push(j);
-                    }
-                }
-            }
-        }
-        return res.size() == k ? res : vector<int>();
-    }
-};
-```
 
-### **Go**
 
-```go
-func buildMatrix(k int, rowConditions [][]int, colConditions [][]int) [][]int {
-	f := func(cond [][]int) []int {
-		g := make([][]int, k+1)
-		indeg := make([]int, k+1)
-		for _, e := range cond {
-			a, b := e[0], e[1]
-			g[a] = append(g[a], b)
-			indeg[b]++
-		}
-		q := []int{}
-		for i, v := range indeg[1:] {
-			if v == 0 {
-				q = append(q, i+1)
-			}
-		}
-		res := []int{}
-		for len(q) > 0 {
-			for n := len(q); n > 0; n-- {
-				i := q[0]
-				q = q[1:]
-				res = append(res, i)
-				for _, j := range g[i] {
-					indeg[j]--
-					if indeg[j] == 0 {
-						q = append(q, j)
-					}
-				}
-			}
-		}
-		if len(res) == k {
-			return res
-		}
-		return []int{}
-	}
 
-	row := f(rowConditions)
-	col := f(colConditions)
-	if len(row) == 0 || len(col) == 0 {
-		return [][]int{}
-	}
-	m := make([]int, k+1)
-	for i, v := range col {
-		m[v] = i
-	}
-	ans := make([][]int, k)
-	for i := range ans {
-		ans[i] = make([]int, k)
-	}
-	for i, v := range row {
-		ans[i][m[v]] = v
-	}
-	return ans
-}
-```
+
 
 ### **TypeScript**
 
-```ts
-function buildMatrix(
-    k: number,
-    rowConditions: number[][],
-    colConditions: number[][],
-): number[][] {
-    function f(cond) {
-        const g = Array.from({ length: k + 1 }, () => []);
-        const indeg = new Array(k + 1).fill(0);
-        for (const [a, b] of cond) {
-            g[a].push(b);
-            ++indeg[b];
-        }
-        const q = [];
-        for (let i = 1; i < indeg.length; ++i) {
-            if (indeg[i] == 0) {
-                q.push(i);
-            }
-        }
-        const res = [];
-        while (q.length) {
-            for (let n = q.length; n; --n) {
-                const i = q.shift();
-                res.push(i);
-                for (const j of g[i]) {
-                    if (--indeg[j] == 0) {
-                        q.push(j);
-                    }
-                }
-            }
-        }
-        return res.length == k ? res : [];
-    }
 
-    const row = f(rowConditions);
-    const col = f(colConditions);
-    if (!row.length || !col.length) return [];
-    const ans = Array.from({ length: k }, () => new Array(k).fill(0));
-    const m = new Array(k + 1).fill(0);
-    for (let i = 0; i < k; ++i) {
-        m[col[i]] = i;
-    }
-    for (let i = 0; i < k; ++i) {
-        ans[i][m[row[i]]] = row[i];
-    }
-    return ans;
-}
-```
 
 ### **...**
 
@@ -344,4 +160,4 @@ function buildMatrix(
 
 ```
 
-<!-- tabs:end -->
+

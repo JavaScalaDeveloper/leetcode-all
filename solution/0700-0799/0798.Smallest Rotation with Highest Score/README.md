@@ -63,24 +63,7 @@ nums 无论怎么变化总是有 3 分。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def bestRotation(self, nums: List[int]) -> int:
-        n = len(nums)
-        mx, ans = -1, n
-        d = [0] * n
-        for i, v in enumerate(nums):
-            l, r = (i + 1) % n, (n + i + 1 - v) % n
-            d[l] += 1
-            d[r] -= 1
-        s = 0
-        for k, t in enumerate(d):
-            s += t
-            if s > mx:
-                mx = s
-                ans = k
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,56 +95,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int bestRotation(vector<int>& nums) {
-        int n = nums.size();
-        int mx = -1, ans = n;
-        vector<int> d(n);
-        for (int i = 0; i < n; ++i) {
-            int l = (i + 1) % n;
-            int r = (n + i + 1 - nums[i]) % n;
-            ++d[l];
-            --d[r];
-        }
-        int s = 0;
-        for (int k = 0; k < n; ++k) {
-            s += d[k];
-            if (s > mx) {
-                mx = s;
-                ans = k;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func bestRotation(nums []int) int {
-	n := len(nums)
-	d := make([]int, n)
-	for i, v := range nums {
-		l, r := (i+1)%n, (n+i+1-v)%n
-		d[l]++
-		d[r]--
-	}
-	mx, ans, s := -1, n, 0
-	for k, t := range d {
-		s += t
-		if s > mx {
-			mx = s
-			ans = k
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -169,4 +109,4 @@ func bestRotation(nums []int) int {
 
 ```
 
-<!-- tabs:end -->
+

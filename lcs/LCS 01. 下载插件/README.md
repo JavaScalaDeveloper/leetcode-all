@@ -57,15 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def leastMinutes(self, n: int) -> int:
-        speed = ans = 1
-        while speed < n:
-            speed <<= 1
-            ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -83,60 +75,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int leastMinutes(int n) {
-        int ans = 1;
-        for (int speed = 1; speed < n; speed <<= 1) {
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func leastMinutes(n int) int {
-	ans := 1
-	for speed := 1; speed < n; speed <<= 1 {
-		ans++
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var leastMinutes = function (n) {
-    let ans = 1;
-    for (let speed = 1; speed < n; speed <<= 1) {
-        ++ans;
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function leastMinutes(n: number): number {
-    let ans = 1;
-    for (let speed = 1; speed < n; speed <<= 1) {
-        ++ans;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -144,4 +97,4 @@ function leastMinutes(n: number): number {
 
 ```
 
-<!-- tabs:end -->
+

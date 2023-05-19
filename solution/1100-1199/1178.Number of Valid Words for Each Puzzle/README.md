@@ -59,9 +59,7 @@ puzzles = ["aboveyz","abrodyz","abslute","absoryz","actresz","gaswxyz"]
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -77,4 +75,4 @@ puzzles = ["aboveyz","abrodyz","abslute","absoryz","actresz","gaswxyz"]
 
 ```
 
-<!-- tabs:end -->
+

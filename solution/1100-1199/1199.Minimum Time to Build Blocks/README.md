@@ -78,15 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minBuildTime(self, blocks: List[int], split: int) -> int:
-        heapify(blocks)
-        while len(blocks) > 1:
-            heappop(blocks)
-            heappush(blocks, heappop(blocks) + split)
-        return blocks[0]
-```
+
 
 ### **Java**
 
@@ -108,50 +100,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minBuildTime(vector<int>& blocks, int split) {
-        priority_queue<int, vector<int>, greater<int>> pq;
-        for (int v : blocks) pq.push(v);
-        while (pq.size() > 1) {
-            pq.pop();
-            int x = pq.top();
-            pq.pop();
-            pq.push(x + split);
-        }
-        return pq.top();
-    }
-};
-```
 
-### **Go**
 
-```go
-func minBuildTime(blocks []int, split int) int {
-	q := hp{}
-	for _, v := range blocks {
-		heap.Push(&q, v)
-	}
-	for q.Len() > 1 {
-		heap.Pop(&q)
-		heap.Push(&q, heap.Pop(&q).(int)+split)
-	}
-	return q.IntSlice[0]
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-```
+
+
 
 ### **...**
 
@@ -159,4 +114,4 @@ func (h *hp) Pop() interface{} {
 
 ```
 
-<!-- tabs:end -->
+

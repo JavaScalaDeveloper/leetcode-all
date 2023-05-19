@@ -97,41 +97,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def cherryPickup(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        f = [[[-1] * n for _ in range(n)] for _ in range(m)]
-        f[0][0][n - 1] = grid[0][0] + grid[0][n - 1]
-        for i in range(1, m):
-            for j1 in range(n):
-                for j2 in range(n):
-                    x = grid[i][j1] + (0 if j1 == j2 else grid[i][j2])
-                    for y1 in range(j1 - 1, j1 + 2):
-                        for y2 in range(j2 - 1, j2 + 2):
-                            if 0 <= y1 < n and 0 <= y2 < n and f[i - 1][y1][y2] != -1:
-                                f[i][j1][j2] = max(f[i][j1][j2], f[i - 1][y1][y2] + x)
-        return max(f[-1][j1][j2] for j1, j2 in product(range(n), range(n)))
-```
 
-```python
-class Solution:
-    def cherryPickup(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        f = [[-1] * n for _ in range(n)]
-        g = [[-1] * n for _ in range(n)]
-        f[0][n - 1] = grid[0][0] + grid[0][n - 1]
-        for i in range(1, m):
-            for j1 in range(n):
-                for j2 in range(n):
-                    x = grid[i][j1] + (0 if j1 == j2 else grid[i][j2])
-                    for y1 in range(j1 - 1, j1 + 2):
-                        for y2 in range(j2 - 1, j2 + 2):
-                            if 0 <= y1 < n and 0 <= y2 < n and f[y1][y2] != -1:
-                                g[j1][j2] = max(g[j1][j2], f[y1][y2] + x)
-            f, g = g, f
-        return max(f[j1][j2] for j1, j2 in product(range(n), range(n)))
-```
+
+
 
 ### **Java**
 
@@ -212,254 +180,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int cherryPickup(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        int f[m][n][n];
-        memset(f, -1, sizeof(f));
-        f[0][0][n - 1] = grid[0][0] + grid[0][n - 1];
-        for (int i = 1; i < m; ++i) {
-            for (int j1 = 0; j1 < n; ++j1) {
-                for (int j2 = 0; j2 < n; ++j2) {
-                    int x = grid[i][j1] + (j1 == j2 ? 0 : grid[i][j2]);
-                    for (int y1 = j1 - 1; y1 <= j1 + 1; ++y1) {
-                        for (int y2 = j2 - 1; y2 <= j2 + 1; ++y2) {
-                            if (y1 >= 0 && y1 < n && y2 >= 0 && y2 < n && f[i - 1][y1][y2] != -1) {
-                                f[i][j1][j2] = max(f[i][j1][j2], f[i - 1][y1][y2] + x);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        int ans = 0;
-        for (int j1 = 0; j1 < n; ++j1) {
-            for (int j2 = 0; j2 < n; ++j2) {
-                ans = max(ans, f[m - 1][j1][j2]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int cherryPickup(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<vector<int>> f(n, vector<int>(n, -1));
-        vector<vector<int>> g(n, vector<int>(n, -1));
-        f[0][n - 1] = grid[0][0] + grid[0][n - 1];
-        for (int i = 1; i < m; ++i) {
-            for (int j1 = 0; j1 < n; ++j1) {
-                for (int j2 = 0; j2 < n; ++j2) {
-                    int x = grid[i][j1] + (j1 == j2 ? 0 : grid[i][j2]);
-                    for (int y1 = j1 - 1; y1 <= j1 + 1; ++y1) {
-                        for (int y2 = j2 - 1; y2 <= j2 + 1; ++y2) {
-                            if (y1 >= 0 && y1 < n && y2 >= 0 && y2 < n && f[y1][y2] != -1) {
-                                g[j1][j2] = max(g[j1][j2], f[y1][y2] + x);
-                            }
-                        }
-                    }
-                }
-            }
-            swap(f, g);
-        }
-        int ans = 0;
-        for (int j1 = 0; j1 < n; ++j1) {
-            for (int j2 = 0; j2 < n; ++j2) {
-                ans = max(ans, f[j1][j2]);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func cherryPickup(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	f := make([][][]int, m)
-	for i := range f {
-		f[i] = make([][]int, n)
-		for j := range f[i] {
-			f[i][j] = make([]int, n)
-			for k := range f[i][j] {
-				f[i][j][k] = -1
-			}
-		}
-	}
-	f[0][0][n-1] = grid[0][0] + grid[0][n-1]
-	for i := 1; i < m; i++ {
-		for j1 := 0; j1 < n; j1++ {
-			for j2 := 0; j2 < n; j2++ {
-				x := grid[i][j1]
-				if j1 != j2 {
-					x += grid[i][j2]
-				}
-				for y1 := j1 - 1; y1 <= j1+1; y1++ {
-					for y2 := j2 - 1; y2 <= j2+1; y2++ {
-						if y1 >= 0 && y1 < n && y2 >= 0 && y2 < n && f[i-1][y1][y2] != -1 {
-							f[i][j1][j2] = max(f[i][j1][j2], f[i-1][y1][y2]+x)
-						}
-					}
-				}
-			}
-		}
-	}
-	ans := 0
-	for j1 := 0; j1 < n; j1++ {
-		for j2 := 0; j2 < n; j2++ {
-			ans = max(ans, f[m-1][j1][j2])
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func cherryPickup(grid [][]int) int {
-	m, n := len(grid), len(grid[0])
-	f := make([][]int, n)
-	g := make([][]int, n)
-	for i := range f {
-		f[i] = make([]int, n)
-		g[i] = make([]int, n)
-		for j := range f[i] {
-			f[i][j] = -1
-			g[i][j] = -1
-		}
-	}
-	f[0][n-1] = grid[0][0] + grid[0][n-1]
-	for i := 1; i < m; i++ {
-		for j1 := 0; j1 < n; j1++ {
-			for j2 := 0; j2 < n; j2++ {
-				x := grid[i][j1]
-				if j1 != j2 {
-					x += grid[i][j2]
-				}
-				for y1 := j1 - 1; y1 <= j1+1; y1++ {
-					for y2 := j2 - 1; y2 <= j2+1; y2++ {
-						if y1 >= 0 && y1 < n && y2 >= 0 && y2 < n && f[y1][y2] != -1 {
-							g[j1][j2] = max(g[j1][j2], f[y1][y2]+x)
-						}
-					}
-				}
-			}
-		}
-		f, g = g, f
-	}
-	ans := 0
-	for j1 := 0; j1 < n; j1++ {
-		for j2 := 0; j2 < n; j2++ {
-			ans = max(ans, f[j1][j2])
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function cherryPickup(grid: number[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    const f: number[][][] = new Array(m)
-        .fill(0)
-        .map(() => new Array(n).fill(0).map(() => new Array(n).fill(-1)));
-    f[0][0][n - 1] = grid[0][0] + grid[0][n - 1];
-    for (let i = 1; i < m; ++i) {
-        for (let j1 = 0; j1 < n; ++j1) {
-            for (let j2 = 0; j2 < n; ++j2) {
-                const x = grid[i][j1] + (j1 === j2 ? 0 : grid[i][j2]);
-                for (let y1 = j1 - 1; y1 <= j1 + 1; ++y1) {
-                    for (let y2 = j2 - 1; y2 <= j2 + 1; ++y2) {
-                        if (
-                            y1 >= 0 &&
-                            y1 < n &&
-                            y2 >= 0 &&
-                            y2 < n &&
-                            f[i - 1][y1][y2] !== -1
-                        ) {
-                            f[i][j1][j2] = Math.max(
-                                f[i][j1][j2],
-                                f[i - 1][y1][y2] + x,
-                            );
-                        }
-                    }
-                }
-            }
-        }
-    }
-    let ans = 0;
-    for (let j1 = 0; j1 < n; ++j1) {
-        for (let j2 = 0; j2 < n; ++j2) {
-            ans = Math.max(ans, f[m - 1][j1][j2]);
-        }
-    }
-    return ans;
-}
-```
 
-```ts
-function cherryPickup(grid: number[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    let f: number[][] = new Array(n).fill(0).map(() => new Array(n).fill(-1));
-    let g: number[][] = new Array(n).fill(0).map(() => new Array(n).fill(-1));
-    f[0][n - 1] = grid[0][0] + grid[0][n - 1];
-    for (let i = 1; i < m; ++i) {
-        for (let j1 = 0; j1 < n; ++j1) {
-            for (let j2 = 0; j2 < n; ++j2) {
-                const x = grid[i][j1] + (j1 === j2 ? 0 : grid[i][j2]);
-                for (let y1 = j1 - 1; y1 <= j1 + 1; ++y1) {
-                    for (let y2 = j2 - 1; y2 <= j2 + 1; ++y2) {
-                        if (
-                            y1 >= 0 &&
-                            y1 < n &&
-                            y2 >= 0 &&
-                            y2 < n &&
-                            f[y1][y2] !== -1
-                        ) {
-                            g[j1][j2] = Math.max(g[j1][j2], f[y1][y2] + x);
-                        }
-                    }
-                }
-            }
-        }
-        [f, g] = [g, f];
-    }
-    let ans = 0;
-    for (let j1 = 0; j1 < n; ++j1) {
-        for (let j2 = 0; j2 < n; ++j2) {
-            ans = Math.max(ans, f[j1][j2]);
-        }
-    }
-    return ans;
-}
-```
+
+
 
 ### **...**
 
@@ -467,4 +204,4 @@ function cherryPickup(grid: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

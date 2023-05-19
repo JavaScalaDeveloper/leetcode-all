@@ -55,12 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findSmallestSetOfVertices(self, n: int, edges: List[List[int]]) -> List[int]:
-        s = {to for _, to in edges}
-        return [i for i in range(n) if i not in s]
-```
+
 
 ### **Java**
 
@@ -84,75 +79,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findSmallestSetOfVertices(int n, vector<vector<int>>& edges) {
-        unordered_set<int> s;
-        for (auto& e : edges) s.insert(e[1]);
-        vector<int> ans;
-        for (int i = 0; i < n; ++i) {
-            if (!s.count(i)) ans.push_back(i);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findSmallestSetOfVertices(n int, edges [][]int) []int {
-	s := make(map[int]bool)
-	for _, e := range edges {
-		s[e[1]] = true
-	}
-	var ans []int
-	for i := 0; i < n; i++ {
-		if !s[i] {
-			ans = append(ans, i)
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findSmallestSetOfVertices(n: number, edges: number[][]): number[] {
-    const arr = new Array(n).fill(true);
-    for (const [_, i] of edges) {
-        arr[i] = false;
-    }
-    const res = [];
-    arr.forEach((v, i) => {
-        if (v) {
-            res.push(i);
-        }
-    });
-    return res;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn find_smallest_set_of_vertices(n: i32, edges: Vec<Vec<i32>>) -> Vec<i32> {
-        let mut arr = vec![true; n as usize];
-        edges.iter().for_each(|edge| {
-            arr[edge[1] as usize] = false;
-        });
-        arr.iter()
-            .enumerate()
-            .filter_map(|(i, &v)| if v { Some(i as i32) } else { None })
-            .collect()
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -160,4 +101,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

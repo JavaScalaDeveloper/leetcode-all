@@ -55,21 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
-        envelopes.sort(key=lambda x: (x[0], -x[1]))
-        d = [envelopes[0][1]]
-        for _, h in envelopes[1:]:
-            if h > d[-1]:
-                d.append(h)
-            else:
-                idx = bisect_left(d, h)
-                if idx == len(d):
-                    idx = 0
-                d[idx] = h
-        return len(d)
-```
+
 
 ### **Java**
 
@@ -106,70 +92,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxEnvelopes(vector<vector<int>>& envelopes) {
-        sort(envelopes.begin(), envelopes.end(), [](const auto& e1, const auto& e2) {
-            return e1[0] < e2[0] || (e1[0] == e2[0] && e1[1] > e2[1]);
-        });
-        int n = envelopes.size();
-        vector<int> d {envelopes[0][1]};
-        for (int i = 1; i < n; ++i) {
-            int x = envelopes[i][1];
-            if (x > d[d.size() - 1])
-                d.push_back(x);
-            else {
-                int idx = lower_bound(d.begin(), d.end(), x) - d.begin();
-                if (idx == d.size()) idx = 0;
-                d[idx] = x;
-            }
-        }
-        return d.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxEnvelopes(envelopes [][]int) int {
-	sort.Slice(envelopes, func(i, j int) bool {
-		if envelopes[i][0] != envelopes[j][0] {
-			return envelopes[i][0] < envelopes[j][0]
-		}
-		return envelopes[j][1] < envelopes[i][1]
-	})
-	n := len(envelopes)
-	d := make([]int, n+1)
-	d[1] = envelopes[0][1]
-	size := 1
-	for _, e := range envelopes[1:] {
-		x := e[1]
-		if x > d[size] {
-			size++
-			d[size] = x
-		} else {
-			left, right := 1, size
-			for left < right {
-				mid := (left + right) >> 1
-				if d[mid] >= x {
-					right = mid
-				} else {
-					left = mid + 1
-				}
-			}
-			if d[left] < x {
-				left = 1
-			}
-			d[left] = x
-		}
-	}
-	return size
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -177,4 +106,4 @@ func maxEnvelopes(envelopes [][]int) int {
 
 ```
 
-<!-- tabs:end -->
+

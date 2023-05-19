@@ -79,24 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sortString(self, s: str) -> str:
-        counter = [0] * 26
-        for c in s:
-            counter[ord(c) - ord('a')] += 1
-        ans = []
-        while len(ans) < len(s):
-            for i in range(26):
-                if counter[i]:
-                    ans.append(chr(i + ord('a')))
-                    counter[i] -= 1
-            for i in range(25, -1, -1):
-                if counter[i]:
-                    ans.append(chr(i + ord('a')))
-                    counter[i] -= 1
-        return ''.join(ans)
-```
+
 
 ### **Java**
 
@@ -129,93 +112,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string sortString(string s) {
-        vector<int> counter(26);
-        for (char c : s) ++counter[c - 'a'];
-        string ans = "";
-        while (ans.size() < s.size()) {
-            for (int i = 0; i < 26; ++i) {
-                if (counter[i]) {
-                    ans += (i + 'a');
-                    --counter[i];
-                }
-            }
-            for (int i = 25; i >= 0; --i) {
-                if (counter[i]) {
-                    ans += (i + 'a');
-                    --counter[i];
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sortString(s string) string {
-	counter := ['z' + 1]int{}
-	for _, c := range s {
-		counter[c]++
-	}
-	var ans []byte
-	for len(ans) < len(s) {
-		for i := byte('a'); i <= 'z'; i++ {
-			if counter[i] > 0 {
-				ans = append(ans, i)
-				counter[i]--
-			}
-		}
-		for i := byte('z'); i >= 'a'; i-- {
-			if counter[i] > 0 {
-				ans = append(ans, i)
-				counter[i]--
-			}
-		}
-	}
-	return string(ans)
-}
-```
 
-### **Javascript**
 
-```js
-/**
- * @param {string} s
- * @return {string}
- */
-var sortString = function (s) {
-    let rs = '';
-    const m = new Map();
-    for (let i = 0; i < s.length; i++) {
-        m.set(s[i], (m.get(s[i]) || 0) + 1);
-    }
-    const keys = [...m.keys()];
-    keys.sort();
-    while (rs.length < s.length) {
-        for (let j = 0; j < keys.length; j++) {
-            if (m.get(keys[j]) != 0) {
-                rs += keys[j];
-                m.set(keys[j], m.get(keys[j]) - 1);
-            }
-        }
-        for (let j = keys.length - 1; j >= 0; j--) {
-            if (m.get(keys[j]) != 0) {
-                rs += keys[j];
-                m.set(keys[j], m.get(keys[j]) - 1);
-            }
-        }
-    }
-    return rs;
-};
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -223,4 +130,4 @@ var sortString = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

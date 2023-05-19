@@ -66,14 +66,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def climbStairs(self, n: int) -> int:
-        a, b = 0, 1
-        for _ in range(n):
-            a, b = b, a + b
-        return b
-```
+
 
 ### **Java**
 
@@ -93,103 +86,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int climbStairs(int n) {
-        int a = 0, b = 1;
-        for (int i = 0; i < n; ++i) {
-            int c = a + b;
-            a = b;
-            b = c;
-        }
-        return b;
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} n
- * @return {number}
- */
-var climbStairs = function (n) {
-    let a = 0,
-        b = 1;
-    for (let i = 0; i < n; ++i) {
-        const c = a + b;
-        a = b;
-        b = c;
-    }
-    return b;
-};
-```
 
-### **Go**
 
-```go
-func climbStairs(n int) int {
-    a, b := 0, 1
-    for i := 0; i < n; i++ {
-        a, b = b, a + b
-    }
-    return b
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function climbStairs(n: number): number {
-    let p = 1;
-    let q = 1;
-    for (let i = 1; i < n; i++) {
-        [p, q] = [q, p + q];
-    }
-    return q;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn climb_stairs(n: i32) -> i32 {
-        let (mut p, mut q) = (1, 1);
-        for i in 1..n {
-            let t = p + q;
-            p = q;
-            q = t;
-        }
-        q
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer $n
-     * @return Integer
-     */
-    function climbStairs($n) {
-        if ($n <= 2) {
-            return $n;
-        }
-        $dp = [0, 1, 2];
-        for ($i = 3; $i <= $n; $i++) {
-            $dp[$i] = $dp[$i - 2] + $dp[$i - 1];
-        }
-        return $dp[$n];
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -197,4 +116,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

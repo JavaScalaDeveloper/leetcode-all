@@ -56,29 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minSwaps(self, s: str) -> int:
-        s0n0 = s0n1 = s1n0 = s1n1 = 0
-        for i in range(len(s)):
-            if (i & 1) == 0:
-                if s[i] != '0':
-                    s0n0 += 1
-                else:
-                    s1n1 += 1
-            else:
-                if s[i] != '0':
-                    s1n0 += 1
-                else:
-                    s0n1 += 1
-        if s0n0 != s0n1 and s1n0 != s1n1:
-            return -1
-        if s0n0 != s0n1:
-            return s1n0
-        if s1n0 != s1n1:
-            return s0n0
-        return min(s0n0, s1n0)
-```
+
 
 ### **Java**
 
@@ -118,38 +96,9 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {number}
- */
-var minSwaps = function (s) {
-    let n = s.length;
-    let n1 = [...s].reduce((a, c) => parseInt(c) + a, 0);
-    let n0 = n - n1;
-    let count = Infinity;
-    let half = n / 2;
-    // 101、1010
-    if (n1 == Math.ceil(half) && n0 == Math.floor(half)) {
-        let cur = 0;
-        for (let i = 0; i < n; i++) {
-            if (i % 2 == 0 && s.charAt(i) != '1') cur++;
-        }
-        count = Math.min(count, cur);
-    }
-    // 010、0101
-    if (n0 == Math.ceil(half) && n1 == Math.floor(half)) {
-        let cur = 0;
-        for (let i = 0; i < n; i++) {
-            if (i % 2 == 0 && s.charAt(i) != '0') cur++;
-        }
-        count = Math.min(count, cur);
-    }
-    return count == Infinity ? -1 : count;
-};
-```
+
+
 
 ### **...**
 
@@ -157,4 +106,4 @@ var minSwaps = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

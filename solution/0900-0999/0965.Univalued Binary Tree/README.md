@@ -47,22 +47,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def isUnivalTree(self, root: TreeNode) -> bool:
-        def dfs(node):
-            if node is None:
-                return True
-            return node.val == root.val and dfs(node.left) and dfs(node.right)
 
-        return dfs(root)
-```
 
 ### **Java**
 
@@ -98,122 +83,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    bool isUnivalTree(TreeNode* root) {
-        return dfs(root, root->val);
-    }
 
-    bool dfs(TreeNode* root, int val) {
-        if (!root) return true;
-        return root->val == val && dfs(root->left, val) && dfs(root->right, val);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func isUnivalTree(root *TreeNode) bool {
-	var dfs func(*TreeNode) bool
-	dfs = func(node *TreeNode) bool {
-		if node == nil {
-			return true
-		}
-		return node.Val == root.Val && dfs(node.Left) && dfs(node.Right)
-	}
-	return dfs(root)
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function isUnivalTree(root: TreeNode | null): boolean {
-    const val = root.val;
-    const dfs = (root: TreeNode | null) => {
-        if (root == null) {
-            return true;
-        }
-        return root.val === val && dfs(root.left) && dfs(root.right);
-    };
-    return dfs(root.left) && dfs(root.right);
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    fn dfs(val: i32, root: &Option<Rc<RefCell<TreeNode>>>) -> bool {
-        if root.is_none() {
-            return true;
-        }
-        let root = root.as_ref().unwrap().borrow();
-        root.val == val && Self::dfs(val, &root.left) && Self::dfs(val, &root.right)
-    }
-    pub fn is_unival_tree(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
-        let root = root.as_ref().unwrap().borrow();
-        Self::dfs(root.val, &root.left) && Self::dfs(root.val, &root.right)
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -221,4 +105,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

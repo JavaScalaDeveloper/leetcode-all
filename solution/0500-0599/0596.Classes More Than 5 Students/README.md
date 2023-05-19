@@ -78,4 +78,4 @@ HAVING
 	COUNT( class ) >= 5
 ```
 
-<!-- tabs:end -->
+

@@ -72,18 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isValid(self, s: str) -> bool:
-        if len(s) % 3:
-            return False
-        t = []
-        for c in s:
-            t.append(c)
-            if ''.join(t[-3:]) == 'abc':
-                t[-3:] = []
-        return not t
-```
+
 
 ### **Java**
 
@@ -107,62 +96,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isValid(string s) {
-        if (s.size() % 3) {
-            return false;
-        }
-        string t;
-        for (char c : s) {
-            t.push_back(c);
-            if (t.size() >= 3 && t.substr(t.size() - 3, 3) == "abc") {
-                t.erase(t.end() - 3, t.end());
-            }
-        }
-        return t.empty();
-    }
-};
-```
 
-### **Go**
 
-```go
-func isValid(s string) bool {
-	if len(s)%3 > 0 {
-		return false
-	}
-	t := []byte{}
-	for i := range s {
-		t = append(t, s[i])
-		if len(t) >= 3 && string(t[len(t)-3:]) == "abc" {
-			t = t[:len(t)-3]
-		}
-	}
-	return len(t) == 0
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isValid(s: string): boolean {
-    if (s.length % 3 !== 0) {
-        return false;
-    }
-    const t: string[] = [];
-    for (const c of s) {
-        t.push(c);
-        if (t.slice(-3).join('') === 'abc') {
-            t.splice(-3);
-        }
-    }
-    return t.length === 0;
-}
-```
+
 
 ### **...**
 
@@ -170,4 +114,4 @@ function isValid(s: string): boolean {
 
 ```
 
-<!-- tabs:end -->
+

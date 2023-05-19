@@ -68,50 +68,9 @@
 
 ### **Python3**
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution:
-    def isBalanced(self, root: TreeNode) -> bool:
-        def dfs(root):
-            if root is None:
-                return 0
-            l, r = dfs(root.left), dfs(root.right)
-            if l == -1 or r == -1 or abs(l - r) > 1:
-                return -1
-            return 1 + max(l, r)
-
-        return dfs(root) != -1
-```
-
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
 
-class Solution:
-    def isBalanced(self, root: TreeNode) -> bool:
-        def dfs(root):
-            if root is None:
-                return (True, 0)
-            l, ld = dfs(root.left)
-            r, rd = dfs(root.right)
-            d = max(ld, rd) + 1
-            if l and r and abs(ld - rd) <= 1:
-                return (True, d)
-            return (False, d)
 
-        return dfs(root)[0]
-```
 
 ### **Java**
 
@@ -144,186 +103,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    bool isBalanced(TreeNode* root) {
-        function<int(TreeNode*)> dfs = [&](TreeNode* root) -> int {
-            if (!root) {
-                return 0;
-            }
-            int l = dfs(root->left);
-            int r = dfs(root->right);
-            if (l == -1 || r == -1 || abs(l - r) > 1) {
-                return -1;
-            }
-            return 1 + max(l, r);
-        };
-        return dfs(root) != -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func isBalanced(root *TreeNode) bool {
-	var dfs func(*TreeNode) int
-	dfs = func(root *TreeNode) int {
-		if root == nil {
-			return 0
-		}
-		l, r := dfs(root.Left), dfs(root.Right)
-		if l == -1 || r == -1 || abs(l-r) > 1 {
-			return -1
-		}
-		return 1 + max(l, r)
-	}
-	return dfs(root) != -1
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {boolean}
- */
-var isBalanced = function (root) {
-    const dfs = root => {
-        if (!root) {
-            return 0;
-        }
-        const l = dfs(root.left);
-        const r = dfs(root.right);
-        if (l === -1 || r == -1 || Math.abs(l - r) > 1) {
-            return -1;
-        }
-        return 1 + Math.max(l, r);
-    };
-    return dfs(root) !== -1;
-};
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::rc::Rc;
-use std::cell::RefCell;
-impl Solution {
-    fn dfs(root: &Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        match root {
-            None => 0,
-            Some(node) => {
-                let node = node.borrow();
-                1 + Self::dfs(&node.left).max(Self::dfs(&node.right))
-            }
-        }
-    }
-    pub fn is_balanced(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
-        match root {
-            None => true,
-            Some(node) => {
-                let mut node = node.borrow_mut();
-                let a = 10;
-                (Self::dfs(&node.left) - Self::dfs(&node.right)).abs() <= 1
-                    && Self::is_balanced(node.left.take())
-                    && Self::is_balanced(node.right.take())
-            }
-        }
-    }
-}
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
-    public bool IsBalanced(TreeNode root) {
-        return dfs(root) != -1;
-    }
 
-    private int dfs(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        int l = dfs(root.left);
-        int r = dfs(root.right);
-        if (l == -1 || r == -1 || Math.Abs(l - r) > 1) {
-            return -1;
-        }
-        return 1 + Math.Max(l, r);
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -331,4 +129,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -76,26 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def correctBinaryTree(self, root: TreeNode) -> TreeNode:
-        def dfs(root):
-            if root is None or root.right in vis:
-                return None
-            vis.add(root)
-            root.right = dfs(root.right)
-            root.left = dfs(root.left)
-            return root
 
-        vis = set()
-        return dfs(root)
-```
 
 ### **Java**
 
@@ -136,69 +117,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* correctBinaryTree(TreeNode* root) {
-        unordered_set<TreeNode*> vis;
-        function<TreeNode*(TreeNode*)> dfs = [&](TreeNode* root) -> TreeNode* {
-            if (!root || vis.count(root->right)) {
-                return nullptr;
-            }
-            vis.insert(root);
-            root->right = dfs(root->right);
-            root->left = dfs(root->left);
-            return root;
-        };
-        return dfs(root);
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @param {number} from
- * @param {number} to
- * @return {TreeNode}
- */
-var correctBinaryTree = function (root) {
-    const dfs = root => {
-        if (!root || vis.has(root.right)) {
-            return null;
-        }
-        vis.add(root);
-        root.right = dfs(root.right);
-        root.left = dfs(root.left);
-        return root;
-    };
-    const vis = new Set();
-    return dfs(root);
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -206,4 +131,4 @@ var correctBinaryTree = function (root) {
 
 ```
 
-<!-- tabs:end -->
+

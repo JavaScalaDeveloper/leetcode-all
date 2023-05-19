@@ -65,14 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countBits(self, n: int) -> List[int]:
-        dp = [0 for _ in range(n + 1)]
-        for i in range(1, n + 1):
-            dp[i] = dp[i & (i - 1)] + 1
-        return dp
-```
+
 
 ### **Java**
 
@@ -90,33 +83,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func countBits(n int) []int {
-	dp := make([]int, n+1)
-	for i := 1; i <= n; i++ {
-		dp[i] = dp[i&(i-1)] + 1
-	}
-	return dp
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> countBits(int n) {
-        vector<int> res(n + 1);
-        for (int i = 1; i <= n; i++) {
-            res[i] = res[i & (i - 1)] + 1;
-        }
 
-        return res;
-    }
-};
-```
+
+
+
 
 ### **...**
 
@@ -124,4 +97,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

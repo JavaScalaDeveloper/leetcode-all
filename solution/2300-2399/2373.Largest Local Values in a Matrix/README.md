@@ -66,17 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestLocal(self, grid: List[List[int]]) -> List[List[int]]:
-        n = len(grid)
-        ans = [[0] * (n - 2) for _ in range(n - 2)]
-        for i in range(n - 2):
-            for j in range(n - 2):
-                ans[i][j] = max(grid[x][y] for x in range(i, i + 3)
-                                for y in range(j, j + 3))
-        return ans
-```
+
 
 ### **Java**
 
@@ -101,75 +91,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<int>> largestLocal(vector<vector<int>>& grid) {
-        int n = grid.size();
-        vector<vector<int>> ans(n - 2, vector<int>(n - 2));
-        for (int i = 0; i < n - 2; ++i) {
-            for (int j = 0; j < n - 2; ++j) {
-                for (int x = i; x <= i + 2; ++x) {
-                    for (int y = j; y <= j + 2; ++y) {
-                        ans[i][j] = max(ans[i][j], grid[x][y]);
-                    }
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestLocal(grid [][]int) [][]int {
-	n := len(grid)
-	ans := make([][]int, n-2)
-	for i := range ans {
-		ans[i] = make([]int, n-2)
-		for j := 0; j < n-2; j++ {
-			for x := i; x <= i+2; x++ {
-				for y := j; y <= j+2; y++ {
-					ans[i][j] = max(ans[i][j], grid[x][y])
-				}
-			}
-		}
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function largestLocal(grid: number[][]): number[][] {
-    const n = grid.length;
-    const res = Array.from({ length: n - 2 }, () => new Array(n - 2).fill(0));
-    for (let i = 0; i < n - 2; i++) {
-        for (let j = 0; j < n - 2; j++) {
-            let max = 0;
-            for (let k = i; k < i + 3; k++) {
-                for (let z = j; z < j + 3; z++) {
-                    max = Math.max(max, grid[k][z]);
-                }
-            }
-            res[i][j] = max;
-        }
-    }
-    return res;
-}
-```
+
 
 ### **...**
 
@@ -178,4 +110,4 @@ function largestLocal(grid: number[][]): number[][] {
 
 ```
 
-<!-- tabs:end -->
+

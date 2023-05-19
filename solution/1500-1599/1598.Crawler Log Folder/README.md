@@ -75,17 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, logs: List[str]) -> int:
-        ans = 0
-        for v in logs:
-            if v == "../":
-                ans = max(0, ans - 1)
-            elif v[0] != ".":
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -107,42 +97,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<string>& logs) {
-        int ans = 0;
-        for (auto& v : logs) {
-            if (v == "../") {
-                ans = max(0, ans - 1);
-            } else if (v[0] != '.') {
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(logs []string) int {
-	ans := 0
-	for _, v := range logs {
-		if v == "../" {
-			if ans > 0 {
-				ans--
-			}
-		} else if v[0] != '.' {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -165,37 +126,11 @@ int minOperations(char **logs, int logsSize) {
 
 ### **TypeScript**
 
-```ts
-function minOperations(logs: string[]): number {
-    let depth = 0;
-    for (const log of logs) {
-        if (log === '../') {
-            depth = Math.max(0, depth - 1);
-        } else if (log !== './') {
-            depth++;
-        }
-    }
-    return depth;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_operations(logs: Vec<String>) -> i32 {
-        let mut depth = 0;
-        for log in logs.iter() {
-            if log == "../" {
-                depth = 0.max(depth - 1);
-            } else if log != "./" {
-                depth += 1;
-            }
-        }
-        depth
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -203,4 +138,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

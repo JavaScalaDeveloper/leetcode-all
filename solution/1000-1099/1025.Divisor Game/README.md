@@ -79,11 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def divisorGame(self, n: int) -> bool:
-        return n % 2 == 0
-```
+
 
 ### **Java**
 
@@ -97,24 +93,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool divisorGame(int n) {
-        return n % 2 == 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func divisorGame(n int) bool {
-	return n%2 == 0
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -122,4 +107,4 @@ func divisorGame(n int) bool {
 
 ```
 
-<!-- tabs:end -->
+

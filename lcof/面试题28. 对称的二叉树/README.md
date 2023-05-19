@@ -59,26 +59,7 @@
 
 ### **Python3**
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
-
-class Solution:
-    def isSymmetric(self, root: TreeNode) -> bool:
-        def dfs(a, b):
-            if a is None and b is None:
-                return True
-            if a is None or b is None or a.val != b.val:
-                return False
-            return dfs(a.left, b.right) and dfs(a.right, b.left)
-
-        return dfs(root, root)
-```
 
 ### **Java**
 
@@ -109,190 +90,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    bool isSymmetric(TreeNode* root) {
-        function<bool(TreeNode*, TreeNode*)> dfs = [&](TreeNode* a, TreeNode* b) -> bool {
-            if (!a && !b) {
-                return true;
-            }
-            if (!a || !b || a->val != b->val) {
-                return false;
-            }
-            return dfs(a->left, b->right) && dfs(a->right, b->left);
-        };
-        return dfs(root, root);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func isSymmetric(root *TreeNode) bool {
-	var dfs func(a, b *TreeNode) bool
-	dfs = func(a, b *TreeNode) bool {
-		if a == nil && b == nil {
-			return true
-		}
-		if a == nil || b == nil || a.Val != b.Val {
-			return false
-		}
-		return dfs(a.Left, b.Right) && dfs(a.Right, b.Left)
-	}
-	return dfs(root, root)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {boolean}
- */
-var isSymmetric = function (root) {
-    const dfs = (a, b) => {
-        if (!a && !b) {
-            return true;
-        }
-        if (!a || !b || a.val != b.val) {
-            return false;
-        }
-        return dfs(a.left, b.right) && dfs(a.right, b.left);
-    };
-    return dfs(root, root);
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 
-function isSymmetric(root: TreeNode | null): boolean {
-    const dfs = (a: TreeNode | null, b: TreeNode | null): boolean => {
-        if (!a && !b) {
-            return true;
-        }
-        if (!a || !b || a.val != b.val) {
-            return false;
-        }
-        return dfs(a.left, b.right) && dfs(a.right, b.left);
-    };
-    return dfs(root, root);
-}
-```
 
-### **Rust**
 
-```rust
-// Definition for a binary tree node.
-// #[derive(Debug, PartialEq, Eq)]
-// pub struct TreeNode {
-//   pub val: i32,
-//   pub left: Option<Rc<RefCell<TreeNode>>>,
-//   pub right: Option<Rc<RefCell<TreeNode>>>,
-// }
-//
-// impl TreeNode {
-//   #[inline]
-//   pub fn new(val: i32) -> Self {
-//     TreeNode {
-//       val,
-//       left: None,
-//       right: None
-//     }
-//   }
-// }
-use std::cell::RefCell;
-use std::rc::Rc;
-impl Solution {
-    fn dfs(a: &Option<Rc<RefCell<TreeNode>>>, b: &Option<Rc<RefCell<TreeNode>>>) -> bool {
-        if a.is_none() && b.is_none() {
-            return true;
-        }
-        if a.is_none() || b.is_none() {
-            return false;
-        }
-        let l = a.as_ref().unwrap().borrow();
-        let r = b.as_ref().unwrap().borrow();
-        l.val == r.val && Self::dfs(&l.left, &r.right) && Self::dfs(&l.right, &r.left)
-    }
 
-    pub fn is_symmetric(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
-        Self::dfs(&root, &root)
-    }
-}
-```
 
-### **C#**
 
-```cs
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
-    public bool IsSymmetric(TreeNode root) {
-        return dfs(root, root);
-    }
 
-    private bool dfs(TreeNode a, TreeNode b) {
-        if (a == null && b == null) {
-            return true;
-        }
-        if (a == null || b == null || a.val != b.val) {
-            return false;
-        }
-        return dfs(a.left, b.right) && dfs(a.right, b.left);
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -300,4 +120,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

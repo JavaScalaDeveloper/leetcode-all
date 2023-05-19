@@ -72,50 +72,7 @@ countIntervals.count();    // 返回 8
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Node:
-    def __init__(self):
-        self.tag = 0
-        self.tot = 0
-        self.left = None
-        self.right = None
 
-    def update(self, l, r, a, b):
-        if self.tag == 1:
-            return
-        mid = (a + b) >> 1
-        if l == a and r == b:
-            self.tag = 1
-            self.tot = b - a + 1
-            return
-        if not self.left:
-            self.left = Node()
-        if not self.right:
-            self.right = Node()
-        if mid >= l:
-            self.left.update(l, min(mid, r), a, mid)
-        if mid + 1 <= r:
-            self.right.update(max(mid + 1, l), r, mid + 1, b)
-        self.tag = 0
-        self.tot = self.left.tot + self.right.tot
-
-
-class CountIntervals:
-    def __init__(self):
-        self.tree = Node()
-
-    def add(self, left: int, right: int) -> None:
-        self.tree.update(left, right, 0, 1000000010)
-
-    def count(self) -> int:
-        return self.tree.tot
-
-
-# Your CountIntervals object will be instantiated and called as such:
-# obj = CountIntervals()
-# obj.add(left,right)
-# param_2 = obj.count()
-```
 
 ### **Java**
 
@@ -236,47 +193,7 @@ class CountIntervals {
 
 ### **TypeScript**
 
-```ts
-class CountIntervals {
-    left: null | CountIntervals;
-    right: null | CountIntervals;
-    start: number;
-    end: number;
-    sum: number;
-    constructor(start: number = 0, end: number = 10 ** 9) {
-        this.left = null;
-        this.right = null;
-        this.start = start;
-        this.end = end;
-        this.sum = 0;
-    }
 
-    add(left: number, right: number): void {
-        if (this.sum == this.end - this.start + 1) return;
-        if (left <= this.start && right >= this.end) {
-            this.sum = this.end - this.start + 1;
-            return;
-        }
-        let mid = (this.start + this.end) >> 1;
-        if (!this.left) this.left = new CountIntervals(this.start, mid);
-        if (!this.right) this.right = new CountIntervals(mid + 1, this.end);
-        if (left <= mid) this.left.add(left, right);
-        if (right > mid) this.right.add(left, right);
-        this.sum = this.left.sum + this.right.sum;
-    }
-
-    count(): number {
-        return this.sum;
-    }
-}
-
-/**
- * Your CountIntervals object will be instantiated and called as such:
- * var obj = new CountIntervals()
- * obj.add(left,right)
- * var param_2 = obj.count()
- */
-```
 
 ### **...**
 
@@ -284,4 +201,4 @@ class CountIntervals {
 
 ```
 
-<!-- tabs:end -->
+

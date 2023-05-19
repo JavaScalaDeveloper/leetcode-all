@@ -68,15 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def trailingZeroes(self, n: int) -> int:
-        ans = 0
-        while n:
-            n //= 5
-            ans += n
-        return ans
-```
+
 
 ### **Java**
 
@@ -97,42 +89,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function trailingZeroes(n: number): number {
-    let ans = 0;
-    while (n > 0) {
-        n = Math.floor(n / 5);
-        ans += n;
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int trailingZeroes(int n) {
-        int ans = 0;
-        for (int i = 5; i <= n; i *= 5) ans += n / i;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func trailingZeroes(n int) int {
-	ans := 0
-	for n > 0 {
-		n /= 5
-		ans += n
-	}
-	return ans
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -140,4 +105,4 @@ func trailingZeroes(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

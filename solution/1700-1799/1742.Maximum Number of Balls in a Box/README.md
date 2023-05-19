@@ -72,18 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countBalls(self, lowLimit: int, highLimit: int) -> int:
-        cnt = [0] * 50
-        for x in range(lowLimit, highLimit + 1):
-            y = 0
-            while x:
-                y += x % 10
-                x //= 10
-            cnt[y] += 1
-        return max(cnt)
-```
+
 
 ### **Java**
 
@@ -105,44 +94,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countBalls(int lowLimit, int highLimit) {
-        int cnt[50] = {0};
-        int ans = 0;
-        for (int i = lowLimit; i <= highLimit; ++i) {
-            int y = 0;
-            for (int x = i; x; x /= 10) {
-                y += x % 10;
-            }
-            ans = max(ans, ++cnt[y]);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countBalls(lowLimit int, highLimit int) (ans int) {
-	cnt := [50]int{}
-	for i := lowLimit; i <= highLimit; i++ {
-		y := 0
-		for x := i; x > 0; x /= 10 {
-			y += x % 10
-		}
-		cnt[y]++
-		if ans < cnt[y] {
-			ans = cnt[y]
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -150,4 +108,4 @@ func countBalls(lowLimit int, highLimit int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

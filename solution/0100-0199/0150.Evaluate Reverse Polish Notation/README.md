@@ -92,48 +92,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-import operator
 
-
-class Solution:
-    def evalRPN(self, tokens: List[str]) -> int:
-        opt = {
-            "+": operator.add,
-            "-": operator.sub,
-            "*": operator.mul,
-            "/": operator.truediv,
-        }
-        s = []
-        for token in tokens:
-            if token in opt:
-                s.append(int(opt[token](s.pop(-2), s.pop(-1))))
-            else:
-                s.append(int(token))
-        return s[0]
-```
 
 需要注意 Python 的整除对负数也是向下取整（例如：`6 // -132 = -1`），和答案对应不上，所以需要特殊处理。
 
-```python
-class Solution:
-    def evalRPN(self, tokens: List[str]) -> int:
-        nums = []
-        for t in tokens:
-            if len(t) > 1 or t.isdigit():
-                nums.append(int(t))
-            else:
-                if t == "+":
-                    nums[-2] += nums[-1]
-                elif t == "-":
-                    nums[-2] -= nums[-1]
-                elif t == "*":
-                    nums[-2] *= nums[-1]
-                else:
-                    nums[-2] = int(nums[-2] / nums[-1])
-                nums.pop()
-        return nums[0]
-```
+
 
 ### **Java**
 
@@ -170,162 +133,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int evalRPN(vector<string>& tokens) {
-        stack<int> stk;
-        for (auto& t : tokens) {
-            if (t.size() > 1 || isdigit(t[0])) {
-                stk.push(stoi(t));
-            } else {
-                int y = stk.top();
-                stk.pop();
-                int x = stk.top();
-                stk.pop();
-                if (t[0] == '+')
-                    stk.push(x + y);
-                else if (t[0] == '-')
-                    stk.push(x - y);
-                else if (t[0] == '*')
-                    stk.push(x * y);
-                else
-                    stk.push(x / y);
-            }
-        }
-        return stk.top();
-    }
-};
-```
 
-### **Go**
 
-```go
-func evalRPN(tokens []string) int {
-	// https://github.com/emirpasic/gods#arraystack
-	stk := arraystack.New()
-	for _, token := range tokens {
-		if len(token) > 1 || token[0] >= '0' && token[0] <= '9' {
-			num, _ := strconv.Atoi(token)
-			stk.Push(num)
-		} else {
-			y := popInt(stk)
-			x := popInt(stk)
-			switch token {
-			case "+":
-				stk.Push(x + y)
-			case "-":
-				stk.Push(x - y)
-			case "*":
-				stk.Push(x * y)
-			default:
-				stk.Push(x / y)
-			}
-		}
-	}
-	return popInt(stk)
-}
 
-func popInt(stack *arraystack.Stack) int {
-	v, _ := stack.Pop()
-	return v.(int)
-}
-```
 
-### **C#**
 
-```cs
-using System.Collections.Generic;
 
-public class Solution {
-    public int EvalRPN(string[] tokens) {
-        var stack = new Stack<int>();
-        foreach (var token in tokens)
-        {
-            switch (token)
-            {
-                case "+":
-                    stack.Push(stack.Pop() + stack.Pop());
-                    break;
-                case "-":
-                    stack.Push(-stack.Pop() + stack.Pop());
-                    break;
-                case "*":
-                    stack.Push(stack.Pop() * stack.Pop());
-                    break;
-                case "/":
-                    var right = stack.Pop();
-                    stack.Push(stack.Pop() / right);
-                    break;
-                default:
-                    stack.Push(int.Parse(token));
-                    break;
-            }
-        }
-        return stack.Pop();
-    }
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function evalRPN(tokens: string[]): number {
-    const stack = [];
-    for (const token of tokens) {
-        if (/\d/.test(token)) {
-            stack.push(Number(token));
-        } else {
-            const a = stack.pop();
-            const b = stack.pop();
-            switch (token) {
-                case '+':
-                    stack.push(b + a);
-                    break;
-                case '-':
-                    stack.push(b - a);
-                    break;
-                case '*':
-                    stack.push(b * a);
-                    break;
-                case '/':
-                    stack.push(~~(b / a));
-                    break;
-            }
-        }
-    }
-    return stack[0];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn eval_rpn(tokens: Vec<String>) -> i32 {
-        let mut stack = vec![];
-        for token in tokens {
-            match token.parse() {
-                Ok(num) => stack.push(num),
-                Err(_) => {
-                    let a = stack.pop().unwrap();
-                    let b = stack.pop().unwrap();
-                    stack.push(match token.as_str() {
-                        "+" => b + a,
-                        "-" => b - a,
-                        "*" => b * a,
-                        "/" => b / a,
-                        _ => 0,
-                    })
-                }
-            }
-        }
-        stack[0]
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -333,4 +159,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

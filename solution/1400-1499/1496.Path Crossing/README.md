@@ -61,26 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isPathCrossing(self, path: str) -> bool:
-        i = j = 0
-        vis = {(0, 0)}
-        for c in path:
-            match c:
-                case 'N':
-                    i -= 1
-                case 'S':
-                    i += 1
-                case 'E':
-                    j += 1
-                case 'W':
-                    j -= 1
-            if (i, j) in vis:
-                return True
-            vis.add((i, j))
-        return False
-```
+
 
 ### **Java**
 
@@ -109,60 +90,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isPathCrossing(string path) {
-        int i = 0, j = 0;
-        unordered_set<int> s{{0}};
-        for (char& c : path) {
-            if (c == 'N') {
-                --i;
-            } else if (c == 'S') {
-                ++i;
-            } else if (c == 'E') {
-                ++j;
-            } else {
-                --j;
-            }
-            int t = i * 20000 + j;
-            if (s.count(t)) {
-                return true;
-            }
-            s.insert(t);
-        }
-        return false;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isPathCrossing(path string) bool {
-	i, j := 0, 0
-	vis := map[int]bool{0: true}
-	for _, c := range path {
-		switch c {
-		case 'N':
-			i--
-		case 'S':
-			i++
-		case 'E':
-			j++
-		case 'W':
-			j--
-		}
-		if vis[i*20000+j] {
-			return true
-		}
-		vis[i*20000+j] = true
-	}
-	return false
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -170,4 +104,4 @@ func isPathCrossing(path string) bool {
 
 ```
 
-<!-- tabs:end -->
+

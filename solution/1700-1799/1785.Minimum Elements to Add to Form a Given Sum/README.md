@@ -60,12 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minElements(self, nums: List[int], limit: int, goal: int) -> int:
-        d = abs(sum(nums) - goal)
-        return (d + limit - 1) // limit
-```
+
 
 ### **Java**
 
@@ -85,65 +80,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minElements(vector<int>& nums, int limit, int goal) {
-        long long s = accumulate(nums.begin(), nums.end(), 0ll);
-        long long d = abs(s - goal);
-        return (d + limit - 1) / limit;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minElements(nums []int, limit int, goal int) int {
-	s := 0
-	for _, v := range nums {
-		s += v
-	}
-	d := abs(s - goal)
-	return (d + limit - 1) / limit
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minElements(nums: number[], limit: number, goal: number): number {
-    const sum = nums.reduce((r, v) => r + v, 0);
-    const diff = Math.abs(goal - sum);
-    return Math.floor((diff + limit - 1) / limit);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_elements(nums: Vec<i32>, limit: i32, goal: i32) -> i32 {
-        let limit = limit as i64;
-        let goal = goal as i64;
-        let mut sum = 0;
-        for &num in nums.iter() {
-            sum += num as i64;
-        }
-        let diff = (goal - sum).abs();
-        ((diff + limit - 1) / limit) as i32
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -164,4 +115,4 @@ int minElements(int *nums, int numsSize, int limit, int goal) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -74,17 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def leftRigthDifference(self, nums: List[int]) -> List[int]:
-        left, right = 0, sum(nums)
-        ans = []
-        for x in nums:
-            right -= x
-            ans.append(abs(left - right))
-            left += x
-        return ans
-```
+
 
 ### **Java**
 
@@ -106,95 +96,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> leftRigthDifference(vector<int>& nums) {
-        int left = 0, right = accumulate(nums.begin(), nums.end(), 0);
-        vector<int> ans;
-        for (int& x : nums) {
-            right -= x;
-            ans.push_back(abs(left - right));
-            left += x;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func leftRigthDifference(nums []int) (ans []int) {
-	var left, right int
-	for _, x := range nums {
-		right += x
-	}
-	for _, x := range nums {
-		right -= x
-		ans = append(ans, abs(left-right))
-		left += x
-	}
-	return
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function leftRigthDifference(nums: number[]): number[] {
-    let left = 0,
-        right = nums.reduce((a, b) => a + b);
-    const ans: number[] = [];
-    for (const x of nums) {
-        right -= x;
-        ans.push(Math.abs(left - right));
-        left += x;
-    }
-    return ans;
-}
-```
 
-```ts
-function leftRigthDifference(nums: number[]): number[] {
-    let left = 0;
-    let right = nums.reduce((r, v) => r + v);
-    return nums.map(v => {
-        right -= v;
-        const res = Math.abs(left - right);
-        left += v;
-        return res;
-    });
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn left_rigth_difference(nums: Vec<i32>) -> Vec<i32> {
-        let mut left = 0;
-        let mut right = nums.iter().sum::<i32>();
-        nums.iter()
-            .map(|v| {
-                right -= v;
-                let res = (left - right).abs();
-                left += v;
-                res
-            })
-            .collect()
-    }
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -225,4 +143,4 @@ int *leftRigthDifference(int *nums, int numsSize, int *returnSize) {
 
 ```
 
-<!-- tabs:end -->
+

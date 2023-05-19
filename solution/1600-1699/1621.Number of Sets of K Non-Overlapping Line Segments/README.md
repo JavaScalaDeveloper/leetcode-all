@@ -95,24 +95,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numberOfSets(self, n: int, k: int) -> int:
-        mod = 10**9 + 7
-        f = [[0] * (k + 1) for _ in range(n + 1)]
-        g = [[0] * (k + 1) for _ in range(n + 1)]
-        f[1][0] = 1
-        for i in range(2, n + 1):
-            for j in range(k + 1):
-                f[i][j] = (f[i - 1][j] + g[i - 1][j]) % mod
-                g[i][j] = g[i - 1][j]
-                if j:
-                    g[i][j] += f[i - 1][j - 1]
-                    g[i][j] %= mod
-                    g[i][j] += g[i - 1][j - 1]
-                    g[i][j] %= mod
-        return (f[-1][-1] + g[-1][-1]) % mod
-```
+
 
 ### **Java**
 
@@ -143,87 +126,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int f[1010][1010];
-    int g[1010][1010];
-    const int mod = 1e9 + 7;
 
-    int numberOfSets(int n, int k) {
-        memset(f, 0, sizeof(f));
-        memset(g, 0, sizeof(g));
-        f[1][0] = 1;
-        for (int i = 2; i <= n; ++i) {
-            for (int j = 0; j <= k; ++j) {
-                f[i][j] = (f[i - 1][j] + g[i - 1][j]) % mod;
-                g[i][j] = g[i - 1][j];
-                if (j > 0) {
-                    g[i][j] += f[i - 1][j - 1];
-                    g[i][j] %= mod;
-                    g[i][j] += g[i - 1][j - 1];
-                    g[i][j] %= mod;
-                }
-            }
-        }
-        return (f[n][k] + g[n][k]) % mod;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numberOfSets(n int, k int) int {
-	f := make([][]int, n+1)
-	g := make([][]int, n+1)
-	for i := range f {
-		f[i] = make([]int, k+1)
-		g[i] = make([]int, k+1)
-	}
-	f[1][0] = 1
-	var mod int = 1e9 + 7
-	for i := 2; i <= n; i++ {
-		for j := 0; j <= k; j++ {
-			f[i][j] = (f[i-1][j] + g[i-1][j]) % mod
-			g[i][j] = g[i-1][j]
-			if j > 0 {
-				g[i][j] += f[i-1][j-1]
-				g[i][j] %= mod
-				g[i][j] += g[i-1][j-1]
-				g[i][j] %= mod
-			}
-		}
-	}
-	return (f[n][k] + g[n][k]) % mod
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numberOfSets(n: number, k: number): number {
-    const f = Array.from({ length: n + 1 }, _ => new Array(k + 1).fill(0));
-    const g = Array.from({ length: n + 1 }, _ => new Array(k + 1).fill(0));
-    f[1][0] = 1;
-    const mod = 10 ** 9 + 7;
-    for (let i = 2; i <= n; ++i) {
-        for (let j = 0; j <= k; ++j) {
-            f[i][j] = (f[i - 1][j] + g[i - 1][j]) % mod;
-            g[i][j] = g[i - 1][j];
-            if (j) {
-                g[i][j] += f[i - 1][j - 1];
-                g[i][j] %= mod;
-                g[i][j] += g[i - 1][j - 1];
-                g[i][j] %= mod;
-            }
-        }
-    }
-    return (f[n][k] + g[n][k]) % mod;
-}
-```
+
 
 ### **...**
 
@@ -231,4 +144,4 @@ function numberOfSets(n: number, k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

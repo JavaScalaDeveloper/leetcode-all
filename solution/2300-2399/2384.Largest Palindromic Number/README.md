@@ -70,25 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def largestPalindromic(self, num: str) -> str:
-        cnt = Counter(num)
-        ans = ''
-        for i in range(9, -1, -1):
-            v = str(i)
-            if cnt[v] % 2:
-                ans = v
-                cnt[v] -= 1
-                break
-        for i in range(10):
-            v = str(i)
-            if cnt[v]:
-                cnt[v] //= 2
-                s = cnt[v] * v
-                ans = s + ans + s
-        return ans.strip('0') or '0'
-```
+
 
 ### **Java**
 
@@ -126,118 +108,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string largestPalindromic(string num) {
-        vector<int> cnt(10);
-        for (char c : num) ++cnt[c - '0'];
-        string mid = "";
-        for (int i = 9; ~i; --i) {
-            if (cnt[i] % 2) {
-                mid += (i + '0');
-                --cnt[i];
-                break;
-            }
-        }
-        string t = "";
-        for (int i = 0; i < 10; ++i) {
-            if (cnt[i]) {
-                cnt[i] >>= 1;
-                while (cnt[i]--) {
-                    t += (i + '0');
-                }
-            }
-        }
-        while (t.size() && t.back() == '0') {
-            t.pop_back();
-        }
-        string ans = t;
-        reverse(ans.begin(), ans.end());
-        ans += mid + t;
-        return ans == "" ? "0" : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func largestPalindromic(num string) string {
-	cnt := make([]int, 10)
-	for _, c := range num {
-		cnt[c-'0']++
-	}
-	ans := ""
-	for i := 9; i >= 0; i-- {
-		if cnt[i]%2 == 1 {
-			ans = strconv.Itoa(i)
-			cnt[i]--
-			break
-		}
-	}
-	for i := 0; i < 10; i++ {
-		if cnt[i] > 0 {
-			cnt[i] >>= 1
-			s := strings.Repeat(strconv.Itoa(i), cnt[i])
-			ans = s + ans + s
-		}
-	}
-	ans = strings.Trim(ans, "0")
-	if ans == "" {
-		return "0"
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function largestPalindromic(num: string): string {
-    const count = new Array(10).fill(0);
-    for (const c of num) {
-        count[c]++;
-    }
-    while (count.reduce((r, v) => (v % 2 === 1 ? r + 1 : r), 0) > 1) {
-        for (let i = 0; i < 10; i++) {
-            if (count[i] % 2 === 1) {
-                count[i]--;
-                break;
-            }
-        }
-    }
 
-    let res = [];
-    let oddIndex = -1;
-    for (let i = 9; i >= 0; i--) {
-        if (count[i] % 2 == 1) {
-            oddIndex = i;
-            count[i] -= 1;
-        }
-        res.push(...new Array(count[i] >> 1).fill(i));
-    }
-    if (oddIndex !== -1) {
-        res.push(oddIndex);
-    }
-    const n = res.length;
-    for (let i = 0; i < n; i++) {
-        if (res[i] !== 0) {
-            res = res.slice(i);
-            if (oddIndex !== -1) {
-                res.push(...[...res.slice(0, res.length - 1)].reverse());
-            } else {
-                res.push(...[...res].reverse());
-            }
-            return res.join('');
-        }
-    }
-
-    return '0';
-}
-```
 
 ### **...**
 
@@ -246,4 +127,4 @@ function largestPalindromic(num: string): string {
 
 ```
 
-<!-- tabs:end -->
+

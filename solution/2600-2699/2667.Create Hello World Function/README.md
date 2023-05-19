@@ -50,18 +50,7 @@ f({}, null, 42); // "Hello World"
 
 ### **TypeScript**
 
-```ts
-function createHelloWorld() {
-    return function (...args): string {
-        return 'Hello World';
-    };
-}
 
-/**
- * const f = createHelloWorld();
- * f(); // "Hello World"
- */
-```
 
 ### **...**
 
@@ -69,4 +58,4 @@ function createHelloWorld() {
 
 ```
 
-<!-- tabs:end -->
+

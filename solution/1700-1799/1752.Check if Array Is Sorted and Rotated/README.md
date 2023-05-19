@@ -69,11 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def check(self, nums: List[int]) -> bool:
-        return sum(nums[i - 1] > v for i, v in enumerate(nums)) <= 1
-```
+
 
 ### **Java**
 
@@ -93,62 +89,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool check(vector<int>& nums) {
-        int cnt = 0;
-        for (int i = 0, n = nums.size(); i < n; ++i) {
-            cnt += nums[i] > (nums[(i + 1) % n]);
-        }
-        return cnt <= 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func check(nums []int) bool {
-	cnt := 0
-	for i, v := range nums {
-		if v > nums[(i+1)%len(nums)] {
-			cnt++
-		}
-	}
-	return cnt <= 1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function check(nums: number[]): boolean {
-    const n = nums.length;
-    return (
-        nums.reduce((r, v, i) => r + (v > nums[(i + 1) % n] ? 1 : 0), 0) <= 1
-    );
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn check(nums: Vec<i32>) -> bool {
-        let n = nums.len();
-        let mut count = 0;
-        for i in 0..n {
-            if nums[i] > nums[(i + 1) % n] {
-                count += 1;
-            }
-        }
-        count <= 1
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -170,4 +125,4 @@ bool check(int *nums, int numsSize) {
 
 ```
 
-<!-- tabs:end -->
+

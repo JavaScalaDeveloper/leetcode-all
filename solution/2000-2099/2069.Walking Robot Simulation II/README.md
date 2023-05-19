@@ -75,9 +75,7 @@ robot.getDir(); // 返回 "West"
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
 
-```
 
 ### **Java**
 
@@ -93,4 +91,4 @@ robot.getDir(); // 返回 "West"
 
 ```
 
-<!-- tabs:end -->
+

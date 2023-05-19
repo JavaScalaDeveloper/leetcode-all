@@ -66,20 +66,7 @@ arr[i] = 1, arr[j] = arr[k] = 2 出现 12 次：
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def threeSumMulti(self, arr: List[int], target: int) -> int:
-        cnt = Counter(arr)
-        ans = 0
-        mod = 10**9 + 7
-        for j, b in enumerate(arr):
-            cnt[b] -= 1
-            for i in range(j):
-                a = arr[i]
-                c = target - a - b
-                ans = (ans + cnt[c]) % mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -111,60 +98,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int threeSumMulti(vector<int>& arr, int target) {
-        int cnt[101] = {0};
-        for (int& v : arr) {
-            ++cnt[v];
-        }
-        long ans = 0;
-        for (int j = 0; j < arr.size(); ++j) {
-            int b = arr[j];
-            --cnt[b];
-            for (int i = 0; i < j; ++i) {
-                int a = arr[i];
-                int c = target - a - b;
-                if (c >= 0 && c <= 100) {
-                    ans += cnt[c];
-                    ans %= mod;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func threeSumMulti(arr []int, target int) int {
-	const mod int = 1e9 + 7
-	cnt := [101]int{}
-	for _, v := range arr {
-		cnt[v]++
-	}
-	ans := 0
-	for j, b := range arr {
-		cnt[b]--
-		for i := 0; i < j; i++ {
-			a := arr[i]
-			c := target - a - b
-			if c >= 0 && c <= 100 {
-				ans += cnt[c]
-				ans %= mod
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
 
 ### **...**
 
@@ -172,4 +112,4 @@ func threeSumMulti(arr []int, target int) int {
 
 ```
 
-<!-- tabs:end -->
+

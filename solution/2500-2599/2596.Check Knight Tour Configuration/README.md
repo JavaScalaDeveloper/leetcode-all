@@ -60,23 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkValidGrid(self, grid: List[List[int]]) -> bool:
-        if grid[0][0]:
-            return False
-        n = len(grid)
-        pos = [None] * (n * n)
-        for i in range(n):
-            for j in range(n):
-                pos[grid[i][j]] = (i, j)
-        for (x1, y1), (x2, y2) in pairwise(pos):
-            dx, dy = abs(x1 - x2), abs(y1 - y2)
-            ok = (dx == 1 and dy == 2) or (dx == 2 and dy == 1)
-            if not ok:
-                return False
-        return True
-```
+
 
 ### **Java**
 
@@ -110,99 +94,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkValidGrid(vector<vector<int>>& grid) {
-        if (grid[0][0] != 0) {
-            return false;
-        }
-        int n = grid.size();
-        vector<pair<int, int>> pos(n * n);
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                pos[grid[i][j]] = {i, j};
-            }
-        }
-        for (int i = 1; i < n * n; ++i) {
-            auto [x1, y1] = pos[i - 1];
-            auto [x2, y2] = pos[i];
-            int dx = abs(x1 - x2);
-            int dy = abs(y1 - y2);
-            bool ok = (dx == 1 && dy == 2) || (dx == 2 && dy == 1);
-            if (!ok) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkValidGrid(grid [][]int) bool {
-	if grid[0][0] != 0 {
-		return false
-	}
-	n := len(grid)
-	type pair struct{ x, y int }
-	pos := make([]pair, n*n)
-	for i, row := range grid {
-		for j, x := range row {
-			pos[x] = pair{i, j}
-		}
-	}
-	for i := 1; i < n*n; i++ {
-		p1, p2 := pos[i-1], pos[i]
-		dx := abs(p1.x - p2.x)
-		dy := abs(p1.y - p2.y)
-		ok := (dx == 2 && dy == 1) || (dx == 1 && dy == 2)
-		if !ok {
-			return false
-		}
-	}
-	return true
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function checkValidGrid(grid: number[][]): boolean {
-    if (grid[0][0] !== 0) {
-        return false;
-    }
-    const n = grid.length;
-    const pos = Array.from(new Array(n * n), () => new Array(2).fill(0));
-    for (let i = 0; i < n; ++i) {
-        for (let j = 0; j < n; ++j) {
-            pos[grid[i][j]] = [i, j];
-        }
-    }
-    for (let i = 1; i < n * n; ++i) {
-        const p1 = pos[i - 1];
-        const p2 = pos[i];
-        const dx = Math.abs(p1[0] - p2[0]);
-        const dy = Math.abs(p1[1] - p2[1]);
-        const ok = (dx === 1 && dy === 2) || (dx === 2 && dy === 1);
-        if (!ok) {
-            return false;
-        }
-    }
-    return true;
-}
-```
+
 
 ### **...**
 
@@ -210,4 +112,4 @@ function checkValidGrid(grid: number[][]): boolean {
 
 ```
 
-<!-- tabs:end -->
+

@@ -78,23 +78,7 @@ stockSpanner.next(85);  // 返回 6
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class StockSpanner:
-    def __init__(self):
-        self.stk = []
 
-    def next(self, price: int) -> int:
-        cnt = 1
-        while self.stk and self.stk[-1][0] <= price:
-            cnt += self.stk.pop()[1]
-        self.stk.append((price, cnt))
-        return cnt
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)
-```
 
 ### **Java**
 
@@ -124,129 +108,21 @@ class StockSpanner {
  */
 ```
 
-### **C++**
 
-```cpp
-class StockSpanner {
-public:
-    StockSpanner() {
 
-    }
 
-    int next(int price) {
-        int cnt = 1;
-        while (!stk.empty() && stk.top().first <= price) {
-            cnt += stk.top().second;
-            stk.pop();
-        }
-        stk.push({price, cnt});
-        return cnt;
-    }
 
-private:
-    stack<pair<int, int>> stk;
-};
 
-/**
- * Your StockSpanner object will be instantiated and called as such:
- * StockSpanner* obj = new StockSpanner();
- * int param_1 = obj->next(price);
- */
-```
 
-### **Go**
 
-```go
-type StockSpanner struct {
-	stk []pair
-}
-
-func Constructor() StockSpanner {
-	return StockSpanner{[]pair{}}
-}
-
-func (this *StockSpanner) Next(price int) int {
-	cnt := 1
-	for len(this.stk) > 0 && this.stk[len(this.stk)-1].price <= price {
-		cnt += this.stk[len(this.stk)-1].cnt
-		this.stk = this.stk[:len(this.stk)-1]
-	}
-	this.stk = append(this.stk, pair{price, cnt})
-	return cnt
-}
-
-type pair struct{ price, cnt int }
-
-/**
- * Your StockSpanner object will be instantiated and called as such:
- * obj := Constructor();
- * param_1 := obj.Next(price);
- */
-```
 
 ### **TypeScript**
 
-```ts
-class StockSpanner {
-    private stack: [number, number][];
-
-    constructor() {
-        this.stack = [[Infinity, -1]];
-    }
-
-    next(price: number): number {
-        let res = 1;
-        while (this.stack[this.stack.length - 1][0] <= price) {
-            res += this.stack.pop()[1];
-        }
-        this.stack.push([price, res]);
-        return res;
-    }
-}
-
-/**
- * Your StockSpanner object will be instantiated and called as such:
- * var obj = new StockSpanner()
- * var param_1 = obj.next(price)
- */
-```
-
-### **Rust**
-
-```rust
-use std::collections::VecDeque;
-struct StockSpanner {
-    stack: VecDeque<(i32, i32)>,
-}
 
 
-/**
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
-impl StockSpanner {
-    fn new() -> Self {
-        Self {
-            stack: vec![(i32::MAX, -1)].into_iter().collect()
-        }
-    }
 
-    fn next(&mut self, price: i32) -> i32 {
-        let mut res = 1;
-        while self.stack.back().unwrap().0 <= price {
-            res += self.stack.pop_back().unwrap().1;
-        }
-        self.stack.push_back((price, res));
-        res
-    }
-}
 
-/**
- * Your StockSpanner object will be instantiated and called as such:
- * let obj = StockSpanner::new();
- * let ret_1: i32 = obj.next(price);
- */
-```
+
 
 ### **...**
 
@@ -254,4 +130,4 @@ impl StockSpanner {
 
 ```
 
-<!-- tabs:end -->
+

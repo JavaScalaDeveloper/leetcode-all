@@ -58,11 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumXOR(self, nums: List[int]) -> int:
-        return reduce(or_, nums)
-```
+
 
 ### **Java**
 
@@ -80,43 +76,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumXOR(vector<int>& nums) {
-        int ans = 0;
-        for (int& x : nums) {
-            ans |= x;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumXOR(nums []int) (ans int) {
-	for _, x := range nums {
-		ans |= x
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumXOR(nums: number[]): number {
-    let ans = 0;
-    for (const x of nums) {
-        ans |= x;
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -124,4 +94,4 @@ function maximumXOR(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -60,60 +60,11 @@
 
 快速排序：
 
-```python
-class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
-        def quick_sort(l, r):
-            if l >= r:
-                return
-            x = nums[randint(l, r)]
-            i, j, k = l - 1, r + 1, l
-            while k < j:
-                if nums[k] < x:
-                    nums[i + 1], nums[k] = nums[k], nums[i + 1]
-                    i, k = i + 1, k + 1
-                elif nums[k] > x:
-                    j -= 1
-                    nums[j], nums[k] = nums[k], nums[j]
-                else:
-                    k = k + 1
-            quick_sort(l, i)
-            quick_sort(j, r)
 
-        quick_sort(0, len(nums) - 1)
-        return nums
-```
 
 归并排序：
 
-```python
-class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
-        def merge_sort(l, r):
-            if l >= r:
-                return
-            mid = (l + r) >> 1
-            merge_sort(l, mid)
-            merge_sort(mid + 1, r)
-            i, j = l, mid + 1
-            tmp = []
-            while i <= mid and j <= r:
-                if nums[i] <= nums[j]:
-                    tmp.append(nums[i])
-                    i += 1
-                else:
-                    tmp.append(nums[j])
-                    j += 1
-            if i <= mid:
-                tmp.extend(nums[i:mid + 1])
-            if j <= r:
-                tmp.extend(nums[j: r + 1])
-            for i in range(l, r + 1):
-                nums[i] = tmp[i - l]
 
-        merge_sort(0, len(nums) - 1)
-        return nums
-```
 
 ### **Java**
 
@@ -232,292 +183,45 @@ class Solution {
 }
 ```
 
-### **C++**
+
 
 快速排序：
 
-```cpp
-class Solution {
-public:
-    vector<int> sortArray(vector<int>& nums) {
-        function<void(int, int)> quick_sort = [&](int l, int r) {
-            if (l >= r) {
-                return;
-            }
-            int i = l - 1, j = r + 1;
-            int x = nums[(l + r) >> 1];
-            while (i < j) {
-                while (nums[++i] < x) {
-                }
-                while (nums[--j] > x) {
-                }
-                if (i < j) {
-                    swap(nums[i], nums[j]);
-                }
-            }
-            quick_sort(l, j);
-            quick_sort(j + 1, r);
-        };
-        quick_sort(0, nums.size() - 1);
-        return nums;
-    }
-};
-```
+
 
 归并排序：
 
-```cpp
-class Solution {
-public:
-    vector<int> sortArray(vector<int>& nums) {
-        function<void(int, int)> merge_sort = [&](int l, int r) {
-            if (l >= r) {
-                return;
-            }
-            int mid = (l + r) >> 1;
-            merge_sort(l, mid);
-            merge_sort(mid + 1, r);
-            int i = l, j = mid + 1, k = 0;
-            int tmp[r - l + 1];
-            while (i <= mid && j <= r) {
-                if (nums[i] <= nums[j]) {
-                    tmp[k++] = nums[i++];
-                } else {
-                    tmp[k++] = nums[j++];
-                }
-            }
-            while (i <= mid) {
-                tmp[k++] = nums[i++];
-            }
-            while (j <= r) {
-                tmp[k++] = nums[j++];
-            }
-            for (i = l; i <= r; ++i) {
-                nums[i] = tmp[i - l];
-            }
-        };
-        merge_sort(0, nums.size() - 1);
-        return nums;
-    }
-};
-```
 
-### **Go**
+
+
 
 快速排序：
 
-```go
-func sortArray(nums []int) []int {
-	quickSort(nums, 0, len(nums)-1)
-	return nums
-}
 
-func quickSort(nums []int, l, r int) {
-	if l >= r {
-		return
-	}
-	i, j := l-1, r+1
-	x := nums[(l+r)>>1]
-	for i < j {
-		for {
-			i++
-			if nums[i] >= x {
-				break
-			}
-		}
-		for {
-			j--
-			if nums[j] <= x {
-				break
-			}
-		}
-		if i < j {
-			nums[i], nums[j] = nums[j], nums[i]
-		}
-	}
-	quickSort(nums, l, j)
-	quickSort(nums, j+1, r)
-}
-```
 
 归并排序：
 
-```go
-func sortArray(nums []int) []int {
-	mergeSort(nums, 0, len(nums)-1)
-	return nums
-}
 
-func mergeSort(nums []int, l, r int) {
-	if l >= r {
-		return
-	}
-	mid := (l + r) >> 1
-	mergeSort(nums, l, mid)
-	mergeSort(nums, mid+1, r)
-	i, j, k := l, mid+1, 0
-	tmp := make([]int, r-l+1)
-	for i <= mid && j <= r {
-		if nums[i] <= nums[j] {
-			tmp[k] = nums[i]
-			i++
-		} else {
-			tmp[k] = nums[j]
-			j++
-		}
-		k++
-	}
-	for ; i <= mid; i++ {
-		tmp[k] = nums[i]
-		k++
-	}
-	for ; j <= r; j++ {
-		tmp[k] = nums[j]
-		k++
-	}
-	for i = l; i <= r; i++ {
-		nums[i] = tmp[i-l]
-	}
-}
-```
 
 ### **TypeScript**
 
 快速排序：
 
-```ts
-function sortArray(nums: number[]): number[] {
-    function quickSort(l: number, r: number) {
-        if (l >= r) {
-            return;
-        }
-        let i = l - 1;
-        let j = r + 1;
-        const x = nums[(l + r) >> 1];
-        while (i < j) {
-            while (nums[++i] < x);
-            while (nums[--j] > x);
-            if (i < j) {
-                [nums[i], nums[j]] = [nums[j], nums[i]];
-            }
-        }
-        quickSort(l, j);
-        quickSort(j + 1, r);
-    }
-    const n = nums.length;
-    quickSort(0, n - 1);
-    return nums;
-}
-```
+
 
 归并排序：
 
-```ts
-function sortArray(nums: number[]): number[] {
-    function mergetSort(l: number, r: number) {
-        if (l >= r) {
-            return;
-        }
-        const mid = (l + r) >> 1;
-        mergetSort(l, mid);
-        mergetSort(mid + 1, r);
-        let [i, j, k] = [l, mid + 1, 0];
-        while (i <= mid && j <= r) {
-            if (nums[i] <= nums[j]) {
-                tmp[k++] = nums[i++];
-            } else {
-                tmp[k++] = nums[j++];
-            }
-        }
-        while (i <= mid) {
-            tmp[k++] = nums[i++];
-        }
-        while (j <= r) {
-            tmp[k++] = nums[j++];
-        }
-        for (i = l, j = 0; i <= r; ++i, ++j) {
-            nums[i] = tmp[j];
-        }
-    }
-    const n = nums.length;
-    let tmp = new Array(n).fill(0);
-    mergetSort(0, n - 1);
-    return nums;
-}
-```
 
-### **JavaScript**
+
+
 
 快速排序：
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var sortArray = function (nums) {
-    function quickSort(l, r) {
-        if (l >= r) {
-            return;
-        }
-        let i = l - 1;
-        let j = r + 1;
-        const x = nums[(l + r) >> 1];
-        while (i < j) {
-            while (nums[++i] < x);
-            while (nums[--j] > x);
-            if (i < j) {
-                [nums[i], nums[j]] = [nums[j], nums[i]];
-            }
-        }
-        quickSort(l, j);
-        quickSort(j + 1, r);
-    }
-    const n = nums.length;
-    quickSort(0, n - 1);
-    return nums;
-};
-```
+
 
 归并排序：
 
-```js
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-var sortArray = function (nums) {
-    function mergetSort(l, r) {
-        if (l >= r) {
-            return;
-        }
-        const mid = (l + r) >> 1;
-        mergetSort(l, mid);
-        mergetSort(mid + 1, r);
-        let [i, j, k] = [l, mid + 1, 0];
-        while (i <= mid && j <= r) {
-            if (nums[i] <= nums[j]) {
-                tmp[k++] = nums[i++];
-            } else {
-                tmp[k++] = nums[j++];
-            }
-        }
-        while (i <= mid) {
-            tmp[k++] = nums[i++];
-        }
-        while (j <= r) {
-            tmp[k++] = nums[j++];
-        }
-        for (i = l, j = 0; i <= r; ++i, ++j) {
-            nums[i] = tmp[j];
-        }
-    }
-    const n = nums.length;
-    let tmp = new Array(n).fill(0);
-    mergetSort(0, n - 1);
-    return nums;
-};
-```
+
 
 ### **...**
 
@@ -525,4 +229,4 @@ var sortArray = function (nums) {
 
 ```
 
-<!-- tabs:end -->
+

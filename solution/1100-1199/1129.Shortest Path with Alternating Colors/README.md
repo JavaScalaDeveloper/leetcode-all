@@ -75,33 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def shortestAlternatingPaths(
-        self, n: int, redEdges: List[List[int]], blueEdges: List[List[int]]
-    ) -> List[int]:
-        g = [defaultdict(list), defaultdict(list)]
-        for i, j in redEdges:
-            g[0][i].append(j)
-        for i, j in blueEdges:
-            g[1][i].append(j)
-        ans = [-1] * n
-        vis = set()
-        q = deque([(0, 0), (0, 1)])
-        d = 0
-        while q:
-            for _ in range(len(q)):
-                i, c = q.popleft()
-                if ans[i] == -1:
-                    ans[i] = d
-                vis.add((i, c))
-                c ^= 1
-                for j in g[c][i]:
-                    if (j, c) not in vis:
-                        q.append((j, c))
-            d += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -149,91 +123,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> shortestAlternatingPaths(int n, vector<vector<int>>& redEdges, vector<vector<int>>& blueEdges) {
-        vector<vector<vector<int>>> g(2, vector<vector<int>>(n));
-        for (auto& e : redEdges) {
-            g[0][e[0]].push_back(e[1]);
-        }
-        for (auto& e : blueEdges) {
-            g[1][e[0]].push_back(e[1]);
-        }
-        queue<pair<int, int>> q;
-        q.emplace(0, 0);
-        q.emplace(0, 1);
-        bool vis[n][2];
-        memset(vis, false, sizeof vis);
-        vector<int> ans(n, -1);
-        int d = 0;
-        while (!q.empty()) {
-            for (int k = q.size(); k; --k) {
-                auto [i, c] = q.front();
-                q.pop();
-                if (ans[i] == -1) {
-                    ans[i] = d;
-                }
-                vis[i][c] = true;
-                c ^= 1;
-                for (int& j : g[c][i]) {
-                    if (!vis[j][c]) {
-                        q.emplace(j, c);
-                    }
-                }
-            }
-            ++d;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func shortestAlternatingPaths(n int, redEdges [][]int, blueEdges [][]int) []int {
-	g := [2][][]int{}
-	for i := range g {
-		g[i] = make([][]int, n)
-	}
-	for _, e := range redEdges {
-		g[0][e[0]] = append(g[0][e[0]], e[1])
-	}
-	for _, e := range blueEdges {
-		g[1][e[0]] = append(g[1][e[0]], e[1])
-	}
-	type pair struct{ i, c int }
-	q := []pair{pair{0, 0}, pair{0, 1}}
-	ans := make([]int, n)
-	vis := make([][2]bool, n)
-	for i := range ans {
-		ans[i] = -1
-	}
-	d := 0
-	for len(q) > 0 {
-		for k := len(q); k > 0; k-- {
-			p := q[0]
-			q = q[1:]
-			i, c := p.i, p.c
-			if ans[i] == -1 {
-				ans[i] = d
-			}
-			vis[i][c] = true
-			c ^= 1
-			for _, j := range g[c][i] {
-				if !vis[j][c] {
-					q = append(q, pair{j, c})
-				}
-			}
-		}
-		d++
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -241,4 +137,4 @@ func shortestAlternatingPaths(n int, redEdges [][]int, blueEdges [][]int) []int 
 
 ```
 
-<!-- tabs:end -->
+

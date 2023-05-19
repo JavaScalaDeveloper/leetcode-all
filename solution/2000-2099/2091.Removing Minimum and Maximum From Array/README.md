@@ -80,19 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumDeletions(self, nums: List[int]) -> int:
-        mi = mx = 0
-        for i, num in enumerate(nums):
-            if num < nums[mi]:
-                mi = i
-            if num > nums[mx]:
-                mx = i
-        if mi > mx:
-            mi, mx = mx, mi
-        return min(mx + 1, len(nums) - mi, mi + 1 + len(nums) - mx)
-```
+
 
 ### **Java**
 
@@ -122,68 +110,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function minimumDeletions(nums: number[]): number {
-    const n = nums.length;
-    if (n == 1) return 1;
-    let i = nums.indexOf(Math.min(...nums));
-    let j = nums.indexOf(Math.max(...nums));
-    let left = Math.min(i, j);
-    let right = Math.max(i, j);
-    // 左右 left + 1 + n - right
-    // 两个都是左边 left + 1 + right - left = right + 1
-    // 都是右边 n - right + right - left = n - left
-    return Math.min(left + 1 + n - right, right + 1, n - left);
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumDeletions(vector<int>& nums) {
-        int mi = 0, mx = 0, n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] < nums[mi]) mi = i;
-            if (nums[i] > nums[mx]) mx = i;
-        }
-        if (mi > mx) {
-            int t = mi;
-            mi = mx;
-            mx = t;
-        }
-        return min(min(mx + 1, n - mi), mi + 1 + n - mx);
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumDeletions(nums []int) int {
-	mi, mx, n := 0, 0, len(nums)
-	for i, num := range nums {
-		if num < nums[mi] {
-			mi = i
-		}
-		if num > nums[mx] {
-			mx = i
-		}
-	}
-	if mi > mx {
-		mi, mx = mx, mi
-	}
-	return min(min(mx+1, n-mi), mi+1+n-mx)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -191,4 +126,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -71,26 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def splitMessage(self, message: str, limit: int) -> List[str]:
-        n = len(message)
-        sa = 0
-        for k in range(1, n + 1):
-            sa += len(str(k))
-            sb = len(str(k)) * k
-            sc = 3 * k
-            if limit * k - (sa + sb + sc) >= n:
-                ans = []
-                i = 0
-                for j in range(1, k + 1):
-                    tail = f'<{j}/{k}>'
-                    t = message[i: i + limit - len(tail)] + tail
-                    ans.append(t)
-                    i += limit - len(tail)
-                return ans
-        return []
-```
+
 
 ### **Java**
 
@@ -124,74 +105,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> splitMessage(string message, int limit) {
-        int n = message.size();
-        int sa = 0;
-        vector<string> ans;
-        for (int k = 1; k <= n; ++k) {
-            int lk = to_string(k).size();
-            sa += lk;
-            int sb = lk * k;
-            int sc = 3 * k;
-            if (k * limit - (sa + sb + sc) >= n) {
-                int i = 0;
-                for (int j = 1; j <= k; ++j) {
-                    string tail = "<" + to_string(j) + "/" + to_string(k) + ">";
-                    string t = message.substr(i, limit - tail.size()) + tail;
-                    ans.emplace_back(t);
-                    i += limit - tail.size();
-                }
-                break;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func splitMessage(message string, limit int) (ans []string) {
-	n := len(message)
-	sa := 0
-	for k := 1; k <= n; k++ {
-		lk := len(strconv.Itoa(k))
-		sa += lk
-		sb := lk * k
-		sc := 3 * k
-		if limit*k-(sa+sb+sc) >= n {
-			i := 0
-			for j := 1; j <= k; j++ {
-				tail := "<" + strconv.Itoa(j) + "/" + strconv.Itoa(k) + ">"
-				t := message[i:min(i+limit-len(tail), n)] + tail
-				ans = append(ans, t)
-				i += limit - len(tail)
-			}
-			break
-		}
-	}
-	return
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -199,4 +123,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

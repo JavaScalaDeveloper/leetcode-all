@@ -68,29 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
-        m, n = len(s1), len(s2)
-        if m + n != len(s3):
-            return False
 
-        @cache
-        def dfs(i, j):
-            if i == m and j == n:
-                return True
-
-            return (
-                i < m
-                and s1[i] == s3[i + j]
-                and dfs(i + 1, j)
-                or j < n
-                and s2[j] == s3[i + j]
-                and dfs(i, j + 1)
-            )
-
-        return dfs(0, 0)
-```
 
 ### **Java**
 
@@ -135,64 +113,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isInterleave(string s1, string s2, string s3) {
-        int m = s1.size(), n = s2.size();
-        if (m + n != s3.size()) return false;
 
-        unordered_map<int, bool> memo;
 
-        function<bool(int, int)> dfs;
-        dfs = [&](int i, int j) {
-            if (i == m && j == n) return true;
-            auto it = memo.find(i * 100 + j);
-            if (it != memo.end()) return it->second;
 
-            bool ret = (i < m && s1[i] == s3[i + j] && dfs(i + 1, j)) || (j < n && s2[j] == s3[i + j] && dfs(i, j + 1));
 
-            memo[i * 100 + j] = ret;
-            return ret;
-        };
 
-        return dfs(0, 0);
-    }
-};
-```
 
-### **Go**
-
-```go
-func isInterleave(s1 string, s2 string, s3 string) bool {
-	m, n := len(s1), len(s2)
-	if m+n != len(s3) {
-		return false
-	}
-
-	memo := make(map[int]bool)
-
-	var dfs func(int, int) bool
-	dfs = func(i, j int) bool {
-		if i == m && j == n {
-			return true
-		}
-		if v, ok := memo[i*100+j]; ok {
-			return v
-		}
-
-		ret := (i < m && s1[i] == s3[i+j] && dfs(i+1, j)) ||
-			(j < n && s2[j] == s3[i+j] && dfs(i, j+1))
-
-		memo[i*100+j] = ret
-		return ret
-	}
-
-	return dfs(0, 0)
-}
-```
 
 ### **...**
 
@@ -200,4 +127,4 @@ func isInterleave(s1 string, s2 string, s3 string) bool {
 
 ```
 
-<!-- tabs:end -->
+

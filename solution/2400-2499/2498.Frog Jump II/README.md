@@ -74,14 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxJump(self, stones: List[int]) -> int:
-        ans = stones[1] - stones[0]
-        for i in range(2, len(stones)):
-            ans = max(ans, stones[i] - stones[i - 2])
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,37 +92,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxJump(vector<int>& stones) {
-        int ans = stones[1] - stones[0];
-        for (int i = 2; i < stones.size(); ++i) ans = max(ans, stones[i] - stones[i - 2]);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxJump(stones []int) int {
-	ans := stones[1] - stones[0]
-	for i := 2; i < len(stones); i++ {
-		ans = max(ans, stones[i]-stones[i-2])
-	}
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -137,4 +106,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

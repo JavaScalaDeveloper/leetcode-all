@@ -73,17 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def closetTarget(self, words: List[str], target: str, startIndex: int) -> int:
-        n = len(words)
-        ans = n
-        for i, w in enumerate(words):
-            if w == target:
-                t = abs(i - startIndex)
-                ans = min(ans, t, n - t)
-        return -1 if ans == n else ans
-```
+
 
 ### **Java**
 
@@ -106,97 +96,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int closetTarget(vector<string>& words, string target, int startIndex) {
-        int n = words.size();
-        int ans = n;
-        for (int i = 0; i < n; ++i) {
-            auto w = words[i];
-            if (w == target) {
-                int t = abs(i - startIndex);
-                ans = min(ans, min(t, n - t));
-            }
-        }
-        return ans == n ? -1 : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func closetTarget(words []string, target string, startIndex int) int {
-	n := len(words)
-	ans := n
-	for i, w := range words {
-		if w == target {
-			t := abs(i - startIndex)
-			ans = min(ans, min(t, n-t))
-		}
-	}
-	if ans == n {
-		return -1
-	}
-	return ans
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function closetTarget(
-    words: string[],
-    target: string,
-    startIndex: number,
-): number {
-    const n = words.length;
-    for (let i = 0; i <= n >> 1; i++) {
-        if (
-            words[(startIndex - i + n) % n] === target ||
-            words[(startIndex + i) % n] === target
-        ) {
-            return i;
-        }
-    }
-    return -1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn closet_target(words: Vec<String>, target: String, start_index: i32) -> i32 {
-        let start_index = start_index as usize;
-        let n = words.len();
-        for i in 0..=n >> 1 {
-            if words[(start_index - i + n) % n] == target || words[(start_index + i) % n] == target
-            {
-                return i as i32;
-            }
-        }
-        -1
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -218,4 +132,4 @@ int closetTarget(char **words, int wordsSize, char *target, int startIndex) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -90,4 +90,4 @@ ORDER BY ctr DESC,
 ad_id ASC;
 ```
 
-<!-- tabs:end -->
+

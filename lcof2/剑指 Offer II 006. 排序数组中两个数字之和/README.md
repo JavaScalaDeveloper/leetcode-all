@@ -62,18 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        i, j = 0, len(numbers) - 1
-        while True:
-            if numbers[i] + numbers[j] < target:
-                i += 1
-            elif numbers[i] + numbers[j] > target:
-                j -= 1
-            else:
-                return [i, j]
-```
+
 
 ### **Java**
 
@@ -96,95 +85,19 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func twoSum(numbers []int, target int) []int {
-	for i, j := 0, len(numbers)-1; ; {
-		if numbers[i]+numbers[j] < target {
-			i++
-		} else if numbers[i]+numbers[j] > target {
-			j--
-		} else {
-			return []int{i, j}
-		}
-	}
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& numbers, int target) {
-        int i = 0;
-        int j = numbers.size() - 1;
-        vector<int> res;
 
-        while (i < j) {
-            int sum = numbers[i] + numbers[j];
-            if (sum < target) {
-                i++;
-            } else if (sum > target) {
-                j--;
-            } else {
-                res.push_back(i);
-                res.push_back(j);
-                break;
-            }
-        }
 
-        return res;
-    }
-};
-```
 
-### **Rust**
 
-```rust
-use std::cmp::Ordering;
 
-impl Solution {
-    pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
-        let n = numbers.len();
-        let mut l = 0;
-        let mut r = n - 1;
-        loop {
-            match target.cmp(&(numbers[l] + numbers[r])) {
-                Ordering::Less => r -= 1,
-                Ordering::Greater => l += 1,
-                Ordering::Equal => break,
-            }
-        }
-        vec![l as i32, r as i32]
-    }
-}
-```
 
-```rust
-use std::cmp::Ordering;
 
-impl Solution {
-    pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
-        let n = numbers.len();
-        for i in 0..n - 1 {
-            let num = target - numbers[i];
-            let mut l = i + 1;
-            let mut r = n - 1;
-            while l <= r {
-                let mid = l + (r - l) / 2;
-                match num.cmp(&numbers[mid]) {
-                    Ordering::Less => r = mid - 1,
-                    Ordering::Greater => l = mid + 1,
-                    Ordering::Equal => return vec![i as i32, mid as i32],
-                }
-            }
-        }
-        vec![-1, -1]
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -192,4 +105,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -108,13 +108,7 @@ int search(int left, int right) {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
-        l = bisect_left(nums, target)
-        r = bisect_left(nums, target + 1)
-        return [-1, -1] if l == r else [l, r - 1]
-```
+
 
 ### **Java**
 
@@ -143,112 +137,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> searchRange(vector<int>& nums, int target) {
-        int l = lower_bound(nums.begin(), nums.end(), target) - nums.begin();
-        int r = lower_bound(nums.begin(), nums.end(), target + 1) - nums.begin();
-        if (l == r) return {-1, -1};
-        return {l, r - 1};
-    }
-};
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
-var searchRange = function (nums, target) {
-    function search(x) {
-        let left = 0,
-            right = nums.length;
-        while (left < right) {
-            const mid = (left + right) >> 1;
-            if (nums[mid] >= x) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-    const l = search(target);
-    const r = search(target + 1);
-    return l == r ? [-1, -1] : [l, r - 1];
-};
-```
 
-### **Go**
 
-```go
-func searchRange(nums []int, target int) []int {
-	l := sort.Search(len(nums), func(i int) bool { return nums[i] >= target })
-	r := sort.Search(len(nums), func(i int) bool { return nums[i] > target })
-	if l == r {
-		return []int{-1, -1}
-	}
-	return []int{l, r - 1}
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn search_range(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let n = nums.len();
-        let search = |x| {
-            let mut left = 0;
-            let mut right = n;
-            while left < right {
-                let mid = left + (right - left) / 2;
-                if nums[mid] < x {
-                    left = mid + 1;
-                } else {
-                    right = mid;
-                }
-            }
-            left
-        };
-        let l = search(target);
-        let r = search(target + 1);
-        if l == r {
-            return vec![-1, -1];
-        }
-        vec![l as i32, (r - 1) as i32]
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function searchRange(nums: number[], target: number): number[] {
-    function search(x) {
-        let left = 0,
-            right = nums.length;
-        while (left < right) {
-            const mid = (left + right) >> 1;
-            if (nums[mid] >= x) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-    const l = search(target);
-    const r = search(target + 1);
-    return l == r ? [-1, -1] : [l, r - 1];
-}
-```
+
 
 ### **...**
 
@@ -256,4 +163,4 @@ function searchRange(nums: number[], target: number): number[] {
 
 ```
 
-<!-- tabs:end -->
+

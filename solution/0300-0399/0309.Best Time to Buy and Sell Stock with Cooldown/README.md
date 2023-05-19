@@ -65,18 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        # 买入，卖出，继续空仓
-        f1, f2, f3 = -prices[0], 0, 0
-        for price in prices[1:]:
-            pf1, pf2, pf3 = f1, f2, f3
-            f1 = max(pf1, pf3 - price)
-            f2 = max(pf2, pf1 + price)
-            f3 = max(pf3, pf2)
-        return f2
-```
+
 
 ### **Java**
 
@@ -100,61 +89,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function maxProfit(prices: number[]): number {
-    const n = prices.length;
-    let dp = Array.from({ length: n }, v => new Array(3).fill(0));
-    dp[0] = [0, -prices[0], Number.MIN_SAFE_INTEGER];
-    for (let i = 1; i < n; i++) {
-        dp[i] = [
-            Math.max(dp[i - 1][0], dp[i - 1][2]),
-            Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]),
-            dp[i - 1][1] + prices[i],
-        ];
-    }
-    return Math.max(dp[n - 1][0], dp[n - 1][2]);
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-        int f1 = -prices[0], f2 = 0, f3 = 0;
-        for (int i = 1; i < prices.size(); ++i) {
-            int pf1 = f1, pf2 = f2, pf3 = f3;
-            f1 = max(pf1, pf3 - prices[i]);
-            f2 = max(pf2, pf1 + prices[i]);
-            f3 = max(pf3, pf2);
-        }
-        return f2;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxProfit(prices []int) int {
-	f1, f2, f3 := -prices[0], 0, 0
-	for i := 1; i < len(prices); i++ {
-		pf1, pf2, pf3 := f1, f2, f3
-		f1 = max(pf1, pf3-prices[i])
-		f2 = max(pf2, pf1+prices[i])
-		f3 = max(pf3, pf2)
-	}
-	return f2
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -162,4 +105,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -50,23 +50,7 @@ nums 最终元素和为 5 + 6 + 1 + 2 + 3 + 4 + 7 + 8 = 36 ，这是所有情况
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimalKSum(self, nums: List[int], k: int) -> int:
-        nums.append(0)
-        nums.append(2 * 10**9)
-        nums.sort()
-        ans = 0
-        for a, b in pairwise(nums):
-            n = min(k, b - a - 1)
-            if n <= 0:
-                continue
-            k -= n
-            ans += (a + 1 + a + n) * n // 2
-            if k == 0:
-                break
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,64 +83,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long minimalKSum(vector<int>& nums, int k) {
-        nums.push_back(0);
-        nums.push_back(2e9);
-        sort(nums.begin(), nums.end());
-        long long ans = 0;
-        for (int i = 1; i < nums.size(); ++i) {
-            int a = nums[i - 1], b = nums[i];
-            int n = min(k, b - a - 1);
-            if (n <= 0) continue;
-            k -= n;
-            ans += 1ll * (a + 1 + a + n) * n / 2;
-            if (k == 0) break;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimalKSum(nums []int, k int) int64 {
-	nums = append(nums, 0, 2e9)
-	sort.Ints(nums)
-	ans := 0
-	for i := 1; i < len(nums); i++ {
-		a, b := nums[i-1], nums[i]
-		n := min(k, b-a-1)
-		if n <= 0 {
-			continue
-		}
-		k -= n
-		ans += (a + 1 + a + n) * n / 2
-		if k == 0 {
-			break
-		}
-	}
-	return int64(ans)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -164,4 +101,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

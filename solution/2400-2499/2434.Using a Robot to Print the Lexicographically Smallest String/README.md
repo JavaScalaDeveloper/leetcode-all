@@ -79,38 +79,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def robotWithString(self, s: str) -> str:
-        cnt = Counter(s)
-        ans = []
-        stk = []
-        mi = 'a'
-        for c in s:
-            cnt[c] -= 1
-            while mi < 'z' and cnt[mi] == 0:
-                mi = chr(ord(mi) + 1)
-            stk.append(c)
-            while stk and stk[-1] <= mi:
-                ans.append(stk.pop())
-        return ''.join(ans)
-```
 
-```python
-class Solution:
-    def robotWithString(self, s: str) -> str:
-        n = len(s)
-        right = [chr(ord('z') + 1)] * (n + 1)
-        for i in range(n - 1, -1, -1):
-            right[i] = min(s[i], right[i + 1])
-        ans = []
-        stk = []
-        for i, c in enumerate(s):
-            stk.append(c)
-            while stk and stk[-1] <= right[i + 1]:
-                ans.append(stk.pop())
-        return ''.join(ans)
-```
+
+
 
 ### **Java**
 
@@ -164,105 +135,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string robotWithString(string s) {
-        int cnt[26] = {0};
-        for (char& c : s) ++cnt[c - 'a'];
-        char mi = 'a';
-        string stk;
-        string ans;
-        for (char& c : s) {
-            --cnt[c - 'a'];
-            while (mi < 'z' && cnt[mi - 'a'] == 0) ++mi;
-            stk += c;
-            while (!stk.empty() && stk.back() <= mi) {
-                ans += stk.back();
-                stk.pop_back();
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    string robotWithString(string s) {
-        int n = s.size();
-        vector<int> right(n, n - 1);
-        for (int i = n - 2; i >= 0; --i) {
-            right[i] = s[i] < s[right[i + 1]] ? i : right[i + 1];
-        }
-        string ans;
-        string stk;
-        for (int i = 0; i < n; ++i) {
-            stk += s[i];
-            while (!stk.empty() && (stk.back() <= (i > n - 2 ? 'z' + 1 : s[right[i + 1]]))) {
-                ans += stk.back();
-                stk.pop_back();
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func robotWithString(s string) string {
-	cnt := make([]int, 26)
-	for _, c := range s {
-		cnt[c-'a']++
-	}
-	mi := byte('a')
-	stk := []byte{}
-	ans := []byte{}
-	for i := range s {
-		cnt[s[i]-'a']--
-		for mi < 'z' && cnt[mi-'a'] == 0 {
-			mi++
-		}
-		stk = append(stk, s[i])
-		for len(stk) > 0 && stk[len(stk)-1] <= mi {
-			ans = append(ans, stk[len(stk)-1])
-			stk = stk[:len(stk)-1]
-		}
-	}
-	return string(ans)
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function robotWithString(s: string): string {
-    let cnt = new Array(128).fill(0);
-    for (let c of s) cnt[c.charCodeAt(0)] += 1;
-    let min_index = 'a'.charCodeAt(0);
-    let ans = [];
-    let stack = [];
-    for (let c of s) {
-        cnt[c.charCodeAt(0)] -= 1;
-        while (min_index <= 'z'.charCodeAt(0) && cnt[min_index] == 0) {
-            min_index += 1;
-        }
-        stack.push(c);
-        while (
-            stack.length > 0 &&
-            stack[stack.length - 1].charCodeAt(0) <= min_index
-        ) {
-            ans.push(stack.pop());
-        }
-    }
-    return ans.join('');
-}
-```
+
 
 ### **...**
 
@@ -270,4 +155,4 @@ function robotWithString(s: string): string {
 
 ```
 
-<!-- tabs:end -->
+

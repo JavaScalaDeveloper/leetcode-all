@@ -83,30 +83,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        if m * k > len(bloomDay):
-            return -1
 
-        def check(day: int) -> bool:
-            cnt = cur = 0
-            for bd in bloomDay:
-                cur = cur + 1 if bd <= day else 0
-                if cur == k:
-                    cnt += 1
-                    cur = 0
-            return cnt >= m
-
-        left, right = min(bloomDay), max(bloomDay)
-        while left < right:
-            mid = (left + right) >> 1
-            if check(mid):
-                right = mid
-            else:
-                left = mid + 1
-        return left
-```
 
 ### **Java**
 
@@ -149,100 +126,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minDays(vector<int>& bloomDay, int m, int k) {
-        if (m * k > bloomDay.size()) {
-            return -1;
-        }
-        int mi = INT_MIN, mx = INT_MAX;
-        for (int& bd : bloomDay) {
-            mi = min(mi, bd);
-            mx = max(mx, bd);
-        }
-        int left = mi, right = mx;
-        while (left < right) {
-            int mid = left + right >> 1;
-            if (check(bloomDay, m, k, mid)) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
 
-    bool check(vector<int>& bloomDay, int m, int k, int day) {
-        int cnt = 0, cur = 0;
-        for (int& bd : bloomDay) {
-            cur = bd <= day ? cur + 1 : 0;
-            if (cur == k) {
-                ++cnt;
-                cur = 0;
-            }
-        }
-        return cnt >= m;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minDays(bloomDay []int, m int, k int) int {
-	if m*k > len(bloomDay) {
-		return -1
-	}
-	mi, mx := 0, 1000000000
-	for _, bd := range bloomDay {
-		mi = min(mi, bd)
-		mx = max(mx, bd)
-	}
-	left, right := mi, mx
-	for left < right {
-		mid := (left + right) >> 1
-		if check(bloomDay, m, k, mid) {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
 
-func check(bloomDay []int, m, k, day int) bool {
-	cnt, cur := 0, 0
-	for _, bd := range bloomDay {
-		if bd <= day {
-			cur++
-		} else {
-			cur = 0
-		}
-		if cur == k {
-			cnt++
-			cur = 0
-		}
-	}
-	return cnt >= m
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
 ### **...**
 
@@ -250,4 +140,4 @@ func min(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

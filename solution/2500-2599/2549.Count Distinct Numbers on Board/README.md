@@ -71,11 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def distinctIntegers(self, n: int) -> int:
-        return max(1, n - 1)
-```
+
 
 ### **Java**
 
@@ -89,35 +85,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int distinctIntegers(int n) {
-        return max(1, n - 1);
-    }
-};
-```
 
-### **Go**
 
-```go
-func distinctIntegers(n int) int {
-	if n == 1 {
-		return 1
-	}
-	return n - 1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function distinctIntegers(n: number): number {
-    return Math.max(1, n - 1);
-}
-```
+
 
 ### **...**
 
@@ -125,4 +103,4 @@ function distinctIntegers(n: number): number {
 
 ```
 
-<!-- tabs:end -->
+

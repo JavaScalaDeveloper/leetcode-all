@@ -64,12 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countMatches(self, items: List[List[str]], ruleKey: str, ruleValue: str) -> int:
-        i = 0 if ruleKey[0] == 't' else (1 if ruleKey[0] == 'c' else 2)
-        return sum(v[i] == ruleValue for v in items)
-```
+
 
 ### **Java**
 
@@ -90,31 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countMatches(vector<vector<string>>& items, string ruleKey, string ruleValue) {
-        int i = ruleKey[0] == 't' ? 0 : (ruleKey[0] == 'c' ? 1 : 2);
-        return count_if(items.begin(), items.end(), [&](auto& v) { return v[i] == ruleValue; });
-    }
-};
-```
 
-### **Go**
 
-```go
-func countMatches(items [][]string, ruleKey string, ruleValue string) (ans int) {
-	i := map[byte]int{'t': 0, 'c': 1, 'n': 2}[ruleKey[0]]
-	for _, v := range items {
-		if v[i] == ruleValue {
-			ans++
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -133,33 +110,11 @@ int countMatches(char ***items, int itemsSize, int *itemsColSize, char *ruleKey,
 
 ### **TypeScript**
 
-```ts
-function countMatches(
-    items: string[][],
-    ruleKey: string,
-    ruleValue: string,
-): number {
-    const key = ruleKey === 'type' ? 0 : ruleKey === 'color' ? 1 : 2;
-    return items.reduce((r, v) => r + (v[key] === ruleValue ? 1 : 0), 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn count_matches(items: Vec<Vec<String>>, rule_key: String, rule_value: String) -> i32 {
-        let key = if rule_key == "type" {
-            0
-        } else if rule_key == "color" {
-            1
-        } else {
-            2
-        };
-        items.iter().filter(|v| v[key] == rule_value).count() as i32
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -167,4 +122,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

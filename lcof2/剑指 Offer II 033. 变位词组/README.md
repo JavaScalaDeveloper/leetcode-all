@@ -63,15 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        chars = defaultdict(list)
-        for s in strs:
-            k = ''.join(sorted(list(s)))
-            chars[k].append(s)
-        return list(chars.values())
-```
+
 
 ### **Java**
 
@@ -92,46 +84,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        unordered_map<string, vector<string>> chars;
-        for (auto s : strs) {
-            string k = s;
-            sort(k.begin(), k.end());
-            chars[k].emplace_back(s);
-        }
-        vector<vector<string>> res;
-        for (auto it = chars.begin(); it != chars.end(); ++it) {
-            res.emplace_back(it->second);
-        }
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func groupAnagrams(strs []string) [][]string {
-	chars := map[string][]string{}
-	for _, s := range strs {
-		key := []byte(s)
-		sort.Slice(key, func(i, j int) bool {
-			return key[i] < key[j]
-		})
-		chars[string(key)] = append(chars[string(key)], s)
-	}
-	var res [][]string
-	for _, v := range chars {
-		res = append(res, v)
-	}
-	return res
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -139,4 +98,4 @@ func groupAnagrams(strs []string) [][]string {
 
 ```
 
-<!-- tabs:end -->
+

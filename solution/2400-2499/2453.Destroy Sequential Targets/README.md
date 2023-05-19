@@ -65,18 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def destroyTargets(self, nums: List[int], space: int) -> int:
-        cnt = Counter(v % space for v in nums)
-        ans = mx = 0
-        for v in nums:
-            t = cnt[v % space]
-            if t > mx or (t == mx and v < ans):
-                ans = v
-                mx = t
-        return ans
-```
+
 
 ### **Java**
 
@@ -103,52 +92,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int destroyTargets(vector<int>& nums, int space) {
-        unordered_map<int, int> cnt;
-        for (int v : nums) ++cnt[v % space];
-        int ans = 0, mx = 0;
-        for (int v : nums) {
-            int t = cnt[v % space];
-            if (t > mx || (t == mx && v < ans)) {
-                ans = v;
-                mx = t;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func destroyTargets(nums []int, space int) int {
-	cnt := map[int]int{}
-	for _, v := range nums {
-		cnt[v%space]++
-	}
-	ans, mx := 0, 0
-	for _, v := range nums {
-		t := cnt[v%space]
-		if t > mx || (t == mx && v < ans) {
-			ans = v
-			mx = t
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -156,4 +110,4 @@ func destroyTargets(nums []int, space int) int {
 
 ```
 
-<!-- tabs:end -->
+

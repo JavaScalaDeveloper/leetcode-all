@@ -60,16 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def tupleSameProduct(self, nums: List[int]) -> int:
-        cnt = defaultdict(int)
-        for i in range(1, len(nums)):
-            for j in range(i):
-                x = nums[i] * nums[j]
-                cnt[x] += 1
-        return sum(v * (v - 1) // 2 for v in cnt.values()) << 3
-```
+
 
 ### **Java**
 
@@ -94,46 +85,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int tupleSameProduct(vector<int>& nums) {
-        unordered_map<int, int> cnt;
-        for (int i = 1; i < nums.size(); ++i) {
-            for (int j = 0; j < i; ++j) {
-                int x = nums[i] * nums[j];
-                ++cnt[x];
-            }
-        }
-        int ans = 0;
-        for (auto& [_, v] : cnt) {
-            ans += v * (v - 1) / 2;
-        }
-        return ans << 3;
-    }
-};
-```
 
-### **Go**
 
-```go
-func tupleSameProduct(nums []int) int {
-	cnt := map[int]int{}
-	for i := 1; i < len(nums); i++ {
-		for j := 0; j < i; j++ {
-			x := nums[i] * nums[j]
-			cnt[x]++
-		}
-	}
-	ans := 0
-	for _, v := range cnt {
-		ans += v * (v - 1) / 2
-	}
-	return ans << 3
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -141,4 +99,4 @@ func tupleSameProduct(nums []int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -157,57 +157,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-from sortedcontainers import SortedList
 
 
-class Solution:
-    def countOperationsToEmptyArray(self, nums: List[int]) -> int:
-        pos = {x: i for i, x in enumerate(nums)}
-        nums.sort()
-        sl = SortedList()
-        ans = pos[nums[0]] + 1
-        n = len(nums)
-        for k, (a, b) in enumerate(pairwise(nums)):
-            i, j = pos[a], pos[b]
-            d = j - i - sl.bisect(j) + sl.bisect(i)
-            ans += d + (n - k) * int(i > j)
-            sl.add(i)
-        return ans
-```
 
-```python
-class BinaryIndexedTree:
-    def __init__(self, n):
-        self.n = n
-        self.c = [0] * (n + 1)
-
-    def update(self, x, delta):
-        while x <= self.n:
-            self.c[x] += delta
-            x += x & -x
-
-    def query(self, x):
-        s = 0
-        while x:
-            s += self.c[x]
-            x -= x & -x
-        return s
-
-class Solution:
-    def countOperationsToEmptyArray(self, nums: List[int]) -> int:
-        pos = {x: i for i, x in enumerate(nums)}
-        nums.sort()
-        ans = pos[nums[0]] + 1
-        n = len(nums)
-        tree = BinaryIndexedTree(n)
-        for k, (a, b) in enumerate(pairwise(nums)):
-            i, j = pos[a], pos[b]
-            d = j - i - tree.query(j + 1) + tree.query(i + 1)
-            ans += d + (n - k) * int(i > j)
-            tree.update(i + 1, 1)
-        return ans
-```
 
 ### **Java**
 
@@ -261,158 +213,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class BinaryIndexedTree {
-public:
-    BinaryIndexedTree(int _n) : n(_n), c(_n + 1) {}
 
-    void update(int x, int delta) {
-        while (x <= n) {
-            c[x] += delta;
-            x += x & -x;
-        }
-    }
 
-    int query(int x) {
-        int s = 0;
-        while (x) {
-            s += c[x];
-            x -= x & -x;
-        }
-        return s;
-    }
 
-private:
-    int n;
-    vector<int> c;
-};
 
-class Solution {
-public:
-    long long countOperationsToEmptyArray(vector<int>& nums) {
-        unordered_map<int, int> pos;
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            pos[nums[i]] = i;
-        }
-        sort(nums.begin(), nums.end());
-        BinaryIndexedTree tree(n);
-        long long ans = pos[nums[0]] + 1;
-        for (int k = 0; k < n - 1; ++k) {
-            int i = pos[nums[k]], j = pos[nums[k + 1]];
-            long long d = j - i - (tree.query(j + 1) - tree.query(i + 1));
-            ans += d + (n - k) * int(i > j);
-            tree.update(i + 1, 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-type BinaryIndexedTree struct {
-	n int
-	c []int
-}
-
-func newBinaryIndexedTree(n int) *BinaryIndexedTree {
-	c := make([]int, n+1)
-	return &BinaryIndexedTree{n, c}
-}
-
-func (this *BinaryIndexedTree) update(x, delta int) {
-	for x <= this.n {
-		this.c[x] += delta
-		x += x & -x
-	}
-}
-
-func (this *BinaryIndexedTree) query(x int) int {
-	s := 0
-	for x > 0 {
-		s += this.c[x]
-		x -= x & -x
-	}
-	return s
-}
-
-func countOperationsToEmptyArray(nums []int) int64 {
-	n := len(nums)
-	pos := map[int]int{}
-	for i, x := range nums {
-		pos[x] = i
-	}
-	sort.Ints(nums)
-	tree := newBinaryIndexedTree(n)
-	ans := pos[nums[0]] + 1
-	for k := 0; k < n-1; k++ {
-		i, j := pos[nums[k]], pos[nums[k+1]]
-		d := j - i - (tree.query(j+1) - tree.query(i+1))
-		if i > j {
-			d += n - k
-		}
-		ans += d
-		tree.update(i+1, 1)
-	}
-	return int64(ans)
-}
-```
 
 ### **TypeScript**
 
-```ts
-class BinaryIndexedTree {
-    private n: number;
-    private c: number[];
 
-    constructor(n: number) {
-        this.n = n;
-        this.c = Array(n + 1).fill(0);
-    }
-
-    public update(x: number, v: number): void {
-        while (x <= this.n) {
-            this.c[x] += v;
-            x += x & -x;
-        }
-    }
-
-    public query(x: number): number {
-        let s = 0;
-        while (x > 0) {
-            s += this.c[x];
-            x -= x & -x;
-        }
-        return s;
-    }
-}
-
-function countOperationsToEmptyArray(nums: number[]): number {
-    const pos: Map<number, number> = new Map();
-    const n = nums.length;
-    for (let i = 0; i < n; ++i) {
-        pos.set(nums[i], i);
-    }
-    nums.sort((a, b) => a - b);
-    const tree = new BinaryIndexedTree(n);
-    let ans = pos.get(nums[0])! + 1;
-    for (let k = 0; k < n - 1; ++k) {
-        const i = pos.get(nums[k])!;
-        const j = pos.get(nums[k + 1])!;
-        let d = j - i - (tree.query(j + 1) - tree.query(i + 1));
-        if (i > j) {
-            d += n - k;
-        }
-        ans += d;
-        tree.update(i + 1, 1);
-    }
-    return ans;
-}
-```
 
 ### **...**
 
@@ -420,4 +231,4 @@ function countOperationsToEmptyArray(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

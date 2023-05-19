@@ -53,32 +53,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
-        mp = {num: i for i, num in enumerate(arr2)}
-        arr1.sort(key=lambda x: (mp.get(x, 10000), x))
-        return arr1
-```
 
-```python
-class Solution:
-    def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
-        mp = [0] * 1001
-        for x in arr1:
-            mp[x] += 1
-        i = 0
-        for x in arr2:
-            while mp[x] > 0:
-                arr1[i] = x
-                mp[x] -= 1
-                i += 1
-        for x, cnt in enumerate(mp):
-            for _ in range(cnt):
-                arr1[i] = x
-                i += 1
-        return arr1
-```
+
+
 
 ### **Java**
 
@@ -107,52 +84,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
-        vector<int> mp(1001);
-        for (int x : arr1) ++mp[x];
-        int i = 0;
-        for (int x : arr2) {
-            while (mp[x]-- > 0) arr1[i++] = x;
-        }
-        for (int j = 0; j < mp.size(); ++j) {
-            while (mp[j]-- > 0) arr1[i++] = j;
-        }
-        return arr1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func relativeSortArray(arr1 []int, arr2 []int) []int {
-	mp := make([]int, 1001)
-	for _, x := range arr1 {
-		mp[x]++
-	}
-	i := 0
-	for _, x := range arr2 {
-		for mp[x] > 0 {
-			arr1[i] = x
-			mp[x]--
-			i++
-		}
-	}
-	for j, cnt := range mp {
-		for cnt > 0 {
-			arr1[i] = j
-			i++
-			cnt--
-		}
-	}
-	return arr1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -160,4 +98,4 @@ func relativeSortArray(arr1 []int, arr2 []int) []int {
 
 ```
 
-<!-- tabs:end -->
+

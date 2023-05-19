@@ -48,28 +48,7 @@ DFS。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def longestConsecutive(self, root: TreeNode) -> int:
-        def dfs(root, p, t):
-            nonlocal ans
-            if root is None:
-                return
-            t = t + 1 if p is not None and p.val + 1 == root.val else 1
-            ans = max(ans, t)
-            dfs(root.left, root, t)
-            dfs(root.right, root, t)
 
-        ans = 1
-        dfs(root, None, 1)
-        return ans
-```
 
 ### **Java**
 
@@ -112,78 +91,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int ans;
 
-    int longestConsecutive(TreeNode* root) {
-        ans = 1;
-        dfs(root, nullptr, 1);
-        return ans;
-    }
 
-    void dfs(TreeNode* root, TreeNode* p, int t) {
-        if (!root) return;
-        t = p != nullptr && p->val + 1 == root->val ? t + 1 : 1;
-        ans = max(ans, t);
-        dfs(root->left, root, t);
-        dfs(root->right, root, t);
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func longestConsecutive(root *TreeNode) int {
-	ans := 1
-	var dfs func(root, p *TreeNode, t int)
-	dfs = func(root, p *TreeNode, t int) {
-		if root == nil {
-			return
-		}
-		if p != nil && p.Val+1 == root.Val {
-			t++
-			ans = max(ans, t)
-		} else {
-			t = 1
-		}
-		dfs(root.Left, root, t)
-		dfs(root.Right, root, t)
-	}
-	dfs(root, nil, 1)
-	return ans
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
 
 ### **...**
 
@@ -191,4 +105,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

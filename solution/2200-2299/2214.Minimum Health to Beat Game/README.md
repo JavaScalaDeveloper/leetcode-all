@@ -80,11 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumHealth(self, damage: List[int], armor: int) -> int:
-        return sum(damage) - min(max(damage), armor) + 1
-```
+
 
 ### **Java**
 
@@ -104,64 +100,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long minimumHealth(vector<int>& damage, int armor) {
-        long long s = 0;
-        int mx = damage[0];
-        for (int& v : damage) {
-            s += v;
-            mx = max(mx, v);
-        }
-        return s - min(mx, armor) + 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumHealth(damage []int, armor int) int64 {
-	var s int64
-	var mx int
-	for _, v := range damage {
-		s += int64(v)
-		mx = max(mx, v)
-	}
-	return s - int64(min(mx, armor)) + 1
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumHealth(damage: number[], armor: number): number {
-    let s = 0;
-    let mx = 0;
-    for (const v of damage) {
-        mx = Math.max(mx, v);
-        s += v;
-    }
-    return s - Math.min(mx, armor) + 1;
-}
-```
+
 
 ### **...**
 
@@ -169,4 +118,4 @@ function minimumHealth(damage: number[], armor: number): number {
 
 ```
 
-<!-- tabs:end -->
+

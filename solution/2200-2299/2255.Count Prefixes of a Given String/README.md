@@ -51,11 +51,7 @@ words 中是 s = "abc" 前缀的字符串为：
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countPrefixes(self, words: List[str], s: str) -> int:
-        return sum(word == s[: len(word)] for word in words)
-```
+
 
 ### **Java**
 
@@ -75,40 +71,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countPrefixes(vector<string>& words, string s) {
-        int ans = 0;
-        for (auto& word : words)
-            if (s.substr(0, word.size()) == word)
-                ++ans;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countPrefixes(words []string, s string) int {
-	ans := 0
-	for _, word := range words {
-		if strings.HasPrefix(s, word) {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -116,4 +89,4 @@ func countPrefixes(words []string, s string) int {
 
 ```
 
-<!-- tabs:end -->
+

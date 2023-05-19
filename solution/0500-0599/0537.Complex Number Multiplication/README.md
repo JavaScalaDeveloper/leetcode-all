@@ -54,13 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def complexNumberMultiply(self, num1: str, num2: str) -> str:
-        a, b = map(int, num1[:-1].split('+'))
-        c, d = map(int, num2[:-1].split('+'))
-        return f'{a * c - b * d}+{a * d + c * b}i'
-```
+
 
 ### **Java**
 
@@ -82,49 +76,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function complexNumberMultiply(num1: string, num2: string): string {
-    let arr1 = num1.split('+'),
-        arr2 = num2.split('+');
-    let r1 = Number(arr1[0]),
-        r2 = Number(arr2[0]);
-    let v1 = Number(arr1[1].substring(0, arr1[1].length - 1)),
-        v2 = Number(arr2[1].substring(0, arr2[1].length - 1));
-    let ansR = r1 * r2 - v1 * v2;
-    let ansV = r1 * v2 + r2 * v1;
-    return `${ansR}+${ansV}i`;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string complexNumberMultiply(string num1, string num2) {
-        int a, b, c, d;
-        sscanf(num1.c_str(), "%d+%di", &a, &b);
-        sscanf(num2.c_str(), "%d+%di", &c, &d);
-        return string(to_string(a * c - b * d) + "+" + to_string(a * d + c * b) + "i");
-    }
-};
-```
 
-### **Go**
 
-```go
-func complexNumberMultiply(num1, num2 string) string {
-	parse := func(num string) (a, b int) {
-		i := strings.IndexByte(num, '+')
-		a, _ = strconv.Atoi(num[:i])
-		b, _ = strconv.Atoi(num[i+1 : len(num)-1])
-		return
-	}
-	a, b := parse(num1)
-	c, d := parse(num2)
-	return fmt.Sprintf("%d+%di", a*c-b*d, a*d+b*c)
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -132,4 +92,4 @@ func complexNumberMultiply(num1, num2 string) string {
 
 ```
 
-<!-- tabs:end -->
+

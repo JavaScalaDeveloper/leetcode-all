@@ -58,17 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumRounds(self, tasks: List[int]) -> int:
-        cnt = Counter(tasks)
-        ans = 0
-        for v in cnt.values():
-            if v == 1:
-                return -1
-            ans += v // 3 + (v % 3 != 0)
-        return ans
-```
+
 
 ### **Java**
 
@@ -93,68 +83,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumRounds(vector<int>& tasks) {
-        unordered_map<int, int> cnt;
-        for (auto& t : tasks) {
-            ++cnt[t];
-        }
-        int ans = 0;
-        for (auto& [_, v] : cnt) {
-            if (v == 1) {
-                return -1;
-            }
-            ans += v / 3 + (v % 3 != 0);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumRounds(tasks []int) int {
-	cnt := map[int]int{}
-	for _, t := range tasks {
-		cnt[t]++
-	}
-	ans := 0
-	for _, v := range cnt {
-		if v == 1 {
-			return -1
-		}
-		ans += v / 3
-		if v%3 != 0 {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumRounds(tasks: number[]): number {
-    const cnt = new Map();
-    for (const t of tasks) {
-        cnt.set(t, (cnt.get(t) || 0) + 1);
-    }
-    let ans = 0;
-    for (const v of cnt.values()) {
-        if (v == 1) {
-            return -1;
-        }
-        ans += Math.floor(v / 3) + (v % 3 === 0 ? 0 : 1);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -162,4 +101,4 @@ function minimumRounds(tasks: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

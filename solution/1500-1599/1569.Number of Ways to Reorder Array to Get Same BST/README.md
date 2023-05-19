@@ -89,28 +89,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numOfWays(self, nums: List[int]) -> int:
-        def dfs(nums):
-            if len(nums) < 2:
-                return 1
-            left = [x for x in nums if x < nums[0]]
-            right = [x for x in nums if x > nums[0]]
-            m, n = len(left), len(right)
-            a, b = dfs(left), dfs(right)
-            return (((c[m + n][m] * a) % mod) * b) % mod
 
-        n = len(nums)
-        mod = 10**9 + 7
-        c = [[0] * n for _ in range(n)]
-        c[0][0] = 1
-        for i in range(1, n):
-            c[i][0] = 1
-            for j in range(1, i + 1):
-                c[i][j] = (c[i - 1][j] + c[i - 1][j - 1]) % mod
-        return (dfs(nums) - 1 + mod) % mod
-```
 
 ### **Java**
 
@@ -158,120 +137,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numOfWays(vector<int>& nums) {
-        int n = nums.size();
-        const int mod = 1e9 + 7;
-        int c[n][n];
-        memset(c, 0, sizeof(c));
-        c[0][0] = 1;
-        for (int i = 1; i < n; ++i) {
-            c[i][0] = 1;
-            for (int j = 1; j <= i; ++j) {
-                c[i][j] = (c[i - 1][j] + c[i - 1][j - 1]) % mod;
-            }
-        }
-        function<int(vector<int>)> dfs = [&](vector<int> nums) -> int {
-            if (nums.size() < 2) {
-                return 1;
-            }
-            vector<int> left, right;
-            for (int& x : nums) {
-                if (x < nums[0]) {
-                    left.push_back(x);
-                } else if (x > nums[0]) {
-                    right.push_back(x);
-                }
-            }
-            int m = left.size(), n = right.size();
-            int a = dfs(left), b = dfs(right);
-            return c[m + n][m] * 1ll * a % mod * b % mod;
-        };
-        return (dfs(nums) - 1 + mod) % mod;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numOfWays(nums []int) int {
-	n := len(nums)
-	const mod = 1e9 + 7
-	c := make([][]int, n)
-	for i := range c {
-		c[i] = make([]int, n)
-	}
-	c[0][0] = 1
-	for i := 1; i < n; i++ {
-		c[i][0] = 1
-		for j := 1; j <= i; j++ {
-			c[i][j] = (c[i-1][j] + c[i-1][j-1]) % mod
-		}
-	}
-	var dfs func(nums []int) int
-	dfs = func(nums []int) int {
-		if len(nums) < 2 {
-			return 1
-		}
-		var left, right []int
-		for _, x := range nums[1:] {
-			if x < nums[0] {
-				left = append(left, x)
-			} else {
-				right = append(right, x)
-			}
-		}
-		m, n := len(left), len(right)
-		a, b := dfs(left), dfs(right)
-		return c[m+n][m] * a % mod * b % mod
-	}
-	return (dfs(nums) - 1 + mod) % mod
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numOfWays(nums: number[]): number {
-    const n = nums.length;
-    const mod = 1e9 + 7;
-    const c = new Array(n).fill(0).map(() => new Array(n).fill(0));
-    c[0][0] = 1;
-    for (let i = 1; i < n; ++i) {
-        c[i][0] = 1;
-        for (let j = 1; j <= i; ++j) {
-            c[i][j] = (c[i - 1][j - 1] + c[i - 1][j]) % mod;
-        }
-    }
-    const dfs = (nums: number[]): number => {
-        if (nums.length < 2) {
-            return 1;
-        }
-        const left: number[] = [];
-        const right: number[] = [];
-        for (let i = 1; i < nums.length; ++i) {
-            if (nums[i] < nums[0]) {
-                left.push(nums[i]);
-            } else {
-                right.push(nums[i]);
-            }
-        }
-        const m = left.length;
-        const n = right.length;
-        const a = dfs(left);
-        const b = dfs(right);
-        return Number(
-            (BigInt(c[m + n][m]) * BigInt(a) * BigInt(b)) % BigInt(mod),
-        );
-    };
-    return (dfs(nums) - 1 + mod) % mod;
-}
-```
+
 
 ### **...**
 
@@ -279,4 +155,4 @@ function numOfWays(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

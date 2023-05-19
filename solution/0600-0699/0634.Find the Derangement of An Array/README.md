@@ -66,25 +66,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findDerangement(self, n: int) -> int:
-        mod = 10**9 + 7
-        f = [1] + [0] * n
-        for i in range(2, n + 1):
-            f[i] = (i - 1) * (f[i - 1] + f[i - 2]) % mod
-        return f[n]
-```
 
-```python
-class Solution:
-    def findDerangement(self, n: int) -> int:
-        mod = 10**9 + 7
-        a, b = 1, 0
-        for i in range(2, n + 1):
-            a, b = b, ((i - 1) * (a + b)) % mod
-        return b
-```
+
+
 
 ### **Java**
 
@@ -119,64 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findDerangement(int n) {
-        long long f[n + 1];
-        memset(f, 0, sizeof(f));
-        f[0] = 1;
-        const int mod = 1e9 + 7;
-        for (int i = 2; i <= n; i++) {
-            f[i] = (i - 1LL) * (f[i - 1] + f[i - 2]) % mod;
-        }
-        return f[n];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int findDerangement(int n) {
-        long long a = 1, b = 0;
-        const int mod = 1e9 + 7;
-        for (int i = 2; i <= n; ++i) {
-            long long c = (i - 1) * (a + b) % mod;
-            a = b;
-            b = c;
-        }
-        return b;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findDerangement(n int) int {
-	f := make([]int, n+1)
-	f[0] = 1
-	const mod = 1e9 + 7
-	for i := 2; i <= n; i++ {
-		f[i] = (i - 1) * (f[i-1] + f[i-2]) % mod
-	}
-	return f[n]
-}
-```
 
-```go
-func findDerangement(n int) int {
-	a, b := 1, 0
-	const mod = 1e9 + 7
-	for i := 2; i <= n; i++ {
-		a, b = b, (i-1)*(a+b)%mod
-	}
-	return b
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -184,4 +121,4 @@ func findDerangement(n int) int {
 
 ```
 
-<!-- tabs:end -->
+

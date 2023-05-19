@@ -74,37 +74,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rob(self, nums: List[int]) -> int:
-        @cache
-        def dfs(i):
-            if i >= len(nums):
-                return 0
-            return max(nums[i] + dfs(i + 2), dfs(i + 1))
 
-        return dfs(0)
-```
 
-```python
-class Solution:
-    def rob(self, nums: List[int]) -> int:
-        n = len(nums)
-        dp = [0] * (n + 1)
-        dp[1] = nums[0]
-        for i in range(2, n + 1):
-            dp[i] = max(nums[i - 1] + dp[i - 2], dp[i - 1])
-        return dp[n]
-```
 
-```python
-class Solution:
-    def rob(self, nums: List[int]) -> int:
-        a, b = 0, nums[0]
-        for num in nums[1:]:
-            a, b = b, max(num + a, b)
-        return b
-```
+
+
 
 ### **Java**
 
@@ -163,177 +137,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int rob(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> f(n, -1);
-        function<int(int)> dfs = [&](int i) -> int {
-            if (i >= n) return 0;
-            if (f[i] != -1) return f[i];
-            f[i] = max(nums[i] + dfs(i + 2), dfs(i + 1));
-            return f[i];
-        };
-        return dfs(0);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int rob(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> dp(n + 1);
-        dp[1] = nums[0];
-        for (int i = 2; i <= n; ++i) {
-            dp[i] = max(nums[i - 1] + dp[i - 2], dp[i - 1]);
-        }
-        return dp[n];
-    }
-};
-```
 
-```cpp
-class Solution {
-    public : int rob(vector<int>& nums) {
-        int n = nums.size();
-        int a = 0, b = nums[0];
-        for (int i = 1; i < n; ++i) {
-            int c = max(nums[i] + a, b);
-            a = b;
-            b = c;
-        }
-        return b;
-    }
-};
-```
 
-### **Go**
 
-```go
-func rob(nums []int) int {
-	n := len(nums)
-	f := make([]int, n)
-	for i := range f {
-		f[i] = -1
-	}
-	var dfs func(int) int
-	dfs = func(i int) int {
-		if i >= n {
-			return 0
-		}
-		if f[i] != -1 {
-			return f[i]
-		}
-		f[i] = max(nums[i]+dfs(i+2), dfs(i+1))
-		return f[i]
-	}
-	return dfs(0)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func rob(nums []int) int {
-	n := len(nums)
-	dp := make([]int, n+1)
-	dp[1] = nums[0]
-	for i := 2; i <= n; i++ {
-		dp[i] = max(nums[i-1]+dp[i-2], dp[i-1])
-	}
-	return dp[n]
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func rob(nums []int) int {
-    a, b, n := 0, nums[0], len(nums)
-    for i := 1; i < n; i++ {
-        a, b = b, max(nums[i] + a, b)
-    }
-    return b
-}
 
-func max(a, b int) int {
-    if a > b {
-        return a
-    }
-    return b
-}
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function rob(nums: number[]): number {
-    const n = nums.length;
-    const f = new Array(n).fill(-1);
-    function dfs(i) {
-        if (i >= n) {
-            return 0;
-        }
-        if (f[i] != -1) {
-            return f[i];
-        }
-        f[i] = Math.max(nums[i] + dfs(i + 2), dfs(i + 1));
-        return f[i];
-    }
-    return dfs(0);
-}
-```
 
-```ts
-function rob(nums: number[]): number {
-    const n = nums.length;
-    const dp = new Array(n + 1).fill(0);
-    dp[1] = nums[0];
-    for (let i = 2; i <= n; ++i) {
-        dp[i] = Math.max(nums[i - 1] + dp[i - 2], dp[i - 1]);
-    }
-    return dp[n];
-}
-```
 
-```ts
-function rob(nums: number[]): number {
-    const dp = [0, 0];
-    for (const num of nums) {
-        [dp[0], dp[1]] = [dp[1], Math.max(dp[1], dp[0] + num)];
-    }
-    return dp[1];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn rob(nums: Vec<i32>) -> i32 {
-        let mut dp = [0, 0];
-        for num in nums {
-            dp = [dp[1], dp[1].max(dp[0] + num)]
-        }
-        dp[1]
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -341,4 +171,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

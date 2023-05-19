@@ -64,11 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def addDigits(self, num: int) -> int:
-        return 0 if num == 0 else (num - 1) % 9 + 1
-```
+
 
 ### **Java**
 
@@ -82,53 +78,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int addDigits(int num) {
-        return (num - 1) % 9 + 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func addDigits(num int) int {
-	if num == 0 {
-		return 0
-	}
-	return (num-1)%9 + 1
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn add_digits(num: i32) -> i32 {
-        if num < 10 {
-            return num;
-        }
-        Self::add_digits(
-            num.to_string()
-                .chars()
-                .map(|c| c.to_string().parse::<i32>().unwrap())
-                .sum::<i32>(),
-        )
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn add_digits(mut num: i32) -> i32 {
-        (num - 1) % 9 + 1
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -136,4 +98,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

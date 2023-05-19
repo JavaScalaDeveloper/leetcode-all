@@ -63,39 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countPalindromes(self, s: str) -> int:
-        mod = 10**9 + 7
-        n = len(s)
-        pre = [[[0] * 10 for _ in range(10)] for _ in range(n + 2)]
-        suf = [[[0] * 10 for _ in range(10)] for _ in range(n + 2)]
-        t = list(map(int, s))
-        c = [0] * 10
-        for i, v in enumerate(t, 1):
-            for j in range(10):
-                for k in range(10):
-                    pre[i][j][k] = pre[i - 1][j][k]
-            for j in range(10):
-                pre[i][j][v] += c[j]
-            c[v] += 1
-        c = [0] * 10
-        for i in range(n, 0, -1):
-            v = t[i - 1]
-            for j in range(10):
-                for k in range(10):
-                    suf[i][j][k] = suf[i + 1][j][k]
-            for j in range(10):
-                suf[i][j][v] += c[j]
-            c[v] += 1
-        ans = 0
-        for i in range(1, n + 1):
-            for j in range(10):
-                for k in range(10):
-                    ans += pre[i - 1][j][k] * suf[i + 1][j][k]
-                    ans %= mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -153,111 +121,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int countPalindromes(string s) {
-        int n = s.size();
-        int pre[n + 2][10][10];
-        int suf[n + 2][10][10];
-        memset(pre, 0, sizeof pre);
-        memset(suf, 0, sizeof suf);
-        int t[n];
-        for (int i = 0; i < n; ++i) t[i] = s[i] - '0';
-        int c[10] = {0};
-        for (int i = 1; i <= n; ++i) {
-            int v = t[i - 1];
-            for (int j = 0; j < 10; ++j) {
-                for (int k = 0; k < 10; ++k) {
-                    pre[i][j][k] = pre[i - 1][j][k];
-                }
-            }
-            for (int j = 0; j < 10; ++j) {
-                pre[i][j][v] += c[j];
-            }
-            c[v]++;
-        }
-        memset(c, 0, sizeof c);
-        for (int i = n; i > 0; --i) {
-            int v = t[i - 1];
-            for (int j = 0; j < 10; ++j) {
-                for (int k = 0; k < 10; ++k) {
-                    suf[i][j][k] = suf[i + 1][j][k];
-                }
-            }
-            for (int j = 0; j < 10; ++j) {
-                suf[i][j][v] += c[j];
-            }
-            c[v]++;
-        }
-        long ans = 0;
-        for (int i = 1; i <= n; ++i) {
-            for (int j = 0; j < 10; ++j) {
-                for (int k = 0; k < 10; ++k) {
-                    ans += 1ll * pre[i - 1][j][k] * suf[i + 1][j][k];
-                    ans %= mod;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countPalindromes(s string) int {
-	n := len(s)
-	pre := [10010][10][10]int{}
-	suf := [10010][10][10]int{}
-	t := make([]int, n)
-	for i, c := range s {
-		t[i] = int(c - '0')
-	}
-	c := [10]int{}
-	for i := 1; i <= n; i++ {
-		v := t[i-1]
-		for j := 0; j < 10; j++ {
-			for k := 0; k < 10; k++ {
-				pre[i][j][k] = pre[i-1][j][k]
-			}
-		}
-		for j := 0; j < 10; j++ {
-			pre[i][j][v] += c[j]
-		}
-		c[v]++
-	}
-	c = [10]int{}
-	for i := n; i > 0; i-- {
-		v := t[i-1]
-		for j := 0; j < 10; j++ {
-			for k := 0; k < 10; k++ {
-				suf[i][j][k] = suf[i+1][j][k]
-			}
-		}
-		for j := 0; j < 10; j++ {
-			suf[i][j][v] += c[j]
-		}
-		c[v]++
-	}
-	ans := 0
-	const mod int = 1e9 + 7
-	for i := 1; i <= n; i++ {
-		for j := 0; j < 10; j++ {
-			for k := 0; k < 10; k++ {
-				ans += pre[i-1][j][k] * suf[i+1][j][k]
-				ans %= mod
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
 
 ### **...**
 
@@ -265,4 +135,4 @@ func countPalindromes(s string) int {
 
 ```
 
-<!-- tabs:end -->
+

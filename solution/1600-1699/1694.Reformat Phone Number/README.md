@@ -105,19 +105,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reformatNumber(self, number: str) -> str:
-        number = number.replace("-", "").replace(" ", "")
-        n = len(number)
-        ans = [number[i * 3 : i * 3 + 3] for i in range(n // 3)]
-        if n % 3 == 1:
-            ans[-1] = ans[-1][:2]
-            ans.append(number[-2:])
-        elif n % 3 == 2:
-            ans.append(number[-2:])
-        return "-".join(ans)
-```
+
 
 ### **Java**
 
@@ -143,100 +131,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string reformatNumber(string number) {
-        string s;
-        for (char c : number) {
-            if (c != ' ' && c != '-') {
-                s.push_back(c);
-            }
-        }
-        int n = s.size();
-        vector<string> res;
-        for (int i = 0; i < n / 3; ++i) {
-            res.push_back(s.substr(i * 3, 3));
-        }
-        if (n % 3 == 1) {
-            res.back() = res.back().substr(0, 2);
-            res.push_back(s.substr(n - 2));
-        } else if (n % 3 == 2) {
-            res.push_back(s.substr(n - 2));
-        }
-        string ans;
-        for (auto& v : res) {
-            ans += v;
-            ans += "-";
-        }
-        ans.pop_back();
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reformatNumber(number string) string {
-	number = strings.ReplaceAll(number, " ", "")
-	number = strings.ReplaceAll(number, "-", "")
-	n := len(number)
-	ans := []string{}
-	for i := 0; i < n/3; i++ {
-		ans = append(ans, number[i*3:i*3+3])
-	}
-	if n%3 == 1 {
-		ans[len(ans)-1] = ans[len(ans)-1][:2]
-		ans = append(ans, number[n-2:])
-	} else if n%3 == 2 {
-		ans = append(ans, number[n-2:])
-	}
-	return strings.Join(ans, "-")
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function reformatNumber(number: string): string {
-    const cs = [...number].filter(c => c !== ' ' && c !== '-');
-    const n = cs.length;
-    return cs
-        .map((v, i) => {
-            if (
-                ((i + 1) % 3 === 0 && i < n - 2) ||
-                (n % 3 === 1 && n - 3 === i)
-            ) {
-                return v + '-';
-            }
-            return v;
-        })
-        .join('');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn reformat_number(number: String) -> String {
-        let cs: Vec<char> = number.chars().filter(|&c| c != ' ' && c != '-').collect();
-        let n = cs.len();
-        cs.iter()
-            .enumerate()
-            .map(|(i, c)| {
-                if (i + 1) % 3 == 0 && i < n - 2 || n % 3 == 1 && i == n - 3 {
-                    return c.to_string() + &"-";
-                }
-                c.to_string()
-            })
-            .collect()
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -244,4 +153,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

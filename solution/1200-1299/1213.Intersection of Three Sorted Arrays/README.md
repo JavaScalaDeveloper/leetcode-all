@@ -56,26 +56,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def arraysIntersection(
-        self, arr1: List[int], arr2: List[int], arr3: List[int]
-    ) -> List[int]:
-        cnt = Counter(arr1 + arr2 + arr3)
-        return [x for x in arr1 if cnt[x] == 3]
-```
 
-```python
-class Solution:
-    def arraysIntersection(self, arr1: List[int], arr2: List[int], arr3: List[int]) -> List[int]:
-        ans = []
-        for x in arr1:
-            i = bisect_left(arr2, x)
-            j = bisect_left(arr3, x)
-            if i < len(arr2) and j < len(arr3) and arr2[i] == x and arr3[j] == x:
-                ans.append(x)
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -118,102 +101,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> arraysIntersection(vector<int>& arr1, vector<int>& arr2, vector<int>& arr3) {
-        vector<int> ans;
-        int cnt[2001]{};
-        for (int x : arr1) {
-            ++cnt[x];
-        }
-        for (int x : arr2) {
-            ++cnt[x];
-        }
-        for (int x : arr3) {
-            if (++cnt[x] == 3) {
-                ans.push_back(x);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> arraysIntersection(vector<int>& arr1, vector<int>& arr2, vector<int>& arr3) {
-        vector<int> ans;
-        for (int x : arr1) {
-            auto i = lower_bound(arr2.begin(), arr2.end(), x);
-            auto j = lower_bound(arr3.begin(), arr3.end(), x);
-            if (*i == x && *j == x) {
-                ans.push_back(x);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func arraysIntersection(arr1 []int, arr2 []int, arr3 []int) (ans []int) {
-	cnt := [2001]int{}
-	for _, x := range arr1 {
-		cnt[x]++
-	}
-	for _, x := range arr2 {
-		cnt[x]++
-	}
-	for _, x := range arr3 {
-		cnt[x]++
-		if cnt[x] == 3 {
-			ans = append(ans, x)
-		}
-	}
-	return
-}
-```
 
-```go
-func arraysIntersection(arr1 []int, arr2 []int, arr3 []int) (ans []int) {
-	for _, x := range arr1 {
-		i := sort.SearchInts(arr2, x)
-		j := sort.SearchInts(arr3, x)
-		if i < len(arr2) && j < len(arr3) && arr2[i] == x && arr3[j] == x {
-			ans = append(ans, x)
-		}
-	}
-	return
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param Integer[] $arr1
-     * @param Integer[] $arr2
-     * @param Integer[] $arr3
-     * @return Integer[]
-     */
-    function arraysIntersection($arr1, $arr2, $arr3) {
-        $rs = [];
-        $arr = array_merge($arr1, $arr2, $arr3);
-        for ($i = 0; $i < count($arr); $i++) {
-            $hashtable[$arr[$i]] += 1;
-            if ($hashtable[$arr[$i]] === 3) array_push($rs, $arr[$i]);
-        }
-        return $rs;
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -221,4 +123,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

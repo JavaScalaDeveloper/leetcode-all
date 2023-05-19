@@ -75,11 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countDistinctStrings(self, s: str, k: int) -> int:
-        return pow(2, len(s) - k + 1) % (10**9 + 7)
-```
+
 
 ### **Java**
 
@@ -99,41 +95,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int countDistinctStrings(string s, int k) {
-        int ans = 1;
-        for (int i = 0; i < s.size() - k + 1; ++i) {
-            ans = (ans * 2) % mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countDistinctStrings(s string, k int) int {
-	const mod int = 1e9 + 7
-	ans := 1
-	for i := 0; i < len(s)-k+1; i++ {
-		ans = (ans * 2) % mod
-	}
-	return ans
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -141,4 +113,4 @@ func countDistinctStrings(s string, k int) int {
 
 ```
 
-<!-- tabs:end -->
+

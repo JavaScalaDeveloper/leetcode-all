@@ -67,29 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makeArrayIncreasing(self, arr1: List[int], arr2: List[int]) -> int:
-        arr2.sort()
-        m = 0
-        for x in arr2:
-            if m == 0 or x != arr2[m - 1]:
-                arr2[m] = x
-                m += 1
-        arr2 = arr2[:m]
-        arr = [-inf] + arr1 + [inf]
-        n = len(arr)
-        f = [inf] * n
-        f[0] = 0
-        for i in range(1, n):
-            if arr[i - 1] < arr[i]:
-                f[i] = f[i - 1]
-            j = bisect_left(arr2, arr[i])
-            for k in range(1, min(i - 1, j) + 1):
-                if arr[i - k - 1] < arr2[j - k]:
-                    f[i] = min(f[i], f[i - k - 1] + k)
-        return -1 if f[n - 1] >= inf else f[n - 1]
-```
+
 
 ### **Java**
 
@@ -142,178 +120,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int makeArrayIncreasing(vector<int>& arr1, vector<int>& arr2) {
-        sort(arr2.begin(), arr2.end());
-        arr2.erase(unique(arr2.begin(), arr2.end()), arr2.end());
-        const int inf = 1 << 30;
-        arr1.insert(arr1.begin(), -inf);
-        arr1.push_back(inf);
-        int n = arr1.size();
-        vector<int> f(n, inf);
-        f[0] = 0;
-        for (int i = 1; i < n; ++i) {
-            if (arr1[i - 1] < arr1[i]) {
-                f[i] = f[i - 1];
-            }
-            int j = lower_bound(arr2.begin(), arr2.end(), arr1[i]) - arr2.begin();
-            for (int k = 1; k <= min(i - 1, j); ++k) {
-                if (arr1[i - k - 1] < arr2[j - k]) {
-                    f[i] = min(f[i], f[i - k - 1] + k);
-                }
-            }
-        }
-        return f[n - 1] >= inf ? -1 : f[n - 1];
-    }
-};
-```
 
-### **Go**
 
-```go
-func makeArrayIncreasing(arr1 []int, arr2 []int) int {
-	sort.Ints(arr2)
-	m := 0
-	for _, x := range arr2 {
-		if m == 0 || x != arr2[m-1] {
-			arr2[m] = x
-			m++
-		}
-	}
-	arr2 = arr2[:m]
-	const inf = 1 << 30
-	arr1 = append([]int{-inf}, arr1...)
-	arr1 = append(arr1, inf)
-	n := len(arr1)
-	f := make([]int, n)
-	for i := range f {
-		f[i] = inf
-	}
-	f[0] = 0
-	for i := 1; i < n; i++ {
-		if arr1[i-1] < arr1[i] {
-			f[i] = f[i-1]
-		}
-		j := sort.SearchInts(arr2, arr1[i])
-		for k := 1; k <= min(i-1, j); k++ {
-			if arr1[i-k-1] < arr2[j-k] {
-				f[i] = min(f[i], f[i-k-1]+k)
-			}
-		}
-	}
-	if f[n-1] >= inf {
-		return -1
-	}
-	return f[n-1]
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function makeArrayIncreasing(arr1: number[], arr2: number[]): number {
-    arr2.sort((a, b) => a - b);
-    let m = 0;
-    for (const x of arr2) {
-        if (m === 0 || x !== arr2[m - 1]) {
-            arr2[m++] = x;
-        }
-    }
-    arr2 = arr2.slice(0, m);
-    const inf = 1 << 30;
-    arr1 = [-inf, ...arr1, inf];
-    const n = arr1.length;
-    const f: number[] = new Array(n).fill(inf);
-    f[0] = 0;
-    const search = (arr: number[], x: number): number => {
-        let l = 0;
-        let r = arr.length;
-        while (l < r) {
-            const mid = (l + r) >> 1;
-            if (arr[mid] >= x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    };
-    for (let i = 1; i < n; ++i) {
-        if (arr1[i - 1] < arr1[i]) {
-            f[i] = f[i - 1];
-        }
-        const j = search(arr2, arr1[i]);
-        for (let k = 1; k <= Math.min(i - 1, j); ++k) {
-            if (arr1[i - k - 1] < arr2[j - k]) {
-                f[i] = Math.min(f[i], f[i - k - 1] + k);
-            }
-        }
-    }
-    return f[n - 1] >= inf ? -1 : f[n - 1];
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MakeArrayIncreasing(int[] arr1, int[] arr2) {
-        Array.Sort(arr2);
-        int m = 0;
-        foreach (int x in arr2) {
-            if (m == 0 || x != arr2[m - 1]) {
-                arr2[m++] = x;
-            }
-        }
-        int inf = 1 << 30;
-        int[] arr = new int[arr1.Length + 2];
-        arr[0] = -inf;
-        arr[arr.Length - 1] = inf;
-        for (int i = 0; i < arr1.Length; ++i) {
-            arr[i + 1] = arr1[i];
-        }
-        int[] f = new int[arr.Length];
-        Array.Fill(f, inf);
-        f[0] = 0;
-        for (int i = 1; i < arr.Length; ++i) {
-            if (arr[i - 1] < arr[i]) {
-                f[i] = f[i - 1];
-            }
-            int j = search(arr2, arr[i], m);
-            for (int k = 1; k <= Math.Min(i - 1, j); ++k) {
-                if (arr[i - k - 1] < arr2[j - k]) {
-                    f[i] = Math.Min(f[i], f[i - k - 1] + k);
-                }
-            }
-        }
-        return f[arr.Length - 1] >= inf ? -1 : f[arr.Length - 1];
-    }
 
-    private int search(int[] nums, int x, int n) {
-        int l = 0, r = n;
-        while (l < r) {
-            int mid = (l + r) >> 1;
-            if (nums[mid] >= x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        return l;
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -321,4 +142,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

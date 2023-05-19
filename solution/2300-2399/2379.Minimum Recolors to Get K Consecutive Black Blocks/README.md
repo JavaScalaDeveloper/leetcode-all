@@ -69,16 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumRecolors(self, blocks: str, k: int) -> int:
-        ans = cnt = blocks[:k].count('W')
-        for i in range(k, len(blocks)):
-            cnt += blocks[i] == 'W'
-            cnt -= blocks[i - k] == 'W'
-            ans = min(ans, cnt)
-        return ans
-```
+
 
 ### **Java**
 
@@ -102,91 +93,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumRecolors(string blocks, int k) {
-        int cnt = count(blocks.begin(), blocks.begin() + k, 'W');
-        int ans = cnt;
-        for (int i = k; i < blocks.size(); ++i) {
-            cnt += blocks[i] == 'W';
-            cnt -= blocks[i - k] == 'W';
-            ans = min(ans, cnt);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumRecolors(blocks string, k int) int {
-	cnt := strings.Count(blocks[:k], "W")
-	ans := cnt
-	for i := k; i < len(blocks); i++ {
-		if blocks[i] == 'W' {
-			cnt++
-		}
-		if blocks[i-k] == 'W' {
-			cnt--
-		}
-		if ans > cnt {
-			ans = cnt
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumRecolors(blocks: string, k: number): number {
-    let cnt = 0;
-    for (let i = 0; i < k; ++i) {
-        cnt += blocks[i] === 'W' ? 1 : 0;
-    }
-    let ans = cnt;
-    for (let i = k; i < blocks.length; ++i) {
-        cnt += blocks[i] === 'W' ? 1 : 0;
-        cnt -= blocks[i - k] === 'W' ? 1 : 0;
-        ans = Math.min(ans, cnt);
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn minimum_recolors(blocks: String, k: i32) -> i32 {
-        let k = k as usize;
-        let s = blocks.as_bytes();
-        let n = s.len();
-        let mut count = 0;
-        for i in 0..k {
-            if s[i] == b'B' {
-                count += 1;
-            }
-        }
-        let mut ans = k - count;
-        for i in k..n {
-            if s[i - k] == b'B' {
-                count -= 1;
-            }
-            if s[i] == b'B' {
-                count += 1;
-            }
-            ans = ans.min(k - count);
-        }
-        ans as i32
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -216,4 +137,4 @@ int minimumRecolors(char *blocks, int k) {
 
 ```
 
-<!-- tabs:end -->
+

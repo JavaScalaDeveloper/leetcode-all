@@ -80,24 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def validSubarraySplit(self, nums: List[int]) -> int:
-        @cache
-        def dfs(i):
-            if i >= n:
-                return 0
-            ans = inf
-            for j in range(i, n):
-                if gcd(nums[i], nums[j]) > 1:
-                    ans = min(ans, 1 + dfs(j + 1))
-            return ans
 
-        n = len(nums)
-        ans = dfs(0)
-        dfs.cache_clear()
-        return ans if ans < inf else -1
-```
 
 ### **Java**
 
@@ -141,84 +124,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int inf = 0x3f3f3f3f;
-    int validSubarraySplit(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> f(n);
-        function<int(int)> dfs = [&](int i) -> int {
-            if (i >= n) return 0;
-            if (f[i]) return f[i];
-            int ans = inf;
-            for (int j = i; j < n; ++j) {
-                if (__gcd(nums[i], nums[j]) > 1) {
-                    ans = min(ans, 1 + dfs(j + 1));
-                }
-            }
-            f[i] = ans;
-            return ans;
-        };
-        int ans = dfs(0);
-        return ans < inf ? ans : -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func validSubarraySplit(nums []int) int {
-	n := len(nums)
-	f := make([]int, n)
-	var dfs func(int) int
-	const inf int = 0x3f3f3f3f
-	dfs = func(i int) int {
-		if i >= n {
-			return 0
-		}
-		if f[i] > 0 {
-			return f[i]
-		}
-		ans := inf
-		for j := i; j < n; j++ {
-			if gcd(nums[i], nums[j]) > 1 {
-				ans = min(ans, 1+dfs(j+1))
-			}
-		}
-		f[i] = ans
-		return ans
-	}
-	ans := dfs(0)
-	if ans < inf {
-		return ans
-	}
-	return -1
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -226,4 +142,4 @@ func gcd(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -72,22 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkZeroOnes(self, s: str) -> bool:
-        n0 = n1 = 0
-        t0 = t1 = 0
-        for c in s:
-            if c == '0':
-                t0 += 1
-                t1 = 0
-            else:
-                t0 = 0
-                t1 += 1
-            n0 = max(n0, t0)
-            n1 = max(n1, t1)
-        return n1 > n0
-```
+
 
 ### **Java**
 
@@ -114,84 +99,17 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {boolean}
- */
-var checkZeroOnes = function (s) {
-    let max0 = 0,
-        max1 = 0;
-    let t0 = 0,
-        t1 = 0;
-    for (let char of s) {
-        if (char == '0') {
-            t0++;
-            t1 = 0;
-        } else {
-            t1++;
-            t0 = 0;
-        }
-        max0 = Math.max(max0, t0);
-        max1 = Math.max(max1, t1);
-    }
-    return max1 > max0;
-};
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkZeroOnes(string s) {
-        int n0 = 0, n1 = 0;
-        int t0 = 0, t1 = 0;
-        for (auto c : s) {
-            if (c == '0') {
-                ++t0;
-                t1 = 0;
-            } else {
-                ++t1;
-                t0 = 0;
-            }
-            n0 = max(n0, t0);
-            n1 = max(n1, t1);
-        }
-        return n1 > n0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkZeroOnes(s string) bool {
-	n0, n1 := 0, 0
-	t0, t1 := 0, 0
-	for _, c := range s {
-		if c == '0' {
-			t0++
-			t1 = 0
-		} else {
-			t1++
-			t0 = 0
-		}
-		n0 = max(n0, t0)
-		n1 = max(n1, t1)
-	}
-	return n1 > n0
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -199,4 +117,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

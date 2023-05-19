@@ -84,23 +84,7 @@ player1 的得分等于 player2 的得分，所以这一场比赛平局，答案
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isWinner(self, player1: List[int], player2: List[int]) -> int:
-        def f(arr: List[int]) -> int:
-            s = 0
-            for i, x in enumerate(arr):
-                k = 2 if (i and arr[i - 1] == 10) or (i > 1 and arr[i - 2] == 10) else 1
-                s += k * x
-            return s
 
-        a, b = f(player1), f(player2)
-        if a > b:
-            return 1
-        if b > a:
-            return 2
-        return 0
-```
 
 ### **Java**
 
@@ -124,72 +108,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int isWinner(vector<int>& player1, vector<int>& player2) {
-        int a = f(player1), b = f(player2);
-        return a > b ? 1 : b > a ? 2 : 0;
-    }
 
-    int f(vector<int>& arr) {
-        int s = 0;
-        for (int i = 0; i < arr.size(); ++i) {
-            int k = (i > 0 && arr[i - 1] == 10) || (i > 1 && arr[i - 2] == 10) ? 2 : 1;
-            s += k * arr[i];
-        }
-        return s;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isWinner(player1 []int, player2 []int) int {
-	f := func(arr []int) int {
-		s := 0
-		for i, x := range arr {
-			k := 1
-			if (i > 0 && arr[i-1] == 10) || (i > 1 && arr[i-2] == 10) {
-				k = 2
-			}
-			s += k * x
-		}
-		return s
-	}
-	a, b := f(player1), f(player2)
-	if a > b {
-		return 1
-	}
-	if b > a {
-		return 2
-	}
-	return 0
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isWinner(player1: number[], player2: number[]): number {
-    const f = (arr: number[]): number => {
-        let s = 0;
-        for (let i = 0; i < arr.length; ++i) {
-            s += arr[i];
-            if ((i && arr[i - 1] === 10) || (i > 1 && arr[i - 2] === 10)) {
-                s += arr[i];
-            }
-        }
-        return s;
-    };
-    const a = f(player1);
-    const b = f(player2);
-    return a > b ? 1 : a < b ? 2 : 0;
-}
-```
+
 
 ### **...**
 
@@ -197,4 +126,4 @@ function isWinner(player1: number[], player2: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

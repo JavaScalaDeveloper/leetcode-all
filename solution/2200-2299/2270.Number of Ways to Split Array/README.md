@@ -63,17 +63,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def waysToSplitArray(self, nums: List[int]) -> int:
-        s = sum(nums)
-        ans = t = 0
-        for v in nums[:-1]:
-            t += v
-            if t >= s - t:
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -99,48 +89,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int waysToSplitArray(vector<int>& nums) {
-        long long s = accumulate(nums.begin(), nums.end(), 0ll);
-        long long t = 0;
-        int ans = 0;
-        for (int i = 0; i < nums.size() - 1; ++i) {
-            t += nums[i];
-            ans += t >= s - t;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func waysToSplitArray(nums []int) int {
-	s := 0
-	for _, v := range nums {
-		s += v
-	}
-	ans, t := 0, 0
-	for _, v := range nums[:len(nums)-1] {
-		t += v
-		if t >= s-t {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -148,4 +107,4 @@ func waysToSplitArray(nums []int) int {
 
 ```
 
-<!-- tabs:end -->
+

@@ -57,27 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isThereAPath(self, grid: List[List[int]]) -> bool:
-        @cache
-        def dfs(i, j, k):
-            if i >= m or j >= n:
-                return False
-            k += grid[i][j]
-            if k > s or i + j + 1 - k > s:
-                return False
-            if i == m - 1 and j == n - 1:
-                return k == s
-            return dfs(i + 1, j, k) or dfs(i, j + 1, k)
 
-        m, n = len(grid), len(grid[0])
-        s = m + n - 1
-        if s & 1:
-            return False
-        s >>= 1
-        return dfs(0, 0, 0)
-```
 
 ### **Java**
 
@@ -124,68 +104,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isThereAPath(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        int s = m + n - 1;
-        if (s & 1) return false;
-        int f[m][n][s];
-        s >>= 1;
-        memset(f, -1, sizeof f);
-        function<bool(int, int, int)> dfs = [&](int i, int j, int k) -> bool {
-            if (i >= m || j >= n) return false;
-            k += grid[i][j];
-            if (f[i][j][k] != -1) return f[i][j][k];
-            if (k > s || i + j + 1 - k > s) return false;
-            if (i == m - 1 && j == n - 1) return k == s;
-            f[i][j][k] = dfs(i + 1, j, k) || dfs(i, j + 1, k);
-            return f[i][j][k];
-        };
-        return dfs(0, 0, 0);
-    }
-};
-```
 
-### **Go**
 
-```go
-func isThereAPath(grid [][]int) bool {
-	m, n := len(grid), len(grid[0])
-	s := m + n - 1
-	if s%2 == 1 {
-		return false
-	}
-	s >>= 1
-	f := [100][100][200]int{}
-	var dfs func(i, j, k int) bool
-	dfs = func(i, j, k int) bool {
-		if i >= m || j >= n {
-			return false
-		}
-		k += grid[i][j]
-		if f[i][j][k] != 0 {
-			return f[i][j][k] == 1
-		}
-		f[i][j][k] = 2
-		if k > s || i+j+1-k > s {
-			return false
-		}
-		if i == m-1 && j == n-1 {
-			return k == s
-		}
-		res := dfs(i+1, j, k) || dfs(i, j+1, k)
-		if res {
-			f[i][j][k] = 1
-		}
-		return res
-	}
-	return dfs(0, 0, 0)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -193,4 +118,4 @@ func isThereAPath(grid [][]int) bool {
 
 ```
 
-<!-- tabs:end -->
+

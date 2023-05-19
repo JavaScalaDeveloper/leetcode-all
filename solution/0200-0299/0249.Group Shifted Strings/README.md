@@ -38,22 +38,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def groupStrings(self, strings: List[str]) -> List[List[str]]:
-        mp = defaultdict(list)
-        for s in strings:
-            t = []
-            diff = ord(s[0]) - ord('a')
-            for c in s:
-                d = ord(c) - diff
-                if d < ord('a'):
-                    d += 26
-                t.append(chr(d))
-            k = ''.join(t)
-            mp[k].append(s)
-        return list(mp.values())
-```
+
 
 ### **Java**
 
@@ -81,51 +66,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<vector<string>> groupStrings(vector<string>& strings) {
-        unordered_map<string, vector<string>> mp;
-        for (auto& s : strings) {
-            int diff = s[0] - 'a';
-            string t = s;
-            for (int i = 0; i < t.size(); ++i) {
-                char d = t[i] - diff;
-                if (d < 'a') d += 26;
-                t[i] = d;
-            }
-            cout << t << endl;
-            mp[t].push_back(s);
-        }
-        vector<vector<string>> ans;
-        for (auto& e : mp)
-            ans.push_back(e.second);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func groupStrings(strings []string) [][]string {
-	mp := make(map[string][]string)
-	for _, s := range strings {
-		k := ""
-		for i := range s {
-			k += string((s[i]-s[0]+26)%26 + 'a')
-		}
-		mp[k] = append(mp[k], s)
-	}
-	var ans [][]string
-	for _, v := range mp {
-		ans = append(ans, v)
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -133,4 +80,4 @@ func groupStrings(strings []string) [][]string {
 
 ```
 
-<!-- tabs:end -->
+

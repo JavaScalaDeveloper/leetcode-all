@@ -80,18 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        # 第一次买入，第一次卖出，第二次买入，第二次卖出
-        f1, f2, f3, f4 = -prices[0], 0, -prices[0], 0
-        for price in prices[1:]:
-            f1 = max(f1, -price)
-            f2 = max(f2, f1 + price)
-            f3 = max(f3, f2 - price)
-            f4 = max(f4, f3 + price)
-        return f4
-```
+
 
 ### **Java**
 
@@ -113,63 +102,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-        int f1 = -prices[0], f2 = 0, f3 = -prices[0], f4 = 0;
-        for (int i = 1; i < prices.size(); ++i) {
-            f1 = max(f1, -prices[i]);
-            f2 = max(f2, f1 + prices[i]);
-            f3 = max(f3, f2 - prices[i]);
-            f4 = max(f4, f3 + prices[i]);
-        }
-        return f4;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxProfit(prices []int) int {
-    f1, f2, f3, f4 := -prices[0], 0, -prices[0], 0
-    for i := 1; i < len(prices); i++ {
-        f1 = max(f1, -prices[i])
-        f2 = max(f2, f1 + prices[i])
-        f3 = max(f3, f2 - prices[i])
-        f4 = max(f4, f3 + prices[i])
-    }
-    return f4
-}
 
-func max(a, b int) int {
-    if a > b {
-        return a
-    }
-    return b
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MaxProfit(int[] prices) {
-        int f1 = -prices[0], f2 = 0, f3 = -prices[0], f4 = 0;
-        for (int i = 1; i < prices.Length; ++i)
-        {
-            f1 = Math.Max(f1, -prices[i]);
-            f2 = Math.Max(f2, f1 + prices[i]);
-            f3 = Math.Max(f3, f2 - prices[i]);
-            f4 = Math.Max(f4, f3 + prices[i]);
-        }
-        return f4;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -177,4 +120,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

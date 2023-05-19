@@ -65,17 +65,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minStoneSum(self, piles: List[int], k: int) -> int:
-        h = []
-        for p in piles:
-            heappush(h, -p)
-        for _ in range(k):
-            p = -heappop(h)
-            heappush(h, -((p + 1) >> 1))
-        return -sum(h)
-```
+
 
 ### **Java**
 
@@ -101,60 +91,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minStoneSum(vector<int>& piles, int k) {
-        priority_queue<int> q;
-        for (int& p : piles) q.push(p);
-        while (k--) {
-            int p = q.top();
-            q.pop();
-            q.push((p + 1) >> 1);
-        }
-        int ans = 0;
-        while (!q.empty()) {
-            ans += q.top();
-            q.pop();
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minStoneSum(piles []int, k int) int {
-    q := &hp{piles}
-    heap.Init(q)
-    for k > 0 {
-        p := q.pop()
-        q.push((p + 1) >> 1)
-        k--
-    }
-    ans := 0
-    for q.Len() > 0 {
-        ans += q.pop()
-    }
-    return ans
-}
 
-type hp struct{ sort.IntSlice }
 
-func (h hp) Less(i, j int) bool  { return h.IntSlice[i] > h.IntSlice[j] }
-func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
-func (h *hp) Pop() interface{} {
-	a := h.IntSlice
-	v := a[len(a)-1]
-	h.IntSlice = a[:len(a)-1]
-	return v
-}
-func (h *hp) push(v int) { heap.Push(h, v) }
-func (h *hp) pop() int   { return heap.Pop(h).(int) }
-```
+
+
 
 ### **...**
 
@@ -162,4 +105,4 @@ func (h *hp) pop() int   { return heap.Pop(h).(int) }
 
 ```
 
-<!-- tabs:end -->
+

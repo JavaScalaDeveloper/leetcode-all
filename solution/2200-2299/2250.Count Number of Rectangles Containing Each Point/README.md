@@ -71,25 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countRectangles(
-        self, rectangles: List[List[int]], points: List[List[int]]
-    ) -> List[int]:
-        d = defaultdict(list)
-        for x, y in rectangles:
-            d[y].append(x)
-        for y in d.keys():
-            d[y].sort()
-        ans = []
-        for x, y in points:
-            cnt = 0
-            for h in range(y, 101):
-                xs = d[h]
-                cnt += len(xs) - bisect_left(xs, x)
-            ans.append(cnt)
-        return ans
-```
+
 
 ### **Java**
 
@@ -134,98 +116,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function countRectangles(rectangles: number[][], points: number[][]): number[] {
-    const n = 101;
-    let ymap = Array.from({ length: n }, v => []);
-    for (let [x, y] of rectangles) {
-        ymap[y].push(x);
-    }
-    for (let nums of ymap) {
-        nums.sort((a, b) => a - b);
-    }
-    let ans = [];
-    for (let [x, y] of points) {
-        let count = 0;
-        for (let h = y; h < n; h++) {
-            const nums = ymap[h];
-            let left = 0,
-                right = nums.length;
-            while (left < right) {
-                let mid = (left + right) >> 1;
-                if (x > nums[mid]) {
-                    left = mid + 1;
-                } else {
-                    right = mid;
-                }
-            }
-            count += nums.length - right;
-        }
-        ans.push(count);
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> countRectangles(vector<vector<int>>& rectangles, vector<vector<int>>& points) {
-        int n = 101;
-        vector<vector<int>> d(n);
-        for (auto& r : rectangles) d[r[1]].push_back(r[0]);
-        for (auto& v : d) sort(v.begin(), v.end());
-        vector<int> ans;
-        for (auto& p : points) {
-            int x = p[0], y = p[1];
-            int cnt = 0;
-            for (int h = y; h < n; ++h) {
-                auto& xs = d[h];
-                cnt += xs.size() - (lower_bound(xs.begin(), xs.end(), x) - xs.begin());
-            }
-            ans.push_back(cnt);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countRectangles(rectangles [][]int, points [][]int) []int {
-	n := 101
-	d := make([][]int, 101)
-	for _, r := range rectangles {
-		d[r[1]] = append(d[r[1]], r[0])
-	}
-	for _, v := range d {
-		sort.Ints(v)
-	}
-	var ans []int
-	for _, p := range points {
-		x, y := p[0], p[1]
-		cnt := 0
-		for h := y; h < n; h++ {
-			xs := d[h]
-			left, right := 0, len(xs)
-			for left < right {
-				mid := (left + right) >> 1
-				if xs[mid] >= x {
-					right = mid
-				} else {
-					left = mid + 1
-				}
-			}
-			cnt += len(xs) - left
-		}
-		ans = append(ans, cnt)
-	}
-	return ans
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -233,4 +132,4 @@ func countRectangles(rectangles [][]int, points [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

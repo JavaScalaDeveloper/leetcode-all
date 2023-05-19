@@ -64,15 +64,7 @@ words 中不存在互为字母异位词的两个相邻字符串，所以无需�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeAnagrams(self, words: List[str]) -> List[str]:
-        return [
-            w
-            for i, w in enumerate(words)
-            if i == 0 or sorted(w) != sorted(words[i - 1])
-        ]
-```
+
 
 ### **Java**
 
@@ -99,30 +91,7 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function removeAnagrams(words: string[]): string[] {
-    const n = words.length;
-    let ans = [];
-    ans.push(words[0]);
-    let pre = countWord(words[0]).join('');
-    for (let i = 1; i < n; i++) {
-        let cur = countWord(words[i]).join('');
-        if (pre !== cur) {
-            ans.push(words[i]);
-            pre = cur;
-        }
-    }
-    return ans;
-}
 
-function countWord(word: string): number[] {
-    let count = new Array(128).fill(0);
-    for (let i = 0; i < word.length; i++) {
-        count[word.charCodeAt(i)]++;
-    }
-    return count;
-}
-```
 
 ### **...**
 
@@ -130,4 +99,4 @@ function countWord(word: string): number[] {
 
 ```
 
-<!-- tabs:end -->
+

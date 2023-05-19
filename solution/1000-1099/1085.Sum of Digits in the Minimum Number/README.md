@@ -57,16 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sumOfDigits(self, nums: List[int]) -> int:
-        x = min(nums)
-        s = 0
-        while x:
-            s += x % 10
-            x //= 10
-        return s & 1 ^ 1
-```
+
 
 ### **Java**
 
@@ -88,39 +79,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int sumOfDigits(vector<int>& nums) {
-        int x = *min_element(nums.begin(), nums.end());
-        int s = 0;
-        for (; x > 0; x /= 10) {
-            s += x % 10;
-        }
-        return s & 1 ^ 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sumOfDigits(nums []int) int {
-	x := 100
-	for _, v := range nums {
-		if v < x {
-			x = v
-		}
-	}
-	s := 0
-	for ; x > 0; x /= 10 {
-		s += x % 10
-	}
-	return s&1 ^ 1
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -128,4 +93,4 @@ func sumOfDigits(nums []int) int {
 
 ```
 
-<!-- tabs:end -->
+

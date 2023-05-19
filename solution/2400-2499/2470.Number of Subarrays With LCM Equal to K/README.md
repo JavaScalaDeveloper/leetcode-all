@@ -57,19 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def subarrayLCM(self, nums: List[int], k: int) -> int:
-        n = len(nums)
-        ans = 0
-        for i in range(n):
-            a = nums[i]
-            for b in nums[i:]:
-                x = lcm(a, b)
-                ans += x == k
-                a = x
-        return ans
-```
+
 
 ### **Java**
 
@@ -104,61 +92,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int subarrayLCM(vector<int>& nums, int k) {
-        int n = nums.size();
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            int a = nums[i];
-            for (int j = i; j < n; ++j) {
-                int b = nums[j];
-                int x = lcm(a, b);
-                ans += x == k;
-                a = x;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func subarrayLCM(nums []int, k int) (ans int) {
-	for i, a := range nums {
-		for _, b := range nums[i:] {
-			x := lcm(a, b)
-			if x == k {
-				ans++
-			}
-			a = x
-		}
-	}
-	return
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
 
-func lcm(a, b int) int {
-	return a * b / gcd(a, b)
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -166,4 +110,4 @@ func lcm(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

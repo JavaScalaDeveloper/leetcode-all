@@ -92,11 +92,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def doesValidArrayExist(self, derived: List[int]) -> bool:
-        return reduce(xor, derived) == 0
-```
+
 
 ### **Java**
 
@@ -114,32 +110,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool doesValidArrayExist(vector<int>& derived) {
-        int s = 0;
-        for (int x : derived) {
-            s ^= x;
-        }
-        return s == 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func doesValidArrayExist(derived []int) bool {
-	s := 0
-	for _, x := range derived {
-		s ^= x
-	}
-	return s == 0
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -147,4 +124,4 @@ func doesValidArrayExist(derived []int) bool {
 
 ```
 
-<!-- tabs:end -->
+

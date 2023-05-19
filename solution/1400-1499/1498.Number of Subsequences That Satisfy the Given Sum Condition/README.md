@@ -71,23 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numSubseq(self, nums: List[int], target: int) -> int:
-        mod = 10**9 + 7
-        nums.sort()
-        n = len(nums)
-        f = [1] + [0] * n
-        for i in range(1, n + 1):
-            f[i] = f[i - 1] * 2 % mod
-        ans = 0
-        for i, x in enumerate(nums):
-            if x * 2 > target:
-                break
-            j = bisect_right(nums, target - x, i + 1) - 1
-            ans = (ans + f[j - i]) % mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -130,55 +114,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numSubseq(vector<int>& nums, int target) {
-        sort(nums.begin(), nums.end());
-        const int mod = 1e9 + 7;
-        int n = nums.size();
-        int f[n + 1];
-        f[0] = 1;
-        for (int i = 1; i <= n; ++i) {
-            f[i] = (f[i - 1] * 2) % mod;
-        }
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] * 2L > target) {
-                break;
-            }
-            int j = upper_bound(nums.begin() + i + 1, nums.end(), target - nums[i]) - nums.begin() - 1;
-            ans = (ans + f[j - i]) % mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func numSubseq(nums []int, target int) (ans int) {
-	sort.Ints(nums)
-	n := len(nums)
-	f := make([]int, n+1)
-	f[0] = 1
-	const mod int = 1e9 + 7
-	for i := 1; i <= n; i++ {
-		f[i] = f[i-1] * 2 % mod
-	}
-	for i, x := range nums {
-		if x*2 > target {
-			break
-		}
-		j := sort.SearchInts(nums[i+1:], target-x+1) + i
-		ans = (ans + f[j-i]) % mod
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -186,4 +128,4 @@ func numSubseq(nums []int, target int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

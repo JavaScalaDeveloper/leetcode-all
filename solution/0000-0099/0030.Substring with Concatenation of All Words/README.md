@@ -80,36 +80,7 @@ s 中没有子串长度为 16 并且等于 words 的任何顺序排列的连接�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findSubstring(self, s: str, words: List[str]) -> List[int]:
-        cnt = Counter(words)
-        m, n = len(s), len(words)
-        k = len(words[0])
-        ans = []
-        for i in range(k):
-            cnt1 = Counter()
-            l = r = i
-            t = 0
-            while r + k <= m:
-                w = s[r: r + k]
-                r += k
-                if w not in cnt:
-                    l = r
-                    cnt1.clear()
-                    t = 0
-                    continue
-                cnt1[w] += 1
-                t += 1
-                while cnt1[w] > cnt[w]:
-                    remove = s[l: l + k]
-                    l += k
-                    cnt1[remove] -= 1
-                    t -= 1
-                if t == n:
-                    ans.append(l)
-        return ans
-```
+
 
 ### **Java**
 
@@ -156,201 +127,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findSubstring(string s, vector<string>& words) {
-        unordered_map<string, int> cnt;
-        for (auto& w : words) {
-            ++cnt[w];
-        }
-        int m = s.size(), n = words.size(), k = words[0].size();
-        vector<int> ans;
-        for (int i = 0; i < k; ++i) {
-            unordered_map<string, int> cnt1;
-            int l = i, r = i;
-            int t = 0;
-            while (r + k <= m) {
-                string w = s.substr(r, k);
-                r += k;
-                if (!cnt.count(w)) {
-                    cnt1.clear();
-                    l = r;
-                    t = 0;
-                    continue;
-                }
-                ++cnt1[w];
-                ++t;
-                while (cnt1[w] > cnt[w]) {
-                    string remove = s.substr(l, k);
-                    l += k;
-                    --cnt1[remove];
-                    --t;
-                }
-                if (t == n) {
-                    ans.push_back(l);
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> findSubstring(string s, vector<string>& words) {
-        unordered_map<string, int> d;
-        for (auto& w : words) ++d[w];
-        vector<int> ans;
-        int n = s.size(), m = words.size(), k = words[0].size();
-        for (int i = 0; i < k; ++i) {
-            int cnt = 0;
-            unordered_map<string, int> t;
-            for (int j = i; j <= n; j += k) {
-                if (j - i >= m * k) {
-                    auto s1 = s.substr(j - m * k, k);
-                    --t[s1];
-                    cnt -= d[s1] > t[s1];
-                }
-                auto s2 = s.substr(j, k);
-                ++t[s2];
-                cnt += d[s2] >= t[s2];
-                if (cnt == m) ans.emplace_back(j - (m - 1) * k);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findSubstring(s string, words []string) (ans []int) {
-	cnt := map[string]int{}
-	for _, w := range words {
-		cnt[w]++
-	}
-	m, n, k := len(s), len(words), len(words[0])
-	for i := 0; i < k; i++ {
-		cnt1 := map[string]int{}
-		l, r, t := i, i, 0
-		for r+k <= m {
-			w := s[r : r+k]
-			r += k
-			if _, ok := cnt[w]; !ok {
-				l, t = r, 0
-				cnt1 = map[string]int{}
-				continue
-			}
-			cnt1[w]++
-			t++
-			for cnt1[w] > cnt[w] {
-				cnt1[s[l:l+k]]--
-				l += k
-				t--
-			}
-			if t == n {
-				ans = append(ans, l)
-			}
-		}
-	}
-	return
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public IList<int> FindSubstring(string s, string[] words) {
-        var cnt = new Dictionary<string, int>();
-        foreach (var w in words) {
-            if (!cnt.ContainsKey(w)) {
-                cnt[w] = 0;
-            }
-            ++cnt[w];
-        }
-        int m = s.Length, n = words.Length, k = words[0].Length;
-        var ans = new List<int>();
-        for (int i = 0; i < k; ++i) {
-            var cnt1 = new Dictionary<string, int>();
-            int l = i, r = i, t = 0;
-            while (r + k <= m) {
-                var w = s.Substring(r, k);
-                r += k;
-                if (!cnt.ContainsKey(w)) {
-                    cnt1.Clear();
-                    t = 0;
-                    l = r;
-                    continue;
-                }
-                if (!cnt1.ContainsKey(w)) {
-                    cnt1[w] = 0;
-                }
-                ++cnt1[w];
-                ++t;
-                while (cnt1[w] > cnt[w]) {
-                    --cnt1[s.Substring(l, k)];
-                    l += k;
-                    --t;
-                }
-                if (t == n) {
-                    ans.Add(l);
-                }
-            }
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findSubstring(s: string, words: string[]): number[] {
-    const cnt: Map<string, number> = new Map();
-    for (const w of words) {
-        cnt.set(w, (cnt.get(w) || 0) + 1);
-    }
-    const m = s.length;
-    const n = words.length;
-    const k = words[0].length;
-    const ans: number[] = [];
-    for (let i = 0; i < k; ++i) {
-        const cnt1: Map<string, number> = new Map();
-        let l = i;
-        let r = i;
-        let t = 0;
-        while (r + k <= m) {
-            const w = s.slice(r, r + k);
-            r += k;
-            if (!cnt.has(w)) {
-                cnt1.clear();
-                l = r;
-                t = 0;
-                continue;
-            }
-            cnt1.set(w, (cnt1.get(w) || 0) + 1);
-            ++t;
-            while (cnt1.get(w)! - cnt.get(w)! > 0) {
-                const remove = s.slice(l, l + k);
-                cnt1.set(remove, cnt1.get(remove)! - 1);
-                l += k;
-                --t;
-            }
-            if (t === n) {
-                ans.push(l);
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -358,4 +151,4 @@ function findSubstring(s: string, words: string[]): number[] {
 
 ```
 
-<!-- tabs:end -->
+

@@ -76,15 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minFlips(self, target: str) -> int:
-        ans = 0
-        for v in target:
-            if (ans & 1) ^ int(v):
-                ans += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -105,46 +97,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minFlips(string target) {
-        int ans = 0;
-        for (char c : target) {
-            int v = c - '0';
-            if ((ans & 1) ^ v) {
-                ++ans;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minFlips(target string) int {
-	ans := 0
-	for _, c := range target {
-		v := int(c - '0')
-		if ((ans & 1) ^ v) != 0 {
-			ans++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -152,4 +117,4 @@ func minFlips(target string) int {
 
 ```
 
-<!-- tabs:end -->
+

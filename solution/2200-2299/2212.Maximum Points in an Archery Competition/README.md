@@ -82,29 +82,7 @@ Bob 获得总分 8 + 9 + 10 = 27 。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumBobPoints(self, numArrows: int, aliceArrows: List[int]) -> List[int]:
-        n = len(aliceArrows)
-        state = 0
-        mx = -1
-        for mask in range(1 << n):
-            cnt = points = 0
-            for i, alice in enumerate(aliceArrows):
-                if (mask >> i) & 1:
-                    cnt += alice + 1
-                    points += i
-            if cnt <= numArrows and mx < points:
-                state = mask
-                mx = points
-        ans = [0] * n
-        for i, alice in enumerate(aliceArrows):
-            if (state >> i) & 1:
-                ans[i] = alice + 1
-                numArrows -= ans[i]
-        ans[0] = numArrows
-        return ans
-```
+
 
 ### **Java**
 
@@ -142,131 +120,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> maximumBobPoints(int numArrows, vector<int>& aliceArrows) {
-        int n = aliceArrows.size();
-        int state = 0, mx = -1;
-        for (int mask = 1; mask < 1 << n; ++mask) {
-            int cnt = 0, points = 0;
-            for (int i = 0; i < n; ++i) {
-                if ((mask >> i) & 1) {
-                    cnt += aliceArrows[i] + 1;
-                    points += i;
-                }
-            }
-            if (cnt <= numArrows && mx < points) {
-                state = mask;
-                mx = points;
-            }
-        }
-        vector<int> ans(n);
-        for (int i = 0; i < n; ++i) {
-            if ((state >> i) & 1) {
-                ans[i] = aliceArrows[i] + 1;
-                numArrows -= ans[i];
-            }
-        }
-        ans[0] += numArrows;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumBobPoints(numArrows int, aliceArrows []int) []int {
-	n := len(aliceArrows)
-	state, mx := 0, -1
-	for mask := 1; mask < 1<<n; mask++ {
-		cnt, points := 0, 0
-		for i, alice := range aliceArrows {
-			if (mask>>i)&1 == 1 {
-				cnt += alice + 1
-				points += i
-			}
-		}
-		if cnt <= numArrows && mx < points {
-			state = mask
-			mx = points
-		}
-	}
-	ans := make([]int, n)
-	for i, alice := range aliceArrows {
-		if (state>>i)&1 == 1 {
-			ans[i] = alice + 1
-			numArrows -= ans[i]
-		}
-	}
-	ans[0] += numArrows
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maximumBobPoints(numArrows: number, aliceArrows: number[]): number[] {
-    const dfs = (arr: number[], i: number, c: number): number[] => {
-        if (i < 0 || c === 0) {
-            arr[0] += c;
-            return arr;
-        }
-        const a1 = dfs([...arr], i - 1, c);
-        if (c > aliceArrows[i]) {
-            arr[i] = aliceArrows[i] + 1;
-            const a2 = dfs(arr, i - 1, c - aliceArrows[i] - 1);
-            if (
-                a2.reduce((p, v, i) => p + (v > 0 ? i : 0), 0) >=
-                a1.reduce((p, v, i) => p + (v > 0 ? i : 0), 0)
-            ) {
-                return a2;
-            }
-        }
-        return a1;
-    };
-    return dfs(new Array(12).fill(0), 11, numArrows);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    fn dfs(alice_arrows: &Vec<i32>, mut res: Vec<i32>, count: i32, i: usize) -> Vec<i32> {
-        if i == 0 || count == 0 {
-            res[0] += count;
-            return res;
-        }
-        let r1 = Self::dfs(alice_arrows, res.clone(), count, i - 1);
-        if count > alice_arrows[i] {
-            res[i] = alice_arrows[i] + 1;
-            let r2 = Self::dfs(alice_arrows, res, count - alice_arrows[i] - 1, i - 1);
-            if r2
-                .iter()
-                .enumerate()
-                .map(|(i, v)| if v > &0 { i } else { 0 })
-                .sum::<usize>()
-                > r1.iter()
-                    .enumerate()
-                    .map(|(i, v)| if v > &0 { i } else { 0 })
-                    .sum::<usize>()
-            {
-                return r2;
-            }
-        }
-        r1
-    }
 
-    pub fn maximum_bob_points(num_arrows: i32, alice_arrows: Vec<i32>) -> Vec<i32> {
-        Self::dfs(&alice_arrows, vec![0; 12], num_arrows, 11)
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -274,4 +142,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

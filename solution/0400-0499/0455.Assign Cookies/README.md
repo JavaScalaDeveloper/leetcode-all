@@ -66,20 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findContentChildren(self, g: List[int], s: List[int]) -> int:
-        g.sort()
-        s.sort()
-        j = 0
-        for i, x in enumerate(g):
-            while j < len(s) and s[j] < g[i]:
-                j += 1
-            if j >= len(s):
-                return i
-            j += 1
-        return len(g)
-```
+
 
 ### **Java**
 
@@ -105,92 +92,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findContentChildren(vector<int>& g, vector<int>& s) {
-        sort(g.begin(), g.end());
-        sort(s.begin(), s.end());
-        int m = g.size(), n = s.size();
-        for (int i = 0, j = 0; i < m; ++i) {
-            while (j < n && s[j] < g[i]) {
-                ++j;
-            }
-            if (j++ >= n) {
-                return i;
-            }
-        }
-        return m;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findContentChildren(g []int, s []int) int {
-	sort.Ints(g)
-	sort.Ints(s)
-	j := 0
-	for i, x := range g {
-		for j < len(s) && s[j] < x {
-			j++
-		}
-		if j >= len(s) {
-			return i
-		}
-		j++
-	}
-	return len(g)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} g
- * @param {number[]} s
- * @return {number}
- */
-var findContentChildren = function (g, s) {
-    g.sort((a, b) => a - b);
-    s.sort((a, b) => a - b);
-    const m = g.length;
-    const n = s.length;
-    for (let i = 0, j = 0; i < m; ++i) {
-        while (j < n && s[j] < g[i]) {
-            ++j;
-        }
-        if (j++ >= n) {
-            return i;
-        }
-    }
-    return m;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findContentChildren(g: number[], s: number[]): number {
-    g.sort((a, b) => a - b);
-    s.sort((a, b) => a - b);
-    const m = g.length;
-    const n = s.length;
-    for (let i = 0, j = 0; i < m; ++i) {
-        while (j < n && s[j] < g[i]) {
-            ++j;
-        }
-        if (j++ >= n) {
-            return i;
-        }
-    }
-    return m;
-}
-```
+
 
 ### **...**
 
@@ -198,4 +114,4 @@ function findContentChildren(g: number[], s: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

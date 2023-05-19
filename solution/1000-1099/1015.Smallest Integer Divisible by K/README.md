@@ -61,16 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestRepunitDivByK(self, k: int) -> int:
-        n = 1 % k
-        for i in range(1, k + 1):
-            if n == 0:
-                return i
-            n = (n * 10 + 1) % k
-        return -1
-```
+
 
 ### **Java**
 
@@ -91,53 +82,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int smallestRepunitDivByK(int k) {
-        int n = 1 % k;
-        for (int i = 1; i <= k; ++i) {
-            if (n == 0) {
-                return i;
-            }
-            n = (n * 10 + 1) % k;
-        }
-        return -1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestRepunitDivByK(k int) int {
-	n := 1 % k
-	for i := 1; i <= k; i++ {
-		if n == 0 {
-			return i
-		}
-		n = (n*10 + 1) % k
-	}
-	return -1
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function smallestRepunitDivByK(k: number): number {
-    let n = 1 % k;
-    for (let i = 1; i <= k; ++i) {
-        if (n === 0) {
-            return i;
-        }
-        n = (n * 10 + 1) % k;
-    }
-    return -1;
-}
-```
+
 
 ### **...**
 
@@ -145,4 +100,4 @@ function smallestRepunitDivByK(k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

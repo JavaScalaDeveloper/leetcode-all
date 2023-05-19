@@ -72,26 +72,7 @@ solution.pick(3); // 随机返回索引 2, 3 或者 4 之一。每个索引的�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def __init__(self, nums: List[int]):
-        self.nums = nums
 
-    def pick(self, target: int) -> int:
-        n = ans = 0
-        for i, v in enumerate(self.nums):
-            if v == target:
-                n += 1
-                x = random.randint(1, n)
-                if x == n:
-                    ans = i
-        return ans
-
-
-# Your Solution object will be instantiated and called as such:
-# obj = Solution(nums)
-# param_1 = obj.pick(target)
-```
 
 ### **Java**
 
@@ -128,68 +109,13 @@ class Solution {
  */
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> nums;
 
-    Solution(vector<int>& nums) {
-        this->nums = nums;
-    }
 
-    int pick(int target) {
-        int n = 0, ans = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] == target) {
-                ++n;
-                int x = 1 + rand() % n;
-                if (n == x) ans = i;
-            }
-        }
-        return ans;
-    }
-};
 
-/**
- * Your Solution object will be instantiated and called as such:
- * Solution* obj = new Solution(nums);
- * int param_1 = obj->pick(target);
- */
-```
 
-### **Go**
 
-```go
-type Solution struct {
-	nums []int
-}
 
-func Constructor(nums []int) Solution {
-	return Solution{nums}
-}
-
-func (this *Solution) Pick(target int) int {
-	n, ans := 0, 0
-	for i, v := range this.nums {
-		if v == target {
-			n++
-			x := 1 + rand.Intn(n)
-			if n == x {
-				ans = i
-			}
-		}
-	}
-	return ans
-}
-
-/**
- * Your Solution object will be instantiated and called as such:
- * obj := Constructor(nums);
- * param_1 := obj.Pick(target);
- */
-```
 
 ### **...**
 
@@ -197,4 +123,4 @@ func (this *Solution) Pick(target int) int {
 
 ```
 
-<!-- tabs:end -->
+

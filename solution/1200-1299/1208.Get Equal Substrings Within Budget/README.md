@@ -81,43 +81,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
-        def check(x):
-            for i in range(n):
-                j = i + mid - 1
-                if j < n and f[j + 1] - f[i] <= maxCost:
-                    return True
-            return False
 
-        n = len(s)
-        f = list(accumulate((abs(ord(a) - ord(b))
-                 for a, b in zip(s, t)), initial=0))
-        l, r = 0, n
-        while l < r:
-            mid = (l + r + 1) >> 1
-            if check(mid):
-                l = mid
-            else:
-                r = mid - 1
-        return l
-```
 
-```python
-class Solution:
-    def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
-        n = len(s)
-        sum = j = 0
-        ans = 0
-        for i in range(n):
-            sum += abs(ord(s[i]) - ord(t[i]))
-            while sum > maxCost:
-                sum -= abs(ord(s[j]) - ord(t[j]))
-                j += 1
-            ans = max(ans, i - j + 1)
-        return ans
-```
+
 
 ### **Java**
 
@@ -180,119 +146,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int equalSubstring(string s, string t, int maxCost) {
-        int n = s.size();
-        int f[n + 1];
-        f[0] = 0;
-        for (int i = 0; i < n; ++i) {
-            f[i + 1] = f[i] + abs(s[i] - t[i]);
-        }
-        auto check = [&](int x) -> bool {
-            for (int i = 0; i + x - 1 < n; ++i) {
-                int j = i + x - 1;
-                if (f[j + 1] - f[i] <= maxCost) {
-                    return true;
-                }
-            }
-            return false;
-        };
-        int l = 0, r = n;
-        while (l < r) {
-            int mid = (l + r + 1) >> 1;
-            if (check(mid)) {
-                l = mid;
-            } else {
-                r = mid - 1;
-            }
-        }
-        return l;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int equalSubstring(string s, string t, int maxCost) {
-        int n = s.size();
-        int ans = 0, sum = 0;
-        for (int i = 0, j = 0; i < n; ++i) {
-            sum += abs(s[i] - t[i]);
-            while (sum > maxCost) {
-                sum -= abs(s[j] - t[j]);
-                ++j;
-            }
-            ans = max(ans, i - j + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func equalSubstring(s string, t string, maxCost int) int {
-	n := len(s)
-	f := make([]int, n+1)
-	for i, a := range s {
-		f[i+1] = f[i] + abs(int(a)-int(t[i]))
-	}
-	check := func(x int) bool {
-		for i := 0; i+x-1 < n; i++ {
-			if f[i+x]-f[i] <= maxCost {
-				return true
-			}
-		}
-		return false
-	}
-	l, r := 0, n
-	for l < r {
-		mid := (l + r + 1) >> 1
-		if check(mid) {
-			l = mid
-		} else {
-			r = mid - 1
-		}
-	}
-	return l
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
 
-```go
-func equalSubstring(s string, t string, maxCost int) (ans int) {
-	var sum, j int
-	for i := range s {
-		sum += abs(int(s[i]) - int(t[i]))
-		for ; sum > maxCost; j++ {
-			sum -= abs(int(s[j]) - int(t[j]))
-		}
-		if ans < i-j+1 {
-			ans = i - j + 1
-		}
-	}
-	return
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -300,4 +164,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

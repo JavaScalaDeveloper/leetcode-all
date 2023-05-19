@@ -56,20 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def longestWord(self, words: List[str]) -> str:
-        cnt, ans = 0, ''
-        s = set(words)
-        for w in s:
-            n = len(w)
-            if all(w[:i] in s for i in range(1, n)):
-                if cnt < n:
-                    cnt, ans = n, w
-                elif cnt == n and w < ans:
-                    ans = w
-        return ans
-```
+
 
 ### **Java**
 
@@ -110,117 +97,19 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function longestWord(words: string[]): string {
-    words.sort((a, b) => {
-        const n = a.length;
-        const m = b.length;
-        if (n === m) {
-            return a < b ? -1 : 1;
-        }
-        return m - n;
-    });
-    for (const word of words) {
-        let isPass = true;
-        for (let i = 1; i <= word.length; i++) {
-            if (!words.includes(word.slice(0, i))) {
-                isPass = false;
-                break;
-            }
-        }
-        if (isPass) {
-            return word;
-        }
-    }
-    return '';
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn longest_word(mut words: Vec<String>) -> String {
-        words.sort_unstable_by(|a, b| (b.len(), a).cmp(&(a.len(), b)));
-        for word in words.iter() {
-            let mut is_pass = true;
-            for i in 1..=word.len() {
-                if !words.contains(&word[..i].to_string()) {
-                    is_pass = false;
-                    break;
-                }
-            }
-            if is_pass {
-                return word.clone();
-            }
-        }
-        String::new()
-    }
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string longestWord(vector<string>& words) {
-        unordered_set<string> s(words.begin(), words.end());
-        int cnt = 0;
-        string ans = "";
-        for (auto w : s) {
-            int n = w.size();
-            if (check(w, s)) {
-                if (cnt < n) {
-                    cnt = n;
-                    ans = w;
-                } else if (cnt == n && w < ans)
-                    ans = w;
-            }
-        }
-        return ans;
-    }
 
-    bool check(string& word, unordered_set<string>& s) {
-        for (int i = 1, n = word.size(); i < n; ++i)
-            if (!s.count(word.substr(0, i)))
-                return false;
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func longestWord(words []string) string {
-	s := make(map[string]bool)
-	for _, w := range words {
-		s[w] = true
-	}
-	cnt := 0
-	ans := ""
-	check := func(word string) bool {
-		for i, n := 1, len(word); i < n; i++ {
-			if !s[word[:i]] {
-				return false
-			}
-		}
-		return true
-	}
-	for w, _ := range s {
-		n := len(w)
-		if check(w) {
-			if cnt < n {
-				cnt, ans = n, w
-			} else if cnt == n && w < ans {
-				ans = w
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -228,4 +117,4 @@ func longestWord(words []string) string {
 
 ```
 
-<!-- tabs:end -->
+

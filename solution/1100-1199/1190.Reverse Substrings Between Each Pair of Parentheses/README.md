@@ -78,45 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reverseParentheses(self, s: str) -> str:
-        stk = []
-        for c in s:
-            if c == ')':
-                t = []
-                while stk[-1] != '(':
-                    t.append(stk.pop())
-                stk.pop()
-                stk.extend(t)
-            else:
-                stk.append(c)
-        return ''.join(stk)
-```
 
-```python
-class Solution:
-    def reverseParentheses(self, s: str) -> str:
-        n = len(s)
-        d = [0] * n
-        stk = []
-        for i, c in enumerate(s):
-            if c == '(':
-                stk.append(i)
-            elif c == ')':
-                j = stk.pop()
-                d[i], d[j] = j, i
-        i, x = 0, 1
-        ans = []
-        while i < n:
-            if s[i] in '()':
-                i = d[i]
-                x = -x
-            else:
-                ans.append(s[i])
-            i += x
-        return ''.join(ans)
-```
+
+
 
 ### **Java**
 
@@ -153,151 +117,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string reverseParentheses(string s) {
-        string stk;
-        for (char& c : s) {
-            if (c == ')') {
-                string t;
-                while (stk.back() != '(') {
-                    t.push_back(stk.back());
-                    stk.pop_back();
-                }
-                stk.pop_back();
-                stk += t;
-            } else {
-                stk.push_back(c);
-            }
-        }
-        return stk;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    string reverseParentheses(string s) {
-        int n = s.size();
-        vector<int> d(n);
-        stack<int> stk;
-        for (int i = 0; i < n; ++i) {
-            if (s[i] == '(') {
-                stk.push(i);
-            } else if (s[i] == ')') {
-                int j = stk.top();
-                stk.pop();
-                d[i] = j;
-                d[j] = i;
-            }
-        }
-        int i = 0, x = 1;
-        string ans;
-        while (i < n) {
-            if (s[i] == '(' || s[i] == ')') {
-                i = d[i];
-                x = -x;
-            } else {
-                ans.push_back(s[i]);
-            }
-            i += x;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reverseParentheses(s string) string {
-	stk := []byte{}
-	for i := range s {
-		if s[i] == ')' {
-			t := []byte{}
-			for stk[len(stk)-1] != '(' {
-				t = append(t, stk[len(stk)-1])
-				stk = stk[:len(stk)-1]
-			}
-			stk = stk[:len(stk)-1]
-			stk = append(stk, t...)
-		} else {
-			stk = append(stk, s[i])
-		}
-	}
-	return string(stk)
-}
-```
 
-```go
-func reverseParentheses(s string) string {
-	n := len(s)
-	d := make([]int, n)
-	stk := []int{}
-	for i, c := range s {
-		if c == '(' {
-			stk = append(stk, i)
-		} else if c == ')' {
-			j := stk[len(stk)-1]
-			stk = stk[:len(stk)-1]
-			d[i], d[j] = j, i
-		}
-	}
-	ans := []byte{}
-	i, x := 0, 1
-	for i < n {
-		if s[i] == '(' || s[i] == ')' {
-			i = d[i]
-			x = -x
-		} else {
-			ans = append(ans, s[i])
-		}
-		i += x
-	}
-	return string(ans)
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {string}
- */
-var reverseParentheses = function (s) {
-    const n = s.length;
-    const d = new Array(n).fill(0);
-    const stk = [];
-    for (let i = 0; i < n; ++i) {
-        if (s[i] == '(') {
-            stk.push(i);
-        } else if (s[i] == ')') {
-            const j = stk.pop();
-            d[i] = j;
-            d[j] = i;
-        }
-    }
-    let i = 0;
-    let x = 1;
-    const ans = [];
-    while (i < n) {
-        const c = s.charAt(i);
-        if (c == '(' || c == ')') {
-            i = d[i];
-            x = -x;
-        } else {
-            ans.push(c);
-        }
-        i += x;
-    }
-    return ans.join('');
-};
-```
+
+
+
+
+
+
+
+
 
 ### **...**
 
@@ -305,4 +139,4 @@ var reverseParentheses = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

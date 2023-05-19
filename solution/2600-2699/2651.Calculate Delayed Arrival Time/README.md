@@ -52,11 +52,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findDelayedArrivalTime(self, arrivalTime: int, delayedTime: int) -> int:
-        return (arrivalTime + delayedTime) % 24
-```
+
 
 ### **Java**
 
@@ -70,35 +66,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
-        return (arrivalTime + delayedTime) % 24;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findDelayedArrivalTime(arrivalTime int, delayedTime int) int {
-	return (arrivalTime + delayedTime) % 24
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function findDelayedArrivalTime(
-    arrivalTime: number,
-    delayedTime: number,
-): number {
-    return (arrivalTime + delayedTime) % 24;
-}
-```
+
 
 ### **...**
 
@@ -106,4 +84,4 @@ function findDelayedArrivalTime(
 
 ```
 
-<!-- tabs:end -->
+

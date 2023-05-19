@@ -75,37 +75,9 @@ nums 中的所有元素都可以被 p = 1 整除。
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countDistinct(self, nums: List[int], k: int, p: int) -> int:
-        n = len(nums)
-        s = set()
-        for i in range(n):
-            cnt = 0
-            for j in range(i, n):
-                cnt += nums[j] % p == 0
-                if cnt > k:
-                    break
-                s.add(tuple(nums[i: j + 1]))
-        return len(s)
-```
 
-```python
-class Solution:
-    def countDistinct(self, nums: List[int], k: int, p: int) -> int:
-        n = len(nums)
-        s = set()
-        for i in range(n):
-            cnt = 0
-            t = ""
-            for x in nums[i:]:
-                cnt += x % p == 0
-                if cnt > k:
-                    break
-                t += str(x) + ","
-                s.add(t)
-        return len(s)
-```
+
+
 
 ### **Java**
 
@@ -132,72 +104,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countDistinct(vector<int>& nums, int k, int p) {
-        unordered_set<string> s;
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            int cnt = 0;
-            string t;
-            for (int j = i; j < n; ++j) {
-                if (nums[j] % p == 0 && ++cnt > k) {
-                    break;
-                }
-                t += to_string(nums[j]) + ",";
-                s.insert(t);
-            }
-        }
-        return s.size();
-    }
-};
-```
 
-### **Go**
 
-```go
-func countDistinct(nums []int, k int, p int) int {
-	s := map[string]struct{}{}
-	for i := range nums {
-		cnt, t := 0, ""
-		for _, x := range nums[i:] {
-			if x%p == 0 {
-				cnt++
-				if cnt > k {
-					break
-				}
-			}
-			t += string(x) + ","
-			s[t] = struct{}{}
-		}
-	}
-	return len(s)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countDistinct(nums: number[], k: number, p: number): number {
-    const n = nums.length;
-    const s = new Set();
-    for (let i = 0; i < n; ++i) {
-        let cnt = 0;
-        let t = '';
-        for (let j = i; j < n; ++j) {
-            if (nums[j] % p === 0 && ++cnt > k) {
-                break;
-            }
-            t += nums[j].toString() + ',';
-            s.add(t);
-        }
-    }
-    return s.size;
-}
-```
+
 
 ### **...**
 
@@ -205,4 +122,4 @@ function countDistinct(nums: number[], k: number, p: number): number {
 
 ```
 
-<!-- tabs:end -->
+

@@ -149,31 +149,9 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def new21Game(self, n: int, k: int, maxPts: int) -> float:
-        @cache
-        def dfs(i: int) -> float:
-            if i >= k:
-                return int(i <= n)
-            if i == k - 1:
-                return min(n - k + 1, maxPts) / maxPts
-            return dfs(i + 1) + (dfs(i + 1) - dfs(i + maxPts + 1)) / maxPts
 
-        return dfs(0)
-```
 
-```python
-class Solution:
-    def new21Game(self, n: int, k: int, maxPts: int) -> float:
-        f = [0] * (k + maxPts)
-        for i in range(k, min(n + 1, k + maxPts)):
-            f[i] = 1
-        f[k - 1] = min(n - k + 1, maxPts) / maxPts
-        for i in range(k - 2, -1, -1):
-            f[i] = f[i + 1] + (f[i + 1] - f[i + maxPts + 1]) / maxPts
-        return f[0]
-```
+
 
 ### **Java**
 
@@ -226,146 +204,23 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    double new21Game(int n, int k, int maxPts) {
-        vector<double> f(k);
-        function<double(int)> dfs = [&](int i) -> double {
-            if (i >= k) {
-                return i <= n ? 1 : 0;
-            }
-            if (i == k - 1) {
-                return min(n - k + 1, maxPts) * 1.0 / maxPts;
-            }
-            if (f[i]) {
-                return f[i];
-            }
-            return f[i] = dfs(i + 1) + (dfs(i + 1) - dfs(i + maxPts + 1)) / maxPts;
-        };
-        return dfs(0);
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    double new21Game(int n, int k, int maxPts) {
-        if (k == 0) {
-            return 1.0;
-        }
-        double f[k + maxPts];
-        memset(f, 0, sizeof(f));
-        for (int i = k; i < min(n + 1, k + maxPts); ++i) {
-            f[i] = 1;
-        }
-        f[k - 1] = min(n - k + 1, maxPts) * 1.0 / maxPts;
-        for (int i = k - 2; i >= 0; --i) {
-            f[i] = f[i + 1] + (f[i + 1] - f[i + maxPts + 1]) / maxPts;
-        }
-        return f[0];
-    }
-};
-```
 
-### **Go**
 
-```go
-func new21Game(n int, k int, maxPts int) float64 {
-	f := make([]float64, k)
-	var dfs func(int) float64
-	dfs = func(i int) float64 {
-		if i >= k {
-			if i <= n {
-				return 1
-			}
-			return 0
-		}
-		if i == k-1 {
-			return float64(min(n-k+1, maxPts)) / float64(maxPts)
-		}
-		if f[i] > 0 {
-			return f[i]
-		}
-		f[i] = dfs(i+1) + (dfs(i+1)-dfs(i+maxPts+1))/float64(maxPts)
-		return f[i]
-	}
-	return dfs(0)
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func new21Game(n int, k int, maxPts int) float64 {
-	if k == 0 {
-		return 1
-	}
-	f := make([]float64, k+maxPts)
-	for i := k; i < min(n+1, k+maxPts); i++ {
-		f[i] = 1
-	}
-	f[k-1] = float64(min(n-k+1, maxPts)) / float64(maxPts)
-	for i := k - 2; i >= 0; i-- {
-		f[i] = f[i+1] + (f[i+1]-f[i+maxPts+1])/float64(maxPts)
-	}
-	return f[0]
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function new21Game(n: number, k: number, maxPts: number): number {
-    const f = new Array(k).fill(0);
-    const dfs = (i: number): number => {
-        if (i >= k) {
-            return i <= n ? 1 : 0;
-        }
-        if (i === k - 1) {
-            return Math.min(n - k + 1, maxPts) / maxPts;
-        }
-        if (f[i] !== 0) {
-            return f[i];
-        }
-        return (f[i] =
-            dfs(i + 1) + (dfs(i + 1) - dfs(i + maxPts + 1)) / maxPts);
-    };
-    return dfs(0);
-}
-```
 
-```ts
-function new21Game(n: number, k: number, maxPts: number): number {
-    if (k === 0) {
-        return 1;
-    }
-    const f = new Array(k + maxPts).fill(0);
-    for (let i = k; i < Math.min(n + 1, k + maxPts); ++i) {
-        f[i] = 1;
-    }
-    f[k - 1] = Math.min(n - k + 1, maxPts) / maxPts;
-    for (let i = k - 2; i >= 0; --i) {
-        f[i] = f[i + 1] + (f[i + 1] - f[i + maxPts + 1]) / maxPts;
-    }
-    return f[0];
-}
-```
+
+
 
 ### **...**
 
@@ -373,4 +228,4 @@ function new21Game(n: number, k: number, maxPts: number): number {
 
 ```
 
-<!-- tabs:end -->
+

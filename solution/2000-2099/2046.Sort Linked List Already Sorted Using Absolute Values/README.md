@@ -66,26 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def sortLinkedList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        prev, curr = head, head.next
-        while curr:
-            if curr.val < 0:
-                t = curr.next
-                prev.next = t
-                curr.next = head
-                head = curr
-                curr = t
-            else:
-                prev, curr = curr, curr.next
-        return head
-```
+
 
 ### **Java**
 
@@ -122,67 +103,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* sortLinkedList(ListNode* head) {
-        ListNode* prev = head;
-        ListNode* curr = head->next;
-        while (curr) {
-            if (curr->val < 0) {
-                auto t = curr->next;
-                prev->next = t;
-                curr->next = head;
-                head = curr;
-                curr = t;
-            } else {
-                prev = curr;
-                curr = curr->next;
-            }
-        }
-        return head;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func sortLinkedList(head *ListNode) *ListNode {
-	prev, curr := head, head.Next
-	for curr != nil {
-		if curr.Val < 0 {
-			t := curr.Next
-			prev.Next = t
-			curr.Next = head
-			head = curr
-			curr = t
-		} else {
-			prev, curr = curr, curr.Next
-		}
-	}
-	return head
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -190,4 +117,4 @@ func sortLinkedList(head *ListNode) *ListNode {
 
 ```
 
-<!-- tabs:end -->
+

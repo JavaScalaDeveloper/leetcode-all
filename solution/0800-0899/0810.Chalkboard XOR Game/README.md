@@ -106,11 +106,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def xorGame(self, nums: List[int]) -> bool:
-        return len(nums) % 2 == 0 or reduce(xor, nums) == 0
-```
+
 
 ### **Java**
 
@@ -124,34 +120,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool xorGame(vector<int>& nums) {
-        if (nums.size() % 2 == 0) return true;
-        int x = 0;
-        for (int& v : nums) x ^= v;
-        return x == 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func xorGame(nums []int) bool {
-	if len(nums)%2 == 0 {
-		return true
-	}
-	x := 0
-	for _, v := range nums {
-		x ^= v
-	}
-	return x == 0
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -159,4 +134,4 @@ func xorGame(nums []int) bool {
 
 ```
 
-<!-- tabs:end -->
+

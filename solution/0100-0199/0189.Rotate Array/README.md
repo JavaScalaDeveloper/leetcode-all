@@ -77,20 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def rotate(self, nums: List[int], k: int) -> None:
-        def reverse(i: int, j: int):
-            while i < j:
-                nums[i], nums[j] = nums[j], nums[i]
-                i, j = i + 1, j - 1
 
-        n = len(nums)
-        k %= n
-        reverse(0, n - 1)
-        reverse(0, k - 1)
-        reverse(k, n - 1)
-```
 
 ### **Java**
 
@@ -119,120 +106,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    void rotate(vector<int>& nums, int k) {
-        int n = nums.size();
-        k %= n;
-        reverse(nums.begin(), nums.end());
-        reverse(nums.begin(), nums.begin() + k);
-        reverse(nums.begin() + k, nums.end());
-    }
-};
-```
 
-### **Go**
 
-```go
-func rotate(nums []int, k int) {
-	n := len(nums)
-	k %= n
-	reverse := func(i, j int) {
-		for ; i < j; i, j = i+1, j-1 {
-			nums[i], nums[j] = nums[j], nums[i]
-		}
-	}
-	reverse(0, n-1)
-	reverse(0, k-1)
-	reverse(k, n-1)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-/**
- Do not return anything, modify nums in-place instead.
- */
-function rotate(nums: number[], k: number): void {
-    const n: number = nums.length;
-    k %= n;
-    const reverse = (i: number, j: number): void => {
-        for (; i < j; ++i, --j) {
-            const t: number = nums[i];
-            nums[i] = nums[j];
-            nums[j] = t;
-        }
-    };
-    reverse(0, n - 1);
-    reverse(0, k - 1);
-    reverse(k, n - 1);
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    private int[] nums;
 
-    public void Rotate(int[] nums, int k) {
-        this.nums = nums;
-        int n = nums.Length;
-        k %= n;
-        reverse(0, n - 1);
-        reverse(0, k - 1);
-        reverse(k, n - 1);
-    }
 
-    private void reverse(int i, int j) {
-        for (; i < j; ++i, --j) {
-            int t = nums[i];
-            nums[i] = nums[j];
-            nums[j] = t;
-        }
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {void} Do not return anything, modify nums in-place instead.
- */
-var rotate = function (nums, k) {
-    const n = nums.length;
-    k %= n;
-    const reverse = (i, j) => {
-        for (; i < j; ++i, --j) {
-            [nums[i], nums[j]] = [nums[j], nums[i]];
-        }
-    };
-    reverse(0, n - 1);
-    reverse(0, k - 1);
-    reverse(k, n - 1);
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn rotate(nums: &mut Vec<i32>, k: i32) {
-        let n = nums.len();
-        let k = k as usize % n;
-        nums.reverse();
-        nums[..k].reverse();
-        nums[k..].reverse();
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -240,4 +136,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

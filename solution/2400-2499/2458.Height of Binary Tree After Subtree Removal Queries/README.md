@@ -99,36 +99,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def treeQueries(self, root: Optional[TreeNode], queries: List[int]) -> List[int]:
-        def f(root):
-            if root is None:
-                return 0
-            l, r = f(root.left), f(root.right)
-            d[root] = 1 + max(l, r)
-            return d[root]
 
-        def dfs(root, depth, rest):
-            if root is None:
-                return
-            depth += 1
-            res[root.val] = rest
-            dfs(root.left, depth, max(rest, depth + d[root.right]))
-            dfs(root.right, depth, max(rest, depth + d[root.left]))
-
-        d = defaultdict(int)
-        f(root)
-        res = [0] * (len(d) + 1)
-        dfs(root, -1, 0)
-        return [res[v] for v in queries]
-```
 
 ### **Java**
 
@@ -188,101 +159,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<int> treeQueries(TreeNode* root, vector<int>& queries) {
-        unordered_map<TreeNode*, int> d;
-        function<int(TreeNode*)> f = [&](TreeNode* root) -> int {
-            if (!root) return 0;
-            int l = f(root->left), r = f(root->right);
-            d[root] = 1 + max(l, r);
-            return d[root];
-        };
-        f(root);
-        vector<int> res(d.size() + 1);
-        function<void(TreeNode*, int, int)> dfs = [&](TreeNode* root, int depth, int rest) {
-            if (!root) return;
-            ++depth;
-            res[root->val] = rest;
-            dfs(root->left, depth, max(rest, depth + d[root->right]));
-            dfs(root->right, depth, max(rest, depth + d[root->left]));
-        };
-        dfs(root, -1, 0);
-        vector<int> ans;
-        for (int v : queries) ans.emplace_back(res[v]);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func treeQueries(root *TreeNode, queries []int) (ans []int) {
-	d := map[*TreeNode]int{}
-	var f func(*TreeNode) int
-	f = func(root *TreeNode) int {
-		if root == nil {
-			return 0
-		}
-		l, r := f(root.Left), f(root.Right)
-		d[root] = 1 + max(l, r)
-		return d[root]
-	}
-	f(root)
-	res := make([]int, len(d)+1)
-	var dfs func(*TreeNode, int, int)
-	dfs = func(root *TreeNode, depth, rest int) {
-		if root == nil {
-			return
-		}
-		depth++
-		res[root.Val] = rest
-		dfs(root.Left, depth, max(rest, depth+d[root.Right]))
-		dfs(root.Right, depth, max(rest, depth+d[root.Left]))
-	}
-	dfs(root, -1, 0)
-	for _, v := range queries {
-		ans = append(ans, res[v])
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -290,4 +177,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

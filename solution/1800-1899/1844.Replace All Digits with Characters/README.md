@@ -67,14 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def replaceDigits(self, s: str) -> str:
-        s = list(s)
-        for i in range(1, len(s), 2):
-            s[i] = chr(ord(s[i - 1]) + int(s[i]))
-        return ''.join(s)
-```
+
 
 ### **Java**
 
@@ -92,62 +85,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string replaceDigits(string s) {
-        int n = s.size();
-        for (int i = 1; i < n; i += 2) {
-            s[i] = s[i - 1] + s[i] - '0';
-        }
-        return s;
-    }
-};
-```
 
-### **Go**
 
-```go
-func replaceDigits(s string) string {
-	cs := []byte(s)
-	for i := 1; i < len(s); i += 2 {
-		cs[i] = cs[i-1] + cs[i] - '0'
-	}
-	return string(cs)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function replaceDigits(s: string): string {
-    const n = s.length;
-    const ans = [...s];
-    for (let i = 1; i < n; i += 2) {
-        ans[i] = String.fromCharCode(ans[i - 1].charCodeAt(0) + Number(ans[i]));
-    }
-    return ans.join('');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn replace_digits(s: String) -> String {
-        let n = s.len();
-        let mut ans = s.into_bytes();
-        let mut i = 1;
-        while i < n {
-            ans[i] = ans[i - 1] + (ans[i] - b'0');
-            i += 2;
-        }
-        ans.into_iter().map(char::from).collect()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -167,4 +119,4 @@ char *replaceDigits(char *s) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -77,26 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumOperations(self, nums: List[int]) -> int:
-        i, j = 0, len(nums) - 1
-        a, b = nums[i], nums[j]
-        ans = 0
-        while i < j:
-            if a < b:
-                i += 1
-                a += nums[i]
-                ans += 1
-            elif b < a:
-                j -= 1
-                b += nums[j]
-                ans += 1
-            else:
-                i, j = i + 1, j - 1
-                a, b = nums[i], nums[j]
-        return ans
-```
+
 
 ### **Java**
 
@@ -125,62 +106,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumOperations(vector<int>& nums) {
-        int i = 0, j = nums.size() - 1;
-        long a = nums[i], b = nums[j];
-        int ans = 0;
-        while (i < j) {
-            if (a < b) {
-                a += nums[++i];
-                ++ans;
-            } else if (b < a) {
-                b += nums[--j];
-                ++ans;
-            } else {
-                a = nums[++i];
-                b = nums[--j];
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumOperations(nums []int) int {
-	i, j := 0, len(nums)-1
-	a, b := nums[i], nums[j]
-	ans := 0
-	for i < j {
-		if a < b {
-			i++
-			a += nums[i]
-			ans++
-		} else if b < a {
-			j--
-			b += nums[j]
-			ans++
-		} else {
-			i, j = i+1, j-1
-			a, b = nums[i], nums[j]
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -188,4 +124,4 @@ func minimumOperations(nums []int) int {
 
 ```
 
-<!-- tabs:end -->
+

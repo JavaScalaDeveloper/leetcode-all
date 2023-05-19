@@ -75,16 +75,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
-        cnt = Counter(students)
-        for v in sandwiches:
-            if cnt[v] == 0:
-                return cnt[v ^ 1]
-            cnt[v] -= 1
-        return 0
-```
+
 
 ### **Java**
 
@@ -107,41 +98,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countStudents(vector<int>& students, vector<int>& sandwiches) {
-        int cnt[2] = {0};
-        for (int& v : students) ++cnt[v];
-        for (int& v : sandwiches) {
-            if (cnt[v]-- == 0) {
-                return cnt[v ^ 1];
-            }
-        }
-        return 0;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countStudents(students []int, sandwiches []int) int {
-	cnt := [2]int{}
-	for _, v := range students {
-		cnt[v]++
-	}
-	for _, v := range sandwiches {
-		if cnt[v] == 0 {
-			return cnt[v^1]
-		}
-		cnt[v]--
-	}
-	return 0
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -164,42 +127,11 @@ int countStudents(int *students, int studentsSize, int *sandwiches, int sandwich
 
 ### **TypeScript**
 
-```ts
-function countStudents(students: number[], sandwiches: number[]): number {
-    const count = [0, 0];
-    for (const v of students) {
-        count[v]++;
-    }
-    for (const v of sandwiches) {
-        if (count[v] === 0) {
-            return count[v ^ 1];
-        }
-        count[v]--;
-    }
-    return 0;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn count_students(students: Vec<i32>, sandwiches: Vec<i32>) -> i32 {
-        let mut count = [0, 0];
-        for &v in students.iter() {
-            count[v as usize] += 1;
-        }
-        for &v in sandwiches.iter() {
-            let v = v as usize;
-            if count[v as usize] == 0 {
-                return count[v ^ 1];
-            }
-            count[v] -= 1;
-        }
-        0
-    }
-}
-```
+
+
+
 
 ### **...**
 
@@ -207,4 +139,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

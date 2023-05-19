@@ -64,28 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestRange(self, nums: List[List[int]]) -> List[int]:
-        t = [(x, i) for i, v in enumerate(nums) for x in v]
-        t.sort()
-        cnt = Counter()
-        ans = [-inf, inf]
-        j = 0
-        for i, (b, v) in enumerate(t):
-            cnt[v] += 1
-            while len(cnt) == len(nums):
-                a = t[j][0]
-                x = b - a - (ans[1] - ans[0])
-                if x < 0 or (x == 0 and a < ans[0]):
-                    ans = [a, b]
-                w = t[j][1]
-                cnt[w] -= 1
-                if cnt[w] == 0:
-                    cnt.pop(w)
-                j += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -133,81 +112,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> smallestRange(vector<vector<int>>& nums) {
-        int n = 0;
-        for (auto& v : nums) n += v.size();
-        vector<pair<int, int>> t(n);
-        int k = nums.size();
-        for (int i = 0, j = 0; i < k; ++i) {
-            for (int v : nums[i]) {
-                t[j++] = {v, i};
-            }
-        }
-        sort(t.begin(), t.end());
-        int j = 0;
-        unordered_map<int, int> cnt;
-        vector<int> ans = {-1000000, 1000000};
-        for (int i = 0; i < n; ++i) {
-            int b = t[i].first;
-            int v = t[i].second;
-            ++cnt[v];
-            while (cnt.size() == k) {
-                int a = t[j].first;
-                int w = t[j].second;
-                int x = b - a - (ans[1] - ans[0]);
-                if (x < 0 || (x == 0 && a < ans[0])) {
-                    ans[0] = a;
-                    ans[1] = b;
-                }
-                if (--cnt[w] == 0) {
-                    cnt.erase(w);
-                }
-                ++j;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestRange(nums [][]int) []int {
-	t := [][]int{}
-	for i, x := range nums {
-		for _, v := range x {
-			t = append(t, []int{v, i})
-		}
-	}
-	sort.Slice(t, func(i, j int) bool { return t[i][0] < t[j][0] })
-	ans := []int{-1000000, 1000000}
-	j := 0
-	cnt := map[int]int{}
-	for _, x := range t {
-		b, v := x[0], x[1]
-		cnt[v]++
-		for len(cnt) == len(nums) {
-			a, w := t[j][0], t[j][1]
-			x := b - a - (ans[1] - ans[0])
-			if x < 0 || (x == 0 && a < ans[0]) {
-				ans[0], ans[1] = a, b
-			}
-			cnt[w]--
-			if cnt[w] == 0 {
-				delete(cnt, w)
-			}
-			j++
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -215,4 +126,4 @@ func smallestRange(nums [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

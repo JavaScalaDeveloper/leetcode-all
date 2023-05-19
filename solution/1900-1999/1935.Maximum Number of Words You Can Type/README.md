@@ -55,21 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def canBeTypedWords(self, text: str, brokenLetters: str) -> int:
-        letters = set(brokenLetters)
-        res = 0
-        for word in text.split():
-            find = False
-            for letter in letters:
-                if letter in word:
-                    find = True
-                    break
-            if not find:
-                res += 1
-        return res
-```
+
 
 ### **Java**
 
@@ -106,4 +92,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -66,70 +66,11 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minWindow(self, s: str, t: str) -> str:
-        m, n = len(s), len(t)
-        if n > m:
-            return ""
-        need, window = defaultdict(int), defaultdict(int)
-        for c in t:
-            need[c] += 1
-        start, minLen = 0, inf
-        left, right = 0, 0
-        while right < m:
-            window[s[right]] += 1
-            right += 1
-            while self.check(need, window):
-                if right - left < minLen:
-                    minLen = right - left
-                    start = left
-                window[s[left]] -= 1
-                left += 1
-        return "" if minLen == inf else s[start : start + minLen]
 
-    def check(self, need, window):
-        for k, v in need.items():
-            if window[k] < v:
-                return False
-        return True
-```
 
 进阶解法
 
-```python
-class Solution:
-    def minWindow(self, s: str, t: str) -> str:
-        m, n = len(s), len(t)
-        if n > m:
-            return ""
-        need, window = defaultdict(int), defaultdict(int)
-        needCount, windowCount = 0, 0
-        for c in t:
-            if need[c] == 0:
-                needCount += 1
-            need[c] += 1
-        start, minLen = 0, inf
-        left, right = 0, 0
-        while right < m:
-            ch = s[right]
-            right += 1
-            if ch in need:
-                window[ch] += 1
-                if window[ch] == need[ch]:
-                    windowCount += 1
-            while windowCount == needCount:
-                if right - left < minLen:
-                    minLen = right - left
-                    start = left
-                ch = s[left]
-                left += 1
-                if ch in need:
-                    if window[ch] == need[ch]:
-                        windowCount -= 1
-                    window[ch] -= 1
-        return "" if minLen == inf else s[start:start + minLen]
-```
+
 
 ### **Java**
 
@@ -222,96 +163,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func minWindow(s string, t string) string {
-	m, n := len(s), len(t)
-	if n > m {
-		return ""
-	}
-	need, window := make(map[byte]int), make(map[byte]int)
-	for _, r := range t {
-		need[byte(r)]++
-	}
-	start, minLen := 0, math.MaxInt32
-	left, right := 0, 0
-	for right < m {
-		window[s[right]]++
-		right++
-		for check(need, window) {
-			if right-left < minLen {
-				minLen = right - left
-				start = left
-			}
-			window[s[left]]--
-			left++
-		}
-	}
-	if minLen == math.MaxInt32 {
-		return ""
-	}
-	return s[start : start+minLen]
-}
 
-func check(need, window map[byte]int) bool {
-	for k, v := range need {
-		if window[k] < v {
-			return false
-		}
-	}
-	return true
-}
-```
+
 
 进阶解法
 
-```go
-func minWindow(s string, t string) string {
-	m, n := len(s), len(t)
-	if n > m {
-		return ""
-	}
-	need, window := make(map[byte]int), make(map[byte]int)
-	needCount, windowCount := 0, 0
-	for _, r := range t {
-		if need[byte(r)] == 0 {
-			needCount++
-		}
-		need[byte(r)]++
-	}
-	start, minLen := 0, math.MaxInt32
-	left, right := 0, 0
-	for right < m {
-		ch := s[right]
-		right++
-		if v, ok := need[ch]; ok {
-			window[ch]++
-			if window[ch] == v {
-				windowCount++
-			}
-		}
-		for windowCount == needCount {
-			if right-left < minLen {
-				minLen = right - left
-				start = left
-			}
-			ch = s[left]
-			left++
-			if v, ok := need[ch]; ok {
-				if window[ch] == v {
-					windowCount--
-				}
-				window[ch]--
-			}
-		}
-	}
-	if minLen == math.MaxInt32 {
-		return ""
-	}
-	return s[start : start+minLen]
-}
-```
+
 
 ### **...**
 
@@ -319,4 +177,4 @@ func minWindow(s string, t string) string {
 
 ```
 
-<!-- tabs:end -->
+

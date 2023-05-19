@@ -70,44 +70,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def restoreArray(self, adjacentPairs: List[List[int]]) -> List[int]:
-        g = defaultdict(list)
-        for a, b in adjacentPairs:
-            g[a].append(b)
-            g[b].append(a)
-        n = len(adjacentPairs) + 1
-        ans = [0] * n
-        for i, v in g.items():
-            if len(v) == 1:
-                ans[0] = i
-                ans[1] = v[0]
-                break
-        for i in range(2, n):
-            v = g[ans[i - 1]]
-            ans[i] = v[0] if v[1] == ans[i - 2] else v[1]
-        return ans
-```
 
-```python
-class Solution:
-    def restoreArray(self, adjacentPairs: List[List[int]]) -> List[int]:
-        def dfs(i, fa):
-            ans.append(i)
-            for j in g[i]:
-                if j != fa:
-                    dfs(j, i)
 
-        g = defaultdict(list)
-        for a, b in adjacentPairs:
-            g[a].append(b)
-            g[b].append(a)
-        i = next(i for i, v in g.items() if len(v) == 1)
-        ans = []
-        dfs(i, 1e6)
-        return ans
-```
+
 
 ### **Java**
 
@@ -173,124 +138,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> restoreArray(vector<vector<int>>& adjacentPairs) {
-        int n = adjacentPairs.size() + 1;
-        unordered_map<int, vector<int>> g;
-        for (auto& e : adjacentPairs) {
-            int a = e[0], b = e[1];
-            g[a].push_back(b);
-            g[b].push_back(a);
-        }
-        vector<int> ans(n);
-        for (auto& [k, v] : g) {
-            if (v.size() == 1) {
-                ans[0] = k;
-                ans[1] = v[0];
-                break;
-            }
-        }
-        for (int i = 2; i < n; ++i) {
-            auto v = g[ans[i - 1]];
-            ans[i] = v[0] == ans[i - 2] ? v[1] : v[0];
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> restoreArray(vector<vector<int>>& adjacentPairs) {
-        unordered_map<int, vector<int>> g;
-        for (auto& e : adjacentPairs) {
-            int a = e[0], b = e[1];
-            g[a].emplace_back(b);
-            g[b].emplace_back(a);
-        }
-        int n = adjacentPairs.size() + 1;
-        vector<int> ans;
-        function<void(int, int)> dfs = [&](int i, int fa) {
-            ans.emplace_back(i);
-            for (int& j : g[i]) {
-                if (j != fa) {
-                    dfs(j, i);
-                }
-            }
-        };
-        for (auto& [i, v] : g) {
-            if (v.size() == 1) {
-                dfs(i, 1e6);
-                break;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func restoreArray(adjacentPairs [][]int) []int {
-	n := len(adjacentPairs) + 1
-	g := map[int][]int{}
-	for _, e := range adjacentPairs {
-		a, b := e[0], e[1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-	}
-	ans := make([]int, n)
-	for k, v := range g {
-		if len(v) == 1 {
-			ans[0] = k
-			ans[1] = v[0]
-			break
-		}
-	}
-	for i := 2; i < n; i++ {
-		v := g[ans[i-1]]
-		ans[i] = v[0]
-		if v[0] == ans[i-2] {
-			ans[i] = v[1]
-		}
-	}
-	return ans
-}
-```
 
-```go
-func restoreArray(adjacentPairs [][]int) []int {
-	g := map[int][]int{}
-	for _, e := range adjacentPairs {
-		a, b := e[0], e[1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-	}
-	ans := []int{}
-	var dfs func(i, fa int)
-	dfs = func(i, fa int) {
-		ans = append(ans, i)
-		for _, j := range g[i] {
-			if j != fa {
-				dfs(j, i)
-			}
-		}
-	}
-	for i, v := range g {
-		if len(v) == 1 {
-			dfs(i, 1000000)
-			break
-		}
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -298,4 +156,4 @@ func restoreArray(adjacentPairs [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

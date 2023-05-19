@@ -53,12 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxProductDifference(self, nums: List[int]) -> int:
-        nums.sort()
-        return nums[-1] * nums[-2] - nums[0] * nums[1]
-```
+
 
 ### **Java**
 
@@ -74,43 +69,17 @@ class Solution {
 }
 ```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var maxProductDifference = function (nums) {
-    nums.sort((a, b) => a - b);
-    let n = nums.length;
-    let ans = nums[n - 1] * nums[n - 2] - nums[0] * nums[1];
-    return ans;
-};
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxProductDifference(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        return nums[n - 1] * nums[n - 2] - nums[0] * nums[1];
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxProductDifference(nums []int) int {
-	sort.Ints(nums)
-	n := len(nums)
-	return nums[n-1]*nums[n-2] - nums[0]*nums[1]
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -118,4 +87,4 @@ func maxProductDifference(nums []int) int {
 
 ```
 
-<!-- tabs:end -->
+

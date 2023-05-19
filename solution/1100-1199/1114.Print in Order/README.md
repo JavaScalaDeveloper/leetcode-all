@@ -83,55 +83,9 @@ public class Foo {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Foo:
-    def __init__(self):
-        self.l2 = threading.Lock()
-        self.l3 = threading.Lock()
-        self.l2.acquire()
-        self.l3.acquire()
 
-    def first(self, printFirst: 'Callable[[], None]') -> None:
-        printFirst()
-        self.l2.release()
 
-    def second(self, printSecond: 'Callable[[], None]') -> None:
-        self.l2.acquire()
-        printSecond()
-        self.l3.release()
 
-    def third(self, printThird: 'Callable[[], None]') -> None:
-        self.l3.acquire()
-        printThird()
-```
-
-```python
-from threading import Semaphore
-
-class Foo:
-    def __init__(self):
-        self.a = Semaphore(1)
-        self.b = Semaphore(0)
-        self.c = Semaphore(0)
-
-    def first(self, printFirst: 'Callable[[], None]') -> None:
-        self.a.acquire()
-        # printFirst() outputs "first". Do not change or remove this line.
-        printFirst()
-        self.b.release()
-
-    def second(self, printSecond: 'Callable[[], None]') -> None:
-        self.b.acquire()
-        # printSecond() outputs "second". Do not change or remove this line.
-        printSecond()
-        self.c.release()
-
-    def third(self, printThird: 'Callable[[], None]') -> None:
-        self.c.acquire()
-        # printThird() outputs "third". Do not change or remove this line.
-        printThird()
-        self.a.release()
-```
 
 ### **Java**
 
@@ -169,73 +123,11 @@ class Foo {
 }
 ```
 
-### **C++**
 
-```cpp
-class Foo {
-private:
-    mutex m2, m3;
 
-public:
-    Foo() {
-        m2.lock();
-        m3.lock();
-    }
 
-    void first(function<void()> printFirst) {
-        printFirst();
-        m2.unlock();
-    }
 
-    void second(function<void()> printSecond) {
-        m2.lock();
-        printSecond();
-        m3.unlock();
-    }
 
-    void third(function<void()> printThird) {
-        m3.lock();
-        printThird();
-    }
-};
-```
-
-```cpp
-#include <semaphore.h>
-
-class Foo {
-private:
-    sem_t a, b, c;
-
-public:
-    Foo() {
-        sem_init(&a, 0, 1);
-        sem_init(&b, 0, 0);
-        sem_init(&c, 0, 0);
-    }
-
-    void first(function<void()> printFirst) {
-         sem_wait(&a);
-        // printFirst() outputs "first". Do not change or remove this line.
-        printFirst();
-        sem_post(&b);
-    }
-
-    void second(function<void()> printSecond) {
-         sem_wait(&b);
-        // printSecond() outputs "second". Do not change or remove this line.
-        printSecond();
-        sem_post(&c);
-    }
-
-    void third(function<void()> printThird) {
-         sem_wait(&c);
-        // printThird() outputs "third". Do not change or remove this line.
-        printThird();
-        sem_post(&a);
-    }
-};
-```
 
 ### **...**
 
@@ -243,4 +135,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

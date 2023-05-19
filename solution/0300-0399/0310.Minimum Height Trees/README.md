@@ -61,31 +61,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
-        if n == 1:
-            return [0]
-        g = defaultdict(list)
-        degree = [0] * n
-        for a, b in edges:
-            g[a].append(b)
-            g[b].append(a)
-            degree[a] += 1
-            degree[b] += 1
-        q = deque(i for i in range(n) if degree[i] == 1)
-        ans = []
-        while q:
-            ans.clear()
-            for _ in range(len(q)):
-                a = q.popleft()
-                ans.append(a)
-                for b in g[a]:
-                    degree[b] -= 1
-                    if degree[b] == 1:
-                        q.append(b)
-        return ans
-```
+
 
 ### **Java**
 
@@ -131,83 +107,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
-        if (n == 1) return {0};
-        vector<vector<int>> g(n);
-        vector<int> degree(n);
-        for (auto& e : edges) {
-            int a = e[0], b = e[1];
-            g[a].push_back(b);
-            g[b].push_back(a);
-            ++degree[a];
-            ++degree[b];
-        }
-        queue<int> q;
-        for (int i = 0; i < n; ++i)
-            if (degree[i] == 1)
-                q.push(i);
-        vector<int> ans;
-        while (!q.empty()) {
-            ans.clear();
-            for (int i = q.size(); i > 0; --i) {
-                int a = q.front();
-                q.pop();
-                ans.push_back(a);
-                for (int b : g[a])
-                    if (--degree[b] == 1)
-                        q.push(b);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findMinHeightTrees(n int, edges [][]int) []int {
-	if n == 1 {
-		return []int{0}
-	}
-	g := make([][]int, n)
-	degree := make([]int, n)
-	for _, e := range edges {
-		a, b := e[0], e[1]
-		g[a] = append(g[a], b)
-		g[b] = append(g[b], a)
-		degree[a]++
-		degree[b]++
-	}
-	var q []int
-	for i := 0; i < n; i++ {
-		if degree[i] == 1 {
-			q = append(q, i)
-		}
-	}
-	var ans []int
-	for len(q) > 0 {
-		ans = []int{}
-		for i := len(q); i > 0; i-- {
-			a := q[0]
-			q = q[1:]
-			ans = append(ans, a)
-			for _, b := range g[a] {
-				degree[b]--
-				if degree[b] == 1 {
-					q = append(q, b)
-				}
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -215,4 +121,4 @@ func findMinHeightTrees(n int, edges [][]int) []int {
 
 ```
 
-<!-- tabs:end -->
+

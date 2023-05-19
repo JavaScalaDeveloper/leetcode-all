@@ -62,11 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def makeStringsEqual(self, s: str, target: str) -> bool:
-        return ("1" in s) == ("1" in target)
-```
+
 
 ### **Java**
 
@@ -80,44 +76,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool makeStringsEqual(string s, string target) {
-        auto a = count(s.begin(), s.end(), '1') > 0;
-        auto b = count(target.begin(), target.end(), '1') > 0;
-        return a == b;
-    }
-};
-```
 
-### **Go**
 
-```go
-func makeStringsEqual(s string, target string) bool {
-	return strings.Contains(s, "1") == strings.Contains(target, "1")
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function makeStringsEqual(s: string, target: string): boolean {
-    return s.includes('1') === target.includes('1');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn make_strings_equal(s: String, target: String) -> bool {
-        s.contains('1') == target.contains('1')
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -146,4 +119,4 @@ bool makeStringsEqual(char *s, char *target) {
 
 ```
 
-<!-- tabs:end -->
+

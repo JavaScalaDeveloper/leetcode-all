@@ -71,30 +71,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        n = len(numbers)
-        for i in range(n - 1):
-            x = target - numbers[i]
-            j = bisect_left(numbers, x, lo=i + 1)
-            if j < n and numbers[j] == x:
-                return [i + 1, j + 1]
-```
 
-```python
-class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        i, j = 0, len(numbers) - 1
-        while i < j:
-            x = numbers[i] + numbers[j]
-            if x == target:
-                return [i + 1, j + 1]
-            if x < target:
-                i += 1
-            else:
-                j -= 1
-```
+
+
 
 ### **Java**
 
@@ -140,183 +119,33 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& numbers, int target) {
-        for (int i = 0, n = numbers.size();; ++i) {
-            int x = target - numbers[i];
-            int j = lower_bound(numbers.begin() + i + 1, numbers.end(), x) - numbers.begin();
-            if (j < n && numbers[j] == x) {
-                return {i + 1, j + 1};
-            }
-        }
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& numbers, int target) {
-        for (int i = 0, j = numbers.size() - 1;;) {
-            int x = numbers[i] + numbers[j];
-            if (x == target) {
-                return {i + 1, j + 1};
-            }
-            if (x < target) {
-                ++i;
-            } else {
-                --j;
-            }
-        }
-    }
-};
-```
 
-### **Go**
 
-```go
-func twoSum(numbers []int, target int) []int {
-	for i, n := 0, len(numbers); ; i++ {
-		x := target - numbers[i]
-		j := sort.SearchInts(numbers[i+1:], x) + i + 1
-		if j < n && numbers[j] == x {
-			return []int{i + 1, j + 1}
-		}
-	}
-}
-```
 
-```go
-func twoSum(numbers []int, target int) []int {
-	for i, j := 0, len(numbers)-1; ; {
-		x := numbers[i] + numbers[j]
-		if x == target {
-			return []int{i + 1, j + 1}
-		}
-		if x < target {
-			i++
-		} else {
-			j--
-		}
-	}
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function twoSum(numbers: number[], target: number): number[] {
-    const n = numbers.length;
-    for (let i = 0; ; ++i) {
-        const x = target - numbers[i];
-        let l = i + 1;
-        let r = n - 1;
-        while (l < r) {
-            const mid = (l + r) >> 1;
-            if (numbers[mid] >= x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        if (numbers[l] === x) {
-            return [i + 1, l + 1];
-        }
-    }
-}
-```
 
-```ts
-function twoSum(numbers: number[], target: number): number[] {
-    for (let i = 0, j = numbers.length - 1; ; ) {
-        const x = numbers[i] + numbers[j];
-        if (x === target) {
-            return [i + 1, j + 1];
-        }
-        if (x < target) {
-            ++i;
-        } else {
-            --j;
-        }
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} numbers
- * @param {number} target
- * @return {number[]}
- */
-var twoSum = function (numbers, target) {
-    const n = numbers.length;
-    for (let i = 0; ; ++i) {
-        const x = target - numbers[i];
-        let l = i + 1;
-        let r = n - 1;
-        while (l < r) {
-            const mid = (l + r) >> 1;
-            if (numbers[mid] >= x) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        if (numbers[l] === x) {
-            return [i + 1, l + 1];
-        }
-    }
-};
-```
 
-```js
-/**
- * @param {number[]} numbers
- * @param {number} target
- * @return {number[]}
- */
-var twoSum = function (numbers, target) {
-    for (let i = 0, j = numbers.length - 1; ; ) {
-        const x = numbers[i] + numbers[j];
-        if (x === target) {
-            return [i + 1, j + 1];
-        }
-        if (x < target) {
-            ++i;
-        } else {
-            --j;
-        }
-    }
-};
-```
 
-### **Rust**
 
-```rust
-use std::cmp::Ordering;
 
-impl Solution {
-    pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
-        let n = numbers.len();
-        let mut l = 0;
-        let mut r = n - 1;
-        loop {
-            match (numbers[l] + numbers[r]).cmp(&target) {
-                Ordering::Less => l += 1,
-                Ordering::Greater => r -= 1,
-                Ordering::Equal => break,
-            }
-        }
-        vec![l as i32 + 1, r as i32 + 1]
-    }
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -324,4 +153,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

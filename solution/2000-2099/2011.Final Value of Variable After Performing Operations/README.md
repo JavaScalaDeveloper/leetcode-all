@@ -81,11 +81,7 @@ X--：X 减 1 ，X = 1 - 1 = 0
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def finalValueAfterOperations(self, operations: List[str]) -> int:
-        return sum(1 if s[1] == '+' else -1 for s in operations)
-```
+
 
 ### **Java**
 
@@ -103,81 +99,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int finalValueAfterOperations(vector<string>& operations) {
-        int ans = 0;
-        for (auto& s : operations) ans += (s[1] == '+' ? 1 : -1);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func finalValueAfterOperations(operations []string) (ans int) {
-	for _, s := range operations {
-		if s[1] == '+' {
-			ans += 1
-		} else {
-			ans -= 1
-		}
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string[]} operations
- * @return {number}
- */
-var finalValueAfterOperations = function (operations) {
-    let ans = 0;
-    for (const s of operations) {
-        ans += s[1] === '+' ? 1 : -1;
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function finalValueAfterOperations(operations: string[]): number {
-    let ans = 0;
-    for (let operation of operations) {
-        ans += operation.includes('+') ? 1 : -1;
-    }
-    return ans;
-}
-```
 
-```ts
-function finalValueAfterOperations(operations: string[]): number {
-    return operations.reduce((r, v) => r + (v[1] === '+' ? 1 : -1), 0);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn final_value_after_operations(operations: Vec<String>) -> i32 {
-        let mut ans = 0;
-        for s in operations.iter() {
-            ans += if s.as_bytes()[1] == b'+' { 1 } else { -1 };
-        }
-        ans
-    }
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -197,4 +139,4 @@ int finalValueAfterOperations(char **operations, int operationsSize) {
 
 ```
 
-<!-- tabs:end -->
+

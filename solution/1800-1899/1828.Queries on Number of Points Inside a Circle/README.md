@@ -63,20 +63,7 @@ queries[0] 是绿色的圆，queries[1] 是红色的圆，queries[2] 是蓝色�
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countPoints(
-        self, points: List[List[int]], queries: List[List[int]]
-    ) -> List[int]:
-        ans = []
-        for x, y, r in queries:
-            cnt = 0
-            for i, j in points:
-                dx, dy = i - x, j - y
-                cnt += dx * dx + dy * dy <= r * r
-            ans.append(cnt)
-        return ans
-```
+
 
 ### **Java**
 
@@ -102,87 +89,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> countPoints(vector<vector<int>>& points, vector<vector<int>>& queries) {
-        vector<int> ans;
-        for (auto& q : queries) {
-            int x = q[0], y = q[1], r = q[2];
-            int cnt = 0;
-            for (auto& p : points) {
-                int i = p[0], j = p[1];
-                int dx = i - x, dy = j - y;
-                cnt += dx * dx + dy * dy <= r * r;
-            }
-            ans.emplace_back(cnt);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countPoints(points [][]int, queries [][]int) (ans []int) {
-	for _, q := range queries {
-		x, y, r := q[0], q[1], q[2]
-		cnt := 0
-		for _, p := range points {
-			i, j := p[0], p[1]
-			dx, dy := i-x, j-y
-			if dx*dx+dy*dy <= r*r {
-				cnt++
-			}
-		}
-		ans = append(ans, cnt)
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countPoints(points: number[][], queries: number[][]): number[] {
-    return queries.map(([cx, cy, r]) => {
-        let res = 0;
-        for (const [px, py] of points) {
-            if (Math.sqrt((cx - px) ** 2 + (cy - py) ** 2) <= r) {
-                res++;
-            }
-        }
-        return res;
-    });
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn count_points(points: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {
-        queries
-            .iter()
-            .map(|v| {
-                let cx = v[0];
-                let cy = v[1];
-                let r = v[2].pow(2);
-                let mut count = 0;
-                for p in points.iter() {
-                    if ((p[0] - cx).pow(2) + (p[1] - cy).pow(2)) <= r {
-                        count += 1;
-                    }
-                }
-                count
-            })
-            .collect()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -216,4 +137,4 @@ int *countPoints(int **points, int pointsSize, int *pointsColSize, int **queries
 
 ```
 
-<!-- tabs:end -->
+

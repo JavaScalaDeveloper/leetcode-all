@@ -84,44 +84,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:
-        ans = [0] * n
-        for first, last, seats in bookings:
-            ans[first - 1] += seats
-            if last < n:
-                ans[last] -= seats
-        return list(accumulate(ans))
-```
-
-```python
-class BinaryIndexedTree:
-    def __init__(self, n):
-        self.n = n
-        self.c = [0] * (n + 1)
-
-    def update(self, x, delta):
-        while x <= self.n:
-            self.c[x] += delta
-            x += x & -x
-
-    def query(self, x):
-        s = 0
-        while x:
-            s += self.c[x]
-            x -= x & -x
-        return s
 
 
-class Solution:
-    def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:
-        tree = BinaryIndexedTree(n)
-        for first, last, seats in bookings:
-            tree.update(first, seats)
-            tree.update(last + 1, -seats)
-        return [tree.query(i + 1) for i in range(n)]
-```
+
 
 ### **Java**
 
@@ -190,155 +155,21 @@ class BinaryIndexedTree {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
-        vector<int> ans(n);
-        for (auto& e : bookings) {
-            int first = e[0], last = e[1], seats = e[2];
-            ans[first - 1] += seats;
-            if (last < n) {
-                ans[last] -= seats;
-            }
-        }
-        for (int i = 1; i < n; ++i) {
-            ans[i] += ans[i - 1];
-        }
-        return ans;
-    }
-};
-```
 
-```cpp
-class BinaryIndexedTree {
-public:
-    BinaryIndexedTree(int _n): n(_n), c(_n + 1){}
 
-    void update(int x, int delta) {
-        while (x <= n) {
-            c[x] += delta;
-            x += x & -x;
-        }
-    }
 
-    int query(int x) {
-        int s = 0;
-        while (x) {
-            s += c[x];
-            x -= x & -x;
-        }
-        return s;
-    }
 
-private:
-    int n;
-    vector<int> c;
-};
 
-class Solution {
-public:
-    vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
-        BinaryIndexedTree* tree = new BinaryIndexedTree(n);
-        for (auto& e : bookings) {
-            int first = e[0], last = e[1], seats = e[2];
-            tree->update(first, seats);
-            tree->update(last + 1, -seats);
-        }
-        vector<int> ans(n);
-        for (int i = 0; i < n; ++i) {
-            ans[i] = tree->query(i + 1);
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func corpFlightBookings(bookings [][]int, n int) []int {
-	ans := make([]int, n)
-	for _, e := range bookings {
-		first, last, seats := e[0], e[1], e[2]
-		ans[first-1] += seats
-		if last < n {
-			ans[last] -= seats
-		}
-	}
-	for i := 1; i < n; i++ {
-		ans[i] += ans[i-1]
-	}
-	return ans
-}
-```
 
-```go
-type BinaryIndexedTree struct {
-	n int
-	c []int
-}
 
-func newBinaryIndexedTree(n int) *BinaryIndexedTree {
-	c := make([]int, n+1)
-	return &BinaryIndexedTree{n, c}
-}
 
-func (this *BinaryIndexedTree) update(x, delta int) {
-	for x <= this.n {
-		this.c[x] += delta
-		x += x & -x
-	}
-}
 
-func (this *BinaryIndexedTree) query(x int) int {
-	s := 0
-	for x > 0 {
-		s += this.c[x]
-		x -= x & -x
-	}
-	return s
-}
 
-func corpFlightBookings(bookings [][]int, n int) []int {
-	tree := newBinaryIndexedTree(n)
-	for _, e := range bookings {
-		first, last, seats := e[0], e[1], e[2]
-		tree.update(first, seats)
-		tree.update(last+1, -seats)
-	}
-	ans := make([]int, n)
-	for i := range ans {
-		ans[i] = tree.query(i + 1)
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[][]} bookings
- * @param {number} n
- * @return {number[]}
- */
-var corpFlightBookings = function (bookings, n) {
-    const ans = new Array(n).fill(0);
-    for (const [first, last, seats] of bookings) {
-        ans[first - 1] += seats;
-        if (last < n) {
-            ans[last] -= seats;
-        }
-    }
-    for (let i = 1; i < n; ++i) {
-        ans[i] += ans[i - 1];
-    }
-    return ans;
-};
-```
 
 ### **...**
 
@@ -346,4 +177,4 @@ var corpFlightBookings = function (bookings, n) {
 
 ```
 
-<!-- tabs:end -->
+

@@ -66,49 +66,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxHappyGroups(self, batchSize: int, groups: List[int]) -> int:
-        @cache
-        def dfs(state, mod):
-            res = 0
-            x = int(mod == 0)
-            for i in range(1, batchSize):
-                if state >> (i * 5) & 31:
-                    t = dfs(state - (1 << (i * 5)), (mod + i) % batchSize)
-                    res = max(res, t + x)
-            return res
 
-        state = ans = 0
-        for v in groups:
-            i = v % batchSize
-            ans += i == 0
-            if i:
-                state += 1 << (i * 5)
-        ans += dfs(state, 0)
-        return ans
-```
 
-```python
-class Solution:
-    def maxHappyGroups(self, batchSize: int, groups: List[int]) -> int:
-        @cache
-        def dfs(state, x):
-            if state == mask:
-                return 0
-            vis = [False] * batchSize
-            res = 0
-            for i, v in enumerate(g):
-                if state >> i & 1 == 0 and not vis[v]:
-                    vis[v] = True
-                    y = (x + v) % batchSize
-                    res = max(res, dfs(state | 1 << i, y))
-            return res + (x == 0)
 
-        g = [v % batchSize for v in groups if v % batchSize]
-        mask = (1 << len(g)) - 1
-        return len(groups) - len(g) + dfs(0, 0)
-```
 
 ### **Java**
 
@@ -152,87 +112,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxHappyGroups(int batchSize, vector<int>& groups) {
-        using ll = long long;
-        unordered_map<ll, int> f;
-        ll state = 0;
-        int ans = 0;
-        for (auto& v : groups) {
-            int i = v % batchSize;
-            ans += i == 0;
-            if (i) {
-                state += 1ll << (i * 5);
-            }
-        }
-        function<int(ll, int)> dfs = [&](ll state, int mod) {
-            if (f.count(state)) {
-                return f[state];
-            }
-            int res = 0;
-            int x = mod == 0;
-            for (int i = 1; i < batchSize; ++i) {
-                if (state >> (i * 5) & 31) {
-                    int t = dfs(state - (1ll << (i * 5)), (mod + i) % batchSize);
-                    res = max(res, t + x);
-                }
-            }
-            return f[state] = res;
-        };
-        ans += dfs(state, 0);
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxHappyGroups(batchSize int, groups []int) (ans int) {
-	state := 0
-	for _, v := range groups {
-		i := v % batchSize
-		if i == 0 {
-			ans++
-		} else {
-			state += 1 << (i * 5)
-		}
-	}
-	f := map[int]int{}
-	var dfs func(int, int) int
-	dfs = func(state, mod int) int {
-		if v, ok := f[state]; ok {
-			return v
-		}
-		res := 0
-		x := 0
-		if mod == 0 {
-			x = 1
-		}
-		for i := 1; i < batchSize; i++ {
-			if state>>(i*5)&31 != 0 {
-				t := dfs(state-1<<(i*5), (mod+i)%batchSize)
-				res = max(res, t+x)
-			}
-		}
-		f[state] = res
-		return res
-	}
-	ans += dfs(state, 0)
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -240,4 +126,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

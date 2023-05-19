@@ -62,21 +62,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def palindromePairs(self, words: List[str]) -> List[List[int]]:
-        d = {w: i for i, w in enumerate(words)}
-        ans = []
-        for i, w in enumerate(words):
-            for j in range(len(w) + 1):
-                a, b = w[:j], w[j:]
-                ra, rb = a[::-1], b[::-1]
-                if ra in d and d[ra] != i and b == rb:
-                    ans.append([i, d[ra]])
-                if j and rb in d and d[rb] != i and a == ra:
-                    ans.append([d[rb], i])
-        return ans
-```
+
 
 ### **Java**
 
@@ -210,48 +196,9 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func palindromePairs(words []string) [][]int {
-	base := 131
-	mod := int(1e9) + 7
-	mul := make([]int, 310)
-	mul[0] = 1
-	for i := 1; i < len(mul); i++ {
-		mul[i] = (mul[i-1] * base) % mod
-	}
-	n := len(words)
-	prefix := make([]int, n)
-	suffix := make([]int, n)
-	for i, word := range words {
-		m := len(word)
-		for j, c := range word {
-			t := int(c-'a') + 1
-			s := int(word[m-j-1]-'a') + 1
-			prefix[i] = (prefix[i]*base)%mod + t
-			suffix[i] = (suffix[i]*base)%mod + s
-		}
-	}
-	check := func(i, j, n, m int) bool {
-		t := ((prefix[i]*mul[n])%mod + prefix[j]) % mod
-		s := ((suffix[j]*mul[m])%mod + suffix[i]) % mod
-		return t == s
-	}
-	var ans [][]int
-	for i := 0; i < n; i++ {
-		for j := i + 1; j < n; j++ {
-			if check(i, j, len(words[j]), len(words[i])) {
-				ans = append(ans, []int{i, j})
-			}
-			if check(j, i, len(words[i]), len(words[j])) {
-				ans = append(ans, []int{j, i})
-			}
-		}
-	}
-	return ans
-}
-```
+
+
 
 ### **...**
 
@@ -259,4 +206,4 @@ func palindromePairs(words []string) [][]int {
 
 ```
 
-<!-- tabs:end -->
+

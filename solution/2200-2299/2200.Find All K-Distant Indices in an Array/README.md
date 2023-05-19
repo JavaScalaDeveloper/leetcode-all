@@ -58,18 +58,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def findKDistantIndices(self, nums: List[int], key: int, k: int) -> List[int]:
-        ans = []
-        n = len(nums)
-        for i in range(n):
-            for j in range(n):
-                if abs(i - j) <= k and nums[j] == key:
-                    ans.append(i)
-                    break
-        return ans
-```
+
 
 ### **Java**
 
@@ -95,68 +84,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function findKDistantIndices(nums: number[], key: number, k: number): number[] {
-    const n = nums.length;
-    let ans = [];
-    for (let j = 0; j < n; j++) {
-        if (nums[j] == key) {
-            for (let i = j - k; i <= j + k; i++) {
-                if (i >= 0 && i < n && !ans.includes(i)) {
-                    ans.push(i);
-                }
-            }
-        }
-    }
-    return ans;
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> findKDistantIndices(vector<int>& nums, int key, int k) {
-        int n = nums.size();
-        vector<int> ans;
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (abs(i - j) <= k && nums[j] == key) {
-                    ans.push_back(i);
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func findKDistantIndices(nums []int, key int, k int) []int {
-	n := len(nums)
-	var ans []int
-	for i := 0; i < n; i++ {
-		for j, v := range nums {
-			if abs(i-j) <= k && v == key {
-				ans = append(ans, i)
-				break
-			}
-		}
-	}
-	return ans
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -164,4 +100,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

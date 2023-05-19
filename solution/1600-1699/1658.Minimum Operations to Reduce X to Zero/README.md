@@ -77,39 +77,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int], x: int) -> int:
-        x = sum(nums) - x
-        vis = {0: -1}
-        ans = inf
-        s, n = 0, len(nums)
-        for i, v in enumerate(nums):
-            s += v
-            if s not in vis:
-                vis[s] = i
-            if s - x in vis:
-                j = vis[s - x]
-                ans = min(ans, n - (i - j))
-        return -1 if ans == inf else ans
-```
 
-```python
-class Solution:
-    def minOperations(self, nums: List[int], x: int) -> int:
-        x = sum(nums) - x
-        ans = inf
-        n = len(nums)
-        s = j = 0
-        for i, v in enumerate(nums):
-            s += v
-            while j <= i and s > x:
-                s -= nums[j]
-                j += 1
-            if s == x:
-                ans = min(ans, n - (i - j + 1))
-        return -1 if ans == inf else ans
-```
+
+
 
 ### **Java**
 
@@ -162,190 +132,27 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<int>& nums, int x) {
-        x = accumulate(nums.begin(), nums.end(), 0) - x;
-        unordered_map<int, int> vis{{0, -1}};
-        int n = nums.size();
-        int ans = 1 << 30;
-        for (int i = 0, s = 0; i < n; ++i) {
-            s += nums[i];
-            if (!vis.count(s)) {
-                vis[s] = i;
-            }
-            if (vis.count(s - x)) {
-                int j = vis[s - x];
-                ans = min(ans, n - (i - j));
-            }
-        }
-        return ans == 1 << 30 ? -1 : ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<int>& nums, int x) {
-        x = accumulate(nums.begin(), nums.end(), 0) - x;
-        int n = nums.size();
-        int ans = 1 << 30;
-        for (int i = 0, j = 0, s = 0; i < n; ++i) {
-            s += nums[i];
-            while (j <= i && s > x) {
-                s -= nums[j++];
-            }
-            if (s == x) {
-                ans = min(ans, n - (i - j + 1));
-            }
-        }
-        return ans == 1 << 30 ? -1 : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(nums []int, x int) int {
-	x = -x
-	for _, v := range nums {
-		x += v
-	}
-	vis := map[int]int{0: -1}
-	ans := 1 << 30
-	s, n := 0, len(nums)
-	for i, v := range nums {
-		s += v
-		if _, ok := vis[s]; !ok {
-			vis[s] = i
-		}
-		if j, ok := vis[s-x]; ok {
-			ans = min(ans, n-(i-j))
-		}
-	}
-	if ans == 1<<30 {
-		return -1
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-```go
-func minOperations(nums []int, x int) int {
-	x = -x
-	for _, v := range nums {
-		x += v
-	}
-	ans := 1 << 30
-	s, n := 0, len(nums)
-	j := 0
-	for i, v := range nums {
-		s += v
-		for j <= i && s > x {
-			s -= nums[j]
-			j++
-		}
-		if s == x {
-			ans = min(ans, n-(i-j+1))
-		}
-	}
-	if ans == 1<<30 {
-		return -1
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minOperations(nums: number[], x: number): number {
-    x = nums.reduce((a, b) => a + b, 0) - x;
-    const vis = new Map();
-    vis.set(0, -1);
-    const n = nums.length;
-    let ans = 1 << 30;
-    for (let i = 0, s = 0; i < n; ++i) {
-        s += nums[i];
-        if (!vis.has(s)) {
-            vis.set(s, i);
-        }
-        if (vis.has(s - x)) {
-            const j = vis.get(s - x);
-            ans = Math.min(ans, n - (i - j));
-        }
-    }
-    return ans == 1 << 30 ? -1 : ans;
-}
-```
 
-```ts
-function minOperations(nums: number[], x: number): number {
-    x = nums.reduce((a, b) => a + b, 0) - x;
-    const n = nums.length;
-    let ans = 1 << 30;
-    for (let i = 0, j = 0, s = 0; i < n; ++i) {
-        s += nums[i];
-        while (j <= i && s > x) {
-            s -= nums[j++];
-        }
-        if (s == x) {
-            ans = Math.min(ans, n - (i - j + 1));
-        }
-    }
-    return ans == 1 << 30 ? -1 : ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_operations(nums: Vec<i32>, x: i32) -> i32 {
-        let n = nums.len();
-        let target = nums.iter().sum::<i32>() - x;
-        if target < 0 {
-            return -1;
-        }
-        let mut ans = i32::MAX;
-        let mut sum = 0;
-        let mut i = 0;
-        for j in 0..n {
-            sum += nums[j];
-            while sum > target {
-                sum -= nums[i];
-                i += 1;
-            }
-            if sum == target {
-                ans = ans.min((n - 1 - (j - i)) as i32)
-            }
-        }
-        if ans == i32::MAX {
-            return -1;
-        }
-        ans
-    }
-}
-```
+
+
+
+
 
 ### **C**
 
@@ -385,4 +192,4 @@ int minOperations(int *nums, int numsSize, int x) {
 
 ```
 
-<!-- tabs:end -->
+

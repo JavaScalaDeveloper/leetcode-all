@@ -70,23 +70,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countServers(self, grid: List[List[int]]) -> int:
-        m, n = len(grid), len(grid[0])
-        row = [0] * m
-        col = [0] * n
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j]:
-                    row[i] += 1
-                    col[j] += 1
-        return sum(
-            grid[i][j] and (row[i] > 1 or col[j] > 1)
-            for i in range(m)
-            for j in range(n)
-        )
-```
+
 
 ### **Java**
 
@@ -119,85 +103,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int countServers(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
-        vector<int> row(m), col(n);
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j]) {
-                    ++row[i];
-                    ++col[j];
-                }
-            }
-        }
-        int ans = 0;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                ans += grid[i][j] && (row[i] > 1 || col[j] > 1);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countServers(grid [][]int) (ans int) {
-	m, n := len(grid), len(grid[0])
-	row, col := make([]int, m), make([]int, n)
-	for i := range grid {
-		for j, x := range grid[i] {
-			if x == 1 {
-				row[i]++
-				col[j]++
-			}
-		}
-	}
-	for i := range grid {
-		for j, x := range grid[i] {
-			if x == 1 && (row[i] > 1 || col[j] > 1) {
-				ans++
-			}
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countServers(grid: number[][]): number {
-    const m = grid.length;
-    const n = grid[0].length;
-    const row = new Array(m).fill(0);
-    const col = new Array(n).fill(0);
-    for (let i = 0; i < m; i++) {
-        for (let j = 0; j < n; j++) {
-            if (grid[i][j] === 1) {
-                row[i]++;
-                col[j]++;
-            }
-        }
-    }
-    let ans = 0;
-    for (let i = 0; i < m; i++) {
-        for (let j = 0; j < n; j++) {
-            if (grid[i][j] === 1 && (row[i] > 1 || col[j] > 1)) {
-                ans++;
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -205,4 +121,4 @@ function countServers(grid: number[][]): number {
 
 ```
 
-<!-- tabs:end -->
+

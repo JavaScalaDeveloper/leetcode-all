@@ -97,24 +97,7 @@ func(sequence, target)
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def binarySearchableNumbers(self, nums: List[int]) -> int:
-        n = len(nums)
-        ok = [1] * n
-        mx, mi = -1000000, 1000000
-        for i, x in enumerate(nums):
-            if x < mx:
-                ok[i] = 0
-            else:
-                mx = x
-        for i in range(n - 1, -1, -1):
-            if nums[i] > mi:
-                ok[i] = 0
-            else:
-                mi = nums[i]
-        return sum(ok)
-```
+
 
 ### **Java**
 
@@ -146,62 +129,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int binarySearchableNumbers(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> ok(n, 1);
-        int mx = -1000000, mi = 1000000;
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] < mx) {
-                ok[i] = 0;
-            }
-            mx = max(mx, nums[i]);
-        }
-        int ans = 0;
-        for (int i = n - 1; i >= 0; --i) {
-            if (nums[i] > mi) {
-                ok[i] = 0;
-            }
-            mi = min(mi, nums[i]);
-            ans += ok[i];
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func binarySearchableNumbers(nums []int) (ans int) {
-	n := len(nums)
-	ok := make([]int, n)
-	for i := range ok {
-		ok[i] = 1
-	}
-	mx, mi := -1000000, 1000000
-	for i, x := range nums {
-		if x < mx {
-			ok[i] = 0
-		} else {
-			mx = x
-		}
-	}
-	for i := n - 1; i >= 0; i-- {
-		if nums[i] > mi {
-			ok[i] = 0
-		} else {
-			mi = nums[i]
-		}
-		ans += ok[i]
-	}
-	return
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -209,4 +143,4 @@ func binarySearchableNumbers(nums []int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

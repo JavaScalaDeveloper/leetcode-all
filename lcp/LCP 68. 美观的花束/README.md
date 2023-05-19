@@ -60,20 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def beautifulBouquet(self, flowers: List[int], cnt: int) -> int:
-        mod = 10**9 + 7
-        d = Counter()
-        ans = j = 0
-        for i, x in enumerate(flowers):
-            d[x] += 1
-            while d[x] > cnt:
-                d[flowers[j]] -= 1
-                j += 1
-            ans = (ans + i - j + 1) % mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -101,58 +88,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int beautifulBouquet(vector<int>& flowers, int cnt) {
-        int mx = *max_element(flowers.begin(), flowers.end());
-        int d[mx + 1];
-        memset(d, 0, sizeof(d));
-        long long ans = 0;
-        const int mod = 1e9 + 7;
-        for (int i = 0, j = 0; i < flowers.size(); ++i) {
-            ++d[flowers[i]];
-            while (d[flowers[i]] > cnt) {
-                --d[flowers[j++]];
-            }
-            ans = (ans + i - j + 1) % mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func beautifulBouquet(flowers []int, cnt int) (ans int) {
-	mx := 0
-	for _, x := range flowers {
-		mx = max(mx, x)
-	}
-	d := make([]int, mx+1)
-	j := 0
-	const mod = 1e9 + 7
-	for i, x := range flowers {
-		d[x]++
-		for d[x] > cnt {
-			d[flowers[j]]--
-			j++
-		}
-		ans = (ans + i - j + 1) % mod
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **...**
 
@@ -160,4 +102,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

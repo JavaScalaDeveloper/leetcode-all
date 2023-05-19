@@ -56,26 +56,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
-
-class Solution:
-    def inorderSuccessor(self, root: 'TreeNode', p: 'TreeNode') -> 'TreeNode':
-        cur, ans = root, None
-        while cur:
-            if cur.val <= p.val:
-                cur = cur.right
-            else:
-                ans = cur
-                cur = cur.left
-        return ans
-```
 
 ### **Java**
 
@@ -107,59 +88,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func inorderSuccessor(root *TreeNode, p *TreeNode) (ans *TreeNode) {
-	cur := root
-	for cur != nil {
-		if cur.Val <= p.Val {
-			cur = cur.Right
-		} else {
-			ans = cur
-			cur = cur.Left
-		}
-	}
-	return
-}
-```
 
-### **C++**
 
-```cpp
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* inorderSuccessor(TreeNode* root, TreeNode* p) {
-        TreeNode *cur = root, *ans = nullptr;
-        while (cur != nullptr) {
-            if (cur->val <= p->val) {
-                cur = cur->right;
-            } else {
-                ans = cur;
-                cur = cur->left;
-            }
-        }
-        return ans;
-    }
-};
-```
+
+
+
+
 
 ### **...**
 
@@ -167,4 +102,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

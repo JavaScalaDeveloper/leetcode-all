@@ -67,21 +67,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumReplacement(self, nums: List[int]) -> int:
-        ans = 0
-        n = len(nums)
-        mx = nums[-1]
-        for i in range(n - 2, -1, -1):
-            if nums[i] <= mx:
-                mx = nums[i]
-                continue
-            k = (nums[i] + mx - 1) // mx
-            ans += k - 1
-            mx = nums[i] // k
-        return ans
-```
+
 
 ### **Java**
 
@@ -107,67 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long minimumReplacement(vector<int>& nums) {
-        long long ans = 0;
-        int n = nums.size();
-        int mx = nums[n - 1];
-        for (int i = n - 2; i >= 0; --i) {
-            if (nums[i] <= mx) {
-                mx = nums[i];
-                continue;
-            }
-            int k = (nums[i] + mx - 1) / mx;
-            ans += k - 1;
-            mx = nums[i] / k;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumReplacement(nums []int) (ans int64) {
-	n := len(nums)
-	mx := nums[n-1]
-	for i := n - 2; i >= 0; i-- {
-		if nums[i] <= mx {
-			mx = nums[i]
-			continue
-		}
-		k := (nums[i] + mx - 1) / mx
-		ans += int64(k - 1)
-		mx = nums[i] / k
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumReplacement(nums: number[]): number {
-    const n = nums.length;
-    let mx = nums[n - 1];
-    let ans = 0;
-    for (let i = n - 2; i >= 0; --i) {
-        if (nums[i] <= mx) {
-            mx = nums[i];
-            continue;
-        }
-        const k = Math.ceil(nums[i] / mx);
-        ans += k - 1;
-        mx = Math.floor(nums[i] / k);
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -175,4 +111,4 @@ function minimumReplacement(nums: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

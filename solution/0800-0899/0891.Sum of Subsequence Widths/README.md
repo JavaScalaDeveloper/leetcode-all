@@ -100,17 +100,7 @@ $$
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def sumSubseqWidths(self, nums: List[int]) -> int:
-        mod = 10**9 + 7
-        nums.sort()
-        ans, p = 0, 1
-        for i, v in enumerate(nums):
-            ans = (ans + (v - nums[-i - 1]) * p) % mod
-            p = (p << 1) % mod
-        return ans
-```
+
 
 ### **Java**
 
@@ -133,40 +123,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    const int mod = 1e9 + 7;
 
-    int sumSubseqWidths(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        long ans = 0, p = 1;
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            ans = (ans + (nums[i] - nums[n - i - 1]) * p + mod) % mod;
-            p = (p << 1) % mod;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func sumSubseqWidths(nums []int) (ans int) {
-	const mod int = 1e9 + 7
-	sort.Ints(nums)
-	p, n := 1, len(nums)
-	for i, v := range nums {
-		ans = (ans + (v-nums[n-i-1])*p + mod) % mod
-		p = (p << 1) % mod
-	}
-	return
-}
-```
+
+
+
 
 ### **...**
 
@@ -174,4 +137,4 @@ func sumSubseqWidths(nums []int) (ans int) {
 
 ```
 
-<!-- tabs:end -->
+

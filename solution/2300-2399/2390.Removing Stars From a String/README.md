@@ -73,17 +73,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeStars(self, s: str) -> str:
-        ans = []
-        for c in s:
-            if c == '*':
-                ans.pop()
-            else:
-                ans.append(c)
-        return ''.join(ans)
-```
+
 
 ### **Java**
 
@@ -105,93 +95,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string removeStars(string s) {
-        string ans;
-        for (char c : s) {
-            if (c == '*') {
-                ans.pop_back();
-            } else {
-                ans.push_back(c);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeStars(s string) string {
-	ans := []rune{}
-	for _, c := range s {
-		if c == '*' {
-			ans = ans[:len(ans)-1]
-		} else {
-			ans = append(ans, c)
-		}
-	}
-	return string(ans)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function removeStars(s: string): string {
-    const ans: string[] = [];
-    for (const c of s) {
-        if (c === '*') {
-            ans.pop();
-        } else {
-            ans.push(c);
-        }
-    }
-    return ans.join('');
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn remove_stars(s: String) -> String {
-        let mut ans = String::new();
-        for &c in s.as_bytes().iter() {
-            if c == b'*' {
-                ans.pop();
-            } else {
-                ans.push(char::from(c));
-            }
-        }
-        ans
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $s
-     * @return String
-     */
-    function removeStars($s) {
-        $rs = [];
-        for ($i = 0; $i < strlen($s); $i++) {
-            if ($s[$i] == "*") array_pop($rs);
-            else array_push($rs, $s[$i]);
-        }
-        return join($rs);
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -199,4 +121,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

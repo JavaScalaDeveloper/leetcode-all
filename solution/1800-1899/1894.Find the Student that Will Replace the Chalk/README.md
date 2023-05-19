@@ -118,13 +118,7 @@ int search(int left, int right) {
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def chalkReplacer(self, chalk: List[int], k: int) -> int:
-        s = list(accumulate(chalk))
-        k %= s[-1]
-        return bisect_right(s, k)
-```
+
 
 ### **Java**
 
@@ -153,55 +147,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int chalkReplacer(vector<int>& chalk, int k) {
-        int n = chalk.size();
-        vector<long long> s(n, chalk[0]);
-        for (int i = 1; i < n; ++i) s[i] = s[i - 1] + chalk[i];
-        k %= s[n - 1];
-        return upper_bound(s.begin(), s.end(), k) - s.begin();
-    }
-};
-```
 
-### **Go**
 
-```go
-func chalkReplacer(chalk []int, k int) int {
-	n := len(chalk)
-	s := make([]int, n+1)
-	for i := 0; i < n; i++ {
-		s[i+1] = s[i] + chalk[i]
-	}
-	k %= s[n]
-	return sort.Search(n, func(i int) bool { return s[i+1] > k })
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn chalk_replacer(chalk: Vec<i32>, k: i32) -> i32 {
-        let pre_sum: Vec<i64> = chalk
-            .into_iter()
-            .map(|x| x as i64)
-            .scan(0, |state, x| {
-                *state += x;
-                Some(*state)
-            })
-            .collect();
 
-        pre_sum
-            .binary_search(&(k as i64 % pre_sum.last().unwrap()))
-            .map_or_else(|e| e, |v| v + 1) as i32
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -209,4 +165,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

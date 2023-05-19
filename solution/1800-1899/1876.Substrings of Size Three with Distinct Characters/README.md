@@ -53,14 +53,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countGoodSubstrings(self, s: str) -> int:
-        count, n = 0, len(s)
-        for i in range(n - 2):
-            count += s[i] != s[i + 1] and s[i] != s[i + 2] and s[i + 1] != s[i + 2]
-        return count
-```
+
 
 ### **Java**
 
@@ -83,21 +76,7 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function countGoodSubstrings(s: string): number {
-    const n: number = s.length;
-    let count: number = 0;
-    for (let i: number = 0; i < n - 2; ++i) {
-        let a: string = s.charAt(i),
-            b: string = s.charAt(i + 1),
-            c: string = s.charAt(i + 2);
-        if (a != b && a != c && b != c) {
-            ++count;
-        }
-    }
-    return count;
-}
-```
+
 
 ### **...**
 
@@ -105,4 +84,4 @@ function countGoodSubstrings(s: string): number {
 
 ```
 
-<!-- tabs:end -->
+

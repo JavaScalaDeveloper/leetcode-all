@@ -71,17 +71,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def jump(self, nums: List[int]) -> int:
-        ans = mx = last = 0
-        for i, x in enumerate(nums[:-1]):
-            mx = max(mx, i + x)
-            if last == i:
-                ans += 1
-                last = mx
-        return ans
-```
+
 
 ### **Java**
 
@@ -103,83 +93,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int jump(vector<int>& nums) {
-        int ans = 0, mx = 0, last = 0;
-        for (int i = 0; i < nums.size() - 1; ++i) {
-            mx = max(mx, i + nums[i]);
-            if (last == i) {
-                ++ans;
-                last = mx;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func jump(nums []int) (ans int) {
-	mx, last := 0, 0
-	for i, x := range nums[:len(nums)-1] {
-		mx = max(mx, i+x)
-		if last == i {
-			ans++
-			last = mx
-		}
-	}
-	return
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function jump(nums: number[]): number {
-    let ans = 0;
-    let mx = 0;
-    let last = 0;
-    for (let i = 0; i < nums.length - 1; ++i) {
-        mx = Math.max(mx, i + nums[i]);
-        if (last === i) {
-            ++ans;
-            last = mx;
-        }
-    }
-    return ans;
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int Jump(int[] nums) {
-        int ans = 0, mx = 0, last = 0;
-        for (int i = 0; i < nums.Length - 1; ++i) {
-            mx = Math.Max(mx, i + nums[i]);
-            if (last == i) {
-                ++ans;
-                last = mx;
-            }
-        }
-        return ans;
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -200,26 +128,9 @@ int jump(int* nums, int numsSize) {
 }
 ```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn jump(nums: Vec<i32>) -> i32 {
-        let n = nums.len();
-        let mut dp = vec![i32::MAX; n];
-        dp[0] = 0;
-        for i in 0..n - 1 {
-            for j in 1..=nums[i] as usize {
-                if i + j >= n {
-                    break;
-                }
-                dp[i + j] = dp[i + j].min(dp[i] + 1);
-            }
-        }
-        dp[n - 1]
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -227,4 +138,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

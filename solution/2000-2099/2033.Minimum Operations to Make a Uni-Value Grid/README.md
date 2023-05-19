@@ -78,20 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, grid: List[List[int]], x: int) -> int:
-        nums = []
-        mod = grid[0][0] % x
-        for row in grid:
-            for v in row:
-                if v % x != mod:
-                    return -1
-                nums.append(v)
-        nums.sort()
-        mid = nums[len(nums) >> 1]
-        return sum(abs(v - mid) // x for v in nums)
-```
+
 
 ### **Java**
 
@@ -122,64 +109,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minOperations(vector<vector<int>>& grid, int x) {
-        int m = grid.size(), n = grid[0].size();
-        int mod = grid[0][0] % x;
-        int nums[m * n];
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (grid[i][j] % x != mod) {
-                    return -1;
-                }
-                nums[i * n + j] = grid[i][j];
-            }
-        }
-        sort(nums, nums + m * n);
-        int mid = nums[(m * n) >> 1];
-        int ans = 0;
-        for (int v : nums) {
-            ans += abs(v - mid) / x;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(grid [][]int, x int) int {
-	mod := grid[0][0] % x
-	nums := []int{}
-	for _, row := range grid {
-		for _, v := range row {
-			if v%x != mod {
-				return -1
-			}
-			nums = append(nums, v)
-		}
-	}
-	sort.Ints(nums)
-	mid := nums[len(nums)>>1]
-	ans := 0
-	for _, v := range nums {
-		ans += abs(v-mid) / x
-	}
-	return ans
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
+
+
+
 
 ### **...**
 
@@ -187,4 +123,4 @@ func abs(x int) int {
 
 ```
 
-<!-- tabs:end -->
+

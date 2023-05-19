@@ -69,12 +69,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def capitalizeTitle(self, title: str) -> str:
-        words = [w.lower() if len(w) < 3 else w.capitalize() for w in title.split()]
-        return " ".join(words)
-```
+
 
 ### **Java**
 
@@ -96,48 +91,19 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string capitalizeTitle(string title) {
-        transform(title.begin(), title.end(), title.begin(), ::tolower);
-        istringstream ss(title);
-        string ans;
-        while (ss >> title) {
-            if (title.size() > 2) title[0] = toupper(title[0]);
-            ans += title;
-            ans += " ";
-        }
-        ans.pop_back();
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func capitalizeTitle(title string) string {
-	title = strings.ToLower(title)
-	words := strings.Split(title, " ")
-	for i, s := range words {
-		if len(s) > 2 {
-			words[i] = strings.Title(s)
-		}
-	}
-	return strings.Join(words, " ")
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```ts
 
-```
 
 ### **...**
 
@@ -145,4 +111,4 @@ func capitalizeTitle(title string) string {
 
 ```
 
-<!-- tabs:end -->
+

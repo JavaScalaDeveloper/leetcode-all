@@ -78,28 +78,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def greatestLetter(self, s: str) -> str:
-        ss = set(s)
-        for c in ascii_uppercase[::-1]:
-            if c in ss and c.lower() in ss:
-                return c
-        return ''
-```
 
-```python
-class Solution:
-    def greatestLetter(self, s: str) -> str:
-        mask1 = mask2 = 0
-        for c in s:
-            if c.islower():
-                mask1 |= 1 << (ord(c) - ord("a"))
-            else:
-                mask2 |= 1 << (ord(c) - ord("A"))
-        mask = mask1 & mask2
-        return chr(mask.bit_length() - 1 + ord("A")) if mask else ""
-```
+
+
 
 ### **Java**
 
@@ -141,136 +122,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string greatestLetter(string s) {
-        unordered_set<char> ss(s.begin(), s.end());
-        for (char c = 'Z'; c >= 'A'; --c) {
-            if (ss.count(c) && ss.count(char(c + 32))) {
-                return string(1, c);
-            }
-        }
-        return "";
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    string greatestLetter(string s) {
-        int mask1 = 0, mask2 = 0;
-        for (char& c : s) {
-            if (islower(c)) {
-                mask1 |= 1 << (c - 'a');
-            } else {
-                mask2 |= 1 << (c - 'A');
-            }
-        }
-        int mask = mask1 & mask2;
-        return mask ? string(1, 31 - __builtin_clz(mask) + 'A') : "";
-    }
-};
-```
 
-### **Go**
 
-```go
-func greatestLetter(s string) string {
-	ss := map[rune]bool{}
-	for _, c := range s {
-		ss[c] = true
-	}
-	for c := 'Z'; c >= 'A'; c-- {
-		if ss[c] && ss[rune(c+32)] {
-			return string(c)
-		}
-	}
-	return ""
-}
-```
 
-```go
-func greatestLetter(s string) string {
-	mask1, mask2 := 0, 0
-	for _, c := range s {
-		if unicode.IsLower(c) {
-			mask1 |= 1 << (c - 'a')
-		} else {
-			mask2 |= 1 << (c - 'A')
-		}
-	}
-	mask := mask1 & mask2
-	if mask == 0 {
-		return ""
-	}
-	return string(byte(bits.Len(uint(mask))-1) + 'A')
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function greatestLetter(s: string): string {
-    const ss = new Array(128).fill(false);
-    for (const c of s) {
-        ss[c.charCodeAt(0)] = true;
-    }
-    for (let i = 90; i >= 65; --i) {
-        if (ss[i] && ss[i + 32]) {
-            return String.fromCharCode(i);
-        }
-    }
-    return '';
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn greatest_letter(s: String) -> String {
-        let mut arr = [0; 26];
-        for &c in s.as_bytes().iter() {
-            if c >= b'a' {
-                arr[(c - b'a') as usize] |= 1;
-            } else {
-                arr[(c - b'A') as usize] |= 2;
-            }
-        }
-        for i in (0..26).rev() {
-            if arr[i] == 3 {
-                return char::from(b'A' + i as u8).to_string();
-            }
-        }
-        "".to_string()
-    }
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {string} s
- * @return {string}
- */
-var greatestLetter = function (s) {
-    const ss = new Array(128).fill(false);
-    for (const c of s) {
-        ss[c.charCodeAt(0)] = true;
-    }
-    for (let i = 90; i >= 65; --i) {
-        if (ss[i] && ss[i + 32]) {
-            return String.fromCharCode(i);
-        }
-    }
-    return '';
-};
-```
+
+
+
+
+
 
 ### **...**
 
@@ -278,4 +152,4 @@ var greatestLetter = function (s) {
 
 ```
 
-<!-- tabs:end -->
+

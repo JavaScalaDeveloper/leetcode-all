@@ -79,17 +79,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def wiggleMaxLength(self, nums: List[int]) -> int:
-        up = down = 1
-        for i in range(1, len(nums)):
-            if nums[i] > nums[i - 1]:
-                up = max(up, down + 1)
-            elif nums[i] < nums[i - 1]:
-                down = max(down, up + 1)
-        return max(up, down)
-```
+
 
 ### **Java**
 
@@ -113,64 +103,15 @@ class Solution {
 
 ### **TypeScript**
 
-```ts
-function wiggleMaxLength(nums: number[]): number {
-    let up = 1,
-        down = 1;
-    for (let i = 1; i < nums.length; ++i) {
-        let prev = nums[i - 1],
-            cur = nums[i];
-        if (cur > prev) {
-            up = Math.max(up, down + 1);
-        } else if (cur < prev) {
-            down = Math.max(down, up + 1);
-        }
-    }
-    return Math.max(up, down);
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int wiggleMaxLength(vector<int>& nums) {
-        int up = 1, down = 1;
-        for (int i = 1; i < nums.size(); ++i) {
-            if (nums[i] > nums[i - 1]) {
-                up = max(up, down + 1);
-            } else if (nums[i] < nums[i - 1]) {
-                down = max(down, up + 1);
-            }
-        }
-        return max(up, down);
-    }
-};
-```
 
-### **Go**
 
-```go
-func wiggleMaxLength(nums []int) int {
-	up, down := 1, 1
-	for i := 1; i < len(nums); i++ {
-		if nums[i] > nums[i-1] {
-			up = max(up, down+1)
-		} else if nums[i] < nums[i-1] {
-			down = max(down, up+1)
-		}
-	}
-	return max(up, down)
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -178,4 +119,4 @@ func max(a, b int) int {
 
 ```
 
-<!-- tabs:end -->
+

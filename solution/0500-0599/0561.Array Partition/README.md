@@ -55,11 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def arrayPairSum(self, nums: List[int]) -> int:
-        return sum(sorted(nums)[::2])
-```
+
 
 ### **Java**
 
@@ -78,73 +74,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int arrayPairSum(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int ans = 0;
-        for (int i = 0; i < nums.size(); i += 2) ans += nums[i];
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func arrayPairSum(nums []int) int {
-	sort.Ints(nums)
-	ans := 0
-	for i := 0; i < len(nums); i += 2 {
-		ans += nums[i]
-	}
-	return ans
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var arrayPairSum = function (nums) {
-    nums.sort((a, b) => a - b);
-    let ans = 0;
-    for (let i = 0; i < nums.length; i += 2) {
-        ans += nums[i];
-    }
-    return ans;
-};
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn array_pair_sum(mut nums: Vec<i32>) -> i32 {
-        nums.sort();
-        let n = nums.len();
-        let mut i = 0;
-        let mut res = 0;
-        while i < n {
-            res += nums[i];
-            i += 2;
-        }
-        res
-    }
-}
-```
+
+
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -152,4 +100,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

@@ -57,16 +57,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minBitFlips(self, start: int, goal: int) -> int:
-        t = start ^ goal
-        ans = 0
-        while t:
-            ans += t & 1
-            t >>= 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -86,66 +77,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minBitFlips(int start, int goal) {
-        int t = start ^ goal;
-        int ans = 0;
-        while (t) {
-            ans += t & 1;
-            t >>= 1;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minBitFlips(start int, goal int) int {
-	t := start ^ goal
-	ans := 0
-	for t != 0 {
-		ans += t & 1
-		t >>= 1
-	}
-	return ans
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minBitFlips(start: number, goal: number): number {
-    let tmp = start ^ goal;
-    let ans = 0;
-    while (tmp !== 0) {
-        ans += tmp & 1;
-        tmp >>= 1;
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_bit_flips(start: i32, goal: i32) -> i32 {
-        let mut tmp = start ^ goal;
-        let mut ans = 0;
-        while tmp != 0 {
-            ans += tmp & 1;
-            tmp >>= 1;
-        }
-        ans
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -167,4 +113,4 @@ int minBitFlips(int start, int goal) {
 
 ```
 
-<!-- tabs:end -->
+

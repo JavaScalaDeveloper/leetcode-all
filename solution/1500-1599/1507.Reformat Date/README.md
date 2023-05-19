@@ -66,16 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reformatDate(self, date: str) -> str:
-        s = date.split()
-        s.reverse()
-        months = " JanFebMarAprMayJunJulAugSepOctNovDec"
-        s[1] = str(months.index(s[1]) // 3 + 1).zfill(2)
-        s[2] = s[2][:-2].zfill(2)
-        return "-".join(s)
-```
+
 
 ### **Java**
 
@@ -93,35 +84,13 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string reformatDate(string date) {
-        string months = " JanFebMarAprMayJunJulAugSepOctNovDec";
-        stringstream ss(date);
-        string year, month, t;
-        int day;
-        ss >> day >> t >> month >> year;
-        month = to_string(months.find(month) / 3 + 1);
-        return year + "-" + (month.size() == 1 ? "0" + month : month) + "-" + (day > 9 ? "" : "0") + to_string(day);
-    }
-};
-```
 
-### **Go**
 
-```go
-func reformatDate(date string) string {
-	s := strings.Split(date, " ")
-	day, _ := strconv.Atoi(s[0][:len(s[0])-2])
-	months := " JanFebMarAprMayJunJulAugSepOctNovDec"
-	month := strings.Index(months, s[1])/3 + 1
-	year, _ := strconv.Atoi(s[2])
-	return fmt.Sprintf("%d-%02d-%02d", year, month, day)
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -129,4 +98,4 @@ func reformatDate(date string) string {
 
 ```
 
-<!-- tabs:end -->
+

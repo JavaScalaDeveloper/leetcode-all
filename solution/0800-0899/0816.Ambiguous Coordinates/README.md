@@ -74,23 +74,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def ambiguousCoordinates(self, s: str) -> List[str]:
-        def f(i, j):
-            res = []
-            for k in range(1, j - i + 1):
-                l, r = s[i : i + k], s[i + k : j]
-                ok = (l == '0' or not l.startswith('0')) and not r.endswith('0')
-                if ok:
-                    res.append(l + ('.' if k < j - i else '') + r)
-            return res
 
-        n = len(s)
-        return [
-            f'({x}, {y})' for i in range(2, n - 1) for x in f(1, i) for y in f(i, n - 1)
-        ]
-```
 
 ### **Java**
 
@@ -126,101 +110,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<string> ambiguousCoordinates(string s) {
-        int n = s.size();
-        vector<string> ans;
-        auto f = [&](int i, int j) {
-            vector<string> res;
-            for (int k = 1; k <= j - i; ++k) {
-                string l = s.substr(i, k);
-                string r = s.substr(i + k, j - i - k);
-                bool ok = (l == "0" || l[0] != '0') && r.back() != '0';
-                if (ok) {
-                    res.push_back(l + (k < j - i ? "." : "") + r);
-                }
-            }
-            return res;
-        };
-        for (int i = 2; i < n - 1; ++i) {
-            for (auto& x : f(1, i)) {
-                for (auto& y : f(i, n - 1)) {
-                    ans.emplace_back("(" + x + ", " + y + ")");
-                }
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func ambiguousCoordinates(s string) []string {
-	f := func(i, j int) []string {
-		res := []string{}
-		for k := 1; k <= j-i; k++ {
-			l, r := s[i:i+k], s[i+k:j]
-			ok := (l == "0" || l[0] != '0') && (r == "" || r[len(r)-1] != '0')
-			if ok {
-				t := ""
-				if k < j-i {
-					t = "."
-				}
-				res = append(res, l+t+r)
-			}
-		}
-		return res
-	}
 
-	n := len(s)
-	ans := []string{}
-	for i := 2; i < n-1; i++ {
-		for _, x := range f(1, i) {
-			for _, y := range f(i, n-1) {
-				ans = append(ans, "("+x+", "+y+")")
-			}
-		}
-	}
-	return ans
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function ambiguousCoordinates(s: string): string[] {
-    s = s.slice(1, s.length - 1);
-    const n = s.length;
-    const dfs = (s: string) => {
-        const res: string[] = [];
-        for (let i = 1; i < s.length; i++) {
-            const t = `${s.slice(0, i)}.${s.slice(i)}`;
-            if (`${Number(t)}` === t) {
-                res.push(t);
-            }
-        }
-        if (`${Number(s)}` === s) {
-            res.push(s);
-        }
-        return res;
-    };
-    const ans: string[] = [];
-    for (let i = 1; i < n; i++) {
-        for (const left of dfs(s.slice(0, i))) {
-            for (const right of dfs(s.slice(i))) {
-                ans.push(`(${left}, ${right})`);
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -228,4 +128,4 @@ function ambiguousCoordinates(s: string): string[] {
 
 ```
 
-<!-- tabs:end -->
+

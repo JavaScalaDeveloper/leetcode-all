@@ -86,4 +86,4 @@ GROUP BY customer_number
 ORDER BY COUNT(customer_number) DESC;
 ```
 
-<!-- tabs:end -->
+

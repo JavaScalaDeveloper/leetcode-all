@@ -77,21 +77,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def mincostTickets(self, days: List[int], costs: List[int]) -> int:
-        @cache
-        def dfs(i):
-            if i >= len(days):
-                return 0
-            res = inf
-            for c, d in zip(costs, [1, 7, 30]):
-                j = bisect_left(days, days[i] + d)
-                res = min(res, c + dfs(j))
-            return res
 
-        return dfs(0)
-```
 
 ### **Java**
 
@@ -146,106 +132,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> t = {1, 7, 30};
-    vector<int> days;
-    vector<int> costs;
-    vector<int> f;
-    int n;
 
-    int mincostTickets(vector<int>& days, vector<int>& costs) {
-        n = days.size();
-        this->days = days;
-        this->costs = costs;
-        f.assign(n, -1);
-        return dfs(0);
-    }
 
-    int dfs(int i) {
-        if (i >= n) return 0;
-        if (f[i] != -1) return f[i];
-        int res = INT_MAX;
-        for (int k = 0; k < 3; ++k) {
-            int j = lower_bound(days.begin(), days.end(), days[i] + t[k]) - days.begin();
-            res = min(res, costs[k] + dfs(j));
-        }
-        f[i] = res;
-        return res;
-    }
-};
-```
 
-### **Go**
 
-```go
-func mincostTickets(days []int, costs []int) int {
-	t := []int{1, 7, 30}
-	n := len(days)
-	f := make([]int, n)
-	for i := range f {
-		f[i] = -1
-	}
-	var dfs func(i int) int
-	dfs = func(i int) int {
-		if i >= n {
-			return 0
-		}
-		if f[i] != -1 {
-			return f[i]
-		}
-		res := 0x3f3f3f3f
-		for k, c := range costs {
-			j := lowerBound(days, days[i]+t[k])
-			res = min(res, c+dfs(j))
-		}
-		f[i] = res
-		return res
-	}
-	return dfs(0)
-}
 
-func lowerBound(arr []int, x int) int {
-	left, right := 0, len(arr)
-	for left < right {
-		mid := (left + right) >> 1
-		if arr[mid] >= x {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
 ### **TypeScript**
 
-```ts
-function mincostTickets(days: number[], costs: number[]): number {
-    const n = days.length,
-        m = days[n - 1] + 1;
-    const [a, b, c] = costs;
-    let dp = new Array(m).fill(0);
-    for (let i = 1; i < m; i++) {
-        let x = days.includes(i) ? dp[i - 1] + a : dp[i - 1];
-        let y = (i > 7 ? dp[i - 7] : dp[0]) + b;
-        let z = (i > 30 ? dp[i - 30] : dp[0]) + c;
-        dp[i] = Math.min(x, y, z);
-    }
-    return dp[m - 1];
-}
-```
+
 
 ### **...**
 
@@ -253,4 +150,4 @@ function mincostTickets(days: number[], costs: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

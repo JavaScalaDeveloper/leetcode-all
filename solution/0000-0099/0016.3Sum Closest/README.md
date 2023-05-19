@@ -55,26 +55,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def threeSumClosest(self, nums: List[int], target: int) -> int:
-        nums.sort()
-        n = len(nums)
-        ans = inf
-        for i, v in enumerate(nums):
-            j, k = i + 1, n - 1
-            while j < k:
-                t = v + nums[j] + nums[k]
-                if t == target:
-                    return t
-                if abs(t - target) < abs(ans - target):
-                    ans = t
-                if t > target:
-                    k -= 1
-                else:
-                    j += 1
-        return ans
-```
+
 
 ### **Java**
 
@@ -108,127 +89,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int threeSumClosest(vector<int>& nums, int target) {
-        sort(nums.begin(), nums.end());
-        int ans = 1 << 30;
-        int n = nums.size();
-        for (int i = 0; i < n; ++i) {
-            int j = i + 1, k = n - 1;
-            while (j < k) {
-                int t = nums[i] + nums[j] + nums[k];
-                if (t == target) return t;
-                if (abs(t - target) < abs(ans - target)) ans = t;
-                if (t > target) -- k;
-                else ++j;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func threeSumClosest(nums []int, target int) int {
-	sort.Ints(nums)
-	ans := 1 << 30
-	n := len(nums)
-	for i, v := range nums {
-		j, k := i+1, n-1
-		for j < k {
-			t := v + nums[j] + nums[k]
-			if t == target {
-				return t
-			}
-			if abs(t-target) < abs(ans-target) {
-				ans = t
-			}
-			if t > target {
-				k--
-			} else {
-				j++
-			}
-		}
-	}
-	return ans
-}
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var threeSumClosest = function (nums, target) {
-    nums.sort((a, b) => a - b);
-    let ans = 1 << 30;
-    const n = nums.length;
-    for (let i = 0; i < n; ++i) {
-        let j = i + 1;
-        let k = n - 1;
-        while (j < k) {
-            const t = nums[i] + nums[j] + nums[k];
-            if (t === target) {
-                return t;
-            }
-            if (Math.abs(t - target) < Math.abs(ans - target)) {
-                ans = t;
-            }
-            if (t > target) {
-                --k;
-            } else {
-                ++j;
-            }
-        }
-    }
-    return ans;
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function threeSumClosest(nums: number[], target: number): number {
-    nums.sort((a, b) => a - b);
-    let ans: number = 1 << 30;
-    const n = nums.length;
-    for (let i = 0; i < n; ++i) {
-        let j = i + 1;
-        let k = n - 1;
-        while (j < k) {
-            const t: number = nums[i] + nums[j] + nums[k];
-            if (t === target) {
-                return t;
-            }
-            if (Math.abs(t - target) < Math.abs(ans - target)) {
-                ans = t;
-            }
-            if (t > target) {
-                --k;
-            } else {
-                ++j;
-            }
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -236,4 +111,4 @@ function threeSumClosest(nums: number[], target: number): number {
 
 ```
 
-<!-- tabs:end -->
+

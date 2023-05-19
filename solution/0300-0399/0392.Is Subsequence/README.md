@@ -60,16 +60,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def isSubsequence(self, s: str, t: str) -> bool:
-        i = j = 0
-        while i < len(s) and j < len(t):
-            if s[i] == t[j]:
-                i += 1
-            j += 1
-        return i == len(s)
-```
+
 
 ### **Java**
 
@@ -91,76 +82,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool isSubsequence(string s, string t) {
-        int m = s.size(), n = t.size();
-        int i = 0, j = 0;
-        for (; i < m && j < n; ++j) {
-            if (s[i] == t[j]) {
-                ++i;
-            }
-        }
-        return i == m;
-    }
-};
-```
 
-### **Go**
 
-```go
-func isSubsequence(s string, t string) bool {
-	i, j, m, n := 0, 0, len(s), len(t)
-	for i < m && j < n {
-		if s[i] == t[j] {
-			i++
-		}
-		j++
-	}
-	return i == m
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function isSubsequence(s: string, t: string): boolean {
-    const m = s.length;
-    const n = t.length;
-    let i = 0;
-    for (let j = 0; i < m && j < n; ++j) {
-        if (s[i] === t[j]) {
-            ++i;
-        }
-    }
-    return i === m;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn is_subsequence(s: String, t: String) -> bool {
-        let (s, t) = (s.as_bytes(), t.as_bytes());
-        let n = t.len();
-        let mut i = 0;
-        for &c in s.iter() {
-            while i < n && t[i] != c {
-                i += 1;
-            }
-            if i == n {
-                return false;
-            }
-            i += 1;
-        }
-        true
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -178,22 +114,9 @@ bool isSubsequence(char * s, char * t){
 }
 ```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool IsSubsequence(string s, string t) {
-        int m = s.Length, n = t.Length;
-        int i = 0, j = 0;
-        for (; i < m && j < n; ++j) {
-            if (s[i] == t[j]) {
-                ++i;
-            }
-        }
-        return i == m;
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -201,4 +124,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

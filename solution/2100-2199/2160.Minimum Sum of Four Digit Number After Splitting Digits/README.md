@@ -50,16 +50,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumSum(self, num: int) -> int:
-        nums = []
-        while num:
-            nums.append(num % 10)
-            num //= 10
-        nums.sort()
-        return 10 * (nums[0] + nums[1]) + nums[2] + nums[3]
-```
+
 
 ### **Java**
 
@@ -79,66 +70,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumSum(int num) {
-        vector<int> nums;
-        while (num) {
-            nums.push_back(num % 10);
-            num /= 10;
-        }
-        sort(nums.begin(), nums.end());
-        return 10 * (nums[0] + nums[1]) + nums[2] + nums[3];
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumSum(num int) int {
-	var nums []int
-	for num > 0 {
-		nums = append(nums, num%10)
-		num /= 10
-	}
-	sort.Ints(nums)
-	return 10*(nums[0]+nums[1]) + nums[2] + nums[3]
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumSum(num: number): number {
-    const nums = new Array(4).fill(0);
-    for (let i = 0; i < 4; i++) {
-        nums[i] = num % 10;
-        num = Math.floor(num / 10);
-    }
-    nums.sort((a, b) => a - b);
-    return 10 * (nums[0] + nums[1]) + nums[2] + nums[3];
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn minimum_sum(mut num: i32) -> i32 {
-        let mut nums = [0; 4];
-        for i in 0..4 {
-            nums[i] = num % 10;
-            num /= 10;
-        }
-        nums.sort();
-        10 * (nums[0] + nums[1]) + nums[2] + nums[3]
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -164,4 +110,4 @@ int minimumSum(int num) {
 
 ```
 
-<!-- tabs:end -->
+

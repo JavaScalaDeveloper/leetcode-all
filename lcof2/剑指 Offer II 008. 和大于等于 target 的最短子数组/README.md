@@ -64,22 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        n = len(nums)
-        ans = inf
-        sum = 0
-        left, right = 0, 0
-        while right < n:
-            sum += nums[right]
-            right += 1
-            while sum >= target:
-                ans = min(ans, right - left)
-                sum -= nums[left]
-                left += 1
-        return 0 if ans == inf else ans
-```
+
 
 ### **Java**
 
@@ -104,59 +89,13 @@ class Solution {
 }
 ```
 
-### **Go**
 
-```go
-func minSubArrayLen(target int, nums []int) int {
-	n := len(nums)
-	ans := math.MaxInt32
-	sum := 0
-	left, right := 0, 0
-	for right < n {
-		sum += nums[right]
-		right++
-		for sum >= target {
-			ans = min(ans, right-left)
-			sum -= nums[left]
-			left++
-		}
-	}
-	if ans == math.MaxInt32 {
-		return 0
-	}
-	return ans
-}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minSubArrayLen(int target, vector<int>& nums) {
-        int left = 0, right;
-        int sum = 0;
-        int minlen = INT_MAX;
 
-        for (right = 0; right < nums.size(); right++) {
-            sum += nums[right];
-            while (left <= right && sum >= target) {
-                minlen = min(minlen, right - left + 1);
-                sum -= nums[left++];
-            }
-        }
 
-        return minlen == INT_MAX ? 0 : minlen;
-    }
-};
-```
+
 
 ### **...**
 
@@ -164,4 +103,4 @@ public:
 
 ```
 
-<!-- tabs:end -->
+

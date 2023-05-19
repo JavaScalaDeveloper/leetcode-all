@@ -72,14 +72,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkAlmostEquivalent(self, word1: str, word2: str) -> bool:
-        cnt = Counter(word1)
-        for c in word2:
-            cnt[c] -= 1
-        return all(abs(x) <= 3 for x in cnt.values())
-```
+
 
 ### **Java**
 
@@ -105,103 +98,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkAlmostEquivalent(string word1, string word2) {
-        int cnt[26]{};
-        for (char& c : word1) {
-            ++cnt[c - 'a'];
-        }
-        for (char& c : word2) {
-            --cnt[c - 'a'];
-        }
-        for (int i = 0; i < 26; ++i) {
-            if (abs(cnt[i]) > 3) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkAlmostEquivalent(word1 string, word2 string) bool {
-	cnt := [26]int{}
-	for _, c := range word1 {
-		cnt[c-'a']++
-	}
-	for _, c := range word2 {
-		cnt[c-'a']--
-	}
-	for _, x := range cnt {
-		if x > 3 || x < -3 {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function checkAlmostEquivalent(word1: string, word2: string): boolean {
-    const cnt: number[] = new Array(26).fill(0);
-    for (const c of word1) {
-        ++cnt[c.charCodeAt(0) - 97];
-    }
-    for (const c of word2) {
-        --cnt[c.charCodeAt(0) - 97];
-    }
-    return cnt.every(x => Math.abs(x) <= 3);
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public bool CheckAlmostEquivalent(string word1, string word2) {
-        int[] cnt = new int[26];
-        foreach (var c in word1) {
-            cnt[c - 'a']++;
-        }
-        foreach (var c in word2) {
-            cnt[c - 'a']--;
-        }
-        return cnt.All(x => Math.Abs(x) <= 3);
-    }
-}
-```
 
-### **PHP**
 
-```php
-class Solution {
-    /**
-     * @param String $word1
-     * @param String $word2
-     * @return Boolean
-     */
-    function checkAlmostEquivalent($word1, $word2) {
-        for ($i = 0; $i < strlen($word1); $i++) {
-            $hashtable[$word1[$i]] += 1;
-            $hashtable[$word2[$i]] -= 1;
-        }
-        $keys = array_keys($hashtable);
-        for ($j = 0; $j < count($keys); $j++) {
-            if (abs($hashtable[$keys[$j]]) > 3) return false;
-        }
-        return true;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -209,4 +124,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

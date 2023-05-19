@@ -79,29 +79,7 @@ solution.pickIndex(); // 返回 0，返回下标 0，返回该下标概率为 1/
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def __init__(self, w: List[int]):
-        self.s = [0]
-        for c in w:
-            self.s.append(self.s[-1] + c)
 
-    def pickIndex(self) -> int:
-        x = random.randint(1, self.s[-1])
-        left, right = 1, len(self.s) - 1
-        while left < right:
-            mid = (left + right) >> 1
-            if self.s[mid] >= x:
-                right = mid
-            else:
-                left = mid + 1
-        return left - 1
-
-
-# Your Solution object will be instantiated and called as such:
-# obj = Solution(w)
-# param_1 = obj.pickIndex()
-```
 
 ### **Java**
 
@@ -142,163 +120,21 @@ class Solution {
  */
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> s;
 
-    Solution(vector<int>& w) {
-        int n = w.size();
-        s.resize(n + 1);
-        for (int i = 0; i < n; ++i) s[i + 1] = s[i] + w[i];
-    }
 
-    int pickIndex() {
-        int n = s.size();
-        int x = 1 + rand() % s[n - 1];
-        int left = 1, right = n - 1;
-        while (left < right) {
-            int mid = left + right >> 1;
-            if (s[mid] >= x)
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return left - 1;
-    }
-};
 
-/**
- * Your Solution object will be instantiated and called as such:
- * Solution* obj = new Solution(w);
- * int param_1 = obj->pickIndex();
- */
-```
 
-### **Go**
 
-```go
-type Solution struct {
-	s []int
-}
 
-func Constructor(w []int) Solution {
-	n := len(w)
-	s := make([]int, n+1)
-	for i := 0; i < n; i++ {
-		s[i+1] = s[i] + w[i]
-	}
-	return Solution{s}
-}
 
-func (this *Solution) PickIndex() int {
-	n := len(this.s)
-	x := 1 + rand.Intn(this.s[n-1])
-	left, right := 1, n-1
-	for left < right {
-		mid := (left + right) >> 1
-		if this.s[mid] >= x {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left - 1
-}
 
-/**
- * Your Solution object will be instantiated and called as such:
- * obj := Constructor(w);
- * param_1 := obj.PickIndex();
- */
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} w
- */
-var Solution = function (w) {
-    const n = w.length;
-    this.s = new Array(n + 1).fill(0);
-    for (let i = 0; i < n; ++i) {
-        this.s[i + 1] = this.s[i] + w[i];
-    }
-};
 
-/**
- * @return {number}
- */
-Solution.prototype.pickIndex = function () {
-    const n = this.s.length;
-    const x = 1 + Math.floor(Math.random() * this.s[n - 1]);
-    let left = 1,
-        right = n - 1;
-    while (left < right) {
-        const mid = (left + right) >> 1;
-        if (this.s[mid] >= x) {
-            right = mid;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return left - 1;
-};
 
-/**
- * Your Solution object will be instantiated and called as such:
- * var obj = new Solution(w)
- * var param_1 = obj.pickIndex()
- */
-```
 
-### **Rust**
 
-```rust
-use rand::{thread_rng, Rng};
-
-struct Solution {
-    sum: Vec<i32>,
-}
-
-/**
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
-impl Solution {
-    fn new(w: Vec<i32>) -> Self {
-        let n = w.len();
-        let mut sum = vec![0; n + 1];
-        for i in 1..=n {
-            sum[i] = sum[i - 1] + w[i - 1];
-        }
-        Self { sum }
-    }
-
-    fn pick_index(&self) -> i32 {
-        let x = thread_rng().gen_range(1, self.sum.last().unwrap() + 1);
-        let (mut left, mut right) = (1, self.sum.len() - 1);
-        while left < right {
-            let mid = (left + right) >> 1;
-            if self.sum[mid] < x {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-        (left - 1) as i32
-    }
-}
-
-/**
- * Your Solution object will be instantiated and called as such:
- * let obj = Solution::new(w);
- * let ret_1: i32 = obj.pick_index();
- */
-```
 
 ### **...**
 
@@ -306,4 +142,4 @@ impl Solution {
 
 ```
 
-<!-- tabs:end -->
+

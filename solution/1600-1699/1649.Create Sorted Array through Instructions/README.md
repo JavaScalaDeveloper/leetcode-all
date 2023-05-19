@@ -108,98 +108,11 @@
 
 树状数组：
 
-```python
-class BinaryIndexedTree:
-    def __init__(self, n):
-        self.n = n
-        self.c = [0] * (n + 1)
 
-    def update(self, x: int, v: int):
-        while x <= self.n:
-            self.c[x] += v
-            x += x & -x
-
-    def query(self, x: int) -> int:
-        s = 0
-        while x:
-            s += self.c[x]
-            x -= x & -x
-        return s
-
-
-class Solution:
-    def createSortedArray(self, instructions: List[int]) -> int:
-        m = max(instructions)
-        tree = BinaryIndexedTree(m)
-        ans = 0
-        mod = 10 ** 9 + 7
-        for i, x in enumerate(instructions):
-            cost = min(tree.query(x - 1), i - tree.query(x))
-            ans += cost
-            tree.update(x, 1)
-        return ans % mod
-```
 
 线段树：
 
-```python
-class Node:
-    def __init__(self):
-        self.l = 0
-        self.r = 0
-        self.v = 0
 
-class SegmentTree:
-    def __init__(self, n):
-        self.tr = [Node() for _ in range(4 * n)]
-        self.build(1, 1, n)
-
-    def build(self, u, l, r):
-        self.tr[u].l = l
-        self.tr[u].r = r
-        if l == r:
-            return
-        mid = (l + r) >> 1
-        self.build(u << 1, l, mid)
-        self.build(u << 1 | 1, mid + 1, r)
-
-    def modify(self, u, x, v):
-        if self.tr[u].l == x and self.tr[u].r == x:
-            self.tr[u].v += v
-            return
-        mid = (self.tr[u].l + self.tr[u].r) >> 1
-        if x <= mid:
-            self.modify(u << 1, x, v)
-        else:
-            self.modify(u << 1 | 1, x, v)
-        self.pushup(u)
-
-    def pushup(self, u):
-        self.tr[u].v = self.tr[u << 1].v + self.tr[u << 1 | 1].v
-
-    def query(self, u, l, r):
-        if self.tr[u].l >= l and self.tr[u].r <= r:
-            return self.tr[u].v
-        mid = (self.tr[u].l + self.tr[u].r) >> 1
-        v = 0
-        if l <= mid:
-            v = self.query(u << 1, l, r)
-        if r > mid:
-            v += self.query(u << 1 | 1, l, r)
-        return v
-
-class Solution:
-    def createSortedArray(self, instructions: List[int]) -> int:
-        n = max(instructions)
-        tree = SegmentTree(n)
-        ans = 0
-        for num in instructions:
-            a = tree.query(1, 1, num - 1)
-            b = tree.query(1, 1, n) - tree.query(1, 1, num)
-            ans += min(a, b)
-            tree.modify(1, num, 1)
-        return ans % int((1e9 + 7))
-```
 
 ### **Java**
 
@@ -337,235 +250,25 @@ class SegmentTree {
 }
 ```
 
-### **C++**
+
 
 树状数组：
 
-```cpp
-class BinaryIndexedTree {
-public:
-    BinaryIndexedTree(int _n)
-        : n(_n)
-        , c(_n + 1) {}
 
-    void update(int x, int delta) {
-        while (x <= n) {
-            c[x] += delta;
-            x += x & -x;
-        }
-    }
-
-    int query(int x) {
-        int s = 0;
-        while (x) {
-            s += c[x];
-            x -= x & -x;
-        }
-        return s;
-    }
-
-private:
-    int n;
-    vector<int> c;
-};
-
-class Solution {
-public:
-    int createSortedArray(vector<int>& instructions) {
-        int m = *max_element(instructions.begin(), instructions.end());
-        BinaryIndexedTree tree(m);
-        const int mod = 1e9 + 7;
-        int ans = 0;
-        for (int i = 0; i < instructions.size(); ++i) {
-            int x = instructions[i];
-            int cost = min(tree.query(x - 1), i - tree.query(x));
-            ans = (ans + cost) % mod;
-            tree.update(x, 1);
-        }
-        return ans;
-    }
-};
-```
 
 线段树：
 
-```cpp
-class Node {
-public:
-    int l;
-    int r;
-    int v;
-};
 
-class SegmentTree {
-public:
-    vector<Node*> tr;
 
-    SegmentTree(int n) {
-        tr.resize(4 * n);
-        for (int i = 0; i < tr.size(); ++i) tr[i] = new Node();
-        build(1, 1, n);
-    }
 
-    void build(int u, int l, int r) {
-        tr[u]->l = l;
-        tr[u]->r = r;
-        if (l == r) return;
-        int mid = (l + r) >> 1;
-        build(u << 1, l, mid);
-        build(u << 1 | 1, mid + 1, r);
-    }
-
-    void modify(int u, int x, int v) {
-        if (tr[u]->l == x && tr[u]->r == x)
-        {
-            tr[u]->v += v;
-            return;
-        }
-        int mid = (tr[u]->l + tr[u]->r) >> 1;
-        if (x <= mid) modify(u << 1, x, v);
-        else modify(u << 1 | 1, x, v);
-        pushup(u);
-    }
-
-    void pushup(int u) {
-        tr[u]->v = tr[u << 1]->v + tr[u << 1 | 1]->v;
-    }
-
-    int query(int u, int l, int r) {
-        if (tr[u]->l >= l && tr[u]->r <= r) return tr[u]->v;
-        int mid = (tr[u]->l + tr[u]->r) >> 1;
-        int v = 0;
-        if (l <= mid) v = query(u << 1, l, r);
-        if (r > mid) v += query(u << 1 | 1, l, r);
-        return v;
-    }
-};
-
-class Solution {
-public:
-    int createSortedArray(vector<int>& instructions) {
-        int n = *max_element(instructions.begin(), instructions.end());
-        int mod = 1e9 + 7;
-        SegmentTree* tree = new SegmentTree(n);
-        int ans = 0;
-        for (int num : instructions)
-        {
-            int a = tree->query(1, 1, num - 1);
-            int b = tree->query(1, 1, n) - tree->query(1, 1, num);
-            ans += min(a, b);
-            ans %= mod;
-            tree->modify(1, num, 1);
-        }
-        return ans;
-    }
-};
-```
-
-### **Go**
 
 树状数组：
 
-```go
-type BinaryIndexedTree struct {
-	n int
-	c []int
-}
 
-func newBinaryIndexedTree(n int) *BinaryIndexedTree {
-	c := make([]int, n+1)
-	return &BinaryIndexedTree{n, c}
-}
-
-func (this *BinaryIndexedTree) update(x, delta int) {
-	for x <= this.n {
-		this.c[x] += delta
-		x += x & -x
-	}
-}
-
-func (this *BinaryIndexedTree) query(x int) int {
-	s := 0
-	for x > 0 {
-		s += this.c[x]
-		x -= x & -x
-	}
-	return s
-}
-
-func createSortedArray(instructions []int) (ans int) {
-	m := 0
-	for _, x := range instructions {
-		m = max(m, x)
-	}
-	tree := newBinaryIndexedTree(m)
-	const mod = 1e9 + 7
-	for i, x := range instructions {
-		cost := min(tree.query(x-1), i-tree.query(x))
-		ans = (ans + cost) % mod
-		tree.update(x, 1)
-	}
-	return
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-```
 
 ### **TypeScript**
 
-```ts
-class BinaryIndexedTree {
-    private n: number;
-    private c: number[];
 
-    constructor(n: number) {
-        this.n = n;
-        this.c = new Array(n + 1).fill(0);
-    }
-
-    public update(x: number, v: number): void {
-        while (x <= this.n) {
-            this.c[x] += v;
-            x += x & -x;
-        }
-    }
-
-    public query(x: number): number {
-        let s = 0;
-        while (x > 0) {
-            s += this.c[x];
-            x -= x & -x;
-        }
-        return s;
-    }
-}
-
-function createSortedArray(instructions: number[]): number {
-    const m = Math.max(...instructions);
-    const tree = new BinaryIndexedTree(m);
-    let ans = 0;
-    const mod = 10 ** 9 + 7;
-    for (let i = 0; i < instructions.length; ++i) {
-        const x = instructions[i];
-        const cost = Math.min(tree.query(x - 1), i - tree.query(x));
-        ans = (ans + cost) % mod;
-        tree.update(x, 1);
-    }
-    return ans;
-}
-```
 
 ### **...**
 
@@ -573,4 +276,4 @@ function createSortedArray(instructions: number[]): number {
 
 ```
 
-<!-- tabs:end -->
+

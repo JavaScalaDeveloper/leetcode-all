@@ -61,43 +61,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minOperations(self, boxes: str) -> List[int]:
-        n = len(boxes)
-        left = [0] * n
-        right = [0] * n
-        cnt = 0
-        for i in range(1, n):
-            if boxes[i - 1] == '1':
-                cnt += 1
-            left[i] = left[i - 1] + cnt
-        cnt = 0
-        for i in range(n - 2, -1, -1):
-            if boxes[i + 1] == '1':
-                cnt += 1
-            right[i] = right[i + 1] + cnt
-        return [a + b for a, b in zip(left, right)]
-```
 
-```python
-class Solution:
-    def minOperations(self, boxes: str) -> List[int]:
-        n = len(boxes)
-        ans = [0] * n
-        cnt = 0
-        for i in range(1, n):
-            if boxes[i - 1] == '1':
-                cnt += 1
-            ans[i] = ans[i - 1] + cnt
-        cnt = s = 0
-        for i in range(n - 2, -1, -1):
-            if boxes[i + 1] == '1':
-                cnt += 1
-            s += cnt
-            ans[i] += s
-        return ans
-```
+
+
 
 ### **Java**
 
@@ -153,198 +119,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    vector<int> minOperations(string boxes) {
-        int n = boxes.size();
-        int left[n];
-        int right[n];
-        memset(left, 0, sizeof left);
-        memset(right, 0, sizeof right);
-        for (int i = 1, cnt = 0; i < n; ++i) {
-            cnt += boxes[i - 1] == '1';
-            left[i] = left[i - 1] + cnt;
-        }
-        for (int i = n - 2, cnt = 0; ~i; --i) {
-            cnt += boxes[i + 1] == '1';
-            right[i] = right[i + 1] + cnt;
-        }
-        vector<int> ans(n);
-        for (int i = 0; i < n; ++i) ans[i] = left[i] + right[i];
-        return ans;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    vector<int> minOperations(string boxes) {
-        int n = boxes.size();
-        vector<int> ans(n);
-        for (int i = 1, cnt = 0; i < n; ++i) {
-            cnt += boxes[i - 1] == '1';
-            ans[i] = ans[i - 1] + cnt;
-        }
-        for (int i = n - 2, cnt = 0, s = 0; ~i; --i) {
-            cnt += boxes[i + 1] == '1';
-            s += cnt;
-            ans[i] += s;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minOperations(boxes string) []int {
-	n := len(boxes)
-	left := make([]int, n)
-	right := make([]int, n)
-	for i, cnt := 1, 0; i < n; i++ {
-		if boxes[i-1] == '1' {
-			cnt++
-		}
-		left[i] = left[i-1] + cnt
-	}
-	for i, cnt := n-2, 0; i >= 0; i-- {
-		if boxes[i+1] == '1' {
-			cnt++
-		}
-		right[i] = right[i+1] + cnt
-	}
-	ans := make([]int, n)
-	for i := range ans {
-		ans[i] = left[i] + right[i]
-	}
-	return ans
-}
-```
 
-```go
-func minOperations(boxes string) []int {
-	n := len(boxes)
-	ans := make([]int, n)
-	for i, cnt := 1, 0; i < n; i++ {
-		if boxes[i-1] == '1' {
-			cnt++
-		}
-		ans[i] = ans[i-1] + cnt
-	}
-	for i, cnt, s := n-2, 0, 0; i >= 0; i-- {
-		if boxes[i+1] == '1' {
-			cnt++
-		}
-		s += cnt
-		ans[i] += s
-	}
-	return ans
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minOperations(boxes: string): number[] {
-    const n = boxes.length;
-    const left = new Array(n).fill(0);
-    const right = new Array(n).fill(0);
-    for (let i = 1, count = 0; i < n; i++) {
-        if (boxes[i - 1] == '1') {
-            count++;
-        }
-        left[i] = left[i - 1] + count;
-    }
-    for (let i = n - 2, count = 0; i >= 0; i--) {
-        if (boxes[i + 1] == '1') {
-            count++;
-        }
-        right[i] = right[i + 1] + count;
-    }
-    return left.map((v, i) => v + right[i]);
-}
-```
 
-```ts
-function minOperations(boxes: string): number[] {
-    const n = boxes.length;
-    const ans = new Array(n).fill(0);
-    for (let i = 1, count = 0; i < n; i++) {
-        if (boxes[i - 1] === '1') {
-            count++;
-        }
-        ans[i] = ans[i - 1] + count;
-    }
-    for (let i = n - 2, count = 0, sum = 0; i >= 0; i--) {
-        if (boxes[i + 1] === '1') {
-            count++;
-        }
-        sum += count;
-        ans[i] += sum;
-    }
-    return ans;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn min_operations(boxes: String) -> Vec<i32> {
-        let s = boxes.as_bytes();
-        let n = s.len();
-        let mut left = vec![0; n];
-        let mut right = vec![0; n];
-        let mut count = 0;
-        for i in 1..n {
-            if s[i - 1] == b'1' {
-                count += 1;
-            }
-            left[i] = left[i - 1] + count;
-        }
-        count = 0;
-        for i in (0..n - 1).rev() {
-            if s[i + 1] == b'1' {
-                count += 1;
-            }
-            right[i] = right[i + 1] + count;
-        }
-        (0..n).into_iter().map(|i| left[i] + right[i]).collect()
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn min_operations(boxes: String) -> Vec<i32> {
-        let s = boxes.as_bytes();
-        let n = s.len();
-        let mut ans = vec![0; n];
-        let mut count = 0;
-        for i in 1..n {
-            if s[i - 1] == b'1' {
-                count += 1;
-            }
-            ans[i] = ans[i - 1] + count;
-        }
-        let mut sum = 0;
-        count = 0;
-        for i in (0..n - 1).rev() {
-            if s[i + 1] == b'1' {
-                count += 1;
-            }
-            sum += count;
-            ans[i] += sum;
-        }
-        ans
-    }
-}
-```
+
+
+
+
+
 
 ### **C**
 
@@ -413,4 +210,4 @@ int *minOperations(char *boxes, int *returnSize) {
 
 ```
 
-<!-- tabs:end -->
+

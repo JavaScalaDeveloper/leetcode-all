@@ -80,24 +80,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def numWays(self, steps: int, arrLen: int) -> int:
-        @cache
-        def dfs(i, j):
-            if i > j or i >= arrLen or i < 0 or j < 0:
-                return 0
-            if i == 0 and j == 0:
-                return 1
-            ans = 0
-            for k in range(-1, 2):
-                ans += dfs(i + k, j - 1)
-                ans %= mod
-            return ans
 
-        mod = 10**9 + 7
-        return dfs(0, steps)
-```
 
 ### **Java**
 
@@ -134,95 +117,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int numWays(int steps, int arrLen) {
-        int f[steps][steps + 1];
-        memset(f, -1, sizeof f);
-        const int mod = 1e9 + 7;
-        function<int(int, int)> dfs = [&](int i, int j) -> int {
-            if (i > j || i >= arrLen || i < 0 || j < 0) {
-                return 0;
-            }
-            if (i == 0 && j == 0) {
-                return 1;
-            }
-            if (f[i][j] != -1) {
-                return f[i][j];
-            }
-            int ans = 0;
-            for (int k = -1; k <= 1; ++k) {
-                ans = (ans + dfs(i + k, j - 1)) % mod;
-            }
-            return f[i][j] = ans;
-        };
-        return dfs(0, steps);
-    }
-};
-```
 
-### **Go**
 
-```go
-func numWays(steps int, arrLen int) int {
-	const mod int = 1e9 + 7
-	f := make([][]int, steps)
-	for i := range f {
-		f[i] = make([]int, steps+1)
-		for j := range f[i] {
-			f[i][j] = -1
-		}
-	}
-	var dfs func(i, j int) int
-	dfs = func(i, j int) (ans int) {
-		if i > j || i >= arrLen || i < 0 || j < 0 {
-			return 0
-		}
-		if i == 0 && j == 0 {
-			return 1
-		}
-		if f[i][j] != -1 {
-			return f[i][j]
-		}
-		for k := -1; k <= 1; k++ {
-			ans += dfs(i+k, j-1)
-			ans %= mod
-		}
-		f[i][j] = ans
-		return
-	}
-	return dfs(0, steps)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function numWays(steps: number, arrLen: number): number {
-    const f = Array.from({ length: steps }, () => Array(steps + 1).fill(-1));
-    const mod = 10 ** 9 + 7;
-    const dfs = (i: number, j: number) => {
-        if (i > j || i >= arrLen || i < 0 || j < 0) {
-            return 0;
-        }
-        if (i == 0 && j == 0) {
-            return 1;
-        }
-        if (f[i][j] != -1) {
-            return f[i][j];
-        }
-        let ans = 0;
-        for (let k = -1; k <= 1; ++k) {
-            ans = (ans + dfs(i + k, j - 1)) % mod;
-        }
-        return (f[i][j] = ans);
-    };
-    return dfs(0, steps);
-}
-```
+
 
 ### **...**
 
@@ -230,4 +135,4 @@ function numWays(steps: number, arrLen: number): number {
 
 ```
 
-<!-- tabs:end -->
+

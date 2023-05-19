@@ -62,20 +62,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkIfPangram(self, sentence: str) -> bool:
-        return len(set(sentence)) == 26
-```
 
-```python
-class Solution:
-    def checkIfPangram(self, sentence: str) -> bool:
-        mask = 0
-        for c in sentence:
-            mask |= 1 << (ord(c) - ord('a'))
-        return mask == (1 << 26) - 1
-```
+
+
 
 ### **Java**
 
@@ -110,105 +99,29 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkIfPangram(string sentence) {
-        int vis[26] = {0};
-        for (char& c : sentence) vis[c - 'a'] = 1;
-        for (int& v : vis) if (!v) return false;
-        return true;
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool checkIfPangram(string sentence) {
-        int mask = 0;
-        for (char& c : sentence) mask |= 1 << (c - 'a');
-        return mask == (1 << 26) - 1;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkIfPangram(sentence string) bool {
-	vis := [26]bool{}
-	for _, c := range sentence {
-		vis[c-'a'] = true
-	}
-	for _, v := range vis {
-		if !v {
-			return false
-		}
-	}
-	return true
-}
-```
 
-```go
-func checkIfPangram(sentence string) bool {
-	mask := 0
-	for _, c := range sentence {
-		mask |= 1 << int(c-'a')
-	}
-	return mask == 1<<26-1
-}
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function checkIfPangram(sentence: string): boolean {
-    const vis = new Array(26).fill(false);
-    for (const c of sentence) {
-        vis[c.charCodeAt(0) - 'a'.charCodeAt(0)] = true;
-    }
-    return vis.every(v => v);
-}
-```
 
-```ts
-function checkIfPangram(sentence: string): boolean {
-    let mark = 0;
-    for (const c of sentence) {
-        mark |= 1 << (c.charCodeAt(0) - 'a'.charCodeAt(0));
-    }
-    return mark === (1 << 26) - 1;
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn check_if_pangram(sentence: String) -> bool {
-        let mut vis = [false; 26];
-        for c in sentence.as_bytes() {
-            vis[(*c - b'a') as usize] = true;
-        }
-        vis.iter().all(|v| *v)
-    }
-}
-```
 
-```rust
-impl Solution {
-    pub fn check_if_pangram(sentence: String) -> bool {
-        let mut mark = 0;
-        for c in sentence.as_bytes() {
-            mark |= 1 << *c - b'a';
-        }
-        mark == (1 << 26) - 1
-    }
-}
-```
+
+
+
+
+
 
 ### **C**
 
@@ -243,4 +156,4 @@ bool checkIfPangram(char *sentence) {
 
 ```
 
-<!-- tabs:end -->
+

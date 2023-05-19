@@ -68,11 +68,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        return reduce(xor, nums)
-```
+
 
 ### **Java**
 
@@ -98,63 +94,25 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int singleNumber(vector<int>& nums) {
-        int ans = 0;
-        for (int v : nums) ans ^= v;
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func singleNumber(nums []int) (ans int) {
-	for _, v := range nums {
-		ans ^= v
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var singleNumber = function (nums) {
-    let ans = 0;
-    for (const v of nums) {
-        ans ^= v;
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function singleNumber(nums: number[]): number {
-    return nums.reduce((r, v) => r ^ v);
-}
-```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn single_number(nums: Vec<i32>) -> i32 {
-        nums.into_iter().reduce(|r, v| r ^ v).unwrap()
-    }
-}
-```
+
+
+
 
 ### **C**
 
@@ -168,22 +126,9 @@ int singleNumber(int *nums, int numsSize) {
 }
 ```
 
-### **Swift**
 
-```swift
-class Solution {
-    func singleNumber(_ nums: [Int]) -> Int {
-        var a = nums.sorted()
-        var n = a.count
-        for i in stride(from: 0, through: n - 2, by: 2) {
-            if a[i] != a[i + 1] {
-                return a[i]
-            }
-        }
-        return a[n - 1]
-    }
-}
-```
+
+
 
 ### **...**
 
@@ -191,4 +136,4 @@ class Solution {
 
 ```
 
-<!-- tabs:end -->
+

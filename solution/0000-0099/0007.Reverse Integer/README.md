@@ -81,21 +81,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def reverse(self, x: int) -> int:
-        ans = 0
-        mi, mx = -2**31, 2**31 - 1
-        while x:
-            if ans < mi // 10 + 1 or ans > mx // 10:
-                return 0
-            y = x % 10
-            if x < 0 and y > 0:
-                y -= 10
-            ans = ans * 10 + y
-            x = (x - y) // 10
-        return ans
-```
+
 
 ### **Java**
 
@@ -116,58 +102,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int reverse(int x) {
-        int ans = 0;
-        for (; x; x /= 10) {
-            if (ans < INT_MIN / 10 || ans > INT_MAX / 10) {
-                return 0;
-            }
-            ans = ans * 10 + x % 10;
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func reverse(x int) (ans int) {
-	for ; x != 0; x /= 10 {
-		if ans < math.MinInt32/10 || ans > math.MaxInt32/10 {
-			return 0
-		}
-		ans = ans*10 + x%10
-	}
-	return
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number} x
- * @return {number}
- */
-var reverse = function (x) {
-    const mi = -(2 ** 31);
-    const mx = 2 ** 31 - 1;
-    let ans = 0;
-    for (; x != 0; x = ~~(x / 10)) {
-        if (ans < ~~(mi / 10) || ans > ~~(mx / 10)) {
-            return 0;
-        }
-        ans = ans * 10 + (x % 10);
-    }
-    return ans;
-};
-```
+
+
+
+
+
+
 
 ### **C**
 
@@ -184,43 +129,13 @@ int reverse(int x) {
 }
 ```
 
-### **Rust**
 
-```rust
-impl Solution {
-    pub fn reverse(mut x: i32) -> i32 {
-        let is_minus = x < 0;
-        match x
-            .abs()
-            .to_string()
-            .chars()
-            .rev()
-            .collect::<String>()
-            .parse::<i32>()
-        {
-            Ok(x) => x * if is_minus { -1 } else { 1 },
-            Err(_) => 0,
-        }
-    }
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int Reverse(int x) {
-        int ans = 0;
-        for (; x != 0; x /= 10) {
-            if (ans < int.MinValue / 10 || ans > int.MaxValue / 10) {
-                return 0;
-            }
-            ans = ans * 10 + x % 10;
-        }
-        return ans;
-    }
-}
-```
+
+
+
+
 
 ### **...**
 
@@ -228,4 +143,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

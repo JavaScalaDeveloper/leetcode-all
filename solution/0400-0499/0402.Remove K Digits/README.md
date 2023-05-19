@@ -66,18 +66,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def removeKdigits(self, num: str, k: int) -> str:
-        stk = []
-        remain = len(num) - k
-        for c in num:
-            while k and stk and stk[-1] > c:
-                stk.pop()
-                k -= 1
-            stk.append(c)
-        return ''.join(stk[:remain]).lstrip('0') or '0'
-```
+
 
 ### **Java**
 
@@ -104,72 +93,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string removeKdigits(string num, int k) {
-        string stk;
-        for (char& c : num) {
-            while (k && stk.size() && stk.back() > c) {
-                stk.pop_back();
-                --k;
-            }
-            stk += c;
-        }
-        while (k--) {
-            stk.pop_back();
-        }
-        int i = 0;
-        for (; i < stk.size() && stk[i] == '0'; ++i) {
 
-        }
-        string ans = stk.substr(i);
-        return ans == "" ? "0" : ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func removeKdigits(num string, k int) string {
-	stk, remain := make([]byte, 0), len(num)-k
-	for i := 0; i < len(num); i++ {
-		n := len(stk)
-		for k > 0 && n > 0 && stk[n-1] > num[i] {
-			stk = stk[:n-1]
-			n, k = n-1, k-1
-		}
-		stk = append(stk, num[i])
-	}
 
-	for i := 0; i < len(stk) && i < remain; i++ {
-		if stk[i] != '0' {
-			return string(stk[i:remain])
-		}
-	}
-	return "0"
-}
-```
+
+
 
 ### **TypeScript**
 
-```ts
-function removeKdigits(num: string, k: number): string {
-    let nums = [...num];
-    while (k > 0) {
-        let idx = 0;
-        while (idx < nums.length - 1 && nums[idx + 1] >= nums[idx]) {
-            idx++;
-        }
-        nums.splice(idx, 1);
-        k--;
-    }
-    return nums.join('').replace(/^0*/g, '') || '0';
-}
-```
+
 
 ### **...**
 
@@ -177,4 +111,4 @@ function removeKdigits(num: string, k: number): string {
 
 ```
 
-<!-- tabs:end -->
+

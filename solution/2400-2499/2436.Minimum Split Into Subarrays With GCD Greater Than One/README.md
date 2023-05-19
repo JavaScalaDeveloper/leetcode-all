@@ -76,17 +76,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minimumSplits(self, nums: List[int]) -> int:
-        ans, g = 1, 0
-        for x in nums:
-            g = gcd(g, x)
-            if g == 1:
-                ans += 1
-                g = x
-        return ans
-```
+
 
 ### **Java**
 
@@ -112,68 +102,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minimumSplits(vector<int>& nums) {
-        int ans = 1, g = 0;
-        for (int x : nums) {
-            g = gcd(g, x);
-            if (g == 1) {
-                ++ans;
-                g = x;
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minimumSplits(nums []int) int {
-	ans, g := 1, 0
-	for _, x := range nums {
-		g = gcd(g, x)
-		if g == 1 {
-			ans++
-			g = x
-		}
-	}
-	return ans
-}
 
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-	return gcd(b, a%b)
-}
-```
+
+
+
 
 ### **TypeScript**
 
-```ts
-function minimumSplits(nums: number[]): number {
-    let ans = 1;
-    let g = 0;
-    for (const x of nums) {
-        g = gcd(g, x);
-        if (g == 1) {
-            ++ans;
-            g = x;
-        }
-    }
-    return ans;
-}
 
-function gcd(a: number, b: number): number {
-    return b ? gcd(b, a % b) : a;
-}
-```
 
 ### **...**
 
@@ -181,4 +120,4 @@ function gcd(a: number, b: number): number {
 
 ```
 
-<!-- tabs:end -->
+

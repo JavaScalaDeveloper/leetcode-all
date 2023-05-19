@@ -54,19 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maximumCandies(self, candies: List[int], k: int) -> int:
-        left, right = 0, max(candies)
-        while left < right:
-            mid = (left + right + 1) >> 1
-            cnt = sum(v // mid for v in candies)
-            if cnt >= k:
-                left = mid
-            else:
-                right = mid - 1
-        return left
-```
+
 
 ### **Java**
 
@@ -93,53 +81,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maximumCandies(vector<int>& candies, long long k) {
-        int left = 0, right = 1e7;
-        while (left < right) {
-            int mid = (left + right + 1) >> 1;
-            long long cnt = 0;
-            for (int& v : candies) cnt += v / mid;
-            if (cnt >= k)
-                left = mid;
-            else
-                right = mid - 1;
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maximumCandies(candies []int, k int64) int {
-	left, right := 0, int(1e7)
-	for left < right {
-		mid := (left + right + 1) >> 1
-		var cnt int64
-		for _, v := range candies {
-			cnt += int64(v / mid)
-		}
-		if cnt >= k {
-			left = mid
-		} else {
-			right = mid - 1
-		}
-	}
-	return left
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
 
-```
 
 ### **...**
 
@@ -147,4 +99,4 @@ func maximumCandies(candies []int, k int64) int {
 
 ```
 
-<!-- tabs:end -->
+

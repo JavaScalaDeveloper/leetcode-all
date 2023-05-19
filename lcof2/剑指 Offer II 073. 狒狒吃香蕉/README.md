@@ -64,19 +64,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def minEatingSpeed(self, piles: List[int], h: int) -> int:
-        left, right = 1, max(piles)
-        while left < right:
-            mid = (left + right) >> 1
-            s = sum((pile + mid - 1) // mid for pile in piles)
-            if s <= h:
-                right = mid
-            else:
-                left = mid + 1
-        return left
-```
+
 
 ### **Java**
 
@@ -107,86 +95,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int minEatingSpeed(vector<int>& piles, int h) {
-        int left = 1, right = *max_element(piles.begin(), piles.end());
-        while (left < right) {
-            int mid = left + right >> 1;
-            int s = 0;
-            for (int pile : piles) s += (pile + mid - 1) / mid;
-            if (s <= h)
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func minEatingSpeed(piles []int, h int) int {
-	mx := 0
-	for _, pile := range piles {
-		mx = max(mx, pile)
-	}
-	left, right := 1, mx
-	for left < right {
-		mid := (left + right) >> 1
-		s := 0
-		for _, pile := range piles {
-			s += (pile + mid - 1) / mid
-		}
-		if s <= h {
-			right = mid
-		} else {
-			left = mid + 1
-		}
-	}
-	return left
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **C#**
 
-```cs
-public class Solution {
-    public int MinEatingSpeed(int[] piles, int h) {
-        int left = 1, right = piles.Max();
-        while (left < right)
-        {
-            int mid = (left + right) >> 1;
-            int s = 0;
-            foreach (int pile in piles)
-            {
-                s += (pile + mid - 1) / mid;
-            }
-            if (s <= h)
-            {
-                right = mid;
-            }
-            else
-            {
-                left = mid + 1;
-            }
-        }
-        return left;
-    }
-}
-```
+
+
+
+
+
 
 ### **...**
 
@@ -194,4 +113,4 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->
+

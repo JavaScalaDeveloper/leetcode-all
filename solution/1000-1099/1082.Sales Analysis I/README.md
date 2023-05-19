@@ -97,4 +97,4 @@ FROM Sales
 GROUP BY  seller_id )
 ```
 
-<!-- tabs:end -->
+

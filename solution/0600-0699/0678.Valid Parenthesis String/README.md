@@ -81,45 +81,9 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def checkValidString(self, s: str) -> bool:
-        n = len(s)
-        dp = [[False] * n for _ in range(n)]
-        for i, c in enumerate(s):
-            dp[i][i] = c == '*'
-        for i in range(n - 2, -1, -1):
-            for j in range(i + 1, n):
-                dp[i][j] = (
-                    s[i] in '(*' and s[j] in '*)' and (i + 1 == j or dp[i + 1][j - 1])
-                )
-                dp[i][j] = dp[i][j] or any(
-                    dp[i][k] and dp[k + 1][j] for k in range(i, j)
-                )
-        return dp[0][-1]
-```
 
-```python
-class Solution:
-    def checkValidString(self, s: str) -> bool:
-        x = 0
-        for c in s:
-            if c in '(*':
-                x += 1
-            elif x:
-                x -= 1
-            else:
-                return False
-        x = 0
-        for c in s[::-1]:
-            if c in '*)':
-                x += 1
-            elif x:
-                x -= 1
-            else:
-                return False
-        return True
-```
+
+
 
 ### **Java**
 
@@ -176,108 +140,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    bool checkValidString(string s) {
-        int n = s.size();
-        vector<vector<bool>> dp(n, vector<bool>(n));
-        for (int i = 0; i < n; ++i) {
-            dp[i][i] = s[i] == '*';
-        }
-        for (int i = n - 2; i >= 0; --i) {
-            for (int j = i + 1; j < n; ++j) {
-                char a = s[i], b = s[j];
-                dp[i][j] = (a == '(' || a == '*') && (b == '*' || b == ')') && (i + 1 == j || dp[i + 1][j - 1]);
-                for (int k = i; k < j && !dp[i][j]; ++k) {
-                    dp[i][j] = dp[i][k] && dp[k + 1][j];
-                }
-            }
-        }
-        return dp[0][n - 1];
-    }
-};
-```
 
-```cpp
-class Solution {
-public:
-    bool checkValidString(string s) {
-        int x = 0, n = s.size();
-        for (int i = 0; i < n; ++i) {
-            if (s[i] != ')') {
-                ++x;
-            } else if (x) {
-                --x;
-            } else {
-                return false;
-            }
-        }
-        x = 0;
-        for (int i = n - 1; i >= 0; --i) {
-            if (s[i] != '(') {
-                ++x;
-            } else if (x) {
-                --x;
-            } else {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-```
 
-### **Go**
 
-```go
-func checkValidString(s string) bool {
-	n := len(s)
-	dp := make([][]bool, n)
-	for i := range dp {
-		dp[i] = make([]bool, n)
-		dp[i][i] = s[i] == '*'
-	}
-	for i := n - 2; i >= 0; i-- {
-		for j := i + 1; j < n; j++ {
-			a, b := s[i], s[j]
-			dp[i][j] = (a == '(' || a == '*') && (b == '*' || b == ')') && (i+1 == j || dp[i+1][j-1])
-			for k := i; k < j && !dp[i][j]; k++ {
-				dp[i][j] = dp[i][k] && dp[k+1][j]
-			}
-		}
-	}
-	return dp[0][n-1]
-}
-```
 
-```go
-func checkValidString(s string) bool {
-	x := 0
-	for _, c := range s {
-		if c != ')' {
-			x++
-		} else if x > 0 {
-			x--
-		} else {
-			return false
-		}
-	}
-	x = 0
-	for i := len(s) - 1; i >= 0; i-- {
-		if s[i] != '(' {
-			x++
-		} else if x > 0 {
-			x--
-		} else {
-			return false
-		}
-	}
-	return true
-}
-```
+
+
+
+
+
+
 
 ### **...**
 
@@ -285,4 +158,4 @@ func checkValidString(s string) bool {
 
 ```
 
-<!-- tabs:end -->
+

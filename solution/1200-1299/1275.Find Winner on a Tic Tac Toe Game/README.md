@@ -99,23 +99,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def tictactoe(self, moves: List[List[int]]) -> str:
-        n = len(moves)
-        cnt = [0] * 8
-        for k in range(n - 1, -1, -2):
-            i, j = moves[k]
-            cnt[i] += 1
-            cnt[j + 3] += 1
-            if i == j:
-                cnt[6] += 1
-            if i + j == 2:
-                cnt[7] += 1
-            if any(v == 3 for v in cnt):
-                return "B" if k & 1 else "A"
-        return "Draw" if n == 9 else "Pending"
-```
+
 
 ### **Java**
 
@@ -145,86 +129,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string tictactoe(vector<vector<int>>& moves) {
-        int n = moves.size();
-        int cnt[8]{};
-        for (int k = n - 1; k >= 0; k -= 2) {
-            int i = moves[k][0], j = moves[k][1];
-            cnt[i]++;
-            cnt[j + 3]++;
-            if (i == j) {
-                cnt[6]++;
-            }
-            if (i + j == 2) {
-                cnt[7]++;
-            }
-            if (cnt[i] == 3 || cnt[j + 3] == 3 || cnt[6] == 3 || cnt[7] == 3) {
-                return k % 2 == 0 ? "A" : "B";
-            }
-        }
-        return n == 9 ? "Draw" : "Pending";
-    }
-};
-```
 
-### **Go**
 
-```go
-func tictactoe(moves [][]int) string {
-	n := len(moves)
-	cnt := [8]int{}
-	for k := n - 1; k >= 0; k -= 2 {
-		i, j := moves[k][0], moves[k][1]
-		cnt[i]++
-		cnt[j+3]++
-		if i == j {
-			cnt[6]++
-		}
-		if i+j == 2 {
-			cnt[7]++
-		}
-		if cnt[i] == 3 || cnt[j+3] == 3 || cnt[6] == 3 || cnt[7] == 3 {
-			if k%2 == 0 {
-				return "A"
-			}
-			return "B"
-		}
-	}
-	if n == 9 {
-		return "Draw"
-	}
-	return "Pending"
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function tictactoe(moves: number[][]): string {
-    const n = moves.length;
-    const cnt = new Array(8).fill(0);
-    for (let k = n - 1; k >= 0; k -= 2) {
-        const [i, j] = moves[k];
-        cnt[i]++;
-        cnt[j + 3]++;
-        if (i == j) {
-            cnt[6]++;
-        }
-        if (i + j == 2) {
-            cnt[7]++;
-        }
-        if (cnt[i] == 3 || cnt[j + 3] == 3 || cnt[6] == 3 || cnt[7] == 3) {
-            return k % 2 == 0 ? 'A' : 'B';
-        }
-    }
-    return n == 9 ? 'Draw' : 'Pending';
-}
-```
+
 
 ### **...**
 
@@ -232,4 +147,4 @@ function tictactoe(moves: number[][]): string {
 
 ```
 
-<!-- tabs:end -->
+

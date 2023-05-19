@@ -54,21 +54,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def smallestSubsequence(self, s: str) -> str:
-        last = {c: i for i, c in enumerate(s)}
-        stk = []
-        vis = set()
-        for i, c in enumerate(s):
-            if c in vis:
-                continue
-            while stk and stk[-1] > c and last[stk[-1]] > i:
-                vis.remove(stk.pop())
-            stk.append(c)
-            vis.add(c)
-        return "".join(stk)
-```
+
 
 ### **Java**
 
@@ -129,90 +115,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    string smallestSubsequence(string s) {
-        int n = s.size();
-        int last[26] = {0};
-        for (int i = 0; i < n; ++i) {
-            last[s[i] - 'a'] = i;
-        }
-        string ans;
-        int mask = 0;
-        for (int i = 0; i < n; ++i) {
-            char c = s[i];
-            if ((mask >> (c - 'a')) & 1) {
-                continue;
-            }
-            while (!ans.empty() && ans.back() > c && last[ans.back() - 'a'] > i) {
-                mask ^= 1 << (ans.back() - 'a');
-                ans.pop_back();
-            }
-            ans.push_back(c);
-            mask |= 1 << (c - 'a');
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func smallestSubsequence(s string) string {
-	last := make([]int, 26)
-	for i, c := range s {
-		last[c-'a'] = i
-	}
-	stk := []rune{}
-	vis := make([]bool, 128)
-	for i, c := range s {
-		if vis[c] {
-			continue
-		}
-		for len(stk) > 0 && stk[len(stk)-1] > c && last[stk[len(stk)-1]-'a'] > i {
-			vis[stk[len(stk)-1]] = false
-			stk = stk[:len(stk)-1]
-		}
-		stk = append(stk, c)
-		vis[c] = true
-	}
-	return string(stk)
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function smallestSubsequence(s: string): string {
-    const f = (c: string): number => c.charCodeAt(0) - 'a'.charCodeAt(0);
-    const last: number[] = new Array(26).fill(0);
-    for (const [i, c] of [...s].entries()) {
-        last[f(c)] = i;
-    }
-    const stk: string[] = [];
-    let mask = 0;
-    for (const [i, c] of [...s].entries()) {
-        const x = f(c);
-        if ((mask >> x) & 1) {
-            continue;
-        }
-        while (
-            stk.length &&
-            stk[stk.length - 1] > c &&
-            last[f(stk[stk.length - 1])] > i
-        ) {
-            mask ^= 1 << f(stk.pop()!);
-        }
-        stk.push(c);
-        mask |= 1 << x;
-    }
-    return stk.join('');
-}
-```
+
 
 ### **...**
 
@@ -220,4 +133,4 @@ function smallestSubsequence(s: string): string {
 
 ```
 
-<!-- tabs:end -->
+

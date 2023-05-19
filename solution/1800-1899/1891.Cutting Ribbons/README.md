@@ -82,19 +82,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def maxLength(self, ribbons: List[int], k: int) -> int:
-        left, right = 0, max(ribbons)
-        while left < right:
-            mid = (left + right + 1) >> 1
-            cnt = sum(x // mid for x in ribbons)
-            if cnt >= k:
-                left = mid
-            else:
-                right = mid - 1
-        return left
-```
+
 
 ### **Java**
 
@@ -124,109 +112,21 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    int maxLength(vector<int>& ribbons, int k) {
-        int left = 0, right = *max_element(ribbons.begin(), ribbons.end());
-        while (left < right) {
-            int mid = (left + right + 1) >> 1;
-            int cnt = 0;
-            for (int ribbon : ribbons) {
-                cnt += ribbon / mid;
-            }
-            if (cnt >= k) {
-                left = mid;
-            } else {
-                right = mid - 1;
-            }
-        }
-        return left;
-    }
-};
-```
 
-### **Go**
 
-```go
-func maxLength(ribbons []int, k int) int {
-	left, right := 0, 0
-	for _, x := range ribbons {
-		right = max(right, x)
-	}
-	for left < right {
-		mid := (left + right + 1) >> 1
-		cnt := 0
-		for _, x := range ribbons {
-			cnt += x / mid
-		}
-		if cnt >= k {
-			left = mid
-		} else {
-			right = mid - 1
-		}
-	}
-	return left
-}
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-```
 
-### **JavaScript**
 
-```js
-/**
- * @param {number[]} ribbons
- * @param {number} k
- * @return {number}
- */
-var maxLength = function (ribbons, k) {
-    let left = 0;
-    let right = Math.max(...ribbons);
-    while (left < right) {
-        const mid = (left + right + 1) >> 1;
-        let cnt = 0;
-        for (const x of ribbons) {
-            cnt += Math.floor(x / mid);
-        }
-        if (cnt >= k) {
-            left = mid;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return left;
-};
-```
+
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function maxLength(ribbons: number[], k: number): number {
-    let left = 0;
-    let right = Math.max(...ribbons);
-    while (left < right) {
-        const mid = (left + right + 1) >> 1;
-        let cnt = 0;
-        for (const x of ribbons) {
-            cnt += Math.floor(x / mid);
-        }
-        if (cnt >= k) {
-            left = mid;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return left;
-}
-```
+
 
 ### **...**
 
@@ -234,4 +134,4 @@ function maxLength(ribbons: number[], k: number): number {
 
 ```
 
-<!-- tabs:end -->
+

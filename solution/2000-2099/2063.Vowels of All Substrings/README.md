@@ -78,12 +78,7 @@
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
-```python
-class Solution:
-    def countVowels(self, word: str) -> int:
-        n = len(word)
-        return sum((i + 1) * (n - i) for i, c in enumerate(word) if c in 'aeiou')
-```
+
 
 ### **Java**
 
@@ -104,51 +99,17 @@ class Solution {
 }
 ```
 
-### **C++**
 
-```cpp
-class Solution {
-public:
-    long long countVowels(string word) {
-        long long ans = 0;
-        for (int i = 0, n = word.size(); i < n; ++i) {
-            char c = word[i];
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-                ans += (i + 1LL) * (n - i);
-            }
-        }
-        return ans;
-    }
-};
-```
 
-### **Go**
 
-```go
-func countVowels(word string) (ans int64) {
-	for i, c := range word {
-		if c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' {
-			ans += int64((i + 1) * (len(word) - i))
-		}
-	}
-	return
-}
-```
+
+
+
+
 
 ### **TypeScript**
 
-```ts
-function countVowels(word: string): number {
-    const n = word.length;
-    let ans = 0;
-    for (let i = 0; i < n; ++i) {
-        if (['a', 'e', 'i', 'o', 'u'].includes(word[i])) {
-            ans += (i + 1) * (n - i);
-        }
-    }
-    return ans;
-}
-```
+
 
 ### **...**
 
@@ -156,4 +117,4 @@ function countVowels(word: string): number {
 
 ```
 
-<!-- tabs:end -->
+
