@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个二进制字符串&nbsp;<code>s</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;。如果所有长度为 <code>k</code>&nbsp;的二进制字符串都是 <code>s</code>&nbsp;的子串，请返回 <code>true</code> ，否则请返回 <code>false</code> 。</p>
 
 <p>&nbsp;</p>

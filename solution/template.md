@@ -116,8 +116,6 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 {}
 
 ## 解法
@@ -161,8 +159,6 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 [English Version]({})
 
 ## 题目描述
-
-<!-- 这里写题目描述 -->
 
 {}
 
@@ -208,8 +204,6 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 {}
 
 ## 解法
@@ -254,13 +248,9 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 {}
 
 ## 解法
-
-### **TypeScript**
 
 <!-- 这里是ts_problem_readme_template结束位置 -->
 
@@ -277,7 +267,5 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 {}
 
 ## Solutions
-
-### **TypeScript**
 
 <!-- 这里是ts_problem_readme_template_en结束位置 -->

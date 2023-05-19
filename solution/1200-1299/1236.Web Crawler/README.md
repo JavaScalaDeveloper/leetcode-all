@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个链接&nbsp;<code>startUrl</code> 和一个接口&nbsp;<code>HtmlParser</code>&nbsp;，请你实现一个网络爬虫，以实现爬取同&nbsp;<code>startUrl</code>&nbsp;拥有相同&nbsp;<strong>域名标签&nbsp;</strong>的全部链接。该爬虫得到的全部链接可以&nbsp;<strong>任何顺序&nbsp;</strong>返回结果。</p>
 
 <p>你的网络爬虫应当按照如下模式工作：</p>

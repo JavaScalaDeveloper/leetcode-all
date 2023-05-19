@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个二进制字符串 <code>s</code> ，该字符串 <strong>不含前导零</strong> 。</p>
 
 <p>如果 <code>s</code> 包含 <strong>零个或一个由连续的 <code>'1'</code> 组成的字段</strong> ，返回 <code>true</code>​​​ 。否则，返回 <code>false</code> 。</p>
@@ -59,5 +57,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

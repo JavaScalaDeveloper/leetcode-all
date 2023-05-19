@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个四位&nbsp;<strong>正</strong>&nbsp;整数&nbsp;<code>num</code>&nbsp;。请你使用 <code>num</code>&nbsp;中的 <strong>数位</strong> ，将&nbsp;<code>num</code>&nbsp;拆成两个新的整数&nbsp;<code>new1</code>&nbsp;和&nbsp;<code>new2</code>&nbsp;。<code>new1</code> 和&nbsp;<code>new2</code>&nbsp;中可以有&nbsp;<strong>前导 0</strong>&nbsp;，且&nbsp;<code>num</code>&nbsp;中 <strong>所有</strong>&nbsp;数位都必须使用。</p>
 
 <ul>
@@ -57,8 +55,6 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**
 
 ### **C**
 

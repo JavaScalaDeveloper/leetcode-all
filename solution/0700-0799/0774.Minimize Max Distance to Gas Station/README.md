@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>整数数组 <code>stations</code> 表示 <strong>水平数轴</strong> 上各个加油站的位置。给你一个整数 <code>k</code> 。</p>
 
 <p>请你在数轴上增设 <code>k</code> 个加油站，新增加油站可以位于 <strong>水平数轴</strong> 上的任意位置，而不必放在整数位置上。</p>

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个由&nbsp;<strong>正整数&nbsp;</strong>组成的数组 <code>nums</code>。</p>
 
 <p>可以对阵列执行如下操作，<strong>次数不限</strong>:</p>
@@ -93,5 +91,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

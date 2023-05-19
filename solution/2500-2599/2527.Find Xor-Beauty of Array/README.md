@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;。</p>
 
 <p>三个下标&nbsp;<code>i</code>&nbsp;，<code>j</code>&nbsp;和&nbsp;<code>k</code>&nbsp;的 <strong>有效值</strong>&nbsp;定义为&nbsp;<code>((nums[i] | nums[j]) &amp; nums[k])</code>&nbsp;。</p>

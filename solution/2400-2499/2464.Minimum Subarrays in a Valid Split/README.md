@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个整数数组 <code>nums</code>。</p>
 
 <p>如果要将整数数组 <code>nums</code> 拆分为&nbsp;<strong>子数组&nbsp;</strong>后是&nbsp;<strong>有效的</strong>，则必须满足:</p>
@@ -111,5 +109,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

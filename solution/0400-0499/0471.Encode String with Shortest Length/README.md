@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个 <strong>非空</strong> 字符串，将其编码为具有最短长度的字符串。</p>
 
 <p>编码规则是：<code>k[encoded_string]</code>，其中在方括号 <code>encoded_string</code><em> </em>中的内容重复 <code>k</code> 次。</p>

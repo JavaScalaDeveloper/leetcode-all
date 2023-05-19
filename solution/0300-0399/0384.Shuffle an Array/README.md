@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>nums</code> ，设计算法来打乱一个没有重复元素的数组。打乱后，数组的所有排列应该是&nbsp;<strong>等可能</strong>&nbsp;的。</p>
 
 <p>实现 <code>Solution</code> class:</p>
@@ -87,5 +85,3 @@ class Solution {
  * int[] param_2 = obj.shuffle();
  */
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个字符串&nbsp;<code>s</code>&nbsp;，找到 <em>它的第一个不重复的字符，并返回它的索引</em> 。如果不存在，则返回 <code>-1</code>&nbsp;。</p>
 
 <p>&nbsp;</p>
@@ -71,5 +69,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

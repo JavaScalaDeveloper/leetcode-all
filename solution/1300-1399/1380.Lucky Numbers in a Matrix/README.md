@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个 <code>m * n</code> 的矩阵，矩阵中的数字 <strong>各不相同</strong> 。请你按 <strong>任意</strong> 顺序返回矩阵中的所有幸运数。</p>
 
 <p><strong>幸运数</strong> 是指矩阵中满足同时下列两个条件的元素：</p>
@@ -84,5 +82,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

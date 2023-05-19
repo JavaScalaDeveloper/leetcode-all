@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>超市里正在举行打折活动，每隔&nbsp;<code>n</code>&nbsp;个顾客会得到 <code>discount</code>&nbsp;的折扣。</p>
 
 <p>超市里有一些商品，第&nbsp;<code>i</code>&nbsp;种商品为&nbsp;<code>products[i]</code>&nbsp;且每件单品的价格为&nbsp;<code>prices[i]</code>&nbsp;。</p>

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>如果一个正方形矩阵满足下述 <strong>全部</strong> 条件，则称之为一个 <strong>X 矩阵</strong> ：</p>
 
 <ol>
@@ -74,8 +72,6 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**
 
 ### **C**
 

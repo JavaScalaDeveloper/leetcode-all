@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><code><font face="monospace">Bikes</font></code><font face="monospace">&nbsp;表：</font></p>
 
 <pre>

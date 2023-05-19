@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+
 
 <p>给定一个字符串 <code>s</code> ，验证 <code>s</code>&nbsp;是否是&nbsp;<strong>回文串&nbsp;</strong>，只考虑字母和数字字符，可以忽略字母的大小写。</p>
 
@@ -62,7 +62,5 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**
 
 使用 `is_alphabetic()` 与 `is_numeric()` 过滤字符

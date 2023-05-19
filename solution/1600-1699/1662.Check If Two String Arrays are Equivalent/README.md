@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个字符串数组 <code>word1</code> 和 <code>word2</code> 。如果两个数组表示的字符串相同，返回<em> </em><code>true</code><em> </em>；否则，返回 <code>false</code><em> 。</em></p>
 
 <p><strong>数组表示的字符串</strong> 是由数组中的所有元素 <strong>按顺序</strong> 连接形成的字符串。</p>
@@ -125,5 +123,3 @@ bool arrayStringsAreEqual(char **word1, int word1Size, char **word2, int word2Si
     return i == word1Size && j == word2Size;
 }
 ```
-
-### **TypeScript**

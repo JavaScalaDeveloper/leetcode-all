@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>RGB 颜色 <code>"#AABBCC"</code>&nbsp;可以简写成&nbsp;<code>"#ABC"</code> 。</p>
 
 <ul>

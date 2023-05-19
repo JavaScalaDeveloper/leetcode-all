@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>You are given the&nbsp;<code>root</code> of a binary tree&nbsp;and an integer <code>k</code>. Besides&nbsp;the left and right children, every node of this tree has two other properties, a&nbsp;<strong>string&nbsp;</strong><code>node.val</code>&nbsp;containing only lowercase English letters (possibly empty) and a non-negative integer&nbsp;<code>node.len</code>.&nbsp;There are two types of nodes in this tree:</p>
 
 <ul>

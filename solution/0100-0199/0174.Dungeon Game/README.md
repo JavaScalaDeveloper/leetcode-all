@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <style type="text/css">table.dungeon, .dungeon th, .dungeon td {
   border:3px solid black;
 }

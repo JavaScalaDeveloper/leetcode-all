@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个长度为 <code>n</code> 的数组 <code>words</code> ，该数组由 <strong>非空</strong> 字符串组成。</p>
 
 <p>定义字符串 <code>word</code> 的 <strong>分数</strong> 等于以 <code>word</code> 作为 <strong>前缀</strong> 的 <code>words[i]</code> 的数目。</p>
@@ -116,5 +114,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

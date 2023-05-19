@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一棵二叉树的根节点 <code>root</code> ，找出并返回满足要求的节点数，要求节点的值等于其 <strong>子树</strong> 中值的 <strong>平均值</strong> 。</p>
 
 <p><strong>注意：</strong></p>
@@ -89,5 +87,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

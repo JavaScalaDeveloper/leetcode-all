@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>现有一个按 <strong>升序</strong> 排列的整数数组 <code>nums</code> ，其中每个数字都 <strong>互不相同</strong> 。</p>
 
 <p>给你一个整数 <code>k</code> ，请你找出并返回从数组最左边开始的第 <code>k</code> 个缺失数字。</p>

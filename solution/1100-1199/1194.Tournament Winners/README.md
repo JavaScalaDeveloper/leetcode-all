@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><code>Players</code>&nbsp;玩家表</p>
 
 <pre>

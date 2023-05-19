@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>Write a function that&nbsp;returns an&nbsp;<strong>infinite-method</strong><strong>&nbsp;object</strong>.</p>
 
 <p>An&nbsp;<strong>infinite-method</strong><strong>&nbsp;object</strong>&nbsp;is defined as an object that allows you to call any method and it will always return the name of the method.</p>
@@ -38,5 +36,3 @@ The returned string should always match the method name.</pre>
 </ul>
 
 ## 解法
-
-### **TypeScript**

@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+
 
 <p>实现一个二叉搜索树迭代器类<code>BSTIterator</code> ，表示一个按中序遍历二叉搜索树（BST）的迭代器：</p>
 
@@ -180,5 +180,3 @@ class BSTIterator {
 ```
 
 ## **JavaScript**
-
-### **TypeScript**

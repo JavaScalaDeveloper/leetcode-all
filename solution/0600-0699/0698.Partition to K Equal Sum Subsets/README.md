@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个整数数组&nbsp;&nbsp;<code>nums</code> 和一个正整数 <code>k</code>，找出是否有可能把这个数组分成 <code>k</code> 个非空子集，其总和都相等。</p>
 
 <p>&nbsp;</p>
@@ -198,5 +196,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个字符串：<code>ransomNote</code> 和 <code>magazine</code> ，判断 <code>ransomNote</code> 能不能由 <code>magazine</code> 里面的字符构成。</p>
 
 <p>如果可以，返回 <code>true</code> ；否则返回 <code>false</code> 。</p>
@@ -72,5 +70,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

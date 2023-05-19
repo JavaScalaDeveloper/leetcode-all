@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><code>Transactions</code> 记录表</p>
 
 <pre>

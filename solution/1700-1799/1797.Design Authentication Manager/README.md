@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>你需要设计一个包含验证码的验证系统。每一次验证中，用户会收到一个新的验证码，这个验证码在 <code>currentTime</code> 时刻之后 <code>timeToLive</code> 秒过期。如果验证码被更新了，那么它会在 <code>currentTime</code> （可能与之前的 <code>currentTime</code> 不同）时刻延长 <code>timeToLive</code> 秒。</p>
 
 <p>请你实现 <code>AuthenticationManager</code> 类：</p>
@@ -111,5 +109,3 @@ class AuthenticationManager {
  * int param_3 = obj.countUnexpiredTokens(currentTime);
  */
 ```
-
-### **TypeScript**

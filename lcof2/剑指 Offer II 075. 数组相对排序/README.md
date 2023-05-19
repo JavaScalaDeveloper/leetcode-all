@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+
 
 <p>给定两个数组，<code>arr1</code> 和&nbsp;<code>arr2</code>，</p>
 

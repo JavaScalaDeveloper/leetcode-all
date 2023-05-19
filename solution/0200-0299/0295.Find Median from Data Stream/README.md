@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><strong>中位数</strong>是有序整数列表中的中间值。如果列表的大小是偶数，则没有中间值，中位数是两个中间值的平均值。</p>
 
 <ul>
@@ -100,5 +98,3 @@ class MedianFinder {
  * double param_2 = obj.findMedian();
  */
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一棵以 <code>root</code> 为根的 <strong>二叉树</strong> ，请你返回 <strong>任意</strong> 二叉搜索子树的最大键值和。</p>
 
 <p>二叉搜索树的定义如下：</p>
@@ -144,5 +142,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

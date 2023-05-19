@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个正整数&nbsp; <code>n</code>，表示从 <code>1</code> 到 <code>n</code> 的 <code>n</code> 个城市。还给你一个&nbsp;<strong>二维&nbsp;</strong>数组 <code>roads</code>，其中 <code>roads[i] = [a<sub>i</sub>, b<sub>i</sub>, cost<sub>i</sub>]</code> 表示在城市 <code>a<sub>i</sub></code> 和 <code>b<sub>i</sub></code> 之间有一条双向道路，其旅行成本等于 <code>cost<sub>i</sub></code>。</p>
 
 <p>&nbsp;</p>
@@ -116,5 +114,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,7 +4,7 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+
 <p>编写一种算法，若M × N矩阵中某个元素为0，则将其所在的行与列清零。</p>
 
 <p>&nbsp;</p>
@@ -207,5 +207,3 @@ void setZeroes(int **matrix, int matrixSize, int *matrixColSize) {
     }
 }
 ```
-
-### **TypeScript**

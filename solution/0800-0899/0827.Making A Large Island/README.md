@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个大小为 <code>n x n</code> 二进制矩阵 <code>grid</code> 。<strong>最多</strong> 只能将一格 <code>0</code> 变成 <code>1</code> 。</p>
 
 <p>返回执行此操作后，<code>grid</code> 中最大的岛屿面积是多少？</p>
@@ -209,5 +207,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

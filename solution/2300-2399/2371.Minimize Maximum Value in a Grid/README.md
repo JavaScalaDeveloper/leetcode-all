@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个包含&nbsp;<strong>不同&nbsp;</strong>正整数的 <code>m × n</code> 整数矩阵 <code>grid</code>。</p>
 
 <p>必须将矩阵中的每一个整数替换为正整数，且满足以下条件:</p>
@@ -91,5 +89,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

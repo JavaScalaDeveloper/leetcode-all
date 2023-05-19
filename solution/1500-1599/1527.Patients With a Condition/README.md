@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>患者信息表：&nbsp;<code>Patients</code></p>
 
 <pre>

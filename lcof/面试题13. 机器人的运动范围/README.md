@@ -101,8 +101,6 @@ class Solution {
 }
 ```
 
-### **TypeScript**
-
 循环：
 
 递归：

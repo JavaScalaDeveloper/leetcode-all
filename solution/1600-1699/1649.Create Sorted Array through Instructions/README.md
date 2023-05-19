@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>instructions</code> ，你需要根据 <code>instructions</code> 中的元素创建一个有序数组。一开始你有一个空的数组 <code>nums</code> ，你需要 <strong>从左到右</strong> 遍历 <code>instructions</code> 中的元素，将它们依次插入 <code>nums</code> 数组中。每一次插入操作的 <strong>代价</strong> 是以下两者的 <strong>较小值</strong> ：</p>
 
 <ul>
@@ -241,5 +239,3 @@ class SegmentTree {
 线段树：
 
 树状数组：
-
-### **TypeScript**

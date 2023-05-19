@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>设计一个支持 <code>push</code> ，<code>pop</code> ，<code>top</code> 操作，并能在常数时间内检索到最小元素的栈。</p>
 
 <p>实现 <code>MinStack</code> 类:</p>
@@ -103,5 +101,3 @@ class MinStack {
  * int param_4 = obj.getMin();
  */
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个 <strong>正</strong> 整数 <code>n</code> 。</p>
 
 <p>用 <code>even</code> 表示在 <code>n</code> 的二进制形式（下标从 <strong>0</strong> 开始）中值为 <code>1</code> 的偶数下标的个数。</p>
@@ -63,5 +61,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

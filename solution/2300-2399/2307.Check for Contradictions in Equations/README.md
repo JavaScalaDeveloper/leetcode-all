@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个由字符串二维数组&nbsp;<code>equations</code> 和实数数组&nbsp;&nbsp;<code>values</code>&nbsp;，其中 <code>equations[i] = [A<sub>i</sub>, B<sub>i</sub>]</code>，<code>values[i]</code> 表示 <code>A<sub>i</sub> / B<sub>i</sub> = values[i]</code>.。</p>
 
 <p>确定方程中是否存在矛盾。<em>如果存在矛盾则返回 <code>true</code>，否则返回 <code>false</code></em>。</p>
@@ -62,5 +60,3 @@ a = 3, b = 1 和 c = 2.
 ```java
 
 ```
-
-### **TypeScript**

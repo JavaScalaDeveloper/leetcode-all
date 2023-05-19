@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><meta charset="UTF-8" /></p>
 
 <p>表:&nbsp;<code>Person</code></p>

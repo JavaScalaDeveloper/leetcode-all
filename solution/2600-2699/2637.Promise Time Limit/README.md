@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>请你编写一个函数，它接收一个异步函数 <code>fn</code>&nbsp;和一个以毫秒为单位的时间 <code>t</code>。它应根据限时函数返回一个有 <strong>限时</strong> 效果的函数。</p>
 
 <p>限时函数是与原函数相同的函数，除非它需要 <code>t</code> 毫秒以上的时间来完成。如果出现了这种情况，请你返回 <code>"Time Limit Exceeded"</code>&nbsp;拒绝这次函数的调用。注意，它应该返回一个字符串拒绝，而不是一个&nbsp;<code>Error</code>&nbsp;。</p>
@@ -81,5 +79,3 @@ t = 1000
 </ul>
 
 ## 解法
-
-### **TypeScript**

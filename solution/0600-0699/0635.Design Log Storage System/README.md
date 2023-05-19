@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>你将获得多条日志，每条日志都有唯一的 <code>id</code> 和 <code>timestamp</code> ，<code>timestamp</code> 是形如 <code>Year:Month:Day:Hour:Minute:Second</code> 的字符串，<code>2017:01:01:23:59:59</code> ，所有值域都是零填充的十进制数。</p>
 
 <p>实现 <code>LogSystem</code> 类：</p>

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>nums</code>，请你选择数组的两个不同下标 <code>i</code> 和 <code>j</code><em>，</em>使 <code>(nums[i]-1)*(nums[j]-1)</code> 取得最大值。</p>
 
 <p>请你计算并返回该式的最大值。</p>
@@ -121,5 +119,3 @@ int maxProduct(int* nums, int numsSize){
     return (max - 1) * (submax - 1);
 }
 ```
-
-### **TypeScript**

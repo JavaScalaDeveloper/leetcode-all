@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个<strong>索引从 0 开始</strong>的整数类型数组 <code>nums</code> ，包含 <code>n</code> 个非负整数。</p>
 
 <p>另外给定一个（包含查询指令的）数组 <code>queries</code> ，其中 <code>queries[i] = [x<sub>i</sub>, y<sub>i</sub>]</code>。 第 <code>i</code> 个查询指令的答案是 <code>nums[j]</code> 中满足该条件的所有元素的和： <code>x<sub>i</sub> &lt;= j &lt; n</code> 且 <code>(j - x<sub>i</sub>)</code> 能被 <code>y<sub>i</sub></code> 整除。</p>

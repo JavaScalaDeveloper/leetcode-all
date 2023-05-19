@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>Alice 和&nbsp;Bob 交替进行一个游戏，<strong>由 Alice 先手</strong>。</p>
 
 <p>在游戏中，共有&nbsp;<code>n</code>&nbsp;堆石头。在每个玩家的回合中，玩家需要 <strong>选择</strong> 任一非空石头堆，从中移除任意 <strong>非零</strong> 数量的石头。如果不能移除任意的石头，就输掉游戏，同时另一人获胜。</p>

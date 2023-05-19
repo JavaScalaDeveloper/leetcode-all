@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>不使用任何内建的哈希表库设计一个哈希映射（HashMap）。</p>
 
 <p>实现 <code>MyHashMap</code> 类：</p>
@@ -90,5 +88,3 @@ class MyHashMap {
  * obj.remove(key);
  */
 ```
-
-### **TypeScript**

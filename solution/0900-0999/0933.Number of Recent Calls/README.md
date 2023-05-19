@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>写一个&nbsp;<code>RecentCounter</code>&nbsp;类来计算特定时间范围内最近的请求。</p>
 
 <p>请你实现 <code>RecentCounter</code> 类：</p>
@@ -95,5 +93,3 @@ class RecentCounter {
  * int param_1 = obj.ping(t);
  */
 ```
-
-### **TypeScript**

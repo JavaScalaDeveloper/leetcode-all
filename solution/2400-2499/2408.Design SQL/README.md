@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定 <code>n</code> 个表，用两个数组 <code>names</code> 和 <code>columns</code>&nbsp;表示，其中 <code>names[i]</code> 是第 <code>i</code> 个表的名称，<code>columns[i]</code> 是第 <code>i</code> 个表的列数。</p>
 
 <p>您能够执行以下&nbsp;<strong>操作</strong>:</p>
@@ -101,5 +99,3 @@ class SQL {
  * String param_3 = obj.selectCell(name,rowId,columnId);
  */
 ```
-
-### **TypeScript**

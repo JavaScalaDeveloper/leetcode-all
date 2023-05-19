@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，请找出该二叉树的 <strong>最底层 最左边 </strong>节点的值。</p>
 
 <p>假设二叉树中至少有一个节点。</p>
@@ -127,5 +125,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

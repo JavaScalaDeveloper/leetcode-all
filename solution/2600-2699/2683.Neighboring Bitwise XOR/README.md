@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>下标从 <strong>0</strong> 开始、长度为 <code>n</code> 的数组 <code>derived</code> 是由同样长度为 <code>n</code> 的原始 <strong>二进制数组</strong> <code>original</code> 通过计算相邻值的 <strong>按位异或（⊕）</strong>派生而来。</p>
 
 <p>特别地，对于范围&nbsp;<code>[0, n - 1]</code> 内的每个下标 <code>i</code> ：</p>

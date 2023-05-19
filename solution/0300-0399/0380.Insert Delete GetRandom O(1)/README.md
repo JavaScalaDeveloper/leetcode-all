@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>实现<code>RandomizedSet</code> 类：</p>
 
 <div class="original__bRMd">
@@ -112,5 +110,3 @@ class RandomizedSet {
  * int param_3 = obj.getRandom();
  */
 ```
-
-### **TypeScript**

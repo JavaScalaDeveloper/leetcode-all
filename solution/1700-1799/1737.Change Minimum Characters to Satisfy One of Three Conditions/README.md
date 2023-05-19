@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个字符串 <code>a</code> 和 <code>b</code> ，二者均由小写字母组成。一步操作中，你可以将 <code>a</code> 或 <code>b</code> 中的 <strong>任一字符</strong> 改变为 <strong>任一小写字母</strong> 。</p>
 
 <p>操作的最终目标是满足下列三个条件 <strong>之一</strong> ：</p>
@@ -100,5 +98,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

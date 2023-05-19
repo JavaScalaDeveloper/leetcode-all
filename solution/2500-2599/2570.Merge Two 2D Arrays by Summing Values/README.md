@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个 <strong>二维</strong> 整数数组 <code>nums1</code> 和 <code>nums2.</code></p>
 
 <ul>
@@ -94,5 +92,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

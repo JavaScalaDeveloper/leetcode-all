@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>请你编写一个函数，检查给定的对象是否是给定类或超类的实例。</p>
 
 <p>可以传递给函数的数据类型没有限制。</p>
@@ -48,5 +46,3 @@ Dog 是 Animal 的子类。因此，Dog 对象同时是 Dog 和 Animal 的实例
 <strong>解释：</strong>5 是一个 Number。注意，"instanceof" 关键字将返回 false。</pre>
 
 ## 解法
-
-### **TypeScript**

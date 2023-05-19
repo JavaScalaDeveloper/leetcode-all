@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始、长度为 <code>n</code>&nbsp;的数组&nbsp;<code>nums</code>&nbsp;。一开始，所有元素都是 <strong>未染色</strong>&nbsp;（值为 <code>0</code>&nbsp;）的。</p>
 
 <p>给你一个二维整数数组&nbsp;<code>queries</code>&nbsp;，其中&nbsp;<code>queries[i] = [index<sub>i</sub>, color<sub>i</sub>]</code>&nbsp;。</p>
@@ -83,5 +81,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

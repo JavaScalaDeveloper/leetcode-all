@@ -100,5 +100,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

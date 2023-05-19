@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>设计实现双端队列。</p>
 
 <p>实现 <code>MyCircularDeque</code> 类:</p>
@@ -170,5 +168,3 @@ class MyCircularDeque {
  * boolean param_8 = obj.isFull();
  */
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一正整数数组<strong> </strong><code>nums</code><strong>，</strong><code>nums</code> 中的相邻整数将进行浮点除法。例如，&nbsp;[2,3,4] -&gt; 2 / 3 / 4 。</p>
 
 <ul>
@@ -86,5 +84,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

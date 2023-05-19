@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，数组长度为 <strong>偶数</strong> ，由数目相等的正整数和负整数组成。</p>
 
 <p>你需要 <strong>重排</strong> <code>nums</code> 中的元素，使修改后的数组满足下述条件：</p>
@@ -75,5 +73,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

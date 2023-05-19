@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>一个数组的 <strong>分数</strong>&nbsp;定义为数组之和 <strong>乘以</strong>&nbsp;数组的长度。</p>
 
 <ul>
@@ -113,5 +111,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

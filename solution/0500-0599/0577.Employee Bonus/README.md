@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>选出所有 bonus &lt; 1000 的员工的 name 及其 bonus。</p>
 
 <p><code>Employee</code> 表单</p>

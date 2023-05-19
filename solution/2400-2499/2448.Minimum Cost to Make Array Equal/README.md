@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个下标从 <strong>0</strong>&nbsp;开始的数组&nbsp;<code>nums</code> 和&nbsp;<code>cost</code>&nbsp;，分别包含&nbsp;<code>n</code>&nbsp;个&nbsp;<strong>正</strong>&nbsp;整数。</p>
 
 <p>你可以执行下面操作 <strong>任意</strong>&nbsp;次：</p>
@@ -146,5 +144,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

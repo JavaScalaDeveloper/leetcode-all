@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>整数的 <strong>数组形式</strong> &nbsp;<code>num</code>&nbsp;是按照从左到右的顺序表示其数字的数组。</p>
 
 <ul>
@@ -75,5 +73,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>查询表 <code>Queries</code>：&nbsp;</p>
 
 <pre>

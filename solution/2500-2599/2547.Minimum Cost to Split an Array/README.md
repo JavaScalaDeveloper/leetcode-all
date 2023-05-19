@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
 
 <p>将数组拆分成一些非空子数组。拆分的 <strong>代价</strong> 是每个子数组中的 <strong>重要性</strong> 之和。</p>
@@ -126,5 +124,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

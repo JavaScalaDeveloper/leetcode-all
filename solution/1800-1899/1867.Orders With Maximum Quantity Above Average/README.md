@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>&nbsp;<code>OrdersDetails</code> 表</p>
 
 <pre>

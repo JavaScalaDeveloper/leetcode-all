@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>现给定一个整数的 <strong>多维数组</strong> ，请你返回一个生成器对象，按照&nbsp;<strong>中序遍历</strong> 的顺序逐个生成整数。</p>
 
 <p><strong>多维数组</strong> 是一个递归数据结构，包含整数和其他 <strong>多维数组</strong>。</p>
@@ -46,5 +44,3 @@ generator.next().done; // true
 </ul>
 
 ## 解法
-
-### **TypeScript**

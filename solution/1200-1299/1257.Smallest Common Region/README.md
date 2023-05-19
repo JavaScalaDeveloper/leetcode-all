@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一些区域列表&nbsp;<code>regions</code> ，每个列表的第一个区域都包含这个列表内所有其他区域。</p>
 
 <p>很自然地，如果区域&nbsp;<code>X</code> 包含区域&nbsp;<code>Y</code> ，那么区域&nbsp;<code>X</code> &nbsp;比区域&nbsp;<code>Y</code> 大。</p>

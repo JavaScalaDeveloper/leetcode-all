@@ -58,5 +58,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

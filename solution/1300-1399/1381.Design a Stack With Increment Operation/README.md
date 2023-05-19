@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>请你设计一个支持对其元素进行增量操作的栈。</p>
 
 <p>实现自定义栈类 <code>CustomStack</code> ：</p>
@@ -91,5 +89,3 @@ class CustomStack {
  * obj.increment(k,val);
  */
 ```
-
-### **TypeScript**

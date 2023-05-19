@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个字符串<meta charset="UTF-8" />&nbsp;<code>s</code>&nbsp;，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。</p>
 
 <p>&nbsp;</p>
@@ -54,5 +52,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个下标从&nbsp;<strong>0&nbsp;</strong>开始的字符串数组&nbsp;<code>words</code>&nbsp;。每个字符串都只包含 <strong>小写英文字母</strong>&nbsp;。<code>words</code>&nbsp;中任意一个子串中，每个字母都至多只出现一次。</p>
 
 <p>如果通过以下操作之一，我们可以从 <code>s1</code>&nbsp;的字母集合得到 <code>s2</code>&nbsp;的字母集合，那么我们称这两个字符串为 <strong>关联的</strong>&nbsp;：</p>
@@ -133,5 +131,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

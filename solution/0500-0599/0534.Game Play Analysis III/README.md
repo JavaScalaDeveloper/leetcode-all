@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>Table:&nbsp;<code>Activity</code></p>
 
 <pre>

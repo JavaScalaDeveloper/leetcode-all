@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个 <strong>下标从0开始</strong> 的整数数组 <code>nums</code> 和一个正整数 <code>k</code> 。</p>
 
 <p>如果满足以下条件，我们称下标 <code>i</code> 为 <strong>k-big</strong> ：</p>

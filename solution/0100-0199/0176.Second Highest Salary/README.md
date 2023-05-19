@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <code>Employee</code> 表：
 
 <div class="original__bRMd">

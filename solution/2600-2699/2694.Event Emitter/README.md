@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>Design an <code>EventEmitter</code> class. This interface&nbsp;is similar (but with some differences) to the one found in Node.js or the Event Target interface of the DOM. The <code>EventEmitter</code> should allow for subscribing to events and emitting them.</p>
 
 <p>Your <code>EventEmitter</code> class should have the following two methods:</p>
@@ -72,5 +70,3 @@ emitter.emit(&quot;firstEvent&quot;, [4, 5, 6]); // [], there are no subscriptio
 </ul>
 
 ## 解法
-
-### **TypeScript**

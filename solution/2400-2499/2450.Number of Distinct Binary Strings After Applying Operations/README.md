@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个&nbsp;<strong>二进制&nbsp;</strong>字符串 <code>s</code> 和一个正整数 <code>k</code>。</p>
 
 <p>你可以对字符串应用以下操作&nbsp;<strong>任意&nbsp;</strong>次数:</p>
@@ -82,5 +80,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

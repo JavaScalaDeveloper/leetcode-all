@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>一个 ATM 机器，存有&nbsp;<code>5</code>&nbsp;种面值的钞票：<code>20</code>&nbsp;，<code>50</code>&nbsp;，<code>100</code>&nbsp;，<code>200</code>&nbsp;和&nbsp;<code>500</code>&nbsp;美元。初始时，ATM 机是空的。用户可以用它存或者取任意数目的钱。</p>
 
 <p>取款时，机器会优先取 <b>较大</b>&nbsp;数额的钱。</p>
@@ -105,5 +103,3 @@ class ATM {
  * int[] param_2 = obj.withdraw(amount);
  */
 ```
-
-### **TypeScript**

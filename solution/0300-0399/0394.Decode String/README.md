@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个经过编码的字符串，返回它解码后的字符串。</p>
 
 <p>编码规则为: <code>k[encoded_string]</code>，表示其中方括号内部的 <code>encoded_string</code> 正好重复 <code>k</code> 次。注意 <code>k</code> 保证为正整数。</p>
@@ -99,5 +97,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

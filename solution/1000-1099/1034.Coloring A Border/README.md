@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个大小为 <code>m x n</code> 的整数矩阵 <code>grid</code> ，表示一个网格。另给你三个整数&nbsp;<code>row</code>、<code>col</code> 和 <code>color</code> 。网格中的每个值表示该位置处的网格块的颜色。</p>
 
 <p>两个网格块属于同一 <strong>连通分量</strong> 需满足下述全部条件：</p>
@@ -107,5 +105,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

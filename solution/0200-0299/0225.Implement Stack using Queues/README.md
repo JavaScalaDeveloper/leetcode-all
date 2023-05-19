@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（<code>push</code>、<code>top</code>、<code>pop</code> 和 <code>empty</code>）。</p>
 
 <p>实现 <code>MyStack</code> 类：</p>
@@ -117,5 +115,3 @@ class MyStack {
  * boolean param_4 = obj.empty();
  */
 ```
-
-### **TypeScript**

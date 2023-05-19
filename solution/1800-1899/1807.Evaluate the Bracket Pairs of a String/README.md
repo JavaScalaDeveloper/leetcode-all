@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，它包含一些括号对，每个括号中包含一个 <strong>非空</strong>&nbsp;的键。</p>
 
 <ul>
@@ -105,5 +103,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个字符串 <code>s</code> 和一个整数 <code>repeatLimit</code> ，用 <code>s</code> 中的字符构造一个新字符串 <code>repeatLimitedString</code> ，使任何字母 <strong>连续</strong> 出现的次数都不超过 <code>repeatLimit</code> 次。你不必使用 <code>s</code> 中的全部字符。</p>
 
 <p>返回 <strong>字典序最大的</strong><em> </em><code>repeatLimitedString</code> 。</p>
@@ -87,5 +85,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

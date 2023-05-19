@@ -86,8 +86,6 @@ class Solution {
 }
 ```
 
-### **TypeScript**
-
 ### **Kotlin**
 
 ```kotlin

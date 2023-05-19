@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><em>（这是一个<strong>交互题</strong>）</em></p>
 
 <p>我们称只包含元素&nbsp;<code>0</code>&nbsp;或&nbsp;<code>1</code>&nbsp;的矩阵为二进制矩阵。矩阵中每个<strong>单独</strong>的行都按非递减顺序排序。</p>

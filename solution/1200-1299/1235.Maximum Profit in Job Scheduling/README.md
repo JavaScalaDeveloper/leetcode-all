@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>你打算利用空闲时间来做兼职工作赚些零花钱。</p>
 
 <p>这里有&nbsp;<code>n</code>&nbsp;份兼职工作，每份工作预计从&nbsp;<code>startTime[i]</code>&nbsp;开始到&nbsp;<code>endTime[i]</code>&nbsp;结束，报酬为&nbsp;<code>profit[i]</code>。</p>
@@ -178,5 +176,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

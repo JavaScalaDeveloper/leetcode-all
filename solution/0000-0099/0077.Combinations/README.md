@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定两个整数 <code>n</code> 和 <code>k</code>，返回范围 <code>[1, n]</code> 中所有可能的 <code>k</code> 个数的组合。</p>
 
 <p>你可以按 <strong>任何顺序</strong> 返回答案。</p>
@@ -127,5 +125,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

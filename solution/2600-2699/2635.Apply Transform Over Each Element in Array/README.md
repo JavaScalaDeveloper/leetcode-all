@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>编写一个函数，这个函数接收一个整数数组&nbsp;<code>arr</code> 和一个映射函数&nbsp; <code>fn</code>&nbsp;，通过该映射函数返回一个新的数组。</p>
 
 <p>返回数组的创建语句应为 <code>returnedArray[i] = fn(arr[i], i)</code>&nbsp;。</p>
@@ -58,5 +56,3 @@ const newArray = map(arr, plusone); // [2,3,4]
 我们遍历数组 $arr$，对于每个元素 $arr[i]$，将其替换为 $fn(arr[i], i)$。最后返回数组 $arr$ 即可。
 
 时间复杂度 $O(n)$，其中 $n$ 为数组 $arr$ 的长度。空间复杂度 $O(1)$。
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>设计一个支持下述操作的食物评分系统：</p>
 
 <ul>
@@ -79,5 +77,3 @@ foodRatings.highestRated("japanese"); // 返回 "ramen"
 ```java
 
 ```
-
-### **TypeScript**

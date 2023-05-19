@@ -84,5 +84,3 @@ class Solution {
 ```
 
 利用 Go 的特性，中序遍历“生产”的数字传到 `channel`，返回第 `k` 个。
-
-### **TypeScript**

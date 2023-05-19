@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;。</p>
 
 <p>一开始，所有下标都没有被标记。你可以执行以下操作任意次：</p>
@@ -82,5 +80,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

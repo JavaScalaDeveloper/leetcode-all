@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个正整数 <code>num</code> ，请你统计并返回 <strong>小于或等于</strong> <code>num</code> 且各位数字之和为 <strong>偶数</strong> 的正整数的数目。</p>
 
 <p>正整数的 <strong>各位数字之和</strong> 是其所有位上的对应数字相加的结果。</p>
@@ -94,5 +92,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 给你一个链表的头结点&nbsp;<code>head</code>&nbsp;，这个链表是根据结点的<strong>绝对值</strong>进行<strong>升序</strong>排序, 返回重新根据<strong>节点的值</strong>进行<strong>升序</strong>排序的链表。
 
 <p>&nbsp;</p>

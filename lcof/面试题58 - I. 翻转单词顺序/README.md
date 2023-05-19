@@ -65,8 +65,6 @@ class Solution {
 }
 ```
 
-### **TypeScript**
-
 API：
 
 双指针：

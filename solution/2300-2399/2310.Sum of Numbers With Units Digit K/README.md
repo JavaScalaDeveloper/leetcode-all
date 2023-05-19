@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个整数 <code>num</code> 和 <code>k</code> ，考虑具有以下属性的正整数多重集：</p>
 
 <ul>
@@ -105,5 +103,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><strong>布尔表达式</strong> 是计算结果不是 <code>true</code> 就是 <code>false</code> 的表达式。有效的表达式需遵循以下约定：</p>
 
 <ul>
@@ -103,5 +101,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

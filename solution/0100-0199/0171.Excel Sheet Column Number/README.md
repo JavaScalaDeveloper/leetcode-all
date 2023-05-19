@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个字符串&nbsp;<code>columnTitle</code> ，表示 Excel 表格中的列名称。返回 <em>该列名称对应的列序号</em>&nbsp;。</p>
 
 <p>例如：</p>
@@ -67,5 +65,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

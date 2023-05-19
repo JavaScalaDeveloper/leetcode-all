@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>朋友关系列表：&nbsp;<code>Friendship</code></p>
 
 <pre>

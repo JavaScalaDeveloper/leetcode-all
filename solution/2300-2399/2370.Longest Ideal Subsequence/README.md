@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个由小写字母组成的字符串 <code>s</code> ，和一个整数 <code>k</code> 。如果满足下述条件，则可以将字符串 <code>t</code> 视作是 <strong>理想字符串</strong> ：</p>
 
 <ul>
@@ -87,5 +85,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

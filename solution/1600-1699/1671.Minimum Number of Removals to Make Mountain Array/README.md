@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>我们定义&nbsp;<code>arr</code>&nbsp;是 <b>山形数组</b>&nbsp;当且仅当它满足：</p>
 
 <ul>
@@ -94,5 +92,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

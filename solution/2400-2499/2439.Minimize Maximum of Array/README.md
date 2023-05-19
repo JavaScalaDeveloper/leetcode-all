@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的数组&nbsp;<code>nums</code>&nbsp;，它含有&nbsp;<code>n</code>&nbsp;个非负整数。</p>
 
 <p>每一步操作中，你需要：</p>
@@ -96,5 +94,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

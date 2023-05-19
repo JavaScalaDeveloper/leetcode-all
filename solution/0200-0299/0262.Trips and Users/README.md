@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 表：<code>Trips</code>
 
 <div class="original__bRMd">

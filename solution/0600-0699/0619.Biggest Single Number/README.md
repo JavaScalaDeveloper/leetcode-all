@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><code>MyNumbers</code> 表：</p>
 
 <div class="original__bRMd">

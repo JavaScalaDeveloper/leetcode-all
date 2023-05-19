@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个表&nbsp;<code>tree</code>，<strong>id</strong> 是树节点的编号，&nbsp;<strong>p_id</strong>&nbsp;是它父节点的&nbsp;<strong>id 。</strong></p>
 
 <pre>+----+------+

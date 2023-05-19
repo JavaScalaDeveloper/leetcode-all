@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个数组&nbsp;<code>nums</code>&nbsp;，它包含若干正整数。</p>
 
 <p>一开始分数&nbsp;<code>score = 0</code>&nbsp;，请你按照下面算法求出最后分数：</p>
@@ -128,5 +126,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

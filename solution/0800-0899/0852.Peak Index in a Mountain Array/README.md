@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 符合下列属性的数组 <code>arr</code> 称为 <strong>山脉数组</strong> ：
 
 <ul>
@@ -77,5 +75,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

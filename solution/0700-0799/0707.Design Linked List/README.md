@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>你可以选择使用单链表或者双链表，设计并实现自己的链表。</p>
 
 <p>单链表中的节点应该具备两个属性：<code>val</code> 和 <code>next</code> 。<code>val</code> 是当前节点的值，<code>next</code> 是指向下一个节点的指针/引用。</p>
@@ -234,5 +232,3 @@ class MyLinkedList {
  * obj.deleteAtIndex(index);
  */
 ```
-
-### **TypeScript**

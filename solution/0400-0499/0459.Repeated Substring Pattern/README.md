@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个非空的字符串<meta charset="UTF-8" />&nbsp;<code>s</code>&nbsp;，检查是否可以通过由它的一个子串重复多次构成。</p>
 
 <p>&nbsp;</p>
@@ -62,5 +60,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

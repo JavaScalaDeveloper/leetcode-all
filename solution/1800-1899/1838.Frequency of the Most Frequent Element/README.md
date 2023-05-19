@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>元素的 <strong>频数</strong> 是该元素在一个数组中出现的次数。</p>
 
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> 。在一步操作中，你可以选择 <code>nums</code> 的一个下标，并将该下标对应元素的值增加 <code>1</code> 。</p>
@@ -129,5 +127,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

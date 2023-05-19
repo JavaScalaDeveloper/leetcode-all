@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>在无限大的二维平面上有&nbsp;<code>n</code>&nbsp;种 <strong>不同</strong> 的病毒。给定二维数组&nbsp;<code>points</code>&nbsp;，<span style="">第 </span><code>i</code><span style=""> 项&nbsp;</span><code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code>&nbsp;说明第&nbsp;<code>0</code>&nbsp;天有一种病毒在点&nbsp;<code>(x<sub>i</sub>, y<sub>i</sub>)</code>&nbsp;。注意初始状态下，可能有 <strong>多种</strong> 病毒在 <strong>同一点</strong> 上。</p>
 
 <p>每天，被感染的点会把它感染的病毒传播到上、下、左、右四个邻居点。</p>

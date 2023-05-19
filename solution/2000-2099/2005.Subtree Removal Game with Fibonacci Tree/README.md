@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><strong>斐波那契</strong>树是一种按这种规则函数&nbsp;<code>order(n)</code>&nbsp;创建的二叉树：</p>
 
 <ul>

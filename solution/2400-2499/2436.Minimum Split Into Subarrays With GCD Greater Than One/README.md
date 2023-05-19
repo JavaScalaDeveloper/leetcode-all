@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个由正整数组成的数组 <code>nums</code>。</p>
 
 <p>将数组拆分为&nbsp;<strong>一个或多个&nbsp;</strong>不相连的子数组，如下所示:</p>
@@ -89,5 +87,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

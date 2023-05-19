@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个整数数组 <code>nums</code>&nbsp;和一个整数 <code>k</code> ，返回其中元素之和可被 <code>k</code>&nbsp;整除的（连续、非空） <strong>子数组</strong> 的数目。</p>
 
 <p><strong>子数组</strong> 是数组的 <strong>连续</strong> 部分。</p>
@@ -72,5 +70,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

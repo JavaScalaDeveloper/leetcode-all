@@ -4,7 +4,7 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+
 <p>给定一个方阵，其中每个单元(像素)非黑即白。设计一个算法，找出 4 条边皆为黑色像素的最大子方阵。</p>
 <p>返回一个数组 <code>[r, c, size]</code> ，其中&nbsp;<code>r</code>,&nbsp;<code>c</code>&nbsp;分别代表子方阵左上角的行号和列号，<code>size</code> 是子方阵的边长。若有多个满足条件的子方阵，返回 <code>r</code> 最小的，若 <code>r</code> 相同，返回 <code>c</code> 最小的子方阵。若无满足条件的子方阵，返回空数组。</p>
 <p><strong>示例 1:</strong></p>
@@ -97,5 +97,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

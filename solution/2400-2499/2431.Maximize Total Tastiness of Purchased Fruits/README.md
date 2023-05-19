@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>你有两个非负整数数组 <code>price</code> 和 <code>tastiness</code>，两个数组的长度都是 <code>n</code>。同时给你两个非负整数 <code>maxAmount</code> 和 <code>maxCoupons</code>。</p>
 
 <p data-group="1-1">对于范围 <code>[0, n - 1]</code>&nbsp;中的每一个整数 <code>i</code>:</p>
@@ -119,5 +117,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

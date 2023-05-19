@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一棵二叉树的根节点 <code>root</code> ，请你返回 <strong>层数最深的叶子节点的和</strong> 。</p>
 
 <p> </p>
@@ -166,5 +164,3 @@ int deepestLeavesSum(struct TreeNode* root){
     return res;
 }
 ```
-
-### **TypeScript**

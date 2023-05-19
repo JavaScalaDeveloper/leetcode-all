@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>国家表：<code>Countries</code></p>
 
 <pre>

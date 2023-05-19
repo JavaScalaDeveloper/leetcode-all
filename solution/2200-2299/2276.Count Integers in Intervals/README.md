@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你区间的 <strong>空</strong> 集，请你设计并实现满足要求的数据结构：</p>
 
 <ul>
@@ -178,5 +176,3 @@ class CountIntervals {
  * int param_2 = obj.count();
  */
 ```
-
-### **TypeScript**

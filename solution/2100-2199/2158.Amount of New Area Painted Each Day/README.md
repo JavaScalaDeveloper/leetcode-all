@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>有一幅细长的画，可以用数轴来表示。 给你一个长度为 <code>n</code> 、下标从 <strong>0</strong> 开始的二维整数数组 <code>paint</code> ，其中 <code>paint[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> 表示在第 <code>i</code> 天你需要绘制 <code>start<sub>i</sub></code>&nbsp;和 <code>end<sub>i</sub></code>&nbsp;之间的区域。</p>
 
 <p>多次绘制同一区域会导致不均匀，因此每个区域最多只能绘制 <strong>一次 </strong>。</p>
@@ -190,5 +188,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

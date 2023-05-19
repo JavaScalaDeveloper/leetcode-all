@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> 。</p>
 
 <p>考虑 <code>nums</code> 中进行 <strong>按位与（bitwise AND）</strong>运算得到的值 <strong>最大</strong> 的 <strong>非空</strong> 子数组。</p>
@@ -85,5 +83,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

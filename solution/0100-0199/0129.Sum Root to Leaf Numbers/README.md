@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 给你一个二叉树的根节点 <code>root</code> ，树中每个节点都存放有一个 <code>0</code> 到 <code>9</code> 之间的数字。
 
 <div class="original__bRMd">
@@ -134,5 +132,3 @@ int sumNumbers(struct TreeNode *root) {
     return dfs(root, 0);
 }
 ```
-
-### **TypeScript**

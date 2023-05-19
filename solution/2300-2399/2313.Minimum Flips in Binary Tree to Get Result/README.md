@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定<strong>二叉树</strong>的根 <code>root</code>，具有以下属性:</p>
 
 <ul>
@@ -70,5 +68,3 @@
 ```java
 
 ```
-
-### **TypeScript**

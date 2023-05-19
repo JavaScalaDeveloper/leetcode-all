@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>部门表&nbsp;<code>Department</code>：</p>
 
 <pre>

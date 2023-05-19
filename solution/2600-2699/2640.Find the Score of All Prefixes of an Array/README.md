@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>定义一个数组 <code>arr</code>&nbsp;的 <strong>转换数组</strong>&nbsp;<code>conver</code>&nbsp;为：</p>
 
 <ul>
@@ -78,5 +76,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

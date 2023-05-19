@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定&nbsp;<strong>下标从 0 开始&nbsp;</strong>的 <code>m x n</code> <strong>二进制&nbsp;</strong>矩阵 <code>grid</code>。</p>
 
 <p>在一次操作中，可以选择满足以下条件的任意 <code>i</code> 和 <code>j</code>:</p>
@@ -117,5 +115,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

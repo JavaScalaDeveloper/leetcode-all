@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数&nbsp;<code>money</code>&nbsp;，表示你总共有的钱数（单位为美元）和另一个整数&nbsp;<code>children</code>&nbsp;，表示你要将钱分配给多少个儿童。</p>
 
 <p>你需要按照如下规则分配：</p>
@@ -81,5 +79,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

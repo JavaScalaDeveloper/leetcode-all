@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+
 
 <p>给定一个由&nbsp;<code>0</code> 和 <code>1</code> 组成的非空二维数组&nbsp;<code>grid</code>&nbsp;，用来表示海洋岛屿地图。</p>
 
@@ -152,8 +152,6 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**
 
 DFS：
 

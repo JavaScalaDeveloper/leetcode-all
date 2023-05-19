@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+
 
 <p>实现&nbsp;<code>int sqrt(int x)</code>&nbsp;函数。</p>
 

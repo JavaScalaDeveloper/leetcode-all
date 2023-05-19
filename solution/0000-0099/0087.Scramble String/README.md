@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 使用下面描述的算法可以扰乱字符串 <code>s</code> 得到字符串 <code>t</code> ：
 
 <ol>
@@ -158,5 +156,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

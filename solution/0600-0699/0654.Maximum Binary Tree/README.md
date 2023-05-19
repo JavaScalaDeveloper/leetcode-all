@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个不重复的整数数组&nbsp;<code>nums</code> 。&nbsp;<strong>最大二叉树</strong>&nbsp;可以用下面的算法从&nbsp;<code>nums</code> 递归地构建:</p>
 
 <ol>
@@ -292,5 +290,3 @@ struct TreeNode* constructMaximumBinaryTree(int* nums, int numsSize) {
     return construct(nums, 0, numsSize);
 }
 ```
-
-### **TypeScript**

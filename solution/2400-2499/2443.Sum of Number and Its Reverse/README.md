@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个 <strong>非负</strong> 整数 <code>num</code> 。如果存在某个 <strong>非负</strong> 整数 <code>k</code> 满足 <code>k + reverse(k) = num</code>&nbsp; ，则返回 <code>true</code> ；否则，返回<em> </em><code>false</code> 。</p>
 
 <p><code>reverse(k)</code> 表示 <code>k</code> 反转每个数位后得到的数字。</p>
@@ -91,5 +89,3 @@ bool sumOfNumberAndReverse(int num) {
     return 0;
 }
 ```
-
-### **TypeScript**

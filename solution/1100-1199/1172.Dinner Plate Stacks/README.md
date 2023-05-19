@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>我们把无限数量 &infin; 的栈排成一行，按从左到右的次序从 0 开始编号。每个栈的的最大容量&nbsp;<code>capacity</code> 都相同。</p>
 
 <p>实现一个叫「餐盘」的类&nbsp;<code>DinnerPlates</code>：</p>
@@ -157,5 +155,3 @@ class DinnerPlates {
  * int param_3 = obj.popAtStack(index);
  */
 ```
-
-### **TypeScript**

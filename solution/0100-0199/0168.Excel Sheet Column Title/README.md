@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数 <code>columnNumber</code> ，返回它在 Excel 表中相对应的列名称。</p>
 
 <p>例如：</p>
@@ -76,5 +74,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

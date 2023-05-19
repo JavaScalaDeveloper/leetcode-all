@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个整数：<code>m</code> 和 <code>n</code> ，表示矩阵的维数。</p>
 
 <p>另给你一个整数链表的头节点 <code>head</code> 。</p>
@@ -86,5 +84,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>请你设计一个带光标的文本编辑器，它可以实现以下功能：</p>
 
 <ul>
@@ -136,5 +134,3 @@ class TextEditor {
  * String param_4 = obj.cursorRight(k);
  */
 ```
-
-### **TypeScript**

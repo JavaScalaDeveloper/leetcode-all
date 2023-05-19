@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>表&nbsp;<code>Submissions</code> 结构如下：</p>
 
 <pre>

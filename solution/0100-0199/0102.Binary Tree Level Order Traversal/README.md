@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你二叉树的根节点 <code>root</code> ，返回其节点值的 <strong>层序遍历</strong> 。 （即逐层地，从左到右访问所有节点）。</p>
 
 <p>&nbsp;</p>
@@ -97,5 +95,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

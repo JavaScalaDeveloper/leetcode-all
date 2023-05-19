@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>请设计并实现一个能够展开二维向量的迭代器。该迭代器需要支持 <code>next</code> 和 <code>hasNext</code> 两种操作。</p>
 
 <p> </p>
@@ -88,5 +86,3 @@ class Vector2D {
  * boolean param_2 = obj.hasNext();
  */
 ```
-
-### **TypeScript**

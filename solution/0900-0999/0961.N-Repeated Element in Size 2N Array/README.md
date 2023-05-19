@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>nums</code> ，该数组具有以下属性：</p>
 
 <div class="original__bRMd">

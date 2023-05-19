@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个正整数组成的数组 <code>nums</code> ，返回 <code>nums</code> 中一个 <strong>升序 </strong>子数组的最大可能元素和。</p>
 
 <p>子数组是数组中的一个连续数字序列。</p>
@@ -105,5 +103,3 @@ int maxAscendingSum(int* nums, int numsSize){
     return max(res, sum);
 }
 ```
-
-### **TypeScript**

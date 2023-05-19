@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个大小为&nbsp;<code>m x n</code> 的二进制矩阵&nbsp;<code>grid</code>。</p>
 
 <p>每次操作，你可以选择 <strong>任意</strong> 一行 或者 一列，然后将其中的所有值翻转（<code>0</code> 变成 <code>1</code>， <code>1</code>变成 <code>0</code>）。</p>
@@ -55,5 +53,3 @@
 ```java
 
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给出&nbsp;<strong>字符串 </strong><code>text</code> 和&nbsp;<strong>字符串列表</strong> <code>words</code>, 返回所有的索引对 <code>[i, j]</code> 使得在索引对范围内的子字符串 <code>text[i]...text[j]</code>（包括&nbsp;<code>i</code>&nbsp;和&nbsp;<code>j</code>）属于字符串列表 <code>words</code>。</p>
 
 <p>&nbsp;</p>

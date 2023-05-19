@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>共有 <code>n</code> 位员工，每位员工都有一个从 <code>0</code> 到 <code>n - 1</code> 的唯一 id 。</p>
 
 <p>给你一个二维整数数组 <code>logs</code> ，其中 <code>logs[i] = [id<sub>i</sub>, leaveTime<sub>i</sub>]</code> ：</p>
@@ -125,5 +123,3 @@ int hardestWorker(int n, int **logs, int logsSize, int *logsColSize) {
     return res;
 }
 ```
-
-### **TypeScript**

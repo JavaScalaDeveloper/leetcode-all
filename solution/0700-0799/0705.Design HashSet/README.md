@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>不使用任何内建的哈希表库设计一个哈希集合（HashSet）。</p>
 
 <p>实现 <code>MyHashSet</code> 类：</p>
@@ -145,5 +143,3 @@ class MyHashSet {
  * boolean param_3 = obj.contains(key);
  */
 ```
-
-### **TypeScript**

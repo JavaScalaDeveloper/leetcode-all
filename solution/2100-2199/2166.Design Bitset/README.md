@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><strong>位集 Bitset</strong> 是一种能以紧凑形式存储位的数据结构。</p>
 
 <p>请你实现 <code>Bitset</code> 类。</p>
@@ -127,5 +125,3 @@ class Bitset {
  * String param_7 = obj.toString();
  */
 ```
-
-### **TypeScript**

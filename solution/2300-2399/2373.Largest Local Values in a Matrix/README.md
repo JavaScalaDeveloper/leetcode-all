@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个大小为 <code>n x n</code> 的整数矩阵 <code>grid</code> 。</p>
 
 <p>生成一个大小为&nbsp;<code>(n - 2) x (n - 2)</code> 的整数矩阵&nbsp; <code>maxLocal</code> ，并满足：</p>
@@ -78,5 +76,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

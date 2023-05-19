@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个字符串数组 <code>patterns</code> 和一个字符串 <code>word</code> ，统计 <code>patterns</code> 中有多少个字符串是 <code>word</code> 的子字符串。返回字符串数目。</p>
 
 <p><strong>子字符串</strong> 是字符串中的一个连续字符序列。</p>
@@ -81,5 +79,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

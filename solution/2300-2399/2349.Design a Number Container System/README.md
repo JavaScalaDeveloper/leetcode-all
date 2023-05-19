@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>设计一个数字容器系统，可以实现以下功能：</p>
 
 <ul>
@@ -91,5 +89,3 @@ class NumberContainers {
  * int param_2 = obj.find(number);
  */
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 给你一个正整数 <code>n</code> ，返回 <code>2</code><em> </em>和<em> </em><code>n</code> 的最小公倍数（正整数）。
 
 <p>&nbsp;</p>
@@ -57,5 +55,3 @@ int smallestEvenMultiple(int n) {
     return n % 2 == 0 ? n : n * 2;
 }
 ```
-
-### **TypeScript**

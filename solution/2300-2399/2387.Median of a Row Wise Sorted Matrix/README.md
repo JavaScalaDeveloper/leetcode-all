@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个包含&nbsp;<strong>奇数&nbsp;</strong>个整数的&nbsp;<code>m x n</code> 矩阵&nbsp;<code>grid</code>，其中每一行按 <strong>非递减 </strong>的顺序排序，返回矩阵的&nbsp;<strong>中位数</strong>。</p>
 
 <p>你必须以 <code>O(m * log(n))</code> 的时间复杂度来解决这个问题。</p>
@@ -91,5 +89,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

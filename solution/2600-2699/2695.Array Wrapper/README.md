@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>Create a class&nbsp;<code>ArrayWrapper</code> that accepts&nbsp;an array of integers in it&#39;s constructor. This class should have two features:</p>
 
 <ul>
@@ -56,5 +54,3 @@ obj1 + obj2; // 0
 </ul>
 
 ## 解法
-
-### **TypeScript**

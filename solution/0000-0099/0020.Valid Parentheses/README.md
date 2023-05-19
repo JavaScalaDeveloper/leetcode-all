@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个只包括 <code>'('</code>，<code>')'</code>，<code>'{'</code>，<code>'}'</code>，<code>'['</code>，<code>']'</code>&nbsp;的字符串 <code>s</code> ，判断字符串是否有效。</p>
 
 <p>有效字符串需满足：</p>
@@ -83,32 +81,3 @@ class Solution {
     }
 }
 ```
-
-### **Ruby**
-
-```rb
-# @param {String} s
-# @return {Boolean}
-def is_valid(s)
-  stack = ''
-  s.split('').each do |c|
-    if ['{', '[', '('].include?(c)
-      stack += c
-    else
-      if c == '}' && stack[stack.length - 1] == '{'
-
-        stack = stack.length > 1 ? stack[0..stack.length - 2] : ""
-      elsif c == ']' && stack[stack.length - 1] == '['
-        stack = stack.length > 1 ? stack[0..stack.length - 2] : ""
-      elsif c == ')' && stack[stack.length - 1] == '('
-        stack = stack.length > 1 ? stack[0..stack.length - 2] : ""
-      else
-        return false
-      end
-    end
-  end
-  stack == ''
-end
-```
-
-### **TypeScript**

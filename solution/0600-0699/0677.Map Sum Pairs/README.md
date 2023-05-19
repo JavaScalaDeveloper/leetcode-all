@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>设计一个 map ，满足以下几点:</p>
 
 <ul>
@@ -125,5 +123,3 @@ class MapSum {
  * int param_2 = obj.sum(prefix);
  */
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>总计有 <code>n</code> 个环，环的颜色可以是红、绿、蓝中的一种。这些环分布穿在 10 根编号为 <code>0</code> 到 <code>9</code> 的杆上。</p>
 
 <p>给你一个长度为 <code>2n</code> 的字符串 <code>rings</code> ，表示这 <code>n</code> 个环在杆上的分布。<code>rings</code> 中每两个字符形成一个 <strong>颜色位置对</strong> ，用于描述每个环：</p>
@@ -85,8 +83,6 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**
 
 ### **C**
 

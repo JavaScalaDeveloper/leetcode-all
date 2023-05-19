@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>字符串的 <strong>引力</strong> 定义为：字符串中 <strong>不同</strong> 字符的数量。</p>
 
 <ul>
@@ -82,5 +80,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

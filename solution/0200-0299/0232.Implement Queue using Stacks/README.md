@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>请你仅使用两个栈实现先入先出队列。队列应当支持一般队列支持的所有操作（<code>push</code>、<code>pop</code>、<code>peek</code>、<code>empty</code>）：</p>
 
 <p>实现 <code>MyQueue</code> 类：</p>
@@ -125,5 +123,3 @@ class MyQueue {
  * boolean param_4 = obj.empty();
  */
 ```
-
-### **TypeScript**

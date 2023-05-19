@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>nums</code> ，另给你一个整数 <code>original</code> ，这是需要在 <code>nums</code> 中搜索的第一个数字。</p>
 
 <p>接下来，你需要按下述步骤操作：</p>
@@ -69,5 +67,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

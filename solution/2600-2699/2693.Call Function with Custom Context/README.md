@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>Enhance all functions to have the&nbsp;<code>callPolyfill</code>&nbsp;method. The method accepts an object&nbsp;<code>obj</code>&nbsp;as it&#39;s first parameter and any number of additional arguments. The&nbsp;<code>obj</code>&nbsp;becomes the&nbsp;<code>this</code>&nbsp;context for the function. The additional arguments are passed to the function (that the <code>callPolyfill</code>&nbsp;method belongs on).</p>
 
 <p>For example if you had the function:</p>
@@ -60,5 +58,3 @@ args = [{&quot;item&quot;: &quot;burger&quot;}, 10, 1,1]
 </ul>
 
 ## 解法
-
-### **TypeScript**

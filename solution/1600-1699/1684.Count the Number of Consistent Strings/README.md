@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个由不同字符组成的字符串 <code>allowed</code> 和一个字符串数组 <code>words</code> 。如果一个字符串的每一个字符都在 <code>allowed</code> 中，就称这个字符串是 <strong>一致字符串 </strong>。</p>
 
 <p>请你返回 <code>words</code> 数组中 <strong>一致字符串</strong> 的数目。</p>
@@ -162,5 +160,3 @@ int countConsistentStrings(char *allowed, char **words, int wordsSize) {
     return ans;
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>员工表：<code>Employees</code></p>
 
 <pre>

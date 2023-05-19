@@ -72,5 +72,3 @@ class CQueue {
  * int param_2 = obj.deleteHead();
  */
 ```
-
-### **TypeScript**

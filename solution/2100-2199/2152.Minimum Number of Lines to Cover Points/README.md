@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个 <code>points</code>&nbsp;数组，<code>points[i] = [xi, yi]</code>&nbsp;表示直角坐标系 <strong>X-Y</strong> 的一个点。</p>
 
 <p>现在考虑向 X-Y 坐标系中添加 <strong>直线</strong>，使得每个点 <strong>至少</strong> 在一条直线上。</p>
@@ -111,5 +109,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

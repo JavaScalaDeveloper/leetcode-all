@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个文件<meta charset="UTF-8" />&nbsp;<code>file</code>&nbsp;，并且该文件只能通过给定的&nbsp;<code>read4</code>&nbsp;方法来读取，请实现一个方法使其能够使&nbsp;<code>read</code> 读取 <code>n</code> 个字符。<strong>注意：你的</strong>&nbsp;<strong><code>read</code> 方法可能会被调用多次。</strong></p>
 
 <p><strong>read4 的定义：</strong></p>
@@ -142,5 +140,3 @@ public class Solution extends Reader4 {
     }
 }
 ```
-
-### **TypeScript**

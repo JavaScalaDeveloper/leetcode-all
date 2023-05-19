@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组&nbsp;<code>nums</code> 和一个整数 <code>k</code>。如果某个连续子数组中恰好有 <code>k</code> 个奇数数字，我们就认为这个子数组是「<strong>优美子数组</strong>」。</p>
 
 <p>请返回这个数组中 <strong>「优美子数组」</strong> 的数目。</p>
@@ -73,5 +71,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

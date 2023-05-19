@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个二维整数数组 <code>items</code> ，其中 <code>items[i] = [price<sub>i</sub>, weight<sub>i</sub>]</code> 表示第 <code>i</code> 个物品的价格和重量。</p>
 
 <p>还给定一个 <strong>正</strong> 整数容量 <code>capacity</code> 。</p>
@@ -80,5 +78,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

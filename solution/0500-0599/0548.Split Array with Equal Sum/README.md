@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个有 <code>n</code> 个整数的数组 <code>nums</code>&nbsp;，如果能找到满足以下条件的三元组&nbsp; <code>(i, j, k)</code>&nbsp; 则返回 <code>true</code> ：</p>
 
 <ol>

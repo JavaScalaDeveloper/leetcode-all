@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你字符串 <code>s</code> 和整数 <code>k</code> 。</p>
 
 <p>请返回字符串 <code>s</code> 中长度为 <code>k</code> 的单个子字符串中可能包含的最大元音字母数。</p>
@@ -95,5 +93,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

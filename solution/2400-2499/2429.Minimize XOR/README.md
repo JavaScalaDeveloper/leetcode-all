@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个正整数 <code>num1</code> 和 <code>num2</code> ，找出满足下述条件的整数 <code>x</code> ：</p>
 
 <ul>
@@ -94,5 +92,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

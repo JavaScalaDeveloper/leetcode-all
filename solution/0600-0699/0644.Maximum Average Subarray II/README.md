@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个包含 <code>n</code> 个整数的数组 <code>nums</code> ，和一个整数 <code>k</code> 。</p>
 
 <p>请你找出<strong> 长度大于等于</strong> <code>k</code> 且含最大平均值的连续子数组。并输出这个最大平均值。任何计算误差小于 <code>10<sup>-5</sup></code> 的结果都将被视为正确答案。</p>

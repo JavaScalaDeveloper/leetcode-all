@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>请你设计并实现一个能够对其中的值进行跟踪的数据结构，并支持对频率相关查询进行应答。</p>
 
 <p>实现 <code>FrequencyTracker</code> 类：</p>
@@ -121,5 +119,3 @@ class FrequencyTracker {
  * boolean param_3 = obj.hasFrequency(frequency);
  */
 ```
-
-### **TypeScript**

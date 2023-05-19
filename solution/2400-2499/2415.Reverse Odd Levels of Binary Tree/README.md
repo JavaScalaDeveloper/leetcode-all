@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一棵 <strong>完美</strong> 二叉树的根节点 <code>root</code> ，请你反转这棵树中每个 <strong>奇数</strong> 层的节点值。</p>
 
 <ul>
@@ -118,5 +116,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

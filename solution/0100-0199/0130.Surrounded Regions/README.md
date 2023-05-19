@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 给你一个 <code>m x n</code> 的矩阵 <code>board</code> ，由若干字符 <code>'X'</code> 和 <code>'O'</code> ，找到所有被 <code>'X'</code> 围绕的区域，并将这些区域里所有的  <code>'O'</code> 用 <code>'X'</code> 填充。
 
 <div class="original__bRMd">
@@ -142,8 +140,6 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**
 
 DFS：
 

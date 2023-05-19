@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><strong>字母序连续字符串</strong> 是由字母表中连续字母组成的字符串。换句话说，字符串 <code>"abcdefghijklmnopqrstuvwxyz"</code> 的任意子字符串都是 <strong>字母序连续字符串</strong> 。</p>
 
 <ul>
@@ -85,5 +83,3 @@ int longestContinuousSubstring(char *s) {
     return max(res, n - i);
 }
 ```
-
-### **TypeScript**

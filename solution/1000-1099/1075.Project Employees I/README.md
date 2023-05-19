@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>项目表&nbsp;<code>Project</code>：&nbsp;</p>
 
 <pre>

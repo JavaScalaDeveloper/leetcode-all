@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个 <strong>正</strong>&nbsp;整数&nbsp;<code>k</code>&nbsp;，同时给你：</p>
 
 <ul>
@@ -128,5 +126,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>在 facebook 中，表&nbsp;<code>follow</code>&nbsp;会有 2 个字段： <strong>followee</strong>, <strong>follower</strong>&nbsp;，分别表示被关注者和关注者。</p>
 
 <p>请写一个 sql 查询语句，对每一个关注者，查询关注他的关注者的数目。</p>

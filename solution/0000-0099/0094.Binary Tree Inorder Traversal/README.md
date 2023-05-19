@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个二叉树的根节点 <code>root</code> ，返回 <em>它的 <strong>中序</strong>&nbsp;遍历</em> 。</p>
 
 <p>&nbsp;</p>
@@ -204,8 +202,6 @@ class Solution {
 栈实现非递归：
 
 Morris 遍历:
-
-### **TypeScript**
 
 递归：
 

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一棵二叉树的根节点 <code>root</code> ，返回其节点值的 <strong>后序遍历 </strong>。</p>
 
 <p>&nbsp;</p>
@@ -204,5 +202,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

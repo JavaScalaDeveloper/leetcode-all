@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>nums</code> 和两个整数 <code>minK</code> 以及 <code>maxK</code> 。</p>
 
 <p><code>nums</code> 的定界子数组是满足下述条件的一个子数组：</p>
@@ -110,5 +108,3 @@ long long countSubarrays(int *nums, int numsSize, int minK, int maxK) {
     return res;
 }
 ```
-
-### **TypeScript**

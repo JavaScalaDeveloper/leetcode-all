@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>动作表：&nbsp;<code>Actions</code></p>
 
 <pre>

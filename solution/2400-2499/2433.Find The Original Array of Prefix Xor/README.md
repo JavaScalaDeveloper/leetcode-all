@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个长度为 <code>n</code> 的 <strong>整数</strong> 数组 <code>pref</code> 。找出并返回满足下述条件且长度为 <code>n</code> 的数组<em> </em><code>arr</code> ：</p>
 
 <ul>
@@ -104,5 +102,3 @@ int *findArray(int *pref, int prefSize, int *returnSize) {
     return res;
 }
 ```
-
-### **TypeScript**

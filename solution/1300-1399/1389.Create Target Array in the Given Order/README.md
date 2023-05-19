@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个整数数组 <code>nums</code> 和 <code>index</code>。你需要按照以下规则创建目标数组：</p>
 
 <ul>
@@ -83,5 +81,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

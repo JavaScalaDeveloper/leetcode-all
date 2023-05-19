@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一棵二叉树的根节点 <code>root</code> ，二叉树中节点的值 <strong>互不相同</strong> 。另给你一个整数 <code>start</code> 。在第 <code>0</code> 分钟，<strong>感染</strong> 将会从值为 <code>start</code> 的节点开始爆发。</p>
 
 <p>每分钟，如果节点满足以下全部条件，就会被感染：</p>
@@ -177,5 +175,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

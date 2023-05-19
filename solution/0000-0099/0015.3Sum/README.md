@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>nums</code> ，判断是否存在三元组 <code>[nums[i], nums[j], nums[k]]</code> 满足 <code>i != j</code>、<code>i != k</code> 且 <code>j != k</code> ，同时还满足 <code>nums[i] + nums[j] + nums[k] == 0</code> 。请</p>
 
 <p>你返回所有和为 <code>0</code> 且不重复的三元组。</p>
@@ -111,39 +109,4 @@ class Solution {
         return ans;
     }
 }
-```
-
-### **TypeScript**
-
-### **Ruby**
-
-```rb
-# @param {Integer[]} nums
-# @return {Integer[][]}
-def three_sum(nums)
-  res = []
-  nums.sort!
-
-  for i in 0..(nums.length - 3)
-    next if i > 0 && nums[i - 1] == nums[i]
-    j = i + 1
-    k = nums.length - 1
-    while j < k do
-      sum = nums[i] + nums[j] + nums[k]
-      if sum < 0
-        j += 1
-      elsif sum > 0
-        k -= 1
-      else
-        res += [[nums[i], nums[j], nums[k]]]
-        j += 1
-        k -= 1
-        j += 1 while nums[j] == nums[j - 1]
-        k -= 1 while nums[k] == nums[k + 1]
-      end
-    end
-  end
-
-  res
-end
 ```

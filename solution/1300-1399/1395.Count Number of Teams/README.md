@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p> <code>n</code> 名士兵站成一排。每个士兵都有一个 <strong>独一无二</strong> 的评分 <code>rating</code> 。</p>
 
 <p>每 <strong>3</strong> 个士兵可以组成一个作战单位，分组规则如下：</p>
@@ -166,5 +164,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

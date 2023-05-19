@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个嵌套的整数列表 <code>nestedList</code> 。每个元素要么是一个整数，要么是一个列表；该列表的元素也可能是整数或者是其他列表。请你实现一个迭代器将其扁平化，使之能够遍历这个列表中的所有整数。</p>
 
 <p>实现扁平迭代器类 <code>NestedIterator</code> ：</p>
@@ -122,8 +120,6 @@ public class NestedIterator implements Iterator<Integer> {
  * while (i.hasNext()) v[f()] = i.next();
  */
 ```
-
-### **TypeScript**
 
 递归:
 

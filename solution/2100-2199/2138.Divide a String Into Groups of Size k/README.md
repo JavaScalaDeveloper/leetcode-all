@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>字符串 <code>s</code> 可以按下述步骤划分为若干长度为 <code>k</code> 的组：</p>
 
 <ul>
@@ -71,5 +69,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

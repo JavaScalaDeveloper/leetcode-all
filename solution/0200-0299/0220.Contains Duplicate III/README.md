@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>nums</code> 和两个整数 <code>k</code> 和 <code>t</code> 。请你判断是否存在 <b>两个不同下标</b> <code>i</code> 和 <code>j</code>，使得 <code>abs(nums[i] - nums[j]) <= t</code> ，同时又满足 <code>abs(i - j) <= k</code><em> </em>。</p>
 
 <p>如果存在则返回 <code>true</code>，不存在返回 <code>false</code>。</p>
@@ -71,5 +69,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

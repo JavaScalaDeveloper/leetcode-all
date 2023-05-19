@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一棵二叉树的根节点 <code>root</code> 和一个正整数 <code>k</code> 。</p>
 
 <p>树中的 <strong>层和</strong> 是指 <strong>同一层</strong> 上节点值的总和。</p>
@@ -153,5 +151,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

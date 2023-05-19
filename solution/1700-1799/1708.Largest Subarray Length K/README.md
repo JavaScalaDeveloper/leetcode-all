@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>在数组 <code>A</code> 和数组 <code>B</code> 中，对于第一个满足 <code>A[i] != B[i]</code> 的索引 <code>i</code> ，当 <code>A[i] &gt; B[i]</code> 时，数组 <code>A</code> 大于数组 <code>B</code>。</p>
 
 <p>例如，对于索引从 <code>0</code> 开始的数组：</p>

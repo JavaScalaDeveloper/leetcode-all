@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><strong>易混淆数</strong>（Confusing Number）指的是一个数字在整体旋转 <code>180°</code> 以后，能够得到一个和原来&nbsp;<strong>不同&nbsp;</strong>的数，且 <strong>新数字的每一位都应该是有效的</strong>。</p>
 
 <p>本题我们会将数字旋转 <code>180°</code> 来生成一个新的数字。</p>

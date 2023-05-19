@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>设计一种类似队列的数据结构，该数据结构将最近使用的元素移到队列尾部。</p>
 
 <p>实现 <code>MRUQueue</code> 类：</p>
@@ -123,5 +121,3 @@ class MRUQueue {
  * int param_1 = obj.fetch(k);
  */
 ```
-
-### **TypeScript**

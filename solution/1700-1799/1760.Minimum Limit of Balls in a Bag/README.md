@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个整数数组 <code>nums</code> ，其中 <code>nums[i]</code> 表示第 <code>i</code> 个袋子里球的数目。同时给你一个整数 <code>maxOperations</code> 。</p>
 
 <p>你可以进行如下操作至多 <code>maxOperations</code> 次：</p>
@@ -97,5 +95,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>&nbsp;<code>Customers</code>&nbsp;表：</p>
 
 <pre>

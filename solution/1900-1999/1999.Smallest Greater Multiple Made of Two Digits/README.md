@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你三个整数, <code>k</code>, <code>digit1</code>和&nbsp;<code>digit2</code>, 你想要找到满足以下条件的 <strong>最小 </strong>整数：</p>
 
 <ul>

@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，你需要处理 <code>n</code> 个查询。</p>
 
 <p>对于第 <code>i</code> （<code>0 &lt;= i &lt;&nbsp;n</code>）个查询：</p>

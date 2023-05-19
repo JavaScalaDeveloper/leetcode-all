@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>现有一个包含所有正整数的集合 <code>[1, 2, 3, 4, 5, ...]</code> 。</p>
 
 <p>实现 <code>SmallestInfiniteSet</code> 类：</p>
@@ -116,5 +114,3 @@ class SmallestInfiniteSet {
  * obj.addBack(num);
  */
 ```
-
-### **TypeScript**

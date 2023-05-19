@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个任务数组 <code>tasks</code> ，其中 <code>tasks[i] = [actual<sub>i</sub>, minimum<sub>i</sub>]</code> ：</p>
 
 <ul>
@@ -114,5 +112,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

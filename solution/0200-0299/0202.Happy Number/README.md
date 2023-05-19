@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>编写一个算法来判断一个数 <code>n</code> 是不是快乐数。</p>
 
 <p><strong>「快乐数」</strong>&nbsp;定义为：</p>
@@ -103,8 +101,6 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**
 
 ### **C**
 

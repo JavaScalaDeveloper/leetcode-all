@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 给你两个整数&nbsp;<code>num1</code> 和 <code>num2</code>，返回这两个整数的和。
 
 <p>&nbsp;</p>
@@ -45,10 +43,6 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**
-
-### **TypeScript**
 
 ### **C**
 

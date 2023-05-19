@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>现给定你一个整数 <code>n</code> 。考虑一个边长为 <code>n</code> 的等边三角形，被分成 <code>n<sup>2</sup></code> 个单位等边三角形。这个三角形有 <code>n</code> 个 <strong>从 1 开始编号</strong> 的行，其中第 <code>i</code> 行有 <code>2i - 1</code> 个单位等边三角形。</p>
 
 <p>第 <code>i</code> 行的三角形也是&nbsp;<strong>从 1 开始编号&nbsp;</strong>的，其坐标从 <code>(i, 1)</code> 到 <code>(i, 2i - 1)</code>&nbsp;。下面的图像显示了一个边长为 <code>4</code> 的三角形及其三角形的索引。</p>
@@ -111,5 +109,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

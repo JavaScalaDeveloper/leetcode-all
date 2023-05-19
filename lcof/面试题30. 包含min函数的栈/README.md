@@ -81,5 +81,3 @@ class MinStack {
  * int param_4 = obj.getMin();
  */
 ```
-
-### **TypeScript**

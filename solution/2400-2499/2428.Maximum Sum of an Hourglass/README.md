@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你一个大小为 <code>m x n</code> 的整数矩阵 <code>grid</code> 。</p>
 
 <p>按以下形式将矩阵的一部分定义为一个 <strong>沙漏</strong> ：</p>
@@ -71,5 +69,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

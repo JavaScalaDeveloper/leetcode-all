@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p><code>World</code> 表：</p>
 
 <div class="top-view__1vxA">

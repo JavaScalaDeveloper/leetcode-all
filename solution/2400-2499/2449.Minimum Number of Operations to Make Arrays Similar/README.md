@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给你两个正整数数组&nbsp;<code>nums</code> 和&nbsp;<code>target</code>&nbsp;，两个数组长度相等。</p>
 
 <p>在一次操作中，你可以选择两个 <strong>不同</strong>&nbsp;的下标&nbsp;<code>i</code> 和&nbsp;<code>j</code>&nbsp;，其中&nbsp;<code>0 &lt;= i, j &lt; nums.length</code>&nbsp;，并且：</p>
@@ -110,5 +108,3 @@ class Solution {
     }
 }
 ```
-
-### **TypeScript**

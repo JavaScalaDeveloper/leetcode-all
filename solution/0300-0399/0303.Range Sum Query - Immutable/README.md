@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>给定一个整数数组 &nbsp;<code>nums</code>，处理以下类型的多个查询:</p>
 
 <ol>
@@ -81,8 +79,6 @@ class NumArray {
  * int param_1 = obj.sumRange(left,right);
  */
 ```
-
-### **TypeScript**
 
 ### **C**
 

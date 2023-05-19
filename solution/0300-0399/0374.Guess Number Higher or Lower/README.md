@@ -4,8 +4,6 @@
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
-
 <p>猜数字游戏的规则如下：</p>
 
 <ul>
@@ -97,5 +95,3 @@ public class Solution extends GuessGame {
     }
 }
 ```
-
-### **TypeScript**
