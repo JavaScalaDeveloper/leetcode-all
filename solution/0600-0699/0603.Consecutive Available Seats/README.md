@@ -55,10 +55,6 @@ Cinema 表:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -71,5 +67,3 @@ WHERE  ( ( c1.seat_id = c2.seat_id + 1 )
              AND c2.free = 1 )
 GROUP BY seat_id;
 ```
-
-

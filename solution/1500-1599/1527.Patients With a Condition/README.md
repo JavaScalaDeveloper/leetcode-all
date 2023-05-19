@@ -55,10 +55,6 @@ patient_id （患者 ID）是该表的主键。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -72,5 +68,3 @@ WHERE
     conditions LIKE 'DIAB1%'
     OR conditions LIKE '% DIAB1%';
 ```
-
-

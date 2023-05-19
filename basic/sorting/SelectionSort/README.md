@@ -4,8 +4,6 @@
 
 ## 代码示例
 
-<!-- tabs:start -->
-
 ### **Java**
 
 ```java
@@ -38,32 +36,6 @@ public class SelectionSort {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **Python3**
-
-
-
-
 
 ## 算法分析
 

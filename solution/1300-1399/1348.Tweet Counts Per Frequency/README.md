@@ -69,8 +69,6 @@ tweetCounts.getTweetCountsPerFrequency("hour", "tweet3", 0, 210);  //&nbsp;返�
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：哈希表 + 有序列表**
 
 我们用哈希表 `data` 记录每个用户的推文时间，用有序列表记录每个用户的所有推文时间。
@@ -81,17 +79,7 @@ tweetCounts.getTweetCountsPerFrequency("hour", "tweet3", 0, 210);  //&nbsp;返�
 
 时间复杂度，对于 `recordTweet` 操作，总的时间复杂度 $O(n \times \log n)$；对于 `getTweetCountsPerFrequency` 操作，总的时间复杂度 $O(q \times (t + \log n))$。其中 $n$, $q$ 和 $t$ 分别表示插入的推文数量，查询的次数和时间间隔的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class TweetCounts {
@@ -135,15 +123,3 @@ class TweetCounts {
  * List<Integer> param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime);
  */
 ```
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

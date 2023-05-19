@@ -59,8 +59,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：计数**
 
 我们可以先遍历数组 $suits$，判断相邻两个元素是否均相等，如果是，则返回 `"Flush"`。
@@ -73,17 +71,7 @@
 
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为数组 $ranks$ 的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -108,21 +96,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -152,11 +126,3 @@ char *bestHand(int *ranks, int ranksSize, char *suits, int suitsSize) {
     return "High Card";
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

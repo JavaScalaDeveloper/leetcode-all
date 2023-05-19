@@ -89,10 +89,6 @@ TVProgram</code> 表:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -119,5 +115,3 @@ WHERE
     kids_content = 'Y'
         AND (MONTH(program_date) , YEAR(program_date)) = (6 , 2020);
 ```
-
-

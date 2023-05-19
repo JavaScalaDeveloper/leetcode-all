@@ -62,8 +62,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：遍历计数**
 
 同时遍历 $startTime$ 和 $endTime$，统计正在做作业的学生人数。
@@ -94,19 +92,7 @@ $$
 
 时间复杂度 $O(n+queryTime)$，空间复杂度 $O(1010)$。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -139,18 +125,6 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **C**
 
 ```c
@@ -166,17 +140,3 @@ int busyStudent(int* startTime, int startTimeSize, int* endTime, int endTimeSize
 ```
 
 ### **TypeScript**
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

@@ -69,8 +69,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：递归**
 
 如果 $val$ 是最大数，那么将 $val$ 作为新的根节点，$root$ 作为新的根节点的左子树。
@@ -87,19 +85,7 @@
 
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /**
@@ -163,22 +149,6 @@ class Solution {
 
 ### **TypeScript**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### **C**
 
 ```c
@@ -190,7 +160,6 @@ class Solution {
  *     struct TreeNode *right;
  * };
  */
-
 
 struct TreeNode *insertIntoMaxTree(struct TreeNode *root, int val) {
     if (!root || root->val < val) {
@@ -204,15 +173,3 @@ struct TreeNode *insertIntoMaxTree(struct TreeNode *root, int val) {
     return root;
 }
 ```
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

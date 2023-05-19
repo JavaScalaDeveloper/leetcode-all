@@ -61,11 +61,7 @@ Result 表:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 `CASE WHEN` + `GROUP BY`。
-
-<!-- tabs:start -->
 
 ### **SQL**
 
@@ -81,5 +77,3 @@ FROM
 GROUP BY sale_date
 ORDER BY sale_date;
 ```
-
-

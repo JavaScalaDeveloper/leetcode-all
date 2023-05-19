@@ -54,8 +54,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：贪心 + 枚举**
 
 我们用变量 $s$ 表示当前已经选择的整数的和，用变量 $ans$ 表示当前已经选择的整数的个数。将数组 `banned` 转换为哈希表，方便判断某个整数是否不可选。
@@ -78,19 +76,7 @@
 
 相似题目：[2557. 从一个范围内选择最多整数 II](/solution/2500-2599/2557.Maximum%20Number%20of%20Integers%20to%20Choose%20From%20a%20Range%20II/README.md)
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -147,25 +133,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -194,11 +162,3 @@ int maxCount(int *banned, int bannedSize, int n, int maxSum) {
     return ans;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

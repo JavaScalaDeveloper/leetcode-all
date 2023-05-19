@@ -39,8 +39,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：快慢指针**
 
 定义快慢指针 `fast` 和 `slow`，初始时均指向链表的头结点。
@@ -49,17 +47,7 @@
 
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 是链表的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /**
@@ -84,21 +72,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -111,7 +85,6 @@ class Solution {
  * };
  */
 
-
 struct ListNode *middleNode(struct ListNode *head) {
     struct ListNode *fast = head;
     struct ListNode *slow = head;
@@ -122,15 +95,3 @@ struct ListNode *middleNode(struct ListNode *head) {
     return slow;
 }
 ```
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

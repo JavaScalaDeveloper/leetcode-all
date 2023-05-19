@@ -51,8 +51,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：Flood fill 算法**
 
 Flood fill 算法是从一个区域中提取若干个连通的点与其他相邻区域区分开（或分别染成不同颜色）的经典算法。因为其思路类似洪水从一个区域扩散到所有能到达的区域而得名。
@@ -78,31 +76,15 @@ Flood fill 算法是从一个区域中提取若干个连通的点与其他相邻
 -   `find(x)` 函数用于查找 $x$ 所在集合的祖宗节点
 -   `union(a, b)` 函数用于合并 $a$ 和 $b$ 所在的集合
 
-
-
 时间复杂度 $O(m\times n\times \alpha(m\times n))$。其中 $m$ 和 $n$ 分别为网格的行数和列数。
-
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 DFS - Flood Fill 算法：
 
-
-
 BFS - Flood Fill 算法：
-
-
 
 并查集：
 
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 DFS - Flood Fill 算法：
 
@@ -233,66 +215,28 @@ class Solution {
 }
 ```
 
-
-
 DFS - Flood Fill 算法：
-
-
 
 BFS - Flood Fill 算法：
 
-
-
 并查集：
-
-
-
-
 
 DFS - Flood Fill 算法：
 
-
-
 BFS - Flood Fill 算法：
 
-
-
 并查集：
-
-
 
 ### **TypeScript**
 
 DFS - Flood Fill 算法：
 
-
-
 BFS - Flood Fill 算法：
 
-
-
 并查集：
-
-
-
-
 
 DFS - Flood Fill 算法：
 
-
-
 BFS - Flood Fill 算法：
 
-
-
 并查集：
-
-
-
-### **...**
-
-```
-
-```
-
-

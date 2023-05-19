@@ -64,10 +64,6 @@ RequestAccepted 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -85,5 +81,3 @@ GROUP BY ids
 ORDER BY num DESC
 LIMIT 1;
 ```
-
-

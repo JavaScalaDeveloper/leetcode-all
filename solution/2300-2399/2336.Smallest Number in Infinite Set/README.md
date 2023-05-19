@@ -49,25 +49,11 @@ smallestInfiniteSet.popSmallest(); // 返回 5 ，并将其从集合中移除。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：哈希表**
 
 **方法二：哈希表 + 优先队列（小根堆）**
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class SmallestInfiniteSet {
@@ -131,30 +117,4 @@ class SmallestInfiniteSet {
  */
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

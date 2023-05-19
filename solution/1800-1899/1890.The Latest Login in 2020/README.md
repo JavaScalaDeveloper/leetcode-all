@@ -63,13 +63,7 @@ Logins 表:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```sql
 SELECT
@@ -80,5 +74,3 @@ FROM
 WHERE YEAR(time_stamp) = 2020
 GROUP BY user_id;
 ```
-
-

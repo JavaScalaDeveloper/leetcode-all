@@ -95,10 +95,6 @@ RequestAccepted 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -110,5 +106,3 @@ SELECT IFNULL(ROUND((
 		FROM FriendRequest
 	), 2), 0.00) AS accept_rate;
 ```
-
-

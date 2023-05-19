@@ -59,8 +59,6 @@ magicDictionary.search("leetcoded"); // 返回 False
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：直接遍历**
 
 对于 $buildDict$ 方法，直接将 $dictionary$ 赋给 $MagicDictionary$ 的成员变量 $d$。
@@ -75,19 +73,7 @@ magicDictionary.search("leetcoded"); // 返回 False
 
 执行 $search$ 时，我们拿到 $searchWord$ 的模式串列表，然后判断列表中每个模式串 $p$ 是否在 $cnt$ 和 $s$ 中出现过。若 $cnt>1$ 或 $cnt=1$ 且 $searchWord$ 没在 $s$ 中出现过，说明找到了满足条件的单词，返回 $true$。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class MagicDictionary {
@@ -176,23 +162,3 @@ class MagicDictionary {
  * boolean param_2 = obj.search(searchWord);
  */
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

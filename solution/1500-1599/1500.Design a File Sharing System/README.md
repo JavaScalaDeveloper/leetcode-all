@@ -82,19 +82,7 @@ fileSharing.join([]);        // 一个不拥有任何文件块的用户加入系
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class FileSharing {
@@ -152,11 +140,3 @@ class FileSharing {
  * List<Integer> param_3 = obj.request(userID,chunkID);
  */
 ```
-
-### **...**
-
-```
-
-```
-
-

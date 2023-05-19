@@ -75,21 +75,9 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 直接模拟。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -122,23 +110,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
-
 
 ### **C**
 
@@ -173,11 +145,3 @@ int *executeInstructions(int n, int *startPos, int startPosSize, char *s, int *r
     return ans;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

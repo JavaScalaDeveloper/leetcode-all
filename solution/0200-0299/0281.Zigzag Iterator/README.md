@@ -34,21 +34,9 @@ v2 = [3,4,5,6]
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 定义 vectors 列表保存输入的所有一维向量，indexes 表示 vectors 列表每一项当前所遍历到的下标位置，cur 表示当前遍历到的 vector 列表，而 size 表示 vectors 列表元素个数。具体实现参考以下代码实现。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 public class ZigzagIterator {
@@ -93,11 +81,3 @@ public class ZigzagIterator {
  * while (i.hasNext()) v[f()] = i.next();
  */
 ```
-
-### **...**
-
-```
-
-```
-
-

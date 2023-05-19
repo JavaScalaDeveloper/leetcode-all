@@ -37,8 +37,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：BFS**
 
 可以忽略一些细节，每次都统计当前遍历层级的数值和，当 BFS 结束时，最后一次数值和便是结果。
@@ -49,19 +47,7 @@
 
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是树中节点的数目。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /**
@@ -143,18 +129,6 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **C**
 
 ```c
@@ -166,7 +140,6 @@ class Solution {
  *     struct TreeNode *right;
  * };
  */
-
 
 void dfs(struct TreeNode* root, int depth, int* maxDepth, int* res) {
     if (!root->left && !root->right) {
@@ -195,19 +168,3 @@ int deepestLeavesSum(struct TreeNode* root){
 ```
 
 ### **TypeScript**
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

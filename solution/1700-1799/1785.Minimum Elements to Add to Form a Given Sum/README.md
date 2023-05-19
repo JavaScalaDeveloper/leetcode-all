@@ -42,8 +42,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：贪心**
 
 我们先计算数组元素总和 $s$，然后计算 $s$ 与 $goal$ 的差值 $d$。
@@ -54,17 +52,7 @@
 
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组 `nums` 的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -80,21 +68,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -108,11 +82,3 @@ int minElements(int *nums, int numsSize, int limit, int goal) {
     return (diff + limit - 1) / limit;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

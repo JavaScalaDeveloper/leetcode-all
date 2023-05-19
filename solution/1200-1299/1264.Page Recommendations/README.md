@@ -60,7 +60,7 @@ Friendship table:
 | 2        | 5        |
 | 6        | 1        |
 +----------+----------+
- 
+
 Likes table:
 +---------+---------+
 | user_id | page_id |
@@ -94,10 +94,6 @@ Likes table:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -107,5 +103,3 @@ FROM Likes
 WHERE user_id IN ( SELECT user1_id AS user_id FROM Friendship WHERE user2_id = 1  UNION ALL SELECT user2_id AS user_id FROM Friendship WHERE user1_id = 1 )
 AND page_id NOT IN ( SELECT page_id FROM Likes WHERE user_id = 1 )
 ```
-
-

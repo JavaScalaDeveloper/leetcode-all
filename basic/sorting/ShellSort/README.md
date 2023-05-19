@@ -9,8 +9,6 @@
 
 ## 代码示例
 
-<!-- tabs:start -->
-
 ### **Java**
 
 ```java
@@ -40,20 +38,6 @@ public class ShellSort {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 算法分析
 

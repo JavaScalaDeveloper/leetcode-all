@@ -58,23 +58,11 @@ v1.dotProduct(v2) = 0*0 + 1*0 + 0*0 + 0*0 + 0*2 = 0
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 哈希表实现。
 
 用哈希表存储非 0 点的下标与值。求点积时，遍历长度较小的哈希表。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class SparseVector {
@@ -111,11 +99,3 @@ class SparseVector {
 // SparseVector v2 = new SparseVector(nums2);
 // int ans = v1.dotProduct(v2);
 ```
-
-### **...**
-
-```
-
-```
-
-

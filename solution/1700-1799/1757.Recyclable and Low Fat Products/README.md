@@ -51,10 +51,6 @@ Result 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -66,5 +62,3 @@ WHERE
     low_fats = 'Y'
     AND recyclable = 'Y';
 ```
-
-

@@ -65,10 +65,6 @@ employee_id 是 3, 8 ，9 的职员不会直接或间接的汇报给公司 CEO�
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -82,5 +78,3 @@ ON e2.manager_id = e3.employee_id
 WHERE e1.employee_id != 1
 AND e3.manager_id = 1
 ```
-
-

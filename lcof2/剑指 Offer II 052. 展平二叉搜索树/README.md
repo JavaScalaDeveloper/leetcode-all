@@ -41,21 +41,9 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 由于二叉搜索树的性质，可以利用中序遍历得到递增序列
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /**
@@ -98,21 +86,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -145,11 +119,3 @@ struct TreeNode *increasingBST(struct TreeNode *root) {
     return dummy->right;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

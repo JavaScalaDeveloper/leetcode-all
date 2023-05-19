@@ -62,10 +62,6 @@ Calls 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -81,5 +77,3 @@ GROUP BY
     LEAST(from_id, to_id),
     GREATEST(from_id, to_id);
 ```
-
-

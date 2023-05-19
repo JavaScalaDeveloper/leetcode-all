@@ -47,8 +47,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：一次遍历**
 
 我们用变量 $x$ 记录加减次数的差值，用变量 $ans$ 记录操作次数。
@@ -59,17 +57,7 @@
 
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -95,21 +83,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -139,11 +113,3 @@ long long minOperations(int *nums1, int nums1Size, int *nums2, int nums2Size, in
     return sum2 / (k * 2);
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

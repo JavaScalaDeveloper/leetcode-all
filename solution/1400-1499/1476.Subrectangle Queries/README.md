@@ -90,21 +90,9 @@ subrectangleQueries.getValue(2, 2); // 返回 20
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 用历史记录列表保存修改历史。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class SubrectangleQueries {
@@ -137,22 +125,4 @@ class SubrectangleQueries {
  */
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-### **...**
-
-```
-
-```
-
-

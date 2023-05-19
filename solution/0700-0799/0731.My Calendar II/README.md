@@ -46,8 +46,6 @@ MyCalendar.book(25, 55); // returns true
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：差分**
 
 利用有序哈希表实现。
@@ -72,19 +70,7 @@ MyCalendar.book(25, 55); // returns true
 
 时间复杂度 $O(nlogn)$，其中 $n$ 表示日程安排的数量。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class MyCalendarTwo {
@@ -227,23 +213,3 @@ class MyCalendarTwo {
  * boolean param_1 = obj.book(start,end);
  */
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

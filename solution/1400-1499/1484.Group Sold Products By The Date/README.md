@@ -59,10 +59,6 @@ Activities</code> 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -77,5 +73,3 @@ FROM
 GROUP BY sell_date
 ORDER BY sell_date ASC;
 ```
-
-

@@ -28,8 +28,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一**：后序遍历求每个结点的深度，此过程中获取每个结点左右子树的最长伸展（深度），迭代获取最长路径。
 
 相似题目：[687. 最长同值路径](/solution/0600-0699/0687.Longest%20Univalue%20Path/README.md)
@@ -38,19 +36,7 @@
 
 相似题目：[1245. 树的直径](/solution/1200-1299/1245.Tree%20Diameter/README.md), [1522. N 叉树的直径](/solution/1500-1599/1522.Diameter%20of%20N-Ary%20Tree/README.md)
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /**
@@ -89,14 +75,6 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **C**
 
 ```c
@@ -129,17 +107,3 @@ int diameterOfBinaryTree(struct TreeNode *root) {
 ```
 
 ### **TypeScript**
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

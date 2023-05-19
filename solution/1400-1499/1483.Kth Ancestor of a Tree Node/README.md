@@ -53,8 +53,6 @@ treeAncestor.getKthAncestor(6, 3);  // 返回 -1 因为不存在满足要求的�
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：动态规划 + 倍增**
 
 题目要我们寻找节点 `node` 的第 $k$ 个祖先节点，如果暴力求解，需要从 `node` 开始向上遍历 $k$ 次，时间复杂度为 $O(k)$，显然会超时。
@@ -73,17 +71,7 @@ $$
 
 时间复杂度：初始化为 $O(n \times \log n)$，查询为 $O(\log n)$。空间复杂度：$O(n \times \log n)$。其中 $n$ 为树的节点数。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class TreeAncestor {
@@ -126,19 +114,3 @@ class TreeAncestor {
  * int param_1 = obj.getKthAncestor(node,k);
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

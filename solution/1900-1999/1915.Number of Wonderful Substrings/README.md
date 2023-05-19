@@ -68,23 +68,11 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 状态压缩 + 前缀和。
 
 相似题目：[1371. 每个元音包含偶数次的最长子字符串](/solution/1300-1399/1371.Find%20the%20Longest%20Substring%20Containing%20Vowels%20in%20Even%20Counts/README.md)
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -105,23 +93,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

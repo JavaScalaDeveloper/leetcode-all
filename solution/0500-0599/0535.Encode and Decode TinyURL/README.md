@@ -47,21 +47,9 @@ string ans = obj.decode(tiny); // 返回解密后得到的原本的 URL 。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：哈希表**
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 public class Codec {
@@ -87,19 +75,3 @@ public class Codec {
 // Codec codec = new Codec();
 // codec.decode(codec.encode(url));
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

@@ -51,8 +51,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：前缀和 + 排序 + 枚举**
 
 我们记数组 `nums` 所有元素为 $a_1, a_2, \cdots, a_n$，数组 `cost` 所有元素为 $b_1, b_2, \cdots, b_n$。我们不妨令 $a_1 \leq a_2 \leq \cdots \leq a_n$，即数组 `nums` 升序排列。
@@ -85,19 +83,7 @@ $$
 -   [296. 最佳的碰头地点](/solution/0200-0299/0296.Best%20Meeting%20Point/README.md)
 -   [462. 最少移动次数使数组元素相等 II](/solution/0400-0499/0462.Minimum%20Moves%20to%20Equal%20Array%20Elements%20II/README.md)
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -161,26 +147,4 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-### **...**
-
-```
-
-```
-
-

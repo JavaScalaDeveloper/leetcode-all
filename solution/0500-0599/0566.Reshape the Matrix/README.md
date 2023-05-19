@@ -44,8 +44,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：模拟**
 
 我们先获取原矩阵的行数和列数，分别记为 $m$ 和 $n$。如果 $m \times n \neq r \times c$，则无法重塑矩阵，直接返回原矩阵。
@@ -56,17 +54,7 @@
 
 时间复杂度 $O(m \times n)$，其中 $m$ 和 $n$ 分别是原矩阵的行数和列数。忽略答案的空间消耗，空间复杂度 $O(1)$。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -84,23 +72,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
-
-
 
 ### **C**
 
@@ -129,11 +101,3 @@ int **matrixReshape(int **mat, int matSize, int *matColSize, int r, int c, int *
     return ans;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

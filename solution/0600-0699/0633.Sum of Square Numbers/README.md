@@ -35,25 +35,13 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 ![](https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0633.Sum%20of%20Square%20Numbers/images/table.png)
 
 上图为 a，b，c 之间的关系，这题其实就是在这张“表”里查找 c。
 
 从表的右上角看，不难发现它类似一棵二叉查找树，所以只需从右上角开始，按照二叉查找树的规律进行搜索。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -76,25 +64,3 @@ class Solution {
 ```
 
 ### **TypeScript**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

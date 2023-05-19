@@ -53,8 +53,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：排序 + 贪心**
 
 根据题意我们知道，最小得分实际上是排序数组相邻两个元素的最小差值，最大得分是排序数组首尾元素的差值。数组 `nums` 的分数是最小得分与最大得分的和。
@@ -73,17 +71,7 @@
 
 -   [1509. 三次操作后最大值与最小值的最小差](/solution/1500-1599/1509.Minimum%20Difference%20Between%20Largest%20and%20Smallest%20Value%20in%20Three%20Moves/README.md)
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -98,21 +86,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -128,11 +102,3 @@ int minimizeSum(int *nums, int numsSize) {
     return min(nums[numsSize - 1] - nums[2], min(nums[numsSize - 2] - nums[1], nums[numsSize - 3] - nums[0]));
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

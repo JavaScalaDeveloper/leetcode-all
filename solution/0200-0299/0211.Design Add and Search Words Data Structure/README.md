@@ -51,21 +51,9 @@ wordDictionary.search("b.."); // 返回 True
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 “前缀树”实现。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Trie {
@@ -125,19 +113,3 @@ class WordDictionary {
  * boolean param_2 = obj.search(word);
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

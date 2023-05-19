@@ -36,7 +36,6 @@ TAG_NAME 是合法的，TAG_CONTENT 包含了一些字符和 cdata 。
 
 所以 TAG_CONTENT 是合法的，因此代码是合法的。最终返回True。
 
-
 <strong>输入:</strong> &quot;&lt;DIV&gt;&gt;&gt;  ![cdata[]] &lt;![CDATA[&lt;div&gt;]&gt;]]&gt;]]&gt;&gt;]&lt;/DIV&gt;&quot;
 
 <strong>输出:</strong> True
@@ -56,7 +55,6 @@ text1 -&gt; <strong>&quot;&gt;&gt;  ![cdata[]] &quot;</strong>
 cdata -&gt; <strong>&quot;&lt;![CDATA[&lt;div&gt;]&gt;]]&gt;&quot;</strong> ，其中 CDATA_CONTENT 为 <strong>&quot;&lt;div&gt;]&gt;&quot;</strong>
 
 text2 -&gt; <strong>&quot;]]&gt;&gt;]&quot;</strong>
-
 
 start_tag <strong>不</strong>是 <strong>&quot;&lt;DIV&gt;&gt;&gt;&quot;</strong> 的原因参照规则 6 。
 cdata <strong>不</strong>是 <strong>&quot;&lt;![CDATA[&lt;div&gt;]&gt;]]&gt;]]&gt;&quot;</strong> 的原因参照规则 7 。
@@ -93,21 +91,9 @@ cdata <strong>不</strong>是 <strong>&quot;&lt;![CDATA[&lt;div&gt;]&gt;]]&gt;]]
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：栈模拟**
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -163,23 +149,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

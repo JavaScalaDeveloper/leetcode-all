@@ -40,8 +40,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：递归**
 
 判断 `root.val` 与 `low` 和 `high` 的大小关系：
@@ -70,19 +68,7 @@
 
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 是二叉搜索树的节点个数。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /**
@@ -163,24 +149,6 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### **C**
 
 ```c
@@ -192,7 +160,6 @@ class Solution {
  *     struct TreeNode *right;
  * };
  */
-
 
 struct TreeNode *trimBST(struct TreeNode *root, int low, int high) {
     if (!root) {
@@ -211,17 +178,3 @@ struct TreeNode *trimBST(struct TreeNode *root, int low, int high) {
 ```
 
 ### **TypeScript**
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

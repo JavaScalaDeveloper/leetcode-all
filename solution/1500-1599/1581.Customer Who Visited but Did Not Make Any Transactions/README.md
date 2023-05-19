@@ -89,13 +89,7 @@ ID = 96 的顾客曾经去过购物中心，并且没有进行任何交易。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```sql
 SELECT customer_id,
@@ -107,5 +101,3 @@ WHERE visit_id NOT IN (
     )
 GROUP BY customer_id;
 ```
-
-

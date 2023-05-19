@@ -57,8 +57,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：遍历链表**
 
 我们用变量 `ans` 记录当前的十进制值，初始值为 $0$。
@@ -67,17 +65,7 @@
 
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为链表的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /**
@@ -101,25 +89,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -132,7 +102,6 @@ class Solution {
  * };
  */
 
-
 int getDecimalValue(struct ListNode *head) {
     int ans = 0;
     struct ListNode *cur = head;
@@ -143,15 +112,3 @@ int getDecimalValue(struct ListNode *head) {
     return ans;
 }
 ```
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

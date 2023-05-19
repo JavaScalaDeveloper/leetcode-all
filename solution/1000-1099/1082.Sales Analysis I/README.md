@@ -80,10 +80,6 @@ Product 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -96,5 +92,3 @@ SELECT  SUM(price)
 FROM Sales
 GROUP BY  seller_id )
 ```
-
-

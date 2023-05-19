@@ -42,8 +42,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：**
 
 列举所有已存在订单的客户 ID，使用 `NOT IN` 找到不存在其中的客户。
@@ -51,8 +49,6 @@
 **方法二：**
 
 使用 `LEFT JOIN` 连接表格，返回 `CustomerId` 为 `NULL` 的数据。
-
-<!-- tabs:start -->
 
 ### **SQL**
 
@@ -74,5 +70,3 @@ FROM
 WHERE
     o.CustomerId IS NULL;
 ```
-
-

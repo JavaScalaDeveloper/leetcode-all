@@ -76,11 +76,7 @@ addressId = 1 包含了 personId = 2 的地址信息。</pre>
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 左连接。
-
-<!-- tabs:start -->
 
 ### **SQL**
 
@@ -92,5 +88,3 @@ SELECT p.FirstName,
 FROM Person p
     LEFT JOIN Address a ON p.PersonId = a.PersonId;
 ```
-
-

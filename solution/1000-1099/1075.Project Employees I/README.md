@@ -72,10 +72,6 @@ Result 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -87,5 +83,3 @@ LEFT JOIN Employee e
 ON p.employee_id = e.employee_id
 GROUP BY  project_id
 ```
-
-

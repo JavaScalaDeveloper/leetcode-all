@@ -65,8 +65,6 @@ obj.calculateMKAverage(); // 最后 3 个元素为 [5,5,5]
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：有序集合 + 队列**
 
 我们可以维护以下数据结构或变量：
@@ -89,19 +87,7 @@ obj.calculateMKAverage(); // 最后 3 个元素为 [5,5,5]
 
 时间复杂度方面，每次调用 $addElement(num)$ 函数的时间复杂度为 $O(\log m)$，每次调用 $calculateMKAverage()$ 函数的时间复杂度为 $O(1)$。空间复杂度为 $O(m)$。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class MKAverage {
@@ -196,19 +182,3 @@ class MKAverage {
  * int param_2 = obj.calculateMKAverage();
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

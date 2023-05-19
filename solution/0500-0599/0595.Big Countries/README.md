@@ -70,10 +70,6 @@ World 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -84,5 +80,3 @@ FROM world
 WHERE area > 3000000
         OR population > 25000000;
 ```
-
-

@@ -41,10 +41,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -54,5 +50,3 @@ WHERE description NOT LIKE '%boring%'
         AND mod(id, 2) = 1
 ORDER BY rating desc;
 ```
-
-

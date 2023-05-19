@@ -46,25 +46,13 @@ parkingSystem.addCar(1); // 返回 false ，因为没有空的大车位，唯一
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：模拟**
 
 为每种车维护一个计数器，初始值为车位的数目。此后，每来一辆车，就将对应类型的计数器减 `1`。当计数器为 `0` 时，说明车位已满。
 
 时间复杂度 $O(1)$，空间复杂度 $O(1)$。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class ParkingSystem {
@@ -90,21 +78,7 @@ class ParkingSystem {
  */
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -112,7 +86,6 @@ class ParkingSystem {
 typedef struct {
     int *count;
 } ParkingSystem;
-
 
 ParkingSystem *parkingSystemCreate(int big, int medium, int small) {
     ParkingSystem *res = malloc(sizeof(ParkingSystem));
@@ -144,11 +117,3 @@ void parkingSystemFree(ParkingSystem *obj) {
  * parkingSystemFree(obj);
 */
 ```
-
-### **...**
-
-```
-
-```
-
-

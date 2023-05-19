@@ -41,8 +41,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：二分查找**
 
 给与的数组是有序的，由此可以使用二分查找，那条件该如何判断呢。
@@ -81,17 +79,7 @@ while l < r
 return nums[l]
 ```
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -114,8 +102,6 @@ class Solution {
 
 ### **TypeScript**
 
-
-
 ### **C**
 
 ```c
@@ -133,23 +119,3 @@ int singleNonDuplicate(int* nums, int numsSize) {
     return nums[left];
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

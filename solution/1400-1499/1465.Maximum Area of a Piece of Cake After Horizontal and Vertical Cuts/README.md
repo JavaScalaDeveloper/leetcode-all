@@ -59,25 +59,13 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：排序**
 
 先分别对 `horizontalCuts` 和 `verticalCuts` 排序，然后遍历数组，计算相邻两个元素的差值，取最大值的乘积即可。
 
 时间复杂度 $O(m\log m \times n\log n)$。其中 $m$ 和 $n$ 分别为 `horizontalCuts` 和 `verticalCuts` 的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -100,19 +88,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

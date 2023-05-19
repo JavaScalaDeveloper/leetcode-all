@@ -79,19 +79,7 @@ frequencyTracker.hasFrequency(1); // 返回 true ，因为 3 出现 1 次
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class FrequencyTracker {
@@ -134,22 +122,4 @@ class FrequencyTracker {
  */
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-### **...**
-
-```
-
-```
-
-

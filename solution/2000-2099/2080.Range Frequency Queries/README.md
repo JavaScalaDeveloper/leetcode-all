@@ -48,19 +48,7 @@ rangeFreqQuery.query(0, 11, 33); // 返回 2 。33 在整个子数组中出现 2
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class RangeFreqQuery {
@@ -102,19 +90,3 @@ class RangeFreqQuery {
  * int param_1 = obj.query(left,right,value);
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

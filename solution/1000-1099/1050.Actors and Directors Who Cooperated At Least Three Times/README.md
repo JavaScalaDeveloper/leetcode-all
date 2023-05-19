@@ -49,11 +49,7 @@ Result 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 `GROUP BY` + `HAVING` 解决。
-
-<!-- tabs:start -->
 
 ### **SQL**
 
@@ -65,5 +61,3 @@ FROM
 GROUP BY actor_id, director_id
 HAVING count(1) >= 3;
 ```
-
-

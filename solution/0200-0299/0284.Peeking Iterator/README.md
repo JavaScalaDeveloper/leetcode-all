@@ -56,21 +56,9 @@ peekingIterator.hasNext(); // 返回 False
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 定义一个变量 peekElement 专门用来保存下一个值，布尔变量 hasPeeked 标记是否保存了下一个元素。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 // Java Iterator interface reference:
@@ -114,19 +102,3 @@ class PeekingIterator implements Iterator<Integer> {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

@@ -60,10 +60,6 @@ Bob 只有一条记录，我们就取这条记录</pre>
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -80,5 +76,3 @@ FROM UserActivity) a
 WHERE a.rk = 2
 OR a.cnt = 1;
 ```
-
-

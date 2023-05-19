@@ -53,10 +53,6 @@ Person 表:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -73,5 +69,3 @@ FROM person AS p1,
 WHERE p1.id != p2.id
     AND p1.email = p2.email;
 ```
-
-

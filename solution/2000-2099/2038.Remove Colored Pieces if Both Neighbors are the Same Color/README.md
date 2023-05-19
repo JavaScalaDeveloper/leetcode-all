@@ -73,8 +73,6 @@ ABBBB<strong><em>B</em></strong>BBAA -&gt; ABBBBBBAA
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：计数**
 
 统计字符串 `colors` 中连续出现 $3$ 个 `'A'` 或 $3$ 个 `'B'` 的个数，分别记为 $a$ 和 $b$。
@@ -83,17 +81,7 @@ ABBBB<strong><em>B</em></strong>BBAA -&gt; ABBBBBBAA
 
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为字符串 `colors` 的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -117,19 +105,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

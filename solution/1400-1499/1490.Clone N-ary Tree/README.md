@@ -54,8 +54,6 @@ class Node {
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：递归**
 
 我们可以用递归的方法来实现 N 叉树的深拷贝。
@@ -64,17 +62,7 @@ class Node {
 
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为 N 叉树的节点个数。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /*
@@ -82,7 +70,6 @@ class Node {
 class Node {
     public int val;
     public List<Node> children;
-
 
     public Node() {
         children = new ArrayList<Node>();
@@ -113,19 +100,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

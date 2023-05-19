@@ -93,10 +93,6 @@ Teams </code>table:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -111,5 +107,3 @@ GROUP BY  t.team_id
 ORDER BY num_points DESC
          ,team_id;
 ```
-
-

@@ -71,10 +71,6 @@ Employee 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 解法 1：使用 LIMIT 语句和子查询。
@@ -101,5 +97,3 @@ WHERE Salary < (
     FROM Employee
 );
 ```
-
-

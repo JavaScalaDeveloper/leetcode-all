@@ -53,8 +53,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 设 n 表示点数，m 表示边数。
 
 **方法一：朴素 Dijkstra 算法**
@@ -73,31 +71,15 @@
 
 时间复杂度，平均情况下 $O(m)$，最坏情况下 $O(nm)$。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
 朴素 Dijkstra 算法：
-
-
 
 堆优化 Dijkstra 算法：
 
-
-
 Bellman Ford 算法：
-
-
 
 SPFA 算法：
 
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 朴素 Dijkstra 算法：
 
@@ -250,46 +232,18 @@ class Solution {
 }
 ```
 
-
-
 朴素 Dijkstra 算法：
-
-
 
 堆优化 Dijkstra 算法：
 
-
-
 Bellman Ford 算法：
 
-
-
 SPFA 算法：
-
-
-
-
 
 朴素 Dijkstra 算法：
 
-
-
 堆优化 Dijkstra 算法：
-
-
 
 Bellman Ford 算法：
 
-
-
 SPFA 算法：
-
-
-
-### **...**
-
-```
-
-```
-
-

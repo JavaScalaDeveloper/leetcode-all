@@ -63,11 +63,7 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 本题不能用这种以下这种方式实现：
-
-
 
 <p><strong><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0988.Smallest%20String%20Starting%20From%20Leaf/images/image_1551131779.png" style="height: 180px; width: 172px;"></strong></p>
 
@@ -77,17 +73,7 @@
 
 本题可以用 DFS 解决，每次到达一个叶子节点时，翻转此路径上的字符串，并与 ans 比较大小，取二者较小值。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /**
@@ -133,19 +119,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

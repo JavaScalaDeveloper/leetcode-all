@@ -79,8 +79,6 @@ t.getInheritanceOrder(); // 返回 ["king", "andy", "matthew", "alex", "asha", "
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：多叉树的前序遍历**
 
 可以发现，题目中王位的继承顺序，实际上是多叉树的前序遍历。
@@ -89,17 +87,7 @@ t.getInheritanceOrder(); // 返回 ["king", "andy", "matthew", "alex", "asha", "
 
 获取继承顺序的时间复杂度是 $O(n)$，其他操作的时间复杂度是 $O(1)$，空间复杂度 $O(n)$。其中 $n$ 是树中的节点数。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class ThroneInheritance {
@@ -144,19 +132,3 @@ class ThroneInheritance {
  * List<String> param_3 = obj.getInheritanceOrder();
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

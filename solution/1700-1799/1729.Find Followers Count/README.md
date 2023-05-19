@@ -56,11 +56,7 @@ Followers 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 `GROUP BY` 实现。
-
-<!-- tabs:start -->
 
 ### **SQL**
 
@@ -75,5 +71,3 @@ GROUP BY
 ORDER BY
     user_id;
 ```
-
-

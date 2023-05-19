@@ -50,8 +50,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **前言**
 
 二叉搜索树的中序遍历（左根右）结果是一个单调递增的有序序列，我们反序进行中序遍历（右根左），即可以得到一个单调递减的有序序列。通过累加单调递减的有序序列，我们可以得到大于等于 `node.val` 的新值，并重新赋值给 `node`。
@@ -79,23 +77,11 @@ Morris 遍历无需使用栈，时间复杂度 $O(n)$，空间复杂度为 $O(1)
 
 > Morris 反序中序遍历跟 Morris 中序遍历思路一致，只是将中序遍历的“左根右”变为“右根左”。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
 递归遍历：
-
-
 
 Morris 遍历：
 
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 递归遍历：
 
@@ -183,39 +169,15 @@ class Solution {
 }
 ```
 
-
-
 递归遍历：
-
-
 
 Morris 遍历：
 
-
-
-
-
 递归遍历：
 
-
-
 Morris 遍历：
-
-
-
-
-
-
 
 ### **TypeScript**
-
-
-
-
-
-
-
-
 
 ### **C**
 
@@ -228,7 +190,6 @@ Morris 遍历：
  *     struct TreeNode *right;
  * };
  */
-
 
 int dfs(struct TreeNode *root, int sum) {
     if (root) {
@@ -254,7 +215,6 @@ struct TreeNode *bstToGst(struct TreeNode *root) {
  *     struct TreeNode *right;
  * };
  */
-
 
 struct TreeNode *bstToGst(struct TreeNode *root) {
     struct TreeNode *cur = root;
@@ -283,11 +243,3 @@ struct TreeNode *bstToGst(struct TreeNode *root) {
     return root;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

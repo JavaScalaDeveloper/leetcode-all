@@ -12,8 +12,6 @@
 
 ## 代码示例
 
-<!-- tabs:start -->
-
 ### **Java**
 
 ```java
@@ -35,12 +33,6 @@ public static void sort(int[] nums, int min, int max) {
     System.arraycopy(r, 0, nums, 0, r.length);
 }
 ```
-
-
-
-
-
-
 
 ## 算法分析
 

@@ -83,10 +83,6 @@ id 3的产品在2019年春季之后销售。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -99,5 +95,3 @@ ON p.product_id = s.product_id
 GROUP BY  p.product_id
 HAVING SUM(s.sale_date < '2019-01-01') = 0 AND SUM(s.sale_date > '2019-03-31') = 0;
 ```
-
-

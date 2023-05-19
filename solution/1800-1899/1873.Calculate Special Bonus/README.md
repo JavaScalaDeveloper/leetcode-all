@@ -63,13 +63,7 @@ Employees 表:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```sql
 SELECT
@@ -97,5 +91,3 @@ SELECT
 FROM
     employees;
 ```
-
-

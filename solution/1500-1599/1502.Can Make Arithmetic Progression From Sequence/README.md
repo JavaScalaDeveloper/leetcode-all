@@ -39,25 +39,13 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：排序 + 遍历**
 
 我们可以先将数组 `arr` 排序，然后遍历数组，判断相邻两项的差是否相等即可。
 
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(\log n)$。其中 $n$ 为数组 `arr` 的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -74,29 +62,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
-
-
-
-
 
 ### **C**
 
@@ -115,11 +81,3 @@ bool canMakeArithmeticProgression(int *arr, int arrSize) {
     return 1;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

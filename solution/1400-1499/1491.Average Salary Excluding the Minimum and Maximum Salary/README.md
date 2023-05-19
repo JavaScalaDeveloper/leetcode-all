@@ -53,8 +53,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：模拟**
 
 按题意模拟即可。
@@ -63,17 +61,7 @@
 
 时间复杂度 $O(n)$。其中 $n$ 为数组 `salary` 的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -91,21 +79,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -125,15 +99,3 @@ double average(int* salary, int salarySize) {
     return (sum - mi - ma) * 1.0 / (salarySize - 2);
 }
 ```
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

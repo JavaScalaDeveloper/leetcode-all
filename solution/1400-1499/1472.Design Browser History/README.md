@@ -55,23 +55,11 @@ browserHistory.back(7);                   // 你原本在浏览 &quot;google.com
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：栈**
 
 使用两个栈模拟前进与后退操作。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class BrowserHistory {
@@ -110,19 +98,3 @@ class BrowserHistory {
  * String param_3 = obj.forward(steps);
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

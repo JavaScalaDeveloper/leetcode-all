@@ -79,8 +79,6 @@ textEditor.cursorRight(6); // 返回 "practi"
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：左右栈**
 
 我们可以使用两个栈 `left` 和 `right`，其中栈 `left` 存储光标左边的字符，另一个栈 `right` 存储光标右边的字符。
@@ -90,17 +88,7 @@ textEditor.cursorRight(6); // 返回 "practi"
 -   当调用 `cursorLeft` 方法时，我们将 `left` 中的字符出栈最多 $k$ 次，然后将出栈的字符依次入栈 `right`，最后返回 `left` 栈最多 $10$ 个字符。时间复杂度 $O(k)$。
 -   当调用 `cursorRight` 方法时，我们将 `right` 中的字符出栈最多 $k$ 次，然后将出栈的字符依次入栈 `left`，最后返回 `left` 栈最多 $10$ 个字符。时间复杂度 $O(k)$。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class TextEditor {
@@ -149,22 +137,4 @@ class TextEditor {
  */
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-### **...**
-
-```
-
-```
-
-

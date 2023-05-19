@@ -32,18 +32,16 @@
 </ul>
 <p>&nbsp;</p>
 <p><strong>进阶：</strong>你可以想出一个时间复杂度小于 <code>O(n<sup>2</sup>)</code> 的算法吗？</p>
+
 ## 解法
-<!-- 这里可写通用的实现逻辑 -->
+
 **方法一：哈希表**
 我们可以用哈希表 $m$ 存放数组值以及对应的下标。
 遍历数组 `nums`，当发现 `target - nums[i]` 在哈希表中，说明找到了目标值，返回 `target - nums[i]` 的下标以及 $i$ 即可。
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是数组 `nums` 的长度。
-<!-- tabs:start -->
-### **Python3**
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ### **Java**
-<!-- 这里可写当前语言的特殊实现逻辑 -->
+
 ```java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -59,21 +57,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

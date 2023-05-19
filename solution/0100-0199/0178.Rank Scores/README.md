@@ -64,10 +64,6 @@ Scores 表:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **MySQL8**
 
 使用 `DENSE_RANK()` 函数，语法如下：
@@ -108,5 +104,3 @@ FROM (SELECT Score,
            (SELECT @rank := 0, @latest := NULL) tmp
       ORDER BY Score DESC) s;
 ```
-
-

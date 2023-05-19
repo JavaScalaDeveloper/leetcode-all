@@ -115,10 +115,6 @@ Moustafa 在2020年6月花费了$110 (10 * 2 + 45 * 2), 在7月花费了$0.</pre
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -135,5 +131,3 @@ GROUP BY c.customer_id
 HAVING sum(if(month(o.order_date)=6, price*quantity, 0)) >= 100
 AND sum(if(month(o.order_date)=7, price*quantity, 0)) >= 100;
 ```
-
-

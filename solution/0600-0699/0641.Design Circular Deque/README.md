@@ -58,8 +58,6 @@ circularDeque.getFront();				// 返回 4
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：数组**
 
 利用循环数组，实现循环双端队列。
@@ -73,17 +71,7 @@ circularDeque.getFront();				// 返回 4
 
 时间复杂度 $O(1)$，空间复杂度 $O(k)$。其中 $k$ 是队列的容量。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class MyCircularDeque {
@@ -183,22 +171,4 @@ class MyCircularDeque {
  */
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-### **...**
-
-```
-
-```
-
-

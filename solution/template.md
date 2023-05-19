@@ -122,19 +122,11 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **Bash**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```bash
 
 ```
-
-
 
 <!-- 这里是bash_problem_readme_template结束位置 -->
 
@@ -152,15 +144,11 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## Solutions
 
-<!-- tabs:start -->
-
 ### **Bash**
 
 ```bash
 
 ```
-
-
 
 <!-- 这里是bash_problem_readme_template_en结束位置 -->
 
@@ -180,39 +168,11 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-
 
 <!-- 这里是problem_readme_template结束位置 -->
 
@@ -230,33 +190,11 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## Solutions
 
-<!-- tabs:start -->
-
-### **Python3**
-
-
-
 ### **Java**
 
 ```java
 
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-
 
 <!-- 这里是problem_readme_template_en结束位置 -->
 
@@ -276,19 +214,11 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```sql
 
 ```
-
-
 
 <!-- 这里是sql_problem_readme_template结束位置 -->
 
@@ -306,15 +236,11 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## Solutions
 
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
 
 ```
-
-
 
 <!-- 这里是sql_problem_readme_template_en结束位置 -->
 
@@ -334,17 +260,7 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **TypeScript**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
 
 <!-- 这里是ts_problem_readme_template结束位置 -->
 
@@ -362,12 +278,6 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 ## Solutions
 
-<!-- tabs:start -->
-
 ### **TypeScript**
-
-
-
-
 
 <!-- 这里是ts_problem_readme_template_en结束位置 -->

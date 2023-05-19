@@ -38,8 +38,6 @@
 
 ## 解法
 
-<!-- tabs:start -->
-
 **方法一：DFS**
 
 我们先判断 `A` 或 `B` 是否为空，如果 `A` 或 `B` 为空，直接返回 `false`。
@@ -55,10 +53,6 @@
 最后我们返回 `dfs(A, B) or isSubStructure(A.left, B) or isSubStructure(A.right, B)`，即 `A` 的子树和 `B` 的结构是否相同，或者 `A` 的左子树和 `B` 的结构是否相同，或者 `A` 的右子树和 `B` 的结构是否相同。
 
 时间复杂度 $O(m \times n)$，空间复杂度 $O(\max(m, n))$。其中 $m$ 和 $n$ 分别为树 `A` 和 `B` 的节点数。
-
-### **Python3**
-
-
 
 ### **Java**
 
@@ -92,34 +86,4 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

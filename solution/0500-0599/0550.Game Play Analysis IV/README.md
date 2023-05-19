@@ -49,10 +49,6 @@ Result table:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -68,5 +64,3 @@ FROM
 LEFT JOIN activity b
 ON a.player_id = b.player_id AND DATEDIFF( a.event_date, b.event_date ) = -1
 ```
-
-

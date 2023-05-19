@@ -39,14 +39,4 @@ The returned string should always match the method name.</pre>
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **TypeScript**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-

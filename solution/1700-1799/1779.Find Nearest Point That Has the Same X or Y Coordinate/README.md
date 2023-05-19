@@ -47,25 +47,13 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：直接遍历**
 
 直接遍历 `points` 数组，对于 $points[i]$，如果 $points[i][0] = x$ 或者 $points[i][1] = y$，则说明 $points[i]$ 是有效点，计算曼哈顿距离，更新最小距离和最小距离的下标。
 
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为 `points` 数组的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -86,21 +74,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -122,11 +96,3 @@ int nearestValidPoint(int x, int y, int **points, int pointsSize, int *pointsCol
     return ans;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

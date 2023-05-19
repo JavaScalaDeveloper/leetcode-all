@@ -69,12 +69,6 @@ for (int i = n / 2; i > 0; --i) {
 
 ## 代码实现
 
-<!-- tabs:start -->
-
-### **Python3**
-
-
-
 ### **Java**
 
 ```java
@@ -129,13 +123,3 @@ public class Main {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-

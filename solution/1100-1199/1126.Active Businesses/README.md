@@ -53,10 +53,6 @@ id 为 1 的业务有 7 个 &#39;reviews&#39; 事件（大于 5）和 11 个 &#3
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -75,5 +71,3 @@ WHERE t1.occurences > t2.occurences
 GROUP BY  business_id
 HAVING COUNT( 1 ) > 1
 ```
-
-

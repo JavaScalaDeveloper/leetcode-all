@@ -50,25 +50,13 @@ numArray.sumRange(0, 5); // return -3 ((-2) + 0 + 3 + (-5) + 2 + (-1))
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：前缀和**
 
 前缀和计算公式：`s[i + 1] = s[i] + nums[i]`。
 
 初始化的时间复杂度是 $O(n)$，每次查询的时间复杂度是 $O(1)$。其中 $n$ 是数组的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class NumArray {
@@ -94,27 +82,7 @@ class NumArray {
  */
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
-
-
 
 ### **C**
 
@@ -122,7 +90,6 @@ class NumArray {
 typedef struct {
     int *sums;
 } NumArray;
-
 
 NumArray *numArrayCreate(int *nums, int numsSize) {
     int *sums = malloc(sizeof(int) * (numsSize + 1));
@@ -151,15 +118,3 @@ void numArrayFree(NumArray *obj) {
  * numArrayFree(obj);
 */
 ```
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

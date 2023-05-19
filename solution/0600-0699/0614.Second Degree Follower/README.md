@@ -49,10 +49,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -65,5 +61,3 @@ ON f1.follower = f2.followee
 GROUP BY  f1.follower
 ORDER BY f1.follower
 ```
-
-

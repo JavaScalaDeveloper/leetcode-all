@@ -42,8 +42,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 直接调库或者应用蔡勒公式。
 
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1100-1199/1185.Day%20of%20the%20Week/images/zeller.svg">
@@ -56,19 +54,7 @@
 -   `[ ]`: 向下取整
 -   `mod`: 取余
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 import java.util.Calendar;
@@ -99,19 +85,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

@@ -46,8 +46,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 核心思路: **一个数字要么不选，要么全选**
 
 首先计算出每个数字的总和 sums，并维护两个 dp 数组：select 和 nonSelect
@@ -66,17 +64,7 @@ select[i] = nonSelect[i-1] + sums[i];
 nonSelect[i] = Math.max(select[i-1], nonSelect[i-1]);
 ```
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -103,19 +91,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

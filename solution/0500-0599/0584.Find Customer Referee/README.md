@@ -38,10 +38,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -63,5 +59,3 @@ FROM
 WHERE
     IFNULL(referee_id, 0) != 2;
 ```
-
-

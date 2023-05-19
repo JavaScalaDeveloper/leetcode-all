@@ -47,8 +47,6 @@ iterator.hasNext(); // 返回 false
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：DFS 回溯**
 
 我们通过 $DFS$ 枚举，预处理生成所有长度为 $combinationLength$ 的字符串，存放到 $cs$ 数组中。
@@ -73,19 +71,7 @@ iterator.hasNext(); // 返回 false
 
 所谓的长度 $combinationLength$，只需要满足二进制编码中 $1$ 的个数满足要求即可。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class CombinationIterator {
@@ -179,23 +165,3 @@ class CombinationIterator {
  * boolean param_2 = obj.hasNext();
  */
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

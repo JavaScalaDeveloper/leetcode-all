@@ -114,10 +114,6 @@ Orders 表:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -148,5 +144,3 @@ WHERE
             o.sales_id = s.sales_id AND c.name = 'RED'
     );
 ```
-
-

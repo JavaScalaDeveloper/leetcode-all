@@ -51,8 +51,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：计数**
 
 我们通过观察发现，`()` 是唯一贡献分数的结构，外括号只是为该结构添加了一些乘数。所以我们只需要关心 `()`。
@@ -80,17 +78,7 @@
 -   [1541. 平衡括号字符串的最少插入次数](https://github.com/doocs/leetcode/tree/main/solution/1500-1599/1541.Minimum%20Insertions%20to%20Balance%20a%20Parentheses%20String/README.md)
 -   [2116. 判断一个括号字符串是否有效](https://github.com/doocs/leetcode/tree/main/solution/2100-2199/2116.Check%20if%20a%20Parentheses%20String%20Can%20Be%20Valid/README.md)
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -110,19 +98,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

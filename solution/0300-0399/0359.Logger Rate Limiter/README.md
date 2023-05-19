@@ -51,21 +51,9 @@ logger.shouldPrintMessage(11, "foo"); // 11 >= 11 ，返回 true ，下一次 "f
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 哈希表实现。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Logger {
@@ -98,15 +86,3 @@ class Logger {
  * boolean param_1 = obj.shouldPrintMessage(timestamp,message);
  */
 ```
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

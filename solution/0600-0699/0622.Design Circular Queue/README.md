@@ -49,21 +49,9 @@ circularQueue.Rear(); &nbsp;// 返回 4</pre>
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 “循环数组”实现。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class MyCircularQueue {
@@ -132,26 +120,4 @@ class MyCircularQueue {
  */
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

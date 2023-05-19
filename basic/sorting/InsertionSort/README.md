@@ -15,8 +15,6 @@
 
 ## 代码示例
 
-<!-- tabs:start -->
-
 ### **Java**
 
 ```java
@@ -41,32 +39,6 @@ public class InsertionSort {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **Python3**
-
-
-
-
 
 ## 算法分析
 

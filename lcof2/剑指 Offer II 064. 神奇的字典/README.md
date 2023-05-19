@@ -61,21 +61,9 @@ magicDictionary.search(&quot;leetcoded&quot;); // 返回 False
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 哈希表实现。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class MagicDictionary {
@@ -127,19 +115,3 @@ class MagicDictionary {
  * boolean param_2 = obj.search(searchWord);
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

@@ -45,10 +45,6 @@ empId 是这张表单的主关键字
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -61,5 +57,3 @@ FROM
 WHERE
     b.bonus < 1000 OR b.bonus IS NULL;
 ```
-
-

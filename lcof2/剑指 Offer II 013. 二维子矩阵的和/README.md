@@ -57,21 +57,9 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 动态规划-二维前缀和。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class NumMatrix {
@@ -100,19 +88,3 @@ class NumMatrix {
  * int param_1 = obj.sumRegion(row1,col1,row2,col2);
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

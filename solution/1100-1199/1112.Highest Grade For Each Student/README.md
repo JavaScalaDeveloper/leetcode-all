@@ -56,10 +56,6 @@ Enrollments 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -73,5 +69,3 @@ FROM (SELECT
 FROM Enrollments) a
 WHERE a.rk = 1;
 ```
-
-

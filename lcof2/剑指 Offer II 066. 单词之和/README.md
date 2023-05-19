@@ -48,21 +48,9 @@ mapSum.sum(&quot;ap&quot;);           // return 5 (<u>ap</u>ple + <u>ap</u>p = 3
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 利用哈希表存储每个键的所有前缀子串。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class MapSum {
@@ -96,19 +84,3 @@ class MapSum {
  * int param_2 = obj.sum(prefix);
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

@@ -91,11 +91,7 @@ Chests 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 “`LEFT JOIN` + `IFNULL`”实现。
-
-<!-- tabs:start -->
 
 ### **SQL**
 
@@ -111,5 +107,3 @@ LEFT JOIN
 ON
     b.chest_id = c.chest_id;
 ```
-
-

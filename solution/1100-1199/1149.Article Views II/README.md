@@ -59,11 +59,7 @@ Views 表:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 “`DISTINCT` + `GROUP BY`” 实现。
-
-<!-- tabs:start -->
 
 ### **SQL**
 
@@ -80,5 +76,3 @@ HAVING
 ORDER BY
     id;
 ```
-
-

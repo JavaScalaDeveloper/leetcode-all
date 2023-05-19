@@ -43,8 +43,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：排序 + 贪心**
 
 > 三角形由三条边组成，且满足 <var>C</var> >= <var>B</var> && <var>C</var> >= <var>A</var> && <var>C</var> < <var>A</var> + <var>B</var>
@@ -56,17 +54,7 @@
 3. 当找到满足条件的三个元素时直接返回即可。
 4. 否则，在遍历结束时返回 0。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -83,21 +71,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -116,11 +90,3 @@ int largestPerimeter(int *nums, int numsSize) {
     return 0;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

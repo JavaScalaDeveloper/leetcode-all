@@ -53,11 +53,7 @@ Views 表：
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 “`DISTINCT` + `ORDER BY`” 实现。
-
-<!-- tabs:start -->
 
 ### **SQL**
 
@@ -67,5 +63,3 @@ FROM Views
 WHERE author_id = viewer_id
 ORDER BY id;
 ```
-
-

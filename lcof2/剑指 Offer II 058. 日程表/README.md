@@ -47,19 +47,7 @@ MyCalendar.book(20, 30); // returns true ，第三个日程安排可以添加到
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 import java.util.Map;
@@ -91,15 +79,3 @@ class MyCalendar {
  * obj = new MyCalendar(); boolean param_1 = obj.book(start,end);
  */
 ```
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

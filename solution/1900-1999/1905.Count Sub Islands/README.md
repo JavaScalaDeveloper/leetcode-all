@@ -43,31 +43,15 @@ grid2 中标红的 1 区域是子岛屿，总共有 2 个子岛屿。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 BFS、DFS 或者并查集。
-
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 BFS - Flood Fill 算法：
 
-
-
 DFS：
-
-
 
 并查集：
 
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 BFS - Flood Fill 算法：
 
@@ -209,32 +193,10 @@ class Solution {
 
 ### **TypeScript**
 
-
-
-
-
 BFS - Flood Fill 算法：
-
-
 
 DFS：
 
-
-
-
-
 BFS - Flood Fill 算法：
 
-
-
 DFS：
-
-
-
-### **...**
-
-```
-
-```
-
-

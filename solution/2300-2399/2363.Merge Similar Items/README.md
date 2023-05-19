@@ -68,25 +68,13 @@ value = 7 的物品在 items2 中 weight = 1 ，总重量为 1 。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：哈希表或数组**
 
 我们可以用哈希表或数组 `cnt` 统计 `items1` 和 `items2` 中每个物品的总重量，然后从小到大遍历价值，将每个价值以及对应的总重量加入结果数组即可。
 
 时间复杂度 $O(n + m)$，空间复杂度 $O(n + m)$。其中 $n$ 和 $m$ 分别是 `items1` 和 `items2` 的长度。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -109,21 +97,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -158,11 +132,3 @@ int **mergeSimilarItems(int **items1, int items1Size, int *items1ColSize, int **
     return ans;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

@@ -50,37 +50,15 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 单调栈。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 
 ```
 
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -107,11 +85,3 @@ int *canSeePersonsCount(int *heights, int heightsSize, int *returnSize) {
     return ans;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

@@ -60,8 +60,6 @@ productOfNumbers.getProduct(2); // 返回 32 。最后 2 个数字的乘积是 4
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：前缀积**
 
 我们初始化一个数组 $s$，其中 $s[i]$ 表示前 $i$ 个数字的乘积。
@@ -72,17 +70,7 @@ productOfNumbers.getProduct(2); // 返回 32 。最后 2 个数字的乘积是 4
 
 时间复杂度 $O(1)$，空间复杂度 $O(n)$。其中 $n$ 为调用 `add` 的次数。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class ProductOfNumbers {
@@ -114,19 +102,3 @@ class ProductOfNumbers {
  * int param_2 = obj.getProduct(k);
  */
 ```
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

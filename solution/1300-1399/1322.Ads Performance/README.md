@@ -70,10 +70,6 @@ action 列是一个枚举类型 (&#39;Clicked&#39;, &#39;Viewed&#39;, &#39;Ignor
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -89,5 +85,3 @@ GROUP BY ad_id
 ORDER BY ctr DESC,
 ad_id ASC;
 ```
-
-

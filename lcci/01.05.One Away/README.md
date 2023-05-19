@@ -28,8 +28,6 @@ second = &quot;pal&quot;
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 双指针。
 
 先判断两字符串长度差 `diff` 是否大于 1，若是直接返回 false。
@@ -48,17 +46,7 @@ second = &quot;pal&quot;
 
 遍历结束，直接返回 true。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -90,28 +78,6 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
 可以直接扩展成[编辑距离](https://leetcode.cn/problems/edit-distance/)问题的解法
 
-
-
 ### **TypeScript**
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

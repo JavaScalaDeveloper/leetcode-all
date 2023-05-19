@@ -58,8 +58,6 @@ authenticationManager.<code>countUnexpiredTokens</code>(15); // tokenId 为 "bbb
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：哈希表**
 
 我们可以简单维护一个哈希表 $d$，键为 `tokenId`，值为过期时间。
@@ -72,17 +70,7 @@ authenticationManager.<code>countUnexpiredTokens</code>(15); // tokenId 为 "bbb
 
 空间复杂度为 $O(n)$，其中 $n$ 为哈希表 $d$ 的键值对个数。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class AuthenticationManager {
@@ -124,26 +112,4 @@ class AuthenticationManager {
  */
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

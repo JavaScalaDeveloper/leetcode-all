@@ -52,7 +52,7 @@ Prices table:
 | 2          | 2019-02-01 | 2019-02-20 | 15     |
 | 2          | 2019-02-21 | 2019-03-31 | 30     |
 +------------+------------+------------+--------+
- 
+
 UnitsSold table:
 +------------+---------------+-------+
 | product_id | purchase_date | units |
@@ -76,10 +76,6 @@ Result table:
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -92,5 +88,3 @@ FROM   Prices p
 WHERE  u.purchase_date BETWEEN p.start_date AND p.end_date
 GROUP  BY p.product_id;
 ```
-
-

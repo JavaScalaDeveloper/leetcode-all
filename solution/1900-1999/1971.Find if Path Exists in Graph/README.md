@@ -49,8 +49,6 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：DFS**
 
 我们先将 `edges` 转换成邻接表 $g$，然后使用 DFS，判断是否存在从 `source` 到 `destination` 的路径。
@@ -86,8 +84,6 @@
 -   `find(x)` 函数用于查找 $x$ 所在集合的祖宗节点
 -   `union(a, b)` 函数用于合并 $a$ 和 $b$ 所在的集合
 
-
-
 ```java [sol1-Java 模板]
 int[] p = new int[n];
 int[] size = new int[n];
@@ -114,23 +110,7 @@ void union(int a, int b) {
 }
 ```
 
-
-
-
-
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -187,23 +167,3 @@ class Solution {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **...**
-
-```
-
-```
-
-

@@ -71,12 +71,6 @@ void mergeSort(int[] nums, int left, int right) {
 
 ## 代码实现
 
-<!-- tabs:start -->
-
-### **Python3**
-
-
-
 ### **Java**
 
 ```java
@@ -125,21 +119,3 @@ public class Main {
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

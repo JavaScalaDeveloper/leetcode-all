@@ -47,21 +47,9 @@
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 用数组或哈希表存放字母顺序。依次遍历单词列表，检测相邻两单词是否满足字典序。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -92,21 +80,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -141,11 +115,3 @@ bool isAlienSorted(char **words, int wordsSize, char *order) {
     return 1;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

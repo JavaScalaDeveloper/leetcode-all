@@ -47,25 +47,13 @@ answer = [7,1,3,9] 。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：模拟**
 
 将数组中的每个数字进行数位分割，然后将分割后的数字依次放入答案数组中。
 
 时间复杂度 $O(n \times \log_{10} M)$，空间复杂度 $O(n \times \log_{10} M)$，其中 $n$ 为数组 `nums` 的长度，而 $M$ 为数组 `nums` 中的最大值。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 class Solution {
@@ -88,21 +76,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -131,11 +105,3 @@ int *separateDigits(int *nums, int numsSize, int *returnSize) {
     return ans;
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

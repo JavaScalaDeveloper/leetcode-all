@@ -60,8 +60,6 @@ OR 运算节点的值为 True OR False = True 。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
 **方法一：递归**
 
 我们可以使用递归的方式来求解本题。
@@ -75,19 +73,7 @@ OR 运算节点的值为 True OR False = True 。
 
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为二叉树节点个数。
 
-<!-- tabs:start -->
-
-### **Python3**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
-
-
-
-
-
 ### **Java**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```java
 /**
@@ -151,25 +137,7 @@ class Solution {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### **TypeScript**
-
-
-
-
-
-
 
 ### **C**
 
@@ -192,11 +160,3 @@ bool evaluateTree(struct TreeNode *root) {
     return evaluateTree(root->left) && evaluateTree(root->right);
 }
 ```
-
-### **...**
-
-```
-
-```
-
-

@@ -79,13 +79,7 @@ Result table
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
-
-<!-- 这里可写当前语言的特殊实现逻辑 -->
 
 ```sql
 SELECT
@@ -97,5 +91,3 @@ ON c1.user_id = c2.user_id
 WHERE c1.time_stamp < c2.time_stamp
 AND TIMESTAMPDIFF(SECOND, c1.time_stamp, c2.time_stamp) <= 24 * 60 * 60;
 ```
-
-

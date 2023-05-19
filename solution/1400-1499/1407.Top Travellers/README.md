@@ -90,10 +90,6 @@ Donald 没有任何行程, 他的旅行距离为 0。
 
 ## 解法
 
-<!-- 这里可写通用的实现逻辑 -->
-
-<!-- tabs:start -->
-
 ### **SQL**
 
 ```sql
@@ -107,5 +103,3 @@ ORDER BY
     travelled_distance DESC,
     name;
 ```
-
-
