@@ -18,7 +18,7 @@
 <p>返回&nbsp;<em><strong>结果&nbsp;</strong>矩阵</em>。如果有多个答案，则返回其中&nbsp;<strong>任何&nbsp;</strong>一个。</p>
 
 <p><strong>示例 1:</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2371.Minimize%20Maximum%20Value%20in%20a%20Grid/images/grid2drawio.png" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2371.Minimize%20Maximum%20Value%20in%20a%20Grid/images/grid2drawio.png" />
 <pre>
 <strong>输入:</strong> grid = [[3,1],[2,5]]
 <strong>输出:</strong> [[2,1],[1,2]]

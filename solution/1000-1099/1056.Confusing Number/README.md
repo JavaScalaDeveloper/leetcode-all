@@ -14,7 +14,7 @@
 
 <p><strong>示例 1：</strong></p>
 
-<p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1056.Confusing%20Number/images/1268_1.png" style="height: 90px; width: 180px;"></p>
+<p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1056.Confusing%20Number/images/1268_1.png" style="height: 90px; width: 180px;"></p>
 
 <pre><strong>输入：</strong>6
 <strong>输出：</strong>true
@@ -24,7 +24,7 @@
 
 <p><strong>示例 2：</strong></p>
 
-<p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1056.Confusing%20Number/images/1268_2.png" style="height: 90px; width: 180px;"></p>
+<p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1056.Confusing%20Number/images/1268_2.png" style="height: 90px; width: 180px;"></p>
 
 <pre><strong>输入：</strong>89
 <strong>输出：</strong>true
@@ -34,7 +34,7 @@
 
 <p><strong>示例 3：</strong></p>
 
-<p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1056.Confusing%20Number/images/1268_3.png" style="height: 121px; width: 301px;"></p>
+<p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1056.Confusing%20Number/images/1268_3.png" style="height: 121px; width: 301px;"></p>
 
 <pre><strong>输入：</strong>11
 <strong>输出：</strong>false
@@ -44,7 +44,7 @@
 
 <p><strong>示例 4：</strong></p>
 
-<p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1056.Confusing%20Number/images/1268_4.png" style="height: 90px; width: 180px;"></p>
+<p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1056.Confusing%20Number/images/1268_4.png" style="height: 90px; width: 180px;"></p>
 
 <pre><strong>输入：</strong>25
 <strong>输出：</strong>false

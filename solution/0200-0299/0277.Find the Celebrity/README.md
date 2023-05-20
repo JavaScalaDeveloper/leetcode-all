@@ -14,7 +14,7 @@
 
 <p><strong>示例 1:</strong></p>
 
-<p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0277.Find%20the%20Celebrity/images/277_example_1_bold.png" style="height: 181px; width: 186px;" /></p>
+<p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0277.Find%20the%20Celebrity/images/277_example_1_bold.png" style="height: 181px; width: 186px;" /></p>
 
 <pre>
 <strong>输入: </strong>graph = [
@@ -28,7 +28,7 @@
 
 <p><strong>示例 2:</strong></p>
 
-<p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0277.Find%20the%20Celebrity/images/277_example_2.png" style="height: 192px; width: 193px;" /></p>
+<p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0277.Find%20the%20Celebrity/images/277_example_2.png" style="height: 192px; width: 193px;" /></p>
 
 <pre>
 <strong>输入: </strong>graph = [

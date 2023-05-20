@@ -8,7 +8,7 @@
 
 <p><strong>示例&nbsp;1：</strong></p>
 
-<p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0817.Linked%20List%20Components/images/lc-linkedlistcom1.jpg" /></p>
+<p><img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0817.Linked%20List%20Components/images/lc-linkedlistcom1.jpg" /></p>
 
 <pre>
 <strong>输入:</strong> head = [0,1,2,3], nums = [0,1,3]
@@ -17,7 +17,7 @@
 
 <p><strong>示例 2：</strong></p>
 
-<p><strong>&nbsp;</strong><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0817.Linked%20List%20Components/images/lc-linkedlistcom2.jpg" /></p>
+<p><strong>&nbsp;</strong><img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0817.Linked%20List%20Components/images/lc-linkedlistcom2.jpg" /></p>
 
 <pre>
 <strong>输入:</strong> head = [0,1,2,3,4], nums = [0,3,1,4]

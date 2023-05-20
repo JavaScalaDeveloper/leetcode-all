@@ -27,7 +27,7 @@
 
 ## 解法
 
-![](https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0633.Sum%20of%20Square%20Numbers/images/table.png)
+![](https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0633.Sum%20of%20Square%20Numbers/images/table.png)
 
 上图为 a，b，c 之间的关系，这题其实就是在这张“表”里查找 c。
 

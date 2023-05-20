@@ -16,13 +16,13 @@
 <p>返回结果数组 <code>answer</code> 。</p>
 
 <p><strong>示例 1：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2503.Maximum%20Number%20of%20Points%20From%20Grid%20Queries/images/yetgriddrawio.png" style="width: 571px; height: 151px;">
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2503.Maximum%20Number%20of%20Points%20From%20Grid%20Queries/images/yetgriddrawio.png" style="width: 571px; height: 151px;">
 <pre><strong>输入：</strong>grid = [[1,2,3],[2,5,7],[3,5,1]], queries = [5,6,2]
 <strong>输出：</strong>[5,8,1]
 <strong>解释：</strong>上图展示了每个查询中访问并获得分数的单元格。</pre>
 
 <p><strong>示例 2：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2503.Maximum%20Number%20of%20Points%20From%20Grid%20Queries/images/yetgriddrawio-2.png">
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2503.Maximum%20Number%20of%20Points%20From%20Grid%20Queries/images/yetgriddrawio-2.png">
 <pre><strong>输入：</strong>grid = [[5,2,1],[1,1,2]], queries = [3]
 <strong>输出：</strong>[0]
 <strong>解释：</strong>无法获得分数，因为左上角单元格的值大于等于 3 。

@@ -9,7 +9,7 @@
 <p>若机器人持续运转下去，返回被<strong>清扫干净</strong>的空间数量。</p>
 
 <p><strong>示例 1：</strong><br />
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2061.Number%20of%20Spaces%20Cleaning%20Robot%20Cleaned/images/image-20211101204703-1.png" style="width: 250px; height: 242px;" /></p>
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2061.Number%20of%20Spaces%20Cleaning%20Robot%20Cleaned/images/image-20211101204703-1.png" style="width: 250px; height: 242px;" /></p>
 
 <pre>
 <strong>输入:</strong> room = [[0,0,0],[1,1,0],[0,0,0]]
@@ -24,7 +24,7 @@
 </pre>
 
 <p><strong>示例 2：</strong><br />
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2061.Number%20of%20Spaces%20Cleaning%20Robot%20Cleaned/images/image-20211101204736-2.png" style="width: 250px; height: 245px;" /></p>
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2061.Number%20of%20Spaces%20Cleaning%20Robot%20Cleaned/images/image-20211101204736-2.png" style="width: 250px; height: 245px;" /></p>
 
 <pre>
 <strong>输入:</strong> room = [[0,1,0],[1,0,0],[0,0,0]]

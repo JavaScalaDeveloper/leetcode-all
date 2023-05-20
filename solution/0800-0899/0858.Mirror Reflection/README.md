@@ -10,7 +10,7 @@
 &nbsp;
 
 <p><strong class="example">示例 1：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0858.Mirror%20Reflection/images/reflection.png" style="width: 218px; height: 217px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0858.Mirror%20Reflection/images/reflection.png" style="width: 218px; height: 217px;" />
 <pre>
 <strong>输入：</strong>p = 2, q = 1
 <strong>输出：</strong>2

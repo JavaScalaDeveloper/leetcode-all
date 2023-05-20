@@ -20,7 +20,7 @@
 </ul>
 
 <p><strong class="example">示例 1:</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2445.Number%20of%20Nodes%20With%20Value%20One/images/ex1.jpg" style="width: 600px; height: 297px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2445.Number%20of%20Nodes%20With%20Value%20One/images/ex1.jpg" style="width: 600px; height: 297px;" />
 <pre>
 <strong>输入:</strong> n = 5 , queries = [1,2,5]
 <strong>输出:</strong> 3
@@ -29,7 +29,7 @@
 </pre>
 
 <p><strong class="example">示例 2:</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2445.Number%20of%20Nodes%20With%20Value%20One/images/ex2.jpg" style="width: 650px; height: 88px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2445.Number%20of%20Nodes%20With%20Value%20One/images/ex2.jpg" style="width: 650px; height: 88px;" />
 <pre>
 <strong>输入:</strong> n = 3, queries = [2,3,3]
 <strong>输出:</strong> 1

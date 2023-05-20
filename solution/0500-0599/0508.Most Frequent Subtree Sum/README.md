@@ -8,7 +8,7 @@
 
 <p><strong>示例 1：</strong></p>
 
-<p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0508.Most%20Frequent%20Subtree%20Sum/images/freq1-tree.jpg" /></p>
+<p><img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0508.Most%20Frequent%20Subtree%20Sum/images/freq1-tree.jpg" /></p>
 
 <pre>
 <strong>输入:</strong> root = [5,2,-3]
@@ -17,7 +17,7 @@
 
 <p><strong>示例&nbsp;2：</strong></p>
 
-<p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0508.Most%20Frequent%20Subtree%20Sum/images/freq2-tree.jpg" /></p>
+<p><img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0508.Most%20Frequent%20Subtree%20Sum/images/freq2-tree.jpg" /></p>
 
 <pre>
 <strong>输入:</strong> root = [5,2,-5]

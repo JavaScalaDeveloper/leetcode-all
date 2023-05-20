@@ -11,7 +11,7 @@
 <p>返回生成的矩阵。</p>
 
 <p><strong>示例 1：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2326.Spiral%20Matrix%20IV/images/ex1new.jpg" style="width: 240px; height: 150px;">
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2326.Spiral%20Matrix%20IV/images/ex1new.jpg" style="width: 240px; height: 150px;">
 <pre><strong>输入：</strong>m = 3, n = 5, head = [3,0,2,6,8,1,7,9,4,2,5,5,0]
 <strong>输出：</strong>[[3,0,2,6,8],[5,0,-1,-1,1],[5,2,4,9,7]]
 <strong>解释：</strong>上图展示了链表中的整数在矩阵中是如何排布的。
@@ -19,7 +19,7 @@
 </pre>
 
 <p><strong>示例 2：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2326.Spiral%20Matrix%20IV/images/ex2.jpg" style="width: 221px; height: 60px;">
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2326.Spiral%20Matrix%20IV/images/ex2.jpg" style="width: 221px; height: 60px;">
 <pre><strong>输入：</strong>m = 1, n = 4, head = [0,1,2]
 <strong>输出：</strong>[[0,1,2,-1]]
 <strong>解释：</strong>上图展示了链表中的整数在矩阵中是如何从左到右排布的。 

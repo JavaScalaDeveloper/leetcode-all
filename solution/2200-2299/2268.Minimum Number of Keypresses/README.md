@@ -17,7 +17,7 @@
 <p><b>注意：</b>字母映射到每个按键上，映射的顺序无法进行更改。</p>
 
 <p><strong>示例 1 ：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2268.Minimum%20Number%20of%20Keypresses/images/image-20220505184346-1.png" style="width: 300px; height: 293px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2268.Minimum%20Number%20of%20Keypresses/images/image-20220505184346-1.png" style="width: 300px; height: 293px;" />
 <pre>
 <strong>输入：</strong>s = "apple"
 <strong>输出：</strong>5
@@ -30,7 +30,7 @@
 总共按按键 5 次，所以返回 5 。</pre>
 
 <p><strong>示例 2 ：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2268.Minimum%20Number%20of%20Keypresses/images/image-20220505203823-1.png" style="width: 300px; height: 288px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2268.Minimum%20Number%20of%20Keypresses/images/image-20220505203823-1.png" style="width: 300px; height: 288px;" />
 <pre>
 <strong>输入：</strong>s = "abcdefghijkl"
 <strong>输出：</strong>15

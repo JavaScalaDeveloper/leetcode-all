@@ -9,7 +9,7 @@
 <p>请你找出 <code>arr</code> 中在 <code>mat</code> 的某一行或某一列上都被涂色且下标最小的元素，并返回其下标 <code>i</code> 。</p>
 
 <p><strong>示例 1：</strong></p>
-<img alt="image explanation for example 1" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2661.First%20Completely%20Painted%20Row%20or%20Column/images/grid1.jpg" style="width: 321px; height: 81px;" />
+<img alt="image explanation for example 1" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2661.First%20Completely%20Painted%20Row%20or%20Column/images/grid1.jpg" style="width: 321px; height: 81px;" />
 <pre>
 <strong>输入：</strong>arr = [1,3,4,2], mat = [[1,4],[2,3]]
 <strong>输出：</strong>2
@@ -17,7 +17,7 @@
 </pre>
 
 <p><strong>示例 2：</strong></p>
-<img alt="image explanation for example 2" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2661.First%20Completely%20Painted%20Row%20or%20Column/images/grid2.jpg" style="width: 601px; height: 121px;" />
+<img alt="image explanation for example 2" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2661.First%20Completely%20Painted%20Row%20or%20Column/images/grid2.jpg" style="width: 601px; height: 121px;" />
 <pre>
 <strong>输入：</strong>arr = [2,8,7,4,1,3,5,6,9], mat = [[3,2,5],[1,4,6],[8,7,9]]
 <strong>输出：</strong>3

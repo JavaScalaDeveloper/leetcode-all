@@ -18,7 +18,7 @@
 </ul>
 
 <p><strong>示例 1：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0308.Range%20Sum%20Query%202D%20-%20Mutable/images/summut-grid.jpg" style="height: 222px; width: 500px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0308.Range%20Sum%20Query%202D%20-%20Mutable/images/summut-grid.jpg" style="height: 222px; width: 500px;" />
 <pre>
 <strong>输入</strong>
 ["NumMatrix", "sumRegion", "update", "sumRegion"]

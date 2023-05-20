@@ -10,7 +10,7 @@
 
 <p><strong>示例 1：</strong></p>
 
-<p><strong><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0979.Distribute%20Coins%20in%20Binary%20Tree/images/tree1.png" style="height: 142px; width: 150px;"></strong></p>
+<p><strong><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0979.Distribute%20Coins%20in%20Binary%20Tree/images/tree1.png" style="height: 142px; width: 150px;"></strong></p>
 
 <pre><strong>输入：</strong>[3,0,0]
 <strong>输出：</strong>2
@@ -19,7 +19,7 @@
 
 <p><strong>示例 2：</strong></p>
 
-<p><strong><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0979.Distribute%20Coins%20in%20Binary%20Tree/images/tree2.png" style="height: 142px; width: 150px;"></strong></p>
+<p><strong><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0979.Distribute%20Coins%20in%20Binary%20Tree/images/tree2.png" style="height: 142px; width: 150px;"></strong></p>
 
 <pre><strong>输入：</strong>[0,3,0]
 <strong>输出：</strong>3
@@ -28,7 +28,7 @@
 
 <p><strong>示例 3：</strong></p>
 
-<p><strong><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0979.Distribute%20Coins%20in%20Binary%20Tree/images/tree3.png" style="height: 142px; width: 150px;"></strong></p>
+<p><strong><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0979.Distribute%20Coins%20in%20Binary%20Tree/images/tree3.png" style="height: 142px; width: 150px;"></strong></p>
 
 <pre><strong>输入：</strong>[1,0,2]
 <strong>输出：</strong>2
@@ -36,7 +36,7 @@
 
 <p><strong>示例 4：</strong></p>
 
-<p><strong><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0979.Distribute%20Coins%20in%20Binary%20Tree/images/tree4.png" style="height: 156px; width: 155px;"></strong></p>
+<p><strong><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0979.Distribute%20Coins%20in%20Binary%20Tree/images/tree4.png" style="height: 156px; width: 155px;"></strong></p>
 
 <pre><strong>输入：</strong>[1,0,0,null,3]
 <strong>输出：</strong>4

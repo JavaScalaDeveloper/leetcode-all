@@ -9,7 +9,7 @@
 <p>返回<em>街道上 <code>0</code> 到 <code>n - 1</code> 之间&nbsp;<strong>亮度至少满足</strong>&nbsp;</em><code>requirement[i]</code><em> 的位置 <code>i</code> 的数量。</em></p>
 
 <p><strong class="example">示例 1:</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2237.Count%20Positions%20on%20Street%20With%20Required%20Brightness/images/screenshot-2022-04-11-at-22-24-43-diagramdrawio-diagramsnet.png" style="height: 150px; width: 579px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2237.Count%20Positions%20on%20Street%20With%20Required%20Brightness/images/screenshot-2022-04-11-at-22-24-43-diagramdrawio-diagramsnet.png" style="height: 150px; width: 579px;" />
 <pre>
 <strong>输入:</strong> n = 5, lights = [[0,1],[2,1],[3,2]], requirement = [0,2,1,4,1]
 <strong>输出:</strong> 4

@@ -9,7 +9,7 @@
 <p data-group="1-1">返回<em>可见山的数量。</em></p>
 
 <p><strong class="example">示例 1:</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2345.Finding%20the%20Number%20of%20Visible%20Mountains/images/ex1.png" style="width: 402px; height: 210px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2345.Finding%20the%20Number%20of%20Visible%20Mountains/images/ex1.png" style="width: 402px; height: 210px;" />
 <pre>
 <strong>输入:</strong> peaks = [[2,2],[6,3],[5,4]]
 <strong>输出:</strong> 2
@@ -20,7 +20,7 @@
 有 2 座山是可见的。</pre>
 
 <p><strong class="example">示例 2:</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2345.Finding%20the%20Number%20of%20Visible%20Mountains/images/ex2new1.png" style="width: 300px; height: 180px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2345.Finding%20the%20Number%20of%20Visible%20Mountains/images/ex2new1.png" style="width: 300px; height: 180px;" />
 <pre>
 <strong>输入:</strong> peaks = [[1,3],[1,3]]
 <strong>输出:</strong> 0

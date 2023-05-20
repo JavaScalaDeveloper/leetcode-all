@@ -17,7 +17,7 @@
 <p>一棵二叉树的子树&nbsp;<code>tree</code> 是由&nbsp;<code>tree</code>&nbsp;中某个节点及其所有后代节点组成的树。树&nbsp;<code>tree</code>&nbsp;也可当作自身的子树。</p>
 
 <p><strong>示例 1:</strong><br />
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2005.Subtree%20Removal%20Game%20with%20Fibonacci%20Tree/images/image-20210914173520-3.png" style="width: 200px; height: 184px;" /></p>
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2005.Subtree%20Removal%20Game%20with%20Fibonacci%20Tree/images/image-20210914173520-3.png" style="width: 200px; height: 184px;" /></p>
 
 <pre>
 <strong>输入:</strong> n = 3
@@ -31,7 +31,7 @@ Bob 只能删除根节点 3，所以 Bob 输了。
 </pre>
 
 <p><strong>示例 2:</strong><br />
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2005.Subtree%20Removal%20Game%20with%20Fibonacci%20Tree/images/image-20210914173634-4.png" style="width: 75px; height: 75px;" /></p>
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2005.Subtree%20Removal%20Game%20with%20Fibonacci%20Tree/images/image-20210914173634-4.png" style="width: 75px; height: 75px;" /></p>
 
 <pre>
 <strong>输入:</strong> n = 1
@@ -42,7 +42,7 @@ Alice 只能移除根节点 1, 所以 Alice 输了。
 </pre>
 
 <p><strong>示例 3:</strong><br />
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2005.Subtree%20Removal%20Game%20with%20Fibonacci%20Tree/images/image-20210914173425-1.png" style="width: 100px; height: 106px;" /></p>
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2005.Subtree%20Removal%20Game%20with%20Fibonacci%20Tree/images/image-20210914173425-1.png" style="width: 100px; height: 106px;" /></p>
 
 <pre>
 <strong>输入:</strong> n = 2

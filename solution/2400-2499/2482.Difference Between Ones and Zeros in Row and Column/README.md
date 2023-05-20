@@ -18,7 +18,7 @@
 
 <p><strong>示例 1：</strong></p>
 
-<p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2482.Difference%20Between%20Ones%20and%20Zeros%20in%20Row%20and%20Column/images/image-20221106171729-5.png" style="width: 400px; height: 208px;"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2482.Difference%20Between%20Ones%20and%20Zeros%20in%20Row%20and%20Column/images/image-20221106171729-5.png" style="width: 400px; height: 208px;"></p>
 
 <pre><b>输入：</b>grid = [[0,1,1],[1,0,1],[0,0,1]]
 <b>输出：</b>[[0,0,4],[0,0,4],[-2,-2,2]]
@@ -36,7 +36,7 @@
 
 <p><strong>示例 2：</strong></p>
 
-<p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2482.Difference%20Between%20Ones%20and%20Zeros%20in%20Row%20and%20Column/images/image-20221106171747-6.png" style="width: 358px; height: 150px;"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2482.Difference%20Between%20Ones%20and%20Zeros%20in%20Row%20and%20Column/images/image-20221106171747-6.png" style="width: 358px; height: 150px;"></p>
 
 <pre><b>输入：</b>grid = [[1,1,1],[1,1,1]]
 <b>输出：</b>[[5,5,5],[5,5,5]]

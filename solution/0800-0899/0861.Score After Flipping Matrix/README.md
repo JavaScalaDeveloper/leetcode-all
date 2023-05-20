@@ -14,7 +14,7 @@
 </ol>
 
 <p><strong class="example">示例 1：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0861.Score%20After%20Flipping%20Matrix/images/lc-toogle1.jpg" style="width: 500px; height: 299px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0861.Score%20After%20Flipping%20Matrix/images/lc-toogle1.jpg" style="width: 500px; height: 299px;" />
 <pre>
 <strong>输入：</strong>grid = [[0,0,1,1],[1,0,1,0],[1,1,0,0]]
 <strong>输出：</strong>39

@@ -6,7 +6,7 @@
 
 <p>蜗牛排序从左上角的单元格开始，从当前数组的第一个值开始。然后，它从上到下遍历第一列，接着移动到右边的下一列，并从下到上遍历它。将这种模式持续下去，每列交替变换遍历方向，直到覆盖整个数组。例如，当给定输入数组&nbsp;&nbsp;<code>[19, 10, 3, 7, 9, 8, 5, 2, 1, 17, 16, 14, 12, 18, 6, 13, 11, 20, 4, 15]</code> ，当 <code>rowsCount = 5</code>&nbsp;且&nbsp;<code>colsCount = 4</code> 时，需要输出矩阵如下图所示。注意，矩阵沿箭头方向对应于原数组中数字的顺序</p>
 
-<p><img alt="Traversal Diagram" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2624.Snail%20Traversal/images/screen-shot-2023-04-10-at-100006-pm.png" style="width: 275px; height: 343px;" /></p>
+<p><img alt="Traversal Diagram" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2624.Snail%20Traversal/images/screen-shot-2023-04-10-at-100006-pm.png" style="width: 275px; height: 343px;" /></p>
 
 <p><b>示例 1：</b></p>
 

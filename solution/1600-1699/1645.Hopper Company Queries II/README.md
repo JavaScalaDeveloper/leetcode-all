@@ -43,7 +43,7 @@ ride_id是该表的主键。
 </pre>
 
 <p>编写SQL查询以报告2020年每个月的工作驱动因素<strong>百分比</strong>（<code>working_percentage</code>），其中：</p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1645.Hopper%20Company%20Queries%20II/images/codecogseqn.png" style="width: 800px; height: 36px;">
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1645.Hopper%20Company%20Queries%20II/images/codecogseqn.png" style="width: 800px; height: 36px;">
 
 <p><strong>注意：如果一个月内可用驾驶员的数量为零，我们认为</strong><code>working_percentage</code><strong>为<code>0</code>。</strong></p>
 

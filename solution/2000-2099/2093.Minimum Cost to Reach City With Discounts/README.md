@@ -9,7 +9,7 @@
 <p>返回从城市<code>0</code><em>&nbsp;</em>前往城市<em>&nbsp;</em><code>n - 1</code>&nbsp;的<em><strong> </strong></em><strong>最小费用</strong><em><strong> 。</strong></em>如果不存在从城市<code>0</code><em>&nbsp;</em>前往城市<em>&nbsp;</em><code>n - 1</code>&nbsp;的路径，返回&nbsp;<code>-1</code>&nbsp;。</p>
 
 <p><strong>示例 1：</strong><br />
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2093.Minimum%20Cost%20to%20Reach%20City%20With%20Discounts/images/image-20211129222429-1.png" style="height: 250px; width: 404px;" /></p>
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2093.Minimum%20Cost%20to%20Reach%20City%20With%20Discounts/images/image-20211129222429-1.png" style="height: 250px; width: 404px;" /></p>
 
 <pre>
 <strong>输入：</strong>n = 5, highways = [[0,1,4],[2,1,3],[1,4,11],[3,2,3],[3,4,2]], discounts = 1
@@ -21,7 +21,7 @@
 </pre>
 
 <p><strong>示例 2：</strong><br />
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2093.Minimum%20Cost%20to%20Reach%20City%20With%20Discounts/images/image-20211129222650-4.png" style="width: 284px; height: 250px;" /></p>
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2093.Minimum%20Cost%20to%20Reach%20City%20With%20Discounts/images/image-20211129222650-4.png" style="width: 284px; height: 250px;" /></p>
 
 <pre>
 <strong>输入：</strong>n = 4, highways = [[1,3,17],[1,2,7],[3,2,5],[0,1,6],[3,0,20]], discounts = 20
@@ -34,7 +34,7 @@
 </pre>
 
 <p><strong>示例 3：</strong><br />
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2093.Minimum%20Cost%20to%20Reach%20City%20With%20Discounts/images/image-20211129222531-3.png" style="width: 275px; height: 250px;" /></p>
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2093.Minimum%20Cost%20to%20Reach%20City%20With%20Discounts/images/image-20211129222531-3.png" style="width: 275px; height: 250px;" /></p>
 
 <pre>
 <strong>输入：</strong>n = 4, highways = [[0,1,3],[2,3,2]], discounts = 0

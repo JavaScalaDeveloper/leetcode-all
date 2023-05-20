@@ -11,7 +11,7 @@
 <p>返回 <strong>边积分</strong> 最高的节点。如果多个节点的 <strong>边积分</strong> 相同，返回编号 <strong>最小</strong> 的那个。</p>
 
 <p><strong>示例 1：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2374.Node%20With%20Highest%20Edge%20Score/images/image-20220620195403-1.png" style="width: 450px; height: 260px;">
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2374.Node%20With%20Highest%20Edge%20Score/images/image-20220620195403-1.png" style="width: 450px; height: 260px;">
 <pre><strong>输入：</strong>edges = [1,0,0,0,0,7,7,5]
 <strong>输出：</strong>7
 <strong>解释：</strong>
@@ -23,7 +23,7 @@
 </pre>
 
 <p><strong>示例 2：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2374.Node%20With%20Highest%20Edge%20Score/images/image-20220620200212-3.png" style="width: 150px; height: 155px;">
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2374.Node%20With%20Highest%20Edge%20Score/images/image-20220620200212-3.png" style="width: 150px; height: 155px;">
 <pre><strong>输入：</strong>edges = [2,0,0,2]
 <strong>输出：</strong>0
 <strong>解释：

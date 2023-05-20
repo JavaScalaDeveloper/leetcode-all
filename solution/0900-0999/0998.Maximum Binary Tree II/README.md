@@ -24,7 +24,7 @@
 
 <p><strong>示例 1：</strong></p>
 
-<p><strong><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-1-1.png" style="height: 160px; width: 159px;" /><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-1-2.png" style="height: 160px; width: 169px;" /></strong></p>
+<p><strong><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-1-1.png" style="height: 160px; width: 159px;" /><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-1-2.png" style="height: 160px; width: 169px;" /></strong></p>
 
 <pre>
 <strong>输入：</strong>root = [4,1,3,null,null,2], val = 5
@@ -32,7 +32,7 @@
 <strong>解释：</strong>a = [1,4,2,3], b = [1,4,2,3,5]</pre>
 
 <p><strong>示例 2：<br />
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-2-1.png" style="height: 160px; width: 180px;" /><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-2-2.png" style="height: 160px; width: 214px;" /></strong></p>
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-2-1.png" style="height: 160px; width: 180px;" /><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-2-2.png" style="height: 160px; width: 214px;" /></strong></p>
 
 <pre>
 <strong>输入：</strong>root = [5,2,4,null,1], val = 3
@@ -40,7 +40,7 @@
 <strong>解释：</strong>a = [2,1,5,4], b = [2,1,5,4,3]</pre>
 
 <p><strong>示例 3：<br />
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-3-1.png" style="height: 160px; width: 180px;" /><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-3-2.png" style="height: 160px; width: 201px;" /></strong></p>
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-3-1.png" style="height: 160px; width: 180px;" /><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/images/maximum-binary-tree-3-2.png" style="height: 160px; width: 201px;" /></strong></p>
 
 <pre>
 <strong>输入：</strong>root = [5,2,3,null,1], val = 4

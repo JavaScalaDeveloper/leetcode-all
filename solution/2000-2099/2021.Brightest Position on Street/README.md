@@ -9,7 +9,7 @@
 <p>给出&nbsp;<code>lights</code>, 返回<strong>最亮</strong>的位置&nbsp;。如果有很多，返回坐标最小的。</p>
 
 <p><strong>示例 1:</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2021.Brightest%20Position%20on%20Street/images/image-20210928155140-1.png" style="width: 700px; height: 165px;">
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2021.Brightest%20Position%20on%20Street/images/image-20210928155140-1.png" style="width: 700px; height: 165px;">
 <pre><strong>输入:</strong> lights = [[-3,2],[1,2],[3,3]]
 <strong>输出:</strong> -1
 <strong>解释:</strong>

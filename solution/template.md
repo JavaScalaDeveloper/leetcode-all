@@ -50,8 +50,8 @@ Press <kbd>Control</kbd>+<kbd>F</kbd>(or <kbd>Command</kbd>+<kbd>F</kbd> on the 
 
 | 段位 | 比例 | 段位名   | 国服分数线  | 勋章                                                                                                                    |
 | ---- | ---- | -------- | ----------- | ----------------------------------------------------------------------------------------------------------------------- |
-| LV3  | 5%   | Guardian | &ge;2251.88 | <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/images/Guardian.gif" style="width: 80px;" /></p> |
-| LV2  | 20%  | Knight   | &ge;1879.80 | <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/images/Knight.gif" style="width: 80px;" /></p>   |
+| LV3  | 5%   | Guardian | &ge;2251.88 | <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/images/Guardian.gif" style="width: 80px;" /></p> |
+| LV2  | 20%  | Knight   | &ge;1879.80 | <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/images/Knight.gif" style="width: 80px;" /></p>   |
 | LV1  | 75%  | -        | -           | -                                                                                                                       |
 
 力扣竞赛 **全国排名前 10** 的用户，全站用户名展示为品牌橙色。
@@ -86,8 +86,8 @@ If you are in the top 25% of the contest rating, you’ll get the “Knight” b
 
 | Level | Proportion | Badge    | Rating      |                                                                                                                         |
 | ----- | ---------- | -------- | ----------- | ----------------------------------------------------------------------------------------------------------------------- |
-| LV3   | 5\%        | Guardian | &ge;2228.90 | <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/images/Guardian.gif" style="width: 80px;" /></p> |
-| LV2   | 20\%       | Knight   | &ge;1842.73 | <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/images/Knight.gif" style="width: 80px;" /></p>   |
+| LV3   | 5\%        | Guardian | &ge;2228.90 | <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/images/Guardian.gif" style="width: 80px;" /></p> |
+| LV2   | 20\%       | Knight   | &ge;1842.73 | <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/images/Knight.gif" style="width: 80px;" /></p>   |
 | LV1   | 75\%       | -        | -           | -                                                                                                                       |
 
 For top 10 users (excluding LCCN users), your LeetCode ID will be colored orange on the ranking board. You'll also have the honor with you when you post/comment under discuss.

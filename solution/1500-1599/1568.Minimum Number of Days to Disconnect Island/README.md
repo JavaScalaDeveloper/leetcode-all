@@ -11,7 +11,7 @@
 <p>返回使陆地分离的最少天数。</p>
 
 <p><strong class="example">示例 1：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1568.Minimum%20Number%20of%20Days%20to%20Disconnect%20Island/images/land1.jpg" style="width: 500px; height: 169px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1568.Minimum%20Number%20of%20Days%20to%20Disconnect%20Island/images/land1.jpg" style="width: 500px; height: 169px;" />
 <pre>
 <strong>输入：</strong>grid = [[0,1,1,0],[0,1,1,0],[0,0,0,0]]
 <strong>输出：</strong>2
@@ -19,7 +19,7 @@
 将陆地 grid[1][1] 和 grid[0][2] 更改为水，得到两个分离的岛屿。</pre>
 
 <p><strong class="example">示例 2：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1568.Minimum%20Number%20of%20Days%20to%20Disconnect%20Island/images/land2.jpg" style="width: 404px; height: 85px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1568.Minimum%20Number%20of%20Days%20to%20Disconnect%20Island/images/land2.jpg" style="width: 404px; height: 85px;" />
 <pre>
 <strong>输入：</strong>grid = [[1,1]]
 <strong>输出：</strong>2

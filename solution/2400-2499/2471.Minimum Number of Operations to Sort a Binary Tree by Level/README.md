@@ -11,7 +11,7 @@
 <p>节点的 <strong>层数</strong> 是该节点和根节点之间的路径的边数。</p>
 
 <p><strong>示例 1 ：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2471.Minimum%20Number%20of%20Operations%20to%20Sort%20a%20Binary%20Tree%20by%20Level/images/image-20220918174006-2.png" style="width: 500px; height: 324px;">
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2471.Minimum%20Number%20of%20Operations%20to%20Sort%20a%20Binary%20Tree%20by%20Level/images/image-20220918174006-2.png" style="width: 500px; height: 324px;">
 <pre><strong>输入：</strong>root = [1,4,3,7,6,8,5,null,null,null,null,9,null,10]
 <strong>输出：</strong>3
 <strong>解释：</strong>
@@ -23,7 +23,7 @@
 </pre>
 
 <p><strong>示例 2 ：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2471.Minimum%20Number%20of%20Operations%20to%20Sort%20a%20Binary%20Tree%20by%20Level/images/image-20220918174026-3.png" style="width: 400px; height: 303px;">
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2471.Minimum%20Number%20of%20Operations%20to%20Sort%20a%20Binary%20Tree%20by%20Level/images/image-20220918174026-3.png" style="width: 400px; height: 303px;">
 <pre><strong>输入：</strong>root = [1,3,2,7,6,5,4]
 <strong>输出：</strong>3
 <strong>解释：
@@ -35,7 +35,7 @@
 </pre>
 
 <p><strong>示例 3 ：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2471.Minimum%20Number%20of%20Operations%20to%20Sort%20a%20Binary%20Tree%20by%20Level/images/image-20220918174052-4.png" style="width: 400px; height: 274px;">
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2471.Minimum%20Number%20of%20Operations%20to%20Sort%20a%20Binary%20Tree%20by%20Level/images/image-20220918174052-4.png" style="width: 400px; height: 274px;">
 <pre><strong>输入：</strong>root = [1,2,3,4,5,6]
 <strong>输出：</strong>0
 <strong>解释：</strong>每一层已经按递增顺序排序，所以返回 0 。

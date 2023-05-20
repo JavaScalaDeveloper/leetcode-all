@@ -7,7 +7,7 @@
 <p>根据<a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor" target="_blank">维基百科中对最近公共祖先节点的定义</a>：“两个节点 <code>p</code> 和 <code>q</code> 在二叉树 <code>T</code> 中的最近公共祖先节点是<strong> 后代节点 </strong>中既包括 <code>p</code>&nbsp;又包括&nbsp;<code>q</code>&nbsp;的最深节点（我们允许<strong> 一个节点为自身的一个后代节点 </strong>）”。一个节点 <code>x</code>&nbsp;的<strong> 后代节点 </strong>是节点&nbsp;<code>x</code> 到某一叶节点间的路径中的节点 <code>y</code>。</p>
 
 <p><strong>示例 1:</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1644.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20II/images/binarytree.png" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1644.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20II/images/binarytree.png" />
 <pre>
 <b>输入：</b> root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
 <b>输出：</b> 3
@@ -15,7 +15,7 @@
 
 <p><strong>示例 2:</strong></p>
 
-<p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1644.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20II/images/binarytree.png" /></p>
+<p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1644.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20II/images/binarytree.png" /></p>
 
 <pre>
 <b>输入：</b> root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
@@ -24,7 +24,7 @@
 
 <p><strong>示例 3:</strong></p>
 
-<p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1644.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20II/images/binarytree.png" /></p>
+<p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1644.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20II/images/binarytree.png" /></p>
 
 <pre>
 <strong>输入：</strong> root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 10

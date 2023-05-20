@@ -9,7 +9,7 @@
 <p>请你返回建造坚实的砖墙的方法数，由于答案可能很大，需要对 <code>10<sup>9</sup> + 7</code><strong> 取余</strong> 。</p>
 
 <p><strong>示例 1：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2184.Number%20of%20Ways%20to%20Build%20Sturdy%20Brick%20Wall/images/image-20220220190749-1.png" style="width: 919px; height: 250px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2184.Number%20of%20Ways%20to%20Build%20Sturdy%20Brick%20Wall/images/image-20220220190749-1.png" style="width: 919px; height: 250px;" />
 <pre>
 <strong>输入：</strong>height = 2, width = 3, bricks = [1,2]
 <strong>输出：</strong>2

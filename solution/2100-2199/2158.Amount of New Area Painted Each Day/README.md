@@ -9,7 +9,7 @@
 <p>返回一个长度为 <code>n</code> 的整数数组 <code>worklog</code>，其中 <code>worklog[i]</code> 是你在第 <code>i</code> 天绘制的<strong> 新 </strong>区域的数量。</p>
 
 <p><strong>示例 1：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2158.Amount%20of%20New%20Area%20Painted%20Each%20Day/images/screenshot-2022-02-01-at-17-16-16-diagram-drawio-diagrams-net.png" style="height: 300px; width: 620px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2158.Amount%20of%20New%20Area%20Painted%20Each%20Day/images/screenshot-2022-02-01-at-17-16-16-diagram-drawio-diagrams-net.png" style="height: 300px; width: 620px;" />
 <pre>
 <strong>输入：</strong>paint = [[1,4],[4,7],[5,8]]
 <strong>输出：</strong>[3,3,1]
@@ -24,7 +24,7 @@
 </pre>
 
 <p><strong>示例&nbsp;2：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2158.Amount%20of%20New%20Area%20Painted%20Each%20Day/images/screenshot-2022-02-01-at-17-17-45-diagram-drawio-diagrams-net.png" style="width: 604px; height: 300px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2158.Amount%20of%20New%20Area%20Painted%20Each%20Day/images/screenshot-2022-02-01-at-17-17-45-diagram-drawio-diagrams-net.png" style="width: 604px; height: 300px;" />
 <pre>
 <strong>输入：</strong>paint = [[1,4],[5,8],[4,7]]
 <strong>输出：</strong>[3,3,1]
@@ -39,7 +39,7 @@
 </pre>
 
 <p><strong>示例&nbsp;3：</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2158.Amount%20of%20New%20Area%20Painted%20Each%20Day/images/screenshot-2022-02-01-at-17-19-49-diagram-drawio-diagrams-net.png" style="width: 423px; height: 275px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2158.Amount%20of%20New%20Area%20Painted%20Each%20Day/images/screenshot-2022-02-01-at-17-19-49-diagram-drawio-diagrams-net.png" style="width: 423px; height: 275px;" />
 <pre>
 <strong>输入：</strong>paint = [[1,5],[2,4]]
 <strong>输出：</strong>[4,0]

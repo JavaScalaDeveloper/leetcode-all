@@ -30,7 +30,7 @@
 <p><strong>半开区间&nbsp;</strong><code>[a, b)</code>&nbsp;是数轴上点&nbsp;<code>a</code> 和点&nbsp;<code>b</code>&nbsp;之间的部分，<strong>包含 </strong>点&nbsp;<code>a</code>&nbsp;且 <strong>不包含</strong>&nbsp;点&nbsp;<code>b</code>&nbsp;。</p>
 
 <p><strong>示例 1：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1943.Describe%20the%20Painting/images/1.png" style="width: 529px; height: 241px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1943.Describe%20the%20Painting/images/1.png" style="width: 529px; height: 241px;" />
 <pre>
 <b>输入：</b>segments = [[1,4,5],[4,7,7],[1,7,9]]
 <b>输出：</b>[[1,4,14],[4,7,16]]
@@ -40,7 +40,7 @@
 </pre>
 
 <p><strong>示例 2：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1943.Describe%20the%20Painting/images/2.png" style="width: 532px; height: 219px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1943.Describe%20the%20Painting/images/2.png" style="width: 532px; height: 219px;" />
 <pre>
 <b>输入：</b>segments = [[1,7,9],[6,8,15],[8,10,7]]
 <b>输出：</b>[[1,6,9],[6,7,24],[7,8,15],[8,10,7]]
@@ -52,7 +52,7 @@
 </pre>
 
 <p><strong>示例 3：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1943.Describe%20the%20Painting/images/c1.png" style="width: 529px; height: 289px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1943.Describe%20the%20Painting/images/c1.png" style="width: 529px; height: 289px;" />
 <pre>
 <b>输入：</b>segments = [[1,4,5],[1,4,7],[4,7,1],[4,7,11]]
 <b>输出：</b>[[1,4,12],[4,7,12]]

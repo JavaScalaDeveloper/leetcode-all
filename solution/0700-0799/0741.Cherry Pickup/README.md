@@ -20,7 +20,7 @@
 </ul>
 
 <p><strong>示例 1：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0700-0799/0741.Cherry%20Pickup/images/grid.jpg" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0700-0799/0741.Cherry%20Pickup/images/grid.jpg" />
 <pre>
 <b>输入：</b>grid = [[0,1,-1],[1,0,-1],[1,1,1]]
 <b>输出：</b>5

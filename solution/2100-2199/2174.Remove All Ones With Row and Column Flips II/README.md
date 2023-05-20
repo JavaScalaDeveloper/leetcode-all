@@ -17,7 +17,7 @@
 <p>返回<em>从&nbsp;</em><code>grid</code><em> 中删除所有 <code>1</code> 所需的最小操作数。</em></p>
 
 <p><strong class="example">示例 1:</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2174.Remove%20All%20Ones%20With%20Row%20and%20Column%20Flips%20II/images/image-20220213162716-1.png" style="width: 709px; height: 200px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2174.Remove%20All%20Ones%20With%20Row%20and%20Column%20Flips%20II/images/image-20220213162716-1.png" style="width: 709px; height: 200px;" />
 <pre>
 <strong>输入:</strong> grid = [[1,1,1],[1,1,1],[0,1,0]]
 <strong>输出:</strong> 2
@@ -27,7 +27,7 @@
 </pre>
 
 <p><strong class="example">示例 2:</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2174.Remove%20All%20Ones%20With%20Row%20and%20Column%20Flips%20II/images/image-20220213162737-2.png" style="width: 734px; height: 200px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2174.Remove%20All%20Ones%20With%20Row%20and%20Column%20Flips%20II/images/image-20220213162737-2.png" style="width: 734px; height: 200px;" />
 <pre>
 <strong>输入:</strong> grid = [[0,1,0],[1,0,1],[0,1,0]]
 <strong>输出:</strong> 2
@@ -38,7 +38,7 @@
 </pre>
 
 <p><strong class="example">示例 3:</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2174.Remove%20All%20Ones%20With%20Row%20and%20Column%20Flips%20II/images/image-20220213162752-3.png" style="width: 156px; height: 150px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2174.Remove%20All%20Ones%20With%20Row%20and%20Column%20Flips%20II/images/image-20220213162752-3.png" style="width: 156px; height: 150px;" />
 <pre>
 <strong>输入:</strong> grid = [[0,0],[0,0]]
 <strong>输出:</strong> 0

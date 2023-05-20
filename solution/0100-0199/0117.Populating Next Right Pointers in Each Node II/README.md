@@ -17,7 +17,7 @@ struct Node {
 <p>初始状态下，所有&nbsp;next 指针都被设置为 <code>NULL</code> 。</p>
 
 <p><strong>示例 1：</strong></p>
-<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0117.Populating%20Next%20Right%20Pointers%20in%20Each%20Node%20II/images/117_sample.png" style="width: 500px; height: 171px;" />
+<img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0117.Populating%20Next%20Right%20Pointers%20in%20Each%20Node%20II/images/117_sample.png" style="width: 500px; height: 171px;" />
 <pre>
 <strong>输入</strong>：root = [1,2,3,4,5,null,7]
 <strong>输出：</strong>[1,#,2,3,#,4,5,7,#]

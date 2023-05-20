@@ -9,7 +9,7 @@
 <p>返回<em>长度为 <code>m</code> 的整数数组 </em><code>answer</code><em>，其中 </em><code>answer[i]</code>&nbsp;<em>是第 <code>i</code> 个查询的答案。</em></p>
 
 <p><strong class="example">示例 1:</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2277.Closest%20Node%20to%20Path%20in%20Tree/images/image-20220514132158-1.png" style="width: 300px; height: 211px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2277.Closest%20Node%20to%20Path%20in%20Tree/images/image-20220514132158-1.png" style="width: 300px; height: 211px;" />
 <pre>
 <strong>输入:</strong> n = 7, edges = [[0,1],[0,2],[0,3],[1,4],[2,5],[2,6]], query = [[5,3,4],[5,3,6]]
 <strong>输出:</strong> [0,2]
@@ -22,7 +22,7 @@
 </pre>
 
 <p><strong class="example">示例 2:</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2277.Closest%20Node%20to%20Path%20in%20Tree/images/image-20220514132318-2.png" style="width: 300px; height: 89px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2277.Closest%20Node%20to%20Path%20in%20Tree/images/image-20220514132318-2.png" style="width: 300px; height: 89px;" />
 <pre>
 <strong>输入:</strong> n = 3, edges = [[0,1],[1,2]], query = [[0,1,2]]
 <strong>输出:</strong> [1]
@@ -33,7 +33,7 @@
 </pre>
 
 <p><strong class="example">示例 3:</strong></p>
-<img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2277.Closest%20Node%20to%20Path%20in%20Tree/images/image-20220514132333-3.png" style="width: 300px; height: 89px;" />
+<img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2277.Closest%20Node%20to%20Path%20in%20Tree/images/image-20220514132333-3.png" style="width: 300px; height: 89px;" />
 <pre>
 <strong>输入:</strong> n = 3, edges = [[0,1],[1,2]], query = [[0,0,0]]
 <strong>输出:</strong> [0]
