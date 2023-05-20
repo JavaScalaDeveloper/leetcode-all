@@ -1,7 +1,5 @@
 # [1486. 数组异或操作](https://leetcode.cn/problems/xor-operation-in-an-array)
 
-[English Version](/solution/1400-1499/1486.XOR%20Operation%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数，<code>n</code> 和 <code>start</code> 。</p>
@@ -9,8 +7,6 @@
 <p>数组 <code>nums</code> 定义为：<code>nums[i] = start + 2*i</code>（下标从 0 开始）且 <code>n == nums.length</code> 。</p>
 
 <p>请返回 <code>nums</code> 中所有元素按位异或（<strong>XOR</strong>）后得到的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <pre><strong>输入：</strong>n = 10, start = 5
 <strong>输出：</strong>2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2090. 半径为 k 的子数组平均值](https://leetcode.cn/problems/k-radius-subarray-averages)
 
-[English Version](/solution/2000-2099/2090.K%20Radius%20Subarray%20Averages/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的数组 <code>nums</code> ，数组中有 <code>n</code> 个整数，另给你一个整数 <code>k</code> 。</p>
@@ -15,8 +13,6 @@
 <ul>
 	<li>例如，四个元素 <code>2</code>、<code>3</code>、<code>1</code> 和 <code>5</code> 的平均值是 <code>(2 + 3 + 1 + 5) / 4 = 11 / 4 = 2.75</code>，截断后得到 <code>2</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@
 <strong>解释：</strong>
 - avg[0] 是 -1 ，因为在下标 0 前后的元素数量均不足 k 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

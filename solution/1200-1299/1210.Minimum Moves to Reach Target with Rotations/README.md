@@ -1,7 +1,5 @@
 # [1210. 穿过迷宫的最少移动次数](https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations)
 
-[English Version](/solution/1200-1299/1210.Minimum%20Moves%20to%20Reach%20Target%20with%20Rotations/README_EN.md)
-
 ## 题目描述
 
 <p>你还记得那条风靡全球的贪吃蛇吗？</p>
@@ -22,8 +20,6 @@
 <p>返回蛇抵达目的地所需的最少移动次数。</p>
 
 <p>如果无法到达目的地，请返回&nbsp;<code>-1</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 &nbsp;              [1,1,1,0,0,0]]
 <strong>输出：</strong>9
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

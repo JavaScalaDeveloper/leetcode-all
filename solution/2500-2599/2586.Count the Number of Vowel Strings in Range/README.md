@@ -1,7 +1,5 @@
 # [2586. 统计范围内的元音字符串数](https://leetcode.cn/problems/count-the-number-of-vowel-strings-in-range)
 
-[English Version](/solution/2500-2599/2586.Count%20the%20Number%20of%20Vowel%20Strings%20in%20Range/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串数组 <code>words</code> 和两个整数：<code>left</code> 和 <code>right</code> 。</p>
@@ -9,8 +7,6 @@
 <p>如果字符串以元音字母开头并以元音字母结尾，那么该字符串就是一个 <strong>元音字符串</strong> ，其中元音字母是 <code>'a'</code>、<code>'e'</code>、<code>'i'</code>、<code>'o'</code>、<code>'u'</code> 。</p>
 
 <p>返回<em> </em><code>words[i]</code> 是元音字符串的数目，其中<em> </em><code>i</code> 在闭区间 <code>[left, right]</code> 内。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 - "artro" 是一个元音字符串，因为它以 'a' 开头并以 'o' 结尾。
 在上述范围中的元音字符串数目为 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

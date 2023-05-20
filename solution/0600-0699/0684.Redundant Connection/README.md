@@ -1,7 +1,5 @@
 # [684. 冗余连接](https://leetcode.cn/problems/redundant-connection)
 
-[English Version](/solution/0600-0699/0684.Redundant%20Connection/README_EN.md)
-
 ## 题目描述
 
 <p>树可以看成是一个连通且 <strong>无环 </strong>的 <strong>无向 </strong>图。</p>

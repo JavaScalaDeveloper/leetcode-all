@@ -1,12 +1,8 @@
 # [1121. 将数组分成几个递增序列](https://leetcode.cn/problems/divide-array-into-increasing-sequences)
 
-[English Version](/solution/1100-1199/1121.Divide%20Array%20Into%20Increasing%20Sequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>非递减</strong> 的正整数数组&nbsp;<code>nums</code>&nbsp;和整数&nbsp;<code>K</code>，判断该数组是否可以被分成一个或几个&nbsp;<strong>长度至少&nbsp;为 </strong><code>K</code><strong> 的 不相交的递增子序列</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>解释：</strong>
 没有办法根据条件来划分数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

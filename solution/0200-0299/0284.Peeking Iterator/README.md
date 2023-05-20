@@ -1,7 +1,5 @@
 # [284. 顶端迭代器](https://leetcode.cn/problems/peeking-iterator)
 
-[English Version](/solution/0200-0299/0284.Peeking%20Iterator/README_EN.md)
-
 ## 题目描述
 
 <p>请你在设计一个迭代器，在集成现有迭代器拥有的&nbsp;<code>hasNext</code> 和 <code>next</code> 操作的基础上，还额外支持 <code>peek</code> 操作。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p><strong>注意：</strong>每种语言可能有不同的构造函数和迭代器&nbsp;<code>Iterator</code>，但均支持 <code>int next()</code> 和 <code>boolean hasNext()</code> 函数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@ peekingIterator.next();    // 返回 3 ，指针移动到下一个元素 [1,2,3]
 peekingIterator.hasNext(); // 返回 False
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -47,8 +41,6 @@ peekingIterator.hasNext(); // 返回 False
 	<li>对 <code>next</code> 和 <code>peek</code> 的调用均有效</li>
 	<li><code>next</code>、<code>hasNext</code> 和 <code>peek </code>最多调用&nbsp; <code>1000</code> 次</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你将如何拓展你的设计？使之变得通用化，从而适应所有的类型，而不只是整数型？</p>
 

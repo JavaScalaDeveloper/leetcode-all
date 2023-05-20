@@ -1,7 +1,5 @@
 # [2424. 最长上传前缀](https://leetcode.cn/problems/longest-uploaded-prefix)
 
-[English Version](/solution/2400-2499/2424.Longest%20Uploaded%20Prefix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个&nbsp;<code>n</code>&nbsp;个视频的上传序列，每个视频编号为&nbsp;<code>1</code>&nbsp;到&nbsp;<code>n</code>&nbsp;之间的 <strong>不同</strong>&nbsp;数字，你需要依次将这些视频上传到服务器。请你实现一个数据结构，在上传的过程中计算 <strong>最长上传前缀</strong>&nbsp;。</p>
@@ -15,8 +13,6 @@
 	<li><code>void upload(int video)</code>&nbsp;上传&nbsp;<code>video</code>&nbsp;到服务器。</li>
 	<li><code>int longest()</code>&nbsp;返回上述定义的 <strong>最长上传前缀</strong>&nbsp;的长度。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@ server.longest();                    // 前缀 [1] 是最长上传前缀，所�
 server.upload(2);                    // 上传视频 2 。
 server.longest();                    // 前缀 [1,2,3] 是最长上传前缀，所以我们返回 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

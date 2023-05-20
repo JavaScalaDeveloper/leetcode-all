@@ -1,7 +1,5 @@
 # [2612. 最少翻转操作数](https://leetcode.cn/problems/minimum-reverse-operations)
 
-[English Version](/solution/2600-2699/2612.Minimum%20Reverse%20Operations/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>n</code>&nbsp;和一个在范围 <code>[0, n - 1]</code>&nbsp;以内的整数&nbsp;<code>p</code>&nbsp;，它们表示一个长度为 <code>n</code> 且下标从 <strong>0</strong>&nbsp;开始的数组&nbsp;<code>arr</code>&nbsp;，数组中除了下标为&nbsp;<code>p</code>&nbsp;处是 <code>1</code>&nbsp;以外，其他所有数都是 <code>0</code>&nbsp;。</p>
@@ -17,8 +15,6 @@
 	<li>对于所有的 <code>i</code>&nbsp;，<code>ans[i]</code>&nbsp;相互之间独立计算。</li>
 	<li>将一个数组中的元素 <strong>翻转</strong> 指的是将数组中的值变成 <strong>相反顺序</strong>&nbsp;。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <b>输出：</b>[-1,-1,0,-1]
 <b>解释：</b>这个例子中，我们只能对长度为 1 的子数组执行翻转操作，所以 1 无法离开初始位置。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

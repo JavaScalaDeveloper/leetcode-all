@@ -1,7 +1,5 @@
 # [91. 解码方法](https://leetcode.cn/problems/decode-ways)
 
-[English Version](/solution/0000-0099/0091.Decode%20Ways/README_EN.md)
-
 ## 题目描述
 
 <p>一条包含字母&nbsp;<code>A-Z</code> 的消息通过以下映射进行了 <strong>编码</strong> ：</p>
@@ -24,8 +22,6 @@
 <p>给你一个只含数字的 <strong>非空 </strong>字符串 <code>s</code> ，请计算并返回 <strong>解码</strong> 方法的 <strong>总数</strong> 。</p>
 
 <p>题目数据保证答案肯定是一个 <strong>32 位</strong> 的整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>"06" 无法映射到 "F" ，因为存在前导零（"6" 和 "06" 并不等价）。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

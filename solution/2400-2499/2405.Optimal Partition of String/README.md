@@ -1,7 +1,5 @@
 # [2405. 子字符串的最优划分](https://leetcode.cn/problems/optimal-partition-of-string)
 
-[English Version](/solution/2400-2499/2405.Optimal%20Partition%20of%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> ，请你将该字符串划分成一个或多个 <strong>子字符串</strong> ，并满足每个子字符串中的字符都是 <strong>唯一</strong> 的。也就是说，在单个子字符串中，字母的出现次数都不超过 <strong>一次</strong> 。</p>
@@ -9,8 +7,6 @@
 <p>满足题目要求的情况下，返回 <strong>最少</strong> 需要划分多少个子字符串<em>。</em></p>
 
 <p>注意，划分后，原字符串中的每个字符都应该恰好属于一个子字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>解释：
 </strong>只存在一种可行的划分方法 ("s","s","s","s","s","s") 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

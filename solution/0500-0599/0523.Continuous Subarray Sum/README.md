@@ -1,7 +1,5 @@
 # [523. 连续的子数组和](https://leetcode.cn/problems/continuous-subarray-sum)
 
-[English Version](/solution/0500-0599/0523.Continuous%20Subarray%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，编写一个函数来判断该数组是否含有同时满足下述条件的连续子数组：</p>

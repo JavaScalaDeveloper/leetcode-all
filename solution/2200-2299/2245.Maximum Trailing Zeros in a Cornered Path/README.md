@@ -1,7 +1,5 @@
 # [2245. 转角路径的乘积中最多能有几个尾随零](https://leetcode.cn/problems/maximum-trailing-zeros-in-a-cornered-path)
 
-[English Version](/solution/2200-2299/2245.Maximum%20Trailing%20Zeros%20in%20a%20Cornered%20Path/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维整数数组 <code>grid</code> ，大小为 <code>m x n</code>，其中每个单元格都含一个正整数。</p>
@@ -18,8 +16,6 @@
 	<li><strong>水平</strong> 移动是指向左或右移动。</li>
 	<li><strong>竖直 </strong>移动是指向上或下移动。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <strong>解释：</strong>网格如上图所示。
 不存在乘积含尾随零的转角路径。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

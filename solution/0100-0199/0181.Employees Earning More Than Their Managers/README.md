@@ -1,7 +1,5 @@
 # [181. 超过经理收入的员工](https://leetcode.cn/problems/employees-earning-more-than-their-managers)
 
-[English Version](/solution/0100-0199/0181.Employees%20Earning%20More%20Than%20Their%20Managers/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Employee</code>&nbsp;</p>
@@ -19,15 +17,11 @@ Id是该表的主键。
 该表的每一行都表示雇员的ID、姓名、工资和经理的ID。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个SQL查询来查找收入比经理高的员工。</p>
 
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

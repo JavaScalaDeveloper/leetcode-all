@@ -1,7 +1,5 @@
 # [1966. 未排序数组中的可被二分搜索的数](https://leetcode.cn/problems/binary-searchable-numbers-in-an-unsorted-array)
 
-[English Version](/solution/1900-1999/1966.Binary%20Searchable%20Numbers%20in%20an%20Unsorted%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>有一个 <strong>类似</strong> <a href="https://leetcode.com/explore/learn/card/binary-search/" target="_blank">二分搜索</a>的方法。 这个方法有两个入参: <code>sequence</code> 是一个整数数组， <code>target</code> 是一个整数。 这个方法可以判断 <code>target</code> 是否存在 <code>sequence</code>中。</p>
@@ -21,8 +19,6 @@ func(sequence, target)
 <p>当 <code>sequence</code> 是排好序时, 这个方法对 <strong>所有</strong> 值都可正常判断。如果&nbsp;<code>sequence</code>&nbsp;不是排好序的, 该方法并不是对所有值都可正常判断, 但对<strong>一些</strong> 值仍可正常判断。</p>
 
 <p>给定一个仅包含<strong>不同</strong>数字的数组 <code>nums</code>表示 <code>sequence</code>， nums<strong>是否排序未知</strong>，对于 <strong>所有可能</strong>的选择, 返回通过这个方法<b>保证</b>能找到的值的数量。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -54,8 +50,6 @@ func(sequence, target)
 因为只有-1 是保证能被找到的, 你应该返回 1.
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -63,8 +57,6 @@ func(sequence, target)
 	<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
 	<li><code>nums</code>&nbsp;中所有值都&nbsp;<b>不同</b>.</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>提升:</strong>&nbsp;如果&nbsp;<code>nums</code> 存在&nbsp;<strong>重复的值</strong>, 你会如何修改你的算法吗?&nbsp;</p>
 

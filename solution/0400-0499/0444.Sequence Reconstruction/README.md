@@ -1,7 +1,5 @@
 # [444. 序列重建](https://leetcode.cn/problems/sequence-reconstruction)
 
-[English Version](/solution/0400-0499/0444.Sequence%20Reconstruction/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，其中 <code>nums</code> 是范围为 <code>[1，n]</code> 的整数的排列。还提供了一个 2D 整数数组&nbsp;<code>sequences</code>&nbsp;，其中&nbsp;<code>sequences[i]</code>&nbsp;是&nbsp;<code>nums</code>&nbsp;的子序列。<br />
@@ -14,8 +12,6 @@
 
 <p><em>如果 <code>nums</code> 是序列的唯一最短 <strong>超序列</strong> ，则返回 <code>true</code> ，否则返回 <code>false</code> 。</em><br />
 <strong>子序列</strong> 是一个可以通过从另一个序列中删除一些元素或不删除任何元素，而不改变其余元素的顺序的序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,8 +44,6 @@
 序列 [1,3] 是它的一个子序列：[<u><strong>1</strong></u>,2,<u><strong>3</strong></u>]。
 序列 [2,3] 是它的一个子序列：[1,<u><strong>2,3</strong></u>]。
 因为 nums 是唯一最短的超序列，所以返回true。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

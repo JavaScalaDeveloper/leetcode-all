@@ -1,7 +1,5 @@
 # [1264. 页面推荐](https://leetcode.cn/problems/page-recommendations)
 
-[English Version](/solution/1200-1299/1264.Page%20Recommendations/README_EN.md)
-
 ## 题目描述
 
 <p>朋友关系列表：&nbsp;<code>Friendship</code></p>
@@ -17,8 +15,6 @@
 这张表的每一行代表着 user1_id 和 user2_id 之间存在着朋友关系。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>喜欢列表：&nbsp;<code>Likes</code></p>
 
 <pre>
@@ -32,15 +28,11 @@
 这张表的每一行代表着 user_id 喜欢 page_id。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一段 SQL &nbsp;向<code>user_id</code> = 1 的用户，推荐其朋友们喜欢的页面。不要推荐该用户已经喜欢的页面。</p>
 
 <p>你返回的结果中不应当包含重复项。</p>
 
 <p>返回结果的格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

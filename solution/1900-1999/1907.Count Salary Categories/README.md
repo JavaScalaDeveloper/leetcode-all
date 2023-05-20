@@ -1,7 +1,5 @@
 # [1907. 按分类统计薪水](https://leetcode.cn/problems/count-salary-categories)
 
-[English Version](/solution/1900-1999/1907.Count%20Salary%20Categories/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Accounts</code></p>
@@ -16,8 +14,6 @@
 account_id&nbsp;是这个表的主键。
 每一行都包含一个银行帐户的月收入的信息。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写出一个&nbsp;SQL&nbsp;查询，来报告每个工资类别的银行账户数量。&nbsp;工资类别如下：</p>
 
@@ -34,8 +30,6 @@ account_id&nbsp;是这个表的主键。
 <p>按 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下示例。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

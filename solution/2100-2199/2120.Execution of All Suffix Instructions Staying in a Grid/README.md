@@ -1,7 +1,5 @@
 # [2120. 执行所有后缀指令](https://leetcode.cn/problems/execution-of-all-suffix-instructions-staying-in-a-grid)
 
-[English Version](/solution/2100-2199/2120.Execution%20of%20All%20Suffix%20Instructions%20Staying%20in%20a%20Grid/README_EN.md)
-
 ## 题目描述
 
 <p>现有一个 <code>n x n</code> 大小的网格，左上角单元格坐标 <code>(0, 0)</code> ，右下角单元格坐标 <code>(n - 1, n - 1)</code> 。给你整数 <code>n</code> 和一个整数数组 <code>startPos</code> ，其中 <code>startPos = [start<sub>row</sub>, start<sub>col</sub>]</code> 表示机器人最开始在坐标为 <code>(start<sub>row</sub>, start<sub>col</sub>)</code> 的单元格上。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>返回一个长度为 <code>m</code> 的数组 <code>answer</code> ，其中 <code>answer[i]</code> 是机器人从第 <code>i</code>&nbsp;条指令 <strong>开始</strong>&nbsp;，可以执行的 <strong>指令数目</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -58,8 +54,6 @@
 <strong>输出：</strong>[0,0,0,0]
 <strong>解释：</strong>无论机器人从哪条指令开始执行，都会移动到网格外。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -108,36 +102,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *executeInstructions(int n, int *startPos, int startPosSize, char *s, int *returnSize) {
-    int m = strlen(s);
-    int *ans = malloc(sizeof(int) * m);
-    for (int i = 0; i < m; i++) {
-        int y = startPos[0];
-        int x = startPos[1];
-        int j = i;
-        for (j = i; j < m; j++) {
-            if (s[j] == 'U') {
-                y--;
-            } else if (s[j] == 'D') {
-                y++;
-            } else if (s[j] == 'L') {
-                x--;
-            } else {
-                x++;
-            }
-            if (y == -1 || y == n || x == -1 || x == n) {
-                break;
-            }
-        }
-        ans[i] = j - i;
-    }
-    *returnSize = m;
-    return ans;
-}
-```
+**

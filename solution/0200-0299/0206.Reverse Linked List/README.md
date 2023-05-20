@@ -1,7 +1,5 @@
 # [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list)
 
-[English Version](/solution/0200-0299/0206.Reverse%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。

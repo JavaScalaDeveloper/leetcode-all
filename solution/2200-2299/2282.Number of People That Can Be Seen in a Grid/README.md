@@ -1,7 +1,5 @@
 # [2282. 在一个网格中可以看到的人数](https://leetcode.cn/problems/number-of-people-that-can-be-seen-in-a-grid)
 
-[English Version](/solution/2200-2299/2282.Number%20of%20People%20That%20Can%20Be%20Seen%20in%20a%20Grid/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个 <code>m x n</code> <strong>下标从 0 开始</strong>的二维正整数数组 <code>heights</code>，其中 <code>heights[i][j]</code> 是站在位置 <code>(i, j)</code>&nbsp;上的人的高度。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>返回<em>一个&nbsp;<code>m x n</code> 的二维整数数组<code>answer</code>，其中&nbsp;<code>answer[i][j]</code>&nbsp;是位于&nbsp;<code>(i, j)</code> 位置的人可以看到的人数。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2282.Number%20of%20People%20That%20Can%20Be%20Seen%20in%20a%20Grid/images/image-20220524180458-1.png" style="width: 700px; height: 164px;" />
@@ -42,8 +38,6 @@
 - (1,1) 上的人可以看到 (2,1) 上的人。
 - (2,0) 上的人可以看到 (2,1) 上的人。
 - (2,1) 上的人看不到任何人。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

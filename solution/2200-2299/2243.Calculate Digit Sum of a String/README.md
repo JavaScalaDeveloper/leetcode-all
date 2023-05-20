@@ -1,7 +1,5 @@
 # [2243. 计算字符串的数字和](https://leetcode.cn/problems/calculate-digit-sum-of-a-string)
 
-[English Version](/solution/2200-2299/2243.Calculate%20Digit%20Sum%20of%20a%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由若干数字（<code>0</code> - <code>9</code>）组成的字符串 <code>s</code> ，和一个整数。</p>
@@ -15,8 +13,6 @@
 </ol>
 
 <p>返回在完成所有轮操作后的 <code>s</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 接着，计算每一组的数字和：0 + 0 + 0 = 0 、0 + 0 + 0 = 0 和 0 + 0 = 0 。 
 s 变为 "0" + "0" + "0" = "000" ，其长度等于 k ，所以返回 "000" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

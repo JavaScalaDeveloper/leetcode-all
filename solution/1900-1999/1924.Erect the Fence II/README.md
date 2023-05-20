@@ -1,7 +1,5 @@
 # [1924. 安装栅栏 II](https://leetcode.cn/problems/erect-the-fence-ii)
 
-[English Version](/solution/1900-1999/1924.Erect%20the%20Fence%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维整数数组&nbsp;<code>trees</code>，其中 <code>trees[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示花园中第 <code>i</code> 棵树的坐标。</p>
@@ -11,8 +9,6 @@
 <p>正式地说，你需要求出栅栏的圆心坐标 <code>(x,y)</code> 和半径 <code>r</code>，使花园中所有的树都在圆的内部或边界上，并且让半径 <code>r</code> <strong>最小</strong>。</p>
 
 <p>请用一个长度为 3 的数组 <code>[x,y,r]</code> 来返回圆心坐标和半径。如果答案与正确答案的误差不超过&nbsp;<code>10<sup>-5</sup></code>，则该答案将被视为正确答案通过。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出:</strong> [2.50000,2.00000,1.50000]
 <strong>解释:</strong> 栅栏的圆心应当在 (2.5, 2) 处，半径为 1.5。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

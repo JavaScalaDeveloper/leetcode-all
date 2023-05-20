@@ -1,7 +1,5 @@
 # [2399. 检查相同字母间的距离](https://leetcode.cn/problems/check-distances-between-same-letters)
 
-[English Version](/solution/2300-2399/2399.Check%20Distances%20Between%20Same%20Letters/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串 <code>s</code> ，该字符串仅由小写英文字母组成，<code>s</code> 中的每个字母都 <strong>恰好</strong> 出现 <strong>两次</strong> 。另给你一个下标从 <strong>0</strong> 开始、长度为 <code>26</code> 的的整数数组 <code>distance</code> 。</p>
@@ -11,8 +9,6 @@
 <p>在一个 <strong>匀整</strong> 字符串中，第 <code>i</code> 个字母的两次出现之间的字母数量是 <code>distance[i]</code> 。如果第 <code>i</code> 个字母没有在 <code>s</code> 中出现，那么 <code>distance[i]</code> 可以 <strong>忽略</strong> 。</p>
 
 <p>如果 <code>s</code> 是一个 <strong>匀整</strong> 字符串，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 - 'a' 在下标 0 和 1 处出现，所以两次出现之间的字母数量为 0 。
 但是 distance[0] = 1 ，s 不是一个匀整字符串。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -73,19 +67,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool checkDistances(char *s, int *distance, int distanceSize) {
-    int n = strlen(s);
-    int d[26] = {0};
-    for (int i = 0; i < n; i++) {
-        int j = s[i] - 'a';
-        if (d[j] > 0 && i - d[j] != distance[j]) {
-            return false;
-        }
-        d[j] = i + 1;
-    }
-    return true;
-}
-```
+**

@@ -1,7 +1,5 @@
 # [2143. 在两个数组的区间中选取数字](https://leetcode.cn/problems/choose-numbers-from-two-arrays-in-range)
 
-[English Version](/solution/2100-2199/2143.Choose%20Numbers%20From%20Two%20Arrays%20in%20Range/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个 <strong>下标从 0 开始</strong>，长度为 <code>n</code> 的整数数组 <code>nums1</code> 和 <code>nums2</code>。</p>
@@ -22,8 +20,6 @@
 </ul>
 
 <p>请返回 <strong>不同</strong> 的平衡的区间数目。由于答案可能很大，请返回答案 <strong>模 </strong><code>10<sup>9</sup>+7</code> 的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -54,8 +50,6 @@
 - [0, 1], 我们选取 nums2[0] 和 nums1[1]。
   从 <code>nums1</code> 中选取的数字和与从 <code>nums2</code> 中选取的数字和相等: 1 = 1。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

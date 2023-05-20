@@ -1,7 +1,5 @@
 # [379. 电话目录管理系统](https://leetcode.cn/problems/design-phone-directory)
 
-[English Version](/solution/0300-0399/0379.Design%20Phone%20Directory/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个电话目录管理系统，让它支持以下功能：</p>
@@ -11,8 +9,6 @@
 	<li><code>check</code>: 检查指定的电话号码是否被使用</li>
 	<li><code>release</code>: 释放掉一个电话号码，使其能够重新被分配</li>
 </ol>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -40,8 +36,6 @@ directory.release(2);
 // 号码 2 现在是未分配状态，所以返回 true。
 directory.check(2);
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

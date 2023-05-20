@@ -1,7 +1,5 @@
 # [580. 统计各专业学生人数](https://leetcode.cn/problems/count-student-number-in-departments)
 
-[English Version](/solution/0500-0599/0580.Count%20Student%20Number%20in%20Departments/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Student</code></p>
@@ -20,8 +18,6 @@ dept_id是Department表中dept_id的外键。
 该表的每一行都表示学生的姓名、性别和所属系的id。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表:&nbsp;<code>Department</code></p>
 
 <pre>
@@ -34,15 +30,11 @@ dept_id是Department表中dept_id的外键。
 Dept_id是该表的主键。
 该表的每一行包含一个部门的id和名称。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个SQL查询，为&nbsp;<code>Department</code>&nbsp;表中的所有部门(甚至是没有当前学生的部门)报告各自的部门名称和每个部门的学生人数。</p>
 
 <p>按 <code>student_number</code> <strong>降序&nbsp;</strong>返回结果表。如果是平局，则按 <code>dept_name</code> 的&nbsp; <strong>字母顺序&nbsp;</strong>排序。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

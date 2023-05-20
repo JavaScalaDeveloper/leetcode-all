@@ -1,7 +1,5 @@
 # [731. 我的日程安排表 II](https://leetcode.cn/problems/my-calendar-ii)
 
-[English Version](/solution/0700-0799/0731.My%20Calendar%20II/README_EN.md)
-
 ## 题目描述
 
 <p>实现一个 <code>MyCalendar</code> 类来存放你的日程安排。如果要添加的时间内不会导致三重预订时，则可以存储这个新的日程安排。</p>
@@ -13,8 +11,6 @@
 <p>每次调用 <code>MyCalendar.book</code>方法时，如果可以将日程安排成功添加到日历中而不会导致三重预订，返回 <code>true</code>。否则，返回 <code>false</code> 并且不要将该日程安排添加到日历中。</p>
 
 <p>请按照以下步骤调用<code>MyCalendar</code> 类: <code>MyCalendar cal = new MyCalendar();</code> <code>MyCalendar.book(start, end)</code></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -32,8 +28,6 @@ MyCalendar.book(25, 55); // returns true
 第六个日程安排（25,55）可以添加至日历中，因为时间 [25,40] 将和第三个日程安排双重预订；
 时间 [40,50] 将单独预订，时间 [50,55）将和第二个日程安排双重预订。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

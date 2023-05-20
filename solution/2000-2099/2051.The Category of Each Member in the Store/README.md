@@ -1,7 +1,5 @@
 # [2051. 商店中每个成员的级别](https://leetcode.cn/problems/the-category-of-each-member-in-the-store)
 
-[English Version](/solution/2000-2099/2051.The%20Category%20of%20Each%20Member%20in%20the%20Store/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Members</code></p>
@@ -16,8 +14,6 @@
 member_id 是该表的主键。
 该表的每一行都表示成员的名称和 ID。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Visits</code></p>
 
@@ -34,8 +30,6 @@ member_id 是 Members 表中 member_id 的外键。
 该表的每一行都包含关于访问商店的日期和访问该商店的成员的信息。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Purchases</code></p>
 
 <pre>
@@ -49,8 +43,6 @@ visit_id 是该表的主键。
 visit_id 是访问表 visit_id 的外键。
 该表的每一行都包含了关于在商店中消费的信息。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>一个商店想对其成员进行分类。有三个层次:</p>
 
@@ -68,8 +60,6 @@ visit_id 是访问表 visit_id 的外键。
 <p data-group="1-1">以&nbsp;<strong>任意顺序&nbsp;</strong>返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 

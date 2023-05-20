@@ -1,7 +1,5 @@
 # [746. 使用最小花费爬楼梯](https://leetcode.cn/problems/min-cost-climbing-stairs)
 
-[English Version](/solution/0700-0799/0746.Min%20Cost%20Climbing%20Stairs/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>cost</code> ，其中 <code>cost[i]</code> 是从楼梯第 <code>i</code> 个台阶向上爬需要支付的费用。一旦你支付此费用，即可选择向上爬一个或者两个台阶。</p>
@@ -9,8 +7,6 @@
 <p>你可以选择从下标为 <code>0</code> 或下标为 <code>1</code> 的台阶开始爬楼梯。</p>
 
 <p>请你计算并返回达到楼梯顶部的最低花费。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 - 支付 1 ，向上爬一个台阶，到达楼梯顶部。
 总花费为 6 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

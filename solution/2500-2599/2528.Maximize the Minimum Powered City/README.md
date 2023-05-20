@@ -1,7 +1,5 @@
 # [2528. 最大化城市的最小供电站数目](https://leetcode.cn/problems/maximize-the-minimum-powered-city)
 
-[English Version](/solution/2500-2599/2528.Maximize%20the%20Minimum%20Powered%20City/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始长度为 <code>n</code>&nbsp;的整数数组&nbsp;<code>stations</code>&nbsp;，其中&nbsp;<code>stations[i]</code>&nbsp;表示第 <code>i</code>&nbsp;座城市的供电站数目。</p>
@@ -19,8 +17,6 @@
 <p>给你两个整数&nbsp;<code>r</code> 和&nbsp;<code>k</code>&nbsp;，如果以最优策略建造额外的发电站，返回所有城市中，最小供电站数目的最大值是多少。</p>
 
 <p>这 <code>k</code>&nbsp;座供电站可以建在多个城市。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <b>解释：</b>
 无论如何安排，总有一座城市的供电站数目是 4 ，所以最优解是 4 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

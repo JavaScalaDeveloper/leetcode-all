@@ -1,7 +1,5 @@
 # [2118. 建立方程](https://leetcode.cn/problems/build-the-equation)
 
-[English Version](/solution/2100-2199/2118.Build%20the%20Equation/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Terms</code></p>
@@ -18,8 +16,6 @@ power 是该表的主键。
 power 为范围为 [0, 100] 的整数。
 factor 为范围为 [-100,100] 的整数，不能为零。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>你有一个非常强大的程序，可以解决世界上任何一个变量的方程。传递给程序的方程必须格式化如下:</p>
 
@@ -49,8 +45,6 @@ factor 为范围为 [-100,100] 的整数，不能为零。
 <p data-group="1-1">编写一个 SQL 查询来构建方程。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -91,8 +85,6 @@ Terms 表:
 | -4X^4+1X^2-1X=0 |
 +-----------------+
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>扩展:</strong> 如果幂函数不是主键，但每个幂函数在答案中都是唯一的，那么解决方案中将改变什么?</p>
 

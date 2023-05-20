@@ -1,7 +1,5 @@
 # [2666. 只允许一次函数调用](https://leetcode.cn/problems/allow-one-function-call)
 
-[English Version](/solution/2600-2699/2666.Allow%20One%20Function%20Call/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个函数 <code>fn</code> ，它返回一个新的函数，返回的函数与原始函数完全相同，只不过它确保 <code>fn</code> 最多被调用一次。</p>
@@ -10,8 +8,6 @@
 	<li>第一次调用返回的函数时，它应该返回与 <code>fn</code> 相同的结果。</li>
 	<li>第一次后的每次调用，它应该返回 <code>undefined</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -35,8 +31,6 @@ onceFn(5, 7, 4); // 140
 onceFn(2, 3, 6); // undefined, fn 没有被调用
 onceFn(4, 6, 8); // undefined, fn 没有被调用
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

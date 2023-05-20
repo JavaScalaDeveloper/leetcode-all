@@ -1,7 +1,5 @@
 # [1235. 规划兼职工作](https://leetcode.cn/problems/maximum-profit-in-job-scheduling)
 
-[English Version](/solution/1200-1299/1235.Maximum%20Profit%20in%20Job%20Scheduling/README_EN.md)
-
 ## 题目描述
 
 <p>你打算利用空闲时间来做兼职工作赚些零花钱。</p>
@@ -13,8 +11,6 @@
 <p>注意，时间上出现重叠的 2 份工作不能同时进行。</p>
 
 <p>如果你选择的工作在时间&nbsp;<code>X</code>&nbsp;结束，那么你可以立刻进行在时间&nbsp;<code>X</code>&nbsp;开始的下一份工作。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 <pre><strong>输入：</strong>startTime = [1,1,1], endTime = [2,3,4], profit = [5,6,4]
 <strong>输出：</strong>6
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

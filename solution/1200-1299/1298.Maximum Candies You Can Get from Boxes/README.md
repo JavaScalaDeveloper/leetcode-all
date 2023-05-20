@@ -1,7 +1,5 @@
 # [1298. 你能从盒子里获得的最大糖果数](https://leetcode.cn/problems/maximum-candies-you-can-get-from-boxes)
 
-[English Version](/solution/1200-1299/1298.Maximum%20Candies%20You%20Can%20Get%20from%20Boxes/README_EN.md)
-
 ## 题目描述
 
 <p>给你&nbsp;<code>n</code>&nbsp;个盒子，每个盒子的格式为&nbsp;<code>[status, candies, keys, containedBoxes]</code>&nbsp;，其中：</p>
@@ -16,8 +14,6 @@
 <p>给你一个&nbsp;<code>initialBoxes</code> 数组，表示你现在得到的盒子，你可以获得里面的糖果，也可以用盒子里的钥匙打开新的盒子，还可以继续探索从这个盒子里找到的其他盒子。</p>
 
 <p>请你按照上述规则，返回可以获得糖果的 <strong>最大数目&nbsp;</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -56,8 +52,6 @@
 <pre><strong>输入：</strong>status = [1,1,1], candies = [2,3,2], keys = [[],[],[]], containedBoxes = [[],[],[]], initialBoxes = [2,1,0]
 <strong>输出：</strong>7
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

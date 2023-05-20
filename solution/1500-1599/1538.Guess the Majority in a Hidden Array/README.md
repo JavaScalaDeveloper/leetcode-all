@@ -1,7 +1,5 @@
 # [1538. 找出隐藏数组中出现次数最多的元素](https://leetcode.cn/problems/guess-the-majority-in-a-hidden-array)
 
-[English Version](/solution/1500-1599/1538.Guess%20the%20Majority%20in%20a%20Hidden%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组&nbsp;<code>nums</code>，且&nbsp;<code>nums</code>&nbsp;中的所有整数都为 <strong>0</strong> 或 <strong>1</strong>。你不能直接访问这个数组，你需要使用&nbsp;API <code>ArrayReader</code>&nbsp;，该 API 含有下列成员函数：</p>
@@ -22,8 +20,6 @@
 <p>你可以调用&nbsp;<code>query()</code>&nbsp;最多&nbsp;<strong>2 * n 次</strong>，其中 n 等于&nbsp;<code>ArrayReader.length()</code>。</p>
 
 <p>返回&nbsp;<code>nums</code>&nbsp;中出现次数最多的值的<strong>任意</strong>索引，若所有的值出现次数均相同，返回&nbsp;-1。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -53,16 +49,12 @@ reader.query(4,5,6,7) // 返回 4，因为 nums[4], nums[5], nums[6], nums[7] �
 <strong>输出:</strong> -1
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
 	<li><code>5 &lt;= nums.length&nbsp;&lt;= 10^5</code></li>
 	<li><code>0 &lt;= nums[i] &lt;= 1</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>要找到出现次数最多的元素，需要至少调用&nbsp;<code>query()</code>&nbsp;多少次？</p>
 

@@ -1,7 +1,5 @@
 # [1526. 形成目标数组的子数组最少增加次数](https://leetcode.cn/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array)
 
-[English Version](/solution/1500-1599/1526.Minimum%20Number%20of%20Increments%20on%20Subarrays%20to%20Form%20a%20Target%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>target</code>&nbsp;和一个数组&nbsp;<code>initial</code>&nbsp;，<code>initial</code>&nbsp;数组与 <code>target</code>&nbsp; 数组有同样的维度，且一开始全部为 0 。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>答案保证在 32 位有符号整数以内。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <pre><strong>输入：</strong>target = [1,1,1,1]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

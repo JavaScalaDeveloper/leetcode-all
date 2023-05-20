@@ -1,7 +1,5 @@
 # [13. 罗马数字转整数](https://leetcode.cn/problems/roman-to-integer)
 
-[English Version](/solution/0000-0099/0013.Roman%20to%20Integer/README_EN.md)
-
 ## 题目描述
 
 <p>罗马数字包含以下七种字符:&nbsp;<code>I</code>，&nbsp;<code>V</code>，&nbsp;<code>X</code>，&nbsp;<code>L</code>，<code>C</code>，<code>D</code>&nbsp;和&nbsp;<code>M</code>。</p>
@@ -27,8 +25,6 @@ M             1000</pre>
 </ul>
 
 <p>给定一个罗马数字，将其转换成整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -62,8 +58,6 @@ M             1000</pre>
 <strong>输入:</strong>&nbsp;s = "MCMXCIV"
 <strong>输出:</strong> 1994
 <strong>解释:</strong> M = 1000, CM = 900, XC = 90, IV = 4.</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

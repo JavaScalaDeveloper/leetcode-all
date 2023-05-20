@@ -1,7 +1,5 @@
 # [528. 按权重随机选择](https://leetcode.cn/problems/random-pick-with-weight)
 
-[English Version](/solution/0500-0599/0528.Random%20Pick%20with%20Weight/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>下标从 0 开始</strong> 的正整数数组&nbsp;<code>w</code> ，其中&nbsp;<code>w[i]</code> 代表第 <code>i</code> 个下标的权重。</p>
@@ -14,8 +12,6 @@
 <ul>
 	<li>例如，对于 <code>w = [1, 3]</code>，挑选下标 <code>0</code> 的概率为 <code>1 / (1 + 3)&nbsp;= 0.25</code> （即，25%），而选取下标 <code>1</code> 的概率为 <code>3 / (1 + 3)&nbsp;= 0.75</code>（即，<code>75%</code>）。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -54,8 +50,6 @@ solution.pickIndex(); // 返回 0，返回下标 0，返回该下标概率为 1/
 ......
 诸若此类。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

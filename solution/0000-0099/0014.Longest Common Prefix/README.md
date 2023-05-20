@@ -1,14 +1,10 @@
 # [14. 最长公共前缀](https://leetcode.cn/problems/longest-common-prefix)
 
-[English Version](/solution/0000-0099/0014.Longest%20Common%20Prefix/README_EN.md)
-
 ## 题目描述
 
 <p>编写一个函数来查找字符串数组中的最长公共前缀。</p>
 
 <p>如果不存在公共前缀，返回空字符串&nbsp;<code>""</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输入：</strong>strs = ["dog","racecar","car"]
 <strong>输出：</strong>""
 <strong>解释：</strong>输入不存在公共前缀。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

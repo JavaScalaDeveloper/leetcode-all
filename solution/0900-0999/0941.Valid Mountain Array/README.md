@@ -1,7 +1,5 @@
 # [941. 有效的山脉数组](https://leetcode.cn/problems/valid-mountain-array)
 
-[English Version](/solution/0900-0999/0941.Valid%20Mountain%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组 <code>arr</code>，如果它是有效的山脉数组就返回&nbsp;<code>true</code>，否则返回 <code>false</code>。</p>
@@ -18,11 +16,7 @@
 	</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0941.Valid%20Mountain%20Array/images/hint_valid_mountain_array.png" style="height: 316px; width: 500px;" /></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +37,6 @@
 <pre>
 <strong>输入：</strong>arr = [0,3,2,1]
 <strong>输出：</strong>true</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2456. 最流行的视频创作者](https://leetcode.cn/problems/most-popular-video-creator)
 
-[English Version](/solution/2400-2499/2456.Most%20Popular%20Video%20Creator/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串数组 <code>creators</code> 和 <code>ids</code> ，和一个整数数组 <code>views</code> ，所有数组的长度都是 <code>n</code> 。平台上第 <code>i</code> 个视频者是&nbsp;<code>creator[i]</code> ，视频分配的 id 是 <code>ids[i]</code> ，且播放量为 <code>views[i]</code> 。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>返回一个二维字符串数组<em> </em><code>answer</code><em> </em>，其中<em> </em><code>answer[i] = [creator<sub>i</sub>, id<sub>i</sub>]</code><em> </em>表示<em> </em><code>creator<sub>i</sub></code> 的流行度 <strong>最高</strong> 且其最流行的视频 id 是<em> </em><code>id<sub>i</sub></code><em> </em>，可以按任何顺序返回该结果<em>。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@ alice 播放量最高的视频 id 是 "one" 和 "three" 。由于 "one" 的字�
 id 为 "b" 和 "c" 的视频都满足播放量最高的条件。
 由于 "b" 的字典序比 "c" 更小，所以结果中返回的 id 是 "b" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

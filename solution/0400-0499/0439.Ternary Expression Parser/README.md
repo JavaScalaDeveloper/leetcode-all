@@ -1,7 +1,5 @@
 # [439. 三元表达式解析器](https://leetcode.cn/problems/ternary-expression-parser)
 
-[English Version](/solution/0400-0499/0439.Ternary%20Expression%20Parser/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个表示任意嵌套三元表达式的字符串&nbsp;<code>expression</code>&nbsp;，求值并返回其结果。</p>
@@ -9,8 +7,6 @@
 <p>你可以总是假设给定的表达式是有效的，并且只包含数字，&nbsp;<code>'?'</code>&nbsp;，&nbsp;&nbsp;<code>':'</code>&nbsp;，&nbsp;&nbsp;<code>'T'</code>&nbsp;和 <code>'F'</code> ，其中 <code>'T'</code> 为真， <code>'F'</code> 为假。表达式中的所有数字都是 <strong>一位</strong> 数(即在 <strong>[0,9] </strong>范围内)。</p>
 
 <p>条件表达式从右到左分组(大多数语言中都是这样)，表达式的结果总是为数字 <code>'T'</code> 或 <code>'F'</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@ or "(F ? 1 : (T ? 4 : 5))" --&gt; "(T ? 4 : 5)" --&gt; "4"
 <strong>解释：</strong> 条件表达式自右向左结合。使用括号的话，相当于：
 "(T ? (T ? F : 5) : 3)" --&gt; "(T ? F : 3)" --&gt; "F"
 "(T ? (T ? F : 5) : 3)" --&gt; "(T ? F : 5)" --&gt; "F"</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

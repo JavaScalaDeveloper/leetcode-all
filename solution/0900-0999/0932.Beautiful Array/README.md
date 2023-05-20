@@ -1,7 +1,5 @@
 # [932. 漂亮数组](https://leetcode.cn/problems/beautiful-array)
 
-[English Version](/solution/0900-0999/0932.Beautiful%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>如果长度为 <code>n</code> 的数组 <code>nums</code> 满足下述条件，则认为该数组是一个 <strong>漂亮数组</strong> ：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>给你整数 <code>n</code> ，返回长度为 <code>n</code> 的任一 <strong>漂亮数组</strong> 。本题保证对于给定的 <code>n</code> 至少存在一个有效答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1 ：</strong></p>
 
@@ -29,15 +25,11 @@
 <strong>输出：</strong>[3,1,2,5,4]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= n &lt;= 1000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

@@ -1,7 +1,5 @@
 # [2388. 将表中的空值更改为前一个值](https://leetcode.cn/problems/change-null-values-in-a-table-to-the-previous-value)
 
-[English Version](/solution/2300-2399/2388.Change%20Null%20Values%20in%20a%20Table%20to%20the%20Previous%20Value/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>CoffeeShop</code></p>
@@ -17,15 +15,11 @@ id 是该表的主键。
 该表中的每一行都显示了订单 id 和所点饮料的名称。一些饮料行为 null。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，将 drink 的 <code>null</code>&nbsp;值替换为前面最近一行不为 <code>null</code>&nbsp;的 drink。保证表第一行的 drink 不为 <code>null</code>。</p>
 
 <p>返回&nbsp;<strong>与输入顺序相同的&nbsp;</strong>结果表。</p>
 
 <p>查询结果格式示例如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 

@@ -1,7 +1,5 @@
 # [1050. 合作过至少三次的演员和导演](https://leetcode.cn/problems/actors-and-directors-who-cooperated-at-least-three-times)
 
-[English Version](/solution/1000-1099/1050.Actors%20and%20Directors%20Who%20Cooperated%20At%20Least%20Three%20Times/README_EN.md)
-
 ## 题目描述
 
 <p><code>ActorDirector</code>&nbsp;表：</p>
@@ -16,8 +14,6 @@
 +-------------+---------+
 timestamp 是这张表的主键.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写一条SQL查询语句获取合作过至少三次的演员和导演的 id 对&nbsp;<code>(actor_id, director_id)</code></p>
 

@@ -1,7 +1,5 @@
 # [500. 键盘行](https://leetcode.cn/problems/keyboard-row)
 
-[English Version](/solution/0500-0599/0500.Keyboard%20Row/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>words</code> ，只返回可以使用在 <strong>美式键盘</strong> 同一行的字母打印出来的单词。键盘如下图所示。</p>

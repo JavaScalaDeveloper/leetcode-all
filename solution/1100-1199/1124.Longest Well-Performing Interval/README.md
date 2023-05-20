@@ -1,7 +1,5 @@
 # [1124. 表现良好的最长时间段](https://leetcode.cn/problems/longest-well-performing-interval)
 
-[English Version](/solution/1100-1199/1124.Longest%20Well-Performing%20Interval/README_EN.md)
-
 ## 题目描述
 
 <p>给你一份工作时间表&nbsp;<code>hours</code>，上面记录着某一位员工每天的工作小时数。</p>
@@ -11,8 +9,6 @@
 <p>所谓「表现良好的时间段」，意味在这段时间内，「劳累的天数」是严格<strong> 大于</strong>「不劳累的天数」。</p>
 
 <p>请你返回「表现良好时间段」的最大长度。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输入：</strong>hours = [6,6,6]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1623. 三人国家代表队](https://leetcode.cn/problems/all-valid-triplets-that-can-represent-a-country)
 
-[English Version](/solution/1600-1699/1623.All%20Valid%20Triplets%20That%20Can%20Represent%20a%20Country/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>SchoolA</code></p>
@@ -18,8 +16,6 @@ student_id 是表的主键
 所有student_name在表中都是独一无二的
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>SchoolB</code></p>
 
 <pre>
@@ -34,8 +30,6 @@ student_id 是表的主键
 所有student_name在表中都是独一无二的
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>SchoolC</code></p>
 
 <pre>
@@ -49,8 +43,6 @@ student_id 是表的主键
 表中的每一行包含了学校C中每一个学生的名字和ID
 所有student_name在表中都是独一无二的
 </pre>
-
-<p>&nbsp;</p>
 
 <p>有一个国家只有三所学校，这个国家的每一个学生只会注册<strong>一所学校</strong>。</p>
 
@@ -70,8 +62,6 @@ student_id 是表的主键
 <p>查询结果接受<strong>任何顺序。</strong></p>
 
 <p>查询结果格式如下例。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

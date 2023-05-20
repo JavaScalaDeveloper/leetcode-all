@@ -1,7 +1,5 @@
 # [1354. 多次求和构造目标数组](https://leetcode.cn/problems/construct-target-array-with-multiple-sums)
 
-[English Version](/solution/1300-1399/1354.Construct%20Target%20Array%20With%20Multiple%20Sums/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>target</code> 。一开始，你有一个数组&nbsp;<code>A</code> ，它的所有元素均为 1 ，你可以执行以下操作：</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>如果能从&nbsp;<code>A</code>&nbsp;开始构造出目标数组&nbsp;<code>target</code>&nbsp;，请你返回 True ，否则返回 False 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <pre><strong>输入：</strong>target = [8,5]
 <strong>输出：</strong>true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

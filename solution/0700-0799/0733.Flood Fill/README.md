@@ -1,7 +1,5 @@
 # [733. 图像渲染](https://leetcode.cn/problems/flood-fill)
 
-[English Version](/solution/0700-0799/0733.Flood%20Fill/README_EN.md)
-
 ## 题目描述
 
 <p>有一幅以&nbsp;<code>m x n</code>&nbsp;的二维整数数组表示的图画&nbsp;<code>image</code>&nbsp;，其中&nbsp;<code>image[i][j]</code>&nbsp;表示该图画的像素值大小。</p>
@@ -11,8 +9,6 @@
 <p>为了完成<strong> 上色工作</strong> ，从初始像素开始，记录初始坐标的 <strong>上下左右四个方向上</strong> 像素值与初始坐标相同的相连像素点，接着再记录这四个方向上符合条件的像素点与他们对应 <strong>四个方向上</strong> 像素值与初始坐标相同的相连像素点，……，重复该过程。将所有有记录的像素点的颜色值改为&nbsp;<code>newColor</code>&nbsp;。</p>
 
 <p>最后返回 <em>经过上色渲染后的图像&nbsp;</em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输入:</strong> image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, newColor = 2
 <strong>输出:</strong> [[2,2,2],[2,2,2]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

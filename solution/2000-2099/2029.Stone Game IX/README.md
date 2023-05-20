@@ -1,7 +1,5 @@
 # [2029. 石子游戏 IX](https://leetcode.cn/problems/stone-game-ix)
 
-[English Version](/solution/2000-2099/2029.Stone%20Game%20IX/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 和 Bob 再次设计了一款新的石子游戏。现有一行 n 个石子，每个石子都有一个关联的数字表示它的价值。给你一个整数数组 <code>stones</code> ，其中 <code>stones[i]</code> 是第 <code>i</code> 个石子的价值。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>假设两位玩家均采用&nbsp;<strong>最佳</strong> 决策。如果 Alice 获胜，返回 <code>true</code> ；如果 Bob 获胜，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 - 回合 5：Alice 可以移除值为 5 的第 1 个石子。已移除石子值总和为 = 1 + 3 + 4 + 2 + 5 = 15.
 Alice 输掉游戏，因为已移除石子值总和（15）可以被 3 整除，Bob 获胜。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

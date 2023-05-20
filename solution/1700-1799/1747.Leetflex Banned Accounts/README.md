@@ -1,7 +1,5 @@
 # [1747. 应该被禁止的 Leetflex 账户](https://leetcode.cn/problems/leetflex-banned-accounts)
 
-[English Version](/solution/1700-1799/1747.Leetflex%20Banned%20Accounts/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>LogInfo</code></p>
@@ -20,15 +18,11 @@
 题目确保每一个注销时间都在登录时间之后。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个SQL查询语句，查找那些应该被禁止的Leetflex帐户编号 <code>account_id</code> 。 如果某个帐户在某一时刻从两个不同的网络地址登录了，则这个帐户应该被禁止。</p>
 
 <p>可以以 <strong>任何顺序 </strong>返回结果。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

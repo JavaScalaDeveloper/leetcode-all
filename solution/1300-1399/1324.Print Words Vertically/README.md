@@ -1,14 +1,10 @@
 # [1324. 竖直打印单词](https://leetcode.cn/problems/print-words-vertically)
 
-[English Version](/solution/1300-1399/1324.Print%20Words%20Vertically/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>。请你按照单词在 <code>s</code> 中的出现顺序将它们全部竖直返回。<br>
 单词应该以字符串列表的形式返回，必要时用空格补位，但输出尾部的空格需要删除（不允许尾随空格）。<br>
 每个单词只能放在一列上，每一列中也只能有一个单词。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <pre><strong>输入：</strong>s = &quot;CONTEST IS COMING&quot;
 <strong>输出：</strong>[&quot;CIC&quot;,&quot;OSO&quot;,&quot;N M&quot;,&quot;T I&quot;,&quot;E N&quot;,&quot;S G&quot;,&quot;T&quot;]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

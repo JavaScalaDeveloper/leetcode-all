@@ -1,7 +1,5 @@
 # [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph)
 
-[English Version](/solution/2300-2399/2360.Longest%20Cycle%20in%20a%20Graph/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>n</code>&nbsp;个节点的 <b>有向图</b>&nbsp;，节点编号为&nbsp;<code>0</code>&nbsp;到&nbsp;<code>n - 1</code>&nbsp;，其中每个节点&nbsp;<strong>至多</strong>&nbsp;有一条出边。</p>
@@ -11,8 +9,6 @@
 <p>请你返回图中的 <strong>最长</strong>&nbsp;环，如果没有任何环，请返回 <code>-1</code>&nbsp;。</p>
 
 <p>一个环指的是起点和终点是 <strong>同一个</strong>&nbsp;节点的路径。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <b>输出：</b>-1
 <b>解释：</b>图中没有任何环。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

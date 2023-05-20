@@ -1,7 +1,5 @@
 # [150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation)
 
-[English Version](/solution/0100-0199/0150.Evaluate%20Reverse%20Polish%20Notation/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>tokens</code> ，表示一个根据&nbsp;<a href="https://baike.baidu.com/item/%E9%80%86%E6%B3%A2%E5%85%B0%E5%BC%8F/128437" target="_blank">逆波兰表示法</a> 表示的算术表达式。</p>
@@ -18,8 +16,6 @@
 	<li>输入是一个根据逆波兰表示法表示的算术表达式。</li>
 	<li>答案及所有中间计算结果可以用 <strong>32 位</strong> 整数表示。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -51,16 +47,12 @@
 = 17 + 5
 = 22</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= tokens.length &lt;= 10<sup>4</sup></code></li>
 	<li><code>tokens[i]</code>&nbsp;是一个算符（<code>"+"</code>、<code>"-"</code>、<code>"*"</code> 或 <code>"/"</code>），或是在范围 <code>[-200, 200]</code> 内的一个整数</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>逆波兰表达式：</strong></p>
 

@@ -1,7 +1,5 @@
 # [676. 实现一个魔法字典](https://leetcode.cn/problems/implement-magic-dictionary)
 
-[English Version](/solution/0600-0699/0676.Implement%20Magic%20Dictionary/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个使用单词列表进行初始化的数据结构，单词列表中的单词 <strong>互不相同</strong> 。 如果给出一个单词，请判定能否只将这个单词中<strong>一个</strong>字母换成另一个字母，使得所形成的新单词存在于你构建的字典中。</p>

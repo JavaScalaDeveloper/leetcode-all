@@ -1,7 +1,5 @@
 # [2414. 最长的字母序连续子字符串的长度](https://leetcode.cn/problems/length-of-the-longest-alphabetical-continuous-substring)
 
-[English Version](/solution/2400-2499/2414.Length%20of%20the%20Longest%20Alphabetical%20Continuous%20Substring/README_EN.md)
-
 ## 题目描述
 
 <p><strong>字母序连续字符串</strong> 是由字母表中连续字母组成的字符串。换句话说，字符串 <code>"abcdefghijklmnopqrstuvwxyz"</code> 的任意子字符串都是 <strong>字母序连续字符串</strong> 。</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>给你一个仅由小写英文字母组成的字符串 <code>s</code> ，返回其 <strong>最长</strong> 的 字母序连续子字符串 的长度。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 <strong>输出：</strong>5
 <strong>解释：</strong>"abcde" 是最长的字母序连续子字符串。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -65,21 +59,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-
-int longestContinuousSubstring(char *s) {
-    int n = strlen(s);
-    int i = 0;
-    int res = 1;
-    for (int j = 1; j < n; j++) {
-        if (s[j] - s[j - 1] != 1) {
-            res = max(res, j - i);
-            i = j;
-        }
-    }
-    return max(res, n - i);
-}
-```
+**

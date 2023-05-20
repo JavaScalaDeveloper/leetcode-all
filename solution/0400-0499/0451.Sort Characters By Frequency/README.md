@@ -1,14 +1,10 @@
 # [451. 根据字符出现频率排序](https://leetcode.cn/problems/sort-characters-by-frequency)
 
-[English Version](/solution/0400-0499/0451.Sort%20Characters%20By%20Frequency/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串 <code>s</code> ，根据字符出现的 <strong>频率</strong> 对其进行 <strong>降序排序</strong> 。一个字符出现的 <strong>频率</strong> 是它出现在字符串中的次数。</p>
 
 <p>返回 <em>已排序的字符串&nbsp;</em>。如果有多个答案，返回其中任何一个。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>解释: </strong>此外，"bbaA"也是一个有效的答案，但"Aabb"是不正确的。
 注意'A'和'a'被认为是两种不同的字符。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [1715. 苹果和橘子的个数](https://leetcode.cn/problems/count-apples-and-oranges)
 
-[English Version](/solution/1700-1799/1715.Count%20Apples%20and%20Oranges/README_EN.md)
-
 ## 题目描述
 
 <p>表：&nbsp;<code>Boxes</code></p>
@@ -19,8 +17,6 @@ box_id 是该表的主键。
 chest_id 是 chests 表的外键。
 该表包含大箱子 (box) 中包含的苹果和橘子的个数。每个大箱子中可能包含一个小盒子 (chest) ，小盒子中也包含若干苹果和橘子。</pre>
 
-<p>&nbsp;</p>
-
 <p>表：&nbsp;<code>Chests</code></p>
 
 <pre>
@@ -34,15 +30,11 @@ chest_id 是 chests 表的外键。
 chest_id 是该表的主键。
 该表包含小盒子的信息，以及小盒子中包含的苹果和橘子的个数。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写 SQL 语句，查询每个大箱子中苹果和橘子的个数。如果大箱子中包含小盒子，还应当包含小盒子中苹果和橘子的个数。</p>
 
 <p>以任意顺序返回结果表。</p>
 
 <p>查询结果的格式如下示例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1:</b></p>
 

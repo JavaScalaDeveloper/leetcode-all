@@ -1,7 +1,5 @@
 # [1914. 循环轮转矩阵](https://leetcode.cn/problems/cyclically-rotating-a-grid)
 
-[English Version](/solution/1900-1999/1914.Cyclically%20Rotating%20a%20Grid/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的整数矩阵 <code>grid</code>​​​ ，其中 <code>m</code> 和 <code>n</code> 都是 <strong>偶数</strong> ；另给你一个整数 <code>k</code> 。</p>

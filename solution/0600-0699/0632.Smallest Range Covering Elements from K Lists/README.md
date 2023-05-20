@@ -1,14 +1,10 @@
 # [632. 最小区间](https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists)
 
-[English Version](/solution/0600-0699/0632.Smallest%20Range%20Covering%20Elements%20from%20K%20Lists/README_EN.md)
-
 ## 题目描述
 
 <p>你有&nbsp;<code>k</code>&nbsp;个 <strong>非递减排列</strong> 的整数列表。找到一个 <strong>最小 </strong>区间，使得&nbsp;<code>k</code>&nbsp;个列表中的每个列表至少有一个数包含在其中。</p>
 
 <p>我们定义如果&nbsp;<code>b-a &lt; d-c</code>&nbsp;或者在&nbsp;<code>b-a == d-c</code>&nbsp;时&nbsp;<code>a &lt; c</code>，则区间 <code>[a,b]</code> 比 <code>[c,d]</code> 小。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 <strong>输出：</strong>[1,1]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -39,8 +33,6 @@
 	<li><code>-10<sup>5</sup> &lt;= nums[i][j] &lt;= 10<sup>5</sup></code></li>
 	<li><code>nums[i]</code> 按非递减顺序排列</li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

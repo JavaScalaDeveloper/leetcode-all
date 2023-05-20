@@ -1,7 +1,5 @@
 # [1463. 摘樱桃 II](https://leetcode.cn/problems/cherry-pickup-ii)
 
-[English Version](/solution/1400-1499/1463.Cherry%20Pickup%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个&nbsp;<code>rows x cols</code> 的矩阵&nbsp;<code>grid</code>&nbsp;来表示一块樱桃地。 <code>grid</code>&nbsp;中每个格子的数字表示你能获得的樱桃数目。</p>
@@ -17,8 +15,6 @@
 	<li>两个机器人在任意时刻都不能移动到 <code>grid</code>&nbsp;外面。</li>
 	<li>两个机器人最后都要到达&nbsp;<code>grid</code>&nbsp;最底下一行。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,8 +51,6 @@
 <pre><strong>输入：</strong>grid = [[1,1],[1,1]]
 <strong>输出：</strong>4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

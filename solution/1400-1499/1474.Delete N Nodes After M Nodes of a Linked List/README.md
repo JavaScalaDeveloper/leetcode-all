@@ -1,7 +1,5 @@
 # [1474. 删除链表 M 个节点之后的 N 个节点](https://leetcode.cn/problems/delete-n-nodes-after-m-nodes-of-a-linked-list)
 
-[English Version](/solution/1400-1499/1474.Delete%20N%20Nodes%20After%20M%20Nodes%20of%20a%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给定链表&nbsp;<code>head</code>&nbsp;和两个整数&nbsp;<code>m</code>&nbsp;和&nbsp;<code>n</code>. 遍历该链表并按照如下方式删除节点:</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>在删除了指定结点之后,&nbsp;返回修改过后的链表的头节点.</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -52,8 +48,6 @@
 <strong>输出:</strong> [9,7,8]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -61,8 +55,6 @@
 	<li><code>1 &lt;= Node.val &lt;= 10<sup>6</sup></code></li>
 	<li><code>1 &lt;= m, n &lt;= 1000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶:</strong> 你能通过<strong> 就地 </strong>修改链表的方式解决这个问题吗?</p>
 

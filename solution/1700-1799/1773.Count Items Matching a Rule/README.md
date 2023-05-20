@@ -1,7 +1,5 @@
 # [1773. 统计匹配检索规则的物品数量](https://leetcode.cn/problems/count-items-matching-a-rule)
 
-[English Version](/solution/1700-1799/1773.Count%20Items%20Matching%20a%20Rule/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>items</code> ，其中 <code>items[i] = [type<sub>i</sub>, color<sub>i</sub>, name<sub>i</sub>]</code> ，描述第 <code>i</code> 件物品的类型、颜色以及名称。</p>
@@ -71,17 +69,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int countMatches(char ***items, int itemsSize, int *itemsColSize, char *ruleKey, char *ruleValue) {
-    int k = strcmp(ruleKey, "type") == 0 ? 0 : strcmp(ruleKey, "color") == 0 ? 1 : 2;
-    int res = 0;
-    for (int i = 0; i < itemsSize; i++) {
-        if (strcmp(items[i][k], ruleValue) == 0) {
-            res++;
-        }
-    }
-    return res;
-}
-```
+**

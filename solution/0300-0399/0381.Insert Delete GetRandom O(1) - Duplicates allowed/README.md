@@ -1,7 +1,5 @@
 # [381. O(1) 时间插入、删除和获取随机元素 - 允许重复](https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed)
 
-[English Version](/solution/0300-0399/0381.Insert%20Delete%20GetRandom%20O%281%29%20-%20Duplicates%20allowed/README_EN.md)
-
 ## 题目描述
 
 <p><code>RandomizedCollection</code> 是一种包含数字集合(可能是重复的)的数据结构。它应该支持插入和删除特定元素，以及删除随机元素。</p>
@@ -18,8 +16,6 @@
 <p>您必须实现类的函数，使每个函数的 <strong>平均</strong> 时间复杂度为 <code>O(1)</code> 。</p>
 
 <p><strong>注意：</strong>生成测试用例时，只有在 <code>RandomizedCollection</code> 中 <strong>至少有一项</strong> 时，才会调用 <code>getRandom</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -44,8 +40,6 @@ collection.getRandom(); // getRandom 应当:
 collection.remove(1);   // 返回 true，因为集合包含 1。
 &nbsp;                       // 从集合中移除 1。集合现在包含 [1,2]。
 collection.getRandom(); // getRandom 应该返回 1 或 2，两者的可能性相同。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

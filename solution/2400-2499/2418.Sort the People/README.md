@@ -1,7 +1,5 @@
 # [2418. 按身高排序](https://leetcode.cn/problems/sort-the-people)
 
-[English Version](/solution/2400-2499/2418.Sort%20the%20People/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>names</code> ，和一个由 <strong>互不相同</strong> 的正整数组成的数组 <code>heights</code> 。两个数组的长度均为 <code>n</code> 。</p>
@@ -9,8 +7,6 @@
 <p>对于每个下标 <code>i</code>，<code>names[i]</code> 和 <code>heights[i]</code> 表示第 <code>i</code> 个人的名字和身高。</p>
 
 <p>请按身高 <strong>降序</strong> 顺序返回对应的名字数组 <code>names</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <strong>输出：</strong>["Bob","Alice","Bob"]
 <strong>解释：</strong>第一个 Bob 最高，然后是 Alice 和第二个 Bob 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

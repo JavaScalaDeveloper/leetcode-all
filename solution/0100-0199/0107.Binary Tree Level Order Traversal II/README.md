@@ -1,12 +1,8 @@
 # [107. 二叉树的层序遍历 II](https://leetcode.cn/problems/binary-tree-level-order-traversal-ii)
 
-[English Version](/solution/0100-0199/0107.Binary%20Tree%20Level%20Order%20Traversal%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你二叉树的根节点 <code>root</code> ，返回其节点值 <strong>自底向上的层序遍历</strong> 。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0107.Binary%20Tree%20Level%20Order%20Traversal%20II/images/tree1.jpg" style="width: 277px; height: 302px;" />
@@ -28,8 +24,6 @@
 <strong>输入：</strong>root = []
 <strong>输出：</strong>[]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [81. 搜索旋转排序数组 II](https://leetcode.cn/problems/search-in-rotated-sorted-array-ii)
 
-[English Version](/solution/0000-0099/0081.Search%20in%20Rotated%20Sorted%20Array%20II/README_EN.md)
-
 ## 题目描述
 
 <p>已知存在一个按非降序排列的整数数组 <code>nums</code> ，数组中的值不必互不相同。</p>
@@ -11,8 +9,6 @@
 <p>给你 <strong>旋转后</strong> 的数组 <code>nums</code> 和一个整数 <code>target</code> ，请你编写一个函数来判断给定的目标值是否存在于数组中。如果 <code>nums</code> 中存在这个目标值 <code>target</code> ，则返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
 
 <p>你必须尽可能减少整个操作步骤。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输入：</strong>nums = [2<code>,5,6,0,0,1,2]</code>, target = 3
 <strong>输出：</strong>false</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -38,16 +32,12 @@
 	<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>进阶：</strong></p>
 
 <ul>
 	<li>这是 <a href="https://leetcode.cn/problems/search-in-rotated-sorted-array/description/">搜索旋转排序数组</a>&nbsp;的延伸题目，本题中的&nbsp;<code>nums</code>&nbsp; 可能包含重复元素。</li>
 	<li>这会影响到程序的时间复杂度吗？会有怎样的影响，为什么？</li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

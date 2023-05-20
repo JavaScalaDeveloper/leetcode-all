@@ -1,7 +1,5 @@
 # [815. 公交路线](https://leetcode.cn/problems/bus-routes)
 
-[English Version](/solution/0800-0899/0815.Bus%20Routes/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>routes</code> ，表示一系列公交线路，其中每个 <code>routes[i]</code> 表示一条公交线路，第 <code>i</code> 辆公交车将会在上面循环行驶。</p>

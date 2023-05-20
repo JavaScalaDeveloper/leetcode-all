@@ -1,7 +1,5 @@
 # [710. 黑名单中的随机数](https://leetcode.cn/problems/random-pick-with-blacklist)
 
-[English Version](/solution/0700-0799/0710.Random%20Pick%20with%20Blacklist/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数 <code>n</code> 和一个 <strong>无重复</strong> 黑名单整数数组&nbsp;<code>blacklist</code>&nbsp;。设计一种算法，从 <code>[0, n - 1]</code> 范围内的任意整数中选取一个&nbsp;<strong>未加入&nbsp;</strong>黑名单&nbsp;<code>blacklist</code>&nbsp;的整数。任何在上述范围内且不在黑名单&nbsp;<code>blacklist</code>&nbsp;中的整数都应该有 <strong>同等的可能性</strong> 被返回。</p>
@@ -14,8 +12,6 @@
 	<li><code>Solution(int n, int[] blacklist)</code>&nbsp;初始化整数 <code>n</code> 和被加入黑名单&nbsp;<code>blacklist</code>&nbsp;的整数</li>
 	<li><code>int pick()</code>&nbsp;返回一个范围为 <code>[0, n - 1]</code> 且不在黑名单&nbsp;<code>blacklist</code> 中的随机整数</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@ solution.pick(); // 返回 1
 solution.pick(); // 返回 0
 solution.pick(); // 返回 4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

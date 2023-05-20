@@ -1,7 +1,5 @@
 # [2591. 将钱分给最多的儿童](https://leetcode.cn/problems/distribute-money-to-maximum-children)
 
-[English Version](/solution/2500-2599/2591.Distribute%20Money%20to%20Maximum%20Children/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>money</code>&nbsp;，表示你总共有的钱数（单位为美元）和另一个整数&nbsp;<code>children</code>&nbsp;，表示你要将钱分配给多少个儿童。</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>请你按照上述规则分配金钱，并返回 <strong>最多</strong>&nbsp;有多少个儿童获得 <strong>恰好</strong><em>&nbsp;</em><code>8</code>&nbsp;美元。如果没有任何分配方案，返回&nbsp;<code>-1</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <b>输出：</b>2
 <b>解释：</b>每个儿童都可以获得 8 美元。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

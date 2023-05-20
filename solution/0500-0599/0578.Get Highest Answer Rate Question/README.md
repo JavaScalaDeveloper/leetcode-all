@@ -1,7 +1,5 @@
 # [578. 查询回答率最高的问题](https://leetcode.cn/problems/get-highest-answer-rate-question)
 
-[English Version](/solution/0500-0599/0578.Get%20Highest%20Answer%20Rate%20Question/README_EN.md)
-
 ## 题目描述
 
 <p><code>SurveyLog</code> 表：</p>
@@ -26,15 +24,11 @@ action 是一个 ENUM 数据，可以是 "show"、"answer" 或者 "skip" 。
 q_num 是该问题在当前会话中的数字顺序。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>回答率</strong> 是指：同一问题编号中回答次数占显示次数的比率。</p>
 
 <p>编写一个 SQL 查询以报告 <strong>回答率</strong> 最高的问题。如果有多个问题具有相同的最大 <strong>回答率</strong> ，返回 <code>question_id</code> 最小的那个。</p>
 
 <p>查询结果如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 

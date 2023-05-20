@@ -1,7 +1,5 @@
 # [66. 加一](https://leetcode.cn/problems/plus-one)
 
-[English Version](/solution/0000-0099/0066.Plus%20One/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个由 <strong>整数 </strong>组成的<strong> 非空</strong> 数组所表示的非负整数，在该数的基础上加一。</p>

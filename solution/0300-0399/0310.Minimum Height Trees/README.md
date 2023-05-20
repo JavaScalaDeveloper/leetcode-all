@@ -1,7 +1,5 @@
 # [310. 最小高度树](https://leetcode.cn/problems/minimum-height-trees)
 
-[English Version](/solution/0300-0399/0310.Minimum%20Height%20Trees/README_EN.md)
-
 ## 题目描述
 
 <p>树是一个无向图，其中任何两个顶点只通过一条路径连接。 换句话说，一个任何没有简单环路的连通图都是一棵树。</p>
@@ -12,8 +10,6 @@
 
 <p>请你找到所有的 <strong>最小高度树</strong> 并按 <strong>任意顺序</strong> 返回它们的根节点标签列表。</p>
 树的 <strong>高度</strong> 是指根节点和叶子节点之间最长向下路径上边的数量。
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0310.Minimum%20Height%20Trees/images/e1.jpg" style="height: 213px; width: 800px;" />
@@ -28,8 +24,6 @@
 <strong>输入：</strong>n = 6, edges = [[3,0],[3,1],[3,2],[3,4],[5,4]]
 <strong>输出：</strong>[3,4]
 </pre>
-
-<p>&nbsp;</p>
 
 <ul>
 </ul>

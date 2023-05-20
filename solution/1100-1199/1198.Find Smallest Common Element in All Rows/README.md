@@ -1,14 +1,10 @@
 # [1198. 找出所有行中最小公共元素](https://leetcode.cn/problems/find-smallest-common-element-in-all-rows)
 
-[English Version](/solution/1100-1199/1198.Find%20Smallest%20Common%20Element%20in%20All%20Rows/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个&nbsp;<code>m x n</code>&nbsp;的矩阵&nbsp;<code>mat</code>，其中每一行的元素均符合&nbsp;<strong>严格递增</strong> 。请返回 <em>所有行中的&nbsp;<strong>最小公共元素</strong>&nbsp;</em>。</p>
 
 <p>如果矩阵中没有这样的公共元素，就请返回&nbsp;<code>-1</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <b>输入：</b>mat = [[1,2,3],[2,3,4],[2,3,5]]
 <strong>输出：</strong> 2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

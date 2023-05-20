@@ -1,7 +1,5 @@
 # [1220. 统计元音字母序列的数目](https://leetcode.cn/problems/count-vowels-permutation)
 
-[English Version](/solution/1200-1299/1220.Count%20Vowels%20Permutation/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>n</code>，请你帮忙统计一下我们可以按下述规则形成多少个长度为&nbsp;<code>n</code>&nbsp;的字符串：</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>由于答案可能会很大，所以请你返回 模&nbsp;<code>10^9 + 7</code>&nbsp;之后的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 
 <pre><strong>输入：</strong>n = 5
 <strong>输出：</strong>68</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

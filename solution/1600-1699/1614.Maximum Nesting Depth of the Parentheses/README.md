@@ -1,7 +1,5 @@
 # [1614. 括号的最大嵌套深度](https://leetcode.cn/problems/maximum-nesting-depth-of-the-parentheses)
 
-[English Version](/solution/1600-1699/1614.Maximum%20Nesting%20Depth%20of%20the%20Parentheses/README_EN.md)
-
 ## 题目描述
 
 <p>如果字符串满足以下条件之一，则可以称之为 <strong>有效括号字符串</strong><strong>（valid parentheses string</strong>，可以简写为 <strong>VPS</strong>）：</p>
@@ -25,8 +23,6 @@
 
 <p>给你一个 <strong>有效括号字符串</strong> <code>s</code>，返回该字符串的<em> </em><code>s</code> <strong>嵌套深度</strong> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -41,8 +37,6 @@
 <strong>输入：</strong>s = "(1)+((2))+(((<strong>3</strong>)))"
 <strong>输出：</strong>3
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

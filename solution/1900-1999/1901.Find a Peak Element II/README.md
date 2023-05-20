@@ -1,7 +1,5 @@
 # [1901. 寻找峰值 II](https://leetcode.cn/problems/find-a-peak-element-ii)
 
-[English Version](/solution/1900-1999/1901.Find%20a%20Peak%20Element%20II/README_EN.md)
-
 ## 题目描述
 
 <p>一个 2D 网格中的 <strong>峰值</strong><strong> </strong>是指那些 <strong>严格大于 </strong>其相邻格子(上、下、左、右)的元素。</p>
@@ -11,10 +9,6 @@
 <p>你可以假设整个矩阵周边环绕着一圈值为 <code>-1</code> 的格子。</p>
 
 <p>要求必须写出时间复杂度为 <code>O(m log(n))</code> 或 <code>O(n log(m))</code> 的算法</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -35,8 +29,6 @@
 <strong>输出:</strong> [1,1]
 <strong>解释:</strong>&nbsp;30 和 32 都是峰值，所以[1,1]和[2,2]都是可接受的答案。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

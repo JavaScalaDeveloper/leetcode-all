@@ -1,7 +1,5 @@
 # [2042. 检查句子中的数字是否递增](https://leetcode.cn/problems/check-if-numbers-are-ascending-in-a-sentence)
 
-[English Version](/solution/2000-2099/2042.Check%20if%20Numbers%20Are%20Ascending%20in%20a%20Sentence/README_EN.md)
-
 ## 题目描述
 
 <p>句子是由若干 <strong>token</strong> 组成的一个列表，<strong>token</strong> 间用 <strong>单个</strong> 空格分隔，句子没有前导或尾随空格。每个 token 要么是一个由数字 <code>0-9</code> 组成的不含前导零的 <strong>正整数</strong>&nbsp;，要么是一个由小写英文字母组成的 <strong>单词</strong> 。</p>
@@ -13,8 +11,6 @@
 <p>给你一个表示句子的字符串 <code>s</code> ，你需要检查 <code>s</code> 中的 <strong>全部</strong> 数字是否从左到右严格递增（即，除了最后一个数字，<code>s</code> 中的 <strong>每个</strong> 数字都严格小于它 <strong>右侧</strong> 的数字）。</p>
 
 <p>如果满足题目要求，返回 <code>true</code>&nbsp;，否则，返回<em> </em><code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -53,8 +49,6 @@
 <strong>解释：</strong>s 中的数字是：4, 5, 11, 26 。
 这些数字是按从左到右严格递增的：4 &lt; 5 &lt; 11 &lt; 26 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -98,28 +92,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool areNumbersAscending(char *s) {
-    int pre = -1;
-    int cur = 0;
-    for (int i = 0; s[i]; i++) {
-        if (isdigit(s[i])) {
-            cur = cur * 10 + s[i] - '0';
-        } else {
-            if (cur != 0) {
-                if (cur <= pre) {
-                    return 0;
-                }
-                pre = cur;
-                cur = 0;
-            }
-        }
-    }
-    if (cur != 0 && cur <= pre) {
-        return 0;
-    }
-    return 1;
-}
-```
+**

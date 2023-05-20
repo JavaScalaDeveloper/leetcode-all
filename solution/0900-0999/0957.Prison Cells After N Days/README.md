@@ -1,7 +1,5 @@
 # [957. N 天后的牢房](https://leetcode.cn/problems/prison-cells-after-n-days)
 
-[English Version](/solution/0900-0999/0957.Prison%20Cells%20After%20N%20Days/README_EN.md)
-
 ## 题目描述
 
 <p>监狱中 <code>8</code> 间牢房排成一排，每间牢房可能被占用或空置。</p>
@@ -18,8 +16,6 @@
 <p>给你一个整数数组 <code>cells</code> ，用于表示牢房的初始状态：如果第 <code>i</code> 间牢房被占用，则 <code>cell[i]==1</code>，否则 <code>cell[i]==0</code> 。另给你一个整数 <code>n</code> 。</p>
 
 <p>请你返回 <code>n</code> 天后监狱的状况（即，按上文描述进行 <code>n</code> 次变更）。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@ Day 7: [0, 0, 1, 1, 0, 0, 0, 0]
 <strong>输入：</strong>cells = [1,0,0,1,0,0,1,0], n = 1000000000
 <strong>输出：</strong>[0,0,1,1,1,1,1,0]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1007. 行相等的最少多米诺旋转](https://leetcode.cn/problems/minimum-domino-rotations-for-equal-row)
 
-[English Version](/solution/1000-1099/1007.Minimum%20Domino%20Rotations%20For%20Equal%20Row/README_EN.md)
-
 ## 题目描述
 
 <p>在一排多米诺骨牌中，<code>tops[i]</code> 和 <code>bottoms[i]</code>&nbsp;分别代表第 <code>i</code> 个多米诺骨牌的上半部分和下半部分。（一个多米诺是两个从 1 到 6 的数字同列平铺形成的&nbsp;—— 该平铺的每一半上都有一个数字。）</p>
@@ -11,8 +9,6 @@
 <p>返回能使 <code>tops</code> 中所有值或者 <code>bottoms</code> 中所有值都相同的最小旋转次数。</p>
 
 <p>如果无法做到，返回&nbsp;<code>-1</code>.</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1007.Minimum%20Domino%20Rotations%20For%20Equal%20Row/images/domino.png" style="height: 300px; width: 421px;" />
@@ -31,8 +27,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong> 在这种情况下，不可能旋转多米诺牌使一行的值相等。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

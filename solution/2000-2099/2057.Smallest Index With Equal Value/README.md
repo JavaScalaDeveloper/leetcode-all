@@ -1,14 +1,10 @@
 # [2057. 值相等的最小索引](https://leetcode.cn/problems/smallest-index-with-equal-value)
 
-[English Version](/solution/2000-2099/2057.Smallest%20Index%20With%20Equal%20Value/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 0 开始的整数数组 <code>nums</code> ，返回 <code>nums</code> 中满足<em> </em><code>i mod 10 == nums[i]</code><em> </em>的最小下标 <code>i</code> ；如果不存在这样的下标，返回<em> </em><code>-1</code><em> </em>。</p>
 
 <p><code>x mod y</code> 表示 <code>x</code> 除以 <code>y</code> 的 <strong>余数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@ i=3: 3 mod 10 = 3 != nums[3].
 <strong>输出：</strong>1
 <strong>解释：</strong>1 是唯一一个满足 i mod 10 == nums[i] 的下标
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

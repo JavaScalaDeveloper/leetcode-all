@@ -1,7 +1,5 @@
 # [1297. 子串的最大出现次数](https://leetcode.cn/problems/maximum-number-of-occurrences-of-a-substring)
 
-[English Version](/solution/1200-1299/1297.Maximum%20Number%20of%20Occurrences%20of%20a%20Substring/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code> ，请你返回满足以下条件且出现次数最大的&nbsp;<strong>任意</strong>&nbsp;子串的出现次数：</p>
@@ -10,8 +8,6 @@
 	<li>子串中不同字母的数目必须小于等于 <code>maxLetters</code> 。</li>
 	<li>子串的长度必须大于等于&nbsp;<code>minSize</code> 且小于等于&nbsp;<code>maxSize</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <pre><strong>输入：</strong>s = &quot;abcde&quot;, maxLetters = 2, minSize = 3, maxSize = 3
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

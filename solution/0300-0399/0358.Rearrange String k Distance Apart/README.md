@@ -1,12 +1,8 @@
 # [358. K 距离间隔重排字符串](https://leetcode.cn/problems/rearrange-string-k-distance-apart)
 
-[English Version](/solution/0300-0399/0358.Rearrange%20String%20k%20Distance%20Apart/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个非空的字符串&nbsp;<code>s</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;，你要将这个字符串&nbsp;<code>s</code>&nbsp;中的字母进行重新排列，使得重排后的字符串中相同字母的位置间隔距离 <strong>至少</strong> 为&nbsp;<code>k</code>&nbsp;。如果无法做到，请返回一个空字符串&nbsp;<code>""</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出: </strong>"abacabcd"
 <strong>解释:</strong> 相同的字母在新的字符串中间隔至少 2 个单位距离。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

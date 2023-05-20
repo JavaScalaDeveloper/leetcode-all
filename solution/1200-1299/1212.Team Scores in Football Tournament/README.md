@@ -1,7 +1,5 @@
 # [1212. 查询球队积分](https://leetcode.cn/problems/team-scores-in-football-tournament)
 
-[English Version](/solution/1200-1299/1212.Team%20Scores%20in%20Football%20Tournament/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Teams</code></p>
@@ -16,8 +14,6 @@
 此表的主键是 team_id。
 表中的每一行都代表一支独立足球队。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表:&nbsp;<code>Matches</code></p>
 
@@ -36,8 +32,6 @@
 比赛的主客队分别由它们自己的 id 表示，他们的进球由 host_goals 和 guest_goals 分别表示。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>您希望在所有比赛之后计算所有球队的比分。积分奖励方式如下:</p>
 
 <ul>
@@ -51,8 +45,6 @@
 <p>返回的结果根据&nbsp;<code>num_points</code><strong> 降序排序</strong>，如果有两队积分相同，那么这两队按&nbsp;<code>team_id</code>&nbsp; <strong>升序排序</strong>。</p>
 
 <p>查询结果格式如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

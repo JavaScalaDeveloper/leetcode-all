@@ -1,7 +1,5 @@
 # [2687. 自行车的最后使用时间](https://leetcode.cn/problems/bikes-last-time-used)
 
-[English Version](/solution/2600-2699/2687.Bikes%20Last%20Time%20Used/README_EN.md)
-
 ## 题目描述
 
 <p><code><font face="monospace">Bikes</font></code><font face="monospace">&nbsp;表：</font></p>
@@ -21,15 +19,9 @@ ride_id是该表的主键。
 
 <p>编写一个 SQL 查询，以找出每辆自行车 <strong>最后一次使用</strong> 的时间。</p>
 
-<p>&nbsp;</p>
-
 <p>返回结果表按 <strong>最近使用</strong>&nbsp;的自行车进行排序。</p>
 
-<p>&nbsp;</p>
-
 <p>查询结果的格式如下所示：</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -60,8 +52,6 @@ ride_id是该表的主键。
 编号为 W00300 的自行车只有一次骑行记录，所以我们直接在输出中包含结束时间。
 编号为 W00455 的自行车有两次骑行记录，其中最近的骑行记录是 ride_id 为 3，于 2012-03-26 17:40:00结束。
 按照最近使用的自行车顺序返回输出。</pre>
-
-<p>&nbsp;</p>
 
 ## 解法
 

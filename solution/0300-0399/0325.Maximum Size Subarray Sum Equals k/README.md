@@ -1,12 +1,8 @@
 # [325. 和等于 k 的最长子数组长度](https://leetcode.cn/problems/maximum-size-subarray-sum-equals-k)
 
-[English Version](/solution/0300-0399/0325.Maximum%20Size%20Subarray%20Sum%20Equals%20k/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个数组 <code><em>nums</em></code> 和一个目标值 <code><em>k</em></code>，找到和等于<em> <code>k</code> </em>的最长连续子数组长度。如果不存在任意一个符合要求的子数组，则返回 <code>0</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -22,8 +18,6 @@
 <strong>输入: </strong><em>nums</em> = <code>[-2,-1,2,1]</code>, <em>k</em> = <code>1</code>
 <strong>输出: </strong>2 <strong>
 解释: </strong>子数组<code> [-1, 2]</code> 和等于 1，且长度最长。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

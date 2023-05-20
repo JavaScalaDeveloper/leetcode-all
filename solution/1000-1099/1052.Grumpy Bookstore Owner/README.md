@@ -1,7 +1,5 @@
 # [1052. 爱生气的书店老板](https://leetcode.cn/problems/grumpy-bookstore-owner)
 
-[English Version](/solution/1000-1099/1052.Grumpy%20Bookstore%20Owner/README_EN.md)
-
 ## 题目描述
 
 <p>有一个书店老板，他的书店开了&nbsp;<code>n</code>&nbsp;分钟。每分钟都有一些顾客进入这家商店。给定一个长度为 <code>n</code> 的整数数组 <code>customers</code> ，其中 <code>customers[i]</code> 是在第 <code>i</code> 分钟开始时进入商店的顾客数量，所有这些顾客在第 <code>i</code> 分钟结束后离开。</p>
@@ -29,8 +27,6 @@
 <pre>
 <strong>输入：</strong>customers = [1], grumpy = [0], minutes = 1
 <strong>输出：</strong>1</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1315. 祖父节点值为偶数的节点和](https://leetcode.cn/problems/sum-of-nodes-with-even-valued-grandparent)
 
-[English Version](/solution/1300-1399/1315.Sum%20of%20Nodes%20with%20Even-Valued%20Grandparent/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵二叉树，请你返回满足以下条件的所有节点的值之和：</p>
@@ -12,8 +10,6 @@
 
 <p>如果不存在祖父节点值为偶数的节点，那么返回&nbsp;<code>0</code> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <p><strong><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1300-1399/1315.Sum%20of%20Nodes%20with%20Even-Valued%20Grandparent/images/1473_ex1.png" style="height: 214px; width: 350px;"></strong></p>
@@ -22,8 +18,6 @@
 <strong>输出：</strong>18
 <strong>解释：</strong>图中红色节点的祖父节点的值为偶数，蓝色节点为这些红色节点的祖父节点。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [1460. 通过翻转子数组使两个数组相等](https://leetcode.cn/problems/make-two-arrays-equal-by-reversing-subarrays)
 
-[English Version](/solution/1400-1499/1460.Make%20Two%20Arrays%20Equal%20by%20Reversing%20Subarrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个长度相同的整数数组&nbsp;<code>target</code>&nbsp;和&nbsp;<code>arr</code>&nbsp;。每一步中，你可以选择&nbsp;<code>arr</code>&nbsp;的任意 <strong>非空子数组</strong>&nbsp;并将它翻转。你可以执行此过程任意次。</p>
 
 <p><em>如果你能让 <code>arr</code>&nbsp;变得与 <code>target</code>&nbsp;相同，返回 True；否则，返回 False 。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>arr 没有数字 9 ，所以无论如何也无法变成 target 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -114,20 +108,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool canBeEqual(int* target, int targetSize, int* arr, int arrSize){
-    int count[1001] = {0};
-    for (int i = 0 ; i < targetSize; i++) {
-        count[target[i]]++;
-        count[arr[i]]--;
-    }
-    for (int i = 0; i < 1001; i++) {
-        if (count[i] != 0) {
-            return false;
-        }
-    }
-    return true;
-}
-```
+**

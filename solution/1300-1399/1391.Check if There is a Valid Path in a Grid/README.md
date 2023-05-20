@@ -1,7 +1,5 @@
 # [1391. 检查网格中是否存在有效路径](https://leetcode.cn/problems/check-if-there-is-a-valid-path-in-a-grid)
 
-[English Version](/solution/1300-1399/1391.Check%20if%20There%20is%20a%20Valid%20Path%20in%20a%20Grid/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <em>m</em> x <em>n</em> 的网格 <code>grid</code>。网格里的每个单元都代表一条街道。<code>grid[i][j]</code> 的街道可以是：</p>
@@ -22,8 +20,6 @@
 <p><strong>注意：</strong>你 <strong>不能</strong> 变更街道。</p>
 
 <p>如果网格中存在有效的路径，则返回 <code>true</code>，否则返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -61,8 +57,6 @@
 <pre><strong>输入：</strong>grid = [[2],[2],[2],[2],[2],[2],[6]]
 <strong>输出：</strong>true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

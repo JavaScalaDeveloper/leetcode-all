@@ -1,7 +1,5 @@
 # [981. 基于时间的键值存储](https://leetcode.cn/problems/time-based-key-value-store)
 
-[English Version](/solution/0900-0999/0981.Time%20Based%20Key-Value%20Store/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个基于时间的键值数据结构，该结构可以在不同时间戳存储对应同一个键的多个值，并针对特定时间戳检索键对应的值。</p>

@@ -1,7 +1,5 @@
 # [2079. 给植物浇水](https://leetcode.cn/problems/watering-plants)
 
-[English Version](/solution/2000-2099/2079.Watering%20Plants/README_EN.md)
-
 ## 题目描述
 
 <p>你打算用一个水罐给花园里的 <code>n</code> 株植物浇水。植物排成一行，从左到右进行标记，编号从 <code>0</code> 到 <code>n - 1</code> 。其中，第 <code>i</code> 株植物的位置是 <code>x = i</code> 。<code>x = -1</code>&nbsp;处有一条河，你可以在那里重新灌满你的水罐。</p>
@@ -17,8 +15,6 @@
 <p>最初，你在河边（也就是，<code>x = -1</code>），在 x 轴上每移动 <strong>一个单位</strong>&nbsp;都需要 <strong>一步</strong> 。</p>
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>plants</code> ，数组由 <code>n</code> 个整数组成。其中，<code>plants[i]</code> 为第 <code>i</code> 株植物需要的水量。另有一个整数 <code>capacity</code> 表示水罐的容量，返回浇灌所有植物需要的 <strong>步数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -56,8 +52,6 @@
 需要的步数是 = 1 + 1 + 2 + 2 + 3 + 3 + 4 + 4 + 5 + 5 + 6 + 6 + 7 = 49 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -89,21 +83,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int wateringPlants(int *plants, int plantsSize, int capacity) {
-    int ans = 0;
-    int water = capacity;
-    for (int i = 0; i < plantsSize; i++) {
-        if (water < plants[i]) {
-            ans += i * 2 + 1;
-            water = capacity - plants[i];
-        } else {
-            ans++;
-            water -= plants[i];
-        }
-    }
-    return ans;
-}
-```
+**

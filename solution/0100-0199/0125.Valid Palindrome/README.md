@@ -1,7 +1,5 @@
 # [125. 验证回文串](https://leetcode.cn/problems/valid-palindrome)
 
-[English Version](/solution/0100-0199/0125.Valid%20Palindrome/README_EN.md)
-
 ## 题目描述
 
 <p>如果在将所有大写字符转换为小写字符、并移除所有非字母数字字符之后，短语正着读和反着读都一样。则可以认为该短语是一个 <strong>回文串</strong> 。</p>
@@ -9,8 +7,6 @@
 <p>字母和数字都属于字母数字字符。</p>
 
 <p>给你一个字符串 <code>s</code>，如果它是 <strong>回文串</strong> ，返回 <code>true</code><em> </em>；否则，返回<em> </em><code>false</code><em> </em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>解释：</strong>在移除非字母数字字符之后，s 是一个空字符串 "" 。
 由于空字符串正着反着读都一样，所以是回文串。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

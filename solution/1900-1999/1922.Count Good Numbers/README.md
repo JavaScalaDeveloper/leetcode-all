@@ -1,7 +1,5 @@
 # [1922. 统计好数字的数目](https://leetcode.cn/problems/count-good-numbers)
 
-[English Version](/solution/1900-1999/1922.Count%20Good%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>我们称一个数字字符串是 <strong>好数字</strong> 当它满足（下标从 <strong>0</strong> 开始）<strong>偶数</strong> 下标处的数字为 <strong>偶数</strong> 且 <strong>奇数</strong> 下标处的数字为 <strong>质数</strong> （<code>2</code>，<code>3</code>，<code>5</code> 或 <code>7</code>）。</p>

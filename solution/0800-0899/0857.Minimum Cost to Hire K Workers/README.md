@@ -1,7 +1,5 @@
 # [857. 雇佣 K 名工人的最低成本](https://leetcode.cn/problems/minimum-cost-to-hire-k-workers)
 
-[English Version](/solution/0800-0899/0857.Minimum%20Cost%20to%20Hire%20K%20Workers/README_EN.md)
-
 ## 题目描述
 
 <p>有 <code>n</code>&nbsp;名工人。&nbsp;给定两个数组&nbsp;<code>quality</code>&nbsp;和&nbsp;<code>wage</code>&nbsp;，其中，<code>quality[i]</code>&nbsp;表示第&nbsp;<code>i</code>&nbsp;名工人的工作质量，其最低期望工资为&nbsp;<code>wage[i]</code>&nbsp;。</p>
@@ -14,8 +12,6 @@
 </ol>
 
 <p>给定整数 <code>k</code> ，返回 <em>组成满足上述条件的付费群体所需的最小金额&nbsp;</em>。在实际答案的&nbsp;<code>10<sup>-5</sup></code>&nbsp;以内的答案将被接受。。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -33,8 +29,6 @@
 <strong>输入： </strong>quality = [3,1,10,10,1], wage = [4,8,2,2,7], k = 3
 <strong>输出： </strong>30.66667
 <strong>解释： </strong>我们向 0 号工人支付 4，向 2 号和 3 号分别支付 13.33333。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

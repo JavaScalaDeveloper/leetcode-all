@@ -1,7 +1,5 @@
 # [1796. 字符串中第二大的数字](https://leetcode.cn/problems/second-largest-digit-in-a-string)
 
-[English Version](/solution/1700-1799/1796.Second%20Largest%20Digit%20in%20a%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个混合字符串 <code>s</code> ，请你返回 <code>s</code> 中 <strong>第二大 </strong>的数字，如果不存在第二大的数字，请你返回 <code>-1</code> 。</p>
@@ -100,23 +98,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int secondHighest(char *s) {
-    int first = -1;
-    int second = -1;
-    for (int i = 0; s[i]; i++) {
-        if (isdigit(s[i])) {
-            int num = s[i] - '0';
-            if (num > first) {
-                second = first;
-                first = num;
-            } else if (num < first && second < num) {
-                second = num;
-            }
-        }
-    }
-    return second;
-}
-```
+**

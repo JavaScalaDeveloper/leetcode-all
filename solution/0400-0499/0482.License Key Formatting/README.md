@@ -1,7 +1,5 @@
 # [482. 密钥格式化](https://leetcode.cn/problems/license-key-formatting)
 
-[English Version](/solution/0400-0499/0482.License%20Key%20Formatting/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个许可密钥字符串 <code>s</code>，仅由字母、数字字符和破折号组成。字符串由 <code>n</code> 个破折号分成 <code>n + 1</code> 组。你也会得到一个整数 <code>k</code> 。</p>
@@ -9,8 +7,6 @@
 <p>我们想要重新格式化字符串&nbsp;<code>s</code>，使每一组包含 <code>k</code> 个字符，除了第一组，它可以比 <code>k</code> 短，但仍然必须包含至少一个字符。此外，两组之间必须插入破折号，并且应该将所有小写字母转换为大写字母。</p>
 
 <p>返回 <em>重新格式化的许可密钥</em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 <strong>输出：</strong>"2-5G-3J"
 <strong>解释：</strong>字符串 S 被分成了 3 个部分，按照前面的规则描述，第一部分的字符可以少于给定的数量，其余部分皆为 2 个字符。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

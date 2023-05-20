@@ -1,7 +1,5 @@
 # [1321. 餐馆营业额变化增长](https://leetcode.cn/problems/restaurant-growth)
 
-[English Version](/solution/1300-1399/1321.Restaurant%20Growth/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Customer</code></p>
@@ -21,8 +19,6 @@ visited_on 表示 (customer_id) 的顾客在 visited_on 那天访问了餐馆。
 amount 是一个顾客某一天的消费总额。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>你是餐馆的老板，现在你想分析一下可能的营业额变化增长（每天至少有一位顾客）。</p>
 
 <p>写一条 SQL 查询计算以 7 天（某日期 + 该日期前的 6 天）为一个时间段的顾客消费平均值。<code>average_amount</code>&nbsp;要 <strong>保留两位小数。</strong></p>
@@ -30,8 +26,6 @@ amount 是一个顾客某一天的消费总额。
 <p>查询结果按 <code>visited_on</code> 排序。</p>
 
 <p>查询结果格式的例子如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

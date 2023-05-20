@@ -1,7 +1,5 @@
 # [2363. 合并相似的物品](https://leetcode.cn/problems/merge-similar-items)
 
-[English Version](/solution/2300-2399/2363.Merge%20Similar%20Items/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个二维整数数组&nbsp;<code>items1</code> 和&nbsp;<code>items2</code>&nbsp;，表示两个物品集合。每个数组&nbsp;<code>items</code>&nbsp;有以下特质：</p>
@@ -14,8 +12,6 @@
 <p>请你返回一个二维数组&nbsp;<code>ret</code>，其中&nbsp;<code>ret[i] = [value<sub>i</sub>, weight<sub>i</sub>]</code>，&nbsp;<code>weight<sub>i</sub></code>&nbsp;是所有价值为&nbsp;<code>value<sub>i</sub></code><sub>&nbsp;</sub>物品的&nbsp;<strong>重量之和</strong>&nbsp;。</p>
 
 <p><strong>注意：</strong><code>ret</code>&nbsp;应该按价值 <strong>升序</strong>&nbsp;排序后返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,8 +47,6 @@ value = 2 的物品在 items1 中 weight = 2 ，在 items2 中 weight = 2 ，总
 value = 7 的物品在 items2 中 weight = 1 ，总重量为 1 。
 所以，我们返回 [[1,7],[2,4],[7,1]] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -95,36 +89,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Return an array of arrays of size *returnSize.
- * The sizes of the arrays are returned as *returnColumnSizes array.
- * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
- */
-int **mergeSimilarItems(int **items1, int items1Size, int *items1ColSize, int **items2, int items2Size,
-                        int *items2ColSize, int *returnSize, int **returnColumnSizes) {
-    int count[1001] = {0};
-    for (int i = 0; i < items1Size; i++) {
-        count[items1[i][0]] += items1[i][1];
-    }
-    for (int i = 0; i < items2Size; i++) {
-        count[items2[i][0]] += items2[i][1];
-    }
-    int **ans = malloc(sizeof(int *) * (items1Size + items2Size));
-    *returnColumnSizes = malloc(sizeof(int) * (items1Size + items2Size));
-    int size = 0;
-    for (int i = 0; i < 1001; i++) {
-        if (count[i]) {
-            ans[size] = malloc(sizeof(int) * 2);
-            ans[size][0] = i;
-            ans[size][1] = count[i];
-            (*returnColumnSizes)[size] = 2;
-            size++;
-        }
-    }
-    *returnSize = size;
-    return ans;
-}
-```
+**

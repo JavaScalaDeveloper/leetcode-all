@@ -1,12 +1,8 @@
 # [637. 二叉树的层平均值](https://leetcode.cn/problems/average-of-levels-in-binary-tree)
 
-[English Version](/solution/0600-0699/0637.Average%20of%20Levels%20in%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个非空二叉树的根节点<meta charset="UTF-8" />&nbsp;<code>root</code>&nbsp;, 以数组的形式返回每一层节点的平均值。与实际答案相差&nbsp;<code>10<sup>-5</sup></code> 以内的答案可以被接受。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输入：</strong>root = [3,9,20,15,7]
 <strong>输出：</strong>[3.00000,14.50000,11.00000]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

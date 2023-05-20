@@ -1,7 +1,5 @@
 # [1837. K 进制表示下的各位数字总和](https://leetcode.cn/problems/sum-of-digits-in-base-k)
 
-[English Version](/solution/1800-1899/1837.Sum%20of%20Digits%20in%20Base%20K/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code>（<code>10</code> 进制）和一个基数 <code>k</code> ，请你将 <code>n</code> 从 <code>10</code> 进制表示转换为 <code>k</code> 进制表示，计算并返回转换后各位数字的 <strong>总和</strong> 。</p>
@@ -58,15 +56,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int sumBase(int n, int k) {
-    int ans = 0;
-    while (n) {
-        ans += n % k;
-        n /= k;
-    }
-    return ans;
-}
-```
+**

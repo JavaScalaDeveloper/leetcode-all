@@ -1,7 +1,5 @@
 # [2416. 字符串的前缀分数和](https://leetcode.cn/problems/sum-of-prefix-scores-of-strings)
 
-[English Version](/solution/2400-2499/2416.Sum%20of%20Prefix%20Scores%20of%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的数组 <code>words</code> ，该数组由 <strong>非空</strong> 字符串组成。</p>
@@ -15,8 +13,6 @@
 <p>返回一个长度为<em> </em><code>n</code> 的数组<em> </em><code>answer</code><em> </em>，其中<em> </em><code>answer[i]</code><em> </em>是<em>&nbsp;</em><code>words[i]</code> 的每个非空前缀的分数 <strong>总和</strong> <em>。</em></p>
 
 <p><strong>注意：</strong>字符串视作它自身的一个前缀。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 "abcd" 有 4 个前缀 "a"、"ab"、"abc" 和 "abcd"。
 每个前缀的分数都是 1 ，总计 answer[0] = 1 + 1 + 1 + 1 = 4 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

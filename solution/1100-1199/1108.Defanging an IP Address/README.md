@@ -1,14 +1,10 @@
 # [1108. IP 地址无效化](https://leetcode.cn/problems/defanging-an-ip-address)
 
-[English Version](/solution/1100-1199/1108.Defanging%20an%20IP%20Address/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个有效的 <a href="https://baike.baidu.com/item/IPv4" target="_blank">IPv4</a> 地址&nbsp;<code>address</code>，返回这个 IP 地址的无效化版本。</p>
 
 <p>所谓无效化&nbsp;IP 地址，其实就是用&nbsp;<code>&quot;[.]&quot;</code>&nbsp;代替了每个 <code>&quot;.&quot;</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,8 +17,6 @@
 <pre><strong>输入：</strong>address = &quot;255.100.50.0&quot;
 <strong>输出：</strong>&quot;255[.]100[.]50[.]0&quot;
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

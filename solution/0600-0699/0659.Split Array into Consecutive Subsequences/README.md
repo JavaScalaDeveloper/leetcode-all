@@ -1,7 +1,5 @@
 # [659. 分割数组为连续子序列](https://leetcode.cn/problems/split-array-into-consecutive-subsequences)
 
-[English Version](/solution/0600-0699/0659.Split%20Array%20into%20Consecutive%20Subsequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个按 <strong>非递减顺序</strong> 排列的整数数组 <code>nums</code> 。</p>
@@ -18,8 +16,6 @@
 <p>如果可以分割 <code>nums</code> 并满足上述条件，则返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 </div>
 </div>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -48,8 +44,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>无法将 nums 分割成长度至少为 3 的连续递增子序列。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

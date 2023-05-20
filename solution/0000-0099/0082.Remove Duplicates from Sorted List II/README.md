@@ -1,12 +1,8 @@
 # [82. 删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii)
 
-[English Version](/solution/0000-0099/0082.Remove%20Duplicates%20from%20Sorted%20List%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个已排序的链表的头&nbsp;<code>head</code> ，&nbsp;<em>删除原始链表中所有重复数字的节点，只留下不同的数字</em>&nbsp;。返回 <em>已排序的链表</em>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0082.Remove%20Duplicates%20from%20Sorted%20List%20II/images/linkedlist1.jpg" style="height: 142px; width: 500px;" />
@@ -21,8 +17,6 @@
 <strong>输入：</strong>head = [1,1,1,2,3]
 <strong>输出：</strong>[2,3]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

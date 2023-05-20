@@ -1,7 +1,5 @@
 # [940. 不同的子序列 II](https://leetcode.cn/problems/distinct-subsequences-ii)
 
-[English Version](/solution/0900-0999/0940.Distinct%20Subsequences%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串 <code>s</code>，计算 <code>s</code> 的 <strong>不同非空子序列</strong> 的个数。因为结果可能很大，所以返回答案需要对<strong> </strong><strong><code>10^9 + 7</code> 取余</strong> 。</p>
@@ -11,8 +9,6 @@
 <ul>
 	<li>例如，<code>"ace"</code> 是 <code>"<em><strong>a</strong></em>b<em><strong>c</strong></em>d<em><strong>e</strong></em>"</code> 的一个子序列，但 <code>"aec"</code> 不是。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,16 +34,12 @@
 <strong>解释：</strong>3 个不同的子序列分别是 "a", "aa" 以及 "aaa"。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= s.length &lt;= 2000</code></li>
 	<li><code>s</code> 仅由小写英文字母组成</li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 
@@ -110,24 +102,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int distinctSubseqII(char * s){
-    int mod = 1e9 + 7;
-    int n = strlen(s);
-    int dp[26] = {0};
-    for (int i = 0 ; i < n; i++) {
-        int sum = 0;
-        for (int j = 0; j < 26; j++) {
-            sum = (sum + dp[j]) % mod;
-        }
-        dp[s[i] - 'a'] = sum + 1;
-    }
-    int res = 0;
-    for (int i = 0 ; i < 26; i++) {
-        res = (res + dp[i]) % mod;
-    }
-    return res;
-}
-```
+**

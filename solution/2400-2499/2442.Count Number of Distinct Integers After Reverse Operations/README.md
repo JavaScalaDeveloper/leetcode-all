@@ -1,7 +1,5 @@
 # [2442. 反转之后不同整数的数目](https://leetcode.cn/problems/count-number-of-distinct-integers-after-reverse-operations)
 
-[English Version](/solution/2400-2499/2442.Count%20Number%20of%20Distinct%20Integers%20After%20Reverse%20Operations/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由 <strong>正</strong> 整数组成的数组 <code>nums</code> 。</p>
@@ -9,8 +7,6 @@
 <p>你必须取出数组中的每个整数，<strong>反转其中每个数位</strong>，并将反转后得到的数字添加到数组的末尾。这一操作只针对 <code>nums</code> 中原有的整数执行。</p>
 
 <p>返回结果数组中 <strong>不同</strong> 整数的数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>解释：</strong>反转每个数字后，结果数组是 [2,2,2,<em><strong>2,2,2</strong></em>] 。
 数组中不同整数的数目为 1（数字 2）。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

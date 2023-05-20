@@ -1,7 +1,5 @@
 # [1992. 找到所有的农场组](https://leetcode.cn/problems/find-all-groups-of-farmland)
 
-[English Version](/solution/1900-1999/1992.Find%20All%20Groups%20of%20Farmland/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始，大小为&nbsp;<code>m x n</code>&nbsp;的二进制矩阵&nbsp;<code>land</code>&nbsp;，其中 <code>0</code>&nbsp;表示一单位的森林土地，<code>1</code>&nbsp;表示一单位的农场土地。</p>
@@ -42,8 +40,6 @@
 <b>解释：</b>
 没有任何农场组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

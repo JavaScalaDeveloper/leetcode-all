@@ -1,7 +1,5 @@
 # [2201. 统计可以提取的工件](https://leetcode.cn/problems/count-artifacts-that-can-be-extracted)
 
-[English Version](/solution/2200-2299/2201.Count%20Artifacts%20That%20Can%20Be%20Extracted/README_EN.md)
-
 ## 题目描述
 
 <p>存在一个 <code>n x n</code> 大小、下标从 <strong>0</strong> 开始的网格，网格中埋着一些工件。给你一个整数 <code>n</code> 和一个下标从 <strong>0</strong> 开始的二维整数数组 <code>artifacts</code> ，<code>artifacts</code> 描述了矩形工件的位置，其中 <code>artifacts[i] = [r1<sub>i</sub>, c1<sub>i</sub>, r2<sub>i</sub>, c2<sub>i</sub>]</code> 表示第 <code>i</code> 个工件在子网格中的填埋情况：</p>
@@ -23,8 +21,6 @@
 	<li><code>dig</code> 中的元素互不相同。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2201.Count%20Artifacts%20That%20Can%20Be%20Extracted/images/untitled-diagram.jpg" style="width: 216px; height: 216px;">
 <pre><strong>输入：</strong>n = 2, artifacts = [[0,0,0,0],[0,1,1,1]], dig = [[0,0],[0,1]]
@@ -42,8 +38,6 @@
 <strong>输出：</strong>2
 <strong>解释：</strong>红色工件和蓝色工件的所有部分都裸露出来（用 'D' 标记），都可以提取。因此，返回 2 。 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

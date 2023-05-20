@@ -1,7 +1,5 @@
 # [1215. 步进数](https://leetcode.cn/problems/stepping-numbers)
 
-[English Version](/solution/1200-1299/1215.Stepping%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>如果一个整数上的每一位数字与其相邻位上的数字的绝对差都是 <code>1</code>，那么这个数就是一个「步进数」。</p>
@@ -10,15 +8,11 @@
 
 <p>给你两个整数，<code>low</code>&nbsp;和&nbsp;<code>high</code>，请你找出在&nbsp;<code>[low, high]</code>&nbsp;范围内的所有步进数，并返回&nbsp;<strong>排序后</strong> 的结果。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre><strong>输入：</strong>low = 0, high = 21
 <strong>输出：</strong>[0,1,2,3,4,5,6,7,8,9,10,12,21]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

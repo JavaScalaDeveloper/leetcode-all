@@ -1,7 +1,5 @@
 # [2367. 算术三元组的数目](https://leetcode.cn/problems/number-of-arithmetic-triplets)
 
-[English Version](/solution/2300-2399/2367.Number%20of%20Arithmetic%20Triplets/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始、<strong>严格递增</strong> 的整数数组 <code>nums</code> 和一个正整数 <code>diff</code> 。如果满足下述全部条件，则三元组 <code>(i, j, k)</code> 就是一个 <strong>算术三元组</strong> ：</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回不同 <strong>算术三元组</strong> 的数目<em>。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 (0, 2, 4) 是算术三元组：8 - 6 == 2 且 6 - 4 == 2 。
 (1, 3, 5) 是算术三元组：9 - 7 == 2 且 7 - 5 == 2 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

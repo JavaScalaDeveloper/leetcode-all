@@ -1,7 +1,5 @@
 # [2689. Extract Kth Character From The Rope Tree](https://leetcode.cn/problems/extract-kth-character-from-the-rope-tree)
 
-[English Version](/solution/2600-2699/2689.Extract%20Kth%20Character%20From%20The%20Rope%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>You are given the&nbsp;<code>root</code> of a binary tree&nbsp;and an integer <code>k</code>. Besides&nbsp;the left and right children, every node of this tree has two other properties, a&nbsp;<strong>string&nbsp;</strong><code>node.val</code>&nbsp;containing only lowercase English letters (possibly empty) and a non-negative integer&nbsp;<code>node.len</code>.&nbsp;There are two types of nodes in this tree:</p>
@@ -22,7 +20,6 @@
 
 <p><strong>Note:</strong> If <code>s</code> and <code>p</code> are two strings, <code>concat(s, p)</code> is a string obtained by concatenating <code>p</code> to&nbsp;<code>s</code>. For example, <code>concat(&quot;ab&quot;, &quot;zz&quot;) = &quot;abzz&quot;</code>.</p>
 
-<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
@@ -56,7 +53,6 @@ You can see that S[root] = &quot;ropetree&quot;. So S[root][7], which represents
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2689.Extract%20Kth%20Character%20From%20The%20Rope%20Tree/images/example3.png" style="width: 80px; height: 78px; margin-left: 400px; margin-right: 400px;" /></p>
 
-<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>

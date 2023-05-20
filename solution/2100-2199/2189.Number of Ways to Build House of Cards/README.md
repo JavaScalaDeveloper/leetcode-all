@@ -1,7 +1,5 @@
 # [2189. 建造纸牌屋的方法数](https://leetcode.cn/problems/number-of-ways-to-build-house-of-cards)
 
-[English Version](/solution/2100-2199/2189.Number%20of%20Ways%20to%20Build%20House%20of%20Cards/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code>，代表你拥有牌的数量。一个&nbsp;<strong>纸牌屋&nbsp;</strong>满足以下条件:</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>返回<em>使用所有 <code>n</code> 张卡片可以构建的不同纸牌屋的数量</em>。如果存在一行两个纸牌屋包含不同数量的纸牌，那么两个纸牌屋被认为是不同的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2189.Number%20of%20Ways%20to%20Build%20House%20of%20Cards/images/image-20220227213243-1.png" style="width: 726px; height: 150px;" />
@@ -43,8 +39,6 @@
 第一个纸牌屋需要在两个三角形之间放置一张水平纸牌。
 第二个纸牌屋使用 5 张纸牌。
 第三个纸牌屋使用 2 张纸牌。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [865. 具有所有最深节点的最小子树](https://leetcode.cn/problems/smallest-subtree-with-all-the-deepest-nodes)
 
-[English Version](/solution/0800-0899/0865.Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个根为&nbsp;<code>root</code>&nbsp;的二叉树，每个节点的深度是 <strong>该节点到根的最短距离</strong> 。</p>
@@ -11,8 +9,6 @@
 <p>如果一个节点在 <strong>整个树 </strong>的任意节点之间具有最大的深度，则该节点是 <strong>最深的</strong> 。</p>
 
 <p>一个节点的 <strong>子树</strong> 是该节点加上它的所有后代的集合。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>输出：</strong>[2]
 <strong>解释：</strong>树中最深的节点为 2 ，有效子树为节点 2、1 和 0 的子树，但节点 2 的子树最小。</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -50,8 +44,6 @@
 	<li><code>0 &lt;= Node.val &lt;= 500</code></li>
 	<li>每个节点的值都是 <strong>独一无二</strong> 的。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>注意：</strong>本题与力扣 1123 重复：<a href="https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/" target="_blank">https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves</a></p>
 

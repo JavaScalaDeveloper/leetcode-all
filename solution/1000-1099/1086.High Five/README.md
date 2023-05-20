@@ -1,7 +1,5 @@
 # [1086. 前五科的均分](https://leetcode.cn/problems/high-five)
 
-[English Version](/solution/1000-1099/1086.High%20Five/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个不同学生的分数列表 <code>items</code>，其中 <code>items[i] = [ID<sub>i</sub>, score<sub>i</sub>]</code> 表示 <code>ID<sub>i</sub></code> 的学生的一科分数，你需要计算每个学生 <strong>最高的五科 </strong>成绩的 <strong>平均分</strong>。</p>

@@ -1,7 +1,5 @@
 # [489. 扫地机器人](https://leetcode.cn/problems/robot-room-cleaner)
 
-[English Version](/solution/0400-0499/0489.Robot%20Room%20Cleaner/README_EN.md)
-
 ## 题目描述
 
 <p>房间（用格栅表示）中有一个扫地机器人。格栅中的每一个格子有空和障碍物两种可能。</p>

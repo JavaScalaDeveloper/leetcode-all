@@ -1,7 +1,5 @@
 # [2140. 解决智力问题](https://leetcode.cn/problems/solving-questions-with-brainpower)
 
-[English Version](/solution/2100-2199/2140.Solving%20Questions%20With%20Brainpower/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的二维整数数组&nbsp;<code>questions</code>&nbsp;，其中&nbsp;<code>questions[i] = [points<sub>i</sub>, brainpower<sub>i</sub>]</code>&nbsp;。</p>
@@ -20,8 +18,6 @@
 </ul>
 
 <p>请你返回这场考试里你能获得的 <strong>最高</strong>&nbsp;分数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 - 解决问题 4 ：获得 5 分
 总得分为：2 + 5 = 7 。没有别的办法获得 7 分或者多于 7 分。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1476. 子矩形查询](https://leetcode.cn/problems/subrectangle-queries)
 
-[English Version](/solution/1400-1499/1476.Subrectangle%20Queries/README_EN.md)
-
 ## 题目描述
 
 <p>请你实现一个类&nbsp;<code>SubrectangleQueries</code>&nbsp;，它的构造函数的参数是一个 <code>rows x cols</code>&nbsp;的矩形（这里用整数矩阵表示），并支持以下两种操作：</p>
@@ -17,8 +15,6 @@
 <ul>
 	<li>返回矩形中坐标 <code>(row,col)</code> 的当前值。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -69,8 +65,6 @@ subrectangleQueries.getValue(2, 2); // 返回 100
 subrectangleQueries.updateSubrectangle(1, 1, 2, 2, 20);
 subrectangleQueries.getValue(2, 2); // 返回 20
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

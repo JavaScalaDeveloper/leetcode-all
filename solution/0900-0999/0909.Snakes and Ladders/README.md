@@ -1,7 +1,5 @@
 # [909. 蛇梯棋](https://leetcode.cn/problems/snakes-and-ladders)
 
-[English Version](/solution/0900-0999/0909.Snakes%20and%20Ladders/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>n x n</code> 的整数矩阵 <code>board</code> ，方格按从&nbsp;<code>1</code> 到 <code>n<sup>2</sup></code> 编号，编号遵循 <a href="https://baike.baidu.com/item/%E7%89%9B%E8%80%95%E5%BC%8F%E8%BD%AC%E8%A1%8C%E4%B9%A6%E5%86%99%E6%B3%95/17195786">转行交替方式</a><strong> </strong>，<strong>从左下角开始</strong>&nbsp;（即，从 <code>board[n - 1][0]</code> 开始）每一行交替方向。</p>
@@ -30,8 +28,6 @@
 
 <p>返回达到编号为&nbsp;<code>n<sup>2</sup></code> 的方格所需的最少移动次数，如果不可能，则返回 <code>-1</code>。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0909.Snakes%20and%20Ladders/images/snakes.png" style="width: 500px; height: 394px;" />
 <pre>
@@ -52,8 +48,6 @@
 <strong>输入：</strong>board = [[-1,-1],[-1,3]]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2037. 使每位学生都有座位的最少移动次数](https://leetcode.cn/problems/minimum-number-of-moves-to-seat-everyone)
 
-[English Version](/solution/2000-2099/2037.Minimum%20Number%20of%20Moves%20to%20Seat%20Everyone/README_EN.md)
-
 ## 题目描述
 
 <p>一个房间里有 <code>n</code>&nbsp;个座位和 <code>n</code>&nbsp;名学生，房间用一个数轴表示。给你一个长度为 <code>n</code>&nbsp;的数组&nbsp;<code>seats</code>&nbsp;，其中&nbsp;<code>seats[i]</code> 是第 <code>i</code>&nbsp;个座位的位置。同时给你一个长度为 <code>n</code>&nbsp;的数组&nbsp;<code>students</code>&nbsp;，其中&nbsp;<code>students[j]</code>&nbsp;是第 <code>j</code>&nbsp;位学生的位置。</p>
@@ -15,8 +13,6 @@
 <p>请你返回使所有学生都有座位坐的 <strong>最少移动次数</strong>&nbsp;，并确保没有两位学生的座位相同。</p>
 
 <p>请注意，初始时有可能有多个座位或者多位学生在 <strong>同一</strong>&nbsp;位置。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -53,8 +49,6 @@
 总共 1 + 3 + 0 + 0 = 4 次移动。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -87,20 +81,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int cmp(const void *a, const void *b) {
-    return *(int *) a - *(int *) b;
-}
-
-int minMovesToSeat(int *seats, int seatsSize, int *students, int studentsSize) {
-    qsort(seats, seatsSize, sizeof(int), cmp);
-    qsort(students, studentsSize, sizeof(int), cmp);
-    int ans = 0;
-    for (int i = 0; i < seatsSize; i++) {
-        ans += abs(seats[i] - students[i]);
-    }
-    return ans;
-}
-```
+**

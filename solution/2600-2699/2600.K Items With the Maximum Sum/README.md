@@ -1,7 +1,5 @@
 # [2600. K 件物品的最大和](https://leetcode.cn/problems/k-items-with-the-maximum-sum)
 
-[English Version](/solution/2600-2699/2600.K%20Items%20With%20the%20Maximum%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>袋子中装有一些物品，每个物品上都标记着数字 <code>1</code> 、<code>0</code> 或 <code>-1</code> 。</p>
@@ -18,8 +16,6 @@
 
 <p>现计划从这些物品中恰好选出 <code>k</code> 件物品。返回所有可行方案中，物品上所标记数字之和的最大值。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>numOnes = 3, numZeros = 2, numNegOnes = 0, k = 2
@@ -34,8 +30,6 @@
 <strong>解释：</strong>袋子中的物品分别标记为 {1, 1, 1, 0, 0} 。取 3 件标记为 1 的物品，1 件标记为 0 的物品，得到的数字之和为 3 。
 可以证明 3 是所有可行方案中的最大值。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

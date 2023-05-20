@@ -1,7 +1,5 @@
 # [2295. 替换数组中的元素](https://leetcode.cn/problems/replace-elements-in-an-array)
 
-[English Version](/solution/2200-2299/2295.Replace%20Elements%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的数组&nbsp;<code>nums</code>&nbsp;，它包含 <code>n</code>&nbsp;个 <strong>互不相同</strong>&nbsp;的正整数。请你对这个数组执行 <code>m</code>&nbsp;个操作，在第 <code>i</code>&nbsp;个操作中，你需要将数字&nbsp;<code>operations[i][0]</code> 替换成&nbsp;<code>operations[i][1]</code>&nbsp;。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>请你返回执行完所有操作后的数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 - 将数字 3 替换为 2 。nums 变为 [<em><strong>2</strong></em>,1] 。
 返回最终数组 [2,1] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

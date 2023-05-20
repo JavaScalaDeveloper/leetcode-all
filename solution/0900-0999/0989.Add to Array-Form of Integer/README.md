@@ -1,7 +1,5 @@
 # [989. 数组形式的整数加法](https://leetcode.cn/problems/add-to-array-form-of-integer)
 
-[English Version](/solution/0900-0999/0989.Add%20to%20Array-Form%20of%20Integer/README_EN.md)
-
 ## 题目描述
 
 <p>整数的 <strong>数组形式</strong> &nbsp;<code>num</code>&nbsp;是按照从左到右的顺序表示其数字的数组。</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>给定 <code>num</code> ，整数的 <strong>数组形式</strong> ，和整数 <code>k</code> ，返回 <em>整数 <code>num + k</code> 的 <strong>数组形式</strong></em> 。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -40,8 +36,6 @@
 <strong>输出：</strong>[1,0,2,1]
 <strong>解释：</strong>215 + 806 = 1021
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

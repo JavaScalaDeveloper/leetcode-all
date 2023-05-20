@@ -1,7 +1,5 @@
 # [2334. 元素值大于变化阈值的子数组](https://leetcode.cn/problems/subarray-with-elements-greater-than-varying-threshold)
 
-[English Version](/solution/2300-2399/2334.Subarray%20With%20Elements%20Greater%20Than%20Varying%20Threshold/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>threshold</code>&nbsp;。</p>
@@ -11,8 +9,6 @@
 <p>请你返回满足要求的 <strong>任意</strong>&nbsp;子数组的 <strong>大小</strong>&nbsp;。如果没有这样的子数组，返回&nbsp;<code>-1</code>&nbsp;。</p>
 
 <p><strong>子数组</strong> 是数组中一段连续非空的元素序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 注意子数组 [6,5] 大小为 2 ，每个元素都大于 7 / 2 = 3.5 。
 类似的，子数组 [6,5,6] ，[6,5,6,5] ，[6,5,6,5,8] 都是符合条件的子数组。
 所以返回 2, 3, 4 和 5 都可以。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

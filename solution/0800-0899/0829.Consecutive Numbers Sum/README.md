@@ -1,12 +1,8 @@
 # [829. 连续整数求和](https://leetcode.cn/problems/consecutive-numbers-sum)
 
-[English Version](/solution/0800-0899/0829.Consecutive%20Numbers%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个正整数 <code>n</code>，返回 <em>连续正整数满足所有数字之和为 <code>n</code>&nbsp;的组数</em> 。&nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示</strong><strong>例 1:</strong></p>
 
@@ -28,8 +24,6 @@
 <strong>输入: </strong>n = 15
 <strong>输出: </strong>4
 <strong>解释: </strong>15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

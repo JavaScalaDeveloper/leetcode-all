@@ -1,14 +1,10 @@
 # [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
 
-[English Version](/solution/0200-0299/0239.Sliding%20Window%20Maximum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code>，有一个大小为&nbsp;<code>k</code><em>&nbsp;</em>的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 <code>k</code>&nbsp;个数字。滑动窗口每次只向右移动一位。</p>
 
 <p>返回 <em>滑动窗口中的最大值 </em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <b>输入：</b>nums = [1], k = 1
 <b>输出：</b>[1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

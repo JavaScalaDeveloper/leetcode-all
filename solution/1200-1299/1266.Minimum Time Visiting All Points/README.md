@@ -1,7 +1,5 @@
 # [1266. 访问所有点的最小时间](https://leetcode.cn/problems/minimum-time-visiting-all-points)
 
-[English Version](/solution/1200-1299/1266.Minimum%20Time%20Visiting%20All%20Points/README_EN.md)
-
 ## 题目描述
 
 <p>平面上有 <code>n</code> 个点，点的位置用整数坐标表示 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 。请你计算访问所有这些点需要的 <strong>最小时间</strong>（以秒为单位）。</p>
@@ -80,18 +78,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-
-int minTimeToVisitAllPoints(int **points, int pointsSize, int *pointsColSize) {
-    int ans = 0;
-    for (int i = 1; i < pointsSize; i++) {
-        int x = abs(points[i - 1][0] - points[i][0]);
-        int y = abs(points[i - 1][1] - points[i][1]);
-        ans += max(x, y);
-    }
-    return ans;
-}
-```
+**

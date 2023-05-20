@@ -1,7 +1,5 @@
 # [1915. 最美子字符串的数目](https://leetcode.cn/problems/number-of-wonderful-substrings)
 
-[English Version](/solution/1900-1999/1915.Number%20of%20Wonderful%20Substrings/README_EN.md)
-
 ## 题目描述
 
 <p>如果某个字符串中 <strong>至多一个</strong> 字母出现 <strong>奇数</strong> 次，则称其为 <strong>最美</strong> 字符串。</p>

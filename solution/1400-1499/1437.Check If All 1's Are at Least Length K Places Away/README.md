@@ -1,12 +1,8 @@
 # [1437. 是否所有 1 都至少相隔 k 个元素](https://leetcode.cn/problems/check-if-all-1s-are-at-least-length-k-places-away)
 
-[English Version](/solution/1400-1499/1437.Check%20If%20All%201%27s%20Are%20at%20Least%20Length%20K%20Places%20Away/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由若干 <code>0</code> 和 <code>1</code> 组成的数组 <code>nums</code> 以及整数 <code>k</code>。如果所有 <code>1</code> 都至少相隔 <code>k</code> 个元素，则返回 <code>True</code> ；否则，返回 <code>False</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <pre><strong>输入：</strong>nums = [0,1,0,1], k = 1
 <strong>输出：</strong>true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

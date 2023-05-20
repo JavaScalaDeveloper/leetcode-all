@@ -1,7 +1,5 @@
 # [2374. 边积分最高的节点](https://leetcode.cn/problems/node-with-highest-edge-score)
 
-[English Version](/solution/2300-2399/2374.Node%20With%20Highest%20Edge%20Score/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个有向图，图中有 <code>n</code> 个节点，节点编号从 <code>0</code> 到 <code>n - 1</code> ，其中每个节点都 <strong>恰有一条</strong> 出边。</p>
@@ -11,8 +9,6 @@
 <p>节点 <code>i</code> 的 <strong>边积分</strong> 定义为：所有存在一条指向节点 <code>i</code> 的边的节点的 <strong>编号</strong> 总和。</p>
 
 <p>返回 <strong>边积分</strong> 最高的节点。如果多个节点的 <strong>边积分</strong> 相同，返回编号 <strong>最小</strong> 的那个。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2374.Node%20With%20Highest%20Edge%20Score/images/image-20220620195403-1.png" style="width: 450px; height: 260px;">
@@ -35,8 +31,6 @@
 - 节点 0 和 3 都有指向节点 2 的边，节点 2 的边积分等于 0 + 3 = 3 。
 节点 0 和 2 的边积分都是 3 。由于节点 0 的编号更小，返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

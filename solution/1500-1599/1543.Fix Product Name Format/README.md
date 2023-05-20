@@ -1,7 +1,5 @@
 # [1543. 产品名称格式修复](https://leetcode.cn/problems/fix-product-name-format)
 
-[English Version](/solution/1500-1599/1543.Fix%20Product%20Name%20Format/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Sales</code></p>
@@ -18,8 +16,6 @@ sale_id 是该表主键
 该表的每一行包含了产品的名称及其销售日期
 </pre>
 
-<p>&nbsp;</p>
-
 <p>因为在 2000 年该表是手工填写的，<code>product_name</code>&nbsp;可能包含前后空格，而且包含大小写。</p>
 
 <p>写一个 SQL 语句报告每个月的销售情况：</p>
@@ -33,8 +29,6 @@ sale_id 是该表主键
 <p>返回结果以&nbsp;<code>product_name</code>&nbsp;<strong>升序</strong> 排列，如果有排名相同，再以&nbsp;<code>sale_date</code> <strong>升序 </strong>排列。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

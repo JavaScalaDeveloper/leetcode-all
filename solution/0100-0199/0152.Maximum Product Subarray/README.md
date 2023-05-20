@@ -1,7 +1,5 @@
 # [152. 乘积最大子数组](https://leetcode.cn/problems/maximum-product-subarray)
 
-[English Version](/solution/0100-0199/0152.Maximum%20Product%20Subarray/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code>&nbsp;，请你找出数组中乘积最大的非空连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。</p>
@@ -9,8 +7,6 @@
 <p>测试用例的答案是一个&nbsp;<strong>32-位</strong> 整数。</p>
 
 <p><strong>子数组</strong> 是数组的连续子序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -26,8 +22,6 @@
 <strong>输入:</strong> nums = [-2,0,-1]
 <strong>输出:</strong> 0
 <strong>解释:</strong>&nbsp;结果不能为 2, 因为 [-2,-1] 不是子数组。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

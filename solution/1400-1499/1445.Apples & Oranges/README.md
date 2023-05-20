@@ -1,7 +1,5 @@
 # [1445. 苹果和桔子](https://leetcode.cn/problems/apples-oranges)
 
-[English Version](/solution/1400-1499/1445.Apples%20%26%20Oranges/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Sales</code></p>
@@ -17,15 +15,11 @@
 该表包含了每一天中&quot;苹果&quot; 和 &quot;桔子&quot;的销售情况.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL&nbsp;查询,&nbsp;报告每一天&nbsp;<strong>苹果</strong>&nbsp;和&nbsp;<strong>桔子</strong>&nbsp;销售的数目的差异.</p>
 
 <p>返回的结果表,&nbsp;按照格式为&nbsp;(&#39;YYYY-MM-DD&#39;) 的 <code>sale_date</code> 排序.</p>
 
 <p>查询结果表如下例所示:</p>
-
-<p>&nbsp;</p>
 
 <pre><code>Sales</code> 表:
 +------------+------------+-------------+

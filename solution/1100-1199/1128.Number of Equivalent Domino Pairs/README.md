@@ -1,7 +1,5 @@
 # [1128. 等价多米诺骨牌对的数量](https://leetcode.cn/problems/number-of-equivalent-domino-pairs)
 
-[English Version](/solution/1100-1199/1128.Number%20of%20Equivalent%20Domino%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由一些多米诺骨牌组成的列表&nbsp;<code>dominoes</code>。</p>
@@ -12,15 +10,11 @@
 
 <p>在&nbsp;<code>0 &lt;= i &lt; j &lt; dominoes.length</code>&nbsp;的前提下，找出满足&nbsp;<code>dominoes[i]</code> 和&nbsp;<code>dominoes[j]</code>&nbsp;等价的骨牌对 <code>(i, j)</code> 的数量。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre><strong>输入：</strong>dominoes = [[1,2],[2,1],[3,4],[5,6]]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

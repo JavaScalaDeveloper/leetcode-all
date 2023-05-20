@@ -1,7 +1,5 @@
 # [2547. 拆分数组的最小代价](https://leetcode.cn/problems/minimum-cost-to-split-an-array)
 
-[English Version](/solution/2500-2599/2547.Minimum%20Cost%20to%20Split%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
@@ -23,8 +21,6 @@
 <p>找出并返回拆分 <code>nums</code> 的所有可行方案中的最小代价。</p>
 
 <p><strong>子数组</strong> 是数组的一个连续 <strong>非空</strong> 元素序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -58,8 +54,6 @@
 拆分的代价是 10 ，可以证明这是所有可行的拆分方案中的最小代价。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -67,8 +61,6 @@
 	<li><code>0 &lt;= nums[i] &lt; nums.length</code></li>
 	<li><code>1 &lt;= k &lt;= 10<sup>9</sup></code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

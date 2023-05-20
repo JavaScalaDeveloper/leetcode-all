@@ -1,7 +1,5 @@
 # [276. 栅栏涂色](https://leetcode.cn/problems/paint-fence)
 
-[English Version](/solution/0200-0299/0276.Paint%20Fence/README_EN.md)
-
 ## 题目描述
 
 <p>有 <code>k</code> 种颜色的涂料和一个包含 <code>n</code> 个栅栏柱的栅栏，请你按下述规则为栅栏设计涂色方案：</p>

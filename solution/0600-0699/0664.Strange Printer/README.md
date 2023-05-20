@@ -1,7 +1,5 @@
 # [664. 奇怪的打印机](https://leetcode.cn/problems/strange-printer)
 
-[English Version](/solution/0600-0699/0664.Strange%20Printer/README_EN.md)
-
 ## 题目描述
 
 <p>有台奇怪的打印机有以下两个特殊要求：</p>
@@ -29,8 +27,6 @@
 <strong>输出：</strong>2
 <strong>解释：</strong>首先打印 "aaa" 然后在第二个位置打印 "b" 覆盖掉原来的字符 'a'。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

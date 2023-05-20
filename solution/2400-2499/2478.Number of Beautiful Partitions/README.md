@@ -1,7 +1,5 @@
 # [2478. 完美分割的方案数](https://leetcode.cn/problems/number-of-beautiful-partitions)
 
-[English Version](/solution/2400-2499/2478.Number%20of%20Beautiful%20Partitions/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，每个字符是数字&nbsp;<code>'1'</code>&nbsp;到&nbsp;<code>'9'</code>&nbsp;，再给你两个整数&nbsp;<code>k</code> 和&nbsp;<code>minLength</code>&nbsp;。</p>
@@ -17,8 +15,6 @@
 <p>请你返回 <code>s</code>&nbsp;的 <strong>完美</strong>&nbsp;分割数目。由于答案可能很大，请返回答案对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;<strong>取余</strong>&nbsp;后的结果。</p>
 
 <p>一个 <strong>子字符串</strong>&nbsp;是字符串中一段连续字符串序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <b>输出：</b>1
 <b>解释：</b>存在一种完美分割方案："331 | 29 | 58" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

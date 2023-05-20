@@ -1,7 +1,5 @@
 # [71. 简化路径](https://leetcode.cn/problems/simplify-path)
 
-[English Version](/solution/0000-0099/0071.Simplify%20Path/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>path</code> ，表示指向某一文件或目录的 Unix 风格 <strong>绝对路径 </strong>（以 <code>'/'</code> 开头），请你将其转化为更加简洁的规范路径。</p>

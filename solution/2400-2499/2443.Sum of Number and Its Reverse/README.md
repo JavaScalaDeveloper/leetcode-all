@@ -1,14 +1,10 @@
 # [2443. 反转之后的数字和](https://leetcode.cn/problems/sum-of-number-and-its-reverse)
 
-[English Version](/solution/2400-2499/2443.Sum%20of%20Number%20and%20Its%20Reverse/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>非负</strong> 整数 <code>num</code> 。如果存在某个 <strong>非负</strong> 整数 <code>k</code> 满足 <code>k + reverse(k) = num</code>&nbsp; ，则返回 <code>true</code> ；否则，返回<em> </em><code>false</code> 。</p>
 
 <p><code>reverse(k)</code> 表示 <code>k</code> 反转每个数位后得到的数字。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输出：</strong>true
 <strong>解释：</strong>140 + 041 = 181 ，所以返回 true 。注意，反转后的数字可能包含前导零。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -71,21 +65,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool sumOfNumberAndReverse(int num) {
-    for (int i = 0; i <= num; i++) {
-        int t = i;
-        int j = 0;
-        while (t > 0) {
-            j = j * 10 + t % 10;
-            t /= 10;
-        }
-        if (i + j == num) {
-            return 1;
-        }
-    }
-    return 0;
-}
-```
+**

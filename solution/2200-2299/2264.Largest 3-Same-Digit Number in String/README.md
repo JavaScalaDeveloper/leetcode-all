@@ -1,7 +1,5 @@
 # [2264. 字符串中最大的 3 位相同数字](https://leetcode.cn/problems/largest-3-same-digit-number-in-string)
 
-[English Version](/solution/2200-2299/2264.Largest%203-Same-Digit%20Number%20in%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>num</code> ，表示一个大整数。如果一个整数满足下述所有条件，则认为该整数是一个 <strong>优质整数</strong> ：</p>
@@ -19,8 +17,6 @@
 	<li><strong>子字符串</strong> 是字符串中的一个连续字符序列。</li>
 	<li><code>num</code> 或优质整数中可能存在 <strong>前导零</strong> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <strong>输出：</strong>""
 <strong>解释：</strong>不存在长度为 3 且仅由一个唯一数字组成的整数。因此，不存在优质整数。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

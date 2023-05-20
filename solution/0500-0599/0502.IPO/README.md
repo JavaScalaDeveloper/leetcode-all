@@ -1,7 +1,5 @@
 # [502. IPO](https://leetcode.cn/problems/ipo)
 
-[English Version](/solution/0500-0599/0502.IPO/README_EN.md)
-
 ## 题目描述
 
 <p>假设 力扣（LeetCode）即将开始 <strong>IPO</strong> 。为了以更高的价格将股票卖给风险投资公司，力扣 希望在 IPO 之前开展一些项目以增加其资本。 由于资源有限，它只能在 IPO 之前完成最多 <code>k</code> 个不同的项目。帮助 力扣 设计完成最多 <code>k</code> 个不同项目后得到最大总资本的方式。</p>
@@ -13,8 +11,6 @@
 <p>总而言之，从给定项目中选择 <strong>最多</strong> <code>k</code> 个不同项目的列表，以 <strong>最大化最终资本</strong> ，并输出最终可获得的最多资本。</p>
 
 <p>答案保证在 32 位有符号整数范围内。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输入：</strong>k = 3, w = 0, profits = [1,2,3], capital = [0,1,2]
 <strong>输出：</strong>6
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

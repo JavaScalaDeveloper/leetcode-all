@@ -1,7 +1,5 @@
 # [1072. 按列翻转得到最大值等行数](https://leetcode.cn/problems/flip-columns-for-maximum-number-of-equal-rows)
 
-[English Version](/solution/1000-1099/1072.Flip%20Columns%20For%20Maximum%20Number%20of%20Equal%20Rows/README_EN.md)
-
 ## 题目描述
 
 <p>给定&nbsp;<code>m x n</code>&nbsp;矩阵&nbsp;<code>matrix</code>&nbsp;。</p>
@@ -9,8 +7,6 @@
 <p>你可以从中选出任意数量的列并翻转其上的&nbsp;<strong>每个&nbsp;</strong>单元格。（即翻转后，单元格的值从 <code>0</code> 变成 <code>1</code>，或者从 <code>1</code> 变为 <code>0</code> 。）</p>
 
 <p>返回 <em>经过一些翻转后，行内所有值都相等的最大行数</em>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -37,8 +33,6 @@
 <strong>输入：</strong>matrix = [[0,0,0],[0,0,1],[1,1,0]]
 <strong>输出：</strong>2
 <strong>解释：</strong>翻转前两列的值之后，后两行由相等的值组成。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

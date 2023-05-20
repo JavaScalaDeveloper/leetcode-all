@@ -1,7 +1,5 @@
 # [617. 合并二叉树](https://leetcode.cn/problems/merge-two-binary-trees)
 
-[English Version](/solution/0600-0699/0617.Merge%20Two%20Binary%20Trees/README_EN.md)
-
 ## 题目描述
 
 <p>给你两棵二叉树： <code>root1</code> 和 <code>root2</code> 。</p>
@@ -11,8 +9,6 @@
 <p>返回合并后的二叉树。</p>
 
 <p><strong>注意:</strong> 合并过程必须从两个树的根节点开始。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0617.Merge%20Two%20Binary%20Trees/images/merge.jpg" style="height: 163px; width: 600px;" />
@@ -27,8 +23,6 @@
 <strong>输入：</strong>root1 = [1], root2 = [1,2]
 <strong>输出：</strong>[2,2]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

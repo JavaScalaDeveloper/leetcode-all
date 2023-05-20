@@ -1,7 +1,5 @@
 # [2546. 执行逐位运算使字符串相等](https://leetcode.cn/problems/apply-bitwise-operations-to-make-strings-equal)
 
-[English Version](/solution/2500-2599/2546.Apply%20Bitwise%20Operations%20to%20Make%20Strings%20Equal/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong> 开始的 <strong>二元</strong> 字符串 <code>s</code> 和 <code>target</code> ，两个字符串的长度均为 <code>n</code> 。你可以对 <code>s</code> 执行下述操作 <strong>任意</strong> 次：</p>
@@ -14,8 +12,6 @@
 <p>例如，如果 <code>s = "0110"</code> ，你可以选择 <code>i = 0</code> 和 <code>j = 2</code>，然后同时将 <code>s[0]</code> 替换为 (<code>s[0]</code> <strong>OR</strong> <code>s[2]</code> = <code>0</code> <strong>OR</strong> <code>1</code> = <code>1</code>)，并将 <code>s[2]</code> 替换为 (<code>s[0]</code> <strong>XOR</strong> <code>s[2]</code> = <code>0</code> <strong>XOR</strong> <code>1</code> = <code>1</code>)，最终得到 <code>s = "1110"</code> 。</p>
 
 <p>如果可以使 <code>s</code> 等于 <code>target</code> ，返回 <code>true</code> ，否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>执行任意次操作都无法使 s 等于 target 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -62,23 +56,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool makeStringsEqual(char *s, char *target) {
-    int count = 0;
-    for (int i = 0; s[i]; i++) {
-        if (s[i] == '1') {
-            count++;
-            break;
-        }
-    }
-    for (int i = 0; target[i]; i++) {
-        if (target[i] == '1') {
-            count++;
-            break;
-        }
-    }
-    return !(count & 1);
-}
-```
+**

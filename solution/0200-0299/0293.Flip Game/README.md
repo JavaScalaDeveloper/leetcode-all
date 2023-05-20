@@ -1,7 +1,5 @@
 # [293. 翻转游戏](https://leetcode.cn/problems/flip-game)
 
-[English Version](/solution/0200-0299/0293.Flip%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>你和朋友玩一个叫做「翻转游戏」的游戏。游戏规则如下：</p>

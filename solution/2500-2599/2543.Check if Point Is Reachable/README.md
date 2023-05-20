@@ -1,7 +1,5 @@
 # [2543. 判断一个点是否可以到达](https://leetcode.cn/problems/check-if-point-is-reachable)
 
-[English Version](/solution/2500-2599/2543.Check%20if%20Point%20Is%20Reachable/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个无穷大的网格图。一开始你在&nbsp;<code>(1, 1)</code>&nbsp;，你需要通过有限步移动到达点&nbsp;<code>(targetX, targetY)</code>&nbsp;。</p>
@@ -17,8 +15,6 @@
 
 <p>给你两个整数&nbsp;<code>targetX</code> 和&nbsp;<code>targetY</code>&nbsp;，分别表示你最后需要到达点的 X 和 Y 坐标。如果你可以从&nbsp;<code>(1, 1)</code>&nbsp;出发到达这个点，请你返回<code>true</code> ，否则返回<em>&nbsp;</em><code>false</code><em>&nbsp;</em>。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><b>输入：</b>targetX = 6, targetY = 9
@@ -32,8 +28,6 @@
 <b>输出：</b>true
 <b>解释：</b>你可以按照以下路径到达：(1,1) -&gt; (1,2) -&gt; (1,4) -&gt; (1,8) -&gt; (1,7) -&gt; (2,7) -&gt; (4,7) 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

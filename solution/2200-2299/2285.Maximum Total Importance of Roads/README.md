@@ -1,7 +1,5 @@
 # [2285. 道路的最大总重要性](https://leetcode.cn/problems/maximum-total-importance-of-roads)
 
-[English Version](/solution/2200-2299/2285.Maximum%20Total%20Importance%20of%20Roads/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>n</code>&nbsp;，表示一个国家里的城市数目。城市编号为&nbsp;<code>0</code>&nbsp;到&nbsp;<code>n - 1</code>&nbsp;。</p>
@@ -11,8 +9,6 @@
 <p>你需要给每个城市安排一个从 <code>1</code>&nbsp;到 <code>n</code>&nbsp;之间的整数值，且每个值只能被使用 <strong>一次</strong>&nbsp;。道路的 <strong>重要性</strong>&nbsp;定义为这条道路连接的两座城市数值 <strong>之和</strong>&nbsp;。</p>
 
 <p>请你返回在最优安排下，<strong>所有道路重要性</strong> 之和 <strong>最大</strong>&nbsp;为多少。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 所有道路重要性之和为 9 + 3 + 8 = 20 。
 可以证明，重要性之和不可能超过 20 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

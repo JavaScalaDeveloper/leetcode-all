@@ -1,7 +1,5 @@
 # [464. 我能赢吗](https://leetcode.cn/problems/can-i-win)
 
-[English Version](/solution/0400-0499/0464.Can%20I%20Win/README_EN.md)
-
 ## 题目描述
 
 <p>在 "100 game" 这个游戏中，两名玩家轮流选择从 <code>1</code> 到 <code>10</code> 的任意整数，累计整数和，先使得累计整数和 <strong>达到或超过</strong>&nbsp; 100 的玩家，即为胜者。</p>
@@ -11,8 +9,6 @@
 <p>例如，两个玩家可以轮流从公共整数池中抽取从 1 到 15 的整数（不放回），直到累计整数和 &gt;= 100。</p>
 
 <p>给定两个整数&nbsp;<code>maxChoosableInteger</code>&nbsp;（整数池中可选择的最大数）和&nbsp;<code>desiredTotal</code>（累计和），若先出手的玩家能稳赢则返回 <code>true</code>&nbsp;，否则返回 <code>false</code> 。假设两位玩家游戏时都表现 <strong>最佳</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>输入：</strong>maxChoosableInteger = 10, desiredTotal = 1
 <strong>输出：</strong>true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

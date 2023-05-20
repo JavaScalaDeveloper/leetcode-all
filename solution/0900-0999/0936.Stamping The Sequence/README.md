@@ -1,7 +1,5 @@
 # [936. 戳印序列](https://leetcode.cn/problems/stamping-the-sequence)
 
-[English Version](/solution/0900-0999/0936.Stamping%20The%20Sequence/README_EN.md)
-
 ## 题目描述
 
 <p>你想要用<strong>小写字母</strong>组成一个目标字符串&nbsp;<code>target</code>。&nbsp;</p>
@@ -18,8 +16,6 @@
 
 <p>另外，如果可以印出序列，那么需要保证可以在 <code>10 * target.length</code>&nbsp;个回合内完成。任何超过此数字的答案将不被接受。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>stamp = &quot;abc&quot;, target = &quot;ababc&quot;
@@ -32,8 +28,6 @@
 <pre><strong>输入：</strong>stamp = &quot;abca&quot;, target = &quot;aabcaca&quot;
 <strong>输出：</strong>[3,0,1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

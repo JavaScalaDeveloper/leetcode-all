@@ -1,7 +1,5 @@
 # [1357. 每隔 n 个顾客打折](https://leetcode.cn/problems/apply-discount-every-n-orders)
 
-[English Version](/solution/1300-1399/1357.Apply%20Discount%20Every%20n%20Orders/README_EN.md)
-
 ## 题目描述
 
 <p>超市里正在举行打折活动，每隔&nbsp;<code>n</code>&nbsp;个顾客会得到 <code>discount</code>&nbsp;的折扣。</p>
@@ -18,8 +16,6 @@
 	<li><code>Cashier(int n, int discount, int[] products, int[] prices)</code>&nbsp;初始化实例对象，参数分别为打折频率&nbsp;<code>n</code>&nbsp;，折扣大小 <code>discount</code>&nbsp;，超市里的商品列表 <code>products</code>&nbsp;和它们的价格 <code>prices</code>&nbsp;。</li>
 	<li><code>double&nbsp;getBill(int[] product, int[] amount)</code>&nbsp;返回账单的实际金额（如果有打折，请返回打折后的结果）。返回结果与标准答案误差在&nbsp;<code>10^-5</code>&nbsp;以内都视为正确结果。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@ cashier.getBill([7,3],[10,10]);                      // 返回 4000.0
 cashier.getBill([7,5,3,1,6,4,2],[10,10,10,9,9,9,7]); // 返回 7350.0 ，账单原本为 14700.0 ，但由于系统计数再次达到三，该顾客将得到 50% 的折扣，实际金额为 7350.0 。
 cashier.getBill([2,3,5],[5,3,2]);                    // 返回 2500.0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

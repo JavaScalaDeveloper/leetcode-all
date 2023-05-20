@@ -1,12 +1,8 @@
 # [2046. 给按照绝对值排序的链表排序](https://leetcode.cn/problems/sort-linked-list-already-sorted-using-absolute-values)
 
-[English Version](/solution/2000-2099/2046.Sort%20Linked%20List%20Already%20Sorted%20Using%20Absolute%20Values/README_EN.md)
-
 ## 题目描述
 
 给你一个链表的头结点&nbsp;<code>head</code>&nbsp;，这个链表是根据结点的<strong>绝对值</strong>进行<strong>升序</strong>排序, 返回重新根据<strong>节点的值</strong>进行<strong>升序</strong>排序的链表。
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2046.Sort%20Linked%20List%20Already%20Sorted%20Using%20Absolute%20Values/images/image-20211017201240-3.png" style="width: 621px; height: 250px;">
@@ -33,8 +29,6 @@
 <strong>解释:</strong>
 这个链表已经是升序的了。</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -43,7 +37,6 @@
 	<li><code>head</code>&nbsp;是根据结点绝对值升序排列好的链表.</li>
 </ul>
 
-<p>&nbsp;</p>
 <strong>进阶:</strong>
 
 <ul>

@@ -1,7 +1,5 @@
 # [1611. 使整数变为 0 的最少操作次数](https://leetcode.cn/problems/minimum-one-bit-operations-to-make-integers-zero)
 
-[English Version](/solution/1600-1699/1611.Minimum%20One%20Bit%20Operations%20to%20Make%20Integers%20Zero/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code>，你需要重复执行多次下述操作将其转换为 <code>0</code> ：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>返回将 <code>n</code> 转换为 <code>0</code> 的最小操作次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 "0<strong>1</strong>1" -&gt; "0<strong>0</strong>1" ，执行的是第 2 种操作，因为第 0 位为 1 。
 "00<strong>1</strong>" -&gt; "00<strong>0</strong>" ，执行的是第 1 种操作。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

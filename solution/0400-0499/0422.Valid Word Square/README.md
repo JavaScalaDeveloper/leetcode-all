@@ -1,7 +1,5 @@
 # [422. 有效的单词方块](https://leetcode.cn/problems/valid-word-square)
 
-[English Version](/solution/0400-0499/0422.Valid%20Word%20Square/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个单词序列，判断其是否形成了一个有效的单词方块。</p>
@@ -15,8 +13,6 @@
 	<li>单词长度大于等于 1 且不超过 500。</li>
 	<li>每个单词只包含小写英文字母&nbsp;<code>a-z</code>。</li>
 </ol>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@ true
 因此，这是一个有效的单词方块。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 2：</strong></p>
 
 <pre><strong>输入：</strong>
@@ -64,8 +58,6 @@ true
 因此，这是一个有效的单词方块。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 3：</strong></p>
 
 <pre><strong>输入：</strong>
@@ -84,8 +76,6 @@ false
 
 因此，这 <strong>不是</strong> 一个有效的单词方块。
 </pre>
-
-<p>&nbsp;</p>
 
 ## 解法
 

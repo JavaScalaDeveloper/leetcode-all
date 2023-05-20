@@ -1,12 +1,8 @@
 # [713. 乘积小于 K 的子数组](https://leetcode.cn/problems/subarray-product-less-than-k)
 
-[English Version](/solution/0700-0799/0713.Subarray%20Product%20Less%20Than%20K/README_EN.md)
-
 ## 题目描述
 
 给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你返回子数组内所有元素的乘积严格小于<em> </em><code>k</code> 的连续子数组的数目。
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,8 +18,6 @@
 <pre>
 <strong>输入：</strong>nums = [1,2,3], k = 0
 <strong>输出：</strong>0</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:&nbsp;</strong></p>
 

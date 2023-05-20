@@ -1,7 +1,5 @@
 # [2448. 使数组相等的最小开销](https://leetcode.cn/problems/minimum-cost-to-make-array-equal)
 
-[English Version](/solution/2400-2499/2448.Minimum%20Cost%20to%20Make%20Array%20Equal/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong>&nbsp;开始的数组&nbsp;<code>nums</code> 和&nbsp;<code>cost</code>&nbsp;，分别包含&nbsp;<code>n</code>&nbsp;个&nbsp;<strong>正</strong>&nbsp;整数。</p>
@@ -15,8 +13,6 @@
 <p>对第 <code>i</code>&nbsp;个元素执行一次操作的开销是&nbsp;<code>cost[i]</code>&nbsp;。</p>
 
 <p>请你返回使 <code>nums</code>&nbsp;中所有元素 <strong>相等</strong>&nbsp;的 <strong>最少</strong>&nbsp;总开销。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <b>输出：</b>0
 <b>解释：</b>数组中所有元素已经全部相等，不需要执行额外的操作。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

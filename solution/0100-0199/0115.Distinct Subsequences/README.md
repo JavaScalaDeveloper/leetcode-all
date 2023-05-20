@@ -1,14 +1,10 @@
 # [115. 不同的子序列](https://leetcode.cn/problems/distinct-subsequences)
 
-[English Version](/solution/0100-0199/0115.Distinct%20Subsequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串 <code>s</code><strong> </strong>和 <code>t</code> ，统计并返回在 <code>s</code> 的 <strong>子序列</strong> 中 <code>t</code> 出现的个数。</p>
 
 <p>题目数据保证答案符合 32 位带符号整数范围。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -34,8 +30,6 @@
 <code>ba<u><strong>b</strong></u>gb<u><strong>ag</strong></u></code>
 <code>babg<strong><u>bag</u></strong></code>
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [269. 火星词典](https://leetcode.cn/problems/alien-dictionary)
 
-[English Version](/solution/0200-0299/0269.Alien%20Dictionary/README_EN.md)
-
 ## 题目描述
 
 <p>现有一种使用英语字母的火星语言，这门语言的字母顺序与英语顺序不同。</p>

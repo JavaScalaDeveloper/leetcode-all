@@ -1,7 +1,5 @@
 # [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list)
 
-[English Version](/solution/0100-0199/0147.Insertion%20Sort%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给定单个链表的头<meta charset="UTF-8" />&nbsp;<code>head</code>&nbsp;，使用 <strong>插入排序</strong> 对链表进行排序，并返回&nbsp;<em>排序后链表的头</em>&nbsp;。</p>
@@ -20,8 +18,6 @@
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0147.Insertion%20Sort%20List/images/Insertion-sort-example-300px.gif" /></p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0147.Insertion%20Sort%20List/images/sort1linked-list.jpg" /></p>
@@ -37,8 +33,6 @@
 <pre>
 <strong>输入:</strong> head = [-1,5,3,4,0]
 <strong>输出:</strong> [-1,0,3,4,5]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [1214. 查找两棵二叉搜索树之和](https://leetcode.cn/problems/two-sum-bsts)
 
-[English Version](/solution/1200-1299/1214.Two%20Sum%20BSTs/README_EN.md)
-
 ## 题目描述
 
 <p>给出两棵二叉搜索树的根节点&nbsp;<meta charset="UTF-8" /><code>root1</code>&nbsp;和<meta charset="UTF-8" />&nbsp;<code>root2</code>&nbsp;，请你从两棵树中各找出一个节点，使得这两个节点的值之和等于目标值&nbsp;<code>Target</code>。</p>
 
 <p>如果可以找到返回&nbsp;<code>True</code>，否则返回&nbsp;<code>False</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <pre>
 <strong>输入：</strong>root1 = [0,-10,10], root2 = [5,1,7,0,2], target = 18
 <strong>输出：</strong>false</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

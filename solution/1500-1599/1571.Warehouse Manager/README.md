@@ -1,7 +1,5 @@
 # [1571. 仓库经理](https://leetcode.cn/problems/warehouse-manager)
 
-[English Version](/solution/1500-1599/1571.Warehouse%20Manager/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Warehouse</code></p>
@@ -17,8 +15,6 @@
 (name, product_id) 是该表主键.
 该表的行包含了每个仓库的所有商品信息.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Products</code></p>
 
@@ -36,15 +32,11 @@ product_id 是该表主键.
 该表的行包含了每件商品以英尺为单位的尺寸(宽度, 长度和高度)信息.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL&nbsp;查询来报告,&nbsp;每个仓库的存货量是多少立方英尺.</p>
 
 <p>返回结果没有顺序要求.</p>
 
 <p>查询结果如下例所示.</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

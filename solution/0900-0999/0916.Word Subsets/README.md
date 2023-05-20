@@ -1,7 +1,5 @@
 # [916. 单词子集](https://leetcode.cn/problems/word-subsets)
 
-[English Version](/solution/0900-0999/0916.Word%20Subsets/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串数组 <code>words1</code>&nbsp;和&nbsp;<code>words2</code>。</p>
@@ -15,8 +13,6 @@
 <p>如果对 <code>words2</code> 中的每一个单词&nbsp;<code>b</code>，<code>b</code> 都是 <code>a</code> 的子集，那么我们称&nbsp;<code>words1</code> 中的单词 <code>a</code> 是<em> </em><strong>通用单词</strong><em> </em>。</p>
 
 <p>以数组形式返回&nbsp;<code>words1</code> 中所有的通用单词。你可以按 <strong>任意顺序</strong> 返回答案。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -55,8 +51,6 @@
 <strong>输入：</strong>words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["ec","oc","ceo"]
 <strong>输出：</strong>["facebook","leetcode"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

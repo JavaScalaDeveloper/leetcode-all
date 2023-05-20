@@ -1,14 +1,10 @@
 # [1133. 最大唯一数](https://leetcode.cn/problems/largest-unique-number)
 
-[English Version](/solution/1100-1199/1133.Largest%20Unique%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>A</code>，请找出并返回在该数组中仅出现一次的最大整数。</p>
 
 <p>如果不存在这个只出现一次的整数，则返回 -1。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <strong>解释： </strong>
 数组中不存在仅出现一次的整数。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

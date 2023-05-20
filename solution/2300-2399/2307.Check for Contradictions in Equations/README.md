@@ -1,7 +1,5 @@
 # [2307. 检查方程中的矛盾之处](https://leetcode.cn/problems/check-for-contradictions-in-equations)
 
-[English Version](/solution/2300-2399/2307.Check%20for%20Contradictions%20in%20Equations/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由字符串二维数组&nbsp;<code>equations</code> 和实数数组&nbsp;&nbsp;<code>values</code>&nbsp;，其中 <code>equations[i] = [A<sub>i</sub>, B<sub>i</sub>]</code>，<code>values[i]</code> 表示 <code>A<sub>i</sub> / B<sub>i</sub> = values[i]</code>.。</p>
@@ -14,8 +12,6 @@
 	<li>当检查两个数字是否相等时，检查它们的&nbsp;<strong>绝对差值&nbsp;</strong>是否小于 <code>10<sup>-5</sup></code>.</li>
 	<li>生成的测试用例没有针对精度的用例，即使用 <code>double</code> 就足以解决问题。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 
@@ -38,8 +34,6 @@ a = 3, b = 1 和 c = 2.
 根据前两个方程，我们得到 code / et = 0.4.
 因为第三个方程是 code / et = 0.5, 所以矛盾。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [2608. 图中的最短环](https://leetcode.cn/problems/shortest-cycle-in-a-graph)
 
-[English Version](/solution/2600-2699/2608.Shortest%20Cycle%20in%20a%20Graph/README_EN.md)
-
 ## 题目描述
 
 <p>现有一个含 <code>n</code> 个顶点的 <strong>双向</strong> 图，每个顶点按从 <code>0</code> 到 <code>n - 1</code> 标记。图中的边由二维整数数组 <code>edges</code> 表示，其中 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>]</code> 表示顶点 <code>u<sub>i</sub></code> 和 <code>v<sub>i</sub></code> 之间存在一条边。每对顶点最多通过一条边连接，并且不存在与自身相连的顶点。</p>
@@ -9,8 +7,6 @@
 <p>返回图中 <strong>最短</strong> 环的长度。如果不存在环，则返回 <code>-1</code> 。</p>
 
 <p><strong>环</strong> 是指以同一节点开始和结束，并且路径中的每条边仅使用一次。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2608.Shortest%20Cycle%20in%20a%20Graph/images/cropped.png" style="width: 387px; height: 331px;">
@@ -25,8 +21,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>图中不存在循环
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [970. 强整数](https://leetcode.cn/problems/powerful-integers)
 
-[English Version](/solution/0900-0999/0970.Powerful%20Integers/README_EN.md)
-
 ## 题目描述
 
 <p>给定三个整数 <code>x</code>&nbsp;、&nbsp;<code>y</code>&nbsp;和<em>&nbsp;</em><code>bound</code><em>&nbsp;</em>，返回 <em>值小于或等于&nbsp;<code>bound</code>&nbsp;的所有&nbsp;<strong>强整数</strong>&nbsp;组成的列表</em>&nbsp;。</p>
@@ -9,8 +7,6 @@
 <p>如果某一整数可以表示为&nbsp;<code>x<sup>i</sup>&nbsp;+ y<sup>j</sup></code>&nbsp;，其中整数&nbsp;<code>i &gt;= 0</code> 且&nbsp;<code>j &gt;= 0</code>，那么我们认为该整数是一个&nbsp;<strong>强整数</strong>&nbsp;。</p>
 
 <p>你可以按 <strong>任何顺序</strong> 返回答案。在你的回答中，每个值 <strong>最多</strong> 出现一次。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输入：</strong>x = 3, y = 5, bound = 15
 <strong>输出：</strong>[2,4,6,8,10,14]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [978. 最长湍流子数组](https://leetcode.cn/problems/longest-turbulent-subarray)
 
-[English Version](/solution/0900-0999/0978.Longest%20Turbulent%20Subarray/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组 <code>arr</code>&nbsp;，返回 <code>arr</code>&nbsp;的&nbsp;<em>最大湍流子数组的<strong>长度</strong></em><strong>&nbsp;</strong>。</p>
@@ -25,8 +23,6 @@
     </li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -47,8 +43,6 @@
 <strong>输入：</strong>arr = [100]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2527. 查询数组 Xor 美丽值](https://leetcode.cn/problems/find-xor-beauty-of-array)
 
-[English Version](/solution/2500-2599/2527.Find%20Xor-Beauty%20of%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;。</p>
@@ -18,8 +16,6 @@
 	<li><code>val1 | val2</code>&nbsp;是&nbsp;<code>val1</code> 和&nbsp;<code>val2</code>&nbsp;的按位或。</li>
 	<li><code>val1 &amp; val2</code>&nbsp;是&nbsp;<code>val1</code> 和&nbsp;<code>val2</code>&nbsp;的按位与。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 <b>输出：</b>34
 <code><span style=""><b>解释：</b>数组的 xor 美丽值为</span> 34 。</code>
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

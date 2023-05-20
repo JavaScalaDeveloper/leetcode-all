@@ -1,12 +1,8 @@
 # [46. 全排列](https://leetcode.cn/problems/permutations)
 
-[English Version](/solution/0000-0099/0046.Permutations/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个不含重复数字的数组 <code>nums</code> ，返回其 <em>所有可能的全排列</em> 。你可以 <strong>按任意顺序</strong> 返回答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 <strong>输入：</strong>nums = [1]
 <strong>输出：</strong>[[1]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

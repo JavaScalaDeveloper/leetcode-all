@@ -1,12 +1,8 @@
 # [1281. 整数的各位积和之差](https://leetcode.cn/problems/subtract-the-product-and-sum-of-digits-of-an-integer)
 
-[English Version](/solution/1200-1299/1281.Subtract%20the%20Product%20and%20Sum%20of%20Digits%20of%20an%20Integer/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>n</code>，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 各位数之和 = 4 + 4 + 2 + 1 = 11 
 结果 = 32 - 11 = 21
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -55,18 +49,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int subtractProductAndSum(int n) {
-    int p = 1;
-    int s = 0;
-    while (n) {
-        int num = n % 10;
-        n /= 10;
-        p *= num;
-        s += num;
-    }
-    return p - s;
-}
-```
+**

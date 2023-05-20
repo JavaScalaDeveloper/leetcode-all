@@ -1,7 +1,5 @@
 # [183. 从不订购的客户](https://leetcode.cn/problems/customers-who-never-order)
 
-[English Version](/solution/0100-0199/0183.Customers%20Who%20Never%20Order/README_EN.md)
-
 ## 题目描述
 
 <p>某网站包含两个表，<code>Customers</code> 表和 <code>Orders</code> 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。</p>

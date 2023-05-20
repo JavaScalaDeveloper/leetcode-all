@@ -1,7 +1,5 @@
 # [1005. K 次取反后最大化的数组和](https://leetcode.cn/problems/maximize-sum-of-array-after-k-negations)
 
-[English Version](/solution/1000-1099/1005.Maximize%20Sum%20Of%20Array%20After%20K%20Negations/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，按以下方法修改该数组：</p>
@@ -13,8 +11,6 @@
 <p>重复这个过程恰好 <code>k</code> 次。可以多次选择同一个下标 <code>i</code> 。</p>
 
 <p>以这种方式修改数组后，返回数组 <strong>可能的最大和</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>输出：</strong>13
 <strong>解释：</strong>选择下标 (1, 4) ，nums 变为 [2,3,-1,5,4] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

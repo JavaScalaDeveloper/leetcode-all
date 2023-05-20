@@ -1,7 +1,5 @@
 # [904. 水果成篮](https://leetcode.cn/problems/fruit-into-baskets)
 
-[English Version](/solution/0900-0999/0904.Fruit%20Into%20Baskets/README_EN.md)
-
 ## 题目描述
 
 <p>你正在探访一家农场，农场从左到右种植了一排果树。这些树用一个整数数组 <code>fruits</code> 表示，其中 <code>fruits[i]</code> 是第 <code>i</code> 棵树上的水果 <strong>种类</strong> 。</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>给你一个整数数组 <code>fruits</code> ，返回你可以收集的水果的 <strong>最大</strong> 数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,8 +47,6 @@
 <strong>输出：</strong>5
 <strong>解释：</strong>可以采摘 [1,2,1,1,2] 这五棵树。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

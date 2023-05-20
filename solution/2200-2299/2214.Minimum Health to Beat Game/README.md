@@ -1,7 +1,5 @@
 # [2214. 通关游戏所需的最低生命值](https://leetcode.cn/problems/minimum-health-to-beat-game)
 
-[English Version](/solution/2200-2299/2214.Minimum%20Health%20to%20Beat%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>你正在玩一个有 <code>n</code> 个关卡的游戏，从 <code>0</code> 到 <code>n - 1</code>。给你一个&nbsp;<strong>下标从 0&nbsp;开始&nbsp;</strong>的整数数组 <code>damage</code>，其中 <code>damage[i]</code> 是你完成第 <code>i</code> 个关卡所损失的生命值。</p>
@@ -11,8 +9,6 @@
 <p>你必须按顺序完成关卡，并且你的生命值必须一直&nbsp;<strong>大于</strong> <code>0</code> 才能通关。</p>
 
 <p>返回<em>你开始通关所需的最低生命值。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -50,8 +46,6 @@
 第 2 回合，受到 3 点伤害。你还有 7 - 3 = 4 生命值。
 第 3 回合， 受到 3 点伤害。你还有 4 - 3 = 1 生命值。
 注意你没有使用护甲技能。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

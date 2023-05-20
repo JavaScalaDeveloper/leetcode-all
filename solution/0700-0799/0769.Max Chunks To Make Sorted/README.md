@@ -1,7 +1,5 @@
 # [769. 最多能完成排序的块](https://leetcode.cn/problems/max-chunks-to-make-sorted)
 
-[English Version](/solution/0700-0799/0769.Max%20Chunks%20To%20Make%20Sorted/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个长度为 <code>n</code> 的整数数组 <code>arr</code> ，它表示在 <code>[0, n - 1]</code> 范围内的整数的排列。</p>
@@ -9,8 +7,6 @@
 <p>我们将 <code>arr</code> 分割成若干 <strong>块</strong> (即分区)，并对每个块单独排序。将它们连接起来后，使得连接的结果和按升序排序后的原数组相同。</p>
 
 <p>返回数组能分成的最多块数量。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -32,8 +28,6 @@
 然而，分成 [1, 0], [2], [3], [4] 可以得到最多的块数。
 对每个块单独排序后，结果为 [0, 1], [2], [3], [4]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 
@@ -99,20 +93,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-
-int maxChunksToSorted(int *arr, int arrSize) {
-    int res = 0;
-    int mx = -1;
-    for (int i = 0; i < arrSize; i++) {
-        mx = max(mx, arr[i]);
-        if (mx == i) {
-            res++;
-        }
-    }
-    return res;
-}
-```
+**

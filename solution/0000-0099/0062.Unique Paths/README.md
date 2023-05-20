@@ -1,7 +1,5 @@
 # [62. 不同路径](https://leetcode.cn/problems/unique-paths)
 
-[English Version](/solution/0000-0099/0062.Unique%20Paths/README_EN.md)
-
 ## 题目描述
 
 <p>一个机器人位于一个 <code>m x n</code><em> </em>网格的左上角 （起始点在下图中标记为 “Start” ）。</p>

@@ -1,7 +1,5 @@
 # [1833. 雪糕的最大数量](https://leetcode.cn/problems/maximum-ice-cream-bars)
 
-[English Version](/solution/1800-1899/1833.Maximum%20Ice%20Cream%20Bars/README_EN.md)
-
 ## 题目描述
 
 <p>夏日炎炎，小男孩 Tony 想买一些雪糕消消暑。</p>
@@ -13,8 +11,6 @@
 <p>给你价格数组 <code>costs</code> 和现金量 <code>coins</code> ，请你计算并返回 Tony 用 <code>coins</code> 现金能够买到的雪糕的 <strong>最大数量</strong> 。</p>
 
 <p>你必须使用计数排序解决此问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>输出：</strong>6
 <strong>解释：</strong>Tony 可以买下所有的雪糕，总价为 1 + 6 + 3 + 1 + 2 + 5 = 18 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

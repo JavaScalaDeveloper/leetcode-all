@@ -1,7 +1,5 @@
 # [1548. 图中最相似的路径](https://leetcode.cn/problems/the-most-similar-path-in-a-graph)
 
-[English Version](/solution/1500-1599/1548.The%20Most%20Similar%20Path%20in%20a%20Graph/README_EN.md)
-
 ## 题目描述
 
 <p>我们有&nbsp;<code>n</code>&nbsp;座城市和&nbsp;<code>m</code>&nbsp;条双向道路&nbsp;<code>roads</code>&nbsp;，其中&nbsp;<code>roads[i] = [a<sub>i</sub>, b<sub>i</sub>]</code>&nbsp;连接城市&nbsp;<code>a<sub>i</sub></code>&nbsp;和城市&nbsp;<code>b<sub>i</sub></code>。每个城市的名称由字符串数组&nbsp;<code>names</code>&nbsp;中给出的三个大写英文字母组成。从任意城市&nbsp;<code>x</code>&nbsp;出发，你可以到达任意城市&nbsp;<code>y</code> ，其中&nbsp;<code>y != x</code>&nbsp;（即：城市和道路形成一张无向连通图）。</p>
@@ -13,8 +11,6 @@
 <p><strong>编辑距离</strong> 的定义如下：</p>
 
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1548.The%20Most%20Similar%20Path%20in%20a%20Graph/images/edit.jpg" /></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 该路径等价于 ["ATL","DXB","HND","DXB","ATL","LAX","PEK"]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -69,8 +63,6 @@
 	<li><code>targetPath[i].length == 3</code></li>
 	<li><code>targetPath[i]</code> 由大写英文字母组成。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>如果路径中每个节点只可访问一次，你该如何修改你的答案？</p>
 

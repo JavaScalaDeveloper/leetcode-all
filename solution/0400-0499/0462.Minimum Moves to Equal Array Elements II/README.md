@@ -1,14 +1,10 @@
 # [462. 最小操作次数使数组元素相等 II](https://leetcode.cn/problems/minimum-moves-to-equal-array-elements-ii)
 
-[English Version](/solution/0400-0499/0462.Minimum%20Moves%20to%20Equal%20Array%20Elements%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，返回使所有数组元素相等需要的最小操作数。</p>
 
 <p>在一次操作中，你可以使数组中的一个元素加 <code>1</code> 或者减 <code>1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,8 +22,6 @@
 <strong>输入：</strong>nums = [1,10,2,9]
 <strong>输出：</strong>16
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

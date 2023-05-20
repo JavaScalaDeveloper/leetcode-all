@@ -1,7 +1,5 @@
 # [1855. 下标对中的最大距离](https://leetcode.cn/problems/maximum-distance-between-a-pair-of-values)
 
-[English Version](/solution/1800-1899/1855.Maximum%20Distance%20Between%20a%20Pair%20of%20Values/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个 <strong>非递增</strong> 的整数数组 <code>nums1</code>​​​​​​ 和 <code>nums2</code>​​​​​​ ，数组下标均 <strong>从 0 开始</strong> 计数。</p>
@@ -11,8 +9,6 @@
 <p>返回所有 <strong>有效</strong> 下标对<em> </em><code>(i, j)</code><em> </em>中的 <strong>最大距离</strong> 。如果不存在有效下标对，返回 <code>0</code> 。</p>
 
 <p>一个数组 <code>arr</code> ，如果每个 <code>1 &lt;= i &lt; arr.length</code> 均有 <code>arr[i-1] &gt;= arr[i]</code> 成立，那么该数组是一个 <strong>非递增</strong> 数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>解释：</strong>有效下标对是 (2,2), (2,3), (2,4), (3,3) 和 (3,4) 。
 最大距离是 2 ，对应下标对 (2,4) 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

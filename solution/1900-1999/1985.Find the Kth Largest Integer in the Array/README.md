@@ -1,7 +1,5 @@
 # [1985. 找出数组中的第 K 大整数](https://leetcode.cn/problems/find-the-kth-largest-integer-in-the-array)
 
-[English Version](/solution/1900-1999/1985.Find%20the%20Kth%20Largest%20Integer%20in%20the%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>nums</code> 和一个整数 <code>k</code> 。<code>nums</code> 中的每个字符串都表示一个不含前导零的整数。</p>
@@ -9,8 +7,6 @@
 <p>返回 <code>nums</code> 中表示第 <code>k</code> 大整数的字符串。</p>
 
 <p><strong>注意：</strong>重复的数字在统计时会视为不同元素考虑。例如，如果 <code>nums</code> 是 <code>["1","2","2"]</code>，那么 <code>"2"</code> 是最大的整数，<code>"2"</code> 是第二大的整数，<code>"1"</code> 是第三大的整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@ nums 中的数字按非递减顺序排列为 ["1","2","12","21"]
 nums 中的数字按非递减顺序排列为 ["0","0"]
 其中第 2 大整数是 "0"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2293. 极大极小游戏](https://leetcode.cn/problems/min-max-game)
 
-[English Version](/solution/2200-2299/2293.Min%20Max%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，其长度是 <code>2</code> 的幂。</p>
@@ -17,8 +15,6 @@
 </ol>
 
 <p>执行算法后，返回 <code>nums</code> 中剩下的那个数字。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>3 就是最后剩下的数字，返回 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -77,21 +71,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define min(a, b) (((a) < (b)) ? (a) : (b))
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-
-int minMaxGame(int *nums, int numsSize) {
-    while (numsSize != 1) {
-        numsSize >>= 1;
-        for (int i = 0; i < numsSize; i++) {
-            int a = nums[i << 1];
-            int b = nums[i << 1 | 1];
-            nums[i] = i & 1 ? max(a, b) : min(a, b);
-        }
-    }
-    return nums[0];
-}
-```
+**

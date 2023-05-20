@@ -1,7 +1,5 @@
 # [2503. 矩阵查询可获得的最大分数](https://leetcode.cn/problems/maximum-number-of-points-from-grid-queries)
 
-[English Version](/solution/2500-2599/2503.Maximum%20Number%20of%20Points%20From%20Grid%20Queries/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的整数矩阵 <code>grid</code> 和一个大小为 <code>k</code> 的数组 <code>queries</code> 。</p>
@@ -17,8 +15,6 @@
 
 <p>返回结果数组 <code>answer</code> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2503.Maximum%20Number%20of%20Points%20From%20Grid%20Queries/images/yetgriddrawio.png" style="width: 571px; height: 151px;">
 <pre><strong>输入：</strong>grid = [[1,2,3],[2,5,7],[3,5,1]], queries = [5,6,2]
@@ -31,8 +27,6 @@
 <strong>输出：</strong>[0]
 <strong>解释：</strong>无法获得分数，因为左上角单元格的值大于等于 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

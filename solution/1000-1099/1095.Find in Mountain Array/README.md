@@ -1,7 +1,5 @@
 # [1095. 山脉数组中查找目标值](https://leetcode.cn/problems/find-in-mountain-array)
 
-[English Version](/solution/1000-1099/1095.Find%20in%20Mountain%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>（这是一个 <strong>交互式问题&nbsp;</strong>）</p>
@@ -9,8 +7,6 @@
 <p>给你一个 <strong>山脉数组</strong>&nbsp;<code>mountainArr</code>，请你返回能够使得&nbsp;<code>mountainArr.get(index)</code>&nbsp;<strong>等于</strong>&nbsp;<code>target</code>&nbsp;<strong>最小</strong>&nbsp;的下标 <code>index</code>&nbsp;值。</p>
 
 <p>如果不存在这样的下标 <code>index</code>，就请返回&nbsp;<code>-1</code>。</p>
-
-<p>&nbsp;</p>
 
 <p>何为山脉数组？如果数组&nbsp;<code>A</code> 是一个山脉数组的话，那它满足如下条件：</p>
 
@@ -23,16 +19,12 @@
 	<li><code>A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]</code></li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p>你将&nbsp;<strong>不能直接访问该山脉数组</strong>，必须通过&nbsp;<code>MountainArray</code>&nbsp;接口来获取数据：</p>
 
 <ul>
 	<li><code>MountainArray.get(k)</code>&nbsp;- 会返回数组中索引为<code>k</code>&nbsp;的元素（下标从 0 开始）</li>
 	<li><code>MountainArray.length()</code>&nbsp;- 会返回该数组的长度</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>注意：</strong></p>
 
@@ -42,8 +34,6 @@
 
 <ol>
 </ol>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -57,8 +47,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>3 在数组中没有出现，返回 -1。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

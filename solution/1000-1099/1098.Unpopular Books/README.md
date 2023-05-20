@@ -1,7 +1,5 @@
 # [1098. 小众书籍](https://leetcode.cn/problems/unpopular-books)
 
-[English Version](/solution/1000-1099/1098.Unpopular%20Books/README_EN.md)
-
 ## 题目描述
 
 <p>书籍表&nbsp;<code>Books</code>：</p>
@@ -30,13 +28,9 @@ order_id 是这个表的主键。
 book_id  是 Books 表的外键。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>你需要写一段 SQL 命令，筛选出过去一年中订单总量&nbsp;<strong>少于10本&nbsp;</strong>的&nbsp;<strong>书籍&nbsp;</strong>。</p>
 
 <p>注意：<strong>不考虑&nbsp;</strong>上架（available from）距今&nbsp;<strong>不满一个月</strong> 的书籍。并且&nbsp;<strong>假设今天是</strong>&nbsp;<strong>2019-06-23&nbsp;</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p>下面是样例输出结果：</p>
 

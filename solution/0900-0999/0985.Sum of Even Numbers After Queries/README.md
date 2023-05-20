@@ -1,7 +1,5 @@
 # [985. 查询后的偶数和](https://leetcode.cn/problems/sum-of-even-numbers-after-queries)
 
-[English Version](/solution/0900-0999/0985.Sum%20of%20Even%20Numbers%20After%20Queries/README_EN.md)
-
 ## 题目描述
 
 <p>给出一个整数数组&nbsp;<code>A</code>&nbsp;和一个查询数组&nbsp;<code>queries</code>。</p>
@@ -11,8 +9,6 @@
 <p><em>（此处给定的&nbsp;<code>index = queries[i][1]</code>&nbsp;是从 0 开始的索引，每次查询都会永久修改数组&nbsp;<code>A</code>。）</em></p>
 
 <p>返回所有查询的答案。你的答案应当以数组&nbsp;<code>answer</code>&nbsp;给出，<code>answer[i]</code>&nbsp;为第&nbsp;<code>i</code>&nbsp;次查询的答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -25,8 +21,6 @@
 将 -4 加到 A[0] 上之后，数组为 [-2,-1,3,4]，偶数值之和为 -2 + 4 = 2。
 将 2 加到 A[3] 上之后，数组为 [-2,-1,3,6]，偶数值之和为 -2 + 6 = 4。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

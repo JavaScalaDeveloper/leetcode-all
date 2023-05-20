@@ -1,7 +1,5 @@
 # [1609. 奇偶树](https://leetcode.cn/problems/even-odd-tree)
 
-[English Version](/solution/1600-1699/1609.Even%20Odd%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>如果一棵二叉树满足下述几个条件，则可以称为 <strong>奇偶树</strong> ：</p>

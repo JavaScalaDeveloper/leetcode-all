@@ -1,7 +1,5 @@
 # [1361. 验证二叉树](https://leetcode.cn/problems/validate-binary-tree-nodes)
 
-[English Version](/solution/1300-1399/1361.Validate%20Binary%20Tree%20Nodes/README_EN.md)
-
 ## 题目描述
 
 <p>二叉树上有 <code>n</code>&nbsp;个节点，按从&nbsp;<code>0</code>&nbsp;到 <code>n - 1</code>&nbsp;编号，其中节点&nbsp;<code>i</code>&nbsp;的两个子节点分别是&nbsp;<code>leftChild[i]</code>&nbsp;和&nbsp;<code>rightChild[i]</code>。</p>
@@ -11,8 +9,6 @@
 <p>如果节点&nbsp;<code>i</code>&nbsp;没有左子节点，那么&nbsp;<code>leftChild[i]</code>&nbsp;就等于&nbsp;<code>-1</code>。右子节点也符合该规则。</p>
 
 <p>注意：节点没有值，本问题中仅仅使用节点编号。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 <pre><strong>输入：</strong>n = 6, leftChild = [1,-1,-1,4,-1,-1], rightChild = [2,-1,-1,5,-1,-1]
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

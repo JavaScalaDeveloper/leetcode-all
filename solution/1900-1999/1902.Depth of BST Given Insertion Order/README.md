@@ -1,7 +1,5 @@
 # [1902. 给定二叉搜索树的插入顺序求深度](https://leetcode.cn/problems/depth-of-bst-given-insertion-order)
 
-[English Version](/solution/1900-1999/1902.Depth%20of%20BST%20Given%20Insertion%20Order/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个<strong>从 0 开始索引</strong>的整数类型数组 <code>order</code> ，其长度为 <code>n</code>，是从 <code>1</code> 到 <code>n</code> 的所有整数的一个排列，表示插入到一棵二叉搜索树的顺序。</p>
@@ -24,8 +22,6 @@
 <p>返回该二叉搜索树的<strong>深度</strong>。</p>
 
 <p>一棵二叉树的<strong>深度</strong>是从根节点到最远叶节点的<strong>最长路径</strong>所经<strong>节点</strong>的个数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1902.Depth%20of%20BST%20Given%20Insertion%20Order/images/1.png" style="width: 624px; height: 154px;" />
@@ -50,8 +46,6 @@
 <strong>输出:</strong> 4
 <strong>解释: </strong>该二叉搜索树的深度为 4，路径为 1-&gt;2-&gt;3-&gt;4。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

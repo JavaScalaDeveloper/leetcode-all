@@ -1,7 +1,5 @@
 # [2153. 每辆车的乘客人数 II](https://leetcode.cn/problems/the-number-of-passengers-in-each-bus-ii)
 
-[English Version](/solution/2100-2199/2153.The%20Number%20of%20Passengers%20in%20Each%20Bus%20II/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Buses</code></p>
@@ -19,8 +17,6 @@ bus_id 是该表的主键。
 不会出现两辆公交车同时到达，所有公交车的容量都是正整数。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Passengers</code></p>
 
 <pre>
@@ -34,8 +30,6 @@ passenger_id 是该表的主键。
 该表的每一行都包含乘客到达 LeetCode 站的时间信息。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>公交车和乘客到达 LeetCode 站。如果一辆公交车在 <code>t<sub>bus</sub></code> 时间点到达车站，乘客在 <code>t<sub>passenger</sub></code> 到达车站，其中&nbsp;<code>t<sub>passenger</sub> &lt;= t<sub>bus</sub></code>，而该乘客没有赶上任何公交车，则该乘客将搭乘该公交车。此外，每辆公交车都有一个容量。如果在公交车到站的那一刻，等待的乘客超过了它的载客量 <code>capacity</code>，只有&nbsp;<code>capacity</code> 个乘客才会搭乘该公交车。</p>
 
 <p>编写一个 SQL 来查询使用每条总线的用户数量。</p>
@@ -43,8 +37,6 @@ passenger_id 是该表的主键。
 <p>返回按 <code>bus_id</code> <strong>升序排序&nbsp;</strong>的结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

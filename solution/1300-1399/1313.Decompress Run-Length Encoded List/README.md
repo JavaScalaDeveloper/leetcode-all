@@ -1,7 +1,5 @@
 # [1313. 解压缩编码列表](https://leetcode.cn/problems/decompress-run-length-encoded-list)
 
-[English Version](/solution/1300-1399/1313.Decompress%20Run-Length%20Encoded%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个以行程长度编码压缩的整数列表 <code>nums</code> 。</p>
@@ -60,24 +58,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *decompressRLElist(int *nums, int numsSize, int *returnSize) {
-    int size = 0;
-    for (int i = 0; i < numsSize; i += 2) {
-        size += nums[i];
-    }
-    int *ans = malloc(size * sizeof(int));
-    for (int i = 0, j = 0; j < numsSize; j += 2) {
-        for (int k = 0; k < nums[j]; k++) {
-            ans[i++] = nums[j + 1];
-        }
-    }
-    *returnSize = size;
-    return ans;
-}
-```
+**

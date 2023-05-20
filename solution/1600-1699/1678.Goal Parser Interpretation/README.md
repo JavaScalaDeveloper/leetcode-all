@@ -1,7 +1,5 @@
 # [1678. 设计 Goal 解析器](https://leetcode.cn/problems/goal-parser-interpretation)
 
-[English Version](/solution/1600-1699/1678.Goal%20Parser%20Interpretation/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个可以解释字符串 <code>command</code> 的 <strong>Goal 解析器</strong> 。<code>command</code> 由 <code>"G"</code>、<code>"()"</code> 和/或 <code>"(al)"</code> 按某种顺序组成。Goal 解析器会将 <code>"G"</code> 解释为字符串 <code>"G"</code>、<code>"()"</code> 解释为字符串 <code>"o"</code> ，<code>"(al)"</code> 解释为字符串 <code>"al"</code> 。然后，按原顺序将经解释得到的字符串连接成一个字符串。</p>
@@ -86,27 +84,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char *interpret(char *command) {
-    int n = strlen(command);
-    char *ans = malloc(sizeof(char) * n + 1);
-    int i = 0;
-    for (int j = 0; j < n; j++) {
-        char c = command[j];
-        if (c == 'G') {
-            ans[i++] = 'G';
-        } else if (c == '(') {
-            if (command[j + 1] == ')') {
-                ans[i++] = 'o';
-            } else {
-                ans[i++] = 'a';
-                ans[i++] = 'l';
-            }
-        }
-    }
-    ans[i] = '\0';
-    return ans;
-}
-```
+**

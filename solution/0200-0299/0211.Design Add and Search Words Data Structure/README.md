@@ -1,7 +1,5 @@
 # [211. 添加与搜索单词 - 数据结构设计](https://leetcode.cn/problems/design-add-and-search-words-data-structure)
 
-[English Version](/solution/0200-0299/0211.Design%20Add%20and%20Search%20Words%20Data%20Structure/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个数据结构，支持 添加新单词 和 查找字符串是否与任何先前添加的字符串匹配 。</p>
@@ -13,8 +11,6 @@
 	<li><code>void addWord(word)</code> 将 <code>word</code> 添加到数据结构中，之后可以对它进行匹配</li>
 	<li><code>bool search(word)</code> 如果数据结构中存在字符串与&nbsp;<code>word</code> 匹配，则返回 <code>true</code> ；否则，返回&nbsp; <code>false</code> 。<code>word</code> 中可能包含一些 <code>'.'</code> ，每个&nbsp;<code>.</code> 都可以表示任何一个字母。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -35,8 +31,6 @@ wordDictionary.search("bad"); // 返回 True
 wordDictionary.search(".ad"); // 返回 True
 wordDictionary.search("b.."); // 返回 True
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

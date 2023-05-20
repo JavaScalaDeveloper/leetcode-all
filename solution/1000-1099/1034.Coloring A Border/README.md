@@ -1,7 +1,5 @@
 # [1034. 边界着色](https://leetcode.cn/problems/coloring-a-border)
 
-[English Version](/solution/1000-1099/1034.Coloring%20A%20Border/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的整数矩阵 <code>grid</code> ，表示一个网格。另给你三个整数&nbsp;<code>row</code>、<code>col</code> 和 <code>color</code> 。网格中的每个值表示该位置处的网格块的颜色。</p>
@@ -22,8 +20,6 @@
 
 <p>请你使用指定颜色&nbsp;<code>color</code> 为所有包含网格块&nbsp;<code>grid[row][col]</code> 的 <strong>连通分量的边界</strong> 进行着色，并返回最终的网格&nbsp;<code>grid</code> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -42,8 +38,6 @@
 <strong>输入：</strong>grid = [[1,1,1],[1,1,1],[1,1,1]], row = 1, col = 1, color = 2
 <strong>输出：</strong>[[2,2,2],[2,1,2],[2,2,2]]</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -54,8 +48,6 @@
 	<li><code>0 &lt;= row &lt; m</code></li>
 	<li><code>0 &lt;= col &lt; n</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

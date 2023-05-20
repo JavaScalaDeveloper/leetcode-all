@@ -1,7 +1,5 @@
 # [2641. 二叉树的堂兄弟节点 II](https://leetcode.cn/problems/cousins-in-binary-tree-ii)
 
-[English Version](/solution/2600-2699/2641.Cousins%20in%20Binary%20Tree%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵二叉树的根&nbsp;<code>root</code>&nbsp;，请你将每个节点的值替换成该节点的所有 <strong>堂兄弟节点值的和&nbsp;</strong>。</p>
@@ -11,8 +9,6 @@
 <p>请你返回修改值之后，树的根<em>&nbsp;</em><code>root</code><em>&nbsp;</em>。</p>
 
 <p><strong>注意</strong>，一个节点的深度指的是从树根节点到这个节点经过的边数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 - 值为 1 的节点没有堂兄弟，所以值修改为 0 。
 - 值为 2 的节点没有堂兄弟，所以值修改为 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

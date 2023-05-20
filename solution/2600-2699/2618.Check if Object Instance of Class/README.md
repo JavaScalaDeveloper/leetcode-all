@@ -1,14 +1,10 @@
 # [2618. 检查是否是类的对象实例](https://leetcode.cn/problems/check-if-object-instance-of-class)
 
-[English Version](/solution/2600-2699/2618.Check%20if%20Object%20Instance%20of%20Class/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个函数，检查给定的对象是否是给定类或超类的实例。</p>
 
 <p>可以传递给函数的数据类型没有限制。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2532. 过桥的时间](https://leetcode.cn/problems/time-to-cross-a-bridge)
 
-[English Version](/solution/2500-2599/2532.Time%20to%20Cross%20a%20Bridge/README_EN.md)
-
 ## 题目描述
 
 <p>共有 <code>k</code> 位工人计划将 <code>n</code> 个箱子从旧仓库移动到新仓库。给你两个整数 <code>n</code> 和 <code>k</code>，以及一个二维整数数组 <code>time</code> ，数组的大小为 <code>k x 4</code> ，其中 <code>time[i] = [leftToRight<sub>i</sub>, pickOld<sub>i</sub>, rightToLeft<sub>i</sub>, putNew<sub>i</sub>]</code> 。</p>
@@ -31,8 +29,6 @@
 </ul>
 
 <p>所有 <code>n</code> 个盒子都需要放入新仓库，<span class="text-only" data-eleid="8" style="white-space: pre;">请你返回最后一个搬运箱子的工人 </span><strong><span class="text-only" data-eleid="9" style="white-space: pre;">到达河左岸</span></strong><span class="text-only" data-eleid="10" style="white-space: pre;"> 的时间。</span></p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -67,8 +63,6 @@
 从 50 到 58 ：工人 0 将箱子放入新仓库。
 整个过程在 58 分钟后结束。因为问题关注的是最后一个工人到达左岸的时间，所以返回 50 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

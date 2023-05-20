@@ -1,7 +1,5 @@
 # [1684. 统计一致字符串的数目](https://leetcode.cn/problems/count-the-number-of-consistent-strings)
 
-[English Version](/solution/1600-1699/1684.Count%20the%20Number%20of%20Consistent%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由不同字符组成的字符串 <code>allowed</code> 和一个字符串数组 <code>words</code> 。如果一个字符串的每一个字符都在 <code>allowed</code> 中，就称这个字符串是 <strong>一致字符串 </strong>。</p>
@@ -116,47 +114,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int countConsistentStrings(char *allowed, char **words, int wordsSize) {
-    int n = strlen(allowed);
-    int make[26] = {0};
-    for (int i = 0; i < n; i++) {
-        make[allowed[i] - 'a'] = 1;
-    }
-    int ans = wordsSize;
-    for (int i = 0; i < wordsSize; i++) {
-        char *word = words[i];
-        for (int j = 0; j < strlen(word); j++) {
-            if (!make[word[j] - 'a']) {
-                ans--;
-                break;
-            }
-        }
-    }
-    return ans;
-}
-```
-
-```c
-int helper(char *s) {
-    int res = 0;
-    int n = strlen(s);
-    for (int i = 0; i < n; i++) {
-        res |= 1 << (s[i] - 'a');
-    }
-    return res;
-}
-
-int countConsistentStrings(char *allowed, char **words, int wordsSize) {
-    int mask = helper(allowed);
-    int ans = 0;
-    for (int i = 0; i < wordsSize; i++) {
-        if ((mask | helper(words[i])) == mask) {
-            ans++;
-        }
-    }
-    return ans;
-}
-```
+**

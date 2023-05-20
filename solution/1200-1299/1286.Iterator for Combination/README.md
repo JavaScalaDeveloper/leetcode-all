@@ -1,7 +1,5 @@
 # [1286. 字母组合迭代器](https://leetcode.cn/problems/iterator-for-combination)
 
-[English Version](/solution/1200-1299/1286.Iterator%20for%20Combination/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个迭代器类&nbsp;<code>CombinationIterator</code>&nbsp;，包括以下内容：</p>
@@ -11,8 +9,6 @@
 	<li>函数&nbsp;<em><code>next()</code>&nbsp;</em>，按&nbsp;<strong>字典序&nbsp;</strong>返回长度为&nbsp;<code>combinationLength</code> 的下一个字母组合。</li>
 	<li>函数&nbsp;<em><code>hasNext()</code>&nbsp;</em>，只有存在长度为&nbsp;<code>combinationLength</code> 的下一个字母组合时，才返回&nbsp;<code>true</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@ iterator.hasNext(); // 返回 true
 iterator.next(); // 返回 "bc"
 iterator.hasNext(); // 返回 false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

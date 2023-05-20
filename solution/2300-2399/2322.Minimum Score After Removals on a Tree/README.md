@@ -1,7 +1,5 @@
 # [2322. 从树中删除边的最小分数](https://leetcode.cn/problems/minimum-score-after-removals-on-a-tree)
 
-[English Version](/solution/2300-2399/2322.Minimum%20Score%20After%20Removals%20on%20a%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>存在一棵无向连通树，树中有编号从 <code>0</code> 到 <code>n - 1</code> 的 <code>n</code> 个节点， 以及 <code>n - 1</code> 条边。</p>
@@ -20,8 +18,6 @@
 </ul>
 
 <p>返回在给定树上执行任意删除边方案可能的 <strong>最小</strong> 分数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2322.Minimum%20Score%20After%20Removals%20on%20a%20Tree/images/ex1drawio.png" style="width: 193px; height: 190px;">
@@ -46,8 +42,6 @@
 分数是最大异或值和最小异或值的差值，0 - 0 = 0 。
 无法获得比 0 更小的分数 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

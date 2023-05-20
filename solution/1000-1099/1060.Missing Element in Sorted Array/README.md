@@ -1,7 +1,5 @@
 # [1060. 有序数组中的缺失元素](https://leetcode.cn/problems/missing-element-in-sorted-array)
 
-[English Version](/solution/1000-1099/1060.Missing%20Element%20in%20Sorted%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>现有一个按 <strong>升序</strong> 排列的整数数组 <code>nums</code> ，其中每个数字都 <strong>互不相同</strong> 。</p>

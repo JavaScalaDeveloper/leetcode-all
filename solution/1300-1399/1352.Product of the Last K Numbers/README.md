@@ -1,7 +1,5 @@
 # [1352. 最后 K 个数的乘积](https://leetcode.cn/problems/product-of-the-last-k-numbers)
 
-[English Version](/solution/1300-1399/1352.Product%20of%20the%20Last%20K%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>请你实现一个「数字乘积类」<code>ProductOfNumbers</code>，要求支持下述两种方法：</p>
@@ -20,8 +18,6 @@
 </ul>
 
 <p>题目数据保证：任何时候，任一连续数字序列的乘积都在 32-bit 整数范围内，不会溢出。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -45,8 +41,6 @@ productOfNumbers.getProduct(4); // 返回  0 。最后 4 个数字的乘积是 0
 productOfNumbers.add(8);        // [3,0,2,5,4,8]
 productOfNumbers.getProduct(2); // 返回 32 。最后 2 个数字的乘积是 4 * 8 = 32 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

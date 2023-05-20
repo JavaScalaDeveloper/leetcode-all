@@ -1,7 +1,5 @@
 # [2227. 加密解密字符串](https://leetcode.cn/problems/encrypt-and-decrypt-strings)
 
-[English Version](/solution/2200-2299/2227.Encrypt%20and%20Decrypt%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符数组 <code>keys</code> ，由若干 <strong>互不相同</strong> 的字符组成。还有一个字符串数组 <code>values</code> ，内含若干长度为 2 的字符串。另给你一个字符串数组 <code>dictionary</code> ，包含解密后所有允许的原字符串。请你设计并实现一个支持加密及解密下标从 <strong>0</strong> 开始字符串的数据结构。</p>
@@ -28,8 +26,6 @@
 	<li><code>int decrypt(String word2)</code> 统计并返回可以由 <code>word2</code> 解密得到且出现在 <code>dictionary</code> 中的字符串数目。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre>
@@ -48,8 +44,6 @@ encrypter.decrypt("eizfeiam"); // return 2.
                               // 因此，解密后可以得到的字符串是 "abad"，"cbad"，"abcd" 和 "cbcd"。 
                               // 其中 2 个字符串，"abad" 和 "abcd"，在 dictionary 中出现，所以答案是 2 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

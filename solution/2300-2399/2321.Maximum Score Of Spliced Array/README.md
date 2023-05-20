@@ -1,7 +1,5 @@
 # [2321. 拼接数组的最大分数](https://leetcode.cn/problems/maximum-score-of-spliced-array)
 
-[English Version](/solution/2300-2399/2321.Maximum%20Score%20Of%20Spliced%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong> 开始的整数数组 <code>nums1</code> 和 <code>nums2</code> ，长度都是 <code>n</code> 。</p>
@@ -19,8 +17,6 @@
 <p>返回 <strong>可能的最大分数</strong> 。</p>
 
 <p><strong>子数组 </strong>是数组中连续的一个元素序列。<code>arr[left...right]</code> 表示子数组包含 <code>nums</code> 中下标 <code>left</code> 和 <code>right</code> 之间的元素<strong>（含</strong> 下标 <code>left</code> 和 <code>right</code> 对应元素<strong>）</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <strong>解释：</strong>选择不交换任何子数组。
 分数为 max(sum(nums1), sum(nums2)) = max(31, 3) = 31 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

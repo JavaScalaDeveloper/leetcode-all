@@ -1,7 +1,5 @@
 # [1544. 整理字符串](https://leetcode.cn/problems/make-the-string-great)
 
-[English Version](/solution/1500-1599/1544.Make%20The%20String%20Great/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由大小写英文字母组成的字符串 <code>s</code> 。</p>

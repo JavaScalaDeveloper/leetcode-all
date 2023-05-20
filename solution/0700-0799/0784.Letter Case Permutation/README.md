@@ -1,14 +1,10 @@
 # [784. 字母大小写全排列](https://leetcode.cn/problems/letter-case-permutation)
 
-[English Version](/solution/0700-0799/0784.Letter%20Case%20Permutation/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串&nbsp;<code>s</code>&nbsp;，通过将字符串&nbsp;<code>s</code>&nbsp;中的每个字母转变大小写，我们可以获得一个新的字符串。</p>
 
 <p>返回 <em>所有可能得到的字符串集合</em> 。以 <strong>任意顺序</strong> 返回输出。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输入:</strong> s = "3z4"
 <strong>输出:</strong> ["3z4","3Z4"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

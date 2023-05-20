@@ -1,7 +1,5 @@
 # [641. 设计循环双端队列](https://leetcode.cn/problems/design-circular-deque)
 
-[English Version](/solution/0600-0699/0641.Design%20Circular%20Deque/README_EN.md)
-
 ## 题目描述
 
 <p>设计实现双端队列。</p>
@@ -19,8 +17,6 @@
 	<li><code>boolean isEmpty()</code>&nbsp;：若双端队列为空，则返回&nbsp;<code>true</code>&nbsp;，否则返回 <code>false</code> &nbsp;。</li>
 	<li><code>boolean isFull()</code>&nbsp;：若双端队列满了，则返回&nbsp;<code>true</code>&nbsp;，否则返回 <code>false</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@ circularDeque.deleteLast();			        // 返回 true
 circularDeque.insertFront(4);			        // 返回 true
 circularDeque.getFront();				// 返回 4
 &nbsp;</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2446. 判断两个事件是否存在冲突](https://leetcode.cn/problems/determine-if-two-events-have-conflict)
 
-[English Version](/solution/2400-2499/2446.Determine%20if%20Two%20Events%20Have%20Conflict/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串数组 <code>event1</code> 和&nbsp;<code>event2</code>&nbsp;，表示发生在同一天的两个闭区间时间段事件，其中：</p>
@@ -16,8 +14,6 @@
 <p>当两个事件存在某个非空的交集时（即，某些时刻是两个事件都包含的），则认为出现 <strong>冲突</strong>&nbsp;。</p>
 
 <p>如果两个事件之间存在冲突，返回&nbsp;<code>true</code><em>&nbsp;</em>；否则，返回<em>&nbsp;</em><code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -42,8 +38,6 @@
 <b>输出：</b>false
 <b>解释：</b>两个事件不存在交集。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

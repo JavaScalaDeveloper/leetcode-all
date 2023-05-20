@@ -1,7 +1,5 @@
 # [1507. 转变日期格式](https://leetcode.cn/problems/reformat-date)
 
-[English Version](/solution/1500-1599/1507.Reformat%20Date/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>date</code>&nbsp;，它的格式为&nbsp;<code>Day Month Year</code>&nbsp;，其中：</p>
@@ -20,8 +18,6 @@
 	<li><code>DD</code>&nbsp;表示 2 位的天数。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>date = &quot;20th Oct 2052&quot;
@@ -39,8 +35,6 @@
 <pre><strong>输入：</strong>date = &quot;26th May 1960&quot;
 <strong>输出：</strong>&quot;1960-05-26&quot;
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

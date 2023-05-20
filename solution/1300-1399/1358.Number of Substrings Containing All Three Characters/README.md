@@ -1,14 +1,10 @@
 # [1358. 包含所有三种字符的子字符串数目](https://leetcode.cn/problems/number-of-substrings-containing-all-three-characters)
 
-[English Version](/solution/1300-1399/1358.Number%20of%20Substrings%20Containing%20All%20Three%20Characters/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code>&nbsp;，它只包含三种字符 a, b 和 c 。</p>
 
 <p>请你返回 a，b 和 c 都&nbsp;<strong>至少&nbsp;</strong>出现过一次的子字符串数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <pre><strong>输入：</strong>s = &quot;abc&quot;
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

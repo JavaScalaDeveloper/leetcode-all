@@ -1,7 +1,5 @@
 # [685. 冗余连接 II](https://leetcode.cn/problems/redundant-connection-ii)
 
-[English Version](/solution/0600-0699/0685.Redundant%20Connection%20II/README_EN.md)
-
 ## 题目描述
 
 <p>在本问题中，有根树指满足以下条件的 <strong>有向</strong> 图。该树只有一个根节点，所有其他节点都是该根节点的后继。该树除了根节点之外的每一个节点都有且只有一个父节点，而根节点没有父节点。</p>

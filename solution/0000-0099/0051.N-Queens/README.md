@@ -1,7 +1,5 @@
 # [51. N 皇后](https://leetcode.cn/problems/n-queens)
 
-[English Version](/solution/0000-0099/0051.N-Queens/README_EN.md)
-
 ## 题目描述
 
 <p>按照国际象棋的规则，皇后可以攻击与之处在同一行或同一列或同一斜线上的棋子。</p>
@@ -13,8 +11,6 @@
 <div class="original__bRMd">
 <div>
 <p>每一种解法包含一个不同的&nbsp;<strong>n 皇后问题</strong> 的棋子放置方案，该方案中 <code>'Q'</code> 和 <code>'.'</code> 分别代表了皇后和空位。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0051.N-Queens/images/queens.jpg" style="width: 600px; height: 268px;" />
@@ -30,8 +26,6 @@
 <strong>输入：</strong>n = 1
 <strong>输出：</strong>[["Q"]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

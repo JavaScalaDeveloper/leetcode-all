@@ -1,7 +1,5 @@
 # [1387. 将整数按权重排序](https://leetcode.cn/problems/sort-integers-by-the-power-value)
 
-[English Version](/solution/1300-1399/1387.Sort%20Integers%20by%20The%20Power%20Value/README_EN.md)
-
 ## 题目描述
 
 <p>我们将整数 <code>x</code>&nbsp;的 <strong>权重</strong> 定义为按照下述规则将 <code>x</code>&nbsp;变成 <code>1</code>&nbsp;所需要的步数：</p>
@@ -18,8 +16,6 @@
 <p>请你返回区间&nbsp;<code>[lo, hi]</code>&nbsp;之间的整数按权重排序后的第&nbsp;<code>k</code>&nbsp;个数。</p>
 
 <p>注意，题目保证对于任意整数&nbsp;<code>x</code>&nbsp;<code>（lo &lt;= x &lt;= hi）</code>&nbsp;，它变成&nbsp;<code>1</code> 所需要的步数是一个 32 位有符号整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 按权重排序后得到的结果为 [8, 10, 11, 7, 9] 。
 排序后数组中第 4 个数字为 7 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

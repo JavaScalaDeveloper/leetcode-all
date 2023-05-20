@@ -1,7 +1,5 @@
 # [737. 句子相似性 II](https://leetcode.cn/problems/sentence-similarity-ii)
 
-[English Version](/solution/0700-0799/0737.Sentence%20Similarity%20II/README_EN.md)
-
 ## 题目描述
 
 <p>我们可以将一个句子表示为一个单词数组，例如，句子 <code>I am happy with leetcode"</code>可以表示为&nbsp;<code>arr = ["I","am",happy","with","leetcode"]</code></p>
@@ -18,8 +16,6 @@
 </ul>
 
 <p>请注意，一个词总是与它自己相似，也请注意，相似关系是可传递的。例如，如果单词 <code>a</code> 和 <code>b</code> 是相似的，单词&nbsp;<code>b</code> 和 <code>c</code> 也是相似的，那么 <code>a</code> 和 <code>c</code> 也是 <strong>相似</strong> 的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -44,8 +40,6 @@
 <strong>输出:</strong> false
 <strong>解释: </strong>“leetcode”和“onepiece”不相似。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

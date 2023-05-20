@@ -1,7 +1,5 @@
 # [845. 数组中的最长山脉](https://leetcode.cn/problems/longest-mountain-in-array)
 
-[English Version](/solution/0800-0899/0845.Longest%20Mountain%20in%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>把符合下列属性的数组 <code>arr</code> 称为 <strong>山脉数组</strong> ：</p>
@@ -17,8 +15,6 @@
 </ul>
 
 <p>给出一个整数数组 <code>arr</code>，返回最长山脉子数组的长度。如果不存在山脉子数组，返回 <code>0</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,16 +32,12 @@
 <strong>解释：</strong>不存在山脉子数组。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= arr.length &lt;= 10<sup>4</sup></code></li>
 	<li><code>0 &lt;= arr[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

@@ -1,7 +1,5 @@
 # [468. 验证 IP 地址](https://leetcode.cn/problems/validate-ip-address)
 
-[English Version](/solution/0400-0499/0468.Validate%20IP%20Address/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串&nbsp;<code>queryIP</code>。如果是有效的 IPv4 地址，返回 <code>"IPv4"</code> ；如果是有效的 IPv6 地址，返回 <code>"IPv6"</code> ；如果不是上述类型的 IP 地址，返回 <code>"Neither"</code> 。</p>
@@ -17,8 +15,6 @@
 </ul>
 
 <p>例如 <code>"2001:0db8:85a3:0000:0000:8a2e:0370:7334"</code> 和 <code>"2001:db8:85a3:0:0:8A2E:0370:7334"</code> 是有效的 IPv6 地址，而 <code>"2001:0db8:85a3::8A2E:037j:7334"</code> 和 <code>"02001:0db8:85a3:0000:0000:8a2e:0370:7334"</code> 是无效的 IPv6 地址。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 <strong>输出：</strong>"Neither"
 <strong>解释：</strong>既不是 IPv4 地址，又不是 IPv6 地址
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

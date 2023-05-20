@@ -1,14 +1,10 @@
 # [1078. Bigram 分词](https://leetcode.cn/problems/occurrences-after-bigram)
 
-[English Version](/solution/1000-1099/1078.Occurrences%20After%20Bigram/README_EN.md)
-
 ## 题目描述
 
 <p>给出第一个词&nbsp;<code>first</code> 和第二个词&nbsp;<code>second</code>，考虑在某些文本&nbsp;<code>text</code>&nbsp;中可能以 <code>"first second third"</code> 形式出现的情况，其中&nbsp;<code>second</code>&nbsp;紧随&nbsp;<code>first</code>&nbsp;出现，<code>third</code>&nbsp;紧随&nbsp;<code>second</code>&nbsp;出现。</p>
 
 <p>对于每种这样的情况，将第三个词 "<code>third</code>" 添加到答案中，并返回答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输入：</strong>text = "we will we will rock you", first = "we", second = "will"
 <strong>输出：</strong>["we","rock"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

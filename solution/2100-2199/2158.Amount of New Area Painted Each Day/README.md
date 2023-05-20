@@ -1,7 +1,5 @@
 # [2158. 每天绘制新区域的数量](https://leetcode.cn/problems/amount-of-new-area-painted-each-day)
 
-[English Version](/solution/2100-2199/2158.Amount%20of%20New%20Area%20Painted%20Each%20Day/README_EN.md)
-
 ## 题目描述
 
 <p>有一幅细长的画，可以用数轴来表示。 给你一个长度为 <code>n</code> 、下标从 <strong>0</strong> 开始的二维整数数组 <code>paint</code> ，其中 <code>paint[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> 表示在第 <code>i</code> 天你需要绘制 <code>start<sub>i</sub></code>&nbsp;和 <code>end<sub>i</sub></code>&nbsp;之间的区域。</p>
@@ -9,8 +7,6 @@
 <p>多次绘制同一区域会导致不均匀，因此每个区域最多只能绘制 <strong>一次 </strong>。</p>
 
 <p>返回一个长度为 <code>n</code> 的整数数组 <code>worklog</code>，其中 <code>worklog[i]</code> 是你在第 <code>i</code> 天绘制的<strong> 新 </strong>区域的数量。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2158.Amount%20of%20New%20Area%20Painted%20Each%20Day/images/screenshot-2022-02-01-at-17-16-16-diagram-drawio-diagrams-net.png" style="height: 300px; width: 620px;" />
@@ -53,8 +49,6 @@
 在第 1 天，什么都不画，因为第 0 天已经画了 2 到 4 之间的所有内容。
 第 1 天绘制的新区域数量为 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2377. 整理奥运表](https://leetcode.cn/problems/sort-the-olympic-table)
 
-[English Version](/solution/2300-2399/2377.Sort%20the%20Olympic%20Table/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Olympic</code></p>
@@ -19,8 +17,6 @@ country 是该表的主键。
 该表中的每一行都显示了一个国家的名称以及它在奥运会上获得的金、银、铜牌的数量。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>奥运名次表的排序规则如下:</p>
 
 <ul>
@@ -33,8 +29,6 @@ country 是该表的主键。
 <p>编写一个 SQL 查询对奥运表进行排序</p>
 
 <p>查询结果格式示例如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

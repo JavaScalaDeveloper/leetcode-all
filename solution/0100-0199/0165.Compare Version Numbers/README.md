@@ -1,7 +1,5 @@
 # [165. 比较版本号](https://leetcode.cn/problems/compare-version-numbers)
 
-[English Version](/solution/0100-0199/0165.Compare%20Version%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个版本号 <code>version1</code> 和 <code>version2</code> ，请你比较它们。</p>
@@ -17,8 +15,6 @@
 	<li>如果&nbsp;<code><em>version1&nbsp;</em>&lt;&nbsp;<em>version2</em></code> 返回 <code>-1</code>，</li>
 	<li>除此之外返回 <code>0</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>version1 中下标为 0 的修订号是 "0"，version2 中下标为 0 的修订号是 "1" 。0 &lt; 1，所以 version1 &lt; version2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

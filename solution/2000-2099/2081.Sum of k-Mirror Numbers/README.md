@@ -1,7 +1,5 @@
 # [2081. k 镜像数字的和](https://leetcode.cn/problems/sum-of-k-mirror-numbers)
 
-[English Version](/solution/2000-2099/2081.Sum%20of%20k-Mirror%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>一个 <strong>k 镜像数字</strong>&nbsp;指的是一个在十进制和 k 进制下从前往后读和从后往前读都一样的&nbsp;<strong>没有前导 0</strong>&nbsp;的&nbsp;<strong>正</strong>&nbsp;整数。</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>给你进制&nbsp;<code>k</code>&nbsp;和一个数字&nbsp;<code>n</code>&nbsp;，请你返回 k 镜像数字中 <strong>最小</strong> 的 <code>n</code>&nbsp;个数 <strong>之和</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -54,8 +50,6 @@
 <b>解释：</b>17 个最小的 7 镜像数字分别为：
 1, 2, 3, 4, 5, 6, 8, 121, 171, 242, 292, 16561, 65656, 2137312, 4602064, 6597956, 6958596
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

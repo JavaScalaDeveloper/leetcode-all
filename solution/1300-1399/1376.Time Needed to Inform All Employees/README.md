@@ -1,7 +1,5 @@
 # [1376. 通知所有员工所需的时间](https://leetcode.cn/problems/time-needed-to-inform-all-employees)
 
-[English Version](/solution/1300-1399/1376.Time%20Needed%20to%20Inform%20All%20Employees/README_EN.md)
-
 ## 题目描述
 
 <p>公司里有 <code>n</code> 名员工，每个员工的 ID 都是独一无二的，编号从 <code>0</code> 到 <code>n - 1</code>。公司的总负责人通过 <code>headID</code> 进行标识。</p>
@@ -13,8 +11,6 @@
 <p>第 <code>i</code> 名员工需要 <code>informTime[i]</code> 分钟来通知它的所有直属下属（也就是说在 <code>informTime[i]</code> 分钟后，他的所有直属下属都可以开始传播这一消息）。</p>
 
 <p>返回通知所有员工这一紧急消息所需要的 <strong>分钟数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>解释：</strong>id = 2 的员工是公司的总负责人，也是其他所有员工的直属负责人，他需要 1 分钟来通知所有员工。
 上图显示了公司员工的树结构。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

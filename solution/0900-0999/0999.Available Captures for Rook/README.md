@@ -1,7 +1,5 @@
 # [999. 可以被一步捕获的棋子数](https://leetcode.cn/problems/available-captures-for-rook)
 
-[English Version](/solution/0900-0999/0999.Available%20Captures%20for%20Rook/README_EN.md)
-
 ## 题目描述
 
 <p>在一个 8 x 8 的棋盘上，有一个白色的车（<code>Rook</code>），用字符 <code>&#39;R&#39;</code> 表示。棋盘上还可能存在空方块，白色的象（<code>Bishop</code>）以及黑色的卒（<code>pawn</code>），分别用字符 <code>&#39;.&#39;</code>，<code>&#39;B&#39;</code> 和 <code>&#39;p&#39;</code> 表示。不难看出，大写字符表示的是白棋，小写字符表示的是黑棋。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>你现在可以控制车移动一次，请你统计有多少敌方的卒处于你的捕获范围内（即，可以被一步捕获的棋子数）。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,8 +44,6 @@
 <strong>解释： </strong>
 车可以捕获位置 b5，d6 和 f5 的卒。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

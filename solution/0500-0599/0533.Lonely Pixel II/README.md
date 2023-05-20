@@ -1,7 +1,5 @@
 # [533. 孤独像素 II](https://leetcode.cn/problems/lonely-pixel-ii)
 
-[English Version](/solution/0500-0599/0533.Lonely%20Pixel%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的二维字符数组 <code>picture</code> ，表示一张黑白图像，数组中的 <code>'B'</code> 表示黑色像素，<code>'W'</code> 表示白色像素。另给你一个整数 <code>target</code> ，请你找出并返回符合规则的 <strong>黑色</strong> 孤独像素的数量。</p>
@@ -12,8 +10,6 @@
 	<li>行 <code>r</code> 和列 <code>c</code> 中的黑色像素恰好有 <code>target</code> 个。</li>
 	<li>列 <code>c</code> 中所有黑色像素所在的行必须和行 <code>r</code> 完全相同。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0533.Lonely%20Pixel%20II/images/pixel2-1-grid.jpg" style="width: 493px; height: 333px;" />
@@ -32,8 +28,6 @@
 <strong>输入：</strong>picture = [["W","W","B"],["W","W","B"],["W","W","B"]], target = 1
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

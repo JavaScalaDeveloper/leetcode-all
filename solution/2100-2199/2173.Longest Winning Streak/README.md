@@ -1,7 +1,5 @@
 # [2173. 最多连胜的次数](https://leetcode.cn/problems/longest-winning-streak)
 
-[English Version](/solution/2100-2199/2173.Longest%20Winning%20Streak/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Matches</code></p>
@@ -18,8 +16,6 @@
 每一行包括了：参赛选手 id、 比赛时间、 比赛结果。
 比赛结果（result）的枚举类型为 ('Win', 'Draw', 'Lose')。</pre>
 
-<p>&nbsp;</p>
-
 <p>选手的&nbsp;<strong>连胜数</strong> 是指连续获胜的次数，且没有被平局或输球中断。</p>
 
 <p>写一个SQL 语句来计算每个参赛选手最多的<strong>连胜数</strong>。</p>
@@ -27,8 +23,6 @@
 <p>结果可以以任何顺序返回。</p>
 
 <p>结果格式如下例所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -70,8 +64,6 @@ Player 3:
 2022-03-30, player 3 赢了一场比赛。
 最多连赢了一场比赛。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶:</strong> 如果我们想计算最长的连续不输的次数（即获胜或平局），你将如何调整？</p>
 

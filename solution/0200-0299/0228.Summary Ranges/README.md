@@ -1,7 +1,5 @@
 # [228. 汇总区间](https://leetcode.cn/problems/summary-ranges)
 
-[English Version](/solution/0200-0299/0228.Summary%20Ranges/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个 &nbsp;<strong>无重复元素</strong> 的&nbsp;<strong>有序</strong> 整数数组 <code>nums</code> 。</p>
@@ -14,8 +12,6 @@
 	<li><code>"a-&gt;b"</code> ，如果 <code>a != b</code></li>
 	<li><code>"a"</code> ，如果 <code>a == b</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 [6,6] --&gt; "6"
 [8,9] --&gt; "8-&gt;9"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

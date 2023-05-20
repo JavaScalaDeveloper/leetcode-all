@@ -1,7 +1,5 @@
 # [1629. 按键持续时间最长的键](https://leetcode.cn/problems/slowest-key)
 
-[English Version](/solution/1600-1699/1629.Slowest%20Key/README_EN.md)
-
 ## 题目描述
 
 <p>LeetCode 设计了一款新式键盘，正在测试其可用性。测试人员将会点击一系列键（总计 <code>n</code> 个），每次一个。</p>
@@ -13,8 +11,6 @@
 <p>注意，测试期间，同一个键可以在不同时刻被多次按下，而每次的持续时间都可能不同。</p>
 
 <p>请返回单次按键 <strong>持续时间最长</strong> 的键，如果有多个这样的键，则返回 <strong>按字母顺序排列最大</strong> 的那个键。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 按下 'd' ，持续时间 46 - 36 = 10
 按下 'a' ，持续时间 62 - 46 = 16
 按键持续时间最长的键是 'a' ，持续时间 16</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

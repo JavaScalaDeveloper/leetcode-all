@@ -1,7 +1,5 @@
 # [834. 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree)
 
-[English Version](/solution/0800-0899/0834.Sum%20of%20Distances%20in%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个无向、连通的树。树中有 <code>n</code> 个标记为 <code>0...n-1</code> 的节点以及 <code>n-1</code>&nbsp;条边&nbsp;。</p>
@@ -9,8 +7,6 @@
 <p>给定整数 <code>n</code> 和数组&nbsp;<code>edges</code>&nbsp;，&nbsp;<code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code>表示树中的节点&nbsp;<code>a<sub>i</sub></code>&nbsp;和&nbsp;<code>b<sub>i</sub></code>&nbsp;之间有一条边。</p>
 
 <p>返回长度为 <code>n</code> 的数组&nbsp;<code>answer</code>&nbsp;，其中&nbsp;<code>answer[i]</code>&nbsp;是树中第 <code>i</code> 个节点与所有其他节点之间的距离之和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输入:</strong> n = 2, edges = [[1,0]]
 <strong>输出:</strong> [1,1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

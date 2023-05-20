@@ -1,7 +1,5 @@
 # [606. 根据二叉树创建字符串](https://leetcode.cn/problems/construct-string-from-binary-tree)
 
-[English Version](/solution/0600-0699/0606.Construct%20String%20from%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你二叉树的根节点 <code>root</code> ，请你采用前序遍历的方式，将二叉树转化为一个由括号和整数组成的字符串，返回构造出的字符串。</p>
@@ -10,7 +8,6 @@
 
 <div class="original__bRMd">
 <div>
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0606.Construct%20String%20from%20Binary%20Tree/images/cons1-tree.jpg" style="width: 292px; height: 301px;" />
@@ -26,8 +23,6 @@
 <strong>输入：</strong>root = [1,2,3,null,4]
 <strong>输出：</strong>"1(2()(4))(3)"
 <strong>解释：</strong>和第一个示例类似，但是无法省略第一个空括号对，否则会破坏输入与输出一一映射的关系。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [389. 找不同](https://leetcode.cn/problems/find-the-difference)
 
-[English Version](/solution/0300-0399/0389.Find%20the%20Difference/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个字符串 <code>s</code> 和 <code>t</code>&nbsp;，它们只包含小写字母。</p>
@@ -9,8 +7,6 @@
 <p>字符串 <code>t</code>&nbsp;由字符串 <code>s</code> 随机重排，然后在随机位置添加一个字母。</p>
 
 <p>请找出在 <code>t</code>&nbsp;中被添加的字母。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,8 +22,6 @@
 <strong>输入：</strong>s = "", t = "y"
 <strong>输出：</strong>"y"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -86,36 +80,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char findTheDifference(char *s, char *t) {
-    int n = strlen(s);
-    int count[26] = {0};
-    for (int i = 0; i < n; i++) {
-        count[s[i] - 'a']++;
-        count[t[i] - 'a']--;
-    }
-    count[t[n] - 'a']--;
-    int i;
-    for (i = 0; i < 26; i++) {
-        if (count[i]) {
-            break;
-        }
-    }
-    return 'a' + i;
-}
-```
-
-```c
-char findTheDifference(char *s, char *t) {
-    int n = strlen(s);
-    char ans = 0;
-    for (int i = 0; i < n; i++) {
-        ans ^= s[i];
-        ans ^= t[i];
-    }
-    ans ^= t[n];
-    return ans;
-}
-```
+**

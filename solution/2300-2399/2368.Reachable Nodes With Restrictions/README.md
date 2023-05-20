@@ -1,7 +1,5 @@
 # [2368. 受限条件下可到达节点的数目](https://leetcode.cn/problems/reachable-nodes-with-restrictions)
 
-[English Version](/solution/2300-2399/2368.Reachable%20Nodes%20With%20Restrictions/README_EN.md)
-
 ## 题目描述
 
 <p>现有一棵由 <code>n</code> 个节点组成的无向树，节点编号从 <code>0</code> 到 <code>n - 1</code> ，共有 <code>n - 1</code> 条边。</p>
@@ -11,8 +9,6 @@
 <p>在不访问受限节点的前提下，返回你可以从节点<em> </em><code>0</code><em> </em>到达的 <strong>最多</strong> 节点数目<em>。</em></p>
 
 <p>注意，节点 <code>0</code> <strong>不</strong> 会标记为受限节点。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2368.Reachable%20Nodes%20With%20Restrictions/images/ex1drawio.png" style="width: 402px; height: 322px;">
@@ -28,8 +24,6 @@
 <strong>解释：</strong>上图所示正是这棵树。
 在不访问受限节点的前提下，只有节点 [0,5,6] 可以从节点 0 到达。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1244. 力扣排行榜](https://leetcode.cn/problems/design-a-leaderboard)
 
-[English Version](/solution/1200-1299/1244.Design%20A%20Leaderboard/README_EN.md)
-
 ## 题目描述
 
 <p>新一轮的「力扣杯」编程大赛即将启动，为了动态显示参赛者的得分数据，需要设计一个排行榜 Leaderboard。</p>

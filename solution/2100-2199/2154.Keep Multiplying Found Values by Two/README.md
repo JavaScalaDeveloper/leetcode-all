@@ -1,7 +1,5 @@
 # [2154. 将找到的值乘以 2](https://leetcode.cn/problems/keep-multiplying-found-values-by-two)
 
-[English Version](/solution/2100-2199/2154.Keep%20Multiplying%20Found%20Values%20by%20Two/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，另给你一个整数 <code>original</code> ，这是需要在 <code>nums</code> 中搜索的第一个数字。</p>
@@ -15,8 +13,6 @@
 </ol>
 
 <p>返回<em> </em><code>original</code> 的 <strong>最终</strong> 值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>解释：</strong>
 - 4 不能在 nums 中找到。因此，返回 4 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

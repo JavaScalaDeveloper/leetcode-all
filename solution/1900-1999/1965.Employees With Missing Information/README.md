@@ -1,7 +1,5 @@
 # [1965. 丢失信息的雇员](https://leetcode.cn/problems/employees-with-missing-information)
 
-[English Version](/solution/1900-1999/1965.Employees%20With%20Missing%20Information/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Employees</code></p>
@@ -30,8 +28,6 @@ employee_id is 这个表的主键。
 每一行表示雇员的id 和他的薪水。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写出一个查询语句，找到所有 <strong>丢失信息</strong> 的雇员id。当满足下面一个条件时，就被认为是雇员的信息丢失：</p>
 
 <ul>
@@ -42,8 +38,6 @@ employee_id is 这个表的主键。
 <p>返回这些雇员的id &nbsp;<code>employee_id</code>&nbsp;，&nbsp;<strong>从小到大排序&nbsp;</strong>。</p>
 
 <p>查询结果格式如下面的例子所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

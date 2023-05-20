@@ -1,7 +1,5 @@
 # [1138. 字母板上的路径](https://leetcode.cn/problems/alphabet-board-path)
 
-[English Version](/solution/1100-1199/1138.Alphabet%20Board%20Path/README_EN.md)
-
 ## 题目描述
 
 <p>我们从一块字母板上的位置&nbsp;<code>(0, 0)</code>&nbsp;出发，该坐标对应的字符为&nbsp;<code>board[0][0]</code>。</p>
@@ -24,8 +22,6 @@
 
 <p>返回指令序列，用最小的行动次数让答案和目标&nbsp;<code>target</code>&nbsp;相同。你可以返回任何达成目标的路径。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -39,8 +35,6 @@
 <strong>输入：</strong>target = "code"
 <strong>输出：</strong>"RR!DDRR!UUL!R!"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

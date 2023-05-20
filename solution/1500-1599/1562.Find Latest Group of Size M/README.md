@@ -1,7 +1,5 @@
 # [1562. 查找大小为 M 的最新分组](https://leetcode.cn/problems/find-latest-group-of-size-m)
 
-[English Version](/solution/1500-1599/1562.Find%20Latest%20Group%20of%20Size%20M/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>arr</code> ，该数组表示一个从 <code>1</code> 到 <code>n</code> 的数字排列。有一个长度为 <code>n</code> 的二进制字符串，该字符串上的所有位最初都设置为 <code>0</code> 。</p>
@@ -11,8 +9,6 @@
 <p>给你一个整数 <code>m</code> ，请你找出二进制字符串上存在长度为 <code>m</code> 的一组 <code>1</code> 的最后步骤。一组 <code>1</code> 是一个连续的、由 <code>1</code> 组成的子串，且左右两边不再有可以延伸的 <code>1</code> 。</p>
 
 <p>返回存在长度 <strong>恰好</strong> 为 <code>m</code> 的 <strong>一组 <code>1</code>&nbsp;</strong> 的最后步骤。如果不存在这样的步骤，请返回 <code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 <pre><strong>输入：</strong>arr = [2,1], m = 2
 <strong>输出：</strong>2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

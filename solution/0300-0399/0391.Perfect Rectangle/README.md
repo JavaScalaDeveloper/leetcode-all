@@ -1,7 +1,5 @@
 # [391. 完美矩形](https://leetcode.cn/problems/perfect-rectangle)
 
-[English Version](/solution/0300-0399/0391.Perfect%20Rectangle/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>rectangles</code> ，其中 <code>rectangles[i] = [x<sub>i</sub>, y<sub>i</sub>, a<sub>i</sub>, b<sub>i</sub>]</code> 表示一个坐标轴平行的矩形。这个矩形的左下顶点是 <code>(x<sub>i</sub>, y<sub>i</sub>)</code> ，右上顶点是 <code>(a<sub>i</sub>, b<sub>i</sub>)</code> 。</p>
@@ -30,8 +28,6 @@
 <strong>输入：</strong>rectangles = [[1,1,3,3],[3,1,4,2],[1,3,2,4],[2,2,4,4]]
 <strong>输出：</strong>false
 <strong>解释：</strong>因为中间有相交区域，虽然形成了矩形，但不是精确覆盖。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

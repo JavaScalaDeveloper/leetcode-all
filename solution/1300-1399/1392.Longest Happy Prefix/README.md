@@ -1,14 +1,10 @@
 # [1392. 最长快乐前缀](https://leetcode.cn/problems/longest-happy-prefix)
 
-[English Version](/solution/1300-1399/1392.Longest%20Happy%20Prefix/README_EN.md)
-
 ## 题目描述
 
 <p><strong>「快乐前缀」</strong>&nbsp;是在原字符串中既是&nbsp;<strong>非空</strong> 前缀也是后缀（不包括原字符串自身）的字符串。</p>
 
 <p>给你一个字符串 <code>s</code>，请你返回它的 <strong>最长快乐前缀</strong>。如果不存在满足题意的前缀，则返回一个空字符串<meta charset="UTF-8" />&nbsp;<code>""</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <strong>输出：</strong>"abab"
 <strong>解释：</strong>"abab" 是最长的既是前缀也是后缀的字符串。题目允许前后缀在原字符串中重叠。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

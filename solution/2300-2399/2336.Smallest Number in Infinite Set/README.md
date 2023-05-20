@@ -1,7 +1,5 @@
 # [2336. 无限集中的最小数字](https://leetcode.cn/problems/smallest-number-in-infinite-set)
 
-[English Version](/solution/2300-2399/2336.Smallest%20Number%20in%20Infinite%20Set/README_EN.md)
-
 ## 题目描述
 
 <p>现有一个包含所有正整数的集合 <code>[1, 2, 3, 4, 5, ...]</code> 。</p>
@@ -13,8 +11,6 @@
 	<li><code>int popSmallest()</code> <strong>移除</strong> 并返回该无限集中的最小整数。</li>
 	<li><code>void addBack(int num)</code> 如果正整数 <code>num</code> <strong>不</strong> 存在于无限集中，则将一个 <code>num</code> <strong>添加</strong> 到该无限集中。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -35,8 +31,6 @@ smallestInfiniteSet.popSmallest(); // 返回 1 ，因为 1 在上一步中被添
                                    // 且 1 是最小的整数，并将其从集合中移除。
 smallestInfiniteSet.popSmallest(); // 返回 4 ，并将其从集合中移除。
 smallestInfiniteSet.popSmallest(); // 返回 5 ，并将其从集合中移除。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

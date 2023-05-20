@@ -1,7 +1,5 @@
 # [1041. 困于环中的机器人](https://leetcode.cn/problems/robot-bounded-in-circle)
 
-[English Version](/solution/1000-1099/1041.Robot%20Bounded%20In%20Circle/README_EN.md)
-
 ## 题目描述
 
 <p>在无限的平面上，机器人最初位于&nbsp;<code>(0, 0)</code>&nbsp;处，面朝北方。注意:</p>
@@ -24,8 +22,6 @@
 <p>机器人按顺序执行指令&nbsp;<code>instructions</code>，并一直重复它们。</p>
 
 <p>只有在平面中存在环使得机器人永远无法离开时，返回&nbsp;<code>true</code>。否则，返回 <code>false</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -71,8 +67,6 @@
 “L”:逆时针旋转90度。位置:(0,0)方向:北。
 重复指令，机器人进入循环:(0,0)——&gt;(0,1)——&gt;(- 1,1)——&gt;(- 1,0)——&gt;(0,0)。
 在此基础上，我们返回true。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

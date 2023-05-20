@@ -1,14 +1,10 @@
 # [1446. 连续字符](https://leetcode.cn/problems/consecutive-characters)
 
-[English Version](/solution/1400-1499/1446.Consecutive%20Characters/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，字符串的<strong>「能量」</strong>定义为：只包含一种字符的最长非空子字符串的长度。</p>
 
 <p>请你返回字符串 <code>s</code> 的 <strong>能量</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <strong>输出：</strong>5
 <strong>解释：</strong>子字符串 "eeeee" 长度为 5 ，只包含字符 'e' 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

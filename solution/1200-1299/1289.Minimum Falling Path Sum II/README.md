@@ -1,14 +1,10 @@
 # [1289. 下降路径最小和 II](https://leetcode.cn/problems/minimum-falling-path-sum-ii)
 
-[English Version](/solution/1200-1299/1289.Minimum%20Falling%20Path%20Sum%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个&nbsp;<code>n x n</code> 整数矩阵&nbsp;<code>arr</code>&nbsp;，请你返回 <strong>非零偏移下降路径</strong> 数字和的最小值。</p>
 
 <p><strong>非零偏移下降路径</strong> 定义为：从&nbsp;<code>arr</code> 数组中的每一行选择一个数字，且按顺序选出来的数字中，相邻数字不在原数组的同一列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输入：</strong>grid = [[7]]
 <strong>输出：</strong>7
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

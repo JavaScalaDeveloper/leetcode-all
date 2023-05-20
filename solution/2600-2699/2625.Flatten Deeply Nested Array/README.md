@@ -1,7 +1,5 @@
 # [2625. 扁平化嵌套数组](https://leetcode.cn/problems/flatten-deeply-nested-array)
 
-[English Version](/solution/2600-2699/2625.Flatten%20Deeply%20Nested%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个函数，它接收一个&nbsp;<strong>多维数组&nbsp;</strong><code>arr</code> 和它的深度 <code>n</code> ，并返回该数组的&nbsp;<strong>扁平化&nbsp;</strong>后的结果。</p>
@@ -11,8 +9,6 @@
 <p>数组 <strong>扁平化</strong> 是对数组的一种操作，定义是将原数组部分或全部子数组删除，并替换为该子数组中的实际元素。只有当嵌套的数组深度大于 <code>n</code> 时，才应该执行扁平化操作。第一层数组中元素的深度被认为是 0。</p>
 
 <p>请在没有使用内置方法&nbsp;<code>Array.flat</code> 的前提下解决这个问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -50,8 +46,6 @@ n = 2
 
 <strong>解释</strong>
 所有子数组的最大深度都为 1 。因此，它们都被扁平化了。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

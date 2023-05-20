@@ -1,7 +1,5 @@
 # [427. 建立四叉树](https://leetcode.cn/problems/construct-quad-tree)
 
-[English Version](/solution/0400-0499/0427.Construct%20Quad%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>n * n</code> 矩阵 <code>grid</code> ，矩阵由若干 <code>0</code> 和 <code>1</code> 组成。请你用四叉树表示该矩阵 <code>grid</code> 。</p>
@@ -46,8 +44,6 @@
 
 <p>如果 <code>isLeaf</code> 或者 <code>val</code> 的值为 True ，则表示它在列表&nbsp;<code>[isLeaf, val]</code> 中的值为 <strong>1</strong> ；如果 <code>isLeaf</code> 或者 <code>val</code> 的值为 False ，则表示值为 <strong>0 </strong>。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0400-0499/0427.Construct%20Quad%20Tree/images/grid1.png" style="height: 99px; width: 777px;"></p>
@@ -89,8 +85,6 @@ topRight 具有不同的值，因此我们将其再分为 4 个子网格，这�
 <pre><strong>输入：</strong>grid = [[1,1,0,0],[1,1,0,0],[0,0,1,1],[0,0,1,1]]
 <strong>输出：</strong>[[0,1],[1,1],[1,0],[1,0],[1,1]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

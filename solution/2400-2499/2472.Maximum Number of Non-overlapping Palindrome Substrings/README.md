@@ -1,7 +1,5 @@
 # [2472. 不重叠回文子字符串的最大数目](https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings)
 
-[English Version](/solution/2400-2499/2472.Maximum%20Number%20of%20Non-overlapping%20Palindrome%20Substrings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> 和一个 <strong>正</strong> 整数 <code>k</code> 。</p>
@@ -16,8 +14,6 @@
 <p>返回最优方案中能选择的子字符串的 <strong>最大</strong> 数目。</p>
 
 <p><strong>子字符串</strong> 是字符串中一个连续的字符序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1 ：</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>字符串中不存在长度至少为 2 的回文子字符串。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1668. 最大重复子字符串](https://leetcode.cn/problems/maximum-repeating-substring)
 
-[English Version](/solution/1600-1699/1668.Maximum%20Repeating%20Substring/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>sequence</code> ，如果字符串 <code>word</code> 连续重复 <code>k</code> 次形成的字符串是 <code>sequence</code> 的一个子字符串，那么单词 <code>word</code> 的 <strong>重复值为 <code>k</code></strong><strong> </strong>。单词 <code>word</code> 的 <strong>最</strong><strong>大重复值</strong> 是单词 <code>word</code> 在 <code>sequence</code> 中最大的重复值。如果 <code>word</code> 不是 <code>sequence</code> 的子串，那么重复值 <code>k</code> 为 <code>0</code> 。</p>
@@ -67,28 +65,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-
-int findWord(int i, char *sequence, char *word) {
-    int n = strlen(word);
-    for (int j = 0; j < n; j++) {
-        if (sequence[j + i] != word[j]) {
-            return 0;
-        }
-    }
-    return 1 + findWord(i + n, sequence, word);
-}
-
-int maxRepeating(char *sequence, char *word) {
-    int n = strlen(sequence);
-    int m = strlen(word);
-    int ans = 0;
-    for (int i = 0; i <= n - m; i++) {
-        ans = max(ans, findWord(i, sequence, word));
-    }
-    return ans;
-}
-```
+**

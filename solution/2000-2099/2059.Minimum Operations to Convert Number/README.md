@@ -1,7 +1,5 @@
 # [2059. 转化数字的最小运算数](https://leetcode.cn/problems/minimum-operations-to-convert-number)
 
-[English Version](/solution/2000-2099/2059.Minimum%20Operations%20to%20Convert%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，该数组由 <strong>互不相同</strong> 的数字组成。另给你两个整数 <code>start</code> 和 <code>goal</code> 。</p>
@@ -19,8 +17,6 @@
 <p>注意，你可以按任意顺序使用每个 <code>nums[i]</code> 任意次。使 <code>x</code> 越过 <code>0 &lt;= x &lt;= 1000</code> 范围的运算同样可以生效，但该该运算执行后将不能执行其他运算。</p>
 
 <p>返回将 <code>x = start</code><em> </em>转化为<em> </em><code>goal</code><em> </em>的最小操作数；如果无法完成转化，则返回<em> </em><code>-1</code><em> </em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>
 无法将 0 转化为 1</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

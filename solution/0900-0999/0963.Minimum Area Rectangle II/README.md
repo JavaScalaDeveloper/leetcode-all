@@ -1,14 +1,10 @@
 # [963. 最小面积矩形 II](https://leetcode.cn/problems/minimum-area-rectangle-ii)
 
-[English Version](/solution/0900-0999/0963.Minimum%20Area%20Rectangle%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定在 xy 平面上的一组点，确定由这些点组成的任何矩形的最小面积，其中矩形的边<strong>不一定平行于</strong> x 轴和 y 轴。</p>
 
 <p>如果没有任何矩形，就返回 0。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <strong>输出：</strong>2.00000
 <strong>解释：</strong>最小面积的矩形出现在 [2,1],[2,3],[3,3],[3,1] 处，面积为 2。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

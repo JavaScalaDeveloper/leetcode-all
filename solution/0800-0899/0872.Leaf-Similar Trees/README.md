@@ -1,7 +1,5 @@
 # [872. 叶子相似的树](https://leetcode.cn/problems/leaf-similar-trees)
 
-[English Version](/solution/0800-0899/0872.Leaf-Similar%20Trees/README_EN.md)
-
 ## 题目描述
 
 <p>请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个&nbsp;<strong>叶值序列 </strong>。</p>
@@ -13,8 +11,6 @@
 <p>如果有两棵二叉树的叶值序列是相同，那么我们就认为它们是&nbsp;<em>叶相似&nbsp;</em>的。</p>
 
 <p>如果给定的两个根结点分别为&nbsp;<code>root1</code> 和&nbsp;<code>root2</code>&nbsp;的树是叶相似的，则返回&nbsp;<code>true</code>；否则返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输入：</strong>root1 = [1,2,3], root2 = [1,3,2]
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

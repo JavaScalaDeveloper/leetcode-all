@@ -1,7 +1,5 @@
 # [631. 设计 Excel 求和公式](https://leetcode.cn/problems/design-excel-sum-formula)
 
-[English Version](/solution/0600-0699/0631.Design%20Excel%20Sum%20Formula/README_EN.md)
-
 ## 题目描述
 
 <p>你的任务是实现 Excel 的求和功能，具体的操作如下：</p>

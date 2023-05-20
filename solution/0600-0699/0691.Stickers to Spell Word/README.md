@@ -1,7 +1,5 @@
 # [691. 贴纸拼词](https://leetcode.cn/problems/stickers-to-spell-word)
 
-[English Version](/solution/0600-0699/0691.Stickers%20to%20Spell%20Word/README_EN.md)
-
 ## 题目描述
 
 <p>我们有 <code>n</code> 种不同的贴纸。每个贴纸上都有一个小写的英文单词。</p>
@@ -11,8 +9,6 @@
 <p>返回你需要拼出 <code>target</code>&nbsp;的最小贴纸数量。如果任务不可能，则返回 <code>-1</code> 。</p>
 
 <p><strong>注意：</strong>在所有的测试用例中，所有的单词都是从 <code>1000</code> 个最常见的美国英语单词中随机选择的，并且 <code>target</code>&nbsp;被选择为两个随机单词的连接。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <b>输入：</b>stickers = ["notice","possible"], target = "basicbasic"
 <b>输出：</b>-1
 <strong>解释：</strong>我们不能通过剪切给定贴纸的字母来形成目标“basicbasic”。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [568. 最大休假天数](https://leetcode.cn/problems/maximum-vacation-days)
 
-[English Version](/solution/0500-0599/0568.Maximum%20Vacation%20Days/README_EN.md)
-
 ## 题目描述
 
 <p>力扣想让一个最优秀的员工在 <strong>N</strong> 个城市间旅行来收集算法问题。 但只工作不玩耍，聪明的孩子也会变傻，所以您可以在某些特定的城市和星期休假。您的工作就是安排旅行使得最大化你可以休假的天数，但是您需要遵守一些规则和限制。</p>
@@ -18,8 +16,6 @@
 </ol>
 
 <p>给定 <code>flights</code> 矩阵和 <code>days</code> 矩阵，您需要输出 <code>k</code>&nbsp;周内可以休假的最长天数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -59,8 +55,6 @@ Ans = 1 + 1 + 1 = 3.
 第三个星期 : 星期一从城市 1 飞到城市 2，玩 7 天。
 Ans = 7 + 7 + 7 = 21
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

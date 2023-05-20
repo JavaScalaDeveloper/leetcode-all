@@ -1,7 +1,5 @@
 # [1136. 并行课程](https://leetcode.cn/problems/parallel-courses)
 
-[English Version](/solution/1100-1199/1136.Parallel%20Courses/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code> ，表示编号从 <code>1</code> 到 <code>n</code> 的 <code>n</code> 门课程。另给你一个数组 <code>relations</code> ，其中 <code>relations[i] = [prevCourse<sub>i</sub>, nextCourse<sub>i</sub>]</code> ，表示课程 <code>prevCourse<sub>i</sub></code> 和课程 <code>nextCourse<sub>i</sub></code> 之间存在先修关系：课程 <code>prevCourse<sub>i</sub></code> 必须在 <code>nextCourse<sub>i</sub></code> 之前修读完成。</p>
@@ -11,10 +9,6 @@
 <div class="original__bRMd">
 <div>
 <p>请你返回学完全部课程所需的 <strong>最少</strong> 学期数。如果没有办法做到学完全部这些课程的话，就返回&nbsp;<code>-1</code>。</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1100-1199/1136.Parallel%20Courses/images/course1graph.jpg" style="width: 222px; height: 222px;" />
@@ -33,8 +27,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>没有课程可以学习，因为它们互为先修课程。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

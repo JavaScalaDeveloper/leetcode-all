@@ -1,7 +1,5 @@
 # [2077. 殊途同归](https://leetcode.cn/problems/paths-in-maze-that-lead-to-same-room)
 
-[English Version](/solution/2000-2099/2077.Paths%20in%20Maze%20That%20Lead%20to%20Same%20Room/README_EN.md)
-
 ## 题目描述
 
 <p>迷宫由 <code>n</code> 个从 <code>1</code> 到 <code>n</code> 的房间组成，有些房间由走廊连接。给定一个二维整数数组 <code>corridors</code>，其中 <code>corridors[i] = [room1<sub>i</sub>, room2<sub>i</sub>]</code>&nbsp;表示有一条走廊连接 <code>room1<sub>i</sub></code> 和<code>room2<sub>i</sub></code>，允许迷宫中的一个人从 <code>room1<sub>i</sub></code> 到 <code>room1<sub>i</sub></code> ，<strong>反之亦然</strong>。</p>
@@ -35,8 +33,6 @@
 <strong>输出:</strong> 0
 <strong>解释:</strong>
 没有长度为 3 的环。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

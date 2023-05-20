@@ -1,7 +1,5 @@
 # [2343. 裁剪数字后查询第 K 小的数字](https://leetcode.cn/problems/query-kth-smallest-trimmed-number)
 
-[English Version](/solution/2300-2399/2343.Query%20Kth%20Smallest%20Trimmed%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的字符串数组&nbsp;<code>nums</code>&nbsp;，其中每个字符串 <strong>长度相等</strong>&nbsp;且只包含数字。</p>
@@ -22,8 +20,6 @@
 	<li>裁剪到剩下最右边 <code>x</code>&nbsp;个数位的意思是不断删除最左边的数位，直到剩下 <code>x</code>&nbsp;个数位。</li>
 	<li><code>nums</code>&nbsp;中的字符串可能会有前导 0 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,8 +45,6 @@
 2. 裁剪到剩 2 个数位，nums 不变。第二小的数字是 24 ，下标为 0 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><b>提示：</b></p>
 
 <ul>
@@ -63,8 +57,6 @@
 	<li><code>1 &lt;= k<sub>i</sub> &lt;= nums.length</code></li>
 	<li><code>1 &lt;= trim<sub>i</sub> &lt;= nums[0].length</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你能使用 <strong>基数排序算法</strong> 解决此问题吗？这种解法的复杂度又是多少？</p>
 

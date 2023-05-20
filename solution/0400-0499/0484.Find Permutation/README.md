@@ -1,7 +1,5 @@
 # [484. 寻找排列](https://leetcode.cn/problems/find-permutation)
 
-[English Version](/solution/0400-0499/0484.Find%20Permutation/README_EN.md)
-
 ## 题目描述
 
 <p>由范围 <code>[1,n]</code> 内所有整数组成的 <code>n</code> 个整数的排列&nbsp;<code>perm</code>&nbsp;可以表示为长度为 <code>n - 1</code> 的字符串 <code>s</code> ，其中:</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>给定一个字符串 <code>s</code> ，重构字典序上最小的排列&nbsp;<code>perm</code>&nbsp;并返回它。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输出：</strong> [2,1,3]
 <strong>解释：</strong> [2,1,3] 和 [3,1,2] 可以生成秘密签名 "DI"，
 但是由于我们要找字典序最小的排列，因此你需要输出 [2,1,3]。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

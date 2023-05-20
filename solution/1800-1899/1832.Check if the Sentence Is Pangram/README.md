@@ -1,7 +1,5 @@
 # [1832. 判断句子是否为全字母句](https://leetcode.cn/problems/check-if-the-sentence-is-pangram)
 
-[English Version](/solution/1800-1899/1832.Check%20if%20the%20Sentence%20Is%20Pangram/README_EN.md)
-
 ## 题目描述
 
 <p><strong>全字母句</strong> 指包含英语字母表中每个字母至少一次的句子。</p>
@@ -83,29 +81,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool checkIfPangram(char *sentence) {
-    int vis[26] = {0};
-    for (int i = 0; sentence[i]; i++) {
-        vis[sentence[i] - 'a'] = 1;
-    }
-    for (int i = 0; i < 26; i++) {
-        if (!vis[i]) {
-            return 0;
-        }
-    }
-    return 1;
-}
-```
-
-```c
-bool checkIfPangram(char *sentence) {
-    int mark = 0;
-    for (int i = 0; sentence[i]; i++) {
-        mark |= 1 << (sentence[i] - 'a');
-    }
-    return mark == (1 << 26) - 1;
-}
-```
+**

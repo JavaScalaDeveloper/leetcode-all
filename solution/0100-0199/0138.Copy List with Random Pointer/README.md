@@ -1,7 +1,5 @@
 # [138. 复制带随机指针的链表](https://leetcode.cn/problems/copy-list-with-random-pointer)
 
-[English Version](/solution/0100-0199/0138.Copy%20List%20with%20Random%20Pointer/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的链表，每个节点包含一个额外增加的随机指针 <code>random</code> ，该指针可以指向链表中的任何节点或空节点。</p>
@@ -20,8 +18,6 @@
 </ul>
 
 <p>你的代码 <strong>只</strong> 接受原链表的头节点 <code>head</code> 作为传入参数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,8 +45,6 @@
 <strong>输入：</strong>head = [[3,null],[3,0],[3,null]]
 <strong>输出：</strong>[[3,null],[3,0],[3,null]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

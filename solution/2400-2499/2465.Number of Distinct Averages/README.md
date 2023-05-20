@@ -1,7 +1,5 @@
 # [2465. 不同的平均值数目](https://leetcode.cn/problems/number-of-distinct-averages)
 
-[English Version](/solution/2400-2499/2465.Number%20of%20Distinct%20Averages/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始长度为 <strong>偶数</strong>&nbsp;的整数数组&nbsp;<code>nums</code>&nbsp;。</p>
@@ -24,8 +22,6 @@
 
 <p><strong>注意</strong>&nbsp;，如果最小值或者最大值有重复元素，可以删除任意一个。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><b>输入：</b>nums = [4,1,4,0,3,5]
@@ -44,8 +40,6 @@
 <strong>解释：</strong>
 删除 1 和 100 后只有一个平均值，所以我们返回 1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,12 +1,8 @@
 # [515. 在每个树行中找最大值](https://leetcode.cn/problems/find-largest-value-in-each-tree-row)
 
-[English Version](/solution/0500-0599/0515.Find%20Largest%20Value%20in%20Each%20Tree%20Row/README_EN.md)
-
 ## 题目描述
 
 <p>给定一棵二叉树的根节点&nbsp;<code>root</code> ，请找出该二叉树中每一层的最大值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例1：</strong></p>
 
@@ -24,16 +20,12 @@
 <strong>输出: </strong>[1,3]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li>二叉树的节点个数的范围是 <code>[0,10<sup>4</sup>]</code></li>
 	<li><meta charset="UTF-8" /><code>-2<sup>31</sup>&nbsp;&lt;= Node.val &lt;= 2<sup>31</sup>&nbsp;- 1</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

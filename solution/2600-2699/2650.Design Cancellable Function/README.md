@@ -1,7 +1,5 @@
 # [2650. 设计可取消函数](https://leetcode.cn/problems/design-cancellable-function)
 
-[English Version](/solution/2600-2699/2650.Design%20Cancellable%20Function/README_EN.md)
-
 ## 题目描述
 
 <p>有时候你会有一个长时间运行的任务，并且你可能希望在它完成之前取消它。为了实现这个目标，请你编写一个名为 <code>cancellable</code> 的函数，它接收一个生成器对象，并返回一个包含两个值的数组：一个 <strong>取消函数</strong> 和一个 <strong>promise</strong> 对象。</p>
@@ -26,8 +24,6 @@ promise.catch(console.log); // logs "Cancelled" at t=50ms
 </pre>
 
 <p>如果相反， <code>cancel()</code> 没有被调用或者在 <code>t=100ms</code> 之后才被调用，那么 Promise 应被解析为 <code>5</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -132,8 +128,6 @@ cancelledAt = null
 <b>输出：</b>{"resolved": 4}
 <strong>解释：</strong>
 第一个生成的 promise 立即被拒绝。该错误被捕获。因为生成器没有被取消，执行继续像往常一样。最终解析为 2 + 2 = 4。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

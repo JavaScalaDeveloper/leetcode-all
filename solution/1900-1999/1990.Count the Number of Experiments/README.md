@@ -1,7 +1,5 @@
 # [1990. 统计实验的数量](https://leetcode.cn/problems/count-the-number-of-experiments)
 
-[English Version](/solution/1900-1999/1990.Count%20the%20Number%20of%20Experiments/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Experiments</code></p>
@@ -21,15 +19,11 @@ experiment_name 也是枚举类型的，取值是这三种 ('Reading', 'Sports',
 这个表包含有关随机实验人员进行的实验的 ID、用于做实验的平台以及实验名称的信息。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL 查询语句，以报告在给定三个实验平台中每种实验完成的次数。请注意，每一对（实验平台、实验名称）都应包含在输出中，包括平台上实验次数是零的。</p>
 
 <p>结果可以以任意顺序给出。</p>
 
 <p>查询的结果如下所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 

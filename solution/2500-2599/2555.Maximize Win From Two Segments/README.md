@@ -1,7 +1,5 @@
 # [2555. 两个线段获得的最多奖品](https://leetcode.cn/problems/maximize-win-from-two-segments)
 
-[English Version](/solution/2500-2599/2555.Maximize%20Win%20From%20Two%20Segments/README_EN.md)
-
 ## 题目描述
 
 <p>在 <strong>X轴</strong>&nbsp;上有一些奖品。给你一个整数数组&nbsp;<code>prizePositions</code>&nbsp;，它按照 <strong>非递减</strong>&nbsp;顺序排列，其中&nbsp;<code>prizePositions[i]</code>&nbsp;是第&nbsp;<code>i</code>&nbsp;件奖品的位置。数轴上一个位置可能会有多件奖品。再给你一个整数&nbsp;<code>k</code>&nbsp;。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>请你返回在选择两个最优线段的前提下，可以获得的 <strong>最多</strong>&nbsp;奖品数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <b>输出：</b>2
 <b>解释：</b>这个例子中，一个选择是选择线段 <code>[3, 3]</code> 和 <code>[4, 4] ，获得 2 个奖品。</code>
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

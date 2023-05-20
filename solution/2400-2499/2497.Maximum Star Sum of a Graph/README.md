@@ -1,7 +1,5 @@
 # [2497. 图中最大星和](https://leetcode.cn/problems/maximum-star-sum-of-a-graph)
 
-[English Version](/solution/2400-2499/2497.Maximum%20Star%20Sum%20of%20a%20Graph/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个&nbsp;<code>n</code>&nbsp;个点的无向图，节点从&nbsp;<code>0</code>&nbsp;到&nbsp;<code>n - 1</code>&nbsp;编号。给你一个长度为 <code>n</code>&nbsp;下标从&nbsp;<strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>vals</code>&nbsp;，其中&nbsp;<code>vals[i]</code>&nbsp;表示第&nbsp;<code>i</code>&nbsp;个节点的值。</p>
@@ -17,8 +15,6 @@
 <p><strong>星和</strong> 定义为星图中所有节点值的和。</p>
 
 <p>给你一个整数&nbsp;<code>k</code>&nbsp;，请你返回 <strong>至多</strong>&nbsp;包含 <code>k</code>&nbsp;条边的星图中的 <strong>最大星和</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <b>解释：</b>只有一个星图，就是节点 0 自己。
 所以我们返回 -5 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

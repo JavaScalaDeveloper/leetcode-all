@@ -1,12 +1,8 @@
 # [976. 三角形的最大周长](https://leetcode.cn/problems/largest-perimeter-triangle)
 
-[English Version](/solution/0900-0999/0976.Largest%20Perimeter%20Triangle/README_EN.md)
-
 ## 题目描述
 
 <p>给定由一些正数（代表长度）组成的数组 <code>nums</code>&nbsp;，返回 <em>由其中三个长度组成的、<strong>面积不为零</strong>的三角形的最大周长</em>&nbsp;。如果不能形成任何面积不为零的三角形，返回&nbsp;<code>0</code>。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -29,8 +25,6 @@
 不能用边长 1,1,10 来构成三角形。
 不能用边长 1、2 和 10 来构成三角形。
 因为我们不能用任何三条边长来构成一个非零面积的三角形，所以我们返回 0。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -69,20 +63,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int cmp(const void *a, const void *b) {
-    return *(int *) b - *(int *) a;
-}
-
-int largestPerimeter(int *nums, int numsSize) {
-    qsort(nums, numsSize, sizeof(int), cmp);
-    for (int i = 2; i < numsSize; i++) {
-        if (nums[i - 2] < nums[i - 1] + nums[i]) {
-            return nums[i - 2] + nums[i - 1] + nums[i];
-        }
-    }
-    return 0;
-}
-```
+**

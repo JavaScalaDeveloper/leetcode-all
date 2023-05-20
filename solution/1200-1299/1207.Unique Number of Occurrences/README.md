@@ -1,14 +1,10 @@
 # [1207. 独一无二的出现次数](https://leetcode.cn/problems/unique-number-of-occurrences)
 
-[English Version](/solution/1200-1299/1207.Unique%20Number%20of%20Occurrences/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>arr</code>，请你帮忙统计数组中每个数的出现次数。</p>
 
 <p>如果每个数的出现次数都是独一无二的，就返回&nbsp;<code>true</code>；否则返回 <code>false</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <pre><strong>输入：</strong>arr = [-3,0,1,-3,1,1,1,-3,10,0]
 <strong>输出：</strong>true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1635. Hopper 公司查询 I](https://leetcode.cn/problems/hopper-company-queries-i)
 
-[English Version](/solution/1600-1699/1635.Hopper%20Company%20Queries%20I/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Drivers</code></p>
@@ -17,8 +15,6 @@ driver_id是该表的主键。
 该表的每一行均包含驾驶员的ID以及他们加入Hopper公司的日期。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Rides</code></p>
 
 <pre>
@@ -33,8 +29,6 @@ ride_id是该表的主键。
 该表的每一行均包含行程ID(ride_id)，用户ID(user_id)以及该行程的日期(requested_at)。
 该表中可能有一些不被接受的乘车请求。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>AcceptedRides</code></p>
 
@@ -52,8 +46,6 @@ ride_id是该表的主键。
 表中的行程信息都在“<code>Rides</code>”表中存在。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写SQL查询以报告2020年每个月的以下统计信息：</p>
 
 <ul>
@@ -64,8 +56,6 @@ ride_id是该表的主键。
 <p>返回按<code>month</code> 升序排列的结果表，其中<code>month</code> 是月份的数字（一月是<code>1</code>，二月是<code>2</code>，依此类推）。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

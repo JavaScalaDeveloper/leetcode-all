@@ -1,14 +1,10 @@
 # [1554. 只有一个不同字符的字符串](https://leetcode.cn/problems/strings-differ-by-one-character)
 
-[English Version](/solution/1500-1599/1554.Strings%20Differ%20by%20One%20Character/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串列表&nbsp;<code>dict</code> ，其中所有字符串的长度都相同。</p>
 
 <p>当存在两个字符串在相同索引处只有一个字符不同时，返回 <code>True</code> ，否则返回 <code>False</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输出：</strong>true
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -42,8 +36,6 @@
 	<li><code>dict[i]</code>&nbsp;是互不相同的。</li>
 	<li><code>dict[i]</code>&nbsp;只包含小写英文字母。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你可以以 <code>O(n*m)</code> 的复杂度解决问题吗？其中 n 是列表 <code>dict</code> 的长度，<code>m</code> 是字符串的长度。</p>
 

@@ -1,7 +1,5 @@
 # [2156. 查找给定哈希值的子串](https://leetcode.cn/problems/find-substring-with-given-hash-value)
 
-[English Version](/solution/2100-2199/2156.Find%20Substring%20With%20Given%20Hash%20Value/README_EN.md)
-
 ## 题目描述
 
 <p>给定整数 <code>p</code>&nbsp;和 <code>m</code>&nbsp;，一个长度为 <code>k</code>&nbsp;且下标从 <strong>0</strong>&nbsp;开始的字符串&nbsp;<code>s</code>&nbsp;的哈希值按照如下函数计算：</p>
@@ -17,8 +15,6 @@
 <p>测试数据保证一定 <strong>存在</strong>&nbsp;至少一个这样的子串。</p>
 
 <p><strong>子串</strong> 定义为一个字符串中连续非空字符组成的序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 "fbx" 是长度为 3 的第一个哈希值为 32 的子串，所以我们返回 "fbx" 。
 注意，"bxz" 的哈希值也为 32 ，但是它在字符串中比 "fbx" 更晚出现。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

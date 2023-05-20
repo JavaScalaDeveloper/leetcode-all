@@ -1,7 +1,5 @@
 # [393. UTF-8 编码验证](https://leetcode.cn/problems/utf-8-validation)
 
-[English Version](/solution/0300-0399/0393.UTF-8%20Validation/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个表示数据的整数数组&nbsp;<code>data</code>&nbsp;，返回它是否为有效的 <strong>UTF-8</strong> 编码。</p>
@@ -29,8 +27,6 @@
 
 <p><strong>注意：</strong>输入是整数数组。只有每个整数的 <strong>最低 8 个有效位</strong> 用来存储数据。这意味着每个整数只表示 1 字节的数据。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -50,8 +46,6 @@
 下一个字节是开头为 10 的延续字节，这是正确的。
 但第二个延续字节不以 10 开头，所以是不符合规则的。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

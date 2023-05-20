@@ -1,7 +1,5 @@
 # [1809. 没有广告的剧集](https://leetcode.cn/problems/ad-free-sessions)
 
-[English Version](/solution/1800-1899/1809.Ad-Free%20Sessions/README_EN.md)
-
 ## 题目描述
 
 <p>Table: <code>Playback</code></p>

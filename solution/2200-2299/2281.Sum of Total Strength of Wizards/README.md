@@ -1,7 +1,5 @@
 # [2281. 巫师的总力量和](https://leetcode.cn/problems/sum-of-total-strength-of-wizards)
 
-[English Version](/solution/2200-2299/2281.Sum%20of%20Total%20Strength%20of%20Wizards/README_EN.md)
-
 ## 题目描述
 
 <p>作为国王的统治者，你有一支巫师军队听你指挥。</p>
@@ -16,8 +14,6 @@
 <p>请你返回 <strong>所有</strong>&nbsp;巫师组的 <strong>总</strong>&nbsp;力量之和。由于答案可能很大，请将答案对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;<strong>取余</strong>&nbsp;后返回。</p>
 
 <p><strong>子数组</strong>&nbsp;是一个数组里 <strong>非空</strong>&nbsp;连续子序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 - [<em><strong>5,4,6</strong></em>] 中 [5,4,6] ，总力量值为 min([5,4,6]) * sum([5,4,6]) = 4 * 15 = 60
 所有力量值之和为 25 + 16 + 36 + 36 + 40 + 60 = 213 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

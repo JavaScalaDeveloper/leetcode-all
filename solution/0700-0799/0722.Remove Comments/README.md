@@ -1,7 +1,5 @@
 # [722. 删除注释](https://leetcode.cn/problems/remove-comments)
 
-[English Version](/solution/0700-0799/0722.Remove%20Comments/README_EN.md)
-
 ## 题目描述
 
 <p>给一个 C++ 程序，删除程序中的注释。这个程序<code>source</code>是一个数组，其中<code>source[i]</code>表示第&nbsp;<code>i</code>&nbsp;行源码。&nbsp;这表示每行源码由<font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.6px"><span style="background-color:#f9f2f4"> <code>'\n'&nbsp;</code></span></span></font></font>分隔。</p>
@@ -36,8 +34,6 @@
 
 <p>从源代码中删除注释后，需要以相同的格式返回源代码。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例&nbsp;1:</strong></p>
 
 <pre>
@@ -71,8 +67,6 @@ a = b + c;
 <strong>输出:</strong> ["ab"]
 <strong>解释:</strong> 原始的 source 字符串是 "a/*comment<strong>\n</strong>line<strong>\n</strong>more_comment*/b", 其中我们用粗体显示了换行符。删除注释后，隐含的换行符被删除，留下字符串 "ab" 用换行符分隔成数组时就是 ["ab"].
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

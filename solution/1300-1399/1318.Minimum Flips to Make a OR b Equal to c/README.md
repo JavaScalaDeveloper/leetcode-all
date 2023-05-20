@@ -1,7 +1,5 @@
 # [1318. 或运算的最小翻转次数](https://leetcode.cn/problems/minimum-flips-to-make-a-or-b-equal-to-c)
 
-[English Version](/solution/1300-1399/1318.Minimum%20Flips%20to%20Make%20a%20OR%20b%20Equal%20to%20c/README_EN.md)
-
 ## 题目描述
 
 <p>给你三个正整数&nbsp;<code>a</code>、<code>b</code> 和 <code>c</code>。</p>
@@ -9,8 +7,6 @@
 <p>你可以对 <code>a</code> 和 <code>b</code>&nbsp;的二进制表示进行位翻转操作，返回能够使按位或运算&nbsp; &nbsp;<code>a</code> OR <code>b</code> == <code>c</code>&nbsp;&nbsp;成立的最小翻转次数。</p>
 
 <p>「位翻转操作」是指将一个数的二进制表示任何单个位上的 1 变成 0 或者 0 变成 1 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <pre><strong>输入：</strong>a = 1, b = 2, c = 3
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

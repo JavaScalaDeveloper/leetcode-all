@@ -1,7 +1,5 @@
 # [1911. 最大子序列交替和](https://leetcode.cn/problems/maximum-alternating-subsequence-sum)
 
-[English Version](/solution/1900-1999/1911.Maximum%20Alternating%20Subsequence%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>一个下标从 <strong>0</strong> 开始的数组的 <strong>交替和</strong> 定义为 <strong>偶数</strong> 下标处元素之 <strong>和</strong> 减去 <strong>奇数</strong> 下标处元素之 <strong>和</strong> 。</p>

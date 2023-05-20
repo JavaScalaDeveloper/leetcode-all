@@ -1,14 +1,10 @@
 # [863. 二叉树中所有距离为 K 的结点](https://leetcode.cn/problems/all-nodes-distance-k-in-binary-tree)
 
-[English Version](/solution/0800-0899/0863.All%20Nodes%20Distance%20K%20in%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树（具有根结点&nbsp;<code>root</code>），&nbsp;一个目标结点&nbsp;<code>target</code>&nbsp;，和一个整数值 <code>k</code> 。</p>
 
 <p>返回到目标结点 <code>target</code> 距离为 <code>k</code> 的所有结点的值的列表。 答案可以以 <strong>任何顺序</strong> 返回。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -30,8 +26,6 @@
 <strong>输出:</strong> []
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -41,8 +35,6 @@
 	<li>目标结点&nbsp;<code>target</code>&nbsp;是树上的结点。</li>
 	<li><code>0 &lt;= k &lt;= 1000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

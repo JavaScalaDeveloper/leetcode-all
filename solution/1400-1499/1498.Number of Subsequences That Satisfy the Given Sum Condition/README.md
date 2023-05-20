@@ -1,7 +1,5 @@
 # [1498. 满足条件的子序列数目](https://leetcode.cn/problems/number-of-subsequences-that-satisfy-the-given-sum-condition)
 
-[English Version](/solution/1400-1499/1498.Number%20of%20Subsequences%20That%20Satisfy%20the%20Given%20Sum%20Condition/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>target</code> 。</p>
@@ -9,8 +7,6 @@
 <p>请你统计并返回 <code>nums</code> 中能满足其最小元素与最大元素的 <strong>和</strong> 小于或等于 <code>target</code> 的 <strong>非空</strong> 子序列的数目。</p>
 
 <p>由于答案可能很大，请将结果对<meta charset="UTF-8" />&nbsp;<code>10<sup>9</sup>&nbsp;+ 7</code>&nbsp;取余后返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>解释：</strong>共有 63 个非空子序列，其中 2 个不满足条件（[6,7], [7]）
 有效序列总数为（63 - 2 = 61）
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

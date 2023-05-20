@@ -1,7 +1,5 @@
 # [1505. 最多 K 次交换相邻数位后得到的最小整数](https://leetcode.cn/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits)
 
-[English Version](/solution/1500-1599/1505.Minimum%20Possible%20Integer%20After%20at%20Most%20K%20Adjacent%20Swaps%20On%20Digits/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>num</code> 和一个整数&nbsp;<code>k</code> 。其中，<code>num</code> 表示一个很大的整数，字符串中的每个字符依次对应整数上的各个 <strong>数位</strong> 。</p>
@@ -9,8 +7,6 @@
 <p>你可以交换这个整数相邻数位的数字 <strong>最多</strong>&nbsp;<code>k</code>&nbsp;次。</p>
 
 <p>请你返回你能得到的最小整数，并以字符串形式返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,8 +47,6 @@
 <strong>输入：</strong>num = &quot;9438957234785635408&quot;, k = 23
 <strong>输出：</strong>&quot;0345989723478563548&quot;
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [29. 两数相除](https://leetcode.cn/problems/divide-two-integers)
 
-[English Version](/solution/0000-0099/0029.Divide%20Two%20Integers/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数，被除数&nbsp;<code>dividend</code>&nbsp;和除数&nbsp;<code>divisor</code>。将两数相除，要求 <strong>不使用</strong> 乘法、除法和取余运算。</p>
@@ -11,8 +9,6 @@
 <p>返回被除数&nbsp;<code>dividend</code>&nbsp;除以除数&nbsp;<code>divisor</code>&nbsp;得到的 <strong>商</strong> 。</p>
 
 <p><strong>注意：</strong>假设我们的环境只能存储 <strong>32 位</strong> 有符号整数，其数值范围是 <code>[−2<sup>31</sup>,&nbsp; 2<sup>31&nbsp;</sup>− 1]</code> 。本题中，如果商 <strong>严格大于</strong> <code>2<sup>31&nbsp;</sup>− 1</code> ，则返回 <code>2<sup>31&nbsp;</sup>− 1</code> ；如果商 <strong>严格小于</strong> <code>-2<sup>31</sup></code> ，则返回 <code>-2<sup>31</sup></code><sup> </sup>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输入:</strong> dividend = 7, divisor = -3
 <strong>输出:</strong> -2
 <strong>解释:</strong> 7/-3 = -2.33333.. ，向零截断后得到 -2 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

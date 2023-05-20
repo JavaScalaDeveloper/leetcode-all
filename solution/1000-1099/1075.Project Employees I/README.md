@@ -1,7 +1,5 @@
 # [1075. 项目员工 I](https://leetcode.cn/problems/project-employees-i)
 
-[English Version](/solution/1000-1099/1075.Project%20Employees%20I/README_EN.md)
-
 ## 题目描述
 
 <p>项目表&nbsp;<code>Project</code>：&nbsp;</p>
@@ -29,8 +27,6 @@ employee_id 是员工表 <code>Employee 表的外键。</code>
 +------------------+---------+
 主键是 employee_id。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>请写一个 SQL&nbsp;语句，查询每一个项目中员工的&nbsp;<strong>平均&nbsp;</strong>工作年限，<strong>精确到小数点后两位</strong>。</p>
 

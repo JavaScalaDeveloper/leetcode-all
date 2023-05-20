@@ -1,7 +1,5 @@
 # [1828. 统计一个圆中点的数目](https://leetcode.cn/problems/queries-on-number-of-points-inside-a-circle)
 
-[English Version](/solution/1800-1899/1828.Queries%20on%20Number%20of%20Points%20Inside%20a%20Circle/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> ，表示第 <code>i</code> 个点在二维平面上的坐标。多个点可能会有 <strong>相同</strong> 的坐标。</p>
@@ -75,28 +73,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *countPoints(int **points, int pointsSize, int *pointsColSize, int **queries, int queriesSize, int *queriesColSize,
-                 int *returnSize) {
-    int *ans = malloc(sizeof(int) * queriesSize);
-    for (int i = 0; i < queriesSize; i++) {
-        int cx = queries[i][0];
-        int cy = queries[i][1];
-        int r = queries[i][2];
-        int count = 0;
-        for (int j = 0; j < pointsSize; j++) {
-            if (sqrt(pow(points[j][0] - cx, 2) + pow(points[j][1] - cy, 2)) <= r) {
-                count++;
-            }
-        }
-        ans[i] = count;
-    }
-    *returnSize = queriesSize;
-    return ans;
-}
-```
+**

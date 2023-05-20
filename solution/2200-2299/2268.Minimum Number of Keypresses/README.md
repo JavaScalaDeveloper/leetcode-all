@@ -1,7 +1,5 @@
 # [2268. 最少按键次数](https://leetcode.cn/problems/minimum-number-of-keypresses)
 
-[English Version](/solution/2200-2299/2268.Minimum%20Number%20of%20Keypresses/README_EN.md)
-
 ## 题目描述
 
 <p>你有一个 9 键键盘，按键按 1 到 9 编号，每个按键对应着几个英文小写字母。你可以决定每个按键对应哪些英文字母，但要满足如下条件：</p>
@@ -17,8 +15,6 @@
 <p>给你一个字符串 <code>s</code> ，返回基于你设计的键盘打出 <code>s</code> 需要的<strong> 最少</strong> 按键次数。</p>
 
 <p><b>注意：</b>字母映射到每个按键上，映射的顺序无法进行更改。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1 ：</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2268.Minimum%20Number%20of%20Keypresses/images/image-20220505184346-1.png" style="width: 300px; height: 293px;" />
@@ -45,8 +41,6 @@
 按按键 3 两次输入 'l' 。
 总共按按键 15 次，所以返回 15 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1534. 统计好三元组](https://leetcode.cn/problems/count-good-triplets)
 
-[English Version](/solution/1500-1599/1534.Count%20Good%20Triplets/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>arr</code> ，以及 <code>a</code>、<code>b</code> 、<code>c</code> 三个整数。请你统计其中好三元组的数量。</p>
@@ -19,8 +17,6 @@
 
 <p>返回 <strong>好三元组的数量</strong> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>arr = [3,0,1,1,9,7], a = 7, b = 2, c = 3
@@ -34,8 +30,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>不存在满足所有条件的三元组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [397. 整数替换](https://leetcode.cn/problems/integer-replacement)
 
-[English Version](/solution/0300-0399/0397.Integer%20Replacement/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个正整数&nbsp;<code>n</code> ，你可以做如下操作：</p>
@@ -12,8 +10,6 @@
 </ol>
 
 <p>返回 <code>n</code><em>&nbsp;</em>变为 <code>1</code> 所需的 <em>最小替换次数</em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输入：</strong>n = 4
 <strong>输出：</strong>2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

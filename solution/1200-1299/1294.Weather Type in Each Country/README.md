@@ -1,7 +1,5 @@
 # [1294. 不同国家的天气类型](https://leetcode.cn/problems/weather-type-in-each-country)
 
-[English Version](/solution/1200-1299/1294.Weather%20Type%20in%20Each%20Country/README_EN.md)
-
 ## 题目描述
 
 <p>国家表：<code>Countries</code></p>
@@ -17,8 +15,6 @@ country_id 是这张表的主键。
 该表的每行有 country_id 和 country_name 两列。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>天气表：<code>Weather</code></p>
 
 <pre>
@@ -32,8 +28,6 @@ country_id 是这张表的主键。
 (country_id, day) 是该表的复合主键。
 该表的每一行记录了某个国家某一天的天气情况。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写一段 SQL 来找到表中每个国家在 2019 年 11 月的天气类型。</p>
 

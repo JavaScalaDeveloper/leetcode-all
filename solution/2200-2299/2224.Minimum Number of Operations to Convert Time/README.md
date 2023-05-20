@@ -1,7 +1,5 @@
 # [2224. 转化时间需要的最少操作数](https://leetcode.cn/problems/minimum-number-of-operations-to-convert-time)
 
-[English Version](/solution/2200-2299/2224.Minimum%20Number%20of%20Operations%20to%20Convert%20Time/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串 <code>current</code> 和 <code>correct</code> ，表示两个 <strong>24 小时制时间</strong> 。</p>
@@ -11,8 +9,6 @@
 <p>在一步操作中，你可以将 <code>current</code> 这个时间增加 <code>1</code>、<code>5</code>、<code>15</code> 或 <code>60</code> 分钟。你可以执行这一操作 <strong>任意</strong> 次数。</p>
 
 <p>返回将&nbsp;<code>current</code><em> </em>转化为<em> </em><code>correct</code> 需要的 <strong>最少操作数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>只需要为 current 加一分钟，所以最小操作数是 1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

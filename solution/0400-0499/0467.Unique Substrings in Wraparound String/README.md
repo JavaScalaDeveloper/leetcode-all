@@ -1,7 +1,5 @@
 # [467. 环绕字符串中唯一的子字符串](https://leetcode.cn/problems/unique-substrings-in-wraparound-string)
 
-[English Version](/solution/0400-0499/0467.Unique%20Substrings%20in%20Wraparound%20String/README_EN.md)
-
 ## 题目描述
 
 <p>定义字符串&nbsp;<code>base</code>&nbsp;为一个&nbsp;<code>"abcdefghijklmnopqrstuvwxyz"</code>&nbsp;无限环绕的字符串，所以&nbsp;<code>base</code>&nbsp;看起来是这样的：</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>给你一个字符串&nbsp;<code>s</code> ，请你统计并返回&nbsp;<code>s</code>&nbsp;中有多少&nbsp;<strong>不同</strong><strong>非空子串</strong>&nbsp;也在&nbsp;<code>base</code>&nbsp;中出现。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>6
 <strong>解释：</strong>字符串 s 有六个子字符串 ("z", "a", "b", "za", "ab", and "zab") 在 base 中出现。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

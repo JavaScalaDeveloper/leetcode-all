@@ -1,7 +1,5 @@
 # [1673. 找出最具竞争力的子序列](https://leetcode.cn/problems/find-the-most-competitive-subsequence)
 
-[English Version](/solution/1600-1699/1673.Find%20the%20Most%20Competitive%20Subsequence/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个正整数 <code>k</code> ，返回长度为 <code>k</code> 且最具 <strong>竞争力</strong> 的<em> </em><code>nums</code> 子序列。</p>

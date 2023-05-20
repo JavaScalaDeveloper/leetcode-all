@@ -1,14 +1,10 @@
 # [1037. 有效的回旋镖](https://leetcode.cn/problems/valid-boomerang)
 
-[English Version](/solution/1000-1099/1037.Valid%20Boomerang/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个数组<meta charset="UTF-8" />&nbsp;<code>points</code>&nbsp;，其中<meta charset="UTF-8" />&nbsp;<code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code>&nbsp;表示 <strong>X-Y</strong> 平面上的一个点，<em>如果这些点构成一个&nbsp;</em><strong>回旋镖</strong>&nbsp;则返回&nbsp;<code>true</code>&nbsp;。</p>
 
 <p><strong>回旋镖</strong>&nbsp;定义为一组三个点，这些点&nbsp;<strong>各不相同</strong>&nbsp;且&nbsp;<strong>不在一条直线上</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,8 +18,6 @@
 <pre>
 <strong>输入：</strong>points = [[1,1],[2,2],[3,3]]
 <strong>输出：</strong>false</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 <meta charset="UTF-8" />

@@ -1,7 +1,5 @@
 # [199. 二叉树的右视图](https://leetcode.cn/problems/binary-tree-right-side-view)
 
-[English Version](/solution/0100-0199/0199.Binary%20Tree%20Right%20Side%20View/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。</p>

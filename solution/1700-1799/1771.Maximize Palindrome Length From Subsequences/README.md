@@ -1,7 +1,5 @@
 # [1771. 由子序列构造的最长回文串的长度](https://leetcode.cn/problems/maximize-palindrome-length-from-subsequences)
 
-[English Version](/solution/1700-1799/1771.Maximize%20Palindrome%20Length%20From%20Subsequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串 <code>word1</code> 和 <code>word2</code> ，请你按下述方法构造一个字符串：</p>

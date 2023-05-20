@@ -1,7 +1,5 @@
 # [626. 换座位](https://leetcode.cn/problems/exchange-seats)
 
-[English Version](/solution/0600-0699/0626.Exchange%20Seats/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Seat</code></p>
@@ -18,15 +16,11 @@ Id是该表的主键列。
 Id是一个连续的增量。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写SQL查询来交换每两个连续的学生的座位号。如果学生的数量是奇数，则最后一个学生的id不交换。</p>
 
 <p>按 <code>id</code> <strong>升序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

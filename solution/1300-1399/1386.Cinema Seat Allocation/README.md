@@ -1,7 +1,5 @@
 # [1386. 安排电影院座位](https://leetcode.cn/problems/cinema-seat-allocation)
 
-[English Version](/solution/1300-1399/1386.Cinema%20Seat%20Allocation/README_EN.md)
-
 ## 题目描述
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1300-1399/1386.Cinema%20Seat%20Allocation/images/cinema_seats_1.png" style="height: 149px; width: 400px;"></p>
@@ -11,8 +9,6 @@
 <p>给你数组&nbsp;<code>reservedSeats</code>&nbsp;，包含所有已经被预约了的座位。比如说，<code>researvedSeats[i]=[3,8]</code>&nbsp;，它表示第&nbsp;<strong>3</strong>&nbsp;行第&nbsp;<strong>8</strong>&nbsp;个座位被预约了。</p>
 
 <p>请你返回&nbsp;<strong>最多能安排多少个 4 人家庭</strong>&nbsp;。4 人家庭要占据&nbsp;<strong>同一行内连续&nbsp;</strong>的 4 个座位。隔着过道的座位（比方说 [3,3] 和 [3,4]）不是连续的座位，但是如果你可以将 4 人家庭拆成过道两边各坐 2 人，这样子是允许的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <pre><strong>输入：</strong>n = 4, reservedSeats = [[4,3],[1,4],[4,6],[1,7]]
 <strong>输出：</strong>4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

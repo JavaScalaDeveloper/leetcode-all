@@ -1,7 +1,5 @@
 # [380. O(1) 时间插入、删除和获取随机元素](https://leetcode.cn/problems/insert-delete-getrandom-o1)
 
-[English Version](/solution/0300-0399/0380.Insert%20Delete%20GetRandom%20O%281%29/README_EN.md)
-
 ## 题目描述
 
 <p>实现<code>RandomizedSet</code> 类：</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>你必须实现类的所有函数，并满足每个函数的 <strong>平均</strong> 时间复杂度为 <code>O(1)</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -38,8 +34,6 @@ randomizedSet.remove(1); // 从集合中移除 1 ，返回 true 。集合现在�
 randomizedSet.insert(2); // 2 已在集合中，所以返回 false 。
 randomizedSet.getRandom(); // 由于 2 是集合中唯一的数字，getRandom 总是返回 2 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

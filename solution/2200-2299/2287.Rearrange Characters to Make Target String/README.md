@@ -1,14 +1,10 @@
 # [2287. 重排字符形成目标字符串](https://leetcode.cn/problems/rearrange-characters-to-make-target-string)
 
-[English Version](/solution/2200-2299/2287.Rearrange%20Characters%20to%20Make%20Target%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong> 开始的字符串 <code>s</code> 和 <code>target</code> 。你可以从 <code>s</code> 取出一些字符并将其重排，得到若干新的字符串。</p>
 
 <p>从 <code>s</code> 中取出字符并重新排列，返回可以形成 <code>target</code> 的 <strong>最大</strong> 副本数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 选取下标为 0 、3 、6 、9 和 12 的字符，可以形成 "aaaaa" 的 1 个副本。
 可以形成最多 1 个 "aaaaa" 的副本，所以返回 1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -82,26 +76,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define min(a, b) (((a) < (b)) ? (a) : (b))
-
-int rearrangeCharacters(char *s, char *target) {
-    int count1[26] = {0};
-    int count2[26] = {0};
-    for (int i = 0; s[i]; i++) {
-        count1[s[i] - 'a']++;
-    }
-    for (int i = 0; target[i]; i++) {
-        count2[target[i] - 'a']++;
-    }
-    int ans = INT_MAX;
-    for (int i = 0; i < 26; i++) {
-        if (count2[i]) {
-            ans = min(ans, count1[i] / count2[i]);
-        }
-    }
-    return ans;
-}
-```
+**

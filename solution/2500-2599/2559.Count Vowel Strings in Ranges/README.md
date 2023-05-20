@@ -1,7 +1,5 @@
 # [2559. 统计范围内的元音字符串数](https://leetcode.cn/problems/count-vowel-strings-in-ranges)
 
-[English Version](/solution/2500-2599/2559.Count%20Vowel%20Strings%20in%20Ranges/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串数组 <code>words</code> 以及一个二维整数数组 <code>queries</code> 。</p>
@@ -11,8 +9,6 @@
 <p>返回一个整数数组，其中数组的第 <code>i</code> 个元素对应第 <code>i</code> 个查询的答案。</p>
 
 <p><strong>注意：</strong>元音字母是 <code>'a'</code>、<code>'e'</code>、<code>'i'</code>、<code>'o'</code> 和 <code>'u'</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输入：</strong>words = ["a","e","i"], queries = [[0,2],[0,1],[2,2]]
 <strong>输出：</strong>[3,2,1]
 <strong>解释：</strong>每个字符串都满足这一条件，所以返回 [3,2,1] 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

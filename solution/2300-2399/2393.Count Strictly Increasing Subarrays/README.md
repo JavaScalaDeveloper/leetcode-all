@@ -1,7 +1,5 @@
 # [2393. 严格递增的子数组个数](https://leetcode.cn/problems/count-strictly-increasing-subarrays)
 
-[English Version](/solution/2300-2399/2393.Count%20Strictly%20Increasing%20Subarrays/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个由&nbsp;<strong>正整数&nbsp;</strong>组成的数组 <code>nums</code> 。</p>
@@ -9,8 +7,6 @@
 <p>返回&nbsp;<em><strong>严格递增&nbsp;</strong>顺序的 </em><code>nums</code><em>&nbsp;<strong>子数组&nbsp;</strong>的数目。</em></p>
 
 <p data-group="1-1"><strong>子数组&nbsp;</strong>是数组的一部分，且是&nbsp;<strong>连续 </strong>的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出:</strong> 15
 <strong>解释:</strong> 每个子数组都严格递增。我们可以取 15 个子数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [1328. 破坏回文串](https://leetcode.cn/problems/break-a-palindrome)
 
-[English Version](/solution/1300-1399/1328.Break%20a%20Palindrome/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由小写英文字母组成的回文字符串&nbsp;<code>palindrome</code> ，请你将其中&nbsp;<strong>一个</strong> 字符用任意小写英文字母替换，使得结果字符串的 <strong>字典序最小</strong> ，且&nbsp;<strong>不是</strong>&nbsp;回文串。</p>
@@ -25,8 +23,6 @@
 <strong>输入：</strong>palindrome = "a"
 <strong>输出：</strong>""
 <strong>解释：</strong>不存在替换一个字符使 "a" 变成非回文的方法，所以返回空字符串。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

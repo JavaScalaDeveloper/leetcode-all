@@ -1,7 +1,5 @@
 # [1048. 最长字符串链](https://leetcode.cn/problems/longest-string-chain)
 
-[English Version](/solution/1000-1099/1048.Longest%20String%20Chain/README_EN.md)
-
 ## 题目描述
 
 <p>给出一个单词数组&nbsp;<code>words</code>&nbsp;，其中每个单词都由小写英文字母组成。</p>
@@ -41,8 +39,6 @@
 <b>解释：</b>字链["abcd"]是最长的字链之一。
 ["abcd"，"dbqca"]不是一个有效的单词链，因为字母的顺序被改变了。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

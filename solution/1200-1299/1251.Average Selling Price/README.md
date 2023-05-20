@@ -1,7 +1,5 @@
 # [1251. 平均售价](https://leetcode.cn/problems/average-selling-price)
 
-[English Version](/solution/1200-1299/1251.Average%20Selling%20Price/README_EN.md)
-
 ## 题目描述
 
 <p>Table: <code>Prices</code></p>
@@ -19,8 +17,6 @@
 <code>Prices </code>表的每一行表示的是某个产品在一段时期内的价格。
 每个产品的对应时间段是不会重叠的，这也意味着同一个产品的价格时段不会出现交叉。</pre>
 
-<p>&nbsp;</p>
-
 <p>Table: <code>UnitsSold</code></p>
 
 <pre>
@@ -33,8 +29,6 @@
 +---------------+---------+
 <code>UnitsSold </code>表没有主键，它可能包含重复项。
 <code>UnitsSold </code>表的每一行表示的是每种产品的出售日期，单位和产品 id。</pre>
-
-<p>&nbsp;</p>
 
 <p>编写SQL查询以查找每种产品的平均售价。<br />
 <code>average_price</code> 应该四舍五入到小数点后两位。<br />

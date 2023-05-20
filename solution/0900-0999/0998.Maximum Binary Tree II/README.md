@@ -1,7 +1,5 @@
 # [998. 最大二叉树 II](https://leetcode.cn/problems/maximum-binary-tree-ii)
 
-[English Version](/solution/0900-0999/0998.Maximum%20Binary%20Tree%20II/README_EN.md)
-
 ## 题目描述
 
 <p><strong>最大树</strong> 定义：一棵树，并满足：其中每个节点的值都大于其子树中的任何其他值。</p>
@@ -23,8 +21,6 @@
 <p>假设 <code>b</code> 是 <code>a</code> 的副本，并在末尾附加值 <code>val</code>。题目数据保证 <code>b</code> 中的值互不相同。</p>
 
 <p>返回&nbsp;<code>Construct(b)</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@
 <strong>解释：</strong>a = [2,1,5,3], b = [2,1,5,3,4]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -62,8 +56,6 @@
 	<li>树中的所有值 <strong>互不相同</strong></li>
 	<li><code>1 &lt;= val &lt;= 100</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 
@@ -145,27 +137,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-
-struct TreeNode *insertIntoMaxTree(struct TreeNode *root, int val) {
-    if (!root || root->val < val) {
-        struct TreeNode *res = (struct TreeNode *) malloc(sizeof(struct TreeNode));
-        res->val = val;
-        res->left = root;
-        res->right = NULL;
-        return res;
-    }
-    root->right = insertIntoMaxTree(root->right, val);
-    return root;
-}
-```
+**

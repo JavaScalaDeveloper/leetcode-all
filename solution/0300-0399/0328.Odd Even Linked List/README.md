@@ -1,7 +1,5 @@
 # [328. 奇偶链表](https://leetcode.cn/problems/odd-even-linked-list)
 
-[English Version](/solution/0300-0399/0328.Odd%20Even%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给定单链表的头节点&nbsp;<code>head</code>&nbsp;，将所有索引为奇数的节点和索引为偶数的节点分别组合在一起，然后返回重新排序的列表。</p>
@@ -11,8 +9,6 @@
 <p>请注意，偶数组和奇数组内部的相对顺序应该与输入时保持一致。</p>
 
 <p>你必须在&nbsp;<code>O(1)</code>&nbsp;的额外空间复杂度和&nbsp;<code>O(n)</code>&nbsp;的时间复杂度下解决这个问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -29,8 +25,6 @@
 <pre>
 <strong>输入:</strong> head = [2,1,3,5,6,4,7]
 <strong>输出:</strong> [2,3,6,7,1,5,4]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
 
-[English Version](/solution/2000-2099/2045.Second%20Minimum%20Time%20to%20Reach%20Destination/README_EN.md)
-
 ## 题目描述
 
 <p>城市用一个 <strong>双向连通</strong> 图表示，图中有 <code>n</code> 个节点，从 <code>1</code> 到 <code>n</code> 编号（包含 <code>1</code> 和 <code>n</code>）。图中的边用一个二维整数数组 <code>edges</code> 表示，其中每个 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>]</code>&nbsp;表示一条节点&nbsp;<code>u<sub>i</sub></code> 和节点&nbsp;<code>v<sub>i</sub></code> 之间的双向连通边。每组节点对由 <strong>最多一条</strong> 边连通，顶点不存在连接到自身的边。穿过任意一条边的时间是 <code>time</code>&nbsp;分钟。</p>
@@ -22,8 +20,6 @@
 	<li>你可以 <strong>任意次</strong> 穿过任意顶点，<strong>包括</strong> <code>1</code> 和 <code>n</code> 。</li>
 	<li>你可以假设在 <strong>启程时</strong> ，所有信号灯刚刚变成 <strong>绿色</strong> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -60,8 +56,6 @@
 <strong>解释：</strong>
 最短时间路径是 1 -&gt; 2 ，总花费时间 = 3 分钟
 第二短时间路径是 1 -&gt; 2 -&gt; 1 -&gt; 2 ，总花费时间 = 11 分钟</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

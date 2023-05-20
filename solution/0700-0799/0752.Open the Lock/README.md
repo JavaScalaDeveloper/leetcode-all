@@ -1,7 +1,5 @@
 # [752. 打开转盘锁](https://leetcode.cn/problems/open-the-lock)
 
-[English Version](/solution/0700-0799/0752.Open%20the%20Lock/README_EN.md)
-
 ## 题目描述
 
 <p>你有一个带有四个圆形拨轮的转盘锁。每个拨轮都有10个数字： <code>'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'</code> 。每个拨轮可以自由旋转：例如把 <code>'9'</code> 变为&nbsp;<code>'0'</code>，<code>'0'</code> 变为 <code>'9'</code> 。每次旋转都只能旋转一个拨轮的一位数字。</p>
@@ -11,8 +9,6 @@
 <p>列表 <code>deadends</code> 包含了一组死亡数字，一旦拨轮的数字和列表里的任何一个元素相同，这个锁将会被永久锁定，无法再被旋转。</p>
 
 <p>字符串 <code>target</code> 代表可以解锁的数字，你需要给出解锁需要的最小旋转次数，如果无论如何不能解锁，返回 <code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>无法旋转到目标数字且不被锁定。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

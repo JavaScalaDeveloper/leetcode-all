@@ -1,7 +1,5 @@
 # [1199. 建造街区的最短时间](https://leetcode.cn/problems/minimum-time-to-build-blocks)
 
-[English Version](/solution/1100-1199/1199.Minimum%20Time%20to%20Build%20Blocks/README_EN.md)
-
 ## 题目描述
 
 <p>你是个城市规划工作者，手里负责管辖一系列的街区。在这个街区列表中&nbsp;<code>blocks[i] = t</code>&nbsp;意味着第 &nbsp;<code>i</code>&nbsp;个街区需要&nbsp;<code>t</code>&nbsp;个单位的时间来建造。</p>
@@ -15,8 +13,6 @@
 <p>注意：如果两个工人同时召唤别的工人，那么他们的行为是并行的，所以时间花费仍然是&nbsp;<code>split</code>。</p>
 
 <p>最开始的时候只有&nbsp;<strong>一个&nbsp;</strong>工人，请你最后输出建造完所有街区所需要的最少时间。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 然后，用这两个未分派的工人分别去建造前两个街区。
 时间花费为 1 + max(3, 1 + max(1, 2)) = 4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

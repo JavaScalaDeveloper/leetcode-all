@@ -1,14 +1,10 @@
 # [2380. 二进制字符串重新安排顺序需要的时间](https://leetcode.cn/problems/time-needed-to-rearrange-a-binary-string)
 
-[English Version](/solution/2300-2399/2380.Time%20Needed%20to%20Rearrange%20a%20Binary%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二进制字符串&nbsp;<code>s</code>&nbsp;。在一秒之中，<strong>所有</strong>&nbsp;子字符串&nbsp;<code>"01"</code> <strong>同时</strong>&nbsp;被替换成&nbsp;<code>"10"</code>&nbsp;。这个过程持续进行到没有&nbsp;<code>"01"</code>&nbsp;存在。</p>
 
 <p>请你返回完成这个过程所需要的秒数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,16 +30,12 @@ s 中没有 "01" 存在，整个过程花费 0 秒。
 所以我们返回 0 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= s.length &lt;= 1000</code></li>
 	<li><code>s[i]</code>&nbsp;要么是&nbsp;<code>'0'</code>&nbsp;，要么是&nbsp;<code>'1'</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

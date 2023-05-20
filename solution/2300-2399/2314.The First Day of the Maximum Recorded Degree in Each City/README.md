@@ -1,7 +1,5 @@
 # [2314. 每个城市最高气温的第一天](https://leetcode.cn/problems/the-first-day-of-the-maximum-recorded-degree-in-each-city)
 
-[English Version](/solution/2300-2399/2314.The%20First%20Day%20of%20the%20Maximum%20Recorded%20Degree%20in%20Each%20City/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Weather</code></p>
@@ -19,15 +17,11 @@
 所有的学位都是在 2022 年获得的。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 来查询每个城市中有最高温度记录的日子。如果同一城市多次记录最高气温，则返回其中最早的一天。</p>
 
 <p>返回按 <code>city_id</code> <strong>升序排序&nbsp;</strong>的结果表。</p>
 
 <p>查询结果格式示例如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 

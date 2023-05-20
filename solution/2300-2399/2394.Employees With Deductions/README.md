@@ -1,7 +1,5 @@
 # [2394. 开除员工](https://leetcode.cn/problems/employees-with-deductions)
 
-[English Version](/solution/2300-2399/2394.Employees%20With%20Deductions/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Employees</code></p>
@@ -16,8 +14,6 @@
 employee_id 是该表的主键。
 每一行都包含员工的 id 和他们获得工资所需的最低工作时数。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Logs</code></p>
 
@@ -34,8 +30,6 @@ employee_id 是该表的主键。
 所有时间都在 2022 年 10 月。out_time 可以是 in_time 之后的一天，这意味着该员工在午夜之后工作。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>在公司里，每个员工每个月必须工作一定的小时数。员工在工作段中工作。员工工作的小时数可以通过员工在所有工作段中工作的分钟数的总和来计算。每个工作段的分钟数是四舍五入的。</p>
 
 <ul>
@@ -47,8 +41,6 @@ employee_id 是该表的主键。
 <p data-group="1-1">以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 

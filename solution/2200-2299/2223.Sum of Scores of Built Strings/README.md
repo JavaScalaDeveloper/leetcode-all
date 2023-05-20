@@ -1,7 +1,5 @@
 # [2223. 构造字符串的总得分和](https://leetcode.cn/problems/sum-of-scores-of-built-strings)
 
-[English Version](/solution/2200-2299/2223.Sum%20of%20Scores%20of%20Built%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>你需要从空字符串开始&nbsp;<strong>构造</strong> 一个长度为 <code>n</code>&nbsp;的字符串 <code>s</code>&nbsp;，构造的过程为每次给当前字符串 <strong>前面</strong>&nbsp;添加 <strong>一个</strong> 字符。构造过程中得到的所有字符串编号为 <code>1</code>&nbsp;到 <code>n</code>&nbsp;，其中长度为 <code>i</code>&nbsp;的字符串编号为 <code>s<sub>i</sub></code>&nbsp;。</p>
@@ -13,8 +11,6 @@
 <p><code>s<sub>i</sub></code>&nbsp;的 <strong>得分</strong>&nbsp;为&nbsp;<code>s<sub>i</sub></code> 和&nbsp;<code>s<sub>n</sub></code>&nbsp;的 <strong>最长公共前缀</strong> 的长度（注意&nbsp;<code>s == s<sub>n</sub></code>&nbsp;）。</p>
 
 <p>给你最终的字符串&nbsp;<code>s</code>&nbsp;，请你返回每一个<em>&nbsp;</em><code>s<sub>i</sub></code>&nbsp;的&nbsp;<strong>得分之和</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@ s<sub>9</sub> == "azbazbzaz" ，最长公共前缀为 "azbazbzaz" ，得分为 9
 其他 s<sub>i</sub> 得分均为 0 。
 得分和为 2 + 3 + 9 = 14 ，所以我们返回 14 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

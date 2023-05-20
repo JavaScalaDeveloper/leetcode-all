@@ -1,7 +1,5 @@
 # [847. 访问所有节点的最短路径](https://leetcode.cn/problems/shortest-path-visiting-all-nodes)
 
-[English Version](/solution/0800-0899/0847.Shortest%20Path%20Visiting%20All%20Nodes/README_EN.md)
-
 ## 题目描述
 
 <p>存在一个由 <code>n</code> 个节点组成的无向连通图，图中的节点按从 <code>0</code> 到 <code>n - 1</code> 编号。</p>
@@ -9,8 +7,6 @@
 <p>给你一个数组 <code>graph</code> 表示这个图。其中，<code>graph[i]</code> 是一个列表，由所有与节点 <code>i</code> 直接相连的节点组成。</p>
 
 <p>返回能够访问所有节点的最短路径的长度。你可以在任一节点开始和停止，也可以多次重访节点，并且可以重用边。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -31,8 +27,6 @@
 <strong>输出：</strong>4
 <strong>解释：</strong>一种可能的路径为 [0,1,4,2,3]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2494. 合并在同一个大厅重叠的活动](https://leetcode.cn/problems/merge-overlapping-events-in-the-same-hall)
 
-[English Version](/solution/2400-2499/2494.Merge%20Overlapping%20Events%20in%20the%20Same%20Hall/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>HallEvents</code></p>
@@ -24,8 +22,6 @@
 <p data-group="1-1">以<strong>任意顺序</strong>返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

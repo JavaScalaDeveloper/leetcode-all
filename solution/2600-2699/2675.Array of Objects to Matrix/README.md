@@ -1,7 +1,5 @@
 # [2675. 将对象数组转换为矩阵](https://leetcode.cn/problems/array-of-objects-to-matrix)
 
-[English Version](/solution/2600-2699/2675.Array%20of%20Objects%20to%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>编写一个函数，将对象数组&nbsp;<code>arr</code>&nbsp;转换为矩阵&nbsp;<code>m</code>&nbsp;。</p>
@@ -13,8 +11,6 @@
 <p>剩余的每一行对应&nbsp;<code>arr</code>&nbsp;中的一个对象。矩阵中的每个值对应对象中的一个值。如果给定对象在给定列中没有值，则应该包含空字符串 <code>""</code> 。</p>
 
 <p>矩阵中的列应按 <strong>字典升序</strong> 排列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -122,8 +118,6 @@ arr = [
 
 <strong>解释：</strong>
 没有键，所以每一行都是一个空数组。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1927. 求和游戏](https://leetcode.cn/problems/sum-game)
 
-[English Version](/solution/1900-1999/1927.Sum%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 和 Bob 玩一个游戏，两人轮流行动，<strong>Alice 先手</strong> 。</p>

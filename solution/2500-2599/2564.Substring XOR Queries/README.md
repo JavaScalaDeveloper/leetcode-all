@@ -1,7 +1,5 @@
 # [2564. 子字符串异或查询](https://leetcode.cn/problems/substring-xor-queries)
 
-[English Version](/solution/2500-2599/2564.Substring%20XOR%20Queries/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>二进制字符串</strong>&nbsp;<code>s</code>&nbsp;和一个整数数组&nbsp;<code>queries</code>&nbsp;，其中&nbsp;<code>queries[i] = [first<sub>i</sub>, second<sub>i</sub>]</code>&nbsp;。</p>
@@ -13,8 +11,6 @@
 <p>请你返回一个数组&nbsp;<code>ans</code>&nbsp;，其中&nbsp;<code>ans[i] = [left<sub>i</sub>, right<sub>i</sub>]</code>&nbsp;是第&nbsp;<code>i</code>&nbsp;个查询的答案。</p>
 
 <p><strong>子字符串</strong>&nbsp;是一个字符串中一段连续非空的字符序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <b>解释：</b>这个例子中，端点为 <code>[0,0]</code> 的子字符串对应的十进制值为 <strong><code>1</code></strong><code>&nbsp;，且</code> <strong><code>1 ^ 4 = 5</code></strong><code>&nbsp;。所以答案为</code> <code>[0,0] 。</code>
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -50,8 +44,6 @@
 	<li><code>1 &lt;= queries.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>0 &lt;= first<sub>i</sub>, second<sub>i</sub> &lt;= 10<sup>9</sup></code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

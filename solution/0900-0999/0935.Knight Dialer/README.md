@@ -1,7 +1,5 @@
 # [935. 骑士拨号器](https://leetcode.cn/problems/knight-dialer)
 
-[English Version](/solution/0900-0999/0935.Knight%20Dialer/README_EN.md)
-
 ## 题目描述
 
 <p>象棋骑士有一个<strong>独特的移动方式</strong>，它可以垂直移动两个方格，水平移动一个方格，或者水平移动两个方格，垂直移动一个方格(两者都形成一个&nbsp;<strong>L&nbsp;</strong>的形状)。</p>
@@ -19,8 +17,6 @@
 <p>你可以将骑士放置在<strong>任何数字单元格</strong>上，然后你应该执行 n - 1 次移动来获得长度为 n 的号码。所有的跳跃应该是<strong>有效</strong>的骑士跳跃。</p>
 
 <p>因为答案可能很大，<strong>所以输出答案模&nbsp;</strong><code>10<sup>9</sup>&nbsp;+ 7</code>.</p>
-
-<p>&nbsp;</p>
 
 <ul>
 </ul>
@@ -48,8 +44,6 @@
 <strong>输出：</strong>136006598
 <strong>解释：</strong>注意取模
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [759. 员工空闲时间](https://leetcode.cn/problems/employee-free-time)
 
-[English Version](/solution/0700-0799/0759.Employee%20Free%20Time/README_EN.md)
-
 ## 题目描述
 
 <p>给定员工的 <code>schedule</code> 列表，表示每个员工的工作时间。</p>
@@ -20,21 +18,15 @@
 我们去除所有包含 inf 的时间段，因为它们不是有限的时间段。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 2：</strong></p>
 
 <pre><strong>输入：</strong>schedule = [[[1,3],[6,7]],[[2,4]],[[2,5],[9,12]]]
 <strong>输出：</strong>[[5,6],[7,9]]
 </pre>
 
-<p>&nbsp;</p>
-
 <p>（尽管我们用 <code>[x, y]</code> 的形式表示 <code>Intervals</code> ，内部的对象是 <code>Intervals</code> 而不是列表或数组。例如，<code>schedule[0][0].start = 1, schedule[0][0].end = 2</code>，并且 <code>schedule[0][0][0]</code>&nbsp;是未定义的）</p>
 
 <p>而且，答案中不包含 [5, 5] ，因为长度为 0。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>注：</strong></p>
 
@@ -44,8 +36,6 @@
 </ol>
 
 <p><strong>注：</strong>输入类型于&nbsp;2019 年&nbsp;4 月 15 日 改变。请重置为默认代码的定义以获取新方法。</p>
-
-<p>&nbsp;</p>
 
 ## 解法
 

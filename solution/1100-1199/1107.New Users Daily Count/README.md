@@ -1,7 +1,5 @@
 # [1107. 每日新用户统计](https://leetcode.cn/problems/new-users-daily-count)
 
-[English Version](/solution/1100-1199/1107.New%20Users%20Daily%20Count/README_EN.md)
-
 ## 题目描述
 
 <p><code>Traffic</code>&nbsp;表：</p>
@@ -16,8 +14,6 @@
 该表没有主键，它可能有重复的行。
 activity 列是 ENUM 类型，可能取 (&#39;login&#39;, &#39;logout&#39;, &#39;jobs&#39;, &#39;groups&#39;, &#39;homepage&#39;) 几个值之一。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>编写一个 SQL 查询，以查询从今天起最多 90 天内，每个日期该日期首次登录的用户数。假设今天是&nbsp;<strong>2019-06-30</strong>.</p>
 

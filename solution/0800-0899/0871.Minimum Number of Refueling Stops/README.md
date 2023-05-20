@@ -1,7 +1,5 @@
 # [871. 最低加油次数](https://leetcode.cn/problems/minimum-number-of-refueling-stops)
 
-[English Version](/solution/0800-0899/0871.Minimum%20Number%20of%20Refueling%20Stops/README_EN.md)
-
 ## 题目描述
 
 <p>汽车从起点出发驶向目的地，该目的地位于出发位置东面 <code>target</code>&nbsp;英里处。</p>
@@ -13,8 +11,6 @@
 <p>为了到达目的地，汽车所必要的最低加油次数是多少？如果无法到达目的地，则返回 <code>-1</code> 。</p>
 
 <p>注意：如果汽车到达加油站时剩余燃料为 <code>0</code>，它仍然可以在那里加油。如果汽车到达目的地时剩余燃料为 <code>0</code>，仍然认为它已经到达目的地。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 并将汽油从 10 升加到 50 升。然后开车抵达目的地。
 沿途在两个加油站停靠，所以返回 2 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

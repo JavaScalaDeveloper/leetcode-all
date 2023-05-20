@@ -1,7 +1,5 @@
 # [2640. 一个数组所有前缀的分数](https://leetcode.cn/problems/find-the-score-of-all-prefixes-of-an-array)
 
-[English Version](/solution/2600-2699/2640.Find%20the%20Score%20of%20All%20Prefixes%20of%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>定义一个数组 <code>arr</code>&nbsp;的 <strong>转换数组</strong>&nbsp;<code>conver</code>&nbsp;为：</p>
@@ -13,8 +11,6 @@
 <p>定义一个数组 <code>arr</code>&nbsp;的 <strong>分数</strong>&nbsp;为 <code>arr</code>&nbsp;转换数组中所有元素的和。</p>
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始长度为 <code>n</code>&nbsp;的整数数组&nbsp;<code>nums</code>&nbsp;，请你返回一个长度为 <code>n</code>&nbsp;的数组<em>&nbsp;</em><code>ans</code>&nbsp;，其中&nbsp;<code>ans[i]</code>是前缀&nbsp;<code>nums[0..i]</code>&nbsp;的分数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 对于前缀 [1, 1, 2, 4, 8]，转换数组为 [2, 2, 4, 8, 16] ，所以分数为 32 。
 对于前缀 [1, 1, 2, 4, 8, 16]，转换数组为 [2, 2, 4, 8, 16, 32] ，所以分数为 64 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2041. 面试中被录取的候选人](https://leetcode.cn/problems/accepted-candidates-from-the-interviews)
 
-[English Version](/solution/2000-2099/2041.Accepted%20Candidates%20From%20the%20Interviews/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Candidates</code></p>
@@ -19,8 +17,6 @@ candidate_id 是这个表的主键。
 该表的每一行都表示候选人的姓名、工作年限以及面试 ID 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表：<code>Rounds</code></p>
 
 <pre>
@@ -35,15 +31,11 @@ candidate_id 是这个表的主键。
 本表的每一行都表示一轮面试的分数
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，查询出至少有两年工作经验、且面试分数之和 <strong>严格大于 <code>15</code>&nbsp;</strong>的候选人的 ID<strong> 。</strong></p>
 
 <p>可以以 <strong>任何顺序 </strong>返回结果表。</p>
 
 <p>查询结果的格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 

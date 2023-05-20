@@ -1,7 +1,5 @@
 # [2390. 从字符串中移除星号](https://leetcode.cn/problems/removing-stars-from-a-string)
 
-[English Version](/solution/2300-2399/2390.Removing%20Stars%20From%20a%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个包含若干星号 <code>*</code> 的字符串 <code>s</code> 。</p>
@@ -22,8 +20,6 @@
 	<li>可以证明结果字符串是唯一的。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -42,8 +38,6 @@
 <strong>输出：</strong>""
 <strong>解释：</strong>整个字符串都会被移除，所以返回空字符串。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1769. 移动所有球到每个盒子所需的最小操作数](https://leetcode.cn/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)
 
-[English Version](/solution/1700-1799/1769.Minimum%20Number%20of%20Operations%20to%20Move%20All%20Balls%20to%20Each%20Box/README_EN.md)
-
 ## 题目描述
 
 <p>有 <code>n</code> 个盒子。给你一个长度为 <code>n</code> 的二进制字符串 <code>boxes</code> ，其中 <code>boxes[i]</code> 的值为 <code>'0'</code> 表示第 <code>i</code> 个盒子是 <strong>空</strong> 的，而 <code>boxes[i]</code> 的值为 <code>'1'</code> 表示盒子里有 <strong>一个</strong> 小球。</p>
@@ -103,63 +101,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *minOperations(char *boxes, int *returnSize) {
-    int n = strlen(boxes);
-    int *left = malloc(sizeof(int) * n);
-    int *right = malloc(sizeof(int) * n);
-    memset(left, 0, sizeof(int) * n);
-    memset(right, 0, sizeof(int) * n);
-    for (int i = 1, count = 0; i < n; i++) {
-        if (boxes[i - 1] == '1') {
-            count++;
-        }
-        left[i] = left[i - 1] + count;
-    }
-    for (int i = n - 2, count = 0; i >= 0; i--) {
-        if (boxes[i + 1] == '1') {
-            count++;
-        }
-        right[i] = right[i + 1] + count;
-    }
-    int *ans = malloc(sizeof(int) * n);
-    for (int i = 0; i < n; i++) {
-        ans[i] = left[i] + right[i];
-    }
-    free(left);
-    free(right);
-    *returnSize = n;
-    return ans;
-}
-```
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *minOperations(char *boxes, int *returnSize) {
-    int n = strlen(boxes);
-    int *ans = malloc(sizeof(int) * n);
-    memset(ans, 0, sizeof(int) * n);
-    for (int i = 1, count = 0; i < n; i++) {
-        if (boxes[i - 1] == '1') {
-            count++;
-        }
-        ans[i] = ans[i - 1] + count;
-    }
-    for (int i = n - 2, count = 0, sum = 0; i >= 0; i--) {
-        if (boxes[i + 1] == '1') {
-            count++;
-        }
-        sum += count;
-        ans[i] += sum;
-    }
-    *returnSize = n;
-    return ans;
-}
-```
+**

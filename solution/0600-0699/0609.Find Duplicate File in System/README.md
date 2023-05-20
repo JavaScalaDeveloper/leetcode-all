@@ -1,7 +1,5 @@
 # [609. 在系统中查找重复文件](https://leetcode.cn/problems/find-duplicate-file-in-system)
 
-[English Version](/solution/0600-0699/0609.Find%20Duplicate%20File%20in%20System/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个目录信息列表&nbsp;<code>paths</code> ，包括目录路径，以及该目录中的所有文件及其内容，请你按路径返回文件系统中的所有重复文件。答案可按 <strong>任意顺序</strong> 返回。</p>
@@ -22,8 +20,6 @@
 	<li><code>"directory_path/file_name.txt"</code></li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -38,8 +34,6 @@
 <strong>输出：</strong>[["root/a/2.txt","root/c/d/4.txt"],["root/a/1.txt","root/c/3.txt"]]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -50,8 +44,6 @@
 	<li>你可以假设在同一目录中没有任何文件或目录共享相同的名称。</li>
 	<li>你可以假设每个给定的目录信息代表一个唯一的目录。目录路径和文件信息用单个空格分隔。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

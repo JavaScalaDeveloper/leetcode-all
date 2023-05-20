@@ -1,7 +1,5 @@
 # [555. 分割连接字符串](https://leetcode.cn/problems/split-concatenated-strings)
 
-[English Version](/solution/0500-0599/0555.Split%20Concatenated%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串列表&nbsp;<code>strs</code>，你可以将这些字符串连接成一个循环字符串，对于每个字符串，你可以选择是否翻转它。在所有可能的循环字符串中，你需要分割循环字符串（这将使循环字符串变成一个常规的字符串），然后找到字典序最大的字符串。</p>
@@ -14,8 +12,6 @@
 </ol>
 
 <p>你的工作是在所有可能的常规字符串中找到字典序最大的一个。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输入:</strong> strs = ["abc"]
 <strong>输出:</strong> "cba"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

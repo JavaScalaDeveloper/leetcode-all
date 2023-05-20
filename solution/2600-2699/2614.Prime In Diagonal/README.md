@@ -1,7 +1,5 @@
 # [2614. 对角线上的质数](https://leetcode.cn/problems/prime-in-diagonal)
 
-[English Version](/solution/2600-2699/2614.Prime%20In%20Diagonal/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的二维整数数组 <code>nums</code> 。</p>
@@ -19,8 +17,6 @@
 
 <p>在上图中，一条对角线是 <strong>[1,5,9]</strong> ，而另一条对角线是<strong> [3,5,7]</strong> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -36,8 +32,6 @@
 <strong>输出：</strong>17
 <strong>解释：</strong>数字 1、3、9、10 和 17 是所有满足"位于至少一条对角线上"的数字。由于 17 是最大的质数，故返回 17 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

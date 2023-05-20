@@ -1,7 +1,5 @@
 # [2648. 生成斐波那契数列](https://leetcode.cn/problems/generate-fibonacci-sequence)
 
-[English Version](/solution/2600-2699/2648.Generate%20Fibonacci%20Sequence/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个生成器函数，并返回一个可以生成 <strong>斐波那契数列</strong> 的生成器对象。</p>
@@ -9,8 +7,6 @@
 <p><strong>斐波那契数列</strong> 的递推公式为 <code>X<sub>n</sub>&nbsp;= X<sub>n-1</sub>&nbsp;+ X<sub>n-2</sub></code> 。</p>
 
 <p>这个数列的前几个数字是 <code>0, 1, 1, 2, 3, 5, 8, 13</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@ gen.next().value; // 3
 <strong>输出：</strong>[]
 <b>解释：</b>gen.next() 永远不会被调用，所以什么也不会输出
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

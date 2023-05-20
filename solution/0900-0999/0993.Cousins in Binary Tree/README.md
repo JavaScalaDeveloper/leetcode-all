@@ -1,7 +1,5 @@
 # [993. 二叉树的堂兄弟节点](https://leetcode.cn/problems/cousins-in-binary-tree)
 
-[English Version](/solution/0900-0999/0993.Cousins%20in%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>在二叉树中，根节点位于深度 <code>0</code> 处，每个深度为 <code>k</code> 的节点的子节点位于深度 <code>k+1</code> 处。</p>

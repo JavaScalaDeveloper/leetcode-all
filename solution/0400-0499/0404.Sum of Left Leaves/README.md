@@ -1,12 +1,8 @@
 # [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves)
 
-[English Version](/solution/0400-0499/0404.Sum%20of%20Left%20Leaves/README_EN.md)
-
 ## 题目描述
 
 <p>给定二叉树的根节点&nbsp;<code>root</code>&nbsp;，返回所有左叶子之和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,16 +21,12 @@
 <strong>输出:</strong> 0
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
 	<li>节点数在&nbsp;<code>[1, 1000]</code>&nbsp;范围内</li>
 	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 
@@ -66,29 +58,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-
-int dfs(struct TreeNode *root, int isLeft) {
-    if (!root) {
-        return 0;
-    }
-    if (!root->left && !root->right) {
-        return isLeft ? root->val : 0;
-    }
-    return dfs(root->left, 1) + dfs(root->right, 0);
-}
-
-int sumOfLeftLeaves(struct TreeNode *root) {
-    return dfs(root, 0);
-}
-```
+**

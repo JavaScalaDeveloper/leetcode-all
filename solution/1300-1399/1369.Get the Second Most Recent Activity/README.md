@@ -1,7 +1,5 @@
 # [1369. 获取最近第二次的活动](https://leetcode.cn/problems/get-the-second-most-recent-activity)
 
-[English Version](/solution/1300-1399/1369.Get%20the%20Second%20Most%20Recent%20Activity/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>UserActivity</code></p>
@@ -20,8 +18,6 @@
 名为 username 的用户在 startDate 到 endDate 日内有一次活动
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一条SQL查询展示每一位用户 <strong>最近第二次</strong> 的活动</p>
 
 <p>如果用户仅有一次活动，返回该活动</p>
@@ -29,8 +25,6 @@
 <p>一个用户不能同时进行超过一项活动，以<strong> 任意 </strong>顺序返回结果</p>
 
 <p>下面是查询结果格式的例子。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

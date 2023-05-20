@@ -1,7 +1,5 @@
 # LeetCode
 
-[English Version](/solution/README_EN.md)
-
 ## 题解
 
 列表所有题解均由 [开源社区 Doocs](https://github.com/doocs) 贡献者提供，正在完善中，欢迎贡献你的题解！

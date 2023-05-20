@@ -1,7 +1,5 @@
 # [1529. 最少的后缀翻转次数](https://leetcode.cn/problems/minimum-suffix-flips)
 
-[English Version](/solution/1500-1599/1529.Minimum%20Suffix%20Flips/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 、下标从 <strong>0</strong> 开始的二进制字符串 <code>target</code> 。你自己有另一个长度为 <code>n</code> 的二进制字符串 <code>s</code> ，最初每一位上都是 0 。你想要让 <code>s</code> 和 <code>target</code> 相等。</p>
@@ -11,8 +9,6 @@
 <div class="original__bRMd">
 <div>
 <p>返回使<em> </em><code>s</code><em> </em>与<em> </em><code>target</code> 相等需要的最少翻转次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 </pre>
 </div>
 </div>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [581. 最短无序连续子数组](https://leetcode.cn/problems/shortest-unsorted-continuous-subarray)
 
-[English Version](/solution/0500-0599/0581.Shortest%20Unsorted%20Continuous%20Subarray/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，你需要找出一个 <strong>连续子数组</strong> ，如果对这个子数组进行升序排序，那么整个数组都会变为升序排序。</p>

@@ -1,7 +1,5 @@
 # [1404. 将二进制表示减到 1 的步骤数](https://leetcode.cn/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one)
 
-[English Version](/solution/1400-1499/1404.Number%20of%20Steps%20to%20Reduce%20a%20Number%20in%20Binary%20Representation%20to%20One/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个以二进制形式表示的数字 <code>s</code> 。请你返回按下述规则将其减少到 1 所需要的步骤数：</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>题目保证你总是可以按上述规则将测试用例变为 1 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@ Step 1) 2 是偶数，除 2 得到 1
 <pre><strong>输入：</strong>s = &quot;1&quot;
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [595. 大的国家](https://leetcode.cn/problems/big-countries)
 
-[English Version](/solution/0500-0599/0595.Big%20Countries/README_EN.md)
-
 ## 题目描述
 
 <p><code>World</code> 表：</p>
@@ -23,8 +21,6 @@ name 是这张表的主键。
 这张表的每一行提供：国家名称、所属大陆、面积、人口和 GDP 值。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>如果一个国家满足下述两个条件之一，则认为该国是 <strong>大国</strong> ：</p>
 
 <ul>
@@ -37,8 +33,6 @@ name 是这张表的主键。
 <p>按 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例：</strong></p>
 

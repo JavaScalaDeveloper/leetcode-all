@@ -1,7 +1,5 @@
 # [1892. 页面推荐 Ⅱ](https://leetcode.cn/problems/page-recommendations-ii)
 
-[English Version](/solution/1800-1899/1892.Page%20Recommendations%20II/README_EN.md)
-
 ## 题目描述
 
 <p>表：&nbsp;<code>Friendship</code></p>
@@ -17,8 +15,6 @@
 该表的每一行表示用户user1_id和user2_id是好友。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表：&nbsp;<code>Likes</code></p>
 
 <pre>
@@ -33,8 +29,6 @@
 该表的每一行表示user_id喜欢page_id。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>您正在为一个社交媒体网站实施一个页面推荐系统。如果页面被<code>user_id</code>的&nbsp;<strong>至少一个朋友喜欢&nbsp;</strong>，而&nbsp;<strong>不被</strong><code>user_id</code><strong>喜欢&nbsp;</strong>，你的系统将&nbsp;<strong>推荐&nbsp;</strong>一个页面到<code>user_id</code>。</p>
 
 <p>编写一个SQL查询来查找针对每个用户的所有可能的&nbsp;<strong>页面建议&nbsp;</strong>。每个建议应该在结果表中显示为一行，包含以下列:</p>
@@ -48,8 +42,6 @@
 <p>以&nbsp;<strong>任意顺序&nbsp;</strong>返回结果表。</p>
 
 <p>查询结果格式示例如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

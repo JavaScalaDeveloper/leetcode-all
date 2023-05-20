@@ -1,7 +1,5 @@
 # [2544. 交替数字和](https://leetcode.cn/problems/alternating-digit-sum)
 
-[English Version](/solution/2500-2599/2544.Alternating%20Digit%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数 <code>n</code> 。<code>n</code> 中的每一位数字都会按下述规则分配一个符号：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>返回所有数字及其对应符号的和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,15 +34,11 @@
 <strong>解释：</strong>(+8) + (-8) + (+6) + (-9) + (+9) + (-6) = 0
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= n &lt;= 10<sup>9</sup></code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 
@@ -72,17 +64,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int alternateDigitSum(int n) {
-    int ans = 0;
-    int sign = 1;
-    while (n) {
-        ans += (n % 10) * sign;
-        sign = -sign;
-        n /= 10;
-    }
-    return ans * -sign;
-}
-```
+**

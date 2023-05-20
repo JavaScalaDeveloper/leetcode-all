@@ -1,7 +1,5 @@
 # [1940. 排序数组之间的最长公共子序列](https://leetcode.cn/problems/longest-common-subsequence-between-sorted-arrays)
 
-[English Version](/solution/1900-1999/1940.Longest%20Common%20Subsequence%20Between%20Sorted%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个由整数数组组成的数组<code>arrays</code>，其中<code>arrays[i]</code>是严格递增排序的，返回一个表示所有数组之间的最长公共子序列的整数数组。</p>

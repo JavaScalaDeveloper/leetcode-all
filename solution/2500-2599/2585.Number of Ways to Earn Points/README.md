@@ -1,7 +1,5 @@
 # [2585. 获得分数的方法数](https://leetcode.cn/problems/number-of-ways-to-earn-points)
 
-[English Version](/solution/2500-2599/2585.Number%20of%20Ways%20to%20Earn%20Points/README_EN.md)
-
 ## 题目描述
 
 <p>考试中有 <code>n</code> 种类型的题目。给你一个整数 <code>target</code> 和一个下标从 <strong>0</strong> 开始的二维整数数组 <code>types</code> ，其中 <code>types[i] = [count<sub>i</sub>, marks<sub>i</sub>] </code>表示第 <code>i</code> 种类型的题目有 <code>count<sub>i</sub></code> 道，每道题目对应 <code>marks<sub>i</sub></code> 分。</p>
@@ -13,8 +11,6 @@
 <ul>
 	<li>比如说，如果有 <code>3</code> 道同类型题目，那么解答第 <code>1</code> 和第 <code>2</code> 道题目与解答第 <code>1</code> 和第 <code>3</code> 道题目或者第 <code>2</code> 和第 <code>3</code> 道题目是相同的。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>只有回答所有题目才能获得 18 分。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

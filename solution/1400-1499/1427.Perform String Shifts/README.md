@@ -1,7 +1,5 @@
 # [1427. 字符串的左右移](https://leetcode.cn/problems/perform-string-shifts)
 
-[English Version](/solution/1400-1499/1427.Perform%20String%20Shifts/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个包含小写英文字母的字符串&nbsp;<code>s</code>&nbsp;以及一个矩阵&nbsp;<code>shift</code>，其中&nbsp;<code>shift[i] = [direction, amount]</code>：</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>对这个字符串进行所有操作后，返回最终结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 [1,1] 表示右移 1 位。 &quot;gabcdef&quot; -&gt; &quot;fgabcde&quot;
 [0,2] 表示左移 2 位。 &quot;fgabcde&quot; -&gt; &quot;abcdefg&quot;
 [1,3] 表示右移 3 位。 &quot;abcdefg&quot; -&gt; &quot;efgabcd&quot;</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

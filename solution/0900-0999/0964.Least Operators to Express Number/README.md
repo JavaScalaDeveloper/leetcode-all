@@ -1,7 +1,5 @@
 # [964. 表示数字的最少运算符](https://leetcode.cn/problems/least-operators-to-express-number)
 
-[English Version](/solution/0900-0999/0964.Least%20Operators%20to%20Express%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个正整数 <code>x</code>，我们将会写出一个形如&nbsp;<code>x (op1) x (op2) x (op3) x ...</code>&nbsp;的表达式，其中每个运算符&nbsp;<code>op1</code>，<code>op2</code>，… 可以是加、减、乘、除（<code>+</code>，<code>-</code>，<code>*</code>，或是&nbsp;<code>/</code>）之一。例如，对于&nbsp;<code>x = 3</code>，我们可以写出表达式&nbsp;<code>3 * 3 / 3 + 3 - 3</code>，该式的值为 3 。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>我们希望编写一个能使表达式等于给定的目标值 <code>target</code> 且运算符最少的表达式。返回所用运算符的最少数量。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>输入：</strong>x = 100, target = 100000000
 <strong>输出：</strong>3
 <strong>解释：</strong>100 * 100 * 100 * 100 。表达式包含 3 个运算符。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

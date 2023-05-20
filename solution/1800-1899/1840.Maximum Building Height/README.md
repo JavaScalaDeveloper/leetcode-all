@@ -1,7 +1,5 @@
 # [1840. 最高建筑高度](https://leetcode.cn/problems/maximum-building-height)
 
-[English Version](/solution/1800-1899/1840.Maximum%20Building%20Height/README_EN.md)
-
 ## 题目描述
 
 <p>在一座城市里，你需要建 <code>n</code> 栋新的建筑。这些新的建筑会从 <code>1</code> 到 <code>n</code> 编号排成一列。</p>

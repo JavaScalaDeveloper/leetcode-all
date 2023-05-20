@@ -1,7 +1,5 @@
 # [1405. 最长快乐字符串](https://leetcode.cn/problems/longest-happy-string)
 
-[English Version](/solution/1400-1499/1405.Longest%20Happy%20String/README_EN.md)
-
 ## 题目描述
 
 <p>如果字符串中不含有任何 <code>&#39;aaa&#39;</code>，<code>&#39;bbb&#39;</code> 或 <code>&#39;ccc&#39;</code> 这样的字符串作为子串，那么该字符串就是一个「快乐字符串」。</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>如果不存在这样的字符串 <code>s</code> ，请返回一个空字符串 <code>&quot;&quot;</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <pre><strong>输入：</strong>a = 7, b = 1, c = 0
 <strong>输出：</strong>&quot;aabaa&quot;
 <strong>解释：</strong>这是该测试用例的唯一正确答案。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

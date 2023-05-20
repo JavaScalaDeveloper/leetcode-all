@@ -1,7 +1,5 @@
 # [1669. 合并两个链表](https://leetcode.cn/problems/merge-in-between-linked-lists)
 
-[English Version](/solution/1600-1699/1669.Merge%20In%20Between%20Linked%20Lists/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个链表&nbsp;<code>list1</code> 和&nbsp;<code>list2</code>&nbsp;，它们包含的元素分别为&nbsp;<code>n</code> 个和&nbsp;<code>m</code> 个。</p>
@@ -11,8 +9,6 @@
 <p>下图中蓝色边和节点展示了操作后的结果：</p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1669.Merge%20In%20Between%20Linked%20Lists/images/fig1.png" style="height: 130px; width: 504px;" />
 <p>请你返回结果链表的头指针。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <b>输出：</b>[0,1,1000000,1000001,1000002,1000003,1000004,6]
 <b>解释：</b>上图中蓝色的边和节点为答案链表。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

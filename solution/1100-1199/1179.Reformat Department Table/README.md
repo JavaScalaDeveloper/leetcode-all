@@ -1,7 +1,5 @@
 # [1179. 重新格式化部门表](https://leetcode.cn/problems/reformat-department-table)
 
-[English Version](/solution/1100-1199/1179.Reformat%20Department%20Table/README_EN.md)
-
 ## 题目描述
 
 <p>部门表&nbsp;<code>Department</code>：</p>
@@ -18,8 +16,6 @@
 这个表格有关于每个部门每月收入的信息。
 月份（month）可以取下列值 [&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;]。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>编写一个 SQL 查询来重新格式化表，使得新的表中有一个部门 id 列和一些对应&nbsp;<strong>每个月 </strong>的收入（revenue）列。</p>
 

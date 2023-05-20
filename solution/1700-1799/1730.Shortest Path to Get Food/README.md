@@ -1,7 +1,5 @@
 # [1730. 获取食物的最短路径](https://leetcode.cn/problems/shortest-path-to-get-food)
 
-[English Version](/solution/1700-1799/1730.Shortest%20Path%20to%20Get%20Food/README_EN.md)
-
 ## 题目描述
 
 <p>你现在很饿，想要尽快找东西吃。你需要找到最短的路径到达一个食物所在的格子。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>返回你到任意食物的最短路径的长度。如果不存在你到任意食物的路径，返回&nbsp;<code>-1</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1:</b></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1700-1799/1730.Shortest%20Path%20to%20Get%20Food/images/img1.jpg" style="width: 300px; height: 201px;" />
@@ -40,8 +36,6 @@
 <strong>输入:</strong> grid = [["X","X","X","X","X","X","X","X"],["X","*","O","X","O","#","O","X"],["X","O","O","X","O","O","X","X"],["X","O","O","O","O","#","O","X"],["X","X","X","X","X","X","X","X"]]
 <strong>输出:</strong> 6
 <strong>解释:</strong> 这里有多个食物。拿到下边的食物仅需走 6 步。</pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

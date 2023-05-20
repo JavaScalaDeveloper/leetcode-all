@@ -1,7 +1,5 @@
 # [156. 上下翻转二叉树](https://leetcode.cn/problems/binary-tree-upside-down)
 
-[English Version](/solution/0100-0199/0156.Binary%20Tree%20Upside%20Down/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二叉树的根节点 <code>root</code> ，请你将此二叉树上下翻转，并返回新的根节点。</p>
@@ -15,8 +13,6 @@
 </ol>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0156.Binary%20Tree%20Upside%20Down/images/main.jpg" style="width: 600px; height: 95px;" />
 <p>上面的步骤逐层进行。题目数据保证每个右节点都有一个同级节点（即共享同一父节点的左节点）且不存在子节点。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0156.Binary%20Tree%20Upside%20Down/images/updown.jpg" style="width: 800px; height: 161px;" />
@@ -38,8 +34,6 @@
 <strong>输入：</strong>root = [1]
 <strong>输出：</strong>[1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

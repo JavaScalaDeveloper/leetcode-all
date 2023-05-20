@@ -1,7 +1,5 @@
 # [1762. 能看到海景的建筑物](https://leetcode.cn/problems/buildings-with-an-ocean-view)
 
-[English Version](/solution/1700-1799/1762.Buildings%20With%20an%20Ocean%20View/README_EN.md)
-
 ## 题目描述
 
 <p>有 <code>n</code> 座建筑物。给你一个大小为 <code>n</code> 的整数数组 <code>heights</code> 表示每一个建筑物的高度。</p>

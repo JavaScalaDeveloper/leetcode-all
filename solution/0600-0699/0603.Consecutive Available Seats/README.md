@@ -1,7 +1,5 @@
 # [603. 连续空余座位](https://leetcode.cn/problems/consecutive-available-seats)
 
-[English Version](/solution/0600-0699/0603.Consecutive%20Available%20Seats/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Cinema</code></p>
@@ -16,8 +14,6 @@
 Seat_id是该表的自动递增主键列。
 该表的每一行表示第i个座位是否空闲。1表示空闲，0表示被占用。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个SQL查询来报告电影院所有连续可用的座位。</p>
 
 <p>返回按 <code>seat_id</code> <strong>升序排序&nbsp;</strong>的结果表。</p>
@@ -25,8 +21,6 @@ Seat_id是该表的自动递增主键列。
 <p>测试用例的生成使得两个以上的座位连续可用。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

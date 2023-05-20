@@ -1,7 +1,5 @@
 # [1327. 列出指定时间段内所有的下单产品](https://leetcode.cn/problems/list-the-products-ordered-in-a-period)
 
-[English Version](/solution/1300-1399/1327.List%20the%20Products%20Ordered%20in%20a%20Period/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Products</code></p>
@@ -18,8 +16,6 @@ product_id 是该表主键。
 该表包含该公司产品的数据。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Orders</code></p>
 
 <pre>
@@ -35,15 +31,11 @@ product_id 是表单 Products 的外键。
 unit 是在日期 order_date 内下单产品的数目。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL 语句，要求获取在 2020 年 2 月份下单的数量不少于 100 的产品的名字和数目。</p>
 
 <p>返回结果表单的 <strong>顺序无要求 </strong>。</p>
 
 <p>查询结果的格式如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

@@ -1,14 +1,10 @@
 # [700. 二叉搜索树中的搜索](https://leetcode.cn/problems/search-in-a-binary-search-tree)
 
-[English Version](/solution/0700-0799/0700.Search%20in%20a%20Binary%20Search%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定二叉搜索树（BST）的根节点<meta charset="UTF-8" />&nbsp;<code>root</code>&nbsp;和一个整数值<meta charset="UTF-8" />&nbsp;<code>val</code>。</p>
 
 <p>你需要在 BST 中找到节点值等于&nbsp;<code>val</code>&nbsp;的节点。 返回以该节点为根的子树。 如果节点不存在，则返回<meta charset="UTF-8" />&nbsp;<code>null</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -25,8 +21,6 @@
 <b>输入：</b>root = [4,2,7,1,3], val = 5
 <b>输出：</b>[]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

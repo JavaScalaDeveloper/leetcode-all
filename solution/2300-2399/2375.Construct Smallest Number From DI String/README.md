@@ -1,7 +1,5 @@
 # [2375. 根据模式串构造最小数字](https://leetcode.cn/problems/construct-smallest-number-from-di-string)
 
-[English Version](/solution/2300-2399/2375.Construct%20Smallest%20Number%20From%20DI%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你下标从 <strong>0</strong> 开始、长度为 <code>n</code>&nbsp;的字符串&nbsp;<code>pattern</code>&nbsp;，它包含两种字符，<code>'I'</code>&nbsp;表示 <strong>上升</strong>&nbsp;，<code>'D'</code>&nbsp;表示 <strong>下降</strong>&nbsp;。</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>请你返回满足上述条件字典序 <strong>最小</strong>&nbsp;的字符串<em>&nbsp;</em><code>num</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 一些可能的 num 的值为 "9876" ，"7321" 和 "8742" 。
 "4321" 是满足条件最小的数字。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

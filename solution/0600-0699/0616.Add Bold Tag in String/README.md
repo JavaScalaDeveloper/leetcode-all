@@ -1,7 +1,5 @@
 # [616. 给字符串添加加粗标签](https://leetcode.cn/problems/add-bold-tag-in-string)
 
-[English Version](/solution/0600-0699/0616.Add%20Bold%20Tag%20in%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> 和一个字符串列表 <code>words</code> ，你需要将在字符串列表中出现过的 <code>s</code> 的子串添加加粗闭合标签 &lt;b&gt; 和 &lt;/b&gt; 。</p>

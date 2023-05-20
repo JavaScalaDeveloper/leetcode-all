@@ -1,7 +1,5 @@
 # [2354. 优质数对的数目](https://leetcode.cn/problems/number-of-excellent-pairs)
 
-[English Version](/solution/2300-2399/2354.Number%20of%20Excellent%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的正整数数组 <code>nums</code> 和一个正整数 <code>k</code> 。</p>
@@ -18,8 +16,6 @@
 <p>如果&nbsp;<code>a != c</code> 或者 <code>b != d</code> ，则认为 <code>(a, b)</code> 和 <code>(c, d)</code> 是不同的两个数对。例如，<code>(1, 2)</code> 和 <code>(2, 1)</code> 不同。</p>
 
 <p><strong>注意：</strong>如果 <code>num1</code> 在数组中至少出现 <strong>一次</strong> ，则满足 <code>num1 == num2</code> 的数对 <code>(num1, num2)</code> 也可以是优质数对。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>该数组中不存在优质数对。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [890. 查找和替换模式](https://leetcode.cn/problems/find-and-replace-pattern)
 
-[English Version](/solution/0800-0899/0890.Find%20and%20Replace%20Pattern/README_EN.md)
-
 ## 题目描述
 
 <p>你有一个单词列表&nbsp;<code>words</code>&nbsp;和一个模式&nbsp;&nbsp;<code>pattern</code>，你想知道 <code>words</code> 中的哪些单词与模式匹配。</p>
@@ -14,8 +12,6 @@
 
 <p>你可以按任何顺序返回答案。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre><strong>输入：</strong>words = [&quot;abc&quot;,&quot;deq&quot;,&quot;mee&quot;,&quot;aqq&quot;,&quot;dkd&quot;,&quot;ccc&quot;], pattern = &quot;abb&quot;
@@ -24,8 +20,6 @@
 </strong>&quot;mee&quot; 与模式匹配，因为存在排列 {a -&gt; m, b -&gt; e, ...}。
 &quot;ccc&quot; 与模式不匹配，因为 {a -&gt; c, b -&gt; c, ...} 不是排列。
 因为 a 和 b 映射到同一个字母。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

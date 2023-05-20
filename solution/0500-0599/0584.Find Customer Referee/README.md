@@ -1,7 +1,5 @@
 # [584. 寻找用户推荐人](https://leetcode.cn/problems/find-customer-referee)
 
-[English Version](/solution/0500-0599/0584.Find%20Customer%20Referee/README_EN.md)
-
 ## 题目描述
 
 <p>给定表 <code>customer</code> ，里面保存了所有客户信息和他们的推荐人。</p>

@@ -1,7 +1,5 @@
 # [2647. 把三角形染成红色](https://leetcode.cn/problems/color-the-triangle-red)
 
-[English Version](/solution/2600-2699/2647.Color%20the%20Triangle%20Red/README_EN.md)
-
 ## 题目描述
 
 <p>现给定你一个整数 <code>n</code> 。考虑一个边长为 <code>n</code> 的等边三角形，被分成 <code>n<sup>2</sup></code> 个单位等边三角形。这个三角形有 <code>n</code> 个 <strong>从 1 开始编号</strong> 的行，其中第 <code>i</code> 行有 <code>2i - 1</code> 个单位等边三角形。</p>
@@ -32,8 +30,6 @@
 
 <p>返回一个二维列表，其中包含你要最初涂成红色的三角形的坐标。答案必须尽可能小。如果有多个有效的解决方案，请返回其中任意一个。</p>
 
-<p>&nbsp;</p>
-
 <p><strong class="example">示例 1 ：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2647.Color%20the%20Triangle%20Red/images/example1.jpg" style="width: 500px; height: 263px;" />
 <pre>
@@ -55,8 +51,6 @@
 -选择有三个红色相邻的 (2,2) 三角形并将其染成红色。 
 可以证明，选择任意 2 个三角形并运行该算法都不能使所有三角形变为红色。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

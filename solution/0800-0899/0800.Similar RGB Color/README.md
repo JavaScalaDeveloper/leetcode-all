@@ -1,7 +1,5 @@
 # [800. 相似 RGB 颜色](https://leetcode.cn/problems/similar-rgb-color)
 
-[English Version](/solution/0800-0899/0800.Similar%20RGB%20Color/README_EN.md)
-
 ## 题目描述
 
 <p>RGB 颜色 <code>"#AABBCC"</code>&nbsp;可以简写成&nbsp;<code>"#ABC"</code> 。</p>
@@ -15,8 +13,6 @@
 <p>那么给你一个按 <code>"#ABCDEF"</code> 形式定义的字符串 <code>color</code> 表示 RGB 颜色，请你以字符串形式，返回一个与它相似度最大且可以简写的颜色。（比如，可以表示成类似 <code>"#XYZ"</code> 的形式）</p>
 
 <p><strong>任何</strong> 具有相同的（最大）相似度的答案都会被视为正确答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输入：</strong>color = "#4e3fe1"
 <strong>输出：</strong>"#5544dd"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

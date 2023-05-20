@@ -1,7 +1,5 @@
 # [2020. 无流量的帐户数](https://leetcode.cn/problems/number-of-accounts-that-did-not-stream)
 
-[English Version](/solution/2000-2099/2020.Number%20of%20Accounts%20That%20Did%20Not%20Stream/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Subscriptions</code></p>
@@ -18,8 +16,6 @@ account_id 是此表的主键列。
 此表的每一行都表示帐户订阅的开始和结束日期。
 请注意，始终开始日期 &lt; 结束日期。</pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Streams</code></p>
 
 <pre>
@@ -34,12 +30,8 @@ session_id是该表的主键列。
 account_id是订阅表中的外键。
 此表的每一行都包含与会话相关联的帐户和日期的信息。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写SQL查询以报告在 <code>2021</code> 购买订阅但没有任何会话的帐 户数。<br />
 查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例1：</strong></p>
 

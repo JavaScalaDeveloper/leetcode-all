@@ -1,7 +1,5 @@
 # [927. 三等分](https://leetcode.cn/problems/three-equal-parts)
 
-[English Version](/solution/0900-0999/0927.Three%20Equal%20Parts/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个由 <code>0</code> 和 <code>1</code> 组成的数组<meta charset="UTF-8" />&nbsp;<code>arr</code>&nbsp;，将数组分成 &nbsp;<strong>3&nbsp;个非空的部分</strong> ，使得所有这些部分表示相同的二进制值。</p>
@@ -18,8 +16,6 @@
 <p>如果无法做到，就返回&nbsp;<code>[-1, -1]</code>。</p>
 
 <p>注意，在考虑每个部分所表示的二进制时，应当将其看作一个整体。例如，<code>[1,1,0]</code>&nbsp;表示十进制中的&nbsp;<code>6</code>，而不会是&nbsp;<code>3</code>。此外，前导零也是<strong>被允许</strong>的，所以&nbsp;<code>[0,1,1]</code> 和&nbsp;<code>[1,1]</code>&nbsp;表示相同的值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>输入：</strong>arr = [1,1,0,0,1]
 <strong>输出：</strong>[0,2]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 <meta charset="UTF-8" />

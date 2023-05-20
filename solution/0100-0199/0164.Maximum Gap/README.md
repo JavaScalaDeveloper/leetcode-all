@@ -1,14 +1,10 @@
 # [164. 最大间距](https://leetcode.cn/problems/maximum-gap)
 
-[English Version](/solution/0100-0199/0164.Maximum%20Gap/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个无序的数组&nbsp;<code>nums</code>，返回 <em>数组在排序之后，相邻元素之间最大的差值</em> 。如果数组元素个数小于 2，则返回 <code>0</code> 。</p>
 
 <p>您必须编写一个在「线性时间」内运行并使用「线性额外空间」的算法。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输入:</strong> nums = [10]
 <strong>输出:</strong> 0
 <strong>解释:</strong> 数组元素个数小于 2，因此返回 0。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

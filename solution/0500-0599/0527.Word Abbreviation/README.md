@@ -1,7 +1,5 @@
 # [527. 单词缩写](https://leetcode.cn/problems/word-abbreviation)
 
-[English Version](/solution/0500-0599/0527.Word%20Abbreviation/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>words</code> ，该数组由 <strong>互不相同</strong> 的若干字符串组成，请你找出并返回每个单词的 <strong>最小缩写</strong> 。</p>
@@ -13,8 +11,6 @@
 	<li>若存在冲突，亦即多于一个单词有同样的缩写，则使用更长的前缀代替首字母，直到从单词到缩写的映射唯一。换而言之，最终的缩写必须只能映射到一个单词。</li>
 	<li>若缩写并不比原单词更短，则保留原样。</li>
 </ol>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输入：</strong>words = ["aa","aaa"]
 <strong>输出：</strong>["aa","aaa"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

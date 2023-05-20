@@ -1,7 +1,5 @@
 # [2663. 字典序最小的美丽字符串](https://leetcode.cn/problems/lexicographically-smallest-beautiful-string)
 
-[English Version](/solution/2600-2699/2663.Lexicographically%20Smallest%20Beautiful%20String/README_EN.md)
-
 ## 题目描述
 
 <p>如果一个字符串满足以下条件，则称其为 <strong>美丽字符串</strong> ：</p>
@@ -21,8 +19,6 @@
 	<li>例如，<code>"abcd"</code> 的字典序比 <code>"abcc"</code> 更大，因为在不同的第一个位置（第四个字符）上 <code>d</code> 的字典序大于 <code>c</code> 。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -38,8 +34,6 @@
 <strong>输入：</strong>s = "dc", k = 4
 <strong>输出：</strong>""
 <strong>解释：</strong>可以证明，不存在既是美丽字符串，又字典序大于 "dc" 的字符串。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2272. 最大波动的子字符串](https://leetcode.cn/problems/substring-with-largest-variance)
 
-[English Version](/solution/2200-2299/2272.Substring%20With%20Largest%20Variance/README_EN.md)
-
 ## 题目描述
 
 <p>字符串的 <strong>波动</strong>&nbsp;定义为子字符串中出现次数 <strong>最多</strong>&nbsp;的字符次数与出现次数 <strong>最少</strong>&nbsp;的字符次数之差。</p>
@@ -9,8 +7,6 @@
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，它只包含小写英文字母。请你返回 <code>s</code>&nbsp;里所有 <strong>子字符串的</strong>&nbsp;<strong>最大波动</strong>&nbsp;值。</p>
 
 <p><strong>子字符串</strong> 是一个字符串的一段连续字符序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>解释：</strong>
 s 中没有字母出现超过 1 次，所以 s 中每个子字符串的波动值都是 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

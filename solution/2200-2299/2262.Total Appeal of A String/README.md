@@ -1,7 +1,5 @@
 # [2262. 字符串的总引力](https://leetcode.cn/problems/total-appeal-of-a-string)
 
-[English Version](/solution/2200-2299/2262.Total%20Appeal%20of%20A%20String/README_EN.md)
-
 ## 题目描述
 
 <p>字符串的 <strong>引力</strong> 定义为：字符串中 <strong>不同</strong> 字符的数量。</p>
@@ -13,8 +11,6 @@
 <p>给你一个字符串 <code>s</code> ，返回 <strong>其所有子字符串的总引力</strong> <strong>。</strong></p>
 
 <p><strong>子字符串</strong> 定义为：字符串中的一个连续字符序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 - 长度为 4 的子字符串："code" 的引力为 4 ，总和为 4 。
 引力总和为 4 + 6 + 6 + 4 = 20 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

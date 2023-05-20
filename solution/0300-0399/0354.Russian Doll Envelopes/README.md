@@ -1,7 +1,5 @@
 # [354. 俄罗斯套娃信封问题](https://leetcode.cn/problems/russian-doll-envelopes)
 
-[English Version](/solution/0300-0399/0354.Russian%20Doll%20Envelopes/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维整数数组 <code>envelopes</code> ，其中 <code>envelopes[i] = [w<sub>i</sub>, h<sub>i</sub>]</code> ，表示第 <code>i</code> 个信封的宽度和高度。</p>
@@ -26,8 +24,6 @@
 <strong>输入：</strong>envelopes = [[1,1],[1,1],[1,1]]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

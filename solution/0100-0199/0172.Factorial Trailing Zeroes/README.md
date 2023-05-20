@@ -1,14 +1,10 @@
 # [172. 阶乘后的零](https://leetcode.cn/problems/factorial-trailing-zeroes)
 
-[English Version](/solution/0100-0199/0172.Factorial%20Trailing%20Zeroes/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数 <code>n</code> ，返回 <code>n!</code> 结果中尾随零的数量。</p>
 
 <p>提示&nbsp;<code>n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1</code></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,15 +29,11 @@
 <strong>输出：</strong>0
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>0 &lt;= n &lt;= 10<sup>4</sup></code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><b>进阶：</b>你可以设计并实现对数时间复杂度的算法来解决此问题吗？</p>
 

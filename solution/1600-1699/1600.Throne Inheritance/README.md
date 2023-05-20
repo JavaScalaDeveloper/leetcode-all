@@ -1,7 +1,5 @@
 # [1600. 王位继承顺序](https://leetcode.cn/problems/throne-inheritance)
 
-[English Version](/solution/1600-1699/1600.Throne%20Inheritance/README_EN.md)
-
 ## 题目描述
 
 <p>一个王国里住着国王、他的孩子们、他的孙子们等等。每一个时间点，这个家庭里有人出生也有人死亡。</p>
@@ -37,8 +35,6 @@ Successor(x, curOrder):
 	<li><code>string[] getInheritanceOrder()</code>&nbsp;返回 <strong>除去</strong>&nbsp;死亡人员的当前继承顺序列表。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre>
@@ -60,8 +56,6 @@ t.getInheritanceOrder(); // 返回 ["king", "andy", "matthew", "bob", "alex", "a
 t.death("bob"); // 继承顺序：king &gt; andy &gt; matthew &gt; <strong>bob（已经去世）</strong>&gt; alex &gt; asha &gt; catherine
 t.getInheritanceOrder(); // 返回 ["king", "andy", "matthew", "alex", "asha", "catherine"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

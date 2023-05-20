@@ -1,7 +1,5 @@
 # [1687. 从仓库到码头运输箱子](https://leetcode.cn/problems/delivering-boxes-from-storage-to-ports)
 
-[English Version](/solution/1600-1699/1687.Delivering%20Boxes%20from%20Storage%20to%20Ports/README_EN.md)
-
 ## 题目描述
 
 <p>你有一辆货运卡车，你需要用这一辆车把一些箱子从仓库运送到码头。这辆卡车每次运输有&nbsp;<strong>箱子数目的限制</strong>&nbsp;和 <strong>总重量的限制</strong>&nbsp;。</p>
@@ -25,8 +23,6 @@
 <p>卡车在将所有箱子运输并卸货后，最后必须回到仓库。</p>
 
 <p>请你返回将所有箱子送到相应码头的&nbsp;<b>最少行程</b>&nbsp;次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -77,8 +73,6 @@
 - 卡车运输第八和第九个箱子，到达码头 1 ，然后去码头 5 ，然后回到仓库，总共 3 趟行程。
 总行程数为 2 + 2 + 2 + 2 + 3 + 3 = 14 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

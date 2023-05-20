@@ -1,7 +1,5 @@
 # [837. 新 21 点](https://leetcode.cn/problems/new-21-game)
 
-[English Version](/solution/0800-0899/0837.New%2021%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>爱丽丝参与一个大致基于纸牌游戏 <strong>“21点”</strong> 规则的游戏，描述如下：</p>
@@ -37,8 +35,6 @@
 <strong>输入：</strong>n = 21, k = 17, maxPts = 10
 <strong>输出：</strong>0.73278
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

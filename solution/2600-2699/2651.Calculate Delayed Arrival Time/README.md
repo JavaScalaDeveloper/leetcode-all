@@ -1,7 +1,5 @@
 # [2651. 计算列车到站时间](https://leetcode.cn/problems/calculate-delayed-arrival-time)
 
-[English Version](/solution/2600-2699/2651.Calculate%20Delayed%20Arrival%20Time/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数 <code>arrivalTime</code> 表示列车正点到站的时间（单位：小时），另给你一个正整数 <code>delayedTime</code> 表示列车延误的小时数。</p>
@@ -9,8 +7,6 @@
 <p>返回列车实际到站的时间。</p>
 
 <p>注意，该问题中的时间采用 24 小时制。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,8 +20,6 @@
 <pre><strong>输入：</strong>arrivalTime = 13, delayedTime = 11
 <strong>输出：</strong>0
 <strong>解释：</strong>列车正点到站时间是 13:00 ，延误 11 小时，所以列车实际到站的时间是 13 + 11 = 24（在 24 小时制中表示为 00:00 ，所以返回 0）。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

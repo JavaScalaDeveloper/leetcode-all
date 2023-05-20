@@ -1,7 +1,5 @@
 # [146. LRU 缓存](https://leetcode.cn/problems/lru-cache)
 
-[English Version](/solution/0100-0199/0146.LRU%20Cache/README_EN.md)
-
 ## 题目描述
 
 <div class="title__3Vvk">请你设计并实现一个满足&nbsp; <a href="https://baike.baidu.com/item/LRU" target="_blank">LRU (最近最少使用) 缓存</a> 约束的数据结构。</div>
@@ -19,8 +17,6 @@
 <p>函数 <code>get</code> 和 <code>put</code> 必须以 <code>O(1)</code> 的平均时间复杂度运行。</p>
 </div>
 </div>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -43,8 +39,6 @@ lRUCache.get(1);    // 返回 -1 (未找到)
 lRUCache.get(3);    // 返回 3
 lRUCache.get(4);    // 返回 4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

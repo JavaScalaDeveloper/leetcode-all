@@ -1,14 +1,11 @@
 # [357. 统计各位数字都不同的数字个数](https://leetcode.cn/problems/count-numbers-with-unique-digits)
 
-[English Version](/solution/0300-0399/0357.Count%20Numbers%20with%20Unique%20Digits/README_EN.md)
-
 ## 题目描述
 
 给你一个整数 <code>n</code> ，统计并返回各位数字都不同的数字 <code>x</code> 的个数，其中 <code>0 &lt;= x &lt; 10<sup>n</sup></code><sup>&nbsp;</sup>。
 
 <div class="original__bRMd">
 <div>
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,8 +23,6 @@
 </pre>
 </div>
 </div>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2010. 职员招聘人数 II](https://leetcode.cn/problems/the-number-of-seniors-and-juniors-to-join-the-company-ii)
 
-[English Version](/solution/2000-2099/2010.The%20Number%20of%20Seniors%20and%20Juniors%20to%20Join%20the%20Company%20II/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Candidates</code></p>
@@ -19,8 +17,6 @@ employee_id是此表的主键列。
 此表的每一行都显示候选人的id、月薪和经验。
 每个候选人的工资保证是 <strong>唯一</strong> 的。</pre>
 
-<p>&nbsp;</p>
-
 <p>一家公司想雇佣新员工。公司的工资预算是 7 万美元。公司的招聘标准是：</p>
 
 <ol>
@@ -32,8 +28,6 @@ employee_id是此表的主键列。
 <p>编写一个SQL查询，查找根据上述条件雇用职员的 ID。<br />
 按 <strong>任意顺序 </strong>返回结果表。<br />
 查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

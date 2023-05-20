@@ -1,12 +1,8 @@
 # [459. 重复的子字符串](https://leetcode.cn/problems/repeated-substring-pattern)
 
-[English Version](/solution/0400-0499/0459.Repeated%20Substring%20Pattern/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个非空的字符串<meta charset="UTF-8" />&nbsp;<code>s</code>&nbsp;，检查是否可以通过由它的一个子串重复多次构成。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输出:</strong> true
 <strong>解释:</strong> 可由子串 "abc" 重复四次构成。 (或子串 "abcabc" 重复两次构成。)
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

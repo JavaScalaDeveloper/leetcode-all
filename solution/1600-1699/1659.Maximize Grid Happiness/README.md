@@ -1,7 +1,5 @@
 # [1659. 最大化网格幸福感](https://leetcode.cn/problems/maximize-grid-happiness)
 
-[English Version](/solution/1600-1699/1659.Maximize%20Grid%20Happiness/README_EN.md)
-
 ## 题目描述
 
 <p>给你四个整数 <code>m</code>、<code>n</code>、<code>introvertsCount</code> 和 <code>extrovertsCount</code> 。有一个 <code>m x n</code> 网格，和两种类型的人：内向的人和外向的人。总共有 <code>introvertsCount</code> 个内向的人和 <code>extrovertsCount</code> 个外向的人。</p>

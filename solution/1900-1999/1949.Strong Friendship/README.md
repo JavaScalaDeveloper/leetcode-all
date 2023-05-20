@@ -1,7 +1,5 @@
 # [1949. 坚定的友谊](https://leetcode.cn/problems/strong-friendship)
 
-[English Version](/solution/1900-1999/1949.Strong%20Friendship/README_EN.md)
-
 ## 题目描述
 
 <p>表名: <code>Friendship</code></p>
@@ -18,8 +16,6 @@
 请注意，user1_id &lt; user2_id。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>如果 <code>x</code>&nbsp; 和&nbsp;<code>y</code>&nbsp;为<strong>朋友</strong>且他们<strong>至少</strong>有三个共同的朋友 ，那么&nbsp;<code>x</code> 和&nbsp;<code>y</code> 之间的友谊就是<strong>坚定的</strong>。</p>
 
 <p>写一个 SQL 查询来找到所有的<strong>坚定的友谊</strong>。</p>
@@ -29,8 +25,6 @@
 <p>以<strong>任何顺序</strong>返回结果表。</p>
 
 <p>查询结果的格式在下面的例子中。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 

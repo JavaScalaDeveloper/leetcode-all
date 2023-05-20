@@ -1,7 +1,5 @@
 # [2269. 找到一个数字的 K 美丽值](https://leetcode.cn/problems/find-the-k-beauty-of-a-number)
 
-[English Version](/solution/2200-2299/2269.Find%20the%20K-Beauty%20of%20a%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>一个整数 <code>num</code>&nbsp;的&nbsp;<strong>k&nbsp;</strong>美丽值定义为&nbsp;<code>num</code>&nbsp;中符合以下条件的&nbsp;<strong>子字符串</strong>&nbsp;数目：</p>
@@ -21,8 +19,6 @@
 </ul>
 
 <p>一个 <strong>子字符串</strong>&nbsp;是一个字符串里的连续一段字符序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,8 +44,6 @@
 - "4300<em><strong>43</strong></em>" 中的 "43" ：43 能整除 430043 。
 所以，k 美丽值为 2 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

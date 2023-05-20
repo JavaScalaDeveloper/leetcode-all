@@ -1,7 +1,5 @@
 # [2136. 全部开花的最早一天](https://leetcode.cn/problems/earliest-possible-day-of-full-bloom)
 
-[English Version](/solution/2100-2199/2136.Earliest%20Possible%20Day%20of%20Full%20Bloom/README_EN.md)
-
 ## 题目描述
 
 <p>你有 <code>n</code> 枚花的种子。每枚种子必须先种下，才能开始生长、开花。播种需要时间，种子的生长也是如此。给你两个下标从 <strong>0</strong> 开始的整数数组 <code>plantTime</code> 和 <code>growTime</code> ，每个数组的长度都是 <code>n</code> ：</p>
@@ -14,8 +12,6 @@
 <p>从第 <code>0</code> 开始，你可以按 <strong>任意</strong> 顺序播种种子。</p>
 
 <p>返回所有种子都开花的 <strong>最早</strong> 一天是第几天。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2136.Earliest%20Possible%20Day%20of%20Full%20Bloom/images/1.png" style="width: 453px; height: 149px;">
@@ -49,8 +45,6 @@
 <strong>解释：</strong>第 0 天，播种第 0 枚种子。种子需要生长 1 整天，然后在第 2 天开花。
 因此，在第 2 天，所有种子都开花。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

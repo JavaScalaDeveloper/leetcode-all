@@ -1,7 +1,5 @@
 # [1064. 不动点](https://leetcode.cn/problems/fixed-point)
 
-[English Version](/solution/1000-1099/1064.Fixed%20Point/README_EN.md)
-
 ## 题目描述
 
 <p>给定已经按 <strong>升序</strong> 排列、由不同整数组成的数组 <code>arr</code>，返回满足 <code>arr[i] == i</code> 的最小索引 <code>i</code>。如果不存在这样的 <code>i</code>，返回 <code>-1</code>。</p>

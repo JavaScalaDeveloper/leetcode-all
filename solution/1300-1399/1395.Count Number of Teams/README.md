@@ -1,7 +1,5 @@
 # [1395. 统计作战单位数](https://leetcode.cn/problems/count-number-of-teams)
 
-[English Version](/solution/1300-1399/1395.Count%20Number%20of%20Teams/README_EN.md)
-
 ## 题目描述
 
 <p> <code>n</code> 名士兵站成一排。每个士兵都有一个 <strong>独一无二</strong> 的评分 <code>rating</code> 。</p>

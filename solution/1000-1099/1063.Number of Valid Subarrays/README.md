@@ -1,7 +1,5 @@
 # [1063. 有效子数组的数目](https://leetcode.cn/problems/number-of-valid-subarrays)
 
-[English Version](/solution/1000-1099/1063.Number%20of%20Valid%20Subarrays/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组&nbsp;<code>nums</code>&nbsp;，返回满足下面条件的&nbsp;<em>非空、连续</em><strong>&nbsp;子数组</strong>的数目：</p>
@@ -10,8 +8,6 @@
 	<li><strong>子数组&nbsp;</strong>是数组的 <strong>连续</strong> 部分。</li>
 	<li><em>子数组最左边的元素不大于子数组中的其他元素</em>&nbsp;。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>输出：</strong>6
 <strong>解释：</strong>有 6 个有效子数组，分别为是：[2],[2],[2],[2,2],[2,2],[2,2,2] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [864. 获取所有钥匙的最短路径](https://leetcode.cn/problems/shortest-path-to-get-all-keys)
 
-[English Version](/solution/0800-0899/0864.Shortest%20Path%20to%20Get%20All%20Keys/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二维网格&nbsp;<code>grid</code>&nbsp;，其中：</p>
@@ -19,8 +17,6 @@
 <p>假设 k&nbsp;为 钥匙/锁 的个数，且满足&nbsp;<code>1 &lt;= k&nbsp;&lt;= 6</code>，字母表中的前 <code>k</code>&nbsp;个字母在网格中都有自己对应的一个小写和一个大写字母。换言之，每个锁有唯一对应的钥匙，每个钥匙也有唯一对应的锁。另外，代表钥匙和锁的字母互为大小写并按字母顺序排列。</p>
 
 <p>返回获取所有钥匙所需要的移动的最少次数。如果无法获取所有钥匙，返回&nbsp;<code>-1</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <pre>
 <strong>输入:</strong> grid = ["@Aa"]
 <strong>输出:</strong> -1</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [2387. 行排序矩阵的中位数](https://leetcode.cn/problems/median-of-a-row-wise-sorted-matrix)
 
-[English Version](/solution/2300-2399/2387.Median%20of%20a%20Row%20Wise%20Sorted%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个包含&nbsp;<strong>奇数&nbsp;</strong>个整数的&nbsp;<code>m x n</code> 矩阵&nbsp;<code>grid</code>，其中每一行按 <strong>非递减 </strong>的顺序排序，返回矩阵的&nbsp;<strong>中位数</strong>。</p>
 
 <p>你必须以 <code>O(m * log(n))</code> 的时间复杂度来解决这个问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -25,8 +21,6 @@
 <strong>输出:</strong> 3
 <strong>解释:</strong> 矩阵的元素按顺序排列为 1,1,<u>3</u>,3,4。中位数是 3。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

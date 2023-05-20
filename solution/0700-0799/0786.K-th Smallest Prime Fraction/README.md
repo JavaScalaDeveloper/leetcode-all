@@ -1,7 +1,5 @@
 # [786. 第 K 个最小的素数分数](https://leetcode.cn/problems/k-th-smallest-prime-fraction)
 
-[English Version](/solution/0700-0799/0786.K-th%20Smallest%20Prime%20Fraction/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个按递增顺序排序的数组 <code>arr</code> 和一个整数 <code>k</code> 。数组 <code>arr</code> 由 <code>1</code> 和若干 <strong>素数</strong>&nbsp; 组成，且其中所有整数互不相同。</p>
@@ -28,8 +26,6 @@
 <strong>输出：</strong>[1,7]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -40,8 +36,6 @@
 	<li><code>arr</code> 中的所有数字 <strong>互不相同</strong> ，且按 <strong>严格递增</strong> 排序</li>
 	<li><code>1 &lt;= k &lt;= arr.length * (arr.length - 1) / 2</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你可以设计并实现时间复杂度小于 <code>O(n<sup>2</sup>)</code> 的算法解决此问题吗？</p>
 

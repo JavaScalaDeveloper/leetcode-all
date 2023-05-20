@@ -1,7 +1,5 @@
 # [122. 买卖股票的最佳时机 II](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii)
 
-[English Version](/solution/0100-0199/0122.Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>prices</code> ，其中&nbsp;<code>prices[i]</code> 表示某支股票第 <code>i</code> 天的价格。</p>
@@ -9,8 +7,6 @@
 <p>在每一天，你可以决定是否购买和/或出售股票。你在任何时候&nbsp;<strong>最多</strong>&nbsp;只能持有 <strong>一股</strong> 股票。你也可以先购买，然后在 <strong>同一天</strong> 出售。</p>
 
 <p>返回 <em>你能获得的 <strong>最大</strong> 利润</em>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输入：</strong>prices = [7,6,4,3,1]
 <strong>输出：</strong>0
 <strong>解释：</strong>在这种情况下, 交易无法获得正利润，所以不参与交易可以获得最大利润，最大利润为 0 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

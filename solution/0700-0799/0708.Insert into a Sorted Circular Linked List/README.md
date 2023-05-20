@@ -1,7 +1,5 @@
 # [708. 循环有序列表的插入](https://leetcode.cn/problems/insert-into-a-sorted-circular-linked-list)
 
-[English Version](/solution/0700-0799/0708.Insert%20into%20a%20Sorted%20Circular%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给定<strong>循环单调非递减列表</strong>中的一个点，写一个函数向这个列表中插入一个新元素&nbsp;<code>insertVal</code> ，使这个列表仍然是循环非降序的。</p>
@@ -11,8 +9,6 @@
 <p>如果有多个满足条件的插入位置，你可以选择任意一个位置插入新的值，插入后整个列表仍然保持有序。</p>
 
 <p>如果列表为空（给定的节点是 <code>null</code>），你需要创建一个循环有序列表并返回这个节点。否则，请返回原先给定的节点。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0700-0799/0708.Insert%20into%20a%20Sorted%20Circular%20Linked%20List/images/example_1_before_65p.jpg" style="height: 149px; width: 250px;" /><br />
@@ -39,8 +35,6 @@
 <strong>输入：</strong>head = [1], insertVal = 0
 <strong>输出：</strong>[1,0]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

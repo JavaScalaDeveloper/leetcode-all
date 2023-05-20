@@ -1,7 +1,5 @@
 # [339. 嵌套列表权重和](https://leetcode.cn/problems/nested-list-weight-sum)
 
-[English Version](/solution/0300-0399/0339.Nested%20List%20Weight%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个嵌套的整数列表 <code>nestedList</code> ，每个元素要么是整数，要么是列表。同时，列表中元素同样也可以是整数或者是另一个列表。</p>

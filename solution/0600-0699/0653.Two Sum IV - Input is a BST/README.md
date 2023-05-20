@@ -1,12 +1,8 @@
 # [653. 两数之和 IV - 输入二叉搜索树](https://leetcode.cn/problems/two-sum-iv-input-is-a-bst)
 
-[English Version](/solution/0600-0699/0653.Two%20Sum%20IV%20-%20Input%20is%20a%20BST/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉搜索树 <code>root</code> 和一个目标结果 <code>k</code>，如果二叉搜索树中存在两个元素且它们的和等于给定的目标结果，则返回 <code>true</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0653.Two%20Sum%20IV%20-%20Input%20is%20a%20BST/images/sum_tree_1.jpg" style="height: 229px; width: 400px;" />
@@ -21,8 +17,6 @@
 <strong>输入:</strong> root = [5,3,6,2,4,null,7], k = 28
 <strong>输出:</strong> false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

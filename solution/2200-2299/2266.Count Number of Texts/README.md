@@ -1,7 +1,5 @@
 # [2266. 统计打字方案数](https://leetcode.cn/problems/count-number-of-texts)
 
-[English Version](/solution/2200-2299/2266.Count%20Number%20of%20Texts/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 在给 Bob 用手机打字。数字到字母的 <strong>对应</strong>&nbsp;如下图所示。</p>
@@ -25,8 +23,6 @@
 
 <p>由于答案可能很大，将它对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;<strong>取余</strong> 后返回。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><b>输入：</b>pressedKeys = "22233"
@@ -45,8 +41,6 @@ Alice 可能发出的文字信息包括：
 总共有 2082876103 种 Alice 可能发出的文字信息。
 由于我们需要将答案对 10<sup>9</sup> + 7 取余，所以我们返回 2082876103 % (10<sup>9</sup> + 7) = 82876089 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

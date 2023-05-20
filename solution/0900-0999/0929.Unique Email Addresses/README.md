@@ -1,7 +1,5 @@
 # [929. 独特的电子邮件地址](https://leetcode.cn/problems/unique-email-addresses)
 
-[English Version](/solution/0900-0999/0929.Unique%20Email%20Addresses/README_EN.md)
-
 ## 题目描述
 
 <p>每个 <strong>有效电子邮件地址</strong> 都由一个 <strong>本地名</strong> 和一个 <strong>域名</strong> 组成，以 <code>'@'</code> 符号分隔。除小写字母之外，电子邮件地址还可以含有一个或多个&nbsp;<code>'.'</code> 或 <code>'+'</code> 。</p>
@@ -25,8 +23,6 @@
 <p>可以同时使用这两个规则。</p>
 
 <p>给你一个字符串数组 <code>emails</code>，我们会向每个 <code>emails[i]</code> 发送一封电子邮件。返回实际收到邮件的不同地址数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

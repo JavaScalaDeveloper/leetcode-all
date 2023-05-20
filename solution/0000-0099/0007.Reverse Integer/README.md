@@ -1,7 +1,5 @@
 # [7. 整数反转](https://leetcode.cn/problems/reverse-integer)
 
-[English Version](/solution/0000-0099/0007.Reverse%20Integer/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 32 位的有符号整数 <code>x</code> ，返回将 <code>x</code> 中的数字部分反转后的结果。</p>
@@ -88,17 +86,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int reverse(int x) {
-    int ans = 0;
-    for (; x != 0; x /= 10) {
-        if (ans > INT_MAX / 10 || ans < INT_MIN / 10) {
-            return 0;
-        }
-        ans = ans * 10 + x % 10;
-    }
-    return ans;
-}
-```
+**

@@ -1,7 +1,5 @@
 # [250. 统计同值子树](https://leetcode.cn/problems/count-univalue-subtrees)
 
-[English Version](/solution/0200-0299/0250.Count%20Univalue%20Subtrees/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树，统计该二叉树数值相同的子树个数。</p>

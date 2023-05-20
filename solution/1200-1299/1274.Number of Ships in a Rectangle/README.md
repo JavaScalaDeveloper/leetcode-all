@@ -1,7 +1,5 @@
 # [1274. 矩形内船只的数目](https://leetcode.cn/problems/number-of-ships-in-a-rectangle)
 
-[English Version](/solution/1200-1299/1274.Number%20of%20Ships%20in%20a%20Rectangle/README_EN.md)
-
 ## 题目描述
 
 <p><em>(此题是 <strong>交互式问题&nbsp;</strong>)</em></p>
@@ -13,8 +11,6 @@
 <p>给你矩形的右上角&nbsp;<code>topRight</code> 和左下角&nbsp;<code>bottomLeft</code> 的坐标，请你返回此矩形内船只的数目。题目保证矩形内&nbsp;<strong>至多只有 10 艘船</strong>。</p>
 
 <p>调用函数&nbsp;<code>hasShips</code>&nbsp;<strong>超过400次&nbsp;</strong>的提交将被判为&nbsp;<em>错误答案（Wrong Answer）</em>&nbsp;。同时，任何尝试绕过评测系统的行为都将被取消比赛资格。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@ ships = [[1,1],[2,2],[3,3],[5,5]], topRight = [4,4], bottomLeft = [0,0]
 <strong>输出：</strong>3
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -44,8 +38,6 @@ ships = [[1,1],[2,2],[3,3],[5,5]], topRight = [4,4], bottomLeft = [0,0]
 	<li><code>0 &lt;=&nbsp;bottomLeft[1]&nbsp;&lt;= topRight[1]&nbsp;&lt;= 1000</code></li>
 	<li><code>topRight != bottomLeft</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

@@ -1,7 +1,5 @@
 # [1689. 十-二进制数的最少数目](https://leetcode.cn/problems/partitioning-into-minimum-number-of-deci-binary-numbers)
 
-[English Version](/solution/1600-1699/1689.Partitioning%20Into%20Minimum%20Number%20Of%20Deci-Binary%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>如果一个十进制数字不含任何前导零，且每一位上的数字不是 <code>0</code> 就是 <code>1</code> ，那么该数字就是一个 <strong>十-二进制数</strong> 。例如，<code>101</code> 和 <code>1100</code> 都是 <strong>十-二进制数</strong>，而 <code>112</code> 和 <code>3001</code> 不是。</p>
@@ -61,17 +59,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int minPartitions(char *n) {
-    int ans = 0;
-    for (int i = 0; n[i]; i++) {
-        int v = n[i] - '0';
-        if (v > ans) {
-            ans = v;
-        }
-    }
-    return ans;
-}
-```
+**

@@ -1,7 +1,5 @@
 # [2113. 查询删除和添加元素后的数组](https://leetcode.cn/problems/elements-in-array-after-removing-and-replacing-elements)
 
-[English Version](/solution/2100-2199/2113.Elements%20in%20Array%20After%20Removing%20and%20Replacing%20Elements/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个&nbsp;<strong>下标从 0 开始</strong>&nbsp;的数组&nbsp;<code>nums</code>。一开始，在第 <code>0</code> 分钟，数组没有变化。此后每过一分钟，数组的 <strong>最左边</strong> 的元素将被移除，直到数组为空。然后，每过一分钟，数组的 <strong>尾部</strong> 将添加一个元素，添加的顺序和删除的顺序相同，直到数组被复原。此后上述操作无限循环进行。</p>
@@ -18,8 +16,6 @@
 </ul>
 
 <p>请返回一个长度为 <code>n</code> 的整数数组 <code>ans</code>，其中 <code>ans[j]</code> 为第 <code>j</code> 个查询的答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -53,8 +49,6 @@
 在第 2 分钟, nums[0] 是 2。
 在第 3 分钟, nums[0] 不存在。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

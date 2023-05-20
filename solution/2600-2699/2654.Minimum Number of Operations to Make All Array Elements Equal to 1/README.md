@@ -1,7 +1,5 @@
 # [2654. 使数组所有元素变成 1 的最少操作次数](https://leetcode.cn/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1)
 
-[English Version](/solution/2600-2699/2654.Minimum%20Number%20of%20Operations%20to%20Make%20All%20Array%20Elements%20Equal%20to%201/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的 <strong>正</strong>&nbsp;整数数组&nbsp;<code>nums</code>&nbsp;。你可以对数组执行以下操作 <strong>任意</strong>&nbsp;次：</p>
@@ -13,8 +11,6 @@
 <p>请你返回使数组 <code>nums</code>&nbsp;中所有元素都等于 <code>1</code>&nbsp;的 <strong>最少</strong>&nbsp;操作次数。如果无法让数组全部变成 <code>1</code>&nbsp;，请你返回 <code>-1</code>&nbsp;。</p>
 
 <p>两个正整数的最大公约数指的是能整除这两个数的最大正整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <b>输出：</b>-1
 <b>解释：</b>无法将所有元素都变成 1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

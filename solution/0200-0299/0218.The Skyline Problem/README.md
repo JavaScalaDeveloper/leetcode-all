@@ -1,7 +1,5 @@
 # [218. 天际线问题](https://leetcode.cn/problems/the-skyline-problem)
 
-[English Version](/solution/0200-0299/0218.The%20Skyline%20Problem/README_EN.md)
-
 ## 题目描述
 
 <p>城市的 <strong>天际线</strong> 是从远处观看该城市中所有建筑物形成的轮廓的外部轮廓。给你所有建筑物的位置和高度，请返回 <em>由这些建筑物形成的<strong> 天际线</strong></em> 。</p>
@@ -20,8 +18,6 @@
 
 <p><strong>注意：</strong>输出天际线中不得有连续的相同高度的水平线。例如 <code>[...[2 3], [4 5], [7 5], [11 5], [12 7]...]</code> 是不正确的答案；三条高度为 5 的线应该在最终输出中合并为一个：<code>[...[2 3], [4 5], [12 7], ...]</code></p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0218.The%20Skyline%20Problem/images/merged.jpg" style="height: 331px; width: 800px;" />
 <pre>
@@ -37,8 +33,6 @@
 <strong>输入：</strong>buildings = [[0,2,3],[2,5,3]]
 <strong>输出：</strong>[[0,3],[5,0]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

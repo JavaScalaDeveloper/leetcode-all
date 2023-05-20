@@ -1,7 +1,5 @@
 # [1643. 第 K 条最小指令](https://leetcode.cn/problems/kth-smallest-instructions)
 
-[English Version](/solution/1600-1699/1643.Kth%20Smallest%20Instructions/README_EN.md)
-
 ## 题目描述
 
 <p>Bob 站在单元格 <code>(0, 0)</code> ，想要前往目的地 <code>destination</code> ：<code>(row, column)</code> 。他只能向 <strong>右</strong> 或向 <strong>下</strong> 走。你可以为 Bob 提供导航 <strong>指令</strong> 来帮助他到达目的地 <code>destination</code> 。</p>

@@ -1,7 +1,5 @@
 # [2312. 卖木头块](https://leetcode.cn/problems/selling-pieces-of-wood)
 
-[English Version](/solution/2300-2399/2312.Selling%20Pieces%20of%20Wood/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数&nbsp;<code>m</code> 和&nbsp;<code>n</code>&nbsp;，分别表示一块矩形木块的高和宽。同时给你一个二维整数数组&nbsp;<code>prices</code>&nbsp;，其中&nbsp;<code>prices[i] = [h<sub>i</sub>, w<sub>i</sub>, price<sub>i</sub>]</code>&nbsp;表示你可以以&nbsp;<code>price<sub>i</sub></code>&nbsp;元的价格卖一块高为&nbsp;<code>h<sub>i</sub></code>&nbsp;宽为&nbsp;<code>w<sub>i</sub></code>&nbsp;的矩形木块。</p>
@@ -18,8 +16,6 @@
 <p>请你返回切割一块大小为<em>&nbsp;</em><code>m x n</code><em> </em>的木块后，能得到的&nbsp;<strong>最多</strong>&nbsp;钱数。</p>
 
 <p>注意你可以切割木块任意次。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,8 +45,6 @@
 总共售出 30 + 2 = 32 元。
 32 元是最多能得到的钱数。
 注意我们不能旋转 1 x 4 的木块来得到 4 x 1 的木块。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

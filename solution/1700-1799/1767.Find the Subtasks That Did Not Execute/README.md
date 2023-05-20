@@ -1,7 +1,5 @@
 # [1767. 寻找没有被执行的任务对](https://leetcode.cn/problems/find-the-subtasks-that-did-not-execute)
 
-[English Version](/solution/1700-1799/1767.Find%20the%20Subtasks%20That%20Did%20Not%20Execute/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Tasks</code></p>
@@ -18,8 +16,6 @@ task_id 表示的为主任务的id,每一个task_id被分为了多个子任务(s
 本表保证2 &lt;=subtasks_count&lt;= 20。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表： <code>Executed</code></p>
 
 <pre>
@@ -34,15 +30,11 @@ task_id 表示的为主任务的id,每一个task_id被分为了多个子任务(s
 本表 <strong>保证 </strong>，对于每一个task_id，subtask_id &lt;= subtasks_count。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>请试写一个SQL查询语句报告没有被执行的（主任务，子任务）对，即没有被执行的（task_id, subtask_id）。</p>
 
 <p>以 <strong>任何顺序</strong> 返回即可。</p>
 
 <p>查询结果格式如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

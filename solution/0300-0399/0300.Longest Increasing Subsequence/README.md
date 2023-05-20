@@ -1,7 +1,5 @@
 # [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)
 
-[English Version](/solution/0300-0399/0300.Longest%20Increasing%20Subsequence/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，找到其中最长严格递增子序列的长度。</p>
@@ -31,16 +29,12 @@
 <strong>输出：</strong>1
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= nums.length &lt;= 2500</code></li>
 	<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><b>进阶：</b></p>
 

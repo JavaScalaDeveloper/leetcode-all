@@ -1,7 +1,5 @@
 # [980. 不同路径 III](https://leetcode.cn/problems/unique-paths-iii)
 
-[English Version](/solution/0900-0999/0980.Unique%20Paths%20III/README_EN.md)
-
 ## 题目描述
 
 <p>在二维网格 <code>grid</code> 上，有 4 种类型的方格：</p>
@@ -16,8 +14,6 @@
 <p>返回在四个方向（上、下、左、右）上行走时，从起始方格到结束方格的不同路径的数目<strong>。</strong></p>
 
 <p><strong>每一个无障碍方格都要通过一次，但是一条路径中不能重复通过同一个方格</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 没有一条路能完全穿过每一个空的方格一次。
 请注意，起始和结束方格可以位于网格中的任意位置。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [549. 二叉树中最长的连续序列](https://leetcode.cn/problems/binary-tree-longest-consecutive-sequence-ii)
 
-[English Version](/solution/0500-0599/0549.Binary%20Tree%20Longest%20Consecutive%20Sequence%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定二叉树的根&nbsp;<code>root</code>&nbsp;，返回树中<strong>最长连续路径</strong>的长度。<br />
@@ -13,8 +11,6 @@
 
 <p>另一方面，路径可以是子-父-子顺序，不一定是父子顺序。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1:</strong></p>
 
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0549.Binary%20Tree%20Longest%20Consecutive%20Sequence%20II/images/consec2-1-tree.jpg" /></p>
@@ -25,8 +21,6 @@
 <strong>解释:</strong> 最长的连续路径是 [1, 2] 或者 [2, 1]。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 2:</strong></p>
 
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0549.Binary%20Tree%20Longest%20Consecutive%20Sequence%20II/images/consec2-2-tree.jpg" /></p>
@@ -36,8 +30,6 @@
 <strong>输出:</strong> 3
 <strong>解释:</strong> 最长的连续路径是 [1, 2, 3] 或者 [3, 2, 1]。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

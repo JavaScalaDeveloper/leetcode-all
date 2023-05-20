@@ -1,7 +1,5 @@
 # [1144. 递减元素使数组呈锯齿状](https://leetcode.cn/problems/decrease-elements-to-make-array-zigzag)
 
-[English Version](/solution/1100-1199/1144.Decrease%20Elements%20To%20Make%20Array%20Zigzag/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>，每次 <strong>操作</strong>&nbsp;会从中选择一个元素并 <strong>将该元素的值减少&nbsp;1</strong>。</p>
@@ -15,8 +13,6 @@
 
 <p>返回将数组&nbsp;<code>nums</code>&nbsp;转换为锯齿数组所需的最小操作次数。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>nums = [1,2,3]
@@ -29,8 +25,6 @@
 <pre><strong>输入：</strong>nums = [9,6,1,6,2]
 <strong>输出：</strong>4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

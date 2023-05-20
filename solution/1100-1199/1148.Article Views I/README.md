@@ -1,7 +1,5 @@
 # [1148. 文章浏览 I](https://leetcode.cn/problems/article-views-i)
 
-[English Version](/solution/1100-1199/1148.Article%20Views%20I/README_EN.md)
-
 ## 题目描述
 
 <p><code>Views</code>&nbsp;表：</p>
@@ -19,8 +17,6 @@
 此表的每一行都表示某人在某天浏览了某位作者的某篇文章。
 请注意，同一人的 author_id 和 viewer_id 是相同的。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>请编写一条 SQL 查询以找出所有浏览过自己文章的作者，结果按照 id 升序排列。</p>
 

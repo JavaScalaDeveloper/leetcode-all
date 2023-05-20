@@ -1,7 +1,5 @@
 # [805. 数组的均值分割](https://leetcode.cn/problems/split-array-with-same-average)
 
-[English Version](/solution/0800-0899/0805.Split%20Array%20With%20Same%20Average/README_EN.md)
-
 ## 题目描述
 
 <p>给定你一个整数数组<meta charset="UTF-8" />&nbsp;<code>nums</code></p>
@@ -11,8 +9,6 @@
 <p>如果可以完成则返回<code>true</code>&nbsp;， 否则返回 <code>false</code>&nbsp;&nbsp;。</p>
 
 <p><strong>注意：</strong>对于数组<meta charset="UTF-8" />&nbsp;<code>arr</code>&nbsp;, <meta charset="UTF-8" />&nbsp;<code>average(arr)</code>&nbsp;是<meta charset="UTF-8" />&nbsp;<code>arr</code>&nbsp;的所有元素的和除以<meta charset="UTF-8" />&nbsp;<code>arr</code>&nbsp;长度。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -28,8 +24,6 @@
 <strong>输入:</strong> nums = [3,1]
 <strong>输出:</strong> false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

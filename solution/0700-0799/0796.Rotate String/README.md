@@ -1,7 +1,5 @@
 # [796. 旋转字符串](https://leetcode.cn/problems/rotate-string)
 
-[English Version](/solution/0700-0799/0796.Rotate%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个字符串, <code>s</code>&nbsp;和&nbsp;<code>goal</code>。如果在若干次旋转操作之后，<code>s</code>&nbsp;能变成&nbsp;<code>goal</code>&nbsp;，那么返回&nbsp;<code>true</code>&nbsp;。</p>
@@ -11,8 +9,6 @@
 <ul>
 	<li>例如, 若&nbsp;<code>s = 'abcde'</code>，在旋转一次之后结果就是<code>'bcdea'</code>&nbsp;。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输入:</strong> s = "abcde", goal = "abced"
 <strong>输出:</strong> false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

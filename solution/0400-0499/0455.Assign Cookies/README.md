@@ -1,7 +1,5 @@
 # [455. 分发饼干](https://leetcode.cn/problems/assign-cookies)
 
-[English Version](/solution/0400-0499/0455.Assign%20Cookies/README_EN.md)
-
 ## 题目描述
 
 <p>假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。</p>

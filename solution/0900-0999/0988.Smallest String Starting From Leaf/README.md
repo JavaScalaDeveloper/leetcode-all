@@ -1,7 +1,5 @@
 # [988. 从叶结点开始的最小字符串](https://leetcode.cn/problems/smallest-string-starting-from-leaf)
 
-[English Version](/solution/0900-0999/0988.Smallest%20String%20Starting%20From%20Leaf/README_EN.md)
-
 ## 题目描述
 
 <p>给定一颗根结点为&nbsp;<code>root</code>&nbsp;的二叉树，树中的每一个结点都有一个&nbsp;<code>[0, 25]</code>&nbsp;范围内的值，分别代表字母&nbsp;<code>'a'</code> 到&nbsp;<code>'z'</code>。</p>
@@ -17,8 +15,6 @@
 </blockquote>
 
 <p>节点的叶节点是没有子节点的节点。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -49,8 +45,6 @@
 <strong>输入：</strong>root = [2,2,1,null,1,0,null,0]
 <strong>输出：</strong>"abc"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2151. 基于陈述统计最多好人数](https://leetcode.cn/problems/maximum-good-people-based-on-statements)
 
-[English Version](/solution/2100-2199/2151.Maximum%20Good%20People%20Based%20on%20Statements/README_EN.md)
-
 ## 题目描述
 
 <p>游戏中存在两种角色：</p>
@@ -22,8 +20,6 @@
 <p>另外，玩家不会对自己进行陈述。形式上，对所有&nbsp;<code>0 &lt;= i &lt; n</code> ，都有 <code>statements[i][i] = 2</code> 。</p>
 
 <p>根据这 <code>n</code> 个玩家的陈述，返回可以认为是 <strong>好人</strong> 的 <strong>最大</strong> 数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2151.Maximum%20Good%20People%20Based%20on%20Statements/images/logic1.jpg" style="width: 600px; height: 262px;">
@@ -72,8 +68,6 @@
 在最佳情况下，至多有一个好人，所以返回 1 。 
 注意，能得到此结论的方法不止一种。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1159. 市场分析 II](https://leetcode.cn/problems/market-analysis-ii)
 
-[English Version](/solution/1100-1199/1159.Market%20Analysis%20II/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Users</code></p>
@@ -46,8 +44,6 @@ buyer_id 和 seller_id 是 Users 表的外键
 +---------------+---------+
 item_id 是该表的主键
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写一个 SQL 查询确定每一个用户按日期顺序卖出的第二件商品的品牌是否是他们最喜爱的品牌。如果一个用户卖出少于两件商品，查询的结果是 <code>no</code> 。</p>
 

@@ -1,7 +1,5 @@
 # [2534. 通过门的时间](https://leetcode.cn/problems/time-taken-to-cross-the-door)
 
-[English Version](/solution/2500-2599/2534.Time%20Taken%20to%20Cross%20the%20Door/README_EN.md)
-
 ## 题目描述
 
 <p><code>n</code> 个人，按从 <code>0</code> 到 <code>n - 1</code> 编号。现在有一扇门，每个人只能通过门进入或离开一次，耗时一秒。</p>
@@ -24,8 +22,6 @@
 	<li>每秒只有一个人可以通过门。</li>
 	<li>为遵循上述规则，一个人可以在到达门附近后等待，而不通过门进入或离开。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 - t = 1 ：第 1 个人想要进入，第 2 个人想要离开。因为前一秒有人使用门离开，所以第 2 个人先离开。
 - t = 2 ：第 1 个人是唯一一个想要进入的人，所以 TA 可以直接进入。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

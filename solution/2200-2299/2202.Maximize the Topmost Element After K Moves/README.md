@@ -1,7 +1,5 @@
 # [2202. K 次操作后最大化顶端元素](https://leetcode.cn/problems/maximize-the-topmost-element-after-k-moves)
 
-[English Version](/solution/2200-2299/2202.Maximize%20the%20Topmost%20Element%20After%20K%20Moves/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;，它表示一个 <strong>栈</strong> ，其中 <code>nums[0]</code>&nbsp;是栈顶的元素。</p>
@@ -16,8 +14,6 @@
 <p>同时给你一个整数&nbsp;<code>k</code>&nbsp;，它表示你总共需要执行操作的次数。</p>
 
 <p>请你返回 <strong>恰好</strong>&nbsp;执行 <code>k</code>&nbsp;次操作以后，栈顶元素的 <strong>最大值</strong>&nbsp;。如果执行完 <code>k</code>&nbsp;次操作以后，栈一定为空，请你返回 <code>-1</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 第 1 次操作中，我们唯一的选择是将栈顶元素弹出栈。
 由于 1 次操作后无法得到一个非空的栈，所以我们返回 -1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1943. 描述绘画结果](https://leetcode.cn/problems/describe-the-painting)
 
-[English Version](/solution/1900-1999/1943.Describe%20the%20Painting/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个细长的画，用数轴表示。这幅画由若干有重叠的线段表示，每个线段有 <strong>独一无二</strong>&nbsp;的颜色。给你二维整数数组&nbsp;<code>segments</code>&nbsp;，其中&nbsp;<code>segments[i] = [start<sub>i</sub>, end<sub>i</sub>, color<sub>i</sub>]</code>&nbsp;表示线段为&nbsp;<strong>半开区间</strong>&nbsp;<code>[start<sub>i</sub>, end<sub>i</sub>)</code> 且颜色为&nbsp;<code>color<sub>i</sub></code>&nbsp;。</p>
@@ -30,8 +28,6 @@
 <p>请你返回二维数组&nbsp;<code>painting</code>&nbsp;，它表示最终绘画的结果（<strong>没有</strong>&nbsp;被涂色的部分不出现在结果中）。你可以按 <strong>任意顺序</strong> 返回最终数组的结果。</p>
 
 <p><strong>半开区间&nbsp;</strong><code>[a, b)</code>&nbsp;是数轴上点&nbsp;<code>a</code> 和点&nbsp;<code>b</code>&nbsp;之间的部分，<strong>包含 </strong>点&nbsp;<code>a</code>&nbsp;且 <strong>不包含</strong>&nbsp;点&nbsp;<code>b</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1943.Describe%20the%20Painting/images/1.png" style="width: 529px; height: 241px;" />
@@ -65,8 +61,6 @@
 - [4,7) 颜色为 {1,11} （和为 12），分别来自第三和第四个线段。
 注意，只返回一个单独的线段 [1,7) 是不正确的，因为混合颜色的集合不相同。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

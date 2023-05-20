@@ -1,7 +1,5 @@
 # [642. 设计搜索自动补全系统](https://leetcode.cn/problems/design-search-autocomplete-system)
 
-[English Version](/solution/0600-0699/0642.Design%20Search%20Autocomplete%20System/README_EN.md)
-
 ## 题目描述
 
 <p>为搜索引擎设计一个搜索自动补全系统。用户会输入一条语句（最少包含一个字母，以特殊字符 <code>'#'</code> 结尾）。</p>
@@ -29,8 +27,6 @@
 	</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -47,8 +43,6 @@ obj.input(" "); // return ["i love you", "i love leetcode"]. There are only two 
 obj.input("a"); // return []. There are no sentences that have prefix "i a".
 obj.input("#"); // return []. The user finished the input, the sentence "i a" should be saved as a historical sentence in system. And the following input will be counted as a new search.
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

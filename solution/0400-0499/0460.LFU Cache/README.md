@@ -1,7 +1,5 @@
 # [460. LFU 缓存](https://leetcode.cn/problems/lfu-cache)
 
-[English Version](/solution/0400-0499/0460.LFU%20Cache/README_EN.md)
-
 ## 题目描述
 
 <p>请你为 <a href="https://baike.baidu.com/item/%E7%BC%93%E5%AD%98%E7%AE%97%E6%B3%95">最不经常使用（LFU）</a>缓存算法设计并实现数据结构。</p>
@@ -19,8 +17,6 @@
 <p>当一个键首次插入到缓存中时，它的使用计数器被设置为 <code>1</code> (由于 put 操作)。对缓存中的键执行 <code>get</code> 或 <code>put</code> 操作，使用计数器的值将会递增。</p>
 
 <p>函数 <code>get</code> 和 <code>put</code> 必须以 <code>O(1)</code> 的平均时间复杂度运行。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -51,8 +47,6 @@ lfu.get(3);      // 返回 3
                  // cache=[3,4], cnt(4)=1, cnt(3)=3
 lfu.get(4);      // 返回 4
                  // cache=[3,4], cnt(4)=2, cnt(3)=3</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

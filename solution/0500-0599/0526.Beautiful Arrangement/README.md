@@ -1,7 +1,5 @@
 # [526. 优美的排列](https://leetcode.cn/problems/beautiful-arrangement)
 
-[English Version](/solution/0500-0599/0526.Beautiful%20Arrangement/README_EN.md)
-
 ## 题目描述
 
 <p>假设有从 1 到 n 的 n 个整数。用这些整数构造一个数组 <code>perm</code>（<strong>下标从 1 开始</strong>），只要满足下述条件 <strong>之一</strong> ，该数组就是一个 <strong>优美的排列</strong> ：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>给你一个整数 <code>n</code> ，返回可以构造的 <strong>优美排列 </strong>的 <strong>数量</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输入：</strong>n = 1
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

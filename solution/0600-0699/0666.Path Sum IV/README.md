@@ -1,7 +1,5 @@
 # [666. 路径总和 IV](https://leetcode.cn/problems/path-sum-iv)
 
-[English Version](/solution/0600-0699/0666.Path%20Sum%20IV/README_EN.md)
-
 ## 题目描述
 
 <p>对于一棵深度小于&nbsp;<code>5</code>&nbsp;的树，可以用一组三位十进制整数来表示。对于每个整数：</p>
@@ -15,8 +13,6 @@
 <p>给定一个包含三位整数的&nbsp;<strong>升序&nbsp;</strong>数组&nbsp;<code>nums</code>&nbsp;，表示一棵深度小于 <code>5</code> 的二叉树，请你返回 <em>从根到所有叶子结点的路径之和&nbsp;</em>。</p>
 
 <p><strong>保证&nbsp;</strong>给定的数组表示一个有效的连接二叉树。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>解释:</strong> 列表所表示的树如上所示。
 路径和 = (3 + 1) = 4.
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

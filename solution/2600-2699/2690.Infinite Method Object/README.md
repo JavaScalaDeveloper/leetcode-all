@@ -1,7 +1,5 @@
 # [2690. Infinite Method Object](https://leetcode.cn/problems/infinite-method-object)
 
-[English Version](/solution/2600-2699/2690.Infinite%20Method%20Object/README_EN.md)
-
 ## 题目描述
 
 <p>Write a function that&nbsp;returns an&nbsp;<strong>infinite-method</strong><strong>&nbsp;object</strong>.</p>
@@ -10,7 +8,6 @@
 
 <p>For example, if you execute&nbsp;<code>obj.abc123()</code>, it will return&nbsp;<code>&quot;abc123&quot;</code>.</p>
 
-<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
@@ -28,7 +25,6 @@ The returned string should always match the method name.</pre>
 <strong>Output:</strong> &quot;.-qw73n|^2It&quot;
 <strong>Explanation:</strong> The returned string should always match the method name.</pre>
 
-<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>

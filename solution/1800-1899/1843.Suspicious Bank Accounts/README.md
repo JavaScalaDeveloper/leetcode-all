@@ -1,7 +1,5 @@
 # [1843. 可疑银行账户](https://leetcode.cn/problems/suspicious-bank-accounts)
 
-[English Version](/solution/1800-1899/1843.Suspicious%20Bank%20Accounts/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Accounts</code></p>
@@ -16,8 +14,6 @@
 account_id 是表主键。
 每行包含一个银行账户每月最大收入的信息。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Transactions</code></p>
 
@@ -37,10 +33,6 @@ type 是枚举类型（包含'Creditor','Debtor'），其中'Creditor'表示用�
 amount 是转账的存取金额。
 </pre>
 
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
 <p>写一个SQL查询语句列示所有的<strong>可疑</strong>账户。</p>
 
 <p>如果一个账户在<strong>连续两个及以上</strong>月份中<strong>总收入</strong>超过最大收入（<code>max_income</code>&nbsp;），那么这个账户<strong>可疑</strong>。&nbsp; 账户当月<strong>总收入</strong>是当月存入资金总数（即transactions 表中type字段的<code>'Creditor'</code>）。</p>
@@ -48,8 +40,6 @@ amount 是转账的存取金额。
 <p>返回的结果表以<code>transaction_id</code>&nbsp;排序。&nbsp;</p>
 
 <p>查询结果格式如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

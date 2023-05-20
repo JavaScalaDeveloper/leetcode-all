@@ -1,7 +1,5 @@
 # [1500. 设计文件分享系统](https://leetcode.cn/problems/design-a-file-sharing-system)
 
-[English Version](/solution/1500-1599/1500.Design%20a%20File%20Sharing%20System/README_EN.md)
-
 ## 题目描述
 
 <p>我们需要使用一套文件分享系统来分享一个非常大的文件，该文件由&nbsp;<code>m</code> 个从&nbsp;<code>1</code>&nbsp;到&nbsp;<code>m</code>&nbsp;编号的文件块组成。</p>
@@ -19,8 +17,6 @@
 	<li><code>void leave(int userID)</code>：ID 为&nbsp;<code>userID</code>&nbsp;的用户将离开系统，你不能再从该用户提取文件块了。</li>
 	<li><code>int[] request(int userID, int chunkID)</code>：ID 为&nbsp;<code>userID</code>&nbsp;的用户请求编号为&nbsp;<code>chunkID</code>&nbsp;的文件块。返回拥有这个文件块的所有用户的 ID 所构成的列表或数组，按升序排列。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例:</strong></p>
 
@@ -52,8 +48,6 @@ fileSharing.leave(2);        // id = 2 的用户离开系统。
 fileSharing.join([]);        // 一个不拥有任何文件块的用户加入系统，为其注册 id = 1 并返回 1 。注意，id 1 和 2 空闲，可以重新使用。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -66,8 +60,6 @@ fileSharing.join([]);        // 一个不拥有任何文件块的用户加入系
 	<li><code>join</code>、&nbsp;<code>leave</code>&nbsp;和&nbsp;<code>request</code>&nbsp;最多被调用&nbsp;<code>10<sup>4</sup></code>&nbsp;次。</li>
 	<li>每次对&nbsp;<code>leave</code>&nbsp;的调用都有对应的对&nbsp;<code>join</code>&nbsp;的调用。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

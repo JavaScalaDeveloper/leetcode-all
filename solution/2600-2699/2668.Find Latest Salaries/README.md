@@ -1,7 +1,5 @@
 # [2668. 查询员工当前薪水](https://leetcode.cn/problems/find-latest-salaries)
 
-[English Version](/solution/2600-2699/2668.Find%20Latest%20Salaries/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code><font face="monospace">Salary</font></code></p>
@@ -25,8 +23,6 @@
 <p>按升序顺序按 <code>emp_id</code> 排序返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 

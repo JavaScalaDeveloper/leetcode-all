@@ -1,7 +1,5 @@
 # [1182. 与目标颜色间的最短距离](https://leetcode.cn/problems/shortest-distance-to-target-color)
 
-[English Version](/solution/1100-1199/1182.Shortest%20Distance%20to%20Target%20Color/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组&nbsp;<code>colors</code>，里面有&nbsp;&nbsp;<code>1</code>、<code>2</code>、&nbsp;<code>3</code> 三种颜色。</p>
@@ -11,8 +9,6 @@
 <p>现在请你帮忙设计一个算法，查找从索引&nbsp;<code>i</code>&nbsp;到具有目标颜色&nbsp;<code>c</code>&nbsp;的元素之间的最短距离。</p>
 
 <p>如果不存在解决方案，请返回&nbsp;<code>-1</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输出：</strong>[-1]
 <strong>解释：</strong>colors 中没有颜色 3。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

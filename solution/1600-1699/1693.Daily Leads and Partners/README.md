@@ -1,7 +1,5 @@
 # [1693. 每天的领导和合伙人](https://leetcode.cn/problems/daily-leads-and-partners)
 
-[English Version](/solution/1600-1699/1693.Daily%20Leads%20and%20Partners/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>DailySales</code></p>
@@ -19,15 +17,11 @@
 该表包含日期、产品的名称，以及售给的领导和合伙人的编号。
 名称只包含小写英文字母。</pre>
 
-<p>&nbsp;</p>
-
 <p>写一条 SQL 语句，使得对于每一个&nbsp;<code>date_id</code>&nbsp;和&nbsp;<code>make_name</code>，返回<strong>不同</strong>的&nbsp;<code>lead_id</code>&nbsp;以及<strong>不同</strong>的&nbsp;<code>partner_id</code>&nbsp;的数量。</p>
 
 <p>按 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下示例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

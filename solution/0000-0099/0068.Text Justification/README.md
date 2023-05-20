@@ -1,7 +1,5 @@
 # [68. 文本左右对齐](https://leetcode.cn/problems/text-justification)
 
-[English Version](/solution/0000-0099/0068.Text%20Justification/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个单词数组&nbsp;<code>words</code> 和一个长度&nbsp;<code>maxWidth</code>&nbsp;，重新排版单词，使其成为每行恰好有&nbsp;<code>maxWidth</code>&nbsp;个字符，且左右两端对齐的文本。</p>
@@ -19,8 +17,6 @@
 	<li>每个单词的长度大于 0，小于等于&nbsp;<em>maxWidth</em>。</li>
 	<li>输入单词数组 <code>words</code>&nbsp;至少包含一个单词。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -63,8 +59,6 @@
 &nbsp; "do &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"
 ]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

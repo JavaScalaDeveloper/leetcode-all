@@ -1,7 +1,5 @@
 # [1588. 所有奇数长度子数组的和](https://leetcode.cn/problems/sum-of-all-odd-length-subarrays)
 
-[English Version](/solution/1500-1599/1588.Sum%20of%20All%20Odd%20Length%20Subarrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数数组&nbsp;<code>arr</code>&nbsp;，请你计算所有可能的奇数长度子数组的和。</p>
@@ -9,8 +7,6 @@
 <p><strong>子数组</strong> 定义为原数组中的一个连续子序列。</p>
 
 <p>请你返回 <code>arr</code>&nbsp;中 <strong>所有奇数长度子数组的和</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,16 +39,12 @@
 <strong>输出：</strong>66
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= arr.length &lt;= 100</code></li>
 	<li><code>1 &lt;= arr[i] &lt;= 1000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 
@@ -87,20 +79,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int sumOddLengthSubarrays(int* arr, int arrSize){
-    int ans = 0;
-    for (int i = 0; i < arrSize; ++i) {
-        int s = 0;
-        for (int j = i; j < arrSize; ++j) {
-            s += arr[j];
-            if ((j - i + 1) % 2 == 1) {
-                ans += s;
-            }
-        }
-    }
-    return ans;
-}
-```
+**

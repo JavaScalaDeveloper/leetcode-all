@@ -1,7 +1,5 @@
 # [2583. 二叉树中的第 K 大层和](https://leetcode.cn/problems/kth-largest-sum-in-a-binary-tree)
 
-[English Version](/solution/2500-2599/2583.Kth%20Largest%20Sum%20in%20a%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵二叉树的根节点 <code>root</code> 和一个正整数 <code>k</code> 。</p>
@@ -11,8 +9,6 @@
 <p>返回树中第 <code>k</code> 大的层和（不一定不同）。如果树少于 <code>k</code> 层，则返回 <code>-1</code> 。</p>
 
 <p><strong>注意</strong>，如果两个节点与根节点的距离相同，则认为它们在同一层。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>最大的层和是 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

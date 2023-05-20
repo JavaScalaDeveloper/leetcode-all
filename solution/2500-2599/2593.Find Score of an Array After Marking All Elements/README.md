@@ -1,7 +1,5 @@
 # [2593. 标记所有元素后数组的分数](https://leetcode.cn/problems/find-score-of-an-array-after-marking-all-elements)
 
-[English Version](/solution/2500-2599/2593.Find%20Score%20of%20an%20Array%20After%20Marking%20All%20Elements/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组&nbsp;<code>nums</code>&nbsp;，它包含若干正整数。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>请你返回执行上述算法后最后的分数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 - 2 是仅剩唯一未标记的元素，所以我们标记它：[<em><strong>2</strong></em>,<em><strong>3</strong></em>,<em><strong>5</strong></em>,<em><strong>1</strong></em>,<em><strong>3</strong></em>,<em><strong>2</strong></em>] 。
 总得分为 1 + 2 + 2 = 5 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2402. 会议室 III](https://leetcode.cn/problems/meeting-rooms-iii)
 
-[English Version](/solution/2400-2499/2402.Meeting%20Rooms%20III/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code> ，共有编号从 <code>0</code> 到 <code>n - 1</code> 的 <code>n</code> 个会议室。</p>
@@ -19,8 +17,6 @@
 <p>返回举办最多次会议的房间 <strong>编号</strong> 。如果存在多个房间满足此条件，则返回编号 <strong>最小</strong> 的房间。</p>
 
 <p><strong>半闭区间 </strong><code>[a, b)</code> 是 <code>a</code> 和 <code>b</code> 之间的区间，<strong>包括</strong> <code>a</code> 但<strong> 不包括</strong> <code>b</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 - 在时间 10 ，会议室 1 和 2 的会议结束。第五场会议在会议室 1 举办，时间周期为 [10,12) 。 
 会议室 1 和会议室 2 都举办了 2 场会议，所以返回 1 。 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

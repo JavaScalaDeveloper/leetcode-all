@@ -1,12 +1,8 @@
 # [67. 二进制求和](https://leetcode.cn/problems/add-binary)
 
-[English Version](/solution/0000-0099/0067.Add%20Binary/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个二进制字符串 <code>a</code> 和 <code>b</code> ，以二进制字符串的形式返回它们的和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -19,8 +15,6 @@
 <pre>
 <strong>输入：</strong>a = "1010", b = "1011"
 <strong>输出：</strong>"10101"</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

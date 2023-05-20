@@ -1,7 +1,5 @@
 # [1331. 数组序号转换](https://leetcode.cn/problems/rank-transform-of-an-array)
 
-[English Version](/solution/1300-1399/1331.Rank%20Transform%20of%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>arr</code> ，请你将数组中的每个元素替换为它们排序后的序号。</p>
@@ -13,8 +11,6 @@
 	<li>一个元素越大，那么序号越大。如果两个元素相等，那么它们的序号相同。</li>
 	<li>每个数字的序号都应该尽可能地小。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <pre><strong>输入：</strong>arr = [37,12,28,9,100,56,80,5,12]
 <strong>输出：</strong>[5,3,4,2,8,6,7,1,3]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

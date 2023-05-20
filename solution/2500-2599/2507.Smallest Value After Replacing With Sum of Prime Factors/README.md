@@ -1,7 +1,5 @@
 # [2507. 使用质因数之和替换后可以取到的最小值](https://leetcode.cn/problems/smallest-value-after-replacing-with-sum-of-prime-factors)
 
-[English Version](/solution/2500-2599/2507.Smallest%20Value%20After%20Replacing%20With%20Sum%20of%20Prime%20Factors/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数 <code>n</code> 。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回<em> </em><code>n</code><em> </em>可以取到的最小值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>最开始，n = 3 。
 3 是 n 可以取到的最小值。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

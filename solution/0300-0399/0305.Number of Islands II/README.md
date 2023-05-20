@@ -1,7 +1,5 @@
 # [305. 岛屿数量 II](https://leetcode.cn/problems/number-of-islands-ii)
 
-[English Version](/solution/0300-0399/0305.Number%20of%20Islands%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的二进制网格 <code>grid</code> 。网格表示一个地图，其中，<code>0</code> 表示水，<code>1</code> 表示陆地。最初，<code>grid</code> 中的所有单元格都是水单元格（即，所有单元格都是 <code>0</code>）。</p>
@@ -33,8 +31,6 @@
 <strong>输出：</strong>[1]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -44,8 +40,6 @@
 	<li><code>0 &lt;= r<sub>i</sub> &lt; m</code></li>
 	<li><code>0 &lt;= c<sub>i</sub> &lt; n</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你可以设计一个时间复杂度 <code>O(k log(mn))</code> 的算法解决此问题吗？（其中 <code>k == positions.length</code>）</p>
 

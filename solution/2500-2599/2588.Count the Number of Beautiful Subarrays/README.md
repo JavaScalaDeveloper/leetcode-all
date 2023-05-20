@@ -1,7 +1,5 @@
 # [2588. 统计美丽子数组数目](https://leetcode.cn/problems/count-the-number-of-beautiful-subarrays)
 
-[English Version](/solution/2500-2599/2588.Count%20the%20Number%20of%20Beautiful%20Subarrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组<code>nums</code>&nbsp;。每次操作中，你可以：</p>
@@ -17,8 +15,6 @@
 <p>请你返回数组 <code>nums</code>&nbsp;中 <strong>美丽子数组</strong>&nbsp;的数目。</p>
 
 <p>子数组是一个数组中一段连续 <strong>非空</strong>&nbsp;的元素序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <b>输出：</b>0
 <b>解释：</b>nums 中没有任何美丽子数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

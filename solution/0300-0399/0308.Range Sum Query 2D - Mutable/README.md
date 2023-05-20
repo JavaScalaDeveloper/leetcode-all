@@ -1,7 +1,5 @@
 # [308. 二维区域和检索 - 可变](https://leetcode.cn/problems/range-sum-query-2d-mutable)
 
-[English Version](/solution/0300-0399/0308.Range%20Sum%20Query%202D%20-%20Mutable/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维矩阵 <code>matrix</code> ，处理以下类型的多个查询:</p>
@@ -19,8 +17,6 @@
 	<li><code>int sumRegion(int row1, int col1, int row2, int col2)</code> 返回矩阵&nbsp;<code>matrix</code> 中指定矩形区域元素的 <strong>和</strong> ，该区域由 <strong>左上角</strong> <code>(row1, col1)</code> 和 <strong>右下角</strong> <code>(row2, col2)</code> 界定。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0308.Range%20Sum%20Query%202D%20-%20Mutable/images/summut-grid.jpg" style="height: 222px; width: 500px;" />
 <pre>
@@ -37,8 +33,6 @@ numMatrix.update(3, 2, 2); // 矩阵从左图变为右图
 numMatrix.sumRegion(2, 1, 4, 3); // 返回 10 (即，右侧红色矩形的和)
 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

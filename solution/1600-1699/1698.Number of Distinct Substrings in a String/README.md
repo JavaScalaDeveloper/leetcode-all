@@ -1,7 +1,5 @@
 # [1698. 字符串的不同子字符串个数](https://leetcode.cn/problems/number-of-distinct-substrings-in-a-string)
 
-[English Version](/solution/1600-1699/1698.Number%20of%20Distinct%20Substrings%20in%20a%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串 <code>s</code>，返回 <code>s</code> 的不同子字符串的个数。</p>

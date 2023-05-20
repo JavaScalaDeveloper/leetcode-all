@@ -1,7 +1,5 @@
 # [1490. 克隆 N 叉树](https://leetcode.cn/problems/clone-n-ary-tree)
 
-[English Version](/solution/1400-1499/1490.Clone%20N-ary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一棵 N 叉树的根节点&nbsp;<code>root</code>&nbsp;，返回该树的<a href="https://baike.baidu.com/item/深拷贝/22785317?fr=aladdin"><strong>深拷贝</strong></a>（克隆）。</p>
@@ -16,8 +14,6 @@ class Node {
 </pre>
 
 <p><em>N 叉树的输入序列用层序遍历表示，每组子节点用 null 分隔（见示例）。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,16 +33,12 @@ class Node {
 <strong>输出：</strong>[1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li>给定的 N 叉树的深度小于或等于&nbsp;<code>1000</code>。</li>
 	<li>节点的总个数在&nbsp;<code>[0,&nbsp;10^4]</code>&nbsp;之间</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你的解决方案可以适用于<a href="https://leetcode.cn/problems/clone-graph/">克隆图</a>问题吗？</p>
 

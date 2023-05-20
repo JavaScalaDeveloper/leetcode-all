@@ -1,7 +1,5 @@
 # [2554. 从一个范围内选择最多整数 I](https://leetcode.cn/problems/maximum-number-of-integers-to-choose-from-a-range-i)
 
-[English Version](/solution/2500-2599/2554.Maximum%20Number%20of%20Integers%20to%20Choose%20From%20a%20Range%20I/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>banned</code>&nbsp;和两个整数&nbsp;<code>n</code> 和&nbsp;<code>maxSum</code>&nbsp;。你需要按照以下规则选择一些整数：</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>请你返回按照上述规则 <strong>最多</strong>&nbsp;可以选择的整数数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <b>解释：</b>你可以选择整数 1, 2, 3, 4, 5, 6 和 7 。
 它们都在范围 [1, 7] 中，且都没出现在 banned 中，它们的和是 28 ，没有超过 maxSum 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -131,30 +125,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int cmp(const void *a, const void *b) {
-    return *(int *) a - *(int *) b;
-}
-
-int maxCount(int *banned, int bannedSize, int n, int maxSum) {
-    qsort(banned, bannedSize, sizeof(int), cmp);
-    int sum = 0;
-    int ans = 0;
-    for (int i = 1, j = 0; i <= n; i++) {
-        if (sum + i > maxSum) {
-            break;
-        }
-        if (j < bannedSize && i == banned[j]) {
-            while (j < bannedSize && i == banned[j]) {
-                j++;
-            }
-        } else {
-            sum += i;
-            ans++;
-        }
-    }
-    return ans;
-}
-```
+**

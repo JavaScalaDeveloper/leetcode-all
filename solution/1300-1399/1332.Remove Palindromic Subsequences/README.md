@@ -1,7 +1,5 @@
 # [1332. 删除回文子序列](https://leetcode.cn/problems/remove-palindromic-subsequences)
 
-[English Version](/solution/1300-1399/1332.Remove%20Palindromic%20Subsequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>，它仅由字母&nbsp;<code>'a'</code> 和 <code>'b'</code>&nbsp;组成。每一次删除操作都可以从 <code>s</code> 中删除一个回文 <strong>子序列</strong>。</p>
@@ -11,8 +9,6 @@
 <p>「子序列」定义：如果一个字符串可以通过删除原字符串某些字符而不改变原字符顺序得到，那么这个字符串就是原字符串的一个子序列。</p>
 
 <p>「回文」定义：如果一个字符串向后和向前读是一致的，那么这个字符串就是一个回文。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>解释：</strong>"<strong>baa</strong>b<strong>b</strong>" -&gt; "b" -&gt; "". 
 先删除回文子序列 "baab"，然后再删除 "b"。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

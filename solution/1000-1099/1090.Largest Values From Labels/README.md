@@ -1,7 +1,5 @@
 # [1090. 受标签影响的最大值](https://leetcode.cn/problems/largest-values-from-labels)
 
-[English Version](/solution/1000-1099/1090.Largest%20Values%20From%20Labels/README_EN.md)
-
 ## 题目描述
 
 <p>我们有一个&nbsp;<code>n</code>&nbsp;项的集合。给出两个整数数组&nbsp;<code>values</code>&nbsp;和 <code>labels</code>&nbsp;，第 <code>i</code> 个元素的值和标签分别是&nbsp;<code>values[i]</code>&nbsp;和&nbsp;<code>labels[i]</code>。还会给出两个整数&nbsp;<code>numWanted</code>&nbsp;和 <code>useLimit</code> 。</p>
@@ -16,8 +14,6 @@
 <p>一个子集的&nbsp;<strong>分数&nbsp;</strong>是该子集的值之和。</p>
 
 <p>返回子集&nbsp;<code>s</code> 的最大 <strong>分数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输出：</strong>16
 <strong>解释：</strong>选出的子集是第一项和第四项。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

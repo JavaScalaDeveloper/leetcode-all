@@ -1,7 +1,5 @@
 # [317. 离建筑物最近的距离](https://leetcode.cn/problems/shortest-distance-from-all-buildings)
 
-[English Version](/solution/0300-0399/0317.Shortest%20Distance%20from%20All%20Buildings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>m × n</code> 的网格，值为 <code>0</code> 、 <code>1</code> 或 <code>2</code> ，其中:</p>
@@ -19,8 +17,6 @@
 <p><strong>总旅行距离&nbsp;</strong>是朋友们家到聚会地点的距离之和。</p>
 
 <p>使用 <strong>曼哈顿距离</strong>&nbsp;计算距离，其中距离 <code>(p1, p2) = |p2.x - p1.x | + | p2.y - p1.y |</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp; 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <strong>输入:</strong> grid = [[1]]
 <strong>输出:</strong> -1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [1795. 每个产品在不同商店的价格](https://leetcode.cn/problems/rearrange-products-table)
 
-[English Version](/solution/1700-1799/1795.Rearrange%20Products%20Table/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Products</code></p>
@@ -20,15 +18,11 @@
 如果这一产品在商店里没有出售，则值将为null。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>请你重构 <code>Products</code> 表，查询每个产品在不同商店的价格，使得输出的格式变为<code>(product_id, store, price)</code> 。如果这一产品在商店里没有出售，则不输出这一行。</p>
 
 <p>输出结果表中的 <strong>顺序不作要求</strong> 。</p>
 
 <p>查询输出格式请参考下面示例。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

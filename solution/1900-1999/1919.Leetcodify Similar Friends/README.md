@@ -1,7 +1,5 @@
 # [1919. 兴趣相同的朋友](https://leetcode.cn/problems/leetcodify-similar-friends)
 
-[English Version](/solution/1900-1999/1919.Leetcodify%20Similar%20Friends/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Listens</code></p>
@@ -18,8 +16,6 @@
 该表的每一行所代表的含义是：用户（user_id）在某天（day）听了某首歌曲（song_id）。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Friendship</code></p>
 
 <pre>
@@ -34,8 +30,6 @@
 注意：user1_id &lt; user2_id。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>请写一段SQL查询获取到兴趣相同的朋友。用户 <code>x</code>&nbsp;和 用户 <code>y</code>&nbsp;是兴趣相同的朋友，需满足下述条件：</p>
 
 <ul>
@@ -46,8 +40,6 @@
 <p>结果表&nbsp;<strong>无需排序&nbsp;</strong>。注意：返回的结果需要和源数据表的呈现方式相同&nbsp;（例如，&nbsp;需满足&nbsp;<code>user1_id &lt; user2_id</code>）。</p>
 
 <p>结果表的格式如下例。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 

@@ -1,7 +1,5 @@
 # [1185. 一周中的第几天](https://leetcode.cn/problems/day-of-the-week)
 
-[English Version](/solution/1100-1199/1185.Day%20of%20the%20Week/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个日期，请你设计一个算法来判断它是对应一周中的哪一天。</p>
@@ -9,8 +7,6 @@
 <p>输入为三个整数：<code>day</code>、<code>month</code> 和&nbsp;<code>year</code>，分别表示日、月、年。</p>
 
 <p>您返回的结果必须是这几个值中的一个&nbsp;<code>{&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;}</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <pre><strong>输入：</strong>day = 15, month = 8, year = 1993
 <strong>输出：</strong>&quot;Sunday&quot;
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

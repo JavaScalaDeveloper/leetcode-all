@@ -1,7 +1,5 @@
 # [1396. 设计地铁系统](https://leetcode.cn/problems/design-underground-system)
 
-[English Version](/solution/1300-1399/1396.Design%20Underground%20System/README_EN.md)
-
 ## 题目描述
 
 <p>地铁系统跟踪不同车站之间的乘客出行时间，并使用这一数据来计算从一站到另一站的平均时间。</p>
@@ -81,8 +79,6 @@ undergroundSystem.checkIn(2, "Leyton", 21);
 undergroundSystem.checkOut(2, "Paradise", 30); // 乘客 2 "Leyton" -&gt; "Paradise" ，用时 30-21 = 9
 undergroundSystem.getAverageTime("Leyton", "Paradise"); // 返回 6.66667 ，(5 + 6 + 9) / 3 = 6.66667
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

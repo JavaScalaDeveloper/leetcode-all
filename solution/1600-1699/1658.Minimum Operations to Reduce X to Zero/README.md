@@ -1,7 +1,5 @@
 # [1658. 将 x 减到 0 的最小操作数](https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero)
 
-[English Version](/solution/1600-1699/1658.Minimum%20Operations%20to%20Reduce%20X%20to%20Zero/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>x</code> 。每一次操作时，你应当移除数组 <code>nums</code> 最左边或最右边的元素，然后从 <code>x</code> 中减去该元素的值。请注意，需要 <strong>修改</strong> 数组以供接下来的操作使用。</p>
@@ -116,34 +114,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define min(a, b) (((a) < (b)) ? (a) : (b))
-
-int minOperations(int *nums, int numsSize, int x) {
-    int target = -x;
-    for (int i = 0; i < numsSize; i++) {
-        target += nums[i];
-    }
-    if (target < 0) {
-        return -1;
-    }
-    int ans = INT_MAX;
-    int sum = 0;
-    int i = 0;
-    for (int j = 0; j < numsSize; j++) {
-        sum += nums[j];
-        while (sum > target) {
-            sum -= nums[i++];
-        }
-        if (sum == target) {
-            ans = min(ans, numsSize - 1 - (j - i));
-        }
-    }
-    if (ans == INT_MAX) {
-        return -1;
-    }
-    return ans;
-}
-```
+**

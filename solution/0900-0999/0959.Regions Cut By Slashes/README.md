@@ -1,7 +1,5 @@
 # [959. 由斜杠划分区域](https://leetcode.cn/problems/regions-cut-by-slashes)
 
-[English Version](/solution/0900-0999/0959.Regions%20Cut%20By%20Slashes/README_EN.md)
-
 ## 题目描述
 
 <p>在由 <code>1 x 1</code> 方格组成的 <code>n&nbsp;x n</code>&nbsp;网格&nbsp;<code>grid</code> 中，每个 <code>1 x 1</code>&nbsp;方块由 <code>'/'</code>、<code>'\'</code> 或空格构成。这些字符会将方块划分为一些共边的区域。</p>
@@ -9,8 +7,6 @@
 <p>给定网格&nbsp;<code>grid</code>&nbsp;表示为一个字符串数组，返回 <em>区域的数量</em> 。</p>
 
 <p>请注意，反斜杠字符是转义的，因此&nbsp;<code>'\'</code> 用 <code>'\\'</code>&nbsp;表示。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -41,8 +37,6 @@
 <strong>输出：</strong>5
 <strong>解释：</strong>回想一下，因为 \ 字符是转义的，所以 "/\\" 表示 /\，而 "\\/" 表示 \/。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

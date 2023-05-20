@@ -1,14 +1,10 @@
 # [1572. 矩阵对角线元素的和](https://leetcode.cn/problems/matrix-diagonal-sum)
 
-[English Version](/solution/1500-1599/1572.Matrix%20Diagonal%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正方形矩阵 <code>mat</code>，请你返回矩阵对角线元素的和。</p>
 
 <p>请你返回在矩阵主对角线上的元素和副对角线上且不在主对角线上元素的和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp; 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>输入：</strong>mat = [[<strong>5</strong>]]
 <strong>输出：</strong>5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -76,17 +70,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int diagonalSum(int **mat, int matSize, int *matColSize) {
-    int ans = 0;
-    for (int i = 0; i < matSize; i++) {
-        ans += mat[i][i] + mat[i][matSize - 1 - i];
-    }
-    if (matSize & 1) {
-        ans -= mat[matSize >> 1][matSize >> 1];
-    }
-    return ans;
-}
-```
+**

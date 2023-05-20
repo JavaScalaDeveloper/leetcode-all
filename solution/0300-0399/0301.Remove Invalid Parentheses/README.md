@@ -1,7 +1,5 @@
 # [301. 删除无效的括号](https://leetcode.cn/problems/remove-invalid-parentheses)
 
-[English Version](/solution/0300-0399/0301.Remove%20Invalid%20Parentheses/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由若干括号和字母组成的字符串 <code>s</code> ，删除最小数量的无效括号，使得输入的字符串有效。</p>

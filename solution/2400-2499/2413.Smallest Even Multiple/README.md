@@ -1,12 +1,8 @@
 # [2413. 最小偶倍数](https://leetcode.cn/problems/smallest-even-multiple)
 
-[English Version](/solution/2400-2499/2413.Smallest%20Even%20Multiple/README_EN.md)
-
 ## 题目描述
 
 给你一个正整数 <code>n</code> ，返回 <code>2</code><em> </em>和<em> </em><code>n</code> 的最小公倍数（正整数）。
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,8 +17,6 @@
 <strong>输出：</strong>6
 <strong>解释：</strong>6 和 2 的最小公倍数是 6 。注意数字会是它自身的倍数。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -48,10 +42,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int smallestEvenMultiple(int n) {
-    return n % 2 == 0 ? n : n * 2;
-}
-```
+**

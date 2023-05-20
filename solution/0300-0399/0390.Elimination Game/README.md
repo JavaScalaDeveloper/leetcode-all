@@ -1,7 +1,5 @@
 # [390. 消除游戏](https://leetcode.cn/problems/elimination-game)
 
-[English Version](/solution/0300-0399/0390.Elimination%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>列表 <code>arr</code> 由在范围 <code>[1, n]</code> 中的所有整数组成，并按严格递增排序。请你对 <code>arr</code> 应用下述算法：</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>给你整数 <code>n</code> ，返回 <code>arr</code> 最后剩下的数字。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@ arr = [6]
 <strong>输入：</strong>n = 1
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

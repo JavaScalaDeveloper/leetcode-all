@@ -1,7 +1,5 @@
 # [1875. 将工资相同的雇员分组](https://leetcode.cn/problems/group-employees-of-the-same-salary)
 
-[English Version](/solution/1800-1899/1875.Group%20Employees%20of%20the%20Same%20Salary/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Employees</code></p>
@@ -18,8 +16,6 @@ employee_id 是这个表的主键.
 这个表格的每一行包含雇员ID(employee_id), 雇员姓名(name)和雇员工资(salary)信息.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>这家公司想要将<strong>工资相同</strong>的雇员划分到同一个队伍中。每个队伍需要满足如下要求：</p>
 
 <ul>
@@ -35,8 +31,6 @@ employee_id 是这个表的主键.
 <p>返回的结果表按照&nbsp;<code>team_id</code>&nbsp;<b>升序排列。</b>如果相同，则按照&nbsp;<code>employee_id</code>&nbsp;<strong>升序排列</strong>。</p>
 
 <p>查询结果格式如下例。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

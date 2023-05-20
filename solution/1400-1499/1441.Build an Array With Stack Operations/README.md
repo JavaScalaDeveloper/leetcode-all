@@ -1,7 +1,5 @@
 # [1441. 用栈操作构建数组](https://leetcode.cn/problems/build-an-array-with-stack-operations)
 
-[English Version](/solution/1400-1499/1441.Build%20an%20Array%20With%20Stack%20Operations/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>target</code> 和一个整数 <code>n</code>。每次迭代，需要从&nbsp; <code>list = { 1 , 2 , 3 ..., n }</code> 中依次读取一个数字。</p>
@@ -17,8 +15,6 @@
 <p>题目数据保证目标数组严格递增，并且只包含 <code>1</code> 到 <code>n</code> 之间的数字。</p>
 
 <p>请返回构建目标数组所用的操作序列。如果存在多个可行方案，返回任一即可。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 <strong>输出：</strong>["Push","Push"]
 <strong>解释：</strong>只需要读取前 2 个数字就可以停止。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -88,27 +82,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-char **buildArray(int *target, int targetSize, int n, int *returnSize) {
-    char **res = (char **) malloc(sizeof(char *) * n * 2);
-    int cur = 1;
-    int i = 0;
-    for (int j = 0; j < targetSize; j++) {
-        while (++cur < target[j]) {
-            res[i] = (char *) malloc(sizeof(char) * 8);
-            strcpy(res[i++], "Push");
-            res[i] = (char *) malloc(sizeof(char) * 8);
-            strcpy(res[i++], "Pop");
-        }
-        res[i] = (char *) malloc(sizeof(char) * 8);
-        strcpy(res[i++], "Push");
-    }
-    *returnSize = i;
-    return res;
-}
-```
+**

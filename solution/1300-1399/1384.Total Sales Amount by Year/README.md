@@ -1,7 +1,5 @@
 # [1384. 按年度列出销售总额](https://leetcode.cn/problems/total-sales-amount-by-year)
 
-[English Version](/solution/1300-1399/1384.Total%20Sales%20Amount%20by%20Year/README_EN.md)
-
 ## 题目描述
 
 <p>&nbsp;<code>Product</code>&nbsp;表：</p>
@@ -16,8 +14,6 @@
 product_id 是这张表的主键。
 product_name 是产品的名称。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><code>Sales</code>&nbsp;表：</p>
 
@@ -36,15 +32,11 @@ average_daily_sales 列存储销售期内该产品的日平均销售额。
 销售日期范围为2018年到2020年。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一段 SQL 查询，查找出每个产品每年的总销售额，并包含 <code>product_id</code> , <code>product_name</code> ,&nbsp;<code>report_year</code> 以及 <code>total_amount</code>&nbsp;。</p>
 
 <p>返回结果并按&nbsp;<code>product_id</code> 和 <code>report_year</code><strong> 排序</strong>。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 

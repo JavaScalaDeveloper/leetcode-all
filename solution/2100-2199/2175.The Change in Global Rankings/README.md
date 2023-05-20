@@ -1,7 +1,5 @@
 # [2175. 世界排名的变化](https://leetcode.cn/problems/the-change-in-global-rankings)
 
-[English Version](/solution/2100-2199/2175.The%20Change%20in%20Global%20Rankings/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>TeamPoints</code></p>
@@ -17,8 +15,6 @@
 team_id 是这张表的主键。
 这张表的每一行均包含了一支国家队的 ID，它所代表的国家，以及它在全球排名中的得分。没有两支队伍代表同一个国家。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表：<code>PointsChange</code></p>
 
@@ -38,8 +34,6 @@ team_id 是这张表的主键。
 TeamPoints 表中出现的每一个 team_id 均会在这张表中出现。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>国家队的全球排名是按<strong> 降序排列</strong> 所有队伍的得分后所得出的排名。如果两支队伍得分相同，我们将按其名称的 <strong>字典顺序 </strong>排列以打破平衡。</p>
 
 <p>每支国家队的分数应根据其相应的 <code>points_change</code> 进行更新。</p>
@@ -49,8 +43,6 @@ TeamPoints 表中出现的每一个 team_id 均会在这张表中出现。
 <p>以<strong> 任意顺序 </strong>返回结果。</p>
 
 <p>查询结果的格式如下例所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

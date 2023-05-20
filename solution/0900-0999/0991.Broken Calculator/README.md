@@ -1,7 +1,5 @@
 # [991. 坏了的计算器](https://leetcode.cn/problems/broken-calculator)
 
-[English Version](/solution/0900-0999/0991.Broken%20Calculator/README_EN.md)
-
 ## 题目描述
 
 <p>在显示着数字&nbsp;<code>startValue</code>&nbsp;的坏计算器上，我们可以执行以下两种操作：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>给定两个整数&nbsp;<code>startValue</code>&nbsp;和&nbsp;<code>target</code>&nbsp;。返回显示数字&nbsp;<code>target</code>&nbsp;所需的最小操作数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>先双倍，然后递减，再双倍 {3 -&gt; 6 -&gt; 5 -&gt; 10}.
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

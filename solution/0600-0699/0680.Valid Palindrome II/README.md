@@ -1,14 +1,10 @@
 # [680. 验证回文串 II](https://leetcode.cn/problems/valid-palindrome-ii)
 
-[English Version](/solution/0600-0699/0680.Valid%20Palindrome%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>，<strong>最多</strong> 可以从中删除一个字符。</p>
 
 <p>请你判断 <code>s</code> 是否能成为回文字符串：如果能，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <pre>
 <strong>输入：</strong>s = "abc"
 <strong>输出：</strong>false</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

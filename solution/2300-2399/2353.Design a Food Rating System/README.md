@@ -1,7 +1,5 @@
 # [2353. 设计食物评分系统](https://leetcode.cn/problems/design-a-food-rating-system)
 
-[English Version](/solution/2300-2399/2353.Design%20a%20Food%20Rating%20System/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个支持下述操作的食物评分系统：</p>
@@ -29,8 +27,6 @@
 
 <p>注意，字符串 <code>x</code> 的字典序比字符串 <code>y</code> 更小的前提是：<code>x</code> 在字典中出现的位置在 <code>y</code> 之前，也就是说，要么 <code>x</code> 是 <code>y</code> 的前缀，或者在满足&nbsp;<code>x[i] != y[i]</code> 的第一个位置 <code>i</code> 处，<code>x[i]</code> 在字母表中出现的位置在 <code>y[i]</code> 之前。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre><strong>输入</strong>
@@ -53,8 +49,6 @@ foodRatings.highestRated("japanese"); // 返回 "ramen"
                                       // "sushi" 和 "ramen" 的评分都是 16 。
                                       // 但是，"ramen" 的字典序比 "sushi" 更小。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

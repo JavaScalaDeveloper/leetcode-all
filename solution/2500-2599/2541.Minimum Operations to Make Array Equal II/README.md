@@ -1,7 +1,5 @@
 # [2541. 使数组中所有元素相等的最小操作数 II](https://leetcode.cn/problems/minimum-operations-to-make-array-equal-ii)
 
-[English Version](/solution/2500-2599/2541.Minimum%20Operations%20to%20Make%20Array%20Equal%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数数组&nbsp;<code>nums1</code> 和&nbsp;<code>nums2</code>&nbsp;，两个数组长度都是&nbsp;<code>n</code>&nbsp;，再给你一个整数&nbsp;<code>k</code>&nbsp;。你可以对数组&nbsp;<code>nums1</code>&nbsp;进行以下操作：</p>
@@ -13,8 +11,6 @@
 <p>如果对于所有满足&nbsp;<code>0 &lt;= i &lt; n</code>&nbsp;都有&nbsp;<code>num1[i] == nums2[i]</code>&nbsp;，那么我们称&nbsp;<code>nums1</code> <strong>等于</strong>&nbsp;<code>nums2</code>&nbsp;。</p>
 
 <p>请你返回使<em>&nbsp;</em><code>nums1</code><em> </em>等于<em>&nbsp;</em><code>nums2</code>&nbsp;的&nbsp;<strong>最少</strong>&nbsp;操作数。如果没办法让它们相等，请你返回&nbsp;<code>-1</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <b>输出：</b>-1
 <b>解释：</b>无法使两个数组相等。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -81,31 +75,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-long long minOperations(int *nums1, int nums1Size, int *nums2, int nums2Size, int k) {
-    if (k == 0) {
-        for (int i = 0; i < nums1Size; i++) {
-            if (nums1[i] != nums2[i]) {
-                return -1;
-            }
-        }
-        return 0;
-    }
-    long long sum1 = 0;
-    long long sum2 = 0;
-    for (int i = 0; i < nums1Size; i++) {
-        long long diff = nums1[i] - nums2[i];
-        sum1 += diff;
-        if (diff % k != 0) {
-            return -1;
-        }
-        sum2 += llabs(diff);
-    }
-    if (sum1 != 0) {
-        return -1;
-    }
-    return sum2 / (k * 2);
-}
-```
+**

@@ -1,7 +1,5 @@
 # [1381. 设计一个支持增量操作的栈](https://leetcode.cn/problems/design-a-stack-with-increment-operation)
 
-[English Version](/solution/1300-1399/1381.Design%20a%20Stack%20With%20Increment%20Operation/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个支持对其元素进行增量操作的栈。</p>
@@ -14,8 +12,6 @@
 	<li><code>int pop()</code>：弹出栈顶元素，并返回栈顶的值，或栈为空时返回 <strong>-1</strong> 。</li>
 	<li><code>void inc(int k, int val)</code>：栈底的 <code>k</code> 个元素的值都增加 <code>val</code> 。如果栈中元素总数小于 <code>k</code> ，则栈中的所有元素都增加 <code>val</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -40,8 +36,6 @@ stk.pop();                            // 返回 202 --&gt; 返回栈顶值 202�
 stk.pop();                            // 返回 201 --&gt; 返回栈顶值 201，栈变为 []
 stk.pop();                            // 返回 -1 --&gt; 栈为空，返回 -1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

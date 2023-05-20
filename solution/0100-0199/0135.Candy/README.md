@@ -1,7 +1,5 @@
 # [135. 分发糖果](https://leetcode.cn/problems/candy)
 
-[English Version](/solution/0100-0199/0135.Candy/README_EN.md)
-
 ## 题目描述
 
 <p><code>n</code> 个孩子站成一排。给你一个整数数组 <code>ratings</code> 表示每个孩子的评分。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>请你给每个孩子分发糖果，计算并返回需要准备的 <strong>最少糖果数目</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输出：</strong>4
 <strong>解释：</strong>你可以分别给第一个、第二个、第三个孩子分发 1、2、1 颗糖果。
      第三个孩子只得到 1 颗糖果，这满足题面中的两个条件。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

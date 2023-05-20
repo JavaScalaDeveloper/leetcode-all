@@ -1,7 +1,5 @@
 # [750. 角矩形的数量](https://leetcode.cn/problems/number-of-corner-rectangles)
 
-[English Version](/solution/0700-0799/0750.Number%20Of%20Corner%20Rectangles/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个只包含 <code>0</code> 和 <code>1</code> 的&nbsp;<code>m x n</code>&nbsp;整数矩阵&nbsp;<code>grid</code>&nbsp;，返回 <em>其中 「<strong>角矩形 」</strong>的数量</em> 。</p>
@@ -9,8 +7,6 @@
 <p>一个<strong>「角矩形」</strong>是由四个不同的在矩阵上的 <code>1</code> 形成的&nbsp;<strong>轴对齐&nbsp;</strong>的矩形。注意只有角的位置才需要为 <code>1</code>。</p>
 
 <p><strong>注意：</strong>4 个 <code>1</code>&nbsp;的位置需要是不同的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>矩形必须有 4 个不同的角。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

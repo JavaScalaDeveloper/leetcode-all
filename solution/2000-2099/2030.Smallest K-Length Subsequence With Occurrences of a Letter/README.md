@@ -1,7 +1,5 @@
 # [2030. 含特定字母的最小子序列](https://leetcode.cn/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter)
 
-[English Version](/solution/2000-2099/2030.Smallest%20K-Length%20Subsequence%20With%20Occurrences%20of%20a%20Letter/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> ，一个整数 <code>k</code> ，一个字母 <code>letter</code> 以及另一个整数 <code>repetition</code> 。</p>
@@ -11,8 +9,6 @@
 <p><strong>子序列</strong> 是由原字符串删除一些（或不删除）字符且不改变剩余字符顺序得到的剩余字符串。</p>
 
 <p>字符串 <code>a</code> 字典序比字符串 <code>b</code> 小的定义为：在 <code>a</code> 和 <code>b</code> 出现不同字符的第一个位置上，字符串 <code>a</code> 的字符在字母表中的顺序早于字符串 <code>b</code>&nbsp;的字符。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <strong>输出：</strong>"bb"
 <strong>解释：</strong>"bb" 是唯一一个长度为 2 且满足字母 "b" 出现至少 2 次的子序列。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1011. 在 D 天内送达包裹的能力](https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days)
 
-[English Version](/solution/1000-1099/1011.Capacity%20To%20Ship%20Packages%20Within%20D%20Days/README_EN.md)
-
 ## 题目描述
 
 <p>传送带上的包裹必须在 <code>days</code> 天内从一个港口运送到另一个港口。</p>
@@ -9,8 +7,6 @@
 <p>传送带上的第 <code>i</code>&nbsp;个包裹的重量为&nbsp;<code>weights[i]</code>。每一天，我们都会按给出重量（<code>weights</code>）的顺序往传送带上装载包裹。我们装载的重量不会超过船的最大运载重量。</p>
 
 <p>返回能在 <code>days</code> 天内将传送带上的所有包裹送达的船的最低运载能力。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,8 +47,6 @@
 第 3 天：3
 第 4 天：1, 1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

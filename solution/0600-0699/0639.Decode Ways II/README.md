@@ -1,7 +1,5 @@
 # [639. 解码方法 II](https://leetcode.cn/problems/decode-ways-ii)
 
-[English Version](/solution/0600-0699/0639.Decode%20Ways%20II/README_EN.md)
-
 ## 题目描述
 
 <p>一条包含字母&nbsp;<code>A-Z</code> 的消息通过以下的方式进行了 <strong>编码</strong> ：</p>
@@ -26,8 +24,6 @@
 <p>给你一个字符串 <code>s</code> ，由数字和 <code>'*'</code> 字符组成，返回 <strong>解码</strong> 该字符串的方法 <strong>数目</strong> 。</p>
 
 <p>由于答案数目可能非常大，返回&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;的&nbsp;<b>模</b>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -58,8 +54,6 @@
 "21"、"22"、"23"、"24"、"25" 和 "26" 由 2 种解码方法，但 "27"、"28" 和 "29" 仅有 1 种解码方法。
 因此，"2*" 共有 (6 * 2) + (3 * 1) = 12 + 3 = 15 种解码方法。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

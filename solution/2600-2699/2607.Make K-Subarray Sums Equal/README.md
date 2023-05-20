@@ -1,7 +1,5 @@
 # [2607. 使子数组元素和相等](https://leetcode.cn/problems/make-k-subarray-sums-equal)
 
-[English Version](/solution/2600-2699/2607.Make%20K-Subarray%20Sums%20Equal/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>arr</code> 和一个整数 <code>k</code> 。数组 <code>arr</code> 是一个循环数组。换句话说，数组中的最后一个元素的下一个元素是数组中的第一个元素，数组中第一个元素的前一个元素是数组中的最后一个元素。</p>
@@ -15,8 +13,6 @@
 <p>执行运算使每个长度为 <code>k</code> 的 <strong>子数组</strong> 的元素总和都相等，返回所需要的最少运算次数。</p>
 
 <p><strong>子数组</strong> 是数组的一个连续部分。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 - 2 处起始的子数组为 [5, 5, 5] ，元素总和为 15
 - 3 处起始的子数组为 [5, 5, 5] ，元素总和为 15
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

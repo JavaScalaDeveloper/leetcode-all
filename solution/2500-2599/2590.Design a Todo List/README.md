@@ -1,7 +1,5 @@
 # [2590. 设计一个待办事项清单](https://leetcode.cn/problems/design-a-todo-list)
 
-[English Version](/solution/2500-2599/2590.Design%20a%20Todo%20List/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个待办事项清单，用户可以添加 <strong>任务</strong> ，标记任务为 <strong>完成状态</strong> ，或获取待办任务列表。用户还可以为任务添加 <strong>标签</strong> ，并可以按照特定标签筛选任务。</p>
@@ -15,8 +13,6 @@
 	<li><code>List&lt;String&gt; getTasksForTag(int userId, String tag)</code> 返回 ID 为 <code>userId</code> 的用户未标记为完成状态且具有 <code>tag</code> 标签之一的所有任务列表，按照到期日期排序。如果不存在此类任务，则返回一个空列表。</li>
 	<li><code>void completeTask(int userId, int taskId)</code> 仅在任务存在且 ID 为 <code>userId</code> 的用户拥有此任务且它是未完成状态时，将 ID 为 <code>taskId</code> 的任务标记为已完成状态。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1 ：</strong></p>
 
@@ -42,8 +38,6 @@ todoList.getTasksForTag(1, "P1"); // 返回["Task3"]。返回ID为1的用户未�
 todoList.getAllTasks(1); // 返回["Task3", "Task1"]。用户1现在有两个未完成的任务。
 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

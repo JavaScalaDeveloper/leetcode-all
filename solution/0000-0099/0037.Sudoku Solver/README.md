@@ -1,7 +1,5 @@
 # [37. 解数独](https://leetcode.cn/problems/sudoku-solver)
 
-[English Version](/solution/0000-0099/0037.Sudoku%20Solver/README_EN.md)
-
 ## 题目描述
 
 <p>编写一个程序，通过填充空格来解决数独问题。</p>
@@ -16,8 +14,6 @@
 
 <p>数独部分空格内已填入了数字，空白格用&nbsp;<code>'.'</code>&nbsp;表示。</p>
 
-<p>&nbsp;</p>
-
 <div class="top-view__1vxA">
 <div class="original__bRMd">
 <div>
@@ -30,8 +26,6 @@
 
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0037.Sudoku%20Solver/images/250px-sudoku-by-l2g-20050714_solutionsvg.png" style="height:250px; width:250px" />
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

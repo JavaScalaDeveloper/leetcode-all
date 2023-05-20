@@ -1,7 +1,5 @@
 # [1512. 好数对的数目](https://leetcode.cn/problems/number-of-good-pairs)
 
-[English Version](/solution/1500-1599/1512.Number%20of%20Good%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 。</p>
@@ -9,8 +7,6 @@
 <p>如果一组数字 <code>(i,j)</code> 满足 <code>nums[i]</code> == <code>nums[j]</code> 且 <code>i</code> &lt; <code>j</code> ，就可以认为这是一组 <strong>好数对</strong> 。</p>
 
 <p>返回好数对的数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <pre><strong>输入：</strong>nums = [1,2,3]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -79,29 +73,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int numIdenticalPairs(int *nums, int numsSize) {
-    int cnt[101] = {0};
-    int ans = 0;
-    for (int i = 0; i < numsSize; i++) {
-        ans += cnt[nums[i]]++;
-    }
-    return ans;
-}
-```
-
-```c
-int numIdenticalPairs(int *nums, int numsSize) {
-    int cnt[101] = {0};
-    for (int i = 0; i < numsSize; i++) {
-        cnt[nums[i]]++;
-    }
-    int ans = 0;
-    for (int i = 0; i < 101; ++i) {
-        ans += cnt[i] * (cnt[i] - 1) / 2;
-    }
-    return ans;
-}
-```
+**

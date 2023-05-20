@@ -1,7 +1,5 @@
 # [814. 二叉树剪枝](https://leetcode.cn/problems/binary-tree-pruning)
 
-[English Version](/solution/0800-0899/0814.Binary%20Tree%20Pruning/README_EN.md)
-
 ## 题目描述
 
 <p>给你二叉树的根结点&nbsp;<code>root</code>&nbsp;，此外树的每个结点的值要么是 <code>0</code> ，要么是 <code>1</code> 。</p>
@@ -9,8 +7,6 @@
 <p>返回移除了所有不包含 <code>1</code> 的子树的原二叉树。</p>
 
 <p>节点 <code>node</code> 的子树为 <code>node</code> 本身加上所有 <code>node</code> 的后代。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0814.Binary%20Tree%20Pruning/images/1028_2.png" style="width: 500px; height: 140px;" />
@@ -34,8 +30,6 @@
 <strong>输入：</strong>root = [1,1,0,1,1,0,1,0]
 <strong>输出：</strong>[1,1,0,1,1,null,1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

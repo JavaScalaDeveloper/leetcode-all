@@ -1,7 +1,5 @@
 # [735. 行星碰撞](https://leetcode.cn/problems/asteroid-collision)
 
-[English Version](/solution/0700-0799/0735.Asteroid%20Collision/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组 <code>asteroids</code>，表示在同一行的行星。</p>
@@ -9,8 +7,6 @@
 <p>对于数组中的每一个元素，其绝对值表示行星的大小，正负表示行星的移动方向（正表示向右移动，负表示向左移动）。每一颗行星以相同的速度移动。</p>
 
 <p>找出碰撞后剩下的所有行星。碰撞规则：两个行星相互碰撞，较小的行星会爆炸。如果两颗行星大小相同，则两颗行星都会爆炸。两颗移动方向相同的行星，永远不会发生碰撞。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输入：</strong>asteroids = [10,2,-5]
 <strong>输出：</strong>[10]
 <b>解释：</b>2 和 -5 发生碰撞后剩下 -5 。10 和 -5 发生碰撞后剩下 10 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

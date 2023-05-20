@@ -1,7 +1,5 @@
 # [1201. 丑数 III](https://leetcode.cn/problems/ugly-number-iii)
 
-[English Version](/solution/1200-1299/1201.Ugly%20Number%20III/README_EN.md)
-
 ## 题目描述
 
 <p>给你四个整数：<code>n</code> 、<code>a</code> 、<code>b</code> 、<code>c</code> ，请你设计一个算法来找出第 <code>n</code> 个丑数。</p>

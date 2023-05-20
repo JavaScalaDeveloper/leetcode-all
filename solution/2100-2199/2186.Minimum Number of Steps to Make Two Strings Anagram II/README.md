@@ -1,7 +1,5 @@
 # [2186. 使两字符串互为字母异位词的最少步骤数](https://leetcode.cn/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii)
 
-[English Version](/solution/2100-2199/2186.Minimum%20Number%20of%20Steps%20to%20Make%20Two%20Strings%20Anagram%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串 <code>s</code> 和 <code>t</code> 。在一步操作中，你可以给 <code>s</code> 或者 <code>t</code> 追加 <strong>任一字符</strong> 。</p>
@@ -9,8 +7,6 @@
 <p>返回使 <code>s</code> 和 <code>t</code> 互为 <strong>字母异位词</strong> 所需的最少步骤数<em>。</em></p>
 
 <p><strong>字母异位词 </strong>指字母相同但是顺序不同（或者相同）的字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>给出的字符串已经互为字母异位词。因此，不需要任何进一步操作。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

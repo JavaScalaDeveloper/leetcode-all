@@ -1,7 +1,5 @@
 # [2691. Immutability Helper](https://leetcode.cn/problems/immutability-helper)
 
-[English Version](/solution/2600-2699/2691.Immutability%20Helper/README_EN.md)
-
 ## 题目描述
 
 <p>Creating clones of immutable objects with minor alterations can be a tedious process. Write a class&nbsp;<code>ImmutableHelper</code>&nbsp;that serves as a tool to help with this requirement. The constructor accepts an immutable object&nbsp;<code>obj</code>&nbsp;which will be a JSON object or array.</p>
@@ -33,7 +31,6 @@ console.log(newObj); // {&quot;x&quot;: 6}</pre>
 
 <p><strong>Note on how the solution will be tested:</strong>&nbsp;the solution validator will only analyze&nbsp;differences between what was returned and the original&nbsp;<code>obj</code>. Doing a full comparison would be too computationally expensive.</p>
 
-<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
@@ -92,7 +89,6 @@ mutators = [
 <strong>Explanation:</strong> The values of &quot;x&quot; and &quot;y&quot; were swapped.
 </pre>
 
-<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>

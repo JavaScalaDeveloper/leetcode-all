@@ -1,7 +1,5 @@
 # [550. 游戏玩法分析 IV](https://leetcode.cn/problems/game-play-analysis-iv)
 
-[English Version](/solution/0500-0599/0550.Game%20Play%20Analysis%20IV/README_EN.md)
-
 ## 题目描述
 
 <p>Table:&nbsp;<code>Activity</code></p>
@@ -18,8 +16,6 @@
 这张表显示了某些游戏的玩家的活动情况。
 每一行是一个玩家的记录，他在某一天使用某个设备注销之前登录并玩了很多游戏（可能是 0）。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>编写一个 SQL 查询，报告在首次登录的第二天再次登录的玩家的比率，四舍五入到小数点后两位。换句话说，您需要计算从首次登录日期开始至少连续两天登录的玩家的数量，然后除以玩家总数。</p>
 

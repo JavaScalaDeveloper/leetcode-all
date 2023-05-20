@@ -1,7 +1,5 @@
 # [8. 字符串转换整数 (atoi)](https://leetcode.cn/problems/string-to-integer-atoi)
 
-[English Version](/solution/0000-0099/0008.String%20to%20Integer%20%28atoi%29/README_EN.md)
-
 ## 题目描述
 
 <p>请你来实现一个&nbsp;<code>myAtoi(string s)</code>&nbsp;函数，使其能将字符串转换成一个 32 位有符号整数（类似 C/C++ 中的 <code>atoi</code> 函数）。</p>
@@ -23,8 +21,6 @@
 	<li>本题中的空白字符只包括空格字符 <code>' '</code> 。</li>
 	<li>除前导空格或数字后的其余字符串外，<strong>请勿忽略</strong> 任何其他字符。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -72,8 +68,6 @@
 解析得到整数 4193 。
 由于 "4193" 在范围 [-2<sup>31</sup>, 2<sup>31</sup> - 1] 内，最终结果为 4193 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

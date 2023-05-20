@@ -1,7 +1,5 @@
 # [2636. Promise 对象池](https://leetcode.cn/problems/promise-pool)
 
-[English Version](/solution/2600-2699/2636.Promise%20Pool/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个异步函数 <code>promisePool</code> ，它接收一个异步函数数组 <code>functions</code> 和 <strong>池限制</strong> <code>n</code>。它应该返回一个 promise 对象，当所有输入函数都执行完毕后，promise 对象就执行完毕。</p>
@@ -11,8 +9,6 @@
 <p>例如，如果 <code>n = 1</code> , <code>promisePool</code>&nbsp;在序列中每次执行一个函数。然而，如果 <code>n = 2</code> ，它首先执行两个函数。当两个函数中的任何一个执行完毕后，再执行第三个函数(如果它是可用的)，依此类推，直到没有函数要执行为止。</p>
 
 <p>你可以假设所有的 <code>functions</code> 都不会被拒绝。对于 <code>promisePool</code> 来说，返回一个可以解析任何值的 promise 都是可以接受的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -68,8 +64,6 @@ n = 1
 当 t=700 时，第二个函数执行完毕后，执行第三个函数。池大小为 1。
 在 t=900 时，第三个函数执行完毕后。池大小为 0，因此返回的 Promise 也执行完成。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

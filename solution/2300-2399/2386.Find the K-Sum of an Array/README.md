@@ -1,7 +1,5 @@
 # [2386. 找出数组的第 K 大和](https://leetcode.cn/problems/find-the-k-sum-of-an-array)
 
-[English Version](/solution/2300-2399/2386.Find%20the%20K-Sum%20of%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个 <strong>正</strong> 整数 <code>k</code> 。你可以选择数组的任一 <strong>子序列</strong> 并且对其全部元素求和。</p>
@@ -13,8 +11,6 @@
 <p>子序列是一个可以由其他数组删除某些或不删除元素排生而来的数组，且派生过程不改变剩余元素的顺序。</p>
 
 <p><strong>注意：</strong>空子序列的和视作 <code>0</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出：</strong>10
 <strong>解释：</strong>数组的第 16 大和是 10 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

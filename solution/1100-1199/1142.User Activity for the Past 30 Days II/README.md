@@ -1,7 +1,5 @@
 # [1142. 过去 30 天的用户活动 II](https://leetcode.cn/problems/user-activity-for-the-past-30-days-ii)
 
-[English Version](/solution/1100-1199/1142.User%20Activity%20for%20the%20Past%2030%20Days%20II/README_EN.md)
-
 ## 题目描述
 
 <p><code>Activity</code> 表：</p>
@@ -20,13 +18,9 @@ activity_type 列是 ENUM 类型，可以取（“ open_session”，“ end_ses
 该表显示了社交媒体网站的用户活动。
 请注意，每个会话只属于一个用户。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写 SQL 查询以查找截至 <code>2019-07-27</code>（含）的 <code>30</code> 天内每个用户的平均会话数，<strong>四舍五入到小数点后两位</strong>。只统计那些会话期间用户至少进行一项活动的有效会话。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 

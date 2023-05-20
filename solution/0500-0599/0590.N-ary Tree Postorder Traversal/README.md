@@ -1,14 +1,10 @@
 # [590. N 叉树的后序遍历](https://leetcode.cn/problems/n-ary-tree-postorder-traversal)
 
-[English Version](/solution/0500-0599/0590.N-ary%20Tree%20Postorder%20Traversal/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个 n&nbsp;叉树的根节点<meta charset="UTF-8" />&nbsp;<code>root</code>&nbsp;，返回 <em>其节点值的<strong> 后序遍历</strong></em> 。</p>
 
 <p>n 叉树 在输入中按层序遍历进行序列化表示，每组子节点由空值 <code>null</code> 分隔（请参见示例）。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 <strong>输出：</strong>[2,6,14,11,7,3,12,8,4,13,9,10,5,1]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -37,8 +31,6 @@
 	<li><code>0 &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
 	<li>n 叉树的高度小于或等于 <code>1000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>递归法很简单，你可以使用迭代法完成此题吗?</p>
 

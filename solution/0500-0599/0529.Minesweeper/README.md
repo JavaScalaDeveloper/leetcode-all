@@ -1,7 +1,5 @@
 # [529. 扫雷游戏](https://leetcode.cn/problems/minesweeper)
 
-[English Version](/solution/0500-0599/0529.Minesweeper/README_EN.md)
-
 ## 题目描述
 
 <p>让我们一起来玩扫雷游戏！</p>
@@ -27,8 +25,6 @@
 	<li>如果在此次点击中，若无更多方块可被揭露，则返回盘面。</li>
 </ol>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0529.Minesweeper/images/minesweeper_example_1.png" style="width: 500px; max-width: 400px; height: 269px;" />
 <pre>
@@ -42,8 +38,6 @@
 <strong>输入：</strong>board = [["B","1","E","1","B"],["B","1","M","1","B"],["B","1","1","1","B"],["B","B","B","B","B"]], click = [1,2]
 <strong>输出：</strong>[["B","1","E","1","B"],["B","1","X","1","B"],["B","1","1","1","B"],["B","B","B","B","B"]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

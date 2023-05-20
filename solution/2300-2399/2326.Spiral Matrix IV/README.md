@@ -1,7 +1,5 @@
 # [2326. 螺旋矩阵 IV](https://leetcode.cn/problems/spiral-matrix-iv)
 
-[English Version](/solution/2300-2399/2326.Spiral%20Matrix%20IV/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数：<code>m</code> 和 <code>n</code> ，表示矩阵的维数。</p>
@@ -11,8 +9,6 @@
 <p>请你生成一个大小为 <code>m x n</code> 的螺旋矩阵，矩阵包含链表中的所有整数。链表中的整数从矩阵 <strong>左上角</strong> 开始、<strong>顺时针 </strong>按 <strong>螺旋</strong> 顺序填充。如果还存在剩余的空格，则用 <code>-1</code> 填充。</p>
 
 <p>返回生成的矩阵。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2326.Spiral%20Matrix%20IV/images/ex1new.jpg" style="width: 240px; height: 150px;">
@@ -28,8 +24,6 @@
 <strong>输出：</strong>[[0,1,2,-1]]
 <strong>解释：</strong>上图展示了链表中的整数在矩阵中是如何从左到右排布的。 
 注意，矩阵中剩下的空格用 -1 填充。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

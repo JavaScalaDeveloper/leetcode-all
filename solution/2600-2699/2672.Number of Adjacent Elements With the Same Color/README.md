@@ -1,7 +1,5 @@
 # [2672. 有相同颜色的相邻元素数目](https://leetcode.cn/problems/number-of-adjacent-elements-with-the-same-color)
 
-[English Version](/solution/2600-2699/2672.Number%20of%20Adjacent%20Elements%20With%20the%20Same%20Color/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始、长度为 <code>n</code>&nbsp;的数组&nbsp;<code>nums</code>&nbsp;。一开始，所有元素都是 <strong>未染色</strong>&nbsp;（值为 <code>0</code>&nbsp;）的。</p>
@@ -13,8 +11,6 @@
 <p>请你返回一个长度与 <code>queries</code>&nbsp;相等的数组<em>&nbsp;</em><code>answer</code><em>&nbsp;</em>，其中<em>&nbsp;</em><code>answer[i]</code>是前 <code>i</code>&nbsp;个操作&nbsp;<strong>之后</strong>&nbsp;，相邻元素颜色相同的数目。</p>
 
 <p>更正式的，<code>answer[i]</code>&nbsp;是执行完前 <code>i</code>&nbsp;个操作后，<code>0 &lt;= j &lt; n - 1</code>&nbsp;的下标 <code>j</code>&nbsp;中，满足&nbsp;<code>nums[j] == nums[j + 1]</code> 且&nbsp;<code>nums[j] != 0</code>&nbsp;的数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <b>解释：</b>一开始数组 nums = [0] ，0 表示数组中还没染色的元素。
 - 第 1 个操作后，nums = [100000] 。相邻元素颜色相同的数目为 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

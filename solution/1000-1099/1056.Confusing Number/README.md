@@ -1,7 +1,5 @@
 # [1056. 易混淆数](https://leetcode.cn/problems/confusing-number)
 
-[English Version](/solution/1000-1099/1056.Confusing%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个数字 <code>N</code>，当它满足以下条件的时候返回 <code>true</code>：</p>
@@ -13,8 +11,6 @@
 <p>2, 3, 4, 5, 7 旋转 180&deg; 后，得到的<strong>不是</strong>数字。</p>
 
 <p>易混淆数&nbsp;(confusing number) 在旋转180&deg;以后，可以得到和原来<strong>不同</strong>的数，且新数字的每一位都是有效的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,8 +51,6 @@
 <strong>解释：</strong>
 把 25 旋转 180&deg; 以后得到的不是数字。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2469. 温度转换](https://leetcode.cn/problems/convert-the-temperature)
 
-[English Version](/solution/2400-2499/2469.Convert%20the%20Temperature/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个四舍五入到两位小数的非负浮点数 <code>celsius</code> 来表示温度，以 <strong>摄氏度</strong>（<strong>Celsius</strong>）为单位。</p>
@@ -17,8 +15,6 @@
 	<li><code>华氏度 = 摄氏度 * 1.80 + 32.00</code></li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1 ：</strong></p>
 
 <pre><strong>输入：</strong>celsius = 36.50
@@ -31,8 +27,6 @@
 <strong>输出：</strong>[395.26000,251.79800]
 <strong>解释：</strong>122.11 摄氏度：转换为开氏度是 395.26 ，转换为华氏度是 251.798 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -58,17 +52,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-double *convertTemperature(double celsius, int *returnSize) {
-    double *ans = malloc(sizeof(double) * 2);
-    ans[0] = celsius + 273.15;
-    ans[1] = celsius * 1.8 + 32;
-    *returnSize = 2;
-    return ans;
-}
-```
+**

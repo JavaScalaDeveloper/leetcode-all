@@ -1,7 +1,5 @@
 # [1670. 设计前中后队列](https://leetcode.cn/problems/design-front-middle-back-queue)
 
-[English Version](/solution/1600-1699/1670.Design%20Front%20Middle%20Back%20Queue/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个队列，支持在前，中，后三个位置的 <code>push</code> 和 <code>pop</code> 操作。</p>

@@ -1,14 +1,10 @@
 # [1383. 最大的团队表现值](https://leetcode.cn/problems/maximum-performance-of-a-team)
 
-[English Version](/solution/1300-1399/1383.Maximum%20Performance%20of%20a%20Team/README_EN.md)
-
 ## 题目描述
 
 <p>公司有编号为 <code>1</code>&nbsp;到 <code>n</code>&nbsp;的 <code>n</code>&nbsp;个工程师，给你两个数组 <code>speed</code>&nbsp;和 <code>efficiency</code>&nbsp;，其中 <code>speed[i]</code>&nbsp;和 <code>efficiency[i]</code>&nbsp;分别代表第 <code>i</code>&nbsp;位工程师的速度和效率。请你返回由最多&nbsp;<code>k</code>&nbsp;个工程师组成的&nbsp;<strong>​​​​​​最大团队表现值</strong>&nbsp;，由于答案可能很大，请你返回结果对 <code>10^9 + 7</code> 取余后的结果。</p>
 
 <p><strong>团队表现值</strong>&nbsp;的定义为：一个团队中「所有工程师速度的和」乘以他们「效率值中的最小值」。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <pre><strong>输入：</strong>n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 4
 <strong>输出：</strong>72
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

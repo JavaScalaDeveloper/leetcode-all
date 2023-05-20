@@ -1,12 +1,8 @@
 # [539. 最小时间差](https://leetcode.cn/problems/minimum-time-difference)
 
-[English Version](/solution/0500-0599/0539.Minimum%20Time%20Difference/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个 24 小时制（小时:分钟 <strong>"HH:MM"</strong>）的时间列表，找出列表中任意两个时间的最小时间差并以分钟数表示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,8 +17,6 @@
 <strong>输入：</strong>timePoints = ["00:00","23:59","00:00"]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

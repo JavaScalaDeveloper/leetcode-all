@@ -1,7 +1,5 @@
 # [1221. 分割平衡字符串](https://leetcode.cn/problems/split-a-string-in-balanced-strings)
 
-[English Version](/solution/1200-1299/1221.Split%20a%20String%20in%20Balanced%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p><strong>平衡字符串</strong> 中，<code>'L'</code> 和 <code>'R'</code> 字符的数量是相同的。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回可以通过分割得到的平衡字符串的 <strong>最大数量</strong> <strong>。</strong></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>s 只能保持原样 "LLLLRRRR" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1652. 拆炸弹](https://leetcode.cn/problems/defuse-the-bomb)
 
-[English Version](/solution/1600-1699/1652.Defuse%20the%20Bomb/README_EN.md)
-
 ## 题目描述
 
 <p>你有一个炸弹需要拆除，时间紧迫！你的情报员会给你一个长度为 <code>n</code> 的 <strong>循环</strong> 数组 <code>code</code> 以及一个密钥 <code>k</code> 。</p>

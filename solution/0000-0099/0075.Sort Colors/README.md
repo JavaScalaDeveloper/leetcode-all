@@ -1,7 +1,5 @@
 # [75. 颜色分类](https://leetcode.cn/problems/sort-colors)
 
-[English Version](/solution/0000-0099/0075.Sort%20Colors/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个包含红色、白色和蓝色、共&nbsp;<code>n</code><em> </em>个元素的数组<meta charset="UTF-8" />&nbsp;<code>nums</code>&nbsp;，<strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank">原地</a></strong>对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>必须在不使用库内置的 sort 函数的情况下解决这个问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输出：</strong>[0,1,2]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -38,8 +32,6 @@
 	<li><code>1 &lt;= n &lt;= 300</code></li>
 	<li><code>nums[i]</code> 为 <code>0</code>、<code>1</code> 或 <code>2</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

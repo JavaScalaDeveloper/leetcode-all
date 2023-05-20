@@ -1,7 +1,5 @@
 # [2203. 得到要求路径的最小带权子图](https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths)
 
-[English Version](/solution/2200-2299/2203.Minimum%20Weighted%20Subgraph%20With%20the%20Required%20Paths/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>n</code>&nbsp;，它表示一个 <strong>带权有向</strong> 图的节点数，节点编号为&nbsp;<code>0</code> 到&nbsp;<code>n - 1</code>&nbsp;。</p>
@@ -13,8 +11,6 @@
 <p>请你从图中选出一个 <b>边权和最小</b>&nbsp;的子图，使得从 <code>src1</code>&nbsp;和 <code>src2</code>&nbsp;出发，在这个子图中，都 <strong>可以</strong>&nbsp;到达 <code>dest</code>&nbsp;。如果这样的子图不存在，请返回 <code>-1</code>&nbsp;。</p>
 
 <p><strong>子图</strong>&nbsp;中的点和边都应该属于原图的一部分。子图的边权和定义为它所包含的所有边的权值之和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 上图为输入的图。
 可以看到，不存在从节点 1 到节点 2 的路径，所以不存在任何子图满足所有限制。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

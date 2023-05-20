@@ -1,7 +1,5 @@
 # [825. 适龄的朋友](https://leetcode.cn/problems/friends-of-appropriate-ages)
 
-[English Version](/solution/0800-0899/0825.Friends%20Of%20Appropriate%20Ages/README_EN.md)
-
 ## 题目描述
 
 <p>在社交媒体网站上有 <code>n</code> 个用户。给你一个整数数组 <code>ages</code> ，其中 <code>ages[i]</code> 是第 <code>i</code> 个用户的年龄。</p>
@@ -19,8 +17,6 @@
 <p>注意，如果 <code>x</code> 向 <code>y</code> 发送一条好友请求，<code>y</code> 不必也向 <code>x</code> 发送一条好友请求。另外，用户不会向自己发送好友请求。</p>
 
 <p>返回在该社交媒体网站上产生的好友请求总数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>产生的好友请求为 110 -&gt; 100 ，120 -&gt; 110 ，120 -&gt; 100 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

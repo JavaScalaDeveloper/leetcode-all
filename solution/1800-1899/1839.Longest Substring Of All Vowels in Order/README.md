@@ -1,7 +1,5 @@
 # [1839. 所有元音按顺序排布的最长子字符串](https://leetcode.cn/problems/longest-substring-of-all-vowels-in-order)
 
-[English Version](/solution/1800-1899/1839.Longest%20Substring%20Of%20All%20Vowels%20in%20Order/README_EN.md)
-
 ## 题目描述
 
 <p>当一个字符串满足如下条件时，我们称它是 <b>美丽的</b> ：</p>

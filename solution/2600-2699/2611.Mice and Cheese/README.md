@@ -1,7 +1,5 @@
 # [2611. 老鼠和奶酪](https://leetcode.cn/problems/mice-and-cheese)
 
-[English Version](/solution/2600-2699/2611.Mice%20and%20Cheese/README_EN.md)
-
 ## 题目描述
 
 <p>有两只老鼠和&nbsp;<code>n</code>&nbsp;块不同类型的奶酪，每块奶酪都只能被其中一只老鼠吃掉。</p>
@@ -16,8 +14,6 @@
 <p>给你一个正整数数组&nbsp;<code>reward1</code>&nbsp;，一个正整数数组&nbsp;<code>reward2</code>&nbsp;，和一个非负整数&nbsp;<code>k</code>&nbsp;。</p>
 
 <p>请你返回第一只老鼠恰好吃掉 <code>k</code>&nbsp;块奶酪的情况下，<strong>最大</strong>&nbsp;得分为多少。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 总得分为 1 + 1 = 2 。
 2 是最高得分。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

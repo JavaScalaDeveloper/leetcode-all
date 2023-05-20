@@ -1,7 +1,5 @@
 # [2371. 最小化网格中的最大值](https://leetcode.cn/problems/minimize-maximum-value-in-a-grid)
 
-[English Version](/solution/2300-2399/2371.Minimize%20Maximum%20Value%20in%20a%20Grid/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个包含&nbsp;<strong>不同&nbsp;</strong>正整数的 <code>m × n</code> 整数矩阵 <code>grid</code>。</p>
@@ -19,8 +17,6 @@
 
 <p>返回&nbsp;<em><strong>结果&nbsp;</strong>矩阵</em>。如果有多个答案，则返回其中&nbsp;<strong>任何&nbsp;</strong>一个。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1:</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2371.Minimize%20Maximum%20Value%20in%20a%20Grid/images/grid2drawio.png" />
 <pre>
@@ -37,8 +33,6 @@
 <strong>输出:</strong> [[1]]
 <strong>解释:</strong> 我们将矩阵中唯一的数字替换为 1。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

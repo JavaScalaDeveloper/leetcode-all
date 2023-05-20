@@ -1,7 +1,5 @@
 # [1994. 好子集的数目](https://leetcode.cn/problems/the-number-of-good-subsets)
 
-[English Version](/solution/1900-1999/1994.The%20Number%20of%20Good%20Subsets/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>&nbsp;。如果&nbsp;<code>nums</code>&nbsp;的一个子集中，所有元素的乘积可以表示为一个或多个 <strong>互不相同的质数</strong> 的乘积，那么我们称它为&nbsp;<strong>好子集</strong>&nbsp;。</p>
@@ -18,8 +16,6 @@
 <p>请你返回 <code>nums</code>&nbsp;中不同的&nbsp;<strong>好</strong>&nbsp;子集的数目对<em>&nbsp;</em><code>10<sup>9</sup> + 7</code>&nbsp;<strong>取余</strong>&nbsp;的结果。</p>
 
 <p><code>nums</code>&nbsp;中的 <strong>子集</strong>&nbsp;是通过删除 <code>nums</code>&nbsp;中一些（可能一个都不删除，也可能全部都删除）元素后剩余元素组成的数组。如果两个子集删除的下标不同，那么它们被视为不同的子集。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 - [3]：乘积为 3 ，可以表示为质数 3 的乘积。
 - [15]：乘积为 15 ，可以表示为互不相同质数 3 和 5 的乘积。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

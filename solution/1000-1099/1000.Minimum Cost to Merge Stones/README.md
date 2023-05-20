@@ -1,7 +1,5 @@
 # [1000. 合并石头的最低成本](https://leetcode.cn/problems/minimum-cost-to-merge-stones)
 
-[English Version](/solution/1000-1099/1000.Minimum%20Cost%20to%20Merge%20Stones/README_EN.md)
-
 ## 题目描述
 
 <p>有 <code>n</code> 堆石头排成一排，第 <code>i</code> 堆中有&nbsp;<code>stones[i]</code>&nbsp;块石头。</p>
@@ -9,8 +7,6 @@
 <p>每次 <strong>移动</strong> 需要将 <strong>连续的</strong> <code>k</code> 堆石头合并为一堆，而这次移动的成本为这 <code>k</code> 堆中石头的总数。</p>
 
 <p>返回把所有石头合并成一堆的最低成本。如果无法合并成一堆，返回 <code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 合并 [3, 8, 6]，成本为 17，剩下 [17]。
 总成本 25，这是可能的最小值。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

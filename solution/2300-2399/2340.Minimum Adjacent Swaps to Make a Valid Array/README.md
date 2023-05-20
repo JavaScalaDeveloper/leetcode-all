@@ -1,7 +1,5 @@
 # [2340. 生成有效数组的最少交换次数](https://leetcode.cn/problems/minimum-adjacent-swaps-to-make-a-valid-array)
 
-[English Version](/solution/2300-2399/2340.Minimum%20Adjacent%20Swaps%20to%20Make%20a%20Valid%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个<strong>&nbsp;下标从 0 开始</strong>&nbsp;的整数数组 <code>nums</code>。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>返回<em>使 </em><code>nums</code><em> </em><em>成为有效数组所需的最少交换次数。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>输入:</strong> nums = [9]
 <strong>输出:</strong> 0
 <strong>解释:</strong> 该数组已经有效，因此返回 0。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

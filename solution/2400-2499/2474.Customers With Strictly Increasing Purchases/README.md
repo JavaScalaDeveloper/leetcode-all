@@ -1,7 +1,5 @@
 # [2474. 购买量严格增加的客户](https://leetcode.cn/problems/customers-with-strictly-increasing-purchases)
 
-[English Version](/solution/2400-2499/2474.Customers%20With%20Strictly%20Increasing%20Purchases/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Orders</code></p>
@@ -19,8 +17,6 @@ order_id 是该表的主键。
 每行包含订单的 id、订购该订单的客户 id、订单日期和价格。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，报告&nbsp;<strong>总购买量&nbsp;</strong>每年严格增加的客户 id。</p>
 
 <ul>
@@ -32,8 +28,6 @@ order_id 是该表的主键。
 <p>以&nbsp;<strong>任意顺序&nbsp;</strong>返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

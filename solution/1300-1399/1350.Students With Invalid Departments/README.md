@@ -1,7 +1,5 @@
 # [1350. 院系无效的学生](https://leetcode.cn/problems/students-with-invalid-departments)
 
-[English Version](/solution/1300-1399/1350.Students%20With%20Invalid%20Departments/README_EN.md)
-
 ## 题目描述
 
 <p>院系表: <code>Departments</code></p>
@@ -17,8 +15,6 @@ id 是该表的主键
 该表包含一所大学每个院系的 id 信息
 </pre>
 
-<p>&nbsp;</p>
-
 <p>学生表: <code>Students</code></p>
 
 <pre>
@@ -33,15 +29,11 @@ id 是该表的主键
 该表包含一所大学每个学生的 id 和他/她就读的院系信息
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一条 SQL 语句以查询那些所在院系不存在的学生的 id 和姓名</p>
 
 <p>可以以 <strong>任何顺序</strong> 返回结果。</p>
 
 <p>下面是返回结果格式的例子。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

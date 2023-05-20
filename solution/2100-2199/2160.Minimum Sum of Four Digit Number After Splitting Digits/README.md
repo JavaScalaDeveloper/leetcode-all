@@ -1,7 +1,5 @@
 # [2160. 拆分数位后四位数字的最小和](https://leetcode.cn/problems/minimum-sum-of-four-digit-number-after-splitting-digits)
 
-[English Version](/solution/2100-2199/2160.Minimum%20Sum%20of%20Four%20Digit%20Number%20After%20Splitting%20Digits/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个四位&nbsp;<strong>正</strong>&nbsp;整数&nbsp;<code>num</code>&nbsp;。请你使用 <code>num</code>&nbsp;中的 <strong>数位</strong> ，将&nbsp;<code>num</code>&nbsp;拆成两个新的整数&nbsp;<code>new1</code>&nbsp;和&nbsp;<code>new2</code>&nbsp;。<code>new1</code> 和&nbsp;<code>new2</code>&nbsp;中可以有&nbsp;<strong>前导 0</strong>&nbsp;，且&nbsp;<code>num</code>&nbsp;中 <strong>所有</strong>&nbsp;数位都必须使用。</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>请你返回可以得到的&nbsp;<code>new1</code>&nbsp;和 <code>new2</code>&nbsp;的 <strong>最小</strong>&nbsp;和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <b>解释：</b>可行的 [new1, new2] 数对为 [0, 49] ，[490, 0] 等等。
 最小和为数对 [4, 9] 的和：4 + 9 = 13 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -56,20 +50,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int cmp(const void *a, const void *b) {
-    return *(int *) a - *(int *) b;
-}
-
-int minimumSum(int num) {
-    int nums[4] = {0};
-    for (int i = 0; i < 4; i++) {
-        nums[i] = num % 10;
-        num /= 10;
-    }
-    qsort(nums, 4, sizeof(int), cmp);
-    return 10 * (nums[0] + nums[1])  + nums[2] + nums[3];
-}
-```
+**

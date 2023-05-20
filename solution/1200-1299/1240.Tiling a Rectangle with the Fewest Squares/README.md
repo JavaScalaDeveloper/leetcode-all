@@ -1,7 +1,5 @@
 # [1240. 铺瓷砖](https://leetcode.cn/problems/tiling-a-rectangle-with-the-fewest-squares)
 
-[English Version](/solution/1200-1299/1240.Tiling%20a%20Rectangle%20with%20the%20Fewest%20Squares/README_EN.md)
-
 ## 题目描述
 
 <p>你是一位施工队的工长，根据设计师的要求准备为一套设计风格独特的房子进行室内装修。</p>
@@ -11,8 +9,6 @@
 <p>假设正方形瓷砖的规格不限，边长都是整数。</p>
 
 <p>请你帮设计师计算一下，最少需要用到多少块方形瓷砖？</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <pre><strong>输入：</strong>n = 11, m = 13
 <strong>输出：</strong>6
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

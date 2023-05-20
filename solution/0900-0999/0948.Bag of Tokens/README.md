@@ -1,7 +1,5 @@
 # [948. 令牌放置](https://leetcode.cn/problems/bag-of-tokens)
 
-[English Version](/solution/0900-0999/0948.Bag%20of%20Tokens/README_EN.md)
-
 ## 题目描述
 
 <p>你的初始 <strong>能量</strong> 为 <code>power</code>，初始 <strong>分数</strong> 为&nbsp;<code>0</code>，只有一包令牌 <code>tokens</code> 。其中 <code>tokens[i]</code> 是第 <code>i</code> 个令牌的值（下标从 0 开始）。</p>
@@ -16,8 +14,6 @@
 <p>每个令牌 <strong>最多</strong> 只能使用一次，使用 <strong>顺序不限</strong> ，<strong>不需</strong> 使用所有令牌。</p>
 
 <p>在使用任意数量的令牌后，返回我们可以得到的最大 <strong>分数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -47,8 +43,6 @@
 2. 令牌 3 正面朝下，能量变为 500 ，分数变为 0
 3. 令牌 1 正面朝上，能量变为 300 ，分数变为 1
 4. 令牌 2 正面朝上，能量变为 0 ，分数变为 2</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

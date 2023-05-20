@@ -1,7 +1,5 @@
 # [202. 快乐数](https://leetcode.cn/problems/happy-number)
 
-[English Version](/solution/0200-0299/0202.Happy%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>编写一个算法来判断一个数 <code>n</code> 是不是快乐数。</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>如果 <code>n</code> 是 <em>快乐数</em> 就返回 <code>true</code> ；不是，则返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>输入：</strong>n = 2
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -102,25 +96,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int getNext(int n) {
-    int res = 0;
-    while (n) {
-        res += (n % 10) * (n % 10);
-        n /= 10;
-    }
-    return res;
-}
-
-bool isHappy(int n) {
-    int slow = n;
-    int fast = getNext(n);
-    while (slow != fast) {
-        slow = getNext(slow);
-        fast = getNext(getNext(fast));
-    }
-    return fast == 1;
-}
-```
+**

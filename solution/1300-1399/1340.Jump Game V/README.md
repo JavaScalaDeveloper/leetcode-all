@@ -1,7 +1,5 @@
 # [1340. 跳跃游戏 V](https://leetcode.cn/problems/jump-game-v)
 
-[English Version](/solution/1300-1399/1340.Jump%20Game%20V/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>arr</code> 和一个整数&nbsp;<code>d</code> 。每一步你可以从下标&nbsp;<code>i</code>&nbsp;跳到：</p>
@@ -16,8 +14,6 @@
 <p>你可以选择数组的任意下标开始跳跃。请你返回你 <strong>最多</strong>&nbsp;可以访问多少个下标。</p>
 
 <p>请注意，任何时刻你都不能跳到数组的外面。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,8 +51,6 @@
 <pre><strong>输入：</strong>arr = [66], d = 1
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

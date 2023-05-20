@@ -1,7 +1,5 @@
 # [2533. 好二进制字符串的数量](https://leetcode.cn/problems/number-of-good-binary-strings)
 
-[English Version](/solution/2500-2599/2533.Number%20of%20Good%20Binary%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p><span style="">给你四个整数 </span><code>minLenght</code>、<code>maxLength</code>、<code>oneGroup</code><span style=""> 和 </span><code>zeroGroup</code><span style=""> 。</span></p>
@@ -26,8 +24,6 @@
 
 <p><strong>注意：</strong><code>0</code> 可以被认为是所有数字的倍数。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -44,8 +40,6 @@
 <strong>解释：</strong>在本示例中有 1 个好二进制字符串: "1111" 。
 可以证明只有 1 个好字符串满足所有的条件。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

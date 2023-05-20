@@ -1,7 +1,5 @@
 # [1628. 设计带解析函数的表达式树](https://leetcode.cn/problems/design-an-expression-tree-with-evaluate-function)
 
-[English Version](/solution/1600-1699/1628.Design%20an%20Expression%20Tree%20With%20Evaluate%20Function/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个算术表达式的后缀表示法的标记（token）&nbsp;<code>postfix</code>&nbsp;，构造并返回该表达式对应的二叉表达式树。</p>
@@ -15,8 +13,6 @@
 <p>我们保证任何子树对应值的绝对值不超过&nbsp;<code>10<sup>9</sup></code>&nbsp;，且所有操作都是有效的（即没有除以零的操作）</p>
 
 <p><b>进阶：</b>&nbsp;你可以将表达式树设计得更模块化吗？例如，你的设计能够不修改现有的&nbsp;<code>evaluate</code>&nbsp;的实现就能支持更多的操作符吗？</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出:</strong> -16
 <strong>解释:</strong> 此表达式可解析为上述二叉树，其对应表达式为 4*(5-<code>(2+7)) = 4*(-4) = -16.</code>
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

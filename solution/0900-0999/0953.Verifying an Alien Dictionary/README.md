@@ -1,7 +1,5 @@
 # [953. 验证外星语词典](https://leetcode.cn/problems/verifying-an-alien-dictionary)
 
-[English Version](/solution/0900-0999/0953.Verifying%20an%20Alien%20Dictionary/README_EN.md)
-
 ## 题目描述
 
 <p>某种外星语也使用英文小写字母，但可能顺序 <code>order</code> 不同。字母表的顺序（<code>order</code>）是一些小写字母的排列。</p>
@@ -78,36 +76,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define min(a, b) (((a) < (b)) ? (a) : (b))
-
-bool isAlienSorted(char **words, int wordsSize, char *order) {
-    int map[26] = {0};
-    for (int i = 0; i < 26; i++) {
-        map[order[i] - 'a'] = i;
-    }
-    for (int i = 1; i < wordsSize; i++) {
-        char *s1 = words[i - 1];
-        char *s2 = words[i];
-        int n = strlen(s1);
-        int m = strlen(s2);
-        int len = min(n, m);
-        int isEqual = 1;
-        for (int j = 0; j < len; j++) {
-            if (map[s1[j] - 'a'] > map[s2[j] - 'a']) {
-                return 0;
-            }
-            if (map[s1[j] - 'a'] < map[s2[j] - 'a']) {
-                isEqual = 0;
-                break;
-            }
-        }
-        if (isEqual && n > m) {
-            return 0;
-        }
-    }
-    return 1;
-}
-```
+**

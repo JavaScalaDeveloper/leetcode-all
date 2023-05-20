@@ -1,7 +1,5 @@
 # [1660. 纠正二叉树](https://leetcode.cn/problems/correct-a-binary-tree)
 
-[English Version](/solution/1600-1699/1660.Correct%20a%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>你有一棵二叉树，这棵二叉树有个小问题，其中<strong>有且只有一个</strong>无效节点，它的右子节点错误地指向了与其在<strong>同一层</strong>且在其<strong>右侧</strong>的一个其他节点。</p>

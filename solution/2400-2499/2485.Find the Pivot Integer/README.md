@@ -1,7 +1,5 @@
 # [2485. 找出中枢整数](https://leetcode.cn/problems/find-the-pivot-integer)
 
-[English Version](/solution/2400-2499/2485.Find%20the%20Pivot%20Integer/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数 <code>n</code> ，找出满足下述条件的<strong> 中枢整数</strong> <code>x</code> ：</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>返回中枢整数<em> </em><code>x</code> 。如果不存在中枢整数，则返回 <code>-1</code> 。题目保证对于给定的输入，至多存在一个中枢整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>输入：</strong>n = 4
 <strong>输出：</strong>-1
 <strong>解释：</strong>可以证明不存在满足题目要求的整数。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

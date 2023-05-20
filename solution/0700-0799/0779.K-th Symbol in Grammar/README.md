@@ -1,7 +1,5 @@
 # [779. 第 K 个语法符号](https://leetcode.cn/problems/k-th-symbol-in-grammar)
 
-[English Version](/solution/0700-0799/0779.K-th%20Symbol%20in%20Grammar/README_EN.md)
-
 ## 题目描述
 
 <p>我们构建了一个包含 <code>n</code> 行(&nbsp;<strong>索引从 1&nbsp; 开始&nbsp;</strong>)的表。首先在第一行我们写上一个 <code>0</code>。接下来的每一行，将前一行中的<code>0</code>替换为<code>01</code>，<code>1</code>替换为<code>10</code>。</p>
@@ -40,8 +38,6 @@
 第一行: 0
 第二行: 0<u>1</u>
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

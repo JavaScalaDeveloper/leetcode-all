@@ -1,7 +1,5 @@
 # [1917. Leetcodify 好友推荐](https://leetcode.cn/problems/leetcodify-friends-recommendations)
 
-[English Version](/solution/1900-1999/1917.Leetcodify%20Friends%20Recommendations/README_EN.md)
-
 ## 题目描述
 
 <p>表： <code>Listens</code></p>
@@ -17,8 +15,6 @@
 表中的每一行表示用户 user_id 在 day 这一天收听的歌曲 song_id。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表： <code>Friendship</code></p>
 
 <pre>+---------------+---------+
@@ -32,8 +28,6 @@
 注意，user1_id &lt; user2_id。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写出 SQL 语句，为 Leetcodify 用户推荐好友。我们将符合下列条件的用户 <code>x</code> 推荐给用户 <code>y</code> ：</p>
 
 <ul>
@@ -46,8 +40,6 @@
 <p>按<strong>任意顺序</strong>返回结果表。</p>
 
 <p>查询格式如下示例所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

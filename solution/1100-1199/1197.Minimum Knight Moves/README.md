@@ -1,7 +1,5 @@
 # [1197. 进击的骑士](https://leetcode.cn/problems/minimum-knight-moves)
 
-[English Version](/solution/1100-1199/1197.Minimum%20Knight%20Moves/README_EN.md)
-
 ## 题目描述
 
 <p>一个坐标可以从 <code>-infinity</code>&nbsp;延伸到&nbsp;<code>+infinity</code>&nbsp;的 <strong>无限大的</strong>&nbsp;棋盘上，你的 <strong>骑士&nbsp;</strong>驻扎在坐标为&nbsp;<code>[0, 0]</code>&nbsp;的方格里。</p>
@@ -13,8 +11,6 @@
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1100-1199/1197.Minimum%20Knight%20Moves/images/knight.png" style="width: 250px; height: 250px;" /></p>
 
 <p>返回 <em>骑士前去征服坐标为&nbsp;<code>[x, y]</code>&nbsp;的部落所需的最小移动次数</em> 。本题确保答案是一定存在的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出：</strong>4
 <strong>解释：</strong>[0, 0] → [2, 1] → [4, 2] → [3, 4] → [5, 5]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

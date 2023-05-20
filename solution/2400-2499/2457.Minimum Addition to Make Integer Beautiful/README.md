@@ -1,7 +1,5 @@
 # [2457. 美丽整数的最小增量](https://leetcode.cn/problems/minimum-addition-to-make-integer-beautiful)
 
-[English Version](/solution/2400-2499/2457.Minimum%20Addition%20to%20Make%20Integer%20Beautiful/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个正整数 <code>n</code> 和 <code>target</code> 。</p>
@@ -9,8 +7,6 @@
 <p>如果某个整数每一位上的数字相加小于或等于 <code>target</code> ，则认为这个整数是一个 <strong>美丽整数</strong> 。</p>
 
 <p>找出并返回满足 <code>n + x</code> 是 <strong>美丽整数</strong> 的最小非负整数 <code>x</code> 。生成的输入保证总可以使 <code>n</code> 变成一个美丽整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>最初，n 是 1 ，且其每一位数字的和是 1 ，已经小于等于 target 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

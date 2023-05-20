@@ -1,7 +1,5 @@
 # [852. 山脉数组的峰顶索引](https://leetcode.cn/problems/peak-index-in-a-mountain-array)
 
-[English Version](/solution/0800-0899/0852.Peak%20Index%20in%20a%20Mountain%20Array/README_EN.md)
-
 ## 题目描述
 
 符合下列属性的数组 <code>arr</code> 称为 <strong>山脉数组</strong> ：
@@ -19,8 +17,6 @@
 <p>给你由整数组成的山脉数组 <code>arr</code> ，返回满足 <code>arr[0] &lt; arr[1] &lt; ... arr[i - 1] &lt; arr[i] &gt; arr[i + 1] &gt; ... &gt; arr[arr.length - 1]</code> 的下标 <code>i</code> 。</p>
 
 <p>你必须设计并实现时间复杂度为 <code>O(log(n))</code> 的解决方案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输入：</strong>arr = [0,10,5,2]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

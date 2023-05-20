@@ -1,12 +1,8 @@
 # [101. 对称二叉树](https://leetcode.cn/problems/symmetric-tree)
 
-[English Version](/solution/0100-0199/0101.Symmetric%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二叉树的根节点 <code>root</code> ， 检查它是否轴对称。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0101.Symmetric%20Tree/images/symtree1.jpg" style="width: 354px; height: 291px;" />
@@ -22,16 +18,12 @@
 <strong>输出：</strong>false
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li>树中节点数目在范围 <code>[1, 1000]</code> 内</li>
 	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你可以运用递归和迭代两种方法解决这个问题吗？</p>
 

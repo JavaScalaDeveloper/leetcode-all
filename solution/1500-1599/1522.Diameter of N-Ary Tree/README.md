@@ -1,7 +1,5 @@
 # [1522. N 叉树的直径](https://leetcode.cn/problems/diameter-of-n-ary-tree)
 
-[English Version](/solution/1500-1599/1522.Diameter%20of%20N-Ary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一棵 N 叉树的根节点&nbsp;<code>root</code>&nbsp;，计算这棵树的直径长度。</p>
@@ -9,8 +7,6 @@
 <p>N 叉树的直径指的是树中任意两个节点间路径中<strong> 最长 </strong>路径的长度。这条路径可能经过根节点，也可能不经过根节点。</p>
 
 <p><em>（N 叉树的输入序列以层序遍历的形式给出，每组子节点用 null 分隔）</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输入:</strong> root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
 <strong>输出:</strong> 7
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

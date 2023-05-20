@@ -1,7 +1,5 @@
 # [158. 用 Read4 读取 N 个字符 II](https://leetcode.cn/problems/read-n-characters-given-read4-ii-call-multiple-times)
 
-[English Version](/solution/0100-0199/0158.Read%20N%20Characters%20Given%20read4%20II%20-%20Call%20Multiple%20Times/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个文件<meta charset="UTF-8" />&nbsp;<code>file</code>&nbsp;，并且该文件只能通过给定的&nbsp;<code>read4</code>&nbsp;方法来读取，请实现一个方法使其能够使&nbsp;<code>read</code> 读取 <code>n</code> 个字符。<strong>注意：你的</strong>&nbsp;<strong><code>read</code> 方法可能会被调用多次。</strong></p>
@@ -32,8 +30,6 @@ read4(buf4); // read4 返回 4。现在 buf4 = "abcd"，fp 指向 'e'
 read4(buf4); // read4 返回 1。现在 buf4 = "e"，fp 指向文件末尾
 read4(buf4); // read4 返回 0。现在 buf4 = ""，fp 指向文件末尾</code></pre>
 
-<p>&nbsp;</p>
-
 <p><strong>read 方法：</strong></p>
 
 <p>通过使用 <code>read4</code> 方法，实现&nbsp;<code>read</code> 方法。该方法可以从文件中读取 <code>n</code> 个字符并将其存储到缓存数组&nbsp;<code>buf</code> 中。您&nbsp;<strong>不能&nbsp;</strong>直接操作&nbsp;<code>file</code> 。</p>
@@ -58,8 +54,6 @@ read4(buf4); // read4 返回 0。现在 buf4 = ""，fp 指向文件末尾</code>
 	<li>你可以假定目标缓存数组&nbsp;<code>buf</code> 保证有足够的空间存下 n 个字符。&nbsp;</li>
 	<li>保证在一个给定测试用例中，<code>read</code> 函数使用的是同一个 <code>buf</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -86,8 +80,6 @@ Solution sol;
 sol.read (buf, 4); // 调用 read 方法后，buf 应该包含 “abc”。我们从文件中总共读取了 3 个字符，所以返回 3。
 sol.read (buf, 1); // 我们已经到达文件的末尾，不能读取更多的字符。所以返回 0。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

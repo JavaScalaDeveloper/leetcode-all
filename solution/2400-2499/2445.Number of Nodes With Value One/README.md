@@ -1,7 +1,5 @@
 # [2445. 值为 1 的节点数](https://leetcode.cn/problems/number-of-nodes-with-value-one)
 
-[English Version](/solution/2400-2499/2445.Number%20of%20Nodes%20With%20Value%20One/README_EN.md)
-
 ## 题目描述
 
 <p>有一个&nbsp;<strong>无向&nbsp;</strong>树，有 <code>n</code> 个节点，节点标记为从 <code>1</code> 到 <code>n</code>&nbsp;，还有&nbsp;<code>n - 1</code> 条边。给定整数 <code>n</code>。标记为 <code>v</code> 的节点的父节点是标记为&nbsp;<code>floor (v / 2)</code>&nbsp;的节点。树的根节点是标记为 <code>1</code> 的节点。</p>
@@ -21,8 +19,6 @@
 	<li><code>floor(x)</code>&nbsp;相当于将 <code>x</code> 舍入到最接近的整数。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong class="example">示例 1:</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2445.Number%20of%20Nodes%20With%20Value%20One/images/ex1.jpg" style="width: 600px; height: 297px;" />
 <pre>
@@ -40,8 +36,6 @@
 <strong>解释:</strong> 上图显示了执行查询后的树结构及其状态。蓝色节点表示值 0，红色节点表示值 1。
 在处理查询之后，有一个红色节点 (值为 1 的节点): 2。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

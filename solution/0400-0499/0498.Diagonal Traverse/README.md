@@ -1,12 +1,8 @@
 # [498. 对角线遍历](https://leetcode.cn/problems/diagonal-traverse)
 
-[English Version](/solution/0400-0499/0498.Diagonal%20Traverse/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的矩阵 <code>mat</code> ，请以对角线遍历的顺序，用一个数组返回这个矩阵中的所有元素。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0400-0499/0498.Diagonal%20Traverse/images/diag1-grid.jpg" style="width: 334px; height: 334px;" />
@@ -21,8 +17,6 @@
 <strong>输入：</strong>mat = [[1,2],[3,4]]
 <strong>输出：</strong>[1,2,3,4]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1105. 填充书架](https://leetcode.cn/problems/filling-bookcase-shelves)
 
-[English Version](/solution/1100-1199/1105.Filling%20Bookcase%20Shelves/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个数组 <code>books</code> ，其中&nbsp;<code>books[i] = [thickness<sub>i</sub>, height<sub>i</sub>]</code>&nbsp;表示第 <code>i</code> 本书的厚度和高度。你也会得到一个整数 <code>shelfWidth</code> 。</p>
@@ -19,8 +17,6 @@
 <p>每一层所摆放的书的最大高度就是这一层书架的层高，书架整体的高度为各层高之和。</p>
 
 <p>以这种方式布置书架，返回书架整体可能的最小高度。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>输入:</strong> books = [[1,3],[2,4],[3,2]], shelfWidth = 6
 <strong>输出:</strong> 4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

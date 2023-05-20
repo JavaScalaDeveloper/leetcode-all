@@ -1,7 +1,5 @@
 # [2331. 计算布尔二叉树的值](https://leetcode.cn/problems/evaluate-boolean-binary-tree)
 
-[English Version](/solution/2300-2399/2331.Evaluate%20Boolean%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵 <strong>完整二叉树</strong>&nbsp;的根，这棵树有以下特征：</p>
@@ -24,8 +22,6 @@
 
 <p><strong>叶子节点</strong>&nbsp;是没有孩子的节点。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2331.Evaluate%20Boolean%20Binary%20Tree/images/example1drawio1.png" style="width: 700px; height: 252px;"></p>
@@ -43,8 +39,6 @@ OR 运算节点的值为 True OR False = True 。
 <b>输出：</b>false
 <b>解释：</b>根节点是叶子节点，且值为 false，所以我们返回 false 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -135,24 +129,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-bool evaluateTree(struct TreeNode *root) {
-    if (!root->left) {
-        return root->val == 1;
-    }
-    if (root->val == 2) {
-        return evaluateTree(root->left) || evaluateTree(root->right);
-    }
-    return evaluateTree(root->left) && evaluateTree(root->right);
-}
-```
+**

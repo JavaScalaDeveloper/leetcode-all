@@ -1,7 +1,5 @@
 # [2104. 子数组范围和](https://leetcode.cn/problems/sum-of-subarray-ranges)
 
-[English Version](/solution/2100-2199/2104.Sum%20of%20Subarray%20Ranges/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 。<code>nums</code> 中，子数组的 <strong>范围</strong> 是子数组中最大元素和最小元素的差值。</p>
@@ -9,8 +7,6 @@
 <p>返回 <code>nums</code> 中 <strong>所有</strong> 子数组范围的 <strong>和</strong> <em>。</em></p>
 
 <p>子数组是数组中一个连续 <strong>非空</strong> 的元素序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,16 +45,12 @@
 <strong>解释：</strong>nums 中所有子数组范围的和是 59
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
 	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你可以设计一种时间复杂度为 <code>O(n)</code> 的解决方案吗？</p>
 

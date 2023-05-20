@@ -1,7 +1,5 @@
 # [2450. 应用操作后不同二进制字符串的数量](https://leetcode.cn/problems/number-of-distinct-binary-strings-after-applying-operations)
 
-[English Version](/solution/2400-2499/2450.Number%20of%20Distinct%20Binary%20Strings%20After%20Applying%20Operations/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个&nbsp;<strong>二进制&nbsp;</strong>字符串 <code>s</code> 和一个正整数 <code>k</code>。</p>
@@ -22,8 +20,6 @@
 	<p data-group="1-1">子字符串是字符串的连续部分。</p>
 	</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -47,8 +43,6 @@
 - 对整个字符串应用一个操作将得到 s = "01001"。
 可以证明，我们不能获得任何其他字符串，所以答案是 2。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

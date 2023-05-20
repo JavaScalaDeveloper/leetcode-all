@@ -1,7 +1,5 @@
 # [1117. H2O 生成](https://leetcode.cn/problems/building-h2o)
 
-[English Version](/solution/1100-1199/1117.Building%20H2O/README_EN.md)
-
 ## 题目描述
 
 <p>现在有两种线程，氧 <code>oxygen</code> 和氢 <code>hydrogen</code>，你的目标是组织这两种线程来产生水分子。</p>
@@ -23,8 +21,6 @@
 
 <p>书写满足这些限制条件的氢、氧线程同步代码。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1:</strong></p>
 
 <pre>
@@ -40,8 +36,6 @@
 <strong>输出: </strong>"HHOHHO"
 <strong>解释:</strong> "HOHHHO", "OHHHHO", "HHOHOH", "HOHHOH", "OHHHOH", "HHOOHH", "HOHOHH" 和 "OHHOHH" 依然都是有效解。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,12 +1,8 @@
 # [1154. 一年中的第几天](https://leetcode.cn/problems/day-of-the-year)
 
-[English Version](/solution/1100-1199/1154.Day%20of%20the%20Year/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>date</code> ，按 <code>YYYY-MM-DD</code> 格式表示一个 <a href="https://baike.baidu.com/item/公元/17855" target="_blank">现行公元纪年法</a> 日期。返回该日期是当年的第几天。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,8 +17,6 @@
 <strong>输入：</strong>date = "2019-02-10"
 <strong>输出：</strong>41
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

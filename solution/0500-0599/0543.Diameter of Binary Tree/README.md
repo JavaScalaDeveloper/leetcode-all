@@ -1,12 +1,8 @@
 # [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree)
 
-[English Version](/solution/0500-0599/0543.Diameter%20of%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过也可能不穿过根结点。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 :</strong><br>
 给定二叉树</p>
@@ -19,8 +15,6 @@
 </pre>
 
 <p>返回&nbsp;<strong>3</strong>, 它的长度是路径 [4,2,1,3] 或者&nbsp;[5,2,1,3]。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>注意：</strong>两结点之间的路径长度是以它们之间边的数目表示。</p>
 
@@ -73,33 +67,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-
-int dfs(struct TreeNode *root, int *res) {
-    if (!root) {
-        return 0;
-    }
-    int left = dfs(root->left, res);
-    int right = dfs(root->right, res);
-    *res = max(*res, left + right);
-    return max(left, right) + 1;
-}
-
-int diameterOfBinaryTree(struct TreeNode *root) {
-    int res = 0;
-    dfs(root, &res);
-    return res;
-}
-```
+**

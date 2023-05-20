@@ -1,14 +1,10 @@
 # [2652. 倍数求和](https://leetcode.cn/problems/sum-multiples)
 
-[English Version](/solution/2600-2699/2652.Sum%20Multiples/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数 <code>n</code> ，请你计算在 <code>[1，n]</code> 范围内能被 <code>3</code>、<code>5</code>、<code>7</code> 整除的所有整数之和。</p>
 
 <p>返回一个整数，用于表示给定范围内所有满足约束条件的数字之和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输出：</strong>30
 <strong>解释：</strong>在 <code>[1, 9]</code> 范围内能被 3、<code>5、</code><code>7 整除的所有整数分别是</code><code> 3、5、6、7、9</code> 。数字之和为 <code>30</code> 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

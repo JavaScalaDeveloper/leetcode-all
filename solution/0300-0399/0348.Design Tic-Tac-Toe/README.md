@@ -1,7 +1,5 @@
 # [348. 设计井字棋](https://leetcode.cn/problems/design-tic-tac-toe)
 
-[English Version](/solution/0300-0399/0348.Design%20Tic-Tac-Toe/README_EN.md)
-
 ## 题目描述
 
 <p>请在 n &times;&nbsp;n 的棋盘上，实现一个判定井字棋（Tic-Tac-Toe）胜负的神器，判断每一次玩家落子后，是否有胜出的玩家。</p>
@@ -57,8 +55,6 @@ toe.move(2, 1, 1); -&gt; 函数返回 1 (此时，玩家 1 赢得了该场比赛
 |O|O| |    // 玩家 1 在 (2, 1) 落子。
 |X|X|X|
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶:</strong><br>
 您有没有可能将每一步的&nbsp;<code>move()</code>&nbsp;操作优化到比&nbsp;O(<em>n</em><sup>2</sup>) 更快吗?</p>

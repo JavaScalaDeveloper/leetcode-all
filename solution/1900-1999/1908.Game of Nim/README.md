@@ -1,7 +1,5 @@
 # [1908. Nim 游戏 II](https://leetcode.cn/problems/game-of-nim)
 
-[English Version](/solution/1900-1999/1908.Game%20of%20Nim/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 和&nbsp;Bob 交替进行一个游戏，<strong>由 Alice 先手</strong>。</p>
@@ -11,8 +9,6 @@
 <p>给定一个整数数组&nbsp;<code>piles</code> ，<code>piles[i]</code> 为 第&nbsp;<code>i</code>&nbsp;堆石头的数量，如果 Alice 能获胜返回&nbsp;<code>true</code><em>&nbsp;</em>，反之返回&nbsp;<code>false</code><em>&nbsp;。</em></p>
 
 <p>Alice 和 Bob 都会采取<strong> 最优策略 </strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 - 第四回合，Bob 移除了第 2 堆中 1 块石头。 piles = [0,0,0]。
 - 第三回合，Alice 没有任何石头可以移除。Bob 获胜。</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -56,8 +50,6 @@
 	<li><code>1 &lt;= n &lt;= 7</code></li>
 	<li><code>1 &lt;= piles[i] &lt;= 7</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你能想出一个&nbsp;<strong>线性时间&nbsp;</strong>的解决方案吗？虽然这一答案可能超出了面试所需的范围，但了解它可能会很有趣。</p>
 

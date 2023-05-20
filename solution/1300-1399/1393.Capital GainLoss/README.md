@@ -1,7 +1,5 @@
 # [1393. 股票的资本损益](https://leetcode.cn/problems/capital-gainloss)
 
-[English Version](/solution/1300-1399/1393.Capital%20GainLoss/README_EN.md)
-
 ## 题目描述
 
 <p><code>Stocks</code>&nbsp;表：</p>
@@ -19,8 +17,6 @@ operation 列使用的是一种枚举类型，包括：(&#39;Sell&#39;,&#39;Buy&
 此表的每一行代表了名为 stock_name 的某支股票在 operation_day 这一天的操作价格。
 保证股票的每次&#39;Sell&#39;操作前，都有相应的&#39;Buy&#39;操作。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>编写一个SQL查询来报告每支股票的资本损益。</p>
 

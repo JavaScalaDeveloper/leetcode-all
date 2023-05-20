@@ -1,7 +1,5 @@
 # [2129. 将标题首字母大写](https://leetcode.cn/problems/capitalize-the-title)
 
-[English Version](/solution/2100-2199/2129.Capitalize%20the%20Title/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>title</code>&nbsp;，它由单个空格连接一个或多个单词组成，每个单词都只包含英文字母。请你按以下规则将每个单词的首字母 <strong>大写</strong>&nbsp;：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>请你返回 <strong>大写后</strong>&nbsp;的<em>&nbsp;</em><code>title</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -40,8 +36,6 @@
 单词 "i" 长度为 1 ，所以它保留小写。
 其他单词长度都至少为 3 ，所以其他单词首字母大写，剩余字母小写。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

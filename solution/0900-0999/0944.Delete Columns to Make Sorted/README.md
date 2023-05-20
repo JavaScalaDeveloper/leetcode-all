@@ -1,7 +1,5 @@
 # [944. 删列造序](https://leetcode.cn/problems/delete-columns-to-make-sorted)
 
-[English Version](/solution/0900-0999/0944.Delete%20Columns%20to%20Make%20Sorted/README_EN.md)
-
 ## 题目描述
 
 <p>给你由 <code>n</code> 个小写字母字符串组成的数组 <code>strs</code>，其中每个字符串长度相等。</p>

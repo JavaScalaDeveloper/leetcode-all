@@ -1,7 +1,5 @@
 # [1410. HTML 实体解析器](https://leetcode.cn/problems/html-entity-parser)
 
-[English Version](/solution/1400-1499/1410.HTML%20Entity%20Parser/README_EN.md)
-
 ## 题目描述
 
 <p>「HTML&nbsp;实体解析器」 是一种特殊的解析器，它将 HTML 代码作为输入，并用字符本身替换掉所有这些特殊的字符实体。</p>
@@ -18,8 +16,6 @@
 </ul>
 
 <p>给你输入字符串&nbsp;<code>text</code>&nbsp;，请你实现一个 HTML&nbsp;实体解析器，返回解析器解析后的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -56,8 +52,6 @@
 <strong>输入：</strong>text = &quot;leetcode.com&amp;frasl;problemset&amp;frasl;all&quot;
 <strong>输出：</strong>&quot;leetcode.com/problemset/all&quot;
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

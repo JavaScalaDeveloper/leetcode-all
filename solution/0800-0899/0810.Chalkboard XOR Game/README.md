@@ -1,7 +1,5 @@
 # [810. 黑板异或游戏](https://leetcode.cn/problems/chalkboard-xor-game)
 
-[English Version](/solution/0800-0899/0810.Chalkboard%20XOR%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>黑板上写着一个非负整数数组 <code>nums[i]</code> 。</p>
@@ -11,8 +9,6 @@
 <p>并且，轮到某个玩家时，如果当前黑板上所有数字按位异或运算结果等于 <code>0</code> ，这个玩家获胜。</p>
 
 <p>假设两个玩家每步都使用最优解，当且仅当 Alice 获胜时返回 <code>true</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@ Alice 有两个选择: 擦掉数字 1 或 2。
 <strong>输入:</strong> nums = [1,2,3]
 <strong>输出:</strong> true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

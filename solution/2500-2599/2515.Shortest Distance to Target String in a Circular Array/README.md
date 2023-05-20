@@ -1,7 +1,5 @@
 # [2515. 到目标字符串的最短距离](https://leetcode.cn/problems/shortest-distance-to-target-string-in-a-circular-array)
 
-[English Version](/solution/2500-2599/2515.Shortest%20Distance%20to%20Target%20String%20in%20a%20Circular%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的 <strong>环形</strong> 字符串数组 <code>words</code> 和一个字符串 <code>target</code> 。<strong>环形数组</strong> 意味着数组首尾相连。</p>
@@ -13,8 +11,6 @@
 <p>从 <code>startIndex</code> 开始，你一次可以用 <code>1</code> 步移动到下一个或者前一个单词。</p>
 
 <p>返回到达目标字符串 <code>target</code> 所需的最短距离。如果 <code>words</code> 中不存在字符串 <code>target</code> ，返回 <code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>因为 words 中不存在字符串 "ate" ，所以返回 -1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -82,16 +76,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int closetTarget(char **words, int wordsSize, char *target, int startIndex) {
-    for (int i = 0; i <= wordsSize >> 1; i++) {
-        if (strcmp(words[(startIndex - i + wordsSize) % wordsSize], target) == 0 ||
-            strcmp(words[(startIndex + i) % wordsSize], target) == 0) {
-            return i;
-        }
-    }
-    return -1;
-}
-```
+**

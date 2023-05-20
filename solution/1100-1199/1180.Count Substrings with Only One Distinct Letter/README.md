@@ -1,7 +1,5 @@
 # [1180. 统计只含单一字母的子串](https://leetcode.cn/problems/count-substrings-with-only-one-distinct-letter)
 
-[English Version](/solution/1100-1199/1180.Count%20Substrings%20with%20Only%20One%20Distinct%20Letter/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code>，返回 <em>只含 <strong>单一字母</strong> 的子串个数</em> 。</p>
@@ -25,8 +23,6 @@
 <strong>输入： </strong>s = "aaaaaaaaaa"
 <strong>输出： </strong>55
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

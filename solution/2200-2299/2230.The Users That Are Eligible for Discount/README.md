@@ -1,7 +1,5 @@
 # [2230. 查找可享受优惠的用户](https://leetcode.cn/problems/the-users-that-are-eligible-for-discount)
 
-[English Version](/solution/2200-2299/2230.The%20Users%20That%20Are%20Eligible%20for%20Discount/README_EN.md)
-
 ## 题目描述
 
 <p>Table: <code>Purchases</code></p>

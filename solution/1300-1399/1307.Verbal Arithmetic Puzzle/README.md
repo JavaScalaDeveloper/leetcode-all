@@ -1,7 +1,5 @@
 # [1307. 口算难题](https://leetcode.cn/problems/verbal-arithmetic-puzzle)
 
-[English Version](/solution/1300-1399/1307.Verbal%20Arithmetic%20Puzzle/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个方程，左边用&nbsp;<code>words</code>&nbsp;表示，右边用&nbsp;<code>result</code> 表示。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>如果方程可解，返回&nbsp;<code>True</code>，否则返回&nbsp;<code>False</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <pre><strong>输入：</strong>words = [&quot;LEET&quot;,&quot;CODE&quot;], result = &quot;POINT&quot;
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

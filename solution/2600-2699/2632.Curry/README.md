@@ -1,7 +1,5 @@
 # [2632. 柯里化](https://leetcode.cn/problems/curry)
 
-[English Version](/solution/2600-2699/2632.Curry/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个函数，它接收一个其他的函数，并返回该函数的&nbsp;<strong>柯里化&nbsp;</strong>后的形式。</p>
@@ -9,8 +7,6 @@
 <p><strong>柯里化&nbsp;</strong>函数的定义是接受与原函数相同数量或更少数量的参数，并返回另一个 <strong>柯里化</strong> 后的函数或与原函数相同的值。</p>
 
 <p>实际上，当你调用原函数，如 <code>sum(1,2,3)</code>&nbsp;时，它将调用 <strong>柯里化</strong> 函数的某个形式，如 <code>csum(1)(2)(3)</code>， <code>csum(1)(2,3)</code>， <code>csum(1,2)(3)</code>，或 <code>csum(1,2,3)</code> 。所有调用 <strong>柯里化</strong> 函数的方法都应该返回与原始函数相同的值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -59,8 +55,6 @@ inputs = [[]]
 柯里化一个没有接收参数，没做有效操作的函数。
 curriedLife() === 42
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

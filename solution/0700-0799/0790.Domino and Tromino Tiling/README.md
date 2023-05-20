@@ -1,7 +1,5 @@
 # [790. 多米诺和托米诺平铺](https://leetcode.cn/problems/domino-and-tromino-tiling)
 
-[English Version](/solution/0700-0799/0790.Domino%20and%20Tromino%20Tiling/README_EN.md)
-
 ## 题目描述
 
 <p>有两种形状的瓷砖：一种是&nbsp;<code>2 x 1</code> 的多米诺形，另一种是形如&nbsp;"L" 的托米诺形。两种形状都可以旋转。</p>
@@ -11,8 +9,6 @@
 <p>给定整数 n ，返回可以平铺&nbsp;<code>2 x n</code> 的面板的方法的数量。<strong>返回对</strong>&nbsp;<code>10<sup>9</sup>&nbsp;+ 7</code>&nbsp;<strong>取模&nbsp;</strong>的值。</p>
 
 <p>平铺指的是每个正方形都必须有瓷砖覆盖。两个平铺不同，当且仅当面板上有四个方向上的相邻单元中的两个，使得恰好有一个平铺有一个瓷砖占据两个正方形。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输入:</strong> n = 1
 <strong>输出:</strong> 1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

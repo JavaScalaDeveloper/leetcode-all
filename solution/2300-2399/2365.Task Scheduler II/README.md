@@ -1,7 +1,5 @@
 # [2365. 任务调度器 II](https://leetcode.cn/problems/task-scheduler-ii)
 
-[English Version](/solution/2300-2399/2365.Task%20Scheduler%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的正整数数组&nbsp;<code>tasks</code>&nbsp;，表示需要 <strong>按顺序</strong>&nbsp;完成的任务，其中&nbsp;<code>tasks[i]</code>&nbsp;表示第&nbsp;<code>i</code>&nbsp;件任务的 <strong>类型</strong>&nbsp;。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>请你返回完成所有任务所需的 <strong>最少</strong>&nbsp;天数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,8 +47,6 @@
 第 6 天：完成任务 3 。
 可以证明无法少于 6 天完成所有任务。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

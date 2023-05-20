@@ -1,7 +1,5 @@
 # [569. 员工薪水中位数](https://leetcode.cn/problems/median-employee-salary)
 
-[English Version](/solution/0500-0599/0569.Median%20Employee%20Salary/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Employee</code></p>
@@ -18,15 +16,11 @@ Id是该表的主键列。
 该表的每一行表示公司和一名员工的工资。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个SQL查询，找出每个公司的工资中位数。</p>
 
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -65,8 +59,6 @@ Employee 表:
 | 14 | C       | 2645   |
 +----+---------+--------+
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶:&nbsp;</strong>你能在不使用任何内置函数或窗口函数的情况下解决它吗?</p>
 

@@ -1,7 +1,5 @@
 # [1555. 银行账户概要](https://leetcode.cn/problems/bank-account-summary)
 
-[English Version](/solution/1500-1599/1555.Bank%20Account%20Summary/README_EN.md)
-
 ## 题目描述
 
 <p>用户表：&nbsp;<code>Users</code></p>
@@ -16,8 +14,6 @@
 +--------------+---------+
 user_id 是这个表的主键。
 表中的每一列包含每一个用户当前的额度信息。</pre>
-
-<p>&nbsp;</p>
 
 <p>交易表：<code>Transactions</code></p>
 
@@ -36,8 +32,6 @@ trans_id 是这个表的主键。
 ID 为 paid_by 的用户给 ID 为 paid_to 的用户转账。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>力扣银行 (LCB) 帮助程序员们完成虚拟支付。我们的银行在表&nbsp;<em>Transaction</em>&nbsp;中记录每条交易信息，我们要查询每个用户的当前余额，并检查他们是否已透支（当前额度小于 0）。</p>
 
 <p>写一条 SQL 语句，查询：</p>
@@ -52,8 +46,6 @@ ID 为 paid_by 的用户给 ID 为 paid_to 的用户转账。
 <p>以<strong>任意</strong>顺序返回结果表。</p>
 
 <p>查询格式见如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

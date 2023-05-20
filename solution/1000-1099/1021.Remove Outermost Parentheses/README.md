@@ -1,7 +1,5 @@
 # [1021. 删除最外层的括号](https://leetcode.cn/problems/remove-outermost-parentheses)
 
-[English Version](/solution/1000-1099/1021.Remove%20Outermost%20Parentheses/README_EN.md)
-
 ## 题目描述
 
 <p>有效括号字符串为空 <code>""</code>、<code>"(" + A + ")"</code> 或 <code>A + B</code> ，其中 <code>A</code> 和 <code>B</code> 都是有效的括号字符串，<code>+</code> 代表字符串的连接。</p>

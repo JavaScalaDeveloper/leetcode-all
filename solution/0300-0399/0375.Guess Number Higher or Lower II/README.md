@@ -1,7 +1,5 @@
 # [375. 猜数字大小 II](https://leetcode.cn/problems/guess-number-higher-or-lower-ii)
 
-[English Version](/solution/0300-0399/0375.Guess%20Number%20Higher%20or%20Lower%20II/README_EN.md)
-
 ## 题目描述
 
 <p>我们正在玩一个猜数游戏，游戏规则如下：</p>
@@ -15,8 +13,6 @@
 </ol>
 
 <p>给你一个特定的数字 <code>n</code> ，返回能够 <strong>确保你获胜</strong> 的最小现金数，<strong>不管我选择那个数字</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0375.Guess%20Number%20Higher%20or%20Lower%20II/images/graph.png" style="width: 505px; height: 388px;" />
@@ -61,8 +57,6 @@
 &nbsp;   - 如果我的数字更大，那么这个数字一定是 2 。你猜测数字为 2 并赢得游戏，总费用为 $1 。
 最糟糕的情况下，你需要支付 $1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

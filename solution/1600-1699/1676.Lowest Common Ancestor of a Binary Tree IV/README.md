@@ -1,7 +1,5 @@
 # [1676. 二叉树的最近公共祖先 IV](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-iv)
 
-[English Version](/solution/1600-1699/1676.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20IV/README_EN.md)
-
 ## 题目描述
 
 <p>给定一棵二叉树的根节点 <code>root</code> 和 <code>TreeNode</code> 类对象的数组（列表） <code>nodes</code>，返回<em> </em><code>nodes</code> 中所有节点的最近公共祖先（LCA）。数组（列表）中所有节点都存在于该二叉树中，且二叉树中所有节点的值都是互不相同的。</p>

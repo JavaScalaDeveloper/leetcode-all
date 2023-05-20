@@ -1,7 +1,5 @@
 # [2598. 执行操作后的最大 MEX](https://leetcode.cn/problems/smallest-missing-non-negative-integer-after-operations)
 
-[English Version](/solution/2500-2599/2598.Smallest%20Missing%20Non-negative%20Integer%20After%20Operations/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个整数 <code>value</code> 。</p>
@@ -19,8 +17,6 @@
 </ul>
 
 <p>返回在执行上述操作 <strong>任意次</strong> 后，<code>nums</code><em> </em>的最大 MEX <em>。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@ nums 的 MEX 是 4 。可以证明 4 是可以取到的最大 MEX 。
 - nums[2] 减去 value 一次，nums = [1,-10,<em><strong>0</strong></em>,13,6,8]
 nums 的 MEX 是 2 。可以证明 2 是可以取到的最大 MEX 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

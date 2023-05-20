@@ -1,14 +1,10 @@
 # [345. 反转字符串中的元音字母](https://leetcode.cn/problems/reverse-vowels-of-a-string)
 
-[English Version](/solution/0300-0399/0345.Reverse%20Vowels%20of%20a%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> ，仅反转字符串中的所有元音字母，并返回结果字符串。</p>
 
 <p>元音字母包括 <code>'a'</code>、<code>'e'</code>、<code>'i'</code>、<code>'o'</code>、<code>'u'</code>，且可能以大小写两种形式出现不止一次。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,8 +18,6 @@
 <pre>
 <strong>输入：</strong>s = "leetcode"
 <strong>输出：</strong>"leotcede"</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [716. 最大栈](https://leetcode.cn/problems/max-stack)
 
-[English Version](/solution/0700-0799/0716.Max%20Stack/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个最大栈数据结构，既支持栈操作，又支持查找栈中最大元素。</p>

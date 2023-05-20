@@ -1,14 +1,10 @@
 # [1290. 二进制链表转整数](https://leetcode.cn/problems/convert-binary-number-in-a-linked-list-to-integer)
 
-[English Version](/solution/1200-1299/1290.Convert%20Binary%20Number%20in%20a%20Linked%20List%20to%20Integer/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个单链表的引用结点&nbsp;<code>head</code>。链表中每个结点的值不是 0 就是 1。已知此链表是一个整数数字的二进制表示形式。</p>
 
 <p>请你返回该链表所表示数字的 <strong>十进制值</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <pre><strong>输入：</strong>head = [0,0]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -87,24 +81,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
- */
-
-int getDecimalValue(struct ListNode *head) {
-    int ans = 0;
-    struct ListNode *cur = head;
-    while (cur) {
-        ans = (ans << 1) | cur->val;
-        cur = cur->next;
-    }
-    return ans;
-}
-```
+**

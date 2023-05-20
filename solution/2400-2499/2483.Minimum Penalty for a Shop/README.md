@@ -1,7 +1,5 @@
 # [2483. 商店的最少代价](https://leetcode.cn/problems/minimum-penalty-for-a-shop)
 
-[English Version](/solution/2400-2499/2483.Minimum%20Penalty%20for%20a%20Shop/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个顾客访问商店的日志，用一个下标从 <strong>0</strong>&nbsp;开始且只包含字符&nbsp;<code>'N'</code> 和&nbsp;<code>'Y'</code>&nbsp;的字符串&nbsp;<code>customers</code>&nbsp;表示：</p>
@@ -21,8 +19,6 @@
 <p>请你返回在确保代价 <strong>最小</strong>&nbsp;的前提下，商店的&nbsp;<strong>最早</strong>&nbsp;关门时间。</p>
 
 <p>注意，商店在第 <code>j</code>&nbsp;小时关门表示在第 <code>j</code> 小时以及之后商店处于关门状态。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@
 <b>输出：</b>4
 <b>解释：</b>最优关门时间是 4 ，因为每一小时均有顾客到达。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

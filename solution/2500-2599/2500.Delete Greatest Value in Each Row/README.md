@@ -1,7 +1,5 @@
 # [2500. 删除每行中的最大值](https://leetcode.cn/problems/delete-greatest-value-in-each-row)
 
-[English Version](/solution/2500-2599/2500.Delete%20Greatest%20Value%20in%20Each%20Row/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>m x n</code> 大小的矩阵 <code>grid</code> ，由若干正整数组成。</p>
@@ -16,8 +14,6 @@
 <p><strong>注意</strong> 每执行一次操作，矩阵中列的数据就会减 1 。</p>
 
 <p>返回执行上述操作后的答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 - 在第一步操作中，从第一行删除 10 。在答案上加 10 。
 最终，答案 = 10 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

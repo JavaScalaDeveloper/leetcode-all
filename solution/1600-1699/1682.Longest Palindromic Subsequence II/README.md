@@ -1,7 +1,5 @@
 # [1682. 最长回文子序列 II](https://leetcode.cn/problems/longest-palindromic-subsequence-ii)
 
-[English Version](/solution/1600-1699/1682.Longest%20Palindromic%20Subsequence%20II/README_EN.md)
-
 ## 题目描述
 
 <p>字符串&nbsp;<code>s</code>&nbsp;的某个子序列符合下列条件时，称为“<strong>好的回文子序列</strong>”：</p>
@@ -16,8 +14,6 @@
 <p>例如，若&nbsp;<code>s = "abcabcabb"</code>，则&nbsp;<code>"abba"</code>&nbsp;可称为“好的回文子序列”，而&nbsp;<code>"bcb"</code>&nbsp;（长度不是偶数）和&nbsp;<code>"bbbb"</code>&nbsp;（含有相等的连续字符）不能称为“好的回文子序列”。</p>
 
 <p>给定一个字符串&nbsp;<code>s</code>， 返回<em>&nbsp;</em><code>s</code>&nbsp;的<strong>最长“好的回文子序列”</strong>的<strong>长度</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输出:</strong> 4
 <strong>解释:</strong> s 的最长“好的回文子序列”是 "dccd"。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

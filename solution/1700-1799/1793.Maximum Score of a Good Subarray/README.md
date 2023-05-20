@@ -1,7 +1,5 @@
 # [1793. 好子数组的最大分数](https://leetcode.cn/problems/maximum-score-of-a-good-subarray)
 
-[English Version](/solution/1700-1799/1793.Maximum%20Score%20of%20a%20Good%20Subarray/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> <strong>（下标从 0 开始）</strong>和一个整数 <code>k</code> 。</p>

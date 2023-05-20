@@ -1,7 +1,5 @@
 # [388. 文件的最长绝对路径](https://leetcode.cn/problems/longest-absolute-file-path)
 
-[English Version](/solution/0300-0399/0388.Longest%20Absolute%20File%20Path/README_EN.md)
-
 ## 题目描述
 
 <p>假设有一个同时存储文件和目录的文件系统。下图展示了文件系统的一个示例：</p>
@@ -27,8 +25,6 @@ dir
 <p>文件系统中的每个文件和文件夹都有一个唯一的 <strong>绝对路径</strong> ，即必须打开才能到达文件/目录所在位置的目录顺序，所有路径用 <code>'/'</code> 连接。上面例子中，指向 <code>file2.ext</code> 的 <strong>绝对路径</strong> 是 <code>"dir/subdir2/subsubdir2/file2.ext"</code> 。每个目录名由字母、数字和/或空格组成，每个文件名遵循 <code>name.extension</code> 的格式，其中<meta charset="UTF-8" />&nbsp;<code>name</code>&nbsp;和<meta charset="UTF-8" />&nbsp;<code>extension</code>由字母、数字和/或空格组成。</p>
 
 <p>给定一个以上述格式表示文件系统的字符串 <code>input</code> ，返回文件系统中&nbsp;<em>指向&nbsp;<strong>文件</strong>&nbsp;的 <strong>最长绝对路径</strong> 的长度</em>&nbsp;。 如果系统中没有文件，返回&nbsp;<code>0</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0388.Longest%20Absolute%20File%20Path/images/dir1.jpg" style="height: 101px; width: 200px;" />
@@ -63,8 +59,6 @@ dir
 <strong>解释：</strong>根目录下有 3 个文件。
 因为根目录中任何东西的绝对路径只是名称本身，所以答案是 "longfile.txt" ，路径长度为 12
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

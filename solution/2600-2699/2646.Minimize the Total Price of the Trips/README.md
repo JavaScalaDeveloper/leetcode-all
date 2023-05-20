@@ -1,7 +1,5 @@
 # [2646. 最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips)
 
-[English Version](/solution/2600-2699/2646.Minimize%20the%20Total%20Price%20of%20the%20Trips/README_EN.md)
-
 ## 题目描述
 
 <p>现有一棵无向、无根的树，树中有 <code>n</code> 个节点，按从 <code>0</code> 到 <code>n - 1</code> 编号。给你一个整数 <code>n</code> 和一个长度为 <code>n - 1</code> 的二维整数数组 <code>edges</code> ，其中 <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 表示树中节点 <code>a<sub>i</sub></code> 和 <code>b<sub>i</sub></code> 之间存在一条边。</p>
@@ -15,8 +13,6 @@
 <p>在执行第一次旅行之前，你可以选择一些 <strong>非相邻节点</strong> 并将价格减半。</p>
 
 <p>返回执行所有旅行的最小价格总和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2646.Minimize%20the%20Total%20Price%20of%20the%20Trips/images/diagram2.png" style="width: 541px; height: 181px;">
@@ -38,8 +34,6 @@
 第 1 次旅行，选择路径 [0] 。路径的价格总和为 1 。 
 所有旅行的价格总和为 1 。可以证明，1 是可以实现的最小答案。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

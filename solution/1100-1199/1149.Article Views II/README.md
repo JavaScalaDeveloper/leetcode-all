@@ -1,7 +1,5 @@
 # [1149. 文章浏览 II](https://leetcode.cn/problems/article-views-ii)
 
-[English Version](/solution/1100-1199/1149.Article%20Views%20II/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Views</code></p>
@@ -20,15 +18,11 @@
 请注意，同一人的 author_id 和 viewer_id 是相同的。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一条 SQL 查询来找出在同一天阅读至少两篇文章的人。</p>
 
 <p>结果按照 <code>id</code> 升序排序。</p>
 
 <p>查询结果的格式如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

@@ -1,7 +1,5 @@
 # [880. 索引处的解码字符串](https://leetcode.cn/problems/decoded-string-at-index)
 
-[English Version](/solution/0800-0899/0880.Decoded%20String%20at%20Index/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个编码字符串 <code>S</code>。请你找出<em> </em><strong>解码字符串</strong> 并将其写入磁带。解码时，从编码字符串中<strong> 每次读取一个字符 </strong>，并采取以下步骤：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>现在，对于给定的编码字符串 <code>S</code> 和索引 <code>K</code>，查找并返回解码字符串中的第&nbsp;<code>K</code>&nbsp;个字母。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>解释：</strong>
 解码后的字符串为 &quot;a&quot; 重复 8301530446056247680 次。第 1 个字母是 &quot;a&quot;。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

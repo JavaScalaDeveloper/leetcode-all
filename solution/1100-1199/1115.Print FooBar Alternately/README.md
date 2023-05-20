@@ -1,7 +1,5 @@
 # [1115. 交替打印 FooBar](https://leetcode.cn/problems/print-foobar-alternately)
 
-[English Version](/solution/1100-1199/1115.Print%20FooBar%20Alternately/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个类：</p>
@@ -31,8 +29,6 @@ class FooBar {
 
 <p>请设计修改程序，以确保 <code>"foobar"</code> 被输出 <code>n</code> 次。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -48,8 +44,6 @@ class FooBar {
 <strong>输出：</strong>"foobarfoobar"
 <strong>解释：</strong>"foobar" 将被输出两次。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

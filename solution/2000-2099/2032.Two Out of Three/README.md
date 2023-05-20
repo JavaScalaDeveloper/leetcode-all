@@ -1,12 +1,8 @@
 # [2032. 至少在两个数组中出现的值](https://leetcode.cn/problems/two-out-of-three)
 
-[English Version](/solution/2000-2099/2032.Two%20Out%20of%20Three/README_EN.md)
-
 ## 题目描述
 
 给你三个整数数组 <code>nums1</code>、<code>nums2</code> 和 <code>nums3</code> ，请你构造并返回一个 <strong>元素各不相同的</strong> 数组，且由 <strong>至少</strong> 在 <strong>两个</strong> 数组中出现的所有值组成<em>。</em>数组中的元素可以按 <strong>任意</strong> 顺序排列。
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>输出：</strong>[]
 <strong>解释：</strong>不存在至少在两个数组中出现的值。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

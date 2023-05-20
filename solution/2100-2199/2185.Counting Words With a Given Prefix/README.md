@@ -1,7 +1,5 @@
 # [2185. 统计包含给定前缀的字符串](https://leetcode.cn/problems/counting-words-with-a-given-prefix)
 
-[English Version](/solution/2100-2199/2185.Counting%20Words%20With%20a%20Given%20Prefix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>words</code> 和一个字符串 <code>pref</code> 。</p>
@@ -9,8 +7,6 @@
 <p>返回 <code>words</code><em> </em>中以 <code>pref</code> 作为 <strong>前缀</strong> 的字符串的数目。</p>
 
 <p>字符串 <code>s</code> 的 <strong>前缀</strong> 就是&nbsp; <code>s</code> 的任一前导连续字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>不存在以 "code" 作为前缀的字符串。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -121,17 +115,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int prefixCount(char **words, int wordsSize, char *pref) {
-    int ans = 0;
-    int n = strlen(pref);
-    for (int i = 0; i < wordsSize; i++) {
-        if (strncmp(words[i], pref, n) == 0) {
-            ans++;
-        }
-    }
-    return ans;
-}
-```
+**

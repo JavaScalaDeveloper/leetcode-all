@@ -1,7 +1,5 @@
 # [792. 匹配子序列的单词数](https://leetcode.cn/problems/number-of-matching-subsequences)
 
-[English Version](/solution/0700-0799/0792.Number%20of%20Matching%20Subsequences/README_EN.md)
-
 ## 题目描述
 
 <p>给定字符串 <code>s</code>&nbsp;和字符串数组&nbsp;<code>words</code>, 返回&nbsp;&nbsp;<em><code>words[i]</code>&nbsp;中是<code>s</code>的子序列的单词个数</em>&nbsp;。</p>
@@ -11,8 +9,6 @@
 <ul>
 	<li>例如， <code>“ace”</code> 是 <code>“abcde”</code> 的子序列。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -28,8 +24,6 @@
 <strong>输入: </strong>s = "dsahjpjauf", words = ["ahjpjau","ja","ahbwzgqnuk","tnmlanowax"]
 <strong>输出:</strong> 2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

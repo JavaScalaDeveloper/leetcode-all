@@ -1,7 +1,5 @@
 # [695. 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island)
 
-[English Version](/solution/0600-0699/0695.Max%20Area%20of%20Island/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的二进制矩阵 <code>grid</code> 。</p>
@@ -11,8 +9,6 @@
 <p>岛屿的面积是岛上值为 <code>1</code> 的单元格的数目。</p>
 
 <p>计算并返回 <code>grid</code> 中最大的岛屿面积。如果没有岛屿，则返回面积为 <code>0</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0695.Max%20Area%20of%20Island/images/maxarea1-grid.jpg" style="width: 500px; height: 310px;" />
@@ -28,8 +24,6 @@
 <strong>输入：</strong>grid = [[0,0,0,0,0,0,0,0]]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

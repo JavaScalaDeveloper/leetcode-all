@@ -1,7 +1,5 @@
 # [2557. 从一个范围内选择最多整数 II](https://leetcode.cn/problems/maximum-number-of-integers-to-choose-from-a-range-ii)
 
-[English Version](/solution/2500-2599/2557.Maximum%20Number%20of%20Integers%20to%20Choose%20From%20a%20Range%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>banned</code> 和两个整数 <code>n</code> 和 <code>maxSum</code>&nbsp;。你需要按照以下规则选择一些整数：</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>请你返回按照上述规则 <strong>最多</strong> 可以选择的整数数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>解释：</strong>你可以选择整数 1, 2&nbsp;和 7 。
 它们都在范围 [1, 7] 中，且都没出现在 banned 中，所选整数的和为 10 ，没有超过 maxSum 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

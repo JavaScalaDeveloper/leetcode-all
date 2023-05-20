@@ -1,7 +1,5 @@
 # [763. 划分字母区间](https://leetcode.cn/problems/partition-labels)
 
-[English Version](/solution/0700-0799/0763.Partition%20Labels/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> 。我们要把这个字符串划分为尽可能多的片段，同一字母最多出现在一个片段中。</p>
@@ -10,7 +8,6 @@
 
 <p>返回一个表示每个字符串片段的长度的列表。</p>
 
-<p>&nbsp;</p>
 <strong class="example">示例 1：</strong>
 
 <pre>
@@ -27,8 +24,6 @@
 <strong>输入：</strong>s = "eccbbbbdec"
 <strong>输出：</strong>[10]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

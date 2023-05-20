@@ -1,7 +1,5 @@
 # [520. 检测大写字母](https://leetcode.cn/problems/detect-capital)
 
-[English Version](/solution/0500-0599/0520.Detect%20Capital/README_EN.md)
-
 ## 题目描述
 
 <p>我们定义，在以下情况时，单词的大写用法是正确的：</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>给你一个字符串 <code>word</code> 。如果大写用法正确，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输入：</strong>word = "FlaG"
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

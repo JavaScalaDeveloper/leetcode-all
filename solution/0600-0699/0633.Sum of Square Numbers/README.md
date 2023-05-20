@@ -1,12 +1,8 @@
 # [633. 平方数之和](https://leetcode.cn/problems/sum-of-square-numbers)
 
-[English Version](/solution/0600-0699/0633.Sum%20of%20Square%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个非负整数&nbsp;<code>c</code>&nbsp;，你要判断是否存在两个整数 <code>a</code> 和 <code>b</code>，使得&nbsp;<code>a<sup>2</sup> + b<sup>2</sup> = c</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,8 +18,6 @@
 <strong>输入：</strong>c = 3
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

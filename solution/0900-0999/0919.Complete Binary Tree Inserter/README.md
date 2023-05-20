@@ -1,7 +1,5 @@
 # [919. 完全二叉树插入器](https://leetcode.cn/problems/complete-binary-tree-inserter)
 
-[English Version](/solution/0900-0999/0919.Complete%20Binary%20Tree%20Inserter/README_EN.md)
-
 ## 题目描述
 
 <p><strong>完全二叉树</strong> 是每一层（除最后一层外）都是完全填充（即，节点数达到最大）的，并且所有的节点都尽可能地集中在左侧。</p>
@@ -15,8 +13,6 @@
 	<li><code>CBTInserter.insert(int v)</code>&nbsp; 向树中插入一个值为&nbsp;<code>Node.val == val</code>的新节点&nbsp;<code>TreeNode</code>。使树保持完全二叉树的状态，<strong>并返回插入节点</strong>&nbsp;<code>TreeNode</code>&nbsp;<strong>的父节点的值</strong>；</li>
 	<li><code>CBTInserter.get_root()</code> 将返回树的头节点。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -37,8 +33,6 @@ CBTInserter cBTInserter = new CBTInserter([1, 2]);
 cBTInserter.insert(3);  // 返回 1
 cBTInserter.insert(4);  // 返回 2
 cBTInserter.get_root(); // 返回 [1, 2, 3, 4]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

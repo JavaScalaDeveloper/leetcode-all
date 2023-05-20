@@ -1,7 +1,5 @@
 # [2199. 找到每篇文章的主题](https://leetcode.cn/problems/finding-the-topic-of-each-post)
 
-[English Version](/solution/2100-2199/2199.Finding%20the%20Topic%20of%20Each%20Post/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Keywords</code></p>
@@ -18,8 +16,6 @@
 可以用多个词来表达同一个主题，也可以用一个词来表达多个主题。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Posts</code></p>
 
 <pre>
@@ -33,8 +29,6 @@ post_id 是该表的主键。
 该表的每一行都包含一个帖子的 ID 及其内容。
 内容仅由英文字母和空格组成。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>Leetcode 从其社交媒体网站上收集了一些帖子，并对每个帖子的主题感兴趣。每个主题可以由一个或多个关键字表示。如果某个主题的关键字存在于一个帖子的内容中 (不区分大小写)，那么这个帖子就有这个主题。</p>
 

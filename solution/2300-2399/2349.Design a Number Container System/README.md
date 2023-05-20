@@ -1,7 +1,5 @@
 # [2349. 设计数字容器系统](https://leetcode.cn/problems/design-a-number-container-system)
 
-[English Version](/solution/2300-2399/2349.Design%20a%20Number%20Container%20System/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个数字容器系统，可以实现以下功能：</p>
@@ -18,8 +16,6 @@
 	<li><code>void change(int index, int number)</code> 在下标&nbsp;<code>index</code>&nbsp;处填入&nbsp;<code>number</code>&nbsp;。如果该下标&nbsp;<code>index</code>&nbsp;处已经有数字了，那么用 <code>number</code>&nbsp;替换该数字。</li>
 	<li><code>int find(int number)</code>&nbsp;返回给定数字&nbsp;<code>number</code>&nbsp;在系统中的最小下标。如果系统中没有&nbsp;<code>number</code>&nbsp;，那么返回&nbsp;<code>-1</code>&nbsp;。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -41,8 +37,6 @@ nc.find(10); // 数字 10 所在的下标为 1 ，2 ，3 和 5 。因为最小�
 nc.change(1, 20); // 容器中下标为 1 处填入数字 20 。注意，下标 1 处之前为 10 ，现在被替换为 20 。
 nc.find(10); // 数字 10 所在下标为 2 ，3 和 5 。最小下标为 2 ，所以返回 2 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

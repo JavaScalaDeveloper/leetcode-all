@@ -1,14 +1,10 @@
 # [780. 到达终点](https://leetcode.cn/problems/reaching-points)
 
-[English Version](/solution/0700-0799/0780.Reaching%20Points/README_EN.md)
-
 ## 题目描述
 
 <p>给定四个整数&nbsp;<code>sx</code>&nbsp;,&nbsp;<code>sy</code>&nbsp;，<code>tx</code>&nbsp;和&nbsp;<code>ty</code>，如果通过一系列的<strong>转换</strong>可以从起点&nbsp;<code>(sx, sy)</code>&nbsp;到达终点&nbsp;<code>(tx, ty)</code>，则返回 <code>true</code>，否则返回&nbsp;<code>false</code>。</p>
 
 <p>从点&nbsp;<code>(x, y)</code>&nbsp;可以<strong>转换</strong>到&nbsp;<code>(x, x+y)</code>&nbsp; 或者&nbsp;<code>(x+y, y)</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输入:</strong> sx = 1, sy = 1, tx = 1, ty = 1 
 <strong>输出:</strong> true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

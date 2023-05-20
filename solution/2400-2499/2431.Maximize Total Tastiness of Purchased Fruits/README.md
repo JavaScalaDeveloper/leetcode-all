@@ -1,7 +1,5 @@
 # [2431. 最大限度地提高购买水果的口味](https://leetcode.cn/problems/maximize-total-tastiness-of-purchased-fruits)
 
-[English Version](/solution/2400-2499/2431.Maximize%20Total%20Tastiness%20of%20Purchased%20Fruits/README_EN.md)
-
 ## 题目描述
 
 <p>你有两个非负整数数组 <code>price</code> 和 <code>tastiness</code>，两个数组的长度都是 <code>n</code>。同时给你两个非负整数 <code>maxAmount</code> 和 <code>maxCoupons</code>。</p>
@@ -28,8 +26,6 @@
 	<li>一些水果你最多只能用一次折价券。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1:</strong></p>
 
 <pre>
@@ -53,8 +49,6 @@
 - 用优惠券买第三个水果，总价= 7 + 3，总口味= 8 + 20。
 可以证明，28 是所能得到的最大总口味。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

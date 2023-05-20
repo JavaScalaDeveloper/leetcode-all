@@ -1,14 +1,10 @@
 # [692. 前 K 个高频单词](https://leetcode.cn/problems/top-k-frequent-words)
 
-[English Version](/solution/0600-0699/0692.Top%20K%20Frequent%20Words/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个单词列表&nbsp;<code>words</code>&nbsp;和一个整数 <code>k</code> ，返回前&nbsp;<code>k</code><em>&nbsp;</em>个出现次数最多的单词。</p>
 
 <p>返回的答案应该按单词出现频率由高到低排序。如果不同的单词有相同出现频率， <strong>按字典顺序</strong> 排序。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
     出现次数依次为 4, 3, 2 和 1 次。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>注意：</strong></p>
 
 <ul>
@@ -38,8 +32,6 @@
 	<li><code>words[i]</code>&nbsp;由小写英文字母组成。</li>
 	<li><code>k</code> 的取值范围是&nbsp;<code>[1, <strong>不同</strong> words[i] 的数量]</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>尝试以&nbsp;<code>O(n log k)</code> 时间复杂度和&nbsp;<code>O(n)</code> 空间复杂度解决。</p>
 

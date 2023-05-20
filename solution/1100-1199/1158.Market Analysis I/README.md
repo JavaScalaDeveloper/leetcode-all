@@ -1,7 +1,5 @@
 # [1158. 市场分析 I](https://leetcode.cn/problems/market-analysis-i)
 
-[English Version](/solution/1100-1199/1158.Market%20Analysis%20I/README_EN.md)
-
 ## 题目描述
 
 <p>Table: <code>Users</code></p>
@@ -17,8 +15,6 @@
 此表主键是 user_id。
 表中描述了购物网站的用户信息，用户可以在此网站上进行商品买卖。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>Table: <code>Orders</code></p>
 
@@ -36,8 +32,6 @@
 外键是 item_id 和（buyer_id，seller_id）。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>Table: <code>Items</code></p>
 
 <pre>
@@ -50,15 +44,11 @@
 此表主键是 item_id。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>请写出一条SQL语句以查询每个用户的注册日期和在 <strong><code>2019</code> </strong>年作为买家的订单总数。</p>
 
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

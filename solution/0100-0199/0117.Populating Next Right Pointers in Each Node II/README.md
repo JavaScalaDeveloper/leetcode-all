@@ -1,7 +1,5 @@
 # [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii)
 
-[English Version](/solution/0100-0199/0117.Populating%20Next%20Right%20Pointers%20in%20Each%20Node%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树：</p>
@@ -18,8 +16,6 @@ struct Node {
 
 <p>初始状态下，所有&nbsp;next 指针都被设置为 <code>NULL</code> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0117.Populating%20Next%20Right%20Pointers%20in%20Each%20Node%20II/images/117_sample.png" style="width: 500px; height: 171px;" />
 <pre>
@@ -33,8 +29,6 @@ struct Node {
 <strong>输入：</strong>root = []
 <strong>输出：</strong>[]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

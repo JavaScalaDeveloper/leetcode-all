@@ -1,7 +1,5 @@
 # [2582. 递枕头](https://leetcode.cn/problems/pass-the-pillow)
 
-[English Version](/solution/2500-2599/2582.Pass%20the%20Pillow/README_EN.md)
-
 ## 题目描述
 
 <p><code>n</code> 个人站成一排，按从 <code>1</code> 到 <code>n</code> 编号。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>给你两个正整数 <code>n</code> 和 <code>time</code> ，返回 <code>time</code> 秒后拿着枕头的人的编号。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>解释：</strong>队伍中枕头的传递情况为：1 -&gt; 2 -&gt; 3 。
 2 秒后，枕头传递到第 3 个人手中。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

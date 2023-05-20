@@ -1,14 +1,10 @@
 # [49. 字母异位词分组](https://leetcode.cn/problems/group-anagrams)
 
-[English Version](/solution/0000-0099/0049.Group%20Anagrams/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组，请你将 <strong>字母异位词</strong> 组合在一起。可以按任意顺序返回结果列表。</p>
 
 <p><strong>字母异位词</strong> 是由重新排列源单词的字母得到的一个新单词，所有源单词中的字母通常恰好只用一次。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -28,8 +24,6 @@
 <pre>
 <strong>输入:</strong> strs = <code>["a"]</code>
 <strong>输出: </strong>[["a"]]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

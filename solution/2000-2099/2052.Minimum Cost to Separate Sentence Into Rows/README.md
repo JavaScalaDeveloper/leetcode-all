@@ -1,7 +1,5 @@
 # [2052. 将句子分隔成行的最低成本](https://leetcode.cn/problems/minimum-cost-to-separate-sentence-into-rows)
 
-[English Version](/solution/2000-2099/2052.Minimum%20Cost%20to%20Separate%20Sentence%20Into%20Rows/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个由空格分隔的单词组成的字符串&nbsp;<code>sentence</code>&nbsp;和一个整数 <code>k</code>。你的任务是将&nbsp;<code>sentence</code> 分成<strong>多行</strong>，每行中的字符数<strong>最多</strong>为 <code>k</code>。你可以假设&nbsp;<code>sentence</code> 不以空格开头或结尾，并且&nbsp;<code>sentence</code> 中的单词由单个空格分隔。</p>
@@ -23,8 +21,6 @@
 </ul>
 
 <p>返回<em>将</em><code>sentence</code><em>分隔成行的<strong>最低的</strong>可能总成本。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -55,8 +51,6 @@
 <strong>输出:</strong> 0
 <strong>解释:</strong>
 最后一行的成本不包括在总成本中，而sentence只有一行，所以返回0</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [175. 组合两个表](https://leetcode.cn/problems/combine-two-tables)
 
-[English Version](/solution/0100-0199/0175.Combine%20Two%20Tables/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Person</code></p>
@@ -17,8 +15,6 @@
 personId 是该表的主键列。
 该表包含一些人的 ID 和他们的姓和名的信息。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Address</code></p>
 
@@ -40,8 +36,6 @@ addressId 是该表的主键列。
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

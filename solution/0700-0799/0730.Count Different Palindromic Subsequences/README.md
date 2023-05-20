@@ -1,7 +1,5 @@
 # [730. 统计不同回文子序列](https://leetcode.cn/problems/count-different-palindromic-subsequences)
 
-[English Version](/solution/0700-0799/0730.Count%20Different%20Palindromic%20Subsequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> ，返回 <code>s</code>&nbsp;中不同的非空回文子序列个数 。由于答案可能很大，请返回对 <code>10<sup>9</sup> + 7</code> <strong>取余</strong> 的结果。</p>
@@ -11,8 +9,6 @@
 <p>如果一个序列与它反转后的序列一致，那么它是回文序列。</p>
 
 <p>如果存在某个 <code>i</code> , 满足&nbsp;<code>a<sub>i</sub>&nbsp;!= b<sub>i</sub></code><sub>&nbsp;</sub>，则两个序列&nbsp;<code>a<sub>1</sub>, a<sub>2</sub>, ...</code>&nbsp;和&nbsp;<code>b<sub>1</sub>, b<sub>2</sub>, ...</code>&nbsp;不同。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输出：</strong>104860361
 <strong>解释：</strong>共有 3104860382 个不同的非空回文子序列，104860361 是对 10<sup>9</sup> + 7 取余后的值。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

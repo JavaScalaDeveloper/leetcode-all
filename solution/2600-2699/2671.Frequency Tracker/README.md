@@ -1,7 +1,5 @@
 # [2671. 频率跟踪器](https://leetcode.cn/problems/frequency-tracker)
 
-[English Version](/solution/2600-2699/2671.Frequency%20Tracker/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计并实现一个能够对其中的值进行跟踪的数据结构，并支持对频率相关查询进行应答。</p>
@@ -14,8 +12,6 @@
 	<li><code>void deleteOne(int number)</code>：从数据结构中删除一个 <code>number</code> 。数据结构 <strong>可能不包含</strong> <code>number</code> ，在这种情况下不删除任何内容。</li>
 	<li><code>bool hasFrequency(int frequency)</code>: 如果数据结构中存在出现 <code>frequency</code> 次的数字，则返回 <code>true</code>，否则返回 <code>false</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -64,8 +60,6 @@ frequencyTracker.hasFrequency(2); // 返回 false ，因为数据结构为空
 frequencyTracker.add(3); // 数据结构现在包含 [3]
 frequencyTracker.hasFrequency(1); // 返回 true ，因为 3 出现 1 次
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

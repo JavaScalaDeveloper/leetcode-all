@@ -1,7 +1,5 @@
 # [1758. 生成交替二进制字符串的最少操作数](https://leetcode.cn/problems/minimum-changes-to-make-alternating-binary-string)
 
-[English Version](/solution/1700-1799/1758.Minimum%20Changes%20To%20Make%20Alternating%20Binary%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个仅由字符 <code>'0'</code> 和 <code>'1'</code> 组成的字符串 <code>s</code> 。一步操作中，你可以将任一 <code>'0'</code> 变成 <code>'1'</code> ，或者将 <code>'1'</code> 变成 <code>'0'</code> 。</p>
@@ -66,17 +64,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define min(a, b) (((a) < (b)) ? (a) : (b))
-
-int minOperations(char *s) {
-    int n = strlen(s);
-    int count = 0;
-    for (int i = 0; i < n; i++) {
-        count += s[i] != ('0' + (i & 1)) ? 0 : 1;
-    }
-    return min(count, n - count);
-}
-```
+**

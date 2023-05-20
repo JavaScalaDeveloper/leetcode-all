@@ -1,7 +1,5 @@
 # [2524. 子数组的最大频率分数](https://leetcode.cn/problems/maximum-frequency-score-of-a-subarray)
 
-[English Version](/solution/2500-2599/2524.Maximum%20Frequency%20Score%20of%20a%20Subarray/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组 <code>nums</code> 和一个 <strong>正</strong> 整数 <code>k</code> 。</p>
@@ -13,8 +11,6 @@
 <p>返回 <code>nums</code> 中长度为 <code>k</code> 的 <strong>子数组</strong> 的 <strong>最大&nbsp;</strong>频率得分。你需要返回取模后的最大值，而不是实际值。</p>
 
 <p><strong>子数组</strong>&nbsp;是一个数组的连续部分。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1 ：</strong></p>
 
@@ -31,8 +27,6 @@
 <b>输出：</b>1
 <b>解释：</b>所有长度为 4 的子数组的频率得分都等于 1。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

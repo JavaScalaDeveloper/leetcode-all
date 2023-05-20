@@ -1,7 +1,5 @@
 # [365. 水壶问题](https://leetcode.cn/problems/water-and-jug-problem)
 
-[English Version](/solution/0300-0399/0365.Water%20and%20Jug%20Problem/README_EN.md)
-
 ## 题目描述
 
 <p>有两个水壶，容量分别为&nbsp;<code>jug1Capacity</code>&nbsp;和 <code>jug2Capacity</code> 升。水的供应是无限的。确定是否有可能使用这两个壶准确得到&nbsp;<code>targetCapacity</code> 升。</p>
@@ -15,8 +13,6 @@
 	<li>清空任意一个水壶</li>
 	<li>从一个水壶向另外一个水壶倒水，直到装满或者倒空</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong>&nbsp;</p>
 
@@ -38,8 +34,6 @@
 <strong>输入:</strong> jug1Capacity = 1, jug2Capacity = 2, targetCapacity = 3
 <strong>输出:</strong> true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

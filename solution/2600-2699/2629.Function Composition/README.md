@@ -1,7 +1,5 @@
 # [2629. 复合函数](https://leetcode.cn/problems/function-composition)
 
-[English Version](/solution/2600-2699/2629.Function%20Composition/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个函数，它接收一个函数数组 <code>[f1, f2, f3，…]， fn]</code> ，并返回一个新的函数 <code>fn</code>&nbsp;，它是函数数组的 <strong>复合函数</strong> 。</p>
@@ -11,8 +9,6 @@
 <p>一个空函数列表的 <strong>复合函数</strong> 是 <strong>恒等函数</strong> <code>f(x) = x</code> 。</p>
 
 <p>你可以假设数组中的每个函数接受一个整型参数作为输入，并返回一个整型作为输出。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -46,8 +42,6 @@ Starting with x = 4.
 <b>输出：</b>42
 <strong>解释：</strong>
 空函数列表的复合函数就是恒等函数</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

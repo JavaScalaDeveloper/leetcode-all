@@ -1,7 +1,5 @@
 # [2338. 统计理想数组的数目](https://leetcode.cn/problems/count-the-number-of-ideal-arrays)
 
-[English Version](/solution/2300-2399/2338.Count%20the%20Number%20of%20Ideal%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数 <code>n</code> 和 <code>maxValue</code> ，用于描述一个 <strong>理想数组</strong> 。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>返回长度为 <code>n</code> 的 <strong>不同</strong> 理想数组的数目。由于答案可能很大，返回对 <code>10<sup>9</sup> + 7</code> 取余的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 - 以 3 开头的数组（1 个）：[3,3,3,3,3]
 共计 9 + 1 + 1 = 11 个不同理想数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

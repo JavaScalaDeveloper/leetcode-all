@@ -1,7 +1,5 @@
 # [1153. 字符串转化](https://leetcode.cn/problems/string-transforms-into-another-string)
 
-[English Version](/solution/1100-1199/1153.String%20Transforms%20Into%20Another%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给出两个长度相同的字符串&nbsp;<code>str1</code>&nbsp;和 <code>str2</code>。请你帮忙判断字符串 <code>str1</code> 能不能在 <strong>零次</strong>&nbsp;或 <strong>多次</strong>&nbsp;<em>转化</em>&nbsp;后变成字符串 <code>str2</code>。</p>
@@ -9,8 +7,6 @@
 <p>每一次转化时，你可以将 <code>str1</code> 中出现的&nbsp;<strong>所有</strong>&nbsp;相同字母变成其他&nbsp;<strong>任何</strong>&nbsp;小写英文字母。</p>
 
 <p>只有在字符串 <code>str1</code>&nbsp;能够通过上述方式顺利转化为字符串 <code>str2</code>&nbsp;时才能返回 <code>true</code>&nbsp;。​​</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>我们没有办法能够把 str1 转化为 str2。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2610. 转换二维数组](https://leetcode.cn/problems/convert-an-array-into-a-2d-array-with-conditions)
 
-[English Version](/solution/2600-2699/2610.Convert%20an%20Array%20Into%20a%202D%20Array%20With%20Conditions/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 。请你创建一个满足以下条件的二维数组：</p>
@@ -15,8 +13,6 @@
 <p>返回结果数组。如果存在多种答案，则返回其中任何一种。</p>
 
 <p>请注意，二维数组的每一行上可以存在不同数量的元素。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@ nums 中的所有元素都有用到，并且每一行都由不同的整数组成
 <strong>输出：</strong>[[4,3,2,1]]
 <strong>解释：</strong>nums 中的所有元素都不同，所以我们可以将其全部保存在二维数组中的第一行。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1861. 旋转盒子](https://leetcode.cn/problems/rotating-the-box)
 
-[English Version](/solution/1800-1899/1861.Rotating%20the%20Box/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>m x n</code> 的字符矩阵 <code>box</code> ，它表示一个箱子的侧视图。箱子的每一个格子可能为：</p>

@@ -1,7 +1,5 @@
 # [1451. 重新排列句子中的单词](https://leetcode.cn/problems/rearrange-words-in-a-sentence)
 
-[English Version](/solution/1400-1499/1451.Rearrange%20Words%20in%20a%20Sentence/README_EN.md)
-
 ## 题目描述
 
 <p>「句子」是一个用空格分隔单词的字符串。给你一个满足下述格式的句子 <code>text</code> :</p>
@@ -14,8 +12,6 @@
 <p>请你重新排列 <code>text</code> 中的单词，使所有单词按其长度的升序排列。如果两个单词的长度相同，则保留其在原句子中的相对顺序。</p>
 
 <p>请同样按上述格式返回新的句子。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <pre><strong>输入：</strong>text = &quot;To be or not to be&quot;
 <strong>输出：</strong>&quot;To be or to be not&quot;
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

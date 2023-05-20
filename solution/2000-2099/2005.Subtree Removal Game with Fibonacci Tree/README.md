@@ -1,7 +1,5 @@
 # [2005. 斐波那契树的移除子树游戏](https://leetcode.cn/problems/subtree-removal-game-with-fibonacci-tree)
 
-[English Version](/solution/2000-2099/2005.Subtree%20Removal%20Game%20with%20Fibonacci%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p><strong>斐波那契</strong>树是一种按这种规则函数&nbsp;<code>order(n)</code>&nbsp;创建的二叉树：</p>
@@ -17,8 +15,6 @@
 <p>给定一个整数&nbsp;<code>n</code>，假定两名玩家都按最优策略进行游戏，若 Alice 赢得这场游戏，返回&nbsp;<code>true</code>&nbsp;。若 Bob 赢得这场游戏，返回&nbsp;<code>false</code>&nbsp;。</p>
 
 <p>一棵二叉树的子树&nbsp;<code>tree</code> 是由&nbsp;<code>tree</code>&nbsp;中某个节点及其所有后代节点组成的树。树&nbsp;<code>tree</code>&nbsp;也可当作自身的子树。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong><br />
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2005.Subtree%20Removal%20Game%20with%20Fibonacci%20Tree/images/image-20210914173520-3.png" style="width: 200px; height: 184px;" /></p>
@@ -56,8 +52,6 @@ Alice 删除节点 1.
 Bob 只能删除根节点 2，所以 Bob 输了。
 返回 true，因为 Alice 赢了。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

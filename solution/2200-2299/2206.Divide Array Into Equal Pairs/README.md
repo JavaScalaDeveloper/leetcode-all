@@ -1,7 +1,5 @@
 # [2206. 将数组划分成相等数对](https://leetcode.cn/problems/divide-array-into-equal-pairs)
 
-[English Version](/solution/2200-2299/2206.Divide%20Array%20Into%20Equal%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>&nbsp;，它包含&nbsp;<code>2 * n</code>&nbsp;个整数。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>如果可以将 <code>nums</code>&nbsp;划分成 <code>n</code>&nbsp;个数对，请你返回 <code>true</code>&nbsp;，否则返回 <code>false</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@ nums 可以划分成 (2, 2) ，(3, 3) 和 (2, 2) ，满足所有要求。
 <b>解释：</b>
 无法将 nums 划分成 4 / 2 = 2 个数对且满足所有要求。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

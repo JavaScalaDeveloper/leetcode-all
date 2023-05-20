@@ -1,7 +1,5 @@
 # [2460. 对数组执行操作](https://leetcode.cn/problems/apply-operations-to-an-array)
 
-[English Version](/solution/2400-2499/2460.Apply%20Operations%20to%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的数组 <code>nums</code> ，数组大小为 <code>n</code> ，且由 <strong>非负</strong> 整数组成。</p>
@@ -21,8 +19,6 @@
 <p>返回结果数组。</p>
 
 <p><strong>注意</strong> 操作应当 <strong>依次有序</strong> 执行，而不是一次性全部执行。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 <strong>输出：</strong>[1,0]
 <strong>解释：</strong>无法执行任何操作，只需要将 0 移动到末尾。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

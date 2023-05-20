@@ -1,7 +1,5 @@
 # [373. 查找和最小的 K 对数字](https://leetcode.cn/problems/find-k-pairs-with-smallest-sums)
 
-[English Version](/solution/0300-0399/0373.Find%20K%20Pairs%20with%20Smallest%20Sums/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个以 <strong>升序排列</strong> 的整数数组 <code>nums1</code> 和<strong> </strong><code>nums2</code><strong>&nbsp;</strong>,&nbsp;以及一个整数 <code>k</code><strong>&nbsp;</strong>。</p>
@@ -9,8 +7,6 @@
 <p>定义一对值&nbsp;<code>(u,v)</code>，其中第一个元素来自&nbsp;<code>nums1</code>，第二个元素来自 <code>nums2</code><strong>&nbsp;</strong>。</p>
 
 <p>请找到和最小的 <code>k</code>&nbsp;个数对&nbsp;<code>(u<sub>1</sub>,v<sub>1</sub>)</code>, <code>&nbsp;(u<sub>2</sub>,v<sub>2</sub>)</code> &nbsp;... &nbsp;<code>(u<sub>k</sub>,v<sub>k</sub>)</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出:</strong> [1,3],[2,3]
 <strong>解释: </strong>也可能序列中所有的数对都被返回:[1,3],[2,3]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

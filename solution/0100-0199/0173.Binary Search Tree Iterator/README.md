@@ -1,7 +1,5 @@
 # [173. 二叉搜索树迭代器](https://leetcode.cn/problems/binary-search-tree-iterator)
 
-[English Version](/solution/0100-0199/0173.Binary%20Search%20Tree%20Iterator/README_EN.md)
-
 ## 题目描述
 
 实现一个二叉搜索树迭代器类<code>BSTIterator</code> ，表示一个按中序遍历二叉搜索树（BST）的迭代器：

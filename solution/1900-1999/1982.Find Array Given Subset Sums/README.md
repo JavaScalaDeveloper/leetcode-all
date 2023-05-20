@@ -1,7 +1,5 @@
 # [1982. 从子集的和还原数组](https://leetcode.cn/problems/find-array-given-subset-sums)
 
-[English Version](/solution/1900-1999/1982.Find%20Array%20Given%20Subset%20Sums/README_EN.md)
-
 ## 题目描述
 
 <p>存在一个未知数组需要你进行还原，给你一个整数 <code>n</code> 表示该数组的长度。另给你一个数组 <code>sums</code> ，由未知数组中全部 <code>2<sup>n</sup></code> 个 <strong>子集的和</strong> 组成（子集中的元素没有特定的顺序）。</p>
@@ -11,8 +9,6 @@
 <p>如果可以由数组 <code>arr</code> 删除部分元素（也可能不删除或全删除）得到数组 <code>sub</code> ，那么数组 <code>sub</code> 就是数组 <code>arr</code> 的一个<strong> 子集</strong> 。<code>sub</code> 的元素之和就是 <code>arr</code> 的一个 <strong>子集的和</strong> 。一个空数组的元素之和为 <code>0</code> 。</p>
 
 <p><strong>注意：</strong>生成的测试用例将保证至少存在一个正确答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <strong>输出：</strong>[0,-1,4,5]
 <strong>解释：</strong>[0,-1,4,5] 能够满足给出的子集的和。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

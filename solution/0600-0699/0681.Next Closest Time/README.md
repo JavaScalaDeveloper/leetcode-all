@@ -1,14 +1,10 @@
 # [681. 最近时刻](https://leetcode.cn/problems/next-closest-time)
 
-[English Version](/solution/0600-0699/0681.Next%20Closest%20Time/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个形如<meta charset="UTF-8" />&nbsp;<code>"HH:MM"</code> 表示的时刻<meta charset="UTF-8" />&nbsp;<code>time</code>&nbsp;，利用当前出现过的数字构造下一个距离当前时间最近的时刻。每个出现数字都可以被无限次使用。</p>
 
 <p>你可以认为给定的字符串一定是合法的。例如，<meta charset="UTF-8" />&nbsp;<code>"01:34"</code> 和 <meta charset="UTF-8" />&nbsp;<code>"12:09"</code> 是合法的，<code>“1:34”</code> 和 <code>“12:9”</code> 是不合法的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>解释:</strong> 利用数字 <strong>2, 3, 5, 9</strong> 构造出来的最近时刻是 <strong>22:22</strong>。 
 答案一定是第二天的某一时刻，所以选择可构造的最小时刻。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

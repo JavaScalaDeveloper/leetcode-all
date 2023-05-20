@@ -1,7 +1,5 @@
 # [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses)
 
-[English Version](/solution/0000-0099/0032.Longest%20Valid%20Parentheses/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个只包含 <code>'('</code> 和 <code>')'</code> 的字符串，找出最长有效（格式正确且连续）括号子串的长度。</p>

@@ -1,7 +1,5 @@
 # [1999. 最小的仅由两个数组成的倍数](https://leetcode.cn/problems/smallest-greater-multiple-made-of-two-digits)
 
-[English Version](/solution/1900-1999/1999.Smallest%20Greater%20Multiple%20Made%20of%20Two%20Digits/README_EN.md)
-
 ## 题目描述
 
 <p>给你三个整数, <code>k</code>, <code>digit1</code>和&nbsp;<code>digit2</code>, 你想要找到满足以下条件的 <strong>最小 </strong>整数：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>请你返回<strong> </strong><strong>最小的满足这两个条件的整数</strong>，如果不存在这样的整数，或者最小的满足这两个条件的整数不在32位整数范围（0~<code>2<sup>31</sup>-1</code>），就返回 <code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>解释：
 </strong>不存在仅由 0 组成的比 2 大且是 2 的倍数的整数，因此返回 -1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

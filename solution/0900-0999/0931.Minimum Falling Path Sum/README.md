@@ -1,14 +1,10 @@
 # [931. 下降路径最小和](https://leetcode.cn/problems/minimum-falling-path-sum)
 
-[English Version](/solution/0900-0999/0931.Minimum%20Falling%20Path%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>n x n</code> 的<strong> 方形 </strong>整数数组&nbsp;<code>matrix</code> ，请你找出并返回通过 <code>matrix</code> 的<strong>下降路径</strong><em> </em>的<strong> </strong><strong>最小和</strong> 。</p>
 
 <p><strong>下降路径</strong> 可以从第一行中的任何元素开始，并从每一行中选择一个元素。在下一行选择的元素和当前行所选元素最多相隔一列（即位于正下方或者沿对角线向左或者向右的第一个元素）。具体来说，位置 <code>(row, col)</code> 的下一个元素应当是 <code>(row + 1, col - 1)</code>、<code>(row + 1, col)</code> 或者 <code>(row + 1, col + 1)</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输出：</strong>-59
 <strong>解释：</strong>如图所示，为和最小的下降路径
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

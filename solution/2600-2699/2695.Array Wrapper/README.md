@@ -1,7 +1,5 @@
 # [2695. Array Wrapper](https://leetcode.cn/problems/array-wrapper)
 
-[English Version](/solution/2600-2699/2695.Array%20Wrapper/README_EN.md)
-
 ## 题目描述
 
 <p>Create a class&nbsp;<code>ArrayWrapper</code> that accepts&nbsp;an array of integers in it&#39;s constructor. This class should have two features:</p>
@@ -11,7 +9,6 @@
 	<li>When the&nbsp;<code>String()</code>&nbsp;function is called on the instance, it will return a comma separated string surrounded by brackets. For example, <code>[1,2,3]</code>.</li>
 </ul>
 
-<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
@@ -44,7 +41,6 @@ const obj2 = new ArrayWrapper([]);
 obj1 + obj2; // 0
 </pre>
 
-<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>

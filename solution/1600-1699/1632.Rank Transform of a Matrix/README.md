@@ -1,7 +1,5 @@
 # [1632. 矩阵转换后的秩](https://leetcode.cn/problems/rank-transform-of-a-matrix)
 
-[English Version](/solution/1600-1699/1632.Rank%20Transform%20of%20a%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>m x n</code> 的矩阵 <code>matrix</code> ，请你返回一个新的矩阵<em> </em><code>answer</code> ，其中<em> </em><code>answer[row][col]</code> 是 <code>matrix[row][col]</code> 的秩。</p>

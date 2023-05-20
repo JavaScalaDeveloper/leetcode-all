@@ -1,7 +1,5 @@
 # [320. 列举单词的全部缩写](https://leetcode.cn/problems/generalized-abbreviation)
 
-[English Version](/solution/0300-0399/0320.Generalized%20Abbreviation/README_EN.md)
-
 ## 题目描述
 
 <p>单词的 <strong>广义缩写词</strong> 可以通过下述步骤构造：先取任意数量的 <strong>不重叠、不相邻</strong> 的子字符串，再用它们各自的长度进行替换。</p>
@@ -25,8 +23,6 @@
 
 <p>给你一个字符串&nbsp;<code>word</code> ，返回&nbsp;<em>一个由</em>&nbsp;<code>word</code> 的<em>所有可能 <strong>广义缩写词</strong> 组成的列表</em>&nbsp;。按 <strong>任意顺序</strong> 返回答案。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -40,8 +36,6 @@
 <strong>输入：</strong>word = "a"
 <strong>输出：</strong>["1","a"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

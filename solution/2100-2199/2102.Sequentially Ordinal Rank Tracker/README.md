@@ -1,7 +1,5 @@
 # [2102. 序列顺序查询](https://leetcode.cn/problems/sequentially-ordinal-rank-tracker)
 
-[English Version](/solution/2100-2199/2102.Sequentially%20Ordinal%20Rank%20Tracker/README_EN.md)
-
 ## 题目描述
 
 <p>一个观光景点由它的名字&nbsp;<code>name</code> 和景点评分&nbsp;<code>score</code>&nbsp;组成，其中&nbsp;<code>name</code>&nbsp;是所有观光景点中&nbsp;<strong>唯一</strong>&nbsp;的字符串，<code>score</code>&nbsp;是一个整数。景点按照最好到最坏排序。景点评分 <strong>越高</strong>&nbsp;，这个景点越好。如果有两个景点的评分一样，那么 <strong>字典序较小</strong>&nbsp;的景点更好。</p>
@@ -26,8 +24,6 @@
 	<li><code>void add(string name, int score)</code>&nbsp;向系统中添加一个名为&nbsp;<code>name</code> 评分为&nbsp;<code>score</code>&nbsp;的景点。</li>
 	<li><code>string get()</code>&nbsp;查询第 <code>i</code>&nbsp;好的景点，其中 <code>i</code>&nbsp;是目前系统查询的次数（包括当前这次查询）。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -62,8 +58,6 @@ tracker.get();              // 从好到坏的景点为：branford, orlando, alp
 tracker.get();              // 从好到坏的景点为：branford, orlando, alpine, alps, bradford, orland 。
                             // 返回 "orland" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

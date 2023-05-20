@@ -1,7 +1,5 @@
 # [178. 分数排名](https://leetcode.cn/problems/rank-scores)
 
-[English Version](/solution/0100-0199/0178.Rank%20Scores/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Scores</code></p>
@@ -17,8 +15,6 @@ Id是该表的主键。
 该表的每一行都包含了一场比赛的分数。Score是一个有两位小数点的浮点值。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写 SQL 查询对分数进行排序。排名按以下规则计算:</p>
 
 <ul>
@@ -30,8 +26,6 @@ Id是该表的主键。
 <p>按&nbsp;<code>score</code>&nbsp;降序返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

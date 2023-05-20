@@ -1,7 +1,5 @@
 # [1754. 构造字典序最大的合并字符串](https://leetcode.cn/problems/largest-merge-of-two-strings)
 
-[English Version](/solution/1700-1799/1754.Largest%20Merge%20Of%20Two%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串 <code>word1</code> 和 <code>word2</code> 。你需要按下述方式构造一个新字符串 <code>merge</code> ：如果 <code>word1</code> 或 <code>word2</code> 非空，选择 <strong>下面选项之一</strong> 继续操作：</p>
@@ -84,37 +82,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char *largestMerge(char *word1, char *word2) {
-    int m = strlen(word1);
-    int n = strlen(word2);
-    int i = 0;
-    int j = 0;
-    char *ans = malloc((m + n + 1) * sizeof(char));
-    while (i < m && j < n) {
-        int k = 0;
-        while (word1[i + k] && word2[j + k] && word1[i + k] == word2[j + k]) {
-            k++;
-        }
-        if (word1[i + k] > word2[j + k]) {
-            ans[i + j] = word1[i];
-            i++;
-        } else {
-            ans[i + j] = word2[j];
-            j++;
-        };
-    }
-    while (word1[i]) {
-        ans[i + j] = word1[i];
-        i++;
-    }
-    while (word2[j]) {
-        ans[i + j] = word2[j];
-        j++;
-    }
-    ans[m + n] = '\0';
-    return ans;
-}
-```
+**

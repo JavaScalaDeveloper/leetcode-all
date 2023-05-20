@@ -1,7 +1,5 @@
 # [1069. 产品销售分析 II](https://leetcode.cn/problems/product-sales-analysis-ii)
 
-[English Version](/solution/1000-1099/1069.Product%20Sales%20Analysis%20II/README_EN.md)
-
 ## 题目描述
 
 <p>销售表：<code>Sales</code></p>
@@ -31,11 +29,7 @@ product_id 是 Product 表的外键。
 product_id 是这个表的主键。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，按产品 id <code>product_id</code> 来统计每个产品的销售总量。</p>
-
-<p>&nbsp;</p>
 
 <p>查询结果格式如下面例子所示:</p>
 

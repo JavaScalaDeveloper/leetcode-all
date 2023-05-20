@@ -1,7 +1,5 @@
 # [2566. 替换一个数字后的最大差值](https://leetcode.cn/problems/maximum-difference-by-remapping-a-digit)
 
-[English Version](/solution/2500-2599/2566.Maximum%20Difference%20by%20Remapping%20a%20Digit/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>num</code>&nbsp;。你知道 Danny Mittal 会偷偷将 <code>0</code>&nbsp;到 <code>9</code>&nbsp;中的一个数字 <strong>替换</strong> 成另一个数字。</p>
@@ -17,8 +15,6 @@
 	<li>替换后得到的数字可以包含前导 0 。</li>
 	<li>Danny Mittal 获得周赛 326 前 10 名，让我们恭喜他。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>解释：</strong>
 可以得到的最大值是 99（将 0 替换成 9），最小值是 0（将 9 替换成 0）。
 所以我们得到 99 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -79,43 +73,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int getLen(int num) {
-    int res = 0;
-    while (num) {
-        num /= 10;
-        res++;
-    }
-    return res;
-}
-
-int minMaxDifference(int num) {
-    int n = getLen(num);
-    int *nums = malloc(sizeof(int) * n);
-    int t = num;
-    for (int i = n - 1; i >= 0; i--) {
-        nums[i] = t % 10;
-        t /= 10;
-    }
-    int min = 0;
-    for (int i = 0; i < n; i++) {
-        min *= 10;
-        if (nums[i] != nums[0]) {
-            min += nums[i];
-        }
-    }
-    int max = 0;
-    int target = 10;
-    for (int i = 0; i < n; i++) {
-        max *= 10;
-        if (target == 10 && nums[i] != 9) {
-            target = nums[i];
-        }
-        max += nums[i] == target ? 9 : nums[i];
-    }
-    free(nums);
-    return max - min;
-}
-```
+**

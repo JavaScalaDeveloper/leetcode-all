@@ -1,7 +1,5 @@
 # [90. 子集 II](https://leetcode.cn/problems/subsets-ii)
 
-[English Version](/solution/0000-0099/0090.Subsets%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，其中可能包含重复元素，请你返回该数组所有可能的子集（幂集）。</p>

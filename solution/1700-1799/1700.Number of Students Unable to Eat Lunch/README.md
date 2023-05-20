@@ -1,7 +1,5 @@
 # [1700. 无法吃午餐的学生数量](https://leetcode.cn/problems/number-of-students-unable-to-eat-lunch)
 
-[English Version](/solution/1700-1799/1700.Number%20of%20Students%20Unable%20to%20Eat%20Lunch/README_EN.md)
-
 ## 题目描述
 
 <p>学校的自助午餐提供圆形和方形的三明治，分别用数字 <code>0</code> 和 <code>1</code> 表示。所有学生站在一个队列里，每个学生要么喜欢圆形的要么喜欢方形的。<br>
@@ -84,21 +82,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int countStudents(int *students, int studentsSize, int *sandwiches, int sandwichesSize) {
-    int count[2] = {0};
-    for (int i = 0; i < studentsSize; i++) {
-        count[students[i]]++;
-    }
-    for (int i = 0; i < sandwichesSize; i++) {
-        int j = sandwiches[i];
-        if (count[j] == 0) {
-            return count[j ^ 1];
-        }
-        count[j]--;
-    }
-    return 0;
-}
-```
+**

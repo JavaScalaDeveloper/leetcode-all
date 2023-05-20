@@ -1,14 +1,10 @@
 # [958. 二叉树的完全性检验](https://leetcode.cn/problems/check-completeness-of-a-binary-tree)
 
-[English Version](/solution/0900-0999/0958.Check%20Completeness%20of%20a%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树的<meta charset="UTF-8" />&nbsp;<code>root</code>&nbsp;，确定它是否是一个&nbsp;<em>完全二叉树</em>&nbsp;。</p>
 
 <p>在一个&nbsp;<strong><a href="https://baike.baidu.com/item/完全二叉树/7773232?fr=aladdin" target="_blank">完全二叉树</a></strong>&nbsp;中，除了最后一个关卡外，所有关卡都是完全被填满的，并且最后一个关卡中的所有节点都是尽可能靠左的。它可以包含<meta charset="UTF-8" />&nbsp;<code>1</code>&nbsp;到<meta charset="UTF-8" />&nbsp;<code>2<sup>h</sup></code>&nbsp;节点之间的最后一级 <code>h</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>值为 7 的结点没有尽可能靠向左侧。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

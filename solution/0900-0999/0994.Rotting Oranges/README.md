@@ -1,7 +1,5 @@
 # [994. 腐烂的橘子](https://leetcode.cn/problems/rotting-oranges)
 
-[English Version](/solution/0900-0999/0994.Rotting%20Oranges/README_EN.md)
-
 ## 题目描述
 
 <p>在给定的&nbsp;<code>m x n</code>&nbsp;网格<meta charset="UTF-8" />&nbsp;<code>grid</code>&nbsp;中，每个单元格可以有以下三个值之一：</p>
@@ -15,8 +13,6 @@
 <p>每分钟，腐烂的橘子&nbsp;<strong>周围&nbsp;4 个方向上相邻</strong> 的新鲜橘子都会腐烂。</p>
 
 <p>返回 <em>直到单元格中没有新鲜橘子为止所必须经过的最小分钟数。如果不可能，返回&nbsp;<code>-1</code></em>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>因为 0 分钟时已经没有新鲜橘子了，所以答案就是 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

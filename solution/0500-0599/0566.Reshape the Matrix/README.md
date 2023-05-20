@@ -1,7 +1,5 @@
 # [566. 重塑矩阵](https://leetcode.cn/problems/reshape-the-matrix)
 
-[English Version](/solution/0500-0599/0566.Reshape%20the%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>在 MATLAB 中，有一个非常有用的函数 <code>reshape</code> ，它可以将一个&nbsp;<code>m x n</code> 矩阵重塑为另一个大小不同（<code>r x c</code>）的新矩阵，但保留其原始数据。</p>
@@ -11,8 +9,6 @@
 <p>重构后的矩阵需要将原始矩阵的所有元素以相同的<strong> 行遍历顺序 </strong>填充。</p>
 
 <p>如果具有给定参数的 <code>reshape</code> 操作是可行且合理的，则输出新的重塑矩阵；否则，输出原始矩阵。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0566.Reshape%20the%20Matrix/images/reshape1-grid.jpg" style="width: 613px; height: 173px;" />
@@ -27,8 +23,6 @@
 <strong>输入：</strong>mat = [[1,2],[3,4]], r = 2, c = 4
 <strong>输出：</strong>[[1,2],[3,4]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -70,30 +64,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Return an array of arrays of size *returnSize.
- * The sizes of the arrays are returned as *returnColumnSizes array.
- * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
- */
-int **matrixReshape(int **mat, int matSize, int *matColSize, int r, int c, int *returnSize, int **returnColumnSizes) {
-    if (matSize * matColSize[0] != r * c) {
-        *returnSize = matSize;
-        *returnColumnSizes = matColSize;
-        return mat;
-    }
-    *returnSize = r;
-    *returnColumnSizes = malloc(sizeof(int) * r);
-    int **ans = malloc(sizeof(int *) * r);
-    for (int i = 0; i < r; i++) {
-        (*returnColumnSizes)[i] = c;
-        ans[i] = malloc(sizeof(int) * c);
-    }
-    for (int i = 0; i < r * c; i++) {
-        ans[i / c][i % c] = mat[i / matColSize[0]][i % matColSize[0]];
-    }
-    return ans;
-}
-```
+**

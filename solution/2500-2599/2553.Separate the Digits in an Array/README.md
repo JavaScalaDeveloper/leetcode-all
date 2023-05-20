@@ -1,7 +1,5 @@
 # [2553. 分割数组中数字的数位](https://leetcode.cn/problems/separate-the-digits-in-an-array)
 
-[English Version](/solution/2500-2599/2553.Separate%20the%20Digits%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数数组&nbsp;<code>nums</code>&nbsp;，请你返回一个数组<em>&nbsp;</em><code>answer</code> ，你需要将&nbsp;<code>nums</code>&nbsp;中每个整数进行数位分割后，按照&nbsp;<code>nums</code>&nbsp;中出现的&nbsp;<strong>相同顺序</strong>&nbsp;放入答案数组中。</p>
@@ -11,8 +9,6 @@
 <ul>
 	<li>比方说，整数&nbsp;<code>10921</code>&nbsp;，分割它的各个数位得到&nbsp;<code>[1,0,9,2,1]</code>&nbsp;。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@ answer = [1,3,2,5,8,3,7,7] 。answer 中的数字分割结果按照原数字在�
 <b>解释：</b>nums 中每个整数的分割是它自己。
 answer = [7,1,3,9] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -74,30 +68,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *separateDigits(int *nums, int numsSize, int *returnSize) {
-    int n = 0;
-    for (int i = 0; i < numsSize; i++) {
-        int t = nums[i];
-        while (t != 0) {
-            t /= 10;
-            n++;
-        }
-    }
-    int *ans = malloc(sizeof(int) * n);
-    for (int i = numsSize - 1, j = n - 1; i >= 0; i--) {
-        int t = nums[i];
-        while (t != 0) {
-            ans[j--] = t % 10;
-            t /= 10;
-        }
-    }
-    *returnSize = n;
-    return ans;
-}
-```
+**

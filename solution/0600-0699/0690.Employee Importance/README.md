@@ -1,7 +1,5 @@
 # [690. 员工的重要性](https://leetcode.cn/problems/employee-importance)
 
-[English Version](/solution/0600-0699/0690.Employee%20Importance/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个保存员工信息的数据结构，它包含了员工 <strong>唯一的 id </strong>，<strong>重要度 </strong>和 <strong>直系下属的 id </strong>。</p>

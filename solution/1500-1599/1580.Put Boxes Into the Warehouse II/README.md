@@ -1,7 +1,5 @@
 # [1580. 把箱子放进仓库里 II](https://leetcode.cn/problems/put-boxes-into-the-warehouse-ii)
 
-[English Version](/solution/1500-1599/1580.Put%20Boxes%20Into%20the%20Warehouse%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个正整数数组 <code>boxes</code> 和 <code>warehouse</code> ，分别包含单位宽度的箱子的高度，以及仓库中<code>n</code>个房间各自的高度。仓库的房间分别从<code>0</code> 到 <code>n - 1</code>自左向右编号，<code>warehouse[i]</code>（索引从 0 开始）是第 <code>i</code> 个房间的高度。</p>

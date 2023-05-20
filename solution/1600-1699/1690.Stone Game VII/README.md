@@ -1,7 +1,5 @@
 # [1690. 石子游戏 VII](https://leetcode.cn/problems/stone-game-vii)
 
-[English Version](/solution/1600-1699/1690.Stone%20Game%20VII/README_EN.md)
-
 ## 题目描述
 
 <p>石子游戏中，爱丽丝和鲍勃轮流进行自己的回合，<strong>爱丽丝先开始</strong> 。</p>

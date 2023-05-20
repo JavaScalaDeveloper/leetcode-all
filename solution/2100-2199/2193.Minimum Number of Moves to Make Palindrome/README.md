@@ -1,7 +1,5 @@
 # [2193. 得到回文串的最少操作次数](https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome)
 
-[English Version](/solution/2100-2199/2193.Minimum%20Number%20of%20Moves%20to%20Make%20Palindrome/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个只包含小写英文字母的字符串&nbsp;<code>s</code>&nbsp;。</p>
@@ -11,8 +9,6 @@
 <p>请你返回将 <code>s</code>&nbsp;变成回文串的 <strong>最少操作次数</strong>&nbsp;。</p>
 
 <p><strong>注意</strong>&nbsp;，输入数据会确保&nbsp;<code>s</code>&nbsp;一定能变成一个回文串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 其他回文串比方说 "tleelt" 也可以通过 2 次操作得到。
 可以证明少于 2 次操作，无法得到回文串。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

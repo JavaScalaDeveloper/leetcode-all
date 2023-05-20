@@ -1,7 +1,5 @@
 # [661. 图片平滑器](https://leetcode.cn/problems/image-smoother)
 
-[English Version](/solution/0600-0699/0661.Image%20Smoother/README_EN.md)
-
 ## 题目描述
 
 <p><strong>图像平滑器</strong> 是大小为&nbsp;<code>3 x 3</code> 的过滤器，用于对图像的每个单元格平滑处理，平滑处理后单元格的值为该单元格的平均灰度。</p>
@@ -13,8 +11,6 @@
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0661.Image%20Smoother/images/smoother-grid.jpg" style="height: 493px; width: 493px;" /></p>
 
 <p>给你一个表示图像灰度的 <code>m x n</code> 整数矩阵 <code>img</code> ，返回对图像的每个单元格平滑处理后的图像&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -39,8 +35,6 @@
 对于点 (0,1), (1,0), (1,2), (2,1): floor((200+200+50+200+100+100)/6) = floor(141.666667) = 141
 对于点 (1,1): floor((50+200+200+200+200+100+100+100+100)/9) = floor(138.888889) = 138
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

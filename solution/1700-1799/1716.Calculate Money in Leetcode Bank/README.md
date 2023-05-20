@@ -1,7 +1,5 @@
 # [1716. 计算力扣银行的钱](https://leetcode.cn/problems/calculate-money-in-leetcode-bank)
 
-[English Version](/solution/1700-1799/1716.Calculate%20Money%20in%20Leetcode%20Bank/README_EN.md)
-
 ## 题目描述
 
 <p>Hercy 想要为购买第一辆车存钱。他 <strong>每天</strong> 都往力扣银行里存钱。</p>

@@ -1,7 +1,5 @@
 # [2529. 正整数和负整数的最大计数](https://leetcode.cn/problems/maximum-count-of-positive-integer-and-negative-integer)
 
-[English Version](/solution/2500-2599/2529.Maximum%20Count%20of%20Positive%20Integer%20and%20Negative%20Integer/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个按 <strong>非递减顺序</strong> 排列的数组 <code>nums</code> ，返回正整数数目和负整数数目中的最大值。</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p><strong>注意：</strong><code>0</code> 既不是正整数也不是负整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>解释：</strong>共有 4 个正整数和 0 个负整数。计数得到的最大值是 4 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -47,8 +41,6 @@
 	<li><code>-2000 &lt;= nums[i] &lt;= 2000</code></li>
 	<li><code>nums</code> 按 <strong>非递减顺序</strong> 排列。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你可以设计并实现时间复杂度为 <code>O(log(n))</code> 的算法解决此问题吗？</p>
 
@@ -108,44 +100,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-
-int maximumCount(int *nums, int numsSize) {
-    int count[2] = {0};
-    for (int i = 0; i < numsSize; i++) {
-        if (nums[i] < 0) {
-            count[0]++;
-        } else if (nums[i] > 0) {
-            count[1]++;
-        }
-    }
-    return max(count[0], count[1]);
-}
-```
-
-```c
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-
-int search(int *nums, int numsSize, int target) {
-    int left = 0;
-    int right = numsSize;
-    while (left < right) {
-        int mid = (left + right) >> 1;
-        if (nums[mid] < target) {
-            left = mid + 1;
-        } else {
-            right = mid;
-        }
-    }
-    return left;
-}
-
-int maximumCount(int *nums, int numsSize) {
-    int i = search(nums, numsSize, 0);
-    int j = search(nums, numsSize, 1);
-    return max(i, numsSize - j);
-}
-```
+**

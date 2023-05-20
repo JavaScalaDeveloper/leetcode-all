@@ -1,7 +1,5 @@
 # [1137. 第 N 个泰波那契数](https://leetcode.cn/problems/n-th-tribonacci-number)
 
-[English Version](/solution/1100-1199/1137.N-th%20Tribonacci%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>泰波那契序列&nbsp;T<sub>n</sub>&nbsp;定义如下：&nbsp;</p>
@@ -9,8 +7,6 @@
 <p>T<sub>0</sub> = 0, T<sub>1</sub> = 1, T<sub>2</sub> = 1, 且在 n &gt;= 0&nbsp;的条件下 T<sub>n+3</sub> = T<sub>n</sub> + T<sub>n+1</sub> + T<sub>n+2</sub></p>
 
 <p>给你整数&nbsp;<code>n</code>，请返回第 n 个泰波那契数&nbsp;T<sub>n </sub>的值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,8 +22,6 @@ T_4 = 1 + 1 + 2 = 4
 <pre><strong>输入：</strong>n = 25
 <strong>输出：</strong>1389537
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

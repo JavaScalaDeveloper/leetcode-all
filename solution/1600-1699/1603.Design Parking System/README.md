@@ -1,7 +1,5 @@
 # [1603. 设计停车系统](https://leetcode.cn/problems/design-parking-system)
 
-[English Version](/solution/1600-1699/1603.Design%20Parking%20System/README_EN.md)
-
 ## 题目描述
 
 <p>请你给一个停车场设计一个停车系统。停车场总共有三种不同大小的车位：大，中和小，每种尺寸分别有固定数目的车位。</p>
@@ -76,40 +74,4 @@ class ParkingSystem {
  */
 ```
 
-### **C**
-
-```c
-typedef struct {
-    int *count;
-} ParkingSystem;
-
-ParkingSystem *parkingSystemCreate(int big, int medium, int small) {
-    ParkingSystem *res = malloc(sizeof(ParkingSystem));
-    res->count = malloc(sizeof(int) * 3);
-    res->count[0] = big;
-    res->count[1] = medium;
-    res->count[2] = small;
-    return res;
-}
-
-bool parkingSystemAddCar(ParkingSystem *obj, int carType) {
-    int i = carType - 1;
-    if (!obj->count[i]) {
-        return 0;
-    }
-    obj->count[i]--;
-    return 1;
-}
-
-void parkingSystemFree(ParkingSystem *obj) {
-    free(obj);
-}
-
-/**
- * Your ParkingSystem struct will be instantiated and called as such:
- * ParkingSystem* obj = parkingSystemCreate(big, medium, small);
- * bool param_1 = parkingSystemAddCar(obj, carType);
-
- * parkingSystemFree(obj);
-*/
-```
+**

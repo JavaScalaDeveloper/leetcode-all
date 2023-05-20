@@ -1,7 +1,5 @@
 # [1233. 删除子文件夹](https://leetcode.cn/problems/remove-sub-folders-from-the-filesystem)
 
-[English Version](/solution/1200-1299/1233.Remove%20Sub-Folders%20from%20the%20Filesystem/README_EN.md)
-
 ## 题目描述
 
 <p>你是一位系统管理员，手里有一份文件夹列表 <code>folder</code>，你的任务是要删除该列表中的所有 <strong>子文件夹</strong>，并以 <strong>任意顺序</strong> 返回剩下的文件夹。</p>
@@ -13,8 +11,6 @@
 <ul>
 	<li>例如，<code>"/leetcode"</code>&nbsp;和&nbsp;<code>"/leetcode/problems"</code>&nbsp;都是有效的路径，而空字符串和&nbsp;<code>"/"</code>&nbsp;不是。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <pre>
 <strong>输入:</strong> folder = ["/a/b/c","/a/b/ca","/a/b/d"]
 <strong>输出:</strong> ["/a/b/c","/a/b/ca","/a/b/d"]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

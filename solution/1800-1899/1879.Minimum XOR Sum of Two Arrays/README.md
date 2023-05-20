@@ -1,7 +1,5 @@
 # [1879. 两个数组最小的异或值之和](https://leetcode.cn/problems/minimum-xor-sum-of-two-arrays)
 
-[English Version](/solution/1800-1899/1879.Minimum%20XOR%20Sum%20of%20Two%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数数组 <code>nums1</code> 和 <code>nums2</code> ，它们长度都为 <code>n</code> 。</p>

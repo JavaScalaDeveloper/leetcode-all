@@ -1,7 +1,5 @@
 # [725. 分隔链表](https://leetcode.cn/problems/split-linked-list-in-parts)
 
-[English Version](/solution/0700-0799/0725.Split%20Linked%20List%20in%20Parts/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个头结点为 <code>head</code> 的单链表和一个整数 <code>k</code> ，请你设计一个算法将链表分隔为 <code>k</code> 个连续的部分。</p>
@@ -31,8 +29,6 @@
 <strong>解释：</strong>
 输入被分成了几个连续的部分，并且每部分的长度相差不超过 1 。前面部分的长度大于等于后面部分的长度。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [582. 杀掉进程](https://leetcode.cn/problems/kill-process)
 
-[English Version](/solution/0500-0599/0582.Kill%20Process/README_EN.md)
-
 ## 题目描述
 
 <p>系统中存在 <code>n</code> 个进程，形成一个有根树结构。给你两个整数数组 <code>pid</code> 和 <code>ppid</code> ，其中 <code>pid[i]</code> 是第 <code>i</code> 个进程的 ID ，<code>ppid[i]</code> 是第 <code>i</code> 个进程的父进程 ID 。</p>

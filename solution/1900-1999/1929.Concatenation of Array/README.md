@@ -1,7 +1,5 @@
 # [1929. 数组串联](https://leetcode.cn/problems/concatenation-of-array)
 
-[English Version](/solution/1900-1999/1929.Concatenation%20of%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> 。请你构建一个长度为 <code>2n</code> 的答案数组 <code>ans</code> ，数组下标<strong> 从 0 开始计数 </strong>，对于所有 <code>0 <= i < n</code> 的 <code>i</code> ，满足下述所有要求：</p>
@@ -63,18 +61,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *getConcatenation(int *nums, int numsSize, int *returnSize) {
-    int *ans = malloc(sizeof(int) * numsSize * 2);
-    for (int i = 0; i < numsSize; i++) {
-        ans[i] = ans[i + numsSize] = nums[i];
-    }
-    *returnSize = numsSize * 2;
-    return ans;
-}
-```
+**

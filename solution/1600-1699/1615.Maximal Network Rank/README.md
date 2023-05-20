@@ -1,7 +1,5 @@
 # [1615. 最大网络秩](https://leetcode.cn/problems/maximal-network-rank)
 
-[English Version](/solution/1600-1699/1615.Maximal%20Network%20Rank/README_EN.md)
-
 ## 题目描述
 
 <p><code>n</code> 座城市和一些连接这些城市的道路 <code>roads</code> 共同组成一个基础设施网络。每个 <code>roads[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 都表示在城市 <code>a<sub>i</sub></code> 和 <code>b<sub>i</sub></code> 之间有一条双向道路。</p>

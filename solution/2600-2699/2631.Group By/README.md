@@ -1,7 +1,5 @@
 # [2631. 分组](https://leetcode.cn/problems/group-by)
 
-[English Version](/solution/2600-2699/2631.Group%20By/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一段可应用于所有数组的代码，使任何数组调用 <code>array. groupBy(fn)</code> 方法时，它返回对该数组 <strong>分组后</strong> 的结果。</p>
@@ -13,8 +11,6 @@
 <p>每个值列表的顺序应该与元素在数组中出现的顺序相同。任何顺序的键都是可以接受的。</p>
 
 <p>请在不使用 lodash 的&nbsp;<code>_.groupBy</code> 函数的前提下解决这个问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -80,8 +76,6 @@ fn = function (n) {
 <strong>解释：</strong>
 分组选择方法是根据每个数字是否大于 5 来分割数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

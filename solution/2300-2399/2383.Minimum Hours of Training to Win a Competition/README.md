@@ -1,7 +1,5 @@
 # [2383. 赢得比赛需要的最少训练时长](https://leetcode.cn/problems/minimum-hours-of-training-to-win-a-competition)
 
-[English Version](/solution/2300-2399/2383.Minimum%20Hours%20of%20Training%20to%20Win%20a%20Competition/README_EN.md)
-
 ## 题目描述
 
 <p>你正在参加一场比赛，给你两个 <strong>正</strong> 整数 <code>initialEnergy</code> 和 <code>initialExperience</code> 分别表示你的初始精力和初始经验。</p>
@@ -15,8 +13,6 @@
 <p>在开始比赛前，你可以训练几个小时。每训练一个小时，你可以选择将增加经验增加 1 <strong>或者</strong> 将精力增加 1 。</p>
 
 <p>返回击败全部 <code>n</code> 个对手需要训练的 <strong>最少</strong> 小时数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>你不需要额外的精力和经验就可以赢得比赛，所以返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -119,23 +113,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int minNumberOfHours(int initialEnergy, int initialExperience, int* energy, int energySize, int* experience, int experienceSize) {
-    int res = 0;
-    for (int i = 0; i < energySize; i++) {
-        if (initialEnergy <= energy[i]) {
-            res += energy[i] - initialEnergy + 1;
-            initialEnergy = energy[i] + 1;
-        }
-        if (initialExperience <= experience[i]) {
-            res += experience[i] - initialExperience + 1;
-            initialExperience = experience[i] + 1;
-        }
-        initialEnergy -= energy[i];
-        initialExperience += experience[i];
-    }
-    return res;
-}
-```
+**

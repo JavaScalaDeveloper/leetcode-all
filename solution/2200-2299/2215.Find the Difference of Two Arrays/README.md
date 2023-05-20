@@ -1,7 +1,5 @@
 # [2215. 找出两数组的不同](https://leetcode.cn/problems/find-the-difference-of-two-arrays)
 
-[English Version](/solution/2200-2299/2215.Find%20the%20Difference%20of%20Two%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <code>0</code> 开始的整数数组 <code>nums1</code> 和 <code>nums2</code> ，请你返回一个长度为 <code>2</code> 的列表 <code>answer</code> ，其中：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p><strong>注意：</strong>列表中的整数可以按 <strong>任意</strong> 顺序返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 </strong>对于 nums1 ，nums1[2] 和 nums1[3] 没有出现在 nums2 中。由于 nums1[2] == nums1[3] ，二者的值只需要在 answer[0] 中出现一次，故 answer[0] = [3]。
 nums2 中的每个整数都在 nums1 中出现，因此，answer[1] = [] 。 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

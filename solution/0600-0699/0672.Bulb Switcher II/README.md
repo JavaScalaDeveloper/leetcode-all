@@ -1,7 +1,5 @@
 # [672. 灯泡开关 Ⅱ](https://leetcode.cn/problems/bulb-switcher-ii)
 
-[English Version](/solution/0600-0699/0672.Bulb%20Switcher%20II/README_EN.md)
-
 ## 题目描述
 
 <p>房间中有 <code>n</code>&nbsp;只已经打开的灯泡，编号从 <code>1</code> 到 <code>n</code> 。墙上挂着 <strong>4 个开关</strong> 。</p>
@@ -18,8 +16,6 @@
 <p>你必须 <strong>恰好</strong> 按压开关 <code>presses</code> 次。每次按压，你都需要从 4 个开关中选出一个来执行按压操作。</p>
 
 <p>给你两个整数 <code>n</code> 和 <code>presses</code> ，执行完所有按压之后，返回 <strong>不同可能状态</strong> 的数量。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -53,8 +49,6 @@
 - 按压开关 3 ，[开, 关, 开]
 - 按压开关 4 ，[关, 开, 开]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

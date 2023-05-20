@@ -1,7 +1,5 @@
 # [1024. 视频拼接](https://leetcode.cn/problems/video-stitching)
 
-[English Version](/solution/1000-1099/1024.Video%20Stitching/README_EN.md)
-
 ## 题目描述
 
 <p>你将会获得一系列视频片段，这些片段来自于一项持续时长为&nbsp;<code>time</code>&nbsp;秒的体育赛事。这些片段可能有所重叠，也可能长度不一。</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（<code>[0, time]</code>）。返回所需片段的最小数目，如果无法完成该任务，则返回&nbsp;<code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <strong>解释： </strong>
 选取片段 [0,4], [4,7] 和 [6,9] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

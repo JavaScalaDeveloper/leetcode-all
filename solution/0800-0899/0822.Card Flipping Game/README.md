@@ -1,7 +1,5 @@
 # [822. 翻转卡片游戏](https://leetcode.cn/problems/card-flipping-game)
 
-[English Version](/solution/0800-0899/0822.Card%20Flipping%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>在桌子上有 <code>N</code> 张卡片，每张卡片的正面和背面都写着一个正数（正面与背面上的数有可能不一样）。</p>
@@ -23,8 +21,6 @@
 <strong>输出：</strong><code>2</code>
 <strong>解释：</strong>假设我们翻转第二张卡片，那么在正面的数变成了 <code>[1,3,4,4,7]</code> ， 背面的数变成了 <code>[1,2,4,1,3]。</code>
 接着我们选择第二张卡片，因为现在该卡片的背面的数是 2，2 与任意卡片上正面的数都不同，所以 2 就是我们想要的数字。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1367. 二叉树中的链表](https://leetcode.cn/problems/linked-list-in-binary-tree)
 
-[English Version](/solution/1300-1399/1367.Linked%20List%20in%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵以&nbsp;<code>root</code>&nbsp;为根的二叉树和一个&nbsp;<code>head</code>&nbsp;为第一个节点的链表。</p>
@@ -9,8 +7,6 @@
 <p>如果在二叉树中，存在一条一直向下的路径，且每个点的数值恰好一一对应以&nbsp;<code>head</code>&nbsp;为首的链表中每个节点的值，那么请你返回 <code>True</code> ，否则返回 <code>False</code> 。</p>
 
 <p>一直向下的路径的意思是：从树中某个节点开始，一直连续向下的路径。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>二叉树中不存在一一对应链表的路径。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

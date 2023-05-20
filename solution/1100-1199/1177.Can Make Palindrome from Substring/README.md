@@ -1,7 +1,5 @@
 # [1177. 构建回文串检测](https://leetcode.cn/problems/can-make-palindrome-from-substring)
 
-[English Version](/solution/1100-1199/1177.Can%20Make%20Palindrome%20from%20Substring/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>，请你对&nbsp;<code>s</code>&nbsp;的子串进行检测。</p>
@@ -14,8 +12,6 @@
 
 <p>注意：在替换时，子串中的每个字母都必须作为 <strong>独立的</strong> 项进行计数，也就是说，如果&nbsp;<code>s[left..right] = &quot;aaa&quot;</code>&nbsp;且&nbsp;<code>k = 2</code>，我们只能替换其中的两个字母。（另外，任何检测都不会修改原始字符串 <code>s</code>，可以认为每次检测都是独立的）</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre><strong>输入：</strong>s = &quot;abcda&quot;, queries = [[3,3,0],[1,2,0],[0,3,1],[0,3,2],[0,4,1]]
@@ -27,8 +23,6 @@ queries[2] :&nbsp;子串 = &quot;abcd&quot;，只替换 1 个字符是变不成�
 queries[3] :&nbsp;子串 = &quot;abcd&quot;，可以变成回文的 &quot;abba&quot;。 也可以变成 &quot;baab&quot;，先重新排序变成 &quot;bacd&quot;，然后把 &quot;cd&quot; 替换为 &quot;ab&quot;。
 queries[4] :&nbsp;子串 = &quot;abcda&quot;，可以变成回文的 &quot;abcba&quot;。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2205. 有资格享受折扣的用户数量](https://leetcode.cn/problems/the-number-of-users-that-are-eligible-for-discount)
 
-[English Version](/solution/2200-2299/2205.The%20Number%20of%20Users%20That%20Are%20Eligible%20for%20Discount/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Purchases</code></p>
@@ -18,15 +16,11 @@
 每一行都包含 ID 为 user_id 的用户的购买时间和支付金额的信息。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>如果用户在时间间隔 <code>[startDate, endDate]</code> 内购买了至少 <code>minAmount</code> 金额的商品，则有资格获得折扣。若要将日期转换为时间，两个日期都应该被视为一天的&nbsp;<strong>开始</strong> (即 <code>endDate = 2022-03-05</code>&nbsp;应该被视为时间 <code>2022-03-05 00:00:00</code>)。</p>
 
 <p>编写一个 SQL 来查询有资格享受折扣的用户数量。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

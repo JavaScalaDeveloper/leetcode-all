@@ -1,12 +1,8 @@
 # [191. 位 1 的个数](https://leetcode.cn/problems/number-of-1-bits)
 
-[English Version](/solution/0100-0199/0191.Number%20of%201%20Bits/README_EN.md)
-
 ## 题目描述
 
 <p>编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 '1' 的个数（也被称为<a href="https://baike.baidu.com/item/%E6%B1%89%E6%98%8E%E9%87%8D%E9%87%8F" target="_blank">汉明重量</a>）。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -14,8 +10,6 @@
 	<li>请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。</li>
 	<li>在 Java 中，编译器使用<a href="https://baike.baidu.com/item/二进制补码/5295284" target="_blank">二进制补码</a>记法来表示有符号整数。因此，在&nbsp;<strong>示例 3</strong>&nbsp;中，输入表示有符号整数 <code>-3</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +34,6 @@
 <strong>输出：</strong>31
 <strong>解释：</strong>输入的二进制串 <strong>11111111111111111111111111111101</strong> 中，共有 31 位为 '1'。</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -50,8 +42,6 @@
 
 <ul>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶</strong>：</p>
 
@@ -122,15 +112,4 @@ public class Solution {
 }
 ```
 
-### **C**
-
-```c
-int hammingWeight(uint32_t n) {
-    int ans = 0;
-    while (n) {
-        n &= n - 1;
-        ans++;
-    }
-    return ans;
-}
-```
+**

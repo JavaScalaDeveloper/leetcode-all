@@ -1,7 +1,5 @@
 # [867. 转置矩阵](https://leetcode.cn/problems/transpose-matrix)
 
-[English Version](/solution/0800-0899/0867.Transpose%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维整数数组 <code>matrix</code>， 返回 <code>matrix</code> 的 <strong>转置矩阵</strong> 。</p>

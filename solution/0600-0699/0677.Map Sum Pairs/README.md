@@ -1,7 +1,5 @@
 # [677. 键值映射](https://leetcode.cn/problems/map-sum-pairs)
 
-[English Version](/solution/0600-0699/0677.Map%20Sum%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个 map ，满足以下几点:</p>
@@ -19,8 +17,6 @@
 	<li><code>int sum(string prefix)</code> 返回所有以该前缀 <code>prefix</code> 开头的键 <code>key</code> 的值的总和。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -37,8 +33,6 @@ mapSum.sum("ap");           // 返回 3 (<u>ap</u>ple = 3)
 mapSum.insert("app", 2);    
 mapSum.sum("ap");           // 返回 5 (<u>ap</u>ple + <u>ap</u>p = 3 + 2 = 5)
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

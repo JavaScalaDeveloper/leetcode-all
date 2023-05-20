@@ -1,7 +1,5 @@
 # [220. 存在重复元素 III](https://leetcode.cn/problems/contains-duplicate-iii)
 
-[English Version](/solution/0200-0299/0220.Contains%20Duplicate%20III/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和两个整数 <code>k</code> 和 <code>t</code> 。请你判断是否存在 <b>两个不同下标</b> <code>i</code> 和 <code>j</code>，使得 <code>abs(nums[i] - nums[j]) <= t</code> ，同时又满足 <code>abs(i - j) <= k</code><em> </em>。</p>

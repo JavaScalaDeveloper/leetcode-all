@@ -1,7 +1,5 @@
 # [926. 将字符串翻转到单调递增](https://leetcode.cn/problems/flip-string-to-monotone-increasing)
 
-[English Version](/solution/0900-0999/0926.Flip%20String%20to%20Monotone%20Increasing/README_EN.md)
-
 ## 题目描述
 
 <p>如果一个二进制字符串，是以一些 <code>0</code>（可能没有 <code>0</code>）后面跟着一些 <code>1</code>（也可能没有 <code>1</code>）的形式组成的，那么该字符串是 <strong>单调递增 </strong>的。</p>
@@ -9,8 +7,6 @@
 <p>给你一个二进制字符串 <code>s</code>，你可以将任何 <code>0</code> 翻转为 <code>1</code> 或者将 <code>1</code> 翻转为 <code>0</code> 。</p>
 
 <p>返回使 <code>s</code> 单调递增的最小翻转次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输出：</strong>2
 <strong>解释：</strong>翻转得到 00000000。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [2352. 相等行列对](https://leetcode.cn/problems/equal-row-and-column-pairs)
 
-[English Version](/solution/2300-2399/2352.Equal%20Row%20and%20Column%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始、大小为 <code>n x n</code> 的整数矩阵 <code>grid</code> ，返回满足 <code>R<sub>i</sub></code><em> </em>行和<em> </em><code>C<sub>j</sub></code><em> </em>列相等的行列对<em> </em><code>(R<sub>i</sub>, C<sub>j</sub>)</code><em> </em>的数目<em>。</em></p>
 
 <p>如果行和列以相同的顺序包含相同的元素（即相等的数组），则认为二者是相等的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 - (第 2 行, 第 2 列)：[2,4,2,2]
 - (第 3 行, 第 2 列)：[2,4,2,2]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

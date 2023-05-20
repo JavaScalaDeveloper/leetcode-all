@@ -1,7 +1,5 @@
 # [2094. 找出 3 位偶数](https://leetcode.cn/problems/finding-3-digit-even-numbers)
 
-[English Version](/solution/2000-2099/2094.Finding%203-Digit%20Even%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>digits</code> ，其中每个元素是一个数字（<code>0 - 9</code>）。数组中可能存在重复元素。</p>
@@ -17,8 +15,6 @@
 <p>例如，给定的 <code>digits</code> 是 <code>[1, 2, 3]</code> ，整数 <code>132</code> 和 <code>312</code> 满足上面列出的全部条件。</p>
 
 <p>将找出的所有互不相同的整数按 <strong>递增顺序</strong> 排列，并以数组形式返回<em>。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <strong>解释：</strong>
 使用给定的 digits 无法构造偶数。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

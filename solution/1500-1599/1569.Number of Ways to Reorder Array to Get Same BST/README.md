@@ -1,7 +1,5 @@
 # [1569. 将子数组重新排序得到同一个二叉搜索树的方案数](https://leetcode.cn/problems/number-of-ways-to-reorder-array-to-get-same-bst)
 
-[English Version](/solution/1500-1599/1569.Number%20of%20Ways%20to%20Reorder%20Array%20to%20Get%20Same%20BST/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>nums</code>&nbsp;表示 <code>1</code>&nbsp;到 <code>n</code>&nbsp;的一个排列。我们按照元素在 <code>nums</code>&nbsp;中的顺序依次插入一个初始为空的二叉搜索树（BST）。请你统计将 <code>nums</code>&nbsp;重新排序后，统计满足如下条件的方案数：重排后得到的二叉搜索树与 <code>nums</code>&nbsp;原本数字顺序得到的二叉搜索树相同。</p>
@@ -11,8 +9,6 @@
 <p>请你返回重排 <code>nums</code>&nbsp;后，与原数组 <code>nums</code> 得到相同二叉搜索树的方案数。</p>
 
 <p>由于答案可能会很大，请将结果对<strong>&nbsp;</strong><code>10^9 + 7</code>&nbsp;取余数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,8 +44,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>没有别的排列顺序能得到相同的 BST 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

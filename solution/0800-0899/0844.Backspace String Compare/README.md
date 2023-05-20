@@ -1,14 +1,10 @@
 # [844. 比较含退格的字符串](https://leetcode.cn/problems/backspace-string-compare)
 
-[English Version](/solution/0800-0899/0844.Backspace%20String%20Compare/README_EN.md)
-
 ## 题目描述
 
 <p>给定 <code>s</code> 和 <code>t</code> 两个字符串，当它们分别被输入到空白的文本编辑器后，如果两者相等，返回 <code>true</code> 。<code>#</code> 代表退格字符。</p>
 
 <p><strong>注意：</strong>如果对空文本输入退格字符，文本继续为空。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,16 +29,12 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>s 会变成 "c"，但 t 仍然是 "b"。</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= s.length, t.length &lt;= 200</code></li>
 	<li><code>s</code> 和 <code>t</code> 只含有小写字母以及字符 <code>'#'</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

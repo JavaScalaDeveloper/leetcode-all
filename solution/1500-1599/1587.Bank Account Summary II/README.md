@@ -1,7 +1,5 @@
 # [1587. 银行账户概要 II](https://leetcode.cn/problems/bank-account-summary-ii)
 
-[English Version](/solution/1500-1599/1587.Bank%20Account%20Summary%20II/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Users</code></p>
@@ -15,8 +13,6 @@
 account 是该表的主键.
 表中的每一行包含银行里中每一个用户的账号.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Transactions</code></p>
 
@@ -34,15 +30,11 @@ trans_id 是该表主键.
 所有账户的起始余额为 0.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL,&nbsp;&nbsp;报告余额高于 10000 的所有用户的名字和余额.&nbsp;账户的余额等于包含该账户的所有交易的总和.</p>
 
 <p>返回结果表单没有顺序要求.</p>
 
 <p>查询结果格式如下例所示.</p>
-
-<p>&nbsp;</p>
 
 <pre><code>Users</code> table:
 +------------+--------------+

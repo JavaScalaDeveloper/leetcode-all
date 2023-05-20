@@ -1,7 +1,5 @@
 # [2091. 从数组中移除最大值和最小值](https://leetcode.cn/problems/removing-minimum-and-maximum-from-array)
 
-[English Version](/solution/2000-2099/2091.Removing%20Minimum%20and%20Maximum%20From%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的数组 <code>nums</code> ，数组由若干 <strong>互不相同</strong> 的整数组成。</p>
@@ -11,8 +9,6 @@
 <p>一次 <strong>删除</strong> 操作定义为从数组的 <strong>前面</strong> 移除一个元素或从数组的 <strong>后面</strong> 移除一个元素。</p>
 
 <p>返回将数组中最小值和最大值 <strong>都</strong> 移除需要的最小删除次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 数组中只有这一个元素，那么它既是数组中的最小值又是数组中的最大值。
 移除它只需要 1 次删除操作。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

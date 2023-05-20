@@ -1,7 +1,5 @@
 # [33. 搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array)
 
-[English Version](/solution/0000-0099/0033.Search%20in%20Rotated%20Sorted%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>整数数组 <code>nums</code> 按升序排列，数组中的值 <strong>互不相同</strong> 。</p>
@@ -11,8 +9,6 @@
 <p>给你 <strong>旋转后</strong> 的数组 <code>nums</code> 和一个整数 <code>target</code> ，如果 <code>nums</code> 中存在这个目标值 <code>target</code> ，则返回它的下标，否则返回&nbsp;<code>-1</code>&nbsp;。</p>
 
 <p>你必须设计一个时间复杂度为 <code>O(log n)</code> 的算法解决此问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输入：</strong>nums = [1], target = 0
 <strong>输出：</strong>-1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

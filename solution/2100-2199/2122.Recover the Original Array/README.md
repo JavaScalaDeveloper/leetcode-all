@@ -1,7 +1,5 @@
 # [2122. 还原原数组](https://leetcode.cn/problems/recover-the-original-array)
 
-[English Version](/solution/2100-2199/2122.Recover%20the%20Original%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 有一个下标从 <strong>0</strong> 开始的数组 <code>arr</code> ，由 <code>n</code> 个正整数组成。她会选择一个任意的 <strong>正整数 </strong><code>k</code> 并按下述方式创建两个下标从 <strong>0</strong> 开始的新整数数组 <code>lower</code> 和 <code>higher</code> ：</p>
@@ -16,8 +14,6 @@
 <p>给你一个由 2n 个整数组成的整数数组 <code>nums</code> ，其中 <strong>恰好</strong> <code>n</code> 个整数出现在 <code>lower</code> ，剩下的出现在 <code>higher</code> ，还原并返回 <strong>原数组</strong> <code>arr</code> 。如果出现答案不唯一的情况，返回 <strong>任一</strong> 有效数组。</p>
 
 <p><strong>注意：</strong>生成的测试用例保证存在 <strong>至少一个</strong> 有效数组 <code>arr</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <strong>输出：</strong>[220]
 <strong>解释：</strong>
 唯一可行的组合是 arr = [220] 且 k = 215 。在这种情况下，lower = [5] 且 higher = [435] 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

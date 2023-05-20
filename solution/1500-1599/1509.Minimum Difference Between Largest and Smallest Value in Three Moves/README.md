@@ -1,7 +1,5 @@
 # [1509. 三次操作后最大值与最小值的最小差](https://leetcode.cn/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves)
 
-[English Version](/solution/1500-1599/1509.Minimum%20Difference%20Between%20Largest%20and%20Smallest%20Value%20in%20Three%20Moves/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组&nbsp;<code>nums</code>&nbsp;。</p>
@@ -9,8 +7,6 @@
 <p>每次操作你可以选择&nbsp;<code>nums</code>&nbsp;中的任意一个元素并将它改成 <strong>任意值</strong> 。</p>
 
 <p>在&nbsp;<strong>执行最多三次移动后&nbsp;</strong>，返回&nbsp;<code>nums</code>&nbsp;中最大值与最小值的最小差值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 第二步，将 20 改为 7 。 nums 变成 [4,7,7] 。
 第三步，将 4 改为 3 。 nums 变成 [7,7,7] 。
 执行 3 步后，最小值和最大值之间的差值是 7 - 7 = 0。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

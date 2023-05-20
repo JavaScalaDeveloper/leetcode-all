@@ -1,7 +1,5 @@
 # [2392. 给定条件下构造矩阵](https://leetcode.cn/problems/build-a-matrix-with-conditions)
 
-[English Version](/solution/2300-2399/2392.Build%20a%20Matrix%20With%20Conditions/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>正</strong>&nbsp;整数&nbsp;<code>k</code>&nbsp;，同时给你：</p>
@@ -23,8 +21,6 @@
 </ul>
 
 <p>返回满足上述要求的 <strong>任意</strong>&nbsp;矩阵。如果不存在答案，返回一个空的矩阵。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,8 +45,6 @@
 <b>解释：</b>由前两个条件可以得到 3 在 1 的下面，但第三个条件是 3 在 1 的上面。
 没有符合条件的矩阵存在，所以我们返回空矩阵。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [966. 元音拼写检查器](https://leetcode.cn/problems/vowel-spellchecker)
 
-[English Version](/solution/0900-0999/0966.Vowel%20Spellchecker/README_EN.md)
-
 ## 题目描述
 
 <p>在给定单词列表&nbsp;<code>wordlist</code>&nbsp;的情况下，我们希望实现一个拼写检查器，将查询单词转换为正确的单词。</p>
@@ -36,8 +34,6 @@
 
 <p>给出一些查询 <code>queries</code>，返回一个单词列表 <code>answer</code>，其中 <code>answer[i]</code> 是由查询 <code>query = queries[i]</code> 得到的正确单词。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -50,8 +46,6 @@
 <b>输入：</b>wordlist = ["yellow"], queries = ["YellOw"]
 <b>输出：</b>["yellow"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [2348. 全 0 子数组的数目](https://leetcode.cn/problems/number-of-zero-filled-subarrays)
 
-[English Version](/solution/2300-2399/2348.Number%20of%20Zero-Filled%20Subarrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>&nbsp;，返回全部为&nbsp;<code>0</code>&nbsp;的&nbsp;<strong>子数组</strong>&nbsp;数目。</p>
 
 <p><strong>子数组</strong>&nbsp;是一个数组中一段连续非空元素组成的序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <b>输出：</b>0
 <b>解释：</b>没有全 0 子数组，所以我们返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

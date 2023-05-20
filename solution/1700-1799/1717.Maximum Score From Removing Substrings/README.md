@@ -1,7 +1,5 @@
 # [1717. 删除子字符串的最大得分](https://leetcode.cn/problems/maximum-score-from-removing-substrings)
 
-[English Version](/solution/1700-1799/1717.Maximum%20Score%20From%20Removing%20Substrings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> 和两个整数 <code>x</code> 和 <code>y</code> 。你可以执行下面两种操作任意次。</p>

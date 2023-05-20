@@ -1,7 +1,5 @@
 # [570. 至少有 5 名直接下属的经理](https://leetcode.cn/problems/managers-with-at-least-5-direct-reports)
 
-[English Version](/solution/0500-0599/0570.Managers%20with%20at%20Least%205%20Direct%20Reports/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Employee</code></p>
@@ -21,15 +19,11 @@ Id是该表的主键列。
 没有员工会成为自己的管理者。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个SQL查询，查询<strong>至少有5名直接下属</strong>的经理<strong> </strong>。</p>
 
 <p>以 <strong>任意顺序 </strong>返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

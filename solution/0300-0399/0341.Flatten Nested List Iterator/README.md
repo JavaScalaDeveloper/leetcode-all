@@ -1,7 +1,5 @@
 # [341. 扁平化嵌套列表迭代器](https://leetcode.cn/problems/flatten-nested-list-iterator)
 
-[English Version](/solution/0300-0399/0341.Flatten%20Nested%20List%20Iterator/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个嵌套的整数列表 <code>nestedList</code> 。每个元素要么是一个整数，要么是一个列表；该列表的元素也可能是整数或者是其他列表。请你实现一个迭代器将其扁平化，使之能够遍历这个列表中的所有整数。</p>
@@ -25,8 +23,6 @@ return res</pre>
 
 <p>如果 <code>res</code> 与预期的扁平化列表匹配，那么你的代码将会被判为正确。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -41,8 +37,6 @@ return res</pre>
 <strong>输出：</strong>[1,4,6]
 <strong>解释：</strong>通过重复调用&nbsp;<em>next&nbsp;</em>直到&nbsp;<em>hasNex</em>t 返回 false，<em>next&nbsp;</em>返回的元素的顺序应该是: <code>[1,4,6]</code>。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

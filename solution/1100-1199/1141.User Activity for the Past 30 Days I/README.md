@@ -1,7 +1,5 @@
 # [1141. 查询近 30 天活跃用户数](https://leetcode.cn/problems/user-activity-for-the-past-30-days-i)
 
-[English Version](/solution/1100-1199/1141.User%20Activity%20for%20the%20Past%2030%20Days%20I/README_EN.md)
-
 ## 题目描述
 
 <p>活动记录表：<code>Activity</code></p>
@@ -21,15 +19,11 @@ activity_type 字段为以下四种值 ('open_session', 'end_session', 'scroll_d
 每个 session_id 只属于一个用户。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>请写SQL查询出截至&nbsp;<code>2019-07-27</code>（包含2019-07-27），近<strong>&nbsp;</strong><code>30</code> 天的每日活跃用户数（当天只要有一条活动记录，即为活跃用户）。</p>
 
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果示例如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

@@ -1,7 +1,5 @@
 # [630. 课程表 III](https://leetcode.cn/problems/course-schedule-iii)
 
-[English Version](/solution/0600-0699/0630.Course%20Schedule%20III/README_EN.md)
-
 ## 题目描述
 
 <p>这里有 <code>n</code> 门不同的在线课程，按从 <code>1</code> 到 <code>n</code>&nbsp;编号。给你一个数组 <code>courses</code> ，其中 <code>courses[i] = [duration<sub>i</sub>, lastDay<sub>i</sub>]</code> 表示第 <code>i</code> 门课将会 <strong>持续</strong> 上 <code>duration<sub>i</sub></code> 天课，并且必须在不晚于 <code>lastDay<sub>i</sub></code> 的时候完成。</p>
@@ -9,8 +7,6 @@
 <p>你的学期从第 <code>1</code> 天开始。且不能同时修读两门及两门以上的课程。</p>
 
 <p>返回你最多可以修读的课程数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输入：</strong>courses = [[3,2],[4,3]]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

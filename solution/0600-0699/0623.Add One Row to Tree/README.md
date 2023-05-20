@@ -1,7 +1,5 @@
 # [623. 在二叉树中增加一行](https://leetcode.cn/problems/add-one-row-to-tree)
 
-[English Version](/solution/0600-0699/0623.Add%20One%20Row%20to%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树的根&nbsp;<code>root</code>&nbsp;和两个整数 <code>val</code> 和&nbsp;<code>depth</code>&nbsp;，在给定的深度&nbsp;<code>depth</code>&nbsp;处添加一个值为 <code>val</code> 的节点行。</p>
@@ -16,8 +14,6 @@
 	<li><code>cur</code> 原来的右子树应该是新的右子树根的右子树。</li>
 	<li>如果 <code>depth == 1 </code>意味着&nbsp;<code>depth - 1</code>&nbsp;根本没有深度，那么创建一个树节点，值 <code>val </code>作为整个原始树的新根，而原始树就是新根的左子树。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输入:</strong> root = [4,2,null,3,1], val = 1, depth = 3
 <strong>输出:</strong>  [4,2,null,1,1,3,null,null,1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

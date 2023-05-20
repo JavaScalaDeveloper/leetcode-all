@@ -1,12 +1,8 @@
 # [159. 至多包含两个不同字符的最长子串](https://leetcode.cn/problems/longest-substring-with-at-most-two-distinct-characters)
 
-[English Version](/solution/0100-0199/0159.Longest%20Substring%20with%20At%20Most%20Two%20Distinct%20Characters/README_EN.md)
-
 ## 题目描述
 
 给你一个字符串 <code>s</code> ，请你找出&nbsp;<strong>至多&nbsp;</strong>包含 <strong>两个不同字符</strong> 的最长子串，并返回该子串的长度。
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输出：</strong>5
 <strong>解释：</strong>满足题目要求的子串是 "aabbb" ，长度为 5 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1120. 子树的最大平均值](https://leetcode.cn/problems/maximum-average-subtree)
 
-[English Version](/solution/1100-1199/1120.Maximum%20Average%20Subtree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵二叉树的根节点&nbsp;<code>root</code>，找出这棵树的 <strong>每一棵</strong> 子树的 <strong>平均值</strong> 中的 <strong>最大</strong> 值。</p>
@@ -9,8 +7,6 @@
 <p>子树是树中的任意节点和它的所有后代构成的集合。</p>
 
 <p>树的平均值是树中节点值的总和除以节点数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -24,8 +20,6 @@
 以 value = 1 的节点作为子树的根节点，得到的平均值为 1 / 1 = 1。
 所以答案取最大值 6。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

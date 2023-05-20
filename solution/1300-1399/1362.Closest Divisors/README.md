@@ -1,7 +1,5 @@
 # [1362. 最接近的因数](https://leetcode.cn/problems/closest-divisors)
 
-[English Version](/solution/1300-1399/1362.Closest%20Divisors/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>num</code>，请你找出同时满足下面全部要求的两个整数：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>你可以按任意顺序返回这两个整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <pre><strong>输入：</strong>num = 999
 <strong>输出：</strong>[40,25]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

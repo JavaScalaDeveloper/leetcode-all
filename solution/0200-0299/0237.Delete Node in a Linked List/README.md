@@ -1,7 +1,5 @@
 # [237. 删除链表中的节点](https://leetcode.cn/problems/delete-node-in-a-linked-list)
 
-[English Version](/solution/0200-0299/0237.Delete%20Node%20in%20a%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 <p>有一个单链表的&nbsp;<code>head</code>，我们想删除它其中的一个节点&nbsp;<code>node</code>。</p>
@@ -27,8 +25,6 @@
 	<li>输出将是调用你函数后的整个链表。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0237.Delete%20Node%20in%20a%20Linked%20List/images/node1.jpg" style="height: 286px; width: 400px;" />
 <pre>
@@ -43,8 +39,6 @@
 <strong>输入：</strong>head = [4,5,1,9], node = 1
 <strong>输出：</strong>[4,5,9]
 <strong>解释：</strong>指定链表中值为&nbsp;1&nbsp;的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

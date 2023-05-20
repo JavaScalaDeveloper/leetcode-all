@@ -1,7 +1,5 @@
 # [1123. 最深叶节点的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves)
 
-[English Version](/solution/1100-1199/1123.Lowest%20Common%20Ancestor%20of%20Deepest%20Leaves/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个有根节点<meta charset="UTF-8" />&nbsp;<code>root</code>&nbsp;的二叉树，返回它&nbsp;<em>最深的叶节点的最近公共祖先</em>&nbsp;。</p>
@@ -13,8 +11,6 @@
 	<li>树的根节点的&nbsp;<strong>深度&nbsp;</strong>为&nbsp;<code>0</code>，如果某一节点的深度为&nbsp;<code>d</code>，那它的子节点的深度就是&nbsp;<code>d+1</code></li>
 	<li>如果我们假定 <code>A</code> 是一组节点&nbsp;<code>S</code>&nbsp;的 <strong>最近公共祖先</strong>，<code>S</code>&nbsp;中的每个节点都在以 <code>A</code> 为根节点的子树中，且 <code>A</code>&nbsp;的深度达到此条件下可能的最大值。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1100-1199/1123.Lowest%20Common%20Ancestor%20of%20Deepest%20Leaves/images/sketch1.png" style="height: 340px; width: 400px;" />
@@ -41,8 +37,6 @@
 <strong>输出：</strong>[2]
 <strong>解释：</strong>树中最深的叶节点是 2 ，最近公共祖先是它自己。</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -50,8 +44,6 @@
 	<li><code>0 &lt;= Node.val &lt;= 1000</code></li>
 	<li>每个节点的值都是&nbsp;<strong>独一无二</strong>&nbsp;的。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>注意：</strong>本题与力扣 865 重复：<a href="https://leetcode.cn/problems/smallest-subtree-with-all-the-deepest-nodes/">https://leetcode.cn/problems/smallest-subtree-with-all-the-deepest-nodes/</a></p>
 

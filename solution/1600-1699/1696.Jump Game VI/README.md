@@ -1,7 +1,5 @@
 # [1696. 跳跃游戏 VI](https://leetcode.cn/problems/jump-game-vi)
 
-[English Version](/solution/1600-1699/1696.Jump%20Game%20VI/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>

@@ -1,7 +1,5 @@
 # [1028. 从先序遍历还原二叉树](https://leetcode.cn/problems/recover-a-tree-from-preorder-traversal)
 
-[English Version](/solution/1000-1099/1028.Recover%20a%20Tree%20From%20Preorder%20Traversal/README_EN.md)
-
 ## 题目描述
 
 <p>我们从二叉树的根节点 <code>root</code>&nbsp;开始进行深度优先搜索。</p>
@@ -11,8 +9,6 @@
 <p>如果节点只有一个子节点，那么保证该子节点为左子节点。</p>
 
 <p>给出遍历输出&nbsp;<code>S</code>，还原树并返回其根节点&nbsp;<code>root</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <pre><strong>输入：</strong>&quot;1-401--349---90--88&quot;
 <strong>输出：</strong>[1,401,null,349,88,90]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

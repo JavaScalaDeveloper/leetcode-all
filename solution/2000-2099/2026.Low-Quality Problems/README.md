@@ -1,7 +1,5 @@
 # [2026. 低质量的问题](https://leetcode.cn/problems/low-quality-problems)
 
-[English Version](/solution/2000-2099/2026.Low-Quality%20Problems/README_EN.md)
-
 ## 题目描述
 
 <p>表：&nbsp;<code>Problems</code></p>
@@ -23,8 +21,6 @@ problem_id 是这张表的主键。
 <p>按&nbsp;<code>problem_id</code> 升序排列返回结果表。</p>
 
 <p>查询结果的格式在下面的例子中。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 

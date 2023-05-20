@@ -1,7 +1,5 @@
 # [513. 找树左下角的值](https://leetcode.cn/problems/find-bottom-left-tree-value)
 
-[English Version](/solution/0500-0599/0513.Find%20Bottom%20Left%20Tree%20Value/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，请找出该二叉树的 <strong>最底层 最左边 </strong>节点的值。</p>

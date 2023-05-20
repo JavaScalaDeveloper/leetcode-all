@@ -1,7 +1,5 @@
 # [2522. 将字符串分割成值不超过 K 的子字符串](https://leetcode.cn/problems/partition-string-into-substrings-with-values-at-most-k)
 
-[English Version](/solution/2500-2599/2522.Partition%20String%20Into%20Substrings%20With%20Values%20at%20Most%20K/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，它每一位都是&nbsp;<code>1</code>&nbsp;到&nbsp;<code>9</code>&nbsp;之间的数字组成，同时给你一个整数&nbsp;<code>k</code>&nbsp;。</p>
@@ -22,8 +20,6 @@
 	<li><strong>子字符串</strong>&nbsp;是字符串中一段连续的字符序列。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -40,8 +36,6 @@
 <b>输出：</b>-1
 <strong>解释：</strong>这个字符串不存在好分割。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

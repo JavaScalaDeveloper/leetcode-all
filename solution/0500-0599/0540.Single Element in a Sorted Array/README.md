@@ -1,7 +1,5 @@
 # [540. 有序数组中的单一元素](https://leetcode.cn/problems/single-element-in-a-sorted-array)
 
-[English Version](/solution/0500-0599/0540.Single%20Element%20in%20a%20Sorted%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个仅由整数组成的有序数组，其中每个元素都会出现两次，唯有一个数只会出现一次。</p>
@@ -9,8 +7,6 @@
 <p>请你找出并返回只出现一次的那个数。</p>
 
 <p>你设计的解决方案必须满足 <code>O(log n)</code> 时间复杂度和 <code>O(1)</code> 空间复杂度。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -25,8 +21,6 @@
 <strong>输入:</strong> nums =  [3,3,7,7,10,11,11]
 <strong>输出:</strong> 10
 </pre>
-
-<p>&nbsp;</p>
 
 <p><meta charset="UTF-8" /></p>
 
@@ -44,15 +38,6 @@
 给与的数组是有序的，由此可以使用二分查找，那条件该如何判断呢。
 
 先观察一下线性遍历是如何确定目标的：
-
-```c
-for (int i = 0; i < n - 1; i += 2) {
-    if (nums[i] != nums[i + 1]) {
-        return nums[i];
-    }
-}
-return nums[n - 1];
-```
 
 偶数下标：当 `nums[i] != nums[i + 1] && i % 2 == 0` 成立，结果便是 `nums[i]`。
 奇数下标：当 `nums[i] != nums[i - 1] && i % 2 == 1` 成立，结果便是 `nums[i - 1]`。
@@ -98,20 +83,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int singleNonDuplicate(int* nums, int numsSize) {
-    int left = 0;
-    int right = numsSize - 1;
-    while (left < right) {
-        int mid = left + (right - left) / 2;
-        if (nums[mid] == nums[mid ^ 1]) {
-            left = mid + 1;
-        } else {
-            right = mid;
-        }
-    }
-    return nums[left];
-}
-```
+**

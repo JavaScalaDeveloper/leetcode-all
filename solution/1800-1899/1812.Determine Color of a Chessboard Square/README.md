@@ -1,7 +1,5 @@
 # [1812. 判断国际象棋棋盘中一个格子的颜色](https://leetcode.cn/problems/determine-color-of-a-chessboard-square)
 
-[English Version](/solution/1800-1899/1812.Determine%20Color%20of%20a%20Chessboard%20Square/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个坐标 <code>coordinates</code> ，它是一个字符串，表示国际象棋棋盘中一个格子的坐标。下图是国际象棋棋盘示意图。</p>
@@ -67,10 +65,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool squareIsWhite(char *coordinates) {
-    return (coordinates[0] + coordinates[1]) & 1;
-}
-```
+**

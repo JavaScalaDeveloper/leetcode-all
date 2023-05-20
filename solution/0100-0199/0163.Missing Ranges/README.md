@@ -1,7 +1,5 @@
 # [163. 缺失的区间](https://leetcode.cn/problems/missing-ranges)
 
-[English Version](/solution/0100-0199/0163.Missing%20Ranges/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个闭区间&nbsp;<code>[lower, upper]</code> 和一个 <strong>按从小到大排序</strong> 的整数数组 <code>nums</code><em><strong>&nbsp;</strong></em>，其中元素的范围在闭区间&nbsp;<code>[lower, upper]</code>&nbsp;当中。</p>
@@ -28,8 +26,6 @@
 <strong>输入：</strong> nums = [-1], lower = -1, upper = -1
 <strong>输出：</strong> []
 <b>解释：</b>&nbsp;没有缺失的区间，因为没有缺失的数字。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

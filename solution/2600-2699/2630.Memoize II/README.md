@@ -1,7 +1,5 @@
 # [2630. 记忆函数 II](https://leetcode.cn/problems/memoize-ii)
 
-[English Version](/solution/2600-2699/2630.Memoize%20II/README_EN.md)
-
 ## 题目描述
 
 <p>现给定一个函数 <code>fn</code> ，返回该函数的一个 <strong>记忆化</strong> 版本。</p>
@@ -9,8 +7,6 @@
 <p>一个 <strong>记忆化</strong> 的函数是一个函数，它不会被相同的输入调用两次。而是会返回一个缓存的值。</p>
 
 <p>函数 <code>fn</code> 可以是任何函数，对它所接受的值类型没有任何限制。如果两个输入值在 JavaScript 中使用 <code>===</code>&nbsp;运算符比较时相等，则它们被视为相同。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@ fn = function (a, b) { return ({...a, ...b}); }
 <strong>解释：</strong>
 将两个空对象合并总是会得到一个空对象。因为传入的每个对象都是相同的，所以第二个和第三个函数调用都会命中缓存。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [875. 爱吃香蕉的珂珂](https://leetcode.cn/problems/koko-eating-bananas)
 
-[English Version](/solution/0800-0899/0875.Koko%20Eating%20Bananas/README_EN.md)
-
 ## 题目描述
 
 <p>珂珂喜欢吃香蕉。这里有 <code>n</code> 堆香蕉，第 <code>i</code> 堆中有&nbsp;<code>piles[i]</code>&nbsp;根香蕉。警卫已经离开了，将在 <code>h</code> 小时后回来。</p>
@@ -11,8 +9,6 @@
 <p>珂珂喜欢慢慢吃，但仍然想在警卫回来前吃掉所有的香蕉。</p>
 
 <p>返回她可以在 <code>h</code> 小时内吃掉所有香蕉的最小速度 <code>k</code>（<code>k</code> 为整数）。</p>
-
-<p>&nbsp;</p>
 
 <ul>
 </ul>
@@ -37,8 +33,6 @@
 <strong>输入：</strong>piles = [30,11,23,4,20], h = 6
 <strong>输出：</strong>23
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

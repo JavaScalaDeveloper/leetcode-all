@@ -1,7 +1,5 @@
 # [2502. 设计内存分配器](https://leetcode.cn/problems/design-memory-allocator)
 
-[English Version](/solution/2500-2599/2502.Design%20Memory%20Allocator/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code> ，表示下标从 <strong>0</strong> 开始的内存数组的大小。所有内存单元开始都是空闲的。</p>
@@ -28,8 +26,6 @@
 	<li><code>int free(int mID)</code> 释放 id <code>mID</code> 对应的所有内存单元。返回释放的内存单元数目。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre><strong>输入</strong>
@@ -51,8 +47,6 @@ loc.free(1); // 释放 mID 为 1 的所有内存单元。内存数组变为 [ , 
 loc.allocate(10, 2); // 无法找出长度为 10 个连续空闲内存单元的空闲块，所有返回 -1 。
 loc.free(7); // 释放 mID 为 7 的所有内存单元。内存数组保持原状，因为不存在 mID 为 7 的内存单元。返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

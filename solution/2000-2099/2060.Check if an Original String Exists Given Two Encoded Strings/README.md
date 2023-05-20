@@ -1,7 +1,5 @@
 # [2060. 同源字符串检测](https://leetcode.cn/problems/check-if-an-original-string-exists-given-two-encoded-strings)
 
-[English Version](/solution/2000-2099/2060.Check%20if%20an%20Original%20String%20Exists%20Given%20Two%20Encoded%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>原字符串由小写字母组成，可以按下述步骤编码：</p>
@@ -23,8 +21,6 @@
 <p>给你两个编码后的字符串 <code>s1</code> 和 <code>s2</code> ，由小写英文字母和数字 <code>1-9</code> 组成。如果存在能够同时编码得到 <code>s1</code> 和 <code>s2</code> 原字符串，返回 <code>true</code> ；否则，返回 <code>false</code>。</p>
 
 <p><strong>注意：</strong>生成的测试用例满足 <code>s1</code> 和 <code>s2</code> 中连续数字数不超过 <code>3</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -88,8 +84,6 @@
 - 编码为 s1 的字符串由两个字母组成
 - 编码为 s2 的字符串由三个字母组成
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

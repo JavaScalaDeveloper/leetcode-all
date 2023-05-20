@@ -1,7 +1,5 @@
 # [2011. 执行操作后的变量值](https://leetcode.cn/problems/final-value-of-variable-after-performing-operations)
 
-[English Version](/solution/2000-2099/2011.Final%20Value%20of%20Variable%20After%20Performing%20Operations/README_EN.md)
-
 ## 题目描述
 
 <p>存在一种仅支持 4 种操作和 1 个变量 <code>X</code> 的编程语言：</p>
@@ -14,8 +12,6 @@
 <p>最初，<code>X</code> 的值是 <code>0</code></p>
 
 <p>给你一个字符串数组 <code>operations</code> ，这是由操作组成的一个列表，返回执行所有操作后，<em> </em><code>X</code> 的 <strong>最终值</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -54,8 +50,6 @@ X++：X 加 1 ，X = 0 + 1 = 1
 X--：X 减 1 ，X = 1 - 1 = 0
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -85,14 +79,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int finalValueAfterOperations(char **operations, int operationsSize) {
-    int ans = 0;
-    for (int i = 0; i < operationsSize; i++) {
-        ans += operations[i][1] == '+' ? 1 : -1;
-    }
-    return ans;
-}
-```
+**

@@ -1,7 +1,5 @@
 # [1537. 最大得分](https://leetcode.cn/problems/get-the-maximum-score)
 
-[English Version](/solution/1500-1599/1537.Get%20the%20Maximum%20Score/README_EN.md)
-
 ## 题目描述
 
 <p>你有两个 <strong>有序</strong>&nbsp;且数组内元素互不相同的数组&nbsp;<code>nums1</code> 和&nbsp;<code>nums2</code>&nbsp;。</p>
@@ -19,8 +17,6 @@
 <p>请你返回所有可能合法路径中的最大得分。</p>
 
 <p>由于答案可能很大，请你将它对 10^9 + 7 取余后返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -54,8 +50,6 @@
 <pre><strong>输入：</strong>nums1 = [1,4,5,8,9,11,19], nums2 = [2,3,4,11,12]
 <strong>输出：</strong>61
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

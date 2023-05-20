@@ -1,7 +1,5 @@
 # [336. 回文对](https://leetcode.cn/problems/palindrome-pairs)
 
-[English Version](/solution/0300-0399/0336.Palindrome%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>给定一组<strong> 互不相同</strong> 的单词， 找出所有<strong> 不同<em> </em></strong>的索引对 <code>(i, j)</code>，使得列表中的两个单词， <code>words[i] + words[j]</code> ，可拼接成回文串。</p>

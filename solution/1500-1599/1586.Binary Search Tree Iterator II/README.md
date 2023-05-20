@@ -1,7 +1,5 @@
 # [1586. 二叉搜索树迭代器 II](https://leetcode.cn/problems/binary-search-tree-iterator-ii)
 
-[English Version](/solution/1500-1599/1586.Binary%20Search%20Tree%20Iterator%20II/README_EN.md)
-
 ## 题目描述
 
 <p>实现二叉搜索树（BST）的<a href="https://baike.baidu.com/item/中序遍历/757281?fr=aladdin">中序遍历</a>迭代器&nbsp;<code>BSTIterator</code>&nbsp;类：</p>
@@ -19,8 +17,6 @@
 <p>你可以假设&nbsp;<code>next()</code>&nbsp;和&nbsp;<code>prev()</code>&nbsp;的调用总是有效的。即，当&nbsp;<code>next()</code>/<code>prev()</code>&nbsp;被调用的时候，在中序遍历序列中一定存在下一个/上一个元素。</p>
 
 <p><strong>进阶：</strong>你可以不提前遍历树中的值来解决问题吗？</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -48,8 +44,6 @@ bSTIterator.hasPrev(); // 返回 true
 bSTIterator.prev(); // 状态变为 [3, 7, 9, &lt;u&gt;15&lt;/u&gt;, 20], 返回 15
 bSTIterator.prev(); // 状态变为 [3, 7, &lt;u&gt;9&lt;/u&gt;, 15, 20], 返回 9
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

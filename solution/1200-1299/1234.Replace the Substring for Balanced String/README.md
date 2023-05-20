@@ -1,14 +1,10 @@
 # [1234. 替换子串得到平衡字符串](https://leetcode.cn/problems/replace-the-substring-for-balanced-string)
 
-[English Version](/solution/1200-1299/1234.Replace%20the%20Substring%20for%20Balanced%20String/README_EN.md)
-
 ## 题目描述
 
 <p>有一个只含有&nbsp;<code>'Q', 'W', 'E',&nbsp;'R'</code>&nbsp;四种字符，且长度为 <code>n</code>&nbsp;的字符串。</p>
 
 <p>假如在该字符串中，这四个字符都恰好出现&nbsp;<code>n/4</code>&nbsp;次，那么它就是一个「平衡字符串」。</p>
-
-<p>&nbsp;</p>
 
 <p>给你一个这样的字符串 <code>s</code>，请通过「替换一个子串」的方式，使原字符串 <code>s</code> 变成一个「平衡字符串」。</p>
 
@@ -17,8 +13,6 @@
 <p>请返回待替换子串的最小可能长度。</p>
 
 <p>如果原字符串自身就是一个平衡字符串，则返回 <code>0</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +44,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>我们可以替换后 3 个 'Q'，使 s = "QWER"。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

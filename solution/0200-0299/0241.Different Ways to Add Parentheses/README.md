@@ -1,14 +1,10 @@
 # [241. 为运算表达式设计优先级](https://leetcode.cn/problems/different-ways-to-add-parentheses)
 
-[English Version](/solution/0200-0299/0241.Different%20Ways%20to%20Add%20Parentheses/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由数字和运算符组成的字符串&nbsp;<code>expression</code> ，按不同优先级组合数字和运算符，计算并返回所有可能组合的结果。你可以 <strong>按任意顺序</strong> 返回答案。</p>
 
 <p>生成的测试用例满足其对应输出值符合 32 位整数范围，不同结果的数量不超过 <code>10<sup>4</sup></code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 (2*((3-4)*5)) = -10 
 (((2*3)-4)*5) = 10
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2563. 统计公平数对的数目](https://leetcode.cn/problems/count-the-number-of-fair-pairs)
 
-[English Version](/solution/2500-2599/2563.Count%20the%20Number%20of%20Fair%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始、长度为 <code>n</code> 的整数数组&nbsp;<code>nums</code>&nbsp;，和两个整数&nbsp;<code>lower</code> 和&nbsp;<code>upper</code> ，返回 <strong>公平数对的数目</strong> 。</p>
@@ -12,8 +10,6 @@
 	<li><code>0 &lt;= i &lt; j &lt; n</code>，且</li>
 	<li><code>lower &lt;= nums[i] + nums[j] &lt;= upper</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -30,8 +26,6 @@
 <b>输出：</b>1
 <b>解释：</b>只有单个公平数对：(2,3) 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

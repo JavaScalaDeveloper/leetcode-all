@@ -1,7 +1,5 @@
 # [155. 最小栈](https://leetcode.cn/problems/min-stack)
 
-[English Version](/solution/0100-0199/0155.Min%20Stack/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个支持 <code>push</code> ，<code>pop</code> ，<code>top</code> 操作，并能在常数时间内检索到最小元素的栈。</p>
@@ -15,8 +13,6 @@
 	<li><code>int top()</code> 获取堆栈顶部的元素。</li>
 	<li><code>int getMin()</code> 获取堆栈中的最小元素。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -38,8 +34,6 @@ minStack.pop();
 minStack.top();      --&gt; 返回 0.
 minStack.getMin();   --&gt; 返回 -2.
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

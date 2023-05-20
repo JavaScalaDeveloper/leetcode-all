@@ -1,7 +1,5 @@
 # [915. 分割数组](https://leetcode.cn/problems/partition-array-into-disjoint-intervals)
 
-[English Version](/solution/0900-0999/0915.Partition%20Array%20into%20Disjoint%20Intervals/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个数组&nbsp;<code>nums</code>&nbsp;，将其划分为两个连续子数组&nbsp;<code>left</code>&nbsp;和&nbsp;<code>right</code>，&nbsp;使得：</p>
@@ -15,8 +13,6 @@
 <p><em>在完成这样的分组后返回&nbsp;<code>left</code>&nbsp;的&nbsp;<strong>长度&nbsp;</strong></em>。</p>
 
 <p>用例可以保证存在这样的划分方法。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输出：</strong>4
 <strong>解释：</strong>left = [1,1,1,0]，right = [6,12]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

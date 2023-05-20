@@ -1,7 +1,5 @@
 # [436. 寻找右区间](https://leetcode.cn/problems/find-right-interval)
 
-[English Version](/solution/0400-0499/0436.Find%20Right%20Interval/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个区间数组 <code>intervals</code> ，其中&nbsp;<code>intervals[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> ，且每个&nbsp;<code>start<sub>i</sub></code> 都 <strong>不同</strong> 。</p>
@@ -37,8 +35,6 @@
 <strong>解释：</strong>对于区间 [1,4] 和 [3,4] ，没有满足条件的“右侧”区间。
 对于 [2,3] ，区间 [3,4] 有最小的“右”起点。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

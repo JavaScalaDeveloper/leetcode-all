@@ -1,7 +1,5 @@
 # [2325. 解密消息](https://leetcode.cn/problems/decode-the-message)
 
-[English Version](/solution/2300-2399/2325.Decode%20the%20Message/README_EN.md)
-
 ## 题目描述
 
 <p>给你字符串 <code>key</code> 和 <code>message</code> ，分别表示一个加密密钥和一段加密消息。解密 <code>message</code> 的步骤如下：</p>
@@ -18,8 +16,6 @@
 </ul>
 
 <p>返回解密后的消息。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>解释：</strong>对照表如上图所示。
 提取 "<em><strong>eljuxhpwnyrdgtqkviszcfmabo</strong></em>" 中每个字母的首次出现可以得到替换表。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -85,25 +79,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char *decodeMessage(char *key, char *message) {
-    int m = strlen(key);
-    int n = strlen(message);
-    char d[26];
-    memset(d, ' ', 26);
-    for (int i = 0, j = 0; i < m; i++) {
-        if (key[i] == ' ' || d[key[i] - 'a'] != ' ') {
-            continue;
-        }
-        d[key[i] - 'a'] = 'a' + j++;
-    }
-    char *ans = malloc(n + 1);
-    for (int i = 0; i < n; i++) {
-        ans[i] = message[i] == ' ' ? ' ' : d[message[i] - 'a'];
-    }
-    ans[n] = '\0';
-    return ans;
-}
-```
+**

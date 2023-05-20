@@ -1,7 +1,5 @@
 # [522. 最长特殊序列 II](https://leetcode.cn/problems/longest-uncommon-subsequence-ii)
 
-[English Version](/solution/0500-0599/0522.Longest%20Uncommon%20Subsequence%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定字符串列表&nbsp;<code>strs</code> ，返回其中 <strong>最长的特殊序列</strong>&nbsp;的长度。如果最长特殊序列不存在，返回 <code>-1</code> 。</p>
@@ -13,8 +11,6 @@
 <ul>
 	<li>例如，<code>"abc"</code>&nbsp;是 <code>"aebdc"</code>&nbsp;的子序列，因为您可以删除<code>"a<u>e</u>b<u>d</u>c"</code>中的下划线字符来得到 <code>"abc"</code>&nbsp;。<code>"aebdc"</code>的子序列还包括<code>"aebdc"</code>、 <code>"aeb"</code>&nbsp;和 <font color="#c7254e" face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size: 12.6px; background-color: rgb(249, 242, 244);">""</span></font>&nbsp;(空字符串)。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输入:</strong> strs = ["aaa","aaa","aa"]
 <strong>输出:</strong> -1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

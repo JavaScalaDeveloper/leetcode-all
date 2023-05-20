@@ -1,7 +1,5 @@
 # [352. 将数据流变为多个不相交区间](https://leetcode.cn/problems/data-stream-as-disjoint-intervals)
 
-[English Version](/solution/0300-0399/0352.Data%20Stream%20as%20Disjoint%20Intervals/README_EN.md)
-
 ## 题目描述
 
 <p>&nbsp;给你一个由非负整数&nbsp;<code>a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub></code> 组成的数据流输入，请你将到目前为止看到的数字总结为不相交的区间列表。</p>
@@ -15,8 +13,6 @@
 	<li><code>void addNum(int val)</code> 向数据流中加入整数 <code>val</code> 。</li>
 	<li><code>int[][] getIntervals()</code> 以不相交区间&nbsp;<code>[start<sub>i</sub>, end<sub>i</sub>]</code> 的列表形式返回对数据流中整数的总结。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -41,8 +37,6 @@ summaryRanges.addNum(6);      // arr = [1, 2, 3, 6, 7]
 summaryRanges.getIntervals(); // 返回 [[1, 3], [6, 7]]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -51,8 +45,6 @@ summaryRanges.getIntervals(); // 返回 [[1, 3], [6, 7]]
 </ul>
 </div>
 </div>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>如果存在大量合并，并且与数据流的大小相比，不相交区间的数量很小，该怎么办?</p>
 

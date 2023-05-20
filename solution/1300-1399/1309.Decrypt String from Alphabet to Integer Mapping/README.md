@@ -1,7 +1,5 @@
 # [1309. 解码字母到整数映射](https://leetcode.cn/problems/decrypt-string-from-alphabet-to-integer-mapping)
 
-[English Version](/solution/1300-1399/1309.Decrypt%20String%20from%20Alphabet%20to%20Integer%20Mapping/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>，它由数字（<code>'0'</code> - <code>'9'</code>）和&nbsp;<code>'#'</code>&nbsp;组成。我们希望按下述规则将&nbsp;<code>s</code>&nbsp;映射为一些小写英文字符：</p>
@@ -14,8 +12,6 @@
 <p>返回映射之后形成的新字符串。</p>
 
 <p>题目数据保证映射始终唯一。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输入：</strong>s = "1326#"
 <strong>输出：</strong>"acz"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -69,26 +63,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char *freqAlphabets(char *s) {
-    int n = strlen(s);
-    int i = 0;
-    int j = 0;
-    char *ans = malloc(sizeof(s) * n);
-    while (i < n) {
-        int t;
-        if (i + 2 < n && s[i + 2] == '#') {
-            t = (s[i] - '0') * 10 + s[i + 1];
-            i += 3;
-        } else {
-            t = s[i];
-            i += 1;
-        }
-        ans[j++] = 'a' + t - '1';
-    }
-    ans[j] = '\0';
-    return ans;
-}
-```
+**

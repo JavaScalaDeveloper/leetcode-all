@@ -1,7 +1,5 @@
 # [1880. 检查某单词是否等于两单词之和](https://leetcode.cn/problems/check-if-word-equals-summation-of-two-words)
 
-[English Version](/solution/1800-1899/1880.Check%20if%20Word%20Equals%20Summation%20of%20Two%20Words/README_EN.md)
-
 ## 题目描述
 
 <p>字母的 <strong>字母值</strong> 取决于字母在字母表中的位置，<strong>从 0 开始</strong> 计数。即，<code>'a' -&gt; 0</code>、<code>'b' -&gt; 1</code>、<code>'c' -&gt; 2</code>，以此类推。</p>
@@ -79,18 +77,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int calc(char *s) {
-    int res = 0;
-    for (int i = 0; s[i]; i++) {
-        res = res * 10 + s[i] - 'a';
-    }
-    return res;
-}
-
-bool isSumEqual(char *firstWord, char *secondWord, char *targetWord) {
-    return calc(firstWord) + calc(secondWord) == calc(targetWord);
-}
-```
+**

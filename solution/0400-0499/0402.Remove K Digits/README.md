@@ -1,7 +1,5 @@
 # [402. 移掉 K 位数字](https://leetcode.cn/problems/remove-k-digits)
 
-[English Version](/solution/0400-0499/0402.Remove%20K%20Digits/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个以字符串表示的非负整数 <code>num</code> 和一个整数 <code>k</code> ，移除这个数中的 <code>k</code><em> </em>位数字，使得剩下的数字最小。请你以字符串形式返回这个最小的数字。</p>

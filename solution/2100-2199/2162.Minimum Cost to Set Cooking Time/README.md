@@ -1,7 +1,5 @@
 # [2162. 设置时间的最少代价](https://leetcode.cn/problems/minimum-cost-to-set-cooking-time)
 
-[English Version](/solution/2100-2199/2162.Minimum%20Cost%20to%20Set%20Cooking%20Time/README_EN.md)
-
 ## 题目描述
 
 <p>常见的微波炉可以设置加热时间，且加热时间满足以下条件：</p>
@@ -27,8 +25,6 @@
 <p>请你能返回设置&nbsp;<code>targetSeconds</code>&nbsp;秒钟加热时间需要花费的最少代价。</p>
 
 <p>请记住，虽然微波炉的秒数最多可以设置到 <code>99</code>&nbsp;秒，但一分钟等于&nbsp;<code>60</code>&nbsp;秒。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -58,8 +54,6 @@
 手指移到 7 处（代价为 1），输入 7 （代价为 2），移到 6 处（代价为 1），输入 6（代价为 2）。总代价为：1 + 2 + 1 + 2 = 6
 其他可行方案为 0076 ，076 ，0116 和 116 ，但是它们的代价都比 6 大。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [917. 仅仅反转字母](https://leetcode.cn/problems/reverse-only-letters)
 
-[English Version](/solution/0900-0999/0917.Reverse%20Only%20Letters/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> ，根据下述规则反转字符串：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>返回反转后的 <code>s</code><em> 。</em></p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -44,8 +40,6 @@
 <strong>输入：</strong>s = "Test1ng-Leet=code-Q!"
 <strong>输出：</strong>"Qedo1ct-eeLg=ntse-T!"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示</strong></p>
 

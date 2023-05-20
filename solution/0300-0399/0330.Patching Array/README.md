@@ -1,14 +1,10 @@
 # [330. 按要求补齐数组](https://leetcode.cn/problems/patching-array)
 
-[English Version](/solution/0300-0399/0330.Patching%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个已排序的正整数数组 <code>nums</code>&nbsp;<em>，</em>和一个正整数&nbsp;<code>n</code><em> 。</em>从&nbsp;<code>[1, n]</code>&nbsp;区间内选取任意个数字补充到&nbsp;nums&nbsp;中，使得&nbsp;<code>[1, n]</code>&nbsp;区间内的任何数字都可以用&nbsp;nums&nbsp;中某几个数字的和来表示。</p>
 
 <p>请返回 <em>满足上述要求的最少需要补充的数字个数</em>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输入: </strong>nums = <code>[1,2,2]</code>, n = <code>5</code>
 <strong>输出:</strong> 0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2589. 完成所有任务的最少时间](https://leetcode.cn/problems/minimum-time-to-complete-all-tasks)
 
-[English Version](/solution/2500-2599/2589.Minimum%20Time%20to%20Complete%20All%20Tasks/README_EN.md)
-
 ## 题目描述
 
 <p>你有一台电脑，它可以 <strong>同时</strong>&nbsp;运行无数个任务。给你一个二维整数数组&nbsp;<code>tasks</code>&nbsp;，其中&nbsp;<code>tasks[i] = [start<sub>i</sub>, end<sub>i</sub>, duration<sub>i</sub>]</code>&nbsp;表示第&nbsp;<code>i</code>&nbsp;个任务需要在 <strong>闭区间</strong>&nbsp;时间段&nbsp;<code>[start<sub>i</sub>, end<sub>i</sub>]</code>&nbsp;内运行&nbsp;<code>duration<sub>i</sub></code>&nbsp;个整数时间点（但不需要连续）。</p>
@@ -9,8 +7,6 @@
 <p>当电脑需要运行任务时，你可以打开电脑，如果空闲时，你可以将电脑关闭。</p>
 
 <p>请你返回完成所有任务的情况下，电脑最少需要运行多少秒。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 - 第三个任务在闭区间 [5, 6] 运行。
 电脑总共运行 4 个整数时间点。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

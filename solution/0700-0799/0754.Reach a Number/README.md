@@ -1,7 +1,5 @@
 # [754. 到达终点数字](https://leetcode.cn/problems/reach-a-number)
 
-[English Version](/solution/0700-0799/0754.Reach%20a%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>在一根无限长的数轴上，你站在<code>0</code>的位置。终点在<code>target</code>的位置。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>给定整数&nbsp;<code>target</code> ，返回 <em>到达目标所需的 <strong>最小&nbsp;</strong>移动次数(即最小 <code>numMoves</code> )&nbsp;</em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -37,8 +33,6 @@
 第一次移动，从 0 到 1 。
 第二次移动，从 1 到 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

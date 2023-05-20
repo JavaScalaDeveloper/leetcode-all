@@ -1,7 +1,5 @@
 # [1995. 统计特殊四元组](https://leetcode.cn/problems/count-special-quadruplets)
 
-[English Version](/solution/1900-1999/1995.Count%20Special%20Quadruplets/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>下标从 0 开始</strong> 的整数数组 <code>nums</code> ，返回满足下述条件的 <strong>不同</strong> 四元组 <code>(a, b, c, d)</code> 的 <strong>数目</strong> ：</p>
@@ -10,8 +8,6 @@
 	<li><code>nums[a] + nums[b] + nums[c] == nums[d]</code> ，且</li>
 	<li><code>a &lt; b &lt; c &lt; d</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 - (0, 2, 3, 4): 1 + 1 + 3 == 5
 - (1, 2, 3, 4): 1 + 1 + 3 == 5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

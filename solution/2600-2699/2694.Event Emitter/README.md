@@ -1,7 +1,5 @@
 # [2694. Event Emitter](https://leetcode.cn/problems/event-emitter)
 
-[English Version](/solution/2600-2699/2694.Event%20Emitter/README_EN.md)
-
 ## 题目描述
 
 <p>Design an <code>EventEmitter</code> class. This interface&nbsp;is similar (but with some differences) to the one found in Node.js or the Event Target interface of the DOM. The <code>EventEmitter</code> should allow for subscribing to events and emitting them.</p>
@@ -15,7 +13,6 @@
 	<li><strong>emit</strong> - This method takes in two arguments: the name of an event as a string and an optional array of arguments that will be&nbsp;passed to the callback(s). If there are no callbacks subscribed to the given event, return an empty array. Otherwise, return an array of the results of all callback calls in the order they were subscribed.</li>
 </ul>
 
-<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
@@ -55,7 +52,6 @@ sub.unsubscribe(); // undefined
 emitter.emit(&quot;firstEvent&quot;, [4, 5, 6]); // [], there are no subscriptions
 </pre>
 
-<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>

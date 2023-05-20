@@ -1,7 +1,5 @@
 # [2114. 句子中的最多单词数](https://leetcode.cn/problems/maximum-number-of-words-found-in-sentences)
 
-[English Version](/solution/2100-2199/2114.Maximum%20Number%20of%20Words%20Found%20in%20Sentences/README_EN.md)
-
 ## 题目描述
 
 <p>一个 <strong>句子</strong>&nbsp;由一些 <strong>单词</strong>&nbsp;以及它们之间的单个空格组成，句子的开头和结尾不会有多余空格。</p>
@@ -9,8 +7,6 @@
 <p>给你一个字符串数组&nbsp;<code>sentences</code>&nbsp;，其中&nbsp;<code>sentences[i]</code>&nbsp;表示单个 <strong>句子</strong>&nbsp;。</p>
 
 <p>请你返回单个句子里 <strong>单词的最多数目</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <b>解释：</b>可能有多个句子有相同单词数。
 这个例子中，第二个句子和第三个句子（加粗斜体）有相同数目的单词数。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -71,23 +65,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-
-int mostWordsFound(char **sentences, int sentencesSize) {
-    int ans = 0;
-    for (int i = 0; i < sentencesSize; i++) {
-        char *s = sentences[i];
-        int count = 1;
-        for (int j = 0; s[j]; j++) {
-            if (s[j] == ' ') {
-                count++;
-            }
-        }
-        ans = max(ans, count);
-    }
-    return ans;
-}
-```
+**

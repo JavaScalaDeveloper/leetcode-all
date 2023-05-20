@@ -1,7 +1,5 @@
 # [2228. 7 天内两次购买的用户](https://leetcode.cn/problems/users-with-two-purchases-within-seven-days)
 
-[English Version](/solution/2200-2299/2228.Users%20With%20Two%20Purchases%20Within%20Seven%20Days/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Purchases</code></p>
@@ -18,15 +16,11 @@ purchase_id 是该表的主键。
 该表包含用户从某个零售商购买的日期的日志。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，获取&nbsp;<strong>最多&nbsp;</strong>间隔 <code>7</code> 天进行两次购买的用户的 id。</p>
 
 <p data-group="1-1">返回<em>按 <code>user_id</code>&nbsp;排序的结果表。</em></p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

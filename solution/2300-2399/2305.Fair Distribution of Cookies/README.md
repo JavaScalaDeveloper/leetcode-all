@@ -1,7 +1,5 @@
 # [2305. 公平分发饼干](https://leetcode.cn/problems/fair-distribution-of-cookies)
 
-[English Version](/solution/2300-2399/2305.Fair%20Distribution%20of%20Cookies/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>cookies</code> ，其中 <code>cookies[i]</code> 表示在第 <code>i</code> 个零食包中的饼干数量。另给你一个整数 <code>k</code> 表示等待分发零食包的孩子数量，<strong>所有</strong> 零食包都需要分发。在同一个零食包中的所有饼干都必须分发给同一个孩子，不能分开。</p>
@@ -9,8 +7,6 @@
 <p>分发的 <strong>不公平程度</strong> 定义为单个孩子在分发过程中能够获得饼干的最大总数。</p>
 
 <p>返回所有分发的最小不公平程度。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 分发的不公平程度为 max(7,7,7) = 7 。
 可以证明不存在不公平程度小于 7 的分发方案。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2263. 数组变为有序的最小操作次数](https://leetcode.cn/problems/make-array-non-decreasing-or-non-increasing)
 
-[English Version](/solution/2200-2299/2263.Make%20Array%20Non-decreasing%20or%20Non-increasing/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 。在一步操作中，你可以：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>返回将数组 <code>nums</code> 变为 <strong>非递增</strong> 或<strong> 非递减 </strong>所需的 <strong>最小</strong> 操作次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,16 +41,12 @@
 <strong>解释：</strong>数组已经是按非递减顺序排列了，无需执行任何操作，返回 0 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
 	<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你可以设计并实现时间复杂度为 <code>O(n*log(n))</code> 的解法吗?</p>
 

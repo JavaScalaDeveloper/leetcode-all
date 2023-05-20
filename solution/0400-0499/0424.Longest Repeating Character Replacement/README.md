@@ -1,14 +1,10 @@
 # [424. 替换后的最长重复字符](https://leetcode.cn/problems/longest-repeating-character-replacement)
 
-[English Version](/solution/0400-0499/0424.Longest%20Repeating%20Character%20Replacement/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> 。你可以选择字符串中的任一字符，并将其更改为任何其他大写英文字符。该操作最多可执行 <code>k</code> 次。</p>
 
 <p>在执行上述操作后，返回包含相同字母的最长子字符串的长度。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 子串 "BBBB" 有最长重复字母, 答案为 4。
 可能存在其他的方法来得到同样的结果。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

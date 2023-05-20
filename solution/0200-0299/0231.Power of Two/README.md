@@ -1,7 +1,5 @@
 # [231. 2 的幂](https://leetcode.cn/problems/power-of-two)
 
-[English Version](/solution/0200-0299/0231.Power%20of%20Two/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code>，请你判断该整数是否是 2 的幂次方。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>

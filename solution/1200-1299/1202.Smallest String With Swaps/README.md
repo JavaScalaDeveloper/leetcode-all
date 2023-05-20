@@ -1,7 +1,5 @@
 # [1202. 交换字符串中的元素](https://leetcode.cn/problems/smallest-string-with-swaps)
 
-[English Version](/solution/1200-1299/1202.Smallest%20String%20With%20Swaps/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>，以及该字符串中的一些「索引对」数组&nbsp;<code>pairs</code>，其中&nbsp;<code>pairs[i] =&nbsp;[a, b]</code>&nbsp;表示字符串中的两个索引（编号从 0 开始）。</p>
@@ -9,8 +7,6 @@
 <p>你可以 <strong>任意多次交换</strong> 在&nbsp;<code>pairs</code>&nbsp;中任意一对索引处的字符。</p>
 
 <p>返回在经过若干次交换后，<code>s</code>&nbsp;可以变成的按字典序最小的字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -39,8 +35,6 @@
 交换 s[1] 和 s[2], s = &quot;bac&quot;
 交换 s[0] 和 s[1], s = &quot;abc&quot;
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

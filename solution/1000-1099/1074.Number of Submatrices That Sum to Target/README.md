@@ -1,7 +1,5 @@
 # [1074. 元素和为目标值的子矩阵数量](https://leetcode.cn/problems/number-of-submatrices-that-sum-to-target)
 
-[English Version](/solution/1000-1099/1074.Number%20of%20Submatrices%20That%20Sum%20to%20Target/README_EN.md)
-
 ## 题目描述
 
 <p>给出矩阵 <code>matrix</code> 和目标值 <code>target</code>，返回元素总和等于目标值的非空子矩阵的数量。</p>

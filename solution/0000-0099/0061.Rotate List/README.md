@@ -1,12 +1,8 @@
 # [61. 旋转链表](https://leetcode.cn/problems/rotate-list)
 
-[English Version](/solution/0000-0099/0061.Rotate%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个链表的头节点 <code>head</code> ，旋转链表，将链表每个节点向右移动&nbsp;<code>k</code><em>&nbsp;</em>个位置。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0061.Rotate%20List/images/rotate1.jpg" style="width: 450px;" />
@@ -21,8 +17,6 @@
 <strong>输入：</strong>head = [0,1,2], k = 4
 <strong>输出：</strong>[2,0,1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [118. 杨辉三角](https://leetcode.cn/problems/pascals-triangle)
 
-[English Version](/solution/0100-0199/0118.Pascal%27s%20Triangle/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个非负整数 <em><code>numRows</code>，</em>生成「杨辉三角」的前 <em><code>numRows</code> </em>行。</p>

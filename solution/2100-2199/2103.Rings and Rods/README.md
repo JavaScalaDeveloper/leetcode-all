@@ -1,7 +1,5 @@
 # [2103. 环和杆](https://leetcode.cn/problems/rings-and-rods)
 
-[English Version](/solution/2100-2199/2103.Rings%20and%20Rods/README_EN.md)
-
 ## 题目描述
 
 <p>总计有 <code>n</code> 个环，环的颜色可以是红、绿、蓝中的一种。这些环分布穿在 10 根编号为 <code>0</code> 到 <code>9</code> 的杆上。</p>
@@ -16,8 +14,6 @@
 <p>例如，<code>"R3G2B1"</code> 表示：共有 <code>n == 3</code> 个环，红色的环在编号为 3 的杆上，绿色的环在编号为 2 的杆上，蓝色的环在编号为 1 的杆上。</p>
 
 <p>找出所有集齐 <strong>全部三种颜色</strong> 环的杆，并返回这种杆的数量。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2103.Rings%20and%20Rods/images/ex1final.png" style="width: 258px; height: 130px;">
@@ -47,8 +43,6 @@
 <strong>解释：</strong>
 只给了一个环，因此，不存在集齐全部三种颜色环的杆。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -84,21 +78,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int countPoints(char *rings) {
-    int target = (1 << ('R' - 'A')) + (1 << ('G' - 'A')) + (1 << ('B' - 'A'));
-    int count[10] = {0};
-    for (int i = 0; rings[i]; i += 2) {
-        count[rings[i + 1] - '0'] |= 1 << (rings[i] - 'A');
-    }
-    int ans = 0;
-    for (int i = 0; i < 10; i++) {
-        if (count[i] == target) {
-            ans++;
-        }
-    }
-    return ans;
-}
-```
+**

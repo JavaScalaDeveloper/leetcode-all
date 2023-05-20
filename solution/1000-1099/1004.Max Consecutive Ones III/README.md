@@ -1,12 +1,8 @@
 # [1004. 最大连续 1 的个数 III](https://leetcode.cn/problems/max-consecutive-ones-iii)
 
-[English Version](/solution/1000-1099/1004.Max%20Consecutive%20Ones%20III/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二进制数组&nbsp;<code>nums</code>&nbsp;和一个整数 <code>k</code>，如果可以翻转最多 <code>k</code> 个 <code>0</code> ，则返回 <em>数组中连续 <code>1</code> 的最大个数</em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输出：</strong>10
 <strong>解释：</strong>[0,0,1,1,<strong>1</strong>,<strong>1</strong>,1,1,1,<strong>1</strong>,1,1,0,0,0,1,1,1,1]
 粗体数字从 0 翻转到 1，最长的子数组长度为 10。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1575. 统计所有可行路径](https://leetcode.cn/problems/count-all-possible-routes)
 
-[English Version](/solution/1500-1599/1575.Count%20All%20Possible%20Routes/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>互不相同</strong>&nbsp;的整数数组，其中&nbsp;<code>locations[i]</code>&nbsp;表示第&nbsp;<code>i</code>&nbsp;个城市的位置。同时给你&nbsp;<code>start</code>，<code>finish</code>&nbsp;和&nbsp;<code>fuel</code>&nbsp;分别表示出发城市、目的地城市和你初始拥有的汽油总量</p>
@@ -13,8 +11,6 @@
 <p>请你返回从<em>&nbsp;</em><code>start</code>&nbsp;到&nbsp;<code>finish</code>&nbsp;所有可能路径的数目。</p>
 
 <p>由于答案可能很大， 请将它对&nbsp;<code>10^9 + 7</code>&nbsp;取余后返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <strong>输入：</strong>locations = [5,2,1], start = 0, finish = 2, fuel = 3
 <strong>输出：</strong>0
 <strong>解释：</strong>没有办法只用 3 单位的汽油从 0 到达 2 。因为最短路径需要 4 单位的汽油。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

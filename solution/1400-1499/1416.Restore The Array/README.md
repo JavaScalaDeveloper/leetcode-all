@@ -1,7 +1,5 @@
 # [1416. 恢复数组](https://leetcode.cn/problems/restore-the-array)
 
-[English Version](/solution/1400-1499/1416.Restore%20The%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>某个程序本来应该输出一个整数数组。但是这个程序忘记输出空格了以致输出了一个数字字符串，我们所知道的信息只有：数组中所有整数都在 <code>[1, k]</code>&nbsp;之间，且数组中的数字都没有前导 0 。</p>
@@ -11,8 +9,6 @@
 <p>按照上述程序，请你返回所有可能输出字符串&nbsp;<code>s</code>&nbsp;的数组方案数。</p>
 
 <p>由于数组方案数可能会很大，请你返回它对&nbsp;<code>10^9 + 7</code>&nbsp;<strong>取余</strong>&nbsp;后的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <pre><strong>输入：</strong>s = &quot;1234567890&quot;, k = 90
 <strong>输出：</strong>34
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

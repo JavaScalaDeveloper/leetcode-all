@@ -1,7 +1,5 @@
 # [1827. 最少操作使数组递增](https://leetcode.cn/problems/minimum-operations-to-make-the-array-increasing)
 
-[English Version](/solution/1800-1899/1827.Minimum%20Operations%20to%20Make%20the%20Array%20Increasing/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> （<strong>下标从 0 开始</strong>）。每一次操作中，你可以选择数组中一个元素，并将它增加 <code>1</code> 。</p>
@@ -72,18 +70,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-
-int minOperations(int *nums, int numsSize) {
-    int ans = 0;
-    int mx = 0;
-    for (int i = 0; i < numsSize; i++) {
-        ans += max(0, mx + 1 - nums[i]);
-        mx = max(mx + 1, nums[i]);
-    }
-    return ans;
-}
-```
+**

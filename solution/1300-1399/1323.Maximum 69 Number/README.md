@@ -1,7 +1,5 @@
 # [1323. 6 和 9 组成的最大数字](https://leetcode.cn/problems/maximum-69-number)
 
-[English Version](/solution/1300-1399/1323.Maximum%2069%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个仅由数字 6 和 9 组成的正整数&nbsp;<code>num</code>。</p>
@@ -9,8 +7,6 @@
 <p>你最多只能翻转一位数字，将 6 变成&nbsp;9，或者把&nbsp;9 变成&nbsp;6 。</p>
 
 <p>请返回你可以得到的最大数字。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <pre><strong>输入：</strong>num = 9999
 <strong>输出：</strong>9999
 <strong>解释：</strong>无需改变就已经是最大的数字了。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -63,20 +57,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int maximum69Number(int num) {
-    int n = 0;
-    int i = 0;
-    int t = num;
-    while (t) {
-        n++;
-        if (t % 10 == 6) {
-            i = n;
-        }
-        t /= 10;
-    }
-    return num + 3 * pow(10, i - 1);
-}
-```
+**

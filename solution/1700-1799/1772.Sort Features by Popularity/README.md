@@ -1,7 +1,5 @@
 # [1772. 按受欢迎程度排列功能](https://leetcode.cn/problems/sort-features-by-popularity)
 
-[English Version](/solution/1700-1799/1772.Sort%20Features%20by%20Popularity/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串数组 <code>features</code> ，其中 <code>features[i]</code> 是一个单词，描述你最近参与开发的项目中一个功能的名称。你调查了用户喜欢哪些功能。另给定一个字符串数组 <code>responses</code>，其中 <code>responses[i]</code> 是一个包含以空格分隔的一系列单词的字符串。</p>

@@ -1,7 +1,5 @@
 # [525. 连续数组](https://leetcode.cn/problems/contiguous-array)
 
-[English Version](/solution/0500-0599/0525.Contiguous%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二进制数组 <code>nums</code> , 找到含有相同数量的 <code>0</code> 和 <code>1</code> 的最长连续子数组，并返回该子数组的长度。</p>

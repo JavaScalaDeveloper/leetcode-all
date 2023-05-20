@@ -1,7 +1,5 @@
 # [2172. 数组的最大与和](https://leetcode.cn/problems/maximum-and-sum-of-array)
 
-[English Version](/solution/2100-2199/2172.Maximum%20AND%20Sum%20of%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为&nbsp;<code>n</code>&nbsp;的整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>numSlots</code>&nbsp;，满足<code>2 * numSlots &gt;= n</code>&nbsp;。总共有&nbsp;<code>numSlots</code>&nbsp;个篮子，编号为&nbsp;<code>1</code>&nbsp;到&nbsp;<code>numSlots</code>&nbsp;。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>请你返回将 <code>nums</code>&nbsp;中所有数放入<em>&nbsp;</em><code>numSlots</code>&nbsp;个篮子中的最大与和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 最大与和为 (1 AND <strong><em>1</em></strong>) + (1 AND <strong><em>1</em></strong>) + (3 AND <strong><em>3</em></strong>) + (4 AND <strong><em>4</em></strong>) + (7 AND <strong><em>7</em></strong>) + (10 AND <strong><em>9</em></strong>) = 1 + 1 + 3 + 4 + 7 + 8 = 24 。
 注意，篮子 2 ，5 ，6 和 8 是空的，这是允许的。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1790. 仅执行一次字符串交换能否使两个字符串相等](https://leetcode.cn/problems/check-if-one-string-swap-can-make-strings-equal)
 
-[English Version](/solution/1700-1799/1790.Check%20if%20One%20String%20Swap%20Can%20Make%20Strings%20Equal/README_EN.md)
-
 ## 题目描述
 
 <p>给你长度相等的两个字符串 <code>s1</code> 和 <code>s2</code> 。一次<strong> 字符串交换 </strong>操作的步骤如下：选出某个字符串中的两个下标（不必不同），并交换这两个下标所对应的字符。</p>
@@ -81,31 +79,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool areAlmostEqual(char *s1, char *s2) {
-    int n = strlen(s1);
-    int i1 = -1;
-    int i2 = -1;
-    for (int i = 0; i < n; i++) {
-        if (s1[i] != s2[i]) {
-            if (i1 == -1) {
-                i1 = i;
-            } else if (i2 == -1) {
-                i2 = i;
-            } else {
-                return 0;
-            }
-        }
-    }
-    if (i1 == -1 && i2 == -1) {
-        return 1;
-    }
-    if (i1 == -1 || i2 == -1) {
-        return 0;
-    }
-    return s1[i1] == s2[i2] && s1[i2] == s2[i1];
-}
-
-```
+**

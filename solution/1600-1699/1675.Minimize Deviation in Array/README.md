@@ -1,7 +1,5 @@
 # [1675. 数组的最小偏移量](https://leetcode.cn/problems/minimize-deviation-in-array)
 
-[English Version](/solution/1600-1699/1675.Minimize%20Deviation%20in%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由 <code>n</code> 个正整数组成的数组 <code>nums</code> 。</p>
@@ -25,8 +23,6 @@
 
 <p>返回数组在执行某些操作之后可以拥有的 <strong>最小偏移量</strong> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -49,8 +45,6 @@
 <strong>输入：</strong>nums = [2,10,8]
 <strong>输出：</strong>3
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

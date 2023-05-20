@@ -1,7 +1,5 @@
 # [1597. 根据中缀表达式构造二叉表达式树](https://leetcode.cn/problems/build-binary-expression-tree-from-infix-expression)
 
-[English Version](/solution/1500-1599/1597.Build%20Binary%20Expression%20Tree%20From%20Infix%20Expression/README_EN.md)
-
 ## 题目描述
 
 <p><strong>二叉表达式树</strong> 是一种表达算术表达式的二叉树。二叉表达式树中的每一个节点都有零个或两个子节点。&nbsp;叶节点（有 0 个子节点的节点）表示操作数，非叶节点（有 2 个子节点的节点）表示运算符：&nbsp;<code>'+'</code>&nbsp;（加）、&nbsp;<code>'-'</code> （减）、&nbsp;<code>'*'</code> （乘）和&nbsp;<code>'/'</code> （除）。</p>
@@ -15,8 +13,6 @@
 <p><strong>注意，表达式的一般解析顺序适用于&nbsp;</strong><code>s</code>，即优先解析括号内的表达式，然后解析乘除法，最后解析加减法。</p>
 
 <p>同时，操作数在 <code>s</code> 和树的中序遍历中 <strong>出现顺序相同</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1597.Build%20Binary%20Expression%20Tree%20From%20Infix%20Expression/images/ex1-4.png" style="width: 250px; height: 161px;" />
@@ -44,8 +40,6 @@
 <strong>输入：</strong>s = "1+2+3+4+5"
 <strong>输出：</strong>[+,+,5,+,4,null,null,+,3,null,null,1,2]
 <strong>解释：</strong>二叉树 [+,+,5,+,+,null,null,1,2,3,4] 也是诸多有效的二叉表达式树之一。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

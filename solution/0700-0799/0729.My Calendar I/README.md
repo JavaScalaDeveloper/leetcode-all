@@ -1,7 +1,5 @@
 # [729. 我的日程安排表 I](https://leetcode.cn/problems/my-calendar-i)
 
-[English Version](/solution/0700-0799/0729.My%20Calendar%20I/README_EN.md)
-
 ## 题目描述
 
 <p>实现一个 <code>MyCalendar</code> 类来存放你的日程安排。如果要添加的日程安排不会造成 <strong>重复预订</strong> ，则可以存储这个新的日程安排。</p>
@@ -17,8 +15,6 @@
 	<li><code>boolean book(int start, int end)</code> 如果可以将日程安排成功添加到日历中而不会导致重复预订，返回 <code>true</code> 。否则，返回 <code>false</code>&nbsp;并且不要将该日程安排添加到日历中。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre>
@@ -33,8 +29,6 @@ MyCalendar myCalendar = new MyCalendar();
 myCalendar.book(10, 20); // return True
 myCalendar.book(15, 25); // return False ，这个日程安排不能添加到日历中，因为时间 15 已经被另一个日程安排预订了。
 myCalendar.book(20, 30); // return True ，这个日程安排可以添加到日历中，因为第一个日程安排预订的每个时间都小于 20 ，且不包含时间 20 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1308. 不同性别每日分数总计](https://leetcode.cn/problems/running-total-for-different-genders)
 
-[English Version](/solution/1300-1399/1308.Running%20Total%20for%20Different%20Genders/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Scores</code></p>
@@ -21,15 +19,11 @@
 如果参赛者是女性，那么 gender 列为 'F'，如果参赛者是男性，那么 gender 列为 'M'
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一条SQL语句查询每种性别在每一天的总分。</p>
 
 <p>返回按&nbsp;<code>gender</code>&nbsp;和&nbsp;<code>day</code>&nbsp;对查询结果 <strong>升序排序</strong>&nbsp;的结果。</p>
 
 <p>查询结果格式的示例如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

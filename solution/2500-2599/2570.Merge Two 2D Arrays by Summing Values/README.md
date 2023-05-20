@@ -1,7 +1,5 @@
 # [2570. 合并两个二维数组 - 求和法](https://leetcode.cn/problems/merge-two-2d-arrays-by-summing-values)
 
-[English Version](/solution/2500-2599/2570.Merge%20Two%202D%20Arrays%20by%20Summing%20Values/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个 <strong>二维</strong> 整数数组 <code>nums1</code> 和 <code>nums2.</code></p>
@@ -22,8 +20,6 @@
 
 <p>返回结果数组。返回的数组需要按 id 以递增顺序排列。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>nums1 = [[1,2],[2,3],[4,5]], nums2 = [[1,4],[3,2],[4,1]]
@@ -41,8 +37,6 @@
 <strong>输出：</strong>[[1,3],[2,4],[3,6],[4,3],[5,5]]
 <strong>解释：</strong>不存在共同 id ，在结果数组中只需要包含每个 id 和其对应的值。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

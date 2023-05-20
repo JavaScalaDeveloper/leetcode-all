@@ -1,7 +1,5 @@
 # [1236. 网络爬虫](https://leetcode.cn/problems/web-crawler)
 
-[English Version](/solution/1200-1299/1236.Web%20Crawler/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个链接&nbsp;<code>startUrl</code> 和一个接口&nbsp;<code>HtmlParser</code>&nbsp;，请你实现一个网络爬虫，以实现爬取同&nbsp;<code>startUrl</code>&nbsp;拥有相同&nbsp;<strong>域名标签&nbsp;</strong>的全部链接。该爬虫得到的全部链接可以&nbsp;<strong>任何顺序&nbsp;</strong>返回结果。</p>
@@ -27,8 +25,6 @@
 }</pre>
 
 <p>下面是两个实例，用以解释该问题的设计功能，对于自定义测试，你可以使用三个变量&nbsp;&nbsp;<code>urls</code>,&nbsp;<code>edges</code>&nbsp;和&nbsp;<code>startUrl</code>。注意在代码实现中，你只可以访问&nbsp;<code>startUrl</code>&nbsp;，而&nbsp;<code>urls</code>&nbsp;和&nbsp;<code>edges</code>&nbsp;不可以在你的代码中被直接访问。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -67,8 +63,6 @@ edges = [[0,2],[2,1],[3,2],[3,1],[3,0]]
 startUrl = &quot;http://news.google.com&quot;
 <strong>输入：</strong>[&quot;http://news.google.com&quot;]
 <strong>解释：</strong>startUrl 链接到所有其他不共享相同主机名的页面。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

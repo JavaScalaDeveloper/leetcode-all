@@ -1,7 +1,5 @@
 # [1194. 锦标赛优胜者](https://leetcode.cn/problems/tournament-winners)
 
-[English Version](/solution/1100-1199/1194.Tournament%20Winners/README_EN.md)
-
 ## 题目描述
 
 <p><code>Players</code>&nbsp;玩家表</p>
@@ -35,8 +33,6 @@ first_score 和 second_score 分别表示 first_player 和 second_player 的得�
 你可以假设，在每一场比赛中，球员都属于同一组。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>每组的获胜者是在组内累积得分最高的选手。如果平局，<code>player_id</code> <strong>最小&nbsp;</strong>的选手获胜。</p>
 
 <p>编写一个 SQL 查询来查找每组中的获胜者。</p>
@@ -44,8 +40,6 @@ first_score 和 second_score 分别表示 first_player 和 second_player 的得�
 <p>返回的结果表单 <strong>没有顺序要求</strong>&nbsp;。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

@@ -1,7 +1,5 @@
 # [2211. 统计道路上的碰撞次数](https://leetcode.cn/problems/count-collisions-on-a-road)
 
-[English Version](/solution/2200-2299/2211.Count%20Collisions%20on%20a%20Road/README_EN.md)
-
 ## 题目描述
 
 <p>在一条无限长的公路上有 <code>n</code> 辆汽车正在行驶。汽车按从左到右的顺序按从 <code>0</code> 到 <code>n - 1</code> 编号，每辆车都在一个 <strong>独特的</strong> 位置。</p>
@@ -18,8 +16,6 @@
 <p>碰撞发生后，涉及的车辆将无法继续移动并停留在碰撞位置。除此之外，汽车不能改变它们的状态或移动方向。</p>
 
 <p>返回在这条道路上发生的 <strong>碰撞总次数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>
 不存在会发生碰撞的车辆。因此，将会在道路上发生的碰撞总次数是 0 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

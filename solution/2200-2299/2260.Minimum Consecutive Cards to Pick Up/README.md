@@ -1,14 +1,10 @@
 # [2260. 必须拿起的最小连续卡牌数](https://leetcode.cn/problems/minimum-consecutive-cards-to-pick-up)
 
-[English Version](/solution/2200-2299/2260.Minimum%20Consecutive%20Cards%20to%20Pick%20Up/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>cards</code> ，其中 <code>cards[i]</code> 表示第 <code>i</code> 张卡牌的 <strong>值</strong> 。如果两张卡牌的值相同，则认为这一对卡牌 <strong>匹配</strong> 。</p>
 
 <p>返回你必须拿起的最小连续卡牌数，以使在拿起的卡牌中有一对匹配的卡牌。如果无法得到一对匹配的卡牌，返回 <code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,8 +17,6 @@
 <pre><strong>输入：</strong>cards = [1,0,5,3]
 <strong>输出：</strong>-1
 <strong>解释：</strong>无法找出含一对匹配卡牌的一组连续卡牌。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

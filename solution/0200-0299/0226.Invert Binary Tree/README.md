@@ -1,12 +1,8 @@
 # [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree)
 
-[English Version](/solution/0200-0299/0226.Invert%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵二叉树的根节点 <code>root</code> ，翻转这棵二叉树，并返回其根节点。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输入：</strong>root = []
 <strong>输出：</strong>[]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

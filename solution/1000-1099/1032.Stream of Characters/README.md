@@ -1,7 +1,5 @@
 # [1032. 字符流](https://leetcode.cn/problems/stream-of-characters)
 
-[English Version](/solution/1000-1099/1032.Stream%20of%20Characters/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个算法：接收一个字符流，并检查这些字符的后缀是否是字符串数组 <code>words</code> 中的一个字符串。</p>
@@ -14,8 +12,6 @@
 	<li><code>StreamChecker(String[] words)</code> ：构造函数，用字符串数组&nbsp;<code>words</code> 初始化数据结构。</li>
 	<li><code>boolean query(char letter)</code>：从字符流中接收一个新字符，如果字符流中的任一非空后缀能匹配 <code>words</code> 中的某一字符串，返回 <code>true</code> ；否则，返回 <code>false</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -41,8 +37,6 @@ streamChecker.query("j"); // 返回 False
 streamChecker.query("k"); // 返回 False
 streamChecker.query("l"); // 返回 True ，因为 'kl' 在 words 中
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

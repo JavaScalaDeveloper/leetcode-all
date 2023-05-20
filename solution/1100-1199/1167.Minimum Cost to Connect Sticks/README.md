@@ -1,7 +1,5 @@
 # [1167. 连接棒材的最低费用](https://leetcode.cn/problems/minimum-cost-to-connect-sticks)
 
-[English Version](/solution/1100-1199/1167.Minimum%20Cost%20to%20Connect%20Sticks/README_EN.md)
-
 ## 题目描述
 
 <p>你有一些长度为正整数的棍子。这些长度以数组<meta charset="UTF-8" />&nbsp;<code>sticks</code>&nbsp;的形式给出，<meta charset="UTF-8" />&nbsp;<code>sticks[i]</code>&nbsp;是 <code>第i个</code> 木棍的长度。</p>
@@ -9,8 +7,6 @@
 <p>你可以通过支付 <code>x + y</code> 的成本将任意两个长度为 <code>x</code> 和 <code>y</code> 的棍子连接成一个棍子。你必须连接所有的棍子，直到剩下一个棍子。</p>
 
 <p>返回以这种方式将所有给定的棍子连接成一个棍子的 <em>最小成本</em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>只有一根木棍，不必再连接。总费用 0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

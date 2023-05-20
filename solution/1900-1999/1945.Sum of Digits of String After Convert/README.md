@@ -1,7 +1,5 @@
 # [1945. 字符串转化后的各位数字之和](https://leetcode.cn/problems/sum-of-digits-of-string-after-convert)
 
-[English Version](/solution/1900-1999/1945.Sum%20of%20Digits%20of%20String%20After%20Convert/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由小写字母组成的字符串 <code>s</code> ，以及一个整数 <code>k</code> 。</p>
@@ -17,8 +15,6 @@
 </ul>
 
 <p>返回执行上述操作后得到的结果整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 - 转换 #2：33 ➝ 3 + 3 ➝ 6
 因此，结果整数为 6 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

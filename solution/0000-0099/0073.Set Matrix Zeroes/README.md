@@ -1,15 +1,11 @@
 # [73. 矩阵置零](https://leetcode.cn/problems/set-matrix-zeroes)
 
-[English Version](/solution/0000-0099/0073.Set%20Matrix%20Zeroes/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个&nbsp;<code><em>m</em> x <em>n</em></code> 的矩阵，如果一个元素为 <strong>0 </strong>，则将其所在行和列的所有元素都设为 <strong>0</strong> 。请使用 <strong><a href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank">原地</a></strong> 算法<strong>。</strong></p>
 
 <ul>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0073.Set%20Matrix%20Zeroes/images/mat1.jpg" style="width: 450px; height: 169px;" />
@@ -25,8 +21,6 @@
 <strong>输出：</strong>[[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -35,8 +29,6 @@
 	<li><code>1 &lt;= m, n &lt;= 200</code></li>
 	<li><code>-2<sup>31</sup> &lt;= matrix[i][j] &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

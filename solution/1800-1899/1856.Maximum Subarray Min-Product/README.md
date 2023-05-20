@@ -1,7 +1,5 @@
 # [1856. 子数组最小乘积的最大值](https://leetcode.cn/problems/maximum-subarray-min-product)
 
-[English Version](/solution/1800-1899/1856.Maximum%20Subarray%20Min-Product/README_EN.md)
-
 ## 题目描述
 
 <p>一个数组的 <strong>最小乘积</strong> 定义为这个数组中 <strong>最小值</strong> <strong>乘以 </strong>数组的 <strong>和</strong> 。</p>

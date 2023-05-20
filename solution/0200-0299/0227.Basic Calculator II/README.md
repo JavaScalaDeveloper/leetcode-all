@@ -1,7 +1,5 @@
 # [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii)
 
-[English Version](/solution/0200-0299/0227.Basic%20Calculator%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串表达式 <code>s</code> ，请你实现一个基本计算器来计算并返回它的值。</p>
@@ -11,8 +9,6 @@
 <p>你可以假设给定的表达式总是有效的。所有中间结果将在&nbsp;<code>[-2<sup>31</sup>, 2<sup>31</sup>&nbsp;- 1]</code> 的范围内。</p>
 
 <p><strong>注意：</strong>不允许使用任何将字符串作为数学表达式计算的内置函数，比如 <code>eval()</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输入：</strong>s = " 3+5 / 2 "
 <strong>输出：</strong>5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

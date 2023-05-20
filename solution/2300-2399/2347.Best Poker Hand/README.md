@@ -1,7 +1,5 @@
 # [2347. 最好的扑克手牌](https://leetcode.cn/problems/best-poker-hand)
 
-[English Version](/solution/2300-2399/2347.Best%20Poker%20Hand/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>ranks</code>&nbsp;和一个字符数组&nbsp;<code>suit</code>&nbsp;。你有&nbsp;<code>5</code>&nbsp;张扑克牌，第&nbsp;<code>i</code>&nbsp;张牌大小为&nbsp;<code>ranks[i]</code>&nbsp;，花色为&nbsp;<code>suits[i]</code>&nbsp;。</p>
@@ -18,8 +16,6 @@
 <p>请你返回一个字符串，表示给定的 5 张牌中，你能组成的 <strong>最好手牌类型</strong>&nbsp;。</p>
 
 <p><strong>注意：</strong>返回的字符串&nbsp;<strong>大小写</strong>&nbsp;需与题目描述相同。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 <b>解释：</b>第一和第二张牌大小相同，所以得到 "Pair" 。
 我们无法得到 "Flush" 或者 "Three of a Kind" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -94,31 +88,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char *bestHand(int *ranks, int ranksSize, char *suits, int suitsSize) {
-    bool isFlush = true;
-    for (int i = 1; i < suitsSize; i++) {
-        if (suits[0] != suits[i]) {
-            isFlush = false;
-            break;
-        }
-    }
-    if (isFlush) {
-        return "Flush";
-    }
-    int count[14] = {0};
-    bool isPair = false;
-    for (int i = 0; i < ranksSize; i++) {
-        if (++count[ranks[i]] == 3) {
-            return "Three of a Kind";
-        }
-        isPair = isPair || count[ranks[i]] == 2;
-    }
-    if (isPair) {
-        return "Pair";
-    }
-    return "High Card";
-}
-```
+**

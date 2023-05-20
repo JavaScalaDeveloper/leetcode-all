@@ -1,7 +1,5 @@
 # [2552. 统计上升四元组](https://leetcode.cn/problems/count-increasing-quadruplets)
 
-[English Version](/solution/2500-2599/2552.Count%20Increasing%20Quadruplets/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code>&nbsp;下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;，它包含&nbsp;<code>1</code>&nbsp;到&nbsp;<code>n</code>&nbsp;的所有数字，请你返回上升四元组的数目。</p>
@@ -12,8 +10,6 @@
 	<li><code>0 &lt;= i &lt; j &lt; k &lt; l &lt; n</code>&nbsp;且</li>
 	<li><code>nums[i] &lt; nums[k] &lt; nums[j] &lt; nums[l]</code>&nbsp;。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <b>输出：</b>0
 <b>解释：</b>只存在一个四元组 i = 0 ，j = 1 ，k = 2 ，l = 3 ，但是 nums[j] &lt; nums[k] ，所以我们返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

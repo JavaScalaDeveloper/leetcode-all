@@ -1,7 +1,5 @@
 # [1956. 感染 K 种病毒所需的最短时间](https://leetcode.cn/problems/minimum-time-for-k-virus-variants-to-spread)
 
-[English Version](/solution/1900-1999/1956.Minimum%20Time%20For%20K%20Virus%20Variants%20to%20Spread/README_EN.md)
-
 ## 题目描述
 
 <p>在无限大的二维平面上有&nbsp;<code>n</code>&nbsp;种 <strong>不同</strong> 的病毒。给定二维数组&nbsp;<code>points</code>&nbsp;，<span style="">第 </span><code>i</code><span style=""> 项&nbsp;</span><code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code>&nbsp;说明第&nbsp;<code>0</code>&nbsp;天有一种病毒在点&nbsp;<code>(x<sub>i</sub>, y<sub>i</sub>)</code>&nbsp;。注意初始状态下，可能有 <strong>多种</strong> 病毒在 <strong>同一点</strong> 上。</p>
@@ -9,8 +7,6 @@
 <p>每天，被感染的点会把它感染的病毒传播到上、下、左、右四个邻居点。</p>
 
 <p>现给定一个整数 <code>k</code>&nbsp;，问 <strong>最少</strong> 需要多少天，方能找到一点感染 <strong>至少</strong> <code>k</code> 种病毒？</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <b>输出：</b>4
 <strong>解释：</strong>在第 4 天，点 (5,2) 会感染所有 3 种病毒。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

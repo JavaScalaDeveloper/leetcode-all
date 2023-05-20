@@ -1,7 +1,5 @@
 # [2531. 使字符串总不同字符的数目相等](https://leetcode.cn/problems/make-number-of-distinct-characters-equal)
 
-[English Version](/solution/2500-2599/2531.Make%20Number%20of%20Distinct%20Characters%20Equal/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong> 开始的字符串 <code>word1</code> 和 <code>word2</code> 。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>如果可以通过 <strong>恰好一次</strong> 移动，使 <code>word1</code> 和 <code>word2</code> 中不同字符的数目相等，则返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <pre><strong>输入：</strong>word1 = "abcde", word2 = "fghij"
 <strong>输出：</strong>true
 <strong>解释：</strong>无论交换哪一组下标，两个字符串中都会有 5 个不同字符。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

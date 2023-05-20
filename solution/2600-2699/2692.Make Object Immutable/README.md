@@ -1,7 +1,5 @@
 # [2692. Make Object Immutable](https://leetcode.cn/problems/make-object-immutable)
 
-[English Version](/solution/2600-2699/2692.Make%20Object%20Immutable/README_EN.md)
-
 ## 题目描述
 
 <p>Write a function that takes an object&nbsp;<code>obj</code> and returns a new&nbsp;<strong>immutable</strong>&nbsp;version of this object.</p>
@@ -20,7 +18,6 @@
 
 <p>Note that a string literal should be thrown, not an&nbsp;<code>Error</code>.</p>
 
-<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
@@ -79,7 +76,6 @@ fn = (obj) =&gt; {
 <strong>Explanation: </strong>No mutations were attempted so the function returns as normal.
 </pre>
 
-<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>

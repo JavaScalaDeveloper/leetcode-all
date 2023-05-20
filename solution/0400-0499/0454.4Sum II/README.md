@@ -1,7 +1,5 @@
 # [454. 四数相加 II](https://leetcode.cn/problems/4sum-ii)
 
-[English Version](/solution/0400-0499/0454.4Sum%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你四个整数数组 <code>nums1</code>、<code>nums2</code>、<code>nums3</code> 和 <code>nums4</code> ，数组长度都是 <code>n</code> ，请你计算有多少个元组 <code>(i, j, k, l)</code> 能满足：</p>
@@ -10,8 +8,6 @@
 	<li><code>0 &lt;= i, j, k, l &lt; n</code></li>
 	<li><code>nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输入：</strong>nums1 = [0], nums2 = [0], nums3 = [0], nums4 = [0]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p>&nbsp; <strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [732. 我的日程安排表 III](https://leetcode.cn/problems/my-calendar-iii)
 
-[English Version](/solution/0700-0799/0732.My%20Calendar%20III/README_EN.md)
-
 ## 题目描述
 
 <p>当 <code>k</code> 个日程安排有一些时间上的交叉时（例如 <code>k</code> 个日程安排都在同一时间内），就会产生 <code>k</code> 次预订。</p>

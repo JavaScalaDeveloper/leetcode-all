@@ -1,7 +1,5 @@
 # [794. 有效的井字游戏](https://leetcode.cn/problems/valid-tic-tac-toe-state)
 
-[English Version](/solution/0700-0799/0794.Valid%20Tic-Tac-Toe%20State/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>board</code> 表示井字游戏的棋盘。当且仅当在井字游戏过程中，棋盘有可能达到 <code>board</code> 所显示的状态时，才返回 <code>true</code> 。</p>
@@ -18,8 +16,6 @@
 	<li>当所有位置非空时，也算为游戏结束。</li>
 	<li>如果游戏结束，玩家不允许再放置字符。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0700-0799/0794.Valid%20Tic-Tac-Toe%20State/images/tictactoe1-grid.jpg" style="width: 253px; height: 253px;" />
@@ -43,8 +39,6 @@
 <strong>输入：</strong>board = ["XOX","O O","XOX"]
 <strong>输出：</strong>true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

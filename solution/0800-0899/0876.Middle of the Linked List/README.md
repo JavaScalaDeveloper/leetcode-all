@@ -1,14 +1,10 @@
 # [876. 链表的中间结点](https://leetcode.cn/problems/middle-of-the-linked-list)
 
-[English Version](/solution/0800-0899/0876.Middle%20of%20the%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给你单链表的头结点 <code>head</code> ，请你找出并返回链表的中间结点。</p>
 
 <p>如果有两个中间结点，则返回第二个中间结点。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0876.Middle%20of%20the%20Linked%20List/images/lc-midlist1.jpg" style="width: 544px; height: 65px;" />
@@ -25,8 +21,6 @@
 <strong>输出：</strong>[4,5,6]
 <strong>解释：</strong>该链表有两个中间结点，值分别为 3 和 4 ，返回第二个结点。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -70,24 +64,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
- */
-
-struct ListNode *middleNode(struct ListNode *head) {
-    struct ListNode *fast = head;
-    struct ListNode *slow = head;
-    while (fast && fast->next) {
-        fast = fast->next->next;
-        slow = slow->next;
-    }
-    return slow;
-}
-```
+**

@@ -1,7 +1,5 @@
 # [534. 游戏玩法分析 III](https://leetcode.cn/problems/game-play-analysis-iii)
 
-[English Version](/solution/0500-0599/0534.Game%20Play%20Analysis%20III/README_EN.md)
-
 ## 题目描述
 
 <p>Table:&nbsp;<code>Activity</code></p>
@@ -19,8 +17,6 @@
 这张表显示了某些游戏的玩家的活动情况。
 每一行是一个玩家的记录，他在某一天使用某个设备注销之前登录并玩了很多游戏（可能是 0 ）。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>编写一个 SQL 查询，同时报告每组玩家和日期，以及玩家到目前为止玩了多少游戏。也就是说，在此日期之前玩家所玩的游戏总数。详细情况请查看示例。</p>
 

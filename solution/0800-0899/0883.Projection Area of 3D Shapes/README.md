@@ -1,7 +1,5 @@
 # [883. 三维形体投影面积](https://leetcode.cn/problems/projection-area-of-3d-shapes)
 
-[English Version](/solution/0800-0899/0883.Projection%20Area%20of%203D%20Shapes/README_EN.md)
-
 ## 题目描述
 
 <p>在<meta charset="UTF-8" />&nbsp;<code>n x n</code>&nbsp;的网格<meta charset="UTF-8" />&nbsp;<code>grid</code>&nbsp;中，我们放置了一些与 x，y，z 三轴对齐的<meta charset="UTF-8" />&nbsp;<code>1 x 1 x 1</code>&nbsp;立方体。</p>
@@ -13,8 +11,6 @@
 <p><strong>投影</strong>&nbsp;就像影子，将 <strong>三维</strong> 形体映射到一个 <strong>二维</strong> 平面上。从顶部、前面和侧面看立方体时，我们会看到“影子”。</p>
 
 <p>返回 <em>所有三个投影的总面积</em> 。</p>
-
-<p>&nbsp;</p>
 
 <ul>
 </ul>
@@ -51,8 +47,6 @@
 <strong>输入：</strong>[[1,0],[0,2]]
 <strong>输出：</strong>8
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

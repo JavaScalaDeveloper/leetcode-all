@@ -1,14 +1,10 @@
 # [1885. 统计数对](https://leetcode.cn/problems/count-pairs-in-two-arrays)
 
-[English Version](/solution/1800-1899/1885.Count%20Pairs%20in%20Two%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个长度为 <code>n</code> 的整数数组 <code>nums1</code>&nbsp;和&nbsp;<code>nums2</code> ，找出所有满足 <code>i &lt; j</code> 且 <code>nums1[i] + nums1[j] &gt; nums2[i] + nums2[j]</code>&nbsp;的数对 <code>(i, j)</code> 。</p>
 
 <p>返回满足条件数对的<strong> 个数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 - (1, 3) 因为 nums1[1] + nums1[3] = 10 + 2 &gt; nums2[1] + nums2[3] = 4 + 5
 - (2, 3) 因为 nums1[2] + nums1[3] = 6 + 2 &gt; nums2[2] + nums2[3] = 1 + 5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

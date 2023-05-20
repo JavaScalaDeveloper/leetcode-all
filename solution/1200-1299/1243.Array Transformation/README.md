@@ -1,7 +1,5 @@
 # [1243. 数组变换](https://leetcode.cn/problems/array-transformation)
 
-[English Version](/solution/1200-1299/1243.Array%20Transformation/README_EN.md)
-
 ## 题目描述
 
 <p>首先，给你一个初始数组 <code>arr</code>。然后，每天你都要根据前一天的数组生成一个新的数组。</p>
@@ -15,8 +13,6 @@
 </ol>
 
 <p>过些时日，你会发现数组将会不再发生变化，请返回最终所得到的数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 第二天，数组从 [1,5,4,3,4,5] 变为 [1,4,4,4,4,5]。
 无法再对该数组进行更多操作。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

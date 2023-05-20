@@ -1,7 +1,5 @@
 # [1375. 二进制字符串前缀一致的次数](https://leetcode.cn/problems/number-of-times-binary-string-is-prefix-aligned)
 
-[English Version](/solution/1300-1399/1375.Number%20of%20Times%20Binary%20String%20Is%20Prefix-Aligned/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 、下标从 <strong>1</strong> 开始的二进制字符串，所有位最开始都是 <code>0</code> 。我们会按步翻转该二进制字符串的所有位（即，将 <code>0</code> 变为 <code>1</code>）。</p>
@@ -11,8 +9,6 @@
 <p>二进制字符串 <strong>前缀一致</strong> 需满足：在第 <code>i</code> 步之后，在 <strong>闭</strong> 区间&nbsp;<code>[1, i]</code> 内的所有位都是 1 ，而其他位都是 0 。</p>
 
 <p>返回二进制字符串在翻转过程中 <strong>前缀一致</strong> 的次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 执行第 3 步：字符串变为 "1101" ，不属于前缀一致的情况。
 执行第 4 步：字符串变为 "1111" ，属于前缀一致的情况。
 在翻转过程中，前缀一致的次数为 1 ，所以返回 1 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

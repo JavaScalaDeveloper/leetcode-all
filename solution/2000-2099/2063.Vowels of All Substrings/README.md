@@ -1,7 +1,5 @@
 # [2063. 所有子字符串中的元音](https://leetcode.cn/problems/vowels-of-all-substrings)
 
-[English Version](/solution/2000-2099/2063.Vowels%20of%20All%20Substrings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>word</code> ，返回 <code>word</code> 的所有子字符串中 <strong>元音的总数</strong> ，元音是指 <code>'a'</code>、<code>'e'</code><em>、</em><code>'i'</code><em>、</em><code>'o'</code><em> </em>和 <code>'u'</code><em> 。</em></p>
@@ -9,8 +7,6 @@
 <p><strong>子字符串</strong> 是字符串中一个连续（非空）的字符序列。</p>
 
 <p><strong>注意：</strong>由于对 <code>word</code> 长度的限制比较宽松，答案可能超过有符号 32 位整数的范围。计算时需当心。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 <strong>输出：</strong>237
 <strong>解释：</strong>所有子字符串中共有 237 个元音。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

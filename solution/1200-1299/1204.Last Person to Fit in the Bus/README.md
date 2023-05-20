@@ -1,7 +1,5 @@
 # [1204. 最后一个能进入电梯的人](https://leetcode.cn/problems/last-person-to-fit-in-the-bus)
 
-[English Version](/solution/1200-1299/1204.Last%20Person%20to%20Fit%20in%20the%20Bus/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Queue</code></p>
@@ -20,15 +18,11 @@ person_id 是这个表的主键。
 表中 person_id 和 turn 列将包含从 1 到 n 的所有数字，其中 n 是表中的行数。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>有一群人在等着上公共汽车。然而，巴士有<code>1000</code>&nbsp;公斤的重量限制，所以可能会有一些人不能上。</p>
 
 <p>写一条 SQL 查询语句查找 <strong>最后一个</strong> 能进入电梯且不超过重量限制的 <code>person_name</code> 。题目确保队列中第一位的人可以进入电梯，不会超重。</p>
 
 <p>查询结果如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

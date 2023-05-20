@@ -1,7 +1,5 @@
 # [2501. 数组中最长的方波](https://leetcode.cn/problems/longest-square-streak-in-an-array)
 
-[English Version](/solution/2500-2599/2501.Longest%20Square%20Streak%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 。如果 <code>nums</code> 的子序列满足下述条件，则认为该子序列是一个 <strong>方波</strong> ：</p>
@@ -14,8 +12,6 @@
 <p>返回<em> </em><code>nums</code><em> </em>中 <strong>最长方波</strong> 的长度，如果不存在 <strong>方波</strong><em> </em>则返回<em> </em><code>-1</code> 。</p>
 
 <p><strong>子序列</strong> 也是一个数组，可以由另一个数组删除一些或不删除元素且不改变剩余元素的顺序得到。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1 ：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>nums 不存在方波，所以返回 -1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

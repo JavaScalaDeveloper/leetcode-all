@@ -1,7 +1,5 @@
 # [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii)
 
-[English Version](/solution/0200-0299/0210.Course%20Schedule%20II/README_EN.md)
-
 ## 题目描述
 
 <p>现在你总共有 <code>numCourses</code> 门课需要选，记为&nbsp;<code>0</code>&nbsp;到&nbsp;<code>numCourses - 1</code>。给你一个数组&nbsp;<code>prerequisites</code> ，其中 <code>prerequisites[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> ，表示在选修课程 <code>a<sub>i</sub></code> 前 <strong>必须</strong> 先选修&nbsp;<code>b<sub>i</sub></code> 。</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>返回你为了学完所有课程所安排的学习顺序。可能会有多个正确的顺序，你只要返回 <strong>任意一种</strong> 就可以了。如果不可能完成所有课程，返回 <strong>一个空数组</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,7 +33,6 @@
 <strong>输出：</strong>[0]
 </pre>
 
-<p>&nbsp;</p>
 <strong>提示：</strong>
 
 <ul>

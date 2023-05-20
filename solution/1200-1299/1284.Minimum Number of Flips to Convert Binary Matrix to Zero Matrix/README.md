@@ -1,7 +1,5 @@
 # [1284. 转化为全零矩阵的最少反转次数](https://leetcode.cn/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix)
 
-[English Version](/solution/1200-1299/1284.Minimum%20Number%20of%20Flips%20to%20Convert%20Binary%20Matrix%20to%20Zero%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个&nbsp;<code>m x n</code>&nbsp;的二进制矩阵&nbsp;<code>mat</code>。每一步，你可以选择一个单元格并将它反转（反转表示 <code>0</code> 变 <code>1</code> ，<code>1</code> 变 <code>0</code> ）。如果存在和它相邻的单元格，那么这些相邻的单元格也会被反转。相邻的两个单元格共享同一条边。</p>
@@ -11,8 +9,6 @@
 <p><strong>二进制矩阵</strong>&nbsp;的每一个格子要么是 <code>0</code> 要么是 <code>1</code> 。</p>
 
 <p><strong>全零矩阵</strong>&nbsp;是所有格子都为 <code>0</code> 的矩阵。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>该矩阵无法转变成全零矩阵
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

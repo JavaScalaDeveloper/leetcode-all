@@ -1,7 +1,5 @@
 # [709. 转换成小写字母](https://leetcode.cn/problems/to-lower-case)
 
-[English Version](/solution/0700-0799/0709.To%20Lower%20Case/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> ，将该字符串中的大写字母转换成相同的小写字母，返回新的字符串。</p>
@@ -62,16 +60,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char *toLowerCase(char *s) {
-    int n = strlen(s);
-    for (int i = 0; i < n; i++) {
-        if (s[i] >= 'A' && s[i] <= 'Z') {
-            s[i] |= 32;
-        }
-    }
-    return s;
-}
-```
+**

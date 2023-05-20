@@ -1,7 +1,5 @@
 # [201. 数字范围按位与](https://leetcode.cn/problems/bitwise-and-of-numbers-range)
 
-[English Version](/solution/0200-0299/0201.Bitwise%20AND%20of%20Numbers%20Range/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数 <code>left</code> 和 <code>right</code> ，表示区间 <code>[left, right]</code> ，返回此区间内所有数字 <strong>按位与</strong> 的结果（包含 <code>left</code> 、<code>right</code> 端点）。</p>

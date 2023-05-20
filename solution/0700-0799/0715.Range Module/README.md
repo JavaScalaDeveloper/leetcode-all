@@ -1,7 +1,5 @@
 # [715. Range 模块](https://leetcode.cn/problems/range-module)
 
-[English Version](/solution/0700-0799/0715.Range%20Module/README_EN.md)
-
 ## 题目描述
 
 <p>Range模块是跟踪数字范围的模块。设计一个数据结构来跟踪表示为 <strong>半开区间</strong> 的范围并查询它们。</p>
@@ -16,8 +14,6 @@
 	<li><code>boolean queryRange(int left, int right)</code>&nbsp;只有在当前正在跟踪区间&nbsp;<code>[left, right)</code>&nbsp;中的每一个实数时，才返回 <code>true</code>&nbsp;，否则返回 <code>false</code> 。</li>
 	<li><code>void removeRange(int left, int right)</code>&nbsp;停止跟踪 <strong>半开区间</strong>&nbsp;<code>[left, right)</code>&nbsp;中当前正在跟踪的每个实数。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@ rangeModule.queryRange(10, 14); 返回 true （区间 [10, 14) 中的每个数�
 rangeModule.queryRange(13, 15); 返回 false（未跟踪区间 [13, 15) 中像 14, 14.03, 14.17 这样的数字）
 rangeModule.queryRange(16, 17); 返回 true （尽管执行了删除操作，区间 [16, 17) 中的数字 16 仍然会被跟踪）
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

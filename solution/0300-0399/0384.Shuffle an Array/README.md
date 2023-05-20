@@ -1,7 +1,5 @@
 # [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array)
 
-[English Version](/solution/0300-0399/0384.Shuffle%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，设计算法来打乱一个没有重复元素的数组。打乱后，数组的所有排列应该是&nbsp;<strong>等可能</strong>&nbsp;的。</p>
@@ -13,8 +11,6 @@
 	<li><code>int[] reset()</code> 重设数组到它的初始状态并返回</li>
 	<li><code>int[] shuffle()</code> 返回数组随机打乱后的结果</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@ solution.shuffle();    // 打乱数组 [1,2,3] 并返回结果。任何 [1,2,3]�
 solution.reset();      // 重设数组到它的初始状态 [1, 2, 3] 。返回 [1, 2, 3]
 solution.shuffle();    // 随机返回数组 [1, 2, 3] 打乱后的结果。例如，返回 [1, 3, 2]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

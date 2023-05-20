@@ -1,14 +1,10 @@
 # [1230. 抛掷硬币](https://leetcode.cn/problems/toss-strange-coins)
 
-[English Version](/solution/1200-1299/1230.Toss%20Strange%20Coins/README_EN.md)
-
 ## 题目描述
 
 <p>有一些不规则的硬币。在这些硬币中，<code>prob[i]</code>&nbsp;表示第&nbsp;<code>i</code>&nbsp;枚硬币正面朝上的概率。</p>
 
 <p>请对每一枚硬币抛掷&nbsp;<strong>一次</strong>，然后返回正面朝上的硬币数等于&nbsp;<code>target</code>&nbsp;的概率。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,8 +17,6 @@
 <pre><strong>输入：</strong>prob = [0.5,0.5,0.5,0.5,0.5], target = 0
 <strong>输出：</strong>0.03125
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

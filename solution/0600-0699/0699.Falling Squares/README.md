@@ -1,7 +1,5 @@
 # [699. 掉落的方块](https://leetcode.cn/problems/falling-squares)
 
-[English Version](/solution/0600-0699/0699.Falling%20Squares/README_EN.md)
-
 ## 题目描述
 
 <p>在二维平面上的 x 轴上，放置着一些方块。</p>
@@ -13,8 +11,6 @@
 <p>在每个方块掉落后，你必须记录目前所有已经落稳的 <strong>方块堆叠的最高高度</strong> 。</p>
 
 <p>返回一个整数数组 <code>ans</code> ，其中 <code>ans[i]</code> 表示在第 <code>i</code> 块方块掉落后堆叠的最高高度。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0699.Falling%20Squares/images/fallingsq1-plane.jpg" style="width: 500px; height: 505px;" />
@@ -39,8 +35,6 @@
 因此，返回 [100, 100] 作为答案。
 注意，方块 2 擦过方块 1 的右侧边，但不会算作在方块 1 上着陆。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

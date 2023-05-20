@@ -1,7 +1,5 @@
 # [1633. 各赛事的用户注册率](https://leetcode.cn/problems/percentage-of-users-attended-a-contest)
 
-[English Version](/solution/1600-1699/1633.Percentage%20of%20Users%20Attended%20a%20Contest/README_EN.md)
-
 ## 题目描述
 
 <p>用户表：&nbsp;<code>Users</code></p>
@@ -16,8 +14,6 @@
 user_id 是该表的主键。
 该表中的每行包括用户 ID 和用户名。</pre>
 
-<p>&nbsp;</p>
-
 <p>注册表：&nbsp;<code>Register</code></p>
 
 <pre>
@@ -30,15 +26,11 @@ user_id 是该表的主键。
 (contest_id, user_id) 是该表的主键。
 该表中的每行包含用户的 ID 和他们注册的赛事。</pre>
 
-<p>&nbsp;</p>
-
 <p>写一条 SQL 语句，查询各赛事的用户注册百分率，保留两位小数。</p>
 
 <p>返回的结果表按&nbsp;<code>percentage</code>&nbsp;的&nbsp;<strong>降序&nbsp;</strong>排序，若相同则按&nbsp;<code>contest_id</code>&nbsp;的&nbsp;<strong>升序&nbsp;</strong>排序。</p>
 
 <p>查询结果如下示例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

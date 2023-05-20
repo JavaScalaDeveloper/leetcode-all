@@ -1,7 +1,5 @@
 # [2299. 强密码检验器 II](https://leetcode.cn/problems/strong-password-checker-ii)
 
-[English Version](/solution/2200-2299/2299.Strong%20Password%20Checker%20II/README_EN.md)
-
 ## 题目描述
 
 <p>如果一个密码满足以下所有条件，我们称它是一个 <strong>强</strong>&nbsp;密码：</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>给你一个字符串&nbsp;<code>password</code>&nbsp;，如果它是一个&nbsp;<strong>强</strong>&nbsp;密码，返回&nbsp;<code>true</code>，否则返回&nbsp;<code>false</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <pre><b>输入：</b>password = "1aB!"
 <b>输出：</b>false
 <b>解释：</b>密码不符合长度要求。所以我们返回 false 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -89,31 +83,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool strongPasswordCheckerII(char *password) {
-    int n = strlen(password);
-    if (n < 8) {
-        return false;
-    }
-    int mask = 0;
-    char prev = ' ';
-    for (int i = 0; i < n; i++) {
-        if (prev == password[i]) {
-            return false;
-        }
-        if (islower(password[i])) {
-            mask |= 0b1000;
-        } else if (isupper(password[i])) {
-            mask |= 0b100;
-        } else if (isdigit(password[i])) {
-            mask |= 0b10;
-        } else {
-            mask |= 0b1;
-        }
-        prev = password[i];
-    }
-    return mask == 0b1111;
-}
-```
+**

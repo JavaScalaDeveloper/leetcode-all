@@ -1,7 +1,5 @@
 # [333. 最大 BST 子树](https://leetcode.cn/problems/largest-bst-subtree)
 
-[English Version](/solution/0300-0399/0333.Largest%20BST%20Subtree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树，找到其中最大的二叉搜索树（BST）子树，并返回该子树的大小。其中，最大指的是子树节点数最多的。</p>
@@ -19,8 +17,6 @@
 
 <p><strong>注意：</strong>子树必须包含其所有后代。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <p><strong><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0333.Largest%20BST%20Subtree/images/tmp.jpg" /></strong></p>
@@ -37,16 +33,12 @@
 <strong>输出：</strong>2
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li>树上节点数目的范围是 <code>[0, 10<sup>4</sup>]</code></li>
 	<li><code>-10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶:</strong>&nbsp; 你能想出 O(n) 时间复杂度的解法吗？</p>
 

@@ -1,14 +1,10 @@
 # [686. 重复叠加字符串匹配](https://leetcode.cn/problems/repeated-string-match)
 
-[English Version](/solution/0600-0699/0686.Repeated%20String%20Match/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个字符串&nbsp;<code>a</code> 和 <code>b</code>，寻找重复叠加字符串 <code>a</code> 的最小次数，使得字符串 <code>b</code> 成为叠加后的字符串 <code>a</code> 的子串，如果不存在则返回 <code>-1</code>。</p>
 
 <p><strong>注意：</strong>字符串 <code>&quot;abc&quot;</code>&nbsp;重复叠加 0 次是 <code>&quot;&quot;</code>，重复叠加 1 次是&nbsp;<code>&quot;abc&quot;</code>，重复叠加 2 次是&nbsp;<code>&quot;abcabc&quot;</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <pre><strong>输入：</strong>a = &quot;abc&quot;, b = &quot;wxyz&quot;
 <strong>输出：</strong>-1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [818. 赛车](https://leetcode.cn/problems/race-car)
 
-[English Version](/solution/0800-0899/0818.Race%20Car/README_EN.md)
-
 ## 题目描述
 
 你的赛车可以从位置 <code>0</code> 开始，并且速度为 <code>+1</code> ，在一条无限长的数轴上行驶。赛车也可以向负方向行驶。赛车可以按照由加速指令 <code>'A'</code> 和倒车指令 <code>'R'</code> 组成的指令序列自动行驶。
@@ -25,8 +23,6 @@
 
 <p>给你一个目标位置 <code>target</code> ，返回能到达目标位置的最短指令序列的长度。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -46,8 +42,6 @@
 最短指令序列是 "AAARA" 。
 位置变化 0 --&gt; 1 --&gt; 3 --&gt; 7 --&gt; 7 --&gt; 6 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

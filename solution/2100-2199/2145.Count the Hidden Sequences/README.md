@@ -1,7 +1,5 @@
 # [2145. 统计隐藏数组数目](https://leetcode.cn/problems/count-the-hidden-sequences)
 
-[English Version](/solution/2100-2199/2145.Count%20the%20Hidden%20Sequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始且长度为 <code>n</code>&nbsp;的整数数组&nbsp;<code>differences</code>&nbsp;，它表示一个长度为&nbsp;<code>n + 1</code>&nbsp;的&nbsp;<strong>隐藏</strong>&nbsp;数组&nbsp;<strong>相邻</strong>&nbsp;元素之间的&nbsp;<strong>差值</strong>&nbsp;。更正式的表述为：我们将隐藏数组记作&nbsp;<code>hidden</code>&nbsp;，那么&nbsp;<code>differences[i] = hidden[i + 1] - hidden[i]</code>&nbsp;。</p>
@@ -21,8 +19,6 @@
 </ul>
 
 <p>请你返回 <strong>符合</strong>&nbsp;要求的隐藏数组的数目。如果没有符合要求的隐藏数组，请返回 <code>0</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@
 <b>输出：</b>0
 <b>解释：</b>没有符合要求的隐藏数组，所以返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

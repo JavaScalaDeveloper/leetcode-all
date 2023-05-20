@@ -1,7 +1,5 @@
 # [1699. 两人之间的通话次数](https://leetcode.cn/problems/number-of-calls-between-two-persons)
 
-[English Version](/solution/1600-1699/1699.Number%20of%20Calls%20Between%20Two%20Persons/README_EN.md)
-
 ## 题目描述
 
 <p>表：&nbsp;<code>Calls</code></p>
@@ -19,15 +17,11 @@
 from_id != to_id
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写 SQL 语句，查询每一对用户&nbsp;<code>(person1, person2)</code>&nbsp;之间的通话次数和通话总时长，其中&nbsp;<code>person1 &lt; person2</code>&nbsp;。</p>
 
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下示例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

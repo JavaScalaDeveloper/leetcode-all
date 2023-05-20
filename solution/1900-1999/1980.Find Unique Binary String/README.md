@@ -1,12 +1,8 @@
 # [1980. 找出不同的二进制字符串](https://leetcode.cn/problems/find-unique-binary-string)
 
-[English Version](/solution/1900-1999/1980.Find%20Unique%20Binary%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>nums</code> ，该数组由 <code>n</code> 个 <strong>互不相同</strong> 的二进制字符串组成，且每个字符串长度都是 <code>n</code> 。请你找出并返回一个长度为&nbsp;<code>n</code>&nbsp;且&nbsp;<strong>没有出现</strong> 在 <code>nums</code> 中的二进制字符串<em>。</em>如果存在多种答案，只需返回 <strong>任意一个</strong> 即可。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输入：</strong>nums = ["111","011","001"]
 <strong>输出：</strong>"101"
 <strong>解释：</strong>"101" 没有出现在 nums 中。"000"、"010"、"100"、"110" 也是正确答案。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

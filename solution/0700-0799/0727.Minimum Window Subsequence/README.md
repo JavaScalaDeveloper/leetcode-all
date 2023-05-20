@@ -1,7 +1,5 @@
 # [727. 最小窗口子序列](https://leetcode.cn/problems/minimum-window-subsequence)
 
-[English Version](/solution/0700-0799/0727.Minimum%20Window%20Subsequence/README_EN.md)
-
 ## 题目描述
 
 <p>给定字符串 <code>S</code> and <code>T</code>，找出 <code>S</code> 中最短的（连续）<strong>子串</strong> <code>W</code> ，使得 <code>T</code> 是 <code>W</code> 的 <strong>子序列</strong> 。</p>
@@ -17,8 +15,6 @@ S = &quot;abcdebdde&quot;, T = &quot;bde&quot;
 &quot;bcde&quot; 是答案，因为它在相同长度的字符串 &quot;bdde&quot; 出现之前。
 &quot;deb&quot; 不是一个更短的答案，因为在窗口中必须按顺序出现 T 中的元素。</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>注：</strong></p>
 
 <ul>
@@ -26,8 +22,6 @@ S = &quot;abcdebdde&quot;, T = &quot;bde&quot;
 	<li><code>S</code>&nbsp;长度的范围为&nbsp;<code>[1, 20000]</code>。</li>
 	<li><code>T</code>&nbsp;长度的范围为&nbsp;<code>[1, 100]</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

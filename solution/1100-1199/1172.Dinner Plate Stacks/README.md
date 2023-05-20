@@ -1,7 +1,5 @@
 # [1172. 餐盘栈](https://leetcode.cn/problems/dinner-plate-stacks)
 
-[English Version](/solution/1100-1199/1172.Dinner%20Plate%20Stacks/README_EN.md)
-
 ## 题目描述
 
 <p>我们把无限数量 &infin; 的栈排成一行，按从左到右的次序从 0 开始编号。每个栈的的最大容量&nbsp;<code>capacity</code> 都相同。</p>
@@ -14,8 +12,6 @@
 	<li><code>int pop()</code>&nbsp;- 返回&nbsp;<strong>从右往左第一个&nbsp;</strong>非空栈顶部的值，并将其从栈中删除；如果所有的栈都是空的，请返回&nbsp;<code>-1</code>。</li>
 	<li><code>int popAtStack(int index)</code>&nbsp;- 返回编号&nbsp;<code>index</code>&nbsp;的栈顶部的值，并将其从栈中删除；如果编号&nbsp;<code>index</code>&nbsp;的栈是空的，请返回 <code>-1</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -59,8 +55,6 @@ D.pop()            // 返回 3。栈的现状为：    1
 D.pop()            // 返回 1。现在没有栈。
 D.pop()            // 返回 -1。仍然没有栈。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid)
 
-[English Version](/solution/2100-2199/2132.Stamping%20the%20Grid/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个&nbsp;<code>m x n</code>&nbsp;的二进制矩阵&nbsp;<code>grid</code>&nbsp;，每个格子要么为&nbsp;<code>0</code>&nbsp;（空）要么为&nbsp;<code>1</code>&nbsp;（被占据）。</p>
@@ -18,8 +16,6 @@
 </ol>
 
 <p>如果在满足上述要求的前提下，可以放入邮票，请返回&nbsp;<code>true</code>&nbsp;，否则返回<i>&nbsp;</i><code>false</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <b>输出：</b>false 
 <b>解释：</b>没办法放入邮票覆盖所有的空格子，且邮票不超出网格图以外。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

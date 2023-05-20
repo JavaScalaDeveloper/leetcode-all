@@ -1,7 +1,5 @@
 # [1045. 买下所有产品的客户](https://leetcode.cn/problems/customers-who-bought-all-products)
 
-[English Version](/solution/1000-1099/1045.Customers%20Who%20Bought%20All%20Products/README_EN.md)
-
 ## 题目描述
 
 <p><code>Customer</code>&nbsp;表：</p>
@@ -24,8 +22,6 @@ product_key 是 <code>Customer 表的外键</code>。
 +-------------+---------+
 product_key 是这张表的主键。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写一条 SQL 查询语句，从 <code>Customer</code> 表中查询购买了 <code>Product</code> 表中所有产品的客户的 id。</p>
 

@@ -1,7 +1,5 @@
 # [1406. 石子游戏 III](https://leetcode.cn/problems/stone-game-iii)
 
-[English Version](/solution/1400-1499/1406.Stone%20Game%20III/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 和 Bob 用几堆石子在做游戏。几堆石子排成一行，每堆石子都对应一个得分，由数组 <code>stoneValue</code> 给出。</p>
@@ -11,8 +9,6 @@
 <p>每个玩家的最终得分为他所拿到的每堆石子的对应得分之和。每个玩家的初始分数都是 <strong>0</strong> 。比赛的目标是决出最高分，得分最高的选手将会赢得比赛，比赛也可能会出现平局。</p>
 
 <p>假设 Alice 和 Bob 都采取 <strong>最优策略</strong> 。如果 Alice 赢了就返回 <em>&quot;Alice&quot;</em> <em>，</em>Bob 赢了就返回<em> &quot;Bob&quot;，</em>平局（分数相同）返回 <em>&quot;Tie&quot;</em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,8 +44,6 @@
 <pre><strong>输入：</strong>values = [-1,-2,-3]
 <strong>输出：</strong>&quot;Tie&quot;
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

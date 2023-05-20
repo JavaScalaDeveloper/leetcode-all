@@ -1,7 +1,5 @@
 # [45. 跳跃游戏 II](https://leetcode.cn/problems/jump-game-ii)
 
-[English Version](/solution/0000-0099/0045.Jump%20Game%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个长度为 <code>n</code> 的 <strong>0 索引</strong>整数数组 <code>nums</code>。初始位置为 <code>nums[0]</code>。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>返回到达&nbsp;<code>nums[n - 1]</code> 的最小跳跃次数。生成的测试用例可以到达 <code>nums[n - 1]</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输入:</strong> nums = [2,3,0,1,4]
 <strong>输出:</strong> 2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 
@@ -79,21 +73,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define min(a, b) a < b ? a : b
-int jump(int* nums, int numsSize) {
-    int dp[numsSize];
-    for (int i = 0; i < numsSize; i++) {
-        dp[i] = numsSize;
-    }
-    dp[0] = 0;
-    for (int i = 0; i < numsSize - 1; i++) {
-        for (int j = i + 1; j < (min(i + nums[i] + 1, numsSize)); j++) {
-            dp[j] = min(dp[j], dp[i] + 1);
-        }
-    }
-    return dp[numsSize - 1];
-}
-```
+**

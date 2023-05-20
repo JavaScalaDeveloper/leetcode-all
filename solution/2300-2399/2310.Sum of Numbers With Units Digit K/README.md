@@ -1,7 +1,5 @@
 # [2310. 个位数字为 K 的整数之和](https://leetcode.cn/problems/sum-of-numbers-with-units-digit-k)
 
-[English Version](/solution/2300-2399/2310.Sum%20of%20Numbers%20With%20Units%20Digit%20K/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数 <code>num</code> 和 <code>k</code> ，考虑具有以下属性的正整数多重集：</p>
@@ -19,8 +17,6 @@
 	<li>多重集与集合类似，但多重集可以包含多个同一整数，空多重集的和为 <code>0</code> 。</li>
 	<li><strong>个位数字</strong> 是数字最右边的数位。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>空多重集的和为 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

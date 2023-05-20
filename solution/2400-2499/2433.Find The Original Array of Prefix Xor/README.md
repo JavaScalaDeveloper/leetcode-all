@@ -1,7 +1,5 @@
 # [2433. 找出前缀异或的原始数组](https://leetcode.cn/problems/find-the-original-array-of-prefix-xor)
 
-[English Version](/solution/2400-2499/2433.Find%20The%20Original%20Array%20of%20Prefix%20Xor/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的 <strong>整数</strong> 数组 <code>pref</code> 。找出并返回满足下述条件且长度为 <code>n</code> 的数组<em> </em><code>arr</code> ：</p>
@@ -13,8 +11,6 @@
 <p>注意 <code>^</code> 表示 <strong>按位异或</strong>（bitwise-xor）运算。</p>
 
 <p>可以证明答案是 <strong>唯一</strong> 的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输出：</strong>[13]
 <strong>解释：</strong>pref[0] = arr[0] = 13
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -86,19 +80,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *findArray(int *pref, int prefSize, int *returnSize) {
-    int *res = (int *) malloc(sizeof(int) * prefSize);
-    res[0] = pref[0];
-    for (int i = 1; i < prefSize; i++) {
-        res[i] = pref[i - 1] ^ pref[i];
-    }
-    *returnSize = prefSize;
-    return res;
-}
-```
+**

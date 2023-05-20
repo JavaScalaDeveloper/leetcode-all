@@ -1,7 +1,5 @@
 # [2635. 转换数组中的每个元素](https://leetcode.cn/problems/apply-transform-over-each-element-in-array)
 
-[English Version](/solution/2600-2699/2635.Apply%20Transform%20Over%20Each%20Element%20in%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>编写一个函数，这个函数接收一个整数数组&nbsp;<code>arr</code> 和一个映射函数&nbsp; <code>fn</code>&nbsp;，通过该映射函数返回一个新的数组。</p>
@@ -9,8 +7,6 @@
 <p>返回数组的创建语句应为 <code>returnedArray[i] = fn(arr[i], i)</code>&nbsp;。</p>
 
 <p>请你在不使用内置方法&nbsp;<code>Array.map</code>&nbsp;的前提下解决这个问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 
@@ -37,8 +33,6 @@ const newArray = map(arr, plusone); // [2,3,4]
 <strong>输出：</strong>[42,42,42]
 <strong>解释：</strong>此映射函数返回值恒为 42。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

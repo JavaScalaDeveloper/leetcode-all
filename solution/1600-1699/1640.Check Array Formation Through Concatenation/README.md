@@ -1,14 +1,10 @@
 # [1640. 能否连接形成数组](https://leetcode.cn/problems/check-array-formation-through-concatenation)
 
-[English Version](/solution/1600-1699/1640.Check%20Array%20Formation%20Through%20Concatenation/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>arr</code> ，数组中的每个整数 <strong>互不相同</strong> 。另有一个由整数数组构成的数组 <code>pieces</code>，其中的整数也 <strong>互不相同</strong> 。请你以 <strong>任意顺序</strong> 连接 <code>pieces</code> 中的数组以形成 <code>arr</code> 。但是，<strong>不允许</strong> 对每个数组 <code>pieces[i]</code> 中的整数重新排序。</p>
 
 <p>如果可以连接<em> </em><code>pieces</code> 中的数组形成 <code>arr</code> ，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输入：</strong>arr = [91,4,64,78], pieces = [[78],[4,64],[91]]
 <strong>输出：</strong>true
 <strong>解释：</strong>依次连接 <code>[91]</code>、<code>[4,64]</code> 和 <code>[78]</code></pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2596. 检查骑士巡视方案](https://leetcode.cn/problems/check-knight-tour-configuration)
 
-[English Version](/solution/2500-2599/2596.Check%20Knight%20Tour%20Configuration/README_EN.md)
-
 ## 题目描述
 
 <p>骑士在一张 <code>n x n</code> 的棋盘上巡视。在有效的巡视方案中，骑士会从棋盘的 <strong>左上角</strong> 出发，并且访问棋盘上的每个格子 <strong>恰好一次</strong> 。</p>
@@ -12,8 +10,6 @@
 
 <p><strong>注意</strong>，骑士行动时可以垂直移动两个格子且水平移动一个格子，或水平移动两个格子且垂直移动一个格子。下图展示了骑士从某个格子出发可能的八种行动路线。<br>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2596.Check%20Knight%20Tour%20Configuration/images/knight.png" style="width: 300px; height: 300px;"></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2596.Check%20Knight%20Tour%20Configuration/images/yetgriddrawio-5.png" style="width: 251px; height: 251px;">
@@ -28,8 +24,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>grid 如上图所示，考虑到骑士第 7 次行动后的位置，第 8 次行动是无效的。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [1017. 负二进制转换](https://leetcode.cn/problems/convert-to-base-2)
 
-[English Version](/solution/1000-1099/1017.Convert%20to%20Base%20-2/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code> ，以二进制字符串的形式返回该整数的 <strong>负二进制（<code>base -2</code>）</strong>表示。</p>
 
 <p><strong>注意，</strong>除非字符串就是&nbsp;<code>"0"</code>，否则返回的字符串中不能含有前导零。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输出：</strong>"100"
 <strong>解释：</strong>(-2)<sup>2</sup> = 4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

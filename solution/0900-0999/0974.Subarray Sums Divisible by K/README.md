@@ -1,14 +1,10 @@
 # [974. 和可被 K 整除的子数组](https://leetcode.cn/problems/subarray-sums-divisible-by-k)
 
-[English Version](/solution/0900-0999/0974.Subarray%20Sums%20Divisible%20by%20K/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组 <code>nums</code>&nbsp;和一个整数 <code>k</code> ，返回其中元素之和可被 <code>k</code>&nbsp;整除的（连续、非空） <strong>子数组</strong> 的数目。</p>
 
 <p><strong>子数组</strong> 是数组的 <strong>连续</strong> 部分。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,8 +22,6 @@
 <strong>输入:</strong> nums = [5], k = 9
 <strong>输出:</strong> 0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

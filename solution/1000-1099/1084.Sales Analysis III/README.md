@@ -1,7 +1,5 @@
 # [1084. 销售分析 III](https://leetcode.cn/problems/sales-analysis-iii)
 
-[English Version](/solution/1000-1099/1084.Sales%20Analysis%20III/README_EN.md)
-
 ## 题目描述
 
 <p>Table:&nbsp;<code>Product</code></p>
@@ -36,15 +34,11 @@ product_id 是 Product 表的外键。
 该表的每一行包含关于一个销售的一些信息。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个SQL查询，报告<code>2019年春季</code>才售出的产品。即<strong>仅</strong>在<code><strong>2019-01-01</strong></code>至<code><strong>2019-03-31</strong></code>（含）之间出售的商品。</p>
 
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

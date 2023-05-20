@@ -1,7 +1,5 @@
 # [97. 交错字符串](https://leetcode.cn/problems/interleaving-string)
 
-[English Version](/solution/0000-0099/0097.Interleaving%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给定三个字符串&nbsp;<code>s1</code>、<code>s2</code>、<code>s3</code>，请你帮忙验证&nbsp;<code>s3</code>&nbsp;是否是由&nbsp;<code>s1</code>&nbsp;和&nbsp;<code>s2</code><em> </em><strong>交错 </strong>组成的。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p><strong>注意：</strong><code>a + b</code> 意味着字符串 <code>a</code> 和 <code>b</code> 连接。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0097.Interleaving%20String/images/interleave.jpg" />
@@ -40,8 +36,6 @@
 <strong>输出：</strong>true
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -49,8 +43,6 @@
 	<li><code>0 &lt;= s3.length &lt;= 200</code></li>
 	<li><code>s1</code>、<code>s2</code>、和 <code>s3</code> 都由小写英文字母组成</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>您能否仅使用 <code>O(s2.length)</code> 额外的内存空间来解决它?</p>
 

@@ -1,7 +1,5 @@
 # [171. Excel 表列序号](https://leetcode.cn/problems/excel-sheet-column-number)
 
-[English Version](/solution/0100-0199/0171.Excel%20Sheet%20Column%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>columnTitle</code> ，表示 Excel 表格中的列名称。返回 <em>该列名称对应的列序号</em>&nbsp;。</p>
@@ -17,8 +15,6 @@ Z -&gt; 26
 AA -&gt; 27
 AB -&gt; 28 
 ...</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -39,8 +35,6 @@ AB -&gt; 28
 <pre>
 <strong>输入: </strong>columnTitle = "ZY"
 <strong>输出:</strong> 701</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

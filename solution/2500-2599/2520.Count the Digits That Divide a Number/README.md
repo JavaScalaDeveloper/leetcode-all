@@ -1,14 +1,10 @@
 # [2520. 统计能整除数字的位数](https://leetcode.cn/problems/count-the-digits-that-divide-a-number)
 
-[English Version](/solution/2500-2599/2520.Count%20the%20Digits%20That%20Divide%20a%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>num</code> ，返回 <code>num</code> 中能整除 <code>num</code> 的数位的数目。</p>
 
 <p>如果满足&nbsp;<code>nums % val == 0</code> ，则认为整数 <code>val</code> 可以整除 <code>nums</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输出：</strong>4
 <strong>解释：</strong>1248 可以被它每一位上的数字整除，因此答案是 4 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -64,18 +58,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int countDigits(int num) {
-    int ans = 0;
-    int cur = num;
-    while (cur) {
-        if (num % (cur % 10) == 0) {
-            ans++;
-        }
-        cur /= 10;
-    }
-    return ans;
-}
-```
+**

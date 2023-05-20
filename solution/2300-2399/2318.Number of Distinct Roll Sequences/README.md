@@ -1,7 +1,5 @@
 # [2318. 不同骰子序列的数目](https://leetcode.cn/problems/number-of-distinct-roll-sequences)
 
-[English Version](/solution/2300-2399/2318.Number%20of%20Distinct%20Roll%20Sequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>n</code>&nbsp;。你需要掷一个 6 面的骰子&nbsp;<code>n</code>&nbsp;次。请你在满足以下要求的前提下，求出 <strong>不同</strong>&nbsp;骰子序列的数目：</p>
@@ -14,8 +12,6 @@
 <p>请你返回不同序列的 <strong>总数目</strong>&nbsp;。由于答案可能很大，请你将答案对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;<strong>取余</strong>&nbsp;后返回。</p>
 
 <p>如果两个序列中至少有一个元素不同，那么它们被视为不同的序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 一些不可行的序列为 (3, 6) ，(2, 4) ，因为最大公约数不为 1 。
 总共有 22 个不同的可行序列，所以我们返回 22 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

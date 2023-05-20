@@ -1,7 +1,5 @@
 # [838. 推多米诺](https://leetcode.cn/problems/push-dominoes)
 
-[English Version](/solution/0800-0899/0838.Push%20Dominoes/README_EN.md)
-
 ## 题目描述
 
 <p><code>n</code> 张多米诺骨牌排成一行，将每张多米诺骨牌垂直竖立。在开始时，同时把一些多米诺骨牌向左或向右推。</p>
@@ -37,8 +35,6 @@
 <strong>输入：</strong>dominoes = ".L.R...LR..L.."
 <strong>输出：</strong>"LL.RR.LLRRLL.."
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

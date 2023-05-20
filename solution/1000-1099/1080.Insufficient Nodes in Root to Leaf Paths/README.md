@@ -1,7 +1,5 @@
 # [1080. 根到叶路径上的不足节点](https://leetcode.cn/problems/insufficient-nodes-in-root-to-leaf-paths)
 
-[English Version](/solution/1000-1099/1080.Insufficient%20Nodes%20in%20Root%20to%20Leaf%20Paths/README_EN.md)
-
 ## 题目描述
 
 <p>给定一棵二叉树的根 <code>root</code>，请你考虑它所有&nbsp;<strong>从根到叶的路径</strong>：从根到任何叶的路径。（所谓一个叶子节点，就是一个没有子节点的节点）</p>
@@ -9,8 +7,6 @@
 <p>假如通过节点 <code>node</code> 的每种可能的 &ldquo;根-叶&rdquo; 路径上值的总和全都小于给定的 <code>limit</code>，则该节点被称之为「不足节点」，需要被删除。</p>
 
 <p>请你删除所有不足节点，并返回生成的二叉树的根。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 输入：</strong>root = [5,-6,-6], limit = 0<strong>
 输出：</strong>[]</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ol>
@@ -42,8 +36,6 @@
 	<li><code>-10^5&nbsp;&lt;= node.val &lt;= 10^5</code></li>
 	<li><code>-10^9 &lt;= limit&nbsp;&lt;= 10^9</code></li>
 </ol>
-
-<p>&nbsp;</p>
 
 ## 解法
 

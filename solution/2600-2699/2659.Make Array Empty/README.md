@@ -1,7 +1,5 @@
 # [2659. 将数组清空](https://leetcode.cn/problems/make-array-empty)
 
-[English Version](/solution/2600-2699/2659.Make%20Array%20Empty/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个包含若干 <strong>互不相同</strong>&nbsp;整数的数组&nbsp;<code>nums</code>&nbsp;，你需要执行以下操作 <strong>直到</strong><strong>数组为空</strong>&nbsp;：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>请你返回需要多少个操作使<em>&nbsp;</em><code>nums</code><em>&nbsp;</em>为空。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -53,8 +49,6 @@
 	</tbody>
 </table>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 2：</strong></p>
 
 <pre>
@@ -93,8 +87,6 @@
 	</tbody>
 </table>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 3：</strong></p>
 
 <pre>
@@ -124,8 +116,6 @@
 		</tr>
 	</tbody>
 </table>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

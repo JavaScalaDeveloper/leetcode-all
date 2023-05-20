@@ -1,7 +1,5 @@
 # [1783. 大满贯数量](https://leetcode.cn/problems/grand-slam-titles)
 
-[English Version](/solution/1700-1799/1783.Grand%20Slam%20Titles/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Players</code></p>
@@ -16,8 +14,6 @@
 player_id 是这个表的主键
 这个表的每一行给出一个网球运动员的 ID 和 姓名
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表：<code>Championships</code></p>
 
@@ -35,15 +31,11 @@ year 是这个表的主键
 该表的每一行都包含在每场大满贯网球比赛中赢得比赛的球员的 ID
 </pre>
 
-<p>&nbsp;</p>
-
 <p>请写出查询语句，查询出每一个球员赢得大满贯比赛的次数。结果不包含没有赢得比赛的球员的ID 。</p>
 
 <p>结果集 <strong>无顺序要求</strong> 。</p>
 
 <p>查询结果的格式，如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

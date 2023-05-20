@@ -1,7 +1,5 @@
 # [1432. 改变一个整数能得到的最大差值](https://leetcode.cn/problems/max-difference-you-can-get-from-changing-an-integer)
 
-[English Version](/solution/1400-1499/1432.Max%20Difference%20You%20Can%20Get%20From%20Changing%20an%20Integer/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数&nbsp;<code>num</code>&nbsp;。你可以对它进行如下步骤恰好 <strong>两次</strong>&nbsp;：</p>
@@ -16,8 +14,6 @@
 <p>令两次对 <code>num</code>&nbsp;的操作得到的结果分别为&nbsp;<code>a</code>&nbsp;和&nbsp;<code>b</code>&nbsp;。</p>
 
 <p>请你返回&nbsp;<code>a</code> 和&nbsp;<code>b</code>&nbsp;的 <strong>最大差值</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -54,8 +50,6 @@
 <pre><strong>输入：</strong>num = 9288
 <strong>输出：</strong>8700
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

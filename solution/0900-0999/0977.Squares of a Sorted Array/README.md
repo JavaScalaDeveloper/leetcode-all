@@ -1,7 +1,5 @@
 # [977. 有序数组的平方](https://leetcode.cn/problems/squares-of-a-sorted-array)
 
-[English Version](/solution/0900-0999/0977.Squares%20of%20a%20Sorted%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个按 <strong>非递减顺序</strong> 排序的整数数组 <code>nums</code>，返回 <strong>每个数字的平方</strong> 组成的新数组，要求也按 <strong>非递减顺序</strong> 排序。</p>

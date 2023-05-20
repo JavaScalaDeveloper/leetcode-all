@@ -1,7 +1,5 @@
 # [2514. 统计同位异构字符串数目](https://leetcode.cn/problems/count-anagrams)
 
-[English Version](/solution/2500-2599/2514.Count%20Anagrams/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，它包含一个或者多个单词。单词之间用单个空格&nbsp;<code>' '</code>&nbsp;隔开。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>请你返回<em>&nbsp;</em><code>s</code>&nbsp;的同位异构字符串的数目，由于答案可能很大，请你将它对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;<strong>取余</strong> 后返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 <pre><b>输入：</b>s = "aa"
 <b>输出：</b>1
 <strong>解释：</strong>输入字符串只有一个同位异构字符串。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

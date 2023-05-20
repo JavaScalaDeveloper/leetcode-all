@@ -1,7 +1,5 @@
 # [2574. 左右元素和的差值](https://leetcode.cn/problems/left-and-right-sum-differences)
 
-[English Version](/solution/2500-2599/2574.Left%20and%20Right%20Sum%20Differences/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，请你找出一个下标从 <strong>0</strong> 开始的整数数组 <code>answer</code> ，其中：</p>
@@ -20,8 +18,6 @@
 
 <p>返回数组 <code>answer</code> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>nums = [10,4,8,3]
@@ -37,8 +33,6 @@
 <strong>解释：</strong>数组 leftSum 为 [0] 且数组 rightSum 为 [0] 。
 数组 answer 为 [|0 - 0|] = [0] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -82,25 +76,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *leftRigthDifference(int *nums, int numsSize, int *returnSize) {
-    int left = 0;
-    int right = 0;
-    for (int i = 0; i < numsSize; i++) {
-        right += nums[i];
-    }
-    int *ans = malloc(sizeof(int) * numsSize);
-    for (int i = 0; i < numsSize; i++) {
-        right -= nums[i];
-        ans[i] = abs(left - right);
-        left += nums[i];
-    }
-    *returnSize = numsSize;
-    return ans;
-}
-```
+**

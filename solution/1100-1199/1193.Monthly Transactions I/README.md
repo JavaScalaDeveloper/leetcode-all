@@ -1,7 +1,5 @@
 # [1193. 每月交易 I](https://leetcode.cn/problems/monthly-transactions-i)
 
-[English Version](/solution/1100-1199/1193.Monthly%20Transactions%20I/README_EN.md)
-
 ## 题目描述
 
 <p>Table: <code>Transactions</code></p>
@@ -21,15 +19,11 @@ id 是这个表的主键。
 state 列类型为 “[”批准“，”拒绝“] 之一。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 sql 查询来查找每个月和每个国家/地区的事务数及其总金额、已批准的事务数及其总金额。</p>
 
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

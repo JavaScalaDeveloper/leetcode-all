@@ -1,7 +1,5 @@
 # [688. 骑士在棋盘上的概率](https://leetcode.cn/problems/knight-probability-in-chessboard)
 
-[English Version](/solution/0600-0699/0688.Knight%20Probability%20in%20Chessboard/README_EN.md)
-
 ## 题目描述
 
 <p>在一个&nbsp;<code>n x n</code>&nbsp;的国际象棋棋盘上，一个骑士从单元格 <code>(row, column)</code>&nbsp;开始，并尝试进行 <code>k</code> 次移动。行和列是 <strong>从 0 开始</strong> 的，所以左上单元格是 <code>(0,0)</code> ，右下单元格是 <code>(n - 1, n - 1)</code> 。</p>
@@ -15,8 +13,6 @@
 <p>骑士继续移动，直到它走了 <code>k</code> 步或离开了棋盘。</p>
 
 <p>返回 <em>骑士在棋盘停止移动后仍留在棋盘上的概率</em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输入:</strong> n = 1, k = 0, row = 0, column = 0
 <strong>输出:</strong> 1.00000
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

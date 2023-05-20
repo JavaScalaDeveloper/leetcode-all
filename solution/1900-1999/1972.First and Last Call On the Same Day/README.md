@@ -1,7 +1,5 @@
 # [1972. 同一天的第一个电话和最后一个电话](https://leetcode.cn/problems/first-and-last-call-on-the-same-day)
 
-[English Version](/solution/1900-1999/1972.First%20and%20Last%20Call%20On%20the%20Same%20Day/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Calls</code></p>
@@ -17,8 +15,6 @@
 (caller_id, recipient_id, call_time) 是这个表的主键。
 每一行所含的时间信息都是关于caller_id 和recipient_id的。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>编写一个 SQL 查询来找出那些ID们在<strong>任意一天</strong>的第一个电话和最后一个电话都是和同一个人的。这些电话不论是拨打者还是接收者都会被记录。</p>
 

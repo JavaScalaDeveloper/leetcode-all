@@ -1,7 +1,5 @@
 # [2095. 删除链表的中间节点](https://leetcode.cn/problems/delete-the-middle-node-of-a-linked-list)
 
-[English Version](/solution/2000-2099/2095.Delete%20the%20Middle%20Node%20of%20a%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个链表的头节点 <code>head</code> 。<strong>删除</strong> 链表的 <strong>中间节点</strong> ，并返回修改后的链表的头节点 <code>head</code> 。</p>
@@ -11,8 +9,6 @@
 <ul>
 	<li>对于 <code>n</code> = <code>1</code>、<code>2</code>、<code>3</code>、<code>4</code> 和 <code>5</code> 的情况，中间节点的下标分别是 <code>0</code>、<code>1</code>、<code>1</code>、<code>2</code> 和 <code>2</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 上图表示给出的链表。
 对于 n = 2 ，值为 1 的节点 1 是中间节点，用红色标注。
 值为 2 的节点 0 是移除节点 1 后剩下的唯一一个节点。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

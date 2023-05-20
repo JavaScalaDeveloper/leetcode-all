@@ -1,7 +1,5 @@
 # [1129. 颜色交替的最短路径](https://leetcode.cn/problems/shortest-path-with-alternating-colors)
 
-[English Version](/solution/1100-1199/1129.Shortest%20Path%20with%20Alternating%20Colors/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数 <code>n</code>，即有向图中的节点数，其中节点标记为 <code>0</code> 到 <code>n - 1</code>。图中的每条边为红色或者蓝色，并且可能存在自环或平行边。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>返回长度为 <code>n</code> 的数组&nbsp;<code>answer</code>，其中&nbsp;<code>answer[X]</code>&nbsp;是从节点&nbsp;<code>0</code>&nbsp;到节点&nbsp;<code>X</code>&nbsp;的红色边和蓝色边交替出现的最短路径的长度。如果不存在这样的路径，那么 <code>answer[x] = -1</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输入：</strong>n = 3, red_edges = [[0,1]], blue_edges = [[2,1]]
 <strong>输出：</strong>[0,1,-1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

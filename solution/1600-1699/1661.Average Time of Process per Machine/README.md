@@ -1,7 +1,5 @@
 # [1661. 每台机器的进程平均运行时间](https://leetcode.cn/problems/average-time-of-process-per-machine)
 
-[English Version](/solution/1600-1699/1661.Average%20Time%20of%20Process%20per%20Machine/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Activity</code></p>
@@ -24,8 +22,6 @@ timestamp 是浮点类型,代表当前时间(以秒为单位).
 'start' 代表该进程在这台机器上的开始运行时间戳 , 'end' 代表该进程在这台机器上的终止运行时间戳.
 同一台机器，同一个进程都有一对开始时间戳和结束时间戳，而且开始时间戳永远在结束时间戳前面.</pre>
 
-<p>&nbsp;</p>
-
 <p>现在有一个工厂网站由几台机器运行，每台机器上运行着相同数量的进程. 请写出一条SQL计算每台机器各自完成一个进程任务的平均耗时.</p>
 
 <p>完成一个进程任务的时间指进程的<code>'end' 时间戳</code> 减去&nbsp;<code>'start' 时间戳</code>. 平均耗时通过计算每台机器上所有进程任务的总耗费时间除以机器上的总进程数量获得.</p>
@@ -35,8 +31,6 @@ timestamp 是浮点类型,代表当前时间(以秒为单位).
 <p>以 <strong>任意顺序</strong> 返回表。</p>
 
 <p>具体参考例子如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

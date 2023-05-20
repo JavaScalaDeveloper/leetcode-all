@@ -1,14 +1,10 @@
 # [1089. 复写零](https://leetcode.cn/problems/duplicate-zeros)
 
-[English Version](/solution/1000-1099/1089.Duplicate%20Zeros/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度固定的整数数组&nbsp;<code>arr</code> ，请你将该数组中出现的每个零都复写一遍，并将其余的元素向右平移。</p>
 
 <p>注意：请不要在超过该数组长度的位置写入元素。请对输入的数组&nbsp;<strong>就地&nbsp;</strong>进行上述修改，不要从函数返回任何东西。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,8 +20,6 @@
 <strong>输出：</strong>[1,2,3]
 <strong>解释：</strong>调用函数后，输入的数组将被修改为：[1,2,3]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -80,31 +74,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-void duplicateZeros(int* arr, int arrSize){
-    int i = 0;
-    int j = 0;
-    while (j < arrSize) {
-        if (arr[i] == 0) {
-            j++;
-        }
-        i++;
-        j++;
-    }
-    i--;
-    j--;
-    while (i >= 0) {
-        if (arr[i] == 0) {
-            if (j < arrSize) {
-                arr[j] = arr[i];
-            }
-            j--;
-        }
-        arr[j] = arr[i];
-        i--;
-        j--;
-    }
-}
-```
+**

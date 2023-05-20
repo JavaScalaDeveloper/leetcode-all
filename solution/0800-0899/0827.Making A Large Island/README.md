@@ -1,7 +1,5 @@
 # [827. 最大人工岛](https://leetcode.cn/problems/making-a-large-island)
 
-[English Version](/solution/0800-0899/0827.Making%20A%20Large%20Island/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>n x n</code> 二进制矩阵 <code>grid</code> 。<strong>最多</strong> 只能将一格 <code>0</code> 变成 <code>1</code> 。</p>

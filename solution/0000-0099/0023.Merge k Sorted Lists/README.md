@@ -1,14 +1,10 @@
 # [23. 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists)
 
-[English Version](/solution/0000-0099/0023.Merge%20k%20Sorted%20Lists/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个链表数组，每个链表都已经按升序排列。</p>
 
 <p>请你将所有链表合并到一个升序链表中，返回合并后的链表。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <pre><strong>输入：</strong>lists = [[]]
 <strong>输出：</strong>[]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

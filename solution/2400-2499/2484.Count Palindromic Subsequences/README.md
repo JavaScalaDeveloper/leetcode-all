@@ -1,7 +1,5 @@
 # [2484. 统计回文子序列数目](https://leetcode.cn/problems/count-palindromic-subsequences)
 
-[English Version](/solution/2400-2499/2484.Count%20Palindromic%20Subsequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你数字字符串&nbsp;<code>s</code>&nbsp;，请你返回&nbsp;<code>s</code>&nbsp;中长度为&nbsp;<code>5</code>&nbsp;的 <b>回文子序列</b>&nbsp;数目。由于答案可能很大，请你将答案对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;<strong>取余</strong>&nbsp;后返回。</p>
@@ -12,8 +10,6 @@
 	<li>如果一个字符串从前往后和从后往前读相同，那么它是 <strong>回文字符串</strong>&nbsp;。</li>
 	<li>子序列是一个字符串中删除若干个字符后，不改变字符顺序，剩余字符构成的字符串。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <b>输出：</b>2
 <b>解释：</b>仅有的两个回文子序列是 "99999" 和 "00000" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

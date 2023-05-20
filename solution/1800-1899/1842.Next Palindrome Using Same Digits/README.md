@@ -1,7 +1,5 @@
 # [1842. 下个由相同数字构成的回文串](https://leetcode.cn/problems/next-palindrome-using-same-digits)
 
-[English Version](/solution/1800-1899/1842.Next%20Palindrome%20Using%20Same%20Digits/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个很长的数字回文串 <code>num</code> ，返回 <strong>大于</strong> <code>num</code>、<strong>由相同数字重新组合而成的最小</strong> 回文串。</p>

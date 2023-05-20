@@ -1,7 +1,5 @@
 # [2493. 将节点分成尽可能多的组](https://leetcode.cn/problems/divide-nodes-into-the-maximum-number-of-groups)
 
-[English Version](/solution/2400-2499/2493.Divide%20Nodes%20Into%20the%20Maximum%20Number%20of%20Groups/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数&nbsp;<code>n</code>&nbsp;，表示一个 <strong>无向</strong>&nbsp;图中的节点数目，节点编号从&nbsp;<code>1</code>&nbsp;到&nbsp;<code>n</code>&nbsp;。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>请你返回最多可以将节点分为多少个组（也就是最大的<em>&nbsp;</em><code>m</code>&nbsp;）。如果没办法在给定条件下分组，请你返回&nbsp;<code>-1</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <b>解释：</b>如果我们将节点 1 放入第一个组，节点 2 放入第二个组，节点 3 放入第三个组，前两条边满足题目要求，但第三条边不满足题目要求。
 没有任何符合题目要求的分组方式。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

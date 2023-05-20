@@ -1,7 +1,5 @@
 # [1622. 奇妙序列](https://leetcode.cn/problems/fancy-sequence)
 
-[English Version](/solution/1600-1699/1622.Fancy%20Sequence/README_EN.md)
-
 ## 题目描述
 
 <p>请你实现三个 API <code>append</code>，<code>addAll</code> 和 <code>multAll</code> 来实现奇妙序列。</p>

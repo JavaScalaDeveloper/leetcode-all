@@ -1,7 +1,5 @@
 # [2284. 最多单词数的发件人](https://leetcode.cn/problems/sender-with-largest-word-count)
 
-[English Version](/solution/2200-2299/2284.Sender%20With%20Largest%20Word%20Count/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个聊天记录，共包含 <code>n</code>&nbsp;条信息。给你两个字符串数组&nbsp;<code>messages</code> 和&nbsp;<code>senders</code>&nbsp;，其中&nbsp;<code>messages[i]</code>&nbsp;是&nbsp;<code>senders[i]</code>&nbsp;发出的一条&nbsp;<strong>信息</strong>&nbsp;。</p>
@@ -16,8 +14,6 @@
 	<li>字典序里，大写字母小于小写字母。</li>
 	<li><code>"Alice"</code> 和&nbsp;<code>"alice"</code>&nbsp;是不同的名字。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@ userThree 发出了 3 个单词。
 <b>解释：</b>Bob 总共发出了 5 个单词。
 Charlie 总共发出了 5 个单词。
 由于最多单词数打平，返回字典序最大的名字，也就是 Charlie 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

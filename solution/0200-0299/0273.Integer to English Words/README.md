@@ -1,12 +1,8 @@
 # [273. 整数转换英文表示](https://leetcode.cn/problems/integer-to-english-words)
 
-[English Version](/solution/0200-0299/0273.Integer%20to%20English%20Words/README_EN.md)
-
 ## 题目描述
 
 <p>将非负整数 <code>num</code> 转换为其对应的英文表示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 <strong>输入：</strong>num = 1234567
 <strong>输出：</strong>"One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

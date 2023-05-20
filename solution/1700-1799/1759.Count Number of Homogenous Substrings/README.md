@@ -1,7 +1,5 @@
 # [1759. 统计同质子字符串的数目](https://leetcode.cn/problems/count-number-of-homogenous-substrings)
 
-[English Version](/solution/1700-1799/1759.Count%20Number%20of%20Homogenous%20Substrings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> ，返回<em> </em><code>s</code><em> </em>中 <strong>同质子字符串</strong> 的数目。由于答案可能很大，只需返回对 <code>10<sup>9</sup> + 7</code> <strong>取余 </strong>后的结果。</p>
@@ -9,8 +7,6 @@
 <p><strong>同质字符串</strong> 的定义为：如果一个字符串中的所有字符都相同，那么该字符串就是同质字符串。</p>
 
 <p><strong>子字符串</strong> 是字符串中的一个连续字符序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>输入：</strong>s = "zzzzz"
 <strong>输出：</strong>15
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -99,18 +93,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int countHomogenous(char *s) {
-    int MOD = 1e9 + 7;
-    int ans = 0;
-    for (int i = 0, j = 0; s[j]; j++) {
-        if (s[i] != s[j]) {
-            i = j;
-        }
-        ans = (ans + j - i + 1) % MOD;
-    }
-    return ans;
-}
-```
+**

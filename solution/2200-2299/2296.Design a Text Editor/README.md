@@ -1,7 +1,5 @@
 # [2296. 设计一个文本编辑器](https://leetcode.cn/problems/design-a-text-editor)
 
-[English Version](/solution/2200-2299/2296.Design%20a%20Text%20Editor/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个带光标的文本编辑器，它可以实现以下功能：</p>
@@ -23,8 +21,6 @@
 	<li><code>string cursorLeft(int k)</code> 将光标向左移动&nbsp;<code>k</code>&nbsp;次。返回移动后光标左边&nbsp;<code>min(10, len)</code>&nbsp;个字符，其中&nbsp;<code>len</code>&nbsp;是光标左边的字符数目。</li>
 	<li><code>string cursorRight(int k)</code>&nbsp;将光标向右移动&nbsp;<code>k</code>&nbsp;次。返回移动后光标左边&nbsp;<code>min(10, len)</code>&nbsp;个字符，其中&nbsp;<code>len</code>&nbsp;是光标左边的字符数目。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -61,8 +57,6 @@ textEditor.cursorRight(6); // 返回 "practi"
                            // "practi" 是光标左边的 min(10, 6) = 6 个字符。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -70,8 +64,6 @@ textEditor.cursorRight(6); // 返回 "practi"
 	<li><code>text</code>&nbsp;只含有小写英文字母。</li>
 	<li>调用 <code>addText</code>&nbsp;，<code>deleteText</code>&nbsp;，<code>cursorLeft</code> 和&nbsp;<code>cursorRight</code>&nbsp;的 <strong>总</strong> 次数不超过&nbsp;<code>2 * 10<sup>4</sup></code>&nbsp;次。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你能设计并实现一个每次调用时间复杂度为 <code>O(k)</code> 的解决方案吗？</p>
 

@@ -1,7 +1,5 @@
 # [2395. 和相等的子数组](https://leetcode.cn/problems/find-subarrays-with-equal-sum)
 
-[English Version](/solution/2300-2399/2395.Find%20Subarrays%20With%20Equal%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;，判断是否存在&nbsp;<strong>两个</strong>&nbsp;长度为&nbsp;<code>2</code>&nbsp;的子数组且它们的&nbsp;<strong>和</strong>&nbsp;相等。注意，这两个子数组起始位置的下标必须&nbsp;<strong>不相同</strong>&nbsp;。</p>
@@ -9,8 +7,6 @@
 <p>如果这样的子数组存在，请返回&nbsp;<code>true</code>，否则返回&nbsp;<code>false</code><em>&nbsp;</em>。</p>
 
 <p><strong>子数组</strong> 是一个数组中一段连续非空的元素组成的序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <b>解释：</b>子数组 [nums[0],nums[1]] 和 [nums[1],nums[2]] 的和相等，都为 0 。
 注意即使子数组的元素相同，这两个子数组也视为不相同的子数组，因为它们在原数组中的起始位置不同。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -69,17 +63,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool findSubarrays(int *nums, int numsSize) {
-    for (int i = 1; i < numsSize - 1; i++) {
-        for (int j = i + 1; j < numsSize; j++) {
-            if (nums[i - 1] + nums[i] == nums[j - 1] + nums[j]) {
-                return true;
-            }
-        }
-    }
-    return false;
-}
-```
+**

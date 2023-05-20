@@ -1,7 +1,5 @@
 # [2604. 吃掉所有谷子的最短时间](https://leetcode.cn/problems/minimum-time-to-eat-all-grains)
 
-[English Version](/solution/2600-2699/2604.Minimum%20Time%20to%20Eat%20All%20Grains/README_EN.md)
-
 ## 题目描述
 
 <p>一条线上有 <code>n</code> 只母鸡和 <code>m</code> 颗谷子。给定两个整数数组 <code>hens</code> 和 <code>grains</code> ，它们的大小分别为 <code>n</code> 和 <code>m</code> ，表示母鸡和谷子的初始位置。</p>
@@ -11,10 +9,6 @@
 <p>在 <code>1</code> 秒钟内，一只母鸡可以向左或向右移动 <code>1</code> 个单位。母鸡可以同时且独立地移动。</p>
 
 <p>如果母鸡行动得当，返回吃掉所有谷子的 <strong>最短</strong> 时间。</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1 ：</strong></p>
 
@@ -41,8 +35,6 @@
 - 第六只母鸡在 1 秒钟内吃掉位置 214 处的谷子。
 - 其他母鸡不动。 
 所以，需要的最长时间为 1 秒。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,12 +1,8 @@
 # [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array)
 
-[English Version](/solution/0400-0499/0421.Maximum%20XOR%20of%20Two%20Numbers%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，返回<em> </em><code>nums[i] XOR nums[j]</code> 的最大运算结果，其中 <code>0 ≤ i ≤ j &lt; n</code> 。</p>
-
-<p>&nbsp;</p>
 
 <div class="original__bRMd">
 <div>
@@ -23,8 +19,6 @@
 <strong>输入：</strong>nums = [14,70,53,83,49,91,36,80,92,51,66,70]
 <strong>输出：</strong>127
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

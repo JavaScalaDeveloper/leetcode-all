@@ -1,7 +1,5 @@
 # [2565. 最少得分子序列](https://leetcode.cn/problems/subsequence-with-the-minimum-score)
 
-[English Version](/solution/2500-2599/2565.Subsequence%20With%20the%20Minimum%20Score/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串&nbsp;<code>s</code> 和&nbsp;<code>t</code>&nbsp;。</p>
@@ -20,8 +18,6 @@
 <p>请你返回使<em>&nbsp;</em><code>t</code><em> </em>成为<em>&nbsp;</em><code>s</code>&nbsp;子序列的最小得分。</p>
 
 <p>一个字符串的 <strong>子序列</strong>&nbsp;是从原字符串中删除一些字符后（也可以一个也不删除），剩余字符不改变顺序得到的字符串。（比方说&nbsp;<code>"ace"</code> 是&nbsp;<code>"<strong><em>a</em></strong>b<strong><em>c</em></strong>d<strong><em>e</em></strong>"</code>&nbsp;的子序列，但是&nbsp;<code>"aec"</code>&nbsp;不是）。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,16 +39,12 @@
 3 是能得到的最小得分。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= s.length, t.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>s</code> 和&nbsp;<code>t</code>&nbsp;都只包含小写英文字母。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

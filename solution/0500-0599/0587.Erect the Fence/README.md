@@ -1,7 +1,5 @@
 # [587. 安装栅栏](https://leetcode.cn/problems/erect-the-fence)
 
-[English Version](/solution/0500-0599/0587.Erect%20the%20Fence/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个数组 <code>trees</code>，其中 <code>trees[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示树在花园中的位置。</p>
@@ -25,8 +23,6 @@
 <pre>
 <strong>输入:</strong> points = [[1,2],[2,2],[4,2]]
 <strong>输出:</strong> [[4,2],[2,2],[1,2]]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>注意:</strong></p>
 

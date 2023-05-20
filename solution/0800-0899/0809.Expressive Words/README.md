@@ -1,7 +1,5 @@
 # [809. 情感丰富的文字](https://leetcode.cn/problems/expressive-words)
 
-[English Version](/solution/0800-0899/0809.Expressive%20Words/README_EN.md)
-
 ## 题目描述
 
 <p>有时候人们会用重复写一些字母来表示额外的感受，比如 <code>"hello" -&gt; "heeellooo"</code>, <code>"hi" -&gt; "hiii"</code>。我们将相邻字母都相同的一串字符定义为相同字母组，例如："h", "eee", "ll", "ooo"。</p>
@@ -11,8 +9,6 @@
 <p>例如，以&nbsp;"hello" 为例，我们可以对字母组&nbsp;"o" 扩张得到 "hellooo"，但是无法以同样的方法得到 "helloo" 因为字母组 "oo" 长度小于&nbsp;3。此外，我们可以进行另一种扩张 "ll" -&gt; "lllll" 以获得&nbsp;"helllllooo"。如果&nbsp;<code>s = "helllllooo"</code>，那么查询词&nbsp;"hello" 是可扩张的，因为可以对它执行这两种扩张操作使得&nbsp;<code>query = "hello" -&gt; "hellooo" -&gt;&nbsp;"helllllooo" = s</code>。</p>
 
 <p>输入一组查询单词，输出其中可扩张的单词数量。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -25,8 +21,6 @@ words = ["hello", "hi", "helo"]
 我们能通过扩张 "hello" 的 "e" 和 "o" 来得到 "heeellooo"。
 我们不能通过扩张 "helo" 来得到 "heeellooo" 因为 "ll" 的长度小于 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

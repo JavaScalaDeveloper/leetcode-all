@@ -1,7 +1,5 @@
 # [2513. 最小化两个数组中的最大值](https://leetcode.cn/problems/minimize-the-maximum-of-two-arrays)
 
-[English Version](/solution/2500-2599/2513.Minimize%20the%20Maximum%20of%20Two%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个数组&nbsp;<code>arr1</code> 和&nbsp;<code>arr2</code>&nbsp;，它们一开始都是空的。你需要往它们中添加正整数，使它们满足以下条件：</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>给你&nbsp;<code>divisor1</code>&nbsp;，<code>divisor2</code>&nbsp;，<code>uniqueCnt1</code>&nbsp;和&nbsp;<code>uniqueCnt2</code>&nbsp;，请你返回两个数组中&nbsp;<strong>最大元素</strong>&nbsp;的&nbsp;<strong>最小值</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@ arr1 = [1,2] 和 arr2 = [3] 满足所有条件。
 最终数组为 arr1 = [1,3,5,7,9,11,13,15] 和 arr2 = [2,6] 。
 上述方案是满足所有条件的最优解。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

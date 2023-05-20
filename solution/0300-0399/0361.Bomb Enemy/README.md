@@ -1,7 +1,5 @@
 # [361. 轰炸敌人](https://leetcode.cn/problems/bomb-enemy)
 
-[English Version](/solution/0300-0399/0361.Bomb%20Enemy/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的矩阵 <code>grid</code> ，其中每个单元格都放置有一个字符：</p>
@@ -16,8 +14,6 @@
 
 <p>由于炸弹的威力不足以穿透墙体，炸弹只能击杀同一行和同一列没被墙体挡住的敌人。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0361.Bomb%20Enemy/images/bomb1-grid.jpg" style="width: 600px; height: 187px;" />
 <pre>
@@ -31,8 +27,6 @@
 <strong>输入：</strong>grid = [["W","W","W"],["0","0","0"],["E","E","E"]]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

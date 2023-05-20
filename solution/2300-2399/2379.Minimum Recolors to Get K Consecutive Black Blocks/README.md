@@ -1,7 +1,5 @@
 # [2379. 得到 K 个黑块的最少涂色次数](https://leetcode.cn/problems/minimum-recolors-to-get-k-consecutive-black-blocks)
 
-[English Version](/solution/2300-2399/2379.Minimum%20Recolors%20to%20Get%20K%20Consecutive%20Black%20Blocks/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code>&nbsp;下标从 <strong>0</strong>&nbsp;开始的字符串&nbsp;<code>blocks</code>&nbsp;，<code>blocks[i]</code>&nbsp;要么是&nbsp;<code>'W'</code>&nbsp;要么是&nbsp;<code>'B'</code>&nbsp;，表示第&nbsp;<code>i</code>&nbsp;块的颜色。字符&nbsp;<code>'W'</code> 和&nbsp;<code>'B'</code>&nbsp;分别表示白色和黑色。</p>
@@ -11,8 +9,6 @@
 <p>每一次操作中，你可以选择一个白色块将它 <strong>涂成</strong>&nbsp;黑色块。</p>
 
 <p>请你返回至少出现 <strong>一次</strong>&nbsp;连续 <code>k</code>&nbsp;个黑色块的 <strong>最少</strong>&nbsp;操作次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 不需要任何操作，因为已经有 2 个连续的黑块。
 所以我们返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 
@@ -79,23 +73,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define min(a, b) (((a) < (b)) ? (a) : (b))
-
-int minimumRecolors(char *blocks, int k) {
-    int n = strlen(blocks);
-    int count = 0;
-    for (int i = 0; i < k; i++) {
-        count += blocks[i] == 'B';
-    }
-    int ans = k - count;
-    for (int i = k; i < n; i++) {
-        count -= blocks[i - k] == 'B';
-        count += blocks[i] == 'B';
-        ans = min(ans, k - count);
-    }
-    return ans;
-}
-```
+**

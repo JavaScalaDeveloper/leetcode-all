@@ -1,7 +1,5 @@
 # [2242. 节点序列的最大得分](https://leetcode.cn/problems/maximum-score-of-a-node-sequence)
 
-[English Version](/solution/2200-2299/2242.Maximum%20Score%20of%20a%20Node%20Sequence/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个&nbsp;<code>n</code>&nbsp;个节点的&nbsp;<strong>无向图</strong>&nbsp;，节点编号为&nbsp;<code>0</code>&nbsp;到&nbsp;<code>n - 1</code>&nbsp;。</p>
@@ -18,8 +16,6 @@
 <p>节点序列的分数定义为序列中节点分数之 <strong>和</strong> 。</p>
 
 <p>请你返回一个长度为 <code>4</code>&nbsp;的合法节点序列的最大分数。如果不存在这样的序列，请你返回 <code>-1</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 <b>解释：</b>上图为输入的图。
 没有长度为 4 的合法序列，所以我们返回 -1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

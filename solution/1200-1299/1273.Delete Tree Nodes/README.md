@@ -1,7 +1,5 @@
 # [1273. 删除树节点](https://leetcode.cn/problems/delete-tree-nodes)
 
-[English Version](/solution/1200-1299/1273.Delete%20Tree%20Nodes/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵以节点 0 为根节点的树，定义如下：</p>
@@ -15,8 +13,6 @@
 <p>请你删除节点值之和为 0 的每一棵子树。</p>
 
 <p>在完成所有删除之后，返回树中剩余节点的数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 <pre><strong>输入：</strong>nodes = 5, parent = [-1,0,0,1,1], value = [-686,-842,616,-739,-746]
 <strong>输出：</strong>5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

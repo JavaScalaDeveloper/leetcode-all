@@ -1,7 +1,5 @@
 # [1706. 球会落何处](https://leetcode.cn/problems/where-will-the-ball-fall)
 
-[English Version](/solution/1700-1799/1706.Where%20Will%20the%20Ball%20Fall/README_EN.md)
-
 ## 题目描述
 
 <p>用一个大小为 <code>m x n</code> 的二维网格 <code>grid</code> 表示一个箱子。你有 <code>n</code> 颗球。箱子的顶部和底部都是开着的。</p>

@@ -1,7 +1,5 @@
 # [1428. 至少有一个 1 的最左端列](https://leetcode.cn/problems/leftmost-column-with-at-least-a-one)
 
-[English Version](/solution/1400-1499/1428.Leftmost%20Column%20with%20at%20Least%20a%20One/README_EN.md)
-
 ## 题目描述
 
 <p><em>（这是一个<strong>交互题</strong>）</em></p>
@@ -20,8 +18,6 @@
 <p>如果提交的答案调用&nbsp;<code>BinaryMatrix.get</code>&nbsp;超过 <code>1000</code> 次，则该答案会被判定为<em>错误答案</em>。提交任何试图规避判定机制的答案将会被取消资格。</p>
 
 <p>下列示例中，&nbsp;<code>mat</code>&nbsp;为给定的二进制矩阵。您不能直接访问该矩阵。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -57,8 +53,6 @@
 <strong>输入:</strong> mat = [[0,0,0,1],[0,0,1,1],[0,1,1,1]]
 <strong>输出:</strong> 1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [2159. 分别排序两列](https://leetcode.cn/problems/order-two-columns-independently)
 
-[English Version](/solution/2100-2199/2159.Order%20Two%20Columns%20Independently/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Data</code></p>
@@ -16,8 +14,6 @@
 该表没有主键且可能包含重复数据。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>请你编写 SQL 使：</p>
 
 <ul>
@@ -26,8 +22,6 @@
 </ul>
 
 <p>查询返回的结果格式如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2015. 每段建筑物的平均高度](https://leetcode.cn/problems/average-height-of-buildings-in-each-segment)
 
-[English Version](/solution/2000-2099/2015.Average%20Height%20of%20Buildings%20in%20Each%20Segment/README_EN.md)
-
 ## 题目描述
 
 <p>一条完全笔直的街道由一条数字线表示。街道上有建筑物，由二维整数阵列&nbsp;<code>buildings</code> 表示，其中 <code>buildings[i] = [start<sub>i</sub>, end<sub>i</sub>, height<sub>i</sub>]</code>。这意味着在 <strong>半封闭的位置</strong><code>[starti，endi]</code> 有一座高度为&nbsp;<code>height<sub>i</sub></code>&nbsp;的建筑。<br />
@@ -22,8 +20,6 @@
 <p>给定&nbsp;<code>buildings</code> ，返回如上所述的二维整数矩阵<em>&nbsp;</em><code>street</code><em>&nbsp;</em>（ <strong>不包括</strong> 街道上没有建筑物的任何区域）。您可以按 <strong>任何顺序</strong> 返回数组。<br />
 <code>n</code> 个元素的 <strong>平均值</strong> 是 <code>n</code> 个元素除以&nbsp;<code>n</code> 的 <strong>总和</strong> （<strong>整数除法</strong>）。<br />
 <strong>半闭合段</strong>&nbsp;<code>[a, b)</code>&nbsp;是点&nbsp;<code>a</code>&nbsp;和 <code>b</code> 之间的数字线的截面，<strong>包括</strong> 点 <code>a</code> ，<strong>不包括&nbsp;</strong>点 <code>b</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例1：</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2015.Average%20Height%20of%20Buildings%20in%20Each%20Segment/images/image-20210921224001-2.png" />
@@ -61,8 +57,6 @@
 从 5 到 6 ，只有第二栋建筑的平均高度为 1 / 1 = 1。
 我们无法将这些部分组合在一起，因为没有建筑的空白空间将这些部分隔开。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

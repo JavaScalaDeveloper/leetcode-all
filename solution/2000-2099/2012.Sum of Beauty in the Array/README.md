@@ -1,7 +1,5 @@
 # [2012. 数组美丽值求和](https://leetcode.cn/problems/sum-of-beauty-in-the-array)
 
-[English Version](/solution/2000-2099/2012.Sum%20of%20Beauty%20in%20the%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 。对于每个下标 <code>i</code>（<code>1 &lt;= i &lt;= nums.length - 2</code>），<code>nums[i]</code> 的 <strong>美丽值</strong> 等于：</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回符合 <code>1 &lt;= i &lt;= nums.length - 2</code> 的所有<em> </em><code>nums[i]</code><em> </em>的 <strong>美丽值的总和</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>解释：</strong>对于每个符合范围 1 &lt;= i &lt;= 1 的下标 i :
 - nums[1] 的美丽值等于 0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

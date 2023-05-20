@@ -1,7 +1,5 @@
 # [1656. 设计有序流](https://leetcode.cn/problems/design-an-ordered-stream)
 
-[English Version](/solution/1600-1699/1656.Design%20an%20Ordered%20Stream/README_EN.md)
-
 ## 题目描述
 
 <p>有 <code>n</code> 个 <code>(id, value)</code> 对，其中 <code>id</code> 是 <code>1</code> 到 <code>n</code> 之间的一个整数，<code>value</code> 是一个字符串。不存在 <code>id</code> 相同的两个 <code>(id, value)</code> 对。</p>

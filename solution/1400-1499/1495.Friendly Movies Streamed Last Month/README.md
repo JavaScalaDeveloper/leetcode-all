@@ -1,7 +1,5 @@
 # [1495. 上月播放的儿童适宜电影](https://leetcode.cn/problems/friendly-movies-streamed-last-month)
 
-[English Version](/solution/1400-1499/1495.Friendly%20Movies%20Streamed%20Last%20Month/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>TVProgram</code></p>
@@ -17,8 +15,6 @@
 (program_date, content_id) 是该表主键.
 该表包含电视上的节目信息.
 content_id 是电视一些频道上的节目的 id.</pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Content</code></p>
 
@@ -37,15 +33,11 @@ Kids_content 是枚举类型, 取值为('Y', 'N'), 其中:
 content_type&nbsp;表示内容的类型, 比如电影, 电视剧等.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL 语句,&nbsp;&nbsp;报告在 2020 年 6 月份播放的儿童适宜电影的去重电影名.</p>
 
 <p>返回的结果表单 <strong>没有顺序要求</strong> .</p>
 
 <p>查询结果的格式如下例所示.</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

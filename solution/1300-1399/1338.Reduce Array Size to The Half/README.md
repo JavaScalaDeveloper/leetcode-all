@@ -1,14 +1,10 @@
 # [1338. 数组大小减半](https://leetcode.cn/problems/reduce-array-size-to-the-half)
 
-[English Version](/solution/1300-1399/1338.Reduce%20Array%20Size%20to%20The%20Half/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>arr</code>。你可以从中选出一个整数集合，并删除这些整数在数组中的每次出现。</p>
 
 <p>返回&nbsp;<strong>至少</strong>&nbsp;能删除数组中的一半整数的整数集合的最小大小。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>我们只能选择集合 {7}，结果数组为空。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

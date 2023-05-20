@@ -1,7 +1,5 @@
 # [1808. 好因子的最大数目](https://leetcode.cn/problems/maximize-number-of-nice-divisors)
 
-[English Version](/solution/1800-1899/1808.Maximize%20Number%20of%20Nice%20Divisors/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数 <code>primeFactors</code> 。你需要构造一个正整数 <code>n</code> ，它满足以下条件：</p>

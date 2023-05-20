@@ -1,7 +1,5 @@
 # [757. 设置交集大小至少为 2](https://leetcode.cn/problems/set-intersection-size-at-least-two)
 
-[English Version](/solution/0700-0799/0757.Set%20Intersection%20Size%20At%20Least%20Two/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维整数数组 <code>intervals</code> ，其中 <code>intervals[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> 表示从 <code>start<sub>i</sub></code> 到 <code>end<sub>i</sub></code> 的所有整数，包括 <code>start<sub>i</sub></code> 和 <code>end<sub>i</sub></code> 。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回包含集合可能的最小大小。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>解释：</strong>nums = [1, 2, 3, 4, 5].
 可以证明不存在元素数量为 4 的包含集合。 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2539. 好子序列的个数](https://leetcode.cn/problems/count-the-number-of-good-subsequences)
 
-[English Version](/solution/2500-2599/2539.Count%20the%20Number%20of%20Good%20Subsequences/README_EN.md)
-
 ## 题目描述
 
 <p>如果字符串的某个 <strong>子序列</strong> 不为空，且其中每一个字符出现的频率都相同，就认为该子序列是一个好子序列。</p>
@@ -9,8 +7,6 @@
 <p>给你一个字符串&nbsp;<code>s</code> ，请你统计并返回它的好子序列的个数。由于答案的值可能非常大，请返回对 <code>10<sup>9</sup> + 7</code> 取余的结果作为答案。</p>
 
 <p>字符串的 <strong>子序列</strong> 是指，通过删除一些（也可以不删除）字符且不改变剩余字符相对位置所组成的新字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输出：</strong>15
 <strong>解释：</strong>s 所有非空子序列均为好子序列。因此，好子序列的个数为 16<code> - 1 = 15</code> 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

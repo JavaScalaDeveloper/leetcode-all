@@ -1,7 +1,5 @@
 # [2043. 简易银行系统](https://leetcode.cn/problems/simple-bank-system)
 
-[English Version](/solution/2000-2099/2043.Simple%20Bank%20System/README_EN.md)
-
 ## 题目描述
 
 <p>你的任务是为一个很受欢迎的银行设计一款程序，以自动化执行所有传入的交易（转账，存款和取款）。银行共有 <code>n</code> 个账户，编号从 <code>1</code> 到 <code>n</code> 。每个账号的初始余额存储在一个下标从 <strong>0</strong> 开始的整数数组 <code>balance</code>&nbsp;中，其中第 <code>(i + 1)</code> 个账户的初始余额是 <code>balance[i]</code> 。</p>
@@ -21,8 +19,6 @@
 	<li><code>boolean deposit(int account, long money)</code> 向编号为&nbsp;<code>account</code> 的账户存款 <code>money</code> 美元。如果交易成功，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
 	<li><code>boolean withdraw(int account, long money)</code> 从编号为 <code>account</code> 的账户取款 <code>money</code> 美元。如果交易成功，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -45,8 +41,6 @@ bank.transfer(3, 4, 15); // 返回 false ，账户 3 的当前余额是 $10 。
                          // 所以无法转账 $15 。
 bank.withdraw(10, 50);   // 返回 false ，交易无效，因为账户 10 并不存在。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

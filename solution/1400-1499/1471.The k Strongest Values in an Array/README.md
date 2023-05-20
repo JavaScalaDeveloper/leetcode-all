@@ -1,7 +1,5 @@
 # [1471. 数组中的 k 个最强值](https://leetcode.cn/problems/the-k-strongest-values-in-an-array)
 
-[English Version](/solution/1400-1499/1471.The%20k%20Strongest%20Values%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>arr</code> 和一个整数 <code>k</code> 。</p>
@@ -21,8 +19,6 @@
 	<li>例如 <code>arr =&nbsp;[6, -3, 7, 2, 11]</code>，<code>n = 5</code>：数组排序后得到 <code>arr = [-3, 2, 6, 7, 11]</code> ，数组的中间位置为 <code>m = ((5 - 1) / 2) = 2</code> ，中位数 <code>arr[m]</code> 的值为 <code>6</code> 。</li>
 	<li>例如 <code>arr =&nbsp;[-7, 22, 17,&thinsp;3]</code>，<code>n = 4</code>：数组排序后得到&nbsp;<code>arr = [-7, 3, 17, 22]</code> ，数组的中间位置为&nbsp;<code>m = ((4 - 1) / 2) = 1</code> ，中位数 <code>arr[m]</code> 的值为 <code>3</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -57,8 +53,6 @@
 <pre><strong>输入：</strong>arr = [-7,22,17,3], k = 2
 <strong>输出：</strong>[22,17]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

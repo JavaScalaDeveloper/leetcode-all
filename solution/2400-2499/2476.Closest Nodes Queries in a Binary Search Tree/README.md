@@ -1,7 +1,5 @@
 # [2476. 二叉搜索树最近节点查询](https://leetcode.cn/problems/closest-nodes-queries-in-a-binary-search-tree)
 
-[English Version](/solution/2400-2499/2476.Closest%20Nodes%20Queries%20in%20a%20Binary%20Search%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>二叉搜索树</strong> 的根节点 <code>root</code> ，和一个由正整数组成、长度为 <code>n</code> 的数组 <code>queries</code> 。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>返回数组 <code>answer</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1 ：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>输出：</strong>[[-1,4]]
 <strong>解释：</strong>树中不存在小于等于 3 的最大值，且大于等于 3 的最小值是 4 。所以查询的答案是 [-1,4] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

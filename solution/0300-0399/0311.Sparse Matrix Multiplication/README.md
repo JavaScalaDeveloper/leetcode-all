@@ -1,12 +1,8 @@
 # [311. 稀疏矩阵的乘法](https://leetcode.cn/problems/sparse-matrix-multiplication)
 
-[English Version](/solution/0300-0399/0311.Sparse%20Matrix%20Multiplication/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个&nbsp;<a href="https://baike.baidu.com/item/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5" target="_blank">稀疏矩阵</a>&nbsp;：大小为 <code>m x k</code> 的稀疏矩阵 <code>mat1</code> 和大小为 <code>k x n</code> 的稀疏矩阵 <code>mat2</code> ，返回 <code>mat1 x mat2</code> 的结果。你可以假设乘法总是可能的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <b>输入：</b>mat1 = [[0]], mat2 = [[0]]
 <b>输出：</b>[[0]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

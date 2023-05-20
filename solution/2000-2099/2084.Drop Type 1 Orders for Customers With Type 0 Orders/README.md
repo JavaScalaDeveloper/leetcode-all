@@ -1,7 +1,5 @@
 # [2084. 为订单类型为 0 的客户删除类型为 1 的订单](https://leetcode.cn/problems/drop-type-1-orders-for-customers-with-type-0-orders)
 
-[English Version](/solution/2000-2099/2084.Drop%20Type%201%20Orders%20for%20Customers%20With%20Type%200%20Orders/README_EN.md)
-
 ## 题目描述
 
 <p>活动表: <code>Orders</code></p>
@@ -18,8 +16,6 @@ order_id是此表的主键列。
 订单可以是类型0或类型1。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写SQL查询以根据以下条件报告所有订单：</p>
 
 <ul>
@@ -30,8 +26,6 @@ order_id是此表的主键列。
 <p>按任意顺序返回结果表。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

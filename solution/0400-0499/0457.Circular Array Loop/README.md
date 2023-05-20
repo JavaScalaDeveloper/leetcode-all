@@ -1,7 +1,5 @@
 # [457. 环形数组是否存在循环](https://leetcode.cn/problems/circular-array-loop)
 
-[English Version](/solution/0400-0499/0457.Circular%20Array%20Loop/README_EN.md)
-
 ## 题目描述
 
 <p>存在一个不含 <code>0</code> 的<strong> 环形 </strong>数组&nbsp;<code>nums</code> ，每个 <code>nums[i]</code> 都表示位于下标 <code>i</code> 的角色应该向前或向后移动的下标个数：</p>
@@ -22,8 +20,6 @@
 </ul>
 
 <p>如果 <code>nums</code> 中存在循环，返回 <code>true</code> ；否则，返回<em> </em><code>false</code><em> </em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,8 +45,6 @@
 <strong>解释：</strong>按下标 1 -&gt; 2 -&gt; 1 -&gt; ... 的运动无法构成循环，因为 nums[1] 是正数，而 nums[2] 是负数。
 所有 nums[seq[j]] 应当不是全正就是全负。</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -58,8 +52,6 @@
 	<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
 	<li><code>nums[i] != 0</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你能设计一个时间复杂度为 <code>O(n)</code> 且额外空间复杂度为 <code>O(1)</code> 的算法吗？</p>
 

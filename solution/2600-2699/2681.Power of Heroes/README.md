@@ -1,7 +1,5 @@
 # [2681. 英雄的力量](https://leetcode.cn/problems/power-of-heroes)
 
-[English Version](/solution/2600-2699/2681.Power%20of%20Heroes/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;，它表示英雄的能力值。如果我们选出一部分英雄，这组英雄的 <strong>力量</strong>&nbsp;定义为：</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>请你返回所有可能的 <strong>非空</strong> 英雄组的 <strong>力量</strong> 之和。由于答案可能非常大，请你将结果对&nbsp;<code>10<sup>9 </sup>+ 7</code>&nbsp;<strong>取余。</strong></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <b>输出：</b>7
 <b>解释：</b>总共有 7 个英雄组，每一组的力量都是 1 。所以所有英雄组的力量之和为 7 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

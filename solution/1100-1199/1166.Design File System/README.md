@@ -1,7 +1,5 @@
 # [1166. 设计文件系统](https://leetcode.cn/problems/design-file-system)
 
-[English Version](/solution/1100-1199/1166.Design%20File%20System/README_EN.md)
-
 ## 题目描述
 
 <p>你需要设计一个文件系统，你可以创建新的路径并将它们与不同的值关联。</p>
@@ -14,8 +12,6 @@
 	<li><meta charset="UTF-8" /><code>bool createPath(string path, int value)</code>&nbsp;创建一个新的&nbsp;<code>path</code> ，并在可能的情况下关联一个 <code>value</code> ，然后返回 <code>true</code> 。如果路径<strong>已经存在</strong>或其父路径<strong>不存在</strong>，则返回&nbsp;<code>false</code>&nbsp;。</li>
 	<li>&nbsp;<code>int get(string path)</code> 返回与 <code>path</code> 关联的值，如果路径不存在则返回 <code>-1</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,8 +45,6 @@ fileSystem.get("/leet/code"); // 返回 2
 fileSystem.createPath("/c/d", 1); // 返回 false 因为父路径 "/c" 不存在。
 fileSystem.get("/c"); // 返回 -1 因为该路径不存在。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

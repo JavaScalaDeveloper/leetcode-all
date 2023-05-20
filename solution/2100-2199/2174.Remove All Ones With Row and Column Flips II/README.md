@@ -1,7 +1,5 @@
 # [2174. 通过翻转行或列来去除所有的 1 II](https://leetcode.cn/problems/remove-all-ones-with-row-and-column-flips-ii)
 
-[English Version](/solution/2100-2199/2174.Remove%20All%20Ones%20With%20Row%20and%20Column%20Flips%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定&nbsp;<strong>下标从 0 开始&nbsp;</strong>的 <code>m x n</code> <strong>二进制&nbsp;</strong>矩阵 <code>grid</code>。</p>
@@ -17,8 +15,6 @@
 <p>并将第 <code>i</code> 行和第 <code>j</code> 列中的&nbsp;<strong>所有&nbsp;</strong>单元格的值更改为零。</p>
 
 <p>返回<em>从&nbsp;</em><code>grid</code><em> 中删除所有 <code>1</code> 所需的最小操作数。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2174.Remove%20All%20Ones%20With%20Row%20and%20Column%20Flips%20II/images/image-20220213162716-1.png" style="width: 709px; height: 200px;" />
@@ -48,8 +44,6 @@
 <strong>输出:</strong> 0
 <strong>解释:</strong>
 没有 1 可以移除，所以返回0。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

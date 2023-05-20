@@ -1,7 +1,5 @@
 # [174. 地下城游戏](https://leetcode.cn/problems/dungeon-game)
 
-[English Version](/solution/0100-0199/0174.Dungeon%20Game/README_EN.md)
-
 ## 题目描述
 
 <style type="text/css">table.dungeon, .dungeon th, .dungeon td {
@@ -26,8 +24,6 @@
 
 <p><strong>注意：</strong>任何房间都可能对骑士的健康点数造成威胁，也可能增加骑士的健康点数，包括骑士进入的左上角房间以及公主被监禁的右下角房间。</p>
 
-<p>&nbsp;</p>
-
 <p><strong class="example">示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0174.Dungeon%20Game/images/dungeon-grid-1.jpg" style="width: 253px; height: 253px;" />
 <pre>
@@ -41,8 +37,6 @@
 <strong>输入：</strong>dungeon = [[0]]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

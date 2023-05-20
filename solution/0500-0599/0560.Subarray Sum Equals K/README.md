@@ -1,12 +1,8 @@
 # [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k)
 
-[English Version](/solution/0500-0599/0560.Subarray%20Sum%20Equals%20K/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个整数&nbsp;<code>k</code> ，请你统计并返回 <em>该数组中和为&nbsp;<code>k</code><strong>&nbsp;</strong>的连续子数组的个数&nbsp;</em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,8 +17,6 @@
 <strong>输入：</strong>nums = [1,2,3], k = 3
 <strong>输出：</strong>2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

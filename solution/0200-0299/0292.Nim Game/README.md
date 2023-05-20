@@ -1,7 +1,5 @@
 # [292. Nim 游戏](https://leetcode.cn/problems/nim-game)
 
-[English Version](/solution/0200-0299/0292.Nim%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>你和你的朋友，两个人一起玩&nbsp;<a href="https://baike.baidu.com/item/Nim游戏/6737105" target="_blank">Nim 游戏</a>：</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>假设你们每一步都是最优解。请编写一个函数，来判断你是否可以在给定石头数量为 <code>n</code> 的情况下赢得游戏。如果可以赢，返回 <code>true</code>；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输入：</strong>n = 2
 <strong>输出：</strong>true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

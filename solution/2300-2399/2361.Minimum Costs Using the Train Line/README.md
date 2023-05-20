@@ -1,7 +1,5 @@
 # [2361. 乘坐火车路线的最少费用](https://leetcode.cn/problems/minimum-costs-using-the-train-line)
 
-[English Version](/solution/2300-2399/2361.Minimum%20Costs%20Using%20the%20Train%20Line/README_EN.md)
-
 ## 题目描述
 
 <p>城市中的火车有两条路线，分别是常规路线和特快路线。两条路线经过 <strong>相同 </strong>的 <code>n + 1</code> 个车站，车站编号从 <code>0</code> 到 <code>n</code>。初始时，你位于车站 <code>0</code> 的常规路线。</p>
@@ -21,8 +19,6 @@
 <p>返回<strong> 下标从 1 开始</strong> 、长度为 <code>n</code> 的数组 <code>costs</code>，其中 <code>costs[i]</code> 是从车站 <code>0</code> 到车站 <code>i</code> 的最少费用。</p>
 
 <p>注意：每个车站都可以从任意一条路线 <strong>到达 </strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2361.Minimum%20Costs%20Using%20the%20Train%20Line/images/ex1drawio.png" style="width: 442px; height: 150px;" />
@@ -50,8 +46,6 @@
 总费用是 10 + 5 + 9 = 24。
 注意转换回特快路线时需要再次支付 expressCost 的费用。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

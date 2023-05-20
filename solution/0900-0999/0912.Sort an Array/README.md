@@ -1,12 +1,8 @@
 # [912. 排序数组](https://leetcode.cn/problems/sort-an-array)
 
-[English Version](/solution/0900-0999/0912.Sort%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>，请你将该数组升序排列。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -24,8 +20,6 @@
 <strong>输入：</strong>nums = [5,1,1,2,0,0]
 <strong>输出：</strong>[0,0,1,1,2,5]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2112. 最繁忙的机场](https://leetcode.cn/problems/the-airport-with-the-most-traffic)
 
-[English Version](/solution/2100-2199/2112.The%20Airport%20With%20the%20Most%20Traffic/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Flights</code></p>
@@ -18,15 +16,11 @@
 该表的每一行都表示从 departure_airport 出发并到达 arrival_airport 的 flights_count 航班。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 来查询&nbsp;<strong>流量最大&nbsp;</strong>的机场的 ID。客流量最大的机场是指从该机场起飞或抵达该机场的航班总数最多的机场。如果有多个机场流量最大，请全部查询出来。</p>
 
 <p data-group="1-1">以&nbsp;<strong>任意顺序&nbsp;</strong>返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

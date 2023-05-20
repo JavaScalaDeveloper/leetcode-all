@@ -1,7 +1,5 @@
 # [1356. 根据数字二进制下 1 的数目排序](https://leetcode.cn/problems/sort-integers-by-the-number-of-1-bits)
 
-[English Version](/solution/1300-1399/1356.Sort%20Integers%20by%20The%20Number%20of%201%20Bits/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>arr</code>&nbsp;。请你将数组中的元素按照其二进制表示中数字 <strong>1</strong> 的数目升序排序。</p>
@@ -9,8 +7,6 @@
 <p>如果存在多个数字二进制中&nbsp;<strong>1</strong>&nbsp;的数目相同，则必须将它们按照数值大小升序排列。</p>
 
 <p>请你返回排序后的数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <pre><strong>输入：</strong>arr = [10,100,1000,10000]
 <strong>输出：</strong>[10,100,10000,1000]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -103,34 +97,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int countOnes(int n) {
-    int res = 0;
-    while (n) {
-        n &= n - 1;
-        res++;
-    }
-    return res;
-}
-
-int cmp(const void *_a, const void *_b) {
-    int a = *(int *) _a;
-    int b = *(int *) _b;
-    int res = countOnes(a) - countOnes(b);
-    if (res == 0) {
-        return a - b;
-    }
-    return res;
-}
-
-int *sortByBits(int *arr, int arrSize, int *returnSize) {
-    qsort(arr, arrSize, sizeof(int), cmp);
-    *returnSize = arrSize;
-    return arr;
-}
-```
+**

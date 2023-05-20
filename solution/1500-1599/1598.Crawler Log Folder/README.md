@@ -1,7 +1,5 @@
 # [1598. 文件夹操作日志搜集器](https://leetcode.cn/problems/crawler-log-folder)
 
-[English Version](/solution/1500-1599/1598.Crawler%20Log%20Folder/README_EN.md)
-
 ## 题目描述
 
 <p>每当用户执行变更文件夹操作时，LeetCode 文件系统都会保存一条日志记录。</p>
@@ -19,8 +17,6 @@
 <p>文件系统启动时位于主文件夹，然后执行 <code>logs</code> 中的操作。</p>
 
 <p>执行完所有变更文件夹操作后，请你找出 <strong>返回主文件夹所需的最小步数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <pre><strong>输入：</strong>logs = [&quot;d1/&quot;,&quot;../&quot;,&quot;../&quot;,&quot;../&quot;]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -83,21 +77,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-
-int minOperations(char **logs, int logsSize) {
-    int depth = 0;
-    for (int i = 0; i < logsSize; i++) {
-        char *log = logs[i];
-        if (!strcmp(log, "../")) {
-            depth = max(0, depth - 1);
-        } else if (strcmp(log, "./")) {
-            depth++;
-        }
-    }
-    return depth;
-}
-```
+**

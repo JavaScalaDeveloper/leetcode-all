@@ -1,7 +1,5 @@
 # [2449. 使数组相似的最少操作次数](https://leetcode.cn/problems/minimum-number-of-operations-to-make-arrays-similar)
 
-[English Version](/solution/2400-2499/2449.Minimum%20Number%20of%20Operations%20to%20Make%20Arrays%20Similar/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个正整数数组&nbsp;<code>nums</code> 和&nbsp;<code>target</code>&nbsp;，两个数组长度相等。</p>
@@ -16,8 +14,6 @@
 <p>如果两个数组中每个元素出现的频率相等，我们称两个数组是 <strong>相似</strong>&nbsp;的。</p>
 
 <p>请你返回将 <code>nums</code>&nbsp;变得与 <code>target</code>&nbsp;相似的最少操作次数。测试数据保证 <code>nums</code>&nbsp;一定能变得与 <code>target</code>&nbsp;相似。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <b>输出：</b>0
 <b>解释：</b>数组 nums 已经与 target 相似。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

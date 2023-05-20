@@ -1,7 +1,5 @@
 # [1440. 计算布尔表达式的值](https://leetcode.cn/problems/evaluate-boolean-expression)
 
-[English Version](/solution/1400-1499/1440.Evaluate%20Boolean%20Expression/README_EN.md)
-
 ## 题目描述
 
 <p>表 <code>Variables</code>:</p>
@@ -15,8 +13,6 @@
 name 是该表主键.
 该表包含了存储的变量及其对应的值.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表 <code>Expressions</code>:</p>
 
@@ -32,8 +28,6 @@ name 是该表主键.
 operator 是枚举类型, 取值于(&#39;&lt;&#39;, &#39;&gt;&#39;, &#39;=&#39;)
 left_operand 和 right_operand 的值保证存在于 Variables 表单中.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写一个 SQL 查询,&nbsp; 以计算表 <code>Expressions</code>&nbsp;中的布尔表达式.</p>
 

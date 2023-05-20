@@ -1,7 +1,5 @@
 # [1642. 可以到达的最远建筑](https://leetcode.cn/problems/furthest-building-you-can-reach)
 
-[English Version](/solution/1600-1699/1642.Furthest%20Building%20You%20Can%20Reach/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>heights</code> ，表示建筑物的高度。另有一些砖块 <code>bricks</code> 和梯子 <code>ladders</code> 。</p>

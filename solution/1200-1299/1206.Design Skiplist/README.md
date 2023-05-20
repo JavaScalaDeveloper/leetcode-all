@@ -1,7 +1,5 @@
 # [1206. 设计跳表](https://leetcode.cn/problems/design-skiplist)
 
-[English Version](/solution/1200-1299/1206.Design%20Skiplist/README_EN.md)
-
 ## 题目描述
 
 <p>不使用任何库函数，设计一个 <strong>跳表</strong> 。</p>
@@ -27,8 +25,6 @@
 
 <p>注意，跳表中可能存在多个相同的值，你的代码需要处理这种情况。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1:</strong></p>
 
 <pre>
@@ -50,8 +46,6 @@ skiplist.erase(0);    // 返回 false，0 不在跳表中
 skiplist.erase(1);    // 返回 true
 skiplist.search(1);   // 返回 false，1 已被擦除
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

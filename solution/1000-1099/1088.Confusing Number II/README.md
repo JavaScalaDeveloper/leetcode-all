@@ -1,7 +1,5 @@
 # [1088. 易混淆数 II](https://leetcode.cn/problems/confusing-number-ii)
 
-[English Version](/solution/1000-1099/1088.Confusing%20Number%20II/README_EN.md)
-
 ## 题目描述
 
 <p><strong>易混淆数</strong>（Confusing Number）指的是一个数字在整体旋转 <code>180°</code> 以后，能够得到一个和原来&nbsp;<strong>不同&nbsp;</strong>的数，且 <strong>新数字的每一位都应该是有效的</strong>。</p>
@@ -20,8 +18,6 @@
 </ul>
 
 <p>给出正整数&nbsp;<code>n</code>，请你返回&nbsp;&nbsp;<em><code>[1, n]</code>&nbsp;范围内的 <strong>易混淆数</strong> 的数量&nbsp;</em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <strong>输出：</strong>19
 <strong>解释：</strong>易混淆数为 [6,9,10,16,18,19,60,61,66,68,80,81,86,89,90,91,98,99,100]。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

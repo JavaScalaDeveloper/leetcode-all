@@ -1,7 +1,5 @@
 # [209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum)
 
-[English Version](/solution/0200-0299/0209.Minimum%20Size%20Subarray%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个含有 <code>n</code><strong> </strong>个正整数的数组和一个正整数 <code>target</code><strong> 。</strong></p>

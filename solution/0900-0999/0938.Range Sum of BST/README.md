@@ -1,7 +1,5 @@
 # [938. 二叉搜索树的范围和](https://leetcode.cn/problems/range-sum-of-bst)
 
-[English Version](/solution/0900-0999/0938.Range%20Sum%20of%20BST/README_EN.md)
-
 ## 题目描述
 
 <p>给定二叉搜索树的根结点 <code>root</code>，返回值位于范围 <em><code>[low, high]</code></em> 之间的所有结点的值的和。</p>

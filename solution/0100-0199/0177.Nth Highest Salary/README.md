@@ -1,7 +1,5 @@
 # [177. 第 N 高的薪水](https://leetcode.cn/problems/nth-highest-salary)
 
-[English Version](/solution/0100-0199/0177.Nth%20Highest%20Salary/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Employee</code></p>
@@ -17,13 +15,9 @@ Id是该表的主键列。
 该表的每一行都包含有关员工工资的信息。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个SQL查询来报告 <code>Employee</code> 表中第 <code>n</code> 高的工资。如果没有第 <code>n</code> 个最高工资，查询应该报告为&nbsp;<code>null</code> 。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

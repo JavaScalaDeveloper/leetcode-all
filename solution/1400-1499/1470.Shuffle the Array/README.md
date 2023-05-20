@@ -1,14 +1,10 @@
 # [1470. 重新排列数组](https://leetcode.cn/problems/shuffle-the-array)
 
-[English Version](/solution/1400-1499/1470.Shuffle%20the%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>nums</code> ，数组中有 <code>2n</code> 个元素，按 <code>[x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>,y<sub>1</sub>,y<sub>2</sub>,...,y<sub>n</sub>]</code> 的格式排列。</p>
 
 <p>请你将数组按 <code>[x<sub>1</sub>,y<sub>1</sub>,x<sub>2</sub>,y<sub>2</sub>,...,x<sub>n</sub>,y<sub>n</sub>]</code> 格式重新排列，返回重排后的数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 <pre><strong>输入：</strong>nums = [1,1,2,2], n = 2
 <strong>输出：</strong>[1,2,1,2]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -56,19 +50,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *shuffle(int *nums, int numsSize, int n, int *returnSize) {
-    int *res = (int *) malloc(sizeof(int) * n * 2);
-    for (int i = 0; i < n; i++) {
-        res[2 * i] = nums[i];
-        res[2 * i + 1] = nums[i + n];
-    }
-    *returnSize = n * 2;
-    return res;
-}
-```
+**

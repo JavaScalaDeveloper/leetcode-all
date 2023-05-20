@@ -1,7 +1,5 @@
 # [1087. 花括号展开](https://leetcode.cn/problems/brace-expansion)
 
-[English Version](/solution/1000-1099/1087.Brace%20Expansion/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个表示单词列表的字符串&nbsp;<code>s</code>&nbsp;。单词中的每个字母都有一个或多个选项。</p>
@@ -14,8 +12,6 @@
 <p>例如，如果<meta charset="UTF-8" />&nbsp;&nbsp;<code>s = "a{b,c}"</code>&nbsp; ，第一个字符总是 <code>'a'</code> ，但第二个字符可以是 <code>'b'</code> 或 <code>'c'</code> 。原来的列表是<meta charset="UTF-8" />&nbsp;<code>["ab", "ac"]</code>&nbsp;。</p>
 
 <p>请你 <strong>按字典顺序</strong> ，返回所有以这种方式形成的单词。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输入：</strong>s = "abcd"
 <strong>输出：</strong>["abcd"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

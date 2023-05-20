@@ -1,7 +1,5 @@
 # [1834. 单线程 CPU](https://leetcode.cn/problems/single-threaded-cpu)
 
-[English Version](/solution/1800-1899/1834.Single-Threaded%20CPU/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维数组 <code>tasks</code> ，用于表示 <code>n</code>​​​​​​ 项从 <code>0</code> 到 <code>n - 1</code> 编号的任务。其中 <code>tasks[i] = [enqueueTime<sub>i</sub>, processingTime<sub>i</sub>]</code> 意味着第 <code>i<sup>​​​​​​</sup></code>​​​​ 项任务将会于 <code>enqueueTime<sub>i</sub></code> 时进入任务队列，需要 <code>processingTime<sub>i</sub></code><sub> </sub>的时长完成执行。</p>

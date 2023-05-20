@@ -1,7 +1,5 @@
 # [1978. 上级经理已离职的公司员工](https://leetcode.cn/problems/employees-whose-manager-left-the-company)
 
-[English Version](/solution/1900-1999/1978.Employees%20Whose%20Manager%20Left%20the%20Company/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Employees</code></p>
@@ -20,15 +18,11 @@ employee_id 是这个表的主键。
 有一些员工没有上级经理（其manager_id 是空值）。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个查询语句，查询出，这些员工的id，他们的薪水严格少于<code>$30000</code>&nbsp;并且他们的上级经理已离职。当一个经理离开公司时，他们的信息需要从员工表中删除掉，但是表中的员工的<code>manager_id</code> &nbsp;这一列还是设置的离职经理的id&nbsp;。</p>
 
 <p>返回的结果按照<code>employee_id&nbsp;</code>从小到大排序。</p>
 
 <p>查询结果如下所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 

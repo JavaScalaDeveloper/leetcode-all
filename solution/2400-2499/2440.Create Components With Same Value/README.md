@@ -1,7 +1,5 @@
 # [2440. 创建价值相同的连通块](https://leetcode.cn/problems/create-components-with-same-value)
 
-[English Version](/solution/2400-2499/2440.Create%20Components%20With%20Same%20Value/README_EN.md)
-
 ## 题目描述
 
 <p>有一棵&nbsp;<code>n</code>&nbsp;个节点的无向树，节点编号为&nbsp;<code>0</code>&nbsp;到&nbsp;<code>n - 1</code>&nbsp;。</p>
@@ -11,8 +9,6 @@
 <p>你可以 <strong>删除</strong>&nbsp;一些边，将这棵树分成几个连通块。一个连通块的 <strong>价值</strong>&nbsp;定义为这个连通块中 <strong>所有</strong> 节点 <code>i</code>&nbsp;对应的 <code>nums[i]</code>&nbsp;之和。</p>
 
 <p>你需要删除一些边，删除后得到的各个连通块的价值都相等。请返回你可以删除的边数&nbsp;<strong>最多</strong>&nbsp;为多少。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <b>输出：</b>0
 <b>解释：</b>没有任何边可以删除。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

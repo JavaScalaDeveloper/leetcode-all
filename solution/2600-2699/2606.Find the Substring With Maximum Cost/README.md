@@ -1,7 +1,5 @@
 # [2606. 找到最大开销的子字符串](https://leetcode.cn/problems/find-the-substring-with-maximum-cost)
 
-[English Version](/solution/2600-2699/2606.Find%20the%20Substring%20With%20Maximum%20Cost/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，一个字符&nbsp;<strong>互不相同</strong>&nbsp;的字符串&nbsp;<code>chars</code>&nbsp;和一个长度与 <code>chars</code>&nbsp;相同的整数数组&nbsp;<code>vals</code>&nbsp;。</p>
@@ -21,8 +19,6 @@
 
 <p>请你返回字符串 <code>s</code>&nbsp;的所有子字符串中的最大开销。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><b>输入：</b>s = "adaa", chars = "d", vals = [-1000]
@@ -40,8 +36,6 @@
 最大开销子字符串是 "" ，它的开销为 0 。
 0 是最大开销。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

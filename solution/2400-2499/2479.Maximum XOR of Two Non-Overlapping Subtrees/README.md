@@ -1,7 +1,5 @@
 # [2479. 两个不重叠子树的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-non-overlapping-subtrees)
 
-[English Version](/solution/2400-2499/2479.Maximum%20XOR%20of%20Two%20Non-Overlapping%20Subtrees/README_EN.md)
-
 ## 题目描述
 
 <p>有一个无向树，有 <code>n</code> 个节点，节点标记为从 <code>0</code> 到 <code>n - 1</code>。给定整数 <code>n</code> 和一个长度为 <code>n - 1</code> 的 2 维整数数组 <code>edges</code>，其中 <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 表示在树中的节点 <code>a<sub>i</sub></code> 和 <code>b<sub>i</sub></code> 之间有一条边。树的根节点是标记为 <code>0</code> 的节点。</p>
@@ -19,8 +17,6 @@
 	<li>如果两个子树不共享&nbsp;<strong>任何公共&nbsp;</strong>节点，则它们是&nbsp;<strong>不重叠&nbsp;</strong>的。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2479.Maximum%20XOR%20of%20Two%20Non-Overlapping%20Subtrees/images/treemaxxor.png" style="width: 346px; height: 249px;" />
 <pre>
@@ -36,8 +32,6 @@
 <strong>输出:</strong> 0
 <strong>解释:</strong> 不可能选择两个不重叠的子树，所以我们只返回 0。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

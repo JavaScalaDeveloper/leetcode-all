@@ -1,7 +1,5 @@
 # [2188. 完成比赛的最少时间](https://leetcode.cn/problems/minimum-time-to-finish-the-race)
 
-[English Version](/solution/2100-2199/2188.Minimum%20Time%20to%20Finish%20the%20Race/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的二维整数数组&nbsp;<code>tires</code>&nbsp;，其中&nbsp;<code>tires[i] = [f<sub>i</sub>, r<sub>i</sub>]</code>&nbsp;表示第&nbsp;<code>i</code>&nbsp;种轮胎如果连续使用，第&nbsp;<code>x</code>&nbsp;圈需要耗时&nbsp;<code>f<sub>i</sub> * r<sub>i</sub><sup>(x-1)</sup></code>&nbsp;秒。</p>
@@ -15,8 +13,6 @@
 <p>比赛总共包含&nbsp;<code>numLaps</code>&nbsp;圈，你可以选择 <strong>任意</strong>&nbsp;一种轮胎开始比赛。每一种轮胎都有 <strong>无数条</strong>&nbsp;。每一圈后，你可以选择耗费 <code>changeTime</code>&nbsp;秒 <strong>换成</strong>&nbsp;任意一种轮胎（也可以换成当前种类的新轮胎）。</p>
 
 <p>请你返回完成比赛需要耗费的 <strong>最少</strong>&nbsp;时间。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 总耗时 = 2 + 4 + 6 + 2 + 4 + 6 + 1 = 25 秒。
 完成比赛的最少时间为 25 秒。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

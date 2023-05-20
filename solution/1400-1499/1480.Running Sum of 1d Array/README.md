@@ -1,14 +1,10 @@
 # [1480. 一维数组的动态和](https://leetcode.cn/problems/running-sum-of-1d-array)
 
-[English Version](/solution/1400-1499/1480.Running%20Sum%20of%201d%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>nums</code> 。数组「动态和」的计算公式为：<code>runningSum[i] = sum(nums[0]&hellip;nums[i])</code> 。</p>
 
 <p>请返回 <code>nums</code> 的动态和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <pre><strong>输入：</strong>nums = [3,1,2,10,1]
 <strong>输出：</strong>[3,4,6,16,17]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

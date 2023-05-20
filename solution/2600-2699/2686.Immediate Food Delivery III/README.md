@@ -1,7 +1,5 @@
 # [2686. 即时食物配送 III](https://leetcode.cn/problems/immediate-food-delivery-iii)
 
-[English Version](/solution/2600-2699/2686.Immediate%20Food%20Delivery%20III/README_EN.md)
-
 ## 题目描述
 
 <p><code>Delivery</code>&nbsp;表：</p>
@@ -25,11 +23,7 @@ delivery_id 是该表的主键。
 
 <p>返回查询结果并按 <code>order_date</code> <strong>升序</strong> 排序。</p>
 
-<p>&nbsp;</p>
-
 <p>查询结果的格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 

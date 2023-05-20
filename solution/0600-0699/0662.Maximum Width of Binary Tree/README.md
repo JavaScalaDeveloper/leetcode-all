@@ -1,7 +1,5 @@
 # [662. 二叉树最大宽度](https://leetcode.cn/problems/maximum-width-of-binary-tree)
 
-[English Version](/solution/0600-0699/0662.Maximum%20Width%20of%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵二叉树的根节点 <code>root</code> ，返回树的 <strong>最大宽度</strong> 。</p>
@@ -13,8 +11,6 @@
 <p>每一层的 <strong>宽度</strong> 被定义为该层最左和最右的非空节点（即，两个端点）之间的长度。将这个二叉树视作与满二叉树结构相同，两端点间会出现一些延伸到这一层的 <code>null</code> 节点，这些 <code>null</code> 节点也计入长度。</p>
 
 <p>题目数据保证答案将会在&nbsp; <strong>32 位</strong> 带符号整数范围内。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0662.Maximum%20Width%20of%20Binary%20Tree/images/width1-tree.jpg" style="width: 359px; height: 302px;" />
@@ -39,8 +35,6 @@
 <strong>输出：</strong>2
 <strong>解释：</strong>最大宽度出现在树的第 2 层，宽度为 2 (3,2) 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

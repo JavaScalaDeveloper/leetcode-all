@@ -1,7 +1,5 @@
 # [1411. 给 N x 3 网格图涂色的方案数](https://leetcode.cn/problems/number-of-ways-to-paint-n-3-grid)
 
-[English Version](/solution/1400-1499/1411.Number%20of%20Ways%20to%20Paint%20N%20%C3%97%203%20Grid/README_EN.md)
-
 ## 题目描述
 
 <p>你有一个 <code>n x 3</code>&nbsp;的网格图 <code>grid</code>&nbsp;，你需要用 <strong>红，黄，绿</strong>&nbsp;三种颜色之一给每一个格子上色，且确保相邻格子颜色不同（也就是有相同水平边或者垂直边的格子颜色不同）。</p>
@@ -9,8 +7,6 @@
 <p>给你网格图的行数 <code>n</code>&nbsp;。</p>
 
 <p>请你返回给&nbsp;<code>grid</code>&nbsp;涂色的方案数。由于答案可能会非常大，请你返回答案对&nbsp;<code>10^9 + 7</code>&nbsp;取余的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 <pre><strong>输入：</strong>n = 5000
 <strong>输出：</strong>30228214
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

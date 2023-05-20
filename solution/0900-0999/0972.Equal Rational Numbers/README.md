@@ -1,7 +1,5 @@
 # [972. 相等的有理数](https://leetcode.cn/problems/equal-rational-numbers)
 
-[English Version](/solution/0900-0999/0972.Equal%20Rational%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个字符串&nbsp;<code>s</code>&nbsp;和&nbsp;<code>t</code>&nbsp;，每个字符串代表一个非负有理数，只有当它们表示相同的数字时才返回 <code>true</code>&nbsp;。字符串中可以使用括号来表示有理数的重复部分。</p>
@@ -32,8 +30,6 @@
 	<li><code>1 / 6 = 0.16666666... = 0.1(6) = 0.1666(6) = 0.166(66)</code></li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -56,8 +52,6 @@
 <strong>输出：</strong>true
 <strong>解释：</strong>"0.9(9)" 代表 0.999999999... 永远重复，等于 1 。[<a href="https://baike.baidu.com/item/0.999…/5615429?fr=aladdin" target="_blank">有关说明，请参阅此链接</a>]
 "1." 表示数字 1，其格式正确：(IntegerPart) = "1" 且 (NonRepeatingPart) = "" 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

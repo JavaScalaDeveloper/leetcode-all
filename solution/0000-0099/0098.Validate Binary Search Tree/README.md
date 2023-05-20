@@ -1,7 +1,5 @@
 # [98. 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree)
 
-[English Version](/solution/0000-0099/0098.Validate%20Binary%20Search%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二叉树的根节点 <code>root</code> ，判断其是否是一个有效的二叉搜索树。</p>
@@ -13,8 +11,6 @@
 	<li>节点的右子树只包含 <strong>大于</strong> 当前节点的数。</li>
 	<li>所有左子树和右子树自身必须也是二叉搜索树。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0098.Validate%20Binary%20Search%20Tree/images/tree1.jpg" style="width: 302px; height: 182px;" />
@@ -30,8 +26,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>根节点的值是 5 ，但是右子节点的值是 4 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

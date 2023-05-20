@@ -1,7 +1,5 @@
 # [298. 二叉树最长连续序列](https://leetcode.cn/problems/binary-tree-longest-consecutive-sequence)
 
-[English Version](/solution/0200-0299/0298.Binary%20Tree%20Longest%20Consecutive%20Sequence/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵指定的二叉树的根节点 <code>root</code> ，请你计算其中 <strong>最长连续序列路径</strong> 的长度。</p>
@@ -24,8 +22,6 @@
 <strong>输出：</strong>2
 <strong>解释：</strong>当中，最长连续序列是 <code>2-3 。注意，不是</code> <code>3-2-1，所以</code>返回 <code>2 。</code>
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

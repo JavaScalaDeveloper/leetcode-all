@@ -1,7 +1,5 @@
 # [1314. 矩阵区域和](https://leetcode.cn/problems/matrix-block-sum)
 
-[English Version](/solution/1300-1399/1314.Matrix%20Block%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>m x n</code> 的矩阵 <code>mat</code> 和一个整数 <code>k</code> ，请你返回一个矩阵 <code>answer</code> ，其中每个 <code>answer[i][j]</code> 是所有满足下述条件的元素 <code>mat[r][c]</code> 的和： </p>

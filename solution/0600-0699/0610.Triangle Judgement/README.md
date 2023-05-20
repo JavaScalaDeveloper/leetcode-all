@@ -1,7 +1,5 @@
 # [610. 判断三角形](https://leetcode.cn/problems/triangle-judgement)
 
-[English Version](/solution/0600-0699/0610.Triangle%20Judgement/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Triangle</code></p>
@@ -18,15 +16,11 @@
 该表的每一行包含三个线段的长度。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个SQL查询，每三个线段报告它们是否可以形成一个三角形。</p>
 
 <p>以&nbsp;<strong>任意顺序&nbsp;</strong>返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

@@ -1,7 +1,5 @@
 # [1191. K 次串联后最大子数组之和](https://leetcode.cn/problems/k-concatenation-maximum-sum)
 
-[English Version](/solution/1100-1199/1191.K-Concatenation%20Maximum%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组&nbsp;<code>arr</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;，通过重复&nbsp;<code>k</code>&nbsp;次来修改数组。</p>
@@ -11,8 +9,6 @@
 <p>返回修改后的数组中的最大的子数组之和。注意，子数组长度可以是 <code>0</code>，在这种情况下它的总和也是 <code>0</code>。</p>
 
 <p>由于&nbsp;<strong>结果可能会很大</strong>，需要返回的<meta charset="UTF-8" />&nbsp;<code>10<sup>9</sup>&nbsp;+ 7</code>&nbsp;的&nbsp;<strong>模</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输入：</strong>arr = [-1,-2], k = 7
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 <meta charset="UTF-8" />

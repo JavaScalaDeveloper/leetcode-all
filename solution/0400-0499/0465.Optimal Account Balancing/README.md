@@ -1,14 +1,10 @@
 # [465. 最优账单平衡](https://leetcode.cn/problems/optimal-account-balancing)
 
-[English Version](/solution/0400-0499/0465.Optimal%20Account%20Balancing/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个表示交易的数组 <code>transactions</code> ，其中 <code>transactions[i] = [from<sub>i</sub>, to<sub>i</sub>, amount<sub>i</sub>]</code> 表示 <code>ID = from<sub>i</sub></code> 的人给&nbsp;<code>ID = to<sub>i</sub></code> 的人共计 <code>amount<sub>i</sub> $</code> 。</p>
 
 <p>请你计算并返回还清所有债务的最小交易笔数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 #2 给 #0 $5 。
 因此，#1 只需要给 #0 $4 ，所有的债务即可还清。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

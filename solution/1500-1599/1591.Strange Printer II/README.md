@@ -1,7 +1,5 @@
 # [1591. 奇怪的打印机 II](https://leetcode.cn/problems/strange-printer-ii)
 
-[English Version](/solution/1500-1599/1591.Strange%20Printer%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个奇怪的打印机，它有如下两个特殊的打印规则：</p>
@@ -14,8 +12,6 @@
 <p>给你一个初始没有颜色的&nbsp;<code>m x n</code>&nbsp;的矩形&nbsp;<code>targetGrid</code>&nbsp;，其中&nbsp;<code>targetGrid[row][col]</code>&nbsp;是位置&nbsp;<code>(row, col)</code>&nbsp;的颜色。</p>
 
 <p>如果你能按照上述规则打印出矩形<em>&nbsp;</em><code>targetGrid</code>&nbsp;，请你返回&nbsp;<code>true</code>&nbsp;，否则返回&nbsp;<code>false</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <pre><strong>输入：</strong>targetGrid = [[1,1,1],[3,1,3]]
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

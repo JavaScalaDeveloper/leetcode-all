@@ -1,7 +1,5 @@
 # [803. 打砖块](https://leetcode.cn/problems/bricks-falling-when-hit)
 
-[English Version](/solution/0800-0899/0803.Bricks%20Falling%20When%20Hit/README_EN.md)
-
 ## 题目描述
 
 <p>有一个 <code>m x n</code> 的二元网格<meta charset="UTF-8" />&nbsp;<code>grid</code>&nbsp;，其中 <code>1</code> 表示砖块，<code>0</code> 表示空白。砖块 <strong>稳定</strong>（不会掉落）的前提是：</p>
@@ -16,8 +14,6 @@
 <p>返回一个数组 <code>result</code> ，其中 <code>result[i]</code> 表示第 <code>i</code> 次消除操作对应掉落的砖块数目。</p>
 
 <p><strong>注意</strong>，消除可能指向是没有砖块的空白位置，如果发生这种情况，则没有砖块掉落。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,8 +51,6 @@
  [0,0,0,0]]
 剩下的砖块仍然是稳定的，所以不会有砖块掉落。
 因此，结果为 [0,0] 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

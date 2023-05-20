@@ -1,14 +1,10 @@
 # [1973. 值等于子节点值之和的节点数量](https://leetcode.cn/problems/count-nodes-equal-to-sum-of-descendants)
 
-[English Version](/solution/1900-1999/1973.Count%20Nodes%20Equal%20to%20Sum%20of%20Descendants/README_EN.md)
-
 ## 题目描述
 
 <p>给定一颗二叉树的根节点&nbsp;<code>root</code>&nbsp;，返回满足条件：节点的值等于该节点所有子节点的值之和&nbsp;<em>的节点的数量。</em></p>
 
 <p>一个节点&nbsp;<code>x</code>&nbsp;的&nbsp;<strong>子节点</strong>&nbsp;是指从节点&nbsp;<code>x</code>&nbsp;出发，到所有叶子节点路径上的节点。没有子节点的节点的子节点和视为&nbsp;<code>0</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1973.Count%20Nodes%20Equal%20to%20Sum%20of%20Descendants/images/screenshot-2021-08-17-at-17-16-50-diagram-drawio-diagrams-net.png" style="width: 250px; height: 207px;" />
@@ -37,8 +33,6 @@
 <strong>解释:</strong>
 对于值为0的节点：因为它没有子节点，所以自己点之和为0。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

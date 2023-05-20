@@ -1,7 +1,5 @@
 # [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands)
 
-[English Version](/solution/0200-0299/0200.Number%20of%20Islands/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由 <code>'1'</code>（陆地）和 <code>'0'</code>（水）组成的的二维网格，请你计算网格中岛屿的数量。</p>

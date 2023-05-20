@@ -1,7 +1,5 @@
 # [1116. 打印零与奇偶数](https://leetcode.cn/problems/print-zero-even-odd)
 
-[English Version](/solution/1100-1199/1116.Print%20Zero%20Even%20Odd/README_EN.md)
-
 ## 题目描述
 
 <p>现有函数 <code>printNumber</code> 可以用一个整数参数调用，并输出该整数到控制台。</p>
@@ -29,8 +27,6 @@
 	<li><code>void odd(printNumber)</code> 调用 <code>printNumber</code> 以输出奇数。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -45,8 +41,6 @@
 <strong>输入：</strong>n = 5
 <strong>输出：</strong>"0102030405"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

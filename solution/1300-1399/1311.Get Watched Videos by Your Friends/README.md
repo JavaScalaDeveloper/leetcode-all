@@ -1,7 +1,5 @@
 # [1311. 获取你好友已观看的视频](https://leetcode.cn/problems/get-watched-videos-by-your-friends)
 
-[English Version](/solution/1300-1399/1311.Get%20Watched%20Videos%20by%20Your%20Friends/README_EN.md)
-
 ## 题目描述
 
 <p>有&nbsp;<code>n</code> 个人，每个人都有一个&nbsp; <code>0</code>&nbsp;到&nbsp;<code>n-1</code>&nbsp;的唯一&nbsp;<em>id</em>&nbsp;。</p>
@@ -11,8 +9,6 @@
 <p>Level&nbsp;<strong>1</strong>&nbsp;的视频包含所有你好友观看过的视频，level&nbsp;<strong>2</strong>&nbsp;的视频包含所有你好友的好友观看过的视频，以此类推。一般的，Level 为 <strong>k</strong>&nbsp;的视频包含所有从你出发，最短距离为&nbsp;<strong>k</strong>&nbsp;的好友观看过的视频。</p>
 
 <p>给定你的&nbsp;<code>id</code>&nbsp; 和一个&nbsp;<code>level</code>&nbsp;值，请你找出所有指定 <code>level</code> 的视频，并将它们按观看频率升序返回。如果有频率相同的视频，请将它们按字母顺序从小到大排列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@ C -&gt; 2
 <strong>解释：</strong>
 你的 id 为 0（绿色），你朋友的朋友只有一个人，他的 id 为 3（黄色）。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

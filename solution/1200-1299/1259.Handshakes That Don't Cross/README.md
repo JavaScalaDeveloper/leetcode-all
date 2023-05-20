@@ -1,7 +1,5 @@
 # [1259. 不相交的握手](https://leetcode.cn/problems/handshakes-that-dont-cross)
 
-[English Version](/solution/1200-1299/1259.Handshakes%20That%20Don%27t%20Cross/README_EN.md)
-
 ## 题目描述
 
 <p><strong>偶数</strong>&nbsp;个人站成一个圆，总人数为&nbsp;<code>num_people</code>&nbsp;。每个人与除自己外的一个人握手，所以总共会有&nbsp;<code>num_people / 2</code>&nbsp;次握手。</p>
@@ -9,8 +7,6 @@
 <p>将握手的人之间连线，请你返回连线不会相交的握手方案数。</p>
 
 <p>由于结果可能会很大，请你返回答案 <strong>模</strong>&nbsp;<strong><code>10^9+7</code></strong>&nbsp;后的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <pre><strong>输入：</strong>num_people = 8
 <strong>输出：</strong>14
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

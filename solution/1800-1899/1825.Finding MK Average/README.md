@@ -1,7 +1,5 @@
 # [1825. 求出 MK 平均值](https://leetcode.cn/problems/finding-mk-average)
 
-[English Version](/solution/1800-1899/1825.Finding%20MK%20Average/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数&nbsp;<code>m</code>&nbsp;和&nbsp;<code>k</code>&nbsp;，以及数据流形式的若干整数。你需要实现一个数据结构，计算这个数据流的 <b>MK 平均值</b>&nbsp;。</p>
@@ -21,8 +19,6 @@
 	<li><code>void addElement(int num)</code>&nbsp;往数据流中插入一个新的元素&nbsp;<code>num</code>&nbsp;。</li>
 	<li><code>int calculateMKAverage()</code>&nbsp;对当前的数据流计算并返回 <strong>MK 平均数</strong>&nbsp;，结果需 <strong>向下取整到最近的整数</strong> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,8 +45,6 @@ obj.calculateMKAverage(); // 最后 3 个元素为 [5,5,5]
                           // 删除最小以及最大的 1 个元素后，容器为 [5]
                           // [5] 的平均值等于 5/1 = 5 ，故返回 5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

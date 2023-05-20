@@ -1,7 +1,5 @@
 # [100. 相同的树](https://leetcode.cn/problems/same-tree)
 
-[English Version](/solution/0100-0199/0100.Same%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你两棵二叉树的根节点 <code>p</code> 和 <code>q</code> ，编写一个函数来检验这两棵树是否相同。</p>

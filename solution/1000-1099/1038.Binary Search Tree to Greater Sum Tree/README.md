@@ -1,7 +1,5 @@
 # [1038. 从二叉搜索树到更大和树](https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree)
 
-[English Version](/solution/1000-1099/1038.Binary%20Search%20Tree%20to%20Greater%20Sum%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">给定一个二叉搜索树</font></span></span></span></span>&nbsp;<code>root</code>&nbsp;(BST)<span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">，请将它的每个</font></span></span></span></span>节点<span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">的值替换成树中大于或者等于该</font></span></span></span></span>节点<span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">值的所有</font></span></span></span></span>节点<span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:10.5000pt"><span style="font-family:宋体"><font face="宋体">值之和。</font></span></span></span></span></p>
@@ -13,8 +11,6 @@
 	<li>节点的右子树仅包含键<strong> 大于</strong> 节点键的节点。</li>
 	<li>左右子树也必须是二叉搜索树。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输出：</strong>[1,null,1]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -41,8 +35,6 @@
 	<li><code>0 &lt;= Node.val &lt;= 100</code></li>
 	<li>树中的所有值均 <strong>不重复</strong>&nbsp;。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>注意：</strong>该题目与 538:&nbsp;<a href="https://leetcode.cn/problems/convert-bst-to-greater-tree/">https://leetcode.cn/problems/convert-bst-to-greater-tree/&nbsp; </a>相同</p>
 
@@ -175,67 +167,4 @@ Morris 遍历：
 
 Morris 遍历：
 
-### **C**
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-
-int dfs(struct TreeNode *root, int sum) {
-    if (root) {
-        sum = dfs(root->right, sum) + root->val;
-        root->val = sum;
-        sum = dfs(root->left, sum);
-    }
-    return sum;
-}
-
-struct TreeNode *bstToGst(struct TreeNode *root) {
-    dfs(root, 0);
-    return root;
-}
-```
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-
-struct TreeNode *bstToGst(struct TreeNode *root) {
-    struct TreeNode *cur = root;
-    int sum = 0;
-    while (cur) {
-        if (!cur->right) {
-            sum += cur->val;
-            cur->val = sum;
-            cur = cur->left;
-        } else {
-            struct TreeNode *next = cur->right;
-            while (next->left && next->left != cur) {
-                next = next->left;
-            }
-            if (!next->left) {
-                next->left = cur;
-                cur = cur->right;
-            } else {
-                next->left = NULL;
-                sum += cur->val;
-                cur->val = sum;
-                cur = cur->left;
-            }
-        }
-    }
-    return root;
-}
-```
+**

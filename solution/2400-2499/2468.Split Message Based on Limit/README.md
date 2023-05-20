@@ -1,7 +1,5 @@
 # [2468. 根据限制分割消息](https://leetcode.cn/problems/split-message-based-on-limit)
 
-[English Version](/solution/2400-2499/2468.Split%20Message%20Based%20on%20Limit/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>message</code>&nbsp;和一个正整数&nbsp;<code>limit</code>&nbsp;。</p>
@@ -11,8 +9,6 @@
 <p>你需要确保分割后的结果数组，删掉每部分的结尾并<strong>&nbsp;按顺序&nbsp;</strong>连起来后，能够得到&nbsp;<code>message</code>&nbsp;。同时，结果数组越短越好。</p>
 
 <p>请你返回<em>&nbsp;</em><code>message</code>&nbsp; 分割后得到的结果数组。如果无法按要求分割&nbsp;<code>message</code>&nbsp;，返回一个空数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 - 第一个部分包含 10 个字符，长度为 15 。
 - 第二个部分包含 3 个字符，长度为 8 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

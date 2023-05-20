@@ -1,7 +1,5 @@
 # [726. 原子的数量](https://leetcode.cn/problems/number-of-atoms)
 
-[English Version](/solution/0700-0799/0726.Number%20of%20Atoms/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串化学式 <code>formula</code> ，返回 <strong>每种原子的数量</strong> 。</p>
@@ -28,8 +26,6 @@
 
 <p>返回所有原子的数量，格式为：第一个（按字典序）原子的名字，跟着它的数量（如果数量大于 1），然后是第二个原子的名字（按字典序），跟着它的数量（如果数量大于 1），以此类推。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -53,8 +49,6 @@
 <strong>输出：</strong>"K4N2O14S4"
 <strong>解释：</strong>原子的数量是 {'K': 4, 'N': 2, 'O': 14, 'S': 4}。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

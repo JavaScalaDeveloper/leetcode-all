@@ -1,7 +1,5 @@
 # [89. 格雷编码](https://leetcode.cn/problems/gray-code)
 
-[English Version](/solution/0000-0099/0089.Gray%20Code/README_EN.md)
-
 ## 题目描述
 
 <strong>n 位格雷码序列</strong> 是一个由 <code>2<sup>n</sup></code> 个整数组成的序列，其中：
@@ -15,8 +13,6 @@
 </ul>
 
 <p>给你一个整数 <code>n</code> ，返回任一有效的 <strong>n 位格雷码序列</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输入：</strong>n = 1
 <strong>输出：</strong>[0,1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

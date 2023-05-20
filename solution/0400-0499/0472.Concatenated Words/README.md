@@ -1,14 +1,10 @@
 # [472. 连接词](https://leetcode.cn/problems/concatenated-words)
 
-[English Version](/solution/0400-0499/0472.Concatenated%20Words/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>不含重复 </strong>单词的字符串数组 <code>words</code> ，请你找出并返回 <code>words</code> 中的所有 <strong>连接词</strong> 。</p>
 
 <p><strong>连接词</strong> 定义为：一个完全由给定数组中的至少两个较短单词（不一定是不同的两个单词）组成的字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <pre>
 <strong>输入：</strong>words = ["cat","dog","catdog"]
 <strong>输出：</strong>["catdog"]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

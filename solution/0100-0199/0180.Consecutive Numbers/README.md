@@ -1,7 +1,5 @@
 # [180. 连续出现的数字](https://leetcode.cn/problems/consecutive-numbers)
 
-[English Version](/solution/0100-0199/0180.Consecutive%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Logs</code></p>
@@ -15,15 +13,11 @@
 +-------------+---------+
 id 是这个表的主键。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，查找所有至少连续出现三次的数字。</p>
 
 <p>返回的结果表中的数据可以按 <strong>任意顺序</strong> 排列。</p>
 
 <p>查询结果格式如下面的例子所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

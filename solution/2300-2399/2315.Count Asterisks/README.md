@@ -1,7 +1,5 @@
 # [2315. 统计星号](https://leetcode.cn/problems/count-asterisks)
 
-[English Version](/solution/2300-2399/2315.Count%20Asterisks/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，每&nbsp;<strong>两个</strong>&nbsp;连续竖线&nbsp;<code>'|'</code>&nbsp;为 <strong>一对</strong>&nbsp;。换言之，第一个和第二个&nbsp;<code>'|'</code>&nbsp;为一对，第三个和第四个&nbsp;<code>'|'</code>&nbsp;为一对，以此类推。</p>
@@ -9,8 +7,6 @@
 <p>请你返回 <strong>不在</strong> 竖线对之间，<code>s</code>&nbsp;中&nbsp;<code>'*'</code>&nbsp;的数目。</p>
 
 <p><strong>注意</strong>，每个竖线&nbsp;<code>'|'</code>&nbsp;都会 <strong>恰好</strong>&nbsp;属于一个对。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <pre><b>输入：</b>s = "yo|uar|e**|b|e***au|tifu|l"
 <b>输出：</b>5
 <b>解释：</b>需要考虑的字符加粗加斜体后："<strong><em>yo</em></strong>|uar|<strong><em>e**</em></strong>|b|<strong><em>e***au</em></strong>|tifu|<strong><em>l</em></strong>" 。不在竖线对之间总共有 5 个星号。所以我们返回 5 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -75,19 +69,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int countAsterisks(char * s){
-    int ans = 0;
-    int ok = 1;
-    for (int i = 0; s[i]; i++) {
-        if (s[i] == '*') {
-            ans += ok;
-        } else if (s[i] == '|') {
-            ok ^= 1;
-        }
-    }
-    return ans;
-}
-```
+**

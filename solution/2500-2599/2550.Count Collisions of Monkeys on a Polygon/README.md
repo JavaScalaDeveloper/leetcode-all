@@ -1,7 +1,5 @@
 # [2550. 猴子碰撞的方法数](https://leetcode.cn/problems/count-collisions-of-monkeys-on-a-polygon)
 
-[English Version](/solution/2500-2599/2550.Count%20Collisions%20of%20Monkeys%20on%20a%20Polygon/README_EN.md)
-
 ## 题目描述
 
 <p>现在有一个正凸多边形，其上共有 <code>n</code> 个顶点。顶点按顺时针方向从 <code>0</code> 到 <code>n - 1</code> 依次编号。每个顶点上 <strong>正好有一只猴子</strong> 。下图中是一个 6 个顶点的凸多边形。</p>
@@ -21,8 +19,6 @@
 
 <p><strong>注意</strong>，每只猴子只能移动一次。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -41,8 +37,6 @@
 <strong>输入：</strong>n = 4
 <strong>输出：</strong>14
 <strong>解释：</strong>可以证明，有 14 种让猴子碰撞的方法。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,12 +1,8 @@
 # [204. 计数质数](https://leetcode.cn/problems/count-primes)
 
-[English Version](/solution/0200-0299/0204.Count%20Primes/README_EN.md)
-
 ## 题目描述
 
 <p>给定整数 <code>n</code> ，返回 <em>所有小于非负整数&nbsp;<code>n</code>&nbsp;的质数的数量</em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输入：</strong>n = 1
 <strong>输出</strong>：0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

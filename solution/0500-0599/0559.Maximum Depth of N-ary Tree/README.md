@@ -1,7 +1,5 @@
 # [559. N 叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-n-ary-tree)
 
-[English Version](/solution/0500-0599/0559.Maximum%20Depth%20of%20N-ary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个 N 叉树，找到其最大深度。</p>

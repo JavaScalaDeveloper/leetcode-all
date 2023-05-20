@@ -1,7 +1,5 @@
 # [1394. 找出数组中的幸运数](https://leetcode.cn/problems/find-lucky-integer-in-an-array)
 
-[English Version](/solution/1300-1399/1394.Find%20Lucky%20Integer%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>在整数数组中，如果一个整数的出现频次和它的数值大小相等，我们就称这个整数为「幸运数」。</p>
@@ -12,8 +10,6 @@
 	<li>如果数组中存在多个幸运数，只需返回 <strong>最大</strong> 的那个。</li>
 	<li>如果数组中不含幸运数，则返回 <strong>-1 </strong>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <pre><strong>输入：</strong>arr = [7,7,7,7,7,7,7]
 <strong>输出：</strong>7
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

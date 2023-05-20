@@ -1,7 +1,5 @@
 # [903. DI 序列的有效排列](https://leetcode.cn/problems/valid-permutations-for-di-sequence)
 
-[English Version](/solution/0900-0999/0903.Valid%20Permutations%20for%20DI%20Sequence/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个长度为 <code>n</code> 的字符串 <code>s</code> ，其中 <code>s[i]</code> 是:</p>
@@ -19,8 +17,6 @@
 </ul>
 
 <p>返回 <em><strong>有效排列 </strong>&nbsp;</em><code>perm</code><em>的数量 </em>。因为答案可能很大，所以请<strong>返回你的答案对</strong>&nbsp;<code>10<sup>9</sup>&nbsp;+ 7</code><strong>&nbsp;取余</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输入:</strong> s = "D"
 <strong>输出:</strong> 1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

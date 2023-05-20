@@ -1,7 +1,5 @@
 # [2034. 股票价格波动](https://leetcode.cn/problems/stock-price-fluctuation)
 
-[English Version](/solution/2000-2099/2034.Stock%20Price%20Fluctuation/README_EN.md)
-
 ## 题目描述
 
 <p>给你一支股票价格的数据流。数据流中每一条记录包含一个 <strong>时间戳</strong>&nbsp;和该时间点股票对应的 <strong>价格</strong>&nbsp;。</p>
@@ -27,8 +25,6 @@
 	<li><code>int minimum()</code>&nbsp;返回股票 <strong>最低价格</strong>&nbsp;。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>
@@ -49,8 +45,6 @@ stockPrice.maximum();     // 返回 5 ，更正后最高价格为 5 。
 stockPrice.update(4, 2);  // 时间戳为 [1,2,4] ，对应价格为 [3,5,2] 。
 stockPrice.minimum();     // 返回 2 ，最低价格时间戳为 4 ，价格为 2 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

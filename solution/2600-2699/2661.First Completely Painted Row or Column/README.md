@@ -1,7 +1,5 @@
 # [2661. 找出叠涂元素](https://leetcode.cn/problems/first-completely-painted-row-or-column)
 
-[English Version](/solution/2600-2699/2661.First%20Completely%20Painted%20Row%20or%20Column/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>arr</code> 和一个 <code>m x n</code> 的整数 <strong>矩阵</strong> <code>mat</code> 。<code>arr</code> 和 <code>mat</code> 都包含范围 <code>[1，m * n]</code> 内的 <strong>所有</strong> 整数。</p>
@@ -9,8 +7,6 @@
 <p>从下标 <code>0</code> 开始遍历 <code>arr</code> 中的每个下标 <code>i</code> ，并将包含整数 <code>arr[i]</code> 的 <code>mat</code> 单元格涂色。</p>
 
 <p>请你找出 <code>arr</code> 中在 <code>mat</code> 的某一行或某一列上都被涂色且下标最小的元素，并返回其下标 <code>i</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="image explanation for example 1" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2661.First%20Completely%20Painted%20Row%20or%20Column/images/grid1.jpg" style="width: 321px; height: 81px;" />
@@ -27,8 +23,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>遍历如上图所示，arr[3] 在矩阵中的第二列上都被涂色。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

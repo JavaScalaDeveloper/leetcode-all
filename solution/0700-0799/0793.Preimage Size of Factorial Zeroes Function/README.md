@@ -1,7 +1,5 @@
 # [793. 阶乘函数后 K 个零](https://leetcode.cn/problems/preimage-size-of-factorial-zeroes-function)
 
-[English Version](/solution/0700-0799/0793.Preimage%20Size%20of%20Factorial%20Zeroes%20Function/README_EN.md)
-
 ## 题目描述
 
 <p>&nbsp;<code>f(x)</code>&nbsp;是&nbsp;<code>x!</code>&nbsp;末尾是 0 的数量。回想一下&nbsp;<code>x! = 1 * 2 * 3 * ... * x</code>，且 <code>0! = 1</code>&nbsp;。</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>给定&nbsp;<code>k</code>，找出返回能满足 <code>f(x) = k</code>&nbsp;的非负整数 <code>x</code>&nbsp;的数量。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong><strong> </strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输入:</strong> k = 3
 <strong>输出:</strong> 5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

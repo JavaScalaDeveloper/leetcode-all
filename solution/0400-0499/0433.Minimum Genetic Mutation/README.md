@@ -1,7 +1,5 @@
 # [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation)
 
-[English Version](/solution/0400-0499/0433.Minimum%20Genetic%20Mutation/README_EN.md)
-
 ## 题目描述
 
 <p>基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 <code>'A'</code>、<code>'C'</code>、<code>'G'</code> 和 <code>'T'</code> 之一。</p>
@@ -17,8 +15,6 @@
 <p>给你两个基因序列 <code>start</code> 和 <code>end</code> ，以及一个基因库 <code>bank</code> ，请你找出并返回能够使&nbsp;<code>start</code> 变化为 <code>end</code> 所需的最少变化次数。如果无法完成此基因变化，返回 <code>-1</code> 。</p>
 
 <p>注意：起始基因序列&nbsp;<code>start</code> 默认是有效的，但是它并不一定会出现在基因库中。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>输入：</strong>start = "AAAAACCC", end = "AACCCCCC", bank = ["AAAACCCC","AAACCCCC","AACCCCCC"]
 <strong>输出：</strong>3
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

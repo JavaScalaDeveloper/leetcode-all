@@ -1,7 +1,5 @@
 # [1514. 概率最大的路径](https://leetcode.cn/problems/path-with-maximum-probability)
 
-[English Version](/solution/1500-1599/1514.Path%20with%20Maximum%20Probability/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由 <code>n</code> 个节点（下标从 0 开始）组成的无向加权图，该图由一个描述边的列表组成，其中 <code>edges[i] = [a, b]</code> 表示连接节点 a 和 b 的一条无向边，且该边遍历成功的概率为 <code>succProb[i]</code> 。</p>
@@ -9,8 +7,6 @@
 <p>指定两个节点分别作为起点 <code>start</code> 和终点 <code>end</code> ，请你找出从起点到终点成功概率最大的路径，并返回其成功概率。</p>
 
 <p>如果不存在从 <code>start</code> 到 <code>end</code> 的路径，请 <strong>返回 0</strong> 。只要答案与标准答案的误差不超过 <strong>1e-5 </strong>，就会被视作正确答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>0.00000
 <strong>解释：</strong>节点 0 和 节点 2 之间不存在路径
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [157. 用 Read4 读取 N 个字符](https://leetcode.cn/problems/read-n-characters-given-read4)
 
-[English Version](/solution/0100-0199/0157.Read%20N%20Characters%20Given%20Read4/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个文件，并且该文件只能通过给定的&nbsp;<code>read4</code>&nbsp;方法来读取，请实现一个方法使其能够读取 n 个字符。</p>
@@ -46,8 +44,6 @@ read4(buf4); // read4 返回 0。现在 buf = &quot;&quot;，fp 指向文件末�
 注意: buf[] 是目标缓存区不是源缓存区，你需要将结果写入 buf[] 中。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入： </strong>file = &quot;abc&quot;, n = 4
@@ -74,8 +70,6 @@ read4(buf4); // read4 返回 0。现在 buf = &quot;&quot;，fp 指向文件末�
 <strong>输出： </strong>5
 <strong>解释：</strong> 当执行你的 read 方法后，buf 需要包含 &quot;leetc&quot;。文件中一共 5 个字符，因此返回 5。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

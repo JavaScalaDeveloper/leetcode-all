@@ -1,14 +1,10 @@
 # [1582. 二进制矩阵中的特殊位置](https://leetcode.cn/problems/special-positions-in-a-binary-matrix)
 
-[English Version](/solution/1500-1599/1582.Special%20Positions%20in%20a%20Binary%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>rows x cols</code> 的矩阵 <code>mat</code>，其中 <code>mat[i][j]</code> 是 <code>0</code> 或 <code>1</code>，请返回 <strong>矩阵&nbsp;<em><code>mat</code></em> 中特殊位置的数目</strong> 。</p>
 
 <p><strong>特殊位置</strong> 定义：如果 <code>mat[i][j] == 1</code> 并且第 <code>i</code> 行和第 <code>j</code> 列中的所有其他元素均为 <code>0</code>（行和列的下标均 <strong>从 0 开始</strong> ），则位置 <code>(i, j)</code> 被称为特殊位置。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 &nbsp;           [0,0,0,1,1]]
 <strong>输出：</strong>3
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -95,34 +89,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int numSpecial(int **mat, int matSize, int *matColSize) {
-    int m = matSize;
-    int n = *matColSize;
-    int *rows = (int *) malloc(sizeof(int) * m);
-    int *cols = (int *) malloc(sizeof(int) * n);
-    memset(rows, 0, sizeof(int) * m);
-    memset(cols, 0, sizeof(int) * n);
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            if (mat[i][j] == 1) {
-                rows[i]++;
-                cols[j]++;
-            }
-        }
-    }
-    int res = 0;
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            if (mat[i][j] == 1 && rows[i] == 1 && cols[j] == 1) {
-                res++;
-            }
-        }
-    }
-    free(rows);
-    free(cols);
-    return res;
-}
-```
+**

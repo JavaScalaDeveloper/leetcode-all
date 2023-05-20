@@ -1,7 +1,5 @@
 # [2470. 最小公倍数为 K 的子数组数目](https://leetcode.cn/problems/number-of-subarrays-with-lcm-equal-to-k)
 
-[English Version](/solution/2400-2499/2470.Number%20of%20Subarrays%20With%20LCM%20Equal%20to%20K/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你统计并返回 <code>nums</code> 的 <strong>子数组</strong> 中满足 <em>元素最小公倍数为 <code>k</code> </em>的子数组数目。</p>
@@ -9,8 +7,6 @@
 <p><strong>子数组</strong> 是数组中一个连续非空的元素序列。</p>
 
 <p><strong>数组的最小公倍数</strong> 是可被所有数组元素整除的最小正整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1 ：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>不存在以 2 为最小公倍数的子数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

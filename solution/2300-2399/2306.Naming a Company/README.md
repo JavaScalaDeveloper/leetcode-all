@@ -1,7 +1,5 @@
 # [2306. 公司命名](https://leetcode.cn/problems/naming-a-company)
 
-[English Version](/solution/2300-2399/2306.Naming%20a%20Company/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>ideas</code> 表示在公司命名过程中使用的名字列表。公司命名流程如下：</p>
@@ -14,8 +12,6 @@
 </ol>
 
 <p>返回 <strong>不同</strong> 且有效的公司名字的数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>不存在有效的选择方案。因此，返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

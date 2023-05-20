@@ -1,7 +1,5 @@
 # [1785. 构成特定和需要添加的最少元素](https://leetcode.cn/problems/minimum-elements-to-add-to-form-a-given-sum)
 
-[English Version](/solution/1700-1799/1785.Minimum%20Elements%20to%20Add%20to%20Form%20a%20Given%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，和两个整数 <code>limit</code> 与 <code>goal</code> 。数组 <code>nums</code> 有一条重要属性：<code>abs(nums[i]) <= limit</code> 。</p>
@@ -66,15 +64,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int minElements(int *nums, int numsSize, int limit, int goal) {
-    long long sum = 0;
-    for (int i = 0; i < numsSize; i++) {
-        sum += nums[i];
-    }
-    long long diff = labs(goal - sum);
-    return (diff + limit - 1) / limit;
-}
-```
+**

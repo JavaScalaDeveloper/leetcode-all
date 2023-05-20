@@ -1,7 +1,5 @@
 # [1003. 检查替换后的词是否有效](https://leetcode.cn/problems/check-if-word-is-valid-after-substitutions)
 
-[English Version](/solution/1000-1099/1003.Check%20If%20Word%20Is%20Valid%20After%20Substitutions/README_EN.md)
-
 ## 题目描述
 
 给你一个字符串 <code>s</code> ，请你判断它是否 <strong>有效</strong> 。
@@ -13,8 +11,6 @@
 </ul>
 
 <p>如果字符串 <code>s</code> 有效，则返回 <code>true</code>；否则，返回 <code>false</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>输入：</strong>s = "abccba"
 <strong>输出：</strong>false
 <strong>解释：</strong>执行操作无法得到 "abccba" 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

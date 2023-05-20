@@ -1,7 +1,5 @@
 # [1388. 3n 块披萨](https://leetcode.cn/problems/pizza-with-3n-slices)
 
-[English Version](/solution/1300-1399/1388.Pizza%20With%203n%20Slices/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个披萨，它由 3n 块不同大小的部分组成，现在你和你的朋友们需要按照如下规则来分披萨：</p>
@@ -16,8 +14,6 @@
 <p>每一块披萨的大小按顺时针方向由循环数组 <code>slices</code>&nbsp;表示。</p>
 
 <p>请你返回你可以获得的披萨大小总和的最大值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输出：</strong>16
 <strong>解释：</strong>两轮都选大小为 8 的披萨。如果你选择大小为 9 的披萨，你的朋友们就会选择大小为 8 的披萨，这种情况下你的总和不是最大的。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

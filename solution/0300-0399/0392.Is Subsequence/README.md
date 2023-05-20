@@ -1,7 +1,5 @@
 # [392. 判断子序列](https://leetcode.cn/problems/is-subsequence)
 
-[English Version](/solution/0300-0399/0392.Is%20Subsequence/README_EN.md)
-
 ## 题目描述
 
 <p>给定字符串 <strong>s</strong> 和 <strong>t</strong> ，判断 <strong>s</strong> 是否为 <strong>t</strong> 的子序列。</p>
@@ -68,18 +66,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool isSubsequence(char * s, char * t){
-    int m = strlen(s);
-    int n = strlen(t);
-    int i = 0;
-    for (int j = 0; i < m && j < n; ++j) {
-        if (s[i] == t[j]) {
-            ++i;
-        }
-    }
-    return i == m;
-}
-```
+**

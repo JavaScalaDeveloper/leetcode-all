@@ -1,7 +1,5 @@
 # [2489. 固定比率的子字符串数](https://leetcode.cn/problems/number-of-substrings-with-fixed-ratio)
 
-[English Version](/solution/2400-2499/2489.Number%20of%20Substrings%20With%20Fixed%20Ratio/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二进制字符串 <code>s</code>&nbsp;和两个整数 <code>num1</code> 和 <code>num2</code>。<code>num1</code> 和 <code>num2</code> 为互质。</p>
@@ -20,8 +18,6 @@
 	<li><strong>子串&nbsp;</strong>是字符串中连续的字符序列。</li>
 	<li>如果 <code>gcd(x, y) == 1</code>，则 <code>x</code> 和 <code>y</code> 为&nbsp;<strong>互质</strong>，其中 <code>gcd(x, y)</code>&nbsp;为 <code>x</code>&nbsp;和 <code>y</code> 的最大公约数。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -43,8 +39,6 @@
 <strong>输出:</strong> 0
 <strong>解释:</strong> s 没有比率子串，返回 0。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

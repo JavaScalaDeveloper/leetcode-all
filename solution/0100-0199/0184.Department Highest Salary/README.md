@@ -1,7 +1,5 @@
 # [184. 部门工资最高的员工](https://leetcode.cn/problems/department-highest-salary)
 
-[English Version](/solution/0100-0199/0184.Department%20Highest%20Salary/README_EN.md)
-
 ## 题目描述
 
 <p>表：&nbsp;<code>Employee</code></p>
@@ -20,8 +18,6 @@ departmentId是Department表中ID的外键。
 此表的每一行都表示员工的ID、姓名和工资。它还包含他们所在部门的ID。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表：&nbsp;<code>Department</code></p>
 
 <pre>
@@ -35,13 +31,9 @@ id是此表的主键列。
 此表的每一行都表示一个部门的ID及其名称。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写SQL查询以查找每个部门中薪资最高的员工。<br />
 按 <strong>任意顺序</strong> 返回结果表。<br />
 查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

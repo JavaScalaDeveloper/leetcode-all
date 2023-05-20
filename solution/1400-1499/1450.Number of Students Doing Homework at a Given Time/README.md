@@ -1,7 +1,5 @@
 # [1450. 在既定时间做作业的学生人数](https://leetcode.cn/problems/number-of-students-doing-homework-at-a-given-time)
 
-[English Version](/solution/1400-1499/1450.Number%20of%20Students%20Doing%20Homework%20at%20a%20Given%20Time/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数数组 <code>startTime</code>（开始时间）和 <code>endTime</code>（结束时间），并指定一个整数 <code>queryTime</code> 作为查询时间。</p>
@@ -9,8 +7,6 @@
 <p>已知，第 <code>i</code> 名学生在 <code>startTime[i]</code> 时开始写作业并于 <code>endTime[i]</code> 时完成作业。</p>
 
 <p>请返回在查询时间 <code>queryTime</code> 时正在做作业的学生人数。形式上，返回能够使 <code>queryTime</code> 处于区间 <code>[startTime[i], endTime[i]]</code>（含）的学生人数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <pre><strong>输入：</strong>startTime = [9,8,7,6,5,4,3,2,1], endTime = [10,10,10,10,10,10,10,10,10], queryTime = 5
 <strong>输出：</strong>5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -123,16 +117,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int busyStudent(int* startTime, int startTimeSize, int* endTime, int endTimeSize, int queryTime) {
-    int res = 0;
-    for (int i = 0; i < startTimeSize; i++) {
-        if (startTime[i] <= queryTime && endTime[i] >= queryTime) {
-            res++;
-        }
-    }
-    return res;
-}
-```
+**

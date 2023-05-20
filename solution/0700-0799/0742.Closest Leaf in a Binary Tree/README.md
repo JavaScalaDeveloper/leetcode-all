@@ -1,14 +1,10 @@
 # [742. 二叉树最近的叶节点](https://leetcode.cn/problems/closest-leaf-in-a-binary-tree)
 
-[English Version](/solution/0700-0799/0742.Closest%20Leaf%20in%20a%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个 <strong>每个结点的值互不相同</strong>&nbsp;的二叉树，和一个目标整数值 <code>k</code>，返回 <em>树中与目标值 <code>k</code>&nbsp; <strong>最近的叶结点</strong></em> 。&nbsp;</p>
 
 <p><strong>与叶结点最近</strong><em> </em>表示在二叉树中到达该叶节点需要行进的边数与到达其它叶结点相比最少。而且，当一个结点没有孩子结点时称其为叶结点。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>值为 3（而不是值为 6）的叶节点是距离结点 2 的最近结点。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

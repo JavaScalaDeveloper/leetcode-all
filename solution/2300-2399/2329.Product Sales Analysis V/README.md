@@ -1,7 +1,5 @@
 # [2329. 产品销售分析 Ⅴ](https://leetcode.cn/problems/product-sales-analysis-v)
 
-[English Version](/solution/2300-2399/2329.Product%20Sales%20Analysis%20V/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Sales</code></p>
@@ -33,15 +31,11 @@ product_id 是这张表的主键。
 这张表中的每一行均表示了某个产品的价格。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一条 SQL 查询获取每个用户的消费额。</p>
 
 <p>按用户消费额 <code>spending</code> <strong>递减</strong>的顺序返回结果。在消费额相等的情况下，以 <code>user_id</code> 递增的顺序将其排序。</p>
 
 <p>查询结果的格式如下面例子所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1 ：</strong></p>
 

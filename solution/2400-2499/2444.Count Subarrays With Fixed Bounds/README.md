@@ -1,7 +1,5 @@
 # [2444. 统计定界子数组的数目](https://leetcode.cn/problems/count-subarrays-with-fixed-bounds)
 
-[English Version](/solution/2400-2499/2444.Count%20Subarrays%20With%20Fixed%20Bounds/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和两个整数 <code>minK</code> 以及 <code>maxK</code> 。</p>
@@ -17,8 +15,6 @@
 
 <p>子数组是数组中的一个连续部分。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>nums = [1,3,5,2,7,5], minK = 1, maxK = 5
@@ -31,8 +27,6 @@
 <pre><strong>输入：</strong>nums = [1,1,1,1], minK = 1, maxK = 1
 <strong>输出：</strong>10
 <strong>解释：</strong>nums 的每个子数组都是一个定界子数组。共有 10 个子数组。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -81,30 +75,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-#define min(a,b) (((a) < (b)) ? (a) : (b))
-
-long long countSubarrays(int *nums, int numsSize, int minK, int maxK) {
-    long long res = 0;
-    int minIndex = -1;
-    int maxIndex = -1;
-    int k = -1;
-    for (int i = 0; i < numsSize; i++) {
-        int num = nums[i];
-        if (num == minK) {
-            minIndex = i;
-        }
-        if (num == maxK) {
-            maxIndex = i;
-        }
-        if (num < minK || num > maxK) {
-            k = i;
-        }
-        res += max(min(minIndex, maxIndex) - k, 0);
-    }
-    return res;
-}
-```
+**

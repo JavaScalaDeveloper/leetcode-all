@@ -1,7 +1,5 @@
 # [1923. 最长公共子路径](https://leetcode.cn/problems/longest-common-subpath)
 
-[English Version](/solution/1900-1999/1923.Longest%20Common%20Subpath/README_EN.md)
-
 ## 题目描述
 
 <p>一个国家由 <code>n</code> 个编号为 <code>0</code> 到 <code>n - 1</code> 的城市组成。在这个国家里，<strong>每两个</strong> 城市之间都有一条道路连接。</p>

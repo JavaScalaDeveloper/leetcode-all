@@ -1,14 +1,10 @@
 # [2455. 可被三整除的偶数的平均值](https://leetcode.cn/problems/average-value-of-even-numbers-that-are-divisible-by-three)
 
-[English Version](/solution/2400-2499/2455.Average%20Value%20of%20Even%20Numbers%20That%20Are%20Divisible%20by%20Three/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由正整数组成的整数数组 <code>nums</code> ，返回其中可被 <code>3</code> 整除的所有偶数的平均值。</p>
 
 <p>注意：<code>n</code> 个元素的平均值等于 <code>n</code> 个元素 <strong>求和</strong> 再除以 <code>n</code> ，结果 <strong>向下取整</strong> 到最接近的整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>不存在满足题目要求的整数，所以返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -60,22 +54,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int averageValue(int *nums, int numsSize) {
-    int sum = 0;
-    int n = 0;
-    for (int i = 0; i < numsSize; i++) {
-        if (nums[i] % 6 == 0) {
-            sum += nums[i];
-            n++;
-        }
-    }
-
-    if (n == 0) {
-        return 0;
-    }
-    return sum / n;
-}
-```
+**

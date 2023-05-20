@@ -1,7 +1,5 @@
 # [1939. 主动请求确认消息的用户](https://leetcode.cn/problems/users-that-actively-request-confirmation-messages)
 
-[English Version](/solution/1900-1999/1939.Users%20That%20Actively%20Request%20Confirmation%20Messages/README_EN.md)
-
 ## 题目描述
 
 <p>Table: <code>Signups</code></p>
@@ -14,8 +12,6 @@
 +----------------+----------+
 user_id is the primary key for this table.
 每行包含有关 ID 为 user_id 的用户的注册时间的信息。</pre>
-
-<p>&nbsp;</p>
 
 <p>Table: <code>Confirmations</code></p>
 
@@ -70,8 +66,6 @@ Result table
 | 6       |
 +---------+
 </pre>
-
-<p>&nbsp;</p>
 
 <p>用户 2 在彼此恰好 24 小时内请求了两条消息，因此我们将它们包括在内。 用户 3 在 6 分 59 秒内请求了两条消息，因此我们将它们包括在内。 用户 6 在 23 小时 59 分 59 秒内请求了两条消息，因此我们将它们包括在内。 用户 7 在 24 小时 1 秒内请求了两条消息，因此我们将它们从答案中排除。</p>
 

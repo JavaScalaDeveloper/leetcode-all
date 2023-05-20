@@ -1,7 +1,5 @@
 # [2447. 最大公因数等于 K 的子数组数目](https://leetcode.cn/problems/number-of-subarrays-with-gcd-equal-to-k)
 
-[English Version](/solution/2400-2499/2447.Number%20of%20Subarrays%20With%20GCD%20Equal%20to%20K/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>k</code> ，请你统计并返回 <code>nums</code>&nbsp;的子数组中元素的最大公因数等于 <code>k</code>&nbsp;的子数组数目。</p>
@@ -9,8 +7,6 @@
 <p><strong>子数组</strong> 是数组中一个连续的非空序列。</p>
 
 <p><strong>数组的最大公因数</strong>&nbsp;是能整除数组中所有元素的最大整数。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -29,8 +25,6 @@
 <b>输出：</b>0
 <b>解释：</b>不存在以 7 作为最大公因数的子数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

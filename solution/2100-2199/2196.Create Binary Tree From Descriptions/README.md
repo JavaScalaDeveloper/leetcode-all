@@ -1,7 +1,5 @@
 # [2196. 根据描述创建二叉树](https://leetcode.cn/problems/create-binary-tree-from-descriptions)
 
-[English Version](/solution/2100-2199/2196.Create%20Binary%20Tree%20From%20Descriptions/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维整数数组 <code>descriptions</code> ，其中 <code>descriptions[i] = [parent<sub>i</sub>, child<sub>i</sub>, isLeft<sub>i</sub>]</code> 表示 <code>parent<sub>i</sub></code> 是 <code>child<sub>i</sub></code> 在 <strong>二叉树</strong> 中的 <strong>父节点</strong>，二叉树中各节点的值 <strong>互不相同</strong> 。此外：</p>
@@ -14,8 +12,6 @@
 <p>请你根据 <code>descriptions</code> 的描述来构造二叉树并返回其 <strong>根节点</strong> 。</p>
 
 <p>测试用例会保证可以构造出 <strong>有效</strong> 的二叉树。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>[1,2,null,null,3,4]
 <strong>解释：</strong>根节点是值为 1 的节点，因为它没有父节点。 
 结果二叉树如上图所示。 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [272. 最接近的二叉搜索树值 II](https://leetcode.cn/problems/closest-binary-search-tree-value-ii)
 
-[English Version](/solution/0200-0299/0272.Closest%20Binary%20Search%20Tree%20Value%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定二叉搜索树的根&nbsp;<code>root</code>&nbsp;、一个目标值&nbsp;<code>target</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;，返回BST中最接近目标的 <code>k</code> 个值。你可以按 <strong>任意顺序</strong> 返回答案。</p>
 
 <p>题目&nbsp;<strong>保证</strong>&nbsp;该二叉搜索树中只会存在一种&nbsp;k 个值集合最接近&nbsp;<code>target</code></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <strong>输出:</strong> [1]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -35,8 +29,6 @@
 	<li><code>0 &lt;= Node.val &lt;= 10<sup>9</sup></code></li>
 	<li><code>-10<sup>9</sup>&nbsp;&lt;= target &lt;= 10<sup>9</sup></code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>假设该二叉搜索树是平衡的，请问您是否能在小于&nbsp;<code>O(n)</code>（&nbsp;<code>n = total nodes</code>&nbsp;）的时间复杂度内解决该问题呢？</p>
 

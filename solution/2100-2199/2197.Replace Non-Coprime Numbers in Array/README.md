@@ -1,7 +1,5 @@
 # [2197. 替换数组中的非互质数](https://leetcode.cn/problems/replace-non-coprime-numbers-in-array)
 
-[English Version](/solution/2100-2199/2197.Replace%20Non-Coprime%20Numbers%20in%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 。请你对数组执行下述操作：</p>
@@ -18,8 +16,6 @@
 <p>生成的测试用例可以保证最终数组中的值 <strong>小于或者等于</strong> <code>10<sup>8</sup></code> 。</p>
 
 <p>两个数字 <code>x</code> 和 <code>y</code> 满足 <strong>非互质数</strong> 的条件是：<code>GCD(x, y) &gt; 1</code> ，其中 <code>GCD(x, y)</code> 是 <code>x</code> 和 <code>y</code> 的 <strong>最大公约数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1 ：</strong></p>
 
@@ -49,8 +45,6 @@
 因此，修改后得到的最终数组是 [2,1,1,3] 。 
 注意，存在其他方法可以获得相同的最终数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

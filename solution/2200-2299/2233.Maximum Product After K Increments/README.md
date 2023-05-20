@@ -1,14 +1,10 @@
 # [2233. K 次增加后的最大乘积](https://leetcode.cn/problems/maximum-product-after-k-increments)
 
-[English Version](/solution/2200-2299/2233.Maximum%20Product%20After%20K%20Increments/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个非负整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;。每次操作，你可以选择&nbsp;<code>nums</code>&nbsp;中 <strong>任一</strong>&nbsp;元素并将它 <strong>增加</strong>&nbsp;<code>1</code>&nbsp;。</p>
 
 <p>请你返回 <strong>至多</strong>&nbsp;<code>k</code>&nbsp;次操作后，能得到的<em>&nbsp;</em><code>nums</code>的&nbsp;<strong>最大乘积</strong>&nbsp;。由于答案可能很大，请你将答案对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;取余后返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 可以证明 216 是能得到的最大乘积，所以我们返回 216 。
 存在其他增加 nums 的方法，也能得到最大乘积。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

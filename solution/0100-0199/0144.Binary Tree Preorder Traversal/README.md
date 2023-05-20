@@ -1,7 +1,5 @@
 # [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal)
 
-[English Version](/solution/0100-0199/0144.Binary%20Tree%20Preorder%20Traversal/README_EN.md)
-
 ## 题目描述
 
 <p>给你二叉树的根节点 <code>root</code> ，返回它节点值的 <strong>前序</strong><em> </em>遍历。</p>

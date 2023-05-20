@@ -1,7 +1,5 @@
 # [418. 屏幕可显示句子的数量](https://leetcode.cn/problems/sentence-screen-fitting)
 
-[English Version](/solution/0400-0499/0418.Sentence%20Screen%20Fitting/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>rows x cols</code> 的屏幕和一个用 <strong>非空 </strong>的单词列表组成的句子，请你计算出给定句子可以在屏幕上完整显示的次数。</p>
@@ -17,8 +15,6 @@
 	<li>1 &le; <code>rows</code>, <code>cols</code> &le; 20,000.</li>
 </ol>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>
@@ -33,8 +29,6 @@ world---
 
 <strong>字符 &#39;-&#39; 表示屏幕上的一个空白位置。</strong>
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 2：</strong></p>
 
@@ -52,8 +46,6 @@ bcd-e-
 <strong>字符 &#39;-&#39; 表示屏幕上的一个空白位置。</strong>
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 3：</strong></p>
 
 <pre><strong>输入：</strong>
@@ -70,8 +62,6 @@ had--
 
 <strong>字符 &#39;-&#39; 表示屏幕上的一个空白位置。</strong>
 </pre>
-
-<p>&nbsp;</p>
 
 ## 解法
 

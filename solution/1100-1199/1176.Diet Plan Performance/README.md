@@ -1,7 +1,5 @@
 # [1176. 健身计划评估](https://leetcode.cn/problems/diet-plan-performance)
 
-[English Version](/solution/1100-1199/1176.Diet%20Plan%20Performance/README_EN.md)
-
 ## 题目描述
 
 <p>你的好友是一位健身爱好者。前段日子，他给自己制定了一份健身计划。现在想请你帮他评估一下这份计划是否合理。</p>
@@ -19,8 +17,6 @@
 <p>请返回统计完所有&nbsp;<code>calories.length</code>&nbsp;天后得到的总分作为评估结果。</p>
 
 <p>注意：总分可能是负数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>calories[0] + calories[1] &gt; upper, calories[2] + calories[3] &lt; lower, 总分 = 0.
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

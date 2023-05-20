@@ -1,7 +1,5 @@
 # [1768. 交替合并字符串](https://leetcode.cn/problems/merge-strings-alternately)
 
-[English Version](/solution/1700-1799/1768.Merge%20Strings%20Alternately/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串 <code>word1</code> 和 <code>word2</code> 。请你从 <code>word1</code> 开始，通过交替添加字母来合并字符串。如果一个字符串比另一个字符串长，就将多出来的字母追加到合并后字符串的末尾。</p>
@@ -80,26 +78,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char *mergeAlternately(char *word1, char *word2) {
-    int m = strlen(word1);
-    int n = strlen(word2);
-    char *ans = malloc(sizeof(char) * (n + m + 1));
-    int i = 0;
-    int j = 0;
-    while (i + j != m + n) {
-        if (i < m) {
-            ans[i + j] = word1[i];
-            i++;
-        }
-        if (j < n) {
-            ans[i + j] = word2[j];
-            j++;
-        }
-    }
-    ans[n + m] = '\0';
-    return ans;
-}
-```
+**

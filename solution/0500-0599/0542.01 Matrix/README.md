@@ -1,7 +1,5 @@
 # [542. 01 矩阵](https://leetcode.cn/problems/01-matrix)
 
-[English Version](/solution/0500-0599/0542.01%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个由 <code>0</code> 和 <code>1</code> 组成的矩阵 <code>mat</code> ，请输出一个大小相同的矩阵，其中每一个格子是 <code>mat</code> 中对应位置元素到最近的 <code>0</code> 的距离。</p>

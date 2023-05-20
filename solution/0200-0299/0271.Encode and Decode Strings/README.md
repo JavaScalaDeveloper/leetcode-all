@@ -1,7 +1,5 @@
 # [271. 字符串的编码与解码](https://leetcode.cn/problems/encode-and-decode-strings)
 
-[English Version](/solution/0200-0299/0271.Encode%20and%20Decode%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个算法，可以将一个&nbsp;<strong>字符串列表&nbsp;</strong>编码成为一个&nbsp;<strong>字符串</strong>。这个编码后的字符串是可以通过网络进行高效传送的，并且可以在接收端被解码回原来的字符串列表。</p>

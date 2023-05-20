@@ -1,7 +1,5 @@
 # [1511. 消费者下单频率](https://leetcode.cn/problems/customer-order-frequency)
 
-[English Version](/solution/1500-1599/1511.Customer%20Order%20Frequency/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Customers</code></p>
@@ -18,8 +16,6 @@ customer_id 是该表主键.
 该表包含公司消费者的信息.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Product</code></p>
 
 <pre>
@@ -33,8 +29,6 @@ customer_id 是该表主键.
 product_id 是该表主键.
 该表包含公司产品的信息.
 price 是本产品的花销.</pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Orders</code></p>
 
@@ -53,15 +47,11 @@ order_id 是该表主键.
 customer_id 是买了数量为"quantity", id为"product_id"产品的消费者的 id.
 Order_date 是订单发货的日期, 格式为('YYYY-MM-DD').</pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL 查询，报告在&nbsp;<strong>2020 年 6 月和 7 月&nbsp;</strong>每个月至少花费 $100 的客户的 customer_id 和 customer_name 。</p>
 
 <p>以<strong>任意顺序</strong>返回结果表.</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

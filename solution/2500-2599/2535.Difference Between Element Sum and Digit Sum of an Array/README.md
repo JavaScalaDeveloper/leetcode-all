@@ -1,7 +1,5 @@
 # [2535. 数组元素和与数字和的绝对差](https://leetcode.cn/problems/difference-between-element-sum-and-digit-sum-of-an-array)
 
-[English Version](/solution/2500-2599/2535.Difference%20Between%20Element%20Sum%20and%20Digit%20Sum%20of%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数数组 <code>nums</code> 。</p>
@@ -14,8 +12,6 @@
 <p>返回 <strong>元素和</strong> 与 <strong>数字和</strong> 的绝对差。</p>
 
 <p><strong>注意：</strong>两个整数 <code>x</code> 和 <code>y</code> 的绝对差定义为 <code>|x - y|</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@ nums 的元素和是 1 + 2 + 3 + 4 = 10 。
 nums 的数字和是 1 + 2 + 3 + 4 = 10 。
 元素和与数字和的绝对差是 |10 - 10| = 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -73,18 +67,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int differenceOfSum(int *nums, int numsSize) {
-    int ans = 0;
-    for (int i = 0; i < numsSize; i++) {
-        ans += nums[i];
-        while (nums[i]) {
-            ans -= nums[i] % 10;
-            nums[i] /= 10;
-        }
-    }
-    return ans;
-}
-```
+**

@@ -1,14 +1,10 @@
 # [905. 按奇偶排序数组](https://leetcode.cn/problems/sort-array-by-parity)
 
-[English Version](/solution/0900-0999/0905.Sort%20Array%20By%20Parity/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code>，将 <code>nums</code> 中的的所有偶数元素移动到数组的前面，后跟所有奇数元素。</p>
 
 <p>返回满足此条件的 <strong>任一数组</strong> 作为答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,8 +20,6 @@
 <strong>输入：</strong>nums = [0]
 <strong>输出：</strong>[0]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

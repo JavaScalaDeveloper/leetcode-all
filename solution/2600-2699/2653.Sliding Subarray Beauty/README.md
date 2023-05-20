@@ -1,7 +1,5 @@
 # [2653. 滑动子数组的美丽值](https://leetcode.cn/problems/sliding-subarray-beauty)
 
-[English Version](/solution/2600-2699/2653.Sliding%20Subarray%20Beauty/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code>&nbsp;的整数数组&nbsp;<code>nums</code>&nbsp;，请你求出每个长度为&nbsp;<code>k</code>&nbsp;的子数组的 <b>美丽值</b>&nbsp;。</p>
@@ -15,8 +13,6 @@
 	<p>子数组指的是数组中一段连续 <strong>非空</strong>&nbsp;的元素序列。</p>
 	</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <code>[2, -3] 中最小的数是负数 -3 。</code>
 <code>[-3, 0] 中最小的数是负数 -3 。</code>
 <code>[0, -3] 中最小的数是负数 -3 。</code></pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

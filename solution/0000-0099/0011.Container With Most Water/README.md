@@ -1,7 +1,5 @@
 # [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water)
 
-[English Version](/solution/0000-0099/0011.Container%20With%20Most%20Water/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个长度为 <code>n</code> 的整数数组&nbsp;<code>height</code>&nbsp;。有&nbsp;<code>n</code>&nbsp;条垂线，第 <code>i</code> 条线的两个端点是&nbsp;<code>(i, 0)</code>&nbsp;和&nbsp;<code>(i, height[i])</code>&nbsp;。</p>
@@ -11,8 +9,6 @@
 <p>返回容器可以储存的最大水量。</p>
 
 <p><strong>说明：</strong>你不能倾斜容器。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输入：</strong>height = [1,1]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

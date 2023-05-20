@@ -1,7 +1,5 @@
 # [38. 外观数列](https://leetcode.cn/problems/count-and-say)
 
-[English Version](/solution/0000-0099/0038.Count%20and%20Say/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个正整数 <code>n</code> ，输出外观数列的第 <code>n</code> 项。</p>
@@ -37,8 +35,6 @@
 <ul>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -58,8 +54,6 @@ countAndSay(2) = 读 "1" = 一 个 1 = "11"
 countAndSay(3) = 读 "11" = 二 个 1 = "21"
 countAndSay(4) = 读 "21" = 一 个 2 + 一 个 1 = "12" + "11" = "1211"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

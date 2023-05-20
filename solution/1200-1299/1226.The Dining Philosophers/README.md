@@ -1,7 +1,5 @@
 # [1226. 哲学家进餐](https://leetcode.cn/problems/the-dining-philosophers)
 
-[English Version](/solution/1200-1299/1226.The%20Dining%20Philosophers/README_EN.md)
-
 ## 题目描述
 
 <p>5 个沉默寡言的哲学家围坐在圆桌前，每人面前一盘意面。叉子放在哲学家之间的桌面上。（5 个哲学家，5 根叉子）</p>
@@ -16,8 +14,6 @@
 
 <p><em>问题描述和图片来自维基百科&nbsp;<a href="https://en.wikipedia.org/wiki/Dining_philosophers_problem" target="_blank">wikipedia.org</a></em></p>
 
-<p>&nbsp;</p>
-
 <p>哲学家从&nbsp;<strong>0</strong> 到 <strong>4</strong> 按 <strong>顺时针</strong> 编号。请实现函数&nbsp;<code>void wantsToEat(philosopher, pickLeftFork, pickRightFork, eat, putLeftFork, putRightFork)</code>：</p>
 
 <ul>
@@ -29,8 +25,6 @@
 </ul>
 
 <p>给你 5 个线程，每个都代表一个哲学家，请你使用类的同一个对象来模拟这个过程。在最后一次调用结束之前，可能会为同一个哲学家多次调用该函数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -45,8 +39,6 @@ output[i] = [a, b, c] (3个整数)
 - c 指定行为：{1 : 拿起, 2 : 放下, 3 : 吃面}。
 如 [4,2,1] 表示 4 号哲学家拿起了右边的叉子。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

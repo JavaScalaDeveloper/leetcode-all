@@ -1,7 +1,5 @@
 # [2105. 给植物浇水 II](https://leetcode.cn/problems/watering-plants-ii)
 
-[English Version](/solution/2100-2199/2105.Watering%20Plants%20II/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 和 Bob 打算给花园里的 <code>n</code> 株植物浇水。植物排成一行，从左到右进行标记，编号从 <code>0</code> 到 <code>n - 1</code> 。其中，第 <code>i</code> 株植物的位置是 <code>x = i</code> 。</p>
@@ -18,8 +16,6 @@
 </ul>
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>plants</code> ，数组由 <code>n</code> 个整数组成。其中，<code>plants[i]</code> 为第 <code>i</code> 株植物需要的水量。另有两个整数 <code>capacityA</code> 和&nbsp;<code>capacityB</code> 分别表示 Alice 和 Bob 水罐的容量。返回两人浇灌所有植物过程中重新灌满水罐的 <strong>次数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -54,8 +50,6 @@
 - 只有一株植物
 - Alice 的水罐有 10 单元水，Bob 的水罐有 8 单元水。因此 Alice 的水罐中水更多，她会给这株植物浇水。
 所以，两人浇灌所有植物过程中重新灌满水罐的次数 = 0 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

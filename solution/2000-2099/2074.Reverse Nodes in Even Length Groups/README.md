@@ -1,7 +1,5 @@
 # [2074. 反转偶数长度组的节点](https://leetcode.cn/problems/reverse-nodes-in-even-length-groups)
 
-[English Version](/solution/2000-2099/2074.Reverse%20Nodes%20in%20Even%20Length%20Groups/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个链表的头节点 <code>head</code> 。</p>
@@ -17,8 +15,6 @@
 <p>注意，最后一组的长度可能小于或者等于 <code>1 + 倒数第二组的长度</code> 。</p>
 
 <p><strong>反转</strong> 每个 <strong>偶数</strong> 长度组中的节点，并返回修改后链表的头节点 <code>head</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -58,8 +54,6 @@
 - 第一组长度为 1 ，没有发生反转。
 - 最后一组长度为 1 ，没有发生反转。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -2,8 +2,6 @@
 
 # LeetCode
 
-[English Version](/solution/README_EN.md)
-
 ## 题解
 
 列表所有题解均由 [开源社区 Doocs](https://github.com/doocs) 贡献者提供，正在完善中，欢迎贡献你的题解！
@@ -43,8 +41,6 @@ Press <kbd>Control</kbd>+<kbd>F</kbd>(or <kbd>Command</kbd>+<kbd>F</kbd> on the 
 <!-- 这里是contest_readme_template开始位置 -->
 
 # 力扣竞赛
-
-[English Version](/solution/CONTEST_README_EN.md)
 
 ## 段位与荣誉勋章
 
@@ -112,8 +108,6 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 # [{}. {}]({})
 
-[English Version]({})
-
 ## 题目描述
 
 {}
@@ -155,8 +149,6 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 <!-- 这里是problem_readme_template开始位置 -->
 
 # [{}. {}]({})
-
-[English Version]({})
 
 ## 题目描述
 
@@ -200,8 +192,6 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 
 # [{}. {}]({})
 
-[English Version]({})
-
 ## 题目描述
 
 {}
@@ -243,8 +233,6 @@ Get your rating changes right after the completion of LeetCode contests, https:/
 <!-- 这里是ts_problem_readme_template开始位置 -->
 
 # [{}. {}]({})
-
-[English Version]({})
 
 ## 题目描述
 

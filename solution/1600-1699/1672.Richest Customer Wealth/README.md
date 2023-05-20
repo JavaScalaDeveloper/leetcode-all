@@ -1,7 +1,5 @@
 # [1672. 最富有客户的资产总量](https://leetcode.cn/problems/richest-customer-wealth)
 
-[English Version](/solution/1600-1699/1672.Richest%20Customer%20Wealth/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>m x n</code> 的整数网格 <code>accounts</code> ，其中 <code>accounts[i][j]</code> 是第 <code>i​​​​​<sup>​​​​​​</sup>​</code> 位客户在第 <code>j</code> 家银行托管的资产数量。返回最富有客户所拥有的 <strong>资产总量</strong> 。</p>
@@ -74,23 +72,7 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-
-int maximumWealth(int **accounts, int accountsSize, int *accountsColSize) {
-    int ans = INT_MIN;
-    for (int i = 0; i < accountsSize; i++) {
-        int sum = 0;
-        for (int j = 0; j < accountsColSize[i]; j++) {
-            sum += accounts[i][j];
-        }
-        ans = max(ans, sum);
-    }
-    return ans;
-}
-```
+**
 
 ### **Kotlin**
 

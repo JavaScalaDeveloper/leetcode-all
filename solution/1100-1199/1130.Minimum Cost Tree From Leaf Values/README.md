@@ -1,7 +1,5 @@
 # [1130. 叶值的最小代价生成树](https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values)
 
-[English Version](/solution/1100-1199/1130.Minimum%20Cost%20Tree%20From%20Leaf%20Values/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数数组&nbsp;<code>arr</code>，考虑所有满足以下条件的二叉树：</p>
@@ -15,8 +13,6 @@
 <p>在所有这样的二叉树中，返回每个非叶节点的值的最小可能总和。这个和的值是一个&nbsp;32 位整数。</p>
 
 <p>如果一个节点有 0 个子节点，那么该节点为叶节点。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1100-1199/1130.Minimum%20Cost%20Tree%20From%20Leaf%20Values/images/tree1.jpg" style="width: 500px; height: 169px;" />
@@ -32,8 +28,6 @@
 <strong>输入：</strong>arr = [4,11]
 <strong>输出：</strong>44
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

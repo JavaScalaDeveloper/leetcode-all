@@ -1,7 +1,5 @@
 # [2595. 奇偶位数](https://leetcode.cn/problems/number-of-even-and-odd-bits)
 
-[English Version](/solution/2500-2599/2595.Number%20of%20Even%20and%20Odd%20Bits/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>正</strong> 整数 <code>n</code> 。</p>
@@ -11,8 +9,6 @@
 <p>用 <code>odd</code> 表示在 <code>n</code> 的二进制形式（下标从 <strong>0</strong> 开始）中值为 <code>1</code> 的奇数下标的个数。</p>
 
 <p>返回整数数组<em> </em><code>answer</code><em> </em>，其中<em> </em><code>answer = [even, odd]</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 下标 1 对应的值为 1 。 
 共有 0 个偶数下标，1 个奇数下标。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

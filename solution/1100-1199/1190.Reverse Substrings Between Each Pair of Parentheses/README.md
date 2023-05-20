@@ -1,7 +1,5 @@
 # [1190. 反转每对括号间的子串](https://leetcode.cn/problems/reverse-substrings-between-each-pair-of-parentheses)
 
-[English Version](/solution/1100-1199/1190.Reverse%20Substrings%20Between%20Each%20Pair%20of%20Parentheses/README_EN.md)
-
 ## 题目描述
 
 <p>给出一个字符串&nbsp;<code>s</code>（仅含有小写英文字母和括号）。</p>
@@ -9,8 +7,6 @@
 <p>请你按照从括号内到外的顺序，逐层反转每对匹配括号中的字符串，并返回最终的结果。</p>
 
 <p>注意，您的结果中 <strong>不应</strong> 包含任何括号。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>输入：</strong>s = "a(bcdefghijkl(mno)p)q"
 <strong>输出：</strong>"apmnolkjihgfedcbq"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

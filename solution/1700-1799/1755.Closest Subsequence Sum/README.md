@@ -1,7 +1,5 @@
 # [1755. 最接近目标值的子序列和](https://leetcode.cn/problems/closest-subsequence-sum)
 
-[English Version](/solution/1700-1799/1755.Closest%20Subsequence%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和一个目标值 <code>goal</code> 。</p>

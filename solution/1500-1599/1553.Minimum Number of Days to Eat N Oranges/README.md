@@ -1,7 +1,5 @@
 # [1553. 吃掉 N 个橘子的最少天数](https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges)
 
-[English Version](/solution/1500-1599/1553.Minimum%20Number%20of%20Days%20to%20Eat%20N%20Oranges/README_EN.md)
-
 ## 题目描述
 
 <p>厨房里总共有 <code>n</code>&nbsp;个橘子，你决定每一天选择如下方式之一吃这些橘子：</p>
@@ -15,8 +13,6 @@
 <p>每天你只能从以上 3 种方案中选择一种方案。</p>
 
 <p>请你返回吃掉所有 <code>n</code>&nbsp;个橘子的最少天数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@
 <pre><strong>输入：</strong>n = 56
 <strong>输出：</strong>6
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

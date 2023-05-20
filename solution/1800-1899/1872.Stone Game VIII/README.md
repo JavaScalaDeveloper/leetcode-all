@@ -1,7 +1,5 @@
 # [1872. 石子游戏 VIII](https://leetcode.cn/problems/stone-game-viii)
 
-[English Version](/solution/1800-1899/1872.Stone%20Game%20VIII/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 和 Bob 玩一个游戏，两人轮流操作， <strong>Alice 先手</strong> 。</p>

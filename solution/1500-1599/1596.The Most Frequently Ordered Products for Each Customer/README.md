@@ -1,7 +1,5 @@
 # [1596. 每位顾客最经常订购的商品](https://leetcode.cn/problems/the-most-frequently-ordered-products-for-each-customer)
 
-[English Version](/solution/1500-1599/1596.The%20Most%20Frequently%20Ordered%20Products%20for%20Each%20Customer/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Customers</code></p>
@@ -16,8 +14,6 @@
 customer_id 是该表主键
 该表包含所有顾客的信息
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表：<code>Orders</code></p>
 
@@ -34,8 +30,6 @@ order_id 是该表主键
 该表包含顾客 customer_id 的订单信息
 没有顾客会在一天内订购相同的商品<strong> 多于一次</strong></pre>
 
-<p>&nbsp;</p>
-
 <p>表：<code>Products</code></p>
 
 <pre>
@@ -50,8 +44,6 @@ product_id 是该表主键
 该表包含了所有商品的信息
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL 语句，找到每一个顾客最经常订购的商品。</p>
 
 <p>结果表单应该有每一位至少下过一次单的顾客 <code>customer_id</code>&nbsp;,&nbsp;他最经常订购的商品的&nbsp;<code>product_id</code>&nbsp;和&nbsp;<code>product_name</code>。</p>
@@ -59,8 +51,6 @@ product_id 是该表主键
 <p>返回结果<strong> 没有顺序要求</strong>。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

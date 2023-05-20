@@ -1,12 +1,8 @@
 # [2619. 数组原型对象的最后一个元素](https://leetcode.cn/problems/array-prototype-last)
 
-[English Version](/solution/2600-2699/2619.Array%20Prototype%20Last/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一段代码实现一个数组方法，使任何数组都可以调用 <code>array.last()</code> 方法，这个方法将返回数组最后一个元素。如果数组中没有元素，则返回&nbsp;<code>-1</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1 ：</strong></p>
 
@@ -23,8 +19,6 @@
 <b>输出：</b>-1
 <strong>解释：</strong>因为此数组没有元素，所以应该返回 -1。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

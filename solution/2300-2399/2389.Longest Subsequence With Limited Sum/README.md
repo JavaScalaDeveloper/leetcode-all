@@ -1,7 +1,5 @@
 # [2389. 和有限的最长子序列](https://leetcode.cn/problems/longest-subsequence-with-limited-sum)
 
-[English Version](/solution/2300-2399/2389.Longest%20Subsequence%20With%20Limited%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code>&nbsp;的整数数组 <code>nums</code> ，和一个长度为 <code>m</code> 的整数数组 <code>queries</code> 。</p>
@@ -9,8 +7,6 @@
 <p>返回一个长度为 <code>m</code> 的数组<em> </em><code>answer</code><em> </em>，其中<em> </em><code>answer[i]</code><em> </em>是 <code>nums</code> 中<span style=""> </span>元素之和小于等于 <code>queries[i]</code> 的 <strong>子序列</strong> 的 <strong>最大</strong> 长度<span style="">&nbsp;</span><span style=""> </span>。</p>
 
 <p><strong>子序列</strong> 是由一个数组删除某些元素（也可以不删除）但不改变剩余元素顺序得到的一个数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输入：</strong>nums = [2,3,4,5], queries = [1]
 <strong>输出：</strong>[0]
 <strong>解释：</strong>空子序列是唯一一个满足元素和小于或等于 1 的子序列，所以 answer[0] = 0 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

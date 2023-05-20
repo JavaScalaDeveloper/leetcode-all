@@ -1,7 +1,5 @@
 # [2157. 字符串分组](https://leetcode.cn/problems/groups-of-strings)
 
-[English Version](/solution/2100-2199/2157.Groups%20of%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从&nbsp;<strong>0&nbsp;</strong>开始的字符串数组&nbsp;<code>words</code>&nbsp;。每个字符串都只包含 <strong>小写英文字母</strong>&nbsp;。<code>words</code>&nbsp;中任意一个子串中，每个字母都至多只出现一次。</p>
@@ -24,8 +22,6 @@
 	<li><code>ans[0]</code>&nbsp;是&nbsp;<code>words</code>&nbsp;分组后的&nbsp;<strong>总组数</strong>&nbsp;。</li>
 	<li><code>ans[1]</code>&nbsp;是字符串数目最多的组所包含的字符串数目。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@
 由于所有字符串与其他字符串都关联，所以它们全部在同一个组内。
 所以最大的组大小为 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

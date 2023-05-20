@@ -1,7 +1,5 @@
 # [2234. 花园的最大总美丽值](https://leetcode.cn/problems/maximum-total-beauty-of-the-gardens)
 
-[English Version](/solution/2200-2299/2234.Maximum%20Total%20Beauty%20of%20the%20Gardens/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 是&nbsp;<code>n</code>&nbsp;个花园的园丁，她想通过种花，最大化她所有花园的总美丽值。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>请你返回 Alice 种最多 <code>newFlowers</code>&nbsp;朵花以后，能得到的<strong>&nbsp;最大</strong>&nbsp;总美丽值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,8 +47,6 @@
 没有其他方案可以让花园总美丽值超过 30 。
 注意，Alice可以让所有花园都变成完善的，但这样她的总美丽值反而更小。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [997. 找到小镇的法官](https://leetcode.cn/problems/find-the-town-judge)
 
-[English Version](/solution/0900-0999/0997.Find%20the%20Town%20Judge/README_EN.md)
-
 ## 题目描述
 
 <p>小镇里有 <code>n</code> 个人，按从 <code>1</code> 到 <code>n</code> 的顺序编号。传言称，这些人中有一个暗地里是小镇法官。</p>
@@ -17,8 +15,6 @@
 <p>给你一个数组 <code>trust</code> ，其中 <code>trust[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 表示编号为 <code>a<sub>i</sub></code> 的人信任编号为 <code>b<sub>i</sub></code> 的人。</p>
 
 <p>如果小镇法官存在并且可以确定他的身份，请返回该法官的编号；否则，返回 <code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

@@ -1,7 +1,5 @@
 # [474. 一和零](https://leetcode.cn/problems/ones-and-zeroes)
 
-[English Version](/solution/0400-0499/0474.Ones%20and%20Zeroes/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二进制字符串数组 <code>strs</code> 和两个整数 <code>m</code> 和 <code>n</code> 。</p>
@@ -11,8 +9,6 @@
 
 <p class="MachineTrans-lang-zh-CN">如果 <code>x</code> 的所有元素也是 <code>y</code> 的元素，集合 <code>x</code> 是集合 <code>y</code> 的 <strong>子集</strong> 。</p>
 </div>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输出：</strong>2
 <strong>解释：</strong>最大的子集是 {"0", "1"} ，所以答案是 2 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

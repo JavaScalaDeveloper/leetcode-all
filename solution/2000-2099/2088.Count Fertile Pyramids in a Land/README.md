@@ -1,7 +1,5 @@
 # [2088. 统计农场中肥沃金字塔的数目](https://leetcode.cn/problems/count-fertile-pyramids-in-a-land)
 
-[English Version](/solution/2000-2099/2088.Count%20Fertile%20Pyramids%20in%20a%20Land/README_EN.md)
-
 ## 题目描述
 
 <p>有一个 <strong>矩形网格</strong>&nbsp;状的农场，划分为&nbsp;<code>m</code>&nbsp;行&nbsp;<code>n</code>&nbsp;列的单元格。每个格子要么是 <strong>肥沃的</strong>&nbsp;（用 <code>1</code>&nbsp;表示），要么是 <strong>贫瘠</strong>&nbsp;的（用 <code>0</code>&nbsp;表示）。网格图以外的所有与格子都视为贫瘠的。</p>
@@ -25,8 +23,6 @@
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2088.Count%20Fertile%20Pyramids%20in%20a%20Land/images/image.png" style="width: 700px; height: 156px;"></p>
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始且大小为 <code>m x n</code>&nbsp;的二进制矩阵&nbsp;<code>grid</code>&nbsp;，它表示农场，请你返回 <code>grid</code>&nbsp;中金字塔和倒金字塔的&nbsp;<strong>总数目</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -72,8 +68,6 @@
 有 6 个倒金字塔区域。上图中最后一张图展示了它们中的 2 个。
 所以金字塔区域总数目为 7 + 6 = 13.
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

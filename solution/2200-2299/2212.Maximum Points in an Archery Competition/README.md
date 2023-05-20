@@ -1,7 +1,5 @@
 # [2212. 射箭比赛中的最大得分](https://leetcode.cn/problems/maximum-points-in-an-archery-competition)
 
-[English Version](/solution/2200-2299/2212.Maximum%20Points%20in%20an%20Archery%20Competition/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 和 Bob 是一场射箭比赛中的对手。比赛规则如下：</p>
@@ -29,8 +27,6 @@
 
 <p>如果存在多种方法都可以使 Bob 获得最大总分，返回其中 <strong>任意一种</strong> 即可。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2212.Maximum%20Points%20in%20an%20Archery%20Competition/images/1647744752-kQKrXw-image.png" style="width: 600px; height: 120px;" /></p>
@@ -54,8 +50,6 @@ Bob 获得总分 4 + 5 + 8 + 9 + 10 + 11 = 47 。
 Bob 获得总分 8 + 9 + 10 = 27 。
 可以证明 Bob 无法获得比 27 更高的分数。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

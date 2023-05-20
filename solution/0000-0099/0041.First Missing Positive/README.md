@@ -1,7 +1,5 @@
 # [41. 缺失的第一个正数](https://leetcode.cn/problems/first-missing-positive)
 
-[English Version](/solution/0000-0099/0041.First%20Missing%20Positive/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个未排序的整数数组 <code>nums</code> ，请你找出其中没有出现的最小的正整数。</p>
@@ -76,29 +74,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int firstMissingPositive(int* nums, int numsSize) {
-
-    int Max = nums[0], i, *Count;
-
-    for (i = 1; i < numsSize; i++) {
-        Max = (Max < nums[i]) ? nums[i] : Max;
-    }
-
-    Count = (int*)calloc(Max + 1, sizeof(int));
-    for (i = 0; i < numsSize; i++) {
-        if (nums[i] > 0) {
-            Count[nums[i]]++;
-        }
-    }
-
-    i = 1;
-    while (Count[i] != 0) {
-        i++;
-    }
-
-    return i;
-}
-```
+**

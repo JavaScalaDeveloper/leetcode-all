@@ -1,7 +1,5 @@
 # [1035. 不相交的线](https://leetcode.cn/problems/uncrossed-lines)
 
-[English Version](/solution/1000-1099/1035.Uncrossed%20Lines/README_EN.md)
-
 ## 题目描述
 
 <p>在两条独立的水平线上按给定的顺序写下 <code>nums1</code> 和 <code>nums2</code> 中的整数。</p>
@@ -16,8 +14,6 @@
 <p>请注意，连线即使在端点也不能相交：每个数字只能属于一条连线。</p>
 
 <p>以这种方法绘制线条，并返回可以绘制的最大连线数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1035.Uncrossed%20Lines/images/142.png" style="width: 400px; height: 286px;" />
@@ -43,7 +39,6 @@
 <strong>输入：</strong>nums1 = <span id="example-input-3-1">[1,3,7,1,7,5]</span>, nums2 = <span id="example-input-3-2">[1,9,2,5,1]</span>
 <strong>输出：</strong><span id="example-output-3">2</span></pre>
 
-<p>&nbsp;</p>
 </div>
 </div>
 
@@ -53,8 +48,6 @@
 	<li><code>1 &lt;= nums1.length, nums2.length &lt;= 500</code></li>
 	<li><code>1 &lt;= nums1[i], nums2[j] &lt;= 2000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

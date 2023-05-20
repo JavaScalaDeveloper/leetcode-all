@@ -1,7 +1,5 @@
 # [1890. 2020 年最后一次登录](https://leetcode.cn/problems/the-latest-login-in-2020)
 
-[English Version](/solution/1800-1899/1890.The%20Latest%20Login%20in%202020/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Logins</code></p>
@@ -17,15 +15,11 @@
 每一行包含的信息是user_id 这个用户的登录时间。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，该查询可以获取在 <code>2020</code> 年登录过的所有用户的本年度 <strong>最后一次 </strong>登录时间。结果集 <strong>不</strong> 包含 <code>2020</code> 年没有登录过的用户。</p>
 
 <p>返回的结果集可以按 <strong>任意顺序 </strong>排列。</p>
 
 <p>查询结果格式如下例。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

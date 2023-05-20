@@ -1,7 +1,5 @@
 # [1377. T 秒后青蛙的位置](https://leetcode.cn/problems/frog-position-after-t-seconds)
 
-[English Version](/solution/1300-1399/1377.Frog%20Position%20After%20T%20Seconds/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵由 n 个顶点组成的无向树，顶点编号从 1 到 <code>n</code>。青蛙从 <strong>顶点 1</strong> 开始起跳。规则如下：</p>
@@ -16,8 +14,6 @@
 <p>无向树的边用数组 <code>edges</code> 描述，其中 <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>]</code> 意味着存在一条直接连通 <code>from<sub>i</sub></code> 和 <code>to<sub>i</sub></code> 两个顶点的边。</p>
 
 <p>返回青蛙在 <em><code>t</code></em> 秒后位于目标顶点 <em><code>target</code> </em>上的概率。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,10 +34,6 @@
 <strong>输出：</strong>0.3333333333333333
 <strong>解释：</strong>上图显示了青蛙的跳跃路径。青蛙从顶点 1 起跳，有 1/3 = 0.3333333333333333 的概率能够 <strong>1 秒</strong> 后跳到顶点 7 。 
 </pre>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

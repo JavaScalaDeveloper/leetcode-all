@@ -1,7 +1,5 @@
 # [1111. 有效括号的嵌套深度](https://leetcode.cn/problems/maximum-nesting-depth-of-two-valid-parentheses-strings)
 
-[English Version](/solution/1100-1199/1111.Maximum%20Nesting%20Depth%20of%20Two%20Valid%20Parentheses%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p><strong>有效括号字符串 </strong>定义：对于每个左括号，都能找到与之对应的右括号，反之亦然。详情参见题末「<strong>有效括号字符串</strong>」部分。</p>
@@ -11,8 +9,6 @@
 <p>有效括号字符串类型与对应的嵌套深度计算方法如下图所示：</p>
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1100-1199/1111.Maximum%20Nesting%20Depth%20of%20Two%20Valid%20Parentheses%20Strings/images/1111.png" style="height: 152px; width: 600px;"></p>
-
-<p>&nbsp;</p>
 
 <p>给你一个「有效括号字符串」 <code>seq</code>，请你将其分成两个不相交的有效括号字符串，<code>A</code> 和&nbsp;<code>B</code>，并使这两个字符串的深度最小。</p>
 
@@ -32,8 +28,6 @@
 
 <p>如果存在多个满足要求的答案，只需返回其中任意 <strong>一个 </strong>即可。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre><strong>输入：</strong>seq = &quot;(()())&quot;
@@ -49,15 +43,11 @@
 像 [1,1,1,0,0,1,1,1]，也是正确结果，其中 A = &quot;()()()&quot;, B = &quot;()&quot;, max(depth(A), depth(B)) = 1 。 
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;&nbsp;seq.size &lt;= 10000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>有效括号字符串：</strong></p>
 

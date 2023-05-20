@@ -1,7 +1,5 @@
 # [2506. 统计相似字符串对的数目](https://leetcode.cn/problems/count-pairs-of-similar-strings)
 
-[English Version](/solution/2500-2599/2506.Count%20Pairs%20Of%20Similar%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串数组 <code>words</code> 。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>请你找出满足字符串&nbsp;<code>words[i]</code><em> </em>和<em> </em><code>words[j]</code> 相似的下标对<em> </em><code>(i, j)</code><em> </em>，并返回下标对的数目，其中 <code>0 &lt;= i &lt; j &lt;= word.length - 1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <pre><strong>输入：</strong>words = ["nba","cba","dba"]
 <strong>输出：</strong>0
 <strong>解释：</strong>不存在满足条件的下标对，返回 0 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

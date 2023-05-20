@@ -1,7 +1,5 @@
 # [2488. 统计中位数为 K 的子数组](https://leetcode.cn/problems/count-subarrays-with-median-k)
 
-[English Version](/solution/2400-2499/2488.Count%20Subarrays%20With%20Median%20K/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的数组 <code>nums</code> ，该数组由从 <code>1</code> 到 <code>n</code> 的 <strong>不同</strong> 整数组成。另给你一个正整数 <code>k</code> 。</p>
@@ -19,8 +17,6 @@
     <li>子数组是数组中的一个连续部分。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -36,8 +32,6 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>[3] 是唯一一个中位数等于 3 的子数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

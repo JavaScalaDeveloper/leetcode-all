@@ -1,7 +1,5 @@
 # [1849. 将字符串拆分为递减的连续值](https://leetcode.cn/problems/splitting-a-string-into-descending-consecutive-values)
 
-[English Version](/solution/1800-1899/1849.Splitting%20a%20String%20Into%20Descending%20Consecutive%20Values/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个仅由数字组成的字符串 <code>s</code> 。</p>

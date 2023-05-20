@@ -1,7 +1,5 @@
 # [1651. Hopper 公司查询 III](https://leetcode.cn/problems/hopper-company-queries-iii)
 
-[English Version](/solution/1600-1699/1651.Hopper%20Company%20Queries%20III/README_EN.md)
-
 ## 题目描述
 
 <p>Table: <code>Drivers</code></p>
@@ -15,8 +13,6 @@
 +-------------+---------+
 driver_id是该表的主键。
 该表的每一行均包含驾驶员的ID以及他们加入Hopper公司的日期。</pre>
-
-<p>&nbsp;</p>
 
 <p>Table: <code>Rides</code></p>
 
@@ -33,8 +29,6 @@ ride_id是该表的主键。
 该表中可能有一些不被接受的乘车请求。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>Table: <code>AcceptedRides</code></p>
 
 <pre>
@@ -50,15 +44,11 @@ ride_id是该表的主键。
 该表的每一行都包含已接受的行程信息。 
 表中的行程信息都在“<code>Rides</code>”表中存在。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写SQL查询以计算从&nbsp;<strong>2020年1月至3月至2020年10月至12月&nbsp;</strong>的每三个月窗口的&nbsp;<code>average_ride_distance</code>&nbsp;和&nbsp;<code>average_ride_duration</code>&nbsp;。将&nbsp;<code>average_ride_distance</code>&nbsp;和&nbsp;<code>average_ride_duration</code>&nbsp;四舍五入至 <strong>小数点后两位</strong> 。<br />
 通过将三个月的总&nbsp;<code>ride_distance</code>&nbsp;相加并除以 <code>3</code> 来计算&nbsp;<code>average_ride_distance</code>&nbsp;。<code>average_ride_duration</code>&nbsp;的计算方法与此类似。<br />
 返回按&nbsp;<code>month</code>&nbsp;升序排列的结果表，其中&nbsp;<code>month</code>&nbsp;是起始月份的编号（一月为 1，二月为 2 ...）。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例1：</strong></p>
 

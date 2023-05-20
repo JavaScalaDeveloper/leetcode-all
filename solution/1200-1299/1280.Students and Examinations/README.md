@@ -1,7 +1,5 @@
 # [1280. 学生们参加各科测试的次数](https://leetcode.cn/problems/students-and-examinations)
 
-[English Version](/solution/1200-1299/1280.Students%20and%20Examinations/README_EN.md)
-
 ## 题目描述
 
 <p>学生表: <code>Students</code></p>
@@ -15,8 +13,6 @@
 主键为 student_id（学生ID），该表内的每一行都记录有学校一名学生的信息。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>科目表: <code>Subjects</code></p>
 
 <pre>+--------------+---------+
@@ -26,8 +22,6 @@
 +--------------+---------+
 主键为 subject_name（科目名称），每一行记录学校的一门科目名称。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>考试表: <code>Examinations</code></p>
 
@@ -40,8 +34,6 @@
 这张表压根没有主键，可能会有重复行。
 学生表里的一个学生修读科目表里的每一门科目，而这张考试表的每一行记录就表示学生表里的某个学生参加了一次科目表里某门科目的测试。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>要求写一段 SQL 语句，查询出每个学生参加每一门科目测试的次数，结果按 <code>student_id</code> 和 <code>subject_name</code> 排序。</p>
 

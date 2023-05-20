@@ -1,7 +1,5 @@
 # [2561. 重排水果](https://leetcode.cn/problems/rearranging-fruits)
 
-[English Version](/solution/2500-2599/2561.Rearranging%20Fruits/README_EN.md)
-
 ## 题目描述
 
 <p>你有两个果篮，每个果篮中有 <code>n</code> 个水果。给你两个下标从 <strong>0</strong> 开始的整数数组 <code>basket1</code> 和 <code>basket2</code> ，用以表示两个果篮中每个水果的成本。</p>
@@ -16,8 +14,6 @@
 <p>根据果篮中水果的成本进行排序，如果排序后结果完全相同，则认为两个果篮相等。</p>
 
 <p>返回使两个果篮相等的最小交换成本，如果无法使两个果篮相等，则返回<em> </em><code>-1</code><em> </em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>可以证明无法使两个果篮相等。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

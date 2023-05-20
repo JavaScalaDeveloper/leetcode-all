@@ -1,7 +1,5 @@
 # [2372. 计算每个销售人员的影响力](https://leetcode.cn/problems/calculate-the-influence-of-each-salesperson)
 
-[English Version](/solution/2300-2399/2372.Calculate%20the%20Influence%20of%20Each%20Salesperson/README_EN.md)
-
 ## 题目描述
 
 <p>表：&nbsp;<code>Salesperson</code></p>
@@ -17,8 +15,6 @@ sales_person_id 是这个表的主键。
 这个表中的每一行都显示一个销售人员的 ID。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表：<code>Customer</code></p>
 
 <pre>
@@ -32,8 +28,6 @@ customer_id 是这个表的主键。
 salesperson_id 是一个来自于 <code>Salesperson 表的外键</code>
 <code>Customer </code>表中的每一行都显示了一个客户的 ID 和销售人员的 ID。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表：<code>Sales</code></p>
 
@@ -50,13 +44,9 @@ customer_id 是一个来自于 Customer 表的外键。
 <code>Sales </code>表中的每一行都显示了一个客户的 ID 以及他们在 sale_id 指代的交易中所支付的金额。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询用来报告每个销售人员的客户所支付的价格总和。如果销售人员没有任何客户，则总值应该为 <code>0</code> 。<br />
 以 <strong>任意顺序</strong> 返回结果表。<br />
 查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

@@ -1,7 +1,5 @@
 # [2688. 查找活跃用户](https://leetcode.cn/problems/find-active-users)
 
-[English Version](/solution/2600-2699/2688.Find%20Active%20Users/README_EN.md)
-
 ## 题目描述
 
 <p><font face="monospace"><code>Users</code> 表：</font></p>
@@ -20,19 +18,11 @@
 
 <p>编写一个SQL查询，找出活跃用户。活跃用户是指在其任何一次购买之后的 <strong>七天内</strong>&nbsp;进行了第二次购买的用户。</p>
 
-<p>&nbsp;</p>
-
 <p>例如，如果结束日期是2023年5月31日，那么在2023年5月31日和2023年6月7日之间（包括这两天）的任何日期都被视为"在7天内"。</p>
-
-<p>&nbsp;</p>
 
 <p>返回 <strong>任意顺序</strong> 的 <code>user_id</code> 列表，表示活跃用户列表。</p>
 
-<p>&nbsp;</p>
-
 <p>查询结果的格式如下示例：</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 

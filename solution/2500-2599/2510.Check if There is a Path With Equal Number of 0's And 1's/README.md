@@ -1,14 +1,10 @@
 # [2510. 检查是否有路径经过相同数量的 0 和 1](https://leetcode.cn/problems/check-if-there-is-a-path-with-equal-number-of-0s-and-1s)
 
-[English Version](/solution/2500-2599/2510.Check%20if%20There%20is%20a%20Path%20With%20Equal%20Number%20of%200%27s%20And%201%27s/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个 <strong>下标从 0 开始</strong> 的 <code>m x n</code> 的 <strong>二进制</strong> 矩阵 <code>grid</code> ，从坐标为 <code>(row, col)</code> 的元素可以向右走 <code>(row, col+1)</code> 或向下走 <code>(row+1, col)</code> 。</p>
 
 <p>返回一个布尔值，表示从 <code>(0, 0)</code> 出发是否存在一条路径，经过 <strong>相同</strong> 数量的 <code>0</code> 和 <code>1</code>，到达终点 <code>(m-1, n-1)</code> 。如果存在这样的路径返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1 ：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2510.Check%20if%20There%20is%20a%20Path%20With%20Equal%20Number%20of%200%27s%20And%201%27s/images/yetgriddrawio-4.png" />
@@ -25,8 +21,6 @@
 <b>输出：</b>false
 <b>解释：</b>这个网格中没有一条路径经过相等数量的0和1。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

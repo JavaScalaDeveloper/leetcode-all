@@ -1,7 +1,5 @@
 # [1624. 两个相同字符之间的最长子字符串](https://leetcode.cn/problems/largest-substring-between-two-equal-characters)
 
-[English Version](/solution/1600-1699/1624.Largest%20Substring%20Between%20Two%20Equal%20Characters/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code>，请你返回 <strong>两个相同字符之间的最长子字符串的长度</strong> <em>，</em>计算长度时不含这两个字符。如果不存在这样的子字符串，返回 <code>-1</code> 。</p>
@@ -77,25 +75,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-
-int maxLengthBetweenEqualCharacters(char *s) {
-    int pos[26];
-    memset(pos, -1, sizeof(pos));
-    int n = strlen(s);
-    int res = -1;
-    for (int i = 0; i < n; i++) {
-        char c = s[i];
-        int j = c - 'a';
-        if (pos[j] == -1) {
-            pos[j] = i;
-        } else {
-            res = max(res, i - pos[j] - 1);
-        }
-    }
-    return res;
-}
-```
+**

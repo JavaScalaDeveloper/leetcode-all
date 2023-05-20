@@ -1,7 +1,5 @@
 # [2276. 统计区间中的整数数目](https://leetcode.cn/problems/count-integers-in-intervals)
 
-[English Version](/solution/2200-2299/2276.Count%20Integers%20in%20Intervals/README_EN.md)
-
 ## 题目描述
 
 <p>给你区间的 <strong>空</strong> 集，请你设计并实现满足要求的数据结构：</p>
@@ -20,8 +18,6 @@
 </ul>
 
 <p><strong>注意：</strong>区间 <code>[left, right]</code> 表示满足 <code>left &lt;= x &lt;= right</code> 的所有整数 <code>x</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@ countIntervals.count();    // 返回 8
                            // 整数 5 和 6 出现在区间 [5, 8] 中
                            // 整数 7 和 8 出现在区间 [5, 8] 和区间 [7, 10] 中
                            // 整数 9 和 10 出现在区间 [7, 10] 中</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

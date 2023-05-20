@@ -1,7 +1,5 @@
 # [1564. 把箱子放进仓库里 I](https://leetcode.cn/problems/put-boxes-into-the-warehouse-i)
 
-[English Version](/solution/1500-1599/1564.Put%20Boxes%20Into%20the%20Warehouse%20I/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个正整数数组&nbsp;<code>boxes</code>&nbsp;和&nbsp;<code>warehouse</code>&nbsp;，分别包含单位宽度的箱子的高度，以及仓库中 <code>n</code> 个房间各自的高度。仓库的房间分别从&nbsp;<code>0</code>&nbsp;到&nbsp;<code>n - 1</code>&nbsp;自左向右编号，&nbsp;<code>warehouse[i]</code>&nbsp;（索引从 0 开始）是第&nbsp;<code>i</code>&nbsp;个房间的高度。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>你最多可以在仓库中放进多少个箱子？</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>由于第一个房间的高度为 1，我们只能放进高度为 1 的箱子。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

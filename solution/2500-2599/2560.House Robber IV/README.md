@@ -1,7 +1,5 @@
 # [2560. 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv)
 
-[English Version](/solution/2500-2599/2560.House%20Robber%20IV/README_EN.md)
-
 ## 题目描述
 
 <p>沿街有一排连续的房屋。每间房屋内都藏有一定的现金。现在有一位小偷计划从这些房屋中窃取现金。</p>
@@ -15,8 +13,6 @@
 <p>另给你一个整数&nbsp;<code>k</code> ，表示窃贼将会窃取的 <strong>最少</strong> 房屋数。小偷总能窃取至少 <code>k</code> 间房屋。</p>
 
 <p>返回小偷的 <strong>最小</strong> 窃取能力。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输出：</strong>2
 <strong>解释：</strong>共有 7 种窃取方式。窃取能力最小的情况所对应的方式是窃取下标 0 和 4 处的房屋。返回 max(nums[0], nums[4]) = 2 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1283. 使结果不超过阈值的最小除数](https://leetcode.cn/problems/find-the-smallest-divisor-given-a-threshold)
 
-[English Version](/solution/1200-1299/1283.Find%20the%20Smallest%20Divisor%20Given%20a%20Threshold/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code> 和一个正整数&nbsp;<code>threshold</code> &nbsp;，你需要选择一个正整数作为除数，然后将数组里每个数都除以它，并对除法结果求和。</p>
@@ -11,8 +9,6 @@
 <p>每个数除以除数后都向上取整，比方说 7/3 = 3 ， 10/2 = 5 。</p>
 
 <p>题目保证一定有解。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>输入：</strong>nums = [19], threshold = 5
 <strong>输出：</strong>4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

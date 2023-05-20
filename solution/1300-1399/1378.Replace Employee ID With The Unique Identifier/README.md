@@ -1,7 +1,5 @@
 # [1378. 使用唯一标识码替换员工 ID](https://leetcode.cn/problems/replace-employee-id-with-the-unique-identifier)
 
-[English Version](/solution/1300-1399/1378.Replace%20Employee%20ID%20With%20The%20Unique%20Identifier/README_EN.md)
-
 ## 题目描述
 
 <p><code>Employees</code> 表：</p>
@@ -17,8 +15,6 @@ id 是这张表的主键。
 这张表的每一行分别代表了某公司其中一位员工的名字和 ID 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><code>EmployeeUNI</code>&nbsp;表：</p>
 
 <pre>
@@ -32,15 +28,11 @@ id 是这张表的主键。
 这张表的每一行包含了该公司某位员工的 ID 和他的唯一标识码（unique ID）。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一段SQL查询来展示每位用户的<strong> 唯一标识码（unique ID ）</strong>；如果某位员工没有唯一标识码，使用 null 填充即可。</p>
 
 <p>你可以以<strong> 任意</strong> 顺序返回结果表。</p>
 
 <p>查询结果的格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

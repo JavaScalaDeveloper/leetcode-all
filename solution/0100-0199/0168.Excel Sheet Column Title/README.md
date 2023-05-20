@@ -1,7 +1,5 @@
 # [168. Excel 表列名称](https://leetcode.cn/problems/excel-sheet-column-title)
 
-[English Version](/solution/0100-0199/0168.Excel%20Sheet%20Column%20Title/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>columnNumber</code> ，返回它在 Excel 表中相对应的列名称。</p>

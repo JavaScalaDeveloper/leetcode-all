@@ -1,7 +1,5 @@
 # [514. 自由之路](https://leetcode.cn/problems/freedom-trail)
 
-[English Version](/solution/0500-0599/0514.Freedom%20Trail/README_EN.md)
-
 ## 题目描述
 
 <p>电子游戏“辐射4”中，任务 <strong>“通向自由”</strong> 要求玩家到达名为 “<strong>Freedom Trail Ring”</strong> 的金属表盘，并使用表盘拼写特定关键词才能开门。</p>
@@ -16,8 +14,6 @@
 	<li>您可以将&nbsp;<strong>ring&nbsp;</strong>顺时针或逆时针旋转&nbsp;<strong>一个位置&nbsp;</strong>，计为1步。旋转的最终目的是将字符串&nbsp;<strong><code>ring</code>&nbsp;</strong>的一个字符与 <code>12:00</code> 方向对齐，并且这个字符必须等于字符&nbsp;<strong><code>key[i]</code> 。</strong></li>
 	<li>如果字符&nbsp;<strong><code>key[i]</code>&nbsp;</strong>已经对齐到12:00方向，您需要按下中心按钮进行拼写，这也将算作&nbsp;<strong>1 步</strong>。按完之后，您可以开始拼写&nbsp;<strong>key&nbsp;</strong>的下一个字符（下一阶段）, 直至完成所有拼写。</li>
 </ol>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>输入:</strong> ring = "godding", key = "godding"
 <strong>输出:</strong> 13
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

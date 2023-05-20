@@ -1,7 +1,5 @@
 # [364. 加权嵌套序列和 II](https://leetcode.cn/problems/nested-list-weight-sum-ii)
 
-[English Version](/solution/0300-0399/0364.Nested%20List%20Weight%20Sum%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数嵌套列表&nbsp;<code>nestedList</code> ，每一个元素要么是一个整数，要么是一个列表（这个列表中的每个元素也同样是整数或列表）。</p>
@@ -11,8 +9,6 @@
 <p>整数的 <strong>权重</strong> 为 <code>maxDepth - (整数的深度) + 1</code> 。</p>
 
 <p>将 <code>nestedList</code> 列表中每个整数先乘权重再求和，返回该加权和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0364.Nested%20List%20Weight%20Sum%20II/images/nestedlistweightsumiiex1.png" style="width: 426px; height: 181px;" />
@@ -31,8 +27,6 @@
 <strong>解释：</strong>一个 1 在深度为 3 的位置， 一个 4 在深度为 2 的位置，一个 6 在深度为 1 的位置。 
 1*3 + 4*2 + 6*1 = 17
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

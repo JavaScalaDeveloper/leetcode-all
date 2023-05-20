@@ -1,7 +1,5 @@
 # [2101. 引爆最多的炸弹](https://leetcode.cn/problems/detonate-the-maximum-bombs)
 
-[English Version](/solution/2100-2199/2101.Detonate%20the%20Maximum%20Bombs/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个炸弹列表。一个炸弹的 <strong>爆炸范围</strong>&nbsp;定义为以炸弹为圆心的一个圆。</p>
@@ -11,8 +9,6 @@
 <p>你需要选择引爆 <strong>一个&nbsp;</strong>炸弹。当这个炸弹被引爆时，<strong>所有</strong> 在它爆炸范围内的炸弹都会被引爆，这些炸弹会进一步将它们爆炸范围内的其他炸弹引爆。</p>
 
 <p>给你数组&nbsp;<code>bombs</code>&nbsp;，请你返回在引爆&nbsp;<strong>一个</strong>&nbsp;炸弹的前提下，<strong>最多</strong>&nbsp;能引爆的炸弹数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 - 炸弹 3 引爆炸弹 4 。绿色圆表示炸弹 3 的爆炸范围。
 所以总共有 5 个炸弹被引爆。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

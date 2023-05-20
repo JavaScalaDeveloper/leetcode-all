@@ -1,7 +1,5 @@
 # [1442. 形成两个异或相等数组的三元组数目](https://leetcode.cn/problems/count-triplets-that-can-form-two-arrays-of-equal-xor)
 
-[English Version](/solution/1400-1499/1442.Count%20Triplets%20That%20Can%20Form%20Two%20Arrays%20of%20Equal%20XOR/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>arr</code> 。</p>
@@ -18,8 +16,6 @@
 <p>注意：<strong>^</strong> 表示 <strong>按位异或</strong> 操作。</p>
 
 <p>请返回能够令 <code>a == b</code> 成立的三元组 (<code>i</code>, <code>j</code> , <code>k</code>) 的数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,8 +47,6 @@
 <pre><strong>输入：</strong>arr = [7,11,12,9,5,2,7,17,22]
 <strong>输出：</strong>8
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1813. 句子相似性 III](https://leetcode.cn/problems/sentence-similarity-iii)
 
-[English Version](/solution/1800-1899/1813.Sentence%20Similarity%20III/README_EN.md)
-
 ## 题目描述
 
 <p>一个句子是由一些单词与它们之间的单个空格组成，且句子的开头和结尾没有多余空格。比方说，<code>"Hello World"</code> ，<code>"HELLO"</code> ，<code>"hello world hello world"</code> 都是句子。每个单词都 <strong>只</strong> 包含大写和小写英文字母。</p>

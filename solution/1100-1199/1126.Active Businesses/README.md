@@ -1,7 +1,5 @@
 # [1126. 查询活跃业务](https://leetcode.cn/problems/active-businesses)
 
-[English Version](/solution/1100-1199/1126.Active%20Businesses/README_EN.md)
-
 ## 题目描述
 
 <p>事件表：<code>Events</code></p>
@@ -17,8 +15,6 @@
 此表的主键是 (business_id, event_type)。
 表中的每一行记录了某种类型的事件在某些业务中多次发生的信息。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写一段 SQL 来查询所有活跃的业务。</p>
 

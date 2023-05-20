@@ -1,14 +1,10 @@
 # [771. 宝石与石头](https://leetcode.cn/problems/jewels-and-stones)
 
-[English Version](/solution/0700-0799/0771.Jewels%20and%20Stones/README_EN.md)
-
 ## 题目描述
 
 <p>&nbsp;给你一个字符串 <code>jewels</code>&nbsp;代表石头中宝石的类型，另有一个字符串 <code>stones</code> 代表你拥有的石头。&nbsp;<code>stones</code>&nbsp;中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。</p>
 
 <p>字母区分大小写，因此 <code>"a"</code> 和 <code>"A"</code> 是不同类型的石头。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输入：</strong>jewels = "z", stones = "ZZ"
 <strong>输出：</strong>0<strong>
 </strong></pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -60,18 +54,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int numJewelsInStones(char *jewels, char *stones) {
-    int set[128] = {0};
-    for (int i = 0; jewels[i]; i++) {
-        set[jewels[i]] = 1;
-    }
-    int ans = 0;
-    for (int i = 0; stones[i]; i++) {
-        set[stones[i]] && ans++;
-    }
-    return ans;
-}
-```
+**

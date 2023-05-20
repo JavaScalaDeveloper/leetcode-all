@@ -1,7 +1,5 @@
 # [2439. 最小化数组中的最大值](https://leetcode.cn/problems/minimize-maximum-of-array)
 
-[English Version](/solution/2400-2499/2439.Minimize%20Maximum%20of%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的数组&nbsp;<code>nums</code>&nbsp;，它含有&nbsp;<code>n</code>&nbsp;个非负整数。</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>你可以对数组执行 <strong>任意</strong>&nbsp;次上述操作，请你返回可以得到的 <code>nums</code>&nbsp;数组中<b>&nbsp;最大值</b>&nbsp;<strong>最小</strong> 为多少。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@ nums 中最大值为 5 。无法得到比 5 更小的最大值。
 <strong>解释：</strong>
 最优解是不改动 nums ，10 是最大值，所以返回 10 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

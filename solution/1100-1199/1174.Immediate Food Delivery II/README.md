@@ -1,7 +1,5 @@
 # [1174. 即时食物配送 II](https://leetcode.cn/problems/immediate-food-delivery-ii)
 
-[English Version](/solution/1100-1199/1174.Immediate%20Food%20Delivery%20II/README_EN.md)
-
 ## 题目描述
 
 <p>配送表: <code>Delivery</code></p>
@@ -18,15 +16,11 @@ delivery_id 是表的主键。
 该表保存着顾客的食物配送信息，顾客在某个日期下了订单，并指定了一个期望的配送日期（和下单日期相同或者在那之后）。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>如果顾客期望的配送日期和下单日期相同，则该订单称为 「即时订单」，否则称为「计划订单」。</p>
 
 <p>「首次订单」是顾客最早创建的订单。我们保证一个顾客只会有一个「首次订单」。</p>
 
 <p>写一条 SQL 查询语句获取即时订单在所有用户的首次订单中的比例。<strong>保留两位小数。</strong></p>
-
-<p>&nbsp;</p>
 
 <p>查询结果如下所示：</p>
 

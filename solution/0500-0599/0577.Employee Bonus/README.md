@@ -1,7 +1,5 @@
 # [577. 员工奖金](https://leetcode.cn/problems/employee-bonus)
 
-[English Version](/solution/0500-0599/0577.Employee%20Bonus/README_EN.md)
-
 ## 题目描述
 
 <p>选出所有 bonus &lt; 1000 的员工的 name 及其 bonus。</p>

@@ -1,7 +1,5 @@
 # [1520. 最多的不重叠子字符串](https://leetcode.cn/problems/maximum-number-of-non-overlapping-substrings)
 
-[English Version](/solution/1500-1599/1520.Maximum%20Number%20of%20Non-Overlapping%20Substrings/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个只包含小写字母的字符串&nbsp;<code>s</code>&nbsp;，你需要找到 <code>s</code>&nbsp;中最多数目的非空子字符串，满足如下条件：</p>
@@ -14,8 +12,6 @@
 <p>请你找到满足上述条件的最多子字符串数目。如果有多个解法有相同的子字符串数目，请返回这些子字符串总长度最小的一个解。可以证明最小总长度解是唯一的。</p>
 
 <p>请注意，你可以以 <strong>任意</strong>&nbsp;顺序返回最优解的子字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>输出：</strong>["d","bb","cc"]
 <strong>解释：</strong>注意到解 ["d","abba","cc"] 答案也为 3 ，但它不是最优解，因为它的总长度更长。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

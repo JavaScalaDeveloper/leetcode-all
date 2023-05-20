@@ -1,7 +1,5 @@
 # [1565. 按月统计订单数与顾客数](https://leetcode.cn/problems/unique-orders-and-customers-per-month)
 
-[English Version](/solution/1500-1599/1565.Unique%20Orders%20and%20Customers%20Per%20Month/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Orders</code></p>
@@ -19,15 +17,11 @@ order_id 是 <strong>Orders </strong>表的主键<sub>。</sub>
 这张表包含顾客(customer_id)所下订单的信息<sub>。</sub>
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个查询语句来 <strong>按月 </strong>统计金额（invoice）<strong>大于 $20 </strong>的唯一 <strong>订单数</strong> 和唯一 <strong>顾客数 。</strong></p>
 
 <p>查询结果无排序要求。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

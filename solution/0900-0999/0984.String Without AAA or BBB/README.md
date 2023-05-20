@@ -1,7 +1,5 @@
 # [984. 不含 AAA 或 BBB 的字符串](https://leetcode.cn/problems/string-without-aaa-or-bbb)
 
-[English Version](/solution/0900-0999/0984.String%20Without%20AAA%20or%20BBB/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个整数 <code>a</code>&nbsp;和 <code>b</code>&nbsp;，返回&nbsp;<strong>任意</strong>&nbsp;字符串 <code>s</code>&nbsp;，要求满足：</p>
@@ -11,8 +9,6 @@
 	<li>子串&nbsp;<code>'aaa'</code>&nbsp;没有出现在 <code>s</code>&nbsp;中；</li>
 	<li>子串&nbsp;<code>'bbb'</code> 没有出现在 <code>s</code>&nbsp;中。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <pre>
 <strong>输入：</strong>a = 4, b = 1
 <strong>输出：</strong>"aabaa"</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

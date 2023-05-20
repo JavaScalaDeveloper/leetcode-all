@@ -1,14 +1,10 @@
 # [687. 最长同值路径](https://leetcode.cn/problems/longest-univalue-path)
 
-[English Version](/solution/0600-0699/0687.Longest%20Univalue%20Path/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树的<meta charset="UTF-8" />&nbsp;<code>root</code>&nbsp;，返回&nbsp;<em>最长的路径的长度</em> ，这个路径中的&nbsp;<em>每个节点具有相同值</em>&nbsp;。 这条路径可以经过也可以不经过根节点。</p>
 
 <p><strong>两个节点之间的路径长度</strong>&nbsp;由它们之间的边数表示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输入：</strong>root = [1,4,5,4,4,5]
 <strong>输出：</strong>2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 
@@ -85,39 +79,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-
-int dfs(struct TreeNode *root, int target, int *res) {
-    if (!root) {
-        return 0;
-    }
-    int left = dfs(root->left, root->val, res);
-    int right = dfs(root->right, root->val, res);
-    *res = max(*res, left + right);
-    if (root->val == target) {
-        return max(left, right) + 1;
-    }
-    return 0;
-}
-
-int longestUnivaluePath(struct TreeNode *root) {
-    if (!root) {
-        return 0;
-    }
-    int res = 0;
-    dfs(root, root->val, &res);
-    return res;
-}
-```
+**

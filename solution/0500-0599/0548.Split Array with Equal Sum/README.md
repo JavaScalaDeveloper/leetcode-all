@@ -1,7 +1,5 @@
 # [548. 将数组分割成和相等的子数组](https://leetcode.cn/problems/split-array-with-equal-sum)
 
-[English Version](/solution/0500-0599/0548.Split%20Array%20with%20Equal%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个有 <code>n</code> 个整数的数组 <code>nums</code>&nbsp;，如果能找到满足以下条件的三元组&nbsp; <code>(i, j, k)</code>&nbsp; 则返回 <code>true</code> ：</p>
@@ -12,8 +10,6 @@
 </ol>
 
 <p>这里我们定义子数组&nbsp;<code>(l, r)</code>&nbsp;表示原数组从索引为&nbsp;<code>l</code>&nbsp;的元素开始至索引为&nbsp;<code>r</code> 的元素。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:&nbsp;</strong></p>
 
@@ -34,8 +30,6 @@ sum(k + 1, n - 1) = sum(6, 6) = 1
 <strong>输入:</strong> nums = [1,2,1,2,1,2,1,2]
 <strong>输出:</strong> false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

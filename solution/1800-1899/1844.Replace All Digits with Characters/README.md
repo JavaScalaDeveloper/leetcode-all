@@ -1,7 +1,5 @@
 # [1844. 将所有数字用字符替换](https://leetcode.cn/problems/replace-all-digits-with-characters)
 
-[English Version](/solution/1800-1899/1844.Replace%20All%20Digits%20with%20Characters/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串 <code>s</code> ，它的 <strong>偶数</strong> 下标处为小写英文字母，<strong>奇数</strong> 下标处为数字。</p>
@@ -71,14 +69,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char *replaceDigits(char *s) {
-    int n = strlen(s);
-    for (int i = 1; i < n; i += 2) {
-        s[i] = s[i - 1] + s[i] - '0';
-    }
-    return s;
-}
-```
+**

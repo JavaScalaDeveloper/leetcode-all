@@ -1,7 +1,5 @@
 # [1479. 周内每天的销售情况](https://leetcode.cn/problems/sales-by-day-of-the-week)
 
-[English Version](/solution/1400-1499/1479.Sales%20by%20Day%20of%20the%20Week/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Orders</code></p>
@@ -35,8 +33,6 @@ item_name 是商品的名字
 item_category&nbsp;是商品的类别
 </pre>
 
-<p>&nbsp;</p>
-
 <p>你是企业主，想要获得分类商品和周内每天的销售报告。</p>
 
 <p>写一个SQL语句，报告 <strong>周内每天 </strong>每个商品类别下订购了多少单位。</p>
@@ -44,8 +40,6 @@ item_category&nbsp;是商品的类别
 <p>返回结果表单<strong> 按商品类别排序 </strong>。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

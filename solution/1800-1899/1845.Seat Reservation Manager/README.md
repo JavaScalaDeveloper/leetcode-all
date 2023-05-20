@@ -1,7 +1,5 @@
 # [1845. 座位预约管理系统](https://leetcode.cn/problems/seat-reservation-manager)
 
-[English Version](/solution/1800-1899/1845.Seat%20Reservation%20Manager/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个管理 <code>n</code> 个座位预约的系统，座位编号从 <code>1</code> 到 <code>n</code> 。</p>

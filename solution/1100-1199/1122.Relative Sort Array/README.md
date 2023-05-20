@@ -1,14 +1,10 @@
 # [1122. 数组的相对排序](https://leetcode.cn/problems/relative-sort-array)
 
-[English Version](/solution/1100-1199/1122.Relative%20Sort%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个数组，<code>arr1</code> 和&nbsp;<code>arr2</code>，<code>arr2</code>&nbsp;中的元素各不相同，<code>arr2</code> 中的每个元素都出现在&nbsp;<code>arr1</code>&nbsp;中。</p>
 
 <p>对 <code>arr1</code>&nbsp;中的元素进行排序，使 <code>arr1</code> 中项的相对顺序和&nbsp;<code>arr2</code>&nbsp;中的相对顺序相同。未在&nbsp;<code>arr2</code>&nbsp;中出现过的元素需要按照升序放在&nbsp;<code>arr1</code>&nbsp;的末尾。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输入：</strong>arr1 = [28,6,22,8,44,17], arr2 = [22,28,8,6]
 <strong>输出：</strong>[22,28,8,6,17,44]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1205. 每月交易 II](https://leetcode.cn/problems/monthly-transactions-ii)
 
-[English Version](/solution/1200-1299/1205.Monthly%20Transactions%20II/README_EN.md)
-
 ## 题目描述
 
 <p><code>Transactions</code> 记录表</p>
@@ -33,8 +31,6 @@ id 是这个表的主键。
 trans_id 是 transactions 表的 id 列的外键。
 每项退单都对应于之前进行的交易，即使未经批准。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL&nbsp;查询，以查找每个月和每个国家/地区的信息：已批准交易的数量及其总金额、退单的数量及其总金额。</p>
 
 <p><strong>注意：</strong>在您的查询中，只需显示给定月份和国家，忽略所有为零的行。</p>
@@ -42,8 +38,6 @@ trans_id 是 transactions 表的 id 列的外键。
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

@@ -1,7 +1,5 @@
 # [2421. 好路径的数目](https://leetcode.cn/problems/number-of-good-paths)
 
-[English Version](/solution/2400-2499/2421.Number%20of%20Good%20Paths/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵 <code>n</code>&nbsp;个节点的树（连通无向无环的图），节点编号从&nbsp;<code>0</code>&nbsp;到&nbsp;<code>n - 1</code>&nbsp;且恰好有&nbsp;<code>n - 1</code>&nbsp;条边。</p>
@@ -18,8 +16,6 @@
 <p>请你返回不同好路径的数目。</p>
 
 <p>注意，一条路径和它反向的路径算作 <strong>同一</strong>&nbsp;路径。比方说，&nbsp;<code>0 -&gt; 1</code>&nbsp;与&nbsp;<code>1 -&gt; 0</code>&nbsp;视为同一条路径。单个节点也视为一条合法路径。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -51,8 +47,6 @@
 <b>输出：</b>1
 <b>解释：</b>这棵树只有一个节点，所以只有一条好路径。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

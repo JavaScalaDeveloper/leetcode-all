@@ -1,12 +1,8 @@
 # [349. 两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays)
 
-[English Version](/solution/0300-0399/0349.Intersection%20of%20Two%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个数组&nbsp;<code>nums1</code>&nbsp;和&nbsp;<code>nums2</code> ，返回 <em>它们的交集</em>&nbsp;。输出结果中的每个元素一定是 <strong>唯一</strong> 的。我们可以 <strong>不考虑输出结果的顺序</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,8 +18,6 @@
 <strong>输出：</strong>[9,4]
 <strong>解释：</strong>[4,9] 也是可通过的
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

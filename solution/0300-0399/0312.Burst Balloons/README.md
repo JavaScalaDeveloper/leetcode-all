@@ -1,7 +1,5 @@
 # [312. 戳气球](https://leetcode.cn/problems/burst-balloons)
 
-[English Version](/solution/0300-0399/0312.Burst%20Balloons/README_EN.md)
-
 ## 题目描述
 
 <p>有 <code>n</code> 个气球，编号为<code>0</code> 到 <code>n - 1</code>，每个气球上都标有一个数字，这些数字存在数组&nbsp;<code>nums</code>&nbsp;中。</p>
@@ -10,7 +8,6 @@
 
 <p>求所能获得硬币的最大数量。</p>
 
-<p>&nbsp;</p>
 <strong>示例 1：</strong>
 
 <pre>
@@ -26,8 +23,6 @@ coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167</pre>
 <strong>输入：</strong>nums = [1,5]
 <strong>输出：</strong>10
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

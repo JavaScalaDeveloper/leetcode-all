@@ -1,7 +1,5 @@
 # [2123. 使矩阵中的 1 互不相邻的最小操作数](https://leetcode.cn/problems/minimum-operations-to-remove-adjacent-ones-in-matrix)
 
-[English Version](/solution/2100-2199/2123.Minimum%20Operations%20to%20Remove%20Adjacent%20Ones%20in%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>下标从 0 开始&nbsp;</strong>的矩阵 <code>grid</code>。每次操作，你可以把 <code>grid</code>&nbsp;中的 一个&nbsp;<code>1</code> 变成&nbsp;<code>0</code> 。</p>
@@ -9,8 +7,6 @@
 <p>如果一个矩阵中，没有 <code>1</code> 与其它的 <code>1</code> <strong>四连通</strong>（也就是说所有 <code>1</code> 在上下左右四个方向上不能与其他 <code>1</code> 相邻），那么该矩阵就是 <strong>完全独立</strong> 的。</p>
 
 <p>请返回让&nbsp;<code>grid</code> 成为 <strong>完全独立</strong> 的矩阵的 <em>最小操作数</em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2100-2199/2123.Minimum%20Operations%20to%20Remove%20Adjacent%20Ones%20in%20Matrix/images/image-20211223181501-1.png" style="width: 644px; height: 250px;">
@@ -33,8 +29,6 @@
 <strong>输出:</strong> 0
 <strong>解释:</strong> 矩阵中的所有的 1 与其它 1 均不相邻，已经是完全独立的，因此无需操作，返回 0。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

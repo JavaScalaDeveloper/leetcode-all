@@ -1,7 +1,5 @@
 # [120. 三角形最小路径和](https://leetcode.cn/problems/triangle)
 
-[English Version](/solution/0100-0199/0120.Triangle/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个三角形 <code>triangle</code> ，找出自顶向下的最小路径和。</p>

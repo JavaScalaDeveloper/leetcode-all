@@ -1,7 +1,5 @@
 # [1734. 解码异或后的排列](https://leetcode.cn/problems/decode-xored-permutation)
 
-[English Version](/solution/1700-1799/1734.Decode%20XORed%20Permutation/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>perm</code> ，它是前 <code>n</code> 个正整数的排列，且 <code>n</code> 是个 <strong>奇数</strong> 。</p>

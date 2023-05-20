@@ -1,14 +1,10 @@
 # [1431. 拥有最多糖果的孩子](https://leetcode.cn/problems/kids-with-the-greatest-number-of-candies)
 
-[English Version](/solution/1400-1499/1431.Kids%20With%20the%20Greatest%20Number%20of%20Candies/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组&nbsp;<code>candies</code>&nbsp;和一个整数&nbsp;<code>extraCandies</code>&nbsp;，其中&nbsp;<code>candies[i]</code>&nbsp;代表第 <code>i</code> 个孩子拥有的糖果数目。</p>
 
 <p>对每一个孩子，检查是否存在一种方案，将额外的&nbsp;<code>extraCandies</code>&nbsp;个糖果分配给孩子们之后，此孩子有 <strong>最多</strong>&nbsp;的糖果。注意，允许有多个孩子同时拥有 <strong>最多</strong>&nbsp;的糖果数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <pre><strong>输入：</strong>candies = [12,1,12], extraCandies = 10
 <strong>输出：</strong>[true,false,true]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -65,23 +59,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-bool *kidsWithCandies(int *candies, int candiesSize, int extraCandies, int *returnSize) {
-    int mx = 0;
-    for (int i = 0; i < candiesSize; i++) {
-        mx = max(mx, candies[i]);
-    }
-    bool *ans = malloc(candiesSize * sizeof(bool));
-    for (int i = 0; i < candiesSize; i++) {
-        ans[i] = candies[i] + extraCandies >= mx;
-    }
-    *returnSize = candiesSize;
-    return ans;
-}
-```
+**

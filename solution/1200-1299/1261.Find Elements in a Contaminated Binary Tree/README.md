@@ -1,7 +1,5 @@
 # [1261. 在受污染的二叉树中查找元素](https://leetcode.cn/problems/find-elements-in-a-contaminated-binary-tree)
 
-[English Version](/solution/1200-1299/1261.Find%20Elements%20in%20a%20Contaminated%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给出一个满足下述规则的二叉树：</p>
@@ -20,8 +18,6 @@
 	<li><code>FindElements(TreeNode* root)</code>&nbsp;用受污染的二叉树初始化对象，你需要先把它还原。</li>
 	<li><code>bool find(int target)</code>&nbsp;判断目标值&nbsp;<code>target</code>&nbsp;是否存在于还原后的二叉树中并返回结果。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -68,8 +64,6 @@ findElements.find(3); // return False
 findElements.find(4); // return False
 findElements.find(5); // return True
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

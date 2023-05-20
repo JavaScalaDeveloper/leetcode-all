@@ -1,7 +1,5 @@
 # [1057. 校园自行车分配](https://leetcode.cn/problems/campus-bikes)
 
-[English Version](/solution/1000-1099/1057.Campus%20Bikes/README_EN.md)
-
 ## 题目描述
 
 <p>在 X-Y 平面上表示的校园中，有 <code>n</code> 名工人和 <code>m</code> 辆自行车，其中 <code>n &lt;= m</code>。</p>
@@ -15,8 +13,6 @@
 <p>返回长度为 <code>n</code> 的向量 <code>answer</code>，其中 <code>answer[i]</code>&nbsp;是第 <code>i</code>&nbsp;位工人分配到的自行车的索引（<strong>从 0 开始</strong>）。</p>
 
 <p>给定两点&nbsp;<code>p1</code>&nbsp;和&nbsp;<code>p2</code>&nbsp;之间的 <strong>曼哈顿距离</strong> 为&nbsp;<code>Manhattan(p1, p2) = |p1.x - p2.x| + |p1.y - p2.y|</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>[0,2,1]
 <strong>解释：</strong>工人 0 首先分配到自行车 0 。工人 1 和工人 2 与自行车 2 距离相同，因此工人 1 分配到自行车 2，工人 2 将分配到自行车 1 。因此输出为 [0,2,1]。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

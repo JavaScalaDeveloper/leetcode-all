@@ -1,7 +1,5 @@
 # [1288. 删除被覆盖区间](https://leetcode.cn/problems/remove-covered-intervals)
 
-[English Version](/solution/1200-1299/1288.Remove%20Covered%20Intervals/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个区间列表，请你删除列表中被其他区间所覆盖的区间。</p>
@@ -10,8 +8,6 @@
 
 <p>在完成所有删除操作后，请你返回列表中剩余区间的数目。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre>
@@ -19,8 +15,6 @@
 <strong>输出：</strong>2
 <strong>解释：</strong>区间 [3,6] 被区间 [2,8] 覆盖，所以它被删除了。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong>​​​​​​</p>
 

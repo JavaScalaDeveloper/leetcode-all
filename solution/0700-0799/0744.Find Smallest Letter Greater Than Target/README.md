@@ -1,14 +1,10 @@
 # [744. 寻找比目标字母大的最小字母](https://leetcode.cn/problems/find-smallest-letter-greater-than-target)
 
-[English Version](/solution/0700-0799/0744.Find%20Smallest%20Letter%20Greater%20Than%20Target/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符数组 <code>letters</code>，该数组按<strong>非递减顺序</strong>排序，以及一个字符 <code>target</code>。<code>letters</code>&nbsp;里<strong>至少有两个不同</strong>的字符。</p>
 
 <p>返回&nbsp;<code>letters</code>&nbsp;中大于 <code>target</code> 的最小的字符。如果不存在这样的字符，则返回&nbsp;<code>letters</code> 的第一个字符。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输入:</strong> letters = ["x","x","y","y"], target = "z"
 <strong>输出:</strong> "x"
 <strong>解释：</strong>letters 中没有一个字符在字典上大于 'z'，所以我们返回 letters[0]。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -62,13 +56,6 @@
 为什么？如题描述，字母是重复出现的，当索引过界时，不是没有结果，而是需要返回前面的元素。
 
 一个容易理解的版本，使用减法：
-
-```c
-if (l < n) {
-    return letters[l];
-}
-return letters[l - n];
-```
 
 时间复杂度：$O(logN)$。
 

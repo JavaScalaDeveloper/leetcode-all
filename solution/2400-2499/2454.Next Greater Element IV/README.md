@@ -1,7 +1,5 @@
 # [2454. 下一个更大元素 IV](https://leetcode.cn/problems/next-greater-element-iv)
 
-[English Version](/solution/2400-2499/2454.Next%20Greater%20Element%20IV/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的非负整数数组&nbsp;<code>nums</code>&nbsp;。对于&nbsp;<code>nums</code>&nbsp;中每一个整数，你必须找到对应元素的&nbsp;<strong>第二大</strong>&nbsp;整数。</p>
@@ -21,8 +19,6 @@
 </ul>
 
 <p>请你返回一个整数数组<em>&nbsp;</em><code>answer</code>&nbsp;，其中<em>&nbsp;</em><code>answer[i]</code>是<em>&nbsp;</em><code>nums[i]</code>&nbsp;的第二大整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <strong>解释：</strong>
 由于每个数右边都没有更大的数，所以我们返回 [-1,-1] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

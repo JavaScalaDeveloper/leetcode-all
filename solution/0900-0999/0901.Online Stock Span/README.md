@@ -1,7 +1,5 @@
 # [901. 股票价格跨度](https://leetcode.cn/problems/online-stock-span)
 
-[English Version](/solution/0900-0999/0901.Online%20Stock%20Span/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个算法收集某些股票的每日报价，并返回该股票当日价格的 <strong>跨度</strong> 。</p>
@@ -20,8 +18,6 @@
 	<li><code>StockSpanner()</code> 初始化类对象。</li>
 	<li><code>int next(int price)</code> 给出今天的股价 <code>price</code> ，返回该股票当日价格的 <strong>跨度</strong> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例：</strong></p>
 

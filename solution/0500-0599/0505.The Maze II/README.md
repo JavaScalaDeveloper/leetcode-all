@@ -1,7 +1,5 @@
 # [505. 迷宫 II](https://leetcode.cn/problems/the-maze-ii)
 
-[English Version](/solution/0500-0599/0505.The%20Maze%20II/README_EN.md)
-
 ## 题目描述
 
 <p><strong>迷宫</strong>中有一个球，它有空地 (表示为 <code>0</code>) 和墙 (表示为 <code>1</code>)。球可以<strong>向上</strong>、<strong>向下</strong>、<strong>向左</strong>或<strong>向右</strong>滚过空地，但直到撞上墙之前它都不会停止滚动。当球停止时，它才可以选择下一个滚动方向。</p>
@@ -11,8 +9,6 @@
 <p><strong>距离</strong>是指球从起始位置 ( 不包括 ) 到终点 ( 包括 ) 所经过的<strong>空地</strong>数。</p>
 
 <p>你可以假设<strong>迷宫的边界都是墙&nbsp;</strong>( 见例子 )。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输入:</strong> maze = [[0,0,0,0,0],[1,1,0,0,1],[0,0,0,0,0],[0,1,0,0,1],[0,1,0,0,0]], start = [4,3], destination = [0,1]
 <strong>输出:</strong> -1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>注意:</strong></p>
 

@@ -1,7 +1,5 @@
 # [2097. 合法重新排列数对](https://leetcode.cn/problems/valid-arrangement-of-pairs)
 
-[English Version](/solution/2000-2099/2097.Valid%20Arrangement%20of%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的二维整数数组&nbsp;<code>pairs</code>&nbsp;，其中&nbsp;<code>pairs[i] = [start<sub>i</sub>, end<sub>i</sub>]</code>&nbsp;。如果 <code>pairs</code>&nbsp;的一个重新排列，满足对每一个下标 <code>i</code> （&nbsp;<code>1 &lt;= i &lt; pairs.length</code>&nbsp;）都有&nbsp;<code>end<sub>i-1</sub> == start<sub>i</sub></code><sub> </sub>，那么我们就认为这个重新排列是&nbsp;<code>pairs</code> 的一个 <strong>合法重新排列</strong> 。</p>
@@ -9,8 +7,6 @@
 <p>请你返回 <strong>任意一个</strong>&nbsp;<code>pairs</code> 的合法重新排列。</p>
 
 <p><b>注意：</b>数据保证至少存在一个 <code>pairs</code>&nbsp;的合法重新排列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@ end<sub>1</sub> = 2 == 2 = start<sub>2</sub>
 end<sub>0</sub> = 2 == 2 = start<sub>1</sub>
 end<sub>1</sub> = 1 == 1 = start<sub>2</sub>
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

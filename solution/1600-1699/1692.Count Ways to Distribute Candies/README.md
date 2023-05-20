@@ -1,7 +1,5 @@
 # [1692. 计算分配糖果的不同方式](https://leetcode.cn/problems/count-ways-to-distribute-candies)
 
-[English Version](/solution/1600-1699/1692.Count%20Ways%20to%20Distribute%20Candies/README_EN.md)
-
 ## 题目描述
 
 <p>现有 <code>n</code> 颗 <strong>不同</strong> 糖果（分别标记为 <code>1</code> 到 <code>n</code> ）和 <code>k</code> 个相同的手袋。请把糖果分配到各个手袋中并保证每个手袋里至少有一颗糖果。</p>
@@ -11,8 +9,6 @@
 <p>例如，<code>(1), (2,3)</code>&nbsp;与<code>(2), (1,3)</code>的分配方式是不同的，因为第一种分配方式中手袋(2,3)里的糖果2和3，在第二种分配方式中被分配到了手袋<code>(2)</code>和<code>(1,3)</code>&nbsp;中。</p>
 
 <p>已知整数&nbsp;<code>n</code>&nbsp;和&nbsp;<code>k</code>, 请返回分配糖果的不同方式。返回的答案如果数值太大，请取<code>10<sup>9</sup> + 7</code>的模，并返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -49,8 +45,6 @@
 <strong>输出：</strong>206085257
 <strong>解释：</strong>把 20 颗糖果分配到 5 个手袋种，共有 1881780996 种方式。1881780996 取 10<sup>9</sup> + 7的模，等于 206085257。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

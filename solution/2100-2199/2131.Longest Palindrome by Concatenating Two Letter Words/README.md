@@ -1,7 +1,5 @@
 # [2131. 连接两字母单词得到的最长回文串](https://leetcode.cn/problems/longest-palindrome-by-concatenating-two-letter-words)
 
-[English Version](/solution/2100-2199/2131.Longest%20Palindrome%20by%20Concatenating%20Two%20Letter%20Words/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组&nbsp;<code>words</code>&nbsp;。<code>words</code>&nbsp;中每个元素都是一个包含 <strong>两个</strong>&nbsp;小写英文字母的单词。</p>
@@ -11,8 +9,6 @@
 <p>请你返回你能得到的最长回文串的 <strong>长度</strong>&nbsp;。如果没办法得到任何一个回文串，请你返回 <code>0</code>&nbsp;。</p>
 
 <p><strong>回文串</strong>&nbsp;指的是从前往后和从后往前读一样的字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <b>输出：</b>2
 <b>解释：</b>最长回文串是 "cc" ，长度为 2 。
 "ll" 是另一个可以得到的最长回文串。"xx" 也是。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1987. 不同的好子序列数目](https://leetcode.cn/problems/number-of-unique-good-subsequences)
 
-[English Version](/solution/1900-1999/1987.Number%20of%20Unique%20Good%20Subsequences/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二进制字符串&nbsp;<code>binary</code>&nbsp;。&nbsp;<code>binary</code>&nbsp;的一个 <strong>子序列</strong>&nbsp;如果是 <strong>非空</strong>&nbsp;的且没有 <b>前导</b>&nbsp;<strong>0</strong>&nbsp;（除非数字是 <code>"0"</code>&nbsp;本身），那么它就是一个 <strong>好</strong>&nbsp;的子序列。</p>
@@ -15,8 +13,6 @@
 <p>请你返回&nbsp;<code>binary</code>&nbsp;中&nbsp;<strong>不同好子序列</strong>&nbsp;的数目。由于答案可能很大，请将它对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;<strong>取余</strong> 后返回。</p>
 
 <p>一个 <strong>子序列</strong>&nbsp;指的是从原数组中删除若干个（可以一个也不删除）元素后，不改变剩余元素顺序得到的序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <b>解释：</b>好的二进制子序列为 ["1", "0", "1", "10", "11", "101"] 。
 不同的好子序列为 "0" ，"1" ，"10" ，"11" 和 "101" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

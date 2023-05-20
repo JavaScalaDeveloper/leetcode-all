@@ -1,7 +1,5 @@
 # [1188. 设计有限阻塞队列](https://leetcode.cn/problems/design-bounded-blocking-queue)
 
-[English Version](/solution/1100-1199/1188.Design%20Bounded%20Blocking%20Queue/README_EN.md)
-
 ## 题目描述
 
 <p>实现一个拥有如下方法的线程安全有限阻塞队列：</p>
@@ -16,8 +14,6 @@
 <p>你的实现将会被多线程同时访问进行测试。每一个线程要么是一个只调用<code>enqueue</code>方法的生产者线程，要么是一个只调用<code>dequeue</code>方法的消费者线程。<code>size</code>方法将会在每一个测试用例之后进行调用。</p>
 
 <p>请不要使用内置的有限阻塞队列实现，否则面试将不会通过。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -48,8 +44,6 @@ queue.dequeue();    // 消费者线程将 2 从队列弹出并返回。生产者
 queue.size();       // 队列中还有 2 个元素。size()方法在每组测试用例最后调用。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 2:</strong></p>
 
 <pre>
@@ -78,8 +72,6 @@ queue.enqueue(3);   // 其中一个生产者线程将3插入队列。
 queue.size();       // 队列中还有 1 个元素。
 
 由于生产者/消费者线程的数目可能大于 1 ，我们并不知道线程如何被操作系统调度，即使输入看上去隐含了顺序。因此任意一种输出[1,0,2]或[1,2,0]或[0,1,2]或[0,2,1]或[2,0,1]或[2,1,0]都可被接受。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

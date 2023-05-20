@@ -1,7 +1,5 @@
 # [2644. 找出可整除性得分最大的整数](https://leetcode.cn/problems/find-the-maximum-divisibility-score)
 
-[English Version](/solution/2600-2699/2644.Find%20the%20Maximum%20Divisibility%20Score/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和 <code>divisors</code> 。</p>
@@ -9,8 +7,6 @@
 <p><code>divisors[i]</code> 的 <strong>可整除性得分</strong> 等于满足 <code>nums[j]</code> 能被 <code>divisors[i]</code> 整除的下标 <code>j</code> 的数量。</p>
 
 <p>返回 <strong>可整除性得分</strong> 最大的整数 <code>divisors[i]</code> 。如果有多个整数具有最大得分，则返回数值最小的一个。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@ divisors[0] 的可整除性得分为 0 ，因为 nums 中没有任何数字能�
 divisors[1] 的可整除性得分为 0 ，因为 nums 中没有任何数字能被 16 整除。 
 由于 divisors[0] 和 divisors[1] 的可整除性得分都是最大的，因此，我们返回数值最小的一个，即 divisors[0] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

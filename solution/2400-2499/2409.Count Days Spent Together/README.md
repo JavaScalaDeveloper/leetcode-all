@@ -1,7 +1,5 @@
 # [2409. 统计共同度过的日子数](https://leetcode.cn/problems/count-days-spent-together)
 
-[English Version](/solution/2400-2499/2409.Count%20Days%20Spent%20Together/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 和 Bob 计划分别去罗马开会。</p>
@@ -11,8 +9,6 @@
 <p>请你返回 Alice和 Bob 同时在罗马的天数。</p>
 
 <p>你可以假设所有日期都在 <strong>同一个</strong>&nbsp;自然年，而且 <strong>不是</strong>&nbsp;闰年。每个月份的天数分别为：<code>[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <b>输出：</b>0
 <b>解释：</b>Alice 和 Bob 没有同时在罗马的日子，所以我们返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

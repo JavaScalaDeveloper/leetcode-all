@@ -1,14 +1,10 @@
 # [2108. 找出数组中的第一个回文字符串](https://leetcode.cn/problems/find-first-palindromic-string-in-the-array)
 
-[English Version](/solution/2100-2199/2108.Find%20First%20Palindromic%20String%20in%20the%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组 <code>words</code> ，找出并返回数组中的 <strong>第一个回文字符串</strong> 。如果不存在满足要求的字符串，返回一个 <strong>空字符串</strong><em> </em><code>""</code> 。</p>
 
 <p><strong>回文字符串</strong> 的定义为：如果一个字符串正着读和反着读一样，那么该字符串就是一个 <strong>回文字符串</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出：</strong>""
 <strong>解释：</strong>不存在回文字符串，所以返回一个空字符串。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -73,24 +67,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char *firstPalindrome(char **words, int wordsSize) {
-    for (int i = 0; i < wordsSize; i++) {
-        int left = 0;
-        int right = strlen(words[i]) - 1;
-        while (left < right) {
-            if (words[i][left] != words[i][right]) {
-                break;
-            }
-            left++;
-            right--;
-        }
-        if (left >= right) {
-            return words[i];
-        }
-    }
-    return "";
-}
-```
+**

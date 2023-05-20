@@ -1,7 +1,5 @@
 # [2487. 从链表中移除节点](https://leetcode.cn/problems/remove-nodes-from-linked-list)
 
-[English Version](/solution/2400-2499/2487.Remove%20Nodes%20From%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个链表的头节点 <code>head</code> 。</p>
@@ -9,8 +7,6 @@
 <p>对于列表中的每个节点 <code>node</code> ，如果其右侧存在一个具有 <strong>严格更大</strong> 值的节点，则移除 <code>node</code> 。</p>
 
 <p>返回修改后链表的头节点<em> </em><code>head</code><em> </em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输出：</strong>[1,1,1,1]
 <strong>解释：</strong>每个节点的值都是 1 ，所以没有需要移除的节点。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

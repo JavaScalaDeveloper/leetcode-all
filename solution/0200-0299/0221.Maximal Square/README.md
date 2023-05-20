@@ -1,7 +1,5 @@
 # [221. 最大正方形](https://leetcode.cn/problems/maximal-square)
 
-[English Version](/solution/0200-0299/0221.Maximal%20Square/README_EN.md)
-
 ## 题目描述
 
 <p>在一个由 <code>'0'</code> 和 <code>'1'</code> 组成的二维矩阵内，找到只包含 <code>'1'</code> 的最大正方形，并返回其面积。</p>

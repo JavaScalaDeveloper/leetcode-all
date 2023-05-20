@@ -1,7 +1,5 @@
 # [2337. 移动片段得到字符串](https://leetcode.cn/problems/move-pieces-to-obtain-a-string)
 
-[English Version](/solution/2300-2399/2337.Move%20Pieces%20to%20Obtain%20a%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串 <code>start</code> 和 <code>target</code> ，长度均为 <code>n</code> 。每个字符串 <strong>仅</strong> 由字符 <code>'L'</code>、<code>'R'</code> 和 <code>'_'</code> 组成，其中：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>如果在移动字符串 <code>start</code> 中的片段任意次之后可以得到字符串 <code>target</code> ，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <pre><strong>输入：</strong>start = "_R", target = "R_"
 <strong>输出：</strong>false
 <strong>解释：</strong>字符串 start 中的片段只能向右移动，所以无法从字符串 start 得到 target 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

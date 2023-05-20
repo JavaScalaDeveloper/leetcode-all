@@ -1,7 +1,5 @@
 # [1336. 每次访问的交易次数](https://leetcode.cn/problems/number-of-transactions-per-visit)
 
-[English Version](/solution/1300-1399/1336.Number%20of%20Transactions%20per%20Visit/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Visits</code></p>
@@ -17,8 +15,6 @@
 该表的每行表示 user_id 在 visit_date 访问了银行
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Transactions</code></p>
 
 <pre>
@@ -33,8 +29,6 @@
 该表的每一行表示 user_id 在 transaction_date 完成了一笔 amount 数额的交易
 可以保证用户 (user) 在 transaction_date 访问了银行 (也就是说 Visits 表包含 (user_id, transaction_date) 行)
 </pre>
-
-<p>&nbsp;</p>
 
 <p>银行想要得到银行客户在一次访问时的交易次数和相应的在一次访问时该交易次数的客户数量的图表</p>
 

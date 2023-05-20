@@ -1,7 +1,5 @@
 # [511. 游戏玩法分析 I](https://leetcode.cn/problems/game-play-analysis-i)
 
-[English Version](/solution/0500-0599/0511.Game%20Play%20Analysis%20I/README_EN.md)
-
 ## 题目描述
 
 <p>活动表&nbsp;<code>Activity</code>：</p>
@@ -19,8 +17,6 @@
 这张表展示了一些游戏玩家在游戏平台上的行为活动。
 每行数据记录了一名玩家在退出平台之前，当天使用同一台设备登录平台后打开的游戏的数目（可能是 0 个）。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写一条 SQL&nbsp;查询语句获取每位玩家 <strong>第一次登陆平台的日期</strong>。</p>
 

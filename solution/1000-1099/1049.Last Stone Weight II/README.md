@@ -1,7 +1,5 @@
 # [1049. 最后一块石头的重量 II](https://leetcode.cn/problems/last-stone-weight-ii)
 
-[English Version](/solution/1000-1099/1049.Last%20Stone%20Weight%20II/README_EN.md)
-
 ## 题目描述
 
 <p>有一堆石头，用整数数组&nbsp;<code>stones</code> 表示。其中&nbsp;<code>stones[i]</code> 表示第 <code>i</code> 块石头的重量。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>最后，<strong>最多只会剩下一块 </strong>石头。返回此石头 <strong>最小的可能重量 </strong>。如果没有石头剩下，就返回 <code>0</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输入：</strong>stones = [31,26,33,21,40]
 <strong>输出：</strong>5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

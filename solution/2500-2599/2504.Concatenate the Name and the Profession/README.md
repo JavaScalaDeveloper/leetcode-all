@@ -1,7 +1,5 @@
 # [2504. 把名字和职业联系起来](https://leetcode.cn/problems/concatenate-the-name-and-the-profession)
 
-[English Version](/solution/2500-2599/2504.Concatenate%20the%20Name%20and%20the%20Profession/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Person</code></p>
@@ -19,15 +17,11 @@ person_id 是该表的主键。
 profession 是 ENUM 类型，其值为 ('Doctor', 'Singer', 'Actor', 'Player', 'Engineer', 'Lawyer') 之一。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，报告每个人的名字，后面是他们职业的第一个字母，用括号括起来。</p>
 
 <p>返回按 <code>person_id</code> <strong>降序排列&nbsp;</strong>的结果表。</p>
 
 <p>查询结果格式示例如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

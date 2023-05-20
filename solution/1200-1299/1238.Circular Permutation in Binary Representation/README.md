@@ -1,7 +1,5 @@
 # [1238. 循环码排列](https://leetcode.cn/problems/circular-permutation-in-binary-representation)
 
-[English Version](/solution/1200-1299/1238.Circular%20Permutation%20in%20Binary%20Representation/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数&nbsp;<code>n</code> 和 <code>start</code>。你的任务是返回任意 <code>(0,1,2,,...,2^n-1)</code> 的排列 <code>p</code>，并且满足：</p>
@@ -11,8 +9,6 @@
 	<li><code>p[i]</code> 和 <code>p[i+1]</code>&nbsp;的二进制表示形式只有一位不同</li>
 	<li><code>p[0]</code> 和 <code>p[2^n -1]</code>&nbsp;的二进制表示形式也只有一位不同</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输出：</strong>[2,6,7,5,4,0,1,3]
 <strong>解释：</strong>这个排列的二进制表示是 (010,110,111,101,100,000,001,011)
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2183. 统计可以被 K 整除的下标对数目](https://leetcode.cn/problems/count-array-pairs-divisible-by-k)
 
-[English Version](/solution/2100-2199/2183.Count%20Array%20Pairs%20Divisible%20by%20K/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始、长度为 <code>n</code> 的整数数组 <code>nums</code> 和一个整数 <code>k</code> ，返回满足下述条件的下标对 <code>(i, j)</code> 的数目：</p>
@@ -10,8 +8,6 @@
 	<li><code>0 &lt;= i &lt; j &lt;= n - 1</code> 且</li>
 	<li><code>nums[i] * nums[j]</code> 能被 <code>k</code> 整除。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>不存在对应积可以被 5 整除的下标对。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

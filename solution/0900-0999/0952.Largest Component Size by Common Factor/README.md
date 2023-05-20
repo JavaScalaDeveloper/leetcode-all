@@ -1,7 +1,5 @@
 # [952. 按公因数计算最大组件大小](https://leetcode.cn/problems/largest-component-size-by-common-factor)
 
-[English Version](/solution/0900-0999/0952.Largest%20Component%20Size%20by%20Common%20Factor/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个由不同正整数的组成的非空数组&nbsp;<code>nums</code> ，考虑下面的图：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>返回 <em>图中最大连通组件的大小</em> 。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -44,8 +40,6 @@
 <strong>输入：</strong>nums = [2,3,6,7,4,12,21,39]
 <strong>输出：</strong>8
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

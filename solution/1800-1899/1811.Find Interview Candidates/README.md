@@ -1,7 +1,5 @@
 # [1811. 寻找面试候选人](https://leetcode.cn/problems/find-interview-candidates)
 
-[English Version](/solution/1800-1899/1811.Find%20Interview%20Candidates/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Contests</code></p>
@@ -34,8 +32,6 @@ contest_id 是该表的主键.
 user_id 是该表的主键.
 该表包含用户信息。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写 SQL 语句来返回 <strong>所有面试候选人</strong> 的姓名&nbsp;<code>name</code>&nbsp;和邮件&nbsp;<code>mail</code>&nbsp;。当用户满足以下两个要求中的 <strong>任意一条 </strong>，其成为 <strong>面试候选人 </strong>:</p>
 
 <ul>
@@ -46,8 +42,6 @@ user_id 是该表的主键.
 <p>可以以 <strong>任何顺序</strong> 返回结果。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -91,8 +85,6 @@ Bob在连续3场竞赛中赢得了奖牌(190, 191, and 192), 所以我们将他�
 Alice在连续3场竞赛中赢得了奖牌 (191, 192, and 193), 所以我们将她列入结果表。
 Quarz在连续5场竞赛中赢得了奖牌(190, 191, 192, 193, and 194), 所以我们将他列入结果表。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

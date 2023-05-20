@@ -1,7 +1,5 @@
 # [1242. 多线程网页爬虫](https://leetcode.cn/problems/web-crawler-multithreaded)
 
-[English Version](/solution/1200-1299/1242.Web%20Crawler%20Multithreaded/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个初始地址&nbsp;<code>startUrl</code>&nbsp;和一个 HTML 解析器接口&nbsp;<code>HtmlParser</code>，请你实现一个&nbsp;<strong>多线程的网页爬虫</strong>，用于获取与&nbsp;<code>startUrl</code>&nbsp;有&nbsp;<strong>相同主机名&nbsp;</strong>的所有链接。&nbsp;</p>
@@ -34,8 +32,6 @@ interface HtmlParser {
 
 <p>对于问题所需的功能，下面提供了两个例子。为了方便自定义测试，你可以声明三个变量&nbsp;<code>urls</code>，<code>edges</code>&nbsp;和&nbsp;<code>startUrl</code>。但要注意你只能在代码中访问&nbsp;<code>startUrl</code>，并不能直接访问&nbsp;<code>urls</code>&nbsp;和&nbsp;<code>edges</code>。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>拓展问题：</strong></p>
 
 <ol>
@@ -43,8 +39,6 @@ interface HtmlParser {
 	<li>如果有一个节点发生故障不工作该怎么办？</li>
 	<li>如何确认爬虫任务已经完成？</li>
 </ol>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -85,8 +79,6 @@ edges = [[0,2],[2,1],[3,2],[3,1],[3,0]]
 startUrl = &quot;http://news.google.com&quot;
 <strong>输出：</strong>[&quot;http://news.google.com&quot;]
 <strong>解释：</strong>startUrl 链接与其他页面不共享一个主机名。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

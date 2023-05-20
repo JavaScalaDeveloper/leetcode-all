@@ -1,7 +1,5 @@
 # [604. 迭代压缩字符串](https://leetcode.cn/problems/design-compressed-string-iterator)
 
-[English Version](/solution/0600-0699/0604.Design%20Compressed%20String%20Iterator/README_EN.md)
-
 ## 题目描述
 
 <p>设计并实现一个迭代压缩字符串的数据结构。给定的压缩字符串的形式是，每个字母后面紧跟一个正整数，表示该字母在原始未压缩字符串中出现的次数。</p>
@@ -12,8 +10,6 @@
 	<li><code>next()</code> - 如果原始字符串中仍有未压缩字符，则返回<strong>下一个字符</strong>，否则返回<strong>空格</strong>。</li>
 	<li><code>hasNext()</code> - 如果原始字符串中存在未压缩的的字母，则返回true，否则返回<code>false</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@ stringIterator.next(); // 返回 "o"
 stringIterator.hasNext(); // 返回 True
 stringIterator.next(); // 返回 "d"
 stringIterator.hasNext(); // 返回 True</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

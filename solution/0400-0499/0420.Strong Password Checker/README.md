@@ -1,7 +1,5 @@
 # [420. 强密码检验器](https://leetcode.cn/problems/strong-password-checker)
 
-[English Version](/solution/0400-0499/0420.Strong%20Password%20Checker/README_EN.md)
-
 ## 题目描述
 
 <p>满足以下条件的密码被认为是强密码：</p>
@@ -21,8 +19,6 @@
 	<li>从 <code>password</code> 中删除一个字符，或</li>
 	<li>用另一个字符来替换 <code>password</code> 中的某个字符。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <strong>输入：</strong>password = "1337C0d3"
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

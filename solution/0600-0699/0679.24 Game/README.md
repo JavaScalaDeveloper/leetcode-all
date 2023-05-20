@@ -1,7 +1,5 @@
 # [679. 24 点游戏](https://leetcode.cn/problems/24-game)
 
-[English Version](/solution/0600-0699/0679.24%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个长度为4的整数数组&nbsp;<code>cards</code>&nbsp;。你有 <code>4</code> 张卡片，每张卡片上都包含一个范围在 <code>[1,9]</code> 的数字。您应该使用运算符&nbsp;<code>['+', '-', '*', '/']</code>&nbsp;和括号&nbsp;<code>'('</code>&nbsp;和&nbsp;<code>')'</code>&nbsp;将这些卡片上的数字排列成数学表达式，以获得值24。</p>
@@ -28,8 +26,6 @@
 
 <p>如果可以得到这样的表达式，其计算结果为 <code>24</code> ，则返回 <code>true </code>，否则返回 <code>false</code>&nbsp;。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1:</strong></p>
 
 <pre>
@@ -44,8 +40,6 @@
 <strong>输入:</strong> cards = [1, 2, 1, 2]
 <strong>输出:</strong> false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

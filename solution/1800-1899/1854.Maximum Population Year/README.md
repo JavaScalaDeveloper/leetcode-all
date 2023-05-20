@@ -1,7 +1,5 @@
 # [1854. 人口最多的年份](https://leetcode.cn/problems/maximum-population-year)
 
-[English Version](/solution/1800-1899/1854.Maximum%20Population%20Year/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维整数数组 <code>logs</code> ，其中每个 <code>logs[i] = [birth<sub>i</sub>, death<sub>i</sub>]</code> 表示第 <code>i</code> 个人的出生和死亡年份。</p>

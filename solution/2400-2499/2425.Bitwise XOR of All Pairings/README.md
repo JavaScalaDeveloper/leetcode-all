@@ -1,14 +1,10 @@
 # [2425. 所有数对的异或和](https://leetcode.cn/problems/bitwise-xor-of-all-pairings)
 
-[English Version](/solution/2400-2499/2425.Bitwise%20XOR%20of%20All%20Pairings/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong>&nbsp;开始的数组&nbsp;<code>nums1</code> 和&nbsp;<code>nums2</code>&nbsp;，两个数组都只包含非负整数。请你求出另外一个数组&nbsp;<code>nums3</code>&nbsp;，包含 <code>nums1</code>&nbsp;和 <code>nums2</code>&nbsp;中 <strong>所有数对</strong>&nbsp;的异或和（<code>nums1</code>&nbsp;中每个整数都跟 <code>nums2</code>&nbsp;中每个整数 <strong>恰好</strong>&nbsp;匹配一次）。</p>
 
 <p>请你返回 <code>nums3</code>&nbsp;中所有整数的 <strong>异或和</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 所以，一个可能的 nums3 数组是 [2,5,1,6] 。
 2 ^ 5 ^ 1 ^ 6 = 0 ，所以我们返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

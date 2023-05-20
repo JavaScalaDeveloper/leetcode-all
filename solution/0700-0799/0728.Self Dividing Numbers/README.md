@@ -1,7 +1,5 @@
 # [728. 自除数](https://leetcode.cn/problems/self-dividing-numbers)
 
-[English Version](/solution/0700-0799/0728.Self%20Dividing%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p><strong>自除数</strong><em>&nbsp;</em>是指可以被它包含的每一位数整除的数。</p>
@@ -13,8 +11,6 @@
 <p><strong>自除数</strong> 不允许包含 0 。</p>
 
 <p>给定两个整数&nbsp;<code>left</code>&nbsp;和&nbsp;<code>right</code> ，返回一个列表，<em>列表的元素是范围&nbsp;<code>[left, right]</code>&nbsp;内所有的 <strong>自除数</strong></em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <b>输入：</b>left = 47, right = 85
 <b>输出：</b>[48,55,66,77]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

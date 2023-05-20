@@ -1,12 +1,8 @@
 # [243. 最短单词距离](https://leetcode.cn/problems/shortest-word-distance)
 
-[English Version](/solution/0200-0299/0243.Shortest%20Word%20Distance/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串数组&nbsp;<code>wordDict</code>&nbsp;和两个已经存在于该数组中的不同的字符串&nbsp;<code>word1</code> 和 <code>word2</code> 。返回列表中这两个单词之间的最短距离。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -20,8 +16,6 @@
 <pre>
 <strong>输入:</strong> wordsDict = ["practice", "makes", "perfect", "coding", "makes"], word1 = "makes", word2 = "coding"
 <strong>输出:</strong> 1</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong><meta charset="UTF-8" /></p>
 

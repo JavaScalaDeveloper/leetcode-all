@@ -1,7 +1,5 @@
 # [1380. 矩阵中的幸运数](https://leetcode.cn/problems/lucky-numbers-in-a-matrix)
 
-[English Version](/solution/1300-1399/1380.Lucky%20Numbers%20in%20a%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>m * n</code> 的矩阵，矩阵中的数字 <strong>各不相同</strong> 。请你按 <strong>任意</strong> 顺序返回矩阵中的所有幸运数。</p>
@@ -12,8 +10,6 @@
 	<li>在同一行的所有元素中最小</li>
 	<li>在同一列的所有元素中最大</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输出：</strong>[7]
 <strong>解释：</strong>7是唯一的幸运数字，因为它是行中的最小值，列中的最大值。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2297. 跳跃游戏 VIII](https://leetcode.cn/problems/jump-game-viii)
 
-[English Version](/solution/2200-2299/2297.Jump%20Game%20VIII/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个长度为 n 的下标从 <strong>0</strong>&nbsp;开始的整数数组 <code>nums</code>。初始位置为下标 <code>0</code>。当 <code>i &lt; j</code> 时，你可以从下标 <code>i</code> 跳转到下标 <code>j</code>:</p>
@@ -38,8 +36,6 @@
 - 以 costs[2] = 1 的代价跳转到下标 2。
 总代价是 2。注意您不能直接从下标 0 跳转到下标 2，因为 nums[0] &lt;= nums[1]。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>解释:</strong></p>
 

@@ -1,7 +1,5 @@
 # [1366. 通过投票对团队排名](https://leetcode.cn/problems/rank-teams-by-votes)
 
-[English Version](/solution/1300-1399/1366.Rank%20Teams%20by%20Votes/README_EN.md)
-
 ## 题目描述
 
 <p>现在有一个特殊的排名系统，依据参赛团队在投票人心中的次序进行排名，每个投票者都需要按从高到低的顺序对参与排名的所有团队进行排位。</p>
@@ -16,8 +14,6 @@
 <p>给你一个字符串数组&nbsp;<code>votes</code> 代表全体投票者给出的排位情况，请你根据上述排名规则对所有参赛团队进行排名。</p>
 
 <p>请你返回能表示按排名系统 <strong>排序后</strong> 的所有团队排名的字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -60,8 +56,6 @@ C 队获得两票「排位第一」，两票「排位第二」，两票「排位
 <strong>输出：</strong>&quot;M&quot;
 <strong>解释：</strong>只有 M 队参赛，所以它排名第一。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

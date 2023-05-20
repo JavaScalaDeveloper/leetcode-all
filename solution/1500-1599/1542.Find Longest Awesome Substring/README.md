@@ -1,7 +1,5 @@
 # [1542. 找出最长的超赞子字符串](https://leetcode.cn/problems/find-longest-awesome-substring)
 
-[English Version](/solution/1500-1599/1542.Find%20Longest%20Awesome%20Substring/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> 。请返回 <code>s</code> 中最长的 <strong>超赞子字符串</strong> 的长度。</p>
@@ -12,8 +10,6 @@
 	<li>该字符串是 <code>s</code> 的一个非空子字符串</li>
 	<li>进行任意次数的字符交换后，该字符串可以变成一个回文字符串</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <pre><strong>输入：</strong>s = &quot;00&quot;
 <strong>输出：</strong>2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

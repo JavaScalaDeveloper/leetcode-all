@@ -1,7 +1,5 @@
 # [2419. 按位与最大的最长子数组](https://leetcode.cn/problems/longest-subarray-with-maximum-bitwise-and)
 
-[English Version](/solution/2400-2499/2419.Longest%20Subarray%20With%20Maximum%20Bitwise%20AND/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> 。</p>
@@ -17,8 +15,6 @@
 <p>数组的按位与就是对数组中的所有数字进行按位与运算。</p>
 
 <p><strong>子数组</strong> 是数组中的一个连续元素序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 子数组按位与运算的最大值是 4 。 
 能得到此结果的最长子数组是 [4]，所以返回 1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

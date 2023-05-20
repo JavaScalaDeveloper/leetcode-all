@@ -1,7 +1,5 @@
 # [443. 压缩字符串](https://leetcode.cn/problems/string-compression)
 
-[English Version](/solution/0400-0499/0443.String%20Compression/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符数组 <code>chars</code> ，请使用下述算法压缩：</p>
@@ -18,8 +16,6 @@
 <p>请在 <strong>修改完输入数组后</strong> ，返回该数组的新长度。</p>
 
 <p>你必须设计并实现一个只使用常量额外空间的算法来解决此问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <strong>输出：</strong>返回 4 ，输入数组的前 4 个字符应该是：["a","b","1","2"]。
 <strong>解释：</strong>由于字符 "a" 不重复，所以不会被压缩。"bbbbbbbbbbbb" 被 “b12” 替代。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

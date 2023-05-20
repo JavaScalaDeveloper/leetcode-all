@@ -1,7 +1,5 @@
 # [833. 字符串中的查找与替换](https://leetcode.cn/problems/find-and-replace-in-string)
 
-[English Version](/solution/0800-0899/0833.Find%20And%20Replace%20in%20String/README_EN.md)
-
 ## 题目描述
 
 <p>你会得到一个字符串 <code>s</code>&nbsp;(索引从 0 开始)，你必须对它执行 <code>k</code> 个替换操作。替换操作以三个长度均为 <code>k</code> 的并行数组给出：<code>indices</code>,&nbsp;<code>sources</code>,&nbsp;&nbsp;<code>targets</code>。</p>
@@ -26,8 +24,6 @@
 
 <p><strong>子字符串</strong> 是字符串中连续的字符序列。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0833.Find%20And%20Replace%20in%20String/images/833-ex1.png" style="height: 251px; width: 411px;" /></p>
@@ -49,8 +45,6 @@
 </strong>"ab" 从 s 中的索引 0 开始，所以它被替换为 "eee"。
 "ec" 没有从<strong>原始的</strong> S 中的索引 2 开始，所以它没有被替换。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

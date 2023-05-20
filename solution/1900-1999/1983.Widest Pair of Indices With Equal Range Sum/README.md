@@ -1,7 +1,5 @@
 # [1983. 范围和相等的最宽索引对](https://leetcode.cn/problems/widest-pair-of-indices-with-equal-range-sum)
 
-[English Version](/solution/1900-1999/1983.Widest%20Pair%20of%20Indices%20With%20Equal%20Range%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个 <strong>以0为索引</strong> 的二进制数组 <code>nums1</code> 和 <code>nums2</code> 。找出 <strong>最宽</strong> 的索引对 <code>(i, j)</code> ，使的&nbsp;<code>i &lt;= j</code>&nbsp;并且&nbsp;<code>nums1[i] + nums1[i+1] + ... + nums1[j] == nums2[i] + nums2[i+1] + ... + nums2[j]</code>。</p>
@@ -9,8 +7,6 @@
 <p><strong>最宽</strong> 的指标对是指在 <code>i </code>和<code> j </code>之间的 <strong>距离最大</strong> 的指标对。一对指标之间的 <strong>距离</strong> 定义为<code> j - i + 1</code> 。</p>
 
 <p>返回 <strong>最宽</strong> 索引对的 <strong>距离</strong> 。如果没有满足条件的索引对，则返回 <code>0</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -44,8 +40,6 @@ i和j之间的距离是j - i + 1 = 1 - 1 + 1 = 1。
 <strong>解释:
 </strong>没有满足要求的索引对。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

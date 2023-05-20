@@ -1,7 +1,5 @@
 # [992. K 个不同整数的子数组](https://leetcode.cn/problems/subarrays-with-k-different-integers)
 
-[English Version](/solution/0900-0999/0992.Subarrays%20with%20K%20Different%20Integers/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个正整数数组 <code>nums</code>和一个整数 <font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.6px"><span style="background-color:#f9f2f4">k</span></span></font></font>&nbsp;，返回 <font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.6px"><span style="background-color:#f9f2f4">num</span></span></font></font>&nbsp;中 「<strong>好子数组」</strong><em>&nbsp;</em>的数目。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p><strong>子数组</strong> 是数组的 <strong>连续</strong> 部分。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>恰好由 3 个不同整数组成的子数组：[1,2,1,3], [2,1,3], [1,3,4].
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

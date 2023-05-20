@@ -1,7 +1,5 @@
 # [921. 使括号有效的最少添加](https://leetcode.cn/problems/minimum-add-to-make-parentheses-valid)
 
-[English Version](/solution/0900-0999/0921.Minimum%20Add%20to%20Make%20Parentheses%20Valid/README_EN.md)
-
 ## 题目描述
 
 <p>只有满足下面几点之一，括号字符串才是有效的：</p>
@@ -20,8 +18,6 @@
 
 <p>返回 <em>为使结果字符串 <code>s</code> 有效而必须添加的最少括号数</em>。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -35,8 +31,6 @@
 <strong>输入：</strong>s = "((("
 <strong>输出：</strong>3
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

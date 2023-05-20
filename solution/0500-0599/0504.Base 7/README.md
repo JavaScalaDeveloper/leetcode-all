@@ -1,12 +1,8 @@
 # [504. 七进制数](https://leetcode.cn/problems/base-7)
 
-[English Version](/solution/0500-0599/0504.Base%207/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数 <code>num</code>，将其转化为 <strong>7 进制</strong>，并以字符串形式输出。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -21,8 +17,6 @@
 <strong>输入:</strong> num = -7
 <strong>输出:</strong> "-10"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

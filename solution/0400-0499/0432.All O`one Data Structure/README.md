@@ -1,7 +1,5 @@
 # [432. 全 O(1) 的数据结构](https://leetcode.cn/problems/all-oone-data-structure)
 
-[English Version](/solution/0400-0499/0432.All%20O%60one%20Data%20Structure/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个用于存储字符串计数的数据结构，并能够返回计数最小和最大的字符串。</p>
@@ -17,8 +15,6 @@
 </ul>
 
 <p><strong>注意：</strong>每个函数都应当满足 <code>O(1)</code> 平均时间复杂度。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -39,8 +35,6 @@ allOne.inc("leet");
 allOne.getMaxKey(); // 返回 "hello"
 allOne.getMinKey(); // 返回 "leet"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

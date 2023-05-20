@@ -1,7 +1,5 @@
 # [244. 最短单词距离 II](https://leetcode.cn/problems/shortest-word-distance-ii)
 
-[English Version](/solution/0200-0299/0244.Shortest%20Word%20Distance%20II/README_EN.md)
-
 ## 题目描述
 
 <p>请设计一个类，使该类的构造函数能够接收一个字符串数组。然后再实现一个方法，该方法能够分别接收两个单词<em>，</em>并返回列表中这两个单词之间的最短距离。</p>
@@ -12,8 +10,6 @@
 	<li><code>WordDistance(String[] wordsDict)</code>&nbsp;用字符串数组 <code>wordsDict</code> 初始化对象。</li>
 	<li><code>int shortest(String word1, String word2)</code>&nbsp;返回数组 <code>worddict</code> 中 <code>word1</code> 和 <code>word2</code> 之间的最短距离。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -28,8 +24,6 @@
 WordDistance wordDistance = new WordDistance(["practice", "makes", "perfect", "coding", "makes"]);
 wordDistance.shortest("coding", "practice"); // 返回 3
 wordDistance.shortest("makes", "coding");    // 返回 1</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>注意:</strong><meta charset="UTF-8" /></p>
 

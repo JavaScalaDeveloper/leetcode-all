@@ -1,7 +1,5 @@
 # [538. 把二叉搜索树转换为累加树](https://leetcode.cn/problems/convert-bst-to-greater-tree)
 
-[English Version](/solution/0500-0599/0538.Convert%20BST%20to%20Greater%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给出二叉<strong> 搜索 </strong>树的根节点，该树的节点值各不相同，请你将其转换为累加树（Greater Sum Tree），使每个节点 <code>node</code>&nbsp;的新值等于原树中大于或等于&nbsp;<code>node.val</code>&nbsp;的值之和。</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p><strong>注意：</strong>本题和 1038:&nbsp;<a href="https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/">https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/</a> 相同</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 <pre><strong>输入：</strong>root = [3,2,4,1]
 <strong>输出：</strong>[7,9,4,10]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

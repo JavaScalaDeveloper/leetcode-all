@@ -1,7 +1,5 @@
 # [866. 回文素数](https://leetcode.cn/problems/prime-palindrome)
 
-[English Version](/solution/0800-0899/0866.Prime%20Palindrome/README_EN.md)
-
 ## 题目描述
 
 <p>求出大于或等于&nbsp;<code>N</code>&nbsp;的最小回文素数。</p>
@@ -13,8 +11,6 @@
 <p>回顾一下，如果一个数从左往右读与从右往左读是一样的，那么这个数是<em>回文数。</em></p>
 
 <p>例如，12321 是回文数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,18 +29,12 @@
 <pre><strong>输入：</strong>13
 <strong>输出：</strong>101</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= N &lt;= 10^8</code></li>
 	<li>答案肯定存在，且小于&nbsp;<code>2 * 10^8</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
 
 ## 解法
 

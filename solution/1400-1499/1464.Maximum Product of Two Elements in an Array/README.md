@@ -1,14 +1,10 @@
 # [1464. 数组中两元素的最大乘积](https://leetcode.cn/problems/maximum-product-of-two-elements-in-an-array)
 
-[English Version](/solution/1400-1499/1464.Maximum%20Product%20of%20Two%20Elements%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code>，请你选择数组的两个不同下标 <code>i</code> 和 <code>j</code><em>，</em>使 <code>(nums[i]-1)*(nums[j]-1)</code> 取得最大值。</p>
 
 <p>请你计算并返回该式的最大值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <pre><strong>输入：</strong>nums = [3,7]
 <strong>输出：</strong>12
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -101,21 +95,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int maxProduct(int* nums, int numsSize){
-    int max = 0;
-    int submax = 0;
-    for (int i = 0; i < numsSize; i++) {
-        int num = nums[i];
-        if (num > max) {
-            submax = max;
-            max = num;
-        } else if (num > submax) {
-            submax = num;
-        }
-    }
-    return (max - 1) * (submax - 1);
-}
-```
+**

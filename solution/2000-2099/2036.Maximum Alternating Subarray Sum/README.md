@@ -1,14 +1,10 @@
 # [2036. 最大交替子数组和](https://leetcode.cn/problems/maximum-alternating-subarray-sum)
 
-[English Version](/solution/2000-2099/2036.Maximum%20Alternating%20Subarray%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p><strong>子数组</strong>是以<strong>0</strong>下标开始的数组的连续非空子序列，从 <code>i</code> 到 <code>j</code>（<code>0 &lt;= i &lt;= j &lt; nums.length</code>）的 <strong>子数组交替和</strong> 被定义为 <code>nums[i] - nums[i+1] + nums[i+2] - ... +/- nums[j]</code> 。</p>
 
 <p>给定一个以<strong>0</strong>下标开始的整数数组<code>nums</code>，返回它所有可能的交替子数组和的最大值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>解释：</strong>
 仅有一个非空子数组，为 [1]，它的交替子数组和为 1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

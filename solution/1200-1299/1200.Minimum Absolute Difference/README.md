@@ -1,7 +1,5 @@
 # [1200. 最小绝对差](https://leetcode.cn/problems/minimum-absolute-difference)
 
-[English Version](/solution/1200-1299/1200.Minimum%20Absolute%20Difference/README_EN.md)
-
 ## 题目描述
 
 <p>给你个整数数组&nbsp;<code>arr</code>，其中每个元素都 <strong>不相同</strong>。</p>
@@ -15,8 +13,6 @@
 	<li><code>a &lt; b</code></li>
 	<li><code>b - a</code>&nbsp;等于 <code>arr</code> 中任意两个元素的最小绝对差</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输入：</strong>arr = [3,8,-10,23,19,-4,-14,27]
 <strong>输出：</strong>[[-14,-10],[19,23],[23,27]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

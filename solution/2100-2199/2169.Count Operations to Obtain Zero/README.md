@@ -1,7 +1,5 @@
 # [2169. 得到 0 的操作数](https://leetcode.cn/problems/count-operations-to-obtain-zero)
 
-[English Version](/solution/2100-2199/2169.Count%20Operations%20to%20Obtain%20Zero/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个 <strong>非负</strong> 整数 <code>num1</code> 和 <code>num2</code> 。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回使 <code>num1 = 0</code> 或 <code>num2 = 0</code> 的 <strong>操作数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 此时 num1 = 0 ，num2 = 10 。由于 num1 == 0 ，不需要再执行任何操作。
 所以总操作数是 1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

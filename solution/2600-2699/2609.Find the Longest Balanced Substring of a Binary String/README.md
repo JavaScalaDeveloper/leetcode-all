@@ -1,7 +1,5 @@
 # [2609. 最长平衡子字符串](https://leetcode.cn/problems/find-the-longest-balanced-substring-of-a-binary-string)
 
-[English Version](/solution/2600-2699/2609.Find%20the%20Longest%20Balanced%20Substring%20of%20a%20Binary%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个仅由 <code>0</code> 和 <code>1</code> 组成的二进制字符串 <code>s</code> 。<span style="">&nbsp;</span><span style="">&nbsp;</span></p>
@@ -11,8 +9,6 @@
 <p>返回&nbsp;<span style=""> </span><code>s</code> 中最长的平衡子字符串长度。</p>
 
 <p>子字符串是字符串中的一个连续字符序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>除了空子字符串之外不存在其他平衡子字符串，所以答案为 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

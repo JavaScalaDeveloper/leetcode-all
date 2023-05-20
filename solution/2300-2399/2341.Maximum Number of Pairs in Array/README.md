@@ -1,7 +1,5 @@
 # [2341. 数组能形成多少数对](https://leetcode.cn/problems/maximum-number-of-pairs-in-array)
 
-[English Version](/solution/2300-2399/2341.Maximum%20Number%20of%20Pairs%20in%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 。在一步操作中，你可以执行以下步骤：</p>
@@ -14,8 +12,6 @@
 <p>请你在 <code>nums</code> 上多次执行此操作直到无法继续执行。</p>
 
 <p>返回一个下标从 <strong>0</strong> 开始、长度为 <code>2</code> 的整数数组 <code>answer</code> 作为答案，其中<em> </em><code>answer[0]</code><em> </em>是形成的数对数目，<code>answer[1]</code> 是对 <code>nums</code> 尽可能执行上述操作后剩下的整数数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@ nums[0] 和 nums[1] 形成一个数对，并从 nums 中移除，nums = [2] 。
 <strong>输出：</strong>[0,1]
 <strong>解释：</strong>无法形成数对，nums 中剩下 1 个数字。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -82,25 +76,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *numberOfPairs(int *nums, int numsSize, int *returnSize) {
-    int count[101] = {0};
-    for (int i = 0; i < numsSize; i++) {
-        count[nums[i]]++;
-    }
-    int sum = 0;
-    for (int i = 0; i < 101; i++) {
-        sum += count[i] >> 1;
-    }
-    int *ans = malloc(sizeof(int) * 2);
-    ans[0] = sum;
-    ans[1] = numsSize - sum * 2;
-    *returnSize = 2;
-    return ans;
-}
-```
+**

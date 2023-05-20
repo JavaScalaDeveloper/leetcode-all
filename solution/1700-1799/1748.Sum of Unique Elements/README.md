@@ -1,7 +1,5 @@
 # [1748. 唯一元素的和](https://leetcode.cn/problems/sum-of-unique-elements)
 
-[English Version](/solution/1700-1799/1748.Sum%20of%20Unique%20Elements/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 。数组中唯一元素是那些只出现 <strong>恰好一次</strong> 的元素。</p>

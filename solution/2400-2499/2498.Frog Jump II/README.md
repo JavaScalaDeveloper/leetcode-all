@@ -1,7 +1,5 @@
 # [2498. 青蛙过河 II](https://leetcode.cn/problems/frog-jump-ii)
 
-[English Version](/solution/2400-2499/2498.Frog%20Jump%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>stones</code>&nbsp;，数组中的元素&nbsp;<strong>严格递增</strong>&nbsp;，表示一条河中石头的位置。</p>
@@ -17,8 +15,6 @@
 <p>一条路径的 <b>代价</b>&nbsp;是这条路径里的&nbsp;<b>最大跳跃长度</b>&nbsp;。</p>
 
 <p>请你返回这只青蛙的 <strong>最小代价</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 在这条路径中，每次跳跃长度都是 9 。所以路径代价是 max(9, 9) = 9 。
 这是可行路径中的最小代价。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

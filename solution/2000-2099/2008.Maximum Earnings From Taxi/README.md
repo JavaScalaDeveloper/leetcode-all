@@ -1,7 +1,5 @@
 # [2008. 出租车的最大盈利](https://leetcode.cn/problems/maximum-earnings-from-taxi)
 
-[English Version](/solution/2000-2099/2008.Maximum%20Earnings%20From%20Taxi/README_EN.md)
-
 ## 题目描述
 
 <p>你驾驶出租车行驶在一条有 <code>n</code>&nbsp;个地点的路上。这 <code>n</code>&nbsp;个地点从近到远编号为&nbsp;<code>1</code>&nbsp;到&nbsp;<code>n</code>&nbsp;，你想要从 <code>1</code>&nbsp;开到 <code>n</code>&nbsp;，通过接乘客订单盈利。你只能沿着编号递增的方向前进，不能改变方向。</p>
@@ -13,8 +11,6 @@
 <p>给你 <code>n</code>&nbsp;和 <code>rides</code>&nbsp;，请你返回在最优接单方案下，你能盈利&nbsp;<strong>最多</strong>&nbsp;多少元。</p>
 
 <p><strong>注意：</strong>你可以在一个地点放下一位乘客，并在同一个地点接上另一位乘客。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 - 将乘客 2 从地点 10 送往地点 12 ，获得 12 - 10 + 3 = 5 元。
 - 将乘客 5 从地点 13 送往地点 18 ，获得 18 - 13 + 1 = 6 元。
 我们总共获得 9 + 5 + 6 = 20 元。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

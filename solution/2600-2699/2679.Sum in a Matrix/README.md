@@ -1,7 +1,5 @@
 # [2679. 矩阵中的和](https://leetcode.cn/problems/sum-in-a-matrix)
 
-[English Version](/solution/2600-2699/2679.Sum%20in%20a%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的二维整数数组&nbsp;<code>nums</code>&nbsp;。一开始你的分数为&nbsp;<code>0</code>&nbsp;。你需要执行以下操作直到矩阵变为空：</p>
@@ -12,8 +10,6 @@
 </ol>
 
 <p>请你返回最后的 <strong>分数</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <b>输入：</b>nums = [[1]]
 <b>输出：</b>1
 <b>解释：</b>我们删除 1 并将分数增加 1 ，所以返回 1 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

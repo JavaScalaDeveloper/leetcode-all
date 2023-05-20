@@ -1,7 +1,5 @@
 # [1662. 检查两个字符串数组是否相等](https://leetcode.cn/problems/check-if-two-string-arrays-are-equivalent)
 
-[English Version](/solution/1600-1699/1662.Check%20If%20Two%20String%20Arrays%20are%20Equivalent/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串数组 <code>word1</code> 和 <code>word2</code> 。如果两个数组表示的字符串相同，返回<em> </em><code>true</code><em> </em>；否则，返回 <code>false</code><em> 。</em></p>
@@ -98,28 +96,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool arrayStringsAreEqual(char **word1, int word1Size, char **word2, int word2Size) {
-    int i = 0;
-    int j = 0;
-    int x = 0;
-    int y = 0;
-    while (i < word1Size && j < word2Size) {
-        if (word1[i][x++] != word2[j][y++]) {
-            return 0;
-        }
-
-        if (word1[i][x] == '\0') {
-            x = 0;
-            i++;
-        }
-        if (word2[j][y] == '\0') {
-            y = 0;
-            j++;
-        }
-    }
-    return i == word1Size && j == word2Size;
-}
-```
+**

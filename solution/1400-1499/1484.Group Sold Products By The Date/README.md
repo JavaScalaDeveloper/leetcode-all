@@ -1,7 +1,5 @@
 # [1484. 按日期分组销售产品](https://leetcode.cn/problems/group-sold-products-by-the-date)
 
-[English Version](/solution/1400-1499/1484.Group%20Sold%20Products%20By%20The%20Date/README_EN.md)
-
 ## 题目描述
 
 <p>表&nbsp;<code>Activities</code>：</p>
@@ -17,14 +15,10 @@
 此表的每一行都包含产品名称和在市场上销售的日期。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询来查找每个日期、销售的不同产品的数量及其名称。<br />
 每个日期的销售产品名称应按词典序排列。<br />
 返回按&nbsp;<code>sell_date</code> 排序的结果表。<br />
 查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

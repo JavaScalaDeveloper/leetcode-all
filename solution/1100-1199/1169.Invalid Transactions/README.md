@@ -1,7 +1,5 @@
 # [1169. 查询无效交易](https://leetcode.cn/problems/invalid-transactions)
 
-[English Version](/solution/1100-1199/1169.Invalid%20Transactions/README_EN.md)
-
 ## 题目描述
 
 <p>如果出现下述两种情况，交易 <strong>可能无效</strong>：</p>
@@ -14,8 +12,6 @@
 <p>给定字符串数组交易清单<meta charset="UTF-8" />&nbsp;<code>transaction</code>&nbsp;。每个交易字符串&nbsp;<code>transactions[i]</code>&nbsp;由一些用逗号分隔的值组成，这些值分别表示交易的名称，时间（以分钟计），金额以及城市。</p>
 
 <p>返回&nbsp;<code>transactions</code>，返回可能无效的交易列表。你可以按 <strong>任何顺序</strong> 返回答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输入：</strong>transactions = ["alice,20,800,mtv","bob,50,1200,mtv"]
 <strong>输出：</strong>["bob,50,1200,mtv"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

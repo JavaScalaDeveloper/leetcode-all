@@ -1,7 +1,5 @@
 # [1518. 换水问题](https://leetcode.cn/problems/water-bottles)
 
-[English Version](/solution/1500-1599/1518.Water%20Bottles/README_EN.md)
-
 ## 题目描述
 
 <p>超市正在促销，你可以用 <code>numExchange</code> 个空水瓶从超市兑换一瓶水。最开始，你一共购入了 <code>numBottles</code> 瓶水。</p>
@@ -9,8 +7,6 @@
 <p>如果喝掉了水瓶中的水，那么水瓶就会变成空的。</p>
 
 <p>给你两个整数 <code>numBottles</code> 和 <code>numExchange</code> ，返回你 <strong>最多</strong> 可以喝到多少瓶水。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,10 +29,6 @@
 <strong>解释：</strong>你可以用 <code>4</code> 个空瓶兑换 1 瓶水。
 所以最多能喝到 15 + 3 + 1 = 19 瓶水。
 </pre>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

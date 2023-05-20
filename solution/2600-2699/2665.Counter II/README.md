@@ -1,7 +1,5 @@
 # [2665. 计数器 II](https://leetcode.cn/problems/counter-ii)
 
-[English Version](/solution/2600-2699/2665.Counter%20II/README_EN.md)
-
 ## 题目描述
 
 <p>请你写一个函数&nbsp;<code>createCounter</code>. 这个函数接收一个初始的整数值 <code>init</code>&nbsp;&nbsp;并返回一个包含三个函数的对象。</p>
@@ -13,8 +11,6 @@
 	<li><code>decrement()</code>&nbsp;将当前值减 1 并返回。</li>
 	<li><code>reset()</code>&nbsp;将当前值设置为 <code>init</code> 并返回。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -41,8 +37,6 @@ counter.decrement(); // 1
 counter.reset(); // 0
 counter.reset(); // 0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1741. 查找每个员工花费的总时间](https://leetcode.cn/problems/find-total-time-spent-by-each-employee)
 
-[English Version](/solution/1700-1799/1741.Find%20Total%20Time%20Spent%20by%20Each%20Employee/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Employees</code></p>

@@ -1,7 +1,5 @@
 # [1535. 找出数组游戏的赢家](https://leetcode.cn/problems/find-the-winner-of-an-array-game)
 
-[English Version](/solution/1500-1599/1535.Find%20the%20Winner%20of%20an%20Array%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由 <strong>不同</strong> 整数组成的整数数组 <code>arr</code> 和一个整数 <code>k</code> 。</p>
@@ -11,8 +9,6 @@
 <p>返回赢得比赛的整数。</p>
 
 <p>题目数据 <strong>保证</strong> 游戏存在赢家。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <pre><strong>输入：</strong>arr = [1,11,22,33,44,55,66,77,88,99], k = 1000000000
 <strong>输出：</strong>99
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

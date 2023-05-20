@@ -1,14 +1,10 @@
 # [965. 单值二叉树](https://leetcode.cn/problems/univalued-binary-tree)
 
-[English Version](/solution/0900-0999/0965.Univalued%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>如果二叉树每个节点都具有相同的值，那么该二叉树就是<em>单值</em>二叉树。</p>
 
 <p>只有给定的树是单值二叉树时，才返回&nbsp;<code>true</code>；否则返回 <code>false</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <pre><strong>输入：</strong>[2,2,2,5,2]
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

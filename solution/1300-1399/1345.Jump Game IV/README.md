@@ -1,7 +1,5 @@
 # [1345. 跳跃游戏 IV](https://leetcode.cn/problems/jump-game-iv)
 
-[English Version](/solution/1300-1399/1345.Jump%20Game%20IV/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>arr</code>&nbsp;，你一开始在数组的第一个元素处（下标为 0）。</p>
@@ -17,8 +15,6 @@
 <p>请你返回到达数组最后一个元素的下标处所需的&nbsp;<strong>最少操作次数</strong>&nbsp;。</p>
 
 <p>注意：任何时候你都不能跳到数组外面。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>你可以直接从下标 0 处跳到下标 7 处，也就是数组的最后一个元素处。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 <meta charset="UTF-8" />

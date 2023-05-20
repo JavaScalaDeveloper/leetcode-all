@@ -1,7 +1,5 @@
 # [717. 1 比特与 2 比特字符](https://leetcode.cn/problems/1-bit-and-2-bit-characters)
 
-[English Version](/solution/0700-0799/0717.1-bit%20and%202-bit%20Characters/README_EN.md)
-
 ## 题目描述
 
 <p>有两种特殊字符：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>给你一个以 <code>0</code> 结尾的二进制数组&nbsp;<code>bits</code>&nbsp;，如果最后一个字符必须是一个一比特字符，则返回 <code>true</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>解释：</strong>唯一的解码方式是将其解析为两比特字符和两比特字符。
 所以最后一个字符不是一比特字符。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

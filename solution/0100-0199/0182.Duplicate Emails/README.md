@@ -1,7 +1,5 @@
 # [182. 查找重复的电子邮箱](https://leetcode.cn/problems/duplicate-emails)
 
-[English Version](/solution/0100-0199/0182.Duplicate%20Emails/README_EN.md)
-
 ## 题目描述
 
 <p><meta charset="UTF-8" /></p>
@@ -19,15 +17,11 @@ id 是该表的主键列。
 此表的每一行都包含一封电子邮件。电子邮件不包含大写字母。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询来报告所有重复的电子邮件。 请注意，可以保证电子邮件字段不为 NULL。</p>
 
 <p>以&nbsp;<strong>任意顺序&nbsp;</strong>返回结果表。</p>
 
 <p>查询结果格式如下例。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 

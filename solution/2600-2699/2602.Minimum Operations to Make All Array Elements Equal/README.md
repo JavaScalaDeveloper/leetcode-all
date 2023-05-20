@@ -1,7 +1,5 @@
 # [2602. 使数组元素全部相等的最少操作次数](https://leetcode.cn/problems/minimum-operations-to-make-all-array-elements-equal)
 
-[English Version](/solution/2600-2699/2602.Minimum%20Operations%20to%20Make%20All%20Array%20Elements%20Equal/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数数组&nbsp;<code>nums</code>&nbsp;。</p>
@@ -15,8 +13,6 @@
 <p>请你返回一个长度为 <code>m</code>&nbsp;的数组<em>&nbsp;</em><code>answer</code>&nbsp;，其中<em>&nbsp;</em><code>answer[i]</code>是将&nbsp;<code>nums</code>&nbsp;中所有元素变成&nbsp;<code>queries[i]</code>&nbsp;的&nbsp;<strong>最少</strong>&nbsp;操作次数。</p>
 
 <p><strong>注意</strong>，每次查询后，数组变回最开始的值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <b>输出：</b>[20]
 <b>解释：</b>我们可以将数组中所有元素都增大到 10 ，总操作次数为 8 + 1 + 4 + 7 = 20 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

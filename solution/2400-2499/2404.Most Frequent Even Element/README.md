@@ -1,14 +1,10 @@
 # [2404. 出现最频繁的偶数元素](https://leetcode.cn/problems/most-frequent-even-element)
 
-[English Version](/solution/2400-2499/2404.Most%20Frequent%20Even%20Element/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，返回出现最频繁的偶数元素。</p>
 
 <p>如果存在多个满足条件的元素，只需要返回 <strong>最小</strong> 的一个。如果不存在这样的元素，返回 <code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>不存在偶数元素。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

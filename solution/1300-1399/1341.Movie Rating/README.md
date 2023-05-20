@@ -1,7 +1,5 @@
 # [1341. 电影评分](https://leetcode.cn/problems/movie-rating)
 
-[English Version](/solution/1300-1399/1341.Movie%20Rating/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>Movies</code></p>
@@ -45,8 +43,6 @@ user_id 是表的主键。
 created_at 是用户的点评日期。 
 </pre>
 
-<p>&nbsp;</p>
-
 <p>请你编写一组&nbsp;SQL 查询：</p>
 
 <ul>
@@ -57,8 +53,6 @@ created_at 是用户的点评日期。
 <p><strong>字典序</strong> ，即按字母在字典中出现顺序对字符串排序，字典序较小则意味着排序靠前。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1070. 产品销售分析 III](https://leetcode.cn/problems/product-sales-analysis-iii)
 
-[English Version](/solution/1000-1099/1070.Product%20Sales%20Analysis%20III/README_EN.md)
-
 ## 题目描述
 
 <p>销售表&nbsp;<code>Sales</code>：</p>
@@ -22,8 +20,6 @@ product_id 是产品表的外键。
 请注意，价格是按每单位计的。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>产品表&nbsp;<code>Product</code>：</p>
 
 <pre>
@@ -36,15 +32,11 @@ product_id 是产品表的外键。
 product_id 是这张表的主键。
 这张表的每一行都标识：每个产品的 id 和 产品名称。</pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，选出每个销售产品&nbsp;<strong>第一年</strong> 销售的 <strong>产品 id</strong>、<strong>年份</strong>、<strong>数量&nbsp;</strong>和 <strong>价格</strong>。</p>
 
 <p>结果表中的条目可以按 <strong>任意顺序</strong> 排列。</p>
 
 <p>查询结果格式如下例所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

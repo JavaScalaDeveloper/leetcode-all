@@ -1,7 +1,5 @@
 # [707. 设计链表](https://leetcode.cn/problems/design-linked-list)
 
-[English Version](/solution/0700-0799/0707.Design%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 <p>你可以选择使用单链表或者双链表，设计并实现自己的链表。</p>
@@ -21,8 +19,6 @@
 	<li><code>void deleteAtIndex(int index)</code> 如果下标有效，则删除链表中下标为 <code>index</code> 的节点。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong class="example">示例：</strong></p>
 
 <pre>
@@ -41,8 +37,6 @@ myLinkedList.get(1);              // 返回 2
 myLinkedList.deleteAtIndex(1);    // 现在，链表变为 1-&gt;3
 myLinkedList.get(1);              // 返回 3
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

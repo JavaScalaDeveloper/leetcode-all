@@ -1,7 +1,5 @@
 # [1867. 最大数量高于平均水平的订单](https://leetcode.cn/problems/orders-with-maximum-quantity-above-average)
 
-[English Version](/solution/1800-1899/1867.Orders%20With%20Maximum%20Quantity%20Above%20Average/README_EN.md)
-
 ## 题目描述
 
 <p>&nbsp;<code>OrdersDetails</code> 表</p>
@@ -19,8 +17,6 @@
 此表的每一行都包含订单id中产品id的订购数量。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>您正在运行一个电子商务网站，该网站正在寻找不平衡的订单。不平衡订单的订单最大数量严格大于每个订单（包括订单本身）的平均数量。</p>
 
 <p>订单的平均数量计算为（订单中所有产品的总数量）/（订单中不同产品的数量）。订单的最大数量是订单中任何单个产品的最高数量。</p>
@@ -30,8 +26,6 @@
 <p>按任意顺序返回结果表。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例:</strong></p>
 

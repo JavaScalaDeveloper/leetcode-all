@@ -1,7 +1,5 @@
 # [1415. 长度为 n 的开心字符串中字典序第 k 小的字符串](https://leetcode.cn/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n)
 
-[English Version](/solution/1400-1499/1415.The%20k-th%20Lexicographical%20String%20of%20All%20Happy%20Strings%20of%20Length%20n/README_EN.md)
-
 ## 题目描述
 
 <p>一个 「开心字符串」定义为：</p>
@@ -16,8 +14,6 @@
 <p>给你两个整数 <code>n</code>&nbsp;和 <code>k</code>&nbsp;，你需要将长度为 <code>n</code>&nbsp;的所有开心字符串按字典序排序。</p>
 
 <p>请你返回排序后的第 k 个开心字符串，如果长度为 <code>n</code>&nbsp;的开心字符串少于 <code>k</code>&nbsp;个，那么请你返回 <strong>空字符串</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,16 +48,12 @@
 <strong>输出：</strong>&quot;abacbabacb&quot;
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= n &lt;= 10</code></li>
 	<li><code>1 &lt;= k &lt;= 100</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

@@ -1,7 +1,5 @@
 # [136. 只出现一次的数字](https://leetcode.cn/problems/single-number)
 
-[English Version](/solution/0100-0199/0136.Single%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>非空</strong> 整数数组 <code>nums</code> ，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p>
@@ -10,7 +8,6 @@
 
 <div class="original__bRMd">
 <div>
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1 ：</strong></p>
 
@@ -32,8 +29,6 @@
 <strong>输入：</strong>nums = [1]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -80,14 +75,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int singleNumber(int *nums, int numsSize) {
-    int ans = 0;
-    for (int i = 0; i < numsSize; i++) {
-        ans ^= nums[i];
-    }
-    return ans;
-}
-```
+**

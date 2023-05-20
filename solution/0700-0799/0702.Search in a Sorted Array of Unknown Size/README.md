@@ -1,7 +1,5 @@
 # [702. 搜索长度未知的有序数组](https://leetcode.cn/problems/search-in-a-sorted-array-of-unknown-size)
 
-[English Version](/solution/0700-0799/0702.Search%20in%20a%20Sorted%20Array%20of%20Unknown%20Size/README_EN.md)
-
 ## 题目描述
 
 <p>这是一个<strong>交互问题</strong>。</p>
@@ -23,8 +21,6 @@
 
 <p>你必须写一个时间复杂度为&nbsp;<code>O(log n)</code>&nbsp;的算法。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -39,8 +35,6 @@
 <strong>输入:</strong> <code>secret</code> = [-1,0,3,5,9,12], <code>target</code> = 2
 <strong>输出:</strong> -1
 <strong>解释:</strong> 2 不在数组中所以返回 -1</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

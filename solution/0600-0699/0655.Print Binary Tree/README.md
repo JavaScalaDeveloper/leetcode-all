@@ -1,7 +1,5 @@
 # [655. 输出二叉树](https://leetcode.cn/problems/print-binary-tree)
 
-[English Version](/solution/0600-0699/0655.Print%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵二叉树的根节点 <code>root</code> ，请你构造一个下标从 <strong>0</strong> 开始、大小为 <code>m x n</code> 的字符串矩阵 <code>res</code> ，用以表示树的 <strong>格式化布局</strong> 。构造此格式化布局矩阵需要遵循以下规则：</p>
@@ -16,10 +14,6 @@
 </ul>
 
 <p>返回构造得到的矩阵<em> </em><code>res</code> 。</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0655.Print%20Binary%20Tree/images/print1-tree.jpg" style="width: 141px; height: 181px;" />
@@ -39,8 +33,6 @@
 &nbsp;["","2","","","","3",""],
 &nbsp;["","","4","","","",""]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

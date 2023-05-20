@@ -1,7 +1,5 @@
 # [20. 有效的括号](https://leetcode.cn/problems/valid-parentheses)
 
-[English Version](/solution/0000-0099/0020.Valid%20Parentheses/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个只包括 <code>'('</code>，<code>')'</code>，<code>'{'</code>，<code>'}'</code>，<code>'['</code>，<code>']'</code>&nbsp;的字符串 <code>s</code> ，判断字符串是否有效。</p>
@@ -13,8 +11,6 @@
 	<li>左括号必须以正确的顺序闭合。</li>
 	<li>每个右括号都有一个对应的相同类型的左括号。</li>
 </ol>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>输入：</strong>s = "(]"
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

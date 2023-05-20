@@ -1,7 +1,5 @@
 # [887. 鸡蛋掉落](https://leetcode.cn/problems/super-egg-drop)
 
-[English Version](/solution/0800-0899/0887.Super%20Egg%20Drop/README_EN.md)
-
 ## 题目描述
 
 <p>给你 <code>k</code> 枚相同的鸡蛋，并可以使用一栋从第 <code>1</code> 层到第 <code>n</code> 层共有 <code>n</code> 层楼的建筑。</p>

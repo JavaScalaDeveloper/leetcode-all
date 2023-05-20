@@ -1,7 +1,5 @@
 # [2066. 账户余额](https://leetcode.cn/problems/account-balance)
 
-[English Version](/solution/2000-2099/2066.Account%20Balance/README_EN.md)
-
 ## 题目描述
 
 <p>表名: <code>Transactions</code></p>
@@ -20,15 +18,11 @@
 其中交易类型(type)字段包括了两种行为：存入 ('Deposit'), 取出('Withdraw').
 </pre>
 
-<p>&nbsp;</p>
-
 <p>请写出能够返回用户每次交易完成后的账户余额. 我们约定所有用户在进行交易前的账户余额都为0，&nbsp;并且保证所有交易行为后的余额不为负数。</p>
 
 <p>返回的结果请依次按照 账户（<code>account_id</code>),&nbsp;日期(&nbsp;<code>day</code>&nbsp;) 进行<strong>升序排序</strong>&nbsp;.</p>
 
 <p>查询结果的格式请参照以下测试样例.</p>
-
-<p>&nbsp;</p>
 
 <p><strong>测试样例1:</strong></p>
 

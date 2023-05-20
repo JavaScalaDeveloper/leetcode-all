@@ -1,7 +1,5 @@
 # [982. 按位与为零的三元组](https://leetcode.cn/problems/triples-with-bitwise-and-equal-to-zero)
 
-[English Version](/solution/0900-0999/0982.Triples%20with%20Bitwise%20AND%20Equal%20To%20Zero/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，返回其中 <strong>按位与三元组</strong> 的数目。</p>
@@ -42,8 +40,6 @@
 <strong>输入：</strong>nums = [0,0,0]
 <strong>输出：</strong>27
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

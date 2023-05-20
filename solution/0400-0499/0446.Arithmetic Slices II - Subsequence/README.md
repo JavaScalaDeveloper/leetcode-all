@@ -1,7 +1,5 @@
 # [446. 等差数列划分 II - 子序列](https://leetcode.cn/problems/arithmetic-slices-ii-subsequence)
 
-[English Version](/solution/0400-0499/0446.Arithmetic%20Slices%20II%20-%20Subsequence/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，返回 <code>nums</code> 中所有 <strong>等差子序列</strong> 的数目。</p>
@@ -20,8 +18,6 @@
 </ul>
 
 <p>题目数据保证答案是一个 <strong>32-bit</strong> 整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 <strong>输出：</strong>16
 <strong>解释：</strong>数组中的任意子序列都是等差子序列。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

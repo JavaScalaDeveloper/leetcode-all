@@ -1,7 +1,5 @@
 # [2401. 最长优雅子数组](https://leetcode.cn/problems/longest-nice-subarray)
 
-[English Version](/solution/2400-2499/2401.Longest%20Nice%20Subarray/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由 <strong>正</strong> 整数组成的数组 <code>nums</code> 。</p>
@@ -13,8 +11,6 @@
 <p><strong>子数组</strong> 是数组中的一个 <strong>连续</strong> 部分。</p>
 
 <p><strong>注意：</strong>长度为 <code>1</code> 的子数组始终视作优雅子数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>最长的优雅子数组长度为 1 ，任何长度为 1 的子数组都满足题目条件。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

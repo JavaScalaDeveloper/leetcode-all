@@ -1,7 +1,5 @@
 # [2100. 适合打劫银行的日子](https://leetcode.cn/problems/find-good-days-to-rob-the-bank)
 
-[English Version](/solution/2100-2199/2100.Find%20Good%20Days%20to%20Rob%20the%20Bank/README_EN.md)
-
 ## 题目描述
 
 <p>你和一群强盗准备打劫银行。给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>security</code>&nbsp;，其中&nbsp;<code>security[i]</code>&nbsp;是第 <code>i</code>&nbsp;天执勤警卫的数量。日子从 <code>0</code>&nbsp;开始编号。同时给你一个整数&nbsp;<code>time</code>&nbsp;。</p>
@@ -17,8 +15,6 @@
 <p>更正式的，第 <code>i</code> 天是一个合适打劫银行的日子当且仅当：<code>security[i - time] &gt;= security[i - time + 1] &gt;= ... &gt;= security[i] &lt;= ... &lt;= security[i + time - 1] &lt;= security[i + time]</code>.</p>
 
 <p>请你返回一个数组，包含 <strong>所有</strong> 适合打劫银行的日子（下标从 <strong>0</strong>&nbsp;开始）。返回的日子可以 <strong>任意</strong>&nbsp;顺序排列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,8 +45,6 @@
 没有任何一天的前 2 天警卫数目是非递增的。
 所以没有适合打劫银行的日子，返回空数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

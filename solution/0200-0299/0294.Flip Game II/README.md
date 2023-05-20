@@ -1,7 +1,5 @@
 # [294. 翻转游戏 II](https://leetcode.cn/problems/flip-game-ii)
 
-[English Version](/solution/0200-0299/0294.Flip%20Game%20II/README_EN.md)
-
 ## 题目描述
 
 <p>你和朋友玩一个叫做「翻转游戏」的游戏。游戏规则如下：</p>
@@ -25,16 +23,12 @@
 <strong>输出：</strong>false
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= currentState.length &lt;= 60</code></li>
 	<li><code>currentState[i]</code> 不是 <code>'+'</code> 就是 <code>'-'</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>请推导你算法的时间复杂度。</p>
 

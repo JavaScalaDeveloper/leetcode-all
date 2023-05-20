@@ -1,7 +1,5 @@
 # [2142. 每辆车的乘客人数 I](https://leetcode.cn/problems/the-number-of-passengers-in-each-bus-i)
 
-[English Version](/solution/2100-2199/2142.The%20Number%20of%20Passengers%20in%20Each%20Bus%20I/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Buses</code></p>
@@ -17,8 +15,6 @@ bus_id 是该表的主键。
 该表的每一行都包含关于 LeetCode 站点的公交车到达时间的信息。
 不会出现两辆公交车会同时到达。</pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Passengers</code></p>
 
 <pre>
@@ -31,8 +27,6 @@ bus_id 是该表的主键。
 passenger_id 是该表的主键。
 该表的每一行都包含乘客到达 LeetCode 站的时间信息。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>公交车和乘客到达 LeetCode 站。如果一辆公交车在时间 <code>t<sub>bus</sub></code> 到站，乘客在时间 <code>t<sub>passenger</sub></code> 到站，其中 <code>t<sub>passenger</sub> &lt;= t<sub>bus</sub></code>，该乘客之前没有赶上任何公交车，则该乘客将搭乘该公交车。</p>
 

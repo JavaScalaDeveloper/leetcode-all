@@ -1,7 +1,5 @@
 # [1270. 向公司 CEO 汇报工作的所有人](https://leetcode.cn/problems/all-people-report-to-the-given-manager)
 
-[English Version](/solution/1200-1299/1270.All%20People%20Report%20to%20the%20Given%20Manager/README_EN.md)
-
 ## 题目描述
 
 <p>员工表：<code>Employees</code></p>
@@ -18,8 +16,6 @@ employee_id 是这个表的主键。
 这个表中每一行中，employee_id 表示职工的 ID，employee_name 表示职工的名字，manager_id 表示该职工汇报工作的直线经理。
 这个公司 CEO 是 employee_id = 1 的人。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>用 SQL 查询出所有直接或间接向公司 CEO 汇报工作的职工的 <code>employee_id</code> 。</p>
 

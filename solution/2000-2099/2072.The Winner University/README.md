@@ -1,7 +1,5 @@
 # [2072. 赢得比赛的大学](https://leetcode.cn/problems/the-winner-university)
 
-[English Version](/solution/2000-2099/2072.The%20Winner%20University/README_EN.md)
-
 ## 题目描述
 
 <p>表： <code>NewYork</code></p>
@@ -16,8 +14,6 @@ student_id 是这个表的主键。
 每一行包含纽约大学 (New York University) 中一名学生一次考试的成绩。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表： <code>California</code></p>
 
 <pre>+-------------+------+
@@ -29,8 +25,6 @@ student_id 是这个表的主键。
 student_id 是这个表的主键。
 每一行包含加州大学 (California University) 中一名学生一次考试的成绩。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>纽约大学和加州大学之间举行了一场比赛。这场比赛由两所大学中相同数量的学生参加。拥有更多<strong>优秀学生</strong>的大学赢得这场比赛。如果两所大学的<strong>优秀学生</strong>数量相同，则这场比赛平局。</p>
 
@@ -45,8 +39,6 @@ student_id 是这个表的主键。
 </ul>
 
 <p>查询格式如下示例所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

@@ -1,7 +1,5 @@
 # [307. 区域和检索 - 数组可修改](https://leetcode.cn/problems/range-sum-query-mutable)
 
-[English Version](/solution/0300-0399/0307.Range%20Sum%20Query%20-%20Mutable/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>nums</code> ，请你完成两类查询。</p>
@@ -19,8 +17,6 @@
 	<li><code>int sumRange(int left, int right)</code> 返回数组&nbsp;<code>nums</code>&nbsp;中索引&nbsp;<code>left</code>&nbsp;和索引&nbsp;<code>right</code>&nbsp;之间（&nbsp;<strong>包含&nbsp;</strong>）的nums元素的 <strong>和</strong>&nbsp;（即，<code>nums[left] + nums[left + 1], ..., nums[right]</code>）</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -36,8 +32,6 @@ numArray.sumRange(0, 2); // 返回 1 + 3 + 5 = 9
 numArray.update(1, 2);   // nums = [1,2,5]
 numArray.sumRange(0, 2); // 返回 1 + 2 + 5 = 8
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

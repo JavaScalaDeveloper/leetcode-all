@@ -1,7 +1,5 @@
 # [682. 棒球比赛](https://leetcode.cn/problems/baseball-game)
 
-[English Version](/solution/0600-0699/0682.Baseball%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>你现在是一场采用特殊赛制棒球比赛的记录员。这场比赛由若干回合组成，过去几回合的得分可能会影响以后几回合的得分。</p>

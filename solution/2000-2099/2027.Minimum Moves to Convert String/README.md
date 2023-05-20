@@ -1,7 +1,5 @@
 # [2027. 转换字符串的最少操作次数](https://leetcode.cn/problems/minimum-moves-to-convert-string)
 
-[English Version](/solution/2000-2099/2027.Minimum%20Moves%20to%20Convert%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> ，由 <code>n</code> 个字符组成，每个字符不是 <code>'X'</code> 就是 <code>'O'</code> 。</p>
@@ -9,8 +7,6 @@
 <p>一次<strong> 操作</strong> 定义为从 <code>s</code> 中选出 <strong>三个连续字符 </strong>并将选中的每个字符都转换为 <code>'O'</code> 。注意，如果字符已经是 <code>'O'</code> ，只需要保持 <strong>不变</strong> 。</p>
 
 <p>返回将 <code>s</code> 中所有字符均转换为 <code>'O'</code> 需要执行的&nbsp;<strong>最少</strong>&nbsp;操作次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>s 中不存在需要转换的 <code>'X' 。</code>
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -72,21 +66,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int minimumMoves(char *s) {
-    int n = strlen(s);
-    int ans = 0;
-    int i = 0;
-    while (i < n) {
-        if (s[i] == 'X') {
-            ans++;
-            i += 3;
-        } else {
-            i++;
-        }
-    }
-    return ans;
-}
-```
+**

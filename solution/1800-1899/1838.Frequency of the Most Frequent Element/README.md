@@ -1,7 +1,5 @@
 # [1838. 最高频元素的频数](https://leetcode.cn/problems/frequency-of-the-most-frequent-element)
 
-[English Version](/solution/1800-1899/1838.Frequency%20of%20the%20Most%20Frequent%20Element/README_EN.md)
-
 ## 题目描述
 
 <p>元素的 <strong>频数</strong> 是该元素在一个数组中出现的次数。</p>

@@ -1,7 +1,5 @@
 # [2579. 统计染色格子数](https://leetcode.cn/problems/count-total-number-of-colored-cells)
 
-[English Version](/solution/2500-2599/2579.Count%20Total%20Number%20of%20Colored%20Cells/README_EN.md)
-
 ## 题目描述
 
 <p>有一个无穷大的二维网格图，一开始所有格子都未染色。给你一个正整数&nbsp;<code>n</code>&nbsp;，表示你需要执行以下步骤&nbsp;<code>n</code>&nbsp;分钟：</p>
@@ -14,8 +12,6 @@
 <p>下图分别是 1、2、3 分钟后的网格图。</p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2579.Count%20Total%20Number%20of%20Colored%20Cells/images/example-copy-2.png" style="width: 500px; height: 279px;">
 <p>请你返回 <code>n</code>&nbsp;分钟之后 <strong>被染色的格子&nbsp;</strong>数目。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -30,8 +26,6 @@
 <b>输出：</b>5
 <b>解释：</b>2 分钟后，有 4 个在边缘的蓝色格子和 1 个在中间的蓝色格子，所以返回 5 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

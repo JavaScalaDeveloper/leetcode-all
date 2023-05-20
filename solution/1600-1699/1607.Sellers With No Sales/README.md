@@ -1,7 +1,5 @@
 # [1607. 没有卖出的卖家](https://leetcode.cn/problems/sellers-with-no-sales)
 
-[English Version](/solution/1600-1699/1607.Sellers%20With%20No%20Sales/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Customer</code></p>
@@ -16,8 +14,6 @@
 customer_id 是该表主键.
 该表的每行包含网上商城的每一位顾客的信息.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Orders</code></p>
 
@@ -36,8 +32,6 @@ order_id 是该表主键.
 sale_date 是顾客customer_id和卖家seller_id之间交易的日期.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Seller</code></p>
 
 <pre>
@@ -51,15 +45,11 @@ seller_id 是该表主键.
 该表的每行包含每一位卖家的信息.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个SQL语句,&nbsp;报告所有在2020年度没有任何卖出的卖家的名字.</p>
 
 <p>返回结果按照&nbsp;<code>seller_name</code>&nbsp;<strong>升序排列</strong>.</p>
 
 <p>查询结果格式如下例所示.</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

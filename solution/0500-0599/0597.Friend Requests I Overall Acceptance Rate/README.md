@@ -1,7 +1,5 @@
 # [597. 好友申请 I：总体通过率](https://leetcode.cn/problems/friend-requests-i-overall-acceptance-rate)
 
-[English Version](/solution/0500-0599/0597.Friend%20Requests%20I%20Overall%20Acceptance%20Rate/README_EN.md)
-
 ## 题目描述
 
 <p>表：<code>FriendRequest</code></p>
@@ -18,8 +16,6 @@
 该表包含发送请求的用户的 ID ，接受请求的用户的 ID 以及请求的日期。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表：<code>RequestAccepted</code></p>
 
 <pre>
@@ -33,8 +29,6 @@
 此表没有主键，它可能包含重复项。
 该表包含发送请求的用户的 ID ，接受请求的用户的 ID 以及请求通过的日期。</pre>
 
-<p>&nbsp;</p>
-
 <p>写一个查询语句，求出好友申请的通过率，用 2 位小数表示。通过率由接受好友申请的数目除以申请总数。</p>
 
 <p><strong>提示：</strong></p>
@@ -46,8 +40,6 @@
 </ul>
 
 <p>查询结果应该如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -81,8 +73,6 @@ RequestAccepted 表：
 +-------------+
 <strong>解释：</strong>
 总共有 5 个请求，有 4 个不同的通过请求，所以通过率是 0.80</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶:</strong></p>
 

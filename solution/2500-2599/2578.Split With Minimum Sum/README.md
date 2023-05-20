@@ -1,7 +1,5 @@
 # [2578. 最小和分割](https://leetcode.cn/problems/split-with-minimum-sum)
 
-[English Version](/solution/2500-2599/2578.Split%20With%20Minimum%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数&nbsp;<code>num</code>&nbsp;，请你将它分割成两个非负整数&nbsp;<code>num1</code> 和&nbsp;<code>num2</code>&nbsp;，满足：</p>
@@ -24,8 +22,6 @@
 	<li><code>num1</code> 和&nbsp;<code>num2</code>&nbsp;中数位顺序可以与&nbsp;<code>num</code>&nbsp;中数位顺序不同。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -41,8 +37,6 @@
 <b>输出：</b>75
 <b>解释：</b>我们可以将 687 分割成 <code>num1</code> = 68 和 <code>num2 </code>= 7 ，和为最优值 75 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

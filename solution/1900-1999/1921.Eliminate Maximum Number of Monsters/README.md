@@ -1,7 +1,5 @@
 # [1921. 消灭怪物的最大数量](https://leetcode.cn/problems/eliminate-maximum-number-of-monsters)
 
-[English Version](/solution/1900-1999/1921.Eliminate%20Maximum%20Number%20of%20Monsters/README_EN.md)
-
 ## 题目描述
 
 <p>你正在玩一款电子游戏，在游戏中你需要保护城市免受怪物侵袭。给你一个 <strong>下标从 0 开始</strong> 且长度为 <code>n</code> 的整数数组 <code>dist</code> ，其中 <code>dist[i]</code> 是第 <code>i</code> 个怪物与城市的 <strong>初始距离</strong>（单位：米）。</p>

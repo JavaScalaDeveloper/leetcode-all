@@ -1,7 +1,5 @@
 # [519. 随机翻转矩阵](https://leetcode.cn/problems/random-flip-matrix)
 
-[English Version](/solution/0500-0599/0519.Random%20Flip%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>m x n</code> 的二元矩阵 <code>matrix</code> ，且所有值被初始化为 <code>0</code> 。请你设计一个算法，随机选取一个满足&nbsp;<code>matrix[i][j] == 0</code> 的下标&nbsp;<code>(i, j)</code> ，并将它的值变为 <code>1</code> 。所有满足 <code>matrix[i][j] == 0</code> 的下标 <code>(i, j)</code> 被选取的概率应当均等。</p>
@@ -15,8 +13,6 @@
 	<li><code>int[] flip()</code> 返回一个满足&nbsp;<code>matrix[i][j] == 0</code> 的随机下标 <code>[i, j]</code> ，并将其对应格子中的值变为 <code>1</code></li>
 	<li><code>void reset()</code> 将矩阵中所有的值重置为 <code>0</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -34,8 +30,6 @@ solution.flip();  // 返回 [2, 0]，因为 [1,0] 已经返回过了，此时返
 solution.flip();  // 返回 [0, 0]，根据前面已经返回过的下标，此时只能返回 [0,0]
 solution.reset(); // 所有值都重置为 0 ，并可以再次选择下标返回
 solution.flip();  // 返回 [2, 0]，此时返回 [0,0]、[1,0] 和 [2,0] 的概率应当相同</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

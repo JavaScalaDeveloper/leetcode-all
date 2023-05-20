@@ -1,7 +1,5 @@
 # [546. 移除盒子](https://leetcode.cn/problems/remove-boxes)
 
-[English Version](/solution/0500-0599/0546.Remove%20Boxes/README_EN.md)
-
 ## 题目描述
 
 <p>给出一些不同颜色的盒子<meta charset="UTF-8" />&nbsp;<code>boxes</code>&nbsp;，盒子的颜色由不同的正数表示。</p>
@@ -9,8 +7,6 @@
 <p>你将经过若干轮操作去去掉盒子，直到所有的盒子都去掉为止。每一轮你可以移除具有相同颜色的连续 <code>k</code> 个盒子（<code>k&nbsp;&gt;= 1</code>），这样一轮之后你将得到 <code>k * k</code> 个积分。</p>
 
 <p>返回 <em>你能获得的最大积分和</em>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输入：</strong>boxes = [1]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

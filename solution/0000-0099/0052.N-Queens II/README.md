@@ -1,14 +1,10 @@
 # [52. N 皇后 II](https://leetcode.cn/problems/n-queens-ii)
 
-[English Version](/solution/0000-0099/0052.N-Queens%20II/README_EN.md)
-
 ## 题目描述
 
 <p><strong>n&nbsp;皇后问题</strong> 研究的是如何将 <code>n</code>&nbsp;个皇后放置在 <code>n × n</code> 的棋盘上，并且使皇后彼此之间不能相互攻击。</p>
 
 <p>给你一个整数 <code>n</code> ，返回 <strong>n 皇后问题</strong> 不同的解决方案的数量。</p>
-
-<p>&nbsp;</p>
 
 <div class="original__bRMd">
 <div>
@@ -26,8 +22,6 @@
 <strong>输入：</strong>n = 1
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

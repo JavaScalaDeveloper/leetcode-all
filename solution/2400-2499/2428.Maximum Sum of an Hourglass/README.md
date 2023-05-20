@@ -1,7 +1,5 @@
 # [2428. 沙漏的最大总和](https://leetcode.cn/problems/maximum-sum-of-an-hourglass)
 
-[English Version](/solution/2400-2499/2428.Maximum%20Sum%20of%20an%20Hourglass/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的整数矩阵 <code>grid</code> 。</p>
@@ -11,8 +9,6 @@
 <p>返回沙漏中元素的 <strong>最大</strong> 总和。</p>
 
 <p><strong>注意：</strong>沙漏无法旋转且必须整个包含在矩阵中。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2428.Maximum%20Sum%20of%20an%20Hourglass/images/1.jpg" style="width: 323px; height: 323px;">
@@ -27,8 +23,6 @@
 <strong>输出：</strong>35
 <strong>解释：</strong>上图中的单元格表示元素总和最大的沙漏：1 + 2 + 3 + 5 + 7 + 8 + 9 = 35 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

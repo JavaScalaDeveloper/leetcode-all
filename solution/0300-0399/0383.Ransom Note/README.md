@@ -1,7 +1,5 @@
 # [383. 赎金信](https://leetcode.cn/problems/ransom-note)
 
-[English Version](/solution/0300-0399/0383.Ransom%20Note/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串：<code>ransomNote</code> 和 <code>magazine</code> ，判断 <code>ransomNote</code> 能不能由 <code>magazine</code> 里面的字符构成。</p>
@@ -9,8 +7,6 @@
 <p>如果可以，返回 <code>true</code> ；否则返回 <code>false</code> 。</p>
 
 <p><code>magazine</code> 中的每个字符只能在 <code>ransomNote</code> 中使用一次。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输入：</strong>ransomNote = "aa", magazine = "aab"
 <strong>输出：</strong>true
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

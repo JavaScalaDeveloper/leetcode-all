@@ -1,7 +1,5 @@
 # [898. 子数组按位或操作](https://leetcode.cn/problems/bitwise-ors-of-subarrays)
 
-[English Version](/solution/0800-0899/0898.Bitwise%20ORs%20of%20Subarrays/README_EN.md)
-
 ## 题目描述
 
 <p>我们有一个非负整数数组<meta charset="UTF-8" />&nbsp;<code>arr</code>&nbsp;。</p>
@@ -9,8 +7,6 @@
 <p>对于每个（连续的）子数组<meta charset="UTF-8" />&nbsp;<code>sub = [arr[i], arr[i + 1], ..., arr[j]]</code>&nbsp;（&nbsp;<code>i &lt;= j</code>），我们对<meta charset="UTF-8" />&nbsp;<code>sub</code>&nbsp;中的每个元素进行按位或操作，获得结果<meta charset="UTF-8" />&nbsp;<code>arr[i] | arr[i + 1] | ... | arr[j]</code>&nbsp;。</p>
 
 <p>返回可能结果的数量。 多次出现的结果在最终答案中仅计算一次。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>解释：</strong>
 可能的结果是 1，2，3，4，6，以及 7 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong><meta charset="UTF-8" /></p>
 

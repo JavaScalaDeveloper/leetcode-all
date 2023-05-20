@@ -1,7 +1,5 @@
 # [2357. 使数组中所有元素都等于零](https://leetcode.cn/problems/make-array-zero-by-subtracting-equal-amounts)
 
-[English Version](/solution/2300-2399/2357.Make%20Array%20Zero%20by%20Subtracting%20Equal%20Amounts/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个非负整数数组 <code>nums</code> 。在一步操作中，你必须：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>返回使 <code>nums</code> 中所有元素都等于<em> </em><code>0</code> 需要的 <strong>最少</strong> 操作数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>nums 中的每个元素都已经是 0 ，所以不需要执行任何操作。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -69,20 +63,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int minimumOperations(int *nums, int numsSize) {
-    int vis[101] = {0};
-    vis[0] = 1;
-    int ans = 0;
-    for (int i = 0; i < numsSize; i++) {
-        if (vis[nums[i]]) {
-            continue;
-        }
-        vis[nums[i]] = 1;
-        ans++;
-    }
-    return ans;
-}
-```
+**

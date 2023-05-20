@@ -1,7 +1,5 @@
 # [313. 超级丑数](https://leetcode.cn/problems/super-ugly-number)
 
-[English Version](/solution/0300-0399/0313.Super%20Ugly%20Number/README_EN.md)
-
 ## 题目描述
 
 <p><strong>超级丑数</strong> 是一个正整数，并满足其所有质因数都出现在质数数组 <code>primes</code> 中。</p>
@@ -9,8 +7,6 @@
 <p>给你一个整数 <code>n</code> 和一个整数数组 <code>primes</code> ，返回第 <code>n</code> 个 <strong>超级丑数</strong> 。</p>
 
 <p>题目数据保证第 <code>n</code> 个 <strong>超级丑数</strong> 在 <strong>32-bit</strong> 带符号整数范围内。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

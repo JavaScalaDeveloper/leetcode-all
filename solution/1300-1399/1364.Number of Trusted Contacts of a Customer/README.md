@@ -1,7 +1,5 @@
 # [1364. 顾客的可信联系人数量](https://leetcode.cn/problems/number-of-trusted-contacts-of-a-customer)
 
-[English Version](/solution/1300-1399/1364.Number%20of%20Trusted%20Contacts%20of%20a%20Customer/README_EN.md)
-
 ## 题目描述
 
 <p>顾客表：<code>Customers</code></p>
@@ -17,8 +15,6 @@ customer_id 是这张表的主键。
 此表的每一行包含了某在线商店顾客的姓名和电子邮件。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>联系方式表：<code>Contacts</code></p>
 
 <pre>+---------------+---------+
@@ -33,8 +29,6 @@ customer_id 是这张表的主键。
 此表包含每位顾客的联系人信息，但顾客的联系人不一定存在于顾客表中。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>发票表：<code>Invoices</code></p>
 
 <pre>+--------------+---------+
@@ -47,8 +41,6 @@ customer_id 是这张表的主键。
 invoice_id 是这张表的主键。
 此表的每一行分别表示编号为 user_id 的顾客拥有有一张编号为 invoice_id、价格为 price 的发票。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>为每张发票 <code>invoice_id</code> 编写一个SQL查询以查找以下内容：</p>
 

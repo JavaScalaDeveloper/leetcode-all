@@ -1,7 +1,5 @@
 # [1249. 移除无效的括号](https://leetcode.cn/problems/minimum-remove-to-make-valid-parentheses)
 
-[English Version](/solution/1200-1299/1249.Minimum%20Remove%20to%20Make%20Valid%20Parentheses/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由 <code>'('</code>、<code>')'</code> 和小写字母组成的字符串 <code>s</code>。</p>
@@ -17,8 +15,6 @@
 	<li>可以被写作&nbsp;<code>AB</code>（<code>A</code>&nbsp;连接&nbsp;<code>B</code>）的字符串，其中&nbsp;<code>A</code>&nbsp;和&nbsp;<code>B</code>&nbsp;都是有效「括号字符串」</li>
 	<li>可以被写作&nbsp;<code>(A)</code>&nbsp;的字符串，其中&nbsp;<code>A</code>&nbsp;是一个有效的「括号字符串」</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输出：</strong>""
 <strong>解释：</strong>空字符串也是有效的
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

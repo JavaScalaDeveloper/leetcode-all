@@ -1,7 +1,5 @@
 # [471. 编码最短长度的字符串](https://leetcode.cn/problems/encode-string-with-shortest-length)
 
-[English Version](/solution/0400-0499/0471.Encode%20String%20with%20Shortest%20Length/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个 <strong>非空</strong> 字符串，将其编码为具有最短长度的字符串。</p>

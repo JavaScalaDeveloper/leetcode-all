@@ -1,7 +1,5 @@
 # [1096. 花括号展开 II](https://leetcode.cn/problems/brace-expansion-ii)
 
-[English Version](/solution/1000-1099/1096.Brace%20Expansion%20II/README_EN.md)
-
 ## 题目描述
 
 <p>如果你熟悉 Shell 编程，那么一定了解过花括号展开，它可以用来生成任意字符串。</p>
@@ -39,8 +37,6 @@
 
 <p>假如你希望以「集合」的概念了解此题，也可以通过点击 “<strong>显示英文描述</strong>” 获取详情。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -54,8 +50,6 @@
 <strong>输出：</strong>["a","ab","ac","z"]
 <strong>解释：</strong>输出中 <strong>不应 </strong>出现重复的组合结果。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

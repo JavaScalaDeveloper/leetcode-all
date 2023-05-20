@@ -1,7 +1,5 @@
 # [646. 最长数对链](https://leetcode.cn/problems/maximum-length-of-pair-chain)
 
-[English Version](/solution/0600-0699/0646.Maximum%20Length%20of%20Pair%20Chain/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由&nbsp;<code>n</code>&nbsp;个数对组成的数对数组&nbsp;<code>pairs</code>&nbsp;，其中&nbsp;<code>pairs[i] = [left<sub>i</sub>, right<sub>i</sub>]</code>&nbsp;且&nbsp;<code>left<sub>i</sub>&nbsp;&lt; right<sub>i</sub></code><sub> 。</sub></p>
@@ -11,8 +9,6 @@
 <p>找出并返回能够形成的 <strong>最长数对链的长度</strong> 。</p>
 
 <p>你不需要用到所有的数对，你可以以任何顺序选择其中的一些数对来构造。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@
 <b>输入：</b>pairs = [[1,2],[7,8],[4,5]]
 <b>输出：</b>3
 <b>解释：</b>最长的数对链是 [1,2] -&gt; [4,5] -&gt; [7,8] 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

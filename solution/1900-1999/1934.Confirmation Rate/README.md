@@ -1,7 +1,5 @@
 # [1934. 确认率](https://leetcode.cn/problems/confirmation-rate)
 
-[English Version](/solution/1900-1999/1934.Confirmation%20Rate/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Signups</code></p>
@@ -16,8 +14,6 @@
 User_id是该表的主键。
 每一行都包含ID为user_id的用户的注册时间信息。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Confirmations</code></p>
 
@@ -34,8 +30,6 @@ user_id是一个引用到注册表的外键。
 action是类型为('confirmed'， 'timeout')的ENUM
 该表的每一行都表示ID为user_id的用户在time_stamp请求了一条确认消息，该确认消息要么被确认('confirmed')，要么被过期('timeout')。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>用户的 <strong>确认率</strong>&nbsp;是 <code>'confirmed'</code>&nbsp;消息的数量除以请求的确认消息的总数。没有请求任何确认消息的用户的确认率为&nbsp;<code>0</code> 。确认率四舍五入到 <strong>小数点后两位</strong> 。</p>
 

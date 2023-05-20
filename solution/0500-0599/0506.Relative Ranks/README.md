@@ -1,7 +1,5 @@
 # [506. 相对名次](https://leetcode.cn/problems/relative-ranks)
 
-[English Version](/solution/0500-0599/0506.Relative%20Ranks/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的整数数组 <code>score</code> ，其中 <code>score[i]</code> 是第 <code>i</code> 位运动员在比赛中的得分。所有得分都 <strong>互不相同</strong> 。</p>
@@ -17,8 +15,6 @@
 
 <p>使用长度为 <code>n</code> 的数组 <code>answer</code> 返回获奖，其中 <code>answer[i]</code> 是第 <code>i</code> 位运动员的获奖情况。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -33,8 +29,6 @@
 <strong>输出：</strong>["Gold Medal","5","Bronze Medal","Silver Medal","4"]
 <strong>解释：</strong>名次为 [1<sup>st</sup>, 5<sup>th</sup>, 3<sup>rd</sup>, 2<sup>nd</sup>, 4<sup>th</sup>] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

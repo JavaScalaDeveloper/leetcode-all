@@ -1,7 +1,5 @@
 # [1421. 净现值查询](https://leetcode.cn/problems/npv-queries)
 
-[English Version](/solution/1400-1499/1421.NPV%20Queries/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>NPV</code></p>
@@ -17,8 +15,6 @@
 该表有每一笔存货的年份, id 和对应净现值的信息.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Queries</code></p>
 
 <pre>+---------------+---------+
@@ -30,8 +26,6 @@
 (id, year) 是该表主键.
 该表有每一次查询所对应存货的 id 和年份的信息.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写一个 SQL,&nbsp;找到 Queries&nbsp;表中每一次查询的净现值.</p>
 

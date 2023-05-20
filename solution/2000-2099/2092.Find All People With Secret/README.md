@@ -1,7 +1,5 @@
 # [2092. 找出知晓秘密的所有专家](https://leetcode.cn/problems/find-all-people-with-secret)
 
-[English Version](/solution/2000-2099/2092.Find%20All%20People%20With%20Secret/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code> ，表示有 <code>n</code> 个专家从 <code>0</code> 到 <code>n - 1</code> 编号。另外给你一个下标从 0 开始的二维整数数组 <code>meetings</code> ，其中 <code>meetings[i] = [x<sub>i</sub>, y<sub>i</sub>, time<sub>i</sub>]</code> 表示专家 <code>x<sub>i</sub></code> 和专家 <code>y<sub>i</sub></code> 在时间 <code>time<sub>i</sub></code> 要开一场会。一个专家可以同时参加 <strong>多场会议</strong> 。最后，给你一个整数 <code>firstPerson</code> 。</p>
@@ -11,8 +9,6 @@
 <p>秘密共享是 <strong>瞬时发生</strong> 的。也就是说，在同一时间，一个专家不光可以接收到秘密，还能在其他会议上与其他专家分享。</p>
 
 <p>在所有会议都结束之后，返回所有知晓这个秘密的专家列表。你可以按 <strong>任何顺序</strong> 返回答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 注意，专家 2 可以在收到秘密的同一时间分享此秘密。
 时间 2 ，专家 3 将秘密与专家 4 共享。
 因此，在所有会议结束后，专家 0、1、2、3 和 4 都将知晓这个秘密。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

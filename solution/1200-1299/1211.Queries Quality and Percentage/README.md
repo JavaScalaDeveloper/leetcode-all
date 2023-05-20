@@ -1,7 +1,5 @@
 # [1211. 查询结果的质量和占比](https://leetcode.cn/problems/queries-quality-and-percentage)
 
-[English Version](/solution/1200-1299/1211.Queries%20Quality%20and%20Percentage/README_EN.md)
-
 ## 题目描述
 
 <p>查询表 <code>Queries</code>：&nbsp;</p>
@@ -20,8 +18,6 @@
 &ldquo;位置&rdquo;（<code>position</code>）列的值为 1 到 500 。
 &ldquo;评分&rdquo;（<code>rating</code>）列的值为 1 到 5 。评分小于 3 的查询被定义为质量很差的查询。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>将查询结果的质量 <code>quality</code> 定义为：</p>
 

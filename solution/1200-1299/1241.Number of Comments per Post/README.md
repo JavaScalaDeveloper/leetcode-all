@@ -1,7 +1,5 @@
 # [1241. 每个帖子的评论数](https://leetcode.cn/problems/number-of-comments-per-post)
 
-[English Version](/solution/1200-1299/1241.Number%20of%20Comments%20per%20Post/README_EN.md)
-
 ## 题目描述
 
 <p>表&nbsp;<code>Submissions</code> 结构如下：</p>
@@ -19,8 +17,6 @@
 对于评论来说，parent_id 就是表中对应帖子的 <code>sub_id</code>。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写 SQL 语句以查找每个帖子的评论数。</p>
 
 <p>结果表应包含帖子的&nbsp;<code>post_id</code> 和对应的评论数&nbsp;<code>number_of_comments</code> 并且按&nbsp;<code>post_id</code>&nbsp;升序排列。</p>
@@ -32,8 +28,6 @@
 <p>结果表应该按 <code>post_id</code> <strong>升序排序</strong>。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

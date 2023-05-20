@@ -1,12 +1,8 @@
 # [1002. 查找共用字符](https://leetcode.cn/problems/find-common-characters)
 
-[English Version](/solution/1000-1099/1002.Find%20Common%20Characters/README_EN.md)
-
 ## 题目描述
 
 给你一个字符串数组 <code>words</code> ，请你找出所有在 <code>words</code> 的每个字符串中都出现的共用字符（ <strong>包括重复字符</strong>），并以数组形式返回。你可以按 <strong>任意顺序</strong> 返回答案。
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,8 +17,6 @@
 <strong>输入：</strong>words = ["cool","lock","cook"]
 <strong>输出：</strong>["c","o"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

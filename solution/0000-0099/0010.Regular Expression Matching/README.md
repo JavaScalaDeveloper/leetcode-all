@@ -1,7 +1,5 @@
 # [10. 正则表达式匹配](https://leetcode.cn/problems/regular-expression-matching)
 
-[English Version](/solution/0000-0099/0010.Regular%20Expression%20Matching/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;和一个字符规律&nbsp;<code>p</code>，请你来实现一个支持 <code>'.'</code>&nbsp;和&nbsp;<code>'*'</code>&nbsp;的正则表达式匹配。</p>
@@ -37,8 +35,6 @@
 <strong>输出：</strong>true
 <strong>解释：</strong>".*" 表示可匹配零个或多个（'*'）任意字符（'.'）。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

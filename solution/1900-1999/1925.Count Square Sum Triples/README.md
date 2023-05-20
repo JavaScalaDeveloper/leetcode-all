@@ -1,7 +1,5 @@
 # [1925. 统计平方和三元组的数目](https://leetcode.cn/problems/count-square-sum-triples)
 
-[English Version](/solution/1900-1999/1925.Count%20Square%20Sum%20Triples/README_EN.md)
-
 ## 题目描述
 
 <p>一个 <strong>平方和三元组</strong> <code>(a,b,c)</code> 指的是满足 <code>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></code> 的 <strong>整数 </strong>三元组 <code>a</code>，<code>b</code> 和 <code>c</code> 。</p>

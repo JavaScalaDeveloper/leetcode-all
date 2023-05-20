@@ -1,7 +1,5 @@
 # [2572. 无平方子集计数](https://leetcode.cn/problems/count-the-number-of-square-free-subsets)
 
-[English Version](/solution/2500-2599/2572.Count%20the%20Number%20of%20Square-Free%20Subsets/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数数组 <code>nums</code> 。</p>
@@ -13,8 +11,6 @@
 <p>返回数组 <code>nums</code> 中 <strong>无平方</strong> 且 <strong>非空</strong> 的子集数目。因为答案可能很大，返回对 <code>10<sup>9</sup> + 7</code> 取余的结果。</p>
 
 <p><code>nums</code> 的 <strong>非空子集</strong> 是可以由删除 <code>nums</code> 中一些元素（可以不删除，但不能全部删除）得到的一个数组。如果构成两个子集时选择删除的下标不同，则认为这两个子集不同。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>解释：</strong>示例中有 1 个无平方子集：
 - 由第 0 个元素 [1] 组成的子集。其元素的乘积是 1 ，这是一个无平方因子数。
 可以证明给定数组中不存在超过 1 个无平方子集。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

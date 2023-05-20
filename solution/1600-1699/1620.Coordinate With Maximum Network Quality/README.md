@@ -1,7 +1,5 @@
 # [1620. 网络信号最好的坐标](https://leetcode.cn/problems/coordinate-with-maximum-network-quality)
 
-[English Version](/solution/1600-1699/1620.Coordinate%20With%20Maximum%20Network%20Quality/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>towers</code>&nbsp;和一个整数 <code>radius</code> 。</p>
@@ -25,8 +23,6 @@
     </li>
     <li><code>⌊val⌋</code>&nbsp;表示小于等于&nbsp;<code>val</code>&nbsp;的最大整数（向下取整函数）。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1620.Coordinate%20With%20Maximum%20Network%20Quality/images/untitled-diagram.png" style="width: 176px; height: 176px;" />
@@ -53,8 +49,6 @@
 <b>输入：</b>towers = [[1,2,13],[2,1,7],[0,1,9]], radius = 2
 <b>输出：</b>[1,2]
 <strong>解释：</strong>坐标 (1, 2) 的信号强度最大。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

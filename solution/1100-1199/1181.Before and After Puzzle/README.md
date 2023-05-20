@@ -1,7 +1,5 @@
 # [1181. 前后拼接](https://leetcode.cn/problems/before-and-after-puzzle)
 
-[English Version](/solution/1100-1199/1181.Before%20and%20After%20Puzzle/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个「短语」列表&nbsp;<code>phrases</code>，请你帮忙按规则生成拼接后的「新短语」列表。</p>
@@ -15,8 +13,6 @@
 <p>注意，两个「短语」拼接时的顺序也很重要，我们需要同时考虑这两个「短语」。另外，同一个「短语」可以多次参与拼接，但「新短语」不能再参与拼接。</p>
 
 <p>请你按字典序排列并返回「新短语」列表，列表中的字符串应该是 <strong>不重复的</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <pre><strong>输入：</strong>phrases = [&quot;a&quot;,&quot;b&quot;,&quot;a&quot;]
 <strong>输出：</strong>[&quot;a&quot;]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

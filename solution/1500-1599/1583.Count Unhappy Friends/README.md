@@ -1,7 +1,5 @@
 # [1583. 统计不开心的朋友](https://leetcode.cn/problems/count-unhappy-friends)
 
-[English Version](/solution/1500-1599/1583.Count%20Unhappy%20Friends/README_EN.md)
-
 ## 题目描述
 
 <p>给你一份 <code>n</code> 位朋友的亲近程度列表，其中 <code>n</code> 总是 <strong>偶数</strong> 。</p>
@@ -18,8 +16,6 @@
 </ul>
 
 <p>返回 <strong>不开心的朋友的数目</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,8 +46,6 @@
 <strong>输入：</strong>n = 4, preferences = [[1, 3, 2], [2, 3, 0], [1, 3, 0], [0, 2, 1]], pairs = [[1, 3], [0, 2]]
 <strong>输出：</strong>4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

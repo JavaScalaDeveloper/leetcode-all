@@ -1,7 +1,5 @@
 # [2464. 有效分割中的最少子数组数目](https://leetcode.cn/problems/minimum-subarrays-in-a-valid-split)
 
-[English Version](/solution/2400-2499/2464.Minimum%20Subarrays%20in%20a%20Valid%20Split/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组 <code>nums</code>。</p>
@@ -21,8 +19,6 @@
 	<li>两个数的&nbsp;<strong>最大公约数&nbsp;</strong>是能整除两个数的最大正整数。</li>
 	<li><strong>子数组&nbsp;</strong>是数组中连续的非空部分。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -52,8 +48,6 @@
 <strong>输入:</strong> nums = [1,2,1]
 <strong>输出:</strong> -1
 <strong>解释:</strong> 不可能创建有效的分割。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [2523. 范围内最接近的两个质数](https://leetcode.cn/problems/closest-prime-numbers-in-range)
 
-[English Version](/solution/2500-2599/2523.Closest%20Prime%20Numbers%20in%20Range/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个正整数&nbsp;<code>left</code> 和&nbsp;<code>right</code>&nbsp;，请你找到两个整数&nbsp;<code>num1</code> 和&nbsp;<code>num2</code>&nbsp;，它们满足：</p>
@@ -15,8 +13,6 @@
 <p>请你返回正整数数组&nbsp;<code>ans = [nums1, nums2]</code>&nbsp;。如果有多个整数对满足上述条件，请你返回&nbsp;<code>nums1</code>&nbsp;最小的质数对。如果不存在符合题意的质数对，请你返回&nbsp;<code>[-1, -1]</code>&nbsp;。</p>
 
 <p>如果一个整数大于&nbsp;<code>1</code>&nbsp;，且只能被&nbsp;<code>1</code> 和它自己整除，那么它是一个质数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <b>输出：</b>[-1,-1]
 <b>解释：</b>给定范围内只有一个质数，所以题目条件无法被满足。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1146. 快照数组](https://leetcode.cn/problems/snapshot-array)
 
-[English Version](/solution/1100-1199/1146.Snapshot%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>实现支持下列接口的「快照数组」-&nbsp;SnapshotArray：</p>
@@ -12,8 +10,6 @@
 	<li><code>int snap()</code>&nbsp;- 获取该数组的快照，并返回快照的编号&nbsp;<code>snap_id</code>（快照号是调用&nbsp;<code>snap()</code>&nbsp;的总次数减去&nbsp;<code>1</code>）。</li>
 	<li><code>int get(index, snap_id)</code>&nbsp;- 根据指定的&nbsp;<code>snap_id</code>&nbsp;选择快照，并返回该快照指定索引 <code>index</code>&nbsp;的值。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -26,8 +22,6 @@ snapshotArr.set(0,5);  // 令 array[0] = 5
 snapshotArr.snap();  // 获取快照，返回 snap_id = 0
 snapshotArr.set(0,6);
 snapshotArr.get(0,0);  // 获取 snap_id = 0 的快照中 array[0] 的值，返回 5</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

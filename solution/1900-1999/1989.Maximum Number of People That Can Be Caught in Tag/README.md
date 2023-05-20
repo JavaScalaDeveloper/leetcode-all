@@ -1,7 +1,5 @@
 # [1989. 捉迷藏中可捕获的最大人数](https://leetcode.cn/problems/maximum-number-of-people-that-can-be-caught-in-tag)
 
-[English Version](/solution/1900-1999/1989.Maximum%20Number%20of%20People%20That%20Can%20Be%20Caught%20in%20Tag/README_EN.md)
-
 ## 题目描述
 
 <p>你正在和你的朋友玩捉迷藏游戏。在捉迷藏比赛中，人们被分成两组：是 “鬼” 的人，和不是 “鬼” 的人。是 “鬼” 的人想要抓住尽可能多的不是 “鬼” 的人。</p>
@@ -9,8 +7,6 @@
 <p>给定一个 <strong>从 0 开始建立索引</strong> 的整数数组 <code>team</code>，其中只包含 0 (表示&nbsp;<strong>不是</strong> “鬼” 的人) 和 1 (表示是 “鬼” 的人)，以及一个整数 <code>dist</code>。索引 <code>i</code> 为 “鬼” 的人可以捕获索引在 <code>[i - dist, i + dist]</code>(<strong>包括</strong>) 范围内且 <strong>不是</strong> “鬼” 的任何<strong>一个</strong>人。</p>
 
 <p>返回 <em>“鬼” 所能捕获的最大人数</em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>解释:
 </strong>没有 “鬼” 来抓人。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

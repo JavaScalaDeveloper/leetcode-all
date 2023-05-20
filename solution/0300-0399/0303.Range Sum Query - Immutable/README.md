@@ -1,7 +1,5 @@
 # [303. 区域和检索 - 数组不可变](https://leetcode.cn/problems/range-sum-query-immutable)
 
-[English Version](/solution/0300-0399/0303.Range%20Sum%20Query%20-%20Immutable/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组 &nbsp;<code>nums</code>，处理以下类型的多个查询:</p>
@@ -16,8 +14,6 @@
 	<li><code>NumArray(int[] nums)</code> 使用数组 <code>nums</code> 初始化对象</li>
 	<li><code>int sumRange(int i, int j)</code> 返回数组 <code>nums</code>&nbsp;中索引&nbsp;<code>left</code>&nbsp;和&nbsp;<code>right</code>&nbsp;之间的元素的 <strong>总和</strong> ，包含&nbsp;<code>left</code>&nbsp;和&nbsp;<code>right</code>&nbsp;两点（也就是&nbsp;<code>nums[left] + nums[left + 1] + ... + nums[right]</code>&nbsp;)</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@ numArray.sumRange(0, 2); // return 1 ((-2) + 0 + 3)
 numArray.sumRange(2, 5); // return -1 (3 + (-5) + 2 + (-1)) 
 numArray.sumRange(0, 5); // return -3 ((-2) + 0 + 3 + (-5) + 2 + (-1))
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -80,37 +74,4 @@ class NumArray {
  */
 ```
 
-### **C**
-
-```c
-typedef struct {
-    int *sums;
-} NumArray;
-
-NumArray *numArrayCreate(int *nums, int numsSize) {
-    int *sums = malloc(sizeof(int) * (numsSize + 1));
-    memset(sums, 0, numsSize + 1);
-    for (int i = 0; i < numsSize; i++) {
-        sums[i + 1] = sums[i] + nums[i];
-    }
-    NumArray *res = malloc(sizeof(NumArray));
-    res->sums = sums;
-    return res;
-}
-
-int numArraySumRange(NumArray *obj, int left, int right) {
-    return obj->sums[right + 1] - obj->sums[left];
-}
-
-void numArrayFree(NumArray *obj) {
-    free(obj);
-}
-
-/**
- * Your NumArray struct will be instantiated and called as such:
- * NumArray* obj = numArrayCreate(nums, numsSize);
- * int param_1 = numArraySumRange(obj, left, right);
-
- * numArrayFree(obj);
-*/
-```
+**

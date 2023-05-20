@@ -1,7 +1,5 @@
 # [2467. 树上最大得分和路径](https://leetcode.cn/problems/most-profitable-path-in-a-tree)
 
-[English Version](/solution/2400-2499/2467.Most%20Profitable%20Path%20in%20a%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>一个 <code>n</code>&nbsp;个节点的无向树，节点编号为&nbsp;<code>0</code>&nbsp;到&nbsp;<code>n - 1</code>&nbsp;，树的根结点是&nbsp;<code>0</code>&nbsp;号节点。给你一个长度为 <code>n - 1</code>&nbsp;的二维整数数组&nbsp;<code>edges</code>&nbsp;，其中&nbsp;<code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code>&nbsp;，表示节点&nbsp;<code>a<sub>i</sub></code> 和&nbsp;<code>b<sub>i</sub></code>&nbsp;在树中有一条边。</p>
@@ -28,8 +26,6 @@
 </ul>
 
 <p>请你返回&nbsp;Alice 朝最优叶子结点移动的 <strong>最大</strong>&nbsp;净得分。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -61,8 +57,6 @@ Alice 无法得到更高分数。
 Alice 按照路径 0-&gt;1 移动，同时 Bob 按照路径 1-&gt;0 移动。
 所以 Alice 只打开节点 0 处的门，她的得分为 -7280 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

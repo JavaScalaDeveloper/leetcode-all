@@ -1,7 +1,5 @@
 # [2678. 老人的数目](https://leetcode.cn/problems/number-of-senior-citizens)
 
-[English Version](/solution/2600-2699/2678.Number%20of%20Senior%20Citizens/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的字符串&nbsp;<code>details</code>&nbsp;。<code>details</code>&nbsp;中每个元素都是一位乘客的信息，信息用长度为 <code>15</code>&nbsp;的字符串表示，表示方式如下：</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>请你返回乘客中年龄 <strong>严格大于 60 岁</strong>&nbsp;的人数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <b>输出：</b>0
 <b>解释：</b>没有乘客的年龄大于 60 岁。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

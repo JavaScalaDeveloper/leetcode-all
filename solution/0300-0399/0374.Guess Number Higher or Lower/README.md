@@ -1,7 +1,5 @@
 # [374. 猜数字大小](https://leetcode.cn/problems/guess-number-higher-or-lower)
 
-[English Version](/solution/0300-0399/0374.Guess%20Number%20Higher%20or%20Lower/README_EN.md)
-
 ## 题目描述
 
 <p>猜数字游戏的规则如下：</p>

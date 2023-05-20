@@ -1,7 +1,5 @@
 # [1613. 找到遗失的 ID](https://leetcode.cn/problems/find-the-missing-ids)
 
-[English Version](/solution/1600-1699/1613.Find%20the%20Missing%20IDs/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Customers</code></p>
@@ -17,8 +15,6 @@ customer_id 是该表主键.
 该表第一行包含了顾客的名字和id.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL 语句,&nbsp;找到所有遗失的顾客id.&nbsp;遗失的顾客id是指那些不在&nbsp;<code>Customers</code>&nbsp;表中,&nbsp;值却处于&nbsp;<code>1</code>&nbsp;和表中<strong>最大</strong>&nbsp;<code>customer_id</code>&nbsp;之间的id.</p>
 
 <p><strong>注意:&nbsp;</strong>最大的&nbsp;<code>customer_id</code>&nbsp;值不会超过&nbsp;<code>100</code>.</p>
@@ -26,8 +22,6 @@ customer_id 是该表主键.
 <p>返回结果按&nbsp;<code>ids</code> <strong>升序</strong>排列</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

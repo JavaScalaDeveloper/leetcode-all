@@ -1,7 +1,5 @@
 # [1721. 交换链表中的节点](https://leetcode.cn/problems/swapping-nodes-in-a-linked-list)
 
-[English Version](/solution/1700-1799/1721.Swapping%20Nodes%20in%20a%20Linked%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给你链表的头节点 <code>head</code> 和一个整数 <code>k</code> 。</p>

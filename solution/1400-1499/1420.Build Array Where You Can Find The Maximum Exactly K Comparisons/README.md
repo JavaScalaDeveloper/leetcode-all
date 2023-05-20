@@ -1,7 +1,5 @@
 # [1420. 生成数组](https://leetcode.cn/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons)
 
-[English Version](/solution/1400-1499/1420.Build%20Array%20Where%20You%20Can%20Find%20The%20Maximum%20Exactly%20K%20Comparisons/README_EN.md)
-
 ## 题目描述
 
 <p>给你三个整数 <code>n</code>、<code>m</code> 和 <code>k</code> 。下图描述的算法用于找出正整数数组中最大的元素。</p>
@@ -17,8 +15,6 @@
 </ul>
 
 <p>返回上述条件下生成数组 <code>arr</code> 的 <strong>方法数</strong> ，由于答案可能会很大，所以 <strong>必须</strong> 对 <code>10^9 + 7</code> 取余。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -53,8 +49,6 @@
 <pre><strong>输入：</strong>n = 37, m = 17, k = 7
 <strong>输出：</strong>418930126
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

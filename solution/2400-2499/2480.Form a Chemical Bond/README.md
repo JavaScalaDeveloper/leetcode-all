@@ -1,7 +1,5 @@
 # [2480. 形成化学键](https://leetcode.cn/problems/form-a-chemical-bond)
 
-[English Version](/solution/2400-2499/2480.Form%20a%20Chemical%20Bond/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Elements</code></p>
@@ -22,8 +20,6 @@ type 是 ENUM&nbsp;类型，它的值是 ('Metal', 'Nonmetal', 'Noble') 之一
  - 如果 type 是 Nonmetal, electrons 这种元素的一个原子所需要的电子数。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>如果一个元素是&nbsp;<code>'Metal'</code>，另外一个元素是&nbsp;<code>'Nonmetal'</code>&nbsp;，那么它们可以形成键。</p>
 
 <p>编写一个 SQL 查询来查找所有可以形成键的元素对。</p>
@@ -31,8 +27,6 @@ type 是 ENUM&nbsp;类型，它的值是 ('Metal', 'Nonmetal', 'Noble') 之一
 <p data-group="1-1">以&nbsp;<strong>任意顺序&nbsp;</strong>返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

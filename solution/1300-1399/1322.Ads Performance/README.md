@@ -1,7 +1,5 @@
 # [1322. 广告效果](https://leetcode.cn/problems/ads-performance)
 
-[English Version](/solution/1300-1399/1322.Ads%20Performance/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Ads</code></p>
@@ -18,8 +16,6 @@
 action 列是一个枚举类型 (&#39;Clicked&#39;, &#39;Viewed&#39;, &#39;Ignored&#39;) 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>一家公司正在运营这些广告并想计算每条广告的效果。</p>
 
 <p>广告效果用点击通过率（Click-Through Rate：CTR）来衡量，公式如下:</p>
@@ -29,8 +25,6 @@ action 列是一个枚举类型 (&#39;Clicked&#39;, &#39;Viewed&#39;, &#39;Ignor
 <p>写一条SQL语句来查询每一条广告的&nbsp;<code>ctr</code>&nbsp;，</p>
 
 <p>&nbsp;<code>ctr</code>&nbsp;要保留两位小数。结果需要按&nbsp;<code>ctr</code>&nbsp;<strong>降序</strong>、按&nbsp;<code>ad_id</code>&nbsp;<strong>升序&nbsp;</strong>进行排序。</p>
-
-<p>&nbsp;</p>
 
 <p>查询结果示例如下：</p>
 

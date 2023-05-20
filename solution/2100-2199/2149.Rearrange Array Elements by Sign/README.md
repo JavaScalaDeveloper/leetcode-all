@@ -1,7 +1,5 @@
 # [2149. 按符号重排数组](https://leetcode.cn/problems/rearrange-array-elements-by-sign)
 
-[English Version](/solution/2100-2199/2149.Rearrange%20Array%20Elements%20by%20Sign/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，数组长度为 <strong>偶数</strong> ，由数目相等的正整数和负整数组成。</p>
@@ -15,8 +13,6 @@
 </ol>
 
 <p>重排元素满足上述条件后，返回修改后的数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@ nums 中的正整数是 [3,1,2] ，负整数是 [-2,-5,-4] 。
 1 是 nums 中唯一一个正整数，-1 是 nums 中唯一一个负整数。
 所以 nums 重排为 [1,-1] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

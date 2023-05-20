@@ -1,7 +1,5 @@
 # [2420. 找到所有好下标](https://leetcode.cn/problems/find-all-good-indices)
 
-[English Version](/solution/2400-2499/2420.Find%20All%20Good%20Indices/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>n</code>&nbsp;下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;和一个正整数&nbsp;<code>k</code>&nbsp;。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>按 <strong>升序</strong>&nbsp;返回所有好下标。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <b>输出：</b>[]
 <b>解释：</b>数组中没有好下标。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

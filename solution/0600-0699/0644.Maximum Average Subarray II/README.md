@@ -1,7 +1,5 @@
 # [644. 子数组最大平均数 II](https://leetcode.cn/problems/maximum-average-subarray-ii)
 
-[English Version](/solution/0600-0699/0644.Maximum%20Average%20Subarray%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个包含 <code>n</code> 个整数的数组 <code>nums</code> ，和一个整数 <code>k</code> 。</p>

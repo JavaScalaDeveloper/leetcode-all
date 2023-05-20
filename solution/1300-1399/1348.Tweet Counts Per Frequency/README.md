@@ -1,12 +1,8 @@
 # [1348. 推文计数](https://leetcode.cn/problems/tweet-counts-per-frequency)
 
-[English Version](/solution/1300-1399/1348.Tweet%20Counts%20Per%20Frequency/README_EN.md)
-
 ## 题目描述
 
 <p>一家社交媒体公司正试图通过分析特定时间段内出现的推文数量来监控其网站上的活动。这些时间段可以根据特定的频率（&nbsp;<strong>每分钟&nbsp;</strong>、<strong>每小时&nbsp;</strong>或 <strong>每一天</strong> ）划分为更小的 <strong>时间段</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p>例如，周期 <code>[10,10000]</code>&nbsp;（以 <strong>秒</strong> 为单位）将被划分为以下频率的 <strong>时间块</strong> :</p>
 
@@ -32,8 +28,6 @@
 	</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre>
@@ -54,8 +48,6 @@ tweetCounts.getTweetCountsPerFrequency("minute", "tweet3", 0, 60); //&nbsp;返�
 tweetCounts.recordTweet("tweet3", 120);                            // "tweet3"&nbsp;发布推文的时间分别是 0, 10, 60 和 120 。
 tweetCounts.getTweetCountsPerFrequency("hour", "tweet3", 0, 210);  //&nbsp;返回&nbsp;[4]。统计频率是每小时（3600 秒），因此只有一个有效时间间隔 [0,211&gt;&nbsp;-&nbsp;&gt;&nbsp;4&nbsp;条推文。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

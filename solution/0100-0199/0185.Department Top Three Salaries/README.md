@@ -1,7 +1,5 @@
 # [185. 部门工资前三高的所有员工](https://leetcode.cn/problems/department-top-three-salaries)
 
-[English Version](/solution/0100-0199/0185.Department%20Top%20Three%20Salaries/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Employee</code></p>
@@ -20,8 +18,6 @@ departmentId是Department表中ID的外键。
 该表的每一行都表示员工的ID、姓名和工资。它还包含了他们部门的ID。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表:&nbsp;<code>Department</code></p>
 
 <pre>
@@ -35,8 +31,6 @@ Id是该表的主键列。
 该表的每一行表示部门ID和部门名。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>公司的主管们感兴趣的是公司每个部门中谁赚的钱最多。一个部门的 <strong>高收入者</strong> 是指一个员工的工资在该部门的 <strong>不同</strong> 工资中 <strong>排名前三</strong> 。</p>
 
 <p>编写一个SQL查询，找出每个部门中 <strong>收入高的员工</strong> 。</p>
@@ -44,8 +38,6 @@ Id是该表的主键列。
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

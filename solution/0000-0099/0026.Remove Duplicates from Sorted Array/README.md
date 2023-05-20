@@ -1,7 +1,5 @@
 # [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array)
 
-[English Version](/solution/0000-0099/0026.Remove%20Duplicates%20from%20Sorted%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>升序排列</strong> 的数组 <code>nums</code> ，请你<strong><a href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank"> 原地</a></strong> 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。然后返回 <code>nums</code> 中唯一元素的个数。</p>
@@ -30,8 +28,6 @@ for (int i = 0; i &lt; k; i++) {
 
 <p>如果所有断言都通过，那么您的题解将被 <strong>通过</strong>。</p>
 
-<p>&nbsp;</p>
-
 <p><strong class="example">示例 1：</strong></p>
 
 <pre>
@@ -47,8 +43,6 @@ for (int i = 0; i &lt; k; i++) {
 <strong>输出：</strong>5, nums = [0,1,2,3,4]
 <strong>解释：</strong>函数应该返回新的长度 <strong><code>5</code></strong> ， 并且原数组 <em>nums </em>的前五个元素被修改为 <strong><code>0</code></strong>, <strong><code>1</code></strong>, <strong><code>2</code></strong>, <strong><code>3</code></strong>, <strong><code>4</code></strong> 。不需要考虑数组中超出新长度后面的元素。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

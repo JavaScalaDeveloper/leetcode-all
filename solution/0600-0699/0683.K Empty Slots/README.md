@@ -1,7 +1,5 @@
 # [683. K 个关闭的灯泡](https://leetcode.cn/problems/k-empty-slots)
 
-[English Version](/solution/0600-0699/0683.K%20Empty%20Slots/README_EN.md)
-
 ## 题目描述
 
 <p><code>n</code>&nbsp;个灯泡排成一行，编号从 <code>1</code> 到<meta charset="UTF-8" />&nbsp;<code>n</code>&nbsp;。最初，所有灯泡都关闭。每天&nbsp;<strong>只打开一个</strong>&nbsp;灯泡，直到<meta charset="UTF-8" />&nbsp;<code>n</code>&nbsp;天后所有灯泡都打开。</p>
@@ -9,8 +7,6 @@
 <p>给你一个长度为<meta charset="UTF-8" />&nbsp;<code>n</code>&nbsp;的灯泡数组 <code>blubs</code> ，其中 <code>bulls[i] = x</code> 意味着在第 <code>(i+1)</code> 天，我们会把在位置 <code>x</code> 的灯泡打开，其中 <code>i</code> <strong>从 0 开始</strong>，<code>x</code> <strong>从 1 开始</strong>。</p>
 
 <p>给你一个整数<meta charset="UTF-8" />&nbsp;<code>k</code>&nbsp;，请返回<em>恰好有两个打开的灯泡，且它们中间 <strong>正好</strong> 有<meta charset="UTF-8" />&nbsp;<code>k</code>&nbsp;个&nbsp;<strong>全部关闭的</strong> 灯泡的 <strong>最小的天数</strong> </em>。<em>如果不存在这种情况，返回 <code>-1</code> 。</em></p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -31,8 +27,6 @@ bulbs = [1,3,2]，k = 1
 <strong>输入：</strong>bulbs = [1,2,3]，k = 1
 <strong>输出：</strong>-1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

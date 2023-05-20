@@ -1,7 +1,5 @@
 # [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words)
 
-[English Version](/solution/0000-0099/0030.Substring%20with%20Concatenation%20of%20All%20Words/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串&nbsp;<code>s</code><strong>&nbsp;</strong>和一个字符串数组&nbsp;<code>words</code><strong>。</strong>&nbsp;<code>words</code>&nbsp;中所有字符串 <strong>长度相同</strong>。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回所有串联字串在&nbsp;<code>s</code><strong>&nbsp;</strong>中的开始索引。你可以以 <strong>任意顺序</strong> 返回答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@ s 中没有子串长度为 16 并且等于 words 的任何顺序排列的连接�
 子串 "foobarthe" 开始位置是 6。它是 words 中以 ["foo","bar","the"] 顺序排列的连接。
 子串 "barthefoo" 开始位置是 9。它是 words 中以 ["bar","the","foo"] 顺序排列的连接。
 子串 "thefoobar" 开始位置是 12。它是 words 中以 ["the","foo","bar"] 顺序排列的连接。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1068. 产品销售分析 I](https://leetcode.cn/problems/product-sales-analysis-i)
 
-[English Version](/solution/1000-1099/1068.Product%20Sales%20Analysis%20I/README_EN.md)
-
 ## 题目描述
 
 <p>销售表&nbsp;<code>Sales</code>：</p>
@@ -33,15 +31,11 @@ product_id 是关联到产品表 Product 的外键.
 product_id&nbsp;是表的主键.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一条SQL&nbsp;查询语句获取 <code>Sales</code>&nbsp;表中所有产品对应的 <strong>产品名称 product_name</strong> 以及该产品的所有 <strong>售卖年份 year</strong>&nbsp;和 <strong>价格 price</strong> 。</p>
 
 <p>查询结果中的顺序无特定要求。</p>
 
 <p>查询结果格式示例如下：</p>
-
-<p>&nbsp;</p>
 
 <pre>
 <code>Sales</code> 表：

@@ -1,7 +1,5 @@
 # [2261. 含最多 K 个可整除元素的子数组](https://leetcode.cn/problems/k-divisible-elements-subarrays)
 
-[English Version](/solution/2200-2299/2261.K%20Divisible%20Elements%20Subarrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> 和两个整数 <code>k</code> 和 <code>p</code> ，找出并返回满足要求的不同的子数组数，要求子数组中最多 <code>k</code> 个可被 <code>p</code> 整除的元素。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p><strong>子数组</strong> 定义为：数组中的连续元素组成的一个 <strong>非空</strong> 序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@ nums 中的所有元素都可以被 p = 1 整除。
 因为所有子数组互不相同，因此满足所有限制条件的子数组总数为 10 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -50,8 +44,6 @@ nums 中的所有元素都可以被 p = 1 整除。
 	<li><code>1 &lt;= nums[i], p &lt;= 200</code></li>
 	<li><code>1 &lt;= k &lt;= nums.length</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

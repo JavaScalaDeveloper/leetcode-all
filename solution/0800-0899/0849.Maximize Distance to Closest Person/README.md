@@ -1,7 +1,5 @@
 # [849. 到最近的人的最大距离](https://leetcode.cn/problems/maximize-distance-to-closest-person)
 
-[English Version](/solution/0800-0899/0849.Maximize%20Distance%20to%20Closest%20Person/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>seats</code> 表示一排座位，其中 <code>seats[i] = 1</code> 代表有人坐在第 <code>i</code> 个座位上，<code>seats[i] = 0</code> 代表座位 <code>i</code> 上是空的（<strong>下标从 0 开始</strong>）。</p>

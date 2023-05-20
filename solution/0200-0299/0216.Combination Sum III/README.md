@@ -1,7 +1,5 @@
 # [216. 组合总和 III](https://leetcode.cn/problems/combination-sum-iii)
 
-[English Version](/solution/0200-0299/0216.Combination%20Sum%20III/README_EN.md)
-
 ## 题目描述
 
 <p>找出所有相加之和为&nbsp;<code>n</code><em> </em>的&nbsp;<code>k</code><strong>&nbsp;</strong>个数的组合，且满足下列条件：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>返回 <em>所有可能的有效组合的列表</em> 。该列表不能包含相同的组合两次，组合可以以任何顺序返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -43,8 +39,6 @@
 <strong>解释:</strong> 不存在有效的组合。
 在[1,9]范围内使用4个不同的数字，我们可以得到的最小和是1+2+3+4 = 10，因为10 &gt; 1，没有有效的组合。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

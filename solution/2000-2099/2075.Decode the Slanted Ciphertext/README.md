@@ -1,7 +1,5 @@
 # [2075. 解码斜向换位密码](https://leetcode.cn/problems/decode-the-slanted-ciphertext)
 
-[English Version](/solution/2000-2099/2075.Decode%20the%20Slanted%20Ciphertext/README_EN.md)
-
 ## 题目描述
 
 <p>字符串 <code>originalText</code> 使用 <strong>斜向换位密码</strong> ，经由 <strong>行数固定</strong> 为 <code>rows</code> 的矩阵辅助，加密得到一个字符串 <code>encodedText</code> 。</p>
@@ -21,8 +19,6 @@
 <p>给你编码后的字符串 <code>encodedText</code> 和矩阵的行数 <code>rows</code> ，返回源字符串 <code>originalText</code> 。</p>
 
 <p><strong>注意：</strong><code>originalText</code> <strong>不</strong> 含任何尾随空格 <code>' '</code> 。生成的测试用例满足 <strong>仅存在一个</strong> 可能的 <code>originalText</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -60,8 +56,6 @@
 <strong>输出：</strong>" abc"
 <strong>解释：</strong>originalText 不能含尾随空格，但它可能会有一个或者多个前置空格。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

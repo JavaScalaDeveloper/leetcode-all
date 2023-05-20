@@ -1,7 +1,5 @@
 # [2370. 最长理想子序列](https://leetcode.cn/problems/longest-ideal-subsequence)
 
-[English Version](/solution/2300-2399/2370.Longest%20Ideal%20Subsequence/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由小写字母组成的字符串 <code>s</code> ，和一个整数 <code>k</code> 。如果满足下述条件，则可以将字符串 <code>t</code> 视作是 <strong>理想字符串</strong> ：</p>
@@ -16,8 +14,6 @@
 <p>字符串的子序列同样是一个字符串，并且子序列还满足：可以经由其他字符串删除某些字符（也可以不删除）但不改变剩余字符的顺序得到。</p>
 
 <p><strong>注意：</strong>字母表顺序不会循环。例如，<code>'a'</code> 和 <code>'z'</code> 在字母表中位次的绝对差值是 <code>25</code> ，而不是 <code>1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输出：</strong>4
 <strong>解释：</strong>最长理想字符串是 "abcd" ，该字符串长度为 4 ，所以返回 4 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

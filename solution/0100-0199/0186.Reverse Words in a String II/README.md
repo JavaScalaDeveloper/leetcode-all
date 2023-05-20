@@ -1,7 +1,5 @@
 # [186. 反转字符串中的单词 II](https://leetcode.cn/problems/reverse-words-in-a-string-ii)
 
-[English Version](/solution/0100-0199/0186.Reverse%20Words%20in%20a%20String%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符数组 <code>s</code> ，反转其中 <strong>单词</strong> 的顺序。</p>
@@ -11,8 +9,6 @@
 <div class="original__bRMd">
 <div>
 <p>必须设计并实现 <strong>原地</strong> 解法来解决此问题，即不分配额外的空间。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输入：</strong>s = ["a"]
 <strong>输出：</strong>["a"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [265. 粉刷房子 II](https://leetcode.cn/problems/paint-house-ii)
 
-[English Version](/solution/0200-0299/0265.Paint%20House%20II/README_EN.md)
-
 ## 题目描述
 
 <p>假如有一排房子共有&nbsp;<code>n</code>&nbsp;幢，每个房子可以被粉刷成 <code>k</code>&nbsp;种颜色中的一种。房子粉刷成不同颜色的花费成本也是不同的。你需要粉刷所有的房子并且使其相邻的两个房子颜色不能相同。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回 <em>粉刷完所有房子的最低成本</em>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输出:</strong> 5
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -43,8 +37,6 @@
 	<li><code>2 &lt;= k &lt;= 20</code></li>
 	<li><code>1 &lt;= costs[i][j] &lt;= 20</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>您能否在&nbsp;<code>O(nk)</code> 的时间复杂度下解决此问题？</p>
 

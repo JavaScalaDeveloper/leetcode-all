@@ -1,7 +1,5 @@
 # [1850. 邻位交换的最小次数](https://leetcode.cn/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number)
 
-[English Version](/solution/1800-1899/1850.Minimum%20Adjacent%20Swaps%20to%20Reach%20the%20Kth%20Smallest%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个表示大整数的字符串 <code>num</code> ，和一个整数 <code>k</code> 。</p>

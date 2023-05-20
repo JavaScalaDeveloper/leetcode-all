@@ -1,7 +1,5 @@
 # [1082. 销售分析 I ](https://leetcode.cn/problems/sales-analysis-i)
 
-[English Version](/solution/1000-1099/1082.Sales%20Analysis%20I/README_EN.md)
-
 ## 题目描述
 
 <p>产品表：<code>Product</code></p>
@@ -36,15 +34,11 @@ product_id 是 Product 表的外键。
 该表的每一行包含关于一个销售的一些信息。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，查询总销售额最高的销售者，如果有并列的，就都展示出来。</p>
 
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

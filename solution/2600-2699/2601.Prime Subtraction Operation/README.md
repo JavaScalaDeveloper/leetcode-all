@@ -1,7 +1,5 @@
 # [2601. 质数减法运算](https://leetcode.cn/problems/prime-subtraction-operation)
 
-[English Version](/solution/2600-2699/2601.Prime%20Subtraction%20Operation/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，数组长度为 <code>n</code> 。</p>
@@ -15,8 +13,6 @@
 <p>如果你能通过上述运算使得 <code>nums</code> 成为严格递增数组，则返回 <code>true</code> ；否则返回 <code>false</code> 。</p>
 
 <p><strong>严格递增数组</strong> 中的每个元素都严格大于其前面的元素。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>输入：</strong>nums = [5,8,3]
 <strong>输出：</strong>false
 <strong>解释：</strong>可以证明，执行运算无法使 nums 按严格递增顺序排序，因此答案是 false 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2622. 有时间限制的缓存](https://leetcode.cn/problems/cache-with-time-limit)
 
-[English Version](/solution/2600-2699/2622.Cache%20With%20Time%20Limit/README_EN.md)
-
 ## 题目描述
 
 <p>编写一个类，它允许获取和设置键-值对，并且每个键都有一个&nbsp;<strong>过期时间</strong>&nbsp;。</p>
@@ -13,8 +11,6 @@
 <p><code>get(key)</code>&nbsp;：如果存在一个未过期的键，它应该返回这个键相关的值。否则返回&nbsp;<code>-1</code>&nbsp;。</p>
 
 <p><code>count()</code>&nbsp;：返回未过期键的总数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,8 +47,6 @@
 在 t=200 时，调用 get(1) ，但缓存为空，因此返回 -1。
 在 t=250 时，count() 返回0 ，因为缓存是空的，没有未过期的键。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

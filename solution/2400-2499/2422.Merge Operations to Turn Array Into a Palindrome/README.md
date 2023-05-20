@@ -1,7 +1,5 @@
 # [2422. 使用合并操作将数组转换为回文序列](https://leetcode.cn/problems/merge-operations-to-turn-array-into-a-palindrome)
 
-[English Version](/solution/2400-2499/2422.Merge%20Operations%20to%20Turn%20Array%20Into%20a%20Palindrome/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个由&nbsp;<strong>正整数&nbsp;</strong>组成的数组 <code>nums</code>。</p>
@@ -19,8 +17,6 @@
 </ul>
 
 <p>返回<em>将数组转换为&nbsp;<strong>回文序列&nbsp;</strong>所需的&nbsp;<strong>最小&nbsp;</strong>操作数。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -41,8 +37,6 @@
 <strong>输出:</strong> 3
 <strong>解释:</strong> 我们在任意位置进行 3 次运算，最后得到数组 [10]，它是一个回文序列。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

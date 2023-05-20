@@ -1,7 +1,5 @@
 # [895. 最大频率栈](https://leetcode.cn/problems/maximum-frequency-stack)
 
-[English Version](/solution/0800-0899/0895.Maximum%20Frequency%20Stack/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个类似堆栈的数据结构，将元素推入堆栈，并从堆栈中弹出<strong>出现频率</strong>最高的元素。</p>
@@ -17,8 +15,6 @@
 	</ul>
 	</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@ freqStack.pop ();//返回 5 ，因为 5 出现频率最高。堆栈变成 [5,7,5
 freqStack.pop ();//返回 7 ，因为 5 和 7 出现频率最高，但7最接近顶部。堆栈变成 [5,7,5,4]。
 freqStack.pop ();//返回 5 ，因为 5 出现频率最高。堆栈变成 [5,7,4]。
 freqStack.pop ();//返回 4 ，因为 4, 5 和 7 出现频率最高，但 4 是最接近顶部的。堆栈变成 [5,7]。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

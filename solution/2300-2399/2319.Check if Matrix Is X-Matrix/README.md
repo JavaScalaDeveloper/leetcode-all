@@ -1,7 +1,5 @@
 # [2319. 判断矩阵是否是一个 X 矩阵](https://leetcode.cn/problems/check-if-matrix-is-x-matrix)
 
-[English Version](/solution/2300-2399/2319.Check%20if%20Matrix%20Is%20X-Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>如果一个正方形矩阵满足下述 <strong>全部</strong> 条件，则称之为一个 <strong>X 矩阵</strong> ：</p>
@@ -12,8 +10,6 @@
 </ol>
 
 <p>给你一个大小为 <code>n x n</code> 的二维整数数组 <code>grid</code> ，表示一个正方形矩阵。如果<em> </em><code>grid</code><em> </em>是一个 <strong>X 矩阵 </strong>，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2319.Check%20if%20Matrix%20Is%20X-Matrix/images/ex1.jpg" style="width: 311px; height: 320px;">
@@ -32,8 +28,6 @@ X 矩阵应该满足：绿色元素（对角线上）都不是 0 ，红色元素
 X 矩阵应该满足：绿色元素（对角线上）都不是 0 ，红色元素都是 0 。
 因此，grid 不是一个 X 矩阵。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -73,21 +67,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool checkXMatrix(int **grid, int gridSize, int *gridColSize) {
-    for (int i = 0; i < gridSize; i++) {
-        for (int j = 0; j < gridSize; j++) {
-            if (i == j || i + j == gridSize - 1) {
-                if (grid[i][j] == 0) {
-                    return false;
-                }
-            } else if (grid[i][j] != 0) {
-                return false;
-            }
-        }
-    }
-    return true;
-}
-```
+**

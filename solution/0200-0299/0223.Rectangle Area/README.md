@@ -1,7 +1,5 @@
 # [223. 矩形面积](https://leetcode.cn/problems/rectangle-area)
 
-[English Version](/solution/0200-0299/0223.Rectangle%20Area/README_EN.md)
-
 ## 题目描述
 
 <p>给你 <strong>二维</strong> 平面上两个 <strong>由直线构成且边与坐标轴平行/垂直</strong> 的矩形，请你计算并返回两个矩形覆盖的总面积。</p>
@@ -14,8 +12,6 @@
 	<li class="MachineTrans-lang-zh-CN">第二个矩形由其左下顶点 <code>(bx1, by1)</code> 和右上顶点 <code>(bx2, by2)</code> 定义。</li>
 </ul>
 </div>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="Rectangle Area" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0223.Rectangle%20Area/images/rectangle-plane.png" style="width: 700px; height: 365px;" />
@@ -30,8 +26,6 @@
 <strong>输入：</strong>ax1 = -2, ay1 = -2, ax2 = 2, ay2 = 2, bx1 = -2, by1 = -2, bx2 = 2, by2 = 2
 <strong>输出：</strong>16
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

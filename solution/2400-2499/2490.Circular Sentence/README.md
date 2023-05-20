@@ -1,7 +1,5 @@
 # [2490. 回环句](https://leetcode.cn/problems/circular-sentence)
 
-[English Version](/solution/2400-2499/2490.Circular%20Sentence/README_EN.md)
-
 ## 题目描述
 
 <p><strong>句子</strong> 是由单个空格分隔的一组单词，且不含前导或尾随空格。</p>
@@ -22,8 +20,6 @@
 <p>例如，<code>"leetcode exercises sound delightful"</code>、<code>"eetcode"</code>、<code>"leetcode eats soul"</code> 都是回环句。然而，<code>"Leetcode is cool"</code>、<code>"happy Leetcode"</code>、<code>"Leetcode"</code> 和 <code>"I like Leetcode"</code> 都 <strong>不</strong> 是回环句。</p>
 
 <p>给你一个字符串 <code>sentence</code> ，请你判断它是不是一个回环句。如果是，返回 <code>true</code><em> </em>；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -54,8 +50,6 @@
 <strong>解释：</strong>句子中的单词是 ["Leetcode", "is", "cool"] 。
 - Leetcod<em><strong>e</strong></em>&nbsp;的最后一个字符和 i<strong><em>s</em></strong> 的第一个字符 <strong>不</strong> 相等。 
 这个句子 <strong>不</strong> 是回环句。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

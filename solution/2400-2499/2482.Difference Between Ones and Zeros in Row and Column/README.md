@@ -1,7 +1,5 @@
 # [2482. 行和列中一和零的差值](https://leetcode.cn/problems/difference-between-ones-and-zeros-in-row-and-column)
 
-[English Version](/solution/2400-2499/2482.Difference%20Between%20Ones%20and%20Zeros%20in%20Row%20and%20Column/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的&nbsp;<code>m x n</code>&nbsp;二进制矩阵&nbsp;<code>grid</code>&nbsp;。</p>
@@ -17,8 +15,6 @@
 </ul>
 
 <p>请你返回差值矩阵<em>&nbsp;</em><code>diff</code>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,8 +48,6 @@
 - diff[1][1] = onesRow<sub>1</sub> + onesCol<sub>1</sub> - zerosRow<sub>1</sub> - zerosCol<sub>1</sub> = 3 + 2 - 0 - 0 = 5
 - diff[1][2] = onesRow<sub>1</sub> + onesCol<sub>2</sub> - zerosRow<sub>1</sub> - zerosCol<sub>2</sub> = 3 + 2 - 0 - 0 = 5
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -99,36 +93,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Return an array of arrays of size *returnSize.
- * The sizes of the arrays are returned as *returnColumnSizes array.
- * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
- */
-int **onesMinusZeros(int **grid, int gridSize, int *gridColSize, int *returnSize, int **returnColumnSizes) {
-    int *rows = malloc(sizeof(int) * gridSize);
-    int *cols = malloc(sizeof(int) * gridColSize[0]);
-    memset(rows, 0, sizeof(int) * gridSize);
-    memset(cols, 0, sizeof(int) * gridColSize[0]);
-    for (int i = 0; i < gridSize; i++) {
-        for (int j = 0; j < gridColSize[0]; j++) {
-            if (grid[i][j]) {
-                rows[i]++;
-                cols[j]++;
-            }
-        }
-    }
-    int **ans = malloc(sizeof(int *) * gridSize);
-    for (int i = 0; i < gridSize; i++) {
-        ans[i] = malloc(sizeof(int) * gridColSize[0]);
-        for (int j = 0; j < gridColSize[0]; j++) {
-            ans[i][j] = rows[i] + cols[j] - (gridSize - rows[i]) - (gridColSize[0] - cols[j]);
-        }
-    }
-    *returnSize = gridSize;
-    *returnColumnSizes = gridColSize;
-    return ans;
-}
-```
+**

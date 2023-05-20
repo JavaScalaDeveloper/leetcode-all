@@ -1,7 +1,5 @@
 # [1355. 活动参与者](https://leetcode.cn/problems/activity-participants)
 
-[English Version](/solution/1300-1399/1355.Activity%20Participants/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Friends</code></p>
@@ -19,8 +17,6 @@ name 是朋友的名字
 activity 是朋友参加的活动的名字
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Activities</code></p>
 
 <pre>
@@ -34,8 +30,6 @@ id 是该表的主键
 name 是活动的名字
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一条 SQL 查询那些既没有最多，也没有最少参与者的活动的名字</p>
 
 <p><code>Activities</code> 表中的任意活动都有在&nbsp;<code>Friends</code> 中参与过</p>
@@ -43,8 +37,6 @@ name 是活动的名字
 <p>可以以 <strong>任何顺序</strong> 返回结果。</p>
 
 <p>下面是查询结果格式的例子。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

@@ -1,7 +1,5 @@
 # [452. 用最少数量的箭引爆气球](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons)
 
-[English Version](/solution/0400-0499/0452.Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons/README_EN.md)
-
 ## 题目描述
 
 <p>有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组&nbsp;<code>points</code>&nbsp;，其中<code>points[i] = [x<sub>start</sub>, x<sub>end</sub>]</code>&nbsp;表示水平直径在&nbsp;<code>x<sub>start</sub></code>&nbsp;和&nbsp;<code>x<sub>end</sub></code>之间的气球。你不知道气球的确切 y 坐标。</p>
@@ -35,8 +33,6 @@
 解释：气球可以用2支箭来爆破:
 - 在x = 2处发射箭，击破气球[1,2]和[2,3]。
 - 在x = 4处射出箭，击破气球[3,4]和[4,5]。</pre>
-
-<p>&nbsp;</p>
 
 <p><meta charset="UTF-8" /></p>
 

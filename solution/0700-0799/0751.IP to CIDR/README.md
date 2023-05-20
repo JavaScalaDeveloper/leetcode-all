@@ -1,7 +1,5 @@
 # [751. IP 到 CIDR](https://leetcode.cn/problems/ip-to-cidr)
 
-[English Version](/solution/0700-0799/0751.IP%20to%20CIDR/README_EN.md)
-
 ## 题目描述
 
 <p><strong>IP地址</strong> 是一个格式化的 32位 无符号整数，每组 8位 被打印为一个十进制数字和，点字符&nbsp;<code>'.'</code>&nbsp;起到了分组的作用。</p>
@@ -19,8 +17,6 @@
 <p>给你一个起始IP地址&nbsp;<code>ip</code>&nbsp;和我们需要覆盖的IP地址数量 <code>n</code> 。你的目标是使用 <strong>尽可能少的CIDR块</strong> 来&nbsp;<strong>覆盖范围&nbsp;<code>[ip, ip + n - 1]</code>&nbsp;内的所有IP地址</strong>&nbsp;。不应该覆盖范围之外的其他IP地址。</p>
 
 <p>返回 <em>包含IP地址范围的 <strong>CIDR块</strong> 的 <strong>最短</strong> 列表。如果有多个答案，返回其中 <strong>任何</strong> 一个&nbsp;</em>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,8 +47,6 @@ CIDR区块“255.0.0.16/32”包含最后一个地址。
 <strong>输入：</strong>ip = "117.145.102.62", n = 8
 <b>输出：</b>["117.145.102.62/31","117.145.102.64/30","117.145.102.68/31"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

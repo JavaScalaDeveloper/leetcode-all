@@ -1,7 +1,5 @@
 # [2396. 严格回文的数字](https://leetcode.cn/problems/strictly-palindromic-number)
 
-[English Version](/solution/2300-2399/2396.Strictly%20Palindromic%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>如果一个整数 <code>n</code>&nbsp;在 <code>b</code>&nbsp;进制下（<code>b</code>&nbsp;为 <code>2</code>&nbsp;到 <code>n - 2</code>&nbsp;之间的所有整数）对应的字符串&nbsp;<strong>全部</strong>&nbsp;都是 <strong>回文的</strong>&nbsp;，那么我们称这个数&nbsp;<code>n</code>&nbsp;是 <strong>严格回文</strong>&nbsp;的。</p>
@@ -9,8 +7,6 @@
 <p>给你一个整数&nbsp;<code>n</code>&nbsp;，如果 <code>n</code>&nbsp;是 <strong>严格回文</strong>&nbsp;的，请返回&nbsp;<code>true</code> ，否则返回<em>&nbsp;</em><code>false</code>&nbsp;。</p>
 
 <p>如果一个字符串从前往后读和从后往前读完全相同，那么这个字符串是 <strong>回文的</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <b>解释：</b>我们只考虑 2 进制：4 = 100 ，不是回文的。
 所以我们返回 false 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -60,10 +54,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool isStrictlyPalindromic(int n) {
-    return 0;
-}
-```
+**

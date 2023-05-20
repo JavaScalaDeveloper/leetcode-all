@@ -1,7 +1,5 @@
 # [1103. 分糖果 II](https://leetcode.cn/problems/distribute-candies-to-people)
 
-[English Version](/solution/1100-1199/1103.Distribute%20Candies%20to%20People/README_EN.md)
-
 ## 题目描述
 
 <p>排排坐，分糖果。</p>
@@ -15,8 +13,6 @@
 <p>重复上述过程（每次都比上一次多给出一颗糖果，当到达队伍终点后再次从队伍起点开始），直到我们分完所有的糖果。注意，就算我们手中的剩下糖果数不够（不比前一次发出的糖果多），这些糖果也会全部发给当前的小朋友。</p>
 
 <p>返回一个长度为 <code>num_people</code>、元素之和为 <code>candies</code> 的数组，以表示糖果的最终分发情况（即 <code>ans[i]</code> 表示第 <code>i</code> 个小朋友分到的糖果数）。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 第三次，ans[2] += 3，数组变为 [1,2,3]。
 第四次，ans[0] += 4，最终数组变为 [5,2,3]。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

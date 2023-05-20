@@ -1,7 +1,5 @@
 # [723. 粉碎糖果](https://leetcode.cn/problems/candy-crush)
 
-[English Version](/solution/0700-0799/0723.Candy%20Crush/README_EN.md)
-
 ## 题目描述
 
 <p>这个问题是实现一个简单的消除算法。</p>
@@ -19,8 +17,6 @@
 
 <p>你需要模拟上述规则并使整个方格达到稳定状态，并输出。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1 :</strong></p>
 
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0700-0799/0723.Candy%20Crush/images/candy_crush_example_2.png" style="height: 411px; width: 600px;" /></p>
@@ -37,8 +33,6 @@
 <strong>输出:</strong> [[1,3,0,0,0],[3,4,0,5,2],[3,2,0,3,1],[2,4,0,5,2],[1,4,3,1,1]]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -47,8 +41,6 @@
 	<li><code>3 &lt;= m, n &lt;= 50</code></li>
 	<li><code>1 &lt;= board[i][j] &lt;= 2000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 ## 解法
 

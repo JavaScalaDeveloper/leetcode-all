@@ -1,7 +1,5 @@
 # [2660. 保龄球游戏的获胜者](https://leetcode.cn/problems/determine-the-winner-of-a-bowling-game)
 
-[English Version](/solution/2600-2699/2660.Determine%20the%20Winner%20of%20a%20Bowling%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong> 开始的整数数组 <code>player1</code> 和 <code>player2</code> ，分别表示玩家 1 和玩家 2 击中的瓶数。</p>
@@ -24,8 +22,6 @@
 	<li>如果玩家 2 的得分高于玩家 1 的得分，则为 <code>2</code> ；</li>
 	<li>如果平局，则为 <code>0</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,8 +51,6 @@ player2 的得分高于 player1 的得分，所以 play2 在比赛中获胜，�
 player2 的得分是 4 + 1 = 5 。
 player1 的得分等于 player2 的得分，所以这一场比赛平局，答案为 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

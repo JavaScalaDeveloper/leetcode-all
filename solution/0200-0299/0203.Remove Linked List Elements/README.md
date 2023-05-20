@@ -1,7 +1,5 @@
 # [203. 移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements)
 
-[English Version](/solution/0200-0299/0203.Remove%20Linked%20List%20Elements/README_EN.md)
-
 ## 题目描述
 
 给你一个链表的头节点 <code>head</code> 和一个整数 <code>val</code> ，请你删除链表中所有满足 <code>Node.val == val</code> 的节点，并返回 <strong>新的头节点</strong> 。

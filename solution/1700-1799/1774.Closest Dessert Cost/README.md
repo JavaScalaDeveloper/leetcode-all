@@ -1,7 +1,5 @@
 # [1774. 最接近目标价格的甜点成本](https://leetcode.cn/problems/closest-dessert-cost)
 
-[English Version](/solution/1700-1799/1774.Closest%20Dessert%20Cost/README_EN.md)
-
 ## 题目描述
 
 <p>你打算做甜点，现在需要购买配料。目前共有 <code>n</code> 种冰激凌基料和 <code>m</code> 种配料可供选购。而制作甜点需要遵循以下几条规则：</p>

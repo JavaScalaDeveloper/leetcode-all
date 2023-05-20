@@ -1,7 +1,5 @@
 # [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards)
 
-[English Version](/solution/1400-1499/1423.Maximum%20Points%20You%20Can%20Obtain%20from%20Cards/README_EN.md)
-
 ## 题目描述
 
 <p>几张卡牌<strong> 排成一行</strong>，每张卡牌都有一个对应的点数。点数由整数数组 <code>cardPoints</code> 给出。</p>
@@ -11,8 +9,6 @@
 <p>你的点数就是你拿到手中的所有卡牌的点数之和。</p>
 
 <p>给你一个整数数组 <code>cardPoints</code> 和整数 <code>k</code>，请你返回可以获得的最大点数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <pre><strong>输入：</strong>cardPoints = [1,79,80,1,1,1,200,1], k = 3
 <strong>输出：</strong>202
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

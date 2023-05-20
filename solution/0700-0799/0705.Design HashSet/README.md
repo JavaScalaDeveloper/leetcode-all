@@ -1,7 +1,5 @@
 # [705. 设计哈希集合](https://leetcode.cn/problems/design-hashset)
 
-[English Version](/solution/0700-0799/0705.Design%20HashSet/README_EN.md)
-
 ## 题目描述
 
 <p>不使用任何内建的哈希表库设计一个哈希集合（HashSet）。</p>
@@ -34,8 +32,6 @@ myHashSet.add(2);      // set = [1, 2]
 myHashSet.contains(2); // 返回 True
 myHashSet.remove(2);   // set = [1]
 myHashSet.contains(2); // 返回 False ，（已移除）</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

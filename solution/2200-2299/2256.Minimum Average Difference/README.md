@@ -1,7 +1,5 @@
 # [2256. 最小平均差](https://leetcode.cn/problems/minimum-average-difference)
 
-[English Version](/solution/2200-2299/2256.Minimum%20Average%20Difference/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始长度为 <code>n</code>&nbsp;的整数数组&nbsp;<code>nums</code>&nbsp;。</p>
@@ -17,8 +15,6 @@
 	<li>&nbsp;<code>n</code>&nbsp;个元素的平均值是 <code>n</code>&nbsp;个元素之 <strong>和</strong>&nbsp;除以（整数除法）&nbsp;<code>n</code>&nbsp;。</li>
 	<li><code>0</code>&nbsp;个元素的平均值视为&nbsp;<code>0</code>&nbsp;。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 唯一的下标是 0 ，所以我们返回 0 。
 下标 0 处的平均差为：|0 / 1 - 0| = |0 - 0| = 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1051. 高度检查器](https://leetcode.cn/problems/height-checker)
 
-[English Version](/solution/1000-1099/1051.Height%20Checker/README_EN.md)
-
 ## 题目描述
 
 <p>学校打算为全体学生拍一张年度纪念照。根据要求，学生需要按照 <strong>非递减</strong> 的高度顺序排成一行。</p>
@@ -11,8 +9,6 @@
 <p>给你一个整数数组 <code>heights</code> ，表示 <strong>当前学生站位</strong> 的高度情况。<code>heights[i]</code> 是这一行中第 <code>i</code> 位学生的高度（<strong>下标从 0 开始</strong>）。</p>
 
 <p>返回满足<em> </em><code>heights[i] != expected[i]</code> 的 <strong>下标数量</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -43,8 +39,6 @@
 高度：[1,2,3,4,5]
 预期：[1,2,3,4,5]
 所有下标的对应学生高度都匹配。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

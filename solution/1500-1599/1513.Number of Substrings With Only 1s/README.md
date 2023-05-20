@@ -1,7 +1,5 @@
 # [1513. 仅含 1 的子串数](https://leetcode.cn/problems/number-of-substrings-with-only-1s)
 
-[English Version](/solution/1500-1599/1513.Number%20of%20Substrings%20With%20Only%201s/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二进制字符串 <code>s</code>（仅由 &#39;0&#39; 和 &#39;1&#39; 组成的字符串）。</p>
@@ -9,8 +7,6 @@
 <p>返回所有字符都为 1 的子字符串的数目。</p>
 
 <p>由于答案可能很大，请你将它对 10^9 + 7 取模后返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <pre><strong>输入：</strong>s = &quot;000&quot;
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

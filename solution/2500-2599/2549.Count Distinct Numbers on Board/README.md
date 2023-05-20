@@ -1,7 +1,5 @@
 # [2549. 统计桌面上的不同数字](https://leetcode.cn/problems/count-distinct-numbers-on-board)
 
-[English Version](/solution/2500-2599/2549.Count%20Distinct%20Numbers%20on%20Board/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数 <code>n</code> ，开始时，它放在桌面上。在 <code>10<sup>9</sup></code> 天内，每天都要执行下述步骤：</p>
@@ -19,8 +17,6 @@
 	<li>一旦数字放在桌面上，则会一直保留直到结束。</li>
 	<li><code>%</code> 表示取余运算。例如，<code>14 % 3</code> 等于 <code>2</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 因为 3 % 2 == 1 ，2 也出现在桌面上。 
 在十亿天结束时，桌面上的不同数字只有两个：2 和 3 。 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [1918. 第 K 小的子数组和·](https://leetcode.cn/problems/kth-smallest-subarray-sum)
 
-[English Version](/solution/1900-1999/1918.Kth%20Smallest%20Subarray%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 长度为&nbsp;<code>n</code>&nbsp;的整型数组&nbsp;<code>nums</code>&nbsp;和一个数值&nbsp;<code>k</code>&nbsp;，返回<strong> 第<em>&nbsp;</em><code>k</code>&nbsp;小的子数组和<i>。</i></strong></p>
 
 <p><b>子数组</b> 是指数组中一个 <b>非空</b>&nbsp;且不间断的子序列。&nbsp; <b>子数组和</b> 则指子数组中所有元素的和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -43,8 +39,6 @@
 - [3,3,5,5] 和为 16
 最小子数组和的升序排序为 3, 3, 5, 5, 6, 8, <strong><em>10</em></strong>, 11, 13, 16。第 7 小的子数组和为 10 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

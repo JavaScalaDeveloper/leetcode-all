@@ -1,7 +1,5 @@
 # [826. 安排工作以达到最大收益](https://leetcode.cn/problems/most-profit-assigning-work)
 
-[English Version](/solution/0800-0899/0826.Most%20Profit%20Assigning%20Work/README_EN.md)
-
 ## 题目描述
 
 <p>你有 <code>n</code>&nbsp;个工作和 <code>m</code> 个工人。给定三个数组：&nbsp;<code>difficulty</code>,&nbsp;<code>profit</code>&nbsp;和&nbsp;<code>worker</code>&nbsp;，其中:</p>
@@ -19,8 +17,6 @@
 
 <p>返回 <em>在把工人分配到工作岗位后，我们所能获得的最大利润&nbsp;</em>。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -33,8 +29,6 @@
 <pre>
 <strong>输入:</strong> difficulty = [85,47,57], profit = [24,66,99], worker = [40,25,25]
 <strong>输出:</strong> 0</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

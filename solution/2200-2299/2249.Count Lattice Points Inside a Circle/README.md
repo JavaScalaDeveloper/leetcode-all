@@ -1,7 +1,5 @@
 # [2249. 统计圆内格点数目](https://leetcode.cn/problems/count-lattice-points-inside-a-circle)
 
-[English Version](/solution/2200-2299/2249.Count%20Lattice%20Points%20Inside%20a%20Circle/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维整数数组 <code>circles</code> ，其中 <code>circles[i] = [x<sub>i</sub>, y<sub>i</sub>, r<sub>i</sub>]</code> 表示网格上圆心为 <code>(x<sub>i</sub>, y<sub>i</sub>)</code> 且半径为 <code>r<sub>i</sub></code> 的第 <code>i</code> 个圆，返回出现在<strong> 至少一个 </strong>圆内的 <strong>格点数目</strong> 。</p>
@@ -12,8 +10,6 @@
 	<li><strong>格点</strong> 是指整数坐标对应的点。</li>
 	<li><strong>圆周上的点</strong> 也被视为出现在圆内的点。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 共有 16 个格点出现在至少一个圆内。
 其中部分点的坐标是 (0, 2)、(2, 0)、(2, 4)、(3, 2) 和 (4, 4) 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

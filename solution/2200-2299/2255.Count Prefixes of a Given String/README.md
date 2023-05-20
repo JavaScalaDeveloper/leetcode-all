@@ -1,7 +1,5 @@
 # [2255. 统计是给定字符串前缀的字符串数目](https://leetcode.cn/problems/count-prefixes-of-a-given-string)
 
-[English Version](/solution/2200-2299/2255.Count%20Prefixes%20of%20a%20Given%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串数组&nbsp;<code>words</code>&nbsp;和一个字符串&nbsp;<code>s</code>&nbsp;，其中&nbsp;<code>words[i]</code> 和&nbsp;<code>s</code>&nbsp;只包含 <strong>小写英文字母</strong>&nbsp;。</p>
@@ -9,8 +7,6 @@
 <p>请你返回 <code>words</code>&nbsp;中是字符串 <code>s</code>&nbsp;<strong>前缀&nbsp;</strong>的 <strong>字符串数目</strong>&nbsp;。</p>
 
 <p>一个字符串的 <strong>前缀</strong>&nbsp;是出现在字符串开头的子字符串。<strong>子字符串</strong>&nbsp;是一个字符串中的连续一段字符序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,8 +24,6 @@ words 中是 s = "abc" 前缀的字符串为：
 <strong>解释：
 </strong>两个字符串都是 s 的前缀。
 注意，相同的字符串可能在 words 中出现多次，它们应该被计数多次。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1822. 数组元素积的符号](https://leetcode.cn/problems/sign-of-the-product-of-an-array)
 
-[English Version](/solution/1800-1899/1822.Sign%20of%20the%20Product%20of%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>已知函数 <code>signFunc(x)</code> 将会根据 <code>x</code> 的正负返回特定值：</p>
@@ -84,19 +82,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int arraySign(int *nums, int numsSize) {
-    int ans = 1;
-    for (int i = 0; i < numsSize; i++) {
-        if (nums[i] == 0) {
-            return 0;
-        }
-        if (nums[i] < 0) {
-            ans *= -1;
-        }
-    }
-    return ans;
-}
-```
+**

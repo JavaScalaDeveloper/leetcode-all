@@ -1,7 +1,5 @@
 # [756. 金字塔转换矩阵](https://leetcode.cn/problems/pyramid-transition-matrix)
 
-[English Version](/solution/0700-0799/0756.Pyramid%20Transition%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>你正在把积木堆成金字塔。每个块都有一个颜色，用一个字母表示。每一行的块比它下面的行 <strong>少一个块</strong> ，并且居中。</p>
@@ -15,8 +13,6 @@
 <p>你从底部的一排积木&nbsp;<code>bottom</code>&nbsp;开始，作为一个单一的字符串，你 <strong>必须</strong> 使用作为金字塔的底部。</p>
 
 <p>在给定&nbsp;<code>bottom</code>&nbsp;和&nbsp;<code>allowed</code>&nbsp;的情况下，如果你能一直构建到金字塔顶部，使金字塔中的 <strong>每个三角形图案</strong> 都是允许的，则返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <strong>解释：</strong>允许的三角形模式显示在右边。
 从最底层(游戏邦注:即第4个关卡)开始，创造第3个关卡有多种方法，但如果尝试所有可能性，你便会在创造第1个关卡前陷入困境。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

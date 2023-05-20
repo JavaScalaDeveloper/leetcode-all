@@ -1,7 +1,5 @@
 # [1279. 红绿灯路口](https://leetcode.cn/problems/traffic-light-controlled-intersection)
 
-[English Version](/solution/1200-1299/1279.Traffic%20Light%20Controlled%20Intersection/README_EN.md)
-
 ## 题目描述
 
 <p>这是两条路的交叉路口。第一条路是 A 路，车辆可沿&nbsp;1 号方向由北向南行驶，也可沿&nbsp;2 号方向由南向北行驶。第二条路是 B 路，车辆可沿&nbsp;3 号方向由西向东行驶，也可沿 4 号方向由东向西行驶。</p>
@@ -33,8 +31,6 @@
 
 <p>当你的答案避免了车辆在路口出现死锁，此答案会被认定为正确的。当路口已经亮起绿灯时仍打开绿灯，此答案会被认定为错误的。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1:</strong></p>
 
 <pre>
@@ -65,8 +61,6 @@
 ]
 <strong>解释:</strong> 这是一个无死锁的方案。注意，在 A 路上的绿灯亮起、5 号车通过前让 4 号车通过，也是一个<strong>正确</strong>且<strong>可</strong><strong>被接受</strong>的方案。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

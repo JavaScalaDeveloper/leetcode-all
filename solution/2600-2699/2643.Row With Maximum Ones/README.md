@@ -1,7 +1,5 @@
 # [2643. 一最多的行](https://leetcode.cn/problems/row-with-maximum-ones)
 
-[English Version](/solution/2600-2699/2643.Row%20With%20Maximum%20Ones/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>m x n</code> 的二进制矩阵 <code>mat</code> ，请你找出包含最多 <strong>1</strong> 的行的下标（从 <strong>0</strong> 开始）以及这一行中 <strong>1</strong> 的数目。</p>
@@ -9,8 +7,6 @@
 <p>如果有多行包含最多的 1 ，只需要选择 <strong>行下标最小</strong> 的那一行。</p>
 
 <p>返回一个由行下标和该行中 1 的数量组成的数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>输入：</strong>mat = [[0,0],[1,1],[0,0]]
 <strong>输出：</strong>[1,2]
 <strong>解释：</strong>下标为 1 的行中 1 的数量最多。该行 1 的数量<code>为 2 。所以，答案为</code> [1,2] 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

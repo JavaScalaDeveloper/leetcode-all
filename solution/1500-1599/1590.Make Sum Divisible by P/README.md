@@ -1,7 +1,5 @@
 # [1590. 使数组和能被 P 整除](https://leetcode.cn/problems/make-sum-divisible-by-p)
 
-[English Version](/solution/1500-1599/1590.Make%20Sum%20Divisible%20by%20P/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数数组&nbsp;<code>nums</code>，请你移除 <strong>最短</strong>&nbsp;子数组（可以为 <strong>空</strong>），使得剩余元素的 <strong>和</strong>&nbsp;能被 <code>p</code>&nbsp;整除。 <strong>不允许</strong>&nbsp;将整个数组都移除。</p>
@@ -9,8 +7,6 @@
 <p>请你返回你需要移除的最短子数组的长度，如果无法满足题目要求，返回 <code>-1</code>&nbsp;。</p>
 
 <p><strong>子数组</strong>&nbsp;定义为原数组中连续的一组元素。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 <pre><strong>输入：</strong>nums = [1000000000,1000000000,1000000000], p = 3
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

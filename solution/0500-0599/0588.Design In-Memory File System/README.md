@@ -1,7 +1,5 @@
 # [588. 设计内存文件系统](https://leetcode.cn/problems/design-in-memory-file-system)
 
-[English Version](/solution/0500-0599/0588.Design%20In-Memory%20File%20System/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个内存文件系统，模拟以下功能：</p>
@@ -31,8 +29,6 @@
 	<li><code>String readContentFromFile(String filePath)</code>&nbsp;返回 <code>filePath</code>下的文件内容。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1:</strong></p>
 
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0588.Design%20In-Memory%20File%20System/images/filesystem.png" style="height: 315px; width: 650px;" /></p>
@@ -51,8 +47,6 @@ fileSystem.mkdir("/a/b/c");
 fileSystem.addContentToFile("/a/b/c/d", "hello");
 fileSystem.ls("/");                         // 返回 ["a"]
 fileSystem.readContentFromFile("/a/b/c/d"); // 返回 "hello"</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>注意:</strong></p>
 

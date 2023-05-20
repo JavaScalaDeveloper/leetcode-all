@@ -1,7 +1,5 @@
 # [768. 最多能完成排序的块 II](https://leetcode.cn/problems/max-chunks-to-make-sorted-ii)
 
-[English Version](/solution/0700-0799/0768.Max%20Chunks%20To%20Make%20Sorted%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>arr</code> 。</p>
@@ -30,8 +28,6 @@
 可以把它分成两块，例如 [2, 1], [3, 4, 4]。 
 然而，分成 [2, 1], [3], [4], [4] 可以得到最多的块数。 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

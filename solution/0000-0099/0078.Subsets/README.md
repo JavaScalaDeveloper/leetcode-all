@@ -1,7 +1,5 @@
 # [78. 子集](https://leetcode.cn/problems/subsets)
 
-[English Version](/solution/0000-0099/0078.Subsets/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，数组中的元素 <strong>互不相同</strong> 。返回该数组所有可能的子集（幂集）。</p>

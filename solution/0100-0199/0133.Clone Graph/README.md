@@ -1,7 +1,5 @@
 # [133. 克隆图](https://leetcode.cn/problems/clone-graph)
 
-[English Version](/solution/0100-0199/0133.Clone%20Graph/README_EN.md)
-
 ## 题目描述
 
 <p>给你无向&nbsp;<strong><a href="https://baike.baidu.com/item/连通图/6460995?fr=aladdin" target="_blank">连通</a>&nbsp;</strong>图中一个节点的引用，请你返回该图的&nbsp;<a href="https://baike.baidu.com/item/深拷贝/22785317?fr=aladdin" target="_blank"><strong>深拷贝</strong></a>（克隆）。</p>
@@ -13,8 +11,6 @@
     public List&lt;Node&gt; neighbors;
 }</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>测试用例格式：</strong></p>
 
 <p>简单起见，每个节点的值都和它的索引相同。例如，第一个节点值为 1（<code>val = 1</code>），第二个节点值为 2（<code>val = 2</code>），以此类推。该图在测试用例中使用邻接列表表示。</p>
@@ -22,8 +18,6 @@
 <p><strong>邻接列表</strong> 是用于表示有限图的无序列表的集合。每个列表都描述了图中节点的邻居集。</p>
 
 <p>给定节点将始终是图中的第一个节点（值为 1）。你必须将&nbsp;<strong>给定节点的拷贝&nbsp;</strong>作为对克隆图的引用返回。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -61,8 +55,6 @@
 
 <pre><strong>输入：</strong>adjList = [[2],[1]]
 <strong>输出：</strong>[[2],[1]]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

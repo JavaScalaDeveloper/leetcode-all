@@ -1,7 +1,5 @@
 # [820. 单词的压缩编码](https://leetcode.cn/problems/short-encoding-of-words)
 
-[English Version](/solution/0800-0899/0820.Short%20Encoding%20of%20Words/README_EN.md)
-
 ## 题目描述
 
 <p>单词数组 <code>words</code> 的 <strong>有效编码</strong> 由任意助记字符串 <code>s</code> 和下标数组 <code>indices</code> 组成，且满足：</p>

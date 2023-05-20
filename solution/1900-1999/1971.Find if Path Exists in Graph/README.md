@@ -1,7 +1,5 @@
 # [1971. 寻找图中是否存在路径](https://leetcode.cn/problems/find-if-path-exists-in-graph)
 
-[English Version](/solution/1900-1999/1971.Find%20if%20Path%20Exists%20in%20Graph/README_EN.md)
-
 ## 题目描述
 
 <p>有一个具有 <code>n</code> 个顶点的 <strong>双向</strong> 图，其中每个顶点标记从 <code>0</code> 到 <code>n - 1</code>（包含 <code>0</code> 和 <code>n - 1</code>）。图中的边用一个二维整数数组 <code>edges</code> 表示，其中 <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>]</code> 表示顶点 <code>ui</code> 和顶点 <code>vi</code> 之间的双向边。 每个顶点对由 <strong>最多一条</strong> 边连接，并且没有顶点存在与自身相连的边。</p>
@@ -9,8 +7,6 @@
 <p>请你确定是否存在从顶点 <code>source</code> 开始，到顶点 <code>destination</code> 结束的 <strong>有效路径</strong> 。</p>
 
 <p>给你数组 <code>edges</code> 和整数 <code>n</code>、<code>source</code> 和 <code>destination</code>，如果从 <code>source</code> 到 <code>destination</code> 存在 <strong>有效路径</strong> ，则返回 <code>true</code>，否则返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1971.Find%20if%20Path%20Exists%20in%20Graph/images/validpath-ex1.png" style="width: 141px; height: 121px;" />
@@ -29,8 +25,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>不存在由顶点 0 到顶点 5 的路径.
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

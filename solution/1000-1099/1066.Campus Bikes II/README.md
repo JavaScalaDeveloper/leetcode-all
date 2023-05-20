@@ -1,7 +1,5 @@
 # [1066. 校园自行车分配 II](https://leetcode.cn/problems/campus-bikes-ii)
 
-[English Version](/solution/1000-1099/1066.Campus%20Bikes%20II/README_EN.md)
-
 ## 题目描述
 
 <p>在由 2D 网格表示的校园里有&nbsp;<code>n</code>&nbsp;位工人（<code>worker</code>）和 <code>m</code>&nbsp;辆自行车（<code>bike</code>），<code>n &lt;= m</code>。所有工人和自行车的位置都用网格上的 2D 坐标表示。</p>
@@ -11,8 +9,6 @@
 <p>返回 <code>每个工人与分配到的自行车之间的曼哈顿距离的最小可能总和</code> 。</p>
 
 <p><code>p1</code> 和&nbsp;<code>p2</code>&nbsp;之间的 <strong>曼哈顿距离</strong> 为&nbsp;<code>Manhattan(p1, p2) = |p1.x - p2.x| + |p1.y - p2.y|</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输入：</strong>workers = [[0,0],[1,0],[2,0],[3,0],[4,0]], bikes = [[0,999],[1,999],[2,999],[3,999],[4,999]]
 <strong>输出：</strong>4995
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

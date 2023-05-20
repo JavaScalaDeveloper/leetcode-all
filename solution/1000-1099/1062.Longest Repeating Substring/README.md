@@ -1,12 +1,8 @@
 # [1062. 最长重复子串](https://leetcode.cn/problems/longest-repeating-substring)
 
-[English Version](/solution/1000-1099/1062.Longest%20Repeating%20Substring/README_EN.md)
-
 ## 题目描述
 
 <p>给定字符串&nbsp;<code>S</code>，找出最长重复子串的长度。如果不存在重复子串就返回 <code>0</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <pre><strong>输入：</strong>&quot;aaaaa&quot;
 <strong>输出：</strong>4
 <strong>解释：</strong>最长的重复子串为 &quot;aaaa&quot;，出现 2 次。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

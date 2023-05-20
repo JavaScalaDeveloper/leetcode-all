@@ -1,7 +1,5 @@
 # [2548. 填满背包的最大价格](https://leetcode.cn/problems/maximum-price-to-fill-a-bag)
 
-[English Version](/solution/2500-2599/2548.Maximum%20Price%20to%20Fill%20a%20Bag/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二维整数数组 <code>items</code> ，其中 <code>items[i] = [price<sub>i</sub>, weight<sub>i</sub>]</code> 表示第 <code>i</code> 个物品的价格和重量。</p>
@@ -16,8 +14,6 @@
 </ul>
 
 <p>使用给定的物品，返回填满容量为 <code>capacity</code> 的背包所需的 <strong>最大总价格</strong> 。如果无法填满背包，则返回 <code>-1</code> 。与实际答案的差距在&nbsp;<code>10<sup>-5</sup></code>&nbsp;以内的 <strong>实际答案</strong> 将被视为接受。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1 ：</strong></p>
 
@@ -39,8 +35,6 @@
 <b>输出：</b>-1.00000
 <b>解释：</b>无法用给定的物品装满背包。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

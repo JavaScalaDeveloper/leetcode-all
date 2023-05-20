@@ -1,7 +1,5 @@
 # [1114. 按序打印](https://leetcode.cn/problems/print-in-order)
 
-[English Version](/solution/1100-1199/1114.Print%20in%20Order/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个类：</p>
@@ -30,8 +28,6 @@ public class Foo {
 	<li>你看到的输入格式主要是为了确保测试的全面性。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -48,8 +44,6 @@ public class Foo {
 <strong>输出：</strong>"firstsecondthird"
 <strong>解释：</strong>
 输入 [1,3,2] 表示线程 A 将会调用 first() 方法，线程 B 将会调用 third() 方法，线程 C 将会调用 second() 方法。正确的输出是 "firstsecondthird"。</pre>
-
-<p>&nbsp;</p>
 
 <ul>
 </ul>

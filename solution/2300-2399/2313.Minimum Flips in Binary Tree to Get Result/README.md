@@ -1,7 +1,5 @@
 # [2313. 二叉树中得到结果所需的最少翻转次数](https://leetcode.cn/problems/minimum-flips-in-binary-tree-to-get-result)
 
-[English Version](/solution/2300-2399/2313.Minimum%20Flips%20in%20Binary%20Tree%20to%20Get%20Result/README_EN.md)
-
 ## 题目描述
 
 <p>给定<strong>二叉树</strong>的根 <code>root</code>，具有以下属性:</p>
@@ -28,8 +26,6 @@
 
 <p>注意: <code>NOT</code> 节点只有左孩子或只有右孩子，但其他非叶节点同时拥有左孩子和右孩子。</p>
 
-<p>&nbsp;</p>
-
 <p><strong class="example">示例 1:</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2313.Minimum%20Flips%20in%20Binary%20Tree%20to%20Get%20Result/images/operationstree.png" style="width: 500px; height: 179px;" />
 <pre>
@@ -47,8 +43,6 @@
 <strong>解释:</strong>
 树的 root 的评价已经为 false，所以 0 个节点必须翻转。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

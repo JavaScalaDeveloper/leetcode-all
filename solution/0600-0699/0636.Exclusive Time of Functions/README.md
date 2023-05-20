@@ -1,7 +1,5 @@
 # [636. 函数的独占时间](https://leetcode.cn/problems/exclusive-time-of-functions)
 
-[English Version](/solution/0600-0699/0636.Exclusive%20Time%20of%20Functions/README_EN.md)
-
 ## 题目描述
 
 <p>有一个 <strong>单线程</strong> CPU 正在运行一个含有 <code>n</code> 道函数的程序。每道函数都有一个位于  <code>0</code> 和 <code>n-1</code> 之间的唯一标识符。</p>

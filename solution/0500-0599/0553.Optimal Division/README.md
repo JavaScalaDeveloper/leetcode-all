@@ -1,7 +1,5 @@
 # [553. 最优除法](https://leetcode.cn/problems/optimal-division)
 
-[English Version](/solution/0500-0599/0553.Optimal%20Division/README_EN.md)
-
 ## 题目描述
 
 <p>给定一正整数数组<strong> </strong><code>nums</code><strong>，</strong><code>nums</code> 中的相邻整数将进行浮点除法。例如，&nbsp;[2,3,4] -&gt; 2 / 3 / 4 。</p>
@@ -15,8 +13,6 @@
 <p>以字符串格式返回具有最大值的对应表达式。</p>
 
 <p><strong>注意：</strong>你的表达式不应该包含多余的括号。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 1000/100/(10/2) = 2
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 2:</strong></p>
 
 <pre>
@@ -44,8 +38,6 @@
 <strong>解释:</strong> (2/(3/4)) = 8/3 = 2.667
 可以看出，在尝试了所有的可能性之后，我们无法得到一个结果大于 2.667 的表达式。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>说明:</strong></p>
 

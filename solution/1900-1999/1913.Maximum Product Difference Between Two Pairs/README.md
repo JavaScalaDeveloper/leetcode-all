@@ -1,7 +1,5 @@
 # [1913. 两个数对之间的最大乘积差](https://leetcode.cn/problems/maximum-product-difference-between-two-pairs)
 
-[English Version](/solution/1900-1999/1913.Maximum%20Product%20Difference%20Between%20Two%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>两个数对 <code>(a, b)</code> 和 <code>(c, d)</code> 之间的 <strong>乘积差</strong> 定义为 <code>(a * b) - (c * d)</code> 。</p>

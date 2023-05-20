@@ -1,7 +1,5 @@
 # [2623. 记忆函数](https://leetcode.cn/problems/memoize)
 
-[English Version](/solution/2600-2699/2623.Memoize/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个函数，它接收另一个函数作为输入，并返回该函数的 <strong>记忆化</strong> 后的结果。</p>
@@ -15,8 +13,6 @@
 	<li>&nbsp;<code>fib</code> 接收一个整型参数&nbsp;<code>n</code> ，如果 <code>n &lt;= 1</code> 则返回 <code>1</code>，否则返回 <code>fib (n - 1) + fib (n - 2)</code>。</li>
 	<li>&nbsp;<code>factorial</code> 接收一个整型参数 <code>n</code> ，如果 <code>n &lt;= 1</code> 则返回&nbsp;&nbsp;<code>1</code>&nbsp;，否则返回 <code>factorial(n - 1) * n</code> 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -74,8 +70,6 @@ memoFactorial(3); // 返回 6。 没有调用 factorial()，因为前面有相�
 // 总调用数：1
 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>Constraints:</strong></p>
 

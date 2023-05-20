@@ -1,7 +1,5 @@
 # [914. 卡牌分组](https://leetcode.cn/problems/x-of-a-kind-in-a-deck-of-cards)
 
-[English Version](/solution/0900-0999/0914.X%20of%20a%20Kind%20in%20a%20Deck%20of%20Cards/README_EN.md)
-
 ## 题目描述
 
 <p>给定一副牌，每张牌上都写着一个整数。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>仅当你可选的 <code>X &gt;= 2</code> 时返回&nbsp;<code>true</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

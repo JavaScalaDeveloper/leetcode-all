@@ -1,7 +1,5 @@
 # [1152. 用户网站访问行为分析](https://leetcode.cn/problems/analyze-user-website-visit-pattern)
 
-[English Version](/solution/1100-1199/1152.Analyze%20User%20Website%20Visit%20Pattern/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个字符串数组&nbsp;<code>username</code>&nbsp;和&nbsp;<code>website</code>&nbsp;和一个整数数组&nbsp;<code>timestamp</code>&nbsp;。给定的数组长度相同，其中元组&nbsp;<code>[username[i], website[i], timestamp[i]]</code>&nbsp;表示用户&nbsp;<code>username[i]</code>&nbsp;在时间&nbsp;<code>timestamp[i]</code>&nbsp;访问了网站&nbsp;<code>website[i]</code>&nbsp;。</p>
@@ -21,8 +19,6 @@
 </ul>
 
 <p>返回<em> <strong>得分</strong> 最大的 <strong>访问</strong><strong>模式</strong></em> 。如果有多个访问模式具有相同的最大分数，则返回字典序最小的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <strong>输入:</strong> username = ["ua","ua","ua","ub","ub","ub"], timestamp = [1,2,3,4,5,6], website = ["a","b","a","a","b","c"]
 <strong>输出:</strong> ["a","b","a"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

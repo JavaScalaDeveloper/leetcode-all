@@ -1,7 +1,5 @@
 # [1402. 做菜顺序](https://leetcode.cn/problems/reducing-dishes)
 
-[English Version](/solution/1400-1499/1402.Reducing%20Dishes/README_EN.md)
-
 ## 题目描述
 
 <p>一个厨师收集了他&nbsp;<code>n</code>&nbsp;道菜的满意程度&nbsp;<code>satisfaction</code>&nbsp;，这个厨师做出每道菜的时间都是 1 单位时间。</p>
@@ -11,8 +9,6 @@
 <p>请你返回做完所有菜 「喜爱时间」总和的最大值为多少。</p>
 
 <p>你可以按&nbsp;<strong>任意</strong>&nbsp;顺序安排做菜的顺序，你也可以选择放弃做某些菜来获得更大的总和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>大家都不喜欢这些菜，所以不做任何菜可以获得最大的喜爱时间系数。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

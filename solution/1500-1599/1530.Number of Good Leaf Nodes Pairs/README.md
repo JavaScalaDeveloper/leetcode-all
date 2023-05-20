@@ -1,7 +1,5 @@
 # [1530. 好叶子节点对的数量](https://leetcode.cn/problems/number-of-good-leaf-nodes-pairs)
 
-[English Version](/solution/1500-1599/1530.Number%20of%20Good%20Leaf%20Nodes%20Pairs/README_EN.md)
-
 ## 题目描述
 
 <p>给你二叉树的根节点 <code>root</code> 和一个整数 <code>distance</code> 。</p>
@@ -10,11 +8,7 @@
 
 <p>返回树中 <strong>好叶子节点对的数量</strong> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
-
-<p>&nbsp;</p>
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1530.Number%20of%20Good%20Leaf%20Nodes%20Pairs/images/e1.jpg" style="height: 321px; width: 321px;"></p>
 
@@ -50,8 +44,6 @@
 <pre><strong>输入：</strong>root = [1,1,1], distance = 2
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [112. 路径总和](https://leetcode.cn/problems/path-sum)
 
-[English Version](/solution/0100-0199/0112.Path%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你二叉树的根节点&nbsp;<code>root</code> 和一个表示目标和的整数&nbsp;<code>targetSum</code> 。判断该树中是否存在 <strong>根节点到叶子节点</strong> 的路径，这条路径上所有节点值相加等于目标和&nbsp;<code>targetSum</code> 。如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
 <p><strong>叶子节点</strong> 是指没有子节点的节点。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0112.Path%20Sum/images/pathsum1.jpg" style="width: 500px; height: 356px;" />
@@ -35,8 +31,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>由于树是空的，所以不存在根节点到叶子节点的路径。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

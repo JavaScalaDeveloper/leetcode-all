@@ -1,7 +1,5 @@
 # [563. 二叉树的坡度](https://leetcode.cn/problems/binary-tree-tilt)
 
-[English Version](/solution/0500-0599/0563.Binary%20Tree%20Tilt/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二叉树的根节点 <code>root</code> ，计算并返回 <strong>整个树 </strong>的坡度 。</p>
@@ -9,8 +7,6 @@
 <p>一个树的<strong> 节点的坡度 </strong>定义即为，该节点左子树的节点之和和右子树节点之和的 <strong>差的绝对值 </strong>。如果没有左子树的话，左子树的节点之和为 0 ；没有右子树的话也是一样。空结点的坡度是 0 。</p>
 
 <p><strong>整个树</strong> 的坡度就是其所有节点的坡度之和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0563.Binary%20Tree%20Tilt/images/tilt1.jpg" style="width: 712px; height: 182px;" />
@@ -45,8 +41,6 @@
 <strong>输入：</strong>root = [21,7,14,1,1,2,2,3,3]
 <strong>输出：</strong>9
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

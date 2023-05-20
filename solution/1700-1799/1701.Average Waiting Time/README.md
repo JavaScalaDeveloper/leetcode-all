@@ -1,7 +1,5 @@
 # [1701. 平均等待时间](https://leetcode.cn/problems/average-waiting-time)
 
-[English Version](/solution/1700-1799/1701.Average%20Waiting%20Time/README_EN.md)
-
 ## 题目描述
 
 <p>有一个餐厅，只有一位厨师。你有一个顾客数组 <code>customers</code> ，其中 <code>customers[i] = [arrival<sub>i</sub>, time<sub>i</sub>]</code> ：</p>

@@ -1,7 +1,5 @@
 # [2166. 设计位集](https://leetcode.cn/problems/design-bitset)
 
-[English Version](/solution/2100-2199/2166.Design%20Bitset/README_EN.md)
-
 ## 题目描述
 
 <p><strong>位集 Bitset</strong> 是一种能以紧凑形式存储位的数据结构。</p>
@@ -18,8 +16,6 @@
 	<li><code>int count()</code> 返回 Bitset 中值为 1 的位的 <strong>总数</strong> 。</li>
 	<li><code>String toString()</code> 返回 Bitset 的当前组成情况。注意，在结果字符串中，第 <code>i</code> 个下标处的字符应该与 Bitset 中的第 <code>i</code> 位一致。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 
@@ -43,8 +39,6 @@ bs.unfix(0);   // 将 idx = 0 处的值更新为 0 ，此时 bitset = "01010" �
 bs.count();    // 返回 2 ，当前有 2 位的值为 1 。
 bs.toString(); // 返回 "01010" ，即 bitset 的当前组成情况。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

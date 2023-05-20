@@ -1,7 +1,5 @@
 # [2496. 数组中字符串的最大值](https://leetcode.cn/problems/maximum-value-of-a-string-in-an-array)
 
-[English Version](/solution/2400-2499/2496.Maximum%20Value%20of%20a%20String%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>一个由字母和数字组成的字符串的 <strong>值</strong>&nbsp;定义如下：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>给你一个字符串数组&nbsp;<code>strs</code>&nbsp;，每个字符串都只由字母和数字组成，请你返回 <code>strs</code>&nbsp;中字符串的 <strong>最大值</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <b>输出：</b>1
 <b>解释：</b>
 数组中所有字符串的值都是 1 ，所以我们返回 1 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -78,29 +72,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-
-int parseInt(char *s) {
-    int n = strlen(s);
-    int res = 0;
-    for (int i = 0; i < n; i++) {
-        if (!isdigit(s[i])) {
-            return n;
-        }
-        res = res * 10 + s[i] - '0';
-    }
-    return res;
-}
-
-int maximumValue(char **strs, int strsSize) {
-    int ans = 0;
-    for (int i = 0; i < strsSize; i++) {
-        int num = parseInt(strs[i]);
-        ans = max(ans, num);
-    }
-    return ans;
-}
-```
+**

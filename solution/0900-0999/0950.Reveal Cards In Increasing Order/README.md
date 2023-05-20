@@ -1,7 +1,5 @@
 # [950. 按递增顺序显示卡牌](https://leetcode.cn/problems/reveal-cards-in-increasing-order)
 
-[English Version](/solution/0900-0999/0950.Reveal%20Cards%20In%20Increasing%20Order/README_EN.md)
-
 ## 题目描述
 
 <p>牌组中的每张卡牌都对应有一个唯一的整数。你可以按你想要的顺序对这套卡片进行排序。</p>
@@ -20,8 +18,6 @@
 
 <p>答案中的第一张牌被认为处于牌堆顶部。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例：</strong></p>
 
 <pre><strong>输入：</strong>[17,13,11,2,3,5,7]
@@ -38,8 +34,6 @@
 我们显示 17。
 由于所有卡片都是按递增顺序排列显示的，所以答案是正确的。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

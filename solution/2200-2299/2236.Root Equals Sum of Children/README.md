@@ -1,14 +1,10 @@
 # [2236. 判断根结点是否等于子结点之和](https://leetcode.cn/problems/root-equals-sum-of-children)
 
-[English Version](/solution/2200-2299/2236.Root%20Equals%20Sum%20of%20Children/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <strong>二叉树 </strong>的根结点&nbsp;<code>root</code>，该二叉树由恰好&nbsp;<code>3</code>&nbsp;个结点组成：根结点、左子结点和右子结点。</p>
 
 <p>如果根结点值等于两个子结点值之和，返回&nbsp;<code>true</code>&nbsp;，否则返回<em>&nbsp;</em><code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2236.Root%20Equals%20Sum%20of%20Children/images/graph3drawio.png" style="width: 281px; height: 199px;" />
@@ -27,8 +23,6 @@
 <strong>解释：</strong>根结点、左子结点和右子结点的值分别是 5 、3 和 1 。
 由于 5 不等于 3 + 1 ，因此返回 false 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -64,19 +58,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-
-bool checkTree(struct TreeNode *root) {
-    return root->val == root->left->val + root->right->val;
-}
-```
+**

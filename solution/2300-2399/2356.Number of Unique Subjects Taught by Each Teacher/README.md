@@ -1,7 +1,5 @@
 # [2356. 每位教师所教授的科目种类的数量](https://leetcode.cn/problems/number-of-unique-subjects-taught-by-each-teacher)
 
-[English Version](/solution/2300-2399/2356.Number%20of%20Unique%20Subjects%20Taught%20by%20Each%20Teacher/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Teacher</code></p>
@@ -18,15 +16,11 @@
 该表中的每一行都表示带有 teacher_id 的教师在系 dept_id 中教授科目 subject_id。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个 SQL 来查询每位老师在大学里教授的科目种类的数量。</p>
 
 <p data-group="1-1">以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式示例如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

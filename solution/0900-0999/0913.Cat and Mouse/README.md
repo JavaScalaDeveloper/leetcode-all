@@ -1,7 +1,5 @@
 # [913. 猫和老鼠](https://leetcode.cn/problems/cat-and-mouse)
 
-[English Version](/solution/0900-0999/0913.Cat%20and%20Mouse/README_EN.md)
-
 ## 题目描述
 
 <p>两位玩家分别扮演猫和老鼠，在一张 <strong>无向</strong> 图上进行游戏，两人轮流行动。</p>
@@ -44,8 +42,6 @@
 <strong>输入：</strong>graph = [[1,3],[0],[3],[0,2]]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

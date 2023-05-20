@@ -1,7 +1,5 @@
 # [65. 有效数字](https://leetcode.cn/problems/valid-number)
 
-[English Version](/solution/0000-0099/0065.Valid%20Number/README_EN.md)
-
 ## 题目描述
 
 <p><strong>有效数字</strong>（按顺序）可以分成以下几个部分：</p>
@@ -37,8 +35,6 @@
 
 <p>给你一个字符串 <code>s</code> ，如果 <code>s</code> 是一个 <strong>有效数字</strong> ，请返回 <code>true</code> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -59,8 +55,6 @@
 <strong>输入：</strong>s = "."
 <strong>输出：</strong>false
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

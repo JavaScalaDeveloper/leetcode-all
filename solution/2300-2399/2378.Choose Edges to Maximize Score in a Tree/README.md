@@ -1,7 +1,5 @@
 # [2378. 选择边来最大化树的得分](https://leetcode.cn/problems/choose-edges-to-maximize-score-in-a-tree)
 
-[English Version](/solution/2300-2399/2378.Choose%20Edges%20to%20Maximize%20Score%20in%20a%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个&nbsp;<strong>加权&nbsp;</strong>树，由 <code>n</code> 个节点组成，从 <code>0</code> 到 <code>n - 1</code>。</p>
@@ -9,8 +7,6 @@
 <p>该树以节点 0 为&nbsp;<strong>根</strong>，用大小为 <code>n</code> 的二维数组 <code>edges</code> 表示，其中 <code>edges[i] = [par<sub>i</sub>, weight<sub>i</sub>]</code> 表示节点 <code>par<sub>i</sub></code> 是节点 <code>i</code>&nbsp;的&nbsp;<strong>父&nbsp;</strong>节点，它们之间的边的权重等于 <code>weight<sub>i</sub></code>。因为根结点&nbsp;<strong>没有&nbsp;</strong>父结点，所以有 <code>edges[0] = [-1, -1]</code>。</p>
 
 <p>从树中选择一些边，使所选的两条边都不&nbsp;<strong>相邻</strong>，所选边的权值之 <strong>和</strong> 最大。</p>
-
-<p>&nbsp;</p>
 
 <p>返回<em>所选边的&nbsp;<strong>最大&nbsp;</strong>和。</em></p>
 
@@ -24,8 +20,6 @@
 	</ul>
 	</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2300-2399/2378.Choose%20Edges%20to%20Maximize%20Score%20in%20a%20Tree/images/treedrawio.png" style="width: 271px; height: 221px;" />
@@ -45,8 +39,6 @@
 <strong>解释:</strong> 我们选择权值为 7 的边。
 注意，我们不能选择一条以上的边，因为所有的边都是彼此相邻的。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

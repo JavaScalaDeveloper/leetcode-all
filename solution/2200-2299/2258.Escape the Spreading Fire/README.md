@@ -1,7 +1,5 @@
 # [2258. 逃离火灾](https://leetcode.cn/problems/escape-the-spreading-fire)
 
-[English Version](/solution/2200-2299/2258.Escape%20the%20Spreading%20Fire/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始大小为 <code>m x n</code>&nbsp;的二维整数数组&nbsp;<code>grid</code>&nbsp;，它表示一个网格图。每个格子为下面 3 个值之一：</p>
@@ -19,8 +17,6 @@
 <p>注意，如果你到达安全屋后，火马上到了安全屋，这视为你能够安全到达安全屋。</p>
 
 <p>如果两个格子有共同边，那么它们为 <strong>相邻</strong>&nbsp;格子。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -53,8 +49,6 @@
 注意，由于火被墙围了起来，所以无论如何你都能安全到达安全屋。
 所以返回 10<sup>9</sup> 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

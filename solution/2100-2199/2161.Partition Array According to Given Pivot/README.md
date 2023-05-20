@@ -1,7 +1,5 @@
 # [2161. 根据给定数字划分数组](https://leetcode.cn/problems/partition-array-according-to-given-pivot)
 
-[English Version](/solution/2100-2199/2161.Partition%20Array%20According%20to%20Given%20Pivot/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>pivot</code>&nbsp;。请你将&nbsp;<code>nums</code>&nbsp;重新排列，使得以下条件均成立：</p>
@@ -17,8 +15,6 @@
 </ul>
 
 <p>请你返回重新排列 <code>nums</code>&nbsp;数组后的结果数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 元素 4 和 3 大于 pivot ，所以它们在数组的最右边。
 小于 pivot 的元素的相对位置和大于 pivot 的元素的相对位置分别为 [-3] 和 [4, 3] ，它们在结果数组中的相对顺序需要保留。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

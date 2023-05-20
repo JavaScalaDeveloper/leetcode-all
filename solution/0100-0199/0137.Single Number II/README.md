@@ -1,14 +1,10 @@
 # [137. 只出现一次的数字 II](https://leetcode.cn/problems/single-number-ii)
 
-[English Version](/solution/0100-0199/0137.Single%20Number%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code> ，除某个元素仅出现 <strong>一次</strong> 外，其余每个元素都恰出现 <strong>三次 。</strong>请你找出并返回那个只出现了一次的元素。</p>
 
 <p>你必须设计并实现线性时间复杂度的算法且不使用额外空间来解决此问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输入：</strong>nums = [0,1,0,1,0,1,99]
 <strong>输出：</strong>99
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -115,20 +109,4 @@ class Solution {
 
 需要注意 Golang 中的 `int` 在 64 位平台上相当于 `int64`
 
-### **C**
-
-```c
-int singleNumber(int *nums, int numsSize) {
-    int ans = 0;
-    for (int i = 0; i < 32; i++) {
-        int count = 0;
-        for (int j = 0; j < numsSize; j++) {
-            if (nums[j] >> i & 1) {
-                count++;
-            }
-        }
-        ans |= (uint)(count % 3) << i;
-    }
-    return ans;
-}
-```
+**

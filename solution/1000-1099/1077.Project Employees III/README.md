@@ -1,7 +1,5 @@
 # [1077. 项目员工 III](https://leetcode.cn/problems/project-employees-iii)
 
-[English Version](/solution/1000-1099/1077.Project%20Employees%20III/README_EN.md)
-
 ## 题目描述
 
 <p>项目表&nbsp;<code>Project</code>：</p>
@@ -29,8 +27,6 @@ employee_id 是员工表 Employee 的外键
 +------------------+---------+
 employee_id 是这个表的主键
 </pre>
-
-<p>&nbsp;</p>
 
 <p>写 一个 SQL 查询语句，报告在每一个项目中经验最丰富的雇员是谁。如果出现经验年数相同的情况，请报告所有具有最大经验年数的员工。</p>
 

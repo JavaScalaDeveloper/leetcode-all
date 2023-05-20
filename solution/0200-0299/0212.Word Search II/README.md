@@ -1,14 +1,10 @@
 # [212. 单词搜索 II](https://leetcode.cn/problems/word-search-ii)
 
-[English Version](/solution/0200-0299/0212.Word%20Search%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个&nbsp;<code>m x n</code> 二维字符网格&nbsp;<code>board</code><strong>&nbsp;</strong>和一个单词（字符串）列表 <code>words</code>，&nbsp;<em>返回所有二维网格上的单词</em>&nbsp;。</p>
 
 <p>单词必须按照字母顺序，通过 <strong>相邻的单元格</strong> 内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母在一个单词中不允许被重复使用。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0212.Word%20Search%20II/images/search1.jpg" />
@@ -23,8 +19,6 @@
 <strong>输入：</strong>board = [["a","b"],["c","d"]], words = ["abcb"]
 <strong>输出：</strong>[]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

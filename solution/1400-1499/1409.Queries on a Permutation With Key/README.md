@@ -1,7 +1,5 @@
 # [1409. 查询带键的排列](https://leetcode.cn/problems/queries-on-a-permutation-with-key)
 
-[English Version](/solution/1400-1499/1409.Queries%20on%20a%20Permutation%20With%20Key/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个待查数组 <code>queries</code> ，数组中的元素为 <code>1</code> 到 <code>m</code> 之间的正整数。 请你根据以下规则处理所有待查项 <code>queries[i]</code>（从 <code>i=0</code> 到 <code>i=queries.length-1</code>）：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>请你以数组形式返回待查数组&nbsp; <code>queries</code> 的查询结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <pre><strong>输入：</strong>queries = [7,5,5,8,3], m = 8
 <strong>输出：</strong>[6,5,0,7,5]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2351. 第一个出现两次的字母](https://leetcode.cn/problems/first-letter-to-appear-twice)
 
-[English Version](/solution/2300-2399/2351.First%20Letter%20to%20Appear%20Twice/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由小写英文字母组成的字符串 <code>s</code> ，请你找出并返回第一个出现 <strong>两次</strong> 的字母。</p>
@@ -12,8 +10,6 @@
 	<li>如果 <code>a</code> 的 <strong>第二次</strong> 出现比 <code>b</code> 的 <strong>第二次</strong> 出现在字符串中的位置更靠前，则认为字母 <code>a</code> 在字母 <code>b</code> 之前出现两次。</li>
 	<li><code>s</code> 包含至少一个出现两次的字母。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <strong>解释：</strong>
 只有字母 'd' 出现两次，所以返回 'd' 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -90,30 +84,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-char repeatedCharacter(char *s) {
-    int vis[26] = {0};
-    for (int i = 0; s[i]; i++) {
-        if (vis[s[i] - 'a']) {
-            return s[i];
-        }
-        vis[s[i] - 'a']++;
-    }
-    return ' ';
-}
-```
-
-```c
-char repeatedCharacter(char *s) {
-    int mask = 0;
-    for (int i = 0; s[i]; i++) {
-        if (mask & (1 << s[i] - 'a')) {
-            return s[i];
-        }
-        mask |= 1 << s[i] - 'a';
-    }
-    return ' ';
-}
-```
+**

@@ -1,7 +1,5 @@
 # [821. 字符的最短距离](https://leetcode.cn/problems/shortest-distance-to-a-character)
 
-[English Version](/solution/0800-0899/0821.Shortest%20Distance%20to%20a%20Character/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> 和一个字符 <code>c</code> ，且 <code>c</code> 是 <code>s</code> 中出现过的字符。</p>
@@ -9,8 +7,6 @@
 <p>返回一个整数数组 <code>answer</code> ，其中 <code>answer.length == s.length</code> 且 <code>answer[i]</code> 是 <code>s</code> 中从下标 <code>i</code> 到离它 <strong>最近</strong> 的字符 <code>c</code> 的 <strong>距离</strong> 。</p>
 
 <p>两个下标&nbsp;<code>i</code> 和 <code>j</code> 之间的 <strong>距离</strong> 为 <code>abs(i - j)</code> ，其中 <code>abs</code> 是绝对值函数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +27,6 @@
 <strong>输出：</strong>[3,2,1,0]
 </pre>
 
-<p>&nbsp;</p>
 <strong>提示：</strong>
 
 <ul>

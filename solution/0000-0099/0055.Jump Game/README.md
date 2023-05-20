@@ -1,7 +1,5 @@
 # [55. 跳跃游戏](https://leetcode.cn/problems/jump-game)
 
-[English Version](/solution/0000-0099/0055.Jump%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个非负整数数组 <code>nums</code> ，你最初位于数组的 <strong>第一个下标</strong> 。</p>

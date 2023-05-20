@@ -1,7 +1,5 @@
 # [596. 超过 5 名学生的课](https://leetcode.cn/problems/classes-more-than-5-students)
 
-[English Version](/solution/0500-0599/0596.Classes%20More%20Than%205%20Students/README_EN.md)
-
 ## 题目描述
 
 <p>表:&nbsp;<code>Courses</code></p>
@@ -17,15 +15,11 @@
 该表的每一行表示学生的名字和他们注册的班级。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个SQL查询来报告 <strong>至少有5个学生</strong> 的所有班级。</p>
 
 <p>以 <strong>任意顺序 </strong>返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

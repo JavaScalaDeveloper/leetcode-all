@@ -1,12 +1,8 @@
 # [2176. 统计数组中相等且可以被整除的数对](https://leetcode.cn/problems/count-equal-and-divisible-pairs-in-an-array)
 
-[English Version](/solution/2100-2199/2176.Count%20Equal%20and%20Divisible%20Pairs%20in%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始长度为 <code>n</code>&nbsp;的整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;，请你返回满足&nbsp;<code>0 &lt;= i &lt; j &lt; n</code>&nbsp;，<code>nums[i] == nums[j]</code> 且&nbsp;<code>(i * j)</code>&nbsp;能被&nbsp;<code>k</code>&nbsp;整除的数对&nbsp;<code>(i, j)</code>&nbsp;的&nbsp;<strong>数目</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,8 +22,6 @@
 <b>输出：</b>0
 <b>解释：</b>由于数组中没有重复数值，所以没有数对 (i,j) 符合所有要求。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -59,18 +53,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int countPairs(int *nums, int numsSize, int k) {
-    int ans = 0;
-    for (int i = 0; i < numsSize - 1; i++) {
-        for (int j = i + 1; j < numsSize; j++) {
-            if (nums[i] == nums[j] && i * j % k == 0) {
-                ans++;
-            }
-        }
-    }
-    return ans;
-}
-```
+**

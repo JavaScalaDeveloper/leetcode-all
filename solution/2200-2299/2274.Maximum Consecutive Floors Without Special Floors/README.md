@@ -1,7 +1,5 @@
 # [2274. 不含特殊楼层的最大连续楼层数](https://leetcode.cn/problems/maximum-consecutive-floors-without-special-floors)
 
-[English Version](/solution/2200-2299/2274.Maximum%20Consecutive%20Floors%20Without%20Special%20Floors/README_EN.md)
-
 ## 题目描述
 
 <p>Alice 管理着一家公司，并租用大楼的部分楼层作为办公空间。Alice 决定将一些楼层作为 <strong>特殊楼层</strong> ，仅用于放松。</p>
@@ -9,8 +7,6 @@
 <p>给你两个整数 <code>bottom</code> 和 <code>top</code> ，表示 Alice 租用了从 <code>bottom</code> 到 <code>top</code>（含 <code>bottom</code> 和 <code>top</code> 在内）的所有楼层。另给你一个整数数组 <code>special</code> ，其中 <code>special[i]</code> 表示&nbsp; Alice 指定用于放松的特殊楼层。</p>
 
 <p>返回不含特殊楼层的 <strong>最大</strong> 连续楼层数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>每层楼都被规划为特殊楼层，所以返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示</strong></p>
 

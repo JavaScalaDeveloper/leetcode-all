@@ -1,12 +1,8 @@
 # [217. 存在重复元素](https://leetcode.cn/problems/contains-duplicate)
 
-[English Version](/solution/0200-0299/0217.Contains%20Duplicate/README_EN.md)
-
 ## 题目描述
 
 给你一个整数数组 <code>nums</code> 。如果任一值在数组中出现 <strong>至少两次</strong> ，返回 <code>true</code> ；如果数组中每个元素互不相同，返回 <code>false</code> 。
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,8 +21,6 @@
 <pre>
 <strong>输入：</strong>nums = [1,1,1,3,3,4,3,2,4,2]
 <strong>输出：</strong>true</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -83,20 +77,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int cmp(const void *a, const void *b) {
-    return *(int *) a - *(int *) b;
-}
-
-bool containsDuplicate(int *nums, int numsSize) {
-    qsort(nums, numsSize, sizeof(int), cmp);
-    for (int i = 1; i < numsSize; i++) {
-        if (nums[i - 1] == nums[i]) {
-            return 1;
-        }
-    }
-    return 0;
-}
-```
+**

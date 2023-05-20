@@ -1,7 +1,5 @@
 # [1563. 石子游戏 V](https://leetcode.cn/problems/stone-game-v)
 
-[English Version](/solution/1500-1599/1563.Stone%20Game%20V/README_EN.md)
-
 ## 题目描述
 
 <p>几块石子 <strong>排成一行</strong> ，每块石子都有一个关联值，关联值为整数，由数组 <code>stoneValue</code> 给出。</p>
@@ -11,8 +9,6 @@
 <p>只 <strong>剩下一块石子</strong> 时，游戏结束。Alice 的分数最初为 <strong><code>0</code></strong> 。</p>
 
 <p>返回 <strong>Alice 能够获得的最大分数</strong><em> 。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 <pre><strong>输入：</strong>stoneValue = [4]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [1278. 分割回文串 III](https://leetcode.cn/problems/palindrome-partitioning-iii)
 
-[English Version](/solution/1200-1299/1278.Palindrome%20Partitioning%20III/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由小写字母组成的字符串&nbsp;<code>s</code>，和一个整数&nbsp;<code>k</code>。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>请返回以这种方式分割字符串所需修改的最少字符数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <pre><strong>输入：</strong>s = &quot;leetcode&quot;, k = 8
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

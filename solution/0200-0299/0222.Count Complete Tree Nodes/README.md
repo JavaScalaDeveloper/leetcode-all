@@ -1,7 +1,5 @@
 # [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes)
 
-[English Version](/solution/0200-0299/0222.Count%20Complete%20Tree%20Nodes/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵<strong> 完全二叉树</strong> 的根节点 <code>root</code> ，求出该树的节点个数。</p>

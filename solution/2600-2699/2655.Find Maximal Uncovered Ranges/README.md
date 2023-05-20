@@ -1,7 +1,5 @@
 # [2655. 寻找最大长度的未覆盖区间](https://leetcode.cn/problems/find-maximal-uncovered-ranges)
 
-[English Version](/solution/2600-2699/2655.Find%20Maximal%20Uncovered%20Ranges/README_EN.md)
-
 ## 题目描述
 
 <p>现给你一个长度为 n 的 <strong>索引从 0 开始的</strong>&nbsp;数组 <code>nums</code> 和一个 <strong>索引从 0 开始的</strong> 2 维数组 <code>ranges</code> ，<strong>ranges</strong> 是 <strong>nums</strong> 的子区间列表（子区间可能 <strong>重叠</strong> ）。</p>
@@ -23,8 +21,6 @@
 	<li>每个未覆盖的元素应该属于 <strong>恰好</strong> 一个子区间。</li>
 	<li><strong>不存在</strong>两个区间 (l1,r1) 和 (l2,r2) 使得 r1+1=l2 。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1 ：</strong></p>
 
@@ -48,8 +44,6 @@
 <b>输入：</b>n = 7, ranges = [[2,4],[0,3]]
 <b>输出：</b>[[5,6]]
 <b>解释：</b>区间 (0,3) 和 (2,4) 都被覆盖，因此如果我们将 nums 简化为一个二进制数组，其中 0 表示未覆盖的元素，1 表示覆盖的元素，则数组变为[1,1,1,1,1,0,0]，在其中我们可以观察到区间 (5,6) 未被覆盖。</pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

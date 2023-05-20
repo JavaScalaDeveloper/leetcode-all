@@ -1,7 +1,5 @@
 # [2536. 子矩阵元素加 1](https://leetcode.cn/problems/increment-submatrices-by-one)
 
-[English Version](/solution/2500-2599/2536.Increment%20Submatrices%20by%20One/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数 <code>n</code> ，表示最初有一个 <code>n x n</code> 、下标从 <strong>0</strong> 开始的整数矩阵 <code>mat</code> ，矩阵中填满了 0 。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回执行完所有操作后得到的矩阵 <code>mat</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>[[1,1],[1,1]]
 <strong>解释：</strong>上图所展示的分别是：初始矩阵、执行完第一个操作后的矩阵。 
 - 第一个操作：将矩阵中的每个元素加 1 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

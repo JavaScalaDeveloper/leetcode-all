@@ -1,7 +1,5 @@
 # [396. 旋转函数](https://leetcode.cn/problems/rotate-function)
 
-[English Version](/solution/0300-0399/0396.Rotate%20Function/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个长度为 <code>n</code> 的整数数组&nbsp;<code>nums</code>&nbsp;。</p>
@@ -15,8 +13,6 @@
 <p>返回&nbsp;<em><code>F(0), F(1), ..., F(n-1)</code>中的最大值&nbsp;</em>。</p>
 
 <p>生成的测试用例让答案符合&nbsp;<strong>32 位</strong> 整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -37,8 +33,6 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <strong>输入:</strong> nums = [100]
 <strong>输出:</strong> 0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

@@ -1,7 +1,5 @@
 # [1157. 子数组中占绝大多数的元素](https://leetcode.cn/problems/online-majority-element-in-subarray)
 
-[English Version](/solution/1100-1199/1157.Online%20Majority%20Element%20In%20Subarray/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个数据结构，有效地找到给定子数组的 <strong>多数元素</strong> 。</p>
@@ -14,8 +12,6 @@
 	<li><code>MajorityChecker(int[] arr)</code>&nbsp;会用给定的数组 <code>arr</code>&nbsp;对&nbsp;<code>MajorityChecker</code> 初始化。</li>
 	<li><code>int query(int left, int right, int threshold)</code>&nbsp;返回子数组中的元素 &nbsp;<code>arr[left...right]</code>&nbsp;至少出现&nbsp;<code>threshold</code>&nbsp;次数，如果不存在这样的元素则返回 <code>-1</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@ majorityChecker.query(0,5,4); // 返回 1
 majorityChecker.query(0,3,3); // 返回 -1
 majorityChecker.query(2,3,2); // 返回 2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

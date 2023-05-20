@@ -1,7 +1,5 @@
 # [1025. 除数博弈](https://leetcode.cn/problems/divisor-game)
 
-[English Version](/solution/1000-1099/1025.Divisor%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。</p>
@@ -16,8 +14,6 @@
 <p>如果玩家无法执行这些操作，就会输掉游戏。</p>
 
 <p><em>只有在爱丽丝在游戏中取得胜利时才返回&nbsp;<code>true</code>&nbsp;。假设两个玩家都以最佳状态参与游戏。</em></p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -37,8 +33,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>爱丽丝选择 1，鲍勃也选择 1，然后爱丽丝无法进行操作。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

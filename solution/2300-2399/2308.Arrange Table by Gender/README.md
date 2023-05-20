@@ -1,7 +1,5 @@
 # [2308. 按性别排列表格](https://leetcode.cn/problems/arrange-table-by-gender)
 
-[English Version](/solution/2300-2399/2308.Arrange%20Table%20by%20Gender/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Genders</code></p>
@@ -19,13 +17,9 @@ gender 的值是 'female', 'male','other' 之一。
 表格中 'female', 'male','other' 数量相等。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个SQL查询以重新排列 <code>Genders</code> 表，使行按顺序在&nbsp;<code>'female'</code>,&nbsp;<code>'other'</code>&nbsp;和&nbsp;<code>'male'</code>&nbsp;之间交替。同时每种性别按照&nbsp;user_id 升序进行排序。<br />
 按 <strong>上述顺序</strong> 返回结果表。<br />
 查询结果格式如以下示例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

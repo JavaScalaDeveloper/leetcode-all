@@ -1,12 +1,8 @@
 # [1390. 四因数](https://leetcode.cn/problems/four-divisors)
 
-[English Version](/solution/1300-1399/1390.Four%20Divisors/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code>，请你返回该数组中恰有四个因数的这些整数的各因数之和。如果数组中不存在满足题意的整数，则返回 <code>0</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <pre>
 <strong>输入:</strong> nums = [1,2,3,4,5]
 <strong>输出:</strong> 0</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

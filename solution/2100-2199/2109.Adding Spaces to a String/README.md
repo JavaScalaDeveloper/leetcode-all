@@ -1,7 +1,5 @@
 # [2109. 向字符串添加空格](https://leetcode.cn/problems/adding-spaces-to-a-string)
 
-[English Version](/solution/2100-2199/2109.Adding%20Spaces%20to%20a%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串 <code>s</code> ，以及一个下标从 <strong>0</strong> 开始的整数数组 <code>spaces</code> 。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>请你添加空格，并返回修改后的字符串<em>。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <strong>解释：</strong>
 字符串的第一个字符前可以添加空格。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

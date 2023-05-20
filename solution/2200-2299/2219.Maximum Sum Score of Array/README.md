@@ -1,7 +1,5 @@
 # [2219. 数组的最大总分](https://leetcode.cn/problems/maximum-sum-score-of-array)
 
-[English Version](/solution/2200-2299/2219.Maximum%20Sum%20Score%20of%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，数组长度为 <code>n</code> 。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>返回数组 <code>nums</code> 在任一下标处能取得的 <strong>最大总分</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@ nums 可取得的最大总分是 10 。
 下标 1 处的最大总分是 max(-3 + -5, -5) = max(-8, -5) = -5 。
 nums 可取得的最大总分是 -3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

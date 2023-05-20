@@ -1,7 +1,5 @@
 # [362. 敲击计数器](https://leetcode.cn/problems/design-hit-counter)
 
-[English Version](/solution/0300-0399/0362.Design%20Hit%20Counter/README_EN.md)
-
 ## 题目描述
 
 <p>设计一个敲击计数器，使它可以统计在过去 <code>5</code> 分钟内被敲击次数。（即过去 <code>300</code> 秒）</p>
@@ -15,8 +13,6 @@
 	<li><code>void hit(int timestamp)</code>&nbsp;记录在&nbsp;<code>timestamp</code>&nbsp;(&nbsp;<strong>单位为秒</strong>&nbsp;)发生的一次命中。在同一个&nbsp;<code>timestamp</code>&nbsp;中可能会出现几个点击。</li>
 	<li><code>int getHits(int timestamp)</code>&nbsp;返回&nbsp;<code>timestamp</code>&nbsp;在过去 5 分钟内(即过去 <code>300</code> 秒)的命中次数。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -38,8 +34,6 @@ counter.getHits(300); // 在时刻 300 统计过去 5 分钟内的敲击次数�
 counter.getHits(301); // 在时刻 301 统计过去 5 分钟内的敲击次数，函数返回 3 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -47,8 +41,6 @@ counter.getHits(301); // 在时刻 301 统计过去 5 分钟内的敲击次数�
 	<li>所有对系统的调用都是按时间顺序进行的（即&nbsp;<code>timestamp</code>&nbsp;是单调递增的）</li>
 	<li><code>hit</code>&nbsp;and&nbsp;<code>getHits&nbsp;</code>最多被调用&nbsp;<code>300</code>&nbsp;次</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶:</strong>&nbsp;如果每秒的敲击次数是一个很大的数字，你的计数器可以应对吗？</p>
 

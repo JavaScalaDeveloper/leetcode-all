@@ -1,7 +1,5 @@
 # [1708. 长度为 K 的最大子数组](https://leetcode.cn/problems/largest-subarray-length-k)
 
-[English Version](/solution/1700-1799/1708.Largest%20Subarray%20Length%20K/README_EN.md)
-
 ## 题目描述
 
 <p>在数组 <code>A</code> 和数组 <code>B</code> 中，对于第一个满足 <code>A[i] != B[i]</code> 的索引 <code>i</code> ，当 <code>A[i] &gt; B[i]</code> 时，数组 <code>A</code> 大于数组 <code>B</code>。</p>

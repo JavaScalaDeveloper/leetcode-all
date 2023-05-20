@@ -1,7 +1,5 @@
 # [264. 丑数 II](https://leetcode.cn/problems/ugly-number-ii)
 
-[English Version](/solution/0200-0299/0264.Ugly%20Number%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code> ，请你找出并返回第 <code>n</code> 个 <strong>丑数</strong> 。</p>

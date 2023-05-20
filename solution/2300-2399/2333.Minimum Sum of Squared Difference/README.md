@@ -1,7 +1,5 @@
 # [2333. 最小差值平方和](https://leetcode.cn/problems/minimum-sum-of-squared-difference)
 
-[English Version](/solution/2300-2399/2333.Minimum%20Sum%20of%20Squared%20Difference/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums1</code> 和&nbsp;<code>nums2</code>&nbsp;，长度为&nbsp;<code>n</code>&nbsp;。</p>
@@ -13,8 +11,6 @@
 <p>请你返回修改数组<em>&nbsp;</em><code>nums1</code><em>&nbsp;</em>至多<em>&nbsp;</em><code>k1</code>&nbsp;次且修改数组<em>&nbsp;</em><code>nums2</code>&nbsp;至多 <code>k2</code><em>&nbsp;</em>次后的最小&nbsp;<strong>差值平方和</strong>&nbsp;。</p>
 
 <p><strong>注意：</strong>你可以将数组中的元素变成&nbsp;<strong>负</strong>&nbsp;整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@
 最小差值平方和为：
 (2 - 5)<sup>2 </sup>+ (4 - 8)<sup>2 </sup>+ (10 - 7)<sup>2 </sup>+ (12 - 9)<sup>2</sup>&nbsp;= 43 。
 注意，也有其他方式可以得到最小差值平方和，但没有得到比 43 更小答案的方案。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

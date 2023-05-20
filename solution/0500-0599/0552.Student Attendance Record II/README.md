@@ -1,7 +1,5 @@
 # [552. 学生出勤记录 II](https://leetcode.cn/problems/student-attendance-record-ii)
 
-[English Version](/solution/0500-0599/0552.Student%20Attendance%20Record%20II/README_EN.md)
-
 ## 题目描述
 
 可以用字符串表示一个学生的出勤记录，其中的每个字符用来标记当天的出勤情况（缺勤、迟到、到场）。记录中只含下面三种字符：
@@ -20,8 +18,6 @@
 </ul>
 
 <p>给你一个整数 <code>n</code> ，表示出勤记录的长度（次数）。请你返回记录长度为 <code>n</code> 时，可能获得出勤奖励的记录情况 <strong>数量</strong> 。答案可能很大，所以返回对 <code>10<sup>9</sup> + 7</code> <strong>取余</strong> 的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 <strong>输入：</strong>n = 10101
 <strong>输出：</strong>183236316
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

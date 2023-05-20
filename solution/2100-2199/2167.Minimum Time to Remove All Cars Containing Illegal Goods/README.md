@@ -1,7 +1,5 @@
 # [2167. 移除所有载有违禁货物车厢所需的最少时间](https://leetcode.cn/problems/minimum-time-to-remove-all-cars-containing-illegal-goods)
 
-[English Version](/solution/2100-2199/2167.Minimum%20Time%20to%20Remove%20All%20Cars%20Containing%20Illegal%20Goods/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的二进制字符串 <code>s</code> ，表示一个列车车厢序列。<code>s[i] = '0'</code> 表示第 <code>i</code> 节车厢 <strong>不</strong> 含违禁货物，而 <code>s[i] = '1'</code> 表示第 <code>i</code> 节车厢含违禁货物。</p>
@@ -17,8 +15,6 @@
 <p>返回移除所有载有违禁货物车厢所需要的 <strong>最少</strong> 单位时间数。</p>
 
 <p>注意，空的列车车厢序列视为没有车厢含违禁货物。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -60,8 +56,6 @@
 
 2 是移除所有载有违禁货物的车厢所需要的最少单位时间数。
 没有其他方法能够用更少的时间移除这些车厢。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

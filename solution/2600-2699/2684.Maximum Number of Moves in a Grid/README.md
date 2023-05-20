@@ -1,7 +1,5 @@
 # [2684. 矩阵中移动的最大次数](https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid)
 
-[English Version](/solution/2600-2699/2684.Maximum%20Number%20of%20Moves%20in%20a%20Grid/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始、大小为 <code>m x n</code> 的矩阵 <code>grid</code> ，矩阵由若干 <strong>正</strong> 整数组成。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回你在矩阵中能够 <strong>移动</strong> 的 <strong>最大</strong> 次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2684.Maximum%20Number%20of%20Moves%20in%20a%20Grid/images/yetgriddrawio-10.png" style="width: 201px; height: 201px;">
@@ -33,8 +29,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>从第一列的任一单元格开始都无法移动。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

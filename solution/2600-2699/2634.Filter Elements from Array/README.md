@@ -1,7 +1,5 @@
 # [2634. 过滤数组中的元素](https://leetcode.cn/problems/filter-elements-from-array)
 
-[English Version](/solution/2600-2699/2634.Filter%20Elements%20from%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个函数，该函数接受一个整数数组参数 <code>arr</code> 和一个过滤函数 <code>fn</code>，并返回一个过滤后元素数量较少或元素数量相等的新数组。</p>
@@ -9,8 +7,6 @@
 <p>返回的数组应该只包含通过过滤函数&nbsp;<code>fn(arr[i]， i)</code> 计算后为真值的元素。</p>
 
 <p>请你在不使用内置函数&nbsp;<code>Array.filter</code>&nbsp;的前提下解决该问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -39,8 +35,6 @@ const newArray = filter(arr, fn); // [20, 30]
 <strong>解释：</strong>
 像 0 这样的假值应被过滤掉
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

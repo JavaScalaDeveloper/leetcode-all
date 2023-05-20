@@ -1,7 +1,5 @@
 # [456. 132 模式](https://leetcode.cn/problems/132-pattern)
 
-[English Version](/solution/0400-0499/0456.132%20Pattern/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，数组中共有 <code>n</code> 个整数。<strong>132 模式的子序列</strong> 由三个整数 <code>nums[i]</code>、<code>nums[j]</code> 和 <code>nums[k]</code> 组成，并同时满足：<code>i < j < k</code> 和 <code>nums[i] < nums[k] < nums[j]</code> 。</p>

@@ -1,7 +1,5 @@
 # [1225. 报告系统状态的连续日期](https://leetcode.cn/problems/report-contiguous-dates)
 
-[English Version](/solution/1200-1299/1225.Report%20Contiguous%20Dates/README_EN.md)
-
 ## 题目描述
 
 <p>Table: <code>Failed</code></p>
@@ -25,8 +23,6 @@
 该表主键为 success_date。
 该表包含成功任务的天数.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>系统 <strong>每天</strong> 运行一个任务。每个任务都独立于先前的任务。任务的状态可以是失败或是成功。</p>
 

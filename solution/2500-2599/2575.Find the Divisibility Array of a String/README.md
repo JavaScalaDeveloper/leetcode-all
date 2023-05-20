@@ -1,7 +1,5 @@
 # [2575. 找出字符串的可整除数组](https://leetcode.cn/problems/find-the-divisibility-array-of-a-string)
 
-[English Version](/solution/2500-2599/2575.Find%20the%20Divisibility%20Array%20of%20a%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串 <code>word</code> ，长度为 <code>n</code> ，由从 <code>0</code> 到 <code>9</code> 的数字组成。另给你一个正整数 <code>m</code> 。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p>返回<em> </em><code>word</code> 的可整除数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输出：</strong>[0,1,0,1]
 <strong>解释：</strong>仅有 2 个前缀可以被 10 整除："10" 和 "1010" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -71,21 +65,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int *divisibilityArray(char *word, int m, int *returnSize) {
-    int n = strlen(word);
-    int *ans = malloc(sizeof(int) * n);
-    long long x = 0;
-    for (int i = 0; i < n; i++) {
-        x = (x * 10 + word[i] - '0') % m;
-        ans[i] = x == 0 ? 1 : 0;
-    }
-    *returnSize = n;
-    return ans;
-}
-```
+**

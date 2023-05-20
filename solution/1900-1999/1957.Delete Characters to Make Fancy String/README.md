@@ -1,7 +1,5 @@
 # [1957. 删除字符使字符串变好](https://leetcode.cn/problems/delete-characters-to-make-fancy-string)
 
-[English Version](/solution/1900-1999/1957.Delete%20Characters%20to%20Make%20Fancy%20String/README_EN.md)
-
 ## 题目描述
 
 <p>一个字符串如果没有 <strong>三个连续</strong>&nbsp;相同字符，那么它就是一个 <strong>好字符串</strong>&nbsp;。</p>
@@ -9,8 +7,6 @@
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，请你从 <code>s</code>&nbsp;删除&nbsp;<strong>最少</strong>&nbsp;的字符，使它变成一个 <strong>好字符串</strong> 。</p>
 
 <p>请你返回删除后的字符串。题目数据保证答案总是 <strong>唯一的 </strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 <b>输出：</b>"aab"
 <b>解释：</b>没有连续三个相同字符，所以返回 "aab" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

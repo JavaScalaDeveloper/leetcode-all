@@ -1,7 +1,5 @@
 # [2. 两数相加](https://leetcode.cn/problems/add-two-numbers)
 
-[English Version](/solution/0000-0099/0002.Add%20Two%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个 <strong>非空</strong> 的链表，表示两个非负的整数。它们每位数字都是按照 <strong>逆序</strong> 的方式存储的，并且每个节点只能存储 <strong>一位</strong> 数字。</p>

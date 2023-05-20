@@ -1,7 +1,5 @@
 # [1132. 报告的记录 II](https://leetcode.cn/problems/reported-posts-ii)
 
-[English Version](/solution/1100-1199/1132.Reported%20Posts%20II/README_EN.md)
-
 ## 题目描述
 
 <p>动作表：&nbsp;<code>Actions</code></p>
@@ -20,8 +18,6 @@
 action 列的类型是 ENUM，可能的值为 ('view', 'like', 'reaction', 'comment', 'report', 'share')。
 extra 列拥有一些可选信息，例如：报告理由（a reason for report）或反应类型（a type of reaction）等。</pre>
 
-<p>&nbsp;</p>
-
 <p>移除表：&nbsp;<code>Removals</code></p>
 
 <pre>
@@ -35,15 +31,11 @@ extra 列拥有一些可选信息，例如：报告理由（a reason for report�
 这张表的每一行表示一个被移除的帖子，原因可能是由于被举报或被管理员审查。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一段 SQL 来查找：在被报告为垃圾广告的帖子中，被移除的帖子的每日平均占比，<strong>四舍五入到小数点后 2 位</strong>。</p>
 
 <p>以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果的格式如下。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

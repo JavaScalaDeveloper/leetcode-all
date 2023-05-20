@@ -1,7 +1,5 @@
 # [332. 重新安排行程](https://leetcode.cn/problems/reconstruct-itinerary)
 
-[English Version](/solution/0300-0399/0332.Reconstruct%20Itinerary/README_EN.md)
-
 ## 题目描述
 
 <p>给你一份航线列表 <code>tickets</code> ，其中 <code>tickets[i] = [from<sub>i</sub>, to<sub>i</sub>]</code> 表示飞机出发和降落的机场地点。请你对该行程进行重新规划排序。</p>

@@ -1,7 +1,5 @@
 # [1533. 找到最大整数的索引](https://leetcode.cn/problems/find-the-index-of-the-large-integer)
 
-[English Version](/solution/1500-1599/1533.Find%20the%20Index%20of%20the%20Large%20Integer/README_EN.md)
-
 ## 题目描述
 
 <p>我们有这样一个整数数组&nbsp;<code>arr</code>&nbsp;，除了一个最大的整数外，其他所有整数都相等。你不能直接访问该数组，你需要通过&nbsp;<strong>API</strong> <code>ArrayReader</code>&nbsp;来间接访问，这个 API&nbsp;有以下成员函数：</p>
@@ -26,8 +24,6 @@
 <ul>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -48,8 +44,6 @@ reader.compareSub(4, 4, 5, 5) // 返回 1。因此，可以确定 arr[4] 是数�
 <strong>输出:</strong> 2
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -57,8 +51,6 @@ reader.compareSub(4, 4, 5, 5) // 返回 1。因此，可以确定 arr[4] 是数�
 	<li><code>1 &lt;= arr[i] &lt;= 100</code></li>
 	<li><code>arr</code>&nbsp;中除一个最大元素外，其余所有元素都相等。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶</strong></p>
 

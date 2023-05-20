@@ -1,7 +1,5 @@
 # [242. 有效的字母异位词](https://leetcode.cn/problems/valid-anagram)
 
-[English Version](/solution/0200-0299/0242.Valid%20Anagram/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个字符串 <code><em>s</em></code> 和 <code><em>t</em></code> ，编写一个函数来判断 <code><em>t</em></code> 是否是 <code><em>s</em></code> 的字母异位词。</p>
@@ -69,42 +67,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int cmp(const void *a, const void *b) {
-    return *(char *) a - *(char *) b;
-}
-
-bool isAnagram(char *s, char *t) {
-    int n = strlen(s);
-    int m = strlen(t);
-    if (n != m) {
-        return 0;
-    }
-    qsort(s, n, sizeof(char), cmp);
-    qsort(t, n, sizeof(char), cmp);
-    return !strcmp(s, t);
-}
-```
-
-```c
-bool isAnagram(char *s, char *t) {
-    int n = strlen(s);
-    int m = strlen(t);
-    if (n != m) {
-        return 0;
-    }
-    int count[26] = {0};
-    for (int i = 0; i < n; i++) {
-        count[s[i] - 'a']++;
-        count[t[i] - 'a']--;
-    }
-    for (int i = 0; i < 26; i++) {
-        if (count[i]) {
-            return 0;
-        }
-    }
-    return 1;
-}
-```
+**

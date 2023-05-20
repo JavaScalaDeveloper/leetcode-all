@@ -1,7 +1,5 @@
 # [2562. 找出数组的串联值](https://leetcode.cn/problems/find-the-array-concatenation-value)
 
-[English Version](/solution/2500-2599/2562.Find%20the%20Array%20Concatenation%20Value/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组&nbsp;<code>nums</code> 。</p>
@@ -20,8 +18,6 @@
 </ul>
 
 <p>返回执行完所有操作后<em>&nbsp;</em><code>nums</code> 的串联值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -60,8 +56,6 @@ nums 只有一个元素，所以我们选中 13 并将其加到串联值上，�
 由于串联值等于 673 ，所以答案就是 673 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -95,30 +89,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int getLen(int num) {
-    int res = 0;
-    while (num) {
-        num /= 10;
-        res++;
-    }
-    return res;
-}
-
-long long findTheArrayConcVal(int *nums, int numsSize) {
-    long long ans = 0;
-    int i = 0;
-    int j = numsSize - 1;
-    while (i < j) {
-        ans += nums[i] * pow(10, getLen(nums[j])) + nums[j];
-        i++;
-        j--;
-    }
-    if (i == j) {
-        ans += nums[i];
-    }
-    return ans;
-}
-```
+**

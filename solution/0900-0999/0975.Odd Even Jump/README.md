@@ -1,7 +1,5 @@
 # [975. 奇偶跳](https://leetcode.cn/problems/odd-even-jump)
 
-[English Version](/solution/0900-0999/0975.Odd%20Even%20Jump/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个整数数组 <code>A</code>，你可以从某一起始索引出发，跳跃一定次数。在你跳跃的过程中，第 1、3、5... 次跳跃称为奇数跳跃，而第 2、4、6... 次跳跃称为偶数跳跃。</p>
@@ -17,8 +15,6 @@
 <p>如果从某一索引开始跳跃一定次数（可能是 0 次或多次），就可以到达数组的末尾（索引 <code>A.length - 1</code>），那么该索引就会被认为是好的起始索引。</p>
 
 <p>返回好的起始索引的数量。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -62,8 +58,6 @@
 <strong>解释： </strong>
 我们可以从起始索引 1，2，4 出发到达数组末尾。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

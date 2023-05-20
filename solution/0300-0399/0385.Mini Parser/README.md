@@ -1,14 +1,10 @@
 # [385. 迷你语法分析器](https://leetcode.cn/problems/mini-parser)
 
-[English Version](/solution/0300-0399/0385.Mini%20Parser/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串 s 表示一个整数嵌套列表，实现一个解析它的语法分析器并返回解析的结果&nbsp;<code>NestedInteger</code> 。</p>
 
 <p>列表中的每个元素只可能是整数或整数嵌套列表</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,8 +26,6 @@
     ii. 一个包含一个元素的嵌套列表
          a. 一个 integer 包含值 789
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

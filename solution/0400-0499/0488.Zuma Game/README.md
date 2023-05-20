@@ -1,7 +1,5 @@
 # [488. 祖玛游戏](https://leetcode.cn/problems/zuma-game)
 
-[English Version](/solution/0400-0499/0488.Zuma%20Game/README_EN.md)
-
 ## 题目描述
 
 <p>你正在参与祖玛游戏的一个变种。</p>
@@ -22,8 +20,6 @@
 </ul>
 
 <p>给你一个字符串 <code>board</code> ，表示桌面上最开始的那排球。另给你一个字符串 <code>hand</code> ，表示手里的彩球。请你按上述操作步骤移除掉桌上所有球，计算并返回所需的 <strong>最少</strong> 球数。如果不能移除桌上所有的球，返回 <code>-1</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -68,8 +64,6 @@
 - 插入一个 'B' ，使桌面变为 BB<em><strong>B</strong></em> 。<em><strong>BBB</strong></em> -&gt; empty
 只需从手中出 3 个球就可以清空桌面。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

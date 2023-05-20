@@ -1,7 +1,5 @@
 # [1841. 联赛信息统计](https://leetcode.cn/problems/league-statistics)
 
-[English Version](/solution/1800-1899/1841.League%20Statistics/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Teams</code></p>
@@ -16,8 +14,6 @@
 team_id 是该表主键.
 每一行都包含了一个参加联赛的队伍信息.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Matches</code></p>
 
@@ -37,8 +33,6 @@ away_team_goals 代表客场队得球数.
 获得球数较多的队伍为胜者队伍.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一段SQL，用来报告联赛信息. 统计数据应使用已进行的比赛来构建，其中 <strong>获胜</strong> 球队获得 <strong>三分</strong> ，而失败球队获得<strong> 零分</strong>&nbsp;。如果 <strong>打平 </strong>，两支球队都得&nbsp;<strong>一分&nbsp;</strong>。</p>
 
 <p>result 表的每行应包含以下信息:</p>
@@ -55,8 +49,6 @@ away_team_goals 代表客场队得球数.
 <p>按 <code>points</code> <strong>降序</strong> 返回结果表。 如果两队或多队得分相同，则按 <code>goal_diff</code> <strong>降序</strong> 排列。 如果仍然存在平局，则以&nbsp;<code>team_name</code> <strong>按字典顺序</strong> 排列它们。</p>
 
 <p>查询的结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

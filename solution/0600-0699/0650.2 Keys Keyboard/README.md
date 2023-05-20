@@ -1,7 +1,5 @@
 # [650. 只有两个键的键盘](https://leetcode.cn/problems/2-keys-keyboard)
 
-[English Version](/solution/0600-0699/0650.2%20Keys%20Keyboard/README_EN.md)
-
 ## 题目描述
 
 <p>最初记事本上只有一个字符 <code>'A'</code> 。你每次可以对这个记事本进行两种操作：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>给你一个数字&nbsp;<code>n</code> ，你需要使用最少的操作次数，在记事本上输出 <strong>恰好</strong>&nbsp;<code>n</code>&nbsp;个 <code>'A'</code> 。返回能够打印出&nbsp;<code>n</code>&nbsp;个 <code>'A'</code> 的最少操作次数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输入：</strong>n = 1
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

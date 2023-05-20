@@ -1,7 +1,5 @@
 # [589. N 叉树的前序遍历](https://leetcode.cn/problems/n-ary-tree-preorder-traversal)
 
-[English Version](/solution/0500-0599/0589.N-ary%20Tree%20Preorder%20Traversal/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个 n&nbsp;叉树的根节点 <meta charset="UTF-8" />&nbsp;<code>root</code>&nbsp;，返回 <em>其节点值的<strong> 前序遍历</strong></em> 。</p>
@@ -27,8 +25,6 @@
 <strong>输出：</strong>[1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -36,8 +32,6 @@
 	<li><code>0 &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
 	<li>n 叉树的高度小于或等于 <code>1000</code></li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>递归法很简单，你可以使用迭代法完成此题吗?</p>
 
@@ -86,36 +80,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for a Node.
- * struct Node {
- *     int val;
- *     int numChildren;
- *     struct Node** children;
- * };
- */
-
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-
-void dfs(struct Node *root, int *ans, int *i) {
-    if (!root) {
-        return;
-    }
-    ans[(*i)++] = root->val;
-    for (int j = 0; j < root->numChildren; j++) {
-        dfs(root->children[j], ans, i);
-    }
-}
-
-int *preorder(struct Node *root, int *returnSize) {
-    int *ans = malloc(sizeof(int) * 10000);
-    *returnSize = 0;
-    dfs(root, ans, returnSize);
-    return ans;
-}
-```
+**

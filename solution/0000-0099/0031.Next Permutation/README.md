@@ -1,7 +1,5 @@
 # [31. 下一个排列](https://leetcode.cn/problems/next-permutation)
 
-[English Version](/solution/0000-0099/0031.Next%20Permutation/README_EN.md)
-
 ## 题目描述
 
 <p>整数数组的一个 <strong>排列</strong>&nbsp; 就是将其所有成员以序列或线性顺序排列。</p>
@@ -21,8 +19,6 @@
 <p>给你一个整数数组 <code>nums</code> ，找出 <code>nums</code> 的下一个排列。</p>
 
 <p>必须<strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank"> 原地 </a></strong>修改，只允许使用额外常数空间。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <strong>输入：</strong>nums = [1,1,5]
 <strong>输出：</strong>[1,5,1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

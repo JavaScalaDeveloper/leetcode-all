@@ -1,7 +1,5 @@
 # [359. 日志速率限制器](https://leetcode.cn/problems/logger-rate-limiter)
 
-[English Version](/solution/0300-0399/0359.Logger%20Rate%20Limiter/README_EN.md)
-
 ## 题目描述
 
 <p>请你设计一个日志系统，可以流式接收消息以及它的时间戳。每条 <strong>不重复</strong> 的消息最多只能每 10 秒打印一次。也就是说，如果在时间戳 <code>t</code> 打印某条消息，那么相同内容的消息直到时间戳变为 <code>t + 10</code> 之前都不会被打印。</p>

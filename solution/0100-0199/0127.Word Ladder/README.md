@@ -1,7 +1,5 @@
 # [127. 单词接龙](https://leetcode.cn/problems/word-ladder)
 
-[English Version](/solution/0100-0199/0127.Word%20Ladder/README_EN.md)
-
 ## 题目描述
 
 <p>字典&nbsp;<code>wordList</code> 中从单词 <code>beginWord</code><em>&nbsp;</em>和 <code>endWord</code> 的 <strong>转换序列 </strong>是一个按下述规格形成的序列<meta charset="UTF-8" />&nbsp;<code>beginWord -&gt; s<sub>1</sub>&nbsp;-&gt; s<sub>2</sub>&nbsp;-&gt; ... -&gt; s<sub>k</sub></code>：</p>
@@ -29,8 +27,6 @@
 <strong>输入：</strong>beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]
 <strong>输出：</strong>0
 <strong>解释：</strong>endWord "cog" 不在字典中，所以无法进行转换。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

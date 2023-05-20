@@ -1,7 +1,5 @@
 # [1561. 你可以获得的最大硬币数目](https://leetcode.cn/problems/maximum-number-of-coins-you-can-get)
 
-[English Version](/solution/1500-1599/1561.Maximum%20Number%20of%20Coins%20You%20Can%20Get/README_EN.md)
-
 ## 题目描述
 
 <p>有 3n 堆数目不一的硬币，你和你的朋友们打算按以下方式分硬币：</p>
@@ -17,8 +15,6 @@
 <p>给你一个整数数组 <code>piles</code> ，其中 <code>piles[i]</code> 是第 <code>i</code> 堆中硬币的数目。</p>
 
 <p>返回你可以获得的最大硬币数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
 <pre><strong>输入：</strong>piles = [9,8,7,6,5,1,2,3,4]
 <strong>输出：</strong>18
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -74,19 +68,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-int cmp(const void *a, const void *b) {
-    return *(int *) a - *(int *) b;
-}
-
-int maxCoins(int *piles, int pilesSize) {
-    qsort(piles, pilesSize, sizeof(int), cmp);
-    int ans = 0;
-    for (int i = 1; i <= pilesSize / 3; i++) {
-        ans += piles[pilesSize - 2 * i];
-    };
-    return ans;
-}
-```
+**

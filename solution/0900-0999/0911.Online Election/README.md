@@ -1,7 +1,5 @@
 # [911. 在线选举](https://leetcode.cn/problems/online-election)
 
-[English Version](/solution/0900-0999/0911.Online%20Election/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个整数数组 <code>persons</code> 和 <code>times</code> 。在选举中，第&nbsp;<code>i</code>&nbsp;张票是在时刻为&nbsp;<code>times[i]</code>&nbsp;时投给候选人 <code>persons[i]</code>&nbsp;的。</p>
@@ -36,8 +34,6 @@ topVotedCandidate.q(15); // 返回 0
 topVotedCandidate.q(24); // 返回 0
 topVotedCandidate.q(8); // 返回 1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

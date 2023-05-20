@@ -1,7 +1,5 @@
 # [2117. 一个区间内所有数乘积的缩写](https://leetcode.cn/problems/abbreviating-the-product-of-a-range)
 
-[English Version](/solution/2100-2199/2117.Abbreviating%20the%20Product%20of%20a%20Range/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个正整数&nbsp;<code>left</code>&nbsp;和&nbsp;<code>right</code>&nbsp;，满足&nbsp;<code>left &lt;= right</code>&nbsp;。请你计算&nbsp;<strong>闭区间</strong>&nbsp;<code>[left, right]</code>&nbsp;中所有整数的&nbsp;<strong>乘积</strong>&nbsp;。</p>
@@ -27,8 +25,6 @@
 </ol>
 
 <p>请你返回一个字符串，表示 <strong>闭区间</strong>&nbsp;<code>[left, right]</code>&nbsp;中所有整数&nbsp;<strong>乘积</strong>&nbsp;的&nbsp;<strong>缩写</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -60,8 +56,6 @@
 <strong>输出：</strong>"7219856259e3"
 <strong>解释：</strong>乘积为 7219856259000 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

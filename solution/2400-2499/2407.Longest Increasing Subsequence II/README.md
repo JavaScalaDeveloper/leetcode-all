@@ -1,7 +1,5 @@
 # [2407. 最长递增子序列 II](https://leetcode.cn/problems/longest-increasing-subsequence-ii)
 
-[English Version](/solution/2400-2499/2407.Longest%20Increasing%20Subsequence%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;。</p>
@@ -16,8 +14,6 @@
 <p>请你返回满足上述要求的 <strong>最长子序列</strong>&nbsp;的长度。</p>
 
 <p><strong>子序列</strong>&nbsp;是从一个数组中删除部分元素后，剩余元素不改变顺序得到的数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 满足要求的最长子序列是 [1] 。
 子序列长度为 1 ，所以我们返回 1 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [260. 只出现一次的数字 III](https://leetcode.cn/problems/single-number-iii)
 
-[English Version](/solution/0200-0299/0260.Single%20Number%20III/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>，其中恰好有两个元素只出现一次，其余所有元素均出现两次。 找出只出现一次的那两个元素。你可以按 <strong>任意顺序</strong> 返回答案。</p>
 
 <p>你必须设计并实现线性时间复杂度的算法且仅使用常量额外空间来解决此问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <strong>输入：</strong>nums = [0,1]
 <strong>输出：</strong>[1,0]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

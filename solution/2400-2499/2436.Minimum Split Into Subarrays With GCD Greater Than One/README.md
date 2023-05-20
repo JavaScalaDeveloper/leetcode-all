@@ -1,7 +1,5 @@
 # [2436. 使子数组最大公约数大于一的最小分割数](https://leetcode.cn/problems/minimum-split-into-subarrays-with-gcd-greater-than-one)
 
-[English Version](/solution/2400-2499/2436.Minimum%20Split%20Into%20Subarrays%20With%20GCD%20Greater%20Than%20One/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个由正整数组成的数组 <code>nums</code>。</p>
@@ -24,8 +22,6 @@
 	</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1:</strong></p>
 
 <pre>
@@ -44,8 +40,6 @@
 <strong>输出:</strong> 1
 <strong>解释:</strong> 我们可以将数组拆分为一个子数组，即整个数组。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

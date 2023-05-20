@@ -1,7 +1,5 @@
 # [654. 最大二叉树](https://leetcode.cn/problems/maximum-binary-tree)
 
-[English Version](/solution/0600-0699/0654.Maximum%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个不重复的整数数组&nbsp;<code>nums</code> 。&nbsp;<strong>最大二叉树</strong>&nbsp;可以用下面的算法从&nbsp;<code>nums</code> 递归地构建:</p>
@@ -13,8 +11,6 @@
 </ol>
 
 <p>返回&nbsp;<em><code>nums</code> 构建的 </em><strong><em>最大二叉树</em> </strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0654.Maximum%20Binary%20Tree/images/tree1.jpg" />
@@ -39,8 +35,6 @@
 <strong>输入：</strong>nums = [3,2,1]
 <strong>输出：</strong>[3,null,2,null,1]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -255,38 +249,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-
-struct TreeNode* construct(int* nums, int start, int end) {
-    if (start >= end) {
-        return NULL;
-    }
-    int idx = 0;
-    int maxVal = -1;
-    for (int i = start; i < end; i++) {
-        if (nums[i] > maxVal) {
-            idx = i;
-            maxVal = nums[i];
-        }
-    }
-    struct TreeNode* res = (struct TreeNode*)malloc(sizeof(struct TreeNode));
-    res->val = maxVal;
-    res->left = construct(nums, start, idx);
-    res->right = construct(nums, idx + 1, end);
-    return res;
-}
-
-struct TreeNode* constructMaximumBinaryTree(int* nums, int numsSize) {
-    return construct(nums, 0, numsSize);
-}
-```
+**

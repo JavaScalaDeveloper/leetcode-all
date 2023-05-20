@@ -1,7 +1,5 @@
 # [770. 基本计算器 IV](https://leetcode.cn/problems/basic-calculator-iv)
 
-[English Version](/solution/0700-0799/0770.Basic%20Calculator%20IV/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个表达式如&nbsp;<code>expression = "e + 8 - a + 5"</code>&nbsp;和一个求值映射，如&nbsp;<code>{"e": 1}</code>（给定的形式为&nbsp;<code>evalvars = ["e"]</code> 和&nbsp;<code>evalints = [1]</code>），返回表示简化表达式的标记列表，例如 <code>["-1*a","14"]</code></p>
@@ -42,8 +40,6 @@
 
 <p><strong>注意：</strong>你可以假设给定的表达式均有效。所有中间结果都在区间 <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code> 内。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -65,8 +61,6 @@ evalvars = ["e", "temperature"], evalints = [1, 12]
 <strong>输入：</strong>expression = "(e + 8) * (e - 8)", evalvars = [], evalints = []
 <strong>输出：</strong>["1*e*e","-64"]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

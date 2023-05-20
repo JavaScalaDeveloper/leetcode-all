@@ -1,7 +1,5 @@
 # [799. 香槟塔](https://leetcode.cn/problems/champagne-tower)
 
-[English Version](/solution/0700-0799/0799.Champagne%20Tower/README_EN.md)
-
 ## 题目描述
 
 <p>我们把玻璃杯摆成金字塔的形状，其中&nbsp;<strong>第一层</strong>&nbsp;有 <code>1</code> 个玻璃杯， <strong>第二层</strong>&nbsp;有 <code>2</code> 个，依次类推到第 100 层，每个玻璃杯 (250ml) 将盛有香槟。</p>
@@ -13,8 +11,6 @@
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0700-0799/0799.Champagne%20Tower/images/tower.png" style="height: 241px; width: 350px;" /></p>
 
 <p>现在当倾倒了非负整数杯香槟后，返回第 <code>i</code> 行 <code>j</code>&nbsp;个玻璃杯所盛放的香槟占玻璃杯容积的比例（ <code>i</code> 和 <code>j</code>&nbsp;都从0开始）。</p>
-
-<p>&nbsp;</p>
 
 <pre>
 <strong>示例 1:</strong>
@@ -36,8 +32,6 @@
 <strong>输入:</strong> poured = 100000009, query_row = 33, query_glass = 17
 <strong>输出:</strong> 1.00000
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

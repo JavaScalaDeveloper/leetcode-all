@@ -1,7 +1,5 @@
 # [1110. 删点成林](https://leetcode.cn/problems/delete-nodes-and-return-forest)
 
-[English Version](/solution/1100-1199/1110.Delete%20Nodes%20And%20Return%20Forest/README_EN.md)
-
 ## 题目描述
 
 <p>给出二叉树的根节点&nbsp;<code>root</code>，树上每个节点都有一个不同的值。</p>
@@ -9,8 +7,6 @@
 <p>如果节点值在&nbsp;<code>to_delete</code>&nbsp;中出现，我们就把该节点从树上删去，最后得到一个森林（一些不相交的树构成的集合）。</p>
 
 <p>返回森林中的每棵树。你可以按任意顺序组织答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,8 +23,6 @@
 <strong>输入：</strong>root = [1,2,4,null,3], to_delete = [3]
 <strong>输出：</strong>[[1,2,4]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2626. 数组归约运算](https://leetcode.cn/problems/array-reduce-transformation)
 
-[English Version](/solution/2600-2699/2626.Array%20Reduce%20Transformation/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个函数，它的参数为一个整数数组&nbsp;<code>nums</code>&nbsp;、一个计算函数&nbsp;<code>fn</code>&nbsp;和初始值&nbsp;<font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.6px"><span style="background-color:#f9f2f4">init&nbsp;</span></span></font></font>。返回一个数组&nbsp;<strong>归约后 </strong>的值。</p>
@@ -11,8 +9,6 @@
 <p>如果数组的长度为 0，它应该返回 <code>init</code>&nbsp;的值。</p>
 
 <p>请你在不使用内置数组方法的&nbsp;<code>Array.reduce</code>&nbsp;前提下解决这个问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -58,8 +54,6 @@ init = 25
 <strong>输出：</strong>25
 <b>解释：</b>这是一个空数组，所以返回 init 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

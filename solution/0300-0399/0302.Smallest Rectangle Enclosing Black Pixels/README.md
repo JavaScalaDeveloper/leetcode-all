@@ -1,7 +1,5 @@
 # [302. 包含全部黑色像素的最小矩形](https://leetcode.cn/problems/smallest-rectangle-enclosing-black-pixels)
 
-[English Version](/solution/0300-0399/0302.Smallest%20Rectangle%20Enclosing%20Black%20Pixels/README_EN.md)
-
 ## 题目描述
 
 <p>图片在计算机处理中往往是使用二维矩阵来表示的。</p>
@@ -13,8 +11,6 @@
 <p>给你两个整数 <code>x</code> 和 <code>y</code> 表示某一个黑色像素的位置，请你找出包含全部黑色像素的最小矩形（与坐标轴对齐），并返回该矩形的面积。</p>
 
 <p>你必须设计并实现一个时间复杂度低于&nbsp;<code>O(mn)</code> 的算法来解决此问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0302.Smallest%20Rectangle%20Enclosing%20Black%20Pixels/images/pixel-grid.jpg" style="width: 333px; height: 253px;" />
@@ -29,8 +25,6 @@
 <strong>输入：</strong>image = [["1"]], x = 0, y = 0
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

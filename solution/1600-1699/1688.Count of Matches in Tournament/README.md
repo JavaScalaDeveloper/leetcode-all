@@ -1,7 +1,5 @@
 # [1688. 比赛中的配对次数](https://leetcode.cn/problems/count-of-matches-in-tournament)
 
-[English Version](/solution/1600-1699/1688.Count%20of%20Matches%20in%20Tournament/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数 <code>n</code> ，表示比赛中的队伍数。比赛遵循一种独特的赛制：</p>

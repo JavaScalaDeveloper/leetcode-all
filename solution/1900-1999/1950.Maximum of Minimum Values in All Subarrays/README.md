@@ -1,7 +1,5 @@
 # [1950. 所有子数组最小值中的最大值](https://leetcode.cn/problems/maximum-of-minimum-values-in-all-subarrays)
 
-[English Version](/solution/1900-1999/1950.Maximum%20of%20Minimum%20Values%20in%20All%20Subarrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，你需要处理 <code>n</code> 个查询。</p>
@@ -14,8 +12,6 @@
 </ol>
 
 <p>返回一个 <strong>下标从 0 开始</strong> 的长度为 <code>n</code> 的整数数组 <code>ans</code> ，<code>ans[i]</code> 代表第 <code>i</code> 个查询的答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -54,8 +50,6 @@ i = 2:
 i = 3: 
 - 大小为 4 的子数组为 [10,20,50,10]
 - 有最大的最小值的子数组是 [10,20,50,10], 它的最小值是 10</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,12 +1,8 @@
 # [2248. 多个数组求交集](https://leetcode.cn/problems/intersection-of-multiple-arrays)
 
-[English Version](/solution/2200-2299/2248.Intersection%20of%20Multiple%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二维整数数组 <code>nums</code> ，其中 <code>nums[i]</code> 是由 <strong>不同</strong> 正整数组成的一个非空数组，按 <strong>升序排列</strong> 返回一个数组，数组中的每个元素在 <code>nums</code>&nbsp;<strong>所有数组</strong> 中都出现过。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,8 +20,6 @@ nums[0] = [<em><strong>3</strong></em>,1,2,<em><strong>4</strong></em>,5]，nums
 <strong>解释：</strong>
 不存在同时出现在 nums[0] 和 nums[1] 的整数，所以返回一个空列表 [] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

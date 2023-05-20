@@ -1,7 +1,5 @@
 # [1835. 所有数对按位与结果的异或和](https://leetcode.cn/problems/find-xor-sum-of-all-pairs-bitwise-and)
 
-[English Version](/solution/1800-1899/1835.Find%20XOR%20Sum%20of%20All%20Pairs%20Bitwise%20AND/README_EN.md)
-
 ## 题目描述
 
 <p>列表的 <strong>异或和</strong>（<strong>XOR sum</strong>）指对所有元素进行按位 <code>XOR</code> 运算的结果。如果列表中仅有一个元素，那么其 <strong>异或和</strong> 就等于该元素。</p>

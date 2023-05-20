@@ -1,7 +1,5 @@
 # [1765. 地图中的最高点](https://leetcode.cn/problems/map-of-highest-peak)
 
-[English Version](/solution/1700-1799/1765.Map%20of%20Highest%20Peak/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为&nbsp;<code>m x n</code>&nbsp;的整数矩阵&nbsp;<code>isWater</code>&nbsp;，它代表了一个由 <strong>陆地</strong>&nbsp;和 <strong>水域</strong>&nbsp;单元格组成的地图。</p>
@@ -22,8 +20,6 @@
 <p>找到一种安排高度的方案，使得矩阵中的最高高度值&nbsp;<strong>最大</strong>&nbsp;。</p>
 
 <p>请你返回一个大小为&nbsp;<code>m x n</code>&nbsp;的整数矩阵 <code>height</code>&nbsp;，其中 <code>height[i][j]</code>&nbsp;是格子 <code>(i, j)</code>&nbsp;的高度。如果有多种解法，请返回&nbsp;<strong>任意一个</strong>&nbsp;。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <b>解释：</b>所有安排方案中，最高可行高度为 2 。
 任意安排方案中，只要最高高度为 2 且符合上述规则的，都为可行方案。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

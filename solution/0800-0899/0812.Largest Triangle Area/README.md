@@ -1,12 +1,8 @@
 # [812. 最大三角形面积](https://leetcode.cn/problems/largest-triangle-area)
 
-[English Version](/solution/0800-0899/0812.Largest%20Triangle%20Area/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由 <strong>X-Y</strong> 平面上的点组成的数组 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 。从其中取任意三个不同的点组成三角形，返回能组成的最大三角形的面积。与真实值误差在 <code>10<sup>-5</sup></code> 内的答案将会视为正确答案<strong>。</strong></p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0812.Largest%20Triangle%20Area/images/1027.png" style="height: 369px; width: 450px;" />
@@ -22,8 +18,6 @@
 <strong>输入：</strong>points = [[1,0],[0,0],[0,1]]
 <strong>输出：</strong>0.50000
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

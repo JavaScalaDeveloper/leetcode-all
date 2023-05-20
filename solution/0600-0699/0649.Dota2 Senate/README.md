@@ -1,7 +1,5 @@
 # [649. Dota2 参议院](https://leetcode.cn/problems/dota2-senate)
 
-[English Version](/solution/0600-0699/0649.Dota2%20Senate/README_EN.md)
-
 ## 题目描述
 
 <p>Dota2 的世界里有两个阵营：<code>Radiant</code>（天辉）和&nbsp;<code>Dire</code>（夜魇）</p>
@@ -18,8 +16,6 @@
 <p>以轮为基础的过程从给定顺序的第一个参议员开始到最后一个参议员结束。这一过程将持续到投票结束。所有失去权利的参议员将在过程中被跳过。</p>
 
 <p>假设每一位参议员都足够聪明，会为自己的政党做出最好的策略，你需要预测哪一方最终会宣布胜利并在 Dota2 游戏中决定改变。输出应该是&nbsp;<code>"Radiant"</code> 或 <code>"Dire"</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,8 +39,6 @@
 <code>这一轮中，</code>第三个<code>来自 Dire 阵营的</code>参议员可以使用他的第一项权利禁止第一个参议员的权利。
 因此在第二轮只剩下第三个参议员拥有投票的权利,于是他可以宣布胜利
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

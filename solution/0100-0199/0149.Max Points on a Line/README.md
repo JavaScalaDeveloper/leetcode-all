@@ -1,7 +1,5 @@
 # [149. 直线上最多的点数](https://leetcode.cn/problems/max-points-on-a-line)
 
-[English Version](/solution/0100-0199/0149.Max%20Points%20on%20a%20Line/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>points</code> ，其中 <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示 <strong>X-Y</strong> 平面上的一个点。求最多有多少个点在同一条直线上。</p>

@@ -1,7 +1,5 @@
 # [782. 变为棋盘](https://leetcode.cn/problems/transform-to-chessboard)
 
-[English Version](/solution/0700-0799/0782.Transform%20to%20Chessboard/README_EN.md)
-
 ## 题目描述
 
 <p>一个&nbsp;<code>n x n</code>&nbsp;的二维网络&nbsp;<code>board</code>&nbsp;仅由&nbsp;<code>0</code>&nbsp;和&nbsp;<code>1</code>&nbsp;组成&nbsp;。每次移动，你能任意交换两列或是两行的位置。</p>
@@ -9,8 +7,6 @@
 <p>返回 <em>将这个矩阵变为<strong>&nbsp; “棋盘”&nbsp;&nbsp;</strong>所需的最小移动次数&nbsp;</em>。如果不存在可行的变换，输出 <code>-1</code>。</p>
 
 <p><strong>“棋盘”</strong> 是指任意一格的上下左右四个方向的值均与本身不同的矩阵。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -43,8 +39,6 @@
 <strong>输出:</strong> -1
 <strong>解释: </strong>任意的变换都不能使这个输入变为合法的棋盘。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

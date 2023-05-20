@@ -1,7 +1,5 @@
 # [585. 2016 年的投资](https://leetcode.cn/problems/investments-in-2016)
 
-[English Version](/solution/0500-0599/0585.Investments%20in%202016/README_EN.md)
-
 ## 题目描述
 
 <p>写一个查询语句，将&nbsp;2016 年 (<strong>TIV_2016</strong>) 所有成功投资的金额加起来，保留 2 位小数。</p>

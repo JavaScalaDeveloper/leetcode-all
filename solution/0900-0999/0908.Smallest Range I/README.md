@@ -1,7 +1,5 @@
 # [908. 最小差值 I](https://leetcode.cn/problems/smallest-range-i)
 
-[English Version](/solution/0900-0999/0908.Smallest%20Range%20I/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code>，和一个整数 <code>k</code> 。</p>
@@ -11,8 +9,6 @@
 <p><code>nums</code>&nbsp;的&nbsp;<strong>分数&nbsp;</strong>是&nbsp;<code>nums</code>&nbsp;中最大和最小元素的差值。&nbsp;</p>
 
 <p><em>在对&nbsp; <code>nums</code> 中的每个索引最多应用一次上述操作后，返回&nbsp;<code>nums</code> 的最低 <strong>分数</strong></em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>将 nums 改为 [4,4,4]。分数是 max(nums) - min(nums) = 4 - 4 = 0。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

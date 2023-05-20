@@ -1,7 +1,5 @@
 # [1740. 找到二叉树中的距离](https://leetcode.cn/problems/find-distance-in-a-binary-tree)
 
-[English Version](/solution/1700-1799/1740.Find%20Distance%20in%20a%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一棵二叉树的根节点 <code>root</code> 以及两个整数 <code>p</code> 和 <code>q</code> ，返回该二叉树中值为 <code>p</code> 的结点与值为 <code>q</code> 的结点间的 <strong>距离 </strong>。</p>

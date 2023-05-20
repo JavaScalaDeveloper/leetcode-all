@@ -1,7 +1,5 @@
 # [1752. 检查数组是否经排序和轮转得到](https://leetcode.cn/problems/check-if-array-is-sorted-and-rotated)
 
-[English Version](/solution/1700-1799/1752.Check%20if%20Array%20Is%20Sorted%20and%20Rotated/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组 <code>nums</code> 。<code>nums</code> 的源数组中，所有元素与 <code>nums</code> 相同，但按非递减顺序排列。</p>
@@ -11,8 +9,6 @@
 <p>源数组中可能存在 <strong>重复项</strong> 。</p>
 
 <p><strong>注意：</strong>我们称数组 <code>A</code> 在轮转 <code>x</code> 个位置后得到长度相同的数组 <code>B</code> ，当它们满足 <code>A[i] == B[(i+x) % A.length]</code> ，其中 <code>%</code> 为取余运算。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,8 +35,6 @@
 <strong>解释：</strong>[1,2,3] 为有序的源数组。
 可以轮转 x = 0 个位置（即不轮转）得到 nums 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -75,16 +69,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-bool check(int *nums, int numsSize) {
-    int count = 0;
-    for (int i = 0; i < numsSize; i++) {
-        if (nums[i] > nums[(i + 1) % numsSize]) {
-            count++;
-        }
-    }
-    return count <= 1;
-}
-```
+**

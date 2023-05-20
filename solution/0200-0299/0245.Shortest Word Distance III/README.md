@@ -1,14 +1,10 @@
 # [245. 最短单词距离 III](https://leetcode.cn/problems/shortest-word-distance-iii)
 
-[English Version](/solution/0200-0299/0245.Shortest%20Word%20Distance%20III/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个字符串数组&nbsp;<code>wordsDict</code> 和两个字符串 <code>word1</code> 和 <code>word2</code> ，返回这两个单词在列表中出现的最短距离。</p>
 
 <p>注意：<code>word1</code> 和 <code>word2</code>&nbsp;是有可能相同的，并且它们将分别表示为列表中 <strong>两个独立的单词</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <strong>输入：</strong>wordsDict = ["practice", "makes", "perfect", "coding", "makes"], word1 = "makes", word2 = "makes"
 <strong>输出：</strong>3
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

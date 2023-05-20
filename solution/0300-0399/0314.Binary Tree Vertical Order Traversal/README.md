@@ -1,14 +1,10 @@
 # [314. 二叉树的垂直遍历](https://leetcode.cn/problems/binary-tree-vertical-order-traversal)
 
-[English Version](/solution/0300-0399/0314.Binary%20Tree%20Vertical%20Order%20Traversal/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个二叉树的根结点，返回其结点按 <strong>垂直方向</strong>（从上到下，逐列）遍历的结果。</p>
 
 <p>如果两个结点在同一行和列，那么顺序则为&nbsp;<strong>从左到右</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0314.Binary%20Tree%20Vertical%20Order%20Traversal/images/vtree1.jpg" style="width: 282px; height: 301px;" />
@@ -30,8 +26,6 @@
 <strong>输入：</strong>root = [3,9,8,4,0,1,7,null,null,null,2,5]
 <strong>输出：</strong>[[4],[9,5],[3,0,1],[8,2],[7]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

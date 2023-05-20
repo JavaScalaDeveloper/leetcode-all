@@ -1,7 +1,5 @@
 # [879. 盈利计划](https://leetcode.cn/problems/profitable-schemes)
 
-[English Version](/solution/0800-0899/0879.Profitable%20Schemes/README_EN.md)
-
 ## 题目描述
 
 <p>集团里有 <code>n</code> 名员工，他们可以完成各种各样的工作创造利润。</p>

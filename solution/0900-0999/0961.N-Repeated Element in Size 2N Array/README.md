@@ -1,7 +1,5 @@
 # [961. 在长度 2N 的数组中找出重复 N 次的元素](https://leetcode.cn/problems/n-repeated-element-in-size-2n-array)
 
-[English Version](/solution/0900-0999/0961.N-Repeated%20Element%20in%20Size%202N%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，该数组具有以下属性：</p>
@@ -15,8 +13,6 @@
 </ul>
 
 <p>找出并返回重复了 <code>n</code><em> </em>次的那个元素。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 </pre>
 </div>
 </div>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

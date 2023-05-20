@@ -1,7 +1,5 @@
 # [619. 只出现一次的最大数字](https://leetcode.cn/problems/biggest-single-number)
 
-[English Version](/solution/0600-0699/0619.Biggest%20Single%20Number/README_EN.md)
-
 ## 题目描述
 
 <p><code>MyNumbers</code> 表：</p>
@@ -18,16 +16,12 @@
 这张表的每一行都含有一个整数。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>单一数字</strong> 是在 <code>MyNumbers</code> 表中只出现一次的数字。</p>
 
 <p>请你编写一个 SQL 查询来报告最大的 <strong>单一数字</strong> 。如果不存在 <strong>单一数字</strong> ，查询需报告 <code>null</code> 。</p>
 
 <p>查询结果如下例所示。</p>
 <ptable> </ptable>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -82,8 +76,6 @@ MyNumbers table:
 </pre>
 </div>
 </div>
-
-<p>&nbsp;</p>
 
 ## 解法
 

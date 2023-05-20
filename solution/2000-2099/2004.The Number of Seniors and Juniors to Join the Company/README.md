@@ -1,7 +1,5 @@
 # [2004. 职员招聘人数](https://leetcode.cn/problems/the-number-of-seniors-and-juniors-to-join-the-company)
 
-[English Version](/solution/2000-2099/2004.The%20Number%20of%20Seniors%20and%20Juniors%20to%20Join%20the%20Company/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Candidates</code></p>
@@ -18,8 +16,6 @@ employee_id是此表的主键列。
 经验是包含一个值（“高级”、“初级”）的枚举类型。
 此表的每一行都显示候选人的id、月薪和经验。</pre>
 
-<p>&nbsp;</p>
-
 <p>一家公司想雇佣新员工。公司的工资预算是 <code>70000</code> 美元。公司的招聘标准是：</p>
 
 <ol>
@@ -30,8 +26,6 @@ employee_id是此表的主键列。
 <p>编写一个SQL查询，查找根据上述标准雇佣的高级员工和初级员工的数量。<br />
 按 <strong>任意顺序</strong> 返回结果表。<br />
 查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

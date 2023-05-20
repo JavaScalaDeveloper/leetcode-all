@@ -1,7 +1,5 @@
 # [2164. 对奇偶下标分别排序](https://leetcode.cn/problems/sort-even-and-odd-indices-independently)
 
-[English Version](/solution/2100-2199/2164.Sort%20Even%20and%20Odd%20Indices%20Independently/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 。根据下述规则重排 <code>nums</code> 中的值：</p>
@@ -22,8 +20,6 @@
 </ol>
 
 <p>返回重排 <code>nums</code> 的值之后形成的数组。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,8 +43,6 @@
 由于只有一个奇数下标和一个偶数下标，所以不会发生重排。
 形成的结果数组是 [2,1] ，和初始数组一样。 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

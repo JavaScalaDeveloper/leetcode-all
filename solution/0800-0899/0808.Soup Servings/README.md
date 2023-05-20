@@ -1,7 +1,5 @@
 # [808. 分汤](https://leetcode.cn/problems/soup-servings)
 
-[English Version](/solution/0800-0899/0808.Soup%20Servings/README_EN.md)
-
 ## 题目描述
 
 <p>有&nbsp;<strong>A&nbsp;和&nbsp;B 两种类型&nbsp;</strong>的汤。一开始每种类型的汤有&nbsp;<code>n</code>&nbsp;毫升。有四种分配操作：</p>
@@ -18,8 +16,6 @@
 <p><strong>注意&nbsp;</strong>不存在先分配 <code>100</code> ml <strong>汤B</strong> 的操作。</p>
 
 <p>需要返回的值：&nbsp;<strong>汤A&nbsp;</strong>先分配完的概率 +&nbsp;&nbsp;<strong>汤A和汤B&nbsp;</strong>同时分配完的概率 / 2。返回值在正确答案&nbsp;<code>10<sup>-5</sup></code>&nbsp;的范围内将被认为是正确的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>输入:</strong> n = 100
 <strong>输出:</strong> 0.71875
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

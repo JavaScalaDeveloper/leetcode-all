@@ -1,7 +1,5 @@
 # [572. 另一棵树的子树](https://leetcode.cn/problems/subtree-of-another-tree)
 
-[English Version](/solution/0500-0599/0572.Subtree%20of%20Another%20Tree/README_EN.md)
-
 ## 题目描述
 
 <div class="original__bRMd">

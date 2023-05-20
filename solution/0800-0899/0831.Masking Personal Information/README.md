@@ -1,7 +1,5 @@
 # [831. 隐藏个人信息](https://leetcode.cn/problems/masking-personal-information)
 
-[English Version](/solution/0800-0899/0831.Masking%20Personal%20Information/README_EN.md)
-
 ## 题目描述
 
 <p>给你一条个人信息字符串 <code>s</code> ，可能表示一个 <strong>邮箱地址</strong> ，也可能表示一串 <strong>电话号码</strong> 。返回按如下规则 <strong>隐藏</strong> 个人信息后的结果：</p>
@@ -81,8 +79,6 @@
 共计 10 位数字，所以本地号码为 10 位数字，国家代码为 0 位数字。
 因此，隐藏后的电话号码应该是 "***-***-7890" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

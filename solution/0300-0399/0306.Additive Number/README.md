@@ -1,7 +1,5 @@
 # [306. 累加数](https://leetcode.cn/problems/additive-number)
 
-[English Version](/solution/0300-0399/0306.Additive%20Number/README_EN.md)
-
 ## 题目描述
 
 <p><strong>累加数</strong> 是一个字符串，组成它的数字可以形成累加序列。</p>
@@ -11,8 +9,6 @@
 <p>给你一个只包含数字&nbsp;<code>'0'-'9'</code>&nbsp;的字符串，编写一个算法来判断给定输入是否是 <strong>累加数</strong> 。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
 <p><strong>说明：</strong>累加序列里的数，除数字 0 之外，<strong>不会</strong> 以 0 开头，所以不会出现&nbsp;<code>1, 2, 03</code> 或者&nbsp;<code>1, 02, 3</code>&nbsp;的情况。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,16 +25,12 @@
 <strong>输出：</strong>true 
 <strong>解释：</strong>累加序列为: <code>1, 99, 100, 199。</code>1 + 99 = 100, 99 + 100 = 199</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 &lt;= num.length &lt;= 35</code></li>
 	<li><code>num</code> 仅由数字（<code>0</code> - <code>9</code>）组成</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong>你计划如何处理由过大的整数输入导致的溢出?</p>
 

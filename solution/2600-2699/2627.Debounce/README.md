@@ -1,7 +1,5 @@
 # [2627. 函数防抖](https://leetcode.cn/problems/debounce)
 
-[English Version](/solution/2600-2699/2627.Debounce/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个函数，接收参数为另一个函数和一个以毫秒为单位的时间 <code>t</code> ，并返回该函数的&nbsp;<b>函数防抖&nbsp;</b>后的结果。</p>
@@ -15,8 +13,6 @@
 <p>上图展示了了防抖函数是如何转换事件的。其中，每个矩形表示 100ms，反弹时间为 400ms。每种颜色代表一组不同的输入。</p>
 
 <p>请在不使用 lodash 的 <code>_.debounce()</code> 函数的前提下解决该问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1：</strong></p>
 
@@ -72,8 +68,6 @@ calls = [
 第二次调用被第三次调用取消
 第三次调用延迟了 150ms，运行时间为 450ms。输入为 (5, 6)。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

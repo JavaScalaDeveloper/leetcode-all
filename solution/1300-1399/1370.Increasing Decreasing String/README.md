@@ -1,7 +1,5 @@
 # [1370. 上升下降字符串](https://leetcode.cn/problems/increasing-decreasing-string)
 
-[English Version](/solution/1300-1399/1370.Increasing%20Decreasing%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，请你根据下面的算法重新构造字符串：</p>
@@ -19,8 +17,6 @@
 <p>在任何一步中，如果最小或者最大字符不止一个&nbsp;，你可以选择其中任意一个，并将其添加到结果字符串。</p>
 
 <p>请你返回将&nbsp;<code>s</code>&nbsp;中字符重新排序后的 <strong>结果字符串</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -57,8 +53,6 @@
 <pre><strong>输入：</strong>s = &quot;spo&quot;
 <strong>输出：</strong>&quot;ops&quot;
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

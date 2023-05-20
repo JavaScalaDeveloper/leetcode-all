@@ -1,7 +1,5 @@
 # [652. 寻找重复的子树](https://leetcode.cn/problems/find-duplicate-subtrees)
 
-[English Version](/solution/0600-0699/0652.Find%20Duplicate%20Subtrees/README_EN.md)
-
 ## 题目描述
 
 <p>给你一棵二叉树的根节点 <code>root</code> ，返回所有 <strong>重复的子树 </strong>。</p>
@@ -9,8 +7,6 @@
 <p>对于同一类的重复子树，你只需要返回其中任意 <strong>一棵 </strong>的根结点即可。</p>
 
 <p>如果两棵树具有<strong> 相同的结构</strong> 和 <strong>相同的结点值 </strong>，则认为二者是 <strong>重复 </strong>的。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <pre>
 <strong>输入：</strong>root = [2,2,2,3,null,3,null]
 <strong>输出：</strong>[[2,3],[3]]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

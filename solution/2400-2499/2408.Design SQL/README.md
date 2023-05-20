@@ -1,7 +1,5 @@
 # [2408. 设计 SQL](https://leetcode.cn/problems/design-sql)
 
-[English Version](/solution/2400-2499/2408.Design%20SQL/README_EN.md)
-
 ## 题目描述
 
 <p>给定 <code>n</code> 个表，用两个数组 <code>names</code> 和 <code>columns</code>&nbsp;表示，其中 <code>names[i]</code> 是第 <code>i</code> 个表的名称，<code>columns[i]</code> 是第 <code>i</code> 个表的列数。</p>
@@ -23,8 +21,6 @@
 	<li><code>String selectCell(String name, int rowId, int columnId)</code> 返回表 <code>name</code> 中 <code>rowId</code> 行和 <code>columnId</code> 列中的单元格值。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong class="example">示例 1:</strong></p>
 
 <pre>
@@ -42,8 +38,6 @@ sql.insertRow("two", ["fourth", "fifth", "sixth"]); // 将另一行添加到表 
 sql.deleteRow("two", 1); // 删除表 "two" 的第一行。注意，第二行仍然有 id 2。
 sql.selectCell("two", 2, 2); // 返回 "fifth"，查找表 "two" 中 id 为 2 的行中第二列的值。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

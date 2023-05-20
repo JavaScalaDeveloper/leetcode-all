@@ -1,14 +1,10 @@
 # [409. 最长回文串](https://leetcode.cn/problems/longest-palindrome)
 
-[English Version](/solution/0400-0499/0409.Longest%20Palindrome/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个包含大写字母和小写字母的字符串<meta charset="UTF-8" />&nbsp;<code>s</code>&nbsp;，返回&nbsp;<em>通过这些字母构造成的 <strong>最长的回文串</strong></em>&nbsp;。</p>
 
 <p>在构造过程中，请注意 <strong>区分大小写</strong> 。比如&nbsp;<code>"Aa"</code>&nbsp;不能当做一个回文字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1: </strong></p>
 
@@ -31,8 +27,6 @@
 <pre>
 <strong>输入:</strong>s = "aaaaaccc"
 <strong>输出:</strong>7</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

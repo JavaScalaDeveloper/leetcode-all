@@ -1,7 +1,5 @@
 # [1947. 最大兼容性评分和](https://leetcode.cn/problems/maximum-compatibility-score-sum)
 
-[English Version](/solution/1900-1999/1947.Maximum%20Compatibility%20Score%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>有一份由 <code>n</code> 个问题组成的调查问卷，每个问题的答案要么是 <code>0</code>（no，否），要么是 <code>1</code>（yes，是）。</p>
@@ -17,8 +15,6 @@
 <p>请你找出最优的学生与导师的配对方案，以 <strong>最大程度上</strong> 提高 <strong>兼容性评分和</strong> 。</p>
 
 <p>给你 <code>students</code> 和 <code>mentors</code> ，返回可以得到的<em> </em><strong>最大兼容性评分和</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>任意学生与导师配对的兼容性评分都是 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

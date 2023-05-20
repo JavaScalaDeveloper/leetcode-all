@@ -1,7 +1,5 @@
 # [2324. 产品销售分析 IV](https://leetcode.cn/problems/product-sales-analysis-iv)
 
-[English Version](/solution/2300-2399/2324.Product%20Sales%20Analysis%20IV/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Sales</code></p>
@@ -20,8 +18,6 @@ product_id 是 product 表的外键。
 该表的每一行都显示了产品的 ID 和用户购买的数量。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Product</code></p>
 
 <pre>
@@ -35,15 +31,11 @@ product_id 是该表的主键
 该表的每一行都表示每种产品的价格。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询，为每个用户获取其消费最多的产品 id。如果同一用户在两个或多个产品上花费了最多的钱，请获取所有花费了最多的钱的产品。</p>
 
 <p data-group="1-1">以 <strong>任意顺序</strong> 返回结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong class="example">示例 1:</strong></p>
 

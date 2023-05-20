@@ -1,7 +1,5 @@
 # [1022. 从根到叶的二进制数之和](https://leetcode.cn/problems/sum-of-root-to-leaf-binary-numbers)
 
-[English Version](/solution/1000-1099/1022.Sum%20of%20Root%20To%20Leaf%20Binary%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>给出一棵二叉树，其上每个结点的值都是&nbsp;<code>0</code>&nbsp;或&nbsp;<code>1</code>&nbsp;。每一条从根到叶的路径都代表一个从最高有效位开始的二进制数。</p>
@@ -13,8 +11,6 @@
 <p>对树上的每一片叶子，我们都要找出从根到该叶子的路径所表示的数字。</p>
 
 <p>返回这些数字之和。题目数据保证答案是一个 <strong>32 位 </strong>整数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1022.Sum%20of%20Root%20To%20Leaf%20Binary%20Numbers/images/sum-of-root-to-leaf-binary-numbers.png" />
@@ -30,8 +26,6 @@
 <strong>输入：</strong>root = [0]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

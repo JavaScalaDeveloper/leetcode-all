@@ -1,7 +1,5 @@
 # [601. 体育馆的人流量](https://leetcode.cn/problems/human-traffic-of-stadium)
 
-[English Version](/solution/0600-0699/0601.Human%20Traffic%20of%20Stadium/README_EN.md)
-
 ## 题目描述
 
 表：<code>Stadium</code>
@@ -19,15 +17,11 @@ visit_date 是表的主键
 每天只有一行记录，日期随着 id 的增加而增加
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 查询以找出每行的人数大于或等于 <code>100</code> 且 <code>id</code> 连续的三行或更多行记录。</p>
 
 <p>返回按 <code>visit_date</code> <strong>升序排列</strong> 的结果表。</p>
 
 <p>查询结果格式如下所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

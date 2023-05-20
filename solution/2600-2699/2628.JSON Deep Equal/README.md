@@ -1,7 +1,5 @@
 # [2628. 完全相等的 JSON 字符串](https://leetcode.cn/problems/json-deep-equal)
 
-[English Version](/solution/2600-2699/2628.JSON%20Deep%20Equal/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个对象 <code>o1</code> 和 <code>o2</code> ，请你检查它们是否 <strong>完全相等</strong> 。</p>
@@ -11,8 +9,6 @@
 <p>你可以假设这两个对象都是 <code>JSON.parse</code> 的输出。换句话说，它们是有效的 <code>JSON</code> 。</p>
 
 <p>请你在不使用 lodash 的 <code>_.isEqual()</code> 函数的前提下解决这个问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,8 +40,6 @@
 <b>输入：</b>o1 = true, o2 = false
 <b>输出：</b>false
 <b>解释：</b>true !== false</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

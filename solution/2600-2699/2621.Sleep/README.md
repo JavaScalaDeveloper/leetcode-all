@@ -1,12 +1,8 @@
 # [2621. 睡眠函数](https://leetcode.cn/problems/sleep)
 
-[English Version](/solution/2600-2699/2621.Sleep/README_EN.md)
-
 ## 题目描述
 
 <p>请你编写一个异步函数，它接收一个正整数参数 <code>millis</code>&nbsp;，并休眠这么多毫秒。要求此函数可以解析任何值。</p>
-
-<p>&nbsp;</p>
 
 <p><b>示例 1：</b></p>
 
@@ -28,8 +24,6 @@ sleep(100).then(() =&gt; {
 <b>输出：</b>200
 <b>解释：</b>在 200ms 后函数执行完时返回一个 Promise 对象
 </pre>
-
-<p>&nbsp;</p>
 
 <p><b>提示：</b></p>
 

@@ -1,7 +1,5 @@
 # [1113. 报告的记录](https://leetcode.cn/problems/reported-posts)
 
-[English Version](/solution/1100-1199/1113.Reported%20Posts/README_EN.md)
-
 ## 题目描述
 
 <p>动作表：<code>Actions</code></p>
@@ -19,8 +17,6 @@
 action 字段是 ENUM 类型的，包含:(&#39;view&#39;, &#39;like&#39;, &#39;reaction&#39;, &#39;comment&#39;, <em><strong>&#39;report&#39;</strong></em>, &#39;share&#39;)
 extra 字段是可选的信息（可能为 null），其中的信息例如有：<em><strong>1.报告理由(a reason for report)</strong></em> 2.反应类型(a type of reaction)
 </pre>
-
-<p>&nbsp;</p>
 
 <p>编写一条SQL，查询每种&nbsp;<em><strong>报告理由</strong></em>（report reason）在昨天的不同报告数量（post_id）。假设今天是&nbsp;<strong>2019-07-05</strong>。</p>
 

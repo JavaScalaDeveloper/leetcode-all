@@ -1,7 +1,5 @@
 # [2013. 检测正方形](https://leetcode.cn/problems/detect-squares)
 
-[English Version](/solution/2000-2099/2013.Detect%20Squares/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个在 X-Y 平面上的点构成的数据流。设计一个满足下述要求的算法：</p>
@@ -20,8 +18,6 @@
 	<li><code>void add(int[] point)</code> 向数据结构添加一个新的点 <code>point = [x, y]</code></li>
 	<li><code>int count(int[] point)</code> 统计按上述方式与点 <code>point = [x, y]</code> 共同构造 <strong>轴对齐正方形</strong> 的方案数。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2000-2099/2013.Detect%20Squares/images/image.png" style="width: 869px; height: 504px;" />
@@ -46,8 +42,6 @@ detectSquares.count([11, 10]); // 返回 2 。你可以选择：
 // - 第一个，第三个，和第四个点
 
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

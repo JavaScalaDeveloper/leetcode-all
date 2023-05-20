@@ -1,7 +1,5 @@
 # [2430. 对字母串可执行的最大删除数](https://leetcode.cn/problems/maximum-deletions-on-a-string)
 
-[English Version](/solution/2400-2499/2430.Maximum%20Deletions%20on%20a%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个仅由小写英文字母组成的字符串 <code>s</code> 。在一步操作中，你可以：</p>
@@ -14,8 +12,6 @@
 <p>例如，如果 <code>s = "ababc"</code> ，那么在一步操作中，你可以删除 <code>s</code> 的前两个字母得到 <code>"abc"</code> ，因为 <code>s</code> 的前两个字母和接下来的两个字母都等于 <code>"ab"</code> 。</p>
 
 <p>返回删除 <code>s</code> 所需的最大操作数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,8 +45,6 @@
 <strong>输出：</strong>5
 <strong>解释：</strong>在每一步操作中，都可以仅删除 s 的第一个字母。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

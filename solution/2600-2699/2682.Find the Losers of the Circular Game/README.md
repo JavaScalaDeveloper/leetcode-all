@@ -1,7 +1,5 @@
 # [2682. 找出转圈游戏输家](https://leetcode.cn/problems/find-the-losers-of-the-circular-game)
 
-[English Version](/solution/2600-2699/2682.Find%20the%20Losers%20of%20the%20Circular%20Game/README_EN.md)
-
 ## 题目描述
 
 <p><code>n</code> 个朋友在玩游戏。这些朋友坐成一个圈，按 <strong>顺时针方向</strong> 从 <code>1</code> 到 <code>n</code> 编号。从第 <code>i</code> 个朋友的位置开始顺时针移动 <code>1</code> 步会到达第 <code>(i + 1)</code> 个朋友的位置（<code>1 &lt;= i &lt; n</code>），而从第 <code>n</code> 个朋友的位置开始顺时针移动 <code>1</code> 步会回到第 <code>1</code> 个朋友的位置。</p>
@@ -24,8 +22,6 @@
 
 <p>给你参与游戏的朋友数量 <code>n</code> 和一个整数 <code>k</code> ，请按升序排列返回包含所有输家编号的数组 <code>answer</code> 作为答案。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -46,8 +42,6 @@
 <strong>解释：</strong>以下为游戏进行情况：
 1）第 1 个朋友接球，第 <code>1</code> 个朋友将球传给距离他顺时针方向 4 步的玩家 —— 第 1 个朋友。
 2）第 1 个朋友接到两次球，游戏结束。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

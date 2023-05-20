@@ -1,7 +1,5 @@
 # [835. 图像重叠](https://leetcode.cn/problems/image-overlap)
 
-[English Version](/solution/0800-0899/0835.Image%20Overlap/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个图像 <code>img1</code> 和 <code>img2</code> ，两个图像的大小都是 <code>n x n</code> ，用大小相同的二进制正方形矩阵表示。二进制矩阵仅由若干 <code>0</code> 和若干 <code>1</code> 组成。</p>
@@ -13,8 +11,6 @@
 <p>请注意，转换 <strong>不包括</strong> 向任何方向旋转。越过矩阵边界的 <code>1</code> 都将被清除。</p>
 
 <p>最大可能的重叠数量是多少？</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0835.Image%20Overlap/images/overlap1.jpg" style="width: 450px; height: 231px;" />
@@ -40,8 +36,6 @@
 <strong>输入：</strong>img1 = [[0]], img2 = [[0]]
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

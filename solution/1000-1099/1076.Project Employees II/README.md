@@ -1,7 +1,5 @@
 # [1076. 项目员工 II](https://leetcode.cn/problems/project-employees-ii)
 
-[English Version](/solution/1000-1099/1076.Project%20Employees%20II/README_EN.md)
-
 ## 题目描述
 
 <p>Table:&nbsp;<code>Project</code></p>
@@ -26,8 +24,6 @@ employee_id 是员工表 <code>Employee 表的外键。</code>
 | experience_years | int     |
 +------------------+---------+
 主键是 employee_id。</pre>
-
-<p>&nbsp;</p>
 
 <p>编写一个SQL查询，报告所有雇员最多的项目。</p>
 

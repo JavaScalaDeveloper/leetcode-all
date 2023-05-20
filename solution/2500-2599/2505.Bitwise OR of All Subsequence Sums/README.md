@@ -1,14 +1,10 @@
 # [2505. 所有子序列和的按位或](https://leetcode.cn/problems/bitwise-or-of-all-subsequence-sums)
 
-[English Version](/solution/2500-2599/2505.Bitwise%20OR%20of%20All%20Subsequence%20Sums/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code> ，返回对数组中所有可能的 <strong>子序列</strong> 之和进行按位 <strong>或</strong> 运算后得到的值。</p>
 
 <p>数组的<strong> 子序列 </strong>是从数组中删除零个或多个元素且不改变剩余元素的顺序得到的序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -26,8 +22,6 @@
 <b>输出：</b>0
 <strong>解释：</strong>0 是唯一可能的子序列的和，所以返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

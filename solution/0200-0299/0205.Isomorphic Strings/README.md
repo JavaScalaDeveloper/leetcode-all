@@ -1,7 +1,5 @@
 # [205. 同构字符串](https://leetcode.cn/problems/isomorphic-strings)
 
-[English Version](/solution/0200-0299/0205.Isomorphic%20Strings/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个字符串&nbsp;<code>s</code>&nbsp;和&nbsp;<code>t</code>&nbsp;，判断它们是否是同构的。</p>
@@ -9,8 +7,6 @@
 <p>如果&nbsp;<code>s</code>&nbsp;中的字符可以按某种映射关系替换得到&nbsp;<code>t</code>&nbsp;，那么这两个字符串是同构的。</p>
 
 <p>每个出现的字符都应当映射到另一个字符，同时不改变字符的顺序。不同字符不能映射到同一个字符上，相同字符只能映射到同一个字符上，字符可以映射到自己本身。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -30,8 +26,6 @@
 <pre>
 <strong>输入：</strong>s = <code>"paper", </code>t = <code>"title"</code>
 <strong>输出：</strong>true</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

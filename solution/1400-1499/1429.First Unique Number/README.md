@@ -1,7 +1,5 @@
 # [1429. 第一个唯一数字](https://leetcode.cn/problems/first-unique-number)
 
-[English Version](/solution/1400-1499/1429.First%20Unique%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给定一系列整数，插入一个队列中，找出队列中第一个唯一整数。</p>

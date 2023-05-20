@@ -1,7 +1,5 @@
 # [1515. 服务中心的最佳位置](https://leetcode.cn/problems/best-position-for-a-service-centre)
 
-[English Version](/solution/1500-1599/1515.Best%20Position%20for%20a%20Service%20Centre/README_EN.md)
-
 ## 题目描述
 
 <p>一家快递公司希望在新城市建立新的服务中心。公司统计了该城市所有客户在二维地图上的坐标，并希望能够以此为依据为新的服务中心选址：使服务中心 <strong>到所有客户的欧几里得距离的总和最小</strong> 。</p>
@@ -13,8 +11,6 @@
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1515.Best%20Position%20for%20a%20Service%20Centre/images/q4_edited.jpg" /></p>
 
 <p>与真实值误差在 <code>10<sup>-5</sup></code>之内的答案将被视作正确答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,8 +31,6 @@
 <strong>输出：</strong>2.82843
 <strong>解释：</strong>欧几里得距离可能的最小总和为 sqrt(2) + sqrt(2) = 2.82843
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)
 
-[English Version](/solution/0400-0499/0466.Count%20The%20Repetitions/README_EN.md)
-
 ## 题目描述
 
 <p>定义 <code>str = [s, n]</code> 表示 <code>str</code> 由 <code>n</code> 个字符串 <code>s</code> 连接构成。</p>

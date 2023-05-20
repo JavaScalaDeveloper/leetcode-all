@@ -1,7 +1,5 @@
 # [1874. 两个数组的最小乘积和](https://leetcode.cn/problems/minimize-product-sum-of-two-arrays)
 
-[English Version](/solution/1800-1899/1874.Minimize%20Product%20Sum%20of%20Two%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给定两个<strong>长度相等</strong>的数组<code>a</code>和<code>b</code>，它们的<strong>乘积和</strong>为数组中所有的<code>a[i] * b[i]</code>之和，其中<code>0 &lt;= i &lt; a.length</code>。</p>

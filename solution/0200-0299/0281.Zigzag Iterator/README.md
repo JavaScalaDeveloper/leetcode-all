@@ -1,7 +1,5 @@
 # [281. 锯齿迭代器](https://leetcode.cn/problems/zigzag-iterator)
 
-[English Version](/solution/0200-0299/0281.Zigzag%20Iterator/README_EN.md)
-
 ## 题目描述
 
 <p>给出两个一维的向量，请你实现一个迭代器，交替返回它们中间的元素。</p>

@@ -1,7 +1,5 @@
 # [370. 区间加法](https://leetcode.cn/problems/range-addition)
 
-[English Version](/solution/0300-0399/0370.Range%20Addition/README_EN.md)
-
 ## 题目描述
 
 <p>假设你有一个长度为&nbsp;<em><strong>n</strong></em>&nbsp;的数组，初始情况下所有的数字均为&nbsp;<strong>0</strong>，你将会被给出&nbsp;<em><strong>k</strong></em>​​​​​​<em>​</em> 个更新的操作。</p>

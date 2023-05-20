@@ -1,7 +1,5 @@
 # [969. 煎饼排序](https://leetcode.cn/problems/pancake-sorting)
 
-[English Version](/solution/0900-0999/0969.Pancake%20Sorting/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>arr</code> ，请使用 <strong>煎饼翻转</strong><em> </em>完成对数组的排序。</p>

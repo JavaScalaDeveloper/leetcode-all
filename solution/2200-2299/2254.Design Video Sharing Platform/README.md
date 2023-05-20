@@ -1,7 +1,5 @@
 # [2254. 设计视频共享平台](https://leetcode.cn/problems/design-video-sharing-platform)
 
-[English Version](/solution/2200-2299/2254.Design%20Video%20Sharing%20Platform/README_EN.md)
-
 ## 题目描述
 
 <p>你有一个视频分享平台，用户可以上传和删除视频。每个 <code>video</code> 都是&nbsp;<strong>字符串&nbsp;</strong>类型的数字，其中字符串的第 <code>i</code> 位表示视频中第 <code>i</code> 分钟的内容。例如，第一个数字表示视频中第 <code>0</code> 分钟的内容，第二个数字表示视频中第 <code>1</code> 分钟的内容，以此类推。视频的观众也可以喜欢和不喜欢视频。该平台会跟踪每个视频的&nbsp;<strong>观看次数</strong>、<strong>点赞次数&nbsp;</strong>和 <strong>不喜欢次数</strong>。</p>
@@ -20,8 +18,6 @@
 	<li><code>int[] getLikesAndDislikes(int videoId)</code> 返回一个长度为 <code>2</code> ，<strong>下标从 0 开始 </strong>的整型数组，其中 <code>values[0]</code>&nbsp;是与 <code>videoId</code>&nbsp;相关联的视频上的点赞数，<code>values[1]</code> 是不喜欢数。如果没有与&nbsp;<code>videoId</code> 相关联的视频，则返回 <code>[-1]</code>。</li>
 	<li><code>int getViews(int videoId)</code> 返回与&nbsp;<code>videoId</code> 相关联的视频的观看次数，如果没有与 <code>videoId</code>&nbsp;相关联的视频，返回 <code>-1</code>。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -69,8 +65,6 @@ videoSharingPlatform.dislike(0);             // 没有与 videoId 0 相关联的
 videoSharingPlatform.getLikesAndDislikes(0); // 没有与 videoId 0 相关联的视频，因此返回 [-1]。
 videoSharingPlatform.getViews(0);            // 没有视频与 videoId 0 相关联，因此返回 -1。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

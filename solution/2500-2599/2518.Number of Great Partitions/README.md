@@ -1,7 +1,5 @@
 # [2518. 好分区的数目](https://leetcode.cn/problems/number-of-great-partitions)
 
-[English Version](/solution/2500-2599/2518.Number%20of%20Great%20Partitions/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
@@ -11,8 +9,6 @@
 <p>返回 <strong>不同</strong> 的好分区的数目。由于答案可能很大，请返回对 <code>10<sup>9</sup> + 7</code> <strong>取余</strong> 后的结果。</p>
 
 <p>如果在两个分区中，存在某个元素 <code>nums[i]</code> 被分在不同的组中，则认为这两个分区不同。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,8 +34,6 @@
 <strong>解释：</strong>可以将 nums[0] 放入第一个分区或第二个分区中。
 好分区的情况是 ([6], [6]) 和 ([6], [6]) 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

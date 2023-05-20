@@ -1,7 +1,5 @@
 # [495. 提莫攻击](https://leetcode.cn/problems/teemo-attacking)
 
-[English Version](/solution/0400-0499/0495.Teemo%20Attacking/README_EN.md)
-
 ## 题目描述
 
 <p>在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄。他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。</p>
@@ -35,8 +33,6 @@
 - 第 2 秒，提莫再次攻击艾希，并重置中毒计时器，艾希中毒状态需要持续 2 秒，即第 2 秒和第 3 秒。
 艾希在第 1、2、3 秒处于中毒状态，所以总中毒秒数是 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

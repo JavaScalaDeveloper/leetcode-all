@@ -1,7 +1,5 @@
 # [1720. 解码异或后的数组](https://leetcode.cn/problems/decode-xored-array)
 
-[English Version](/solution/1700-1799/1720.Decode%20XORed%20Array/README_EN.md)
-
 ## 题目描述
 
 <p><strong>未知</strong> 整数数组 <code>arr</code> 由 <code>n</code> 个非负整数组成。</p>

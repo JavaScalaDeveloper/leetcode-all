@@ -1,14 +1,10 @@
 # [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring)
 
-[English Version](/solution/0000-0099/0005.Longest%20Palindromic%20Substring/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的回文子串。</p>
 
 <p>如果字符串的反序与原始字符串相同，则该字符串称为回文字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,8 +20,6 @@
 <strong>输入：</strong>s = "cbbd"
 <strong>输出：</strong>"bb"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

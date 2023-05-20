@@ -1,7 +1,5 @@
 # [2221. 数组的三角和](https://leetcode.cn/problems/find-triangular-sum-of-an-array)
 
-[English Version](/solution/2200-2299/2221.Find%20Triangular%20Sum%20of%20an%20Array/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;，其中&nbsp;<code>nums[i]</code>&nbsp;是 <code>0</code>&nbsp;到 <code>9</code>&nbsp;之间（两者都包含）的一个数字。</p>
@@ -16,8 +14,6 @@
 </ol>
 
 <p>请你返回&nbsp;<code>nums</code>&nbsp;的三角和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <b>输出：</b>5
 <b>解释：</b>
 由于 nums 中只有一个元素，数组的三角和为这个元素自己。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

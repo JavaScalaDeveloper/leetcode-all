@@ -1,7 +1,5 @@
 # [40. 组合总和 II](https://leetcode.cn/problems/combination-sum-ii)
 
-[English Version](/solution/0000-0099/0040.Combination%20Sum%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个候选人编号的集合&nbsp;<code>candidates</code>&nbsp;和一个目标数&nbsp;<code>target</code>&nbsp;，找出&nbsp;<code>candidates</code>&nbsp;中所有可以使数字和为&nbsp;<code>target</code>&nbsp;的组合。</p>
@@ -9,8 +7,6 @@
 <p><code>candidates</code>&nbsp;中的每个数字在每个组合中只能使用&nbsp;<strong>一次</strong>&nbsp;。</p>
 
 <p><strong>注意：</strong>解集不能包含重复的组合。&nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -33,8 +29,6 @@
 [1,2,2],
 [5]
 ]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

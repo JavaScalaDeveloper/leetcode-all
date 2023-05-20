@@ -1,7 +1,5 @@
 # [2055. 蜡烛之间的盘子](https://leetcode.cn/problems/plates-between-candles)
 
-[English Version](/solution/2000-2099/2055.Plates%20Between%20Candles/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长桌子，桌子上盘子和蜡烛排成一列。给你一个下标从 <strong>0</strong>&nbsp;开始的字符串&nbsp;<code>s</code>&nbsp;，它只包含字符&nbsp;<code>'*'</code> 和&nbsp;<code>'|'</code>&nbsp;，其中&nbsp;<code>'*'</code>&nbsp;表示一个 <strong>盘子</strong>&nbsp;，<code>'|'</code>&nbsp;表示一支&nbsp;<strong>蜡烛</strong>&nbsp;。</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>请你返回一个整数数组&nbsp;<code>answer</code>&nbsp;，其中&nbsp;<code>answer[i]</code>&nbsp;是第&nbsp;<code>i</code>&nbsp;个查询的答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -37,8 +33,6 @@
 - queries[0] 有 9 个盘子在蜡烛之间。
 - 另一个查询没有盘子在蜡烛之间。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

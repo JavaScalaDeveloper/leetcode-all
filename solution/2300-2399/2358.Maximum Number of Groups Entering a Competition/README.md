@@ -1,7 +1,5 @@
 # [2358. 分组的最大数量](https://leetcode.cn/problems/maximum-number-of-groups-entering-a-competition)
 
-[English Version](/solution/2300-2399/2358.Maximum%20Number%20of%20Groups%20Entering%20a%20Competition/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数数组 <code>grades</code> ，表示大学中一些学生的成绩。你打算将 <strong>所有</strong> 学生分为一些 <strong>有序</strong> 的非空分组，其中分组间的顺序满足以下全部条件：</p>
@@ -12,8 +10,6 @@
 </ul>
 
 <p>返回可以形成的 <strong>最大</strong> 组数。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>只能形成 1 个分组，因为如果要形成 2 个分组的话，会导致每个分组中的学生数目相等。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

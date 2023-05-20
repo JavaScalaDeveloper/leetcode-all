@@ -1,7 +1,5 @@
 # [2432. 处理用时最长的那个任务的员工](https://leetcode.cn/problems/the-employee-that-worked-on-the-longest-task)
 
-[English Version](/solution/2400-2499/2432.The%20Employee%20That%20Worked%20on%20the%20Longest%20Task/README_EN.md)
-
 ## 题目描述
 
 <p>共有 <code>n</code> 位员工，每位员工都有一个从 <code>0</code> 到 <code>n - 1</code> 的唯一 id 。</p>
@@ -16,8 +14,6 @@
 <p>注意，第 <code>i</code> 个任务在第 <code>(i - 1)</code> 个任务结束后立即开始，且第 <code>0</code> 个任务从时刻 <code>0</code> 开始。</p>
 
 <p>返回处理用时最长的那个任务的员工的 id 。如果存在两个或多个员工同时满足，则返回几人中 <strong>最小</strong> 的 id 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,8 +51,6 @@
 任务 1 于时刻 10 开始，且在时刻 20 结束，共计 10 个单位时间。
 时间最长的任务是任务 0 和 1 ，处理这两个任务的员工的 id 分别是 0 和 1 ，所以返回最小的 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
@@ -103,23 +97,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define min(a,b) (((a) < (b)) ? (a) : (b))
-
-int hardestWorker(int n, int **logs, int logsSize, int *logsColSize) {
-    int res = 0;
-    int max = 0;
-    int pre = 0;
-    for (int i = 0; i < logsSize; i++) {
-        int t = logs[i][1] - pre;
-        if (t > max || (t == max && res > logs[i][0])) {
-            res = logs[i][0];
-            max = t;
-        }
-        pre = logs[i][1];
-    }
-    return res;
-}
-```
+**

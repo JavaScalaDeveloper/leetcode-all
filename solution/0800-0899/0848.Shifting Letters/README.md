@@ -1,7 +1,5 @@
 # [848. 字母移位](https://leetcode.cn/problems/shifting-letters)
 
-[English Version](/solution/0800-0899/0848.Shifting%20Letters/README_EN.md)
-
 ## 题目描述
 
 <p>有一个由小写字母组成的字符串 <code>s</code>，和一个长度相同的整数数组 <code>shifts</code>。</p>
@@ -15,8 +13,6 @@
 <p>对于每个&nbsp;<code>shifts[i] = x</code>&nbsp;， 我们会将 <code>s</code>&nbsp;中的前&nbsp;<code>i + 1</code>&nbsp;个字母移位&nbsp;<code>x</code>&nbsp;次。</p>
 
 <p>返回 <em>将所有这些移位都应用到 <code>s</code> 后最终得到的字符串</em> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <strong>输入:</strong> s = "aaa", shifts = [1,2,3]
 <strong>输出:</strong> "gfd"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

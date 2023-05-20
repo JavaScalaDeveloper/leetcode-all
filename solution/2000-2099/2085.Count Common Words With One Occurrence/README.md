@@ -1,12 +1,8 @@
 # [2085. 统计出现过一次的公共字符串](https://leetcode.cn/problems/count-common-words-with-one-occurrence)
 
-[English Version](/solution/2000-2099/2085.Count%20Common%20Words%20With%20One%20Occurrence/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个字符串数组&nbsp;<code>words1</code>&nbsp;和&nbsp;<code>words2</code>&nbsp;，请你返回在两个字符串数组中 <strong>都恰好出现一次</strong>&nbsp;的字符串的数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 <b>输出：</b>1
 <b>解释：</b>唯一在两个数组中都出现一次的字符串是 "ab" 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

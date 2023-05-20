@@ -1,7 +1,5 @@
 # [853. 车队](https://leetcode.cn/problems/car-fleet)
 
-[English Version](/solution/0800-0899/0853.Car%20Fleet/README_EN.md)
-
 ## 题目描述
 
 <p>在一条单行道上，有 <code>n</code> 辆车开往同一目的地。目的地是几英里以外的&nbsp;<code>target</code>&nbsp;。</p>
@@ -15,8 +13,6 @@
 <p>即便一辆车在目的地才赶上了一个车队，它们仍然会被视作是同一个车队。</p>
 
 <p>返回到达目的地的 <strong>车队数量</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,8 +42,6 @@
 <strong>解释:</strong>
 以0(速度4)和2(速度2)出发的车辆组成车队，在4点相遇。舰队以2的速度前进。
 然后，车队(速度2)和以4(速度1)出发的汽车组成一个车队，在6点相遇。舰队以1的速度前进，直到到达目标。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

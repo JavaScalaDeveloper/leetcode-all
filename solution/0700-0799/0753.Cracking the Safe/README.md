@@ -1,7 +1,5 @@
 # [753. 破解保险箱](https://leetcode.cn/problems/cracking-the-safe)
 
-[English Version](/solution/0700-0799/0753.Cracking%20the%20Safe/README_EN.md)
-
 ## 题目描述
 
 <p>有一个需要密码才能打开的保险箱。密码是&nbsp;<code>n</code> 位数, 密码的每一位都是范围&nbsp;<code>[0, k - 1]</code>&nbsp;中的一个数字。</p>
@@ -25,8 +23,6 @@
 
 <p>在只知道密码位数 <code>n</code> 和范围边界 <code>k</code> 的前提下，请你找出并返回确保在输入的 <strong>某个时刻</strong> 能够打开保险箱的任一 <strong>最短</strong> 密码序列 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -47,8 +43,6 @@
 - "11" 从第 2 位开始输入。
 因此 "01100" 可以确保打开保险箱。"01100"、"10011" 和 "11001" 也可以确保打开保险箱。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

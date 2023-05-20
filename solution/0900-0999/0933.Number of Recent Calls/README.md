@@ -1,7 +1,5 @@
 # [933. 最近的请求次数](https://leetcode.cn/problems/number-of-recent-calls)
 
-[English Version](/solution/0900-0999/0933.Number%20of%20Recent%20Calls/README_EN.md)
-
 ## 题目描述
 
 <p>写一个&nbsp;<code>RecentCounter</code>&nbsp;类来计算特定时间范围内最近的请求。</p>
@@ -14,8 +12,6 @@
 </ul>
 
 <p><strong>保证</strong> 每次对 <code>ping</code> 的调用都使用比之前更大的 <code>t</code> 值。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@ recentCounter.ping(100);   // requests = [<strong>1</strong>, <strong>100</stron
 recentCounter.ping(3001);  // requests = [<strong>1</strong>, <strong>100</strong>, <strong>3001</strong>]，范围是 [1,3001]，返回 3
 recentCounter.ping(3002);  // requests = [1, <strong>100</strong>, <strong>3001</strong>, <strong>3002</strong>]，范围是 [2,3002]，返回 3
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

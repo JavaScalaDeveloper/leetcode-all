@@ -1,7 +1,5 @@
 # [551. 学生出勤记录 I](https://leetcode.cn/problems/student-attendance-record-i)
 
-[English Version](/solution/0500-0599/0551.Student%20Attendance%20Record%20I/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> 表示一个学生的出勤记录，其中的每个字符用来标记当天的出勤情况（缺勤、迟到、到场）。记录中只含下面三种字符：</p>
@@ -21,8 +19,6 @@
 
 <p>如果学生可以获得出勤奖励，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -38,8 +34,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>学生最后三天连续迟到，所以不满足出勤奖励的条件。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

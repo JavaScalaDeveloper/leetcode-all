@@ -1,7 +1,5 @@
 # [72. 编辑距离](https://leetcode.cn/problems/edit-distance)
 
-[English Version](/solution/0000-0099/0072.Edit%20Distance/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个单词&nbsp;<code>word1</code> 和&nbsp;<code>word2</code>， <em>请返回将&nbsp;<code>word1</code>&nbsp;转换成&nbsp;<code>word2</code> 所使用的最少操作数</em> &nbsp;。</p>
@@ -13,8 +11,6 @@
 	<li>删除一个字符</li>
 	<li>替换一个字符</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -39,8 +35,6 @@ enention -&gt; exention (将 'n' 替换为 'x')
 exention -&gt; exection (将 'n' 替换为 'c')
 exection -&gt; execution (插入 'u')
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,14 +1,10 @@
 # [1189. “气球” 的最大数量](https://leetcode.cn/problems/maximum-number-of-balloons)
 
-[English Version](/solution/1100-1199/1189.Maximum%20Number%20of%20Balloons/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串&nbsp;<code>text</code>，你需要使用 <code>text</code> 中的字母来拼凑尽可能多的单词&nbsp;<strong>&quot;balloon&quot;（气球）</strong>。</p>
 
 <p>字符串&nbsp;<code>text</code> 中的每个字母最多只能被使用一次。请你返回最多可以拼凑出多少个单词&nbsp;<strong>&quot;balloon&quot;</strong>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <pre><strong>输入：</strong>text = &quot;leetcode&quot;
 <strong>输出：</strong>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [824. 山羊拉丁文](https://leetcode.cn/problems/goat-latin)
 
-[English Version](/solution/0800-0899/0824.Goat%20Latin/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个由若干单词组成的句子&nbsp;<code>sentence</code> ，单词间由空格分隔。每个单词仅由大写和小写英文字母组成。</p>
@@ -28,8 +26,6 @@
 
 <p>返回将 <code>sentence</code> 转换为山羊拉丁文后的句子。</p>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -43,8 +39,6 @@
 <strong>输入：</strong>sentence = "The quick brown fox jumped over the lazy dog"
 <strong>输出：</strong>"heTmaa uickqmaaa rownbmaaaa oxfmaaaaa umpedjmaaaaaa overmaaaaaaa hetmaaaaaaaa azylmaaaaaaaaa ogdmaaaaaaaaaa"
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

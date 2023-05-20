@@ -1,7 +1,5 @@
 # [111. 二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree)
 
-[English Version](/solution/0100-0199/0111.Minimum%20Depth%20of%20Binary%20Tree/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个二叉树，找出其最小深度。</p>
@@ -126,32 +124,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-
-#define min(a,b) (((a) < (b)) ? (a) : (b))
-
-int minDepth(struct TreeNode *root) {
-    if (!root) {
-        return 0;
-    }
-    if (!root->left) {
-        return 1 + minDepth(root->right);
-    }
-    if (!root->right) {
-        return 1 + minDepth(root->left);
-    }
-    int left = minDepth(root->left);
-    int right = minDepth(root->right);
-    return 1 + min(left, right);
-}
-```
+**

@@ -1,7 +1,5 @@
 # [2558. 从数量最多的堆取走礼物](https://leetcode.cn/problems/take-gifts-from-the-richest-pile)
 
-[English Version](/solution/2500-2599/2558.Take%20Gifts%20From%20the%20Richest%20Pile/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>gifts</code> ，表示各堆礼物的数量。每一秒，你需要执行以下操作：</p>
@@ -13,8 +11,6 @@
 </ul>
 
 <p>返回在 <code>k</code> 秒后剩下的礼物数量<em>。</em></p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,8 +36,6 @@
 也就是说，你无法获取任一堆中的礼物。 
 所以，剩下礼物的总数量是 4 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

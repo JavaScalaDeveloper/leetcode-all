@@ -1,7 +1,5 @@
 # [1988. 找出每所学校的最低分数要求](https://leetcode.cn/problems/find-cutoff-score-for-each-school)
 
-[English Version](/solution/1900-1999/1988.Find%20Cutoff%20Score%20for%20Each%20School/README_EN.md)
-
 ## 题目描述
 
 <p>表：&nbsp;<code>Schools</code></p>
@@ -15,8 +13,6 @@
 school_id 是该表的主键。
 此表包含了一些学校的容纳能力。容纳能力指的是学校能够接纳学生的最大数量。
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表：&nbsp;<code>Exam</code></p>
 
@@ -45,8 +41,6 @@ score 是该表的主键。
 <p>返回的结果表可以按<strong>任意顺序</strong>排序。</p>
 
 <p>查询结果格式如下例所示：</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 

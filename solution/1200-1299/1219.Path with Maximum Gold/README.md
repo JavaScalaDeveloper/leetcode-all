@@ -1,7 +1,5 @@
 # [1219. 黄金矿工](https://leetcode.cn/problems/path-with-maximum-gold)
 
-[English Version](/solution/1200-1299/1219.Path%20with%20Maximum%20Gold/README_EN.md)
-
 ## 题目描述
 
 <p>你要开发一座金矿，地质勘测学家已经探明了这座金矿中的资源分布，并用大小为&nbsp;<code>m * n</code> 的网格 <code>grid</code> 进行了标注。每个单元格中的整数就表示这一单元格中的黄金数量；如果该单元格是空的，那么就是 <code>0</code>。</p>
@@ -15,8 +13,6 @@
 	<li><strong>不得开采</strong>（进入）黄金数目为 <code>0</code> 的单元格。</li>
 	<li>矿工可以从网格中 <strong>任意一个</strong> 有黄金的单元格出发或者是停止。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
  [9,0,20]]
 一种收集最多黄金的路线是：1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; 7。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

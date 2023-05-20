@@ -1,14 +1,10 @@
 # [996. 正方形数组的数目](https://leetcode.cn/problems/number-of-squareful-arrays)
 
-[English Version](/solution/0900-0999/0996.Number%20of%20Squareful%20Arrays/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个非负整数数组&nbsp;<code>A</code>，如果该数组每对相邻元素之和是一个完全平方数，则称这一数组为<em>正方形</em>数组。</p>
 
 <p>返回 A 的正方形排列的数目。两个排列 <code>A1</code> 和 <code>A2</code> 不同的充要条件是存在某个索引 <code>i</code>，使得 A1[i] != A2[i]。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,8 +19,6 @@
 <pre><strong>输入：</strong>[2,2,2]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

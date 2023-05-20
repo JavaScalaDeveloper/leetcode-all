@@ -1,7 +1,5 @@
 # [1036. 逃离大迷宫](https://leetcode.cn/problems/escape-a-large-maze)
 
-[English Version](/solution/1000-1099/1036.Escape%20a%20Large%20Maze/README_EN.md)
-
 ## 题目描述
 
 <p>在一个 10<sup>6</sup> x 10<sup>6</sup> 的网格中，每个网格上方格的坐标为 <code>(x, y)</code> 。</p>

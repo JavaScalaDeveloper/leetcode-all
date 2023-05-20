@@ -1,7 +1,5 @@
 # [775. 全局倒置与局部倒置](https://leetcode.cn/problems/global-and-local-inversions)
 
-[English Version](/solution/0700-0799/0775.Global%20and%20Local%20Inversions/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，表示由范围 <code>[0, n - 1]</code> 内所有整数组成的一个排列。</p>
@@ -21,8 +19,6 @@
 </ul>
 
 <p>当数组 <code>nums</code> 中 <strong>全局倒置</strong> 的数量等于 <strong>局部倒置</strong> 的数量时，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

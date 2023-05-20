@@ -1,14 +1,10 @@
 # [1852. 每个子数组的数字种类数](https://leetcode.cn/problems/distinct-numbers-in-each-subarray)
 
-[English Version](/solution/1800-1899/1852.Distinct%20Numbers%20in%20Each%20Subarray/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组&nbsp;<code>nums</code>与一个整数 <code>k</code>，请你构造一个长度 <code>n-k+1</code> 的数组 <code>ans</code>，这个数组第<code>i</code>个元素 <code>ans[i]</code> 是每个长度为k的子数组 <code>nums[i:i+k-1] = [nums[i], nums[i+1], ..., nums[i+k-1]]</code>中数字的种类数。</p>
 
 <p>返回这个数组 <code>ans</code>。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 
@@ -34,8 +30,6 @@
 - nums[2:5] = [1,1,2,3] 所以 ans[2] = 3
 - nums[3:6] = [1,2,3,4] 所以 ans[3] = 4
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

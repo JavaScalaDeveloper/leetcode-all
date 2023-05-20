@@ -1,7 +1,5 @@
 # [2373. 矩阵中的局部最大值](https://leetcode.cn/problems/largest-local-values-in-a-matrix)
 
-[English Version](/solution/2300-2399/2373.Largest%20Local%20Values%20in%20a%20Matrix/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个大小为 <code>n x n</code> 的整数矩阵 <code>grid</code> 。</p>
@@ -15,8 +13,6 @@
 <p>换句话说，我们希望找出 <code>grid</code> 中每个&nbsp;<code>3 x 3</code> 矩阵中的最大值。</p>
 
 <p>返回生成的矩阵。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <strong>输出：</strong>[[2,2,2],[2,2,2],[2,2,2]]
 <strong>解释：</strong>注意，2 包含在 grid 中每个 3 x 3 的矩阵中。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

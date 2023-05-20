@@ -1,7 +1,5 @@
 # [1135. 最低成本联通所有城市](https://leetcode.cn/problems/connecting-cities-with-minimum-cost)
 
-[English Version](/solution/1100-1199/1135.Connecting%20Cities%20With%20Minimum%20Cost/README_EN.md)
-
 ## 题目描述
 
 <p>想象一下你是个城市基建规划者，地图上有&nbsp;<code>n</code>&nbsp;座城市，它们按以&nbsp;<code>1</code> 到&nbsp;<code>n</code>&nbsp;的次序编号。</p>
@@ -11,8 +9,6 @@
 <p>返回连接所有城市的<strong>最低成本</strong>，每对城市之间<strong>至少</strong>有一条路径。如果无法连接所有 <code>n</code>&nbsp;个城市，返回 <code>-1</code></p>
 
 <p>该 <strong>最小成本</strong> 应该是所用全部连接成本的总和。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>即使连通所有的边，也无法连接所有城市。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

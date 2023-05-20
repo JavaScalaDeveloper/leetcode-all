@@ -1,7 +1,5 @@
 # [1946. 子字符串突变后可能得到的最大整数](https://leetcode.cn/problems/largest-number-after-mutating-substring)
 
-[English Version](/solution/1900-1999/1946.Largest%20Number%20After%20Mutating%20Substring/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>num</code> ，该字符串表示一个大整数。另给你一个长度为 <code>10</code> 且 <strong>下标从 0&nbsp; 开始</strong> 的整数数组 <code>change</code> ，该数组将 <code>0-9</code> 中的每个数字映射到另一个数字。更规范的说法是，数字 <code>d</code> 映射为数字 <code>change[d]</code> 。</p>
@@ -11,8 +9,6 @@
 <p>请你找出在对 <code>num</code> 的任一子字符串执行突变操作（也可以不执行）后，可能得到的 <strong>最大整数</strong> ，并用字符串表示返回。</p>
 
 <p><strong>子字符串</strong> 是字符串中的一个连续序列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,8 +38,6 @@
 <strong>输出：</strong>"5"
 <strong>解释：</strong>"5" 已经是可以构造的最大整数，所以返回它的字符串表示。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

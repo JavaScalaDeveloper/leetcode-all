@@ -1,7 +1,5 @@
 # [2569. 更新数组后处理求和查询](https://leetcode.cn/problems/handling-sum-queries-after-update)
 
-[English Version](/solution/2500-2599/2569.Handling%20Sum%20Queries%20After%20Update/README_EN.md)
-
 ## 题目描述
 
 <p>给你两个下标从 <strong>0</strong>&nbsp;开始的数组&nbsp;<code>nums1</code> 和&nbsp;<code>nums2</code>&nbsp;，和一个二维数组&nbsp;<code>queries</code>&nbsp;表示一些操作。总共有 3 种类型的操作：</p>
@@ -13,8 +11,6 @@
 </ol>
 
 <p>请你返回一个数组，包含所有第三种操作类型的答案。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,8 +27,6 @@
 <b>输出：</b>[5]
 <b>解释：</b>第一个操作后，nums2 保持不变为 [5] ，所以第二个操作的答案是 5 。所以返回 [5] 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

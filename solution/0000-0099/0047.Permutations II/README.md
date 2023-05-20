@@ -1,12 +1,8 @@
 # [47. 全排列 II](https://leetcode.cn/problems/permutations-ii)
 
-[English Version](/solution/0000-0099/0047.Permutations%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个可包含重复数字的序列 <code>nums</code> ，<em><strong>按任意顺序</strong></em> 返回所有不重复的全排列。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,8 +20,6 @@
 <strong>输入：</strong>nums = [1,2,3]
 <strong>输出：</strong>[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

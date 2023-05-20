@@ -1,7 +1,5 @@
 # [2649. 嵌套数组生成器](https://leetcode.cn/problems/nested-array-generator)
 
-[English Version](/solution/2600-2699/2649.Nested%20Array%20Generator/README_EN.md)
-
 ## 题目描述
 
 <p>现给定一个整数的 <strong>多维数组</strong> ，请你返回一个生成器对象，按照&nbsp;<strong>中序遍历</strong> 的顺序逐个生成整数。</p>
@@ -9,8 +7,6 @@
 <p><strong>多维数组</strong> 是一个递归数据结构，包含整数和其他 <strong>多维数组</strong>。</p>
 
 <p><strong>中序遍历</strong> 是从左到右遍历每个数组，在遇到任何整数时生成它，遇到任何数组时递归应用 <strong>中序遍历</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@ generator.next().done; // true
 <b>输出：</b>[]
 <b>解释：</b>输入的多维数组没有任何参数，所以生成器不需要生成任何值。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

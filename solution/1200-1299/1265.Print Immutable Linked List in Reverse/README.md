@@ -1,7 +1,5 @@
 # [1265. 逆序打印不可变链表](https://leetcode.cn/problems/print-immutable-linked-list-in-reverse)
 
-[English Version](/solution/1200-1299/1265.Print%20Immutable%20Linked%20List%20in%20Reverse/README_EN.md)
-
 ## 题目描述
 
 <p>给您一个不可变的链表，使用下列接口逆序打印每个节点的值：</p>
@@ -18,8 +16,6 @@
 </ul>
 
 <p>输入只用来内部初始化链表。您不可以通过修改链表解决问题。也就是说，您只能通过上述 API 来操作链表。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,16 +41,12 @@
 <ul>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li>链表的长度在&nbsp;<code>[1, 1000]</code>&nbsp;之间。</li>
 	<li>每个节点的值在&nbsp;<code>[-1000, 1000]</code>&nbsp;之间。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

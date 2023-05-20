@@ -1,7 +1,5 @@
 # [2298. 周末任务计数](https://leetcode.cn/problems/tasks-count-in-the-weekend)
 
-[English Version](/solution/2200-2299/2298.Tasks%20Count%20in%20the%20Weekend/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Tasks</code></p>
@@ -18,8 +16,6 @@ task_id 是此表的主键。
 此表中的每一行都包含任务 ID、委托人 ID 和提交日期。
 </pre>
 
-<p>&nbsp;</p>
-
 <p>编写一个 SQL 来查询：</p>
 
 <ul>
@@ -29,8 +25,6 @@ task_id 是此表的主键。
 
 <p>按 <strong>任意顺序</strong> 返回结果表。<br />
 查询结果格式如以下示例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1:</strong></p>
 

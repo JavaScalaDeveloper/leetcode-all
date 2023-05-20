@@ -1,7 +1,5 @@
 # [798. 得分最高的最小轮调](https://leetcode.cn/problems/smallest-rotation-with-highest-score)
 
-[English Version](/solution/0700-0799/0798.Smallest%20Rotation%20with%20Highest%20Score/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个数组&nbsp;<code>nums</code>，我们可以将它按一个非负整数 <code>k</code> 进行轮调，这样可以使数组变为&nbsp;<code>[nums[k], nums[k + 1], ... nums[nums.length - 1], nums[0], nums[1], ..., nums[k-1]]</code>&nbsp;的形式。此后，任何值小于或等于其索引的项都可以记作一分。</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>在所有可能的轮调中，返回我们所能得到的最高分数对应的轮调下标 <code>k</code> 。如果有多个答案，返回满足条件的最小的下标 <code>k</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@ k = 4,  nums = [0,2,3,1,4],    score 3
 nums 无论怎么变化总是有 3 分。
 所以我们将选择最小的 k，即 0。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

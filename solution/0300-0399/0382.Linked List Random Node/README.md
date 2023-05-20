@@ -1,7 +1,5 @@
 # [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node)
 
-[English Version](/solution/0300-0399/0382.Linked%20List%20Random%20Node/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个单链表，随机选择链表的一个节点，并返回相应的节点值。每个节点<strong> 被选中的概率一样</strong> 。</p>
@@ -12,8 +10,6 @@
 	<li><code>Solution(ListNode head)</code> 使用整数数组初始化对象。</li>
 	<li><code>int getRandom()</code> 从链表中随机选择一个节点并返回该节点的值。链表中所有节点被选中的概率相等。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0382.Linked%20List%20Random%20Node/images/getrand-linked-list.jpg" style="width: 302px; height: 62px;" />
@@ -33,8 +29,6 @@ solution.getRandom(); // 返回 2
 solution.getRandom(); // 返回 3
 // getRandom() 方法应随机返回 1、2、3 中的一个，每个元素被返回的概率相等。</pre>
 
-<p>&nbsp;</p>
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -42,8 +36,6 @@ solution.getRandom(); // 返回 3
 	<li><code>-10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
 	<li>至多调用&nbsp;<code>getRandom</code> 方法 <code>10<sup>4</sup></code> 次</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>进阶：</strong></p>
 

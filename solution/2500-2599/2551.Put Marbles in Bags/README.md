@@ -1,7 +1,5 @@
 # [2551. 将珠子放入背包中](https://leetcode.cn/problems/put-marbles-in-bags)
 
-[English Version](/solution/2500-2599/2551.Put%20Marbles%20in%20Bags/README_EN.md)
-
 ## 题目描述
 
 <p>你有&nbsp;<code>k</code>&nbsp;个背包。给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>weights</code>&nbsp;，其中&nbsp;<code>weights[i]</code>&nbsp;是第&nbsp;<code>i</code>&nbsp;个珠子的重量。同时给你整数 <code>k</code>&nbsp;。</p>
@@ -17,8 +15,6 @@
 <p>一个珠子分配方案的 <strong>分数</strong>&nbsp;是所有 <code>k</code>&nbsp;个背包的价格之和。</p>
 
 <p>请你返回所有分配方案中，<strong>最大分数</strong>&nbsp;与 <strong>最小分数</strong>&nbsp;的 <strong>差值</strong>&nbsp;为多少。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,8 +33,6 @@
 <b>解释：</b>唯一的分配方案为 [1],[3] 。
 最大最小得分相等，所以返回 0 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

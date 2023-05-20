@@ -1,7 +1,5 @@
 # [2384. 最大回文数字](https://leetcode.cn/problems/largest-palindromic-number)
 
-[English Version](/solution/2300-2399/2384.Largest%20Palindromic%20Number/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个仅由数字（<code>0 - 9</code>）组成的字符串 <code>num</code> 。</p>
@@ -14,8 +12,6 @@
 	<li>你 <strong>无需</strong> 使用 <code>num</code> 中的所有数字，但你必须使用 <strong>至少</strong> 一个数字。</li>
 	<li>数字可以重新排序。</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,8 +32,6 @@
 可以证明 "9" 能够形成的最大回文整数。
 注意返回的整数不应含前导零。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

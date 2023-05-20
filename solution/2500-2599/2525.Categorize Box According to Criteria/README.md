@@ -1,7 +1,5 @@
 # [2525. 根据规则将箱子分类](https://leetcode.cn/problems/categorize-box-according-to-criteria)
 
-[English Version](/solution/2500-2599/2525.Categorize%20Box%20According%20to%20Criteria/README_EN.md)
-
 ## 题目描述
 
 <p>给你四个整数&nbsp;<code>length</code>&nbsp;，<code>width</code>&nbsp;，<code>height</code>&nbsp;和&nbsp;<code>mass</code>&nbsp;，分别表示一个箱子的三个维度和质量，请你返回一个表示箱子 <strong>类别</strong> 的字符串。</p>
@@ -21,8 +19,6 @@
 </ul>
 
 <p><strong>注意</strong>，箱子的体积等于箱子的长度、宽度和高度的乘积。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,8 +41,6 @@
 体积为 8 * 10<sup>6</sup> &lt;= 10<sup>9</sup>&nbsp;。所以不能归类为 "Bulky" 。
 质量小于 100 ，所以不能归类为 "Heavy" 。
 由于不属于上述两者任何一类，所以我们返回 "Neither" 。</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

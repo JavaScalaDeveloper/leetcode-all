@@ -1,7 +1,5 @@
 # [63. 不同路径 II](https://leetcode.cn/problems/unique-paths-ii)
 
-[English Version](/solution/0000-0099/0063.Unique%20Paths%20II/README_EN.md)
-
 ## 题目描述
 
 <p>一个机器人位于一个<meta charset="UTF-8" />&nbsp;<code>m x n</code>&nbsp;网格的左上角 （起始点在下图中标记为 “Start” ）。</p>
@@ -11,8 +9,6 @@
 <p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p>
 
 <p>网格中的障碍物和空位置分别用 <code>1</code> 和 <code>0</code> 来表示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0063.Unique%20Paths%20II/images/robot1.jpg" />
@@ -31,8 +27,6 @@
 <strong>输入：</strong>obstacleGrid = [[0,1],[0,0]]
 <strong>输出：</strong>1
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

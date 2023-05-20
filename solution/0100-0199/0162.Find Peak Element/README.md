@@ -1,7 +1,5 @@
 # [162. 寻找峰值](https://leetcode.cn/problems/find-peak-element)
 
-[English Version](/solution/0100-0199/0162.Find%20Peak%20Element/README_EN.md)
-
 ## 题目描述
 
 <p>峰值元素是指其值严格大于左右相邻值的元素。</p>
@@ -11,8 +9,6 @@
 <p>你可以假设&nbsp;<code>nums[-1] = nums[n] = -∞</code> 。</p>
 
 <p>你必须实现时间复杂度为 <code>O(log n)</code><em> </em>的算法来解决此问题。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>解释：</strong>你的函数可以返回索引 1，其峰值元素为 2；
 &nbsp;    或者返回索引 5， 其峰值元素为 6。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

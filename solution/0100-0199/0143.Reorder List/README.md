@@ -1,7 +1,5 @@
 # [143. 重排链表](https://leetcode.cn/problems/reorder-list)
 
-[English Version](/solution/0100-0199/0143.Reorder%20List/README_EN.md)
-
 ## 题目描述
 
 <p>给定一个单链表 <code>L</code><em> </em>的头节点 <code>head</code> ，单链表 <code>L</code> 表示为：</p>
@@ -16,8 +14,6 @@ L<sub>0</sub> → L<sub>1</sub> → … → L<sub>n - 1</sub> → L<sub>n</sub>
 L<sub>0</sub> → L<sub>n</sub> → L<sub>1</sub> → L<sub>n - 1</sub> → L<sub>2</sub> → L<sub>n - 2</sub> → …</pre>
 
 <p>不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,8 +30,6 @@ L<sub>0</sub> → L<sub>n</sub> → L<sub>1</sub> → L<sub>n - 1</sub> → L<su
 <pre>
 <strong>输入：</strong>head = [1,2,3,4,5]
 <strong>输出：</strong>[1,5,2,4,3]</pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

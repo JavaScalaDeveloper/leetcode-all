@@ -1,14 +1,10 @@
 # [1254. 统计封闭岛屿的数目](https://leetcode.cn/problems/number-of-closed-islands)
 
-[English Version](/solution/1200-1299/1254.Number%20of%20Closed%20Islands/README_EN.md)
-
 ## 题目描述
 
 <p>二维矩阵 <code>grid</code>&nbsp;由 <code>0</code>&nbsp;（土地）和 <code>1</code>&nbsp;（水）组成。岛是由最大的4个方向连通的 <code>0</code>&nbsp;组成的群，封闭岛是一个&nbsp;<code>完全</code> 由1包围（左、上、右、下）的岛。</p>
 
 <p>请返回 <em>封闭岛屿</em> 的数目。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,8 +37,6 @@
              [1,1,1,1,1,1,1]]
 <strong>输出：</strong>2
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

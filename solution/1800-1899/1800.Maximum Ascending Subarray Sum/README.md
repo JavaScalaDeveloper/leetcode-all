@@ -1,7 +1,5 @@
 # [1800. 最大升序子数组和](https://leetcode.cn/problems/maximum-ascending-subarray-sum)
 
-[English Version](/solution/1800-1899/1800.Maximum%20Ascending%20Subarray%20Sum/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个正整数组成的数组 <code>nums</code> ，返回 <code>nums</code> 中一个 <strong>升序 </strong>子数组的最大可能元素和。</p>
@@ -85,21 +83,4 @@ class Solution {
 }
 ```
 
-### **C**
-
-```c
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-
-int maxAscendingSum(int* nums, int numsSize){
-    int res = nums[0];
-    int sum = nums[0];
-    for (int i = 1; i < numsSize; i++) {
-        if (nums[i - 1] >= nums[i]) {
-            res = max(res, sum);
-            sum = 0;
-        }
-        sum += nums[i];
-    }
-    return max(res, sum);
-}
-```
+**

@@ -1,7 +1,5 @@
 # [1528. 重新排列字符串](https://leetcode.cn/problems/shuffle-string)
 
-[English Version](/solution/1500-1599/1528.Shuffle%20String/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个字符串 <code>s</code> 和一个 <strong>长度相同</strong> 的整数数组 <code>indices</code> 。</p>
@@ -9,8 +7,6 @@
 <p>请你重新排列字符串 <code>s</code> ，其中第 <code>i</code> 个字符需要移动到 <code>indices[i]</code> 指示的位置。</p>
 
 <p>返回重新排列后的字符串。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,8 +25,6 @@
 <strong>输出：</strong>"abc"
 <strong>解释：</strong>重新排列后，每个字符都还留在原来的位置上。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

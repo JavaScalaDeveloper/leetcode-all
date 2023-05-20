@@ -1,7 +1,5 @@
 # [1223. 掷骰子模拟](https://leetcode.cn/problems/dice-roll-simulation)
 
-[English Version](/solution/1200-1299/1223.Dice%20Roll%20Simulation/README_EN.md)
-
 ## 题目描述
 
 <p>有一个骰子模拟器会每次投掷的时候生成一个 1 到 6 的随机数。</p>
@@ -11,8 +9,6 @@
 <p>现在，给你一个整数数组&nbsp;<code>rollMax</code>&nbsp;和一个整数&nbsp;<code>n</code>，请你来计算掷&nbsp;<code>n</code>&nbsp;次骰子可得到的不同点数序列的数量。</p>
 
 <p>假如两个序列中至少存在一个元素不同，就认为这两个序列是不同的。由于答案可能很大，所以请返回 <strong>模&nbsp;<code>10^9 + 7</code></strong>&nbsp;之后的结果。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,8 +28,6 @@
 <pre><strong>输入：</strong>n = 3, rollMax = [1,1,1,2,2,3]
 <strong>输出：</strong>181
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

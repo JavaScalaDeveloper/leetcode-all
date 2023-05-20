@@ -1,7 +1,5 @@
 # [1549. 每件商品的最新订单](https://leetcode.cn/problems/the-most-recent-orders-for-each-product)
 
-[English Version](/solution/1500-1599/1549.The%20Most%20Recent%20Orders%20for%20Each%20Product/README_EN.md)
-
 ## 题目描述
 
 <p>表: <code>Customers</code></p>
@@ -16,8 +14,6 @@
 customer_id 是该表主键.
 该表包含消费者的信息.
 </pre>
-
-<p>&nbsp;</p>
 
 <p>表: <code>Orders</code></p>
 
@@ -34,8 +30,6 @@ order_id 是该表主键.
 该表包含消费者customer_id产生的订单.
 不会有商品被相同的用户在一天内下单<strong>超过一次</strong>.</pre>
 
-<p>&nbsp;</p>
-
 <p>表: <code>Products</code></p>
 
 <pre>
@@ -50,15 +44,11 @@ product_id 是该表主键.
 该表包含所有商品的信息.
 </pre>
 
-<p>&nbsp;</p>
-
 <p>写一个SQL 语句,&nbsp;找到每件商品的最新订单(可能有多个).</p>
 
 <p>返回的结果以&nbsp;<code>product_name</code> <strong>升序排列</strong>,&nbsp;如果有排序相同,&nbsp;再以&nbsp;<code>product_id</code> <strong>升序</strong>排列.&nbsp;如果还有排序相同,&nbsp;再以&nbsp;<code>order_id</code> <strong>升序</strong>排列.</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 

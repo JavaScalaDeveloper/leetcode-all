@@ -1,7 +1,5 @@
 # [2247. K 条高速公路的最大旅行费用](https://leetcode.cn/problems/maximum-cost-of-trip-with-k-highways)
 
-[English Version](/solution/2200-2299/2247.Maximum%20Cost%20of%20Trip%20With%20K%20Highways/README_EN.md)
-
 ## 题目描述
 
 <p>一系列高速公路连接从 <code>0</code> 到 <code>n - 1</code> 的 <code>n</code> 个城市。给定一个二维整数数组 <code>highways</code>，其中 <code>highways[i] = [city1<sub>i</sub>, city2<sub>i</sub>, toll<sub>i</sub>]</code> 表示有一条高速公路连接 <code>city1<sub>i</sub></code> 和<code>city2<sub>i</sub></code>，允许一辆汽车从 <code>city1<sub>i</sub></code> 前往 <code>city2<sub>i</sub></code>，<strong>反之亦然</strong>，费用为 <code>toll<sub>i</sub></code>。</p>
@@ -22,8 +20,6 @@
 注意，旅行 4 -&gt; 1 -&gt; 0 -&gt; 1 是不允许的，因为你访问了城市 1 两次。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong class="example">示例 2:</strong></p>
 <img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2247.Maximum%20Cost%20of%20Trip%20With%20K%20Highways/images/image-20220418173342-2.png" style="height: 200px; width: 217px;" />
 <pre>
@@ -31,8 +27,6 @@
 <strong>输出:</strong> -1
 <strong>解释:</strong> 没有长度为 2 的有效行程，因此返回-1。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示:</strong></p>
 

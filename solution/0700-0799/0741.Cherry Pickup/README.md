@@ -1,7 +1,5 @@
 # [741. 摘樱桃](https://leetcode.cn/problems/cherry-pickup)
 
-[English Version](/solution/0700-0799/0741.Cherry%20Pickup/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个 <code>n x n</code> 的网格 <code>grid</code> ，代表一块樱桃地，每个格子由以下三种数字的一种来表示：</p>
@@ -21,8 +19,6 @@
 	<li>如果在 <code>(0, 0)</code> 和 <code>(n - 1, n - 1)</code> 之间不存在一条可经过的路径，则无法摘到任何一个樱桃。</li>
 </ul>
 
-<p>&nbsp;</p>
-
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0700-0799/0741.Cherry%20Pickup/images/grid.jpg" />
 <pre>
@@ -40,8 +36,6 @@
 <b>输入：</b>grid = [[1,1,-1],[1,-1,1],[-1,1,1]]
 <b>输出：</b>0
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,5 @@
 # [2119. 反转两次的数字](https://leetcode.cn/problems/a-number-after-a-double-reversal)
 
-[English Version](/solution/2100-2199/2119.A%20Number%20After%20a%20Double%20Reversal/README_EN.md)
-
 ## 题目描述
 
 <p><strong>反转</strong> 一个整数意味着倒置它的所有位。</p>
@@ -11,8 +9,6 @@
 </ul>
 
 <p>给你一个整数 <code>num</code> ，<strong>反转</strong> <code>num</code> 得到 <code>reversed1</code> ，<strong>接着反转</strong> <code>reversed1</code> 得到 <code>reversed2</code> 。如果 <code>reversed2</code> 等于 <code>num</code> ，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,8 +29,6 @@
 <strong>输出：</strong>true
 <strong>解释：</strong>反转 num 得到 0 ，接着反转 0 得到 0 ，等于 num 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

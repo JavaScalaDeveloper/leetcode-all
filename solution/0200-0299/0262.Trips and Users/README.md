@@ -1,7 +1,5 @@
 # [262. 行程和用户](https://leetcode.cn/problems/trips-and-users)
 
-[English Version](/solution/0200-0299/0262.Trips%20and%20Users/README_EN.md)
-
 ## 题目描述
 
 表：<code>Trips</code>
@@ -24,8 +22,6 @@ id 是这张表的主键。
 status 是一个表示行程状态的枚举类型，枚举成员为(‘completed’, ‘cancelled_by_driver’, ‘cancelled_by_client’) 。
 </pre>
 
-<p>&nbsp;</p>
-
 <div class="original__bRMd">
 <div>
 <p>表：<code>Users</code></p>
@@ -45,8 +41,6 @@ users_id 是这张表的主键。
 banned 是一个表示用户是否被禁止的枚举类型，枚举成员为 (‘Yes’, ‘No’) 。
 </pre>
 
-<p>&nbsp;</p>
-
 <p><strong>取消率</strong> 的计算方式如下：(被司机或乘客取消的非禁止用户生成的订单数量) / (非禁止用户生成的订单总数)。</p>
 
 <p>写一段 SQL 语句查出&nbsp;<code>"2013-10-01"</code><strong>&nbsp;</strong>至&nbsp;<code>"2013-10-03"</code><strong>&nbsp;</strong>期间非禁止用户（<strong>乘客和司机都必须未被禁止</strong>）的取消率。非禁止用户即 banned 为 No 的用户，禁止用户即 banned 为 Yes 的用户。</p>
@@ -54,8 +48,6 @@ banned 是一个表示用户是否被禁止的枚举类型，枚举成员为 (�
 <p>返回结果表中的数据可以按任意顺序组织。其中取消率 <code>Cancellation Rate</code> 需要四舍五入保留 <strong>两位小数</strong> 。</p>
 
 <p>查询结果格式如下例所示。</p>
-
-<p>&nbsp;</p>
 
 <p><strong>示例：</strong></p>
 

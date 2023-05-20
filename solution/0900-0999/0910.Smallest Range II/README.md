@@ -1,7 +1,5 @@
 # [910. 最小差值 II](https://leetcode.cn/problems/smallest-range-ii)
 
-[English Version](/solution/0900-0999/0910.Smallest%20Range%20II/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整数数组 <code>nums</code>，和一个整数&nbsp;<code>k</code> 。</p>
@@ -11,8 +9,6 @@
 <p><code>nums</code> 的 <strong>分数</strong> 是 <code>nums</code> 中最大元素和最小元素的差值。</p>
 
 <p>在更改每个下标对应的值之后，返回 <code>nums</code> 的最小 <strong>分数</strong> 。</p>
-
-<p>&nbsp;</p>
 
 <ol>
 </ol>
@@ -40,8 +36,6 @@
 <strong>输出：</strong>3
 <strong>解释：</strong>将数组变为 [4, 6, 3] 。分数 = max(nums) - min(nums) = 6 - 3 = 3 。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 

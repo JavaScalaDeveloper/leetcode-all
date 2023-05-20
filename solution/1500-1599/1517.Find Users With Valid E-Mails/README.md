@@ -1,7 +1,5 @@
 # [1517. 查找拥有有效邮箱的用户](https://leetcode.cn/problems/find-users-with-valid-e-mails)
 
-[English Version](/solution/1500-1599/1517.Find%20Users%20With%20Valid%20E-Mails/README_EN.md)
-
 ## 题目描述
 
 <p>用户表：&nbsp;Users</p>
@@ -17,8 +15,6 @@
 user_id （用户 ID）是该表的主键。
 这个表包含用户在某网站上注册的信息。有些邮箱是无效的。</pre>
 
-<p>&nbsp;</p>
-
 <p>写一条&nbsp;SQL 语句，查询拥有<strong>有效邮箱</strong>的用户。</p>
 
 <p>有效的邮箱包含符合下列条件的前缀名和域名：</p>
@@ -29,8 +25,6 @@ user_id （用户 ID）是该表的主键。
 </ul>
 
 <p>按任意顺序返回结果表。</p>
-
-<p>&nbsp;</p>
 
 <p>查询格式如下所示：</p>
 

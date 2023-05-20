@@ -1,7 +1,5 @@
 # [256. 粉刷房子](https://leetcode.cn/problems/paint-house)
 
-[English Version](/solution/0200-0299/0256.Paint%20House/README_EN.md)
-
 ## 题目描述
 
 <p>假如有一排房子，共 <code>n</code> 个，每个房子可以被粉刷成红色、蓝色或者绿色这三种颜色中的一种，你需要粉刷所有的房子并且使其相邻的两个房子颜色不能相同。</p>

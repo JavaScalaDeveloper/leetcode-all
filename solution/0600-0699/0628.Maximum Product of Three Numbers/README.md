@@ -1,7 +1,5 @@
 # [628. 三个数的最大乘积](https://leetcode.cn/problems/maximum-product-of-three-numbers)
 
-[English Version](/solution/0600-0699/0628.Maximum%20Product%20of%20Three%20Numbers/README_EN.md)
-
 ## 题目描述
 
 <p>给你一个整型数组 <code>nums</code> ，在数组中找出由三个数组成的最大乘积，并输出这个乘积。</p>

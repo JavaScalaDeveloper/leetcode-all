@@ -1,7 +1,5 @@
 # [44. 通配符匹配](https://leetcode.cn/problems/wildcard-matching)
 
-[English Version](/solution/0000-0099/0044.Wildcard%20Matching/README_EN.md)
-
 ## 题目描述
 
 <div class="title__3Vvk">给你一个输入字符串 (<code>s</code>) 和一个字符模式 (<code>p</code>) ，请你实现一个支持 <code>'?'</code> 和 <code>'*'</code> 匹配规则的通配符匹配：</div>
@@ -41,8 +39,6 @@
 <strong>输出：</strong>false
 <strong>解释：</strong>'?' 可以匹配 'c', 但第二个 'a' 无法匹配 'b'。
 </pre>
-
-<p>&nbsp;</p>
 
 <p><strong>提示：</strong></p>
 
