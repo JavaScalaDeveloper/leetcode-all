@@ -9,19 +9,26 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ParseMenu {
     public static void main(String[] args) {
-        List<String> lines = readLines("change/scripts/input/menu.txt");
-        List<LineData> lineData = parseLines(lines);
+        List<LineData> lineData = getLineData();
         Map<String, String> num2LevelMap = lineData.stream().collect(Collectors.toMap(LineData::getA, LineData::getD));
         System.out.println(num2LevelMap);
         Map<String, List<LineData>> collect = lineData.stream().collect(Collectors.groupingBy(LineData::getD));
+        Set<String> levelSet = lineData.stream().map(LineData::getD).collect(Collectors.toSet());
+        System.out.println(levelSet);
 //        System.out.println(collect);
     }
 
-    private static class LineData {
+    public static List<LineData> getLineData() {
+        List<String> lines = readLines("change/scripts/input/menu.txt");
+        return parseLines(lines);
+    }
+
+    public static class LineData {
         private String a;
         private String b;
         private String c;

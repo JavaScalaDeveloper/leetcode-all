@@ -68,21 +68,6 @@ DFS 先序遍历二叉树，首次搜索到 $u$ 时，标记目前层数 $d$，�
 ### **Java**
 
 ```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 class Solution {
     public TreeNode findNearestRightNode(TreeNode root, TreeNode u) {
         Deque<TreeNode> q = new ArrayDeque<>();
@@ -107,21 +92,6 @@ class Solution {
 ```
 
 ```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 class Solution {
     private TreeNode u;
     private TreeNode ans;

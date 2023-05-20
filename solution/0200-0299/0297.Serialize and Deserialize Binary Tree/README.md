@@ -52,15 +52,6 @@
 ### **Java**
 
 ```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 public class Codec {
     private static final String NULL = "#";
     private static final String SEP = ",";
