@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2215;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
         Set<Integer> s1 = convert(nums1);
         Set<Integer> s2 = convert(nums2);

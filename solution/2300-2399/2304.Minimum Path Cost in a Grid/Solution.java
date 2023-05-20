@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2304;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minPathCost(int[][] grid, int[][] moveCost) {
         int m = grid.length, n = grid[0].length;
         int[] f = grid[0];

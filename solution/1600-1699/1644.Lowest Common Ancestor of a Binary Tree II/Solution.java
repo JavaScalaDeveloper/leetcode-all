@@ -7,7 +7,10 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+package com.solution._1644;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private TreeNode ans;
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

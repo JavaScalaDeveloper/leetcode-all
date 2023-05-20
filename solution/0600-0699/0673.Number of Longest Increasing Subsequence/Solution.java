@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0673;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findNumberOfLIS(int[] nums) {
         int maxLen = 0, ans = 0, n = nums.length;
         int[] dp = new int[n];

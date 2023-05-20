@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2256;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumAverageDifference(int[] nums) {
         int n = nums.length;
         long[] s = new long[n];

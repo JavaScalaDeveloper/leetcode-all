@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0290;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean wordPattern(String pattern, String s) {
         String[] ws = s.split(" ");
         if (pattern.length() != ws.length) {

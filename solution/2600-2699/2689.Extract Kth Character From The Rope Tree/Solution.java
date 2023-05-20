@@ -22,7 +22,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2689;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public char getKthCharacter(RopeTreeNode root, int k) {
         return dfs(root).charAt(k - 1);
     }

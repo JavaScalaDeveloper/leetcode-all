@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1249;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String minRemoveToMakeValid(String s) {
         Deque<Character> stk = new ArrayDeque<>();
         int x = 0;

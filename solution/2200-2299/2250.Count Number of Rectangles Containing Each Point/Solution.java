@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2250;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] countRectangles(int[][] rectangles, int[][] points) {
         int n = 101;
         List<Integer>[] d = new List[n];

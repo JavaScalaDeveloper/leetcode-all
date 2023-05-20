@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0222;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countNodes(TreeNode root) {
         if (root == null) {
             return 0;

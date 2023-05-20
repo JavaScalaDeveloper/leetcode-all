@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2562;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long findTheArrayConcVal(int[] nums) {
         long ans = 0;
         int i = 0, j = nums.length - 1;

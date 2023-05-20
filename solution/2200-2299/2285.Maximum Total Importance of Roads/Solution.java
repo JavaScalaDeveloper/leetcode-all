@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2285;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maximumImportance(int n, int[][] roads) {
         int[] deg = new int[n];
         for (int[] r : roads) {

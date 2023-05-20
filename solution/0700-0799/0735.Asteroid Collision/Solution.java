@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0735;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] asteroidCollision(int[] asteroids) {
         Deque<Integer> d = new ArrayDeque<>();
         for (int a : asteroids) {

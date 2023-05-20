@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1539;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findKthPositive(int[] arr, int k) {
         if (arr[0] > k) {
             return k;

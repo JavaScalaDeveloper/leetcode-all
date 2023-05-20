@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1176;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int dietPlanPerformance(int[] calories, int k, int lower, int upper) {
         int n = calories.length;
         int[] s = new int[n + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0797;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
         int n = graph.length;
         Queue<List<Integer>> queue = new ArrayDeque<>();

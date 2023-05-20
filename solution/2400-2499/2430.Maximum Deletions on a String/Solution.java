@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2430;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int deleteString(String s) {
         int n = s.length();
         int[][] g = new int[n + 1][n + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0240;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length, n = matrix[0].length;
         int i = m - 1, j = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2333;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minSumSquareDiff(int[] nums1, int[] nums2, int k1, int k2) {
         int n = nums1.length;
         int[] d = new int[n];

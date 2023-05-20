@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._1669;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
         ListNode p = list1, q = list1;
         while (--a > 0) {

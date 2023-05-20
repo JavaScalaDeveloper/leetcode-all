@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1727;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestSubmatrix(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         for (int i = 1; i < m; ++i) {

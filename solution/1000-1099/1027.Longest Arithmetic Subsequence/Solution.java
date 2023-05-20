@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1027;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestArithSeqLength(int[] nums) {
         int n = nums.length;
         int ans = 0;

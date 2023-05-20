@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2121;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long[] getDistances(int[] arr) {
         Map<Integer, List<Integer>> d = new HashMap<>();
         int n = arr.length;

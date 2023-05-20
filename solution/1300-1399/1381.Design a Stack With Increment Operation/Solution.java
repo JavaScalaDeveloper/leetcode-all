@@ -1,4 +1,7 @@
-class CustomStack {
+package com.solution._1381;
+import change.datastructure.*;
+import java.util.*;
+public class CustomStack {
     private int[] s;
     private int t;
 

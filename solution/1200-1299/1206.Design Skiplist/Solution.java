@@ -1,4 +1,7 @@
-class Skiplist {
+package com.solution._1206;
+import change.datastructure.*;
+import java.util.*;
+public class Skiplist {
     private static final int MAX_LEVEL = 32;
     private static final double P = 0.25;
     private static final Random RANDOM = new Random();

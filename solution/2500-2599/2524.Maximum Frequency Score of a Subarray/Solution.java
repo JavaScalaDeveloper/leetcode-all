@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2524;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxFrequencyScore(int[] nums, int k) {
         final int mod = (int) 1e9 + 7;
         Map<Integer, Integer> cnt = new HashMap<>();

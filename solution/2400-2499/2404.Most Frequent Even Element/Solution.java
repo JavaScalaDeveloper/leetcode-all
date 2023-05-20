@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2404;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int mostFrequentEven(int[] nums) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (int x : nums) {

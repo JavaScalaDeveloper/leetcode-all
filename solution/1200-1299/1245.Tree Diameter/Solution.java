@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1245;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Integer, Set<Integer>> g;
     private boolean[] vis;
     private int next;

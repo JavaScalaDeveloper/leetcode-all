@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1640;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canFormArray(int[] arr, int[][] pieces) {
         Map<Integer, int[]> d = new HashMap<>();
         for (var p : pieces) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0650;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSteps(int n) {
         int res = 0;
         for (int i = 2; n > 1; ++i) {

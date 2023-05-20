@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0634;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findDerangement(int n) {
         final int mod = (int) 1e9 + 7;
         long a = 1, b = 0;

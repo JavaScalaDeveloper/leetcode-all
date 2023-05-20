@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1365;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
         int[] cnt = new int[102];
         for (int x : nums) {

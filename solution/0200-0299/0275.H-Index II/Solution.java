@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0275;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int hIndex(int[] citations) {
         int n = citations.length;
         int left = 0, right = n;

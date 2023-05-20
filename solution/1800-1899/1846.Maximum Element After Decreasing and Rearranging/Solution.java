@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1846;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumElementAfterDecrementingAndRearranging(int[] arr) {
         Arrays.sort(arr);
         arr[0] = 1;

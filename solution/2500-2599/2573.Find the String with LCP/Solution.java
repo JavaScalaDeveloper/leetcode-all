@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2573;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String findTheString(int[][] lcp) {
         int n = lcp.length;
         char[] s = new char[n];

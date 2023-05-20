@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0712;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumDeleteSum(String s1, String s2) {
         int m = s1.length(), n = s2.length();
         int[][] f = new int[m + 1][n + 1];

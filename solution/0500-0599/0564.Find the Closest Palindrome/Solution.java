@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0564;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String nearestPalindromic(String n) {
         long x = Long.parseLong(n);
         long ans = -1;

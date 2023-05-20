@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0166;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String fractionToDecimal(int numerator, int denominator) {
         if (numerator == 0) {
             return "0";

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0408;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean validWordAbbreviation(String word, String abbr) {
         int m = word.length(), n = abbr.length();
         int i = 0, j = 0;

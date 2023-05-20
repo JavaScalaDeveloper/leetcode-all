@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1247;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumSwap(String s1, String s2) {
         int xy = 0, yx = 0;
         for (int i = 0; i < s1.length(); ++i) {

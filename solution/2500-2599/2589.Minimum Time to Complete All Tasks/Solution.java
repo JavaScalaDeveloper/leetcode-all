@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2589;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMinimumTime(int[][] tasks) {
         Arrays.sort(tasks, (a, b) -> a[1] - b[1]);
         int[] vis = new int[2010];

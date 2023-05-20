@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0331;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isValidSerialization(String preorder) {
         String[] strs = preorder.split(",");
         int diff = 1;

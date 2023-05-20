@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0436;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findRightInterval(int[][] intervals) {
         int n = intervals.length;
         List<int[]> starts = new ArrayList<>();

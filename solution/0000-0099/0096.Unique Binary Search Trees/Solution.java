@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0096;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numTrees(int n) {
         int[] dp = new int[n + 1];
         dp[0] = 1;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1704;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final Set<Character> VOWELS
         = Set.of('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U');
 

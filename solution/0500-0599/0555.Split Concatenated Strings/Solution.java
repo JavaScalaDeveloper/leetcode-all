@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0555;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String splitLoopedString(String[] strs) {
         int n = strs.length;
         for (int i = 0; i < n; ++i) {

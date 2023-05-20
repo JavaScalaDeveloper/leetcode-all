@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1110;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<TreeNode> delNodes(TreeNode root, int[] to_delete) {
         boolean[] del = new boolean[1001];
         for (int d : to_delete) {

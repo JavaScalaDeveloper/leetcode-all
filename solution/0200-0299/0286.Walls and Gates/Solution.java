@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0286;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void wallsAndGates(int[][] rooms) {
         int m = rooms.length;
         int n = rooms[0].length;

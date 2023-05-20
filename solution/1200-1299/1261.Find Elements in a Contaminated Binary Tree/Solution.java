@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class FindElements {
+package com.solution._1261;
+import change.datastructure.*;
+import java.util.*;
+public class FindElements {
     private Set<Integer> vis = new HashSet<>();
 
     public FindElements(TreeNode root) {

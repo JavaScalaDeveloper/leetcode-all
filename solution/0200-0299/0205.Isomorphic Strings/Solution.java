@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0205;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isIsomorphic(String s, String t) {
         int[] d1 = new int[256];
         int[] d2 = new int[256];

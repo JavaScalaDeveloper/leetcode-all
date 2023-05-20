@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1615;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximalNetworkRank(int n, int[][] roads) {
         int[][] g = new int[n][n];
         int[] cnt = new int[n];

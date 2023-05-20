@@ -1,4 +1,7 @@
-class NumMatrix {
+package com.solution._0304;
+import change.datastructure.*;
+import java.util.*;
+public class NumMatrix {
     private int[][] s;
 
     public NumMatrix(int[][] matrix) {

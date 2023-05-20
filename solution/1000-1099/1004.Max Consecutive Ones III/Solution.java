@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1004;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestOnes(int[] nums, int k) {
         int l = 0, r = 0;
         while (r < nums.length) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1953;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long numberOfWeeks(int[] milestones) {
         int mx = 0;
         long s = 0;

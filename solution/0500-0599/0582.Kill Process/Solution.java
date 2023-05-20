@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0582;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Integer, List<Integer>> g;
     private List<Integer> ans;
 

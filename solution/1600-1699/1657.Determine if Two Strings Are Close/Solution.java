@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1657;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean closeStrings(String word1, String word2) {
         int[] cnt1 = new int[26];
         int[] cnt2 = new int[26];

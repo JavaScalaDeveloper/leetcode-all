@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1037;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isBoomerang(int[][] points) {
         int x1 = points[0][0], y1 = points[0][1];
         int x2 = points[1][0], y2 = points[1][1];

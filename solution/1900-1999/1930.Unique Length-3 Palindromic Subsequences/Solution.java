@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1930;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countPalindromicSubsequence(String s) {
         int ans = 0;
         for (char c = 'a'; c <= 'z'; ++c) {

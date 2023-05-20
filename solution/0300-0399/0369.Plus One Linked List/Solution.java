@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._0369;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode plusOne(ListNode head) {
         ListNode dummy = new ListNode(0, head);
         ListNode target = dummy;

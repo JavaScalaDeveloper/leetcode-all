@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1999;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findInteger(int k, int digit1, int digit2) {
         if (digit1 == 0 && digit2 == 0) {
             return -1;

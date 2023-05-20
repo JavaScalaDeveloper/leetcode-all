@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1482;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
         if (m * k > bloomDay.length) {
             return -1;

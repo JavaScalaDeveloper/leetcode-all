@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2150;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> findLonely(int[] nums) {
         Map<Integer, Integer> counter = new HashMap<>();
         for (int num : nums) {

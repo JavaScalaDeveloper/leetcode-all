@@ -1,4 +1,7 @@
-class MedianFinder {
+package com.solution._0480;
+import change.datastructure.*;
+import java.util.*;
+public class MedianFinder {
     private PriorityQueue<Integer> small = new PriorityQueue<>(Comparator.reverseOrder());
     private PriorityQueue<Integer> large = new PriorityQueue<>();
     private Map<Integer, Integer> delayed = new HashMap<>();
@@ -65,7 +68,10 @@ class MedianFinder {
     }
 }
 
-class Solution {
+package com.solution._0480;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double[] medianSlidingWindow(int[] nums, int k) {
         MedianFinder finder = new MedianFinder(k);
         for (int i = 0; i < k; ++i) {

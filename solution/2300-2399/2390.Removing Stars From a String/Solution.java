@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2390;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String removeStars(String s) {
         StringBuilder ans = new StringBuilder();
         for (int i = 0; i < s.length(); ++i) {

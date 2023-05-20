@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0433;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minMutation(String start, String end, String[] bank) {
         Set<String> s = new HashSet<>();
         for (String b : bank) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0386;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> lexicalOrder(int n) {
         List<Integer> ans = new ArrayList<>();
         int v = 1;

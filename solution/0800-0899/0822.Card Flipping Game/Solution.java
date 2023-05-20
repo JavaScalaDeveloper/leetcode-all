@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0822;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int flipgame(int[] fronts, int[] backs) {
         Set<Integer> s = new HashSet<>();
         int n = fronts.length;

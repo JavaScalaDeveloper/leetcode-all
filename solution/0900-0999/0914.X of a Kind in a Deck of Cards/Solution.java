@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0914;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean hasGroupsSizeX(int[] deck) {
         int[] cnt = new int[10000];
         for (int v : deck) {

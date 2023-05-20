@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0056;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
         int st = intervals[0][0], ed = intervals[0][1];

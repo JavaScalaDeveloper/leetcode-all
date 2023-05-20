@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0713;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSubarrayProductLessThanK(int[] nums, int k) {
         int ans = 0;
         for (int i = 0, j = 0, s = 1; i < nums.length; ++i) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1461;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean hasAllCodes(String s, int k) {
         int n = s.length();
         if (n - k + 1 < (1 << k)) {

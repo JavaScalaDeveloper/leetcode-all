@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1465;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int MOD = (int) 1e9 + 7;
 
     public int maxArea(int h, int w, int[] horizontalCuts, int[] verticalCuts) {

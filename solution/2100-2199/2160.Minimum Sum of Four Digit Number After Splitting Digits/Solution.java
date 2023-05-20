@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2160;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumSum(int num) {
         int[] nums = new int[4];
         for (int i = 0; num != 0; ++i) {

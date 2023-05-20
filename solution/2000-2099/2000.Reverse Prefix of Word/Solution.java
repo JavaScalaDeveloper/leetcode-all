@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2000;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reversePrefix(String word, char ch) {
         int j = word.indexOf(ch);
         if (j == -1) {

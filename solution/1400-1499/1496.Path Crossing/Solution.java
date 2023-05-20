@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1496;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isPathCrossing(String path) {
         int i = 0, j = 0;
         Set<Integer> vis = new HashSet<>();

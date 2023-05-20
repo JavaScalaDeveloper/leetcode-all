@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2533;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int goodBinaryStrings(int minLength, int maxLength, int oneGroup, int zeroGroup) {
         final int mod = (int) 1e9 + 7;
         int[] f = new int[maxLength + 1];

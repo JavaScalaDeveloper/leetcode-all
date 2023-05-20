@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1190;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reverseParentheses(String s) {
         int n = s.length();
         int[] d = new int[n];

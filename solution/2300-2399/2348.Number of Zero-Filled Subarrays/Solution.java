@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2348;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long zeroFilledSubarray(int[] nums) {
         long ans = 0;
         int cnt = 0;

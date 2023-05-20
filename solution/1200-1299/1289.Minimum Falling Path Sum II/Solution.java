@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1289;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minFallingPathSum(int[][] grid) {
         int f = 0, g = 0;
         int fp = -1;

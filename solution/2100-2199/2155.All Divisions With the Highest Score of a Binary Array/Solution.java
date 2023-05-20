@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2155;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> maxScoreIndices(int[] nums) {
         int left = 0, right = sum(nums);
         int mx = right;

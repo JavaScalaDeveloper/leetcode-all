@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1546;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxNonOverlapping(int[] nums, int target) {
         int i = 0, n = nums.length;
         int ans = 0;

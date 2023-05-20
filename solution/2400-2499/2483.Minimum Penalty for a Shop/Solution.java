@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2483;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int bestClosingTime(String customers) {
         int n = customers.length();
         int[] s = new int[n + 1];

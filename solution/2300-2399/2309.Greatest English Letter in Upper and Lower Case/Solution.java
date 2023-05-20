@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2309;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String greatestLetter(String s) {
         int mask1 = 0, mask2 = 0;
         for (int i = 0; i < s.length(); ++i) {

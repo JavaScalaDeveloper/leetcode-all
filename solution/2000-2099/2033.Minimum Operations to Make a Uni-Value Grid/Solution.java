@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2033;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minOperations(int[][] grid, int x) {
         int m = grid.length, n = grid[0].length;
         int[] nums = new int[m * n];

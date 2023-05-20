@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1673;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] mostCompetitive(int[] nums, int k) {
         Deque<Integer> stk = new ArrayDeque<>();
         int n = nums.length;

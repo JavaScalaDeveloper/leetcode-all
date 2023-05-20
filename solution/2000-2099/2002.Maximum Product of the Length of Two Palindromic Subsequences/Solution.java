@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2002;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxProduct(String s) {
         int n = s.length();
         boolean[] p = new boolean[1 << n];

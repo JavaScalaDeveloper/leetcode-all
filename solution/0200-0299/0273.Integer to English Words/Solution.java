@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0273;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static Map<Integer, String> map;
 
     static {

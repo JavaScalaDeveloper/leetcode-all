@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1255;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxScoreWords(String[] words, char[] letters, int[] score) {
         int[] cnt = new int[26];
         for (int i = 0; i < letters.length; ++i) {

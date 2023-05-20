@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0588;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     String name;
     boolean isFile;
     StringBuilder content = new StringBuilder();
@@ -35,7 +38,10 @@ class Trie {
     }
 }
 
-class FileSystem {
+package com.solution._0588;
+import change.datastructure.*;
+import java.util.*;
+public class FileSystem {
     private Trie root = new Trie();
 
     public FileSystem() {

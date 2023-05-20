@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1823;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findTheWinner(int n, int k) {
         if (n == 1) {
             return 1;

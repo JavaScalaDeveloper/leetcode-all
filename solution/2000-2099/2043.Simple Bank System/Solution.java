@@ -1,4 +1,7 @@
-class Bank {
+package com.solution._2043;
+import change.datastructure.*;
+import java.util.*;
+public class Bank {
     private long[] balance;
     private int n;
 

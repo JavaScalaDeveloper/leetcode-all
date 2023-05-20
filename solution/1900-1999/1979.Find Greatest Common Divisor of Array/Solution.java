@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1979;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findGCD(int[] nums) {
         int a = 1, b = 1000;
         for (int x : nums) {

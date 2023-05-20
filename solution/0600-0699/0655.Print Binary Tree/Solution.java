@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0655;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<String>> printTree(TreeNode root) {
         int h = height(root);
         int m = h + 1, n = (1 << (h + 1)) - 1;

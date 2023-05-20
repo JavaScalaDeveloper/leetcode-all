@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1430;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] arr;
 
     public boolean isValidSequence(TreeNode root, int[] arr) {

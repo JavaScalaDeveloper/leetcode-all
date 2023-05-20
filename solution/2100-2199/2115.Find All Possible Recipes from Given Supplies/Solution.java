@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2115;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> findAllRecipes(
         String[] recipes, List<List<String>> ingredients, String[] supplies) {
         Map<String, List<String>> g = new HashMap<>();

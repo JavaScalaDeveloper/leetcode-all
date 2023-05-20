@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0451;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String frequencySort(String s) {
         Map<Character, Integer> cnt = new HashMap<>(52);
         for (int i = 0; i < s.length(); ++i) {

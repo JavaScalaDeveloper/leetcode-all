@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0962;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxWidthRamp(int[] nums) {
         int n = nums.length;
         Deque<Integer> stk = new ArrayDeque<>();

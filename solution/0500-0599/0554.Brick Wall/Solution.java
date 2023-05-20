@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0554;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int leastBricks(List<List<Integer>> wall) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (List<Integer> row : wall) {

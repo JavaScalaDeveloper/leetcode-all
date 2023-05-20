@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0391;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isRectangleCover(int[][] rectangles) {
         long area = 0;
         int minX = rectangles[0][0], minY = rectangles[0][1];

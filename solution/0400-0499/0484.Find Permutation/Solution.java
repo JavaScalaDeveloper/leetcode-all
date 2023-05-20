@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0484;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findPermutation(String s) {
         int n = s.length();
         int[] ans = new int[n + 1];

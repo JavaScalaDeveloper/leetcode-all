@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0365;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canMeasureWater(int jug1Capacity, int jug2Capacity, int targetCapacity) {
         if (jug1Capacity + jug2Capacity < targetCapacity) {
             return false;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1309;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String freqAlphabets(String s) {
         int i = 0, n = s.length();
         StringBuilder res = new StringBuilder();

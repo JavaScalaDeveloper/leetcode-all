@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0897;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private TreeNode prev;
     public TreeNode increasingBST(TreeNode root) {
         TreeNode dummy = new TreeNode(0, null, root);

@@ -6,7 +6,10 @@
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+package com.solution._0237;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void deleteNode(ListNode node) {
         node.val = node.next.val;
         node.next = node.next.next;

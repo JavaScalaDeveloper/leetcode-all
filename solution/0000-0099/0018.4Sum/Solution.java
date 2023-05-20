@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0018;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         int n = nums.length;
         if (n < 4) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0229;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> majorityElement(int[] nums) {
         int n1 = 0, n2 = 0;
         int m1 = 0, m2 = 1;

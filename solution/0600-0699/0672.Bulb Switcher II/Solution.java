@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0672;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int flipLights(int n, int presses) {
         int[] ops = new int[] {0b111111, 0b010101, 0b101010, 0b100100};
         Set<Integer> vis = new HashSet<>();

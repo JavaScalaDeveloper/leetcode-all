@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0368;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> largestDivisibleSubset(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;

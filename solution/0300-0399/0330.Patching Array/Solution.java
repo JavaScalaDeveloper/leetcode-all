@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0330;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minPatches(int[] nums, int n) {
         long x = 1;
         int ans = 0;

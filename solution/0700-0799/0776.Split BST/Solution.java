@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0776;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int t;
 
     public TreeNode[] splitBST(TreeNode root, int target) {

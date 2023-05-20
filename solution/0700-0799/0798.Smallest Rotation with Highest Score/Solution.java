@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0798;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int bestRotation(int[] nums) {
         int n = nums.length;
         int[] d = new int[n];

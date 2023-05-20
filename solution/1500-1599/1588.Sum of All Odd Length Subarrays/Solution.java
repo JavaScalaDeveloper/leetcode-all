@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1588;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int sumOddLengthSubarrays(int[] arr) {
         int n = arr.length;
         int ans = 0;

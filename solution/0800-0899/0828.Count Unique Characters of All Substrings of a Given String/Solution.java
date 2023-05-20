@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0828;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int uniqueLetterString(String s) {
         List<Integer>[] d = new List[26];
         Arrays.setAll(d, k -> new ArrayList<>());

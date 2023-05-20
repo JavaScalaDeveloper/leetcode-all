@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1638;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countSubstrings(String s, String t) {
         int ans = 0;
         int m = s.length(), n = t.length();

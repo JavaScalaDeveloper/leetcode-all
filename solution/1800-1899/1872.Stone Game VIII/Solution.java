@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1872;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int stoneGameVIII(int[] stones) {
         int n = stones.length;
         int[] preSum = new int[n];

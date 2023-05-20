@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1902;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDepthBST(int[] order) {
         TreeMap<Integer, Integer> tm = new TreeMap<>();
         tm.put(0, 0);

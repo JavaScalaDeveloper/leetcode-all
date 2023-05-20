@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0228;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> summaryRanges(int[] nums) {
         List<String> ans = new ArrayList<>();
         for (int i = 0, j, n = nums.length; i < n; i = j + 1) {

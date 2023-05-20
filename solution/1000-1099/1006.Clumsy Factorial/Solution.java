@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1006;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int clumsy(int N) {
         Deque<Integer> s = new ArrayDeque<>();
         s.offerLast(N);

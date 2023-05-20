@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1959;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSpaceWastedKResizing(int[] nums, int k) {
         ++k;
         int n = nums.length;

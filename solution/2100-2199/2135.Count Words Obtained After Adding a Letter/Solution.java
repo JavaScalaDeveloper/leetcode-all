@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2135;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int wordCount(String[] startWords, String[] targetWords) {
         Set<Integer> s = new HashSet<>();
         for (String word : startWords) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1342;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numberOfSteps(int num) {
         int ans = 0;
         while (num != 0) {

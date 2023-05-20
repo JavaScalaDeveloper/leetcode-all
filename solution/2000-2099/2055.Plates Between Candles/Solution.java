@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2055;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] platesBetweenCandles(String s, int[][] queries) {
         int n = s.length();
         int[] presum = new int[n + 1];

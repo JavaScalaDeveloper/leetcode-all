@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1377;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double frogPosition(int n, int[][] edges, int t, int target) {
         List<Integer>[] g = new List[n + 1];
         Arrays.setAll(g, k -> new ArrayList<>());

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0110;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isBalanced(TreeNode root) {
         return height(root) >= 0;
     }

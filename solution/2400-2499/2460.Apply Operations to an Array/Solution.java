@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2460;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] applyOperations(int[] nums) {
         int n = nums.length;
         for (int i = 0; i < n - 1; ++i) {

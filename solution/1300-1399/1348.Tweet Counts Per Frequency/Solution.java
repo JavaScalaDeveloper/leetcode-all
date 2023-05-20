@@ -1,4 +1,7 @@
-class TweetCounts {
+package com.solution._1348;
+import change.datastructure.*;
+import java.util.*;
+public class TweetCounts {
     private Map<String, TreeMap<Integer, Integer>> data = new HashMap<>();
 
     public TweetCounts() {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2684;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxMoves(int[][] grid) {
         int[][] dirs = {{-1, 1}, {0, 1}, {1, 1}};
         int m = grid.length, n = grid[0].length;

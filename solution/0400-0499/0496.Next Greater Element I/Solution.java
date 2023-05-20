@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0496;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Deque<Integer> stk = new ArrayDeque<>();
         Map<Integer, Integer> mp = new HashMap<>();

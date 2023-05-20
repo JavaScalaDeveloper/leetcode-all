@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1658;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minOperations(int[] nums, int x) {
         x = -x;
         for (int v : nums) {

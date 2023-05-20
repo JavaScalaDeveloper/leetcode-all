@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0370;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] getModifiedArray(int length, int[][] updates) {
         int[] d = new int[length];
         for (var e : updates) {

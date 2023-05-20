@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2120;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] executeInstructions(int n, int[] startPos, String s) {
         int m = s.length();
         int[] ans = new int[m];

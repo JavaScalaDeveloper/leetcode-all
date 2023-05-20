@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0881;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numRescueBoats(int[] people, int limit) {
         Arrays.sort(people);
         int ans = 0;

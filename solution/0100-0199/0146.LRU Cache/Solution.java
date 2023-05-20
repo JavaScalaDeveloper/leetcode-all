@@ -1,4 +1,7 @@
-class Node {
+package com.solution._0146;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     int key;
     int val;
     Node prev;
@@ -13,7 +16,10 @@ class Node {
     }
 }
 
-class LRUCache {
+package com.solution._0146;
+import change.datastructure.*;
+import java.util.*;
+public class LRUCache {
     private Map<Integer, Node> cache = new HashMap<>();
     private Node head = new Node();
     private Node tail = new Node();

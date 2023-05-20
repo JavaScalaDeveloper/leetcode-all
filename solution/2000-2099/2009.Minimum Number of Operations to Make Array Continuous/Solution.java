@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2009;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minOperations(int[] nums) {
         int n = nums.length;
         Arrays.sort(nums);

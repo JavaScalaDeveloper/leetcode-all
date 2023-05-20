@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1138;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String alphabetBoardPath(String target) {
         StringBuilder ans = new StringBuilder();
         int i = 0, j = 0;

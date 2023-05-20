@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1297;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {
         int ans = 0;
         Map<String, Integer> cnt = new HashMap<>();

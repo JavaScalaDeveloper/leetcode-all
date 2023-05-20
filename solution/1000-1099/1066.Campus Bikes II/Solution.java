@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1066;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int assignBikes(int[][] workers, int[][] bikes) {
         int n = workers.length;
         int m = bikes.length;

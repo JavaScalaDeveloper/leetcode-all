@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2303;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double calculateTax(int[][] brackets, int income) {
         int ans = 0, prev = 0;
         for (var e : brackets) {

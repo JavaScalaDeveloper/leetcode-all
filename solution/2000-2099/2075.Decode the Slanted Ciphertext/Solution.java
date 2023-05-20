@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2075;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String decodeCiphertext(String encodedText, int rows) {
         StringBuilder ans = new StringBuilder();
         int cols = encodedText.length() / rows;

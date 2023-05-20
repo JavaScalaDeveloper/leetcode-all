@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1275;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String tictactoe(int[][] moves) {
         int n = moves.length;
         int[] cnt = new int[8];

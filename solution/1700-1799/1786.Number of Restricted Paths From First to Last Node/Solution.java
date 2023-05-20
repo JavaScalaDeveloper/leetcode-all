@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1786;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int INF = Integer.MAX_VALUE;
     private static final int MOD = (int) 1e9 + 7;
     private List<int[]>[] g;

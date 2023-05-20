@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0996;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSquarefulPerms(int[] nums) {
         int n = nums.length;
         int[][] f = new int[1 << n][n];

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class BSTIterator {
+package com.solution._0173;
+import change.datastructure.*;
+import java.util.*;
+public class BSTIterator {
     private Deque<TreeNode> stack = new LinkedList<>();
 
     public BSTIterator(TreeNode root) {

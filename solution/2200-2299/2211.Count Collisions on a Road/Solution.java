@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2211;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countCollisions(String directions) {
         char[] ds = directions.toCharArray();
         int n = ds.length;

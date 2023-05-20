@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2398;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {
         Deque<Integer> q = new ArrayDeque<>();
         int n = chargeTimes.length;

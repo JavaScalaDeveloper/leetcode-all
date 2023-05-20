@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0035;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int searchInsert(int[] nums, int target) {
         int left = 0, right = nums.length;
         while (left < right) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1775;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minOperations(int[] nums1, int[] nums2) {
         int s1 = Arrays.stream(nums1).sum();
         int s2 = Arrays.stream(nums2).sum();

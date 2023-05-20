@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0221;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximalSquare(char[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         int[][] dp = new int[m + 1][n + 1];

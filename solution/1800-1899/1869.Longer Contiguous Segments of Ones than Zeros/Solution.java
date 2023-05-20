@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1869;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkZeroOnes(String s) {
         int n0 = 0, n1 = 0;
         int t0 = 0, t1 = 0;

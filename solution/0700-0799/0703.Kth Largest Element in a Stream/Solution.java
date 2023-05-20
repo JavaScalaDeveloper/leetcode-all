@@ -1,4 +1,7 @@
-class KthLargest {
+package com.solution._0703;
+import change.datastructure.*;
+import java.util.*;
+public class KthLargest {
     private PriorityQueue<Integer> q;
     private int size;
 

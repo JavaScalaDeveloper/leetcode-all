@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0988;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private StringBuilder path;
     private String ans;
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2206;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean divideArray(int[] nums) {
         int[] cnt = new int[510];
         for (int v : nums) {

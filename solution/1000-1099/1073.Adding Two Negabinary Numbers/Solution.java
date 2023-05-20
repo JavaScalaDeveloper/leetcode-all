@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1073;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] addNegabinary(int[] arr1, int[] arr2) {
         int i = arr1.length - 1, j = arr2.length - 1;
         List<Integer> ans = new ArrayList<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1940;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> longestCommomSubsequence(int[][] arrays) {
         Map<Integer, Integer> counter = new HashMap<>();
         for (int[] array : arrays) {

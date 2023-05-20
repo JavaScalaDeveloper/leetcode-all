@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1792;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double maxAverageRatio(int[][] classes, int extraStudents) {
         PriorityQueue<double[]> pq = new PriorityQueue<>((a, b) -> {
             double x = (a[0] + 1) / (a[1] + 1) - a[0] / a[1];

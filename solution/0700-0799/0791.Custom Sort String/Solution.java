@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0791;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String customSortString(String order, String s) {
         int[] cnt = new int[26];
         for (int i = 0; i < s.length(); ++i) {

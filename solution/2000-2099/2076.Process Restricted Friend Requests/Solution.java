@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2076;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public boolean[] friendRequests(int n, int[][] restrictions, int[][] requests) {

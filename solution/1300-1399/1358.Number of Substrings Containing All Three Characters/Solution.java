@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1358;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numberOfSubstrings(String s) {
         int[] d = new int[] {-1, -1, -1};
         int ans = 0;

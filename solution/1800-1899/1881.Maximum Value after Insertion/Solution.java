@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1881;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String maxValue(String n, int x) {
         int i = 0;
         if (n.charAt(0) != '-') {

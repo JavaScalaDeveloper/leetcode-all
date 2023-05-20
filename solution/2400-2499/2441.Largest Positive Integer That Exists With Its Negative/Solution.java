@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2441;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMaxK(int[] nums) {
         int ans = -1;
         Set<Integer> s = new HashSet<>();

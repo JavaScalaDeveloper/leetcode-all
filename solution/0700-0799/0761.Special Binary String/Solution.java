@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0761;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String makeLargestSpecial(String s) {
         if ("".equals(s)) {
             return "";

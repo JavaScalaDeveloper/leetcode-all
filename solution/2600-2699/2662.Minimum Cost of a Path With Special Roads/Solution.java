@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2662;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumCost(int[] start, int[] target, int[][] specialRoads) {
         int ans = 1 << 30;
         int n = 1000000;

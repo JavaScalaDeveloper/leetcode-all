@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1997;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int firstDayBeenInAllRooms(int[] nextVisit) {
         int n = nextVisit.length;
         long[] f = new long[n];

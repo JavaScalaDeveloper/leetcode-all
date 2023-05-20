@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0926;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minFlipsMonoIncr(String s) {
         int n = s.length();
         int[] left = new int[n + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0065;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isNumber(String s) {
         int n = s.length();
         int i = 0;

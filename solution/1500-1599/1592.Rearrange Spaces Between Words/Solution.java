@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1592;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reorderSpaces(String text) {
         int cnt = 0;
         for (char c : text.toCharArray()) {

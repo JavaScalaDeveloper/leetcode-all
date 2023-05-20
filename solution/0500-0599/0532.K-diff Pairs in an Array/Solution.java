@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0532;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findPairs(int[] nums, int k) {
         Set<Integer> vis = new HashSet<>();
         Set<Integer> ans = new HashSet<>();

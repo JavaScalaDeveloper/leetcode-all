@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0403;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Boolean[][] f;
     private Map<Integer, Integer> pos = new HashMap<>();
     private int[] stones;

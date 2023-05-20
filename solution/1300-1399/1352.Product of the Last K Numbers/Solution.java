@@ -1,4 +1,7 @@
-class ProductOfNumbers {
+package com.solution._1352;
+import change.datastructure.*;
+import java.util.*;
+public class ProductOfNumbers {
     private List<Integer> s = new ArrayList<>();
 
     public ProductOfNumbers() {

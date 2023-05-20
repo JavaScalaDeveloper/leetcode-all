@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0950;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] deckRevealedIncreasing(int[] deck) {
         Deque<Integer> q = new ArrayDeque<>();
         Arrays.sort(deck);

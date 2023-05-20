@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1710;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumUnits(int[][] boxTypes, int truckSize) {
         Arrays.sort(boxTypes, (a, b) -> b[1] - a[1]);
         int ans = 0;

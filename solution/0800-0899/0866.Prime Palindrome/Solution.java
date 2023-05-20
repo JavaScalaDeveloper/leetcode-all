@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0866;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int primePalindrome(int n) {
         while (true) {
             if (reverse(n) == n && isPrime(n)) {

@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0425;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
     List<Integer> v = new ArrayList<>();
 
@@ -27,7 +30,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._0425;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Trie trie = new Trie();
     private String[] words;
     private List<List<String>> ans = new ArrayList<>();

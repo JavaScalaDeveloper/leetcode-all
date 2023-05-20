@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1061;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public String smallestEquivalentString(String s1, String s2, String baseStr) {

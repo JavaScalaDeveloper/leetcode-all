@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0014;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String longestCommonPrefix(String[] strs) {
         int n = strs.length;
         for (int i = 0; i < strs[0].length(); ++i) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0905;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] sortArrayByParity(int[] nums) {
         for (int i = 0, j = nums.length - 1; i < j;) {
             if (nums[i] % 2 == 1) {

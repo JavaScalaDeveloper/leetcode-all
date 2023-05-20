@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0174;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int calculateMinimumHP(int[][] dungeon) {
         int m = dungeon.length, n = dungeon[0].length;
         int[][] dp = new int[m + 1][n + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2639;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findColumnWidth(int[][] grid) {
         int n = grid[0].length;
         int[] ans = new int[n];

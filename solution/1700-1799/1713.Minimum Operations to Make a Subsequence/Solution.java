@@ -1,4 +1,7 @@
-class BinaryIndexedTree {
+package com.solution._1713;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 
@@ -28,7 +31,10 @@ class BinaryIndexedTree {
     }
 }
 
-class Solution {
+package com.solution._1713;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minOperations(int[] target, int[] arr) {
         Map<Integer, Integer> d = new HashMap<>();
         for (int i = 0; i < target.length; ++i) {

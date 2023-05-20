@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0500;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] findWords(String[] words) {
         String s = "12210111011122000010020202";
         List<String> ans = new ArrayList<>();

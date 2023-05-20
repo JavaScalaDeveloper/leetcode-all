@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1492;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kthFactor(int n, int k) {
         int i = 1;
         for (; i < n / i; ++i) {

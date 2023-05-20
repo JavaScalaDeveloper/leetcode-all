@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1752;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean check(int[] nums) {
         int cnt = 0;
         for (int i = 0, n = nums.length; i < n; ++i) {

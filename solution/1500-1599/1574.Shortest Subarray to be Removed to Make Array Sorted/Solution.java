@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1574;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLengthOfShortestSubarray(int[] arr) {
         int n = arr.length;
         int i = 0, j = n - 1;

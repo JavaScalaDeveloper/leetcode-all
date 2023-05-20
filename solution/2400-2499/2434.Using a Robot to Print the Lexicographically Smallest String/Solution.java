@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2434;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String robotWithString(String s) {
         int[] cnt = new int[26];
         for (char c : s.toCharArray()) {

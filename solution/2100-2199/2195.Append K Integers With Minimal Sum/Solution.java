@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2195;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minimalKSum(int[] nums, int k) {
         int[] arr = new int[nums.length + 2];
         arr[arr.length - 1] = (int) 2e9;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1081;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String smallestSubsequence(String text) {
         int[] cnt = new int[26];
         for (char c : text.toCharArray()) {

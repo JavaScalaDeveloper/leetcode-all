@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1678;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String interpret(String command) {
         StringBuilder ans = new StringBuilder();
         for (int i = 0; i < command.length(); ++i) {

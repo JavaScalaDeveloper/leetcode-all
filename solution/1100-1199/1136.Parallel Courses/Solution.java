@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1136;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumSemesters(int n, int[][] relations) {
         List<Integer>[] g = new List[n];
         Arrays.setAll(g, k -> new ArrayList<>());

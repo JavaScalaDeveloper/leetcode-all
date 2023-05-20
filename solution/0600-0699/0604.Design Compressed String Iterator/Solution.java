@@ -1,4 +1,7 @@
-class StringIterator {
+package com.solution._0604;
+import change.datastructure.*;
+import java.util.*;
+public class StringIterator {
     private List<Node> d = new ArrayList<>();
     private int p;
 
@@ -31,7 +34,10 @@ class StringIterator {
     }
 }
 
-class Node {
+package com.solution._0604;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     char c;
     int x;
 

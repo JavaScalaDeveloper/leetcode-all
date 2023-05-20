@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1923;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     int N = 100010;
     long[] h = new long[N];
     long[] p = new long[N];

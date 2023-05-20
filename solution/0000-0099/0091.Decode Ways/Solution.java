@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0091;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numDecodings(String s) {
         int n = s.length();
         int a = 0, b = 1, c = 0;

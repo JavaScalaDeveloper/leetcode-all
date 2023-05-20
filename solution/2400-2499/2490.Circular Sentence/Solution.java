@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2490;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isCircularSentence(String sentence) {
         if (sentence.charAt(0) != sentence.charAt(sentence.length() - 1)) {
             return false;

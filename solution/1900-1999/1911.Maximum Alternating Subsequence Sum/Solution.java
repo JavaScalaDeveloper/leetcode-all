@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1911;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maxAlternatingSum(int[] nums) {
         long f = 0, g = 0;
         for (int x : nums) {

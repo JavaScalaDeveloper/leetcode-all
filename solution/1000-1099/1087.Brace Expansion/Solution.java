@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1087;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<String> ans;
     private List<String[]> items;
 

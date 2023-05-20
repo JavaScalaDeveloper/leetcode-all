@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1162;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDistance(int[][] grid) {
         int n = grid.length;
         Deque<int[]> q = new ArrayDeque<>();

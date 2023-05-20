@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2512;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> topStudents(String[] positive_feedback, String[] negative_feedback,
         String[] report, int[] student_id, int k) {
         Set<String> ps = new HashSet<>();

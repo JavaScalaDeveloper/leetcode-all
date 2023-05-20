@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0748;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String shortestCompletingWord(String licensePlate, String[] words) {
         int[] counter = count(licensePlate.toLowerCase());
         String ans = null;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0005;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String longestPalindrome(String s) {
         int n = s.length();
         boolean[][] dp = new boolean[n][n];

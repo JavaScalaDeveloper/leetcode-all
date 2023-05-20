@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0066;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] plusOne(int[] digits) {
         int n = digits.length;
         for (int i = n - 1; i >= 0; --i) {

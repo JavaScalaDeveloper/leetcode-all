@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0958;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isCompleteTree(TreeNode root) {
         Deque<TreeNode> q = new LinkedList<>();
         q.offer(root);

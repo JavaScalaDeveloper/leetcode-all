@@ -1,6 +1,9 @@
 /*
 // Definition for a QuadTree node.
-class Node {
+package com.solution._0427;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     public boolean val;
     public boolean isLeaf;
     public Node topLeft;
@@ -34,7 +37,10 @@ topRight; this.bottomLeft = bottomLeft; this.bottomRight = bottomRight;
 };
 */
 
-class Solution {
+package com.solution._0427;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public Node construct(int[][] grid) {
         return dfs(0, 0, grid.length - 1, grid[0].length - 1, grid);
     }

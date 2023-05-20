@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2644;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDivScore(int[] nums, int[] divisors) {
         int ans = divisors[0];
         int mx = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1213;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> arraysIntersection(int[] arr1, int[] arr2, int[] arr3) {
         List<Integer> ans = new ArrayList<>();
         int[] cnt = new int[2001];

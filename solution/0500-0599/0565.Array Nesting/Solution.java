@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0565;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int arrayNesting(int[] nums) {
         int ans = 0, n = nums.length;
         for (int i = 0; i < n; ++i) {

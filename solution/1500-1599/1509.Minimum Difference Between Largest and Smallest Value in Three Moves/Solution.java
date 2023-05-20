@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1509;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minDifference(int[] nums) {
         int n = nums.length;
         if (n < 5) {

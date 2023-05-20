@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2605;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minNumber(int[] nums1, int[] nums2) {
         int mask1 = 0, mask2 = 0;
         for (int x : nums1) {

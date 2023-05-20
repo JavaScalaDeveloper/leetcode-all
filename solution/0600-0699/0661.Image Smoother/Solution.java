@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0661;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] imageSmoother(int[][] img) {
         int m = img.length;
         int n = img[0].length;

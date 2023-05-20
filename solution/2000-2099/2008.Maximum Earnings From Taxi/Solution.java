@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2008;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[][] rides;
     private long[] f;
     private int m;

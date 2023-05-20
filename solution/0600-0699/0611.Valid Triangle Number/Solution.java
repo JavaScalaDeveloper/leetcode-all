@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0611;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int triangleNumber(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;

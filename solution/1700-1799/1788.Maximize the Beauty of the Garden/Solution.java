@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1788;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumBeauty(int[] flowers) {
         int[] s = new int[flowers.length + 1];
         Map<Integer, Integer> d = new HashMap<>();

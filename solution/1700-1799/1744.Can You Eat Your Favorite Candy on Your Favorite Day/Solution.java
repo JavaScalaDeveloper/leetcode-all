@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1744;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean[] canEat(int[] candiesCount, int[][] queries) {
         int n = candiesCount.length;
         long[] s = new long[n + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2122;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] recoverArray(int[] nums) {
         Arrays.sort(nums);
         for (int i = 1, n = nums.length; i < n; ++i) {

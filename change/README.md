@@ -4,3 +4,5 @@
 [//]: # (- 正则匹配[English Version]&#40;[\s\S]*?&#41;)
 
 - 清除空格 
+- 给所有class添加package：AddPackagePrefix
+- 合并所有md：MergeMdFiles

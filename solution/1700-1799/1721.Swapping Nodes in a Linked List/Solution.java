@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._1721;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode swapNodes(ListNode head, int k) {
         ListNode fast = head;
         while (--k > 0) {

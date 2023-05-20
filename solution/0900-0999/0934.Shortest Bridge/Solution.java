@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0934;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] dirs = {-1, 0, 1, 0, -1};
     private Deque<int[]> q = new ArrayDeque<>();
     private int[][] grid;

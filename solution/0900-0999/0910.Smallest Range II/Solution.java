@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0910;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int smallestRangeII(int[] nums, int k) {
         Arrays.sort(nums);
         int n = nums.length;

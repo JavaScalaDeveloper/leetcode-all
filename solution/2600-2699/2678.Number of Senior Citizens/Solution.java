@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2678;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countSeniors(String[] details) {
         int ans = 0;
         for (var x : details) {

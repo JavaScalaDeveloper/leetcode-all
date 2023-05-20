@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2513;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimizeSet(int divisor1, int divisor2, int uniqueCnt1, int uniqueCnt2) {
         long divisor = lcm(divisor1, divisor2);
         long left = 1, right = 10000000000L;

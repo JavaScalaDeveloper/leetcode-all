@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0898;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int subarrayBitwiseORs(int[] arr) {
         Set<Integer> s = new HashSet<>();
         int prev = 0;

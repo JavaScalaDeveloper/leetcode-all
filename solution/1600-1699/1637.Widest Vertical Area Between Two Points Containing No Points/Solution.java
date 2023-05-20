@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1637;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxWidthOfVerticalArea(int[][] points) {
         int n = points.length;
         int[] nums = new int[n];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0135;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int candy(int[] ratings) {
         int n = ratings.length;
         int[] left = new int[n];

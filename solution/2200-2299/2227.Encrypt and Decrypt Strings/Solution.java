@@ -1,4 +1,7 @@
-class Encrypter {
+package com.solution._2227;
+import change.datastructure.*;
+import java.util.*;
+public class Encrypter {
     private Map<Character, String> mp = new HashMap<>();
     private Map<String, Integer> cnt = new HashMap<>();
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0069;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int mySqrt(int x) {
         int left = 0, right = x;
         while (left < right) {

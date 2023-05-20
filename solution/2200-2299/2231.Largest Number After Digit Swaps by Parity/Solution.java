@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2231;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestInteger(int num) {
         int[] cnt = new int[10];
         int x = num;

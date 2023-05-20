@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1686;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int stoneGameVI(int[] aliceValues, int[] bobValues) {
         int n = aliceValues.length;
         int[][] arr = new int[n][2];

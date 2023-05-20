@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0501;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int mx;
     private int cnt;
     private TreeNode prev;

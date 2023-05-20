@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2663;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String smallestBeautifulString(String s, int k) {
         int n = s.length();
         char[] cs = s.toCharArray();

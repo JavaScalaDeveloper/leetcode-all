@@ -26,7 +26,10 @@
  *     public List<NestedInteger> getList();
  * }
  */
-class Solution {
+package com.solution._0385;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public NestedInteger deserialize(String s) {
         if (s.charAt(0) != '[') {
             return new NestedInteger(Integer.parseInt(s));

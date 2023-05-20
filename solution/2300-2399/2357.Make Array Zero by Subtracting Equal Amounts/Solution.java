@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2357;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumOperations(int[] nums) {
         boolean[] s = new boolean[101];
         s[0] = true;

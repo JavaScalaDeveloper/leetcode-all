@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1813;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean areSentencesSimilar(String sentence1, String sentence2) {
         var words1 = sentence1.split(" ");
         var words2 = sentence2.split(" ");

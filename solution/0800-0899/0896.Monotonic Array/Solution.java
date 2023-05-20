@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0896;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isMonotonic(int[] nums) {
         boolean isIncr = false, isDecr = false;
         for (int i = 1; i < nums.length; ++i) {

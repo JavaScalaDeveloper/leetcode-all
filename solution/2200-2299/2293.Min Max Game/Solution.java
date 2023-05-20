@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2293;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minMaxGame(int[] nums) {
         for (int n = nums.length; n > 1;) {
             n >>= 1;

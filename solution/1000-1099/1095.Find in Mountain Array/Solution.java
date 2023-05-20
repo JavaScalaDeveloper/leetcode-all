@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1095;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findInMountainArray(int target, MountainArray mountainArr) {
         int length = mountainArr.length();
         int l = 0, r = length - 1;

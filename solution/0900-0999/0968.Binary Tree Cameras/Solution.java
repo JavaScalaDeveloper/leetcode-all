@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0968;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCameraCover(TreeNode root) {
         int[] ans = dfs(root);
         return Math.min(ans[0], ans[1]);

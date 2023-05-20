@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1243;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> transformArray(int[] arr) {
         boolean f = true;
         while (f) {

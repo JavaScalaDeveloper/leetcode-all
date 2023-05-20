@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1514;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double maxProbability(int n, int[][] edges, double[] succProb, int start, int end) {
         List<Pair<Integer, Double>>[] g = new List[n];
         Arrays.setAll(g, k -> new ArrayList<>());

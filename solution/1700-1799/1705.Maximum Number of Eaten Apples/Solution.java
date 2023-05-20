@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1705;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int eatenApples(int[] apples, int[] days) {
         PriorityQueue<int[]> q = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
         int n = days.length;

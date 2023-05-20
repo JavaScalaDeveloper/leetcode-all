@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2552;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long countQuadruplets(int[] nums) {
         int n = nums.length;
         int[][] f = new int[n][n];

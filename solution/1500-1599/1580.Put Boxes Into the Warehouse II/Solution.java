@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1580;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxBoxesInWarehouse(int[] boxes, int[] warehouse) {
         int n = warehouse.length;
         int[] left = new int[n];

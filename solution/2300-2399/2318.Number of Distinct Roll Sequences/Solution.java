@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2318;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int distinctSequences(int n) {
         if (n == 1) {
             return 6;

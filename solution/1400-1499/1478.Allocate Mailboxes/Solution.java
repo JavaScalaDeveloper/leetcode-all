@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1478;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minDistance(int[] houses, int k) {
         Arrays.sort(houses);
         int n = houses.length;

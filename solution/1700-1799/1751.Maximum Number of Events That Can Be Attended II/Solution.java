@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1751;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxValue(int[][] events, int k) {
         Arrays.sort(events, (a, b) -> a[1] - b[1]);
         int n = events.length;

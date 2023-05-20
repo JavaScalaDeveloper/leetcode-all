@@ -1,4 +1,7 @@
-class SparseVector {
+package com.solution._1570;
+import change.datastructure.*;
+import java.util.*;
+public class SparseVector {
 
     private Map<Integer, Integer> v;
 

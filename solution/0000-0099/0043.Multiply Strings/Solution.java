@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0043;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String multiply(String num1, String num2) {
         if ("0".equals(num1) || "0".equals(num2)) {
             return "0";

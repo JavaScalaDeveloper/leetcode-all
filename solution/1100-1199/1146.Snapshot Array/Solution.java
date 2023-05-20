@@ -1,4 +1,7 @@
-class SnapshotArray {
+package com.solution._1146;
+import change.datastructure.*;
+import java.util.*;
+public class SnapshotArray {
     private List<int[]>[] arr;
     private int idx;
 

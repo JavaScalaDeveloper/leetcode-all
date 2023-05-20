@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1773;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         int i = ruleKey.charAt(0) == 't' ? 0 : (ruleKey.charAt(0) == 'c' ? 1 : 2);
         int ans = 0;

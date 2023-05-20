@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2558;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long pickGifts(int[] gifts, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);
         for (int v : gifts) {

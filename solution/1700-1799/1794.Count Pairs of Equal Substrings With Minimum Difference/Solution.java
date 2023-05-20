@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1794;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countQuadruples(String firstString, String secondString) {
         int[] last = new int[26];
         for (int i = 0; i < secondString.length(); ++i) {

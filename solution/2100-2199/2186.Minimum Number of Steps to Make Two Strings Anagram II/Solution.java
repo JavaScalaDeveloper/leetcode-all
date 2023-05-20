@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2186;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSteps(String s, String t) {
         int[] cnt = new int[26];
         for (char c : s.toCharArray()) {

@@ -1,6 +1,9 @@
 /*
 // Definition for a Node.
-class Node {
+package com.solution._1522;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     public int val;
     public List<Node> children;
 
@@ -21,7 +24,10 @@ class Node {
 };
 */
 
-class Solution {
+package com.solution._1522;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int ans;
 
     public int diameter(Node root) {

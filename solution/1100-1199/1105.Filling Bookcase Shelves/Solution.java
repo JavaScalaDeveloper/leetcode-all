@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1105;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minHeightShelves(int[][] books, int shelfWidth) {
         int n = books.length;
         int[] f = new int[n + 1];

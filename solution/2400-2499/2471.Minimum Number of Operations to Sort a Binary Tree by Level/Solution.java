@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2471;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumOperations(TreeNode root) {
         Deque<TreeNode> q = new ArrayDeque<>();
         q.offer(root);

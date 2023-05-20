@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0246;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isStrobogrammatic(String num) {
         int[] d = new int[] {0, 1, -1, -1, -1, -1, 9, -1, 8, 6};
         for (int i = 0, j = num.length() - 1; i <= j; ++i, --j) {

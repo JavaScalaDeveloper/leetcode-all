@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0592;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String fractionAddition(String expression) {
         int x = 0, y = 6 * 7 * 8 * 9 * 10;
         if (Character.isDigit(expression.charAt(0))) {

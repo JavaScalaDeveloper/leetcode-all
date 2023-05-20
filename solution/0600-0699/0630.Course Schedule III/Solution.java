@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0630;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int scheduleCourse(int[][] courses) {
         Arrays.sort(courses, Comparator.comparingInt(a -> a[1]));
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);

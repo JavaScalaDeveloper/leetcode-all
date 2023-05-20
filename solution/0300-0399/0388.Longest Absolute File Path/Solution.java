@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0388;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int lengthLongestPath(String input) {
         int i = 0;
         int n = input.length();

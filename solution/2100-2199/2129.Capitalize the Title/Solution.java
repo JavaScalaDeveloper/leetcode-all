@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2129;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String capitalizeTitle(String title) {
         List<String> ans = new ArrayList<>();
         for (String s : title.split(" ")) {

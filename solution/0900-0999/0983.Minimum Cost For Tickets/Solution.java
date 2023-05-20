@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0983;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int[] T = new int[] {1, 7, 30};
     private int[] costs;
     private int[] days;

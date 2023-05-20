@@ -1,6 +1,9 @@
 /*
 // Definition for a Node.
-class Node {
+package com.solution._0133;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     public int val;
     public List<Node> neighbors;
     public Node() {
@@ -18,7 +21,10 @@ class Node {
 }
 */
 
-class Solution {
+package com.solution._0133;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Node, Node> visited = new HashMap<>();
 
     public Node cloneGraph(Node node) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2212;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] maximumBobPoints(int numArrows, int[] aliceArrows) {
         int n = aliceArrows.length;
         int mx = -1;

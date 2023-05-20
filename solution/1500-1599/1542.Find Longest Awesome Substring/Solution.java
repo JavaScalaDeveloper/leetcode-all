@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1542;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestAwesome(String s) {
         int[] d = new int[1024];
         int st = 0, ans = 1;

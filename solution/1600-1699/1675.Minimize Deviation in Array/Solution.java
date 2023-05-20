@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1675;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumDeviation(int[] nums) {
         PriorityQueue<Integer> q = new PriorityQueue<>((a, b) -> b - a);
         int mi = Integer.MAX_VALUE;

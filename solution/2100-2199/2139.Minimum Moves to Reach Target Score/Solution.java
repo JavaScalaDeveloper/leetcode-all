@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2139;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minMoves(int target, int maxDoubles) {
         if (target == 1) {
             return 0;

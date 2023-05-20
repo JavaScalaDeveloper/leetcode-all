@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1011;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int shipWithinDays(int[] weights, int days) {
         int left = 0, right = 0;
         for (int w : weights) {

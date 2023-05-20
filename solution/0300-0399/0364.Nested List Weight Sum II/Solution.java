@@ -26,7 +26,10 @@
  *     public List<NestedInteger> getList();
  * }
  */
-class Solution {
+package com.solution._0364;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int depthSumInverse(List<NestedInteger> nestedList) {
         int depth = maxDepth(nestedList);
         return dfs(nestedList, depth);

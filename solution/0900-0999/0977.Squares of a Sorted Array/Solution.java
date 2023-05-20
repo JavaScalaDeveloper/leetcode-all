@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0977;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] sortedSquares(int[] nums) {
         int n = nums.length;
         int[] res = new int[n];

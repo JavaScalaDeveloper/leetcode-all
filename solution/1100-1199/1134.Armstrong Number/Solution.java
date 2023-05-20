@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1134;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isArmstrong(int n) {
         int k = (n + "").length();
         int s = 0;

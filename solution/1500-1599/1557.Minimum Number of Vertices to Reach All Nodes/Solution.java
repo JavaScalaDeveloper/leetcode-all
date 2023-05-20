@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1557;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> findSmallestSetOfVertices(int n, List<List<Integer>> edges) {
         Set<Integer> s = new HashSet<>();
         for (List<Integer> e : edges) {

@@ -8,7 +8,10 @@
  * }
  */
 
-class Solution {
+package com.solution._1379;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private TreeNode res;
 
     public final TreeNode getTargetCopy(

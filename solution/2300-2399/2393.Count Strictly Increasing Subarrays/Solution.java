@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2393;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long countSubarrays(int[] nums) {
         long ans = 0;
         int i = 0, n = nums.length;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0165;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int compareVersion(String version1, String version2) {
         int m = version1.length(), n = version2.length();
         for (int i = 0, j = 0; i < m || j < n; ++i, ++j) {

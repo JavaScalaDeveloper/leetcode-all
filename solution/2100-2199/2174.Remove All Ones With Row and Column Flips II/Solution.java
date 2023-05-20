@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2174;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int removeOnes(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         int state = 0;

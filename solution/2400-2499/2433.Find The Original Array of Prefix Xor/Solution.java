@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2433;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findArray(int[] pref) {
         int n = pref.length;
         int[] ans = new int[n];

@@ -1,4 +1,7 @@
-class DataStream {
+package com.solution._2526;
+import change.datastructure.*;
+import java.util.*;
+public class DataStream {
     private int cnt;
     private int val;
     private int k;

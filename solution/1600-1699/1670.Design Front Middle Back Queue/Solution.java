@@ -1,4 +1,7 @@
-class FrontMiddleBackQueue {
+package com.solution._1670;
+import change.datastructure.*;
+import java.util.*;
+public class FrontMiddleBackQueue {
     private Deque<Integer> q1 = new ArrayDeque<>();
     private Deque<Integer> q2 = new ArrayDeque<>();
 

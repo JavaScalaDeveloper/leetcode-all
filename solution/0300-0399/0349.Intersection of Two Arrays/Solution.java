@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0349;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> s = new HashSet<>();
         for (int num : nums1) {

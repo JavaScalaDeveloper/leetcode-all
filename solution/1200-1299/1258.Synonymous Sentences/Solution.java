@@ -1,4 +1,7 @@
-class UnionFind {
+package com.solution._1258;
+import change.datastructure.*;
+import java.util.*;
+public class UnionFind {
     private int[] p;
     private int[] size;
 
@@ -32,7 +35,10 @@ class UnionFind {
     }
 }
 
-class Solution {
+package com.solution._1258;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<String> ans = new ArrayList<>();
     private List<String> t = new ArrayList<>();
     private List<String> words;

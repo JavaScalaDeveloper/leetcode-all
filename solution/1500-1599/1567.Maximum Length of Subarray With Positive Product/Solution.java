@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1567;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int getMaxLen(int[] nums) {
         int f1 = nums[0] > 0 ? 1 : 0;
         int f2 = nums[0] < 0 ? 1 : 0;

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1214;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean twoSumBSTs(TreeNode root1, TreeNode root2, int target) {
         List<Integer> vals1 = new ArrayList<>();
         List<Integer> vals2 = new ArrayList<>();

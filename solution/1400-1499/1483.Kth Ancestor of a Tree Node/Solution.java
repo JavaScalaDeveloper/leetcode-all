@@ -1,4 +1,7 @@
-class TreeAncestor {
+package com.solution._1483;
+import change.datastructure.*;
+import java.util.*;
+public class TreeAncestor {
     private int[][] p;
 
     public TreeAncestor(int n, int[] parent) {

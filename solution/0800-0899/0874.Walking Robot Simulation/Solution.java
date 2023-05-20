@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0874;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int robotSim(int[] commands, int[][] obstacles) {
         int[][] dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
         Set<String> s = new HashSet<>();

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1145;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean btreeGameWinningMove(TreeNode root, int n, int x) {
         TreeNode node = dfs(root, x);
         int l = count(node.left);

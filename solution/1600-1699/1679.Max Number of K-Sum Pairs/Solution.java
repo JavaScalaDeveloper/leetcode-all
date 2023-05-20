@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1679;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxOperations(int[] nums, int k) {
         Arrays.sort(nums);
         int l = 0, r = nums.length - 1;

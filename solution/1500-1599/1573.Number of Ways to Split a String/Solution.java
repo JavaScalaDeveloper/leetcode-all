@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1573;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private String s;
 
     public int numWays(String s) {

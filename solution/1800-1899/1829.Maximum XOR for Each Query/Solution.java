@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1829;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] getMaximumXor(int[] nums, int maximumBit) {
         int xs = 0;
         for (int x : nums) {

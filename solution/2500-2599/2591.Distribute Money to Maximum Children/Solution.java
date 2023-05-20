@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2591;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int distMoney(int money, int children) {
         if (money < children) {
             return -1;

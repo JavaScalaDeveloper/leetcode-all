@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0804;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int uniqueMorseRepresentations(String[] words) {
         String[] codes = new String[] {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....",
             "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",

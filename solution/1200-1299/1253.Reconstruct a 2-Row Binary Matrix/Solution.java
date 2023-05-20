@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1253;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> reconstructMatrix(int upper, int lower, int[] colsum) {
         int n = colsum.length;
         List<List<Integer>> ans = new ArrayList<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2508;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isPossible(int n, List<List<Integer>> edges) {
         Set<Integer>[] g = new Set[n + 1];
         Arrays.setAll(g, k -> new HashSet<>());

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0188;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxProfit(int k, int[] prices) {
         int n = prices.length;
         if (n <= 1) {

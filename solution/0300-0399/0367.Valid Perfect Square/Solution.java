@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0367;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isPerfectSquare(int num) {
         long left = 1, right = num;
         while (left < right) {

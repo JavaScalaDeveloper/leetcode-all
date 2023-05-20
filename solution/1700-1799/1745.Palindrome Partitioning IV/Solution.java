@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1745;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkPartitioning(String s) {
         int n = s.length();
         boolean[][] g = new boolean[n][n];

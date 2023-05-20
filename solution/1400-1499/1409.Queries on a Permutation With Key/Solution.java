@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1409;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] processQueries(int[] queries, int m) {
         List<Integer> p = new LinkedList<>();
         for (int i = 1; i <= m; ++i) {

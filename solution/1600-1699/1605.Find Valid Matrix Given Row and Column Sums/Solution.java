@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1605;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] restoreMatrix(int[] rowSum, int[] colSum) {
         int m = rowSum.length;
         int n = colSum.length;

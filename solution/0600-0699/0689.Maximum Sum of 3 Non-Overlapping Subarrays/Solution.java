@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0689;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] maxSumOfThreeSubarrays(int[] nums, int k) {
         int[] ans = new int[3];
         int s = 0, s1 = 0, s2 = 0, s3 = 0;

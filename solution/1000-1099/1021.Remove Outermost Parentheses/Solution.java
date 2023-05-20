@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1021;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String removeOuterParentheses(String s) {
         StringBuilder ans = new StringBuilder();
         int cnt = 0;

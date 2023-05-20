@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1296;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isPossibleDivide(int[] nums, int k) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (int v : nums) {

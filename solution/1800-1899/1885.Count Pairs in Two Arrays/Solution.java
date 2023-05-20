@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1885;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long countPairs(int[] nums1, int[] nums2) {
         int n = nums1.length;
         int[] d = new int[n];

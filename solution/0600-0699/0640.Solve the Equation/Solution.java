@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0640;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String solveEquation(String equation) {
         String[] es = equation.split("=");
         int[] a = f(es[0]), b = f(es[1]);

@@ -1,4 +1,7 @@
-class RangeFreqQuery {
+package com.solution._2080;
+import change.datastructure.*;
+import java.util.*;
+public class RangeFreqQuery {
     private Map<Integer, List<Integer>> mp = new HashMap<>();
 
     public RangeFreqQuery(int[] arr) {

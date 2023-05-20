@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0336;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int BASE = 131;
     private static final long[] MUL = new long[310];
     private static final int MOD = (int) 1e9 + 7;

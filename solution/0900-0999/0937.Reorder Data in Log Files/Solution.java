@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0937;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] reorderLogFiles(String[] logs) {
         Arrays.sort(logs, this::cmp);
         return logs;

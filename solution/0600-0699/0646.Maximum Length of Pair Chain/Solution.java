@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0646;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLongestChain(int[][] pairs) {
         Arrays.sort(pairs, Comparator.comparingInt(a -> a[1]));
         int ans = 0;

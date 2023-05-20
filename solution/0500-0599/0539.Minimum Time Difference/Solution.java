@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0539;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMinDifference(List<String> timePoints) {
         if (timePoints.size() > 24 * 60) {
             return 0;

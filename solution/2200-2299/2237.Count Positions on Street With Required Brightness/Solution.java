@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2237;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int meetRequirement(int n, int[][] lights, int[] requirement) {
         int[] d = new int[100010];
         for (int[] e : lights) {

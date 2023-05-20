@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2079;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int wateringPlants(int[] plants, int capacity) {
         int ans = 0, cap = capacity;
         for (int i = 0; i < plants.length; ++i) {

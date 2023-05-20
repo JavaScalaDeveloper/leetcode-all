@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2094;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findEvenNumbers(int[] digits) {
         int[] counter = count(digits);
         List<Integer> ans = new ArrayList<>();

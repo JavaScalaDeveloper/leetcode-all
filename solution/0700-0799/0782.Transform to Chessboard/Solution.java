@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0782;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int n;
 
     public int movesToChessboard(int[][] board) {

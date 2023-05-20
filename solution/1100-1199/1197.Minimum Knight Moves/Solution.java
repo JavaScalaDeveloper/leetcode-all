@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1197;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minKnightMoves(int x, int y) {
         x += 310;
         y += 310;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0806;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int MAX_WIDTH = 100;
 
     public int[] numberOfLines(int[] widths, String s) {

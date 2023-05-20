@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2179;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long goodTriplets(int[] nums1, int[] nums2) {
         int n = nums1.length;
         int[] pos = new int[n];
@@ -18,7 +21,10 @@ class Solution {
     }
 }
 
-class BinaryIndexedTree {
+package com.solution._2179;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 

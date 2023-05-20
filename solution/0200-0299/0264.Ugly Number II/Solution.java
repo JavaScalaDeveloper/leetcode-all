@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0264;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int nthUglyNumber(int n) {
         int[] dp = new int[n];
         dp[0] = 1;

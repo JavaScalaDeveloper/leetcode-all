@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0378;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kthSmallest(int[][] matrix, int k) {
         int n = matrix.length;
         int left = matrix[0][0], right = matrix[n - 1][n - 1];

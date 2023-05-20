@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0095;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<TreeNode> generateTrees(int n) {
         return generateTrees(1, n);
     }

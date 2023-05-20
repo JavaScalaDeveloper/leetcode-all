@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0360;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] sortTransformedArray(int[] nums, int a, int b, int c) {
         int n = nums.length;
         int i = 0, j = n - 1, k = a < 0 ? 0 : n - 1;

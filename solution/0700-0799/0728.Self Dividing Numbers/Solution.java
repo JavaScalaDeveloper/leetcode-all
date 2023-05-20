@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0728;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> selfDividingNumbers(int left, int right) {
         List<Integer> ans = new ArrayList<>();
         for (int i = left; i <= right; ++i) {

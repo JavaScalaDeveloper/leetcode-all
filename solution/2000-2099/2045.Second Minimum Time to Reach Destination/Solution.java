@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2045;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int secondMinimum(int n, int[][] edges, int time, int change) {
         List<Integer>[] g = new List[n + 1];
         Arrays.setAll(g, k -> new ArrayList<>());

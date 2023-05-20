@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0030;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> findSubstring(String s, String[] words) {
         Map<String, Integer> cnt = new HashMap<>();
         for (String w : words) {

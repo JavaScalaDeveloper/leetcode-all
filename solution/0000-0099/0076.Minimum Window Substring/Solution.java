@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0076;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String minWindow(String s, String t) {
         int[] need = new int[128];
         int[] window = new int[128];

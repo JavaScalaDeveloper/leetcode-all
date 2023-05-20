@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1572;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int diagonalSum(int[][] mat) {
         int ans = 0;
         int n = mat.length;

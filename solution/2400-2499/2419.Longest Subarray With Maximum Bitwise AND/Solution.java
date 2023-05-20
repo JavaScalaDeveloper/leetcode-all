@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2419;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestSubarray(int[] nums) {
         int mx = 0;
         for (int v : nums) {

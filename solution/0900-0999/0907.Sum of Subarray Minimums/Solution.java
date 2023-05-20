@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0907;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int sumSubarrayMins(int[] arr) {
         int n = arr.length;
         int[] left = new int[n];

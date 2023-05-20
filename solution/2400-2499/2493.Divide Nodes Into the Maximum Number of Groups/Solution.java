@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2493;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer>[] g;
     private List<Integer> arr = new ArrayList<>();
     private boolean[] vis;

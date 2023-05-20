@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1897;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean makeEqual(String[] words) {
         int[] counter = new int[26];
         for (String word : words) {

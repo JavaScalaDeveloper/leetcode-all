@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1909;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canBeIncreasing(int[] nums) {
         int i = 1, n = nums.length;
         for (; i < n && nums[i - 1] < nums[i]; ++i)

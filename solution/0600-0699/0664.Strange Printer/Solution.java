@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0664;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int strangePrinter(String s) {
         final int inf = 1 << 30;
         int n = s.length();

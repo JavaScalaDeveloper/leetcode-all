@@ -1,7 +1,10 @@
 // Java Iterator interface reference:
 // https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
 
-class PeekingIterator implements Iterator<Integer> {
+package com.solution._0284;
+import change.datastructure.*;
+import java.util.*;
+public class PeekingIterator implements Iterator<Integer> {
     private Iterator<Integer> iterator;
     private boolean hasPeeked;
     private Integer peekedElement;

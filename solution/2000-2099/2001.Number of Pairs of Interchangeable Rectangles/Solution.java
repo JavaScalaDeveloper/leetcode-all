@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2001;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long interchangeableRectangles(int[][] rectangles) {
         long ans = 0;
         int n = rectangles.length + 1;

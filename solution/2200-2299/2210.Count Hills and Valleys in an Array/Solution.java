@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2210;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countHillValley(int[] nums) {
         int ans = 0;
         for (int i = 1, j = 0; i < nums.length - 1; ++i) {

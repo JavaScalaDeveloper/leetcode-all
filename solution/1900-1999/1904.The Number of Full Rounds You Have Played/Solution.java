@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1904;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numberOfRounds(String startTime, String finishTime) {
         int start = get(startTime), finish = get(finishTime);
         if (start > finish) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0908;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int smallestRangeI(int[] nums, int k) {
         int mx = 0;
         int mi = 10000;

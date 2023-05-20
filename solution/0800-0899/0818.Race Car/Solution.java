@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0818;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int racecar(int target) {
         int[] dp = new int[target + 1];
         for (int i = 1; i <= target; ++i) {

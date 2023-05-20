@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1001;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int n;
     public int[] gridIllumination(int n, int[][] lamps, int[][] queries) {
         this.n = n;

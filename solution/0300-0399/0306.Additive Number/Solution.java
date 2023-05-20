@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0306;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isAdditiveNumber(String num) {
         int n = num.length();
         for (int i = 1; i < Math.min(n - 1, 19); ++i) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0416;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canPartition(int[] nums) {
         int s = 0;
         for (int v : nums) {

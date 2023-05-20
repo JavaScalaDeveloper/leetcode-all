@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0548;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean splitArray(int[] nums) {
         int n = nums.length;
         int[] s = new int[n + 1];

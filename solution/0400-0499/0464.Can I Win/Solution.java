@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0464;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Integer, Boolean> memo = new HashMap<>();
 
     public boolean canIWin(int maxChoosableInteger, int desiredTotal) {

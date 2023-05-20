@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1362;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] closestDivisors(int num) {
         int[] a = f(num + 1);
         int[] b = f(num + 2);

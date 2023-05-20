@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0767;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reorganizeString(String s) {
         int[] cnt = new int[26];
         int mx = 0;

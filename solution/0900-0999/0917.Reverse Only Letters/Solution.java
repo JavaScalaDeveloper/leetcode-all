@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0917;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reverseOnlyLetters(String s) {
         char[] chars = s.toCharArray();
         int i = 0, j = s.length() - 1;

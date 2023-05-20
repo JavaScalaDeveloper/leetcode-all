@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1458;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDotProduct(int[] nums1, int[] nums2) {
         int m = nums1.length, n = nums2.length;
         int[][] dp = new int[m + 1][n + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2647;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] colorRed(int n) {
         List<int[]> ans = new ArrayList<>();
         ans.add(new int[] {1, 1});

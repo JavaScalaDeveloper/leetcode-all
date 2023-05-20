@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0540;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int singleNonDuplicate(int[] nums) {
         int left = 0, right = nums.length - 1;
         while (left < right) {

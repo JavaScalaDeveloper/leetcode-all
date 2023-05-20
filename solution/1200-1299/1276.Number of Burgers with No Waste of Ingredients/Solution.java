@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1276;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {
         int k = 4 * cheeseSlices - tomatoSlices;
         int y = k / 2;

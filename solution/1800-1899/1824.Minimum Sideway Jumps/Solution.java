@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1824;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSideJumps(int[] obstacles) {
         final int inf = 1 << 30;
         int[] f = {1, 0, 1};

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2376;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countSpecialNumbers(int n) {
         List<Integer> digits = new ArrayList<>();
         while (n != 0) {

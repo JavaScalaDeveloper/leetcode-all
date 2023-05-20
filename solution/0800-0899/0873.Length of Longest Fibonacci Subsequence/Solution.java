@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0873;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int lenLongestFibSubseq(int[] arr) {
         int n = arr.length;
         Map<Integer, Integer> mp = new HashMap<>();

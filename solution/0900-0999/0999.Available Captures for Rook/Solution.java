@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0999;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numRookCaptures(char[][] board) {
         int ans = 0;
         int[] dirs = {-1, 0, 1, 0, -1};

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2110;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long getDescentPeriods(int[] prices) {
         long ans = 0;
         int n = prices.length;

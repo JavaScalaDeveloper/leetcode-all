@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0946;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean validateStackSequences(int[] pushed, int[] popped) {
         Deque<Integer> stk = new ArrayDeque<>();
         int j = 0;

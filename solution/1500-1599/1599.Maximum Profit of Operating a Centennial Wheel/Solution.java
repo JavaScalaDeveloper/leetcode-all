@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1599;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minOperationsMaxProfit(int[] customers, int boardingCost, int runningCost) {
         int ans = -1;
         int mx = 0, t = 0;

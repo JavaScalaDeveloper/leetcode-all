@@ -1,4 +1,7 @@
-class MinStack {
+package com.solution._0155;
+import change.datastructure.*;
+import java.util.*;
+public class MinStack {
     private Deque<Integer> stk1 = new ArrayDeque<>();
     private Deque<Integer> stk2 = new ArrayDeque<>();
 

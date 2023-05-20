@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0941;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean validMountainArray(int[] arr) {
         int n = arr.length;
         if (n < 3) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1456;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxVowels(String s, int k) {
         int t = 0, n = s.length();
         for (int i = 0; i < k; ++i) {

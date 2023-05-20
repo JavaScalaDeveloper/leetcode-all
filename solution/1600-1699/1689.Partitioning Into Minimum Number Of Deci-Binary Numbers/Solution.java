@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1689;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minPartitions(String n) {
         int ans = 0;
         for (int i = 0; i < n.length(); ++i) {

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0663;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer> seen;
 
     public boolean checkEqualTree(TreeNode root) {

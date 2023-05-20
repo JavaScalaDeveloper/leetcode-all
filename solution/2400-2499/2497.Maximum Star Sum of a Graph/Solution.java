@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2497;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxStarSum(int[] vals, int[][] edges, int k) {
         int n = vals.length;
         List<Integer>[] g = new List[n];

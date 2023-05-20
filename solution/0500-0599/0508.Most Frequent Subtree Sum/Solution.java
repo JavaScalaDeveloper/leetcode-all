@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0508;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Integer, Integer> counter;
     private int mx;
 

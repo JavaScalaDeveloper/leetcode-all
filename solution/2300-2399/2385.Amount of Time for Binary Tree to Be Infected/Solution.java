@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2385;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Integer, List<Integer>> g = new HashMap<>();
 
     public int amountOfTime(TreeNode root, int start) {

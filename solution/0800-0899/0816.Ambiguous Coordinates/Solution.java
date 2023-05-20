@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0816;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> ambiguousCoordinates(String s) {
         int n = s.length();
         List<String> ans = new ArrayList<>();

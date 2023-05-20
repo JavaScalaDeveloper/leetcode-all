@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2184;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<List<Integer>> res = new ArrayList<>();
     private List<Integer> t = new ArrayList<>();
     private static final int MOD = (int) 1e9 + 7;

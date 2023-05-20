@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0063;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int m = obstacleGrid.length, n = obstacleGrid[0].length;
         int[][] dp = new int[m][n];

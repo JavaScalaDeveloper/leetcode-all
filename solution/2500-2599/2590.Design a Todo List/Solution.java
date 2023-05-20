@@ -1,4 +1,7 @@
-class Task {
+package com.solution._2590;
+import change.datastructure.*;
+import java.util.*;
+public class Task {
     int taskId;
     String taskName;
     int dueDate;
@@ -13,7 +16,10 @@ class Task {
     }
 }
 
-class TodoList {
+package com.solution._2590;
+import change.datastructure.*;
+import java.util.*;
+public class TodoList {
     private int i = 1;
     private Map<Integer, TreeSet<Task>> tasks = new HashMap<>();
 

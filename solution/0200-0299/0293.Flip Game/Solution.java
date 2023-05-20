@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0293;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> generatePossibleNextMoves(String currentState) {
         char[] cs = currentState.toCharArray();
         List<String> ans = new ArrayList<>();

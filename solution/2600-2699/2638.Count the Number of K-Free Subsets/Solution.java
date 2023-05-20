@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2638;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long countTheNumOfKFreeSubsets(int[] nums, int k) {
         Arrays.sort(nums);
         Map<Integer, List<Integer>> g = new HashMap<>();

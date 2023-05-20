@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1218;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestSubsequence(int[] arr, int difference) {
         Map<Integer, Integer> dp = new HashMap<>();
         int ans = 1;

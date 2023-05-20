@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0918;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSubarraySumCircular(int[] nums) {
         int s1 = nums[0], s2 = nums[0], f1 = nums[0], f2 = nums[0], total = nums[0];
         for (int i = 1; i < nums.length; ++i) {

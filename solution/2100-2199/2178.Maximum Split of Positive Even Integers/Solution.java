@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2178;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Long> maximumEvenSplit(long finalSum) {
         List<Long> ans = new ArrayList<>();
         if (finalSum % 2 == 1) {

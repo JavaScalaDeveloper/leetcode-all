@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0756;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[][] f = new int[7][7];
     private Map<String, Boolean> dp = new HashMap<>();
 

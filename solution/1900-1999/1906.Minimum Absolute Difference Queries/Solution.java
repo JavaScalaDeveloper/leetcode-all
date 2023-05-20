@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1906;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] minDifference(int[] nums, int[][] queries) {
         int m = nums.length, n = queries.length;
         int[][] preSum = new int[m + 1][101];

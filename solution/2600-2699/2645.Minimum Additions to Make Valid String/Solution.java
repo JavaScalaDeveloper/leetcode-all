@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2645;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int addMinimum(String word) {
         String s = "abc";
         int ans = 0, n = word.length();

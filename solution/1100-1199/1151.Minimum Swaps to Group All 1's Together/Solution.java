@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1151;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSwaps(int[] data) {
         int k = 0;
         for (int v : data) {

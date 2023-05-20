@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2379;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumRecolors(String blocks, int k) {
         int cnt = 0;
         for (int i = 0; i < k; ++i) {

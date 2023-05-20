@@ -1,4 +1,7 @@
-class RandomizedCollection {
+package com.solution._0381;
+import change.datastructure.*;
+import java.util.*;
+public class RandomizedCollection {
     private Map<Integer, Set<Integer>> m;
     private List<Integer> l;
     private Random rnd;

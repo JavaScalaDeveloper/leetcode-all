@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1708;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] largestSubarray(int[] nums, int k) {
         int i = 0, mx = 0;
         for (int j = 0; j < nums.length - k + 1; ++j) {

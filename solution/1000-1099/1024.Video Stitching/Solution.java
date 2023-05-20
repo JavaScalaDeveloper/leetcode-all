@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1024;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int videoStitching(int[][] clips, int time) {
         int[] last = new int[time];
         for (var e : clips) {

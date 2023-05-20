@@ -1,4 +1,7 @@
-class PhoneDirectory {
+package com.solution._0379;
+import change.datastructure.*;
+import java.util.*;
+public class PhoneDirectory {
 
     private boolean[] provided;
 

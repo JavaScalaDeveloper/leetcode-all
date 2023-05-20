@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1926;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int nearestExit(char[][] maze, int[] entrance) {
         int m = maze.length;
         int n = maze[0].length;

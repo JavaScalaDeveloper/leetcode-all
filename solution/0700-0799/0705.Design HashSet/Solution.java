@@ -1,4 +1,7 @@
-class MyHashSet {
+package com.solution._0705;
+import change.datastructure.*;
+import java.util.*;
+public class MyHashSet {
     private boolean[] data = new boolean[1000001];
 
     public MyHashSet() {

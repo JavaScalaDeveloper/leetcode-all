@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0516;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestPalindromeSubseq(String s) {
         int n = s.length();
         int[][] dp = new int[n][n];

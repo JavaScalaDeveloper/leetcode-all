@@ -1,4 +1,7 @@
-class RandomizedSet {
+package com.solution._0380;
+import change.datastructure.*;
+import java.util.*;
+public class RandomizedSet {
     private Map<Integer, Integer> d = new HashMap<>();
     private List<Integer> q = new ArrayList<>();
     private Random rnd = new Random();

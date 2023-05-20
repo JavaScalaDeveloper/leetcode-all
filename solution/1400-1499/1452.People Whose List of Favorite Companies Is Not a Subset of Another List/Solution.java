@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1452;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> peopleIndexes(List<List<String>> favoriteCompanies) {
         Map<String, Integer> d = new HashMap<>();
         int idx = 0;

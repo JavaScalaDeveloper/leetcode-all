@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1481;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLeastNumOfUniqueInts(int[] arr, int k) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (int x : arr) {

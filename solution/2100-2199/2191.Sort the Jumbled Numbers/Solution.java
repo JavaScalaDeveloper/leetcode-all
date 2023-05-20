@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2191;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] sortJumbled(int[] mapping, int[] nums) {
         List<int[]> m = new ArrayList<>();
         for (int i = 0; i < nums.length; ++i) {

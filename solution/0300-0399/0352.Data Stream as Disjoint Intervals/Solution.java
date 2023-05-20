@@ -1,4 +1,7 @@
-class SummaryRanges {
+package com.solution._0352;
+import change.datastructure.*;
+import java.util.*;
+public class SummaryRanges {
     private TreeMap<Integer, int[]> mp;
 
     public SummaryRanges() {

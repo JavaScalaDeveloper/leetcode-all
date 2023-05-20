@@ -1,4 +1,7 @@
-class Node {
+package com.solution._1622;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     Node left;
     Node right;
     int l;
@@ -15,7 +18,10 @@ class Node {
     }
 }
 
-class SegmentTree {
+package com.solution._1622;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private Node root = new Node(1, (int) 1e5 + 1);
     private static final int MOD = (int) 1e9 + 7;
 
@@ -116,7 +122,10 @@ class SegmentTree {
     }
 }
 
-class Fancy {
+package com.solution._1622;
+import change.datastructure.*;
+import java.util.*;
+public class Fancy {
     private int n;
     private SegmentTree tree = new SegmentTree();
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2614;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int diagonalPrime(int[][] nums) {
         int n = nums.length;
         int ans = 0;

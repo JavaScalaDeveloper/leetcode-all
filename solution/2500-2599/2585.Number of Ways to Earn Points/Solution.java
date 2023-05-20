@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2585;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int waysToReachTarget(int target, int[][] types) {
         int n = types.length;
         final int mod = (int) 1e9 + 7;

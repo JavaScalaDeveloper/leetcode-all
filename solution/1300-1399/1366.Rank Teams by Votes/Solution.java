@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1366;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String rankTeams(String[] votes) {
         int n = votes[0].length();
         int[][] cnt = new int[26][n];

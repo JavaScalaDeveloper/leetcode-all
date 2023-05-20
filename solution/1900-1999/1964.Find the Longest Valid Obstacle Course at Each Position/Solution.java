@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1964;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int lengthOfLIS(int[] nums) {
         TreeSet<Integer> ts = new TreeSet();
         for (int v : nums) {
@@ -21,7 +24,10 @@ class Solution {
     }
 }
 
-class BinaryIndexedTree {
+package com.solution._1964;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 

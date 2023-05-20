@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0852;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int peakIndexInMountainArray(int[] arr) {
         int left = 1, right = arr.length - 2;
         while (left < right) {

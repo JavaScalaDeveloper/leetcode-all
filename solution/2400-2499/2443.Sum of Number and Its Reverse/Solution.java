@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2443;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean sumOfNumberAndReverse(int num) {
         for (int x = 0; x <= num; ++x) {
             int k = x;

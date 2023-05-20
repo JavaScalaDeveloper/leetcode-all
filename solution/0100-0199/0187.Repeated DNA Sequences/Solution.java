@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0187;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> findRepeatedDnaSequences(String s) {
         int n = s.length() - 10;
         Map<String, Integer> cnt = new HashMap<>();

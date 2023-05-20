@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2609;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findTheLongestBalancedSubstring(String s) {
         int zero = 0, one = 0;
         int ans = 0, n = s.length();

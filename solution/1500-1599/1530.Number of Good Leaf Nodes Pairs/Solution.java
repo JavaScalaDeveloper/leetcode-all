@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1530;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countPairs(TreeNode root, int distance) {
         if (root == null) {
             return 0;

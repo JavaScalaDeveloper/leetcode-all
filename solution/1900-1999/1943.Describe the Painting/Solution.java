@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1943;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Long>> splitPainting(int[][] segments) {
         TreeMap<Integer, Long> d = new TreeMap<>();
         for (int[] e : segments) {

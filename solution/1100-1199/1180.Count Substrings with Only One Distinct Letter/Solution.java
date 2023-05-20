@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1180;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countLetters(String s) {
         int ans = 0;
         for (int i = 0, n = s.length(); i < n;) {

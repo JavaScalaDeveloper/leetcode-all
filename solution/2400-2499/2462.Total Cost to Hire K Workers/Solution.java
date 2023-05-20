@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2462;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long totalCost(int[] costs, int k, int candidates) {
         PriorityQueue<int[]> q = new PriorityQueue<>((a, b) -> {
             if (a[0] == b[0]) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1701;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double averageWaitingTime(int[][] customers) {
         double tot = 0;
         int t = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1284;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minFlips(int[][] mat) {
         int m = mat.length, n = mat[0].length;
         int state = 0;

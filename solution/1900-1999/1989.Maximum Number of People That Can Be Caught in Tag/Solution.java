@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1989;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int catchMaximumAmountofPeople(int[] team, int dist) {
         int ans = 0;
         int n = team.length;

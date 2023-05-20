@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1023;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Boolean> camelMatch(String[] queries, String pattern) {
         List<Boolean> ans = new ArrayList<>();
         for (var q : queries) {

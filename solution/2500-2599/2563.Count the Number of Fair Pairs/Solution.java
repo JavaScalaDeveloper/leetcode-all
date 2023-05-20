@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2563;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long countFairPairs(int[] nums, int lower, int upper) {
         Arrays.sort(nums);
         long ans = 0;

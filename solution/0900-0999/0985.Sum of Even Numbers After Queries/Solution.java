@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0985;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] sumEvenAfterQueries(int[] nums, int[][] queries) {
         int s = 0;
         for (int num : nums) {

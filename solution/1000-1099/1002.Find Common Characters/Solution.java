@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1002;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> commonChars(String[] words) {
         int[] cnt = new int[26];
         Arrays.fill(cnt, 10000);

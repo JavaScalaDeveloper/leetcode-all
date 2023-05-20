@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2544;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int alternateDigitSum(int n) {
         int ans = 0, sign = 1;
         for (char c : String.valueOf(n).toCharArray()) {

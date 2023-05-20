@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0011;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxArea(int[] height) {
         int i = 0, j = height.length - 1;
         int ans = 0;

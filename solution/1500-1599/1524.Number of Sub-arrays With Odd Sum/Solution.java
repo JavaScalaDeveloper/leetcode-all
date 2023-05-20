@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1524;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numOfSubarrays(int[] arr) {
         final int mod = (int) 1e9 + 7;
         int[] cnt = {1, 0};

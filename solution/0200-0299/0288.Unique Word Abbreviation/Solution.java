@@ -1,4 +1,7 @@
-class ValidWordAbbr {
+package com.solution._0288;
+import change.datastructure.*;
+import java.util.*;
+public class ValidWordAbbr {
     private Map<String, Set<String>> words;
 
     public ValidWordAbbr(String[] dictionary) {

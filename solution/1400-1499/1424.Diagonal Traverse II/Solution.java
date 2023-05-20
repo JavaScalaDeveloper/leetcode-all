@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1424;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findDiagonalOrder(List<List<Integer>> nums) {
         List<int[]> arr = new ArrayList<>();
         for (int i = 0; i < nums.size(); ++i) {

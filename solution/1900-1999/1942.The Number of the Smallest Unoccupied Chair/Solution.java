@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1942;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int smallestChair(int[][] times, int targetFriend) {
         int n = times.length;
         int[][] ts = new int[n][3];

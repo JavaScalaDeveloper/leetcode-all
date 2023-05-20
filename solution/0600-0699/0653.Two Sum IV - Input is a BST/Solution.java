@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0653;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<Integer> vis = new HashSet<>();
     private int k;
 

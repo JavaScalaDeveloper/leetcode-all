@@ -1,4 +1,7 @@
-class TicTacToe {
+package com.solution._0348;
+import change.datastructure.*;
+import java.util.*;
+public class TicTacToe {
     private int n;
     private int[][] counter;
 

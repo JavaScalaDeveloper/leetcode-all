@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0637;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> ans = new ArrayList<>();
         Deque<TreeNode> q = new ArrayDeque<>();

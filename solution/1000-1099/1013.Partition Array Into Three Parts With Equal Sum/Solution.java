@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1013;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canThreePartsEqualSum(int[] arr) {
         int s = 0;
         for (int v : arr) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0465;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minTransfers(int[][] transactions) {
         int[] g = new int[12];
         for (var t : transactions) {

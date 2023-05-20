@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2024;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxConsecutiveAnswers(String answerKey, int k) {
         return Math.max(get('T', k, answerKey), get('F', k, answerKey));
     }

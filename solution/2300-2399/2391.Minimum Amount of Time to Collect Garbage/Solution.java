@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2391;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int garbageCollection(String[] garbage, int[] travel) {
         int[] last = new int[26];
         int n = garbage.length;

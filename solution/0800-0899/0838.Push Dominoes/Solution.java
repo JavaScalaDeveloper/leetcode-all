@@ -39,4 +39,7 @@ public class Solution {
         return new String(ans);
     }
 }
-class Solution {}
+package com.solution._0838;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {}

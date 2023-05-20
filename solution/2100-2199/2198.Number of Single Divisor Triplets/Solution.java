@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2198;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long singleDivisorTriplet(int[] nums) {
         int[] counter = new int[101];
         for (int x : nums) {

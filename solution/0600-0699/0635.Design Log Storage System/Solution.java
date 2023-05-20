@@ -1,4 +1,7 @@
-class LogSystem {
+package com.solution._0635;
+import change.datastructure.*;
+import java.util.*;
+public class LogSystem {
     private List<Log> logs = new ArrayList<>();
     private Map<String, Integer> d = new HashMap<>();
 
@@ -30,7 +33,10 @@ class LogSystem {
     }
 }
 
-class Log {
+package com.solution._0635;
+import change.datastructure.*;
+import java.util.*;
+public class Log {
     int id;
     String ts;
 

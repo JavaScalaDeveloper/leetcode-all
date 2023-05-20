@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1982;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] recoverArray(int n, int[] sums) {
         int m = 1 << 30;
         for (int x : sums) {

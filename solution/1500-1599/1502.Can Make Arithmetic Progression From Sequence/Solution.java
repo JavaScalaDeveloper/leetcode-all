@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1502;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canMakeArithmeticProgression(int[] arr) {
         Arrays.sort(arr);
         int d = arr[1] - arr[0];

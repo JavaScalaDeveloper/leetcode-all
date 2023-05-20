@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1012;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] nums = new int[11];
     private Integer[][] dp = new Integer[11][1 << 11];
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1857;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestPathValue(String colors, int[][] edges) {
         int n = colors.length();
         List<Integer>[] g = new List[n];

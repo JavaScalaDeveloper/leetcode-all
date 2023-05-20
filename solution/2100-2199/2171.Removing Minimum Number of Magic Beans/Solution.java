@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2171;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minimumRemoval(int[] beans) {
         Arrays.sort(beans);
         long s = 0;

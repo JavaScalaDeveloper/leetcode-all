@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1643;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String kthSmallestPath(int[] destination, int k) {
         int v = destination[0], h = destination[1];
         int n = v + h;

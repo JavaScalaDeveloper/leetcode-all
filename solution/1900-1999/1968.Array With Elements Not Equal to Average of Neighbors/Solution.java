@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1968;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] rearrangeArray(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;

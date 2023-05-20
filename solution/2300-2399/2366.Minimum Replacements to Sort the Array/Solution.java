@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2366;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minimumReplacement(int[] nums) {
         long ans = 0;
         int n = nums.length;

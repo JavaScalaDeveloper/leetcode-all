@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2509;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] cycleLengthQueries(int n, int[][] queries) {
         int m = queries.length;
         int[] ans = new int[m];

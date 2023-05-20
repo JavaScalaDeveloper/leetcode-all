@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2578;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int splitNum(int num) {
         int[] cnt = new int[10];
         int n = 0;

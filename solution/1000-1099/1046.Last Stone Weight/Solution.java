@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1046;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int lastStoneWeight(int[] stones) {
         PriorityQueue<Integer> q = new PriorityQueue<>((a, b) -> b - a);
         for (int x : stones) {

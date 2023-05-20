@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2214;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minimumHealth(int[] damage, int armor) {
         long s = 0;
         int mx = damage[0];

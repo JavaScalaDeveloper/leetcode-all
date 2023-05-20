@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2342;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumSum(int[] nums) {
         int ans = -1;
         int[] d = new int[100];

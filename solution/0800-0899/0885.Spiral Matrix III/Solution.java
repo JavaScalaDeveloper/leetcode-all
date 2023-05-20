@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0885;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] spiralMatrixIII(int rows, int cols, int rStart, int cStart) {
         int cnt = rows * cols;
         int[][] ans = new int[cnt][2];

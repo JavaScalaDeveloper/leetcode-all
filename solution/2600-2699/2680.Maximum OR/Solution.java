@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2680;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maximumOr(int[] nums, int k) {
         int n = nums.length;
         long[] suf = new long[n + 1];

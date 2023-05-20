@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2187;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minimumTime(int[] time, int totalTrips) {
         int mi = time[0];
         for (int v : time) {

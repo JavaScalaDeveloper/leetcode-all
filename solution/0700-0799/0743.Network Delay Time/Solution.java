@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0743;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int N = 110;
     private static final int INF = 0x3f3f;
 

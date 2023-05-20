@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1541;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minInsertions(String s) {
         int ans = 0, x = 0;
         int n = s.length();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1856;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSumMinProduct(int[] nums) {
         int n = nums.length;
         int[] left = new int[n];

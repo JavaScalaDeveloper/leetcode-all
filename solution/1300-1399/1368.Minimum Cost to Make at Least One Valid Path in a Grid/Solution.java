@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1368;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCost(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         boolean[][] vis = new boolean[m][n];

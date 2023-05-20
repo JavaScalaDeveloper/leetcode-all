@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1646;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int getMaximumGenerated(int n) {
         if (n < 2) {
             return n;

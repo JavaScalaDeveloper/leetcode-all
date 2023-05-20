@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1889;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minWastedSpace(int[] packages, int[][] boxes) {
         int n = packages.length;
         Arrays.sort(packages);

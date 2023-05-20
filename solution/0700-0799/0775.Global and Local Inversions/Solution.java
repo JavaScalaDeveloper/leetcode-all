@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0775;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isIdealPermutation(int[] nums) {
         int mx = 0;
         for (int i = 2; i < nums.length; ++i) {

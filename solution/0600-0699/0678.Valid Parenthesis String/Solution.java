@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0678;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkValidString(String s) {
         int x = 0;
         int n = s.length();

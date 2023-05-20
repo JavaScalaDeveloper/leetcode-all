@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0169;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int majorityElement(int[] nums) {
         int cnt = 0, m = 0;
         for (int x : nums) {

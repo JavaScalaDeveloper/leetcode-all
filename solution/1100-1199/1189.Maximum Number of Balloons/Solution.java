@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1189;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxNumberOfBalloons(String text) {
         int[] cnt = new int[26];
         for (int i = 0; i < text.length(); ++i) {

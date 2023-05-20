@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1442;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countTriplets(int[] arr) {
         int n = arr.length;
         int[] pre = new int[n + 1];

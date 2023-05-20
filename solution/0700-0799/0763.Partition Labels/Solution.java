@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0763;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> partitionLabels(String s) {
         int[] last = new int[26];
         int n = s.length();

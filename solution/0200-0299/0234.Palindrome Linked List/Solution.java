@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._0234;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isPalindrome(ListNode head) {
         ListNode slow = head;
         ListNode fast = head.next;

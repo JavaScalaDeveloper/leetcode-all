@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0747;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int dominantIndex(int[] nums) {
         int mx = Integer.MIN_VALUE, mid = Integer.MIN_VALUE;
         int ans = -1;

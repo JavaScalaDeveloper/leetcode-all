@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0294;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int n;
     private Map<Long, Boolean> memo = new HashMap<>();
 

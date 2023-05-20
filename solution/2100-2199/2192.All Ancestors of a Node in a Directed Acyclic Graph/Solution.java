@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2192;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> getAncestors(int n, int[][] edges) {
         List<Integer>[] g = new List[n];
         Arrays.setAll(g, k -> new ArrayList<>());

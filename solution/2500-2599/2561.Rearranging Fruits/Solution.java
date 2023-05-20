@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2561;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minCost(int[] basket1, int[] basket2) {
         int n = basket1.length;
         Map<Integer, Integer> cnt = new HashMap<>();

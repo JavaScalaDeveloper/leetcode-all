@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1576;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String modifyString(String s) {
         char[] cs = s.toCharArray();
         int n = cs.length;

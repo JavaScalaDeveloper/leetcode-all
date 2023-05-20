@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1861;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public char[][] rotateTheBox(char[][] box) {
         int m = box.length, n = box[0].length;
         char[][] ans = new char[n][m];

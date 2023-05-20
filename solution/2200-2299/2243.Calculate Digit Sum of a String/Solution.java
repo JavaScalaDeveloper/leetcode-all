@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2243;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String digitSum(String s, int k) {
         while (s.length() > k) {
             int n = s.length();

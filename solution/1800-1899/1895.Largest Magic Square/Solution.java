@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1895;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[][] rowsum;
     private int[][] colsum;
 

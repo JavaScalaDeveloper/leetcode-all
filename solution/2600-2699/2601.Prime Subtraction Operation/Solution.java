@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2601;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean primeSubOperation(int[] nums) {
         List<Integer> p = new ArrayList<>();
         for (int i = 2; i <= 1000; ++i) {

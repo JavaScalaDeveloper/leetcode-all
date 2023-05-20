@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._1166;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Map<String, Trie> children = new HashMap<>();
     int v;
 
@@ -35,7 +38,10 @@ class Trie {
     }
 }
 
-class FileSystem {
+package com.solution._1166;
+import change.datastructure.*;
+import java.util.*;
+public class FileSystem {
     private Trie trie = new Trie();
 
     public FileSystem() {

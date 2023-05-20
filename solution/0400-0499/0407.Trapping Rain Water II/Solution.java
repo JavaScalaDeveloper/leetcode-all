@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0407;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int trapRainWater(int[][] heightMap) {
         int m = heightMap.length, n = heightMap[0].length;
         boolean[][] vis = new boolean[m][n];

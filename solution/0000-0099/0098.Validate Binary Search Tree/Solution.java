@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0098;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Integer prev;
 
     public boolean isValidBST(TreeNode root) {

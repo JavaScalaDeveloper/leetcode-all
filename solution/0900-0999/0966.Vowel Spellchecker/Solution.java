@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0966;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] spellchecker(String[] wordlist, String[] queries) {
         Set<String> s = new HashSet<>();
         Map<String, String> low = new HashMap<>();

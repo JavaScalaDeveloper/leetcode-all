@@ -1,4 +1,7 @@
-class RLEIterator {
+package com.solution._0900;
+import change.datastructure.*;
+import java.util.*;
+public class RLEIterator {
     private int[] encoding;
     private int curr;
     private int i;

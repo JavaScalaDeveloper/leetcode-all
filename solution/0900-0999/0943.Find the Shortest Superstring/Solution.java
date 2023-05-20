@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0943;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String shortestSuperstring(String[] words) {
         int n = words.length;
         int[][] g = new int[n][n];

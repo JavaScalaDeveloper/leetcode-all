@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2451;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String oddString(String[] words) {
         Map<String, List<String>> cnt = new HashMap<>();
         for (var w : words) {

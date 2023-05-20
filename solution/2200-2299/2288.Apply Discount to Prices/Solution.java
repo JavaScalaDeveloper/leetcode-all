@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2288;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String discountPrices(String sentence, int discount) {
         String[] words = sentence.split(" ");
         for (int i = 0; i < words.length; ++i) {

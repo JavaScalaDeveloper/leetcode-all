@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0849;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDistToClosest(int[] seats) {
         int first = -1, last = -1;
         int d = 0, n = seats.length;

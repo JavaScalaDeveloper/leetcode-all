@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0846;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isNStraightHand(int[] hand, int groupSize) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (int v : hand) {

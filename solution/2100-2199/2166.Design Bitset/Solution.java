@@ -1,4 +1,7 @@
-class Bitset {
+package com.solution._2166;
+import change.datastructure.*;
+import java.util.*;
+public class Bitset {
     private char[] a;
     private char[] b;
     private int cnt;

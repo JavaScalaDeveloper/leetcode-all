@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1582;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSpecial(int[][] mat) {
         int m = mat.length, n = mat[0].length;
         int[] r = new int[m];

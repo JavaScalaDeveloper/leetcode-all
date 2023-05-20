@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2596;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkValidGrid(int[][] grid) {
         if (grid[0][0] != 0) {
             return false;

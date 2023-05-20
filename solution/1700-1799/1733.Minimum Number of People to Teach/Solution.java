@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1733;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumTeachings(int n, int[][] languages, int[][] friendships) {
         Set<Integer> s = new HashSet<>();
         for (var e : friendships) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2310;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumNumbers(int num, int k) {
         if (num == 0) {
             return 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0476;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findComplement(int num) {
         int ans = 0;
         boolean find = false;

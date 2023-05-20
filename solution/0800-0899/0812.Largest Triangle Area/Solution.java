@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0812;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double largestTriangleArea(int[][] points) {
         double ans = 0;
         for (int[] p1 : points) {

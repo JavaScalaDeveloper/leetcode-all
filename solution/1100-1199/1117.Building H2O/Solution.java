@@ -1,4 +1,7 @@
-class H2O {
+package com.solution._1117;
+import change.datastructure.*;
+import java.util.*;
+public class H2O {
     private Semaphore h = new Semaphore(2);
     private Semaphore o = new Semaphore(0);
 

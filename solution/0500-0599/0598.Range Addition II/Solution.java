@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0598;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxCount(int m, int n, int[][] ops) {
         for (int[] op : ops) {
             m = Math.min(m, op[0]);

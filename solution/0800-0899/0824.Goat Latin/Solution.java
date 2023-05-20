@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0824;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String toGoatLatin(String sentence) {
         List<String> ans = new ArrayList<>();
         Set<Character> vowels

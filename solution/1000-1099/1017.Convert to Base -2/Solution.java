@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1017;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String baseNeg2(int n) {
         if (n == 0) {
             return "0";

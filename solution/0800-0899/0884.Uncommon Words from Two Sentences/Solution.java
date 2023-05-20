@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0884;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] uncommonFromSentences(String s1, String s2) {
         Map<String, Integer> cnt = new HashMap<>();
         for (String s : s1.split(" ")) {

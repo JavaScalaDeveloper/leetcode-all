@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0792;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numMatchingSubseq(String s, String[] words) {
         Deque<int[]>[] d = new Deque[26];
         Arrays.setAll(d, k -> new ArrayDeque<>());

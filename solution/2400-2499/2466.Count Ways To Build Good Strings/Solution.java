@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2466;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int MOD = (int) 1e9 + 7;
     private int[] f;
     private int lo;

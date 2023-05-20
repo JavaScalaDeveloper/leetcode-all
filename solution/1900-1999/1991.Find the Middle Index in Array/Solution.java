@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1991;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMiddleIndex(int[] nums) {
         int left = 0, right = Arrays.stream(nums).sum();
         for (int i = 0; i < nums.length; ++i) {

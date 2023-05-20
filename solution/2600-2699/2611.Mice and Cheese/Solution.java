@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2611;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int miceAndCheese(int[] reward1, int[] reward2, int k) {
         int n = reward1.length;
         Integer[] idx = new Integer[n];

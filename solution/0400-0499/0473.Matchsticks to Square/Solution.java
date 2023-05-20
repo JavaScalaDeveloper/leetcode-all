@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0473;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean makesquare(int[] matchsticks) {
         int s = 0, mx = 0;
         for (int v : matchsticks) {

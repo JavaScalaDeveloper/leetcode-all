@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2548;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double maxPrice(int[][] items, int capacity) {
         Arrays.sort(items, (a, b) -> a[1] * b[0] - a[0] * b[1]);
         double ans = 0;

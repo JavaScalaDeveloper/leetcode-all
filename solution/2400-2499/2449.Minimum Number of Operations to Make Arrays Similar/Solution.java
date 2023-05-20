@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2449;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long makeSimilar(int[] nums, int[] target) {
         Arrays.sort(nums);
         Arrays.sort(target);

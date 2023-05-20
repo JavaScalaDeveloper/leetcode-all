@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2495;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long evenProduct(int[] nums) {
         long ans = 0;
         int last = -1;

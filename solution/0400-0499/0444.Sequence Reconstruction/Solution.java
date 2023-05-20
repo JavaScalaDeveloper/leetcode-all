@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0444;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean sequenceReconstruction(int[] nums, List<List<Integer>> sequences) {
         int n = nums.length;
         int[] indeg = new int[n];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2255;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countPrefixes(String[] words, String s) {
         int ans = 0;
         for (String word : words) {

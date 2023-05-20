@@ -1,4 +1,7 @@
-class Cashier {
+package com.solution._1357;
+import change.datastructure.*;
+import java.util.*;
+public class Cashier {
     private int i;
     private int n;
     private int discount;

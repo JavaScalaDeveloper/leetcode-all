@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1915;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long wonderfulSubstrings(String word) {
         int[] counter = new int[1 << 10];
         counter[0] = 1;

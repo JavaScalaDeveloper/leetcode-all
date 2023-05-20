@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2515;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int closetTarget(String[] words, String target, int startIndex) {
         int n = words.length;
         int ans = n;

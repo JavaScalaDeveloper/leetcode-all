@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0334;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean increasingTriplet(int[] nums) {
         int min = Integer.MAX_VALUE, mid = Integer.MAX_VALUE;
         for (int num : nums) {

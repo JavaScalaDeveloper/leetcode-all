@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0976;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestPerimeter(int[] nums) {
         Arrays.sort(nums);
         for (int i = nums.length - 1; i >= 2; --i) {

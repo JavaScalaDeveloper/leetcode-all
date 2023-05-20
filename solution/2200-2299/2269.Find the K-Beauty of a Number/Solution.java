@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2269;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int divisorSubstrings(int num, int k) {
         int ans = 0;
         String s = "" + num;

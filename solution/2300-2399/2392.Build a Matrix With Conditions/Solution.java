@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2392;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int k;
 
     public int[][] buildMatrix(int k, int[][] rowConditions, int[][] colConditions) {

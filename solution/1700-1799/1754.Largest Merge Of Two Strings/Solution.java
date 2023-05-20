@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1754;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String largestMerge(String word1, String word2) {
         int m = word1.length(), n = word2.length();
         int i = 0, j = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0397;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int integerReplacement(int n) {
         int ans = 0;
         while (n != 1) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1150;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isMajorityElement(int[] nums, int target) {
         int left = search(nums, target);
         int right = search(nums, target + 1);

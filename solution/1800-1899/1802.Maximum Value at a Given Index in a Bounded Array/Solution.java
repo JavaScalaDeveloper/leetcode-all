@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1802;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxValue(int n, int index, int maxSum) {
         int left = 1, right = maxSum;
         while (left < right) {

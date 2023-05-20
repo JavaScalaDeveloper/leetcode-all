@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1489;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {
         for (int i = 0; i < edges.length; ++i) {
             int[] e = edges[i];
@@ -51,7 +54,10 @@ class Solution {
     }
 }
 
-class UnionFind {
+package com.solution._1489;
+import change.datastructure.*;
+import java.util.*;
+public class UnionFind {
     private int[] p;
     private int n;
 

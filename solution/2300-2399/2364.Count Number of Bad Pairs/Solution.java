@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2364;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long countBadPairs(int[] nums) {
         Map<Integer, Integer> cnt = new HashMap<>();
         long ans = 0;

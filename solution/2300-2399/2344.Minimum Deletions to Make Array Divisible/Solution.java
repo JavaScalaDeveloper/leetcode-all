@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2344;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minOperations(int[] nums, int[] numsDivide) {
         int x = 0;
         for (int v : numsDivide) {

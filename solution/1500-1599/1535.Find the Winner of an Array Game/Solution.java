@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1535;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int getWinner(int[] arr, int k) {
         int time = 0, max = arr[0];
         for (int i = 1; i < arr.length; i++) {

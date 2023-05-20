@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2542;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maxScore(int[] nums1, int[] nums2, int k) {
         int n = nums1.length;
         int[][] nums = new int[n][2];

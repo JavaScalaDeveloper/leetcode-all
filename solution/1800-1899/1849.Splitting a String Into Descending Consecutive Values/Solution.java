@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1849;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private String s;
 
     public boolean splitString(String s) {

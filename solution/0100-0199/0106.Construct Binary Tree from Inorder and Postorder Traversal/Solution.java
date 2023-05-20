@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0106;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Integer, Integer> indexes = new HashMap<>();
 
     public TreeNode buildTree(int[] inorder, int[] postorder) {

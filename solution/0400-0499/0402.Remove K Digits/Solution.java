@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0402;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String removeKdigits(String num, int k) {
         StringBuilder stk = new StringBuilder();
         for (char c : num.toCharArray()) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0830;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> largeGroupPositions(String s) {
         int n = s.length();
         int i = 0;

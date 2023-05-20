@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1578;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCost(String colors, int[] neededTime) {
         int ans = 0;
         int n = neededTime.length;

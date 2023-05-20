@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0502;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {
         int n = capital.length;
         PriorityQueue<int[]> q1 = new PriorityQueue<>((a, b) -> a[0] - b[0]);

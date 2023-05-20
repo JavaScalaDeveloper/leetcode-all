@@ -1,4 +1,7 @@
-class MKAverage {
+package com.solution._1825;
+import change.datastructure.*;
+import java.util.*;
+public class MKAverage {
 
     private int m, k;
     private long s;

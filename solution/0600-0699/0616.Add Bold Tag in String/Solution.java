@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0616;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[128];
     boolean isEnd;
 
@@ -14,7 +17,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._0616;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String addBoldTag(String s, String[] words) {
         Trie trie = new Trie();
         for (String w : words) {

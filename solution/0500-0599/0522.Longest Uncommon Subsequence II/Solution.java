@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0522;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLUSlength(String[] strs) {
         int ans = -1;
         for (int i = 0, j = 0, n = strs.length; i < n; ++i) {

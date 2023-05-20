@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0623;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int val;
     private int depth;
 

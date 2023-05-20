@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2271;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumWhiteTiles(int[][] tiles, int carpetLen) {
         Arrays.sort(tiles, (a, b) -> a[0] - b[0]);
         int n = tiles.length;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1271;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final Set<Character> S = Set.of('A', 'B', 'C', 'D', 'E', 'F', 'I', 'O');
 
     public String toHexspeak(String num) {

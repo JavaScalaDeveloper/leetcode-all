@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1018;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Boolean> prefixesDivBy5(int[] nums) {
         List<Boolean> ans = new ArrayList<>();
         int x = 0;

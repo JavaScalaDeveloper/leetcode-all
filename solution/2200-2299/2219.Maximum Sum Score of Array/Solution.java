@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2219;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maximumSumScore(int[] nums) {
         int n = nums.length;
         long[] s = new long[n + 1];

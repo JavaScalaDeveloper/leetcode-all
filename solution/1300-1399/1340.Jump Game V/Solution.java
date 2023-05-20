@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1340;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxJumps(int[] arr, int d) {
         int n = arr.length;
         Integer[] idx = new Integer[n];

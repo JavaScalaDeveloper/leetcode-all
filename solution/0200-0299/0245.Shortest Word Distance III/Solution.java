@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0245;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int shortestWordDistance(String[] wordsDict, String word1, String word2) {
         int ans = wordsDict.length;
         if (word1.equals(word2)) {

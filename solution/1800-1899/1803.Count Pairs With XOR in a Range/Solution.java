@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._1803;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     private Trie[] children = new Trie[2];
     private int cnt;
 
@@ -32,7 +35,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._1803;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countPairs(int[] nums, int low, int high) {
         Trie trie = new Trie();
         int ans = 0;

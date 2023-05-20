@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2423;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean equalFrequency(String word) {
         int[] cnt = new int[26];
         for (int i = 0; i < word.length(); ++i) {

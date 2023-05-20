@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0989;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> addToArrayForm(int[] num, int k) {
         int i = num.length - 1, carry = 0;
         LinkedList<Integer> ans = new LinkedList<>();

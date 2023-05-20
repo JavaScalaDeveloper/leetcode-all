@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1585;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isTransformable(String s, String t) {
         Deque<Integer>[] pos = new Deque[10];
         Arrays.setAll(pos, k -> new ArrayDeque<>());

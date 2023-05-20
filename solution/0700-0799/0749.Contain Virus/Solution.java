@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0749;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int[] DIRS = {-1, 0, 1, 0, -1};
     private List<Integer> c = new ArrayList<>();
     private List<List<Integer>> areas = new ArrayList<>();

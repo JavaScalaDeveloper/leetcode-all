@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0230;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kthSmallest(TreeNode root, int k) {
         Deque<TreeNode> stk = new ArrayDeque<>();
         while (root != null || !stk.isEmpty()) {

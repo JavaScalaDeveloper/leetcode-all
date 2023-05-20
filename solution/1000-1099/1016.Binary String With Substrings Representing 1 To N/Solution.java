@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1016;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean queryString(String s, int n) {
         if (n > 1023) {
             return false;

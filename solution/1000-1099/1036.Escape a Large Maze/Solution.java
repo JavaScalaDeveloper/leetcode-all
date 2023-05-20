@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1036;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[][] dirs = new int[][] {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
     private static final int N = (int) 1e6;
     private Set<Integer> blocked;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1497;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canArrange(int[] arr, int k) {
         int[] cnt = new int[k];
         for (int x : arr) {

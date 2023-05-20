@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0075;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void sortColors(int[] nums) {
         int i = -1, j = nums.length;
         int cur = 0;

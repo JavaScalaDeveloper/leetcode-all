@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0498;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findDiagonalOrder(int[][] mat) {
         int m = mat.length, n = mat[0].length;
         int[] ans = new int[m * n];

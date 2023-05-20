@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0214;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String shortestPalindrome(String s) {
         int base = 131;
         int mul = 1;

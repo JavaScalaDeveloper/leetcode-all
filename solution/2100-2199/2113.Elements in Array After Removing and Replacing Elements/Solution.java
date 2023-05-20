@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2113;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] elementInNums(int[] nums, int[][] queries) {
         int n = nums.length, m = queries.length;
         int[] ans = new int[m];

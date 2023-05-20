@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0888;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] fairCandySwap(int[] aliceSizes, int[] bobSizes) {
         int s1 = 0, s2 = 0;
         Set<Integer> s = new HashSet<>();

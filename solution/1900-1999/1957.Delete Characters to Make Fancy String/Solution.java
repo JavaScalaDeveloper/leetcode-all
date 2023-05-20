@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1957;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String makeFancyString(String s) {
         StringBuilder ans = new StringBuilder();
         for (char c : s.toCharArray()) {

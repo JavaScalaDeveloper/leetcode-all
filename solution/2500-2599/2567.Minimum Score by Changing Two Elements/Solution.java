@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2567;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimizeSum(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;

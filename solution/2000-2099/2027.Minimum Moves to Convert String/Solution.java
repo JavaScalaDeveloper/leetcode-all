@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2027;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumMoves(String s) {
         int ans = 0;
         for (int i = 0; i < s.length(); ++i) {

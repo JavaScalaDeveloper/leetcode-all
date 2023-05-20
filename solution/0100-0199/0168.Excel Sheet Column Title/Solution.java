@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0168;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String convertToTitle(int columnNumber) {
         StringBuilder res = new StringBuilder();
         while (columnNumber != 0) {

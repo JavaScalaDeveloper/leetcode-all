@@ -1,4 +1,7 @@
-class FooBar {
+package com.solution._1115;
+import change.datastructure.*;
+import java.util.*;
+public class FooBar {
     private int n;
     private Semaphore f = new Semaphore(1);
     private Semaphore b = new Semaphore(0);

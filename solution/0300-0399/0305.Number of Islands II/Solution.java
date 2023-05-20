@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0305;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public List<Integer> numIslands2(int m, int n, int[][] positions) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1187;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int makeArrayIncreasing(int[] arr1, int[] arr2) {
         Arrays.sort(arr2);
         int m = 0;

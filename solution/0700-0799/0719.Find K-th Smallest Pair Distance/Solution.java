@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0719;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int smallestDistancePair(int[] nums, int k) {
         Arrays.sort(nums);
         int left = 0, right = nums[nums.length - 1] - nums[0];

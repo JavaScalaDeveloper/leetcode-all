@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0458;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int poorPigs(int buckets, int minutesToDie, int minutesToTest) {
         int base = minutesToTest / minutesToDie + 1;
         int res = 0;

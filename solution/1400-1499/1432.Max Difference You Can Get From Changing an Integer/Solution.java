@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1432;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDiff(int num) {
         String a = String.valueOf(num);
         String b = a;

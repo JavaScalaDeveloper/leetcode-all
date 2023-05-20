@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0312;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxCoins(int[] nums) {
         int[] vals = new int[nums.length + 2];
         vals[0] = 1;

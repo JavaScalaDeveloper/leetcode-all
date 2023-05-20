@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2400;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Integer[][] f;
     private final int mod = (int) 1e9 + 7;
 

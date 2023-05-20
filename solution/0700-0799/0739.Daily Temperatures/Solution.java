@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0739;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
         int n = temperatures.length;
         int[] ans = new int[n];

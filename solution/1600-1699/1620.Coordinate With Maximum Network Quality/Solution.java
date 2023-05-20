@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1620;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] bestCoordinate(int[][] towers, int radius) {
         int mx = 0;
         int[] ans = new int[] {0, 0};

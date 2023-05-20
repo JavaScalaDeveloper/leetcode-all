@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2363;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> mergeSimilarItems(int[][] items1, int[][] items2) {
         int[] cnt = new int[1010];
         for (var x : items1) {

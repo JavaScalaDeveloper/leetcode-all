@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2258;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static int[] dirs = {-1, 0, 1, 0, -1};
     private int[][] grid;
     private int m;

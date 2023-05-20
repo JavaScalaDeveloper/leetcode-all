@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0524;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String findLongestWord(String s, List<String> dictionary) {
         String ans = "";
         for (String a : dictionary) {

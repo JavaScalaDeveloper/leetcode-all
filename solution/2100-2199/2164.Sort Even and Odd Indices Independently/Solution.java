@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2164;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] sortEvenOdd(int[] nums) {
         int n = nums.length;
         int[] a = new int[(n + 1) >> 1];

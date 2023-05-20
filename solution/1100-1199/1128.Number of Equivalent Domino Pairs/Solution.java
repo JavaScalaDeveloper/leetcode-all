@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1128;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numEquivDominoPairs(int[][] dominoes) {
         int[] cnt = new int[100];
         int ans = 0;

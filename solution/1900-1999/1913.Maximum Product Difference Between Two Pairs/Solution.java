@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1913;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxProductDifference(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;

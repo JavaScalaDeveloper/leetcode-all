@@ -1,4 +1,7 @@
-class Logger {
+package com.solution._0359;
+import change.datastructure.*;
+import java.util.*;
+public class Logger {
 
     private Map<String, Integer> limiter;
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0605;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
         int m = flowerbed.length;
         for (int i = 0; i < m; ++i) {

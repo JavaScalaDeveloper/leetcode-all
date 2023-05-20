@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0067;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String addBinary(String a, String b) {
         StringBuilder sb = new StringBuilder();
         for (int i = a.length() - 1, j = b.length() - 1, carry = 0; i >= 0 || j >= 0 || carry > 0;

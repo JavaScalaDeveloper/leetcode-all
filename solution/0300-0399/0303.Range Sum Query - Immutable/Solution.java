@@ -1,4 +1,7 @@
-class NumArray {
+package com.solution._0303;
+import change.datastructure.*;
+import java.util.*;
+public class NumArray {
     private int[] s;
 
     public NumArray(int[] nums) {

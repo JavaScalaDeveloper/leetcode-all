@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0794;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private String[] board;
 
     public boolean validTicTacToe(String[] board) {

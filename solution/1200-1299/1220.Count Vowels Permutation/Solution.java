@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1220;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final long MOD = (long) 1e9 + 7;
 
     public int countVowelPermutation(int n) {

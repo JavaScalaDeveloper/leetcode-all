@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0562;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestLine(int[][] mat) {
         int m = mat.length, n = mat[0].length;
         int[][] a = new int[m + 2][n + 2];

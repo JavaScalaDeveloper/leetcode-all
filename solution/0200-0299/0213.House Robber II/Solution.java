@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0213;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int rob(int[] nums) {
         int n = nums.length;
         if (n == 1) {

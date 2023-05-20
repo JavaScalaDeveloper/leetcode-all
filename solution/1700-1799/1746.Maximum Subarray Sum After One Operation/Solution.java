@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1746;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSumAfterOperation(int[] nums) {
         int f = 0, g = 0;
         int ans = Integer.MIN_VALUE;

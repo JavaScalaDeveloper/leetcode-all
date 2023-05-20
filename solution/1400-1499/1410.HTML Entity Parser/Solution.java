@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1410;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String entityParser(String text) {
         Map<String, String> d = new HashMap<>();
         d.put("&quot;", "\"");

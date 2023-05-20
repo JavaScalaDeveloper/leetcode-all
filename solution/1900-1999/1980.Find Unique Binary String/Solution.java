@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1980;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String findDifferentBinaryString(String[] nums) {
         int mask = 0;
         for (var x : nums) {

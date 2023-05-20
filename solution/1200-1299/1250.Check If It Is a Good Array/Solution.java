@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1250;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isGoodArray(int[] nums) {
         int g = 0;
         for (int x : nums) {

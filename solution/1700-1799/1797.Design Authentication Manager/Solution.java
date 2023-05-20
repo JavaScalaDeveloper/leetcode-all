@@ -1,4 +1,7 @@
-class AuthenticationManager {
+package com.solution._1797;
+import change.datastructure.*;
+import java.util.*;
+public class AuthenticationManager {
     private int t;
     private Map<String, Integer> d = new HashMap<>();
 

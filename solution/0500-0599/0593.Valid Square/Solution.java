@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0593;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean validSquare(int[] p1, int[] p2, int[] p3, int[] p4) {
         return check(p1, p2, p3) && check(p1, p3, p4) && check(p1, p2, p4) && check(p2, p3, p4);
     }

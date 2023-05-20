@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1772;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] sortFeatures(String[] features, String[] responses) {
         Map<String, Integer> cnt = new HashMap<>();
         for (String r : responses) {

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1612;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkEquivalence(Node root1, Node root2) {
         int[] cnt1 = dfs(root1);
         int[] cnt2 = dfs(root2);

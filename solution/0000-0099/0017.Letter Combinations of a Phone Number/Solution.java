@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0017;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> letterCombinations(String digits) {
         List<String> ans = new ArrayList<>();
         if (digits.length() == 0) {

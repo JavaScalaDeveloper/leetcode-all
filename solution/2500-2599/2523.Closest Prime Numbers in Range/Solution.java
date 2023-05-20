@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2523;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] closestPrimes(int left, int right) {
         int cnt = 0;
         boolean[] st = new boolean[right + 1];

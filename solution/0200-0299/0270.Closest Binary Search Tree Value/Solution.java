@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0270;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int closestValue(TreeNode root, double target) {
         int ans = root.val;
         double mi = Double.MAX_VALUE;

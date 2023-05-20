@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._2058;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] nodesBetweenCriticalPoints(ListNode head) {
         ListNode prev = head;
         ListNode curr = head.next;

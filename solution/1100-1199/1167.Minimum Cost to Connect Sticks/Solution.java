@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1167;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int connectSticks(int[] sticks) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int s : sticks) {

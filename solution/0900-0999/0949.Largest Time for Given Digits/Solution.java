@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0949;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String largestTimeFromDigits(int[] arr) {
         int ans = -1;
         for (int i = 0; i < 4; ++i) {

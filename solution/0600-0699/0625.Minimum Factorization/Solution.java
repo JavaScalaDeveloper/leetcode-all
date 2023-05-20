@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0625;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int smallestFactorization(int num) {
         if (num < 2) {
             return num;

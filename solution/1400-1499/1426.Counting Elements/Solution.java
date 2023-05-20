@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1426;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countElements(int[] arr) {
         Set<Integer> s = new HashSet<>();
         for (int x : arr) {

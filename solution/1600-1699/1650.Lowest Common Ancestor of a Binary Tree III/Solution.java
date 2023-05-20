@@ -1,6 +1,9 @@
 /*
 // Definition for a Node.
-class Node {
+package com.solution._1650;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     public int val;
     public Node left;
     public Node right;
@@ -8,7 +11,10 @@ class Node {
 };
 */
 
-class Solution {
+package com.solution._1650;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public Node lowestCommonAncestor(Node p, Node q) {
         Node a = p, b = q;
         while (a != b) {

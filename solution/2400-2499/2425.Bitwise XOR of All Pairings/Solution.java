@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2425;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int xorAllNums(int[] nums1, int[] nums2) {
         int ans = 0;
         if (nums2.length % 2 == 1) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0736;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int i;
     private String expr;
     private Map<String, Deque<Integer>> scope = new HashMap<>();

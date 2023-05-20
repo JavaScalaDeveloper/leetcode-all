@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0054;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         int[] dirs = {0, 1, 0, -1, 0};

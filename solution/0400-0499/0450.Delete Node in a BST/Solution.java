@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0450;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {
             return null;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2351;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public char repeatedCharacter(String s) {
         int mask = 0;
         for (int i = 0;; ++i) {

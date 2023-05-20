@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0255;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean verifyPreorder(int[] preorder) {
         Deque<Integer> stk = new ArrayDeque<>();
         int last = Integer.MIN_VALUE;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2386;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long kSum(int[] nums, int k) {
         long mx = 0;
         int n = nums.length;

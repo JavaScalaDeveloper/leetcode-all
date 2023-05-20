@@ -1,4 +1,7 @@
-class Node {
+package com.solution._2158;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     Node left;
     Node right;
     int l;
@@ -14,7 +17,10 @@ class Node {
     }
 }
 
-class SegmentTree {
+package com.solution._2158;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private Node root = new Node(1, 100010);
 
     public SegmentTree() {
@@ -87,7 +93,10 @@ class SegmentTree {
     }
 }
 
-class Solution {
+package com.solution._2158;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] amountPainted(int[][] paint) {
         SegmentTree tree = new SegmentTree();
         int n = paint.length;

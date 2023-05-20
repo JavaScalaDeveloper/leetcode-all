@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0667;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] constructArray(int n, int k) {
         int l = 1, r = n;
         int[] ans = new int[n];

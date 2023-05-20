@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0886;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public boolean possibleBipartition(int n, int[][] dislikes) {

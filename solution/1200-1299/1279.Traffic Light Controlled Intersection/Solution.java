@@ -1,4 +1,7 @@
-class TrafficLight {
+package com.solution._1279;
+import change.datastructure.*;
+import java.util.*;
+public class TrafficLight {
     private int road = 1;
 
     public TrafficLight() {

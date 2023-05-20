@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2208;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int halveArray(int[] nums) {
         long s = 0;
         PriorityQueue<Double> q = new PriorityQueue<>(Collections.reverseOrder());

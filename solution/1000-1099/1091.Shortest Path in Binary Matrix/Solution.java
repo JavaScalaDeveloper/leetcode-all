@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1091;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int shortestPathBinaryMatrix(int[][] grid) {
         if (grid[0][0] == 1) {
             return -1;

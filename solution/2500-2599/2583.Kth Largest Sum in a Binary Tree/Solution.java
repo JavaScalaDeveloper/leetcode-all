@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2583;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long kthLargestLevelSum(TreeNode root, int k) {
         List<Long> arr = new ArrayList<>();
         Deque<TreeNode> q = new ArrayDeque<>();

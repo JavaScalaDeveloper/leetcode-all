@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2612;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] minReverseOperations(int n, int p, int[] banned, int k) {
         int[] ans = new int[n];
         TreeSet<Integer>[] ts = new TreeSet[] {new TreeSet<>(), new TreeSet<>()};

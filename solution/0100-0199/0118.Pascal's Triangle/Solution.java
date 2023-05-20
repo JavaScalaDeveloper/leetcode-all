@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0118;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> ans = new ArrayList<>();
         for (int i = 0; i < numRows; ++i) {

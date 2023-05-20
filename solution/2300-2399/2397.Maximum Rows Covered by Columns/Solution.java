@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2397;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumRows(int[][] matrix, int numSelect) {
         int m = matrix.length, n = matrix[0].length;
         int[] rows = new int[m];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2381;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String shiftingLetters(String s, int[][] shifts) {
         int n = s.length();
         int[] d = new int[n + 1];

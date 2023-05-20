@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2300;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] successfulPairs(int[] spells, int[] potions, long success) {
         Arrays.sort(potions);
         int n = spells.length, m = potions.length;

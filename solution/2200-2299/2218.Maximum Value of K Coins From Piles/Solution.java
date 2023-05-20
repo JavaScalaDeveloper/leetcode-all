@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2218;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxValueOfCoins(List<List<Integer>> piles, int k) {
         int n = piles.size();
         List<int[]> presum = new ArrayList<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1903;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String largestOddNumber(String num) {
         for (int i = num.length() - 1; i >= 0; --i) {
             int c = num.charAt(i) - '0';

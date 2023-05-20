@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1508;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int rangeSum(int[] nums, int n, int left, int right) {
         int[] arr = new int[n * (n + 1) / 2];
         for (int i = 0, k = 0; i < n; ++i) {

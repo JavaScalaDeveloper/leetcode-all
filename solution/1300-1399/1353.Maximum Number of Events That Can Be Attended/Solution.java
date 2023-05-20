@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1353;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxEvents(int[][] events) {
         Map<Integer, List<Integer>> d = new HashMap<>();
         int i = Integer.MAX_VALUE, j = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1598;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minOperations(String[] logs) {
         int ans = 0;
         for (var v : logs) {

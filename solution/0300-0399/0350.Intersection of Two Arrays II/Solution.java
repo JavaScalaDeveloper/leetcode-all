@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0350;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
         Map<Integer, Integer> counter = new HashMap<>();
         for (int num : nums1) {

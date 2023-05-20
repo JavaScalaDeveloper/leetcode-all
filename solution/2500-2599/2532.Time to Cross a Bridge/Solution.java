@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2532;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findCrossingTime(int n, int k, int[][] time) {
         int[][] t = new int[k][5];
         for (int i = 0; i < k; ++i) {

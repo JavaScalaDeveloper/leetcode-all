@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2036;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maximumAlternatingSubarraySum(int[] nums) {
         long ans = nums[0];
         long a = nums[0], b = -(1 << 30);

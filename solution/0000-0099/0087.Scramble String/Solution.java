@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0087;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Boolean[][][] f;
     private String s1;
     private String s2;

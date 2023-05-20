@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0826;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {
         int n = difficulty.length;
         List<int[]> job = new ArrayList<>();

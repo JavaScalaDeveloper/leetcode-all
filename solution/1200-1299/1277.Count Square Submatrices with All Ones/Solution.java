@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1277;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countSquares(int[][] matrix) {
         int m = matrix.length;
         int n = matrix[0].length;

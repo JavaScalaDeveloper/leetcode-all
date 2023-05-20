@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1498;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSubseq(int[] nums, int target) {
         Arrays.sort(nums);
         final int mod = (int) 1e9 + 7;

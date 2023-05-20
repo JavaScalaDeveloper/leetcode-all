@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2295;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] arrayChange(int[] nums, int[][] operations) {
         Map<Integer, Integer> d = new HashMap<>();
         for (int i = 0; i < nums.length; ++i) {

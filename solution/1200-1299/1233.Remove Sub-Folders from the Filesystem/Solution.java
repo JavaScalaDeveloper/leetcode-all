@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1233;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> removeSubfolders(String[] folder) {
         Arrays.sort(folder);
         List<String> ans = new ArrayList<>();

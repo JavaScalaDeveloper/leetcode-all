@@ -1,4 +1,7 @@
-class OrderedStream {
+package com.solution._1656;
+import change.datastructure.*;
+import java.util.*;
+public class OrderedStream {
     private String[] data;
     private int ptr;
 

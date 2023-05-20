@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0296;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minTotalDistance(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         List<Integer> rows = new ArrayList<>();

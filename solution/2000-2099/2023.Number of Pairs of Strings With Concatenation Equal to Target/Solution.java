@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2023;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numOfPairs(String[] nums, String target) {
         Map<String, Integer> cnt = new HashMap<>();
         for (String x : nums) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1272;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> removeInterval(int[][] intervals, int[] toBeRemoved) {
         int x = toBeRemoved[0], y = toBeRemoved[1];
         List<List<Integer>> ans = new ArrayList<>();

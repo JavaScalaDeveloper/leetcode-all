@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1725;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countGoodRectangles(int[][] rectangles) {
         int ans = 0, mx = 0;
         for (int[] r : rectangles) {

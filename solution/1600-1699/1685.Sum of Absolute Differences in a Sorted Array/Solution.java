@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1685;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] getSumAbsoluteDifferences(int[] nums) {
         // int s = Arrays.stream(nums).sum();
         int s = 0, t = 0;

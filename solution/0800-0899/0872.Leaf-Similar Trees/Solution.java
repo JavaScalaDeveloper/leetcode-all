@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0872;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
         List<Integer> l1 = dfs(root1);
         List<Integer> l2 = dfs(root2);

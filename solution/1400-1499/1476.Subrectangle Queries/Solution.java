@@ -1,4 +1,7 @@
-class SubrectangleQueries {
+package com.solution._1476;
+import change.datastructure.*;
+import java.util.*;
+public class SubrectangleQueries {
     private int[][] g;
     private LinkedList<int[]> ops = new LinkedList<>();
 

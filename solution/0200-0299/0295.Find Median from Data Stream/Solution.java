@@ -1,4 +1,7 @@
-class MedianFinder {
+package com.solution._0295;
+import change.datastructure.*;
+import java.util.*;
+public class MedianFinder {
     private PriorityQueue<Integer> q1 = new PriorityQueue<>();
     private PriorityQueue<Integer> q2 = new PriorityQueue<>(Collections.reverseOrder());
 

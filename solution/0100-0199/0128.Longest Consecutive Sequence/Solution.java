@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0128;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestConsecutive(int[] nums) {
         Set<Integer> s = new HashSet<>();
         for (int x : nums) {

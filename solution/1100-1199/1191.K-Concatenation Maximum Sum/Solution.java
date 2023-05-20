@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1191;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kConcatenationMaxSum(int[] arr, int k) {
         long s = 0, mxPre = 0, miPre = 0, mxSub = 0;
         for (int x : arr) {

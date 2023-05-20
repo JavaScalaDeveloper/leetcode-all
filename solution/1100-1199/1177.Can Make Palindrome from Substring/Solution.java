@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1177;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Boolean> canMakePaliQueries(String s, int[][] queries) {
         int n = s.length();
         int[][] cnt = new int[n + 1][26];

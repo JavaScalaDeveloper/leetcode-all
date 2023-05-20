@@ -1,4 +1,7 @@
-class BrowserHistory {
+package com.solution._1472;
+import change.datastructure.*;
+import java.util.*;
+public class BrowserHistory {
     private Deque<String> stk1 = new ArrayDeque<>();
     private Deque<String> stk2 = new ArrayDeque<>();
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0395;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private String s;
     private int k;
 

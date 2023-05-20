@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0832;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] flipAndInvertImage(int[][] image) {
         for (var row : image) {
             int i = 0, j = row.length - 1;

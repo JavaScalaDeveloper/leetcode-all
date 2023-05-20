@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2448;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minCost(int[] nums, int[] cost) {
         int n = nums.length;
         int[][] arr = new int[n][2];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2445;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] tree;
 
     public int numberOfNodes(int n, int[] queries) {

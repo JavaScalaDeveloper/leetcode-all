@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1782;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] countPairs(int n, int[][] edges, int[] queries) {
         int[] cnt = new int[n];
         Map<Integer, Integer> g = new HashMap<>();

@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._2326;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] spiralMatrix(int m, int n, ListNode head) {
         int[][] ans = new int[m][n];
         for (int[] row : ans) {

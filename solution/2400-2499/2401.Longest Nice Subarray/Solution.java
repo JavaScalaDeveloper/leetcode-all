@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2401;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestNiceSubarray(int[] nums) {
         int ans = 0, mask = 0;
         for (int i = 0, j = 0; i < nums.length; ++i) {

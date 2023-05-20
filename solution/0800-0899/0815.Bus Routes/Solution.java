@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0815;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numBusesToDestination(int[][] routes, int source, int target) {
         if (source == target) {
             return 0;

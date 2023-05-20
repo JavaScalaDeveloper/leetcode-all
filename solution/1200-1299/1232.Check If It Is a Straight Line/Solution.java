@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1232;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkStraightLine(int[][] coordinates) {
         int x1 = coordinates[0][0], y1 = coordinates[0][1];
         int x2 = coordinates[1][0], y2 = coordinates[1][1];

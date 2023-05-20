@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2418;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] sortPeople(String[] names, int[] heights) {
         int n = names.length;
         Integer[] idx = new Integer[n];

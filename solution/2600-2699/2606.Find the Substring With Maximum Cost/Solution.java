@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2606;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumCostSubstring(String s, String chars, int[] vals) {
         int[] d = new int[26];
         for (int i = 0; i < d.length; ++i) {

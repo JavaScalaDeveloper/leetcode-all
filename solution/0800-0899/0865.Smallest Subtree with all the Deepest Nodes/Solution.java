@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0865;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode subtreeWithAllDeepest(TreeNode root) {
         return dfs(root).getKey();
     }

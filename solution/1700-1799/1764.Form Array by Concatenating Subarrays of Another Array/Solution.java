@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1764;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canChoose(int[][] groups, int[] nums) {
         int n = groups.length, m = nums.length;
         int i = 0;

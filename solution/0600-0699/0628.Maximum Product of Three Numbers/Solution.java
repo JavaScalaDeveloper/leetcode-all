@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0628;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumProduct(int[] nums) {
         final int inf = 1 << 30;
         int mi1 = inf, mi2 = inf;

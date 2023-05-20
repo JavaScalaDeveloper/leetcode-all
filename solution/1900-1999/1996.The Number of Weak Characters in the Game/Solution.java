@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1996;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numberOfWeakCharacters(int[][] properties) {
         Arrays.sort(properties, (a, b) -> b[0] - a[0] == 0 ? a[1] - b[1] : b[0] - a[0]);
         int ans = 0, mx = 0;

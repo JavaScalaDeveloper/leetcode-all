@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0648;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     private Trie[] children = new Trie[26];
     private int ref = -1;
 
@@ -30,7 +33,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._0648;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String replaceWords(List<String> dictionary, String sentence) {
         Trie trie = new Trie();
         for (int i = 0; i < dictionary.size(); ++i) {

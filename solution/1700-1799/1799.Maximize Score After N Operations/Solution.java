@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1799;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxScore(int[] nums) {
         int m = nums.length;
         int[][] g = new int[m][m];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1230;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double probabilityOfHeads(double[] prob, int target) {
         double[] f = new double[target + 1];
         f[0] = 1;

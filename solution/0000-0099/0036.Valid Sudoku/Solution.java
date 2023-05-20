@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0036;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isValidSudoku(char[][] board) {
         boolean[][] row = new boolean[9][9];
         boolean[][] col = new boolean[9][9];

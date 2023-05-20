@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2133;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkValid(int[][] matrix) {
         int n = matrix.length;
         for (int i = 0; i < n; ++i) {

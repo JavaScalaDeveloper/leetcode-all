@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1399;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countLargestGroup(int n) {
         int[] cnt = new int[40];
         int ans = 0, mx = 0;

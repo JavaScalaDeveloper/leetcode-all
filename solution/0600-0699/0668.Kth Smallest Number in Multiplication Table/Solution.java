@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0668;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findKthNumber(int m, int n, int k) {
         int left = 1, right = m * n;
         while (left < right) {

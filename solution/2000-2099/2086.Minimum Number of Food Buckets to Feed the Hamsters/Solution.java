@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2086;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumBuckets(String street) {
         int n = street.length();
         int ans = 0;

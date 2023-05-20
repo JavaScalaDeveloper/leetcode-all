@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0049;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> d = new HashMap<>();
         for (String s : strs) {

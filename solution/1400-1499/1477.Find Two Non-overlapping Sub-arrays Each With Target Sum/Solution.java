@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1477;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSumOfLengths(int[] arr, int target) {
         Map<Integer, Integer> d = new HashMap<>();
         d.put(0, 0);

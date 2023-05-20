@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1952;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isThree(int n) {
         int cnt = 0;
         for (int i = 1; i <= n / i; ++i) {

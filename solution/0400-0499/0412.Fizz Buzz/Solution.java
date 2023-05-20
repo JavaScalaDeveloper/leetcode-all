@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0412;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> fizzBuzz(int n) {
         List<String> ans = new ArrayList<>();
         for (int i = 1; i <= n; ++i) {

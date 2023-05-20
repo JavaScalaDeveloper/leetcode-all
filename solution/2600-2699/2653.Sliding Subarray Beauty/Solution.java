@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2653;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] getSubarrayBeauty(int[] nums, int k, int x) {
         int n = nums.length;
         int[] cnt = new int[101];

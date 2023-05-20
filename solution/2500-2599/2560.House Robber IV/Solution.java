@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2560;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCapability(int[] nums, int k) {
         int left = 0, right = (int) 1e9;
         while (left < right) {

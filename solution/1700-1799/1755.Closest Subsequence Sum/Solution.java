@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1755;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minAbsDifference(int[] nums, int goal) {
         int n = nums.length;
         List<Integer> lsum = new ArrayList<>();

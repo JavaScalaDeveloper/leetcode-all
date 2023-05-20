@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1471;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] getStrongest(int[] arr, int k) {
         Arrays.sort(arr);
         int m = arr[(arr.length - 1) >> 1];

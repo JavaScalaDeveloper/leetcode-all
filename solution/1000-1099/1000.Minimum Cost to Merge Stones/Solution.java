@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1000;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int mergeStones(int[] stones, int K) {
         int n = stones.length;
         if ((n - 1) % (K - 1) != 0) {

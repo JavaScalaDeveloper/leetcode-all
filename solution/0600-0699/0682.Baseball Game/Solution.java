@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0682;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int calPoints(String[] ops) {
         Deque<Integer> stk = new ArrayDeque<>();
         for (String op : ops) {

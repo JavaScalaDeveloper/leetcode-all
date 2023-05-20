@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1770;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumScore(int[] nums, int[] multipliers) {
         final int inf = 1 << 30;
         int n = nums.length, m = multipliers.length;

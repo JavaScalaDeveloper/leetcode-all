@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0247;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int[][] PAIRS = {{1, 1}, {8, 8}, {6, 9}, {9, 6}};
     private int n;
 

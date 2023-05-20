@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2387;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[][] grid;
 
     public int matrixMedian(int[][] grid) {

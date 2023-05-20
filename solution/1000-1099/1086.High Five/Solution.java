@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1086;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] highFive(int[][] items) {
         int size = 0;
         PriorityQueue[] s = new PriorityQueue[101];

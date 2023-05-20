@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0053;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSubArray(int[] nums) {
         int f = nums[0], res = nums[0];
         for (int i = 1, n = nums.length; i < n; ++i) {

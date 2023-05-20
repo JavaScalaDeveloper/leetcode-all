@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1888;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minFlips(String s) {
         int n = s.length();
         String target = "01";

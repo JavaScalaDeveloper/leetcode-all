@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0358;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String rearrangeString(String s, int k) {
         int n = s.length();
         int[] cnt = new int[26];

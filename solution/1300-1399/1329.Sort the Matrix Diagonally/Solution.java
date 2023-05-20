@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1329;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] diagonalSort(int[][] mat) {
         int m = mat.length, n = mat[0].length;
         for (int k = 0; k < Math.min(m, n) - 1; ++k) {

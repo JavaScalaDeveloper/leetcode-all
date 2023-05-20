@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1224;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static int[] cnt = new int[100010];
     private static int[] ccnt = new int[100010];
 

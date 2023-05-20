@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1090;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestValsFromLabels(int[] values, int[] labels, int numWanted, int useLimit) {
         int n = values.length;
         int[][] p = new int[n][2];

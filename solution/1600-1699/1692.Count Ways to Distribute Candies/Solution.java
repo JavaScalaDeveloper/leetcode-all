@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1692;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int waysToDistribute(int n, int k) {
         final int mod = (int) 1e9 + 7;
         int[][] f = new int[n + 1][k + 1];

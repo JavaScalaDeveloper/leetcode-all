@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2521;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int distinctPrimeFactors(int[] nums) {
         Set<Integer> s = new HashSet<>();
         for (int n : nums) {

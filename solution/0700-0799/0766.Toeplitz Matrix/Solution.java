@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0766;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isToeplitzMatrix(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         for (int i = 1; i < m; ++i) {

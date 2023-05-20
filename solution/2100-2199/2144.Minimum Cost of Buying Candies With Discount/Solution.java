@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2144;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumCost(int[] cost) {
         Arrays.sort(cost);
         int ans = 0, n = cost.length;

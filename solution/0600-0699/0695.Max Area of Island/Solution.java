@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0695;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[][] grid;
     private int m;
     private int n;

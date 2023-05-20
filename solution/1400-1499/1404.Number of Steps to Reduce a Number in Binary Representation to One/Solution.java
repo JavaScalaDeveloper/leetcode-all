@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1404;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSteps(String s) {
         boolean carry = false;
         int ans = 0;

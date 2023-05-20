@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0553;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String optimalDivision(int[] nums) {
         int n = nums.length;
         if (n == 1) {

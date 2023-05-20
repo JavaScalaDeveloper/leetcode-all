@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1085;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int sumOfDigits(int[] nums) {
         int x = 100;
         for (int v : nums) {

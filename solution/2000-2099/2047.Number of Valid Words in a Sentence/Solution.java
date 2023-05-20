@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2047;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countValidWords(String sentence) {
         int ans = 0;
         for (String token : sentence.split(" ")) {

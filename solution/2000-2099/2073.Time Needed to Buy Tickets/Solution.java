@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2073;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int timeRequiredToBuy(int[] tickets, int k) {
         int ans = 0;
         for (int i = 0; i < tickets.length; i++) {

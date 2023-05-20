@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1839;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestBeautifulSubstring(String word) {
         int n = word.length();
         List<Node> arr = new ArrayList<>();
@@ -22,7 +25,10 @@ class Solution {
     }
 }
 
-class Node {
+package com.solution._1839;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     char c;
     int v;
 

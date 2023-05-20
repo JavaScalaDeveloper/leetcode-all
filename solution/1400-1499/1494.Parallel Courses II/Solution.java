@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1494;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minNumberOfSemesters(int n, int[][] relations, int k) {
         int[] d = new int[n + 1];
         for (var e : relations) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2108;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String firstPalindrome(String[] words) {
         for (var w : words) {
             boolean ok = true;

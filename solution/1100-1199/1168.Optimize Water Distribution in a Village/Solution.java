@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1168;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public int minCostToSupplyWater(int n, int[] wells, int[][] pipes) {

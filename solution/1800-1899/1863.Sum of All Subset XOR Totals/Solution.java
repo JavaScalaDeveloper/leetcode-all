@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1863;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int res;
 
     public int subsetXORSum(int[] nums) {

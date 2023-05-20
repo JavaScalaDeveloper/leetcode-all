@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0687;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int ans;
 
     public int longestUnivaluePath(TreeNode root) {

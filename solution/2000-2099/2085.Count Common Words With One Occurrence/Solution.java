@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2085;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countWords(String[] words1, String[] words2) {
         Map<String, Integer> cnt1 = count(words1);
         Map<String, Integer> cnt2 = count(words2);

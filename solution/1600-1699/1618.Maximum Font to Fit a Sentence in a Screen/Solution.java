@@ -8,7 +8,10 @@
  *     public int getHeight(int fontSize)
  * }
  */
-class Solution {
+package com.solution._1618;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxFont(String text, int w, int h, int[] fonts, FontInfo fontInfo) {
         int left = 0, right = fonts.length - 1;
         while (left < right) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2607;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long makeSubKSumEqual(int[] arr, int k) {
         int n = arr.length;
         int g = gcd(n, k);

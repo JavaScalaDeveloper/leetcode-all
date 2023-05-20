@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0867;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] transpose(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         int[][] ans = new int[n][m];

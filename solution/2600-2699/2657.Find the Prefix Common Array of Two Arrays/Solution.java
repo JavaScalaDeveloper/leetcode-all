@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2657;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findThePrefixCommonArray(int[] A, int[] B) {
         int n = A.length;
         int[] ans = new int[n];

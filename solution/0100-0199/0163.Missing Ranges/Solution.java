@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0163;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         int n = nums.length;
         List<String> ans = new ArrayList<>();

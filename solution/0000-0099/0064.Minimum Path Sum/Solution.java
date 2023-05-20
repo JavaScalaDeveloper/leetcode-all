@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0064;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minPathSum(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         int[][] dp = new int[m][n];

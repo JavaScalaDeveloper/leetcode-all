@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0799;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double champagneTower(int poured, int query_row, int query_glass) {
         double[][] f = new double[101][101];
         f[0][0] = poured;

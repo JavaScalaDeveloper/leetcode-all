@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0482;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String licenseKeyFormatting(String s, int k) {
         s = s.replace("-", "").toUpperCase();
         StringBuilder sb = new StringBuilder();

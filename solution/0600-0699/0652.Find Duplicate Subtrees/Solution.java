@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0652;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<String, Integer> counter;
     private List<TreeNode> ans;
 

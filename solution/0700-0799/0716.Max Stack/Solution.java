@@ -1,4 +1,7 @@
-class Node {
+package com.solution._0716;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     public int val;
     public Node prev, next;
 
@@ -10,7 +13,10 @@ class Node {
     }
 }
 
-class DoubleLinkedList {
+package com.solution._0716;
+import change.datastructure.*;
+import java.util.*;
+public class DoubleLinkedList {
     private final Node head = new Node();
     private final Node tail = new Node();
 
@@ -43,7 +49,10 @@ class DoubleLinkedList {
     }
 }
 
-class MaxStack {
+package com.solution._0716;
+import change.datastructure.*;
+import java.util.*;
+public class MaxStack {
     private DoubleLinkedList stk = new DoubleLinkedList();
     private TreeMap<Integer, List<Node>> tm = new TreeMap<>();
 

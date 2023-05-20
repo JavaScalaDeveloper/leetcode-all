@@ -1,4 +1,7 @@
-class MyLinkedList {
+package com.solution._0707;
+import change.datastructure.*;
+import java.util.*;
+public class MyLinkedList {
     private ListNode dummy = new ListNode();
     private int cnt;
 

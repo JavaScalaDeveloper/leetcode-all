@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1918;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kthSmallestSubarraySum(int[] nums, int k) {
         int l = 1 << 30, r = 0;
         for (int x : nums) {

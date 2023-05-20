@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1550;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean threeConsecutiveOdds(int[] arr) {
         int cnt = 0;
         for (int v : arr) {

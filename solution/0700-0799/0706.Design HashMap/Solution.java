@@ -1,4 +1,7 @@
-class MyHashMap {
+package com.solution._0706;
+import change.datastructure.*;
+import java.util.*;
+public class MyHashMap {
     private int[] data = new int[1000001];
 
     public MyHashMap() {

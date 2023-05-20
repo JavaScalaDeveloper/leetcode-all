@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1246;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumMoves(int[] arr) {
         int n = arr.length;
         int[][] f = new int[n][n];

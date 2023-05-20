@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1389;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] createTargetArray(int[] nums, int[] index) {
         int n = nums.length;
         List<Integer> target = new ArrayList<>();

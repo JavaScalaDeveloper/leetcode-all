@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2437;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countTime(String time) {
         return f(time.substring(0, 2), 24) * f(time.substring(3), 60);
     }

@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._1065;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
     boolean isEnd = false;
 
@@ -15,7 +18,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._1065;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] indexPairs(String text, String[] words) {
         Trie trie = new Trie();
         for (String w : words) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1451;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String arrangeWords(String text) {
         String[] words = text.split(" ");
         words[0] = words[0].toLowerCase();

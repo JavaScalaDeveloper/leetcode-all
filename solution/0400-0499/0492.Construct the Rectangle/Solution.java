@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0492;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] constructRectangle(int area) {
         int w = (int) Math.sqrt(area);
         while (area % w != 0) {

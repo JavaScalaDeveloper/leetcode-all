@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0314;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
         if (root == null) {

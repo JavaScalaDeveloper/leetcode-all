@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1202;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public String smallestStringWithSwaps(String s, List<List<Integer>> pairs) {

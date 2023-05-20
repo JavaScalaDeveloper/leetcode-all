@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1781;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int beautySum(String s) {
         int ans = 0;
         int n = s.length();

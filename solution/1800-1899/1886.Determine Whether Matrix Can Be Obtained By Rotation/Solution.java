@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1886;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean findRotation(int[][] mat, int[][] target) {
         int n = mat.length;
         for (int k = 0; k < 4; ++k) {

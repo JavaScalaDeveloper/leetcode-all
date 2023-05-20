@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2463;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private long[][] f;
     private List<Integer> robot;
     private int[][] factory;

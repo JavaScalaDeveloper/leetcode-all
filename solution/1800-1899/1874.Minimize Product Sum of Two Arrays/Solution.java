@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1874;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minProductSum(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
         Arrays.sort(nums2);

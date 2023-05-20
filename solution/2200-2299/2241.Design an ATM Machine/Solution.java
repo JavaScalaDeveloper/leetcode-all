@@ -1,4 +1,7 @@
-class ATM {
+package com.solution._2241;
+import change.datastructure.*;
+import java.util.*;
+public class ATM {
     private long[] cnt = new long[5];
     private int[] d = {20, 50, 100, 200, 500};
 

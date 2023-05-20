@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1215;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> countSteppingNumbers(int low, int high) {
         List<Integer> ans = new ArrayList<>();
         if (low == 0) {

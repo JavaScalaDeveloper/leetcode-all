@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1080;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode sufficientSubset(TreeNode root, int limit) {
         if (root == null) {
             return null;

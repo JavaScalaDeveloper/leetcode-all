@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1096;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private TreeSet<String> s = new TreeSet<>();
 
     public List<String> braceExpansionII(String expression) {

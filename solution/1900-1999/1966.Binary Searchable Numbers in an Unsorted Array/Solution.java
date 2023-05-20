@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1966;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int binarySearchableNumbers(int[] nums) {
         int n = nums.length;
         int[] ok = new int[n];

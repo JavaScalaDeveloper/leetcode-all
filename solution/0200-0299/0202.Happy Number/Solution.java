@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0202;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isHappy(int n) {
         int slow = n, fast = next(n);
         while (slow != fast) {

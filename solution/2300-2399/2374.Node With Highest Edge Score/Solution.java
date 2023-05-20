@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2374;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int edgeScore(int[] edges) {
         int n = edges.length;
         long[] cnt = new long[n];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1962;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minStoneSum(int[] piles, int k) {
         PriorityQueue<Integer> q = new PriorityQueue<>((a, b) -> (b - a));
         for (int p : piles) {

@@ -1,4 +1,7 @@
-class SmallestInfiniteSet {
+package com.solution._2336;
+import change.datastructure.*;
+import java.util.*;
+public class SmallestInfiniteSet {
     private Set<Integer> black = new HashSet<>();
 
     public SmallestInfiniteSet() {

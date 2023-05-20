@@ -16,7 +16,10 @@
  * }
  */
 
-class Solution {
+package com.solution._0489;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<String> vis;
     private int[][] dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 

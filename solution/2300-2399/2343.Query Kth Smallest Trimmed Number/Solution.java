@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2343;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] smallestTrimmedNumbers(String[] nums, int[][] queries) {
         int n = nums.length;
         int m = queries.length;

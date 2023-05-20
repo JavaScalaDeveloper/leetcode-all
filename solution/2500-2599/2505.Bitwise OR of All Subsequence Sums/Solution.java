@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2505;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long subsequenceSumOr(int[] nums) {
         long[] cnt = new long[64];
         long ans = 0;

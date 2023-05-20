@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1790;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean areAlmostEqual(String s1, String s2) {
         int cnt = 0;
         char c1 = 0, c2 = 0;

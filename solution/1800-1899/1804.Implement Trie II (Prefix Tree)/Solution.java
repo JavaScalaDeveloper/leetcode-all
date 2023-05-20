@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._1804;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     private Trie[] children = new Trie[26];
     private int v;
     private int pv;

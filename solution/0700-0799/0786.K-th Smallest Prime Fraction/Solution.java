@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0786;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] kthSmallestPrimeFraction(int[] arr, int k) {
         int n = arr.length;
         Queue<Frac> pq = new PriorityQueue<>();

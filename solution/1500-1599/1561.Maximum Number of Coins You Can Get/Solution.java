@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1561;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxCoins(int[] piles) {
         Arrays.sort(piles);
         int ans = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0209;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSubArrayLen(int target, int[] nums) {
         int n = nums.length;
         long s = 0;

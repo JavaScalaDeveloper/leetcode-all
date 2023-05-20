@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2103;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countPoints(String rings) {
         Map<Integer, Set<Character>> mp = new HashMap<>();
         for (int i = 1; i < rings.length(); i += 2) {

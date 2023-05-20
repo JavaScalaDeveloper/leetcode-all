@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2196;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode createBinaryTree(int[][] descriptions) {
         Map<Integer, TreeNode> m = new HashMap<>();
         Set<Integer> vis = new HashSet<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0573;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minDistance(int height, int width, int[] tree, int[] squirrel, int[][] nuts) {
         int ans = Integer.MAX_VALUE;
         int s = 0;

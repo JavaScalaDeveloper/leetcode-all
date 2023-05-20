@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0212;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
     int ref = -1;
 
@@ -15,7 +18,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._0212;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private char[][] board;
     private String[] words;
     private List<String> ans = new ArrayList<>();

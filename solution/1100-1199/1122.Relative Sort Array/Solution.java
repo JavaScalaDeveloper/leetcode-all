@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1122;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] relativeSortArray(int[] arr1, int[] arr2) {
         int[] mp = new int[1001];
         for (int x : arr1) {

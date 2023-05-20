@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._0092;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode reverseBetween(ListNode head, int left, int right) {
         if (head.next == null || left == right) {
             return head;

@@ -7,7 +7,10 @@
  * };
  */
 
-class Solution {
+package com.solution._1428;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int leftMostColumnWithOne(BinaryMatrix binaryMatrix) {
         List<Integer> scale = binaryMatrix.dimensions();
         int rows = scale.get(0), cols = scale.get(1);

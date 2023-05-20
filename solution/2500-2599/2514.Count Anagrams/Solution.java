@@ -1,6 +1,9 @@
 import java.math.BigInteger;
 
-class Solution {
+package com.solution._2514;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int MOD = (int) 1e9 + 7;
 
     public int countAnagrams(String s) {

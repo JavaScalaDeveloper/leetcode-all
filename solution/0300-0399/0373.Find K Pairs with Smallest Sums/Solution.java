@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0373;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         PriorityQueue<int[]> q = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
         for (int i = 0; i < Math.min(nums1.length, k); ++i) {

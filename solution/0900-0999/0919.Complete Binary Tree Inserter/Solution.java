@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class CBTInserter {
+package com.solution._0919;
+import change.datastructure.*;
+import java.util.*;
+public class CBTInserter {
     private List<TreeNode> tree;
 
     public CBTInserter(TreeNode root) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0383;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
         int[] cnt = new int[26];
         for (int i = 0; i < magazine.length(); ++i) {

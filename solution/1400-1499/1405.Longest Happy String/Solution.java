@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1405;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String longestDiverseString(int a, int b, int c) {
         Queue<int[]> pq = new PriorityQueue<>((x, y) -> y[1] - x[1]);
         if (a > 0) {

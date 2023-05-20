@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0057;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         List<int[]> ans = new ArrayList<>();
         int st = newInterval[0], ed = newInterval[1];

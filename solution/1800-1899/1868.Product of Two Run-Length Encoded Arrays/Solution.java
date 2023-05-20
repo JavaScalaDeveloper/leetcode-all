@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1868;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> findRLEArray(int[][] encoded1, int[][] encoded2) {
         List<List<Integer>> ans = new ArrayList<>();
         int j = 0;

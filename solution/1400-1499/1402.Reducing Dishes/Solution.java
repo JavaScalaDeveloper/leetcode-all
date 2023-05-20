@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1402;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSatisfaction(int[] satisfaction) {
         Arrays.sort(satisfaction);
         int ans = 0, presum = 0;

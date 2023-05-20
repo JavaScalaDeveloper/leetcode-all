@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1252;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int oddCells(int m, int n, int[][] indices) {
         int[] row = new int[m];
         int[] col = new int[n];

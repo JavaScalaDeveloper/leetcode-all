@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0059;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] generateMatrix(int n) {
         int[][] ans = new int[n][n];
         int i = 0, j = 0, k = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0267;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<String> ans = new ArrayList<>();
     private int[] cnt = new int[26];
     private int n;

@@ -1,4 +1,7 @@
-class TextEditor {
+package com.solution._2296;
+import change.datastructure.*;
+import java.util.*;
+public class TextEditor {
     private StringBuilder left = new StringBuilder();
     private StringBuilder right = new StringBuilder();
 

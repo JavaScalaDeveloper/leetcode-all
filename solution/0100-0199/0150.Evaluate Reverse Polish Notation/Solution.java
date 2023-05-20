@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0150;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int evalRPN(String[] tokens) {
         Deque<Integer> stk = new ArrayDeque<>();
         for (String t : tokens) {

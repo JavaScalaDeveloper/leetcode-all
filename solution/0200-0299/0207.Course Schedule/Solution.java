@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0207;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         List<Integer>[] g = new List[numCourses];
         Arrays.setAll(g, k -> new ArrayList<>());

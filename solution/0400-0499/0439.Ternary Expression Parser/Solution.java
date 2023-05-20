@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0439;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String parseTernary(String expression) {
         Deque<Character> stk = new ArrayDeque<>();
         boolean cond = false;

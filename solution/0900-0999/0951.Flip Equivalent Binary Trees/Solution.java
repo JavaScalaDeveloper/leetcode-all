@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0951;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean flipEquiv(TreeNode root1, TreeNode root2) {
         return dfs(root1, root2);
     }

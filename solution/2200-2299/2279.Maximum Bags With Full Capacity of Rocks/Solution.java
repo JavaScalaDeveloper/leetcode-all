@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2279;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumBags(int[] capacity, int[] rocks, int additionalRocks) {
         int n = capacity.length;
         int[] d = new int[n];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2311;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestSubsequence(String s, int k) {
         int ans = 0, v = 0;
         for (int i = s.length() - 1; i >= 0; --i) {

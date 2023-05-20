@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1791;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findCenter(int[][] edges) {
         int a = edges[0][0], b = edges[0][1];
         int c = edges[1][0], d = edges[1][1];

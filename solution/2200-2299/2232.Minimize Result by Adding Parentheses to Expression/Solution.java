@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2232;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String minimizeResult(String expression) {
         int idx = expression.indexOf('+');
         String l = expression.substring(0, idx);

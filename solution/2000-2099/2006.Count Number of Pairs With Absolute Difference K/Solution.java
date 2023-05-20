@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2006;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countKDifference(int[] nums, int k) {
         int ans = 0;
         int[] cnt = new int[110];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2535;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int differenceOfSum(int[] nums) {
         int a = 0, b = 0;
         for (int x : nums) {

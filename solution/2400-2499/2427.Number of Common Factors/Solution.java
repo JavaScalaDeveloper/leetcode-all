@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2427;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int commonFactors(int a, int b) {
         int g = gcd(a, b);
         int ans = 0;

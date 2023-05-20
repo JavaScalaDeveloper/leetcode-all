@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0994;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int orangesRotting(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         int cnt = 0;

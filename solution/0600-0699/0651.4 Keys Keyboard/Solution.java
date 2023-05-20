@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0651;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxA(int n) {
         int[] dp = new int[n + 1];
         for (int i = 0; i < n + 1; ++i) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2540;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int getCommon(int[] nums1, int[] nums2) {
         int m = nums1.length, n = nums2.length;
         for (int i = 0, j = 0; i < m && j < n;) {

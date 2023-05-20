@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1312;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minInsertions(String s) {
         int n = s.length();
         int[][] f = new int[n][n];

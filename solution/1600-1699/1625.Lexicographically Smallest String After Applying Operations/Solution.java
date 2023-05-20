@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1625;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String findLexSmallestString(String s, int a, int b) {
         int n = s.length();
         String ans = s;

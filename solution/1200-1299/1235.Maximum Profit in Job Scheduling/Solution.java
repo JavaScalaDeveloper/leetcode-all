@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1235;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
         int n = profit.length;
         int[][] jobs = new int[n][3];

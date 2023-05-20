@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0050;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double myPow(double x, int n) {
         long N = n;
         return n >= 0 ? qmi(x, N) : 1.0 / qmi(x, -N);

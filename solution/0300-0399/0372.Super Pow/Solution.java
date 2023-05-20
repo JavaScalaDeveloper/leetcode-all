@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0372;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int MOD = 1337;
 
     public int superPow(int a, int[] b) {

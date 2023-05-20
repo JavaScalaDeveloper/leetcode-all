@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1866;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int rearrangeSticks(int n, int k) {
         final int mod = (int) 1e9 + 7;
         int[] f = new int[k + 1];

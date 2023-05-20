@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0931;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minFallingPathSum(int[][] matrix) {
         int n = matrix.length;
         for (int i = 1; i < n; ++i) {

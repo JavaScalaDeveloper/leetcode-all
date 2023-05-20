@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1343;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numOfSubarrays(int[] arr, int k, int threshold) {
         int s = 0;
         for (int i = 0; i < k; ++i) {

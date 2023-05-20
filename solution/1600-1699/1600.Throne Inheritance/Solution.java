@@ -1,4 +1,7 @@
-class ThroneInheritance {
+package com.solution._1600;
+import change.datastructure.*;
+import java.util.*;
+public class ThroneInheritance {
     private Map<String, List<String>> g = new HashMap<>();
     private Set<String> dead = new HashSet<>();
     private List<String> ans;

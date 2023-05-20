@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1005;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestSumAfterKNegations(int[] nums, int k) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (int x : nums) {

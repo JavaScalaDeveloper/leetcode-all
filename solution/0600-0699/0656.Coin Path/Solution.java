@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0656;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> cheapestJump(int[] coins, int maxJump) {
         int n = coins.length;
         List<Integer> ans = new ArrayList<>();

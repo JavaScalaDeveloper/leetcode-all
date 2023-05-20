@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0031;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void nextPermutation(int[] nums) {
         int n = nums.length;
         int i = n - 2;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2028;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] missingRolls(int[] rolls, int mean, int n) {
         int m = rolls.length;
         int s = (n + m) * mean;

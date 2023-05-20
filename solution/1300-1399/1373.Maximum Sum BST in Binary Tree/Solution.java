@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1373;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int ans;
     private final int inf = 1 << 30;
 

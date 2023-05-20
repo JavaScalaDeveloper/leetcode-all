@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1631;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumEffortPath(int[][] heights) {
         int m = heights.length;
         int n = heights[0].length;

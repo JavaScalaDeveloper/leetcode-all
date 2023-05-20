@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2588;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long beautifulSubarrays(int[] nums) {
         Map<Integer, Integer> cnt = new HashMap<>();
         cnt.put(0, 1);

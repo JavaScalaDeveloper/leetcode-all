@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1375;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numTimesAllBlue(int[] flips) {
         int ans = 0, mx = 0;
         for (int i = 1; i <= flips.length; ++i) {

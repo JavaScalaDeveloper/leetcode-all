@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1554;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean differByOne(String[] dict) {
         Set<String> s = new HashSet<>();
         for (String word : dict) {

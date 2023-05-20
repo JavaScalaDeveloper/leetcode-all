@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2059;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumOperations(int[] nums, int start, int goal) {
         IntBinaryOperator op1 = (x, y) -> x + y;
         IntBinaryOperator op2 = (x, y) -> x - y;

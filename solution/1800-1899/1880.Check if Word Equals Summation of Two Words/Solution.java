@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1880;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isSumEqual(String firstWord, String secondWord, String targetWord) {
         return f(firstWord) + f(secondWord) == f(targetWord);
     }

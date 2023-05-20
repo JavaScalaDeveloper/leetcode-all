@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1462;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Boolean> checkIfPrerequisite(
         int numCourses, int[][] prerequisites, int[][] queries) {
         int[][] g = new int[numCourses][numCourses];

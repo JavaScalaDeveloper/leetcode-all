@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1566;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean containsPattern(int[] arr, int m, int k) {
         int n = arr.length;
         for (int i = 0; i <= n - m * k; ++i) {

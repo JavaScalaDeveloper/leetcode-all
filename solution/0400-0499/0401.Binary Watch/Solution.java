@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0401;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> readBinaryWatch(int turnedOn) {
         List<String> ans = new ArrayList<>();
         for (int i = 0; i < 12; ++i) {

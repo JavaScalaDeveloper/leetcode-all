@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0472;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
     boolean isEnd;
 
@@ -15,7 +18,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._0472;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Trie trie = new Trie();
 
     public List<String> findAllConcatenatedWordsInADict(String[] words) {

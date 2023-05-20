@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2402;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int mostBooked(int n, int[][] meetings) {
         Arrays.sort(meetings, (a, b) -> a[0] - b[0]);
         PriorityQueue<int[]> busy

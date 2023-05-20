@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2035;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumDifference(int[] nums) {
         int n = nums.length >> 1;
         Map<Integer, Set<Integer>> f = new HashMap<>();

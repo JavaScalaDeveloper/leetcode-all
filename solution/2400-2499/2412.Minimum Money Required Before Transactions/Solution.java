@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2412;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minimumMoney(int[][] transactions) {
         long s = 0;
         for (var e : transactions) {

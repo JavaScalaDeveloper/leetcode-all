@@ -1,4 +1,7 @@
-class Leaderboard {
+package com.solution._1244;
+import change.datastructure.*;
+import java.util.*;
+public class Leaderboard {
     private Map<Integer, Integer> d = new HashMap<>();
     private TreeMap<Integer, Integer> rank = new TreeMap<>((a, b) -> b - a);
 

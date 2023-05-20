@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0591;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isValid(String code) {
         Deque<String> stk = new ArrayDeque<>();
         for (int i = 0; i < code.length(); ++i) {

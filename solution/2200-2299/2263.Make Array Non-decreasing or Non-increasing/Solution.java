@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2263;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int convertArray(int[] nums) {
         return Math.min(solve(nums), solve(reverse(nums)));
     }

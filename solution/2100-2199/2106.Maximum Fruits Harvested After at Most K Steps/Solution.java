@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2106;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxTotalFruits(int[][] fruits, int startPos, int k) {
         int ans = 0, s = 0;
         for (int i = 0, j = 0; j < fruits.length; ++j) {

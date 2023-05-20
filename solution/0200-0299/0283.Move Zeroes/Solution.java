@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0283;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void moveZeroes(int[] nums) {
         int left = 0, n = nums.length;
         for (int right = 0; right < n; ++right) {

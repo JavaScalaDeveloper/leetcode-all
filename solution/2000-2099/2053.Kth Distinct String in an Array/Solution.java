@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2053;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String kthDistinct(String[] arr, int k) {
         Map<String, Integer> counter = new HashMap<>();
         for (String v : arr) {

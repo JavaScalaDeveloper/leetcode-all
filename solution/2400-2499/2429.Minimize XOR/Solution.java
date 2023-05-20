@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2429;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimizeXor(int num1, int num2) {
         int cnt1 = Integer.bitCount(num1);
         int cnt2 = Integer.bitCount(num2);

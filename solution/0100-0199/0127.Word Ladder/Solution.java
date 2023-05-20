@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0127;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<String> words;
 
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {

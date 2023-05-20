@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1337;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] kWeakestRows(int[][] mat, int k) {
         int m = mat.length, n = mat[0].length;
         int[] res = new int[m];

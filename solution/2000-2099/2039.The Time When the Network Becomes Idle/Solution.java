@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2039;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int networkBecomesIdle(int[][] edges, int[] patience) {
         int n = patience.length;
         List<Integer>[] g = new List[n];

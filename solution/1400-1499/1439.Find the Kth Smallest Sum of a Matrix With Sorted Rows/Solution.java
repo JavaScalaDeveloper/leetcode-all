@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1439;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kthSmallest(int[][] mat, int k) {
         int m = mat.length, n = mat[0].length;
         List<Integer> pre = new ArrayList<>(k);

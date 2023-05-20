@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2568;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minImpossibleOR(int[] nums) {
         Set<Integer> s = new HashSet<>();
         for (int x : nums) {

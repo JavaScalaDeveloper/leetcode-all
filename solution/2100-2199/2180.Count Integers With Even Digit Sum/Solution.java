@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2180;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countEven(int num) {
         int ans = 0;
         for (int i = 1; i <= num; ++i) {

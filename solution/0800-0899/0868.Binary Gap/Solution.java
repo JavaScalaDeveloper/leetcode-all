@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0868;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int binaryGap(int n) {
         int ans = 0;
         for (int i = 0, j = -1; n != 0; ++i, n >>= 1) {

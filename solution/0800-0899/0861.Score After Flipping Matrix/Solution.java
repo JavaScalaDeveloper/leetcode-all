@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0861;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int matrixScore(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         for (int i = 0; i < m; ++i) {

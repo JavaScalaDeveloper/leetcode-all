@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2580;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countWays(int[][] ranges) {
         Arrays.sort(ranges, (a, b) -> a[0] - b[0]);
         int cnt = 0, mx = -1;

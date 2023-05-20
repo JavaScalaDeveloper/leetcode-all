@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0016;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
         int ans = 1 << 30;

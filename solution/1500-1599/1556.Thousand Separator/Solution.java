@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1556;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String thousandSeparator(int n) {
         int cnt = 0;
         StringBuilder ans = new StringBuilder();

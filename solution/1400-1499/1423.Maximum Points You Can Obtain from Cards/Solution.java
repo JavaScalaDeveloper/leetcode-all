@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1423;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxScore(int[] cardPoints, int k) {
         int n = cardPoints.length;
         int[] s = new int[n + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2554;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxCount(int[] banned, int n, int maxSum) {
         Set<Integer> ban = new HashSet<>(banned.length);
         for (int x : banned) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0463;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int islandPerimeter(int[][] grid) {
         int ans = 0;
         int m = grid.length;

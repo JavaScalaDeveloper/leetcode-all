@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0609;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<String>> findDuplicate(String[] paths) {
         Map<String, List<String>> d = new HashMap<>();
         for (String p : paths) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0991;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int brokenCalc(int startValue, int target) {
         int ans = 0;
         while (startValue < target) {

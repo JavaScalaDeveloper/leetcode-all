@@ -1,4 +1,7 @@
-class SQL {
+package com.solution._2408;
+import change.datastructure.*;
+import java.util.*;
+public class SQL {
     private Map<String, List<List<String>>> tables;
 
     public SQL(List<String> names, List<Integer> columns) {

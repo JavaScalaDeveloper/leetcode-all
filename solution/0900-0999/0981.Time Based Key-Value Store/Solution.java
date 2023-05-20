@@ -1,4 +1,7 @@
-class TimeMap {
+package com.solution._0981;
+import change.datastructure.*;
+import java.util.*;
+public class TimeMap {
     private Map<String, TreeMap<Integer, String>> ktv = new HashMap<>();
 
     public TimeMap() {

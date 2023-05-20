@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0084;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestRectangleArea(int[] heights) {
         int res = 0, n = heights.length;
         Deque<Integer> stk = new ArrayDeque<>();

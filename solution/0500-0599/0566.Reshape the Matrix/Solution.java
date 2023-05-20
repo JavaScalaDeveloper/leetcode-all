@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0566;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] matrixReshape(int[][] mat, int r, int c) {
         int m = mat.length, n = mat[0].length;
         if (m * n != r * c) {

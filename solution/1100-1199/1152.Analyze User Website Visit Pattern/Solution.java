@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1152;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> mostVisitedPattern(String[] username, int[] timestamp, String[] website) {
         Map<String, List<Node>> d = new HashMap<>();
         int n = username.length;
@@ -39,7 +42,10 @@ class Solution {
     }
 }
 
-class Node {
+package com.solution._1152;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     String user;
     int ts;
     String site;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2281;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int totalStrength(int[] strength) {
         int n = strength.length;
         int[] left = new int[n];

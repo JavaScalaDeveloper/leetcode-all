@@ -1,4 +1,7 @@
-class BinaryIndexedTree {
+package com.solution._1756;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 
@@ -24,7 +27,10 @@ class BinaryIndexedTree {
     }
 }
 
-class MRUQueue {
+package com.solution._1756;
+import change.datastructure.*;
+import java.util.*;
+public class MRUQueue {
     private int n;
     private int[] q;
     private BinaryIndexedTree tree;

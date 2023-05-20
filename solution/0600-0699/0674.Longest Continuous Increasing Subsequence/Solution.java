@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0674;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLengthOfLCIS(int[] nums) {
         int res = 1;
         for (int i = 1, f = 1; i < nums.length; ++i) {

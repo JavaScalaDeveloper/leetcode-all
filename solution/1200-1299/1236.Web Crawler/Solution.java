@@ -6,7 +6,10 @@
  * }
  */
 
-class Solution {
+package com.solution._1236;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<String> ans;
 
     public List<String> crawl(String startUrl, HtmlParser htmlParser) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2262;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long appealSum(String s) {
         long ans = 0;
         long t = 0;

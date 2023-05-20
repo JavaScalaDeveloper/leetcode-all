@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1933;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isDecomposable(String s) {
         int i = 0, n = s.length();
         int cnt2 = 0;

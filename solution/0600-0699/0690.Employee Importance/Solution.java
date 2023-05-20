@@ -1,13 +1,19 @@
 /*
 // Definition for Employee.
-class Employee {
+package com.solution._0690;
+import change.datastructure.*;
+import java.util.*;
+public class Employee {
     public int id;
     public int importance;
     public List<Integer> subordinates;
 };
 */
 
-class Solution {
+package com.solution._0690;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
 
     private final Map<Integer, Employee> map = new HashMap<>();
 

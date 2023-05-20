@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0299;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String getHint(String secret, String guess) {
         int x = 0, y = 0;
         int[] cnt1 = new int[10];

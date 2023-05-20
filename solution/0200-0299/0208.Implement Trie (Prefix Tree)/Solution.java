@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0208;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     private Trie[] children;
     private boolean isEnd;
 

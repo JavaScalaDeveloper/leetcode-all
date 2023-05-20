@@ -1,4 +1,7 @@
-class MyQueue {
+package com.solution._0232;
+import change.datastructure.*;
+import java.util.*;
+public class MyQueue {
     private Deque<Integer> stk1 = new ArrayDeque<>();
     private Deque<Integer> stk2 = new ArrayDeque<>();
 

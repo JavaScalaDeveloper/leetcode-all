@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0990;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public boolean equationsPossible(String[] equations) {

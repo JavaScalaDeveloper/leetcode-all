@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1147;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestDecomposition(String text) {
         int ans = 0;
         for (int i = 0, j = text.length() - 1; i <= j;) {

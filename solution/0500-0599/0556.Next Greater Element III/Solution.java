@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0556;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int nextGreaterElement(int n) {
         char[] cs = String.valueOf(n).toCharArray();
         n = cs.length;

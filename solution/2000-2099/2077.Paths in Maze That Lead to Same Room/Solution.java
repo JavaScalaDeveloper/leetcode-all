@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2077;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numberOfPaths(int n, int[][] corridors) {
         Set<Integer>[] g = new Set[n + 1];
         for (int i = 0; i <= n; ++i) {

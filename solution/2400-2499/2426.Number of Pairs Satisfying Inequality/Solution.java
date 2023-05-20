@@ -1,4 +1,7 @@
-class BinaryIndexedTree {
+package com.solution._2426;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 
@@ -28,7 +31,10 @@ class BinaryIndexedTree {
     }
 }
 
-class Solution {
+package com.solution._2426;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long numberOfPairs(int[] nums1, int[] nums2, int diff) {
         BinaryIndexedTree tree = new BinaryIndexedTree(100000);
         long ans = 0;

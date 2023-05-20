@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0224;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int calculate(String s) {
         Deque<Integer> stk = new ArrayDeque<>();
         int sign = 1;

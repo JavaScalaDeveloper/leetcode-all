@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2482;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] onesMinusZeros(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         int[] rows = new int[m];

@@ -1,9 +1,15 @@
-class Node {
+package com.solution._1157;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     int l, r;
     int x, cnt;
 }
 
-class SegmentTree {
+package com.solution._1157;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private Node[] tr;
     private int[] nums;
 
@@ -69,7 +75,10 @@ class SegmentTree {
     }
 }
 
-class MajorityChecker {
+package com.solution._1157;
+import change.datastructure.*;
+import java.util.*;
+public class MajorityChecker {
     private SegmentTree tree;
     private Map<Integer, List<Integer>> d = new HashMap<>();
 

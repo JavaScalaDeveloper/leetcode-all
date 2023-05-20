@@ -1,4 +1,7 @@
-class MagicDictionary {
+package com.solution._0676;
+import change.datastructure.*;
+import java.util.*;
+public class MagicDictionary {
     private Set<String> s = new HashSet<>();
     private Map<String, Integer> cnt = new HashMap<>();
 

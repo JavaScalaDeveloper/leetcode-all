@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1054;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] rearrangeBarcodes(int[] barcodes) {
         int n = barcodes.length;
         Integer[] t = new Integer[n];

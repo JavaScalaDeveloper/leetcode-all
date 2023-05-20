@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1015;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int smallestRepunitDivByK(int k) {
         int n = 1 % k;
         for (int i = 1; i <= k; ++i) {

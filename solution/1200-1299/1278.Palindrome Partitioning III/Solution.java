@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1278;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int palindromePartition(String s, int k) {
         int n = s.length();
         int[][] g = new int[n][n];

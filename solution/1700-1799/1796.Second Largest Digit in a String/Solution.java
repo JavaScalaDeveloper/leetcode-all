@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1796;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int secondHighest(String s) {
         int a = -1, b = -1;
         for (int i = 0; i < s.length(); ++i) {

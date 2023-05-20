@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0239;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length;
         int[] ans = new int[n - k + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0790;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numTilings(int n) {
         long[] f = {1, 0, 0, 0};
         int mod = (int) 1e9 + 7;

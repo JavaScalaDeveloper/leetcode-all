@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1293;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int shortestPath(int[][] grid, int k) {
         int m = grid.length;
         int n = grid[0].length;

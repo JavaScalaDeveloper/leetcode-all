@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0671;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int ans = -1;
 
     public int findSecondMinimumValue(TreeNode root) {

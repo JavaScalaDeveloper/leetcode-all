@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2202;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumTop(int[] nums, int k) {
         if (k == 0) {
             return nums[0];

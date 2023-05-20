@@ -16,7 +16,10 @@
  * }
  */
 
-class Solution {
+package com.solution._1485;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Node, NodeCopy> mp;
 
     public NodeCopy copyRandomBinaryTree(Node root) {

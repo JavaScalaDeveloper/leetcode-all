@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1335;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minDifficulty(int[] jobDifficulty, int d) {
         final int inf = 1 << 30;
         int n = jobDifficulty.length;

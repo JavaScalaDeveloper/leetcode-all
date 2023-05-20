@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1665;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumEffort(int[][] tasks) {
         Arrays.sort(tasks, (a, b) -> a[0] - b[0] - (a[1] - b[1]));
         int ans = 0, cur = 0;

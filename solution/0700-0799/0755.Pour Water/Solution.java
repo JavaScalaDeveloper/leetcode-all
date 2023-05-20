@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0755;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] pourWater(int[] heights, int volume, int k) {
         while (volume-- > 0) {
             boolean find = false;

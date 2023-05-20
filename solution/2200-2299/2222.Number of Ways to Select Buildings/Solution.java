@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2222;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long numberOfWays(String s) {
         int n = s.length();
         int cnt0 = 0;

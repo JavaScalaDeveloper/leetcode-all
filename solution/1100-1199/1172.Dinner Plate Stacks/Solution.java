@@ -1,4 +1,7 @@
-class DinnerPlates {
+package com.solution._1172;
+import change.datastructure.*;
+import java.util.*;
+public class DinnerPlates {
     private int capacity;
     private List<Deque<Integer>> stacks = new ArrayList<>();
     private TreeSet<Integer> notFull = new TreeSet<>();

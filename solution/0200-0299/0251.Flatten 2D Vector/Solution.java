@@ -1,4 +1,7 @@
-class Vector2D {
+package com.solution._0251;
+import change.datastructure.*;
+import java.util.*;
+public class Vector2D {
     private int i;
     private int j;
     private int[][] vec;

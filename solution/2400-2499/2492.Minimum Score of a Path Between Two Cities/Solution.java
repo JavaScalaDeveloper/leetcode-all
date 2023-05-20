@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2492;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<int[]>[] g;
     private boolean[] vis;
     private int ans = 1 << 30;

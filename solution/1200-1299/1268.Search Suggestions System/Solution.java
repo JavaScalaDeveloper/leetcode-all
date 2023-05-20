@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._1268;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
     List<Integer> v = new ArrayList<>();
 
@@ -33,7 +36,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._1268;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<String>> suggestedProducts(String[] products, String searchWord) {
         Arrays.sort(products);
         Trie trie = new Trie();

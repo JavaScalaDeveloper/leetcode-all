@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0276;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numWays(int n, int k) {
         int[][] dp = new int[n][2];
         dp[0][0] = k;

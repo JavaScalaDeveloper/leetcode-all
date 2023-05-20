@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1260;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> shiftGrid(int[][] grid, int k) {
         int m = grid.length, n = grid[0].length;
         k %= (m * n);

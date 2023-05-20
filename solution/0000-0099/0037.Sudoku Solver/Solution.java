@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0037;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private boolean ok;
     private char[][] board;
     private List<Integer> t = new ArrayList<>();

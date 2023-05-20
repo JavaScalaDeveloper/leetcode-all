@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1417;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reformat(String s) {
         StringBuilder a = new StringBuilder();
         StringBuilder b = new StringBuilder();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1144;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int movesToMakeZigzag(int[] nums) {
         int[] ans = new int[2];
         int n = nums.length;

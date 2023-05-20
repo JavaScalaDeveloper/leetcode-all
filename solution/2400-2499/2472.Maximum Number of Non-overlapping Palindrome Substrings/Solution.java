@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2472;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private boolean[][] dp;
     private int[] f;
     private String s;

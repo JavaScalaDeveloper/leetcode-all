@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0784;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<String> ans = new ArrayList<>();
     private char[] t;
 

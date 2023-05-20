@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1222;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int N = 8;
     private int[][] dirs
         = new int[][] {{0, -1}, {0, 1}, {1, 0}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};

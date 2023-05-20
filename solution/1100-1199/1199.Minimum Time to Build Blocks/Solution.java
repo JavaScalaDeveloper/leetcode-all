@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1199;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minBuildTime(int[] blocks, int split) {
         PriorityQueue<Integer> q = new PriorityQueue<>();
         for (int x : blocks) {

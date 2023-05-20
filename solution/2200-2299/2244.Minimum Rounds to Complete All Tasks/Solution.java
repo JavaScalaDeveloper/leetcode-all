@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2244;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumRounds(int[] tasks) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (int t : tasks) {

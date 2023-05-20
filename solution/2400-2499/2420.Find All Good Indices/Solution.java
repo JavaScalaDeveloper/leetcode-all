@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2420;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> goodIndices(int[] nums, int k) {
         int n = nums.length;
         int[] decr = new int[n];

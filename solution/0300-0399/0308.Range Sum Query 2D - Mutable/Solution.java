@@ -1,4 +1,7 @@
-class BinaryIndexedTree {
+package com.solution._0308;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 
@@ -28,7 +31,10 @@ class BinaryIndexedTree {
     }
 }
 
-class NumMatrix {
+package com.solution._0308;
+import change.datastructure.*;
+import java.util.*;
+public class NumMatrix {
     private BinaryIndexedTree[] trees;
 
     public NumMatrix(int[][] matrix) {

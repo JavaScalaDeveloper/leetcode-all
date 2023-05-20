@@ -1,4 +1,7 @@
-class FileSharing {
+package com.solution._1500;
+import change.datastructure.*;
+import java.util.*;
+public class FileSharing {
     private int chunks;
     private int cur;
     private TreeSet<Integer> reused;

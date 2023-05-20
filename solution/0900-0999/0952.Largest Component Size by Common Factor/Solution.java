@@ -1,4 +1,7 @@
-class UnionFind {
+package com.solution._0952;
+import change.datastructure.*;
+import java.util.*;
+public class UnionFind {
     int[] p;
 
     UnionFind(int n) {
@@ -23,7 +26,10 @@ class UnionFind {
     }
 }
 
-class Solution {
+package com.solution._0952;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestComponentSize(int[] nums) {
         int m = 0;
         for (int v : nums) {

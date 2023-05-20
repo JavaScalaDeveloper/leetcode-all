@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0311;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] multiply(int[][] mat1, int[][] mat2) {
         int r1 = mat1.length, c1 = mat1[0].length, c2 = mat2[0].length;
         int[][] res = new int[r1][c2];

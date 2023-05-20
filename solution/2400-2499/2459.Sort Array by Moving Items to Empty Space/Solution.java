@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2459;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int sortArray(int[] nums) {
         int n = nums.length;
         int[] arr = new int[n];

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2476;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer> nums = new ArrayList<>();
 
     public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {

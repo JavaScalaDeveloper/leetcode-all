@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0287;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findDuplicate(int[] nums) {
         int left = 1, right = nums.length - 1;
         while (left < right) {

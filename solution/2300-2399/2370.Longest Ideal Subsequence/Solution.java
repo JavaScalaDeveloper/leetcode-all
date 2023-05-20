@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2370;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestIdealString(String s, int k) {
         int n = s.length();
         int ans = 1;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0038;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String countAndSay(int n) {
         String s = "1";
         while (--n > 0) {

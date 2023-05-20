@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0683;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kEmptySlots(int[] bulbs, int k) {
         int n = bulbs.length;
         BinaryIndexedTree tree = new BinaryIndexedTree(n);
@@ -17,7 +20,10 @@ class Solution {
     }
 }
 
-class BinaryIndexedTree {
+package com.solution._0683;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 

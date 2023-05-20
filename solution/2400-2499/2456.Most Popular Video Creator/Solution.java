@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2456;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<String>> mostPopularCreator(String[] creators, String[] ids, int[] views) {
         Map<String, Integer> cnt = new HashMap<>();
         Map<String, Integer> d = new HashMap<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2570;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] mergeArrays(int[][] nums1, int[][] nums2) {
         int[] cnt = new int[1001];
         for (var x : nums1) {

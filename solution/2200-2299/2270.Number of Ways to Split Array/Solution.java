@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2270;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int waysToSplitArray(int[] nums) {
         long s = 0;
         for (int v : nums) {

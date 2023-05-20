@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1093;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double[] sampleStats(int[] count) {
         int n = count.length;
         int mode = 0, modeMax = 0;

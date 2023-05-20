@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0161;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isOneEditDistance(String s, String t) {
         int m = s.length(), n = t.length();
         if (m < n) {

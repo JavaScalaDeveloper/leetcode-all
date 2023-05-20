@@ -23,7 +23,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0109;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode sortedListToBST(ListNode head) {
         List<Integer> nums = new ArrayList<>();
         for (; head != null; head = head.next) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1822;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int arraySign(int[] nums) {
         int ans = 1;
         for (int v : nums) {

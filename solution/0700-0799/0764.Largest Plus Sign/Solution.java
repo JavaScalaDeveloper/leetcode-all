@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0764;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int orderOfLargestPlusSign(int n, int[][] mines) {
         int[][] dp = new int[n][n];
         for (var e : dp) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0227;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int calculate(String s) {
         Deque<Integer> stk = new ArrayDeque<>();
         char sign = '+';

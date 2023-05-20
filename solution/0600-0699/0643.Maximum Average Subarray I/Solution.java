@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0643;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double findMaxAverage(int[] nums, int k) {
         int s = 0;
         for (int i = 0; i < k; ++i) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0028;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int strStr(String haystack, String needle) {
         if ("".equals(needle)) {
             return 0;

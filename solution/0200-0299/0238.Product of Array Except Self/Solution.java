@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0238;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
         int[] ans = new int[n];

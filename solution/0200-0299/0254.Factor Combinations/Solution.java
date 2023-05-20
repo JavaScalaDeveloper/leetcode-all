@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0254;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer> t = new ArrayList<>();
     private List<List<Integer>> ans = new ArrayList<>();
 

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0545;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer> res;
 
     public List<Integer> boundaryOfBinaryTree(TreeNode root) {

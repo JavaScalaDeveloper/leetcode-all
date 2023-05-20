@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1589;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSumRangeQuery(int[] nums, int[][] requests) {
         int n = nums.length;
         int[] d = new int[n];

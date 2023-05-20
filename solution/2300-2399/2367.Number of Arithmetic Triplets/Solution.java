@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2367;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int arithmeticTriplets(int[] nums, int diff) {
         boolean[] vis = new boolean[301];
         for (int x : nums) {

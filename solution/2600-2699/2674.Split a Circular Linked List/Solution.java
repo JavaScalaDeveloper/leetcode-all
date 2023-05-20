@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._2674;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode[] splitCircularLinkedList(ListNode list) {
         ListNode a = list, b = list;
         while (b.next != list && b.next.next != list) {

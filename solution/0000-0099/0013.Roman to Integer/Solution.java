@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0013;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int romanToInt(String s) {
         String cs = "IVXLCDM";
         int[] vs = {1, 5, 10, 50, 100, 500, 1000};

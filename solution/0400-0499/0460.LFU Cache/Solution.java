@@ -1,4 +1,7 @@
-class LFUCache {
+package com.solution._0460;
+import change.datastructure.*;
+import java.util.*;
+public class LFUCache {
 
     private final Map<Integer, Node> map;
     private final Map<Integer, DoublyLinkedList> freqMap;

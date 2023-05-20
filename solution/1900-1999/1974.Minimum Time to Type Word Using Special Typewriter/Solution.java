@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1974;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minTimeToType(String word) {
         int ans = 0;
         int prev = 0;

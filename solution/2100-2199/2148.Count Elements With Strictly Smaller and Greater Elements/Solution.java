@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2148;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countElements(int[] nums) {
         int mi = 1000000, mx = -1000000;
         for (int num : nums) {

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0606;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String tree2str(TreeNode root) {
         if (root == null) {
             return "";

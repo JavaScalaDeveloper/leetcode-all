@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2207;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maximumSubsequenceCount(String text, String pattern) {
         int[] cnt = new int[26];
         char a = pattern.charAt(0);

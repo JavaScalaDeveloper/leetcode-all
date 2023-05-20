@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1703;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minMoves(int[] nums, int k) {
         List<Integer> arr = new ArrayList<>();
         int n = nums.length;

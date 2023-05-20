@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0844;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean backspaceCompare(String s, String t) {
         int i = s.length() - 1, j = t.length() - 1;
         int skip1 = 0, skip2 = 0;

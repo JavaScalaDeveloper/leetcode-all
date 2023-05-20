@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2555;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximizeWin(int[] prizePositions, int k) {
         int n = prizePositions.length;
         int[] f = new int[n + 1];

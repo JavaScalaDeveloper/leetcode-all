@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1033;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] numMovesStones(int a, int b, int c) {
         int x = Math.min(a, Math.min(b, c));
         int z = Math.max(a, Math.max(b, c));

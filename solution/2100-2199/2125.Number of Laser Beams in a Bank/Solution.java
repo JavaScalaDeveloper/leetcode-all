@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2125;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numberOfBeams(String[] bank) {
         int last = 0;
         int ans = 0;

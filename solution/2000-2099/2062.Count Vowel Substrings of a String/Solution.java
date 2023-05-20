@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2062;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countVowelSubstrings(String word) {
         int n = word.length();
         int ans = 0;

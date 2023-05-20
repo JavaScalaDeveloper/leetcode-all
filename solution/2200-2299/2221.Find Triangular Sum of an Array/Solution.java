@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2221;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int triangularSum(int[] nums) {
         int n = nums.length;
         for (int i = n; i >= 0; --i) {

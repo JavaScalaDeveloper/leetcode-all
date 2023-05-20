@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1834;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] getOrder(int[][] tasks) {
         int n = tasks.length;
         int[][] ts = new int[n][3];

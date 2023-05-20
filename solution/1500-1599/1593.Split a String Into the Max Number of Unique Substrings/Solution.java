@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1593;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<String> vis = new HashSet<>();
     private int ans = 1;
     private String s;

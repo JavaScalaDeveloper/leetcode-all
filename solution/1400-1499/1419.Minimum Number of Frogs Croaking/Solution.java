@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1419;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minNumberOfFrogs(String croakOfFrogs) {
         int n = croakOfFrogs.length();
         if (n % 5 != 0) {

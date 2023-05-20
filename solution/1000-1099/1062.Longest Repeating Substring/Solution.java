@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1062;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestRepeatingSubstring(String s) {
         int n = s.length();
         int ans = 0;

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0965;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isUnivalTree(TreeNode root) {
         return dfs(root, root.val);
     }

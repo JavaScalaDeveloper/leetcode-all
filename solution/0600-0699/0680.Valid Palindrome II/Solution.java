@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0680;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean validPalindrome(String s) {
         for (int i = 0, j = s.length() - 1; i < j; ++i, --j) {
             if (s.charAt(i) != s.charAt(j)) {

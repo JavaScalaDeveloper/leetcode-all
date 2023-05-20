@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2681;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int sumOfPower(int[] nums) {
         final int mod = (int) 1e9 + 7;
         Arrays.sort(nums);

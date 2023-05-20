@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2323;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumTime(int[] jobs, int[] workers) {
         Arrays.sort(jobs);
         Arrays.sort(workers);

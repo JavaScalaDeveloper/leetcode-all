@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0632;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] smallestRange(List<List<Integer>> nums) {
         int n = 0;
         for (var v : nums) {

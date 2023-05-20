@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0483;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String smallestGoodBase(String n) {
         long num = Long.parseLong(n);
         for (int len = 63; len >= 2; --len) {

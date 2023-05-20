@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1385;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findTheDistanceValue(int[] arr1, int[] arr2, int d) {
         int ans = 0;
         for (int a : arr1) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2537;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long countGood(int[] nums, int k) {
         Map<Integer, Integer> cnt = new HashMap<>();
         long ans = 0, cur = 0;

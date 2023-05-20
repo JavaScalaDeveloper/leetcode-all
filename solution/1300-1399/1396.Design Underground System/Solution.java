@@ -1,4 +1,7 @@
-class UndergroundSystem {
+package com.solution._1396;
+import change.datastructure.*;
+import java.util.*;
+public class UndergroundSystem {
     private Map<Integer, Integer> ts = new HashMap<>();
     private Map<Integer, String> names = new HashMap<>();
     private Map<String, int[]> d = new HashMap<>();

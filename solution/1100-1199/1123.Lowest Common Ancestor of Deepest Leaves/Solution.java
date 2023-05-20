@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1123;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode lcaDeepestLeaves(TreeNode root) {
         return dfs(root).getKey();
     }

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2682;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] circularGameLosers(int n, int k) {
         boolean[] vis = new boolean[n];
         int cnt = 0;

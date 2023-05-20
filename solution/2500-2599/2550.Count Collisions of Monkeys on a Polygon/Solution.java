@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2550;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int monkeyMove(int n) {
         final int mod = (int) 1e9 + 7;
         return (int) (qmi(2, n, mod) - 2 + mod) % mod;

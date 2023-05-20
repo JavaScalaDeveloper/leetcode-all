@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2383;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minNumberOfHours(
         int initialEnergy, int initialExperience, int[] energy, int[] experience) {
         int ans = 0;

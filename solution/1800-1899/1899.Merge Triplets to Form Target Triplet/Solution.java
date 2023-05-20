@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1899;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean mergeTriplets(int[][] triplets, int[] target) {
         int x = target[0], y = target[1], z = target[2];
         int d = 0, e = 0, f = 0;

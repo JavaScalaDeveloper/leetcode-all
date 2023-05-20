@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1165;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int calculateTime(String keyboard, String word) {
         Map<Character, Integer> index = new HashMap<>();
         for (int i = 0; i < keyboard.length(); ++i) {

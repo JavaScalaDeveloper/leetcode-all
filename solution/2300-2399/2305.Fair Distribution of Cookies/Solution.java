@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2305;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] cookies;
     private int[] cnt;
     private int k;

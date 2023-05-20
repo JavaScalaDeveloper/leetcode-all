@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1051;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int heightChecker(int[] heights) {
         int[] expected = heights.clone();
         Arrays.sort(expected);

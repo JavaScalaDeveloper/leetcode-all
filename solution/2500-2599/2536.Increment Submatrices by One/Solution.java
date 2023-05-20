@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2536;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] rangeAddQueries(int n, int[][] queries) {
         int[][] mat = new int[n][n];
         for (var q : queries) {

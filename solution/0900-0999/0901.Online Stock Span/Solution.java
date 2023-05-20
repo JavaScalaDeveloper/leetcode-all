@@ -1,4 +1,7 @@
-class StockSpanner {
+package com.solution._0901;
+import change.datastructure.*;
+import java.util.*;
+public class StockSpanner {
     private Deque<int[]> stk = new ArrayDeque<>();
 
     public StockSpanner() {

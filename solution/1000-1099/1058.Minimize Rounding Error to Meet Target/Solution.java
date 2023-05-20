@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1058;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String minimizeError(String[] prices, int target) {
         int mi = 0;
         List<Double> arr = new ArrayList<>();

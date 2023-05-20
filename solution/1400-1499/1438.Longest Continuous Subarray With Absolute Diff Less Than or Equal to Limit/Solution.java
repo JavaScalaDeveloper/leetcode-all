@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1438;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestSubarray(int[] nums, int limit) {
         TreeMap<Integer, Integer> tm = new TreeMap<>();
         int ans = 0, j = 0;

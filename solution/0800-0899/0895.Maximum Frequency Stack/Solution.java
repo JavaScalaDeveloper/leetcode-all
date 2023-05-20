@@ -1,4 +1,7 @@
-class FreqStack {
+package com.solution._0895;
+import change.datastructure.*;
+import java.util.*;
+public class FreqStack {
     private Map<Integer, Integer> cnt = new HashMap<>();
     private Map<Integer, Deque<Integer>> d = new HashMap<>();
     private int mx;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0399;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<String, String> p;
     private Map<String, Double> w;
 

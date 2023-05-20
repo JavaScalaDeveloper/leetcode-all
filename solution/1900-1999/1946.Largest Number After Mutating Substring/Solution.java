@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1946;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String maximumNumber(String num, int[] change) {
         char[] s = num.toCharArray();
         for (int i = 0; i < s.length; ++i) {

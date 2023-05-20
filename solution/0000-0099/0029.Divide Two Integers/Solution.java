@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0029;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int divide(int a, int b) {
         int sign = 1;
         if ((a < 0) != (b < 0)) {

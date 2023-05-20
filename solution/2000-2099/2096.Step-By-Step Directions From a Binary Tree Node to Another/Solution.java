@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2096;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Integer, List<List<String>>> edges;
     private Set<Integer> visited;
     private String ans;

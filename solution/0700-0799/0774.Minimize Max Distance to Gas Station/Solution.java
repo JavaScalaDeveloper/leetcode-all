@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0774;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double minmaxGasDist(int[] stations, int k) {
         double left = 0, right = 1e8;
         while (right - left > 1e-6) {

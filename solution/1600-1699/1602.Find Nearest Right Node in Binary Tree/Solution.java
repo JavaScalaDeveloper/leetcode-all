@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1602;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode findNearestRightNode(TreeNode root, TreeNode u) {
         Deque<TreeNode> q = new ArrayDeque<>();
         q.offer(root);

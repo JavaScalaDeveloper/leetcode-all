@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0291;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<String> vis;
     private Map<Character, String> d;
     private String p;

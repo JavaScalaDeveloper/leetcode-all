@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1609;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isEvenOddTree(TreeNode root) {
         boolean even = true;
         Deque<TreeNode> q = new ArrayDeque<>();

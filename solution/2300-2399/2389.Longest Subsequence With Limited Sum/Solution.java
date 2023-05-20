@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2389;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] answerQueries(int[] nums, int[] queries) {
         Arrays.sort(nums);
         for (int i = 1; i < nums.length; ++i) {

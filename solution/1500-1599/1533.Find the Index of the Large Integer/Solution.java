@@ -13,7 +13,10 @@
  * }
  */
 
-class Solution {
+package com.solution._1533;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int getIndex(ArrayReader reader) {
         int left = 0, right = reader.length() - 1;
         while (left < right) {

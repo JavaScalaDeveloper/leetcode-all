@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2052;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int INF = Integer.MAX_VALUE;
     private int[] memo;
     private int[] s;

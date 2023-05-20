@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0447;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numberOfBoomerangs(int[][] points) {
         int ans = 0;
         for (int[] p : points) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0263;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isUgly(int n) {
         if (n < 1) return false;
         while (n % 2 == 0) {

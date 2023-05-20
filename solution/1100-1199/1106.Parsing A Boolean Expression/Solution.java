@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1106;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean parseBoolExpr(String expression) {
         Deque<Character> stk = new ArrayDeque<>();
         for (char c : expression.toCharArray()) {

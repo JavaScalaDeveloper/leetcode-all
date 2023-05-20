@@ -1,4 +1,7 @@
-class NumberContainers {
+package com.solution._2349;
+import change.datastructure.*;
+import java.util.*;
+public class NumberContainers {
     private Map<Integer, Integer> mp = new HashMap<>();
     private Map<Integer, TreeSet<Integer>> t = new HashMap<>();
 

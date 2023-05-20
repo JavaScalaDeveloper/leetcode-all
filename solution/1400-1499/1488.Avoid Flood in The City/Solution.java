@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1488;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] avoidFlood(int[] rains) {
         int n = rains.length;
         int[] ans = new int[n];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1153;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canConvert(String str1, String str2) {
         if (str1.equals(str2)) {
             return true;

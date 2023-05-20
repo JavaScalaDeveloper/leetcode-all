@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0479;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestPalindrome(int n) {
         int mx = (int) Math.pow(10, n) - 1;
         for (int a = mx; a > mx / 10; --a) {

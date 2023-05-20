@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2229;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isConsecutive(int[] nums) {
         int mi = nums[0];
         int mx = nums[0];

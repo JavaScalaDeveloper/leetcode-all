@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1324;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> printVertically(String s) {
         String[] words = s.split(" ");
         int n = 0;

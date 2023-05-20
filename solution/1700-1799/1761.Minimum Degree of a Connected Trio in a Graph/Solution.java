@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1761;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minTrioDegree(int n, int[][] edges) {
         boolean[][] g = new boolean[n][n];
         int[] deg = new int[n];

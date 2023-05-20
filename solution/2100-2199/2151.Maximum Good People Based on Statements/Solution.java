@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2151;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumGood(int[][] statements) {
         int ans = 0;
         for (int mask = 1; mask < 1 << statements.length; ++mask) {

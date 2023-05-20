@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1975;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maxMatrixSum(int[][] matrix) {
         long s = 0;
         int cnt = 0;

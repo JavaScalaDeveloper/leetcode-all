@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1345;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minJumps(int[] arr) {
         Map<Integer, List<Integer>> idx = new HashMap<>();
         int n = arr.length;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1346;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkIfExist(int[] arr) {
         Map<Integer, Integer> m = new HashMap<>();
         int n = arr.length;

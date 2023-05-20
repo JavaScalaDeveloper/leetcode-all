@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._2130;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int pairSum(ListNode head) {
         ListNode slow = head;
         ListNode fast = head.next;

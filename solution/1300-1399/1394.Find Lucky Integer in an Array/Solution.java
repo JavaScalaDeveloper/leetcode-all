@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1394;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLucky(int[] arr) {
         int[] cnt = new int[510];
         for (int x : cnt) {

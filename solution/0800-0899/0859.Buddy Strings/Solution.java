@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0859;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean buddyStrings(String s, String goal) {
         int m = s.length(), n = goal.length();
         if (m != n) {

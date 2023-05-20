@@ -1,4 +1,7 @@
-class CombinationIterator {
+package com.solution._1286;
+import change.datastructure.*;
+import java.util.*;
+public class CombinationIterator {
     private int curr;
     private int size;
     private char[] cs;

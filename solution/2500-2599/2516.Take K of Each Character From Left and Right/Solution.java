@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2516;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int takeCharacters(String s, int k) {
         int[] cnt = new int[3];
         int n = s.length();

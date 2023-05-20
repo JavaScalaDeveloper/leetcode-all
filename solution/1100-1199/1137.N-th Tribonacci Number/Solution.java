@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1137;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int tribonacci(int n) {
         int a = 0, b = 1, c = 1;
         while (n-- > 0) {

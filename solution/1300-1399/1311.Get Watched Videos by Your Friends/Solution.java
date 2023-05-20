@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1311;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> watchedVideosByFriends(
         List<List<String>> watchedVideos, int[][] friends, int id, int level) {
         int n = friends.length;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2407;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int lengthOfLIS(int[] nums, int k) {
         int mx = nums[0];
         for (int v : nums) {
@@ -15,13 +18,19 @@ class Solution {
     }
 }
 
-class Node {
+package com.solution._2407;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     int l;
     int r;
     int v;
 }
 
-class SegmentTree {
+package com.solution._2407;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private Node[] tr;
 
     public SegmentTree(int n) {

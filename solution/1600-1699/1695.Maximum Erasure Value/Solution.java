@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1695;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumUniqueSubarray(int[] nums) {
         int[] d = new int[10001];
         int n = nums.length;

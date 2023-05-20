@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1583;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int unhappyFriends(int n, int[][] preferences, int[][] pairs) {
         int[][] d = new int[n][n];
         for (int i = 0; i < n; ++i) {

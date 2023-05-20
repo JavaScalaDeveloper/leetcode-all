@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0199;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         if (root == null) {

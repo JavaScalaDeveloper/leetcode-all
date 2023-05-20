@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0376;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int wiggleMaxLength(int[] nums) {
         int up = 1, down = 1;
         for (int i = 1; i < nums.length; ++i) {

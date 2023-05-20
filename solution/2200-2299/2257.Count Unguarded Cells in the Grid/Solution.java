@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2257;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countUnguarded(int m, int n, int[][] guards, int[][] walls) {
         int[][] g = new int[m][n];
         for (var e : guards) {

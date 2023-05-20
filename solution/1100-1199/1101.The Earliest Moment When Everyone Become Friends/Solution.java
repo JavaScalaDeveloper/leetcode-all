@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1101;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public int earliestAcq(int[][] logs, int n) {

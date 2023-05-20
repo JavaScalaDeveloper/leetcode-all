@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0537;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String complexNumberMultiply(String num1, String num2) {
         String[] c1 = num1.split("\\+|i");
         String[] c2 = num2.split("\\+|i");

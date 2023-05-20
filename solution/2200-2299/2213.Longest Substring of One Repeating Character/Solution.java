@@ -1,4 +1,7 @@
-class Node {
+package com.solution._2213;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     int l;
     int r;
     int size;
@@ -9,7 +12,10 @@ class Node {
     char rc;
 }
 
-class SegmentTree {
+package com.solution._2213;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private String s;
     private Node[] tr;
 
@@ -99,7 +105,10 @@ class SegmentTree {
     }
 }
 
-class Solution {
+package com.solution._2213;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] longestRepeating(String s, String queryCharacters, int[] queryIndices) {
         SegmentTree tree = new SegmentTree(s);
         int k = queryCharacters.length();

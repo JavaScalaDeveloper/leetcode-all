@@ -1,4 +1,7 @@
-class ExamRoom {
+package com.solution._0855;
+import change.datastructure.*;
+import java.util.*;
+public class ExamRoom {
     private TreeSet<int[]> ts = new TreeSet<>((a, b) -> {
         int d1 = dist(a), d2 = dist(b);
         return d1 == d2 ? a[0] - b[0] : d2 - d1;

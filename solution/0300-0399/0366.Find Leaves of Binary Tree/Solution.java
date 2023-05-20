@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0366;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> findLeaves(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         TreeNode prev = new TreeNode(0, root, null);

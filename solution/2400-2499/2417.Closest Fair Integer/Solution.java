@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2417;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int closestFair(int n) {
         int a = 0, b = 0;
         int k = 0, t = n;

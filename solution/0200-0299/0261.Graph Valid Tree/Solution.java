@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0261;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public boolean validTree(int n, int[][] edges) {

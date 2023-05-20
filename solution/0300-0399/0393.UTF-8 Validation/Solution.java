@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0393;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean validUtf8(int[] data) {
         int n = 0;
         for (int v : data) {

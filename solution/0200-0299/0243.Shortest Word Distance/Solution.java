@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0243;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int shortestDistance(String[] wordsDict, String word1, String word2) {
         int ans = 0x3f3f3f3f;
         for (int k = 0, i = -1, j = -1; k < wordsDict.length; ++k) {

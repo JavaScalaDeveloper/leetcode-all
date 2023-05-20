@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1717;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumGain(String s, int x, int y) {
         if (x < y) {
             return maximumGain(new StringBuilder(s).reverse().toString(), y, x);

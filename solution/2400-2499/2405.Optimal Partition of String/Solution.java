@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2405;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int partitionString(String s) {
         int v = 0;
         int ans = 1;

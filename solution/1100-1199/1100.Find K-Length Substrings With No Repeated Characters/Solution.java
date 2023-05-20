@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1100;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numKLenSubstrNoRepeats(String s, int k) {
         int n = s.length();
         if (k > n || k > 26) {

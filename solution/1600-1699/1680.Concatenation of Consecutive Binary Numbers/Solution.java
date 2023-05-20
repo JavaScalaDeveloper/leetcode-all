@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1680;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int concatenatedBinary(int n) {
         final int mod = (int) 1e9 + 7;
         long ans = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0841;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<List<Integer>> rooms;
     private Set<Integer> vis;
 

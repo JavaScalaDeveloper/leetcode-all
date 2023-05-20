@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1877;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minPairSum(int[] nums) {
         Arrays.sort(nums);
         int res = 0, n = nums.length;

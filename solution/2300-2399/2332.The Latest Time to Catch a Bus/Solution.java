@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2332;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int latestTimeCatchTheBus(int[] buses, int[] passengers, int capacity) {
         Arrays.sort(buses);
         Arrays.sort(passengers);

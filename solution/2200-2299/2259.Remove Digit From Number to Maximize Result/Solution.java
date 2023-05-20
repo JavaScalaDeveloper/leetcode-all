@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2259;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String removeDigit(String number, char digit) {
         int last = -1;
         int n = number.length();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1707;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] maximizeXor(int[] nums, int[][] queries) {
         Trie trie = new Trie();
         Arrays.sort(nums);
@@ -21,7 +24,10 @@ class Solution {
     }
 }
 
-class Trie {
+package com.solution._1707;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[2];
 
     public void insert(int x) {

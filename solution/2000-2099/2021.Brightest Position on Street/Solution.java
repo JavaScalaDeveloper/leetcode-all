@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2021;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int brightestPosition(int[][] lights) {
         TreeMap<Integer, Integer> d = new TreeMap<>();
         for (var x : lights) {

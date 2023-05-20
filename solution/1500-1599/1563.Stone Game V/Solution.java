@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1563;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int n;
     private int[] s;
     private int[] stoneValue;

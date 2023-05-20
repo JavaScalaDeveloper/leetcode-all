@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2616;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimizeMax(int[] nums, int p) {
         Arrays.sort(nums);
         int n = nums.length;

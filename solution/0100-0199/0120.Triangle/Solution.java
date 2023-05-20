@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0120;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumTotal(List<List<Integer>> triangle) {
         int n = triangle.size();
         int[] dp = new int[n + 1];

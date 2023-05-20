@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2306;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long distinctNames(String[] ideas) {
         Set<String> s = new HashSet<>();
         for (String v : ideas) {

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0617;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
         if (root1 == null) {
             return root2;

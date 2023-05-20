@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0831;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String maskPII(String s) {
         if (Character.isLetter(s.charAt(0))) {
             s = s.toLowerCase();

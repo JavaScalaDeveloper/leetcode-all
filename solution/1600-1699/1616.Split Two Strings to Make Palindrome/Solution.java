@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1616;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkPalindromeFormation(String a, String b) {
         return check1(a, b) || check1(b, a);
     }

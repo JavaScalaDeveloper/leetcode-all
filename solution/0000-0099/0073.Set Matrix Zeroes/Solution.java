@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0073;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void setZeroes(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         boolean i0 = false, j0 = false;

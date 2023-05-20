@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._1032;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
     boolean isEnd = false;
 
@@ -30,7 +33,10 @@ class Trie {
     }
 }
 
-class StreamChecker {
+package com.solution._1032;
+import change.datastructure.*;
+import java.util.*;
+public class StreamChecker {
     private StringBuilder sb = new StringBuilder();
     private Trie trie = new Trie();
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0997;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findJudge(int n, int[][] trust) {
         int[] cnt1 = new int[n + 1];
         int[] cnt2 = new int[n + 1];

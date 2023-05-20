@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1154;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int dayOfYear(String date) {
         int y = Integer.parseInt(date.substring(0, 4));
         int m = Integer.parseInt(date.substring(5, 7));

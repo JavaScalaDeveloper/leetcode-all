@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1401;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkOverlap(
         int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {
         int dx = x1 > xCenter ? x1 - xCenter : (x2 < xCenter ? xCenter - x2 : 0);

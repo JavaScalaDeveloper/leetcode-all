@@ -1,8 +1,14 @@
-class Trie {
+package com.solution._0820;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
 }
 
-class Solution {
+package com.solution._0820;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumLengthEncoding(String[] words) {
         Trie root = new Trie();
         for (String w : words) {

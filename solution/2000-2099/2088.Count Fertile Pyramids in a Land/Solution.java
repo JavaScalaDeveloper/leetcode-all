@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2088;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countPyramids(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         int[][] f = new int[m][n];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2496;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumValue(String[] strs) {
         int ans = 0;
         for (String s : strs) {

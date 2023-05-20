@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0438;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> findAnagrams(String s, String p) {
         int[] counter = new int[26];
         for (char c : p.toCharArray()) {

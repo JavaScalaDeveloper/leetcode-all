@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._0143;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void reorderList(ListNode head) {
         if (head == null || head.next == null) {
             return;

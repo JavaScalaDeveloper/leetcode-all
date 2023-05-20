@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1893;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isCovered(int[][] ranges, int left, int right) {
         int[] diff = new int[52];
         for (int[] range : ranges) {

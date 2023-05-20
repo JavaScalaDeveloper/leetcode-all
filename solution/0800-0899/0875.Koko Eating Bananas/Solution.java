@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0875;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minEatingSpeed(int[] piles, int h) {
         int left = 1, right = (int) 1e9;
         while (left < right) {

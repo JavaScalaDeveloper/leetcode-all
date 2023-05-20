@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0894;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<TreeNode>[] f;
 
     public List<TreeNode> allPossibleFBT(int n) {

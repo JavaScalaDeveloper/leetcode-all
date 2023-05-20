@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2489;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long fixedRatio(String s, int num1, int num2) {
         long n0 = 0, n1 = 0;
         long ans = 0;

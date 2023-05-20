@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0467;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findSubstringInWraproundString(String p) {
         int[] dp = new int[26];
         int k = 0;

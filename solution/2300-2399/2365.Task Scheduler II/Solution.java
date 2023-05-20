@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2365;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long taskSchedulerII(int[] tasks, int space) {
         Map<Integer, Long> day = new HashMap<>();
         long ans = 0;

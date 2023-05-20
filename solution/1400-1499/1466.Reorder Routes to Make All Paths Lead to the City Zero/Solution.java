@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1466;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minReorder(int n, int[][] connections) {
         Map<Integer, List<Pair<Integer, Boolean>>> g = new HashMap<>();
         for (int[] e : connections) {

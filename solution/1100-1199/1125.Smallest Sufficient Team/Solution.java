@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1125;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] smallestSufficientTeam(String[] req_skills, List<List<String>> people) {
         Map<String, Integer> d = new HashMap<>();
         int m = req_skills.length;

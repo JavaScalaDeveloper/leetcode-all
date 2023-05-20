@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0993;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int x, y;
     private TreeNode p1, p2;
     private int d1, d2;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2131;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestPalindrome(String[] words) {
         Map<String, Integer> cnt = new HashMap<>();
         for (var w : words) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0523;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkSubarraySum(int[] nums, int k) {
         Map<Integer, Integer> mp = new HashMap<>();
         mp.put(0, -1);

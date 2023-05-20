@@ -1,4 +1,7 @@
-class HitCounter {
+package com.solution._0362;
+import change.datastructure.*;
+import java.util.*;
+public class HitCounter {
 
     private Map<Integer, Integer> counter;
 

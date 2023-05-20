@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1413;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minStartValue(int[] nums) {
         int s = 0;
         int t = Integer.MAX_VALUE;

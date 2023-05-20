@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0939;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minAreaRect(int[][] points) {
         TreeMap<Integer, List<Integer>> d = new TreeMap<>();
         for (var p : points) {

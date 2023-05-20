@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2261;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countDistinct(int[] nums, int k, int p) {
         int n = nums.length;
         Set<String> s = new HashSet<>();

@@ -1,4 +1,7 @@
-class Twitter {
+package com.solution._0355;
+import change.datastructure.*;
+import java.util.*;
+public class Twitter {
     private Map<Integer, List<Integer>> userTweets;
     private Map<Integer, Set<Integer>> userFollowing;
     private Map<Integer, Integer> tweets;

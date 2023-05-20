@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0514;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findRotateSteps(String ring, String key) {
         int m = key.length(), n = ring.length();
         List<Integer>[] pos = new List[26];

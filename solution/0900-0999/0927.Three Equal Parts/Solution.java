@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0927;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] arr;
 
     public int[] threeEqualParts(int[] arr) {

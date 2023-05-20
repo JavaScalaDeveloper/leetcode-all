@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2421;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public int numberOfGoodPaths(int[] vals, int[][] edges) {

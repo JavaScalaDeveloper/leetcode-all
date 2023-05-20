@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2660;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int isWinner(int[] player1, int[] player2) {
         int a = f(player1), b = f(player2);
         return a > b ? 1 : b > a ? 2 : 0;

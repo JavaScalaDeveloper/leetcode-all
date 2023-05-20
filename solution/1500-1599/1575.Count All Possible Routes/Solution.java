@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1575;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] locations;
     private int finish;
     private int n;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2111;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kIncreasing(int[] arr, int k) {
         int n = arr.length;
         int ans = 0;

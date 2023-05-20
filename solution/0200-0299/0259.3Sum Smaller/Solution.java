@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0259;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int threeSumSmaller(int[] nums, int target) {
         Arrays.sort(nums);
         int ans = 0;

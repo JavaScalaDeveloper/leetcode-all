@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._0382;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private ListNode head;
     private Random random = new Random();
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2291;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumProfit(int[] present, int[] future, int budget) {
         int n = present.length;
         int[] f = new int[budget + 1];

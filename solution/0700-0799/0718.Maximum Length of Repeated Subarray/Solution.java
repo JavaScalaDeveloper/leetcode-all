@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0718;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLength(int[] nums1, int[] nums2) {
         int m = nums1.length;
         int n = nums2.length;

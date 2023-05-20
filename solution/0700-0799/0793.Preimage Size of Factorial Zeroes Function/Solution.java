@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0793;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int preimageSizeFZF(int k) {
         return g(k + 1) - g(k);
     }

@@ -7,7 +7,10 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+package com.solution._0285;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
         TreeNode cur = root, ans = null;
         while (cur != null) {

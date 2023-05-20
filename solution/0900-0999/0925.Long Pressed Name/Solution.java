@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0925;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isLongPressedName(String name, String typed) {
         int m = name.length(), n = typed.length();
         int i = 0, j = 0;

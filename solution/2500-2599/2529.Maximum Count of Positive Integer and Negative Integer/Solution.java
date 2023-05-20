@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2529;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumCount(int[] nums) {
         int a = nums.length - search(nums, 1);
         int b = search(nums, 0);

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2226;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumCandies(int[] candies, long k) {
         int left = 0, right = (int) 1e7;
         while (left < right) {

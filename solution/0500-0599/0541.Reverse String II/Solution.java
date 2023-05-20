@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0541;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reverseStr(String s, int k) {
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i += (k << 1)) {

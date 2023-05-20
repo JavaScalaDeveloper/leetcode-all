@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0474;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMaxForm(String[] strs, int m, int n) {
         int[][] dp = new int[m + 1][n + 1];
         for (String s : strs) {

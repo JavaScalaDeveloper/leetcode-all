@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2090;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] getAverages(int[] nums, int k) {
         int n = nums.length;
         long[] s = new long[n + 1];

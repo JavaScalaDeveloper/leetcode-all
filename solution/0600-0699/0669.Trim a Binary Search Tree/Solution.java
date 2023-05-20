@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0669;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode trimBST(TreeNode root, int low, int high) {
         if (root == null) {
             return root;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1041;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isRobotBounded(String instructions) {
         int k = 0;
         int[] dist = new int[4];

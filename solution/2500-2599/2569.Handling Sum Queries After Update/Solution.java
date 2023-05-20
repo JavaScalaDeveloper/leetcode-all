@@ -1,9 +1,15 @@
-class Node {
+package com.solution._2569;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     int l, r;
     int s, lazy;
 }
 
-class SegmentTree {
+package com.solution._2569;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private Node[] tr;
     private int[] nums;
 
@@ -79,7 +85,10 @@ class SegmentTree {
     }
 }
 
-class Solution {
+package com.solution._2569;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long[] handleQuery(int[] nums1, int[] nums2, int[][] queries) {
         SegmentTree tree = new SegmentTree(nums1);
         long s = 0;

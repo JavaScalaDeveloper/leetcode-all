@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2477;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer>[] g;
     private long ans;
     private int seats;

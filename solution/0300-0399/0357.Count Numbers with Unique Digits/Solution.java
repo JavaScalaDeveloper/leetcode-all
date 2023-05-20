@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0357;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countNumbersWithUniqueDigits(int n) {
         if (n == 0) {
             return 1;

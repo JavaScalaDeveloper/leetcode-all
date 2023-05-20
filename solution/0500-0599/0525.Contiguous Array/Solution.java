@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0525;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMaxLength(int[] nums) {
         Map<Integer, Integer> mp = new HashMap<>();
         mp.put(0, -1);

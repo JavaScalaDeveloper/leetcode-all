@@ -1,9 +1,15 @@
-class Trie {
+package com.solution._0211;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
     boolean isEnd;
 }
 
-class WordDictionary {
+package com.solution._0211;
+import change.datastructure.*;
+import java.util.*;
+public class WordDictionary {
     private Trie trie;
 
     /** Initialize your data structure here. */

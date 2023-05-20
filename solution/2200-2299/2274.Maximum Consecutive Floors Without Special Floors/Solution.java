@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2274;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxConsecutive(int bottom, int top, int[] special) {
         Arrays.sort(special);
         int n = special.length;

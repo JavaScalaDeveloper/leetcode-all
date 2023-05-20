@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0102;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
         if (root == null) {

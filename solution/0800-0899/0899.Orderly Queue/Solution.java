@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0899;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String orderlyQueue(String s, int k) {
         if (k == 1) {
             String ans = s;

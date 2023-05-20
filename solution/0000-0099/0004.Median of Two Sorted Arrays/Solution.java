@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0004;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length;
         int n = nums2.length;

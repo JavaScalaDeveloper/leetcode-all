@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1852;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] distinctNumbers(int[] nums, int k) {
         int[] cnt = new int[100010];
         int x = 0;

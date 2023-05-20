@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1491;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double average(int[] salary) {
         int s = 0;
         int mi = 10000000, mx = 0;

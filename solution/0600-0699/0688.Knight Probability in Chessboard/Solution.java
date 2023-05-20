@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0688;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double knightProbability(int n, int k, int row, int column) {
         double[][][] f = new double[k + 1][n][n];
         for (int i = 0; i < n; ++i) {

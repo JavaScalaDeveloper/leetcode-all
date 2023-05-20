@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2610;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> findMatrix(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         int n = nums.length;

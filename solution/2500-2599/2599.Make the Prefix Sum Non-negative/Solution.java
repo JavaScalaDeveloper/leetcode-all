@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2599;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int makePrefSumNonNegative(int[] nums) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         int ans = 0;

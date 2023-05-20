@@ -7,7 +7,10 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+package com.solution._1676;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<Integer> s = new HashSet<>();
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode[] nodes) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2280;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumLines(int[][] stockPrices) {
         Arrays.sort(stockPrices, (a, b) -> a[0] - b[0]);
         int dx = 0, dy = 1;

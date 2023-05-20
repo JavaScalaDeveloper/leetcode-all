@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0410;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int splitArray(int[] nums, int k) {
         int left = 0, right = 0;
         for (int x : nums) {

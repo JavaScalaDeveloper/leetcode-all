@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0424;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int characterReplacement(String s, int k) {
         int[] counter = new int[26];
         int i = 0;

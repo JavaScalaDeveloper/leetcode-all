@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0260;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] singleNumber(int[] nums) {
         int eor = 0;
         for (int x : nums) {

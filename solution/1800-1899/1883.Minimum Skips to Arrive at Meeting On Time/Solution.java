@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1883;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSkips(int[] dist, int speed, int hoursBefore) {
         int n = dist.length;
         int[][] dp = new int[n + 1][n + 1];

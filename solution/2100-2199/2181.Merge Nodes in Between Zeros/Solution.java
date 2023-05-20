@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._2181;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode mergeNodes(ListNode head) {
         ListNode dummy = new ListNode();
         int s = 0;

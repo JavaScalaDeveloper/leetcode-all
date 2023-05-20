@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1743;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] restoreArray(int[][] adjacentPairs) {
         int n = adjacentPairs.length + 1;
         Map<Integer, List<Integer>> g = new HashMap<>();

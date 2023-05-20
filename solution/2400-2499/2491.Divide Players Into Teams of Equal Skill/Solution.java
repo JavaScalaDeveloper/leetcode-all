@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2491;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long dividePlayers(int[] skill) {
         Arrays.sort(skill);
         int n = skill.length;

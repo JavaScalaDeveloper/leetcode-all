@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0375;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int getMoneyAmount(int n) {
         int[][] dp = new int[n + 10][n + 10];
         for (int l = 2; l <= n; ++l) {

@@ -1,7 +1,10 @@
 import java.util.Map;
 import java.util.TreeMap;
 
-class MyCalendar {
+package com.solution._0729;
+import change.datastructure.*;
+import java.util.*;
+public class MyCalendar {
 
     private final TreeMap<Integer, Integer> tm = new TreeMap<>();
 

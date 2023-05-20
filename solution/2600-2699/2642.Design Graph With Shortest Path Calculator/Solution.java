@@ -1,4 +1,7 @@
-class Graph {
+package com.solution._2642;
+import change.datastructure.*;
+import java.util.*;
+public class Graph {
     private int n;
     private int[][] g;
     private final int inf = 1 << 29;

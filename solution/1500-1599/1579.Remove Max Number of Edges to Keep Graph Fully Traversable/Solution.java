@@ -1,4 +1,7 @@
-class UnionFind {
+package com.solution._1579;
+import change.datastructure.*;
+import java.util.*;
+public class UnionFind {
     private int[] p;
     private int[] size;
     public int cnt;
@@ -37,7 +40,10 @@ class UnionFind {
     }
 }
 
-class Solution {
+package com.solution._1579;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxNumEdgesToRemove(int n, int[][] edges) {
         UnionFind ufa = new UnionFind(n);
         UnionFind ufb = new UnionFind(n);

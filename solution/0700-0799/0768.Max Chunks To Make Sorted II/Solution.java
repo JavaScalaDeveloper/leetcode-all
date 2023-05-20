@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0768;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxChunksToSorted(int[] arr) {
         Deque<Integer> stk = new ArrayDeque<>();
         for (int v : arr) {

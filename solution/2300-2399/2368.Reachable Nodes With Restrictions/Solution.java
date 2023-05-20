@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2368;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer>[] g;
     private boolean[] vis;
     private int ans;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1844;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String replaceDigits(String s) {
         char[] cs = s.toCharArray();
         for (int i = 1; i < cs.length; i += 2) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2132;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean possibleToStamp(int[][] grid, int stampHeight, int stampWidth) {
         int m = grid.length, n = grid[0].length;
         int[][] s = new int[m + 1][n + 1];

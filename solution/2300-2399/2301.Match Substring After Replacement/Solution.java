@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2301;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean matchReplacement(String s, String sub, char[][] mappings) {
         Map<Character, Set<Character>> d = new HashMap<>();
         for (var e : mappings) {

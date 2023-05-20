@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1473;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCost(int[] houses, int[][] cost, int m, int n, int target) {
         int[][][] f = new int[m][n + 1][target + 1];
         final int inf = 1 << 30;

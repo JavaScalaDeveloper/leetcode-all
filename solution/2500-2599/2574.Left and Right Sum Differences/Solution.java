@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2574;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] leftRigthDifference(int[] nums) {
         int left = 0, right = Arrays.stream(nums).sum();
         int n = nums.length;

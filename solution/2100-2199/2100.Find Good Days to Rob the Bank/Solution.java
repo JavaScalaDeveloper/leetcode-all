@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2100;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> goodDaysToRobBank(int[] security, int time) {
         int n = security.length;
         if (n <= time * 2) {

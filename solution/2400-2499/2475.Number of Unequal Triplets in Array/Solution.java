@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2475;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int unequalTriplets(int[] nums) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (int v : nums) {

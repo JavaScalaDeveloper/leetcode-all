@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2520;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countDigits(int num) {
         int ans = 0;
         for (int x = num; x > 0; x /= 10) {

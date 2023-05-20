@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0437;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Long, Integer> cnt = new HashMap<>();
     private int targetSum;
 

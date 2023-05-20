@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1382;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer> vals;
 
     public TreeNode balanceBST(TreeNode root) {

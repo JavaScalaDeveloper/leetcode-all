@@ -23,7 +23,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1367;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isSubPath(ListNode head, TreeNode root) {
         if (root == null) {
             return false;

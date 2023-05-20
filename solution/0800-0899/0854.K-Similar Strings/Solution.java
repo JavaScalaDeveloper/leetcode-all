@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0854;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kSimilarity(String s1, String s2) {
         Deque<String> q = new ArrayDeque<>();
         Set<String> vis = new HashSet<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1730;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] dirs = {-1, 0, 1, 0, -1};
 
     public int getFood(char[][] grid) {

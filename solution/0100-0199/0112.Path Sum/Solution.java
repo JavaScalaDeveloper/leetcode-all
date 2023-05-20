@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0112;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean hasPathSum(TreeNode root, int targetSum) {
         return dfs(root, targetSum);
     }

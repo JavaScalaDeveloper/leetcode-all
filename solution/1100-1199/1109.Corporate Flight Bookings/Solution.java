@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1109;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] corpFlightBookings(int[][] bookings, int n) {
         int[] ans = new int[n];
         for (var e : bookings) {

@@ -1,4 +1,7 @@
-class LUPrefix {
+package com.solution._2424;
+import change.datastructure.*;
+import java.util.*;
+public class LUPrefix {
     private int r;
     private Set<Integer> s = new HashSet<>();
 

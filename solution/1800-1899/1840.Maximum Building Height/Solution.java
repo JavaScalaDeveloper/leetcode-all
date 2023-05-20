@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1840;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxBuilding(int n, int[][] restrictions) {
         List<int[]> r = new ArrayList<>();
         r.addAll(Arrays.asList(restrictions));

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0520;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean detectCapitalUse(String word) {
         int cnt = 0;
         for (char c : word.toCharArray()) {

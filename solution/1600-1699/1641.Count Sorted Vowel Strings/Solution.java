@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1641;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countVowelStrings(int n) {
         int[] f = {1, 1, 1, 1, 1};
         for (int i = 0; i < n - 1; ++i) {

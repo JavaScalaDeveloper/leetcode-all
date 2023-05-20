@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1072;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxEqualRowsAfterFlips(int[][] matrix) {
         Map<String, Integer> cnt = new HashMap<>();
         int ans = 0, n = matrix[0].length;

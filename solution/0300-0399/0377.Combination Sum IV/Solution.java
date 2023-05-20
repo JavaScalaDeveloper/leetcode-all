@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0377;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int combinationSum4(int[] nums, int target) {
         int[] f = new int[target + 1];
         f[0] = 1;

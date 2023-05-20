@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2486;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int appendCharacters(String s, String t) {
         int m = s.length(), n = t.length();
         for (int i = 0, j = 0; j < n; ++j) {

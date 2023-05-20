@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1808;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxNiceDivisors(int primeFactors) {
         if (primeFactors < 4) {
             return primeFactors;

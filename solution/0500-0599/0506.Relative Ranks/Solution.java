@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0506;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] findRelativeRanks(int[] score) {
         int n = score.length;
         Integer[] idx = new Integer[n];

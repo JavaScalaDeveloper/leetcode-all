@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2087;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCost(int[] startPos, int[] homePos, int[] rowCosts, int[] colCosts) {
         int i = startPos[0], j = startPos[1];
         int x = homePos[0], y = homePos[1];

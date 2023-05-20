@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0215;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findKthLargest(int[] nums, int k) {
         int n = nums.length;
         return quickSort(nums, 0, n - 1, n - k);

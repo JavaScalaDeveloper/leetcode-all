@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0765;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public int minSwapsCouples(int[] row) {

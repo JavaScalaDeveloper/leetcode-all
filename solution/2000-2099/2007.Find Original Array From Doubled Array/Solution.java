@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2007;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findOriginalArray(int[] changed) {
         int n = changed.length;
         if (n % 2 == 1) {

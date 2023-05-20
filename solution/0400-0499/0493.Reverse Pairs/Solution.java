@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0493;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int reversePairs(int[] nums) {
         TreeSet<Long> ts = new TreeSet<>();
         for (int num : nums) {
@@ -21,7 +24,10 @@ class Solution {
     }
 }
 
-class BinaryIndexedTree {
+package com.solution._0493;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 

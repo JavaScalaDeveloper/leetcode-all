@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0527;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
     int[] v = new int[26];
 
@@ -36,7 +39,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._0527;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> wordsAbbreviation(List<String> words) {
         Map<Integer, Trie> trees = new HashMap<>();
         for (String w : words) {

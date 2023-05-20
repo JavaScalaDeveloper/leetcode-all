@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1525;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSplits(String s) {
         Map<Character, Integer> cnt = new HashMap<>();
         for (char c : s.toCharArray()) {

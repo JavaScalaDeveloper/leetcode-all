@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2352;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int equalPairs(int[][] grid) {
         int n = grid.length;
         int[][] g = new int[n][n];

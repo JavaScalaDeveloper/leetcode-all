@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1133;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestUniqueNumber(int[] nums) {
         int[] cnt = new int[1001];
         for (int x : nums) {

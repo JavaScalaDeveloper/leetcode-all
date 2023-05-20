@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0152;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxProduct(int[] nums) {
         int maxf = nums[0], minf = nums[0], res = nums[0];
         for (int i = 1; i < nums.length; ++i) {

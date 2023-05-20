@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2083;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long numberOfSubstrings(String s) {
         int[] cnt = new int[26];
         long ans = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2217;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long[] kthPalindrome(int[] queries, int intLength) {
         int n = queries.length;
         long[] ans = new long[n];

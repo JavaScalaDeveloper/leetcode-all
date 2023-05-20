@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1386;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxNumberOfFamilies(int n, int[][] reservedSeats) {
         Map<Integer, Integer> m = new HashMap<>();
         for (int[] e : reservedSeats) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1604;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> alertNames(String[] keyName, String[] keyTime) {
         Map<String, List<Integer>> d = new HashMap<>();
         for (int i = 0; i < keyName.length; ++i) {

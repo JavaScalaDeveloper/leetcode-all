@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1655;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canDistribute(int[] nums, int[] quantity) {
         int m = quantity.length;
         int[] s = new int[1 << m];

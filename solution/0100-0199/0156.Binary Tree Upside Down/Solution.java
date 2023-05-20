@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0156;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode upsideDownBinaryTree(TreeNode root) {
         if (root == null || root.left == null) {
             return root;

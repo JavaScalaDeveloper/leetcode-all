@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0413;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numberOfArithmeticSlices(int[] nums) {
         int ans = 0, cnt = 0;
         int d = 3000;

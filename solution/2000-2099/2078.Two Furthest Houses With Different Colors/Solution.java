@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2078;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDistance(int[] colors) {
         int n = colors.length;
         if (colors[0] != colors[n - 1]) {

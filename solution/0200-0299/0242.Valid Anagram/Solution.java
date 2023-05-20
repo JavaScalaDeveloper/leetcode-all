@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0242;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;

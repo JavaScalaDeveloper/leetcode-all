@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0272;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer> ans;
     private double target;
     private int k;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0741;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int cherryPickup(int[][] grid) {
         int n = grid.length;
         int[][][] dp = new int[n * 2][n][n];

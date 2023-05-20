@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2564;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] substringXorQueries(String s, int[][] queries) {
         Map<Integer, int[]> d = new HashMap<>();
         int n = s.length();

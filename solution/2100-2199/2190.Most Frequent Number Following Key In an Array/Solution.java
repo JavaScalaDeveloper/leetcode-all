@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2190;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int mostFrequent(int[] nums, int key) {
         int[] cnt = new int[1010];
         int mx = 0, ans = 0;

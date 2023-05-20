@@ -1,4 +1,7 @@
-class TwoSum {
+package com.solution._0170;
+import change.datastructure.*;
+import java.util.*;
+public class TwoSum {
     private Map<Integer, Integer> cnt = new HashMap<>();
 
     public TwoSum() {

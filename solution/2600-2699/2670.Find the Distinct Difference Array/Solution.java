@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2670;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] distinctDifferenceArray(int[] nums) {
         int n = nums.length;
         int[] suf = new int[n + 1];

@@ -1,8 +1,14 @@
-class Node {
+package com.solution._0850;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     int l, r, cnt, length;
 }
 
-class SegmentTree {
+package com.solution._0850;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private Node[] tr;
     private int[] nums;
 
@@ -56,7 +62,10 @@ class SegmentTree {
     }
 }
 
-class Solution {
+package com.solution._0850;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int MOD = (int) 1e9 + 7;
 
     public int rectangleArea(int[][] rectangles) {

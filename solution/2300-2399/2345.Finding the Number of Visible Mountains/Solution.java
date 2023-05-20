@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2345;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int visibleMountains(int[][] peaks) {
         int n = peaks.length;
         int[][] arr = new int[n][2];

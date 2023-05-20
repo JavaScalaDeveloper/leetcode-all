@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1239;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxLength(List<String> arr) {
         int ans = 0;
         List<Integer> masks = new ArrayList<>();

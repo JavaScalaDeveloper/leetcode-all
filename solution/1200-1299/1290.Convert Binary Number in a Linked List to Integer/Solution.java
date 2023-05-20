@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._1290;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int getDecimalValue(ListNode head) {
         int ans = 0;
         for (; head != null; head = head.next) {

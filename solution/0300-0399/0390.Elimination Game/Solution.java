@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0390;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int lastRemaining(int n) {
         int a1 = 1, an = n, step = 1;
         for (int i = 0, cnt = n; cnt > 1; cnt >>= 1, step <<= 1, ++i) {

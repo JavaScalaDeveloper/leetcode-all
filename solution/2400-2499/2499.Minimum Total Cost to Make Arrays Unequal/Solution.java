@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2499;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minimumTotalCost(int[] nums1, int[] nums2) {
         long ans = 0;
         int same = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0335;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isSelfCrossing(int[] distance) {
         int[] d = distance;
         for (int i = 3; i < d.length; ++i) {

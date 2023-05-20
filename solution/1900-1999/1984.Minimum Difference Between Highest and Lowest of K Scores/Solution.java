@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1984;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumDifference(int[] nums, int k) {
         Arrays.sort(nums);
         int ans = 100000;

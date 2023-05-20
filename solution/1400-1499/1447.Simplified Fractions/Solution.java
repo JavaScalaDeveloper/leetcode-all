@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1447;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> simplifiedFractions(int n) {
         List<String> ans = new ArrayList<>();
         for (int i = 1; i < n; ++i) {

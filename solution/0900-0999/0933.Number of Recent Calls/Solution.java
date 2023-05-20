@@ -1,4 +1,7 @@
-class RecentCounter {
+package com.solution._0933;
+import change.datastructure.*;
+import java.util.*;
+public class RecentCounter {
     private Deque<Integer> q = new ArrayDeque<>();
 
     public RecentCounter() {

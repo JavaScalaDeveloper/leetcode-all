@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1223;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Integer[][][] f;
     private int[] rollMax;
 

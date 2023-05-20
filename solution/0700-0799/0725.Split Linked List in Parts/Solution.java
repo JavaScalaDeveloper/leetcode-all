@@ -6,7 +6,10 @@
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+package com.solution._0725;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode[] splitListToParts(ListNode root, int k) {
         int n = 0;
         ListNode cur = root;

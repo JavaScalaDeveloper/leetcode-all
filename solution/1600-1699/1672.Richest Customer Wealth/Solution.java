@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1672;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumWealth(int[][] accounts) {
         int ans = 0;
         for (var e : accounts) {

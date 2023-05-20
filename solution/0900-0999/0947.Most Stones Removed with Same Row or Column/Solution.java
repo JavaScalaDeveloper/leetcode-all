@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0947;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public int removeStones(int[][] stones) {

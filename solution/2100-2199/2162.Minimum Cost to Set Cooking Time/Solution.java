@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2162;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {
         int m = targetSeconds / 60;
         int s = targetSeconds % 60;

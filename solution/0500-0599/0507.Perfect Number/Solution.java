@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0507;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkPerfectNumber(int num) {
         if (num == 1) {
             return false;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2283;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean digitCount(String num) {
         int[] cnt = new int[10];
         int n = num.length();

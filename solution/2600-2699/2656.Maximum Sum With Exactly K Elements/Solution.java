@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2656;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximizeSum(int[] nums, int k) {
         int x = 0;
         for (int v : nums) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2064;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimizedMaximum(int n, int[] quantities) {
         int left = 1, right = (int) 1e5;
         while (left < right) {

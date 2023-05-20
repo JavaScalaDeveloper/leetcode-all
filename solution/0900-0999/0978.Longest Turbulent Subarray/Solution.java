@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0978;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxTurbulenceSize(int[] arr) {
         int ans = 1, f = 1, g = 1;
         for (int i = 1; i < arr.length; ++i) {

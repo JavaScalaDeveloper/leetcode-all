@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1200;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
         Arrays.sort(arr);
         List<List<Integer>> ans = new ArrayList<>();

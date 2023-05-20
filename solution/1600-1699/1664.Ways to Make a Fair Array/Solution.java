@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1664;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int waysToMakeFair(int[] nums) {
         int s1 = 0, s2 = 0;
         int n = nums.length;

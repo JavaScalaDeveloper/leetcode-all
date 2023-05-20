@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0392;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isSubsequence(String s, String t) {
         int m = s.length(), n = t.length();
         int i = 0, j = 0;

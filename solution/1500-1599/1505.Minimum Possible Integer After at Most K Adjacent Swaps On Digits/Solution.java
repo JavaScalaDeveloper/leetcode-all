@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1505;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String minInteger(String num, int k) {
         Queue<Integer>[] pos = new Queue[10];
         for (int i = 0; i < 10; ++i) {
@@ -30,7 +33,10 @@ class Solution {
     }
 }
 
-class BinaryIndexedTree {
+package com.solution._1505;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 

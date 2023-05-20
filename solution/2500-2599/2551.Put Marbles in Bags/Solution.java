@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2551;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long putMarbles(int[] weights, int k) {
         int n = weights.length;
         int[] arr = new int[n - 1];

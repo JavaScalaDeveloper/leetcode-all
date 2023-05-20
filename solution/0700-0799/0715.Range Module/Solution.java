@@ -1,11 +1,17 @@
-class Node {
+package com.solution._0715;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     Node left;
     Node right;
     int add;
     boolean v;
 }
 
-class SegmentTree {
+package com.solution._0715;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private Node root = new Node();
 
     public SegmentTree() {
@@ -73,7 +79,10 @@ class SegmentTree {
     }
 }
 
-class RangeModule {
+package com.solution._0715;
+import change.datastructure.*;
+import java.util.*;
+public class RangeModule {
     private SegmentTree tree = new SegmentTree();
 
     public RangeModule() {

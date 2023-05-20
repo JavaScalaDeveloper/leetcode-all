@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0665;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkPossibility(int[] nums) {
         for (int i = 0; i < nums.length - 1; ++i) {
             int a = nums[i], b = nums[i + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1443;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minTime(int n, int[][] edges, List<Boolean> hasApple) {
         boolean[] vis = new boolean[n];
         List<Integer>[] g = new List[n];

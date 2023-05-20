@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2414;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestContinuousSubstring(String s) {
         int ans = 0;
         int i = 0, j = 1;

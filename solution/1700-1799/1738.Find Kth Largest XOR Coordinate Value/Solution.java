@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1738;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int kthLargestValue(int[][] matrix, int k) {
         int m = matrix.length, n = matrix[0].length;
         int[][] s = new int[m + 1][n + 1];

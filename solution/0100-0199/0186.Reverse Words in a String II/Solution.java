@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0186;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void reverseWords(char[] s) {
         int n = s.length;
         for (int i = 0, j = 0; j < n; ++j) {

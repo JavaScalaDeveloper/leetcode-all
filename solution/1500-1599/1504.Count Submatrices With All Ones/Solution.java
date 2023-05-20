@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1504;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSubmat(int[][] mat) {
         int m = mat.length, n = mat[0].length;
         int[][] g = new int[m][n];

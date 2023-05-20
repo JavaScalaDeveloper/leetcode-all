@@ -1,4 +1,7 @@
-class Allocator {
+package com.solution._2502;
+import change.datastructure.*;
+import java.util.*;
+public class Allocator {
     private TreeMap<Integer, Integer> tm = new TreeMap<>();
     private Map<Integer, List<Integer>> d = new HashMap<>();
 

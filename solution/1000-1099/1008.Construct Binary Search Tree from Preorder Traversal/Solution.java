@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1008;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode bstFromPreorder(int[] preorder) {
         return dfs(preorder, 0, preorder.length - 1);
     }

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0149;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxPoints(int[][] points) {
         int n = points.length;
         int ans = 1;

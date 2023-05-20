@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2249;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countLatticePoints(int[][] circles) {
         int mx = 0, my = 0;
         for (var c : circles) {

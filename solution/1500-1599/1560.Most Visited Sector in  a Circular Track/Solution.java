@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1560;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> mostVisited(int n, int[] rounds) {
         int m = rounds.length - 1;
         List<Integer> ans = new ArrayList<>();

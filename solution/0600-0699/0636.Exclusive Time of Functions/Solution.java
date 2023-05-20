@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0636;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] exclusiveTime(int n, List<String> logs) {
         int[] ans = new int[n];
         Deque<Integer> stk = new ArrayDeque<>();

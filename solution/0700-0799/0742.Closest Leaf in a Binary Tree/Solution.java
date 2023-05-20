@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0742;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<TreeNode, List<TreeNode>> g;
 
     public int findClosestLeaf(TreeNode root, int k) {

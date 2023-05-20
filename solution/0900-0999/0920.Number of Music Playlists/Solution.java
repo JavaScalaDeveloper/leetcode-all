@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0920;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numMusicPlaylists(int n, int goal, int k) {
         final int mod = (int) 1e9 + 7;
         long[][] f = new long[goal + 1][n + 1];

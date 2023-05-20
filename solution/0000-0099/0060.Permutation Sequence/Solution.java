@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0060;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String getPermutation(int n, int k) {
         StringBuilder ans = new StringBuilder();
         boolean[] vis = new boolean[n + 1];

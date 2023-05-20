@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1129;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] shortestAlternatingPaths(int n, int[][] redEdges, int[][] blueEdges) {
         List<Integer>[][] g = new List[2][n];
         for (var f : g) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0789;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean escapeGhosts(int[][] ghosts, int[] target) {
         int tx = target[0], ty = target[1];
         for (var g : ghosts) {

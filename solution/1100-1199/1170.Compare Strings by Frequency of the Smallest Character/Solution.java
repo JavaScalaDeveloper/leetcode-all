@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1170;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] numSmallerByFrequency(String[] queries, String[] words) {
         int n = words.length;
         int[] arr = new int[n];

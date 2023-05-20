@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0780;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean reachingPoints(int sx, int sy, int tx, int ty) {
         while (tx > sx && ty > sy && tx != ty) {
             if (tx > ty) {

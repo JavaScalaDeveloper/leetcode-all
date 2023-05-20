@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2597;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] nums;
     private int[] cnt = new int[1010];
     private int ans = -1;

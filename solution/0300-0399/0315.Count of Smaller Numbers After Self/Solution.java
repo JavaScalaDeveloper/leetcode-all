@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0315;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> countSmaller(int[] nums) {
         Set<Integer> s = new HashSet<>();
         for (int v : nums) {
@@ -22,7 +25,10 @@ class Solution {
     }
 }
 
-class BinaryIndexedTree {
+package com.solution._0315;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 

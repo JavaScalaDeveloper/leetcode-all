@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._0876;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode middleNode(ListNode head) {
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null) {

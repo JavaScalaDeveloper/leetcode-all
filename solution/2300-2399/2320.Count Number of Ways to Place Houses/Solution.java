@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2320;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countHousePlacements(int n) {
         final int mod = (int) 1e9 + 7;
         int[] f = new int[n];

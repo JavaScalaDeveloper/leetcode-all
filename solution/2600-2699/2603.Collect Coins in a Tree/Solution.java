@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2603;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int collectTheCoins(int[] coins, int[][] edges) {
         int n = coins.length;
         Set<Integer>[] g = new Set[n];

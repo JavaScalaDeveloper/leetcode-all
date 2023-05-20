@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1184;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int distanceBetweenBusStops(int[] distance, int start, int destination) {
         if (start > destination) {
             return distanceBetweenBusStops(distance, destination, start);

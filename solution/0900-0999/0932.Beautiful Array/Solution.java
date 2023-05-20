@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0932;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] beautifulArray(int n) {
         if (n == 1) {
             return new int[] {1};

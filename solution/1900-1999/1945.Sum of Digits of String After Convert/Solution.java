@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1945;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int getLucky(String s, int k) {
         StringBuilder sb = new StringBuilder();
         for (char c : s.toCharArray()) {

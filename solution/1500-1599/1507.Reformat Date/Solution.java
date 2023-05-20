@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1507;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reformatDate(String date) {
         var s = date.split(" ");
         String months = " JanFebMarAprMayJunJulAugSepOctNovDec";

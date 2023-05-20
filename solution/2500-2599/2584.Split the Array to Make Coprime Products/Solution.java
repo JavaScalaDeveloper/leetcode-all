@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2584;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findValidSplit(int[] nums) {
         Map<Integer, Integer> first = new HashMap<>();
         int n = nums.length;

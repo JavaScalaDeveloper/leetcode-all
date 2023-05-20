@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1163;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String lastSubstring(String s) {
         int n = s.length();
         int i = 0;

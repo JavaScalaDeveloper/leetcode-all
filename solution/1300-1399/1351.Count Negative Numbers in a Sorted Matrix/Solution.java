@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1351;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countNegatives(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         int ans = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1577;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numTriplets(int[] nums1, int[] nums2) {
         Map<Integer, Integer> cnt1 = new HashMap<>();
         Map<Integer, Integer> cnt2 = new HashMap<>();

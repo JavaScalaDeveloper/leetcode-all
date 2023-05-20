@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0494;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findTargetSumWays(int[] nums, int target) {
         int s = 0;
         for (int v : nums) {

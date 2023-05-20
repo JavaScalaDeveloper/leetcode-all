@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1818;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minAbsoluteSumDiff(int[] nums1, int[] nums2) {
         final int mod = (int) 1e9 + 7;
         int[] nums = nums1.clone();

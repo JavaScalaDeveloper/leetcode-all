@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1104;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> pathInZigZagTree(int label) {
         int x = 1, i = 1;
         while ((x << 1) <= label) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0857;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
         int n = quality.length;
         Pair[] t = new Pair[n];
@@ -21,7 +24,10 @@ class Solution {
     }
 }
 
-class Pair {
+package com.solution._0857;
+import change.datastructure.*;
+import java.util.*;
+public class Pair {
     double x;
     int q;
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0657;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean judgeCircle(String moves) {
         int x = 0, y = 0;
         for (int i = 0; i < moves.length(); ++i) {

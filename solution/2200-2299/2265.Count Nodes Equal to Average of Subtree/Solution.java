@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2265;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int ans;
 
     public int averageOfSubtree(TreeNode root) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2146;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> highestRankedKItems(
         int[][] grid, int[] pricing, int[] start, int k) {
         int m = grid.length, n = grid[0].length;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2287;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int rearrangeCharacters(String s, String target) {
         int[] cnt1 = new int[26];
         int[] cnt2 = new int[26];

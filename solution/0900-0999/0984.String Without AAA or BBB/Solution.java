@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0984;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String strWithout3a3b(int a, int b) {
         StringBuilder ans = new StringBuilder();
         while (a > 0 && b > 0) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2541;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long minOperations(int[] nums1, int[] nums2, int k) {
         long ans = 0, x = 0;
         for (int i = 0; i < nums1.length; ++i) {

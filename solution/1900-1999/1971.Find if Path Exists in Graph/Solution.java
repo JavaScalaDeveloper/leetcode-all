@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1971;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public boolean validPath(int n, int[][] edges, int source, int destination) {

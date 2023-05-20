@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0621;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int leastInterval(char[] tasks, int n) {
         int[] cnt = new int[26];
         int x = 0;

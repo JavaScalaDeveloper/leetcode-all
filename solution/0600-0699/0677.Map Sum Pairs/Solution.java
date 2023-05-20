@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0677;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     private Trie[] children = new Trie[26];
     private int val;
 
@@ -27,7 +30,10 @@ class Trie {
     }
 }
 
-class MapSum {
+package com.solution._0677;
+import change.datastructure.*;
+import java.util.*;
+public class MapSum {
     private Map<String, Integer> d = new HashMap<>();
     private Trie trie = new Trie();
 

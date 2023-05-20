@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2354;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long countExcellentPairs(int[] nums, int k) {
         Set<Integer> s = new HashSet<>();
         for (int v : nums) {

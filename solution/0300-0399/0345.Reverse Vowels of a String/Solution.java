@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0345;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reverseVowels(String s) {
         Set<Character> vowels
             = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));

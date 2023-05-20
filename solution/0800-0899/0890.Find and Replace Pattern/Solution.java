@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0890;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> findAndReplacePattern(String[] words, String pattern) {
         List<String> ans = new ArrayList<>();
         for (String word : words) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1898;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumRemovals(String s, String p, int[] removable) {
         int left = 0, right = removable.length;
         while (left < right) {

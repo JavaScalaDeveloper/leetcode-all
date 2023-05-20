@@ -1,4 +1,7 @@
-class SeatManager {
+package com.solution._1845;
+import change.datastructure.*;
+import java.util.*;
+public class SeatManager {
     private PriorityQueue<Integer> q = new PriorityQueue<>();
 
     public SeatManager(int n) {

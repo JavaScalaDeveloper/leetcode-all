@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0892;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int surfaceArea(int[][] grid) {
         int n = grid.length;
         int ans = 0;

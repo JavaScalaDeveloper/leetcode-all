@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0893;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSpecialEquivGroups(String[] words) {
         Set<String> s = new HashSet<>();
         for (String word : words) {

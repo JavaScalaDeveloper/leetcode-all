@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2167;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumTime(String s) {
         int n = s.length();
         int[] pre = new int[n + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0052;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int n;
     private int ans;
     private boolean[] cols = new boolean[10];

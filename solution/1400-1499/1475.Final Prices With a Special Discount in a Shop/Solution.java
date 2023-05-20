@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1475;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] finalPrices(int[] prices) {
         Deque<Integer> stk = new ArrayDeque<>();
         int n = prices.length;

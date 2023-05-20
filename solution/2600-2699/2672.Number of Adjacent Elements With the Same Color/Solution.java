@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2672;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] colorTheArray(int n, int[][] queries) {
         int m = queries.length;
         int[] nums = new int[n];

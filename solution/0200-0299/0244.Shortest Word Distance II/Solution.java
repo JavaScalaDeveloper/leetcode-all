@@ -1,4 +1,7 @@
-class WordDistance {
+package com.solution._0244;
+import change.datastructure.*;
+import java.util.*;
+public class WordDistance {
     private Map<String, List<Integer>> d = new HashMap<>();
 
     public WordDistance(String[] wordsDict) {

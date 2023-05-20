@@ -1,4 +1,7 @@
-class MyCircularDeque {
+package com.solution._0641;
+import change.datastructure.*;
+import java.util.*;
+public class MyCircularDeque {
     private int[] q;
     private int front;
     private int size;

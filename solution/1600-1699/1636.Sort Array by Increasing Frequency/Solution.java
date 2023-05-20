@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1636;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] frequencySort(int[] nums) {
         int[] cnt = new int[201];
         List<Integer> t = new ArrayList<>();

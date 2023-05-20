@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0720;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<String> s;
 
     public String longestWord(String[] words) {

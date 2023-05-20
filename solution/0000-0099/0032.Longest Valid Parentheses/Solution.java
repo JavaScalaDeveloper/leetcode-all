@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0032;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestValidParentheses(String s) {
         int n = s.length();
         if (n < 2) {

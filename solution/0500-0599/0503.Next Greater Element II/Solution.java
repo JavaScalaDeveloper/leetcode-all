@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0503;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] nextGreaterElements(int[] nums) {
         int n = nums.length;
         int[] ans = new int[n];

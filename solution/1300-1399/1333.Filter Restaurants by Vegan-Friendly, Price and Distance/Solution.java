@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1333;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> filterRestaurants(
         int[][] restaurants, int veganFriendly, int maxPrice, int maxDistance) {
         Arrays.sort(restaurants, (a, b) -> a[1] == b[1] ? b[0] - a[0] : b[1] - a[1]);

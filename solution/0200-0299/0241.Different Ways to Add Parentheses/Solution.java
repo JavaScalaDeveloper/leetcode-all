@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0241;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static Map<String, List<Integer>> memo = new HashMap<>();
 
     public List<Integer> diffWaysToCompute(String expression) {

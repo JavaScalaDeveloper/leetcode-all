@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2017;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long gridGame(int[][] grid) {
         long ans = Long.MAX_VALUE;
         long s1 = 0, s2 = 0;

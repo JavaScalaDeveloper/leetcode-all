@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1370;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String sortString(String s) {
         int[] counter = new int[26];
         for (char c : s.toCharArray()) {

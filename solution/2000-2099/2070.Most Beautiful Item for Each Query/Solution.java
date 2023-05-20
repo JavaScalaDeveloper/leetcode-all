@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2070;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] maximumBeauty(int[][] items, int[] queries) {
         Arrays.sort(items, (a, b) -> a[0] - b[0]);
         for (int i = 1; i < items.length; ++i) {

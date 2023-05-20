@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2439;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] nums;
 
     public int minimizeArrayValue(int[] nums) {

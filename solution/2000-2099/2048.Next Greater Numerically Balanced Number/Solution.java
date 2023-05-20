@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2048;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int nextBeautifulNumber(int n) {
         for (int i = n + 1; i < 10000000; ++i) {
             if (check(i)) {

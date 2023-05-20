@@ -1,4 +1,7 @@
-class FizzBuzz {
+package com.solution._1195;
+import change.datastructure.*;
+import java.util.*;
+public class FizzBuzz {
     private int n;
 
     public FizzBuzz(int n) {

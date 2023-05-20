@@ -1,9 +1,15 @@
-class Node {
+package com.solution._2286;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     int l, r;
     long mx, s;
 }
 
-class SegmentTree {
+package com.solution._2286;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private Node[] tr;
     private int m;
 
@@ -83,7 +89,10 @@ class SegmentTree {
     }
 }
 
-class BookMyShow {
+package com.solution._2286;
+import change.datastructure.*;
+import java.util.*;
+public class BookMyShow {
     private int n;
     private int m;
     private SegmentTree tree;

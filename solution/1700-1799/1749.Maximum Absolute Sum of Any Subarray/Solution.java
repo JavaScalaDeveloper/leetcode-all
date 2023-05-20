@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1749;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxAbsoluteSum(int[] nums) {
         int f = 0, g = 0;
         int ans = 0;

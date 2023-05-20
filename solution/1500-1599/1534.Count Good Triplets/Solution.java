@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1534;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countGoodTriplets(int[] arr, int a, int b, int c) {
         int n = arr.length;
         int ans = 0;

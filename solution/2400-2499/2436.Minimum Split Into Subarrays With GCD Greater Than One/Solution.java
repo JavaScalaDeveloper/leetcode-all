@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2436;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumSplits(int[] nums) {
         int ans = 1, g = 0;
         for (int x : nums) {

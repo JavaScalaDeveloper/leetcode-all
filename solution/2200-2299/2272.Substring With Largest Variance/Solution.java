@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2272;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestVariance(String s) {
         int n = s.length();
         int ans = 0;

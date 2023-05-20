@@ -6,7 +6,10 @@
  * }
  */
 
-class Solution {
+package com.solution._0702;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int search(ArrayReader reader, int target) {
         int left = 0, right = 20000;
         while (left < right) {

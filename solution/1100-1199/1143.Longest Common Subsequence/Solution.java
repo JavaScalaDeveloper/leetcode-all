@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1143;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestCommonSubsequence(String text1, String text2) {
         int m = text1.length(), n = text2.length();
         int[][] f = new int[m + 1][n + 1];

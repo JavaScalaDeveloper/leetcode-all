@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2138;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] divideString(String s, int k, char fill) {
         int n = s.length();
         String[] ans = new String[(n + k - 1) / k];

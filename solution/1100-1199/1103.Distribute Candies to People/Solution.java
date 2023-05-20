@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1103;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] distributeCandies(int candies, int num_people) {
         int[] ans = new int[num_people];
         for (int i = 0; candies > 0; ++i) {

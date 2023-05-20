@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0070;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int climbStairs(int n) {
         int a = 0, b = 1;
         for (int i = 0; i < n; ++i) {

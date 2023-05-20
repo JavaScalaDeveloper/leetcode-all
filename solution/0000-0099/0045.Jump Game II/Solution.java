@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0045;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int jump(int[] nums) {
         int ans = 0, mx = 0, last = 0;
         for (int i = 0; i < nums.length - 1; ++i) {

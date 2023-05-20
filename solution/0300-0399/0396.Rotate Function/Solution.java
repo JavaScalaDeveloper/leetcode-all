@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0396;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxRotateFunction(int[] nums) {
         int f = 0;
         int s = 0;

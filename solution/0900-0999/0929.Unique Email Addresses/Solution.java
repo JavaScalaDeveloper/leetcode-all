@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0929;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numUniqueEmails(String[] emails) {
         Set<String> s = new HashSet<>();
         for (String email : emails) {

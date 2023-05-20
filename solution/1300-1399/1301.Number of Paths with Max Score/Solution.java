@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1301;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<String> board;
     private int n;
     private int[][] f;

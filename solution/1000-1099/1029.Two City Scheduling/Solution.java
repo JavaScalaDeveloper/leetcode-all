@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1029;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int twoCitySchedCost(int[][] costs) {
         Arrays.sort(costs, (a, b) -> { return a[0] - a[1] - (b[0] - b[1]); });
         int ans = 0;

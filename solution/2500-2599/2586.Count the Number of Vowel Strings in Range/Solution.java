@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2586;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int vowelStrings(String[] words, int left, int right) {
         int ans = 0;
         for (int i = left; i <= right; ++i) {

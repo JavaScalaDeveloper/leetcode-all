@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0220;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {
         TreeSet<Long> ts = new TreeSet<>();
         for (int i = 0; i < nums.length; ++i) {

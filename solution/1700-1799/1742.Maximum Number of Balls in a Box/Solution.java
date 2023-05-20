@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1742;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countBalls(int lowLimit, int highLimit) {
         int[] cnt = new int[50];
         for (int i = lowLimit; i <= highLimit; ++i) {

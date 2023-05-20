@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1958;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int[][] DIRS
         = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
     private static final int N = 8;

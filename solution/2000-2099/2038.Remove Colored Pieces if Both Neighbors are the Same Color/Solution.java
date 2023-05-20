@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2038;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean winnerOfGame(String colors) {
         int n = colors.length();
         int a = 0, b = 0;

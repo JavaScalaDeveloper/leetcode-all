@@ -1,4 +1,7 @@
-class Node {
+package com.solution._2276;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     Node left;
     Node right;
     int l;
@@ -14,7 +17,10 @@ class Node {
     }
 }
 
-class SegmentTree {
+package com.solution._2276;
+import change.datastructure.*;
+import java.util.*;
+public class SegmentTree {
     private Node root = new Node(1, (int) 1e9 + 1);
 
     public SegmentTree() {
@@ -87,7 +93,10 @@ class SegmentTree {
     }
 }
 
-class CountIntervals {
+package com.solution._2276;
+import change.datastructure.*;
+import java.util.*;
+public class CountIntervals {
     private SegmentTree tree = new SegmentTree();
 
     public CountIntervals() {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0265;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCostII(int[][] costs) {
         int n = costs.length, k = costs[0].length;
         int[] f = costs[0].clone();

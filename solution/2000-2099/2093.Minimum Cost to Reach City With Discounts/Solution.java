@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2093;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumCost(int n, int[][] highways, int discounts) {
         List<int[]>[] g = new List[n];
         for (int i = 0; i < n; ++i) {

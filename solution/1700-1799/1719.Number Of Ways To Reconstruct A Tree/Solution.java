@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1719;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int checkWays(int[][] pairs) {
         boolean[][] g = new boolean[510][510];
         List<Integer>[] v = new List[510];

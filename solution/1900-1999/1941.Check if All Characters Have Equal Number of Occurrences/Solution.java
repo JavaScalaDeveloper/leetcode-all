@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1941;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean areOccurrencesEqual(String s) {
         int[] cnt = new int[26];
         for (char c : s.toCharArray()) {

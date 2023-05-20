@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1630;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {
         List<Boolean> ans = new ArrayList<>();
         for (int i = 0; i < l.length; ++i) {

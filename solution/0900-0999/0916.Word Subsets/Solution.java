@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0916;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> wordSubsets(String[] words1, String[] words2) {
         int[] cnt = new int[26];
         for (var b : words2) {

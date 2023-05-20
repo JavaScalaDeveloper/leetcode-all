@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1181;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> beforeAndAfterPuzzles(String[] phrases) {
         Map<String, Set<Integer>> sameFirstWord = new HashMap<>();
         for (int i = 0; i < phrases.length; ++i) {

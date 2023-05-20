@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2608;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer>[] g;
     private final int inf = 1 << 30;
 

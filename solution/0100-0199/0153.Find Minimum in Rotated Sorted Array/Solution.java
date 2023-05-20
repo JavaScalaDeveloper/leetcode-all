@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0153;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMin(int[] nums) {
         int n = nums.length;
         if (nums[0] <= nums[n - 1]) {

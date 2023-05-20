@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0113;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<List<Integer>> ans = new ArrayList<>();
     private List<Integer> t = new ArrayList<>();
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1859;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String sortSentence(String s) {
         String[] words = s.split(" ");
         String[] ans = new String[words.length];

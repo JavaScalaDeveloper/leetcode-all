@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1817;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findingUsersActiveMinutes(int[][] logs, int k) {
         Map<Integer, Set<Integer>> d = new HashMap<>();
         for (var log : logs) {

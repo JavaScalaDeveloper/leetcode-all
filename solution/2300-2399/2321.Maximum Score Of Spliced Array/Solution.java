@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2321;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumsSplicedArray(int[] nums1, int[] nums2) {
         int s1 = 0, s2 = 0, n = nums1.length;
         for (int i = 0; i < n; ++i) {

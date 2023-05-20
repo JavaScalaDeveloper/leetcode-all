@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0581;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findUnsortedSubarray(int[] nums) {
         int[] arr = nums.clone();
         Arrays.sort(arr);

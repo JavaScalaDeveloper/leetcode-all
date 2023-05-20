@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1544;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String makeGood(String s) {
         StringBuilder sb = new StringBuilder();
         for (char c : s.toCharArray()) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0871;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minRefuelStops(int target, int startFuel, int[][] stations) {
         PriorityQueue<Integer> q = new PriorityQueue<>((a, b) -> b - a);
         int n = stations.length;

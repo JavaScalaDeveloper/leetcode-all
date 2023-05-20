@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0526;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countArrangement(int N) {
         int maxn = 1 << N;
         int[] f = new int[maxn];

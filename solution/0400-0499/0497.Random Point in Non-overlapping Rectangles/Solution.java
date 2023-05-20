@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0497;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] s;
     private int[][] rects;
     private Random random = new Random();

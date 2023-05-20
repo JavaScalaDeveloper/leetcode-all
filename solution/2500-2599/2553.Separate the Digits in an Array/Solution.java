@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2553;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] separateDigits(int[] nums) {
         List<Integer> res = new ArrayList<>();
         for (int x : nums) {

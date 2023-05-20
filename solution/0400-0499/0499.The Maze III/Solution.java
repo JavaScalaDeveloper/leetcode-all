@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0499;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String findShortestWay(int[][] maze, int[] ball, int[] hole) {
         int m = maze.length;
         int n = maze[0].length;

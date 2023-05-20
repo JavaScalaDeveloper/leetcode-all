@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1870;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSpeedOnTime(int[] dist, double hour) {
         int left = 1, right = (int) 1e7;
         while (left < right) {

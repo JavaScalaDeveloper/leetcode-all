@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1547;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCost(int n, int[] cuts) {
         List<Integer> nums = new ArrayList<>();
         for (int x : cuts) {

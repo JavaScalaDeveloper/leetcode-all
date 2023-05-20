@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1067;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int d;
     private int[] a = new int[11];
     private int[][] dp = new int[11][11];

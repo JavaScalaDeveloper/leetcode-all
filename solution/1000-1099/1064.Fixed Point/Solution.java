@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1064;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int fixedPoint(int[] arr) {
         int left = 0, right = arr.length - 1;
         while (left < right) {

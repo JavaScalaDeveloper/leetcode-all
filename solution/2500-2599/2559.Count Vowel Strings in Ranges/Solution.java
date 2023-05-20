@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2559;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] vowelStrings(String[] words, int[][] queries) {
         List<Integer> t = new ArrayList<>();
         Set<Character> vowels = Set.of('a', 'e', 'i', 'o', 'u');

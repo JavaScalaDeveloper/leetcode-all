@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1860;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] memLeak(int memory1, int memory2) {
         int i = 1;
         for (; i <= Math.max(memory1, memory2); ++i) {

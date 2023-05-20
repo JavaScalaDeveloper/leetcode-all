@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0809;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int expressiveWords(String s, String[] words) {
         int ans = 0;
         for (String t : words) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1089;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void duplicateZeros(int[] arr) {
         int n = arr.length;
         int i = -1, k = 0;

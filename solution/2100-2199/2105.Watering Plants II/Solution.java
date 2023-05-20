@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2105;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumRefill(int[] plants, int capacityA, int capacityB) {
         int i = 0, j = plants.length - 1;
         int ans = 0, a = capacityA, b = capacityB;

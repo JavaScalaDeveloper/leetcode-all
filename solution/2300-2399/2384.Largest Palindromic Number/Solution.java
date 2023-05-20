@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2384;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String largestPalindromic(String num) {
         int[] cnt = new int[10];
         for (char c : num.toCharArray()) {

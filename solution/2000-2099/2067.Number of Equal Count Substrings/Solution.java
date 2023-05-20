@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2067;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int equalCountSubstrings(String s, int count) {
         int ans = 0;
         int n = s.length();

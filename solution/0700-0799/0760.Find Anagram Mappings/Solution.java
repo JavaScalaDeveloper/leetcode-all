@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0760;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] anagramMappings(int[] nums1, int[] nums2) {
         Map<Integer, Set<Integer>> map = new HashMap<>();
         for (int i = 0; i < nums2.length; ++i) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1053;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] prevPermOpt1(int[] arr) {
         int n = arr.length;
         for (int i = n - 1; i > 0; --i) {

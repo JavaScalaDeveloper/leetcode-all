@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0915;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int partitionDisjoint(int[] nums) {
         int n = nums.length;
         int[] mi = new int[n + 1];

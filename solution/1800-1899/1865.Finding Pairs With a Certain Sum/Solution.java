@@ -1,4 +1,7 @@
-class FindSumPairs {
+package com.solution._1865;
+import change.datastructure.*;
+import java.util.*;
+public class FindSumPairs {
     private int[] nums1;
     private int[] nums2;
     private Map<Integer, Integer> cnt = new HashMap<>();

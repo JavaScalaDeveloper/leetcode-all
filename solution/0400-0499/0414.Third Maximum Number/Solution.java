@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0414;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int thirdMax(int[] nums) {
         long m1 = Long.MIN_VALUE;
         long m2 = Long.MIN_VALUE;

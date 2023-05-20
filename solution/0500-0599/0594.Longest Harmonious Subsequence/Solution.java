@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0594;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLHS(int[] nums) {
         Map<Integer, Integer> counter = new HashMap<>();
         for (int num : nums) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1935;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int canBeTypedWords(String text, String brokenLetters) {
         Set<Character> letters = new HashSet<>();
         for (char c : brokenLetters.toCharArray()) {

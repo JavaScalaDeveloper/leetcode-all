@@ -1,4 +1,7 @@
-class Foo {
+package com.solution._1114;
+import change.datastructure.*;
+import java.util.*;
+public class Foo {
     private Semaphore a = new Semaphore(1);
     private Semaphore b = new Semaphore(0);
     private Semaphore c = new Semaphore(0);

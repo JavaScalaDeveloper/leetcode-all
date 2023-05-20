@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0515;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> largestValues(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         if (root == null) {

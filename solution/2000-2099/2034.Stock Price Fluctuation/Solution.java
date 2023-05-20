@@ -1,4 +1,7 @@
-class StockPrice {
+package com.solution._2034;
+import change.datastructure.*;
+import java.util.*;
+public class StockPrice {
     private int lastTs;
     private Map<Integer, Integer> mp = new HashMap<>();
     private TreeMap<Integer, Integer> counter = new TreeMap<>();

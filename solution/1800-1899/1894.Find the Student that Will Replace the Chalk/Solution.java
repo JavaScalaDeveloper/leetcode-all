@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1894;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int chalkReplacer(int[] chalk, int k) {
         int n = chalk.length;
         long[] s = new long[n + 1];

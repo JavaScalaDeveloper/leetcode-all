@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2248;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> intersection(int[][] nums) {
         int[] cnt = new int[1001];
         for (var arr : nums) {

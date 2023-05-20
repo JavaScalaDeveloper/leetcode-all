@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1300;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findBestValue(int[] arr, int target) {
         Arrays.sort(arr);
         int n = arr.length;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1663;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String getSmallestString(int n, int k) {
         char[] ans = new char[n];
         Arrays.fill(ans, 'a');

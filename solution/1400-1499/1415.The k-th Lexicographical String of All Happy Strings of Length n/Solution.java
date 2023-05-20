@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1415;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<String> ans = new ArrayList<>();
 
     public String getHappyString(int n, int k) {

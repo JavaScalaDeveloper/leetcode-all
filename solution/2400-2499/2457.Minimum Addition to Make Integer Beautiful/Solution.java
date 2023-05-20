@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2457;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long makeIntegerBeautiful(long n, int target) {
         long x = 0;
         while (f(n + x) > target) {

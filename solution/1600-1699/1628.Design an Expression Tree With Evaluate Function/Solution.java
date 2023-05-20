@@ -11,7 +11,10 @@ abstract class Node {
     protected Node right;
 };
 
-class MyNode extends Node {
+package com.solution._1628;
+import change.datastructure.*;
+import java.util.*;
+public class MyNode extends Node {
     public MyNode(String val) {
         this.val = val;
     }
@@ -53,7 +56,10 @@ class MyNode extends Node {
  * and returns the expression tree represnting it as a Node.
  */
 
-class TreeBuilder {
+package com.solution._1628;
+import change.datastructure.*;
+import java.util.*;
+public class TreeBuilder {
     Node buildTree(String[] postfix) {
         Deque<MyNode> stk = new ArrayDeque<>();
         for (String s : postfix) {

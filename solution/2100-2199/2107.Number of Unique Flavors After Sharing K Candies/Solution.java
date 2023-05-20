@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2107;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int shareCandies(int[] candies, int k) {
         Map<Integer, Integer> cnt = new HashMap<>();
         int n = candies.length;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1310;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] xorQueries(int[] arr, int[][] queries) {
         int n = arr.length;
         int[] s = new int[n + 1];

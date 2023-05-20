@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1282;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> groupThePeople(int[] groupSizes) {
         int n = groupSizes.length;
         List<Integer>[] g = new List[n + 1];

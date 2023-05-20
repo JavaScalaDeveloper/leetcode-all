@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1436;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String destCity(List<List<String>> paths) {
         Set<String> s = new HashSet<>();
         for (var p : paths) {

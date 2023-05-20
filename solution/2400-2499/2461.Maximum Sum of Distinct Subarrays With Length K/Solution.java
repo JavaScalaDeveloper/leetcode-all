@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2461;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maximumSubarraySum(int[] nums, int k) {
         int n = nums.length;
         Map<Integer, Integer> cnt = new HashMap<>(k);

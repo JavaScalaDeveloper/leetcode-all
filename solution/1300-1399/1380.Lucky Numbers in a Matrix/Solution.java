@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1380;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> luckyNumbers(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         int[] rows = new int[m];

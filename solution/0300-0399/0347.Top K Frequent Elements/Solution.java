@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0347;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Long> frequency = Arrays.stream(nums).boxed().collect(
             Collectors.groupingBy(Function.identity(), Collectors.counting()));

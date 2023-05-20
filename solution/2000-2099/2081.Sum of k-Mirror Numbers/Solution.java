@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2081;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long kMirror(int k, int n) {
         long ans = 0;
         for (int l = 1;; ++l) {

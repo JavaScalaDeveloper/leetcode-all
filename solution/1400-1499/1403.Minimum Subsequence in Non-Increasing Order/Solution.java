@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1403;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> minSubsequence(int[] nums) {
         Arrays.sort(nums);
         List<Integer> ans = new ArrayList<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2572;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int squareFreeSubsets(int[] nums) {
         int[] primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
         int[] cnt = new int[31];

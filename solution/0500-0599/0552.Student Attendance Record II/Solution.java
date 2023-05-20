@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0552;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int MOD = 1000000007;
 
     public int checkRecord(int n) {

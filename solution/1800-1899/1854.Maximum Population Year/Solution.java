@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1854;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumPopulation(int[][] logs) {
         int[] d = new int[101];
         final int offset = 1950;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2275;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int largestCombination(int[] candidates) {
         int ans = 0;
         for (int i = 0; i < 32; ++i) {

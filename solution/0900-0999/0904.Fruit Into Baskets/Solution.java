@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0904;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int totalFruit(int[] fruits) {
         Map<Integer, Integer> cnt = new HashMap<>();
         int j = 0, n = fruits.length;

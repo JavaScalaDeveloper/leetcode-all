@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._0445;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         Deque<Integer> s1 = new ArrayDeque<>();
         Deque<Integer> s2 = new ArrayDeque<>();

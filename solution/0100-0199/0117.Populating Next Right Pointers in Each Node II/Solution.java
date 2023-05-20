@@ -1,6 +1,9 @@
 /*
 // Definition for a Node.
-class Node {
+package com.solution._0117;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     public int val;
     public Node left;
     public Node right;
@@ -21,7 +24,10 @@ class Node {
 };
 */
 
-class Solution {
+package com.solution._0117;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Node prev, next;
 
     public Node connect(Node root) {

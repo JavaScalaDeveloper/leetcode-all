@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2201;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int digArtifacts(int n, int[][] artifacts, int[][] dig) {
         Set<Integer> s = new HashSet<>();
         for (int[] d : dig) {

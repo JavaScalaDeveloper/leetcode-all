@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2470;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int subarrayLCM(int[] nums, int k) {
         int n = nums.length;
         int ans = 0;

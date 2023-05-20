@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1765;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] highestPeak(int[][] isWater) {
         int m = isWater.length, n = isWater[0].length;
         int[][] ans = new int[m][n];

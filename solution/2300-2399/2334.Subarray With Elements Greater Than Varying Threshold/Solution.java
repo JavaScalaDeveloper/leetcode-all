@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2334;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int validSubarraySize(int[] nums, int threshold) {
         int n = nums.length;
         int[] left = new int[n];

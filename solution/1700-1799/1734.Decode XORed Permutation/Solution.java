@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1734;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] decode(int[] encoded) {
         int n = encoded.length + 1;
         int a = 0, b = 0;

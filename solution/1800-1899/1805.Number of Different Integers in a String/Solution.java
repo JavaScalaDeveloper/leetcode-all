@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1805;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numDifferentIntegers(String word) {
         Set<String> s = new HashSet<>();
         int n = word.length();

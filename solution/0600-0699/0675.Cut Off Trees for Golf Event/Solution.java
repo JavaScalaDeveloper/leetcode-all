@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0675;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] dist = new int[3600];
     private List<List<Integer>> forest;
     private int m;

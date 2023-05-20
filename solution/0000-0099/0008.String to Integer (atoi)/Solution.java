@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0008;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int myAtoi(String s) {
         if (s == null) return 0;
         int n = s.length();

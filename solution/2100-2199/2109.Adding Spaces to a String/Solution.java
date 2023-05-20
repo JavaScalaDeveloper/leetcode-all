@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2109;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String addSpaces(String s, int[] spaces) {
         StringBuilder ans = new StringBuilder();
         for (int i = 0, j = 0; i < s.length(); ++i) {

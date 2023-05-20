@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0974;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int subarraysDivByK(int[] nums, int k) {
         Map<Integer, Integer> cnt = new HashMap<>();
         cnt.put(0, 1);

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1654;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumJumps(int[] forbidden, int a, int b, int x) {
         Set<Integer> s = new HashSet<>();
         for (int v : forbidden) {

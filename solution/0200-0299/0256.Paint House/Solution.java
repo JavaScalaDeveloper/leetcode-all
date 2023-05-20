@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0256;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCost(int[][] costs) {
         int r = 0, g = 0, b = 0;
         for (int[] cost : costs) {

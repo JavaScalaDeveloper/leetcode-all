@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1048;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestStrChain(String[] words) {
         Arrays.sort(words, Comparator.comparingInt(String::length));
         int res = 0;

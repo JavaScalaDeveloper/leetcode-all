@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._1171;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode removeZeroSumSublists(ListNode head) {
         ListNode dummy = new ListNode(0, head);
         Map<Integer, ListNode> last = new HashMap<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1528;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String restoreString(String s, int[] indices) {
         int n = s.length();
         char[] ans = new char[n];

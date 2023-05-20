@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0356;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isReflected(int[][] points) {
         int minX = Integer.MAX_VALUE, maxX = Integer.MIN_VALUE;
         Set<String> pointSet = new HashSet<>();

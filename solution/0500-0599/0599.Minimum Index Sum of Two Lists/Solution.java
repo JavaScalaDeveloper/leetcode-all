@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0599;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] findRestaurant(String[] list1, String[] list2) {
         Map<String, Integer> mp = new HashMap<>();
         for (int i = 0; i < list2.length; ++i) {

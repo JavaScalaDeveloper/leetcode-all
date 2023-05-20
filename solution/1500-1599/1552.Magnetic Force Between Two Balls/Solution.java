@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1552;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDistance(int[] position, int m) {
         Arrays.sort(position);
         int left = 1, right = position[position.length - 1];

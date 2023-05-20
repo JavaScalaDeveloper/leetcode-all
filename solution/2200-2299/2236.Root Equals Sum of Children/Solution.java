@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2236;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkTree(TreeNode root) {
         return root.val == root.left.val + root.right.val;
     }

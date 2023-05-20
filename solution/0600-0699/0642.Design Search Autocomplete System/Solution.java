@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0642;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[27];
     int v;
     String w = "";
@@ -29,7 +32,10 @@ class Trie {
     }
 }
 
-class AutocompleteSystem {
+package com.solution._0642;
+import change.datastructure.*;
+import java.util.*;
+public class AutocompleteSystem {
     private Trie trie = new Trie();
     private StringBuilder t = new StringBuilder();
 

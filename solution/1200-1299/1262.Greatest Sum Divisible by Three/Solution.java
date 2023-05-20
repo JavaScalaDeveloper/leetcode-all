@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1262;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSumDivThree(int[] nums) {
         int[] f = new int[3];
         for (int x : nums) {

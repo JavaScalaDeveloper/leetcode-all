@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2399;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkDistances(String s, int[] distance) {
         int[] d = new int[26];
         for (int i = 1, n = s.length(); i <= n; ++i) {

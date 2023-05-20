@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0481;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int magicalString(int n) {
         List<Integer> s = new ArrayList<>(Arrays.asList(1, 2, 2));
         for (int i = 2; s.size() < n; ++i) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1414;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMinFibonacciNumbers(int k) {
         if (k < 2) {
             return k;

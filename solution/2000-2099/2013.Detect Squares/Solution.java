@@ -1,4 +1,7 @@
-class DetectSquares {
+package com.solution._2013;
+import change.datastructure.*;
+import java.util.*;
+public class DetectSquares {
     private Map<Integer, Map<Integer, Integer>> cnt = new HashMap<>();
 
     public DetectSquares() {

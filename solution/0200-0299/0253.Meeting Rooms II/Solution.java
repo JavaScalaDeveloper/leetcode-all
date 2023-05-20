@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0253;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minMeetingRooms(int[][] intervals) {
         int n = 1000010;
         int[] delta = new int[n];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0189;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] nums;
 
     public void rotate(int[] nums, int k) {

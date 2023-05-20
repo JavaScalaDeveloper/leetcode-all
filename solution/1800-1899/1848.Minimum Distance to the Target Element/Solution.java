@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1848;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int getMinDistance(int[] nums, int target, int start) {
         int n = nums.length;
         int ans = n;

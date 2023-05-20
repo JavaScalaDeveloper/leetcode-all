@@ -80,33 +80,42 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 
 ```java
 class Solution {
+    /*
+    将数组排序，这样相同的数字就会挨在一起，方便进行去重；
+    从左到右枚举数组中的每个数字作为第一个数 a；
+    在 a 右边的区域内使用双指针 left 和 right，找出所有满足 a + nums[left] + nums[right] == 0 的三元组，并将其加入结果集；
+    注意去重。
+     */
     public List<List<Integer>> threeSum(int[] nums) {
-        Arrays.sort(nums);
-        List<List<Integer>> ans = new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
         int n = nums.length;
-        for (int i = 0; i < n - 2 && nums[i] <= 0; ++i) {
-            if (i > 0 && nums[i] == nums[i - 1]) {
+        Arrays.sort(nums); // 排序
+        for (int i = 0; i < n - 2; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) { // 去重
                 continue;
             }
-            int j = i + 1, k = n - 1;
-            while (j < k) {
-                int x = nums[i] + nums[j] + nums[k];
-                if (x < 0) {
-                    ++j;
-                } else if (x > 0) {
-                    --k;
+            int left = i + 1;
+            int right = n - 1;
+            while (left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+                if (sum == 0) {
+                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    left++;
+                    while (left < right && nums[left] == nums[left - 1]) { // 去重
+                        left++;
+                    }
+                    right--;
+                    while (left < right && nums[right] == nums[right + 1]) { // 去重
+                        right--;
+                    }
+                } else if (sum < 0) {
+                    left++;
                 } else {
-                    ans.add(List.of(nums[i], nums[j++], nums[k--]));
-                    while (j < k && nums[j] == nums[j - 1]) {
-                        ++j;
-                    }
-                    while (j < k && nums[k] == nums[k + 1]) {
-                        --k;
-                    }
+                    right--;
                 }
             }
         }
-        return ans;
+        return result;
     }
 }
 ```

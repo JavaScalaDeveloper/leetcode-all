@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1629;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public char slowestKey(int[] releaseTimes, String keysPressed) {
         char ans = keysPressed.charAt(0);
         int mx = releaseTimes[0];

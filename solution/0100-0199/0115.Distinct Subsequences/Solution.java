@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0115;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numDistinct(String s, String t) {
         int m = s.length(), n = t.length();
         int[][] dp = new int[m + 1][n + 1];

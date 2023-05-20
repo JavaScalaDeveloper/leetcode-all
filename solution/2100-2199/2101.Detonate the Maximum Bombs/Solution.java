@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2101;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[][] bombs;
 
     public int maximumDetonation(int[][] bombs) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0400;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findNthDigit(int n) {
         int k = 1, cnt = 9;
         while ((long) k * cnt < n) {

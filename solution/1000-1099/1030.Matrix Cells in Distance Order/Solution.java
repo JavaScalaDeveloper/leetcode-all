@@ -1,6 +1,9 @@
 import java.util.Deque;
 
-class Solution {
+package com.solution._1030;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] allCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {
         Deque<int[]> q = new ArrayDeque<>();
         q.offer(new int[] {rCenter, cCenter});

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0159;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int lengthOfLongestSubstringTwoDistinct(String s) {
         Map<Character, Integer> cnt = new HashMap<>();
         int n = s.length();

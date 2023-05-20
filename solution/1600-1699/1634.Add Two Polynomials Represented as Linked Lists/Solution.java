@@ -11,7 +11,10 @@
  * }
  */
 
-class Solution {
+package com.solution._1634;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public PolyNode addPoly(PolyNode poly1, PolyNode poly2) {
         PolyNode dummy = new PolyNode();
         PolyNode curr = dummy;

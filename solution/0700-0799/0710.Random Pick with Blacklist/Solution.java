@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0710;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<Integer, Integer> d = new HashMap<>();
     private Random rand = new Random();
     private int k;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1642;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int furthestBuilding(int[] heights, int bricks, int ladders) {
         PriorityQueue<Integer> q = new PriorityQueue<>();
         int n = heights.length;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0010;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isMatch(String s, String p) {
         int m = s.length(), n = p.length();
         boolean[][] f = new boolean[m + 1][n + 1];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0744;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public char nextGreatestLetter(char[] letters, char target) {
         int left = 0, right = letters.length;
         while (left < right) {

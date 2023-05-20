@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0337;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<TreeNode, Integer> memo;
 
     public int rob(TreeNode root) {

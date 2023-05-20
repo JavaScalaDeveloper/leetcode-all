@@ -1,4 +1,7 @@
-class MovingAverage {
+package com.solution._0346;
+import change.datastructure.*;
+import java.util.*;
+public class MovingAverage {
     private int[] arr;
     private int s;
     private int cnt;

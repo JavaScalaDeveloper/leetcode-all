@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1169;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> invalidTransactions(String[] transactions) {
         Map<String, List<Item>> d = new HashMap<>();
         Set<Integer> idx = new HashSet<>();
@@ -27,7 +30,10 @@ class Solution {
     }
 }
 
-class Item {
+package com.solution._1169;
+import change.datastructure.*;
+import java.util.*;
+public class Item {
     int t;
     String city;
     int i;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2182;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String repeatLimitedString(String s, int repeatLimit) {
         int[] cnt = new int[26];
         for (char c : s.toCharArray()) {

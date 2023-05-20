@@ -1,4 +1,7 @@
-class LockingTree {
+package com.solution._1993;
+import change.datastructure.*;
+import java.util.*;
+public class LockingTree {
     private Map<Integer, Integer> nums;
     private int[] parent;
     private List<Integer>[] children;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2575;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] divisibilityArray(String word, int m) {
         int n = word.length();
         int[] ans = new int[n];

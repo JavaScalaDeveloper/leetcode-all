@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1619;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double trimMean(int[] arr) {
         Arrays.sort(arr);
         int n = arr.length;

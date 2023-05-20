@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0639;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
 
     private static final int MOD = 1000000007;
 

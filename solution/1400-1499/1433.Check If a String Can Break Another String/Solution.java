@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1433;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkIfCanBreak(String s1, String s2) {
         char[] cs1 = s1.toCharArray();
         char[] cs2 = s2.toCharArray();

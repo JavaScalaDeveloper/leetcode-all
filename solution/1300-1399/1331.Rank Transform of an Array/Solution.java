@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1331;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] arrayRankTransform(int[] arr) {
         int n = arr.length;
         int[] t = arr.clone();

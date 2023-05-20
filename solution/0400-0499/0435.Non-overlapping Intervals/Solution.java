@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0435;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int eraseOverlapIntervals(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(a -> a[1]));
         int t = intervals[0][1], ans = 0;

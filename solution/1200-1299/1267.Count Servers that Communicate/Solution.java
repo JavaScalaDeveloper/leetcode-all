@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1267;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countServers(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         int[] row = new int[m];

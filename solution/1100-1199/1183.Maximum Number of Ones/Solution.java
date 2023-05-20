@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1183;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumNumberOfOnes(int width, int height, int sideLength, int maxOnes) {
         int x = sideLength;
         int[] cnt = new int[x * x];

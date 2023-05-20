@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1009;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int bitwiseComplement(int n) {
         if (n == 0) {
             return 1;

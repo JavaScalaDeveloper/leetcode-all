@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1056;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean confusingNumber(int n) {
         int[] d = new int[] {0, 1, -1, -1, -1, -1, 9, -1, 8, 6};
         int x = n, y = 0;

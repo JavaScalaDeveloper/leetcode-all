@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._2416;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     private Trie[] children = new Trie[26];
     private int cnt;
 
@@ -29,7 +32,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._2416;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] sumPrefixScores(String[] words) {
         Trie trie = new Trie();
         for (String w : words) {

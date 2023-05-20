@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0007;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int reverse(int x) {
         int ans = 0;
         for (; x != 0; x /= 10) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2161;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] pivotArray(int[] nums, int pivot) {
         int n = nums.length;
         int[] ans = new int[n];

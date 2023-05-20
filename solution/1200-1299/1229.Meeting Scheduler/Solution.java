@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1229;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> minAvailableDuration(int[][] slots1, int[][] slots2, int duration) {
         Arrays.sort(slots1, (a, b) -> a[0] - b[0]);
         Arrays.sort(slots2, (a, b) -> a[0] - b[0]);

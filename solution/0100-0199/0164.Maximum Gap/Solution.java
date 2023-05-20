@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0164;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumGap(int[] nums) {
         int n = nums.length;
         if (n < 2) {

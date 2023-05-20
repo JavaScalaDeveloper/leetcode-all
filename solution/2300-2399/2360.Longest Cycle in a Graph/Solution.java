@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2360;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestCycle(int[] edges) {
         int n = edges.length;
         boolean[] vis = new boolean[n];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1830;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int N = 3010;
     private static final int MOD = (int) 1e9 + 7;
     private static final long[] f = new long[N];

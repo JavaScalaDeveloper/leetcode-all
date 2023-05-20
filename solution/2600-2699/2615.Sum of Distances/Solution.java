@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2615;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long[] distance(int[] nums) {
         int n = nums.length;
         long[] ans = new long[n];

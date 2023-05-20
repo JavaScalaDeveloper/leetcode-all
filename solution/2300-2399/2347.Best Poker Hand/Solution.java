@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2347;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String bestHand(int[] ranks, char[] suits) {
         boolean flush = true;
         for (int i = 1; i < 5 && flush; ++i) {

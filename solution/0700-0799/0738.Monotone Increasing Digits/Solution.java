@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0738;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int monotoneIncreasingDigits(int n) {
         char[] s = String.valueOf(n).toCharArray();
         int i = 1;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1702;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String maximumBinaryString(String binary) {
         int k = binary.indexOf('0');
         if (k == -1) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2511;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int captureForts(int[] forts) {
         int n = forts.length;
         int ans = 0, i = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2503;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] maxPoints(int[][] grid, int[] queries) {
         int k = queries.length;
         int[][] qs = new int[k][2];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0219;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         Map<Integer, Integer> d = new HashMap<>();
         for (int i = 0; i < nums.length; ++i) {

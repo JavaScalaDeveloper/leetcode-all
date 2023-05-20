@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0420;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int strongPasswordChecker(String password) {
         int types = countTypes(password);
         int n = password.length();

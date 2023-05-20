@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1302;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int deepestLeavesSum(TreeNode root) {
         Deque<TreeNode> q = new ArrayDeque<>();
         q.offer(root);

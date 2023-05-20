@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1060;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int missingElement(int[] nums, int k) {
         int n = nums.length;
         if (k > missing(nums, n - 1)) {

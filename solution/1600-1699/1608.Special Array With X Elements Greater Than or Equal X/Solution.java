@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1608;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int specialArray(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;

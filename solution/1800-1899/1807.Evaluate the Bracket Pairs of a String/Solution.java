@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1807;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String evaluate(String s, List<List<String>> knowledge) {
         Map<String, String> d = new HashMap<>(knowledge.size());
         for (var e : knowledge) {

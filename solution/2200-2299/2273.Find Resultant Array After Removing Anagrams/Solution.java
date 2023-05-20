@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2273;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> removeAnagrams(String[] words) {
         List<String> ans = new ArrayList<>();
         String prev = "";

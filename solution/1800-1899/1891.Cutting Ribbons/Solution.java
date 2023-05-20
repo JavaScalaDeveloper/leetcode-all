@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1891;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxLength(int[] ribbons, int k) {
         int left = 0, right = 0;
         for (int x : ribbons) {

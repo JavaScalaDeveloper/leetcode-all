@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0833;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String findReplaceString(String s, int[] indices, String[] sources, String[] targets) {
         int n = s.length();
         int[] d = new int[n];

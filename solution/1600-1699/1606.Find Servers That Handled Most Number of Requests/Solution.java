@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1606;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> busiestServers(int k, int[] arrival, int[] load) {
         int[] cnt = new int[k];
         PriorityQueue<int[]> busy = new PriorityQueue<>((a, b) -> a[0] - b[0]);

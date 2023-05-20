@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1047;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String removeDuplicates(String s) {
         StringBuilder sb = new StringBuilder();
         for (char c : s.toCharArray()) {

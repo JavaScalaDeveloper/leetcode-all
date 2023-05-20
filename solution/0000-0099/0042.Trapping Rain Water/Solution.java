@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0042;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int trap(int[] height) {
         int n = height.length;
         int[] left = new int[n];

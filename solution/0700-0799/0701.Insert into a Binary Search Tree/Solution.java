@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0701;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null) {
             return new TreeNode(val);

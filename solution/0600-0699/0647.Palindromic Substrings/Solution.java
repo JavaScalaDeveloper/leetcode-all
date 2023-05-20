@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0647;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countSubstrings(String s) {
         StringBuilder sb = new StringBuilder("^#");
         for (char ch : s.toCharArray()) {

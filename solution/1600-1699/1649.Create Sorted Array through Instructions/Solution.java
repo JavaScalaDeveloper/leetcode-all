@@ -1,4 +1,7 @@
-class BinaryIndexedTree {
+package com.solution._1649;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 
@@ -24,7 +27,10 @@ class BinaryIndexedTree {
     }
 }
 
-class Solution {
+package com.solution._1649;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int createSortedArray(int[] instructions) {
         int m = 0;
         for (int x : instructions) {

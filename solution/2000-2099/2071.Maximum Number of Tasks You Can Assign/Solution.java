@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2071;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] tasks;
     private int[] workers;
     private int strength;

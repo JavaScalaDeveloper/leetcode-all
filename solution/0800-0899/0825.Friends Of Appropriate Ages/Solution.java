@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0825;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numFriendRequests(int[] ages) {
         int[] counter = new int[121];
         for (int age : ages) {

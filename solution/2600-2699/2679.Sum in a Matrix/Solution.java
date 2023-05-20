@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2679;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int matrixSum(int[][] nums) {
         for (var row : nums) {
             Arrays.sort(row);

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0114;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void flatten(TreeNode root) {
         while (root != null) {
             if (root.left != null) {

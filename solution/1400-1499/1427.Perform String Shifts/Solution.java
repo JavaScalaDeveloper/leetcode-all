@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1427;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String stringShift(String s, int[][] shift) {
         int x = 0;
         for (var e : shift) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0721;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public List<List<String>> accountsMerge(List<List<String>> accounts) {

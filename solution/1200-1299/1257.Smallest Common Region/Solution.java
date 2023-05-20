@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1257;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String findSmallestRegion(List<List<String>> regions, String region1, String region2) {
         Map<String, String> m = new HashMap<>();
         for (List<String> region : regions) {

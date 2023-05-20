@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0692;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> topKFrequent(String[] words, int k) {
         Map<String, Integer> cnt = new HashMap<>();
         for (String v : words) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0685;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findRedundantDirectedConnection(int[][] edges) {
         int n = edges.length;
         int[] p = new int[n + 1];
@@ -29,7 +32,10 @@ class Solution {
     }
 }
 
-class UnionFind {
+package com.solution._0685;
+import change.datastructure.*;
+import java.util.*;
+public class UnionFind {
     public int[] p;
     public int n;
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2154;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findFinalValue(int[] nums, int original) {
         Set<Integer> s = new HashSet<>();
         for (int num : nums) {

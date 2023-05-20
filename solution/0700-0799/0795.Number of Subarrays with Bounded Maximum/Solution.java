@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0795;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSubarrayBoundedMax(int[] nums, int left, int right) {
         return f(nums, right) - f(nums, left - 1);
     }

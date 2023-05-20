@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2325;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String decodeMessage(String key, String message) {
         char[] d = new char[128];
         d[' '] = ' ';

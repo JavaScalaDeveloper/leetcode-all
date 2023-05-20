@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0513;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findBottomLeftValue(TreeNode root) {
         Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);

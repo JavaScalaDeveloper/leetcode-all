@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2594;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long repairCars(int[] ranks, int cars) {
         long left = 0, right = 1L * ranks[0] * cars * cars;
         while (left < right) {

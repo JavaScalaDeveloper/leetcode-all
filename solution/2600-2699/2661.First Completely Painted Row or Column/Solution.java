@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2661;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int firstCompleteIndex(int[] arr, int[][] mat) {
         int m = mat.length, n = mat[0].length;
         Map<Integer, int[]> idx = new HashMap<>();

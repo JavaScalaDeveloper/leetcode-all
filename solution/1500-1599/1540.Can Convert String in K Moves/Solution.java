@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1540;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canConvertString(String s, String t, int k) {
         if (s.length() != t.length()) {
             return false;

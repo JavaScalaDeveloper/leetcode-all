@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0389;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public char findTheDifference(String s, String t) {
         int[] cnt = new int[26];
         for (int i = 0; i < s.length(); ++i) {

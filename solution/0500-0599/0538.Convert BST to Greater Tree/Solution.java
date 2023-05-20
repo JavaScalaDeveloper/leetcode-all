@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0538;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode convertBST(TreeNode root) {
         int s = 0;
         TreeNode node = root;

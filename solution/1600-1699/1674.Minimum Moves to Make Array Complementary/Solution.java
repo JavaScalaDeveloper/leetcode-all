@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1674;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minMoves(int[] nums, int limit) {
         int n = nums.length;
         int[] d = new int[limit * 2 + 2];

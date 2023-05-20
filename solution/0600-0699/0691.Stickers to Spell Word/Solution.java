@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0691;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minStickers(String[] stickers, String target) {
         Deque<Integer> q = new ArrayDeque<>();
         q.offer(0);

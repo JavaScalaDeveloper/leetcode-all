@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1273;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer>[] g;
     private int[] value;
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1687;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int boxDelivering(int[][] boxes, int portsCount, int maxBoxes, int maxWeight) {
         int n = boxes.length;
         long[] ws = new long[n + 1];

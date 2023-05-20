@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0003;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int lengthOfLongestSubstring(String s) {
         Set<Character> ss = new HashSet<>();
         int i = 0, ans = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0325;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSubArrayLen(int[] nums, int k) {
         Map<Long, Integer> d = new HashMap<>();
         d.put(0L, -1);

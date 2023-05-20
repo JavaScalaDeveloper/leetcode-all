@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0134;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int n = gas.length;
         int i = n - 1, j = n - 1;

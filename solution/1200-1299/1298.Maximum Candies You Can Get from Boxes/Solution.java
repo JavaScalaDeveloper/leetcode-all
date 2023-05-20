@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1298;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxCandies(
         int[] status, int[] candies, int[][] keys, int[][] containedBoxes, int[] initialBoxes) {
         int ans = 0;

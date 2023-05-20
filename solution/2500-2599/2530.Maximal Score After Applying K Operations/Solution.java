@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2530;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maxKelements(int[] nums, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);
         for (int v : nums) {

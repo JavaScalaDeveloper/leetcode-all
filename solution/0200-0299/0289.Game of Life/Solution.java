@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0289;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void gameOfLife(int[][] board) {
         int m = board.length, n = board[0].length;
         for (int i = 0; i < m; ++i) {

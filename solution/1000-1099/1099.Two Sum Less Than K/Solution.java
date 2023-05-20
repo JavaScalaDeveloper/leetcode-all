@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1099;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int twoSumLessThanK(int[] nums, int k) {
         Arrays.sort(nums);
         int ans = -1;

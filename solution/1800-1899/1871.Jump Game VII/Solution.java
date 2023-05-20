@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1871;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canReach(String s, int minJump, int maxJump) {
         int n = s.length();
         boolean[] dp = new boolean[n];

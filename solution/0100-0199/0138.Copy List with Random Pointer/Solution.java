@@ -1,6 +1,9 @@
 /*
 // Definition for a Node.
-class Node {
+package com.solution._0138;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     int val;
     Node next;
     Node random;
@@ -12,7 +15,10 @@ class Node {
     }
 }
 */
-class Solution {
+package com.solution._0138;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public Node copyRandomList(Node head) {
         if (head == null) {
             return null;

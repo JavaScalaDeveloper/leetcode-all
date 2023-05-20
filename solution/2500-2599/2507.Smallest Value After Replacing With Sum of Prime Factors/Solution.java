@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2507;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int smallestValue(int n) {
         while (true) {
             int t = n, s = 0;

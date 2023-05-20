@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2452;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<String> twoEditWords(String[] queries, String[] dictionary) {
         List<String> ans = new ArrayList<>();
         int n = queries[0].length();

@@ -1,4 +1,7 @@
-class UnionFind {
+package com.solution._1632;
+import change.datastructure.*;
+import java.util.*;
+public class UnionFind {
     private int[] p;
     private int[] size;
 
@@ -37,7 +40,10 @@ class UnionFind {
     }
 }
 
-class Solution {
+package com.solution._1632;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] matrixRankTransform(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         TreeMap<Integer, List<int[]>> d = new TreeMap<>();

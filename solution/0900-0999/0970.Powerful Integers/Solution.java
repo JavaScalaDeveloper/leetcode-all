@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0970;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> powerfulIntegers(int x, int y, int bound) {
         Set<Integer> ans = new HashSet<>();
         for (int a = 1; a <= bound; a *= x) {

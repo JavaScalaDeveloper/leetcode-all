@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2341;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] numberOfPairs(int[] nums) {
         int[] cnt = new int[101];
         for (int x : nums) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1590;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSubarray(int[] nums, int p) {
         int k = 0;
         for (int x : nums) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2319;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkXMatrix(int[][] grid) {
         int n = grid.length;
         for (int i = 0; i < n; ++i) {

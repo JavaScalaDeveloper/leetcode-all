@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2373;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] largestLocal(int[][] grid) {
         int n = grid.length;
         int[][] ans = new int[n - 2][n - 2];

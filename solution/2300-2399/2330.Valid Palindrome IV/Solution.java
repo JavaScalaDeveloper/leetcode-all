@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2330;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean makePalindrome(String s) {
         int cnt = 0;
         int i = 0, j = s.length() - 1;

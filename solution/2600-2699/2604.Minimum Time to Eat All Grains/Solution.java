@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2604;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] hens;
     private int[] grains;
     private int m;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0882;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int reachableNodes(int[][] edges, int maxMoves, int n) {
         List<int[]>[] g = new List[n];
         Arrays.setAll(g, e -> new ArrayList<>());

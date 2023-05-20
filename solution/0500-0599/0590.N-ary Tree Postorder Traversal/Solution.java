@@ -1,6 +1,9 @@
 /*
 // Definition for a Node.
-class Node {
+package com.solution._0590;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     public int val;
     public List<Node> children;
 
@@ -17,7 +20,10 @@ class Node {
 };
 */
 
-class Solution {
+package com.solution._0590;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> postorder(Node root) {
         LinkedList<Integer> ans = new LinkedList<>();
         if (root == null) {

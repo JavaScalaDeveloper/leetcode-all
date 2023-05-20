@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1446;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxPower(String s) {
         int ans = 0, t = 0;
         for (int i = 0; i < s.length(); ++i) {

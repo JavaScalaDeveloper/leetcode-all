@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0658;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> findClosestElements(int[] arr, int k, int x) {
         int left = 0;
         int right = arr.length - k;

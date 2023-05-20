@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1161;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxLevelSum(TreeNode root) {
         Deque<TreeNode> q = new ArrayDeque<>();
         q.offer(root);

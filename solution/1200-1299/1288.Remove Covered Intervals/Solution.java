@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1288;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int removeCoveredIntervals(int[][] intervals) {
         Arrays.sort(intervals, (a, b) -> a[0] - b[0] == 0 ? b[1] - a[1] : a[0] - b[0]);
         int[] pre = intervals[0];

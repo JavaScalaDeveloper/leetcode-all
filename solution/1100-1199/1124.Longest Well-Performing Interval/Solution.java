@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1124;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestWPI(int[] hours) {
         int ans = 0, s = 0;
         Map<Integer, Integer> pos = new HashMap<>();

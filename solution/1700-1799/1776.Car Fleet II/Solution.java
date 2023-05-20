@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1776;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public double[] getCollisionTimes(int[][] cars) {
         int n = cars.length;
         double[] ans = new double[n];

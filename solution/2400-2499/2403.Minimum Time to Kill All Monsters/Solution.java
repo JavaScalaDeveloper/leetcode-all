@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2403;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int n;
     private long[] f;
     private int[] power;

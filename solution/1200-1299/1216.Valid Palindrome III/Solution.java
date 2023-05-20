@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1216;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isValidPalindrome(String s, int k) {
         int n = s.length();
         int[][] f = new int[n][n];

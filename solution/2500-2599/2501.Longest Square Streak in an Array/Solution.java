@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2501;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int longestSquareStreak(int[] nums) {
         Set<Integer> s = new HashSet<>();
         for (int v : nums) {

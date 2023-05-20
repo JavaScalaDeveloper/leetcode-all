@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0139;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
         Set<String> words = new HashSet<>(wordDict);
         int n = s.length();

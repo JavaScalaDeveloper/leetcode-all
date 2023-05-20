@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2114;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int mostWordsFound(String[] sentences) {
         int ans = 0;
         for (var s : sentences) {

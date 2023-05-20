@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0659;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isPossible(int[] nums) {
         Map<Integer, PriorityQueue<Integer>> d = new HashMap<>();
         for (int v : nums) {

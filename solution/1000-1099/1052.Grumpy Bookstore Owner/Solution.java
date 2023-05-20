@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1052;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSatisfied(int[] customers, int[] grumpy, int minutes) {
         int s = 0, cs = 0;
         int n = customers.length;

@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0144;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         while (root != null) {

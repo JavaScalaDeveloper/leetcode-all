@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1760;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumSize(int[] nums, int maxOperations) {
         int left = 1, right = 0;
         for (int x : nums) {

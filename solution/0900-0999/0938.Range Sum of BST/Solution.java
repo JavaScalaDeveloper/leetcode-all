@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0938;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int rangeSumBST(TreeNode root, int low, int high) {
         if (root == null) {
             return 0;

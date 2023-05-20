@@ -8,7 +8,10 @@
  * }
  */
 
-class Solution {
+package com.solution._1778;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final char[] dir = {'U', 'R', 'D', 'L'};
     private static final char[] ndir = {'D', 'L', 'U', 'R'};
     private static final int[] dirs = {-1, 0, 1, 0, -1};

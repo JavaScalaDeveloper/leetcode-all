@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0421;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
 
     public int findMaximumXOR(int[] numbers) {
         int max = 0;

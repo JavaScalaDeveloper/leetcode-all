@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1371;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findTheLongestSubstring(String s) {
         int[] pos = new int[32];
         Arrays.fill(pos, Integer.MAX_VALUE);

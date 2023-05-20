@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0697;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findShortestSubArray(int[] nums) {
         Map<Integer, Integer> cnt = new HashMap<>();
         Map<Integer, Integer> left = new HashMap<>();

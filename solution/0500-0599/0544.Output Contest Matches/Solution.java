@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0544;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String findContestMatch(int n) {
         String[] team = new String[n];
         for (int i = 0; i < n; ++i) {

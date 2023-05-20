@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2506;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int similarPairs(String[] words) {
         int ans = 0;
         Map<Integer, Integer> cnt = new HashMap<>();

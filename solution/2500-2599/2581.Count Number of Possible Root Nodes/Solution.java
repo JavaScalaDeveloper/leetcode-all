@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2581;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer>[] g;
     private Map<Long, Integer> gs = new HashMap<>();
     private int ans;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1691;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxHeight(int[][] cuboids) {
         for (var c : cuboids) {
             Arrays.sort(c);

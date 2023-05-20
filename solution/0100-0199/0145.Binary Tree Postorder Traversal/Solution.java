@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0145;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
         LinkedList<Integer> ans = new LinkedList<>();
         while (root != null) {

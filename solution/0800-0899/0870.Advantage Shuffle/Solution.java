@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0870;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] advantageCount(int[] nums1, int[] nums2) {
         int n = nums1.length;
         int[][] t = new int[n][2];

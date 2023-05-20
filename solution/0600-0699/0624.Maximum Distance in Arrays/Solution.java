@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0624;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDistance(List<List<Integer>> arrays) {
         int ans = 0;
         int mi = arrays.get(0).get(0);

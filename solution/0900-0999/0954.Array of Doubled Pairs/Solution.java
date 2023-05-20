@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0954;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canReorderDoubled(int[] arr) {
         Map<Integer, Integer> freq = new HashMap<>();
         for (int v : arr) {

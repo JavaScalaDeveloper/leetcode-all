@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2500;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int deleteGreatestValue(int[][] grid) {
         for (var row : grid) {
             Arrays.sort(row);

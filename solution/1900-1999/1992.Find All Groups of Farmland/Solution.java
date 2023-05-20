@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1992;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] findFarmland(int[][] land) {
         List<int[]> ans = new ArrayList<>();
         int m = land.length;

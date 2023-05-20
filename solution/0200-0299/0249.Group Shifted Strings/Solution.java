@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0249;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<String>> groupStrings(String[] strings) {
         Map<String, List<String>> mp = new HashMap<>();
         for (String s : strings) {

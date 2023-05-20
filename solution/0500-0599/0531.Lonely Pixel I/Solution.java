@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0531;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLonelyPixel(char[][] picture) {
         int m = picture.length, n = picture[0].length;
         int[] rows = new int[m];

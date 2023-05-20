@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._2479;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[2];
 
     void insert(long x) {
@@ -32,7 +35,10 @@ class Trie {
     }
 }
 
-class Solution {
+package com.solution._2479;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer>[] g;
     private int[] vals;
     private long[] s;

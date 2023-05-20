@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2543;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isReachable(int targetX, int targetY) {
         int x = gcd(targetX, targetY);
         return (x & (x - 1)) == 0;

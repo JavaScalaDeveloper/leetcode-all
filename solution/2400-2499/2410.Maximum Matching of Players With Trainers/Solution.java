@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2410;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int matchPlayersAndTrainers(int[] players, int[] trainers) {
         Arrays.sort(players);
         Arrays.sort(trainers);

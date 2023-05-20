@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0869;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean reorderedPowerOf2(int n) {
         String s = convert(n);
         for (int i = 1; i <= Math.pow(10, 9); i <<= 1) {

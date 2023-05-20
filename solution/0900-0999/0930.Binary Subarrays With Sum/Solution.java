@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0930;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSubarraysWithSum(int[] nums, int goal) {
         int i1 = 0, i2 = 0, s1 = 0, s2 = 0, j = 0, ans = 0;
         int n = nums.length;

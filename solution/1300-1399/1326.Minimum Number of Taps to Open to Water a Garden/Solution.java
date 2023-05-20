@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1326;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minTaps(int n, int[] ranges) {
         int[] last = new int[n + 1];
         for (int i = 0; i < n + 1; ++i) {

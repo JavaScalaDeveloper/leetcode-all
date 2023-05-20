@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1313;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] decompressRLElist(int[] nums) {
         int n = 0;
         for (int i = 0; i < nums.length; i += 2) {

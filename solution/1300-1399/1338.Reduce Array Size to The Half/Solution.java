@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1338;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minSetSize(int[] arr) {
         int mx = 0;
         for (int x : arr) {

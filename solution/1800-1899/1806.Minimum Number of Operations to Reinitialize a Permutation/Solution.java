@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1806;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int reinitializePermutation(int n) {
         int ans = 0;
         for (int i = 1;;) {

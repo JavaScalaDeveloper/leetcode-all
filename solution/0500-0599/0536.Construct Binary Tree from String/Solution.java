@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0536;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode str2tree(String s) {
         return dfs(s);
     }

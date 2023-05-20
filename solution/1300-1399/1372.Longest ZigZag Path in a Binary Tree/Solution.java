@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1372;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int ans;
 
     public int longestZigZag(TreeNode root) {

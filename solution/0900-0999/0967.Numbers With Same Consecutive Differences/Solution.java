@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0967;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] numsSameConsecDiff(int n, int k) {
         List<Integer> res = new ArrayList<>();
         for (int i = 1; i < 10; ++i) {

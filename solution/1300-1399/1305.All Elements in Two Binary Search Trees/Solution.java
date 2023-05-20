@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1305;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
         List<Integer> t1 = new ArrayList<>();
         List<Integer> t2 = new ArrayList<>();

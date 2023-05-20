@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0781;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numRabbits(int[] answers) {
         Map<Integer, Integer> counter = new HashMap<>();
         for (int e : answers) {

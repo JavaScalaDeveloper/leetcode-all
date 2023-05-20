@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1121;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canDivideIntoSubsequences(int[] nums, int k) {
         int cnt = 0;
         int a = 0;

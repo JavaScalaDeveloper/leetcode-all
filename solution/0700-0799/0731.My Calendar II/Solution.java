@@ -1,4 +1,7 @@
-class MyCalendarTwo {
+package com.solution._0731;
+import change.datastructure.*;
+import java.util.*;
+public class MyCalendarTwo {
     private Map<Integer, Integer> tm = new TreeMap<>();
 
     public MyCalendarTwo() {

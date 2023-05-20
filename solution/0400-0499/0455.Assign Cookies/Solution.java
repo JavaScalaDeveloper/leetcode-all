@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0455;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g);
         Arrays.sort(s);

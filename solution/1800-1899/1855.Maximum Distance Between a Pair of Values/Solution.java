@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1855;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxDistance(int[] nums1, int[] nums2) {
         int m = nums1.length, n = nums2.length;
         int ans = 0;

@@ -1,4 +1,7 @@
-class Trie {
+package com.solution._0745;
+import change.datastructure.*;
+import java.util.*;
+public class Trie {
     Trie[] children = new Trie[26];
     List<Integer> indexes = new ArrayList<>();
 
@@ -27,7 +30,10 @@ class Trie {
     }
 }
 
-class WordFilter {
+package com.solution._0745;
+import change.datastructure.*;
+import java.util.*;
+public class WordFilter {
     private Trie p = new Trie();
     private Trie s = new Trie();
 

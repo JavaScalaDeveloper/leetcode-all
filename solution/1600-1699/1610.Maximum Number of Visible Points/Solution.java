@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1610;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int visiblePoints(List<List<Integer>> points, int angle, List<Integer> location) {
         List<Double> v = new ArrayList<>();
         int x = location.get(0), y = location.get(1);

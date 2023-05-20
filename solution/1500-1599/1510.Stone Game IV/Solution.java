@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1510;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Boolean[] f;
 
     public boolean winnerSquareGame(int n) {

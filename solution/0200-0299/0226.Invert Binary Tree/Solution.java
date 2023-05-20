@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0226;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public TreeNode invertTree(TreeNode root) {
         dfs(root);
         return root;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2602;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Long> minOperations(int[] nums, int[] queries) {
         Arrays.sort(nums);
         int n = nums.length;

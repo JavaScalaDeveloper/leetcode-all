@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1774;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private List<Integer> arr = new ArrayList<>();
     private int[] ts;
     private int inf = 1 << 30;

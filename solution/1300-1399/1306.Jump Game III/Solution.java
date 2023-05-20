@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1306;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canReach(int[] arr, int start) {
         Deque<Integer> q = new ArrayDeque<>();
         q.offer(start);

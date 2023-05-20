@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0210;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         List<Integer>[] g = new List[numCourses];
         Arrays.setAll(g, k -> new ArrayList<>());

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2168;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int equalDigitFrequency(String s) {
         int n = s.length();
         int[][] presum = new int[n + 1][10];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0006;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String convert(String s, int numRows) {
         if (numRows == 1) {
             return s;

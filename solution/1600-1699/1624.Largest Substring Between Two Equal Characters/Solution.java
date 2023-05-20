@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1624;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxLengthBetweenEqualCharacters(String s) {
         int[] d = new int[26];
         Arrays.fill(d, -1);

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2127;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumInvitations(int[] favorite) {
         return Math.max(maxCycle(favorite), topologicalSort(favorite));
     }

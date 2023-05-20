@@ -1,4 +1,7 @@
-class BinaryIndexedTree {
+package com.solution._2031;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 
@@ -32,7 +35,10 @@ class BinaryIndexedTree {
     }
 }
 
-class Solution {
+package com.solution._2031;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final int MOD = (int) 1e9 + 7;
 
     public int subarraysWithMoreZerosThanOnes(int[] nums) {

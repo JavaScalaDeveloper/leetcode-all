@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0877;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean stoneGame(int[] piles) {
         int n = piles.length;
         int[][] f = new int[n][n];

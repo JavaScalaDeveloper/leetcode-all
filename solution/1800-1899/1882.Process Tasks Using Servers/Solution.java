@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1882;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] assignTasks(int[] servers, int[] tasks) {
         int m = tasks.length, n = servers.length;
         PriorityQueue<int[]> idle

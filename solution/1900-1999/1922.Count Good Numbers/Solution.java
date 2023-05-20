@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1922;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int mod = 1000000007;
 
     public int countGoodNumbers(long n) {

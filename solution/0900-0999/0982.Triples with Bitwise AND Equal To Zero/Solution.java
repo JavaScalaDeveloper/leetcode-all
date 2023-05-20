@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0982;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countTriplets(int[] nums) {
         int mx = 0;
         for (int x : nums) {

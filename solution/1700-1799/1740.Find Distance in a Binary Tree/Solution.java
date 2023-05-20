@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1740;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findDistance(TreeNode root, int p, int q) {
         TreeNode g = lca(root, p, q);
         return dfs(g, p) + dfs(g, q);

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1981;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimizeTheDifference(int[][] mat, int target) {
         boolean[] f = {true};
         for (var row : mat) {

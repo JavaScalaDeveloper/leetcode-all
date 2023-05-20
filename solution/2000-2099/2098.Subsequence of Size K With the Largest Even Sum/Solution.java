@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2098;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long largestEvenSum(int[] nums, int k) {
         Arrays.sort(nums);
         long ans = 0;

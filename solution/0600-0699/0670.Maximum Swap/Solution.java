@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0670;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumSwap(int num) {
         char[] s = String.valueOf(num).toCharArray();
         int n = s.length;

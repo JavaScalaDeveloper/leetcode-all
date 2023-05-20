@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2116;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canBeValid(String s, String locked) {
         int n = s.length();
         if (n % 2 == 1) {

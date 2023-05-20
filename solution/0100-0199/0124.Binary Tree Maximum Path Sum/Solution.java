@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0124;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int ans = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {

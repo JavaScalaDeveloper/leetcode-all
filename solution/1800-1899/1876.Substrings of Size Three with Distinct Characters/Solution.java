@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1876;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countGoodSubstrings(String s) {
         int count = 0, n = s.length();
         for (int i = 0; i < n - 2; ++i) {

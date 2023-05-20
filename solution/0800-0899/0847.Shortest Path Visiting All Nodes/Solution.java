@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0847;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int shortestPathLength(int[][] graph) {
         int n = graph.length;
         Deque<int[]> q = new ArrayDeque<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1283;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int smallestDivisor(int[] nums, int threshold) {
         int left = 1, right = 1000000;
         while (left < right) {

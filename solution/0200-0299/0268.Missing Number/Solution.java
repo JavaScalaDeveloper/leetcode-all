@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0268;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int missingNumber(int[] nums) {
         int n = nums.length;
         int ans = n;

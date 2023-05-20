@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1936;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int addRungs(int[] rungs, int dist) {
         int res = 0;
         for (int i = 0, prev = 0; i < rungs.length; ++i) {

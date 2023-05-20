@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0956;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int tallestBillboard(int[] rods) {
         int n = rods.length;
         int s = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0322;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, amount + 1);

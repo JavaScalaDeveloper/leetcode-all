@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1753;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumScore(int a, int b, int c) {
         int[] s = new int[] {a, b, c};
         Arrays.sort(s);

@@ -1,4 +1,7 @@
-class ParkingSystem {
+package com.solution._1603;
+import change.datastructure.*;
+import java.util.*;
+public class ParkingSystem {
     private int[] cnt;
 
     public ParkingSystem(int big, int medium, int small) {

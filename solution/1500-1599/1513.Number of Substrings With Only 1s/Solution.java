@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1513;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSub(String s) {
         final int mod = (int) 1e9 + 7;
         int ans = 0, cnt = 0;

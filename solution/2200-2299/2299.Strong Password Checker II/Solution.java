@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2299;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean strongPasswordCheckerII(String password) {
         if (password.length() < 8) {
             return false;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0387;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int firstUniqChar(String s) {
         int[] cnt = new int[26];
         int n = s.length();

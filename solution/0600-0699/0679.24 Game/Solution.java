@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0679;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean judgePoint24(int[] nums) {
         return dfs(Arrays.stream(nums).boxed().map(Double::new).collect(Collectors.toList()));
     }

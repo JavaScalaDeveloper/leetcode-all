@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0204;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countPrimes(int n) {
         boolean[] primes = new boolean[n];
         Arrays.fill(primes, true);

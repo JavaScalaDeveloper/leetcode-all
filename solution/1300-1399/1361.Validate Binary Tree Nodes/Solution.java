@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1361;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public boolean validateBinaryTreeNodes(int n, int[] leftChild, int[] rightChild) {

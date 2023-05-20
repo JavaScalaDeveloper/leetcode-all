@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1684;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countConsistentStrings(String allowed, String[] words) {
         boolean[] s = new boolean[26];
         for (char c : allowed.toCharArray()) {

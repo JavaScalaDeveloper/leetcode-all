@@ -7,7 +7,10 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+package com.solution._0404;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int sumOfLeftLeaves(TreeNode root) {
         if (root == null) {
             return 0;

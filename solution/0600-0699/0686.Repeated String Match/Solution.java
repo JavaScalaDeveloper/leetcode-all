@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0686;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int repeatedStringMatch(String a, String b) {
         int m = a.length(), n = b.length();
         int ans = (n + m - 1) / m;

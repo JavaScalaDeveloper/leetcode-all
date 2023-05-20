@@ -1,6 +1,9 @@
 /*
 // Definition for a QuadTree node.
-class Node {
+package com.solution._0558;
+import change.datastructure.*;
+import java.util.*;
+public class Node {
     public boolean val;
     public boolean isLeaf;
     public Node topLeft;
@@ -17,7 +20,10 @@ _bottomLeft; bottomRight = _bottomRight;
 };
 */
 
-class Solution {
+package com.solution._0558;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public Node intersect(Node quadTree1, Node quadTree2) {
         return dfs(quadTree1, quadTree2);
     }

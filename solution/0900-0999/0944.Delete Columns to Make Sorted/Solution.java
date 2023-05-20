@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0944;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minDeletionSize(String[] strs) {
         int m = strs[0].length(), n = strs.length;
         int ans = 0;

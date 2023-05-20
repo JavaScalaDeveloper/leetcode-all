@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0696;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countBinarySubstrings(String s) {
         int i = 0, n = s.length();
         List<Integer> t = new ArrayList<>();

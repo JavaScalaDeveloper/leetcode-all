@@ -1,7 +1,10 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class Solution {
+package com.solution._0819;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static Pattern pattern = Pattern.compile("[a-z]+");
 
     public String mostCommonWord(String paragraph, String[] banned) {

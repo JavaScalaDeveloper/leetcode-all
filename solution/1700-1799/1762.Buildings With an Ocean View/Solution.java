@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1762;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] findBuildings(int[] heights) {
         int mx = 0;
         LinkedList<Integer> ans = new LinkedList<>();

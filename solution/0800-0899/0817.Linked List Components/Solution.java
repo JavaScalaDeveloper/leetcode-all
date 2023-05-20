@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._0817;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numComponents(ListNode head, int[] nums) {
         int ans = 0;
         Set<Integer> s = new HashSet<>();

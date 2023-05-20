@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2640;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long[] findPrefixScore(int[] nums) {
         int n = nums.length;
         long[] ans = new long[n];

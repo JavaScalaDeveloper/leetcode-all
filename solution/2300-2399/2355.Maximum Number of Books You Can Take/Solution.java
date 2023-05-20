@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2355;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long maximumBooks(int[] books) {
         int n = books.length;
         int[] nums = new int[n];

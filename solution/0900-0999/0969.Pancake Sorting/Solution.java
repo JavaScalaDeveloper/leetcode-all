@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0969;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> pancakeSort(int[] arr) {
         int n = arr.length;
         List<Integer> ans = new ArrayList<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1976;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private static final long INF = Long.MAX_VALUE / 2;
     private static final int MOD = (int) 1e9 + 7;
 

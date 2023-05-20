@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1318;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minFlips(int a, int b, int c) {
         int ans = 0;
         for (int i = 0; i < 30; ++i) {

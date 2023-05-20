@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0505;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int shortestDistance(int[][] maze, int[] start, int[] destination) {
         int m = maze.length;
         int n = maze[0].length;

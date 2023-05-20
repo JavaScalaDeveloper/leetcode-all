@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1078;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] findOcurrences(String text, String first, String second) {
         String[] words = text.split(" ");
         List<String> ans = new ArrayList<>();

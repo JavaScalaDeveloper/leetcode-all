@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._1660;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<TreeNode> vis = new HashSet<>();
 
     public TreeNode correctBinaryTree(TreeNode root) {

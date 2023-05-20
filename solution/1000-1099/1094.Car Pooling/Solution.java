@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1094;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean carPooling(int[][] trips, int capacity) {
         int[] d = new int[1001];
         for (var trip : trips) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0318;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxProduct(String[] words) {
         int n = words.length;
         int[] masks = new int[n];

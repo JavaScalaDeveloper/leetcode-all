@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0132;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minCut(String s) {
         int n = s.length();
         boolean[][] dp1 = new boolean[n][n];

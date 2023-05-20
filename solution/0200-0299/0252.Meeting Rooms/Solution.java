@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0252;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canAttendMeetings(int[][] intervals) {
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
         for (int i = 1; i < intervals.length; ++i) {

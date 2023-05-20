@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2315;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countAsterisks(String s) {
         int ans = 0;
         for (int i = 0, ok = 1; i < s.length(); ++i) {

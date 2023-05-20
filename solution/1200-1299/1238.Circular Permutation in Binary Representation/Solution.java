@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1238;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> circularPermutation(int n, int start) {
         List<Integer> ans = new ArrayList<>();
         for (int i = 0; i < 1 << n; ++i) {

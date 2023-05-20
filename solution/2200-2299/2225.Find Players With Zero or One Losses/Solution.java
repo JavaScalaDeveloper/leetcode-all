@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2225;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<Integer>> findWinners(int[][] matches) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (int[] m : matches) {

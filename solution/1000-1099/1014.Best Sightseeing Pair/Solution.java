@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1014;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxScoreSightseeingPair(int[] values) {
         int ans = 0, mx = values[0];
         for (int j = 1; j < values.length; ++j) {

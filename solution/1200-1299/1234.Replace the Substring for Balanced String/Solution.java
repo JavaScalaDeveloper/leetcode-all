@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1234;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int balancedString(String s) {
         int[] cnt = new int[4];
         String t = "QWER";

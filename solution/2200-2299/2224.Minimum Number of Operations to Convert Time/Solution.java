@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2224;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int convertTime(String current, String correct) {
         int a = Integer.parseInt(current.substring(0, 2)) * 60
             + Integer.parseInt(current.substring(3));

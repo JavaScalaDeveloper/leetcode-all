@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2289;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int totalSteps(int[] nums) {
         Deque<Integer> stk = new ArrayDeque<>();
         int ans = 0;

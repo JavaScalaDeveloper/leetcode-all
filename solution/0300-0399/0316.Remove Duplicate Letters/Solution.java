@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0316;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String removeDuplicateLetters(String s) {
         int n = s.length();
         int[] last = new int[26];

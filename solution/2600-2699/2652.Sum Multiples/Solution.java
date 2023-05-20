@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2652;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int sumOfMultiples(int n) {
         int ans = 0;
         for (int x = 1; x <= n; ++x) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2371;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] minScore(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         List<int[]> nums = new ArrayList<>();

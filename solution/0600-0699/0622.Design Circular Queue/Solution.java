@@ -1,4 +1,7 @@
-class MyCircularQueue {
+package com.solution._0622;
+import change.datastructure.*;
+import java.util.*;
+public class MyCircularQueue {
     private int[] q;
     private int front;
     private int size;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0753;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Set<Integer> vis = new HashSet<>();
     private StringBuilder ans = new StringBuilder();
     private int mod;

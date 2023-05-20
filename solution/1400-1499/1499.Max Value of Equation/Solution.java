@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1499;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findMaxValueOfEquation(int[][] points, int k) {
         Deque<int[]> q = new ArrayDeque<>();
         int ans = Integer.MIN_VALUE;

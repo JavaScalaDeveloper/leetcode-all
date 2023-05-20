@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0778;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public int swimInWater(int[][] grid) {

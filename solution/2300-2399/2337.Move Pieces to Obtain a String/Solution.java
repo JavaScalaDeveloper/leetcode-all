@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2337;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canChange(String start, String target) {
         List<int[]> a = f(start);
         List<int[]> b = f(target);

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1814;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countNicePairs(int[] nums) {
         Map<Integer, Integer> cnt = new HashMap<>();
         for (int x : nums) {

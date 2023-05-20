@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0829;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int consecutiveNumbersSum(int n) {
         n <<= 1;
         int ans = 0;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1043;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSumAfterPartitioning(int[] arr, int k) {
         int n = arr.length;
         int[] f = new int[n + 1];

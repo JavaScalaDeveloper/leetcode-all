@@ -1,4 +1,7 @@
-class FrequencyTracker {
+package com.solution._2671;
+import change.datastructure.*;
+import java.util.*;
+public class FrequencyTracker {
     private Map<Integer, Integer> cnt = new HashMap<>();
     private Map<Integer, Integer> freq = new HashMap<>();
 

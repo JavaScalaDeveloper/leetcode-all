@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2126;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean asteroidsDestroyed(int mass, int[] asteroids) {
         Arrays.sort(asteroids);
         long m = mass;

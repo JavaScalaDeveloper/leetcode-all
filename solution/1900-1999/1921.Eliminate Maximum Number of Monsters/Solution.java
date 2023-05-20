@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1921;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int eliminateMaximum(int[] dist, int[] speed) {
         int n = dist.length;
         int[] times = new int[n];

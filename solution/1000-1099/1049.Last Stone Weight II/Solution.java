@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1049;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int lastStoneWeightII(int[] stones) {
         int s = 0;
         for (int v : stones) {

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2022;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] construct2DArray(int[] original, int m, int n) {
         if (m * n != original.length) {
             return new int[0][0];

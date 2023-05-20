@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1040;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[] numMovesStonesII(int[] stones) {
         Arrays.sort(stones);
         int n = stones.length;

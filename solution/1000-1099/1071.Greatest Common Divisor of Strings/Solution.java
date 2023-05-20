@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1071;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String gcdOfStrings(String str1, String str2) {
         if (!(str1 + str2).equals(str2 + str1)) {
             return "";

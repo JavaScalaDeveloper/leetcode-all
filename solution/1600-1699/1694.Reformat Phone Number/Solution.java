@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1694;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String reformatNumber(String number) {
         number = number.replace("-", "").replace(" ", "");
         int n = number.length();

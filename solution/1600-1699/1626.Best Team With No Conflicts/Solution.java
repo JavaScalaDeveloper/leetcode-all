@@ -1,4 +1,7 @@
-class BinaryIndexedTree {
+package com.solution._1626;
+import change.datastructure.*;
+import java.util.*;
+public class BinaryIndexedTree {
     private int n;
     private int[] c;
 
@@ -24,7 +27,10 @@ class BinaryIndexedTree {
     }
 }
 
-class Solution {
+package com.solution._1626;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int bestTeamScore(int[] scores, int[] ages) {
         int n = ages.length;
         int[][] arr = new int[n][2];

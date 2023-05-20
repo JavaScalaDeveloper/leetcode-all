@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2063;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long countVowels(String word) {
         long ans = 0;
         for (int i = 0, n = word.length(); i < n; ++i) {

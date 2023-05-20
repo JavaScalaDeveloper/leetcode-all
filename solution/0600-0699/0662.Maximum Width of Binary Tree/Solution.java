@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0662;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int widthOfBinaryTree(TreeNode root) {
         Deque<Pair<TreeNode, Integer>> q = new ArrayDeque<>();
         q.offer(new Pair<>(root, 1));

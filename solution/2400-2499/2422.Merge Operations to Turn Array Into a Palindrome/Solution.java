@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2422;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int minimumOperations(int[] nums) {
         int i = 0, j = nums.length - 1;
         long a = nums[i], b = nums[j];

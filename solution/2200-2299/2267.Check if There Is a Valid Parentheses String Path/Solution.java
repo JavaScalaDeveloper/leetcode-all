@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2267;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private boolean[][][] vis;
     private char[][] grid;
     private int m;

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1562;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int findLatestStep(int[] arr, int m) {
         int n = arr.length;
         if (m == n) {

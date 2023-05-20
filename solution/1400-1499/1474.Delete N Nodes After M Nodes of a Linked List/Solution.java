@@ -8,7 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+package com.solution._1474;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public ListNode deleteNodes(ListNode head, int m, int n) {
         ListNode pre = head;
         while (pre != null) {

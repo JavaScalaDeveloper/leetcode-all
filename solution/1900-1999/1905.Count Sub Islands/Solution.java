@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1905;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countSubIslands(int[][] grid1, int[][] grid2) {
         int m = grid1.length;
         int n = grid1[0].length;

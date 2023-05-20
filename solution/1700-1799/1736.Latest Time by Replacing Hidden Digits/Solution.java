@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1736;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String maximumTime(String time) {
         char[] t = time.toCharArray();
         if (t[0] == '?') {

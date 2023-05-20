@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0560;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int subarraySum(int[] nums, int k) {
         Map<Integer, Integer> counter = new HashMap<>();
         counter.put(0, 1);

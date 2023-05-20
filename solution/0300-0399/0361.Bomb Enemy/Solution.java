@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0361;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxKilledEnemies(char[][] grid) {
         int m = grid.length;
         int n = grid[0].length;

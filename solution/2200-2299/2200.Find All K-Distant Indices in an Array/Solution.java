@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2200;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> findKDistantIndices(int[] nums, int key, int k) {
         int n = nums.length;
         List<Integer> ans = new ArrayList<>();

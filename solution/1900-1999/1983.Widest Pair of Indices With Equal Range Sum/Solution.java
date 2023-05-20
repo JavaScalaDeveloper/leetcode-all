@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1983;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int widestPairOfIndices(int[] nums1, int[] nums2) {
         Map<Integer, Integer> d = new HashMap<>();
         d.put(0, -1);

@@ -1,4 +1,7 @@
-class FirstUnique {
+package com.solution._1429;
+import change.datastructure.*;
+import java.util.*;
+public class FirstUnique {
     private Map<Integer, Integer> cnt = new HashMap<>();
     private Deque<Integer> q = new ArrayDeque<>();
 

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0839;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int[] p;
 
     public int numSimilarGroups(String[] strs) {

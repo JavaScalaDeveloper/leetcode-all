@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2015;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] averageHeightOfBuildings(int[][] buildings) {
         TreeMap<Integer, Integer> height = new TreeMap<>();
         TreeMap<Integer, Integer> cnt = new TreeMap<>();

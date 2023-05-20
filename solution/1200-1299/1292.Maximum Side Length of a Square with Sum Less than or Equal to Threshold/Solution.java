@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1292;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxSideLength(int[][] mat, int threshold) {
         int m = mat.length, n = mat[0].length;
         int[][] s = new int[310][310];

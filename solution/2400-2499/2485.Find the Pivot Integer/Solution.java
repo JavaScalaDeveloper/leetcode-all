@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2485;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int pivotInteger(int n) {
         for (int x = 1; x < 1000; ++x) {
             if ((1 + x) * x == (x + n) * (n - x + 1)) {

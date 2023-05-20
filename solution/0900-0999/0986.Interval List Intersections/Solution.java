@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0986;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
         List<int[]> ans = new ArrayList<>();
         int m = firstList.length, n = secondList.length;

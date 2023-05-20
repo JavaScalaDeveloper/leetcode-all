@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0301;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private String s;
     private int n;
     private Set<String> ans = new HashSet<>();

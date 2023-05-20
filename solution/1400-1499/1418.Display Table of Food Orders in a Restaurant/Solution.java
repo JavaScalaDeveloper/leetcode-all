@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1418;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<List<String>> displayTable(List<List<String>> orders) {
         Set<Integer> tables = new HashSet<>();
         Set<String> foods = new HashSet<>();

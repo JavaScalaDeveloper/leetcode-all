@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._2331;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean evaluateTree(TreeNode root) {
         if (root.left == null) {
             return root.val == 1;

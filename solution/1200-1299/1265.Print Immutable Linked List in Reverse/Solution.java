@@ -7,7 +7,10 @@
  * };
  */
 
-class Solution {
+package com.solution._1265;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public void printLinkedListInReverse(ImmutableListNode head) {
         if (head != null) {
             printLinkedListInReverse(head.getNext());

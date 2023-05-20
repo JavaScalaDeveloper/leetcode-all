@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1826;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int badSensor(int[] sensor1, int[] sensor2) {
         int i = 0;
         int n = sensor1.length;

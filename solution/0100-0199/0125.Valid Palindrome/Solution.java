@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0125;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean isPalindrome(String s) {
         int i = 0, j = s.length() - 1;
         while (i < j) {

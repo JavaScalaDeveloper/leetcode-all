@@ -13,7 +13,10 @@
  *     }
  * }
  */
-class Solution {
+package com.solution._0563;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private int ans;
 
     public int findTilt(TreeNode root) {

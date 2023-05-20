@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1092;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String shortestCommonSupersequence(String str1, String str2) {
         int m = str1.length(), n = str2.length();
         int[][] f = new int[m + 1][n + 1];

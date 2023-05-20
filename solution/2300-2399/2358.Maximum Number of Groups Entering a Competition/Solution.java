@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2358;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maximumGroups(int[] grades) {
         int n = grades.length;
         int l = 0, r = n;

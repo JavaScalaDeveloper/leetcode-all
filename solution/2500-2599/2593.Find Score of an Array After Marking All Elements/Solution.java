@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2593;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public long findScore(int[] nums) {
         int n = nums.length;
         boolean[] vis = new boolean[n];

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1182;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> shortestDistanceColor(int[] colors, int[][] queries) {
         Map<Integer, List<Integer>> colorIndexes = new HashMap<>();
         for (int i = 0; i < colors.length; ++i) {

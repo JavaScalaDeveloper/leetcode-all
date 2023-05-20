@@ -7,7 +7,10 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+package com.solution._0863;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     private Map<TreeNode, TreeNode> p;
     private Set<Integer> vis;
     private List<Integer> ans;

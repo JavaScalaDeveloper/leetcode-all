@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1819;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int countDifferentSubsequenceGCDs(int[] nums) {
         int mx = Arrays.stream(nums).max().getAsInt();
         boolean[] vis = new boolean[mx + 1];

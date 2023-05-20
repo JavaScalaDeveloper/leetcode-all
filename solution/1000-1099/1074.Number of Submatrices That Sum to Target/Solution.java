@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1074;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int numSubmatrixSumTarget(int[][] matrix, int target) {
         int m = matrix.length, n = matrix[0].length;
         int ans = 0;

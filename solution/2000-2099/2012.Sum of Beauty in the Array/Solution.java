@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2012;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int sumOfBeauties(int[] nums) {
         int n = nums.length;
         int[] lmx = new int[n];

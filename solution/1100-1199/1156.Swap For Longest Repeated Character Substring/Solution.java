@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._1156;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public int maxRepOpt1(String text) {
         int[] cnt = new int[26];
         int n = text.length();

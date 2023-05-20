@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0777;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean canTransform(String start, String end) {
         int n = start.length();
         int i = 0, j = 0;

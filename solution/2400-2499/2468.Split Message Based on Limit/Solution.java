@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2468;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String[] splitMessage(String message, int limit) {
         int n = message.length();
         int sa = 0;

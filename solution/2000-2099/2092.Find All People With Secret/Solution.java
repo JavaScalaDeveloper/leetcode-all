@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._2092;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public List<Integer> findAllPeople(int n, int[][] meetings, int firstPerson) {
         boolean[] vis = new boolean[n];
         vis[0] = true;

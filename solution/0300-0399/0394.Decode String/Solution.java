@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0394;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public String decodeString(String s) {
         Deque<Integer> s1 = new ArrayDeque<>();
         Deque<String> s2 = new ArrayDeque<>();

@@ -1,4 +1,7 @@
-class Solution {
+package com.solution._0567;
+import change.datastructure.*;
+import java.util.*;
+public class Solution {
     public boolean checkInclusion(String s1, String s2) {
         int n = s1.length();
         int m = s2.length();
