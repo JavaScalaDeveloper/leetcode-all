@@ -42,11 +42,11 @@
 
 接下来，将数组 `nums` 排序，然后从头到尾遍历数组 `nums`，找到第一个是最大公约数x的因子的元素，返回当前元素下标即可。
 
-时间复杂度O(m + \log M + n \times \log n)，其中n和m分别是数组 `nums` 和 `numsDivide` 的长度，而M是数组 `numsDivide` 中的最大值。
+时间复杂度O(m + log M + n × log n)，其中n和m分别是数组 `nums` 和 `numsDivide` 的长度，而M是数组 `numsDivide` 中的最大值。
 
 实际上，我们也可以不用排序数组 `nums`，而是直接遍历数组 `nums`，找到最小的能整除x的元素，然后我们再遍历一次数组 `nums`，统计小于等于这个元素的元素个数即可。
 
-时间复杂度O(m + \log M + n)。
+时间复杂度O(m + log M + n)。
 
 ### **Java**
 

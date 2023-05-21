@@ -74,11 +74,11 @@
 
 以上策略的正确性说明如下：
 
-根据题目的要求，我们知道rowSum和colSum的和是相等的，那么rowSum[0]一定小于等于\sum_{j = 0}^{n - 1} colSum[j]。所以，在经过n次操作后，一定能够使得rowSum[0]为0，并且保证对任意j \in [0, n - 1]，都有colSum[j] \geq 0。
+根据题目的要求，我们知道rowSum和colSum的和是相等的，那么rowSum[0]一定小于等于\sum_{j = 0}^{n - 1} colSum[j]。所以，在经过n次操作后，一定能够使得rowSum[0]为0，并且保证对任意j \in [0, n - 1]，都有colSum[j] ≥ 0。
 
 因此，我们把原问题缩小为一个m-1行和n列的子问题，继续进行上述的操作，直到rowSum和colSum中的所有元素都为0，就可以得到一个满足题目要求的矩阵ans。
 
-时间复杂度O(m \times n)，空间复杂度O(m \times n)。其中m和n分别为rowSum和colSum的长度。
+时间复杂度O(m × n)，空间复杂度O(m × n)。其中m和n分别为rowSum和colSum的长度。
 
 ### **Java**
 

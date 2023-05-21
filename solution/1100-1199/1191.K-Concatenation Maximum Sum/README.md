@@ -51,8 +51,8 @@
 接下来，我们考虑k的取值情况：
 
 -   当k = 1时，答案为mxSub。
--   当k \ge 2时，如果最大子数组横跨两个arr，那么答案为mxPre + mxSuf，其中mxSuf = s - miPre。
--   当k \ge 2且s > 0时，如果最大子数组横跨三个arr，那么答案为(k - 2) \times s + mxPre + mxSuf。
+-   当k ≥ 2时，如果最大子数组横跨两个arr，那么答案为mxPre + mxSuf，其中mxSuf = s - miPre。
+-   当k ≥ 2且s > 0时，如果最大子数组横跨三个arr，那么答案为(k - 2) × s + mxPre + mxSuf。
 
 最后，我们返回答案对10^9 + 7取模的结果。
 

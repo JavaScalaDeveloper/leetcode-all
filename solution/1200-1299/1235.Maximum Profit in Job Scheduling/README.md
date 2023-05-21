@@ -61,14 +61,14 @@
 对于第i份工作，我们可以选择做，也可以选择不做。如果不做，最大报酬就是dfs(i + 1)；如果做，我们可以通过二分查找，找到在第i份工作结束时间之后开始的第一份工作，记为j，那么最大报酬就是profit[i] + dfs(j)。取两者的较大值即可。即：
 
 
-dfs(i)=\max(dfs(i+1),profit[i]+dfs(j))
+dfs(i)=max(dfs(i+1),profit[i]+dfs(j))
 
 
-其中j是满足startTime[j] \ge endTime[i]的最小的下标。
+其中j是满足startTime[j] ≥ endTime[i]的最小的下标。
 
 此过程中，我们可以使用记忆化搜索，将每个状态的答案保存下来，避免重复计算。
 
-时间复杂度O(n \times \log n)，其中n是工作的数量。
+时间复杂度O(n × log n)，其中n是工作的数量。
 
 **方法二：动态规划 + 二分查找**
 
@@ -79,12 +79,12 @@ dfs(i)=\max(dfs(i+1),profit[i]+dfs(j))
 对于第i份工作，我们可以选择做，也可以选择不做。如果不做，最大报酬就是dp[i]；如果做，我们可以通过二分查找，找到在第i份工作开始时间之前结束的最后一份工作，记为j，那么最大报酬就是profit[i] + dp[j]。取两者的较大值即可。即：
 
 
-dp[i+1] = \max(dp[i], profit[i] + dp[j])
+dp[i+1] = max(dp[i], profit[i] + dp[j])
 
 
-其中j是满足endTime[j] \leq startTime[i]的最大的下标。
+其中j是满足endTime[j] ≤ startTime[i]的最大的下标。
 
-时间复杂度O(n \times \log n)，其中n是工作的数量。
+时间复杂度O(n × log n)，其中n是工作的数量。
 
 相似题目：
 

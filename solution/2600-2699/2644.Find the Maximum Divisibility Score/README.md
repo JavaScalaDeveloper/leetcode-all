@@ -61,7 +61,7 @@ divisors[1] 的可整除性得分为 0 ，因为 nums 中没有任何数字能�
 
 最后返回ans即可。
 
-时间复杂度(m \times n)，其中m和n分别是nums和divisors的长度。空间复杂度O(1)。
+时间复杂度(m × n)，其中m和n分别是nums和divisors的长度。空间复杂度O(1)。
 
 ### **Java**
 

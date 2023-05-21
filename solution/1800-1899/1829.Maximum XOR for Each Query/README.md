@@ -62,11 +62,11 @@
 
 我们先预处理出数组 `nums` 的异或和xs，即xs=nums[0] \oplus nums[1] \oplus \cdots \oplus nums[n-1]。
 
-接下来，我们从后往前枚举数组 `nums` 中的每个元素x，当前的异或和为xs，我们需要找到一个数k，使得xs \oplus k的值尽可能大，并且k \lt 2^{maximumBit}。
+接下来，我们从后往前枚举数组 `nums` 中的每个元素x，当前的异或和为xs，我们需要找到一个数k，使得xs \oplus k的值尽可能大，并且k < 2^{maximumBit}。
 
 也即是说，我们从xs的第maximumBit - 1位开始，往低位枚举，如果xs的某一位为0，那么我们就将k的对应位设置为1，否则我们就将k的对应位设置为0。这样，最终得到的k就是每一次查询的答案。然后，我们将xs更新为xs \oplus x，继续枚举下一个元素。
 
-时间复杂度O(n \times m)，其中n和m分别是数组 `nums` 和 `maximumBit` 的值。忽略答案数组的空间消耗，空间复杂度O(1)。
+时间复杂度O(n × m)，其中n和m分别是数组 `nums` 和 `maximumBit` 的值。忽略答案数组的空间消耗，空间复杂度O(1)。
 
 **方法二：枚举优化**
 

@@ -70,7 +70,7 @@
 
 其中 `nums[i]` 作为最大值的贡献为正，作为最小值的贡献为负。
 
-我们以 `nums[i]` 作为最大值为例。找出左侧第一个比 `nums[i]` 大的位置 `left[i]`，右侧第一个大于等于 `nums[i]` 的位置 `right[i]`。计算每个 `nums[i]` 的贡献(i - left[i])\times (right[i] - i)\times arr[i]，累加得到结果。
+我们以 `nums[i]` 作为最大值为例。找出左侧第一个比 `nums[i]` 大的位置 `left[i]`，右侧第一个大于等于 `nums[i]` 的位置 `right[i]`。计算每个 `nums[i]` 的贡献(i - left[i])× (right[i] - i)× arr[i]，累加得到结果。
 
 时间复杂度O(n)。
 

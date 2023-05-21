@@ -54,7 +54,7 @@ f[i]=
 \begin{cases}
 0, & i=0 \\
 +\infty, & i \neq 0, s \neq 0 \\
-\min(|i|-1, \min_{j \subset i, j \neq \emptyset} \{f[j]+f[i-j]\}), & i \neq 0, s = 0
+min(|i|-1, min_{j \subset i, j \neq \emptyset} \{f[j]+f[i-j]\}), & i \neq 0, s = 0
 \end{cases}
 
 
@@ -62,7 +62,7 @@ f[i]=
 
 最终答案即为f[2^m-1]。
 
-时间复杂度O(3^n)，空间复杂度O(2^n)。其中n是人的数量，本题中n \leq 12。
+时间复杂度O(3^n)，空间复杂度O(2^n)。其中n是人的数量，本题中n ≤ 12。
 
 ### **Java**
 

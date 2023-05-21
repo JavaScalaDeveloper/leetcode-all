@@ -58,12 +58,12 @@
 那么有：
 
 
-dp[i][j]=max(dp[i-1][j], dp[i][j - 1], max(dp[i - 1][j - 1], 0) + nums1[i] \times nums2[j])
+dp[i][j]=max(dp[i-1][j], dp[i][j - 1], max(dp[i - 1][j - 1], 0) + nums1[i] × nums2[j])
 
 
 答案为dp[m][n]。
 
-时间复杂度O(m \times n)，空间复杂度O(m \times n)。其中m和n分别是数组nums1和nums2的长度。
+时间复杂度O(m × n)，空间复杂度O(m × n)。其中m和n分别是数组nums1和nums2的长度。
 
 ### **Java**
 

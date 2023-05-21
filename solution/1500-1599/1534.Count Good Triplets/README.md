@@ -43,7 +43,7 @@
 
 **方法一：枚举**
 
-我们可以枚举所有的i,j和k，其中i \lt j \lt k，判断是否同时满足|arr[i] - arr[j]| \le a，|arr[j] - arr[k]| \le b和|arr[i] - arr[k]| \le c，如果满足则将答案加一。
+我们可以枚举所有的i,j和k，其中i < j < k，判断是否同时满足|arr[i] - arr[j]| \le a，|arr[j] - arr[k]| \le b和|arr[i] - arr[k]| \le c，如果满足则将答案加一。
 
 枚举结束后，即可得到答案。
 

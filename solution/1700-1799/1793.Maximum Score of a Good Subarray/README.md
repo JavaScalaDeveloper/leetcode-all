@@ -38,9 +38,9 @@
 
 **方法一：单调栈**
 
-我们可以枚举 `nums` 中的每个元素nums[i]作为子数组的最小值，利用单调栈找出其左边第一个小于nums[i]的位置left[i]和右边第一个小于等于nums[i]的位置right[i]，则以nums[i]为最小值的子数组的分数为nums[i] \times (right[i] - left[i] - 1)。
+我们可以枚举 `nums` 中的每个元素nums[i]作为子数组的最小值，利用单调栈找出其左边第一个小于nums[i]的位置left[i]和右边第一个小于等于nums[i]的位置right[i]，则以nums[i]为最小值的子数组的分数为nums[i] × (right[i] - left[i] - 1)。
 
-需要注意的是，只有当左右边界left[i]和right[i]满足left[i]+1 \leq k \leq right[i]-1时，答案才有可能更新。
+需要注意的是，只有当左右边界left[i]和right[i]满足left[i]+1 ≤ k ≤ right[i]-1时，答案才有可能更新。
 
 时间复杂度O(n)，空间复杂度O(n)。其中n为数组 `nums` 的长度。
 

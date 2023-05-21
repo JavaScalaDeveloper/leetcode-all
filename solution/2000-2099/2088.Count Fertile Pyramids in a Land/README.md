@@ -86,7 +86,7 @@
 我们定义f[i][j]表示以(i, j)为顶点的金字塔的最大高度，那么有如下状态转移方程：
 
 
-f[i][j] = \begin{cases} 0 & \text{grid}[i][j] = 0 \\ \min(f[i + 1][j - 1], f[i + 1][j], f[i + 1][j + 1]) + 1 & \text{grid}[i][j] = 1 \end{cases}
+f[i][j] = \begin{cases} 0 & \text{grid}[i][j] = 0 \\ min(f[i + 1][j - 1], f[i + 1][j], f[i + 1][j + 1]) + 1 & \text{grid}[i][j] = 1 \end{cases}
 
 
 因此，我们可以从下往上、从左往右遍历网格，计算出所有的f[i][j]，并累加所有的f[i][j]即可得到正金字塔的个数。
@@ -94,14 +94,14 @@ f[i][j] = \begin{cases} 0 & \text{grid}[i][j] = 0 \\ \min(f[i + 1][j - 1], f[i +
 接下来，我们考虑倒金字塔的个数。与金字塔类似，我们定义g[i][j]表示以(i, j)为顶点的倒金字塔的最大高度，那么有如下状态转移方程：
 
 
-g[i][j] = \begin{cases} 0 & \text{grid}[i][j] = 0 \\ \min(g[i - 1][j - 1], g[i - 1][j], g[i - 1][j + 1]) + 1 & \text{grid}[i][j] = 1 \end{cases}
+g[i][j] = \begin{cases} 0 & \text{grid}[i][j] = 0 \\ min(g[i - 1][j - 1], g[i - 1][j], g[i - 1][j + 1]) + 1 & \text{grid}[i][j] = 1 \end{cases}
 
 
 因此，我们可以从上往下、从左往右遍历网格，计算出所有的g[i][j]，并累加所有的g[i][j]即可得到倒金字塔的个数。
 
 最后，正金字塔的个数加上倒金字塔的个数即为答案。实际代码中，我们可以只用一个二维数组f[i][j]即可。
 
-时间复杂度O(m \times n)，空间复杂度O(m \times n)。其中m和n分别为网格的行数和列数。
+时间复杂度O(m × n)，空间复杂度O(m × n)。其中m和n分别为网格的行数和列数。
 
 ### **Java**
 

@@ -51,12 +51,12 @@
 
 对于每个鸡，我们用指针j指向当前还未被吃的谷物中最左边的谷物，记当前鸡的位置为x，谷物的位置为y，则有以下几种情况：
 
--   如果y \leq x，我们记d = x - y，如果d \gt t，那么当前谷物无法被吃掉，直接返回 `false`。否则，我们向右移动指针j，直到j=m或者grains[j] \gt x。此时我们需要判断鸡是否能吃到j指向的谷物，如果能吃到，我们继续向右移动指针j，直到j=m或者min(d, grains[j] - x) + grains[j] - y \gt t。
--   如果y \lt x，我们向右移动指针j，直到j=m或者grains[j] - x \gt t。
+-   如果y ≤ x，我们记d = x - y，如果d > t，那么当前谷物无法被吃掉，直接返回 `false`。否则，我们向右移动指针j，直到j=m或者grains[j] > x。此时我们需要判断鸡是否能吃到j指向的谷物，如果能吃到，我们继续向右移动指针j，直到j=m或者min(d, grains[j] - x) + grains[j] - y > t。
+-   如果y < x，我们向右移动指针j，直到j=m或者grains[j] - x > t。
 
 如果j=m，说明所有谷物都被吃完了，返回 `true`，否则返回 `false`。
 
-时间复杂度O(n \times \log n + m \times \log m + (m + n) \times \log U)，空间复杂度O(\log m + \log n)。其中n和m分别为鸡和谷物的数量，而U为所有鸡和谷物的位置的最大值。
+时间复杂度O(n × log n + m × log m + (m + n) × log U)，空间复杂度O(log m + log n)。其中n和m分别为鸡和谷物的数量，而U为所有鸡和谷物的位置的最大值。
 
 ### **Java**
 

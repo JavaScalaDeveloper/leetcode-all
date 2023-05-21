@@ -69,11 +69,11 @@
 
 如果不购买，那么最大总美味度是dfs(i + 1, j, k)；
 
-如果购买，如果不使用优惠券（需要满足j\ge price[i]），那么最大总美味度是dfs(i + 1, j - price[i], k) + tastiness[i]；如果使用优惠券（需要满足k\gt 0并且j\ge \lfloor \frac{price[i]}{2} \rfloor），那么最大总美味度是dfs(i + 1, j - \lfloor \frac{price[i]}{2} \rfloor, k - 1) + tastiness[i]。
+如果购买，如果不使用优惠券（需要满足j≥ price[i]），那么最大总美味度是dfs(i + 1, j - price[i], k) + tastiness[i]；如果使用优惠券（需要满足k> 0并且j≥ \lfloor \frac{price[i]}{2} \rfloor），那么最大总美味度是dfs(i + 1, j - \lfloor \frac{price[i]}{2} \rfloor, k - 1) + tastiness[i]。
 
 最终的答案是dfs(0, maxAmount, maxCoupons)。
 
-时间复杂度O(n \times maxAmount \times maxCoupons)。其中n是水果的数量。
+时间复杂度O(n × maxAmount × maxCoupons)。其中n是水果的数量。
 
 ### **Java**
 

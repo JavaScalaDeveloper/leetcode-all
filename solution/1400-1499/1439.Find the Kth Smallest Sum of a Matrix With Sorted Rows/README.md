@@ -58,7 +58,7 @@
 
 最后返回pre中的第k个数（下标k-1）即可。
 
-时间复杂度O(m \times n \times k \times \log (n \times k))，空间复杂度O(n \times k)。其中m和n分别是矩阵的行数和列数。
+时间复杂度O(m × n × k × log (n × k))，空间复杂度O(n × k)。其中m和n分别是矩阵的行数和列数。
 
 ### **Java**
 

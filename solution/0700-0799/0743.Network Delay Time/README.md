@@ -53,7 +53,7 @@
 
 **方法二：堆优化 Dijkstra 算法**
 
-时间复杂度O(m\log n)。
+时间复杂度O(mlog n)。
 
 **方法三：Bellman Ford 算法**
 

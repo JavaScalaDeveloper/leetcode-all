@@ -50,14 +50,14 @@
 对于第i个乘客，我们可以选择接单，也可以选择不接单。如果不接单，那么最多能获得的小费为dfs(i + 1)；如果接单，那么我们可以通过二分查找，找到在第i个乘客下车地点之后遇到的第一个乘客，记为j，那么最多能获得的小费为dfs(j) + end_i - start_i + tip_i。取两者的较大值即可。即：
 
 
-dfs(i) = \max(dfs(i + 1), dfs(j) + end_i - start_i + tip_i)
+dfs(i) = max(dfs(i + 1), dfs(j) + end_i - start_i + tip_i)
 
 
-其中j是满足start_j \ge end_i的最小的下标，可以通过二分查找得到。
+其中j是满足start_j ≥ end_i的最小的下标，可以通过二分查找得到。
 
 此过程中，我们可以使用记忆化搜索，将每个状态的答案保存下来，避免重复计算。
 
-时间复杂度O(m\times \log m)，其中m为 `rides` 的长度。
+时间复杂度O(m× log m)，其中m为 `rides` 的长度。
 
 **方法二：动态规划 + 二分查找**
 
@@ -68,12 +68,12 @@ dfs(i) = \max(dfs(i + 1), dfs(j) + end_i - start_i + tip_i)
 对于第i个乘客，我们可以选择接单，也可以选择不接单。如果不接单，那么最多能获得的小费为dp[i]；如果接单，我们可以通过二分查找，找到在第i个乘客上车地点之前，最后一个下车地点不大于start_i的乘客，记为j，那么最多能获得的小费为dp[j] + end_i - start_i + tip_i。取两者的较大值即可。即：
 
 
-dp[i] = \max(dp[i - 1], dp[j] + end_i - start_i + tip_i)
+dp[i] = max(dp[i - 1], dp[j] + end_i - start_i + tip_i)
 
 
 其中j是满足end_j \le start_i的最大的下标，可以通过二分查找得到。
 
-时间复杂度O(m\times \log m)，其中m为 `rides` 的长度。
+时间复杂度O(m× log m)，其中m为 `rides` 的长度。
 
 相似题目：
 

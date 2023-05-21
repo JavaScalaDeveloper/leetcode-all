@@ -89,7 +89,7 @@
 
 否则，递归计算root的左子树和右子树，分别得到(lbst, lmi, lmx, ls)和(rbst, rmi, rmx, rs)，然后判断root节点是否满足二叉搜索树的条件。
 
-如果满足lbst = 1且rbst = 1且lmx \lt root.val \lt rmi，则以root为根的树是二叉搜索树，节点和s= ls + rs + root.val。我们更新答案ans = \max(ans, s)，并返回(1, \min(lmi, root.val), \max(rmx, root.val), s)。
+如果满足lbst = 1且rbst = 1且lmx < root.val < rmi，则以root为根的树是二叉搜索树，节点和s= ls + rs + root.val。我们更新答案ans = max(ans, s)，并返回(1, min(lmi, root.val), max(rmx, root.val), s)。
 
 否则，以root为根的树不是二叉搜索树，我们返回(0, 0, 0, 0)。
 

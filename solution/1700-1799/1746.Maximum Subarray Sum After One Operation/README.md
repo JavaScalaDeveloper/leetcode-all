@@ -39,8 +39,8 @@
 
 
 \begin{aligned}
-f[i] &= \max(f[i - 1], 0) + nums[i] \\
-g[i] &= \max(\max(f[i - 1], 0) + nums[i] \times nums[i], g[i - 1] + nums[i])
+f[i] &= max(f[i - 1], 0) + nums[i] \\
+g[i] &= max(max(f[i - 1], 0) + nums[i] × nums[i], g[i - 1] + nums[i])
 \end{aligned}
 
 

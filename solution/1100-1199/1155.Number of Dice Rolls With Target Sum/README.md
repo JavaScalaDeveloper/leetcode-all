@@ -47,14 +47,14 @@
 我们定义f[i][j]表示使用i个骰子，和为j的方案数。那么我们可以得到状态转移方程：
 
 
-f[i][j] = \sum_{h=1}^{\min(j, k)} f[i-1][j-h]
+f[i][j] = \sum_{h=1}^{min(j, k)} f[i-1][j-h]
 
 
 其中h表示第i个骰子的点数。
 
 最终的答案即为f[n][target]。
 
-时间复杂度O(n \times k \times target)，空间复杂度O(n \times target)。
+时间复杂度O(n × k × target)，空间复杂度O(n × target)。
 
 ### **Java**
 

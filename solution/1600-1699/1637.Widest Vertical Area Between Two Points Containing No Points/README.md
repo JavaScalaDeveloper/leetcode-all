@@ -38,21 +38,21 @@
 
 我们可以对数组points按照x升序排列，获取相邻点之间x的差值的最大值。
 
-时间复杂度O(n \times \log n)，空间复杂度O(\log n)。其中n为数组points的长度。
+时间复杂度O(n × log n)，空间复杂度O(log n)。其中n为数组points的长度。
 
 **方法二：桶排序**
 
-方法一中排序的时间复杂度为O(n \times \log n)，其实我们可以利用桶排序的思想，将时间复杂度降低到O(n)。
+方法一中排序的时间复杂度为O(n × log n)，其实我们可以利用桶排序的思想，将时间复杂度降低到O(n)。
 
 我们将数组points的横坐标放入数组nums中。
 
 假设数组nums有n个元素，所有元素从小到大依次是nums_0到nums_{n - 1}，最大间距是maxGap。考虑数组中的最大元素和最小元素之差：
 
 
-nums_{n - 1} - nums_0 = \sum_{i = 1}^{n - 1} (nums_i - nums_{i - 1}) \le{maxGap} \times (n - 1)
+nums_{n - 1} - nums_0 = \sum_{i = 1}^{n - 1} (nums_i - nums_{i - 1}) \le{maxGap} × (n - 1)
 
 
-因此maxGap \ge \dfrac{nums_{n - 1} - nums_0}{n - 1}，即最大间距至少为\dfrac{nums_{n - 1} - nums_0}{n - 1}。
+因此maxGap ≥ \dfrac{nums_{n - 1} - nums_0}{n - 1}，即最大间距至少为\dfrac{nums_{n - 1} - nums_0}{n - 1}。
 
 可以利用桶排序的思想，设定桶的大小（即每个桶最多包含的不同元素个数）为\dfrac{nums_{n - 1} - nums_0}{n - 1}，将元素按照元素值均匀分布到各个桶内，则同一个桶内的任意两个元素之差小于{maxGap}，差为{maxGap}的两个元素一定在两个不同的桶内。对于每个桶，维护桶内的最小值和最大值，初始时每个桶内的最小值和最大值分别是正无穷和负无穷，表示桶内没有元素。
 

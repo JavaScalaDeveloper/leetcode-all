@@ -37,11 +37,11 @@
 
 **方法一：两次二分查找**
 
-中位数实际上是排序后第target = \left \lceil \frac{m\times n}{2} \right \rceil个数。
+中位数实际上是排序后第target = \left \lceil \frac{m× n}{2} \right \rceil个数。
 
-我们二分枚举矩阵的元素x，统计网格中大于该元素的个数cnt，如果cnt \ge target，说明中位数在x的左侧（包含x），否则在右侧。
+我们二分枚举矩阵的元素x，统计网格中大于该元素的个数cnt，如果cnt ≥ target，说明中位数在x的左侧（包含x），否则在右侧。
 
-时间复杂度O(m\times \log n \times log M)，空间复杂度O(1)。其中m和n分别为网格的行数和列数；而M为网格中的最大元素。
+时间复杂度O(m× log n × log M)，空间复杂度O(1)。其中m和n分别为网格的行数和列数；而M为网格中的最大元素。
 
 ### **Java**
 

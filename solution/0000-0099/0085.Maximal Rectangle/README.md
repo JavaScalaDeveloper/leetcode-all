@@ -55,7 +55,7 @@
 
 把每一行视为柱状图的底部，对每一行求柱状图的最大面积即可。
 
-时间复杂度O(m \times n)，其中m表示matrix的行数，n表示matrix的列数。
+时间复杂度O(m × n)，其中m表示matrix的行数，n表示matrix的列数。
 
 ### **Java**
 

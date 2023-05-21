@@ -58,7 +58,7 @@ seatManager.unreserve(5); // 将座位 5 变为可以预约，现在可预约的
 
 当调用 `unreserve` 方法时，将座位编号放入优先队列中。
 
-时间复杂度O(n \times \log n)，空间复杂度O(n)。其中n为座位的数量。
+时间复杂度O(n × log n)，空间复杂度O(n)。其中n为座位的数量。
 
 ### **Java**
 

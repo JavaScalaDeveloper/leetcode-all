@@ -44,7 +44,7 @@ f[i][j] =
 \begin{cases}
 0 & i = 0 \text{ or } j = 0 \\
 f[i - 1][j - 1] + 1 & str1[i - 1] = str2[j - 1] \\
-\max(f[i - 1][j], f[i][j - 1]) & str1[i - 1] \neq str2[j - 1]
+max(f[i - 1][j], f[i][j - 1]) & str1[i - 1] \neq str2[j - 1]
 \end{cases}
 
 
@@ -71,7 +71,7 @@ ans:    c   a   b   a   c
 
 最后我们将答案序列反转，即可得到最终的答案。
 
-时间复杂度O(m\times n)，空间复杂度O(m\times n)。其中m和n分别是字符串str1和str2的长度。
+时间复杂度O(m× n)，空间复杂度O(m× n)。其中m和n分别是字符串str1和str2的长度。
 
 ### **Java**
 

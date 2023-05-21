@@ -81,7 +81,7 @@ g[i][j] = f[i - 1][j - 1] + g[i - 1][j - 1]
 
 答案为f[n][k]+g[n][k]。
 
-时间复杂度O(n\times k)，空间复杂度O(n\times k)。
+时间复杂度O(n× k)，空间复杂度O(n× k)。
 
 ### **Java**
 

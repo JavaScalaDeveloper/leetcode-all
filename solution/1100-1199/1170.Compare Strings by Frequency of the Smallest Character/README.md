@@ -49,7 +49,7 @@
 
 最后，我们遍历queries中的每个字符串s，计算f(s)，然后在arr中二分查找第一个大于f(s)的位置i，则arr中下标i及其后面的元素都满足f(s) < f(W)，其中W表示words中的每个字符串，因此当前查询的答案就是n - i。
 
-时间复杂度O(n \times \log n)，空间复杂度O(n)。其中n为words的长度。
+时间复杂度O(n × log n)，空间复杂度O(n)。其中n为words的长度。
 
 ### **Java**
 

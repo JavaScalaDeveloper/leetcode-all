@@ -52,7 +52,7 @@
 
 然后从前往后遍历 `boxTypes`，选择最多 `truckSize` 个箱子，累加单元数。
 
-时间复杂度O(n\times \log n)，其中n表示二维数组 `boxTypes` 的长度。
+时间复杂度O(n× log n)，其中n表示二维数组 `boxTypes` 的长度。
 
 **方法二：计数排序**
 

@@ -41,9 +41,9 @@
 
 题目可以转换为求数字的公共二进制前缀。
 
-当left \lt right时，我们循环将right的最后一个二进制位1变成0，直到left = right，此时right即为数字的公共二进制前缀，返回right即可。
+当left < right时，我们循环将right的最后一个二进制位1变成0，直到left = right，此时right即为数字的公共二进制前缀，返回right即可。
 
-时间复杂度O(\log n)，空间复杂度O(1)。
+时间复杂度O(log n)，空间复杂度O(1)。
 
 ### **Java**
 

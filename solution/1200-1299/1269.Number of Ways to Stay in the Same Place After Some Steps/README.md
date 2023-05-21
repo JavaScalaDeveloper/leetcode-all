@@ -60,13 +60,13 @@
 
 函数dfs(i, j)的执行过程如下：
 
-1. 如果i \gt j或者i \geq arrLen或者i \lt 0或者j \lt 0，那么返回0。
+1. 如果i > j或者i ≥ arrLen或者i < 0或者j < 0，那么返回0。
 1. 如果i = 0且j = 0，那么此时指针已经停在原地，并且没有剩余步数，所以返回1。
 1. 否则，我们可以选择向左走一步，向右走一步，或者不动，所以返回dfs(i - 1, j - 1) + dfs(i + 1, j - 1) + dfs(i, j - 1)。注意答案的取模操作。
 
 过程中，我们可以使用记忆化搜索避免重复计算。
 
-时间复杂度O(steps \times steps)，空间复杂度O(steps \times steps)。其中steps是题目给定的步数。
+时间复杂度O(steps × steps)，空间复杂度O(steps × steps)。其中steps是题目给定的步数。
 
 ### **Java**
 

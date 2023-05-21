@@ -49,7 +49,7 @@
 
 因此，我们可以处理数组 `weights`，将其转化为一个长度为n-1的数组 `arr`，其中 `arr[i] = weights[i] + weights[i+1]`，然后对数组 `arr` 进行排序，最后求出最大的k-1个分割点的价格之和与最小的k-1个分割点的价格之和的差值即可。
 
-时间复杂度O(n \times \log n)，空间复杂度O(n)。其中n为数组 `weights` 的长度。
+时间复杂度O(n × log n)，空间复杂度O(n)。其中n为数组 `weights` 的长度。
 
 ### **Java**
 

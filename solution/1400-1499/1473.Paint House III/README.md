@@ -77,18 +77,18 @@
 如果未涂色，那么我们可以将下标为i的房子涂成颜色j，我们枚举街区的数量k，其中k \in [1,..min(target, i + 1)]，并且枚举下标为i的房子的前一个房子的颜色j_0，其中j_0 \in [1,..n]，那么我们可以得到状态转移方程：
 
 
-f[i][j][k] = \min_{j_0 \in [1,..n]} \{ f[i - 1][j_0][k - (j \neq j_0)] + cost[i][j - 1] \}
+f[i][j][k] = min_{j_0 \in [1,..n]} \{ f[i - 1][j_0][k - (j \neq j_0)] + cost[i][j - 1] \}
 
 
 如果已经涂色，那么我们可以将下标为i的房子涂成颜色j，我们枚举街区的数量k，其中k \in [1,..min(target, i + 1)]，并且枚举下标为i的房子的前一个房子的颜色j_0，其中j_0 \in [1,..n]，那么我们可以得到状态转移方程：
 
 
-f[i][j][k] = \min_{j_0 \in [1,..n]} \{ f[i - 1][j_0][k - (j \neq j_0)] \}
+f[i][j][k] = min_{j_0 \in [1,..n]} \{ f[i - 1][j_0][k - (j \neq j_0)] \}
 
 
 最后，我们返回f[m - 1][j][target]，其中j \in [1,..n]，如果所有的f[m - 1][j][target]的值都为\infty，那么返回-1。
 
-时间复杂度O(m \times n^2 \times target)，空间复杂度O(m \times n \times target)。其中m,n,target分别为房子的数量，颜色的数量，街区的数量。
+时间复杂度O(m × n^2 × target)，空间复杂度O(m × n × target)。其中m,n,target分别为房子的数量，颜色的数量，街区的数量。
 
 ### **Java**
 

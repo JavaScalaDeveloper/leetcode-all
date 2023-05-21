@@ -77,7 +77,7 @@
 
 遍历结束，说明没有冲突，返回 `true`。
 
-时间复杂度O(n + m\times \alpha(n))。
+时间复杂度O(n + m× \alpha(n))。
 
 ### **Java**
 

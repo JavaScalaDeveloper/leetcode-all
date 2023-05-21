@@ -66,7 +66,7 @@
 
 times[i] = \lfloor \frac{dist[i]-1}{speed[i]} \rfloor
 
-我们对times数组升序排列，然后遍历times数组。对于第i个怪物，如果times[i] \geq i，说明第i个怪物可以被消灭，否则说明第i个怪物无法被消灭，直接返回i即可。
+我们对times数组升序排列，然后遍历times数组。对于第i个怪物，如果times[i] ≥ i，说明第i个怪物可以被消灭，否则说明第i个怪物无法被消灭，直接返回i即可。
 
 若所有怪物都可以被消灭，则返回n。
 

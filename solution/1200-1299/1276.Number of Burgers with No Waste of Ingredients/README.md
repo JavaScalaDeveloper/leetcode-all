@@ -72,7 +72,7 @@ x + y &= cheeseSlices
 
 
 \begin{aligned}
-y = (4 \times cheeseSlices - tomatoSlices) / 2 \\
+y = (4 × cheeseSlices - tomatoSlices) / 2 \\
 x = cheeseSlices - y
 \end{aligned}
 

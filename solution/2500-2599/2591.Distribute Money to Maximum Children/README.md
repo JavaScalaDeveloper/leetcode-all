@@ -44,13 +44,13 @@
 
 **方法一：分类讨论**
 
-如果money \lt children，那么一定存在儿童没有分到钱，返回-1。
+如果money < children，那么一定存在儿童没有分到钱，返回-1。
 
-如果money \gt 8 \times children，那么有children-1个儿童获得了8美元，剩下的一个儿童获得了money - 8 \times (children-1)美元，返回children-1。
+如果money > 8 × children，那么有children-1个儿童获得了8美元，剩下的一个儿童获得了money - 8 × (children-1)美元，返回children-1。
 
-如果money = 8 \times children - 4，那么有children-2个儿童获得了8美元，剩下的两个儿童分摊剩下的12美元（只要不是4,8美元就行），返回children-2。
+如果money = 8 × children - 4，那么有children-2个儿童获得了8美元，剩下的两个儿童分摊剩下的12美元（只要不是4,8美元就行），返回children-2。
 
-如果，我们假设有x个儿童获得了8美元，那么剩下的钱为money- 8 \times x，只要保证大于等于剩下的儿童数children-x，就可以满足题意。因此，我们只需要求出x的最大值，即为答案。
+如果，我们假设有x个儿童获得了8美元，那么剩下的钱为money- 8 × x，只要保证大于等于剩下的儿童数children-x，就可以满足题意。因此，我们只需要求出x的最大值，即为答案。
 
 时间复杂度O(1)，空间复杂度O(1)。
 

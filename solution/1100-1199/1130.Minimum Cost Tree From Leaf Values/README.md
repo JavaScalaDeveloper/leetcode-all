@@ -48,7 +48,7 @@
 函数dfs(i, j)的计算过程如下：
 
 -   如果i = j，说明数组arr中只有一个元素，因此dfs(i, j) = 0。
--   否则，我们枚举k \in [i, j - 1]，将数组arr划分为两个子数组arr[i \cdots k]和arr[k + 1 \cdots j]，对于每个k，我们计算dfs(i, k)和dfs(k + 1, j)，其中dfs(i, k)表示数组arr中下标范围[i, k]内的所有叶节点的值的最小可能总和，而dfs(k + 1, j)表示数组arr中下标范围[k + 1, j]内的所有叶节点的值的最小可能总和，那么dfs(i, j) = \min_{i \leq k < j} \{dfs(i, k) + dfs(k + 1, j) + \max_{i \leq t \leq k} \{arr[t]\} \max_{k < t \leq j} \{arr[t]\}\}。
+-   否则，我们枚举k \in [i, j - 1]，将数组arr划分为两个子数组arr[i \cdots k]和arr[k + 1 \cdots j]，对于每个k，我们计算dfs(i, k)和dfs(k + 1, j)，其中dfs(i, k)表示数组arr中下标范围[i, k]内的所有叶节点的值的最小可能总和，而dfs(k + 1, j)表示数组arr中下标范围[k + 1, j]内的所有叶节点的值的最小可能总和，那么dfs(i, j) = min_{i ≤ k < j} \{dfs(i, k) + dfs(k + 1, j) + max_{i ≤ t ≤ k} \{arr[t]\} max_{k < t ≤ j} \{arr[t]\}\}。
 
 上述递归过程中，我们可以使用记忆化搜索的方法进行优化，避免重复计算。
 
@@ -60,7 +60,7 @@
 
 我们可以将方法一中的记忆化搜索改为动态规划的方式进行求解。
 
-定义f[i][j]表示数组arr中下标范围[i, j]内的所有叶节点的值的最小可能总和，而g[i][j]表示数组arr中下标范围[i, j]内的所有叶节点的最大值，那么f[i][j] = \min_{i \leq k < j} \{f[i][k] + f[k + 1][j] + g[i][k] \cdot g[k + 1][j]\}，其中g[i][j] = \max_{i \leq k \leq j} \{arr[k]\}。
+定义f[i][j]表示数组arr中下标范围[i, j]内的所有叶节点的值的最小可能总和，而g[i][j]表示数组arr中下标范围[i, j]内的所有叶节点的最大值，那么f[i][j] = min_{i ≤ k < j} \{f[i][k] + f[k + 1][j] + g[i][k] \cdot g[k + 1][j]\}，其中g[i][j] = max_{i ≤ k ≤ j} \{arr[k]\}。
 
 最后，我们返回f[0][n - 1]即可。
 

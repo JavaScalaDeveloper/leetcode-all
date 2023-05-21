@@ -44,7 +44,7 @@
 
 也即是说，我们可以从后往前遍历数组nums，并且维护当前的最大值mx，初始时mx = nums[n-1]。
 
--   若当前遍历到的元素nums[i] \leq mx，此时不需要将nums[i]进行替换，我们直接更新mx = nums[i]即可。
+-   若当前遍历到的元素nums[i] ≤ mx，此时不需要将nums[i]进行替换，我们直接更新mx = nums[i]即可。
 -   否则，我们需要将nums[i]替换成多个和为nums[i]的数，这些数的最大值为mx，总共替换成k=\left \lceil \frac{nums[i]}{mx} \right \rceil个数，所以需要进行k-1次操作，累加到答案中。这k个数中，最小的数为\left \lfloor \frac{nums[i]}{k} \right \rfloor，因此，我们更新mx = \left \lfloor \frac{nums[i]}{k} \right \rfloor。
 
 遍历结束，返回总的操作次数即可。

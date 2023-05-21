@@ -43,11 +43,11 @@
 
 我们记不翻转子数组时的数组值为s，此时有s = \sum_{i=0}^{n-2} |a_i - a_{i+1}|。我们可以将答案ans初始化为s。
 
-如果翻转子数组，且子数组包含第一个元素，我们可以枚举翻转的子数组的最后一个元素a_i，其中0 \leq i \lt n-1，此时有ans = \max(ans, s + |a_0 - a_{i+1}| - |a_i - a_{i+1}|)。
+如果翻转子数组，且子数组包含第一个元素，我们可以枚举翻转的子数组的最后一个元素a_i，其中0 ≤ i < n-1，此时有ans = max(ans, s + |a_0 - a_{i+1}| - |a_i - a_{i+1}|)。
 
 <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1300-1399/1330.Reverse%20Subarray%20To%20Maximize%20Array%20Value/images/1-drawio.png" /></p>
 
-同理，如果翻转子数组，且子数组包含最后一个元素，我们可以枚举翻转的子数组的第一个元素a_{i+1}，其中0 \leq i \lt n-1，此时有ans = \max(ans, s + |a_{n-1} - a_i| - |a_i - a_{i+1}|)。
+同理，如果翻转子数组，且子数组包含最后一个元素，我们可以枚举翻转的子数组的第一个元素a_{i+1}，其中0 ≤ i < n-1，此时有ans = max(ans, s + |a_{n-1} - a_i| - |a_i - a_{i+1}|)。
 
 <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1300-1399/1330.Reverse%20Subarray%20To%20Maximize%20Array%20Value/images/2-drawio.png" /></p>
 
@@ -58,16 +58,16 @@
 此时相比较于不翻转子数组，数组值的变化量为|x_1 - x_2| + |y_1 - y_2| - |x_1 - y_1| - |x_2 - y_2|，其中，前两项可以表示为：
 
 
-\left | x_1 - x_2 \right |  + \left | y_1 - y_2 \right | = \max \begin{cases} (x_1 + y_1) - (x_2 + y_2) \\ (x_1 - y_1) - (x_2 - y_2) \\ (-x_1 + y_1) - (-x_2 + y_2) \\ (-x_1 - y_1) - (-x_2 - y_2) \end{cases}
+\left | x_1 - x_2 \right |  + \left | y_1 - y_2 \right | = max \begin{cases} (x_1 + y_1) - (x_2 + y_2) \\ (x_1 - y_1) - (x_2 - y_2) \\ (-x_1 + y_1) - (-x_2 + y_2) \\ (-x_1 - y_1) - (-x_2 - y_2) \end{cases}
 
 
 那么数组值变化量为：
 
 
-\left | x_1 - x_2 \right |  + \left | y_1 - y_2 \right | - \left | x_1 - y_1 \right | - \left | x_2 - y_2 \right |  = \max \begin{cases} (x_1 + y_1) - \left |x_1 - y_1 \right | - \left ( (x_2 + y_2) + \left |x_2 - y_2 \right | \right ) \\ (x_1 - y_1) - \left |x_1 - y_1 \right | - \left ( (x_2 - y_2) + \left |x_2 - y_2 \right | \right ) \\ (-x_1 + y_1) - \left |x_1 - y_1 \right | - \left ( (-x_2 + y_2) + \left |x_2 - y_2 \right | \right ) \\ (-x_1 - y_1) - \left |x_1 - y_1 \right | - \left ( (-x_2 - y_2) + \left |x_2 - y_2 \right | \right ) \end{cases}
+\left | x_1 - x_2 \right |  + \left | y_1 - y_2 \right | - \left | x_1 - y_1 \right | - \left | x_2 - y_2 \right |  = max \begin{cases} (x_1 + y_1) - \left |x_1 - y_1 \right | - \left ( (x_2 + y_2) + \left |x_2 - y_2 \right | \right ) \\ (x_1 - y_1) - \left |x_1 - y_1 \right | - \left ( (x_2 - y_2) + \left |x_2 - y_2 \right | \right ) \\ (-x_1 + y_1) - \left |x_1 - y_1 \right | - \left ( (-x_2 + y_2) + \left |x_2 - y_2 \right | \right ) \\ (-x_1 - y_1) - \left |x_1 - y_1 \right | - \left ( (-x_2 - y_2) + \left |x_2 - y_2 \right | \right ) \end{cases}
 
 
-因此，我们只要求出k_1 \times x + k_2 \times y的最大值mx，其中k_1, k_2 \in \{-1, 1\}，以及对应的|x - y|的最小值mi，那么数组值变化量的最大值为mx - mi。答案为ans = \max(ans, s + \max(0, mx - mi))。
+因此，我们只要求出k_1 × x + k_2 × y的最大值mx，其中k_1, k_2 \in \{-1, 1\}，以及对应的|x - y|的最小值mi，那么数组值变化量的最大值为mx - mi。答案为ans = max(ans, s + max(0, mx - mi))。
 
 在代码实现上，我们定义了一个长度为5的数组dirs=[1, -1, -1, 1, 1]，每次取数组相邻两个元素作为k_1, k_2的值，这样可以覆盖k_1, k_2 \in \{-1, 1\}的所有情况。
 

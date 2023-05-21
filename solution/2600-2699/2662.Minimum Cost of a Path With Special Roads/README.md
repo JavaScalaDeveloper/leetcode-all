@@ -53,11 +53,11 @@
 
 我们定义一个优先队列q，队列中的每一个元素是一个三元组(d, x, y)，表示从起点到(x, y)的最小代价为d。初始时，我们将(0, startX, startY)加入队列中。
 
-在每一步中，我们取出队首元素(d, x, y)，此时我们可以更新答案，即ans = \min(ans, d + dist(x, y, targetX, targetY))。然后我们枚举所有的特殊路径(x_1, y_1) \rightarrow (x_2, y_2)，将(d + dist(x, y, x_1, y_1) + cost, x_2, y_2)加入队列中。
+在每一步中，我们取出队首元素(d, x, y)，此时我们可以更新答案，即ans = min(ans, d + dist(x, y, targetX, targetY))。然后我们枚举所有的特殊路径(x_1, y_1) \rightarrow (x_2, y_2)，将(d + dist(x, y, x_1, y_1) + cost, x_2, y_2)加入队列中。
 
 最后当队列为空时，我们就可以得到答案。
 
-时间复杂度O(n^2 \times \log n)，空间复杂度O(n^2)。其中n是特殊路径的数量。
+时间复杂度O(n^2 × log n)，空间复杂度O(n^2)。其中n是特殊路径的数量。
 
 ### **Java**
 

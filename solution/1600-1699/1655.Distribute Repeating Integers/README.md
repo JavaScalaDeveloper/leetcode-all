@@ -60,11 +60,11 @@
 
 接下来，我们定义f[i][j]表示数组arr[0,..i-1]中的数字能否成功分配给quantity中的子集j，其中i的取值范围为[0,..n-1]，而j的取值范围为[0,2^m-1]，其中m为quantity的长度。
 
-考虑f[i][j]，如果子集j中存在一个子集k，使得s[k] \leq arr[i]，并且f[i-1][j \oplus k]为真，那么f[i][j]为真，否则f[i][j]为假。
+考虑f[i][j]，如果子集j中存在一个子集k，使得s[k] ≤ arr[i]，并且f[i-1][j \oplus k]为真，那么f[i][j]为真，否则f[i][j]为假。
 
 答案为f[n-1][2^m-1]。
 
-时间复杂度O(n \times 3^m)，空间复杂度O(n \times 2^m)。其中n是数组nums中不同整数的个数；而m是数组quantity的长度。
+时间复杂度O(n × 3^m)，空间复杂度O(n × 2^m)。其中n是数组nums中不同整数的个数；而m是数组quantity的长度。
 
 ### **Java**
 

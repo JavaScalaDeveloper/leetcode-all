@@ -58,7 +58,7 @@
 
 枚举数组的左端点 `i`，判断是否存在一个 `i`，满足对于任意 `j∈[0, m * k)`，`arr[i + j] == arr[i + (j % m)]`。存在则返回 `true`，否则返回 `false`。
 
-时间复杂度O((n-m\times k)\times m \times k)。
+时间复杂度O((n-m× k)× m × k)。
 
 ### **Java**
 

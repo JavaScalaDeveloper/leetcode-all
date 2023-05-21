@@ -53,7 +53,7 @@ g.shortestPath(0, 3); // 返回 6 。从 0 到 3 的最短路径为 0 -&gt; 1 -&
 
 在 `shortestPath` 函数中，我们使用 Dijsktra 算法求从节点node1到节点node2的最短路径，其中dist[i]表示从节点node1到节点i的最短路径，vis[i]表示节点i是否已经被访问过。我们初始化dist[node1]为0，其余的dist[i]均为\infty。然后我们遍历n次，每次找到当前未被访问过的节点t，使得dist[t]最小。然后我们将节点t标记为已访问，然后更新dist[i]的值为min(dist[i], dist[t] + g_{ti})。最后我们返回dist[node2]，如果dist[node2]为\infty，则说明从节点node1到节点node2不存在路径，返回-1。
 
-时间复杂度O(n^2 \times q)，空间复杂度O(n^2)。其中n为节点数，而q为 `shortestPath` 函数的调用次数。
+时间复杂度O(n^2 × q)，空间复杂度O(n^2)。其中n为节点数，而q为 `shortestPath` 函数的调用次数。
 
 ### **Java**
 

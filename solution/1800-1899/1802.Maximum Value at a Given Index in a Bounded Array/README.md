@@ -50,14 +50,14 @@
 
 为了方便计算数组左侧、右侧的元素之和，我们定义一个函数sum(x, cnt)，表示一共有cnt个元素，且最大值为x的数组的总和。函数sum(x, cnt)可以分为两种情况：
 
--   如果x \geq cnt，那么数组的总和为\frac{(x + x - cnt + 1) \times cnt}{2}
--   如果x \lt cnt，那么数组的总和为\frac{(x + 1) \times x}{2} + cnt - x
+-   如果x ≥ cnt，那么数组的总和为\frac{(x + x - cnt + 1) × cnt}{2}
+-   如果x < cnt，那么数组的总和为\frac{(x + 1) × x}{2} + cnt - x
 
-接下来，定义二分的左边界left = 1，右边界right = maxSum，然后二分查找nums[index]的值mid，如果sum(mid - 1, index) + sum(mid, n - index) \leq maxSum，那么此时的mid是合法的，我们可以将left更新为mid，否则我们将right更新为mid - 1。
+接下来，定义二分的左边界left = 1，右边界right = maxSum，然后二分查找nums[index]的值mid，如果sum(mid - 1, index) + sum(mid, n - index) ≤ maxSum，那么此时的mid是合法的，我们可以将left更新为mid，否则我们将right更新为mid - 1。
 
 最后将left作为答案返回即可。
 
-时间复杂度O(\log M)，空间复杂度O(1)。其中M=maxSum。
+时间复杂度O(log M)，空间复杂度O(1)。其中M=maxSum。
 
 ### **Java**
 

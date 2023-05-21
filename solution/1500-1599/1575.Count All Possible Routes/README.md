@@ -62,14 +62,14 @@
 
 函数dfs(i, k)的计算过程如下：
 
--   如果k \lt |locations[i] - locations[finish]|，那么返回0。
+-   如果k < |locations[i] - locations[finish]|，那么返回0。
 -   如果i = finish，那么答案路径数初始时为1，否则为0。
 -   然后，我们遍历所有城市j，如果j \ne i，那么我们可以从城市i移动到城市j，此时剩余汽油量为k - |locations[i] - locations[j]|，那么我们可以将答案路径数加上dfs(j, k - |locations[i] - locations[j]|)。
 -   最后，我们返回答案路径数。
 
 为了避免重复计算，我们可以使用记忆化搜索。
 
-时间复杂度O(n^2 \times m)，空间复杂度O(n \times m)。其中n和m分别是数组locations和fuel的大小。
+时间复杂度O(n^2 × m)，空间复杂度O(n × m)。其中n和m分别是数组locations和fuel的大小。
 
 **方法二：动态规划**
 
@@ -81,7 +81,7 @@
 
 最后，我们返回答案路径数f[start][fuel]即可。
 
-时间复杂度O(n^2 \times m)，空间复杂度O(n \times m)。其中n和m分别是数组locations和fuel的大小。
+时间复杂度O(n^2 × m)，空间复杂度O(n × m)。其中n和m分别是数组locations和fuel的大小。
 
 ### **Java**
 

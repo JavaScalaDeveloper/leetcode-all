@@ -44,7 +44,7 @@
 
 
 \begin{aligned}
-nums[i] \times (2^i - 2^{n-i-1})
+nums[i] × (2^i - 2^{n-i-1})
 \end{aligned}
 
 
@@ -52,7 +52,7 @@ nums[i] \times (2^i - 2^{n-i-1})
 
 
 \begin{aligned}
-\sum_{i=0}^{n-1} nums[i] \times (2^i - 2^{n-i-1})
+\sum_{i=0}^{n-1} nums[i] × (2^i - 2^{n-i-1})
 \end{aligned}
 
 
@@ -60,7 +60,7 @@ nums[i] \times (2^i - 2^{n-i-1})
 
 
 \begin{aligned}
-nums[0] \times (2^0 - 2^{n-1}) + nums[1] \times (2^1 - 2^{n-2}) + ... + nums[n-1] \times (2^{n-1} - 2^0)
+nums[0] × (2^0 - 2^{n-1}) + nums[1] × (2^1 - 2^{n-2}) + ... + nums[n-1] × (2^{n-1} - 2^0)
 \end{aligned}
 
 
@@ -68,7 +68,7 @@ nums[0] \times (2^0 - 2^{n-1}) + nums[1] \times (2^1 - 2^{n-2}) + ... + nums[n-1
 
 
 \begin{aligned}
-(nums[0] - nums[n-1]) \times 2^0 + (nums[1] - nums[n-2]) \times 2^1 + ... + (nums[n-1] - nums[0]) \times 2^{n-1}
+(nums[0] - nums[n-1]) × 2^0 + (nums[1] - nums[n-2]) × 2^1 + ... + (nums[n-1] - nums[0]) × 2^{n-1}
 \end{aligned}
 
 
@@ -76,13 +76,13 @@ nums[0] \times (2^0 - 2^{n-1}) + nums[1] \times (2^1 - 2^{n-2}) + ... + nums[n-1
 
 
 \begin{aligned}
-\sum_{i=0}^{n-1} (nums[i] - nums[n-i-1]) \times 2^i
+\sum_{i=0}^{n-1} (nums[i] - nums[n-i-1]) × 2^i
 \end{aligned}
 
 
 因此我们只需要对数组 `nums` 进行排序，然后计算上述的贡献即可。注意答案的取模操作。
 
-时间复杂度O(n\times \log n)，空间复杂度O(\log n)。其中n为数组 `nums` 的长度。
+时间复杂度O(n× log n)，空间复杂度O(log n)。其中n为数组 `nums` 的长度。
 
 ### **Java**
 

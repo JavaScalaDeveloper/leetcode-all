@@ -36,7 +36,7 @@
 
 根据题目描述，神奇数字是能被a或b整除的正整数。
 
-而我们知道，对于任意正整数x，在[1,..x]范围内，能被a整除的数有\lfloor \frac{x}{a} \rfloor个，能被b整除的数有\lfloor \frac{x}{b} \rfloor个，能被a和b同时整除的数有\lfloor \frac{x}{c} \rfloor个，其中c是a和b的最小公倍数。最小公倍数的计算公式为c = lcm(a, b) = \frac{a \times b}{gcd(a, b)}。
+而我们知道，对于任意正整数x，在[1,..x]范围内，能被a整除的数有\lfloor \frac{x}{a} \rfloor个，能被b整除的数有\lfloor \frac{x}{b} \rfloor个，能被a和b同时整除的数有\lfloor \frac{x}{c} \rfloor个，其中c是a和b的最小公倍数。最小公倍数的计算公式为c = lcm(a, b) = \frac{a × b}{gcd(a, b)}。
 
 因此，对于任意正整数x，在[1,..x]范围内，神奇数字的个数为：
 
@@ -49,14 +49,14 @@
 题目要我们找到第n个神奇数字，也即是说，要找到一个最小的正整数x，使得以下式子成立：
 
 
-\lfloor \frac{x}{a} \rfloor + \lfloor \frac{x}{b} \rfloor - \lfloor \frac{x}{c} \rfloor \geq n
+\lfloor \frac{x}{a} \rfloor + \lfloor \frac{x}{b} \rfloor - \lfloor \frac{x}{c} \rfloor ≥ n
 
 
 随着x的增大，神奇数字的个数也会增大，因此我们可以使用二分查找的方法，找到最小的正整数x，使得上述式子成立。
 
 注意答案的取模操作。
 
-时间复杂度O(\log M)，空间复杂度O(1)。其中M是二分查找的上界，本题可以取M=(a+b) \times n。
+时间复杂度O(log M)，空间复杂度O(1)。其中M是二分查找的上界，本题可以取M=(a+b) × n。
 
 ### **Java**
 

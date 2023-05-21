@@ -55,7 +55,7 @@ ans = \sum_{i=1}^{r} ans_i -  \sum_{i=1}^{l-1} ans_i
 
 关于函数的实现细节，可以参考下面的代码。
 
-时间复杂度O(\log m + \log n)。其中m,n分别为题目中的 `low` 和 `high`。
+时间复杂度O(log m + log n)。其中m,n分别为题目中的 `low` 和 `high`。
 
 相似题目：[233. 数字 1 的个数](/solution/0200-0299/0233.Number%20of%20Digit%20One/README.md)
 

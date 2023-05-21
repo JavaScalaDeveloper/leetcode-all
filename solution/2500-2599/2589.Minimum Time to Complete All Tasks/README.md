@@ -51,7 +51,7 @@
 
 最后，我们返回ans即可。
 
-时间复杂度O(n \times \log n + n \times m)，空间复杂度O(m)。其中n和m分别为tasks的长度和vis数组的长度。本题中m = 2010。
+时间复杂度O(n × log n + n × m)，空间复杂度O(m)。其中n和m分别为tasks的长度和vis数组的长度。本题中m = 2010。
 
 ### **Java**
 

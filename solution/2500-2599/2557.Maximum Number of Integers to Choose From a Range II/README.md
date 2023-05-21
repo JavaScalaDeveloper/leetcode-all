@@ -47,7 +47,7 @@
 
 接下来，我们枚举数组 `banned` 中的每两个相邻元素i和j，那么可选的整数范围就是[i + 1, j - 1]。二分枚举我们在此区间内能够选择的元素个数，找到最大的可选元素个数，然后将其加到ans中。同时在 `maxSum` 中减去这些元素的和。如果 `maxSum` 小于0，那么我们跳出循环。返回答案即可。
 
-时间复杂度O(n \times \log n)，空间复杂度O(n)。其中n为数组 `banned` 的长度。
+时间复杂度O(n × log n)，空间复杂度O(n)。其中n为数组 `banned` 的长度。
 
 相似题目：[2557. 从一个范围内选择最多整数 II](/solution/2500-2599/2557.Maximum%20Number%20of%20Integers%20to%20Choose%20From%20a%20Range%20II/README.md)
 

@@ -52,7 +52,7 @@
 
 我们可以把数组分成左右两部分，分别求出两部分所有子序列和，记为left和right。最后，只需找到最接近goal的left[i] + right[j]。
 
-时间复杂度O(n\times 2^{n/2})。
+时间复杂度O(n× 2^{n/2})。
 
 相似题目：[1774. 最接近目标价格的甜点成本](/solution/1700-1799/1774.Closest%20Dessert%20Cost/README.md)
 

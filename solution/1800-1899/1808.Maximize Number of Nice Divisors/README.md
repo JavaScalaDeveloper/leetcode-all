@@ -44,20 +44,20 @@
 
 **方法一：问题转换 + 快速幂**
 
-我们可以将n进行质因数分解，即n = a_1^{k_1} \times a_2^{k_2} \times\cdots \times a_m^{k_m}，其中a_i为质因子，而k_i为质因子a_i的指数。由于n的质因子个数不超过primeFactors个，因此k_1 + k_2 + \cdots + k_m \leq primeFactors。
+我们可以将n进行质因数分解，即n = a_1^{k_1} × a_2^{k_2} ×\cdots × a_m^{k_m}，其中a_i为质因子，而k_i为质因子a_i的指数。由于n的质因子个数不超过primeFactors个，因此k_1 + k_2 + \cdots + k_m ≤ primeFactors。
 
-而根据题意描述，我们知道n的好因子要满足能被所有的质因子整除，也即是说n的好因子需要包含a_1 \times a_2 \times \cdots \times a_m作为因数。那么好因子的个数k= k_1 \times k_2 \times \cdots \times k_m，即k为k_1, k_2, \cdots, k_m的乘积。要最大化好因子的个数，也即是说我们要将 `primeFactors` 拆分成k_1, k_2, \cdots, k_m，使得k_1 \times k_2 \times \cdots \times k_m最大。因此问题转换为：将整数 `primeFactors` 拆分成若干个整数的乘积，使得乘积最大。
+而根据题意描述，我们知道n的好因子要满足能被所有的质因子整除，也即是说n的好因子需要包含a_1 × a_2 × \cdots × a_m作为因数。那么好因子的个数k= k_1 × k_2 × \cdots × k_m，即k为k_1, k_2, \cdots, k_m的乘积。要最大化好因子的个数，也即是说我们要将 `primeFactors` 拆分成k_1, k_2, \cdots, k_m，使得k_1 × k_2 × \cdots × k_m最大。因此问题转换为：将整数 `primeFactors` 拆分成若干个整数的乘积，使得乘积最大。
 
 接下来，我们只需要分情况讨论。
 
--   如果primeFactors \lt 4，那么直接返回 `primeFactors` 即可。
+-   如果primeFactors < 4，那么直接返回 `primeFactors` 即可。
 -   如果primeFactors为3的倍数，那么我们将 `primeFactors` 拆分成3的倍数个3，即3^{\frac{primeFactors}{3}}。
--   如果primeFactors除以3余1，那么我们将 `primeFactors` 拆分成\frac{primeFactors}{3} - 1个3，再乘以4，即3^{\frac{primeFactors}{3} - 1} \times 4。
--   如果primeFactors除以3余2，那么我们将 `primeFactors` 拆分成\frac{primeFactors}{3}个3，再乘以2，即3^{\frac{primeFactors}{3}} \times 2。
+-   如果primeFactors除以3余1，那么我们将 `primeFactors` 拆分成\frac{primeFactors}{3} - 1个3，再乘以4，即3^{\frac{primeFactors}{3} - 1} × 4。
+-   如果primeFactors除以3余2，那么我们将 `primeFactors` 拆分成\frac{primeFactors}{3}个3，再乘以2，即3^{\frac{primeFactors}{3}} × 2。
 
 以上过程中，我们利用快速幂取模求解。
 
-时间复杂度O(\log n)，空间复杂度O(1)。
+时间复杂度O(log n)，空间复杂度O(1)。
 
 ### **Java**
 

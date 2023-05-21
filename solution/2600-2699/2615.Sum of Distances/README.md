@@ -40,7 +40,7 @@ i = 4 ，arr[4] = 0 因为不存在值等于 2 的其他下标。
 
 我们先用哈希表d记录数组nums中每个元素对应的下标列表，即d[x]表示数组nums中所有值为x的下标列表。
 
-对于哈希表d中的每个值列表idx，我们可以计算出idx中每个下标i对应的arr[i]的值。对于第一个下标idx[0]，右边所有下标距离idx[0]的和right=\sum_{i=0}^{m-1} - idx[0] \times m。接下来我们遍历idx，每一次计算得到ans[idx[i]] = left + right，然后更新left和right，即left = left + (idx[i+1] - idx[i]) \times (i+1)，而right = right - (idx[i+1] - idx[i]) \times (m-i-1)。
+对于哈希表d中的每个值列表idx，我们可以计算出idx中每个下标i对应的arr[i]的值。对于第一个下标idx[0]，右边所有下标距离idx[0]的和right=\sum_{i=0}^{m-1} - idx[0] × m。接下来我们遍历idx，每一次计算得到ans[idx[i]] = left + right，然后更新left和right，即left = left + (idx[i+1] - idx[i]) × (i+1)，而right = right - (idx[i+1] - idx[i]) × (m-i-1)。
 
 遍历结束后，我们得到了数组nums中每个元素对应的arr的值，即ans。
 

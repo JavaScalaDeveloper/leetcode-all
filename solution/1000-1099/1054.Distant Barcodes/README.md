@@ -34,7 +34,7 @@
 
 接下来，我们创建一个长度为n的答案数组ans，然后遍历排好序的barcodes，将元素依次填入答案数组的0, 2, 4, \cdots等偶数下标位置，然后将剩余元素依次填入答案数组的1, 3, 5, \cdots等奇数下标位置即可。
 
-时间复杂度O(n \times \log n)，空间复杂度O(M)。其中n和M分别是数组barcodes的长度以及数组barcodes中的最大值。
+时间复杂度O(n × log n)，空间复杂度O(M)。其中n和M分别是数组barcodes的长度以及数组barcodes中的最大值。
 
 ### **Java**
 

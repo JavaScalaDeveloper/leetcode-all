@@ -53,7 +53,7 @@
 
 
 \begin{aligned}
-a = \max(nums[i], b + nums[i]) \\
+a = max(nums[i], b + nums[i]) \\
 b = a - nums[i]
 \end{aligned}
 

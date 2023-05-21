@@ -47,7 +47,7 @@
 
 因此，问题转化为求 `nums` 数组的最长递增子序列的长度。参考 [300. 最长递增子序列](/solution/0300-0399/0300.Longest%20Increasing%20Subsequence/README.md)。
 
-时间复杂度O(n\log n)，其中n为 `arr` 数组的长度。
+时间复杂度O(nlog n)，其中n为 `arr` 数组的长度。
 
 ### **Java**
 

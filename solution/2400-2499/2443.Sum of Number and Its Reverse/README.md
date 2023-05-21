@@ -42,7 +42,7 @@
 
 在[0,.., num]范围内枚举k，判断k + reverse(k)是否等于num即可。
 
-时间复杂度O(n\times \log n)。其中n为 `num` 的大小。
+时间复杂度O(n× log n)。其中n为 `num` 的大小。
 
 ### **Java**
 

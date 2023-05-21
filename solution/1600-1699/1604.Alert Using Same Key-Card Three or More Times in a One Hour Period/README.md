@@ -49,7 +49,7 @@
 
 最后，将答案数组按照字典序排序，即可得到答案。
 
-时间复杂度O(n \times \log n)，其中n是数组keyName的长度。
+时间复杂度O(n × log n)，其中n是数组keyName的长度。
 
 ### **Java**
 

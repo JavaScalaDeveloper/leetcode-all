@@ -42,7 +42,7 @@ f[i - 1][j - 1] + 1, & nums1[i - 1] = nums2[j - 1]
 
 最终的答案即为所有f[i][j]中的最大值。
 
-时间复杂度O(m \times n)，空间复杂度O(m \times n)。其中m和n分别是数组nums1和nums2的长度。
+时间复杂度O(m × n)，空间复杂度O(m × n)。其中m和n分别是数组nums1和nums2的长度。
 
 ### **Java**
 

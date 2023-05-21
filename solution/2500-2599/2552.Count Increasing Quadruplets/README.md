@@ -42,12 +42,12 @@
 
 我们可以枚举四元组中的j和k，那么问题转化为，对于当前的j和k：
 
--   统计有多少个l满足l \gt k且nums[l] \gt nums[j]；
--   统计有多少个i满足i \lt j且nums[i] \lt nums[k]。
+-   统计有多少个l满足l > k且nums[l] > nums[j]；
+-   统计有多少个i满足i < j且nums[i] < nums[k]。
 
-我们可以使用两个二维数组f和g分别记录这两个信息。其中f[j][k]表示有多少个l满足l \gt k且nums[l] \gt nums[j]，而g[j][k]表示有多少个i满足i \lt j且nums[i] \lt nums[k]。
+我们可以使用两个二维数组f和g分别记录这两个信息。其中f[j][k]表示有多少个l满足l > k且nums[l] > nums[j]，而g[j][k]表示有多少个i满足i < j且nums[i] < nums[k]。
 
-那么答案就是所有的f[j][k] \times g[j][k]的和。
+那么答案就是所有的f[j][k] × g[j][k]的和。
 
 时间复杂度为O(n^2)，空间复杂度为O(n^2)。其中n是数组的长度。
 

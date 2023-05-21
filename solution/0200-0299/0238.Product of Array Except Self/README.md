@@ -40,7 +40,7 @@
 
 我们先从左到右遍历数组，对于遍历到的第i个元素，我们用left更新ans[i]，然后left乘以nums[i]。
 
-然后，我们从右到左遍历数组，对于遍历到的第i个元素，我们更新ans[i]为ans[i] \times right，然后right乘以nums[i]。
+然后，我们从右到左遍历数组，对于遍历到的第i个元素，我们更新ans[i]为ans[i] × right，然后right乘以nums[i]。
 
 遍历结束后，数组 `ans` 即为所求的答案。
 

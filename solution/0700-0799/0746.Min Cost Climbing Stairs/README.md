@@ -47,7 +47,7 @@
 定义 `dp[i]` 表示到达第 `i` 个台阶的最小花费。可以得到状态转移方程：
 
 
-dp[i] = \min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2])
+dp[i] = min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2])
 
 
 最终结果为 `dp[n]`。其中n表示 `cost` 数组的长度。

@@ -46,10 +46,10 @@
 
 那么当满足以下任一条件时，矩形rec1和rec2不重叠：
 
--   满足y_3 \geq y_2，即rec2在rec1的上方；
--   满足y_4 \leq y_1，即rec2在rec1的下方；
--   满足x_3 \geq x_2，即rec2在rec1的右方；
--   满足x_4 \leq x_1，即rec2在rec1的左方。
+-   满足y_3 ≥ y_2，即rec2在rec1的上方；
+-   满足y_4 ≤ y_1，即rec2在rec1的下方；
+-   满足x_3 ≥ x_2，即rec2在rec1的右方；
+-   满足x_4 ≤ x_1，即rec2在rec1的左方。
 
 当以上条件都不满足时，矩形rec1和rec2重叠。
 

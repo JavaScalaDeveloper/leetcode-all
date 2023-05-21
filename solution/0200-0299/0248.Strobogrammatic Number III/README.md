@@ -49,7 +49,7 @@
 
 接下来，我们在[a,..b]范围内遍历所有长度，对于每个长度n，我们获取所有中心对称数dfs(n)，然后判断是否在[low, high]范围内，若在，答案加一。
 
-时间复杂度为O(2^{n+2}\times \log n)。
+时间复杂度为O(2^{n+2}× log n)。
 
 相似题目：[247. 中心对称数 II](/solution/0200-0299/0247.Strobogrammatic%20Number%20II/README.md)
 

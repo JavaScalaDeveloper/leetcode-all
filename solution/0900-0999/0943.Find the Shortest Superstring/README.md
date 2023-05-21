@@ -45,10 +45,10 @@
 动态规划的状态转移方程如下：
 
 
-dp[i][j] = \max_{k \in \{0, 1, \cdots, n - 1\}} \{dp[i - 2^j][k] + g[k][j]\}
+dp[i][j] = max_{k \in \{0, 1, \cdots, n - 1\}} \{dp[i - 2^j][k] + g[k][j]\}
 
 
-时间复杂度O(2^n \times n^2)，空间复杂度O(2^n \times n)。其中n为字符串数组 `words` 的长度。
+时间复杂度O(2^n × n^2)，空间复杂度O(2^n × n)。其中n为字符串数组 `words` 的长度。
 
 ### **Java**
 

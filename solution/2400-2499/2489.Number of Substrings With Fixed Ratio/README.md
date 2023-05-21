@@ -61,10 +61,10 @@
 其中i < j。我们可以将上式转化为
 
 
-one[j] \times num1 - zero[j] \times num2 = one[i] \times num1 - zero[i] \times num2
+one[j] × num1 - zero[j] × num2 = one[i] × num1 - zero[i] × num2
 
 
-遍历到下标j时，我们只需要统计有多少个下标i满足上式即可。因此，我们可以用哈希表记录one[i] \times num1 - zero[i] \times num2出现的次数，遍历到下标j时，只需要统计one[j] \times num1 - zero[j] \times num2出现的次数即可。
+遍历到下标j时，我们只需要统计有多少个下标i满足上式即可。因此，我们可以用哈希表记录one[i] × num1 - zero[i] × num2出现的次数，遍历到下标j时，只需要统计one[j] × num1 - zero[j] × num2出现的次数即可。
 
 哈希表初始时只有一个键值对(0, 1)。
 

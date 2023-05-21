@@ -39,9 +39,9 @@ queries[4] :&nbsp;子串 = &quot;abcda&quot;，可以变成回文的 &quot;abcba
 
 我们可以使用前缀和的思想，预处理出字符串s中每个位置的字符出现次数，即cnt[i][j]表示字符串s中前i个字符中第j个字母出现的次数。
 
-对于每个查询[left, right, k]，我们可以利用前缀和计算出s[left..right]中每个字母出现的次数，统计出现次数为奇数的字母个数x，则需要替换的次数为\frac{x}{2}，如果\frac{x}{2} \leq k，则可以将s[left..right]变成回文串。
+对于每个查询[left, right, k]，我们可以利用前缀和计算出s[left..right]中每个字母出现的次数，统计出现次数为奇数的字母个数x，则需要替换的次数为\frac{x}{2}，如果\frac{x}{2} ≤ k，则可以将s[left..right]变成回文串。
 
-时间复杂度O((n + m) \times C)，空间复杂度O(n \times C)，其中n和m分别为字符串s和查询数组queries的长度，而C为字符集大小。本题中C = 26。
+时间复杂度O((n + m) × C)，空间复杂度O(n × C)，其中n和m分别为字符串s和查询数组queries的长度，而C为字符集大小。本题中C = 26。
 
 ### **Java**
 

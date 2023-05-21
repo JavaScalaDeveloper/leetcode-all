@@ -41,7 +41,7 @@
 
 我们也可以创建一个长度为n的数组arr，数组中每个元素是一个二元组(heights[i], i)，然后我们对arr按照身高降序排序。最后遍历排序后的arr中的每个元素(heights[i], i)，将names[i]加入答案数组即可。
 
-时间复杂度O(n \times \log n)，空间复杂度O(n)。其中n是数组names和heights的长度。
+时间复杂度O(n × log n)，空间复杂度O(n)。其中n是数组names和heights的长度。
 
 ### **Java**
 

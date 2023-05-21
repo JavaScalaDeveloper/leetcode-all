@@ -61,11 +61,11 @@
 函数dfs(root, s)的计算如下：
 
 -   如果当前节点root为空，则返回0。
--   否则，将当前节点的值加到s中，即s = s \times 10 + root.val。
+-   否则，将当前节点的值加到s中，即s = s × 10 + root.val。
 -   如果当前节点是叶子节点，则返回s。
 -   否则，返回dfs(root.left, s) + dfs(root.right, s)。
 
-时间复杂度O(n)，空间复杂度O(\log n)。其中n是二叉树的节点数。
+时间复杂度O(n)，空间复杂度O(log n)。其中n是二叉树的节点数。
 
 ### **Java**
 

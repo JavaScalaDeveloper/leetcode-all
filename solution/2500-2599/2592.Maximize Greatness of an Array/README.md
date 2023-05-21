@@ -40,7 +40,7 @@
 
 最后返回指针i的值即可。
 
-时间复杂度O(n \times \log n)，空间复杂度O(\log n)。其中n为数组nums的长度。
+时间复杂度O(n × log n)，空间复杂度O(log n)。其中n为数组nums的长度。
 
 ### **Java**
 

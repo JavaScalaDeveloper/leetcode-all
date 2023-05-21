@@ -48,8 +48,8 @@
 
 
 \begin{aligned}
-f[i] &= \max(f[i - 1], 0) + nums[i] \\
-g[i] &= \min(g[i - 1], 0) + nums[i]
+f[i] &= max(f[i - 1], 0) + nums[i] \\
+g[i] &= min(g[i - 1], 0) + nums[i]
 \end{aligned}
 
 

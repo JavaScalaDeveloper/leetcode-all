@@ -57,7 +57,7 @@
 
 f[i] = \begin{cases}
 1 & i = 0 \\
-f[i - oneGroup] + f[i - zeroGroup] & i \geq 1
+f[i - oneGroup] + f[i - zeroGroup] & i ≥ 1
 \end{cases}
 
 

@@ -51,7 +51,7 @@
 
 **方法二：贪心**
 
-我们可以枚举字符串number的所有位置i，如果number[i] = digit，记录digit最后一次出现的位置last，并且如果i + 1 \lt n且number[i] \lt number[i + 1]，那么我们可以直接返回number[0:i] + number[i+1:]，即为移除number[i]后的结果。这是因为如果number[i] < number[i + 1]，那么移除number[i]后，结果一定会更大。
+我们可以枚举字符串number的所有位置i，如果number[i] = digit，记录digit最后一次出现的位置last，并且如果i + 1 < n且number[i] < number[i + 1]，那么我们可以直接返回number[0:i] + number[i+1:]，即为移除number[i]后的结果。这是因为如果number[i] < number[i + 1]，那么移除number[i]后，结果一定会更大。
 
 遍历结束，我们返回number[0:last] + number[last+1:]即可。
 

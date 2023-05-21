@@ -69,7 +69,7 @@
 
 答案为差值a - b。
 
-时间复杂度O(\log num)，空间复杂度O(\log num)。其中num为给定整数。
+时间复杂度O(log num)，空间复杂度O(log num)。其中num为给定整数。
 
 ### **Java**
 

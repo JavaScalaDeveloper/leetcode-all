@@ -48,17 +48,17 @@
 
 如果i=n，此时判断j是否为0，如果是则返回0，否则返回-\infty。
 
-如果i \lt n，此时有三种情况：
+如果i < n，此时有三种情况：
 
 1. 不选择第i根钢筋，此时dfs(i, j) = dfs(i+1, j)；
 1. 选择第i根钢筋，并且放置在原本高度较高的一边，那么dfs(i, j) = dfs(i+1, j+rods[i])；
-1. 选择第i根钢筋，并且放置在高度较低的一边，此时共同高度增加了\min(j, rods[i])，那么dfs(i, j) = dfs(i+1, |rods[i]-j|) + \min(j, rods[i])。
+1. 选择第i根钢筋，并且放置在高度较低的一边，此时共同高度增加了min(j, rods[i])，那么dfs(i, j) = dfs(i+1, |rods[i]-j|) + min(j, rods[i])。
 
 我们取这三种情况下的最大值，即可得到dfs(i, j)的值。
 
 为了避免重复计算，我们使用一个二维数组f来记录已经计算过的dfs(i, j)的值，调用dfs(i, j)时，如果f[i][j]已经被计算过，则直接返回f[i][j]。否则，我们计算dfs(i, j)的值，并将其存入f[i][j]。
 
-时间复杂度O(n \times S)，空间复杂度O(n \times S)。其中n和S分别为rods的长度和rods中所有元素的和。
+时间复杂度O(n × S)，空间复杂度O(n × S)。其中n和S分别为rods的长度和rods中所有元素的和。
 
 **方法二：动态规划**
 
@@ -66,23 +66,23 @@
 
 对于第i根钢筋，我们可以不选择它，此时f[i][j]=f[i-1][j]；也可以选择它，此时有三种情况：
 
-1. 放置在原本高度较高的一边，即满足j \geq rods[i-1]，此时f[i][j] = max(f[i][j], f[i-1][j-rods[i-1]])；
-1. 放置在原本高度较低的一遍，如果满足j + rods[i-1] \leq s，此时f[i][j] = max(f[i][j], f[i-1][j+rods[i-1]] + rods[i-1])；如果满足j \lt rods[i-1]，此时f[i][j] = max(f[i][j], f[i-1][rods[i-1]-j] + rods[i-1]-j)。
+1. 放置在原本高度较高的一边，即满足j ≥ rods[i-1]，此时f[i][j] = max(f[i][j], f[i-1][j-rods[i-1]])；
+1. 放置在原本高度较低的一遍，如果满足j + rods[i-1] ≤ s，此时f[i][j] = max(f[i][j], f[i-1][j+rods[i-1]] + rods[i-1])；如果满足j < rods[i-1]，此时f[i][j] = max(f[i][j], f[i-1][rods[i-1]-j] + rods[i-1]-j)。
 
 综上，我们可以得到状态转移方程：
 
 
 \begin{aligned}
 f[i][j] &= f[i-1][j] \\
-f[i][j] &= max(f[i][j], f[i-1][j-rods[i-1]]) & \text{if } j \geq rods[i-1] \\
-f[i][j] &= max(f[i][j], f[i-1][j+rods[i-1]] + rods[i-1]) & \text{if } j + rods[i-1] \leq s \\
-f[i][j] &= max(f[i][j], f[i-1][rods[i-1]-j] + rods[i-1]-j) & \text{if } j \lt rods[i-1]
+f[i][j] &= max(f[i][j], f[i-1][j-rods[i-1]]) & \text{if } j ≥ rods[i-1] \\
+f[i][j] &= max(f[i][j], f[i-1][j+rods[i-1]] + rods[i-1]) & \text{if } j + rods[i-1] ≤ s \\
+f[i][j] &= max(f[i][j], f[i-1][rods[i-1]-j] + rods[i-1]-j) & \text{if } j < rods[i-1]
 \end{aligned}
 
 
 最终答案即为f[n][0]。
 
-时间复杂度O(n \times S)，空间复杂度O(n \times S)。其中n和S分别为rods的长度和rods中所有元素的和。
+时间复杂度O(n × S)，空间复杂度O(n × S)。其中n和S分别为rods的长度和rods中所有元素的和。
 
 ### **Java**
 

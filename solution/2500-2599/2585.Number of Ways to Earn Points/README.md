@@ -63,14 +63,14 @@
 我们可以枚举第i种类型的题目，假设该类型题目的数量为count，分数为marks，那么我们可以得到如下状态转移方程：
 
 
-f[i][j] = \sum_{k=0}^{count} f[i-1][j-k \times marks]
+f[i][j] = \sum_{k=0}^{count} f[i-1][j-k × marks]
 
 
 其中k表示第i种类型的题目的数量。
 
 最终的答案即为f[n][target]。注意答案可能很大，需要对10^9 + 7取模。
 
-时间复杂度O(n \times target \times count)，空间复杂度O(n \times target)。其中n为题目类型的数量；而target和count分别为题目的目标分数和每种类型题目的数量。
+时间复杂度O(n × target × count)，空间复杂度O(n × target)。其中n为题目类型的数量；而target和count分别为题目的目标分数和每种类型题目的数量。
 
 ### **Java**
 

@@ -55,12 +55,12 @@
 
 然后我们双重循环遍历两个哈希表，记当前 `cnt1` 遍历到的键值对为(a, x)，当前 `cnt2` 遍历到的键值对为(b, y)。接下来分情况讨论：
 
--   如果a^2能被b整除，设c=\frac{a^2}{b}，若b=c，那么答案加上x \times y \times (y - 1)，否则答案加上x \times y \times cnt2[c]。
--   如果b^2能被a整除，设c=\frac{b^2}{a}，若a=c，那么答案加上x \times (x - 1) \times y，否则答案加上x \times cnt1[c] \times y。
+-   如果a^2能被b整除，设c=\frac{a^2}{b}，若b=c，那么答案加上x × y × (y - 1)，否则答案加上x × y × cnt2[c]。
+-   如果b^2能被a整除，设c=\frac{b^2}{a}，若a=c，那么答案加上x × (x - 1) × y，否则答案加上x × cnt1[c] × y。
 
 最后将答案除以2返回即可。
 
-时间复杂度O(n \times m)，空间复杂度O(n + m)。其中n和m分别为数组 `nums1` 和 `nums2` 的长度。
+时间复杂度O(n × m)，空间复杂度O(n + m)。其中n和m分别为数组 `nums1` 和 `nums2` 的长度。
 
 ### **Java**
 

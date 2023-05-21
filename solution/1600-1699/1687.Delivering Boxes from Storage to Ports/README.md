@@ -99,7 +99,7 @@
 状态转移方程为：
 
 
-f[i] = \min_{j \in [i - maxBoxes, i - 1]} \left(f[j] + \sum_{k = j + 1}^i \text{cost}(k)\right)
+f[i] = min_{j \in [i - maxBoxes, i - 1]} \left(f[j] + \sum_{k = j + 1}^i \text{cost}(k)\right)
 
 
 其中\sum_{k = j + 1}^i \text{cost}(k)表示通过一次运输，把[j+1,..i]这些箱子送往对应的码头所需要的行程数。这部分行程数可以通过前缀和快速计算出来。

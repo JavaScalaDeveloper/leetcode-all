@@ -68,7 +68,7 @@ obj.calculateMKAverage(); // 最后 3 个元素为 [5,5,5]
 
 调用addElement(num)函数时，顺序执行以下操作：
 
-1. 如果lo为空，或者num \leq max(lo)，则将num加入lo中；否则如果hi为空，或者num \geq min(hi)，则将num加入hi中；否则将num加入mid中，同时将num的值加到s中。
+1. 如果lo为空，或者num ≤ max(lo)，则将num加入lo中；否则如果hi为空，或者num ≥ min(hi)，则将num加入hi中；否则将num加入mid中，同时将num的值加到s中。
 1. 接下来将num加入队列q中，如果此时队列q的长度大于m，则将队首元素x从队列q中移除，接下来从lo,mid或hi中选择其中一个包含x的集合，将x从该集合中移除，如果该集合为mid，则将s减去x的值。
 1. 如果lo的长度大于k，则循环将lo中的最大值max(lo)从lo中移除，将max(lo)加入mid中，同时将s加上max(lo)的值。
 1. 如果hi的长度大于k，则循环将hi中的最小值min(hi)从hi中移除，将min(hi)加入mid中，同时将s加上min(hi)的值。
@@ -77,7 +77,7 @@ obj.calculateMKAverage(); // 最后 3 个元素为 [5,5,5]
 
 调用calculateMKAverage()函数时，如果q的长度小于m，则返回-1，否则返回\frac{s}{m - 2k}。
 
-时间复杂度方面，每次调用addElement(num)函数的时间复杂度为O(\log m)，每次调用calculateMKAverage()函数的时间复杂度为O(1)。空间复杂度为O(m)。
+时间复杂度方面，每次调用addElement(num)函数的时间复杂度为O(log m)，每次调用calculateMKAverage()函数的时间复杂度为O(1)。空间复杂度为O(m)。
 
 ### **Java**
 

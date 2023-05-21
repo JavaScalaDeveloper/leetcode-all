@@ -48,7 +48,7 @@ f[i][j]=
 \begin{cases}
 1, & \text{if } i=j \\
 f[i][j-1], & \text{if } s[i]=s[j] \\
-\min_{i \leq k < j} \{f[i][k]+f[k+1][j]\}, & \text{otherwise}
+min_{i ≤ k < j} \{f[i][k]+f[k+1][j]\}, & \text{otherwise}
 \end{cases}
 
 

@@ -72,11 +72,11 @@
 
 执行操作1时，我们只需要调用 `modify(1, l + 1, r + 1)` 即可。
 
-执行操作2时，我们更新s = s + p \times query(1, 1, n)即可。
+执行操作2时，我们更新s = s + p × query(1, 1, n)即可。
 
 执行操作3时，我们只需要将s加入答案数组即可。
 
-时间复杂度O(n + m \times \log n)，空间复杂度O(n)。其中n和m分别为数组 `nums1` 和 `queries` 的长度。
+时间复杂度O(n + m × log n)，空间复杂度O(n)。其中n和m分别为数组 `nums1` 和 `queries` 的长度。
 
 ### **Java**
 

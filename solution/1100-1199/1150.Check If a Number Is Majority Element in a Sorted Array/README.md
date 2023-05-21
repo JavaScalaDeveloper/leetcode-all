@@ -44,13 +44,13 @@
 
 我们注意到，数组nums中的元素是非递减的，也就是说，数组nums中的元素单调递增。因此，我们可以使用二分查找的方法，找到数组nums中第一个大于等于target的元素的下标left，以及第一个大于target的元素的下标right。如果right - left > \frac{n}{2}，则说明数组nums中的元素target出现的次数超过了数组长度的一半，因此返回true，否则返回false。
 
-时间复杂度O(\log n)，空间复杂度O(1)。其中n为数组nums的长度。
+时间复杂度O(log n)，空间复杂度O(1)。其中n为数组nums的长度。
 
 **方法二：二分查找（优化）**
 
 方法一中，我们使用了两次二分查找，分别找到数组nums中第一个大于等于target的元素的下标left，以及第一个大于target的元素的下标right。但是，我们可以使用一次二分查找，找到数组nums中第一个大于等于target的元素的下标left，然后判断nums[left + \frac{n}{2}]是否等于target，如果相等，说明数组nums中的元素target出现的次数超过了数组长度的一半，因此返回true，否则返回false。
 
-时间复杂度O(\log n)，空间复杂度O(1)。其中n为数组nums的长度。
+时间复杂度O(log n)，空间复杂度O(1)。其中n为数组nums的长度。
 
 ### **Java**
 

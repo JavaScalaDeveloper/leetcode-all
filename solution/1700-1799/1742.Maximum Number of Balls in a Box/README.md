@@ -58,7 +58,7 @@
 
 答案就是数组 `cnt` 中的最大值。
 
-时间复杂度O(n \times \log_{10}m)。其中n = highLimit - lowLimit + 1，而m = highLimit。
+时间复杂度O(n × log_{10}m)。其中n = highLimit - lowLimit + 1，而m = highLimit。
 
 ### **Java**
 

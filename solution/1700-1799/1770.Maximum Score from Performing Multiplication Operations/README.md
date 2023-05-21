@@ -59,8 +59,8 @@
 
 函数dfs(i, j)的计算过程如下：
 
--   如果i \geq m或者j \geq m，或者i + j \geq m，说明已经没有元素可以选择了，返回0。
--   否则，我们可以选择 `nums` 数组头部第i个元素，那么能够获取的最大分数为nums[i] \times multipliers[i + j] + dfs(i + 1, j)；或者我们可以选择 `nums` 数组尾部第j个元素，那么能够获取的最大分数为nums[n - j - 1] \times multipliers[i + j] + dfs(i, j + 1)。我们取两者的最大值作为dfs(i, j)的返回值。
+-   如果i ≥ m或者j ≥ m，或者i + j ≥ m，说明已经没有元素可以选择了，返回0。
+-   否则，我们可以选择 `nums` 数组头部第i个元素，那么能够获取的最大分数为nums[i] × multipliers[i + j] + dfs(i + 1, j)；或者我们可以选择 `nums` 数组尾部第j个元素，那么能够获取的最大分数为nums[n - j - 1] × multipliers[i + j] + dfs(i, j + 1)。我们取两者的最大值作为dfs(i, j)的返回值。
 
 我们可以使用记忆化搜索来实现上述递归过程，其中 `f` 数组用于存储函数dfs(i, j)的返回值，防止重复计算。
 
@@ -70,9 +70,9 @@
 
 我们可以将方法一中的记忆化搜索改写为动态规划的形式。
 
-我们用f[i][j]表示取数组nums的前i个元素，以及取数组nums的后j个元素，能够获得的最大分数。初始时f[0][0] = 0，其余元素均为-\infty。答案为\max_{0 \leq i \leq m} f[i][m-i]。
+我们用f[i][j]表示取数组nums的前i个元素，以及取数组nums的后j个元素，能够获得的最大分数。初始时f[0][0] = 0，其余元素均为-\infty。答案为max_{0 ≤ i ≤ m} f[i][m-i]。
 
-考虑f[i][j]，那么当前我们可以选择 `nums` 数组头部的第i个元素，或者选择 `nums` 数组尾部的第j个元素。如果选择了 `nums` 数组头部的第i个元素，那么能够获得的最大分数为f[i-1][j] + nums[i-1] \times multipliers[i+j-1]；如果选择了 `nums` 数组尾部的第j个元素，那么能够获得的最大分数为f[i][j-1] + nums[n-j] \times multipliers[i+j-1]。我们取两者的最大值作为f[i][j]的值。如果i + j = m，我们我们更新答案ans = \max(ans, f[i][j])。
+考虑f[i][j]，那么当前我们可以选择 `nums` 数组头部的第i个元素，或者选择 `nums` 数组尾部的第j个元素。如果选择了 `nums` 数组头部的第i个元素，那么能够获得的最大分数为f[i-1][j] + nums[i-1] × multipliers[i+j-1]；如果选择了 `nums` 数组尾部的第j个元素，那么能够获得的最大分数为f[i][j-1] + nums[n-j] × multipliers[i+j-1]。我们取两者的最大值作为f[i][j]的值。如果i + j = m，我们我们更新答案ans = max(ans, f[i][j])。
 
 最后返回答案ans即可。
 

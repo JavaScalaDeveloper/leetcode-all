@@ -51,23 +51,23 @@
 
 我们不妨记mi和mx分别为-2^{31}和2^{31} - 1，则x的反转结果ans需要满足mi \le ans \le mx。
 
-我们可以通过不断地对x取余来获取x的最后一位数字y，并将y添加到ans的末尾。在添加y之前，我们需要判断ans是否溢出。即判断ans \times 10 + y是否在[mi, mx]的范围内。
+我们可以通过不断地对x取余来获取x的最后一位数字y，并将y添加到ans的末尾。在添加y之前，我们需要判断ans是否溢出。即判断ans × 10 + y是否在[mi, mx]的范围内。
 
-若x \gt 0，那么需要满足ans \times 10 + y \leq mx，即ans \times 10 + y \leq \left \lfloor \frac{mx}{10} \right \rfloor \times 10 + 7。整理得(ans - \left \lfloor \frac{mx}{10} \right \rfloor) \times 10 \leq 7 - y。
+若x > 0，那么需要满足ans × 10 + y ≤ mx，即ans × 10 + y ≤ \left \lfloor \frac{mx}{10} \right \rfloor × 10 + 7。整理得(ans - \left \lfloor \frac{mx}{10} \right \rfloor) × 10 ≤ 7 - y。
 
 下面我们讨论上述不等式成立的条件：
 
--   当ans \lt \left \lfloor \frac{mx}{10} \right \rfloor时，不等式显然成立；
--   当ans = \left \lfloor \frac{mx}{10} \right \rfloor时，不等式成立的充要条件是y \leq 7。如果ans = \left \lfloor \frac{mx}{10} \right \rfloor并且还能继续添加数字，说明此时数字是最高位，即此时y一定不超过2，因此，不等式一定成立；
--   当ans \gt \left \lfloor \frac{mx}{10} \right \rfloor时，不等式显然不成立。
+-   当ans < \left \lfloor \frac{mx}{10} \right \rfloor时，不等式显然成立；
+-   当ans = \left \lfloor \frac{mx}{10} \right \rfloor时，不等式成立的充要条件是y ≤ 7。如果ans = \left \lfloor \frac{mx}{10} \right \rfloor并且还能继续添加数字，说明此时数字是最高位，即此时y一定不超过2，因此，不等式一定成立；
+-   当ans > \left \lfloor \frac{mx}{10} \right \rfloor时，不等式显然不成立。
 
-综上，当x \gt 0时，不等式成立的充要条件是ans \leq \left \lfloor \frac{mx}{10} \right \rfloor。
+综上，当x > 0时，不等式成立的充要条件是ans ≤ \left \lfloor \frac{mx}{10} \right \rfloor。
 
-同理，当x \lt 0时，不等式成立的充要条件是ans \geq \left \lfloor \frac{mi}{10} \right \rfloor。
+同理，当x < 0时，不等式成立的充要条件是ans ≥ \left \lfloor \frac{mi}{10} \right \rfloor。
 
-因此，我们可以通过判断ans是否在[\left \lfloor \frac{mi}{10} \right \rfloor, \left \lfloor \frac{mx}{10} \right \rfloor]的范围内来判断ans是否溢出。若溢出，则返回0。否则，将y添加到ans的末尾，然后将x的最后一位数字去除，即x \gets \left \lfloor \frac{x}{10} \right \rfloor。
+因此，我们可以通过判断ans是否在[\left \lfloor \frac{mi}{10} \right \rfloor, \left \lfloor \frac{mx}{10} \right \rfloor]的范围内来判断ans是否溢出。若溢出，则返回0。否则，将y添加到ans的末尾，然后将x的最后一位数字去除，即x ← \left \lfloor \frac{x}{10} \right \rfloor。
 
-时间复杂度O(\log |x|)，其中|x|为x的绝对值。空间复杂度O(1)。
+时间复杂度O(log |x|)，其中|x|为x的绝对值。空间复杂度O(1)。
 
 ### **Java**
 

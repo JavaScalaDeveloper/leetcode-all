@@ -49,11 +49,11 @@
 
 我们注意到，修车时间越长，修理的汽车数目也越多。因此，我们可以将修车时间作为二分查找的目标，二分查找修车时间的最小值。
 
-我们定义二分查找的左右边界分别为left=0,right=ranks[0] \times cars \times cars。接下来二分枚举修车时间mid，每个机械工可以修理的汽车数目为\lfloor \sqrt{\frac{mid}{r}} \rfloor，其中\lfloor x \rfloor表示向下取整。如果修理的汽车数目大于等于cars，则说明修车时间mid可行，我们将右边界缩小至mid，否则将左边界增大至mid+1。
+我们定义二分查找的左右边界分别为left=0,right=ranks[0] × cars × cars。接下来二分枚举修车时间mid，每个机械工可以修理的汽车数目为\lfloor \sqrt{\frac{mid}{r}} \rfloor，其中\lfloor x \rfloor表示向下取整。如果修理的汽车数目大于等于cars，则说明修车时间mid可行，我们将右边界缩小至mid，否则将左边界增大至mid+1。
 
 最终，我们返回左边界即可。
 
-时间复杂度(n \times \log n)，空间复杂度O(1)。其中n为机械工的数量。
+时间复杂度(n × log n)，空间复杂度O(1)。其中n为机械工的数量。
 
 ### **Java**
 

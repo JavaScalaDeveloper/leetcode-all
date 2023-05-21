@@ -83,15 +83,15 @@ bms.scatter(5, 1); // 返回 False
 
 对于 `gather(k, maxRow)` 操作，我们先用 `query_idx(1, 1, n, k)` 找到第一个满足剩余座位数大于等于k的行，记为i。然后我们用 `query_sum(1, i, i)` 得到该行的剩余座位数，记为s。接下来，我们用 `modify(1, i, s - k)` 将该行的剩余座位数修改为s - k，并向上更新。最后，我们返回[i - 1, m - s]即可。
 
-对于 `scatter(k, maxRow)` 操作，我们先用 `query_sum(1, 1, maxRow)` 统计前maxRow行的剩余座位数，记为s。如果s \lt k，说明没有足够的座位，返回 `false`；否则，我们用 `query_idx(1, 1, maxRow, 1)` 找到第一个满足剩余座位数大于等于1的行，记为i。从该行开始，每次用 `query_sum(1, i, i)` 得到该行的剩余座位数，记为s_i。如果s_i \geq k，我们直接用 `modify(1, i, s_i - k)` 将该行的剩余座位数修改为s_i - k，并向上更新，然后返回 `true`。否则，我们更新k = k - s_i，然后将该行的剩余座位数修改为0，并向上更新。最后，我们返回 `true`。
+对于 `scatter(k, maxRow)` 操作，我们先用 `query_sum(1, 1, maxRow)` 统计前maxRow行的剩余座位数，记为s。如果s < k，说明没有足够的座位，返回 `false`；否则，我们用 `query_idx(1, 1, maxRow, 1)` 找到第一个满足剩余座位数大于等于1的行，记为i。从该行开始，每次用 `query_sum(1, i, i)` 得到该行的剩余座位数，记为s_i。如果s_i ≥ k，我们直接用 `modify(1, i, s_i - k)` 将该行的剩余座位数修改为s_i - k，并向上更新，然后返回 `true`。否则，我们更新k = k - s_i，然后将该行的剩余座位数修改为0，并向上更新。最后，我们返回 `true`。
 
 时间复杂度：
 
 -   初始化的时间复杂度为O(n)。
--   `gather(k, maxRow)` 的时间复杂度为O(\log n)。
--   `scatter(k, maxRow)` 的时间复杂度为O((n + q) \times \log n)。
+-   `gather(k, maxRow)` 的时间复杂度为O(log n)。
+-   `scatter(k, maxRow)` 的时间复杂度为O((n + q) × log n)。
 
-整体时间复杂度为O(n + q \times \log n)，空间复杂度O(n)。其中n和q分别为行数和操作数。
+整体时间复杂度为O(n + q × log n)，空间复杂度O(n)。其中n和q分别为行数和操作数。
 
 ### **Java**
 

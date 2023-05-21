@@ -64,18 +64,18 @@ arr_i = arr_{i + k}
 也即是说，数组arr有一个大小为k的循环节，而由于数组arr是一个循环数组，那么数组arr也有一个长度为n的循环节。换句话说，数组arr上间隔为k，以及间隔为n的元素均相等。即有：
 
 
-arr_i = arr_{i + k \times x + n \times y}
+arr_i = arr_{i + k × x + n × y}
 
 
-根据裴蜀定理，有a \times x + b \times y = gcd(a, b)，因此，有：
+根据裴蜀定理，有a × x + b × y = gcd(a, b)，因此，有：
 
 
-arr_i = arr_{i + k \times x + n \times y} = arr_{i + gcd(k, n)}
+arr_i = arr_{i + k × x + n × y} = arr_{i + gcd(k, n)}
 
 
 因此，数组arr上的元素可以分为gcd(k, n)组，每组的元素间隔为gcd(k, n)，且每一组中的所有元素均相等。对于每一组，我们可以将其元素按照大小排序，然后取中位数，即可将该组中的所有元素变为中位数。对于所有组，我们将其中位数之差的绝对值求和，即为答案。
 
-时间复杂度O(n \times \log n)，空间复杂度O(n)。其中n为数组arr的长度。
+时间复杂度O(n × log n)，空间复杂度O(n)。其中n为数组arr的长度。
 
 ### **Java**
 

@@ -63,7 +63,7 @@ max(f[i - 1][j], f[i][j - 1]), & text1[i - 1] \neq text2[j - 1]
 \end{cases}
 
 
-时间复杂度O(m \times n)，空间复杂度O(m \times n)。其中m和n分别为text1和text2的长度。
+时间复杂度O(m × n)，空间复杂度O(m × n)。其中m和n分别为text1和text2的长度。
 
 ### **Java**
 

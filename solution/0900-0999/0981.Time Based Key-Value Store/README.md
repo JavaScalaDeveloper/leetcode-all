@@ -56,9 +56,9 @@ timeMap.get("foo", 5);         // 返回 "bar2"
 
 我们可以用哈希表ktv记录键值对，其中键为字符串key，值为一个列表，列表中的每个元素为一个二元组(timestamp, value)，表示键key在时间戳timestamp时对应的值为value。
 
-当我们需要查询键key在时间戳timestamp时对应的值时，我们可以通过二分查找的方法在ktv[key]中找到最大的时间戳timestamp'，使得timestamp' \leq timestamp，然后返回对应的值即可。
+当我们需要查询键key在时间戳timestamp时对应的值时，我们可以通过二分查找的方法在ktv[key]中找到最大的时间戳timestamp'，使得timestamp' ≤ timestamp，然后返回对应的值即可。
 
-时间复杂度方面，对于set操作，由于哈希表的插入操作的时间复杂度为O(1)，因此时间复杂度为O(1)。对于get操作，由于哈希表的查找操作的时间复杂度为O(1)，而二分查找的时间复杂度为O(\log n)，因此时间复杂度为O(\log n)。空间复杂度为O(n)，其中n为set操作的次数。
+时间复杂度方面，对于set操作，由于哈希表的插入操作的时间复杂度为O(1)，因此时间复杂度为O(1)。对于get操作，由于哈希表的查找操作的时间复杂度为O(1)，而二分查找的时间复杂度为O(log n)，因此时间复杂度为O(log n)。空间复杂度为O(n)，其中n为set操作的次数。
 
 ### **Java**
 

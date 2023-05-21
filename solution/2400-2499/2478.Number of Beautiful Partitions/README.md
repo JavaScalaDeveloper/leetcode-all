@@ -75,7 +75,7 @@ f[i][j]=\sum_{t=0}^{i-minLength}f[t][j-1]
 f[i][j]=g[i-minLength][j-1]
 
 
-时间复杂度O(n \times k)，空间复杂度O(n \times k)。其中n和k分别是字符串s的长度和分割的段数。
+时间复杂度O(n × k)，空间复杂度O(n × k)。其中n和k分别是字符串s的长度和分割的段数。
 
 ### **Java**
 

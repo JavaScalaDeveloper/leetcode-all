@@ -62,7 +62,7 @@
 
 我们可以用哈希表day记录每个任务下一次可以被执行的时间，初始时day中的所有值都为0，用变量ans记录当前时间。
 
-遍历数组tasks，对于每个任务task，当前时间ans加一，表示从上一次执行任务到现在已经过去了一天，如果此时day[task] \gt ans，说明任务task需要在第day[task]天才能被执行，因此我们更新当前时间ans = max(ans, day[task])。然后更新day[task]的值为ans + space + 1，表示任务task下一次可以被执行的时间为ans + space + 1。
+遍历数组tasks，对于每个任务task，当前时间ans加一，表示从上一次执行任务到现在已经过去了一天，如果此时day[task] > ans，说明任务task需要在第day[task]天才能被执行，因此我们更新当前时间ans = max(ans, day[task])。然后更新day[task]的值为ans + space + 1，表示任务task下一次可以被执行的时间为ans + space + 1。
 
 遍历结束后，将ans返回即可。
 

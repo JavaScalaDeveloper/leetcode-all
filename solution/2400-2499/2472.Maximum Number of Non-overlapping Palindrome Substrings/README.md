@@ -50,8 +50,8 @@
 
 \begin{aligned}
 dfs(i) &= \begin{cases}
-0, & i \geq n \\
-\max\{dfs(i + 1), \max_{j \geq i + k - 1} \{dfs(j + 1) + 1\}\}, & i < n
+0, & i ≥ n \\
+max\{dfs(i + 1), max_{j ≥ i + k - 1} \{dfs(j + 1) + 1\}\}, & i < n
 \end{cases}
 \end{aligned}
 

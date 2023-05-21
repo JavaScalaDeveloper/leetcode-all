@@ -58,7 +58,7 @@ dp[i-1][j], & s[i]\neq t[j]
 \end{cases}
 
 
-时间复杂度O(m\times n)，空间复杂度O(m\times n)。其中m,n分别是字符串 `s` 和 `t` 的长度。
+时间复杂度O(m× n)，空间复杂度O(m× n)。其中m,n分别是字符串 `s` 和 `t` 的长度。
 
 ### **Java**
 

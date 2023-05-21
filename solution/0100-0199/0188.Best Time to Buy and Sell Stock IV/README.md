@@ -41,14 +41,14 @@
 
 -   如果i大于等于n，直接返回0；
 -   第i天可以不进行任何操作，那么dfs(i, j, k) = dfs(i + 1, j, k)；
--   如果k \gt 0，那么第i天可以选择卖出股票，那么dfs(i, j, k) = max(dfs(i + 1, j - 1, 0) + prices[i], dfs(i + 1, j, k))；
--   否则，如果j \gt 0，那么第i天可以选择买入股票，那么dfs(i, j, k) = max(dfs(i + 1, j - 1, 1) - prices[i], dfs(i + 1, j, k))。
+-   如果k > 0，那么第i天可以选择卖出股票，那么dfs(i, j, k) = max(dfs(i + 1, j - 1, 0) + prices[i], dfs(i + 1, j, k))；
+-   否则，如果j > 0，那么第i天可以选择买入股票，那么dfs(i, j, k) = max(dfs(i + 1, j - 1, 1) - prices[i], dfs(i + 1, j, k))。
 
 取上述三种情况的最大值即为dfs(i, j, k)的值。
 
 过程中，我们可以使用记忆化搜索的方法，将每次计算的结果保存下来，避免重复计算。
 
-时间复杂度O(n \times k)，空间复杂度O(n \times k)。其中n和k分别为数组prices的长度和k的值。
+时间复杂度O(n × k)，空间复杂度O(n × k)。其中n和k分别为数组prices的长度和k的值。
 
 ### **Java**
 

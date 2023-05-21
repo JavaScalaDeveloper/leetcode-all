@@ -47,22 +47,22 @@
 那么有：
 
 
-dp[i][j] = \min(dp[i - 1][j], dp[i - 1][j - v] + 1, dp[i - 1][j - 2\times v] + 2, ... , dp[i - 1][j - k\times v] + k)
+dp[i][j] = min(dp[i - 1][j], dp[i - 1][j - v] + 1, dp[i - 1][j - 2× v] + 2, ... , dp[i - 1][j - k× v] + k)
 
 
 令j=j-v，则有：
 
 
-dp[i][j - v] = \min( dp[i - 1][j - v], dp[i - 1][j - 2\times v] + 1, ... , dp[i - 1][j - k\times v] + k - 1)
+dp[i][j - v] = min( dp[i - 1][j - v], dp[i - 1][j - 2× v] + 1, ... , dp[i - 1][j - k× v] + k - 1)
 
 
 因此，我们可以得到状态转移方程：
 
 
-dp[i][j] = \min(dp[i - 1][j], dp[i][j - v] + 1)
+dp[i][j] = min(dp[i - 1][j], dp[i][j - v] + 1)
 
 
-时间复杂度O(m\times n)，空间复杂度O(m\times n)。其中m和n分别为硬币数量和总金额。
+时间复杂度O(m× n)，空间复杂度O(m× n)。其中m和n分别为硬币数量和总金额。
 
 动态规划——完全背包问题朴素做法：
 

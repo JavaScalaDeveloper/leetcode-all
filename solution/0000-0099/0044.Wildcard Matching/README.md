@@ -60,12 +60,12 @@
 dp[i][j]=
 \begin{cases}
 dp[i-1][j-1] & \text{if } s[i-1]=p[j-1] \text{ or } p[j-1]=\text{?} \\
-dp[i-1][j-1] \lor dp[i-1][j] \lor dp[i][j-1] & \text{if } p[j-1]=\text{*} \\
+dp[i-1][j-1] OR dp[i-1][j] OR dp[i][j-1] & \text{if } p[j-1]=\text{*} \\
 \text{false} & \text{otherwise}
 \end{cases}
 
 
-时间复杂度O(m\times n)，空间复杂度O(m\times n)。
+时间复杂度O(m× n)，空间复杂度O(m× n)。
 
 ### **Java**
 

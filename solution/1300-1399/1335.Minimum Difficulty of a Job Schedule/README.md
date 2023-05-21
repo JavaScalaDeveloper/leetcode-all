@@ -64,12 +64,12 @@
 考虑第j天的工作安排，我们可以枚举第j天完成的工作[k,..i]，那么有状态转移方程：
 
 
-f[i][j] = \min_{k \in [1,i]} \{f[k-1][j-1] + \max_{k \leq t \leq i} \{jobDifficulty[t-1]\}\}
+f[i][j] = min_{k \in [1,i]} \{f[k-1][j-1] + max_{k ≤ t ≤ i} \{jobDifficulty[t-1]\}\}
 
 
 最终答案即为f[n][d]。
 
-时间复杂度O(n^2 \times d)，空间复杂度O(n \times d)。其中n和d分别为工作数量和需要计划的天数。
+时间复杂度O(n^2 × d)，空间复杂度O(n × d)。其中n和d分别为工作数量和需要计划的天数。
 
 ### **Java**
 

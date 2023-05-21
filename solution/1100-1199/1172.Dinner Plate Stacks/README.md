@@ -90,7 +90,7 @@ D.pop()            // 返回 -1。仍然没有栈。
 
 -   我们直接调用 `popAtStack(stacks.length - 1)` 即可。
 
-时间复杂度(n \times \log n)，空间复杂度O(n)。其中n为操作次数。
+时间复杂度(n × log n)，空间复杂度O(n)。其中n为操作次数。
 
 ### **Java**
 

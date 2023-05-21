@@ -58,22 +58,22 @@
 
 我们不妨假设移动的位置区间为[l,r]，开始位置为startPos，来看看如何算出移动的最小步数。根据startPos所处的位置，我们可以分为三种情况：
 
-1. 如果startPos \leq l，那么就是从startPos一直向右移动到r。移动的最小步数为r - startPos；
-2. 如果startPos \geq r，那么就是从startPos一直向左移动到l。移动的最小步数为startPos - l；
-3. 如果l \lt startPos \lt r，那么可以从startPos向左移动到l，再向右移动到r；也可以从startPos向右移动到r，再向左移动到l。移动的最小步数为r - l + \min(\lvert startPos - l \rvert, \lvert r - startPos \rvert)。
+1. 如果startPos ≤ l，那么就是从startPos一直向右移动到r。移动的最小步数为r - startPos；
+2. 如果startPos ≥ r，那么就是从startPos一直向左移动到l。移动的最小步数为startPos - l；
+3. 如果l < startPos < r，那么可以从startPos向左移动到l，再向右移动到r；也可以从startPos向右移动到r，再向左移动到l。移动的最小步数为r - l + min(\lvert startPos - l \rvert, \lvert r - startPos \rvert)。
 
-以上三种情况可以统一用式子r - l + \min(\lvert startPos - l \rvert, \lvert r - startPos \rvert)表示。
+以上三种情况可以统一用式子r - l + min(\lvert startPos - l \rvert, \lvert r - startPos \rvert)表示。
 
 假设我们固定区间右端点r，向右移动左端点l，我们来看看最小移动步数是怎么变化的。
 
-1. 如果startPos \leq l，随着l的增大，最小步数不会发生变化。
-2. 如果startPos \gt l，随着l的增大，最小步数会减小。
+1. 如果startPos ≤ l，随着l的增大，最小步数不会发生变化。
+2. 如果startPos > l，随着l的增大，最小步数会减小。
 
 因此，随着l的增大，最小移动步数一定是非严格单调递减的。基于此，我们可以使用双指针的方法，找出所有符合条件的最大区间，然后取所有符合条件的区间中水果总数最大的一个作为答案。
 
 具体地，我们用两个指针i和j分别指向区间的左右下标，初始时i = j = 0。另外用一个变量s记录区间内的水果总数，初始时s = 0。
 
-每次我们将j加入区间中，然后更新s = s + fruits[j][1]。如果此时区间内的最小步数fruits[j][0] - fruits[i][0] + \min(\lvert startPos - fruits[i][0] \rvert, \lvert startPos - fruits[j][0] \rvert)大于k，那么我们就将i循环向右移动，直到i \gt j或者区间内的最小步数小于等于k。此时我们更新答案ans = \max(ans, s)。继续移动j，直到j到达数组末尾。
+每次我们将j加入区间中，然后更新s = s + fruits[j][1]。如果此时区间内的最小步数fruits[j][0] - fruits[i][0] + min(\lvert startPos - fruits[i][0] \rvert, \lvert startPos - fruits[j][0] \rvert)大于k，那么我们就将i循环向右移动，直到i > j或者区间内的最小步数小于等于k。此时我们更新答案ans = max(ans, s)。继续移动j，直到j到达数组末尾。
 
 最后返回答案即可。
 

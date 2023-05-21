@@ -56,7 +56,7 @@ patterns 中有 2 个字符串作为子字符串出现在 word 中。
 
 遍历结束后，返回答案。
 
-时间复杂度O(n \times m)，空间复杂度O(1)。其中n和m分别为patterns和word的长度。
+时间复杂度O(n × m)，空间复杂度O(1)。其中n和m分别为patterns和word的长度。
 
 ### **Java**
 

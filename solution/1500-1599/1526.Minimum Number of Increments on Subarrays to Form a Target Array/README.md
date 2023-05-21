@@ -57,7 +57,7 @@
 
 我们定义f[i]表示得到target[0,..i]的最少操作次数，初始时f[0] = target[0]。
 
-对于target[i]，如果target[i] \leq target[i-1]，则f[i] = f[i-1]；否则f[i] = f[i-1] + target[i] - target[i-1]。
+对于target[i]，如果target[i] ≤ target[i-1]，则f[i] = f[i-1]；否则f[i] = f[i-1] + target[i] - target[i-1]。
 
 最终答案即为f[n-1]。
 

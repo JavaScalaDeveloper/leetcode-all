@@ -59,8 +59,8 @@
 
 
 \begin{cases}
-f[i][0]=\max(f[i-1][0],f[i-1][1]-prices[i])\\
-f[i][1]=\max(f[i-1][1],f[i-1][0]+prices[i])
+f[i][0]=max(f[i-1][0],f[i-1][1]-prices[i])\\
+f[i][1]=max(f[i-1][1],f[i-1][0]+prices[i])
 \end{cases}
 
 

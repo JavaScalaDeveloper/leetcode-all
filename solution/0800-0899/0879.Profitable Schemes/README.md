@@ -53,14 +53,14 @@
 
 函数dfs(i, j, k)的执行过程如下：
 
--   如果i = n，表示所有工作都已经考虑过了，如果k \geq minProfit，则方案数为1，否则方案数为0；
--   如果i \lt n，我们可以选择不选择第i个工作，此时方案数为dfs(i + 1, j, k)；如果j + group[i] \leq n，我们也可以选择第i个工作，此时方案数为dfs(i + 1, j + group[i], \min(k + profit[i], minProfit))。这里我们将利润上限限制在minProfit，是因为利润超过minProfit对我们的答案没有任何影响。
+-   如果i = n，表示所有工作都已经考虑过了，如果k ≥ minProfit，则方案数为1，否则方案数为0；
+-   如果i < n，我们可以选择不选择第i个工作，此时方案数为dfs(i + 1, j, k)；如果j + group[i] ≤ n，我们也可以选择第i个工作，此时方案数为dfs(i + 1, j + group[i], min(k + profit[i], minProfit))。这里我们将利润上限限制在minProfit，是因为利润超过minProfit对我们的答案没有任何影响。
 
 最后返回dfs(0, 0, 0)即可。
 
 为了避免重复计算，我们可以使用记忆化搜索的方法，用一个三维数组f记录所有的dfs(i, j, k)的结果。当我们计算出dfs(i, j, k)的值后，我们将其存入f[i][j][k]中。调用dfs(i, j, k)时，如果f[i][j][k]已经被计算过，我们直接返回f[i][j][k]即可。
 
-时间复杂度O(m \times n \times minProfit)，空间复杂度O(m \times n \times minProfit)。其中m和n分别为工作的数量和员工的数量，而minProfit为至少产生的利润。
+时间复杂度O(m × n × minProfit)，空间复杂度O(m × n × minProfit)。其中m和n分别为工作的数量和员工的数量，而minProfit为至少产生的利润。
 
 **方法二：动态规划**
 
@@ -70,7 +70,7 @@
 
 最终的答案即为f[m][n][minProfit]。
 
-时间复杂度O(m \times n \times minProfit)，空间复杂度O(m \times n \times minProfit)。其中m和n分别为工作的数量和员工的数量，而minProfit为至少产生的利润。
+时间复杂度O(m × n × minProfit)，空间复杂度O(m × n × minProfit)。其中m和n分别为工作的数量和员工的数量，而minProfit为至少产生的利润。
 
 ### **Java**
 

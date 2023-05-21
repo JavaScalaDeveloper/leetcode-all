@@ -42,10 +42,10 @@
 
 定义dfs(i)为输出i个字符的最少操作次数。初始化 `dfs(1)=0`。
 
-当i\gt 1时，有：
+当i> 1时，有：
 
 
-dfs(i)=\min _{j \mid i} (dfs(\frac{i}{j})+j, i), 2\leq j\lt i
+dfs(i)=min _{j \mid i} (dfs(\frac{i}{j})+j, i), 2≤ j< i
 
 
 时间复杂度O(n\sqrt{n})。
@@ -55,7 +55,7 @@ dfs(i)=\min _{j \mid i} (dfs(\frac{i}{j})+j, i), 2\leq j\lt i
 记忆化搜索也可以改成动态规划。
 
 
-dp[i]=\min _{j \mid i} (dp[\frac{i}{j}]+j, i), 2\leq j\lt i
+dp[i]=min _{j \mid i} (dp[\frac{i}{j}]+j, i), 2≤ j< i
 
 
 时间复杂度O(n\sqrt{n})。

@@ -40,7 +40,7 @@
 
 
 \begin{aligned}
-s + (n - 1) \times k &= n \times x \\
+s + (n - 1) × k &= n × x \\
 x &= mi + k \\
 \end{aligned}
 
@@ -49,13 +49,13 @@ x &= mi + k \\
 
 
 \begin{aligned}
-s + (n - 1) \times k &= n \times (mi + k) \\
-s + (n - 1) \times k &= n \times mi + n \times k \\
-k &= s - n \times mi \\
+s + (n - 1) × k &= n × (mi + k) \\
+s + (n - 1) × k &= n × mi + n × k \\
+k &= s - n × mi \\
 \end{aligned}
 
 
-因此，最小操作次数为s - n \times mi。
+因此，最小操作次数为s - n × mi。
 
 时间复杂度O(n)，空间复杂度O(1)。其中n为数组的长度。
 

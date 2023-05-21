@@ -52,7 +52,7 @@
 
 最后返回f[n][budget]即可。
 
-时间复杂度O(n \times budget)，空间复杂度O(n \times budget)。其中n为数组长度。
+时间复杂度O(n × budget)，空间复杂度O(n × budget)。其中n为数组长度。
 
 我们可以发现，对于每一行，我们只需要用到上一行的值，因此可以将空间复杂度优化到O(budget)。
 

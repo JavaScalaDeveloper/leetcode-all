@@ -53,7 +53,7 @@
 
 遍历数组 `nums`，对于每个i，枚举所有j，如果i \neq j且nums[i] + nums[j] = target，则答案加一。
 
-时间复杂度O(n^2 \times m)，空间复杂度O(1)。其中n和m分别为数组 `nums` 和字符串 `target` 的长度。
+时间复杂度O(n^2 × m)，空间复杂度O(1)。其中n和m分别为数组 `nums` 和字符串 `target` 的长度。
 
 **方法二：哈希表**
 

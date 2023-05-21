@@ -55,13 +55,13 @@
 
 接下来，遍历每个查询queries[i]，我们需要将所有大于queries[i]的元素减小到queries[i]，将所有小于queries[i]的元素增大到queries[i]。
 
-我们可以通过二分查找找到数组nums中第一个大于queries[i]的元素的下标i，则有n-i个元素需要减小到queries[i]，这些元素的和为s[n]-s[i]，这些元素的和需要减去n-i个queries[i]，因此，这些元素减小到queries[i]的总操作次数为s[n]-s[i]-(n-i)\times queries[i]。
+我们可以通过二分查找找到数组nums中第一个大于queries[i]的元素的下标i，则有n-i个元素需要减小到queries[i]，这些元素的和为s[n]-s[i]，这些元素的和需要减去n-i个queries[i]，因此，这些元素减小到queries[i]的总操作次数为s[n]-s[i]-(n-i)× queries[i]。
 
-同理，我们可以找到数组nums中第一个大于等于queries[i]的元素的下标i，则有i个元素需要增大到queries[i]，这些元素的和为s[i]，因此，这些元素增大到queries[i]的总操作次数为queries[i]\times i-s[i]。
+同理，我们可以找到数组nums中第一个大于等于queries[i]的元素的下标i，则有i个元素需要增大到queries[i]，这些元素的和为s[i]，因此，这些元素增大到queries[i]的总操作次数为queries[i]× i-s[i]。
 
-最后，将这两个总操作次数相加，即为将数组nums中所有元素变成queries[i]的最少操作次数，即ans[i]=s[n]-s[i]-(n-i)\times queries[i]+queries[i]\times i-s[i]。
+最后，将这两个总操作次数相加，即为将数组nums中所有元素变成queries[i]的最少操作次数，即ans[i]=s[n]-s[i]-(n-i)× queries[i]+queries[i]× i-s[i]。
 
-时间复杂度O(n \times \log n)，空间复杂度O(n)。其中n为数组nums的长度。
+时间复杂度O(n × log n)，空间复杂度O(n)。其中n为数组nums的长度。
 
 ### **Java**
 

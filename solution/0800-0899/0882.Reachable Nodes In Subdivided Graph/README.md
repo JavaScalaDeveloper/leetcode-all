@@ -68,11 +68,11 @@
 
 然后，我们遍历数组dist，统计其中小于等于maxMoves的节点个数，也就是我们可以到达的节点数。不过，这并不是最终答案，我们还需要加上新节点中符合条件的节点个数。
 
-我们可以发现，如果我们能在dist[u]步到达节点u（其中dist[u] \leq maxMoves），并且节点u到节点v之间有cnt个新节点，那么我们能通过节点u到达的新节点个数a=\min(cnt, maxMoves - dist[u])。同理，我们能通过节点v到达的新节点个数b=\min(cnt, maxMoves - dist[v])。那么，我们能到达节点u和节点v之间的新节点个数为\min(cnt, a + b)。
+我们可以发现，如果我们能在dist[u]步到达节点u（其中dist[u] ≤ maxMoves），并且节点u到节点v之间有cnt个新节点，那么我们能通过节点u到达的新节点个数a=min(cnt, maxMoves - dist[u])。同理，我们能通过节点v到达的新节点个数b=min(cnt, maxMoves - dist[v])。那么，我们能到达节点u和节点v之间的新节点个数为min(cnt, a + b)。
 
 因此，我们再遍历所有的边，统计其中能到达的新节点个数，累加到答案中即可。
 
-时间复杂度O(n + m \times \log n)，其中m和n分别为边数和节点数。
+时间复杂度O(n + m × log n)，其中m和n分别为边数和节点数。
 
 ### **Java**
 
