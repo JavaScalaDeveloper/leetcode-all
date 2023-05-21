@@ -15,7 +15,7 @@
 
 <p>给你 <code>m</code>、<code>n</code> 和 <code>indices</code> 。请你在执行完所有 <code>indices</code> 指定的增量操作后，返回矩阵中 <strong>奇数值单元格</strong> 的数目。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,7 +39,7 @@
 <strong>解释：</strong>最后的矩阵是 [[2,2],[2,2]]，里面没有奇数。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -50,7 +50,7 @@
 	<li><code>0 <= c<sub>i</sub> < n</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>你可以设计一个时间复杂度为 <code>O(n + m + indices.length)</code> 且仅用 <code>O(n + m)</code> 额外空间的算法来解决此问题吗？</p>
 

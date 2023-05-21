@@ -17,6 +17,9 @@ package com.solution._0700;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
+    public static void main(String[] args) {
+
+    }
     public TreeNode searchBST(TreeNode root, int val) {
         if (root == null || root.val == val) {
             return root;

@@ -20,7 +20,7 @@
 
 <p>给你一个整数数组 <code>destination</code> 和一个整数 <code>k</code> ，请你返回可以为<em> </em>Bob<em> </em>提供前往目的地 <code>destination</code> 导航的<strong> 按字典序排列后的第 <code>k</code> 条最小指令 </strong>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,7 +51,7 @@
 <strong>输出：</strong>"HHVVH"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

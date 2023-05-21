@@ -8,7 +8,7 @@
 
 <p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
 
-<p> </p>
+
 
 <p><strong>说明:</strong></p>
 
@@ -29,7 +29,7 @@ for (int i = 0; i < len; i++) {
 }
 </pre>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,7 +47,7 @@ for (int i = 0; i < len; i++) {
 <strong>解释：</strong>函数应该返回新的长度 <strong><code>5</code></strong>, 并且 nums 中的前五个元素为 <strong><code>0</code></strong>, <strong><code>1</code></strong>, <strong><code>3</code></strong>, <strong><code>0</code></strong>, <strong>4</strong>。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

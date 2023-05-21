@@ -11,7 +11,7 @@
 	<li><code>bool addCar(int carType)</code> 检查是否有 <code>carType</code> 对应的停车位。 <code>carType</code> 有三种类型：大，中，小，分别用数字 <code>1</code>， <code>2</code> 和 <code>3</code> 表示。<strong>一辆车只能停在</strong> <strong> </strong><code>carType</code> 对应尺寸的停车位中。如果没有空车位，请返回 <code>false</code> ，否则将该车停入车位并返回 <code>true</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@ parkingSystem.addCar(3); // 返回 false ，因为没有空的小车位
 parkingSystem.addCar(1); // 返回 false ，因为没有空的大车位，唯一一个大车位已经被占据了
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

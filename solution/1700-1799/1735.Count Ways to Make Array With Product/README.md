@@ -6,7 +6,7 @@
 
 <p>请你返回一个整数数组<em> </em><code>answer</code>，满足<em> </em><code>answer.length == queries.length</code> ，其中<em> </em><code>answer[i]</code>是第<em> </em><code>i</code> 个查询的结果。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,7 +26,7 @@
 <b>输出：</b>[1,2,3,10,5]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

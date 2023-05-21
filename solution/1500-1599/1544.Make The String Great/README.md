@@ -17,7 +17,7 @@
 
 <p><strong>注意：</strong>空字符串也属于整理好的字符串，尽管其中没有任何字符。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,7 +44,7 @@
 <strong>输出：</strong>"s"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -17,7 +17,7 @@
 	<li>如果 <code>x < 0</code> ，那么值为 <code>-x</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1937.Maximum%20Number%20of%20Points%20with%20Cost/images/screenshot-2021-07-12-at-13-40-26-diagram-drawio-diagrams-net.png" style="width: 300px; height: 300px;" />
@@ -43,7 +43,7 @@
 你的最终得分为 12 - 1 = 11 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

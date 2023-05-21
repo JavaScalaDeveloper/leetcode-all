@@ -8,7 +8,7 @@
 
 <p>注意，如果 <code>x >= 0</code> ，那么 <code>abs(x)</code> 等于 <code>x</code> ；否则，等于 <code>-x</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,7 +25,7 @@
 <strong>输出：</strong>1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

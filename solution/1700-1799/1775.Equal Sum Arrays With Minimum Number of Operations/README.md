@@ -8,7 +8,7 @@
 
 <p>请你返回使 <code>nums1</code> 中所有数的和与 <code>nums2</code> 中所有数的和相等的最少操作次数。如果无法使两个数组的和相等，请返回 <code>-1</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,7 +37,7 @@
 - 将 nums2[0] 变为 4 。 nums1 = [2,2], nums2 = [<strong>4</strong>] 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

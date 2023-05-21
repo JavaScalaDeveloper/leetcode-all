@@ -10,7 +10,7 @@
 
 <p>两个闭区间的 <strong>交集</strong> 是一组实数，要么为空集，要么为闭区间。例如，<code>[1, 3]</code> 和 <code>[2, 4]</code> 的交集为 <code>[2, 3]</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0986.Interval%20List%20Intersections/images/interval1.png" style="width: 700px; height: 194px;" />
@@ -40,7 +40,7 @@
 <strong>输出：</strong>[[3,7]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

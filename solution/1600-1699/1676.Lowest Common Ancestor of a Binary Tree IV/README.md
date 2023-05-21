@@ -6,7 +6,7 @@
 
 <p>我们扩展<a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor" target="_blank">二叉树的最近公共祖先节点在维基百科上的定义</a>：“对于任意合理的 <code>i</code> 值， <code>n</code> 个节点 <code>p<sub>1</sub></code> 、 <code>p<sub>2</sub></code>、...、 <code>p<sub>n</sub></code> 在二叉树 <code>T</code> 中的最近公共祖先节点是<strong>后代</strong>中包含所有节点 <code>p<sub>i</sub></code> 的最深节点（我们允许一个节点是其自身的后代）”。一个节点 <code>x</code> 的后代节点是节点 <code>x</code> 到某一叶节点间的路径中的节点 <code>y</code>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1676.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20IV/images/binarytree.png">
@@ -37,7 +37,7 @@
 <strong>解释:</strong> 树中所有节点的最近公共祖先是根节点。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

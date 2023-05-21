@@ -13,7 +13,7 @@
 
 <p>如果存在一个整数 <code>n</code> ，令整数 <code>x</code> 符合 <code>x = n * k</code> ，则称 <code>x</code> 是 <code>k</code> 的一个倍数。<code>0</code> 始终视为 <code>k</code> 的一个倍数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,7 +38,7 @@
 <strong>输出：</strong>false
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

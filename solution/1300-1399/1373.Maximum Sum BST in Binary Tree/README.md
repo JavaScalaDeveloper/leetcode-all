@@ -12,7 +12,7 @@
 	<li>任意节点的左子树和右子树都是二叉搜索树。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -56,7 +56,7 @@
 <strong>输出：</strong>7
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

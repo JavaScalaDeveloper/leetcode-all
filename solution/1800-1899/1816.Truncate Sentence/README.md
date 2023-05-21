@@ -10,7 +10,7 @@
 
 <p>给你一个句子 <code>s</code>​​​​​​ 和一个整数 <code>k</code>​​​​​​ ，请你将 <code>s</code>​​ <strong>截断</strong> ​，​​​使截断后的句子仅含 <strong>前</strong> <code>k</code>​​​​​​ 个单词。返回 <strong>截断</strong> <code>s</code>​​​​<em>​​ </em>后得到的句子<em>。</em></p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,7 +37,7 @@ s 中的单词为 ["What", "is" "the", "solution", "to", "this", "problem"]
 <strong>输出：</strong>"chopper is not a tanuki"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

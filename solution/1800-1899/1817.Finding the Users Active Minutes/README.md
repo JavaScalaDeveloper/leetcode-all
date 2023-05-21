@@ -12,7 +12,7 @@
 
 <p>返回上面描述的答案数组<i> </i><code>answer</code><i> </i>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,7 +37,7 @@ ID=2 的用户执行操作的分钟分别是：2 和 3 。因此，该用户的�
 因此，answer[1] = 1 ，answer[2] = 1 ，其余的值都是 0
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

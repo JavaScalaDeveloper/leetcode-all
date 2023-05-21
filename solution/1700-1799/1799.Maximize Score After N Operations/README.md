@@ -16,7 +16,7 @@
 
 <p>函数 <code>gcd(x, y)</code> 是 <code>x</code> 和 <code>y</code> 的最大公约数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,7 +42,7 @@
 (1 * gcd(1, 5)) + (2 * gcd(2, 4)) + (3 * gcd(3, 6)) = 1 + 4 + 9 = 14
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

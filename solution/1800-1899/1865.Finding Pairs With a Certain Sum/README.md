@@ -17,7 +17,7 @@
 	<li><code>int count(int tot)</code> 返回满足 <code>nums1[i] + nums2[j] == tot</code> 的下标对 <code>(i, j)</code> 数目。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -39,7 +39,7 @@ findSumPairs.add(1, 1); // 此时 nums2 = [<code>2</code>,<em><strong>5</strong>
 findSumPairs.count(7);  // 返回 11 ；下标对 (2,1), (2,2), (2,4), (3,1), (3,2), (3,4), (4,1), (4,2), (4,4) 满足 2 + 5 = 7 ，下标对 (5,3), (5,5) 满足 3 + 4 = 7
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

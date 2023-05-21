@@ -12,7 +12,7 @@
 
 <p>如果可以，则返回 <strong>翻转的</strong> 所有节点的值的列表。你可以按任何顺序返回答案。如果不能，则返回列表 <code>[-1]</code>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0971.Flip%20Binary%20Tree%20To%20Match%20Preorder%20Traversal/images/1219-01.png" style="width: 150px; height: 205px;" />
@@ -37,7 +37,7 @@
 <strong>解释：</strong>先序遍历已经匹配预期行程，所以不需要翻转节点。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

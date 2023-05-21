@@ -10,7 +10,7 @@
 
 <p>返回从节点 <code>1</code> 出发到节点 <code>n</code> 的 <strong>受限路径数</strong> 。由于数字可能很大，请返回对 <code>10<sup>9</sup> + 7</code> <strong>取余</strong> 的结果。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1700-1799/1786.Number%20of%20Restricted%20Paths%20From%20First%20to%20Last%20Node/images/restricted_paths_ex1.png" style="width: 351px; height: 341px;" />
@@ -30,7 +30,7 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>每个圆包含黑色的节点编号和蓝色的 distanceToLastNode 值。唯一一条受限路径是：1 --> 3 --> 7 。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

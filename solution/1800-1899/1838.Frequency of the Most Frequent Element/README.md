@@ -8,7 +8,7 @@
 
 <p>执行最多 <code>k</code> 次操作后，返回数组中最高频元素的 <strong>最大可能频数</strong> <em>。</em></p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,7 +36,7 @@
 <strong>输出：</strong>1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

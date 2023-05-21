@@ -6,7 +6,7 @@
 
 <p><strong>从 0 开始的排列</strong> <code>nums</code> 是一个由 <code>0</code> 到 <code>nums.length - 1</code>（<code>0</code> 和 <code>nums.length - 1</code> 也包含在内）的不同整数组成的数组。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,7 +26,7 @@ ans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]]
     = [nums[5], nums[0], nums[1], nums[2], nums[3], nums[4]]
     = [4,5,0,1,2,3]</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

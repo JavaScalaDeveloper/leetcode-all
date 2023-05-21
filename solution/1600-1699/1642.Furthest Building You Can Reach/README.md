@@ -14,7 +14,7 @@
 </ul>
 如果以最佳方式使用给定的梯子和砖块，返回你可以到达的最远建筑物的下标（下标<strong> 从 0 开始 </strong>）。
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1642.Furthest%20Building%20You%20Can%20Reach/images/q4.gif" style="width: 562px; height: 561px;" />
@@ -43,7 +43,7 @@
 <strong>输出：</strong>3
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

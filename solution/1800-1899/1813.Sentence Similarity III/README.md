@@ -8,7 +8,7 @@
 
 <p>给你两个句子 <code>sentence1</code> 和 <code>sentence2</code> ，如果<em> </em><code>sentence1</code> 和<em> </em><code>sentence2</code> 是相似的，请你返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,7 +37,7 @@
 <b>输出：</b>false
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

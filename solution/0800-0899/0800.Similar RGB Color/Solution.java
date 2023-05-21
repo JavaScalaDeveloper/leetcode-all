@@ -2,6 +2,9 @@ package com.solution._0800;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
+    public static void main(String[] args) {
+        
+    }
     public String similarRGB(String color) {
         String a = color.substring(1, 3), b = color.substring(3, 5), c = color.substring(5, 7);
         return "#" + f(a) + f(b) + f(c);

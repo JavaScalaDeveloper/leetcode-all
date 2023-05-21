@@ -1,7 +1,24 @@
 package com.solution._0480;
 import change.datastructure.*;
 import java.util.*;
-public class MedianFinder {
+public class Solution {
+    public double[] medianSlidingWindow(int[] nums, int k) {
+        MedianFinder finder = new MedianFinder(k);
+        for (int i = 0; i < k; ++i) {
+            finder.addNum(nums[i]);
+        }
+        int n = nums.length;
+        double[] ans = new double[n - k + 1];
+        ans[0] = finder.findMedian();
+        for (int i = k; i < n; ++i) {
+            finder.addNum(nums[i]);
+            finder.removeNum(nums[i - k]);
+            ans[i - k + 1] = finder.findMedian();
+        }
+        return ans;
+    }
+}
+class MedianFinder {
     private PriorityQueue<Integer> small = new PriorityQueue<>(Comparator.reverseOrder());
     private PriorityQueue<Integer> large = new PriorityQueue<>();
     private Map<Integer, Integer> delayed = new HashMap<>();
@@ -65,26 +82,5 @@ public class MedianFinder {
             ++smallSize;
             prune(large);
         }
-    }
-}
-
-package com.solution._0480;
-import change.datastructure.*;
-import java.util.*;
-public class Solution {
-    public double[] medianSlidingWindow(int[] nums, int k) {
-        MedianFinder finder = new MedianFinder(k);
-        for (int i = 0; i < k; ++i) {
-            finder.addNum(nums[i]);
-        }
-        int n = nums.length;
-        double[] ans = new double[n - k + 1];
-        ans[0] = finder.findMedian();
-        for (int i = k; i < n; ++i) {
-            finder.addNum(nums[i]);
-            finder.removeNum(nums[i - k]);
-            ans[i - k + 1] = finder.findMedian();
-        }
-        return ans;
     }
 }

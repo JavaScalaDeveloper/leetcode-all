@@ -10,7 +10,7 @@
 
 <p>给你整数 <code>n</code> 和数组 <code>roads</code>，返回整个基础设施网络的 <strong>最大网络秩</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,7 +40,7 @@
 <strong>解释：</strong>2 和 5 的网络秩为 5，注意并非所有的城市都需要连接起来。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

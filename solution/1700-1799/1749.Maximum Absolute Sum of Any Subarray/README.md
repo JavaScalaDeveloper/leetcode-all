@@ -13,7 +13,7 @@
 	<li>如果 <code>x</code> 是非负整数，那么 <code>abs(x) = x</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@
 <b>解释：</b>子数组 [-5,1,-4] 和的绝对值最大，为 abs(-5+1-4) = abs(-8) = 8 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

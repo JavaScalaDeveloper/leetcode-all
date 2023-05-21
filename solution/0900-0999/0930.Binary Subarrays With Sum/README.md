@@ -6,7 +6,7 @@
 
 <p><strong>子数组</strong> 是数组的一段连续部分。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>输出：</strong>15
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -6,7 +6,7 @@
 
 <p>给你一个整数 <code>n</code> ，请你返回满足<em> </em><code>1 &lt;= a, b, c &lt;= n</code> 的 <strong>平方和三元组</strong> 的数目。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,7 +22,7 @@
 <b>解释：</b>平方和三元组为 (3,4,5)，(4,3,5)，(6,8,10) 和 (8,6,10) 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

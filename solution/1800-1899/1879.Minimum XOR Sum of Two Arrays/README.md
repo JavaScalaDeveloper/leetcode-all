@@ -14,7 +14,7 @@
 
 <p>请你返回重新排列之后的 <strong>异或值之和</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@
 异或值之和为 (1 XOR 5) + (0 XOR 4) + (3 XOR 3) = 4 + 4 + 0 = 8 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

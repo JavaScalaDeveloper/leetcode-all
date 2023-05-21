@@ -7,7 +7,7 @@
 <ul>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>输出：</strong>[4,9,9,49,121]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -34,7 +34,7 @@
 	<li><code>nums</code> 已按 <strong>非递减顺序</strong> 排序</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong></p>
 

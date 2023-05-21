@@ -8,7 +8,7 @@
 
 <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0119.Pascal%27s%20Triangle%20II/images/1626927345-DZmfxB-PascalTriangleAnimated2.gif" /></p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -31,7 +31,7 @@
 <strong>输出:</strong> [1,1]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -39,7 +39,7 @@
 	<li><code>0 <= rowIndex <= 33</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong></p>
 

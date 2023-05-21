@@ -4,7 +4,7 @@
 
 <p>在一个由 <code>'0'</code> 和 <code>'1'</code> 组成的二维矩阵内，找到只包含 <code>'1'</code> 的最大正方形，并返回其面积。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0221.Maximal%20Square/images/max1grid.jpg" style="width: 400px; height: 319px;" />
@@ -27,7 +27,7 @@
 <strong>输出：</strong>0
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

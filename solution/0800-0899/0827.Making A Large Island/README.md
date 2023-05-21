@@ -8,7 +8,7 @@
 
 <p><strong>岛屿</strong> 由一组上、下、左、右四个方向相连的 <code>1</code> 形成。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -32,7 +32,7 @@
 <strong>输出:</strong> 4
 <strong>解释:</strong> 没有0可以让我们变成1，面积依然为 4。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

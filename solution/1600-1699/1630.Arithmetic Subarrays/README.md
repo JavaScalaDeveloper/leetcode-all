@@ -18,7 +18,7 @@
 
 <p>返回<em> </em><code>boolean</code> 元素构成的答案列表 <code>answer</code> 。如果子数组 <code>nums[l[i]], nums[l[i]+1], ... , nums[r[i]]</code> 可以 <strong>重新排列</strong> 形成 <strong>等差数列</strong> ，<code>answer[i]</code> 的值就是 <code>true</code>；否则<code>answer[i]</code> 的值就是 <code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
 <strong>输出：</strong>[false,true,false,false,true,true]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

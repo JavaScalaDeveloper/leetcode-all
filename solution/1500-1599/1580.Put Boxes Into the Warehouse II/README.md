@@ -15,7 +15,7 @@
 
 <p>你最多可以在仓库中放进多少个箱子？</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1580.Put%20Boxes%20Into%20the%20Warehouse%20II/images/22.png" style="width: 401px; height: 202px;" />
@@ -57,7 +57,7 @@
 <strong>输出:</strong> 0
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

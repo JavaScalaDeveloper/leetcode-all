@@ -8,7 +8,7 @@
 
 <p>如果 <code>(x1, y1, x2, y2)</code> 和 <code>(x1', y1', x2', y2')</code> 两个子矩阵中部分坐标不同（如：<code>x1 != x1'</code>），那么这两个子矩阵也不同。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
 <strong>输出：</strong>0
 </pre>
 
-<p> </p>
+
 
 <p><strong><strong>提示：</strong></strong></p>
 

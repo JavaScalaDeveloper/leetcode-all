@@ -8,7 +8,7 @@
 
 <p>请你找出 <code>matrix</code> 的所有坐标中第 <code>k</code> 大的值（<strong><code>k</code> 的值从 1 开始计数</strong>）。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>坐标 (1,1) 的值是 5 XOR 2 XOR 1 XOR 6 = 0 ，为第 4 大的值。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

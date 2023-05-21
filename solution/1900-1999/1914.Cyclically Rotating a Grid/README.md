@@ -12,7 +12,7 @@
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1914.Cyclically%20Rotating%20a%20Grid/images/explanation_grid.jpg" style="width: 500px; height: 268px;">
 <p>返回执行 <code>k</code> 次循环轮转操作后的矩阵。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1914.Cyclically%20Rotating%20a%20Grid/images/rod2.png" style="width: 421px; height: 191px;">
@@ -28,7 +28,7 @@
 <strong>解释：</strong>上图展示了矩阵在执行循环轮转操作时每一步的状态。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

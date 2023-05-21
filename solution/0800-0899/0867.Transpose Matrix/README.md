@@ -8,7 +8,7 @@
 
 <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0800-0899/0867.Transpose%20Matrix/images/hint_transpose.png" style="width: 600px; height: 197px;" /></p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>输出：</strong>[[1,4],[2,5],[3,6]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

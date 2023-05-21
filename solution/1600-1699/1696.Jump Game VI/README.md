@@ -10,7 +10,7 @@
 
 <p>请你返回你能得到的 <strong>最大得分</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
 <b>输出：</b>0
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

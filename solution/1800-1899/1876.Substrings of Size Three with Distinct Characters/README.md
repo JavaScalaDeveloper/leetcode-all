@@ -10,7 +10,7 @@
 
 <p><strong>子字符串</strong> 是一个字符串中连续的字符序列。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@
 好子字符串包括 "abc"，"bca"，"cab" 和 "abc" 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

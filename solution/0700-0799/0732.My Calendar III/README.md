@@ -13,7 +13,7 @@
 	<li><code>int book(int start, int end)</code> 返回一个整数 <code>k</code> ，表示日历中存在的 <code>k</code> 次预订的最大值。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -34,7 +34,7 @@ myCalendarThree.book(5, 10); // 返回 3
 myCalendarThree.book(25, 55); // 返回 3
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

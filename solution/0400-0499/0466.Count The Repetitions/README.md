@@ -18,7 +18,7 @@
 
 <p>请你找出一个最大整数 <code>m</code> ，以满足 <code>str = [str2, m]</code> 可以从 <code>str1</code> 获得。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 <strong>输出：</strong>1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

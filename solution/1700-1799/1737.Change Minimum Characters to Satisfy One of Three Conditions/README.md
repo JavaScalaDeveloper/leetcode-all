@@ -14,7 +14,7 @@
 
 <p>返回达成目标所需的 <strong>最少</strong> 操作数<em>。</em></p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 <strong>解释：</strong>满足条件 1 的最佳方案是将 b 变为 "eee" 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

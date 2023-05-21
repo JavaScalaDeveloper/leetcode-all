@@ -17,7 +17,7 @@ customer_id 是观看该剧集的观众id
 剧集播放时间包含start_time（开始时间） 及 end_time（结束时间）
 可以保证的是，start_time（开始时间）&lt;= end_time（结束时间），一个观众观看的两个剧集的时间不会出现重叠。</pre>
 
-<p> </p>
+
 
 <p>Table: <code>Ads</code></p>
 
@@ -33,7 +33,7 @@ customer_id 为 观看广告的用户id
 timestamp 表示广告出现的时间点
 </pre>
 
-<p> </p>
+
 
 <p>请查出，所有没有广告出现过的剧集。</p>
 
@@ -41,7 +41,7 @@ timestamp 表示广告出现的时间点
 
 <p>返回结果没有顺序要求。</p>
 
-<p> </p>
+
 
 <p>示例：</p>
 

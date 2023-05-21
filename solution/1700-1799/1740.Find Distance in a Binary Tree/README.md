@@ -6,7 +6,7 @@
 
 <p>两个结点间的<strong> 距离 </strong>就是从一个结点到另一个结点的路径上边的数目。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1700-1799/1740.Find%20Distance%20in%20a%20Binary%20Tree/images/binarytree.png" />
@@ -29,7 +29,7 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>一个结点与它本身之间的距离为 0</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

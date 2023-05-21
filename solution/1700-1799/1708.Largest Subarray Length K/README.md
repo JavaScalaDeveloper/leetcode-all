@@ -15,7 +15,7 @@
 
 <p>给定一个包含<strong>不同</strong>整数的整数类型数组 <code>nums</code> ，返回 <code>nums</code> 中长度为 <code>k</code> 的最大子数组。</p>
 
-<p> </p>
+
 
 <p><b>示例 1:</b></p>
 
@@ -37,7 +37,7 @@
 <strong>输出:</strong> [5]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -47,7 +47,7 @@
 	<li><code>nums</code> 中的所有整数都是<strong>不同</strong>的。</li>
 </ul>
 
-<p> </p>
+
 <b>进阶：</b>如果允许 <code>nums</code> 中存在相同元素，你该如何解决该问题？
 
 ## 解法

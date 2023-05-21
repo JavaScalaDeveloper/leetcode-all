@@ -14,7 +14,7 @@
 	<li><code>void erase(String word)</code> 从前缀树中移除字符串 <code>word</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -37,7 +37,7 @@ trie.erase("apple");                // 移除 "apple"。现在前缀树是空的
 trie.countWordsStartingWith("app"); // 返回 0
 </pre>
 
-<p> </p>
+
 
 <p><b>提示：</b></p>
 

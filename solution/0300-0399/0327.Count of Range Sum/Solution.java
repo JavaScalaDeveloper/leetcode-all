@@ -1,35 +1,6 @@
 package com.solution._0327;
 import change.datastructure.*;
 import java.util.*;
-public class BinaryIndexedTree {
-    private int n;
-    private int[] c;
-
-    public BinaryIndexedTree(int n) {
-        this.n = n;
-        this.c = new int[n + 1];
-    }
-
-    public void update(int x, int v) {
-        while (x <= n) {
-            c[x] += v;
-            x += x & -x;
-        }
-    }
-
-    public int query(int x) {
-        int s = 0;
-        while (x != 0) {
-            s += c[x];
-            x -= x & -x;
-        }
-        return s;
-    }
-}
-
-package com.solution._0327;
-import change.datastructure.*;
-import java.util.*;
 public class Solution {
     public int countRangeSum(int[] nums, int lower, int upper) {
         int n = nums.length;
@@ -72,5 +43,30 @@ public class Solution {
             }
         }
         return l + 1;
+    }
+}
+class BinaryIndexedTree {
+    private int n;
+    private int[] c;
+
+    public BinaryIndexedTree(int n) {
+        this.n = n;
+        this.c = new int[n + 1];
+    }
+
+    public void update(int x, int v) {
+        while (x <= n) {
+            c[x] += v;
+            x += x & -x;
+        }
+    }
+
+    public int query(int x) {
+        int s = 0;
+        while (x != 0) {
+            s += c[x];
+            x -= x & -x;
+        }
+        return s;
     }
 }

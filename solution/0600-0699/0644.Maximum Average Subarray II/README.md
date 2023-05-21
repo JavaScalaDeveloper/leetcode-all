@@ -6,7 +6,7 @@
 
 <p>请你找出<strong> 长度大于等于</strong> <code>k</code> 且含最大平均值的连续子数组。并输出这个最大平均值。任何计算误差小于 <code>10<sup>-5</sup></code> 的结果都将被视为正确答案。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>输出：</strong>5.00000
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

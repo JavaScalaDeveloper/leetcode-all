@@ -36,7 +36,7 @@ logSystem.retrieve("2016:01:01:01:01:01", "2017:01:01:23:00:00", "Year");
 logSystem.retrieve("2016:01:01:01:01:01", "2017:01:01:23:00:00", "Hour");
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

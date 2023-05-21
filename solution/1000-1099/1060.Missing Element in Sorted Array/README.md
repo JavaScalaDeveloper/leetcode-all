@@ -6,7 +6,7 @@
 
 <p>给你一个整数 <code>k</code> ，请你找出并返回从数组最左边开始的第 <code>k</code> 个缺失数字。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,7 +32,7 @@
 <strong>解释：</strong>缺失数字有 [3,5,6,7,...]，因此第三个缺失数字为 6 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -43,7 +43,7 @@
 	<li><code>1 <= k <= 10<sup>8</sup></code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>你可以设计一个对数时间复杂度（即，<code>O(log(n))</code>）的解决方案吗？</p>
 

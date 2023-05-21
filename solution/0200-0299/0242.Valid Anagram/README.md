@@ -6,7 +6,7 @@
 
 <p><strong>注意：</strong>若 <code><em>s</em></code> 和 <code><em>t</em></code><em> </em>中每个字符出现的次数都相同，则称 <code><em>s</em></code> 和 <code><em>t</em></code><em> </em>互为字母异位词。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -21,7 +21,7 @@
 <strong>输入:</strong> <em>s</em> = "rat", <em>t</em> = "car"
 <strong>输出: </strong>false</pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -30,7 +30,7 @@
 	<li><code>s</code> 和 <code>t</code> 仅包含小写字母</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶: </strong>如果输入字符串包含 unicode 字符怎么办？你能否调整你的解法来应对这种情况？</p>
 

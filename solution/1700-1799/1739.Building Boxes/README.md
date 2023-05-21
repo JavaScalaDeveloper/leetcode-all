@@ -11,7 +11,7 @@
 
 <p>给你一个整数 <code>n</code> ，返回接触地面的盒子的 <strong>最少</strong> 可能数量<em>。</em></p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,7 +45,7 @@
 <strong>解释：</strong>上图是 10 个盒子的摆放位置。
 这些盒子放在房间的一角，对应后方位置。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

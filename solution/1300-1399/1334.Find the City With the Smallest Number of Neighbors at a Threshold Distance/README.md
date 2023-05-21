@@ -8,7 +8,7 @@
 
 <p>注意，连接城市 <em><strong>i</strong></em> 和 <em><strong>j</strong></em> 的路径的距离等于沿该路径的所有边的权重之和。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,7 +43,7 @@
 城市 0 在阈值距离 2 以内只有 1 个邻居城市。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

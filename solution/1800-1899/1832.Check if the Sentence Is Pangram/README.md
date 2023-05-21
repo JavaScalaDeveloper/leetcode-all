@@ -8,7 +8,7 @@
 
 <p>如果是，返回<em> </em><code>true</code> ；否则，返回<em> </em><code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,7 +25,7 @@
 <strong>输出：</strong>false
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

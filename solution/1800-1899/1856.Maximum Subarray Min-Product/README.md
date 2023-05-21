@@ -14,7 +14,7 @@
 
 <p><strong>子数组</strong> 定义为一个数组的 <strong>连续</strong> 部分。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,7 +43,7 @@
 4 * (5+6+4) = 4 * 15 = 60 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -14,7 +14,7 @@
 
 <p>请你选择 <strong>最优</strong> 箱子供应商，使得 <strong>总浪费空间最小</strong> 。如果 <strong>无法</strong> 将所有包裹放入箱子中，请你返回 <code>-1</code> 。由于答案可能会 <strong>很大</strong> ，请返回它对<strong> </strong><code>10<sup>9</sup> + 7</code> <b>取余</b> 的结果。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,7 +42,7 @@
 总浪费空间为 (5-3) + (5-5) + (10-8) + (10-10) + (14-11) + (14-12) = 9 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

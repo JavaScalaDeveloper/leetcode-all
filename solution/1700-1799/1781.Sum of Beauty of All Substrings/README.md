@@ -10,7 +10,7 @@
 
 <p>给你一个字符串 <code>s</code> ，请你返回它所有子字符串的 <strong>美丽值</strong> 之和。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,7 +26,7 @@
 <b>输出：</b>17
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -16,7 +16,7 @@
 
 <p>一个序列 <code>a</code> 被认为比序列 <code>b</code> （两者长度相同）字典序更大的条件是： <code>a</code> 和 <code>b</code> 中第一个不一样的数字处，<code>a</code> 序列的数字比 <code>b</code> 序列的数字大。比方说，<code>[0,1,9,0]</code> 比 <code>[0,1,5,6]</code> 字典序更大，因为第一个不同的位置是第三个数字，且 <code>9</code> 比 <code>5</code> 大。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@
 <b>输出：</b>[5,3,1,4,3,5,2,4,2]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

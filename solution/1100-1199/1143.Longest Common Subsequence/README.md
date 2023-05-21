@@ -12,7 +12,7 @@
 
 <p>两个字符串的 <strong>公共子序列</strong> 是这两个字符串所共同拥有的子序列。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,7 +38,7 @@
 <strong>解释：</strong>两个字符串没有公共子序列，返回 0 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

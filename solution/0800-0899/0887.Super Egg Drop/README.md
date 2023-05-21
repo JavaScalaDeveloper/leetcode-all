@@ -37,7 +37,7 @@
 <strong>输出：</strong>4
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

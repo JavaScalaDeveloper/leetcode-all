@@ -8,7 +8,7 @@
 
 <p>你可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0002.Add%20Two%20Numbers/images/addtwonumber1.jpg" style="width: 483px; height: 342px;" />
@@ -32,7 +32,7 @@
 <strong>输出：</strong>[8,9,9,9,0,0,0,1]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

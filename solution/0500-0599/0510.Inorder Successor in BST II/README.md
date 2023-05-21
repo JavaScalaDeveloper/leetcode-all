@@ -16,7 +16,7 @@ class Node {
     public Node parent;
 }</pre>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -63,7 +63,7 @@ class Node {
 <strong>输出：</strong>null
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -73,7 +73,7 @@ class Node {
 	<li>树中各结点的值均保证唯一。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>你能否在不访问任何结点的值的情况下解决问题?</p>
 

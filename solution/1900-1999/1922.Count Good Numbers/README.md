@@ -12,7 +12,7 @@
 
 <p>一个 <strong>数字字符串</strong> 是每一位都由 <code>0</code> 到 <code>9</code> 组成的字符串，且可能包含前导 0 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,7 +36,7 @@
 <b>输出：</b>564908303
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

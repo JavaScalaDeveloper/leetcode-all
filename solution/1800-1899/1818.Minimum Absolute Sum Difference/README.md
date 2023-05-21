@@ -17,7 +17,7 @@
 	<li>如果 <code>x <= 0</code> ，值为 <code>-x</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,7 +47,7 @@
 绝对差值和为 <code>|10-9| + |10-3| + |4-5| + |4-1| + |2-7| + |7-4| = 20</code>
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -9,7 +9,7 @@
 <p>设 <code>penalty()</code> 是：增设 <code>k</code> 个新加油站后，<strong>相邻</strong> 两个加油站间的最大距离。</p>
 请你返回 <code>penalty()</code><strong> </strong>可能的最小值。与实际答案误差在 <code>10<sup>-6</sup></code> 范围内的答案将被视作正确答案。
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,7 +25,7 @@
 <strong>输出：</strong>14.00000
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -8,7 +8,7 @@
 
 <p>学生 <strong>最高的五科 </strong>成绩的 <strong>平均分 </strong>的计算方法是将最高的五科分数相加，然后用 <strong>整数除法</strong> 除以 5 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,7 +27,7 @@ ID = 2 的学生分数为 93、97、77、100 和 76 。前五科的平均分 (10
 <strong>输出：</strong>[[1,100],[7,100]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

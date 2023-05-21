@@ -4,7 +4,7 @@
 
 <p>给你一个整型数组 <code>nums</code> ，在数组中找出由三个数组成的最大乘积，并输出这个乘积。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,7 +27,7 @@
 <strong>输出：</strong>-6
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

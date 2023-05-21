@@ -10,7 +10,7 @@
 
 <p>如果不存在下标为 <code>k</code> 的元素 <code>nums[k]</code> 属于不止一个子数组，就称这些子数组是 <strong>不相交</strong> 的。子数组指的是原数组中连续元素组成的一个序列。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,7 +39,7 @@
 它们有一个共同的元素 nums[4] （下标从 0 开始）。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

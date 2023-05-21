@@ -21,7 +21,7 @@
 
 <p>返回日志的最终顺序。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,7 +40,7 @@
 <strong>输出：</strong>["g1 act car","a8 act zoo","ab1 off key dog","a1 9 2 3 1","zo4 4 7"]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

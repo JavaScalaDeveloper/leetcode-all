@@ -14,7 +14,7 @@
 
 <p>返回一个答案数组 <code>answer</code>，数组中的每个元素 <code>answer[i]</code> 是在给出的单词列表 <code>words</code> 中可以作为字谜迷面 <code>puzzles[i]</code> 所对应的谜底的单词数目。</p>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -32,7 +32,7 @@ puzzles = ["aboveyz","abrodyz","abslute","absoryz","actresz","gaswxyz"]
 没有单词可以作为 "gaswxyz" 的谜底，因为列表中的单词都不含字母 'g'。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

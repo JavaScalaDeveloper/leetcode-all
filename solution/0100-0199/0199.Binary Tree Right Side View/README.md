@@ -4,7 +4,7 @@
 
 <p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -29,7 +29,7 @@
 <strong>输出:</strong> []
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

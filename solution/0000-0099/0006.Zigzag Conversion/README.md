@@ -18,7 +18,7 @@ Y   I   R</pre>
 <pre>
 string convert(string s, int numRows);</pre>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,7 +46,7 @@ P     I
 <strong>输出：</strong>"A"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

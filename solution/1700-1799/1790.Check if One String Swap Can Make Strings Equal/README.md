@@ -6,7 +6,7 @@
 
 <p>如果对 <strong>其中一个字符串</strong> 执行 <strong>最多一次字符串交换</strong> 就可以使两个字符串相等，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
 <strong>输出：</strong>false
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

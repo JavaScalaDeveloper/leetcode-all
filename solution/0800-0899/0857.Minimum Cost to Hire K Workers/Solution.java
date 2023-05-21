@@ -1,6 +1,8 @@
 package com.solution._0857;
-import change.datastructure.*;
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.PriorityQueue;
+
 public class Solution {
     public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
         int n = quality.length;
@@ -12,7 +14,7 @@ public class Solution {
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);
         double ans = 1e9;
         int tot = 0;
-        for (var e : t) {
+        for (Pair e : t) {
             tot += e.q;
             pq.offer(e.q);
             if (pq.size() == k) {
@@ -24,10 +26,7 @@ public class Solution {
     }
 }
 
-package com.solution._0857;
-import change.datastructure.*;
-import java.util.*;
-public class Pair {
+class Pair {
     double x;
     int q;
 

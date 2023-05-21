@@ -15,7 +15,7 @@
 
 <p>请你返回记录中所有得分的总和。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,7 +55,7 @@
 <strong>输出：</strong>1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

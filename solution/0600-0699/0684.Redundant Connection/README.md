@@ -8,7 +8,7 @@
 
 <p>请找出一条可以删去的边，删除后可使得剩余部分是一个有着 <code>n</code> 个节点的树。如果有多个答案，则返回数组 <code>edges</code> 中最后出现的边。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>输出:</strong> [1,4]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

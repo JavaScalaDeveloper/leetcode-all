@@ -15,7 +15,7 @@
 
 <p>如果两个字符串长度相同，那么字符串 <code>a</code> 字典序比字符串 <code>b</code> 小可以这样定义：在 <code>a</code> 和 <code>b</code> 出现不同的第一个位置上，字符串 <code>a</code> 中的字符出现在字母表中的时间早于 <code>b</code> 中的对应字符。例如，<code>"0158”</code> 字典序比 <code>"0190"</code> 小，因为不同的第一个位置是在第三个字符，显然 <code>'5'</code> 出现在 <code>'9'</code> 之前。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -63,7 +63,7 @@
 <strong>输出：</strong>"00553311"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -15,7 +15,7 @@
 
 <p>给你一个整数数组 <code>nums</code> ，返回 <code>nums</code> 中作为 <strong>摆动序列 </strong>的 <strong>最长子序列的长度</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,7 +41,7 @@
 <strong>输出：</strong>2
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -50,7 +50,7 @@
 	<li><code>0 <= nums[i] <= 1000</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>你能否用 <code>O(n)</code><em> </em>时间复杂度完成此题?</p>
 

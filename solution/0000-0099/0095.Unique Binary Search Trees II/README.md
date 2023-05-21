@@ -4,7 +4,7 @@
 
 <p>给你一个整数 <code>n</code> ，请你生成并返回所有由 <code>n</code> 个节点组成且节点值从 <code>1</code> 到 <code>n</code> 互不相同的不同 <strong>二叉搜索树</strong><em> </em>。可以按 <strong>任意顺序</strong> 返回答案。</p>
 
-<p> </p>
+
 
 <div class="original__bRMd">
 <div>
@@ -22,7 +22,7 @@
 <strong>输出：</strong>[[1]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -14,7 +14,7 @@
 
 <p>请你返回编号为 <code>targetFriend</code> 的朋友占据的 <strong>椅子编号</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,7 +43,7 @@
 朋友 0 占据椅子 2 ，所以返回 2 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

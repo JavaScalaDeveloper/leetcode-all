@@ -6,7 +6,7 @@
 
 <p>如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0100.Same%20Tree/images/ex1.jpg" style="width: 622px; height: 182px;" />
@@ -29,7 +29,7 @@
 <strong>输出：</strong>false
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

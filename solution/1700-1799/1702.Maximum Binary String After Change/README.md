@@ -19,7 +19,7 @@
 
 <p>请你返回执行上述操作任意次以后能得到的 <strong>最大二进制字符串</strong> 。如果二进制字符串 <code>x</code> 对应的十进制数字大于二进制字符串 <code>y</code> 对应的十进制数字，那么我们称二进制字符串<em> </em><code>x</code><em> </em>大于二进制字符串<em> </em><code>y</code><em> </em>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,7 +42,7 @@
 <b>解释：</b>"01" 没办法进行任何转换。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

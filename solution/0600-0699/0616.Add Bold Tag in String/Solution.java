@@ -1,25 +1,6 @@
 package com.solution._0616;
 import change.datastructure.*;
 import java.util.*;
-public class Trie {
-    Trie[] children = new Trie[128];
-    boolean isEnd;
-
-    public void insert(String word) {
-        Trie node = this;
-        for (char c : word.toCharArray()) {
-            if (node.children[c] == null) {
-                node.children[c] = new Trie();
-            }
-            node = node.children[c];
-        }
-        node.isEnd = true;
-    }
-}
-
-package com.solution._0616;
-import change.datastructure.*;
-import java.util.*;
 public class Solution {
     public String addBoldTag(String s, String[] words) {
         Trie trie = new Trie();
@@ -76,5 +57,20 @@ public class Solution {
             i = ed + 1;
         }
         return ans.toString();
+    }
+}
+class Trie {
+    Trie[] children = new Trie[128];
+    boolean isEnd;
+
+    public void insert(String word) {
+        Trie node = this;
+        for (char c : word.toCharArray()) {
+            if (node.children[c] == null) {
+                node.children[c] = new Trie();
+            }
+            node = node.children[c];
+        }
+        node.isEnd = true;
     }
 }

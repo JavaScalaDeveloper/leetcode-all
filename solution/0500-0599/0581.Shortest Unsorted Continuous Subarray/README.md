@@ -6,7 +6,7 @@
 
 <p>请你找出符合题意的 <strong>最短</strong> 子数组，并输出它的长度。</p>
 
-<p> </p>
+
 
 <div class="original__bRMd">
 <div>
@@ -32,7 +32,7 @@
 <strong>输出：</strong>0
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -41,7 +41,7 @@
 	<li><code>-10<sup>5</sup> <= nums[i] <= 10<sup>5</sup></code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>你可以设计一个时间复杂度为 <code>O(n)</code> 的解决方案吗？</p>
 </div>

@@ -14,7 +14,7 @@
 
 <p>返回你能看到的点的最大数目。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,7 +41,7 @@
 <strong>输出：</strong>1
 <strong>解释：</strong>如图所示，你只能看到两点之一。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

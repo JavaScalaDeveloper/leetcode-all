@@ -16,7 +16,7 @@
 
 <p>请你返回删除操作后，剩下的数组<em> </em><code>nums</code><em> </em>是 <strong>平衡数组</strong> 的 <strong>方案数</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,7 +47,7 @@
 <b>解释：</b>不管删除哪个元素，剩下数组都不是平衡数组。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

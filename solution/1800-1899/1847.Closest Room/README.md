@@ -15,7 +15,7 @@
 
 <p>请你返回长度为 <code>k</code> 的数组 <code>answer</code> ，其中<em> </em><code>answer[j]</code> 为第 <code>j</code> 个查询的结果。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,7 +37,7 @@
 查询 [2,4] ：房间 1 和 3 的面积都至少为 4 ，答案为 1 因为它房间编号更小。
 查询 [2,5] ：房间 3 是唯一面积大于等于 5 的，所以答案为 3 。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -8,7 +8,7 @@
 
 <p>问总共有多少条不同的路径？</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0062.Unique%20Paths/images/robot_maze.png" />
@@ -41,7 +41,7 @@
 <strong>输入：</strong>m = 3, n = 3
 <strong>输出：</strong>6</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

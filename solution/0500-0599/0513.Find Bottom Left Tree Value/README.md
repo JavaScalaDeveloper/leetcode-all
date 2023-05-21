@@ -6,7 +6,7 @@
 
 <p>假设二叉树中至少有一个节点。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -26,7 +26,7 @@
 <strong>输出: </strong>7
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

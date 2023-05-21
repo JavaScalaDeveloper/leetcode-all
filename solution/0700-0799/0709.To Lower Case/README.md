@@ -4,7 +4,7 @@
 
 <p>给你一个字符串 <code>s</code> ，将该字符串中的大写字母转换成相同的小写字母，返回新的字符串。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,7 +27,7 @@
 <strong>输出：</strong>"lovely"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

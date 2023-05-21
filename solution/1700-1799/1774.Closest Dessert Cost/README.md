@@ -22,7 +22,7 @@
 
 <p>返回最接近<em> </em><code>target</code> 的甜点成本。如果有多种方案，返回 <strong>成本相对较低</strong> 的一种。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -64,7 +64,7 @@
 <strong>输出：</strong>10
 <strong>解释：</strong>注意，你可以选择不添加任何配料，但你必须选择一种基料。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -6,7 +6,7 @@
 
 <p>如果存在一个整数 <code>x</code> 使得 <code>n == 2<sup>x</sup></code> ，则认为 <code>n</code> 是 2 的幂次方。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,7 +45,7 @@
 <strong>输出：</strong>false
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -53,7 +53,7 @@
 	<li><code>-2<sup>31</sup> <= n <= 2<sup>31</sup> - 1</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>你能够不使用循环/递归解决此问题吗？</p>
 

@@ -6,7 +6,7 @@
 
 <p>丑数是可以被 <code>a</code> <strong>或</strong> <code>b</code> <strong>或</strong> <code>c</code> 整除的 <strong>正整数</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,7 +38,7 @@
 <strong>输出：</strong>1999999984
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

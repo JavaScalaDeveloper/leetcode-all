@@ -8,7 +8,7 @@
 
 <p><strong>说明：</strong>叶子节点是指没有子节点的节点。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0111.Minimum%20Depth%20of%20Binary%20Tree/images/ex_depth.jpg" style="width: 432px; height: 302px;" />
@@ -24,7 +24,7 @@
 <strong>输出：</strong>5
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

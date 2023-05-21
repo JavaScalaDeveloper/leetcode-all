@@ -6,7 +6,7 @@
 
 <p><strong>漂亮数对</strong> 是一个形如 <code>(i, j)</code> 的数对，其中 <code>0 &lt;= i &lt; j &lt; nums.length</code> 且 <code>low &lt;= (nums[i] XOR nums[j]) &lt;= high</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
     - (2, 3): nums[2] XOR nums[3] = 6
     - (2, 4): nums[2] XOR nums[4] = 5</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

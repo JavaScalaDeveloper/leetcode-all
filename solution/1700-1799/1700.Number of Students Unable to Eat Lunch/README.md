@@ -14,7 +14,7 @@
 
 <p>给你两个整数数组 <code>students</code> 和 <code>sandwiches</code> ，其中 <code>sandwiches[i]</code> 是栈里面第 <code>i<sup>​​​​​​</sup></code> 个三明治的类型（<code>i = 0</code> 是栈的顶部）， <code>students[j]</code> 是初始队列里第 <code>j<sup>​​​​​​</sup></code> 名学生对三明治的喜好（<code>j = 0</code> 是队列的最开始位置）。请你返回无法吃午餐的学生数量。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,7 +38,7 @@
 <b>输出：</b>3
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

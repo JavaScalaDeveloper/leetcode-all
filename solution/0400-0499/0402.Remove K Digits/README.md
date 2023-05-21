@@ -29,7 +29,7 @@
 <strong>解释：</strong>从原数字移除所有的数字，剩余为空就是 0 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

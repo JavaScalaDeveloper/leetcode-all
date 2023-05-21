@@ -1,26 +1,9 @@
 package com.solution._0472;
-import change.datastructure.*;
-import java.util.*;
-public class Trie {
-    Trie[] children = new Trie[26];
-    boolean isEnd;
 
-    void insert(String w) {
-        Trie node = this;
-        for (char c : w.toCharArray()) {
-            c -= 'a';
-            if (node.children[c] == null) {
-                node.children[c] = new Trie();
-            }
-            node = node.children[c];
-        }
-        node.isEnd = true;
-    }
-}
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-package com.solution._0472;
-import change.datastructure.*;
-import java.util.*;
 public class Solution {
     private Trie trie = new Trie();
 
@@ -53,5 +36,22 @@ public class Solution {
             }
         }
         return false;
+    }
+}
+
+class Trie {
+    Trie[] children = new Trie[26];
+    boolean isEnd;
+
+    void insert(String w) {
+        Trie node = this;
+        for (char c : w.toCharArray()) {
+            c -= 'a';
+            if (node.children[c] == null) {
+                node.children[c] = new Trie();
+            }
+            node = node.children[c];
+        }
+        node.isEnd = true;
     }
 }

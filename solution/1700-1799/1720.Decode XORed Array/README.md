@@ -10,7 +10,7 @@
 
 <p>请解码返回原数组 <code>arr</code> 。可以证明答案存在并且是唯一的。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,7 +27,7 @@
 <strong>输出：</strong>[4,2,0,7,4]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

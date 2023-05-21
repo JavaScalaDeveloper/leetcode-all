@@ -11,7 +11,7 @@
 
 <p>如果你可以到达 <code>s</code> 的下标<i> </i><code>s.length - 1</code> 处，请你返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@
 <b>输出：</b>false
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

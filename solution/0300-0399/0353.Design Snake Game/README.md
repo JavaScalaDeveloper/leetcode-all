@@ -42,7 +42,7 @@ snakeGame.move("U"); // 返回 -1 ，蛇与边界相撞，游戏结束
 
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

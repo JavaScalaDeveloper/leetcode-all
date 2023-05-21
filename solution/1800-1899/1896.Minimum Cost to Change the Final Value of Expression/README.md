@@ -25,7 +25,7 @@
 
 <p><strong>注意：</strong><code>'&amp;'</code> 的 <strong>运算优先级</strong> 与 <code>'|'</code> <strong>相同</strong> 。计算表达式时，括号优先级 <strong>最高</strong> ，然后按照 <strong>从左到右</strong> 的顺序运算。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,7 +50,7 @@
 <b>解释：</b>我们可以将 "(0|(<strong>1</strong>|0&amp;1))" 变成 "(0|(<strong>0</strong>|0&amp;1))" ，执行了 1 次操作。
 新表达式的值为 0 。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

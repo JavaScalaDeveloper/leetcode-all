@@ -24,7 +24,7 @@
 
 <p>输入/输出格式表示为 <code>n</code> 个节点的列表，其中每个节点表示为 <code>[coefficient, power]</code> 。例如，多项式 <code>5x<sup>3</sup> + 4x - 7</code> 表示为： <code>[[5,3],[4,1],[-7,0]]</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,7 +52,7 @@
 <strong>解释：</strong>和为 0。我们返回空链表。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

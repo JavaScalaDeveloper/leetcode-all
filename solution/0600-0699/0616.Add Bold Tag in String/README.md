@@ -8,7 +8,7 @@
 
 <p>返回添加加粗标签后的字符串 <code>s</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>输出：</strong>"&lt;b&gt;aaabbc&lt;/b&gt;c"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -36,11 +36,11 @@
 	<li><code>words</code> 中的所有值 <strong>互不相同</strong></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>注：</strong>此题与「758 - 字符串中的加粗单词」相同 - <a href="https://leetcode.cn/problems/bold-words-in-string">https://leetcode.cn/problems/bold-words-in-string</a></p>
 
-<p> </p>
+
 
 ## 解法
 

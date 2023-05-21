@@ -8,7 +8,7 @@
 
 <p>已知区间 <code>ranges[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> ，如果整数 <code>x</code> 满足 <code>start<sub>i</sub> <= x <= end<sub>i</sub></code> ，那么我们称整数<code>x</code> 被覆盖了。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,7 +29,7 @@
 <b>解释：</b>21 没有被任何一个区间覆盖。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -6,7 +6,7 @@
 
 <p>请你重新构造并返回输入数组 <code>people</code> 所表示的队列。返回的队列应该格式化为数组 <code>queue</code> ，其中 <code>queue[j] = [h<sub>j</sub>, k<sub>j</sub>]</code> 是队列中第 <code>j</code> 个人的属性（<code>queue[0]</code> 是排在队列前面的人）。</p>
 
-<p> </p>
+
 
 <ul>
 </ul>
@@ -33,7 +33,7 @@
 <strong>输出：</strong>[[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

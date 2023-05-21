@@ -6,7 +6,7 @@
 
 <p>当一个字符串正着读和反着读是一模一样的，就称其为 <strong>回文字符串</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>解释：</strong>s 没办法被分割成 3 个回文子字符串。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

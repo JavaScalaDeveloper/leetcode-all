@@ -17,7 +17,7 @@
 	<li>比方说，字符串 <code>"010"</code> 和 <code>"1010"</code> 都是交替的，但是字符串 <code>"0100"</code> 不是。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,7 +41,7 @@
 <b>解释：</b>对第二个字符执行第二种操作，得到 s = "1<strong>0</strong>10" 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

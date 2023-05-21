@@ -66,7 +66,7 @@
 <strong>输出：</strong>[1]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

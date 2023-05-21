@@ -8,7 +8,7 @@
 
 <p>结果请按 <code>Id</code> 升序，然后按 <code>Month</code> 降序显示。</p>
 
-<p> </p>
+
 
 <p><strong>示例：</strong><br />
 <strong>输入：</strong></p>
@@ -40,7 +40,7 @@
 | 3  | 2     | 40     |
 </pre>
 
-<p> </p>
+
 
 <p><strong>解释：</strong></p>
 
@@ -73,7 +73,7 @@
 | 3  | 2     | 40     |
 </pre>
 
-<p> </p>
+
 
 ## 解法
 

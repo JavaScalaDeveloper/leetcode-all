@@ -18,7 +18,7 @@
 
 <p>计算并返回 <code>nums</code> 的所有 <strong>非空</strong> 子序列中 <strong>不同</strong> 最大公约数的 <strong>数目</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1800-1899/1819.Number%20of%20Different%20Subsequences%20GCDs/images/image-1.png" />
@@ -36,7 +36,7 @@
 <strong>输出：</strong>7
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

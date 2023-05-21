@@ -15,7 +15,7 @@
 
 <p>要想使 <code>perm</code> 回到排列初始值，至少需要执行多少步操作？返回最小的 <strong>非零</strong> 操作步数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,7 +43,7 @@
 <strong>输出：</strong>4
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

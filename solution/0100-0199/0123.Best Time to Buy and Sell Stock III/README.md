@@ -8,7 +8,7 @@
 
 <p><strong>注意：</strong>你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -42,7 +42,7 @@
 <strong>输出：</strong>0
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

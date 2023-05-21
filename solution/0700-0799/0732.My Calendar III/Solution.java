@@ -1,7 +1,9 @@
 package com.solution._0732;
-import change.datastructure.*;
-import java.util.*;
-public class Node {
+
+public class Solution {
+}
+
+class Node {
     Node left;
     Node right;
     int l;
@@ -9,6 +11,7 @@ public class Node {
     int mid;
     int v;
     int add;
+
     public Node(int l, int r) {
         this.l = l;
         this.r = r;
@@ -16,10 +19,7 @@ public class Node {
     }
 }
 
-package com.solution._0732;
-import change.datastructure.*;
-import java.util.*;
-public class SegmentTree {
+class SegmentTree {
     private Node root = new Node(1, (int) 1e9 + 1);
 
     public SegmentTree() {
@@ -92,10 +92,7 @@ public class SegmentTree {
     }
 }
 
-package com.solution._0732;
-import change.datastructure.*;
-import java.util.*;
-public class MyCalendarThree {
+class MyCalendarThree {
     private SegmentTree tree = new SegmentTree();
 
     public MyCalendarThree() {

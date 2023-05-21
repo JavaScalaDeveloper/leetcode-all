@@ -6,7 +6,7 @@
 
 <p>由于答案可能很大，因此<strong> 返回答案模 <code>10^9 + 7</code></strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>输出：</strong>444
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -33,7 +33,7 @@
 	<li><code>1 <= arr[i] <= 3 * 10<sup>4</sup></code></li>
 </ul>
 
-<p> </p>
+
 
 ## 解法
 

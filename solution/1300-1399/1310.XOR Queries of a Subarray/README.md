@@ -8,7 +8,7 @@
 
 <p>并返回一个包含给定查询 <code>queries</code> 所有结果的数组。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
 <strong>输出：</strong>[8,0,4,4]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

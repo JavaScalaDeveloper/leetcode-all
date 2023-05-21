@@ -35,7 +35,7 @@
 
 <p>给你 <code>rows x cols</code> 的矩阵 <code>grid</code> 和两个整数 <code>catJump</code> 和 <code>mouseJump</code> ，双方都采取最优策略，如果老鼠获胜，那么请你返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -77,7 +77,7 @@
 <b>输出：</b>true
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

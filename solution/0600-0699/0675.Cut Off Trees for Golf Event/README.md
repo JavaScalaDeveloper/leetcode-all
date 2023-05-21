@@ -18,7 +18,7 @@
 
 <p>可以保证的是，没有两棵树的高度是相同的，并且你至少需要砍倒一棵树。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0675.Cut%20Off%20Trees%20for%20Golf%20Event/images/trees1.jpg" style="width: 242px; height: 242px;" />
@@ -44,7 +44,7 @@
 (0,0) 位置的树，可以直接砍去，不用算步数。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

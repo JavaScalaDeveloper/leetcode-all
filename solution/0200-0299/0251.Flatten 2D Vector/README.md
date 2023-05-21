@@ -4,7 +4,7 @@
 
 <p>请设计并实现一个能够展开二维向量的迭代器。该迭代器需要支持 <code>next</code> 和 <code>hasNext</code> 两种操作。</p>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -20,7 +20,7 @@ iterator.next(); // 返回 4
 iterator.hasNext(); // 返回 false
 </pre>
 
-<p> </p>
+
 
 <p><strong>注意：</strong></p>
 
@@ -29,7 +29,7 @@ iterator.hasNext(); // 返回 false
 	<li>你可以假定 <code>next()</code> 的调用总是合法的，即当 <code>next()</code> 被调用时，二维向量总是存在至少一个后续元素。</li>
 </ol>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>尝试在代码中仅使用 <a href="http://www.cplusplus.com/reference/iterator/iterator/">C++ 提供的迭代器</a> 或 <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html">Java 提供的迭代器</a>。</p>
 

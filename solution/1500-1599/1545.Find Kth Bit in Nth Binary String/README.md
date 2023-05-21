@@ -22,7 +22,7 @@
 
 <p>请你返回  <code>S<sub>n</sub></code> 的 <strong>第 <code>k</code> 位字符</strong> ，题目数据保证 <code>k</code> 一定在 <code>S<sub>n</sub></code> 长度范围以内。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -54,7 +54,7 @@
 <strong>输出：</strong>"1"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

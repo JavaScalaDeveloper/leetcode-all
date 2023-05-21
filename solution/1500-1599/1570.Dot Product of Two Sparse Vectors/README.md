@@ -15,7 +15,7 @@
 
 <p><strong>进阶：</strong>当其中只有一个向量是稀疏向量时，你该如何解决此问题？</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,7 +42,7 @@ v1.dotProduct(v2) = 0*0 + 1*0 + 0*0 + 0*0 + 0*2 = 0
 <strong>输出：</strong>6
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

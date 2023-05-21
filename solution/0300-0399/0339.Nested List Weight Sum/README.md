@@ -8,7 +8,7 @@
 
 <p>请返回该列表按深度加权后所有整数的总和。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,7 +33,7 @@
 <strong>输出：</strong>0
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

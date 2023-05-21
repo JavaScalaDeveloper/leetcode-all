@@ -12,7 +12,7 @@
 
 <p>给你二叉树的根节点，如果二叉树为 <strong>奇偶树 </strong>，则返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -67,7 +67,7 @@
 <strong>输出：</strong>true
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

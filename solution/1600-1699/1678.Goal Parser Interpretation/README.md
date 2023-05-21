@@ -6,7 +6,7 @@
 
 <p>给你字符串 <code>command</code> ，返回<em> </em><strong>Goal<em><strong> </strong></em>解析器 </strong>对<em> </em><code>command</code> 的解释结果。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@ G -&gt; G
 <strong>输出：</strong>"alGalooG"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -14,7 +14,7 @@
 
 <p>请你返回 <code>k</code> 次迁移操作后最终得到的 <strong>二维网格</strong>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,7 +41,7 @@
 <strong>输出：</strong>[[1,2,3],[4,5,6],[7,8,9]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

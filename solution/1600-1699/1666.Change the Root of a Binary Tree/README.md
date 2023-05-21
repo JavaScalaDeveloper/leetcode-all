@@ -15,7 +15,7 @@
 
 <p><b>注意：</b>确保你的答案在操作后正确地设定了 <code>Node.parent</code> （父节点）指针，否则会被判为错误答案。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1666.Change%20the%20Root%20of%20a%20Binary%20Tree/images/fliptree.png" style="width: 400px; height: 298px;">
@@ -29,7 +29,7 @@
 <strong>输出:</strong> [0,1,null,3,8,5,null,null,null,6,2,null,null,7,4]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

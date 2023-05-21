@@ -18,7 +18,7 @@
 
 <p>你可以假设 <code>next()</code> 调用总是有效的，也就是说，当调用 <code>next()</code> 时，BST 的中序遍历中至少存在一个下一个数字。</p>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0173.Binary%20Search%20Tree%20Iterator/images/bst-tree.png" style="width: 189px; height: 178px;" />
@@ -43,7 +43,7 @@ bSTIterator.hasNext(); // 返回 False
 
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -53,7 +53,7 @@ bSTIterator.hasNext(); // 返回 False
 	<li>最多调用 <code>10<sup>5</sup></code> 次 <code>hasNext</code> 和 <code>next</code> 操作</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong></p>
 

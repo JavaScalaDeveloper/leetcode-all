@@ -23,7 +23,7 @@
 
 <p>请你返回得到的数组<em> </em><code>answer</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -43,7 +43,7 @@
 <b>输出：</b>[false,true,true,false,false]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -6,7 +6,7 @@
 
 <p>（如果 A 的任何子节点之一为 B，或者 A 的任何子节点是 B 的祖先，那么我们认为 A 是 B 的祖先）</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@
 <strong>输出：</strong>3
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

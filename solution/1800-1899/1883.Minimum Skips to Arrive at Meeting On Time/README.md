@@ -18,7 +18,7 @@
 
 <p>返回准时抵达会议现场所需要的 <strong>最小跳过次数</strong> ，如果 <strong>无法准时参会</strong> ，返回 <code>-1</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,7 +49,7 @@
 <strong>解释：</strong>即使跳过所有的休息时间，也无法准时参加会议。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

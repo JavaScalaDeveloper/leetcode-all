@@ -13,7 +13,7 @@
 	<li><code>boolean startsWith(String prefix)</code> 如果之前已经插入的字符串 <code>word</code> 的前缀之一为 <code>prefix</code> ，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -34,7 +34,7 @@ trie.insert("app");
 trie.search("app");     // 返回 True
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

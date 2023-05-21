@@ -10,7 +10,7 @@
 
 <p>给你一个整数数组 <code>stones</code> ，其中 <code>stones[i]</code> 表示 <strong>从左边开始</strong> 的第 <code>i</code> 个石头的值，如果爱丽丝和鲍勃都 <strong>发挥出最佳水平</strong> ，请返回他们 <strong>得分的差值</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,7 +32,7 @@
 <strong>输入：</strong>stones = [7,90,5,1,100,10,10,2]
 <strong>输出：</strong>122</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

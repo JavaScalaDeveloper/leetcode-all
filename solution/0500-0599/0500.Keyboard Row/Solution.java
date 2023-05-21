@@ -1,11 +1,16 @@
 package com.solution._0500;
-import change.datastructure.*;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution {
+    public static void main(String[] args) {
+
+    }
     public String[] findWords(String[] words) {
         String s = "12210111011122000010020202";
         List<String> ans = new ArrayList<>();
-        for (var w : words) {
+        for (String w : words) {
             String t = w.toLowerCase();
             char x = s.charAt(t.charAt(0) - 'a');
             boolean ok = true;

@@ -16,7 +16,7 @@
 
 <p>注意：<code>abs(x)</code> 等于 <code>x</code> 的前提是 <code>x &gt;= 0</code> ；否则，<code>abs(x)</code> 等于 <code>-x</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@
 <strong>输出：</strong>3
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

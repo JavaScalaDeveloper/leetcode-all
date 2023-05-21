@@ -10,7 +10,7 @@
 
 <p>请计算出粉刷完所有房子最少的花费成本。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>输出: 2</strong>
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

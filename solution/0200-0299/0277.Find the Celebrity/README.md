@@ -10,7 +10,7 @@
 
 <p>派对最多只会有一个 “名人” 参加。若 “名人” 存在，请返回他/她的编号；若 “名人” 不存在，请返回 <code>-1</code>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -40,7 +40,7 @@
 <strong>解释: </strong>没有 “名人”
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -52,7 +52,7 @@
 	<li><code>graph[i][i] == 1</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>如果允许调用 API <code>knows</code> 的最大次数为 <code>3 * n</code> ，你可以设计一个不超过最大调用次数的解决方案吗？</p>
 

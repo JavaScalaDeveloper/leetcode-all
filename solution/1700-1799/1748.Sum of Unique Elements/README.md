@@ -6,7 +6,7 @@
 
 <p>请你返回 <code>nums</code> 中唯一元素的 <strong>和</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,7 +29,7 @@
 <b>解释：</b>唯一元素为 [1,2,3,4,5] ，和为 15 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -6,7 +6,7 @@
 
 <p>与 <strong>标准答案</strong> 误差在 <code>10<sup>-5</sup></code> 的结果都被视为正确结果。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,7 +44,7 @@
 <b>输出：</b>5.29167
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

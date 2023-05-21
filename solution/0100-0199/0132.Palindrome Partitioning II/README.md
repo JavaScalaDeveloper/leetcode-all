@@ -8,7 +8,7 @@
 
 <div class="original__bRMd">
 <div>
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,7 +32,7 @@
 <strong>输出：</strong>1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

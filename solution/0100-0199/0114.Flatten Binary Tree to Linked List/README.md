@@ -9,7 +9,7 @@
 	<li>展开后的单链表应该与二叉树 <a href="https://baike.baidu.com/item/%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86/6442839?fr=aladdin" target="_blank"><strong>先序遍历</strong></a> 顺序相同。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0114.Flatten%20Binary%20Tree%20to%20Linked%20List/images/flaten.jpg" style="width: 500px; height: 226px;" />
@@ -32,7 +32,7 @@
 <strong>输出：</strong>[0]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -41,7 +41,7 @@
 	<li><code>-100 <= Node.val <= 100</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>你可以使用原地算法（<code>O(1)</code> 额外空间）展开这棵树吗？</p>
 

@@ -11,7 +11,7 @@
 	<li><code>double next(int val)</code> 计算并返回数据流中最后 <code>size</code> 个值的移动平均值。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -30,7 +30,7 @@ movingAverage.next(3); // 返回 4.66667 = (1 + 10 + 3) / 3
 movingAverage.next(5); // 返回 6.0 = (10 + 3 + 5) / 3
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

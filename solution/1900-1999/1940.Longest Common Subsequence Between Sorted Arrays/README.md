@@ -34,7 +34,7 @@
 <strong>解释:</strong> 这两个数组之间没有公共子序列。
 </pre>
 
-<p> </p>
+
 
 <p><strong>限制条件:</strong></p>
 

@@ -6,7 +6,7 @@
 
 <p>你应当 <strong>保留</strong> 两个分区中每个节点的初始相对位置。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0086.Partition%20List/images/partition.jpg" style="width: 662px; height: 222px;" />
@@ -22,7 +22,7 @@
 <strong>输出</strong>：[1,2]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

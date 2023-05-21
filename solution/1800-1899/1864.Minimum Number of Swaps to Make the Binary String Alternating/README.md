@@ -8,7 +8,7 @@
 
 <p>任意两个字符都可以进行交换，<strong>不必相邻</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,7 +33,7 @@
 <strong>输出：</strong>-1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

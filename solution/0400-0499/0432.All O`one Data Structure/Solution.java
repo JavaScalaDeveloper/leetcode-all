@@ -1,7 +1,14 @@
 package com.solution._0432;
-import change.datastructure.*;
-import java.util.*;
-public class AllOne {
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class Solution {
+}
+
+class AllOne {
     Node root = new Node();
     Map<String, Node> nodes = new HashMap<>();
 
@@ -63,10 +70,7 @@ public class AllOne {
     }
 }
 
-package com.solution._0432;
-import change.datastructure.*;
-import java.util.*;
-public class Node {
+class Node {
     Node prev;
     Node next;
     int cnt;

@@ -12,7 +12,7 @@
 	<li><code>bool search(String searchWord)</code> 给定一个字符串 <code>searchWord</code> ，判定能否只将字符串中<strong> 一个 </strong>字母换成另一个字母，使得所形成的新字符串能够与字典中的任一字符串匹配。如果可以，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <div class="top-view__1vxA">
 <div class="original__bRMd">
@@ -35,7 +35,7 @@ magicDictionary.search("hell"); // 返回 False
 magicDictionary.search("leetcoded"); // 返回 False
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

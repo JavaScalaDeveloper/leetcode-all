@@ -6,7 +6,7 @@
 
 <p>数组 <code>nums</code> 是 <strong>严格递增</strong> 的定义为：对于任意下标的 <code>1 &lt;= i &lt; nums.length</code> 都满足 <code>nums[i - 1] &lt; nums[i]</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,7 +42,7 @@
 <b>解释：</b>[1,2,3] 已经是严格递增的，所以返回 true 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

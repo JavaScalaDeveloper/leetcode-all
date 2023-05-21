@@ -16,7 +16,7 @@
 
 <p>统计并返回 <strong>匹配检索规则的物品数量</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,7 +33,7 @@
 <strong>输出：</strong>2
 <strong>解释：</strong>只有两件物品匹配检索规则，这两件物品分别是 ["phone","blue","pixel"] 和 ["phone","gold","iphone"] 。注意，["computer","silver","phone"] 未匹配检索规则。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

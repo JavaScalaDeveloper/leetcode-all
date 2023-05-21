@@ -6,7 +6,7 @@
 
 <p>如果矩阵上每一条由左上到右下的对角线上的元素都相同，那么这个矩阵是<em> </em><strong>托普利茨矩阵</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0700-0799/0766.Toeplitz%20Matrix/images/ex1.jpg" style="width: 322px; height: 242px;" />
@@ -27,7 +27,7 @@
 <strong>解释：</strong>
 对角线 "[1, 2]" 上的元素不同。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -38,7 +38,7 @@
 	<li><code>0 <= matrix[i][j] <= 99</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong></p>
 

@@ -11,7 +11,7 @@
 
 <p>给你两个整数 <code>k</code> 和 <code>n</code> ，返回所有有效的涂色 <strong>方案数</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0276.Paint%20Fence/images/paintfenceex1.png" style="width: 507px; height: 313px;" />
@@ -35,7 +35,7 @@
 <strong>输出：</strong>42
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

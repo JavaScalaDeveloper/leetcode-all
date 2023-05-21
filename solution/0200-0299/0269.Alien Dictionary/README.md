@@ -15,7 +15,7 @@
 	<li>如果前面 <code>min(s.length, t.length)</code> 字母都相同，那么 <code>s.length < t.length</code> 时，<code>s</code> 的字典顺序也小于 <code>t</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,7 +39,7 @@
 <strong>解释：</strong>不存在合法字母顺序，因此返回 <code>"" 。</code>
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

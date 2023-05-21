@@ -6,7 +6,7 @@
 
 <p><strong>注意</strong> ，返回的整数应当是一个 <strong>32 位整数</strong> ，如果存在满足题意的答案，但不是 <strong>32 位整数</strong> ，同样返回 <code>-1</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,7 +22,7 @@
 <strong>输出：</strong>-1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

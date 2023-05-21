@@ -38,7 +38,7 @@ timeMap.get("foo", 4);         // 返回 "bar2"
 timeMap.get("foo", 5);         // 返回 "bar2"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

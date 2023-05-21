@@ -12,7 +12,7 @@
 
 <p>返回矩阵中 <strong>省份</strong> 的数量。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0500-0599/0547.Number%20of%20Provinces/images/graph1.jpg" style="width: 222px; height: 142px;" />
@@ -28,7 +28,7 @@
 <strong>输出：</strong>3
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

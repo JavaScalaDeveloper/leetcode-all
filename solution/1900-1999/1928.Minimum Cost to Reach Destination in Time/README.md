@@ -10,7 +10,7 @@
 
 <p>给你 <code>maxTime</code>，<code>edges</code> 和 <code>passingFees</code> ，请你返回完成旅行的 <strong>最小费用</strong> ，如果无法在 <code>maxTime</code> 分钟以内完成旅行，请你返回 <code>-1</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,7 +41,7 @@
 <b>解释：</b>无法在 25 分钟以内从城市 0 到达城市 5 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

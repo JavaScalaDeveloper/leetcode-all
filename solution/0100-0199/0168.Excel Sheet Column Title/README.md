@@ -17,7 +17,7 @@ AB -> 28
 ...
 </pre>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,7 +47,7 @@ AB -> 28
 <strong>输出：</strong>"FXSHRXW"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

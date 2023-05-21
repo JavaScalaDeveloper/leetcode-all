@@ -31,7 +31,7 @@
 
 <p>我们称从根到一个节点路径上的任意一个节点（除去节点本身）都是该节点的 <strong>祖先</strong> 。根节点没有祖先。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1700-1799/1719.Number%20Of%20Ways%20To%20Reconstruct%20A%20Tree/images/trees2.png" style="width: 208px; height: 221px;" />
@@ -56,7 +56,7 @@
 <b>输出：</b>0
 <b>解释：</b>没有符合规定的有根树。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

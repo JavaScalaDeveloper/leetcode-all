@@ -25,10 +25,7 @@ public class Solution {
     }
 }
 
-package com.solution._0315;
-import change.datastructure.*;
-import java.util.*;
-public class BinaryIndexedTree {
+class BinaryIndexedTree {
     private int n;
     private int[] c;
 

@@ -10,7 +10,7 @@
 
 <p>只有在可以通过一系列的移动从源方格 <code>source</code> 到达目标方格 <code>target</code> 时才返回 <code>true</code>。否则，返回 <code>false</code>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@
 因为没有方格被封锁，所以一定可以到达目标方格。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -13,7 +13,7 @@
 
 <p>返回符合上述 4 个条件的四元组的 <strong>个数</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例1：</strong></p>
 
@@ -31,7 +31,7 @@
 <strong>解释：</strong>没有任何一个四元组能满足上述4个要求.
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

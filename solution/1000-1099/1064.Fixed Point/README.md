@@ -4,7 +4,7 @@
 
 <p>给定已经按 <strong>升序</strong> 排列、由不同整数组成的数组 <code>arr</code>，返回满足 <code>arr[i] == i</code> 的最小索引 <code>i</code>。如果不存在这样的 <code>i</code>，返回 <code>-1</code>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@
 <strong>解释：</strong>不存在这样的 i 满足 <code>arr[i] = i</code>，因此输出为 -1 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -39,7 +39,7 @@
 	<li><code>-10<sup>9</sup> <= arr[i] <= 10<sup>9</sup></code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>时间复杂度为 <code>O(n)</code> 的解决方案很直观也很简单。你可以设计更优的解决方案吗？</p>
 

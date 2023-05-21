@@ -6,7 +6,7 @@
 
 <p>我们可以假设 <code>words</code> 中没有字符串是 <code>words</code> 中另一个字符串的子字符串。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,7 +21,7 @@
 <strong>输入：</strong>words = ["catg","ctaagt","gcta","ttca","atgcatc"]
 <strong>输出：</strong>"gctaagttcatgcatc"</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -6,7 +6,7 @@
 
 <div class="original__bRMd">
 <div>
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0206.Reverse%20Linked%20List/images/rev1ex1.jpg" style="width: 542px; height: 222px;" />
@@ -29,7 +29,7 @@
 <strong>输出：</strong>[]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -38,7 +38,7 @@
 	<li><code>-5000 <= Node.val <= 5000</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？</p>
 </div>

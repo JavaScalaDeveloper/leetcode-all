@@ -13,7 +13,7 @@
 
 <p>请你返回将 <code>instructions</code> 中所有元素依次插入 <code>nums</code> 后的 <strong>总最小代价 </strong>。由于答案会很大，请将它对 <code>10<sup>9</sup> + 7</code> <b>取余</b> 后返回。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -57,7 +57,7 @@
 总代价为 0 + 0 + 0 + 0 + 1 + 0 + 1 + 0 + 2 = 4 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

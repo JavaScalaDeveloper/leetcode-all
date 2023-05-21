@@ -13,7 +13,7 @@
 
 <p><strong>畅通路径的长度</strong> 是该路径途经的单元格总数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1000-1099/1091.Shortest%20Path%20in%20Binary%20Matrix/images/example1_1.png" style="width: 500px; height: 234px;" />
@@ -36,7 +36,7 @@
 <strong>输出：</strong>-1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -12,7 +12,7 @@
 
 <p>给你一个 <strong>打乱顺序</strong> 的句子 <code>s</code> ，它包含的单词不超过 <code>9</code> 个，请你重新构造并得到原本顺序的句子。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,7 +29,7 @@
 <b>输出：</b>"Me Myself and I"
 <b>解释：</b>将 s 中的单词按照初始位置排序，得到 "Me1 Myself2 and3 I4" ，然后删除数字。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

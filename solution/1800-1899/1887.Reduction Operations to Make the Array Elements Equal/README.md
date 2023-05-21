@@ -12,7 +12,7 @@
 
 <p>返回使<em> </em><code>nums</code><em> </em>中的所有元素相等的操作次数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,7 +45,7 @@
 4. largest = 2 下标为 4 。nextLargest = 1 。将 nums[4] 减少到 1 。nums = [1,1,1,1,<strong>1</strong>] 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

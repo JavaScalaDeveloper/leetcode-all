@@ -10,7 +10,7 @@
 
 <p>由于答案可能会很大，请返回方案数 <strong>模</strong> <code>10^9 + 7</code> 后的结果。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,7 +41,7 @@
 <strong>输出：</strong>8
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

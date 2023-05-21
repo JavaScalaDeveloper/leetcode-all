@@ -20,7 +20,7 @@
 	</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -42,7 +42,7 @@ os.insert(5, "eeeee"); // 插入 (5, "eeeee")，返回 []
 os.insert(4, "ddddd"); // 插入 (4, "ddddd")，返回 ["ddddd", "eeeee"]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

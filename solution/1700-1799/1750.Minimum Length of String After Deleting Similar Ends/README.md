@@ -14,7 +14,7 @@
 
 <p>请你返回对字符串 <code>s</code> 执行上面操作任意次以后（可能 0 次），能得到的 <strong>最短长度</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,7 +45,7 @@
 - 选择前缀 "b" 和后缀 "bb" 并删除它们，得到 s = "cca" 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

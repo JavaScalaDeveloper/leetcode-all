@@ -1,7 +1,30 @@
 package com.solution._0307;
-import change.datastructure.*;
-import java.util.*;
-public class BinaryIndexedTree {
+
+public class Solution {
+}
+
+class NumArray {
+    private BinaryIndexedTree tree;
+
+    public NumArray(int[] nums) {
+        int n = nums.length;
+        tree = new BinaryIndexedTree(n);
+        for (int i = 0; i < n; ++i) {
+            tree.update(i + 1, nums[i]);
+        }
+    }
+
+    public void update(int index, int val) {
+        int prev = sumRange(index, index);
+        tree.update(index + 1, val - prev);
+    }
+
+    public int sumRange(int left, int right) {
+        return tree.query(right + 1) - tree.query(left);
+    }
+}
+
+class BinaryIndexedTree {
     private int n;
     private int[] c;
 
@@ -28,30 +51,6 @@ public class BinaryIndexedTree {
 
     public static int lowbit(int x) {
         return x & -x;
-    }
-}
-
-package com.solution._0307;
-import change.datastructure.*;
-import java.util.*;
-public class NumArray {
-    private BinaryIndexedTree tree;
-
-    public NumArray(int[] nums) {
-        int n = nums.length;
-        tree = new BinaryIndexedTree(n);
-        for (int i = 0; i < n; ++i) {
-            tree.update(i + 1, nums[i]);
-        }
-    }
-
-    public void update(int index, int val) {
-        int prev = sumRange(index, index);
-        tree.update(index + 1, val - prev);
-    }
-
-    public int sumRange(int left, int right) {
-        return tree.query(right + 1) - tree.query(left);
     }
 }
 

@@ -8,7 +8,7 @@
 
 <p>请你返回从 <code>entrance</code> 到最近出口的最短路径的 <strong>步数</strong> ，如果不存在这样的路径，请你返回 <code>-1</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1926.Nearest%20Exit%20from%20Entrance%20in%20Maze/images/nearest1-grid.jpg" style="width: 333px; height: 253px;">
@@ -40,7 +40,7 @@
 <b>解释：</b>这个迷宫中没有出口。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

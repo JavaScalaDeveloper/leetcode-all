@@ -12,7 +12,7 @@
 
 <p>给你一个单词数组 <code>words</code> ，返回成功对 <code>words</code> 进行编码的最小助记字符串 <code>s</code> 的长度 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,7 +33,7 @@ words[2] = "bell" ，s 开始于 indices[2] = 5 到下一个 '#' 结束的子字
 <strong>解释：</strong>一组有效编码为 s = "t#" 和 indices = [0] 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

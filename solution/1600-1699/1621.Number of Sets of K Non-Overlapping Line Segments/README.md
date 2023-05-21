@@ -6,7 +6,7 @@
 
 <p>请你返回 <code>k</code> 个不重叠线段的方案数。由于答案可能很大，请将结果对 <code>10<sup>9</sup> + 7</code> <strong>取余</strong> 后返回。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1621.Number%20of%20Sets%20of%20K%20Non-Overlapping%20Line%20Segments/images/ex1.png" style="width: 179px; height: 222px;" />
@@ -46,7 +46,7 @@
 <b>输入：</b>n = 3, k = 2
 <b>输出：</b>1</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

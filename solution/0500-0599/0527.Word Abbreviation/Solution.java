@@ -1,7 +1,25 @@
 package com.solution._0527;
 import change.datastructure.*;
 import java.util.*;
-public class Trie {
+public class Solution {
+    public List<String> wordsAbbreviation(List<String> words) {
+        Map<Integer, Trie> trees = new HashMap<>();
+        for (String w : words) {
+            if (!trees.containsKey(w.length())) {
+                trees.put(w.length(), new Trie());
+            }
+        }
+        for (String w : words) {
+            trees.get(w.length()).insert(w);
+        }
+        List<String> ans = new ArrayList<>();
+        for (String w : words) {
+            ans.add(trees.get(w.length()).search(w));
+        }
+        return ans;
+    }
+}
+class Trie {
     Trie[] children = new Trie[26];
     int[] v = new int[26];
 
@@ -36,27 +54,5 @@ public class Trie {
         }
         res.append(w.charAt(w.length() - 1));
         return res.length() < w.length() ? res.toString() : w;
-    }
-}
-
-package com.solution._0527;
-import change.datastructure.*;
-import java.util.*;
-public class Solution {
-    public List<String> wordsAbbreviation(List<String> words) {
-        Map<Integer, Trie> trees = new HashMap<>();
-        for (String w : words) {
-            if (!trees.containsKey(w.length())) {
-                trees.put(w.length(), new Trie());
-            }
-        }
-        for (String w : words) {
-            trees.get(w.length()).insert(w);
-        }
-        List<String> ans = new ArrayList<>();
-        for (String w : words) {
-            ans.add(trees.get(w.length()).search(w));
-        }
-        return ans;
     }
 }

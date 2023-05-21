@@ -6,7 +6,7 @@
 
 <p><strong>路径</strong> 不需要从根节点开始，也不需要在叶子节点结束，但是路径方向必须是向下的（只能从父节点到子节点）。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,7 +25,7 @@
 <strong>输出：</strong>3
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

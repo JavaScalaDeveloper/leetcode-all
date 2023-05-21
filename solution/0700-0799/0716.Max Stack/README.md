@@ -15,7 +15,7 @@
 	<li><code>int popMax()</code> 检索并返回栈中最大元素，并将其移除。如果有多个最大元素，只要移除 <strong>最靠近栈顶</strong> 的那个。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -39,7 +39,7 @@ stk.pop();     // 返回 1，[<strong>5</strong>] - 此操作后，5 既是栈�
 stk.top();     // 返回 5，[<strong>5</strong>] - 栈没有改变
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -49,7 +49,7 @@ stk.top();     // 返回 5，[<strong>5</strong>] - 栈没有改变
 	<li>调用 <code>pop</code>、<code>top</code>、<code>peekMax</code> 或 <code>popMax</code> 时，栈中 <strong>至少存在一个元素</strong></li>
 </ul>
 
-<p> </p>
+
 
 <p><b>进阶：</b> </p>
 

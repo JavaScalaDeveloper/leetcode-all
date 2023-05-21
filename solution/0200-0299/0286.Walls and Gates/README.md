@@ -12,7 +12,7 @@
 
 <p>你要给每个空房间位上填上该房间到 <strong>最近门的距离</strong> ，如果无法到达门，则填 <code>INF</code> 即可。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0286.Walls%20and%20Gates/images/grid.jpg" style="width: 500px; height: 223px;" />
@@ -42,7 +42,7 @@
 <strong>输出：</strong>[[0]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

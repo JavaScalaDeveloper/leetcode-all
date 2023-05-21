@@ -6,7 +6,7 @@
 
 <p>返回将每个人都飞到 <code>a</code> 、<code>b</code> 中某座城市的最低费用，要求每个城市都有 <code>n</code> 人抵达<strong>。</strong></p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,7 +36,7 @@
 <strong>输出：</strong>3086
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

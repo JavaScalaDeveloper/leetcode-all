@@ -8,7 +8,7 @@
 
 <p>返回一个整数数组<em> </em><code>answer</code><em> </em>作为查询的答案，其中<em> </em><code>answer.length == queries.length</code><em> </em>且<em> </em><code>answer[i]</code><em> </em>是第<em> </em><code>i</code><em> </em>个查询的答案。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,7 +26,7 @@
 <strong>输出：</strong>[15,-1,5]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

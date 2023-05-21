@@ -11,7 +11,7 @@
 	<li><code>int add(int val)</code> 将 <code>val</code> 插入数据流 <code>nums</code> 后，返回当前数据流中第 <code>k</code> 大的元素。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -31,7 +31,7 @@ kthLargest.add(9);   // return 8
 kthLargest.add(4);   // return 8
 </pre>
 
-<p> </p>
+
 <strong>提示：</strong>
 
 <ul>

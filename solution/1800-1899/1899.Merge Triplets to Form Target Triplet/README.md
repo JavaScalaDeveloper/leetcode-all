@@ -16,7 +16,7 @@
 
 <p>如果通过以上操作我们可以使得目标 <strong>三元组</strong> <code>target</code> 成为 <code>triplets</code> 的一个 <strong>元素</strong> ，则返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,7 +55,7 @@
 <strong>解释：</strong>无法得到 [3,2,5] ，因为 triplets 不含 2 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

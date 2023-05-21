@@ -15,7 +15,7 @@
 	<li>如果 <code>i</code> 是 <code>x[i] != y[i]</code> 的第一个位置，且 <code>x[i]</code> 在字母表中的位置比 <code>y[i]</code> 靠前。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@
 <strong>输出：</strong>"aaszz"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -6,7 +6,7 @@
 
 <p>你可以按 <strong>任何顺序</strong> 返回答案。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>输入：</strong>n = 1, k = 1
 <strong>输出：</strong>[[1]]</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -27,7 +27,7 @@
 
 <p><strong>注意：</strong>测试数据保证 <code>rent</code> 操作中指定商店拥有 <strong>未借出 </strong>的指定电影，且 <code>drop</code> 操作指定的商店 <strong>之前已借出</strong> 指定电影。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,7 +48,7 @@ movieRentingSystem.drop(1, 2); // 在商店 1 返还电影 2 。现在商店 1 �
 movieRentingSystem.search(2);  // 返回 [0, 1] 。商店 0 和 1 有未借出的 ID 为 2 的电影。商店 0 最便宜，然后是商店 1 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

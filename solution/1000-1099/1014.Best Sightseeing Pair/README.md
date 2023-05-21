@@ -8,7 +8,7 @@
 
 <p>返回一对观光景点能取得的最高分。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,7 +25,7 @@
 <strong>输出：</strong>2
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

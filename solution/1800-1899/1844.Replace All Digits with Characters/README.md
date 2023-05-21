@@ -14,7 +14,7 @@
 
 <p>请你替换所有数字以后，将字符串 <code>s</code> 返回。题目 <strong>保证</strong><em> </em><code>shift(s[i-1], s[i])</code> 不会超过 <code>'z'</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
 - s[5] -&gt; shift('c',3) = 'f'
 - s[7] -&gt; shift('d',4) = 'h'</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

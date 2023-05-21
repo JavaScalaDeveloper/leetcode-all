@@ -13,7 +13,7 @@
 
 <p>返回卡车可以装载 <strong>单元</strong> 的 <strong>最大</strong> 总数<em>。</em></p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 <strong>输出：</strong>91
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

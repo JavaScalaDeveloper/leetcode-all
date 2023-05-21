@@ -4,7 +4,7 @@
 
 <p>给你一棵二叉树的根节点 <code>root</code> ，请你返回 <strong>层数最深的叶子节点的和</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,7 +22,7 @@
 <strong>输出：</strong>19
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

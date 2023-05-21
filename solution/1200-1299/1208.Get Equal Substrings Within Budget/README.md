@@ -12,7 +12,7 @@
 
 <p>如果 <code>s</code> 中没有子字符串可以转化成 <code>t</code> 中对应的子字符串，则返回 <code>0</code>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,7 +37,7 @@
 <strong>解释：</strong>a -> a, cost = 0，字符串未发生变化，所以最大长度为 1。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -1,7 +1,13 @@
 package com.solution._0642;
-import change.datastructure.*;
-import java.util.*;
-public class Trie {
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+
+public class Solution {
+}
+
+class Trie {
     Trie[] children = new Trie[27];
     int v;
     String w = "";
@@ -32,10 +38,8 @@ public class Trie {
     }
 }
 
-package com.solution._0642;
-import change.datastructure.*;
-import java.util.*;
-public class AutocompleteSystem {
+
+class AutocompleteSystem {
     private Trie trie = new Trie();
     private StringBuilder t = new StringBuilder();
 
@@ -59,7 +63,7 @@ public class AutocompleteSystem {
             return res;
         }
         PriorityQueue<Trie> q
-            = new PriorityQueue<>((a, b) -> a.v == b.v ? b.w.compareTo(a.w) : a.v - b.v);
+                = new PriorityQueue<>((a, b) -> a.v == b.v ? b.w.compareTo(a.w) : a.v - b.v);
         dfs(node, q);
         while (!q.isEmpty()) {
             res.add(0, q.poll().w);

@@ -6,7 +6,7 @@
 
 <p>解集 <strong>不能</strong> 包含重复的子集。你可以按 <strong>任意顺序</strong> 返回解集。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,7 +22,7 @@
 <strong>输出：</strong>[[],[0]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

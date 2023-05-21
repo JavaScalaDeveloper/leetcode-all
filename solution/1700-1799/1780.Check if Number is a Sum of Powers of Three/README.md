@@ -6,7 +6,7 @@
 
 <p>对于一个整数 <code>y</code> ，如果存在整数 <code>x</code> 满足 <code>y == 3<sup>x</sup></code> ，我们称这个整数 <code>y</code> 是三的幂。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <b>输出：</b>false
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

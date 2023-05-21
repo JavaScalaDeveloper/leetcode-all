@@ -6,7 +6,7 @@
 
 <p>函数 <code>floor()</code> 返回输入数字的整数部分。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,7 +27,7 @@ floor(9 / 5) = 1
 <b>输出：</b>49
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

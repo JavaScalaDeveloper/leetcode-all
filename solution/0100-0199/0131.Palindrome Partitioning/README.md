@@ -6,7 +6,7 @@
 
 <p><strong>回文串</strong> 是正着读和反着读都一样的字符串。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,7 +22,7 @@
 <strong>输出：</strong>[["a"]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

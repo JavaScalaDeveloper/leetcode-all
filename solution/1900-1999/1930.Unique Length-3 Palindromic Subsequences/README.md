@@ -14,7 +14,7 @@
 	<li>例如，<code>"ace"</code> 是 <code>"<strong><em>a</em></strong>b<strong><em>c</em></strong>d<strong><em>e</em></strong>"</code> 的一个子序列。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,7 +47,7 @@
 - "aba" ("bbcb<strong><em>aba</em></strong>" 的子序列)
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -14,7 +14,7 @@
 
 <p>如果 <code>firstWord</code><em> </em>和<em> </em><code>secondWord</code> 的 <strong>数值之和</strong> 等于<em> </em><code>targetWord</code><em> </em>的数值，返回 <code>true</code> ；否则，返回<em> </em><code>false</code><em> </em>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,7 +48,7 @@ targetWord 的数值为 "aaaa" -&gt; "0000" -&gt; 0
 由于 0 + 0 == 0 ，返回 true
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

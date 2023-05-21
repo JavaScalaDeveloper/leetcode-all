@@ -12,7 +12,7 @@
 
 <p>找到每一个 <strong>较大分组</strong> 的区间，<strong>按起始位置下标递增顺序排序后</strong>，返回结果。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 

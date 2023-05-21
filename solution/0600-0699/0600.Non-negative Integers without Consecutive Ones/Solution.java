@@ -2,6 +2,9 @@ package com.solution._0600;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
+    public static void main(String[] args) {
+
+    }
     private int[] a = new int[33];
     private int[][] dp = new int[33][2];
 
@@ -11,7 +14,7 @@ public class Solution {
             a[++len] = n & 1;
             n >>= 1;
         }
-        for (var e : dp) {
+        for (int[] e : dp) {
             Arrays.fill(e, -1);
         }
         return dfs(len, 0, true);

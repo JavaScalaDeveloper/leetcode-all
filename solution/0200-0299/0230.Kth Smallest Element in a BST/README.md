@@ -4,7 +4,7 @@
 
 <p>给定一个二叉搜索树的根节点 <code>root</code> ，和一个整数 <code>k</code> ，请你设计一个算法查找其中第 <code>k</code><strong> </strong>个最小元素（从 1 开始计数）。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0200-0299/0230.Kth%20Smallest%20Element%20in%20a%20BST/images/kthtree1.jpg" style="width: 212px; height: 301px;" />
@@ -20,9 +20,9 @@
 <strong>输出：</strong>3
 </pre>
 
-<p> </p>
 
-<p> </p>
+
+
 
 <p><strong>提示：</strong></p>
 
@@ -32,7 +32,7 @@
 	<li><code>0 <= Node.val <= 10<sup>4</sup></code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong>如果二叉搜索树经常被修改（插入/删除操作）并且你需要频繁地查找第 <code>k</code> 小的值，你将如何优化算法？</p>
 

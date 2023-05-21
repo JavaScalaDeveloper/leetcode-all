@@ -1,40 +1,9 @@
 package com.solution._0308;
-import change.datastructure.*;
-import java.util.*;
-public class BinaryIndexedTree {
-    private int n;
-    private int[] c;
 
-    public BinaryIndexedTree(int n) {
-        this.n = n;
-        c = new int[n + 1];
-    }
-
-    public void update(int x, int delta) {
-        while (x <= n) {
-            c[x] += delta;
-            x += lowbit(x);
-        }
-    }
-
-    public int query(int x) {
-        int s = 0;
-        while (x > 0) {
-            s += c[x];
-            x -= lowbit(x);
-        }
-        return s;
-    }
-
-    public static int lowbit(int x) {
-        return x & -x;
-    }
+public class Solution {
 }
 
-package com.solution._0308;
-import change.datastructure.*;
-import java.util.*;
-public class NumMatrix {
+class NumMatrix {
     private BinaryIndexedTree[] trees;
 
     public NumMatrix(int[][] matrix) {
@@ -66,6 +35,35 @@ public class NumMatrix {
     }
 }
 
+class BinaryIndexedTree {
+    private int n;
+    private int[] c;
+
+    public BinaryIndexedTree(int n) {
+        this.n = n;
+        c = new int[n + 1];
+    }
+
+    public void update(int x, int delta) {
+        while (x <= n) {
+            c[x] += delta;
+            x += lowbit(x);
+        }
+    }
+
+    public int query(int x) {
+        int s = 0;
+        while (x > 0) {
+            s += c[x];
+            x -= lowbit(x);
+        }
+        return s;
+    }
+
+    public static int lowbit(int x) {
+        return x & -x;
+    }
+}
 /**
  * Your NumMatrix object will be instantiated and called as such:
  * NumMatrix obj = new NumMatrix(matrix);

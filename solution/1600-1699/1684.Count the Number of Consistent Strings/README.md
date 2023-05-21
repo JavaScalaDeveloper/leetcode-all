@@ -6,7 +6,7 @@
 
 <p>请你返回 <code>words</code> 数组中 <strong>一致字符串</strong> 的数目。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,7 +32,7 @@
 <b>解释：</b>字符串 "cc"，"acd"，"ac" 和 "d" 是一致字符串。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -8,7 +8,7 @@
 
 <p>返回一个数组<em> </em><code>answer</code>，其中<em>  </em><code>answer.length == queries.length</code> 且 <code>answer[i]</code> 是第 <code>i</code> 个查询指令的答案对 <code>10<sup>9 </sup>+ 7</code> 取模。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -26,7 +26,7 @@
 <strong>输出:</strong> [303]
 </pre>
 
-<p> </p>
+
 
 <p><b>提示：</b></p>
 

@@ -6,7 +6,7 @@
 
 <p><strong>数组表示的字符串</strong> 是由数组中的所有元素 <strong>按顺序</strong> 连接形成的字符串。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,7 +32,7 @@ word2 表示的字符串为 "a" + "bc" -> "abc"
 <strong>输出：</strong>true
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

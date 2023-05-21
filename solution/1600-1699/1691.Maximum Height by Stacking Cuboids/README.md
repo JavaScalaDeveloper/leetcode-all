@@ -8,7 +8,7 @@
 
 <p>返回 <strong>堆叠长方体</strong> <code>cuboids</code> 可以得到的 <strong>最大高度</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,7 +45,7 @@
 堆叠长方体的最大高度为 6 * 17 = 102 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

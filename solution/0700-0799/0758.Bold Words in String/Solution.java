@@ -1,25 +1,8 @@
 package com.solution._0758;
-import change.datastructure.*;
-import java.util.*;
-public class Trie {
-    Trie[] children = new Trie[128];
-    boolean isEnd;
 
-    public void insert(String word) {
-        Trie node = this;
-        for (char c : word.toCharArray()) {
-            if (node.children[c] == null) {
-                node.children[c] = new Trie();
-            }
-            node = node.children[c];
-        }
-        node.isEnd = true;
-    }
-}
+import java.util.ArrayList;
+import java.util.List;
 
-package com.solution._0758;
-import change.datastructure.*;
-import java.util.*;
 public class Solution {
     public String boldWords(String[] words, String s) {
         Trie trie = new Trie();
@@ -37,7 +20,7 @@ public class Solution {
                 }
                 node = node.children[idx];
                 if (node.isEnd) {
-                    pairs.add(new int[] {i, j});
+                    pairs.add(new int[]{i, j});
                 }
             }
         }
@@ -49,14 +32,14 @@ public class Solution {
         for (int j = 1; j < pairs.size(); ++j) {
             int a = pairs.get(j)[0], b = pairs.get(j)[1];
             if (ed + 1 < a) {
-                t.add(new int[] {st, ed});
+                t.add(new int[]{st, ed});
                 st = a;
                 ed = b;
             } else {
                 ed = Math.max(ed, b);
             }
         }
-        t.add(new int[] {st, ed});
+        t.add(new int[]{st, ed});
         int i = 0, j = 0;
         StringBuilder ans = new StringBuilder();
         while (i < n) {
@@ -76,5 +59,21 @@ public class Solution {
             i = ed + 1;
         }
         return ans.toString();
+    }
+}
+
+class Trie {
+    Trie[] children = new Trie[128];
+    boolean isEnd;
+
+    public void insert(String word) {
+        Trie node = this;
+        for (char c : word.toCharArray()) {
+            if (node.children[c] == null) {
+                node.children[c] = new Trie();
+            }
+            node = node.children[c];
+        }
+        node.isEnd = true;
     }
 }

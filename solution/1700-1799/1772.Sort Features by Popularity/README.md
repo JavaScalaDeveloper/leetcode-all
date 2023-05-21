@@ -8,7 +8,7 @@
 
 <p>返回一个数组 <code>sortedFeatures</code> ，包含按受欢迎程度排列的功能名称。当第 <code>x</code>  个功能和第 <code>y</code> 个功能的受欢迎程度相同且 <code>x < y</code> 时，你应当将第 <code>x</code> 个功能放在第 <code>y</code> 个功能之前。</p>
 
-<p> </p>
+
 
 <p><b>示例 1：</b></p>
 
@@ -25,7 +25,7 @@
 <strong>输出</strong><b>：</b>["a","aa","b","c"]
 </pre>
 
-<p> </p>
+
 
 <p><b>提示：</b></p>
 

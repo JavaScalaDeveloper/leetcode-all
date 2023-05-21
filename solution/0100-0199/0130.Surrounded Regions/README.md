@@ -6,7 +6,7 @@
 
 <div class="original__bRMd">
 <div>
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0130.Surrounded%20Regions/images/xogrid.jpg" style="width: 550px; height: 237px;" />
@@ -23,7 +23,7 @@
 <strong>输出：</strong>[["X"]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -8,7 +8,7 @@
 
 <p>返回能看到海景建筑物的下标列表（下标 <strong>从 <code>0</code> 开始</strong> ），并按升序排列。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,7 +39,7 @@
 <strong>输出：</strong>[3]
 <strong>解释：</strong>如果建筑物右边有相同高度的建筑物则无法看到海景。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

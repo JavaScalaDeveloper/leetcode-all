@@ -14,7 +14,7 @@
 
 <p>数组 <code>a</code> 是数组 <code>b</code> 的一个 <strong>子集</strong> 的前提条件是：从 <code>b</code> 删除几个（也可能不删除）元素能够得到 <code>a</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -51,7 +51,7 @@
 <strong>解释：</strong>每个子集的全部异或总和值之和为 480 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

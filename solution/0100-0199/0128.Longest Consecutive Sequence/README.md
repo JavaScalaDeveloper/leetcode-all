@@ -6,7 +6,7 @@
 
 <p>请你设计并实现时间复杂度为 <code>O(n)</code><em> </em>的算法解决此问题。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,7 +22,7 @@
 <strong>输出：</strong>9
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

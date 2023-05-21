@@ -6,7 +6,7 @@
 
 <p><strong>丑数 </strong>就是只包含质因数 <code>2</code>、<code>3</code> 和/或 <code>5</code> 的正整数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>解释：</strong>1 通常被视为丑数。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

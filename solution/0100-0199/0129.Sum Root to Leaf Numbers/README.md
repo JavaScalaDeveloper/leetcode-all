@@ -16,7 +16,7 @@
 
 <p><strong>叶节点</strong> 是指没有子节点的节点。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0129.Sum%20Root%20to%20Leaf%20Numbers/images/num1tree.jpg" style="width: 212px; height: 182px;" />
@@ -40,7 +40,7 @@
 因此，数字总和 = 495 + 491 + 40 = <code>1026</code>
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

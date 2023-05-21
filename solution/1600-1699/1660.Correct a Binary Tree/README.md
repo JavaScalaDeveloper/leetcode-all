@@ -18,7 +18,7 @@
 
 <p>当以 <code>root</code> 为根的二叉树被解析后，值为 <code>fromNode</code> 的节点 <code>TreeNode</code> 将其右子节点指向值为 <code>toNode</code> 的节点 <code>TreeNode</code> 。然后， <code>root</code> 传入 <code>correctBinaryTree</code> 的参数中。</p>
 
-<p> </p>
+
 
 <p><b>示例 1:</b></p>
 
@@ -40,7 +40,7 @@
 <strong>解释:</strong> 值为 7 的节点是无效的，所以移除这个节点及其子节点 2。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

@@ -11,7 +11,7 @@
 
 <p>请你返回一个数组 <code>answer</code> ，其中<em> </em><code>answer[i]</code>是第 <code>i</code> 个查询的结果。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,7 +44,7 @@
 <b>输出：</b>[4,3,6,4,6,7]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

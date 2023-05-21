@@ -8,7 +8,7 @@
 
 <p>返回 <strong>人口最多</strong> 且 <strong>最早</strong> 的年份。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,7 +25,7 @@
 人口最多为 2 ，分别出现在 1960 和 1970 。
 其中最早年份是 1960 。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

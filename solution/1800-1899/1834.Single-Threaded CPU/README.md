@@ -15,7 +15,7 @@
 
 <p>返回<em> </em>CPU<em> </em>处理任务的顺序。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,7 +46,7 @@
 - time = 28 ，CPU 完成任务 0 并开始执行任务 1 ，可执行任务项 = {}
 - time = 40 ，CPU 完成任务 1 并进入空闲状态</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

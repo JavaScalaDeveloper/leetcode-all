@@ -69,7 +69,7 @@ The robot is initially standing on cell (1, 0), denoted by the -1.
 <strong>输出:</strong> -1
 <strong>解释:</strong> 机器人和终点间没有可通行的路径.</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

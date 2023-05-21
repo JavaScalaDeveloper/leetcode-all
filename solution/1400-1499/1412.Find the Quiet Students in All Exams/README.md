@@ -14,7 +14,7 @@
 student_id 是该表主键.
 student_name 学生名字.</pre>
 
-<p> </p>
+
 
 <p>表: <code>Exam</code></p>
 
@@ -30,7 +30,7 @@ student_name 学生名字.</pre>
 学生 student_id 在测验 exam_id 中得分为 score.
 </pre>
 
-<p> </p>
+
 
 <p>成绩处于中游的学生是指至少参加了一次测验, 且得分既不是最高分也不是最低分的学生。</p>
 
@@ -40,7 +40,7 @@ student_name 学生名字.</pre>
 
 <p>查询结果格式如下。</p>
 
-<p> </p>
+
 
 <pre>
 Student 表：

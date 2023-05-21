@@ -20,7 +20,7 @@
 
 <p><strong>注意</strong>：点 <code>0</code> 处和点 <code>n</code> 处的任一跑道都不会有障碍。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1800-1899/1824.Minimum%20Sideway%20Jumps/images/ic234-q3-ex1.png" style="width: 500px; height: 244px;" />
@@ -47,7 +47,7 @@
 <b>解释：</b>最优方案如上图所示。总共有 2 次侧跳。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

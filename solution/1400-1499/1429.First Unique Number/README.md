@@ -12,7 +12,7 @@
 	<li><code>void add(int value)</code> 将 value 插入队列中。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -67,7 +67,7 @@ firstUnique.add(809);          // 此时队列为 [809,809]
 firstUnique.showFirstUnique(); // 返回 -1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

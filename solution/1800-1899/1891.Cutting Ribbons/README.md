@@ -18,7 +18,7 @@
 
 <p>对于这 <code>k</code> 根绳子，返回你能得到的绳子<strong>最大</strong>长度；如果你无法得到 <code>k</code> 根相同长度的绳子，返回 <code>0</code>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -48,7 +48,7 @@
 <strong>解释:</strong> 由于绳子长度需要为正整数，你无法得到 22 条长度相同的绳子。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

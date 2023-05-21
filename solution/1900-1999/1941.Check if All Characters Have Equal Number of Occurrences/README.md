@@ -6,7 +6,7 @@
 
 <p>如果 <code>s</code> 中出现过的 <strong>所有</strong> 字符的出现次数 <strong>相同</strong> ，那么我们称字符串 <code>s</code> 是 <strong>好</strong> 字符串。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,7 +23,7 @@
 'a' 出现了 3 次，'b' 出现了 2 次，两者出现次数不同。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

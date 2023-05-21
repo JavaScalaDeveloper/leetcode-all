@@ -10,7 +10,7 @@
 
 <p>请你返回所有连通三元组中度数的 <strong>最小值</strong> ，如果图中没有连通三元组，那么返回 <code>-1</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1700-1799/1761.Minimum%20Degree%20of%20a%20Connected%20Trio%20in%20a%20Graph/images/trios1.png" style="width: 388px; height: 164px;" />
@@ -31,7 +31,7 @@
 3) [5,6,7]，度数为 2 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

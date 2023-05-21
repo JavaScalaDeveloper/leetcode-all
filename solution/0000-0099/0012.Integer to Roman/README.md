@@ -26,7 +26,7 @@ M             1000</pre>
 
 <p>给你一个整数，将其转为罗马数字。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -61,7 +61,7 @@ M             1000</pre>
 <strong>输出:</strong> "MCMXCIV"
 <strong>解释:</strong> M = 1000, CM = 900, XC = 90, IV = 4.</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

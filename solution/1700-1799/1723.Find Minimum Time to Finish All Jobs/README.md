@@ -8,7 +8,7 @@
 
 <p>返回分配方案中尽可能 <strong>最小</strong> 的 <strong>最大工作时间</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 2 号工人：4、7（工作时间 = 4 + 7 = 11）
 最大工作时间是 11 。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -8,7 +8,7 @@
 
 <p>返回爬到最后一阶时必须添加到梯子上的 <strong>最少</strong> 台阶数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,7 +49,7 @@
 <strong>解释：</strong>这个梯子无需增设新台阶也可以爬上去。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

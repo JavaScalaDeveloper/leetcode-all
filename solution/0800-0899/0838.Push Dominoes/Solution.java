@@ -1,3 +1,7 @@
+package com.solution._0838;
+
+import java.util.*;
+
 public class Solution {
     public String pushDominoes(String dominoes) {
         int n = dominoes.length();
@@ -39,7 +43,3 @@ public class Solution {
         return new String(ans);
     }
 }
-package com.solution._0838;
-import change.datastructure.*;
-import java.util.*;
-public class Solution {}

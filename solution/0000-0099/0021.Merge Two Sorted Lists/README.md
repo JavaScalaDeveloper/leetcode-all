@@ -4,7 +4,7 @@
 
 <p>将两个升序链表合并为一个新的 <strong>升序</strong> 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 </p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0021.Merge%20Two%20Sorted%20Lists/images/merge_ex1.jpg" style="width: 662px; height: 302px;" />
@@ -27,7 +27,7 @@
 <strong>输出：</strong>[0]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

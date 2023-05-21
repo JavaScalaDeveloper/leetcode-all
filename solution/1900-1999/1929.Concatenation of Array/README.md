@@ -13,7 +13,7 @@
 
 <p>返回数组<em> </em><code>ans</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 - ans = [1,3,2,1,1,3,2,1]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

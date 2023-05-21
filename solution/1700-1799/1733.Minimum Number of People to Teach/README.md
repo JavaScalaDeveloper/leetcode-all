@@ -15,7 +15,7 @@
 <p>你可以选择 <strong>一门</strong> 语言并教会一些用户，使得所有好友之间都可以相互沟通。请返回你 <strong>最少</strong> 需要教会多少名用户。</p>
 请注意，好友关系没有传递性，也就是说如果 <code>x</code> 和 <code>y</code> 是好友，且 <code>y</code> 和 <code>z</code> 是好友， <code>x</code> 和 <code>z</code> 不一定是好友。
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,7 +33,7 @@
 <b>解释：</b>教用户 1 和用户 3 第三门语言，需要教 2 名用户。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

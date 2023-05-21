@@ -6,7 +6,7 @@
 
 <p><strong>子字符串</strong> 是字符串中的一个连续字符序列。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
 <strong>解释：</strong>最优的子字符串是 "abba" ，其他的非最优解包括 "bb" 和 "" 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

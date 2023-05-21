@@ -10,7 +10,7 @@
 
 <p>只有与值 <code>x</code> 和 <code>y</code> 对应的节点是堂兄弟节点时，才返回 <code>true</code> 。否则，返回 <code>false</code>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：<br />
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0993.Cousins%20in%20Binary%20Tree/images/q1248-01.png" style="height: 160px; width: 180px;" /></strong></p>
@@ -36,7 +36,7 @@
 <strong>输入：</strong>root = [1,2,3,null,4], x = 2, y = 3
 <strong>输出：</strong>false</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -45,7 +45,7 @@
 	<li>每个节点的值都是唯一的、范围为 <code>1</code> 到 <code>100</code> 的整数。</li>
 </ul>
 
-<p> </p>
+
 
 ## 解法
 

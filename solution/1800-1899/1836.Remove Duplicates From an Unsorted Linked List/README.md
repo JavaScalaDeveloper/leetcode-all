@@ -6,7 +6,7 @@
 
 <p>返回删除后的链表。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1800-1899/1836.Remove%20Duplicates%20From%20an%20Unsorted%20Linked%20List/images/tmp-linked-list.jpg" style="width: 422px; height: 222px;">
@@ -29,7 +29,7 @@
 <strong>解释: </strong>3 出现了两次，且 2 出现了三次。移除了所有的 3 和 2 后，我们还剩下 [1,4] 。
 </pre>
 
-<p> </p>
+
 
 <p><b>提示：</b></p>
 

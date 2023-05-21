@@ -14,7 +14,7 @@
 
 <p>生成的测试用例保证答案不超过 <code>10<sup>7</sup></code> ，且 <code>hour</code> 的 <strong>小数点后最多存在两位数字</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -46,7 +46,7 @@
 <strong>输出：</strong>-1
 <strong>解释：</strong>不可能准时到达，因为第 3 趟列车最早是在第 2 小时发车。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

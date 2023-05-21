@@ -6,7 +6,7 @@
 
 <p><strong>注意：</strong>该题与 316 <a href="https://leetcode.com/problems/remove-duplicate-letters/">https://leetcode.com/problems/remove-duplicate-letters/</a> 相同</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,7 +21,7 @@
 <strong>输入：</strong><code>s = "cbacdcbc"</code>
 <strong>输出：</strong><code>"acdb"</code></pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

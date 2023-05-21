@@ -11,7 +11,7 @@
 
 <p>给你一个 <strong>非负</strong> 整数数组 <code>nums</code> ，请你返回 <strong>好的</strong> 分割 <code>nums</code> 方案数目。由于答案可能会很大，请你将结果对 <code>10<sup>9 </sup>+ 7</code> 取余后返回。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -38,7 +38,7 @@
 <b>输出：</b>0
 <b>解释：</b>没有好的分割方案。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

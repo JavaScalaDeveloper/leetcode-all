@@ -4,7 +4,7 @@
 
 给你单链表的头指针 <code>head</code> 和两个整数  <code>left</code> 和 <code>right</code> ，其中  <code>left <= right</code> 。请你反转从位置 <code>left</code> 到位置 <code>right</code> 的链表节点，返回 <strong>反转后的链表</strong> 。
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0092.Reverse%20Linked%20List%20II/images/rev2ex2.jpg" style="width: 542px; height: 222px;" />
@@ -20,7 +20,7 @@
 <strong>输出：</strong>[5]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -31,7 +31,7 @@
 	<li><code>1 <= left <= right <= n</code></li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong> 你可以使用一趟扫描完成反转吗？</p>
 

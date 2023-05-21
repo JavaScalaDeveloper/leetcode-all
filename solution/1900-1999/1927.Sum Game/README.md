@@ -21,7 +21,7 @@
 
 <p>在 Alice 和 Bob 都采取 <strong>最优</strong> 策略的前提下，如果 Alice 获胜，请返回 <code>true</code> ，如果 Bob 获胜，请返回 <code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -53,7 +53,7 @@
 Bob 获胜，因为 9 + 3 + 2 + 9 = 5 + 9 + 2 + 7 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -14,7 +14,7 @@
 	<li><code>int getIndex(idx)</code> 得到下标为 <code>idx</code> 处的数值（下标从 0 开始），并将结果对 <code>10<sup>9</sup> + 7</code> 取余。如果下标大于等于序列的长度，请返回 <code>-1</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -40,7 +40,7 @@ fancy.getIndex(1); // 返回 34
 fancy.getIndex(2); // 返回 20
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -8,7 +8,7 @@
 
 <p>给你 <code>encoded</code> 数组，请你返回原始数组 <code>perm</code> 。题目保证答案存在且唯一。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -23,7 +23,7 @@
 <b>输出：</b>[2,4,1,5,3]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

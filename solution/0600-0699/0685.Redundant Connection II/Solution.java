@@ -1,6 +1,5 @@
 package com.solution._0685;
-import change.datastructure.*;
-import java.util.*;
+
 public class Solution {
     public int[] findRedundantDirectedConnection(int[][] edges) {
         int n = edges.length;
@@ -26,16 +25,13 @@ public class Solution {
         }
         int v = edges[conflict][1];
         if (cycle != -1) {
-            return new int[] {p[v], v};
+            return new int[]{p[v], v};
         }
         return edges[conflict];
     }
 }
 
-package com.solution._0685;
-import change.datastructure.*;
-import java.util.*;
-public class UnionFind {
+class UnionFind {
     public int[] p;
     public int n;
 

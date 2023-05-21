@@ -13,7 +13,7 @@
 	<li>如果编码的过程不能使字符串缩短，则不要对其进行编码。如果有多种编码方式，返回 <strong>任意一种</strong> 即可</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,7 +55,7 @@
 <strong>解释：</strong>"abbbabbbc" 出现两次，但是 "abbbabbbc" 可以编码为 "2[abbb]c"，因此一种答案可以是 "2[2[abbb]c]"。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

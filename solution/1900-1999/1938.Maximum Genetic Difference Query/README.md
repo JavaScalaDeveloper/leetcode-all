@@ -8,7 +8,7 @@
 
 <p>请你返回数组<em> </em><code>ans</code> ，其中 <code>ans[i]</code> 是第 <code>i</code> 个查询的答案。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1938.Maximum%20Genetic%20Difference%20Query/images/c1.png" style="width: 118px; height: 163px;">
@@ -30,7 +30,7 @@
 - [0,5]：最大基因差的对应节点为 2 ，基因差为 5 XOR 2 = 7 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

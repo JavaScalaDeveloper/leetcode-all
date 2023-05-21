@@ -8,7 +8,7 @@
 
 <p>请你返回 <code>grid2</code> 中 <strong>子岛屿</strong> 的 <strong>数目</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1900-1999/1905.Count%20Sub%20Islands/images/test1.png" style="width: 493px; height: 205px;">
@@ -26,7 +26,7 @@ grid2 中标红的 1 区域是子岛屿，总共有 3 个子岛屿。
 grid2 中标红的 1 区域是子岛屿，总共有 2 个子岛屿。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

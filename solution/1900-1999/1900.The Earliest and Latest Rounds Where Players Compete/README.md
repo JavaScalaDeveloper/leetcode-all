@@ -24,7 +24,7 @@
 
 <p>给你三个整数 <code>n</code>、<code>firstPlayer</code> 和 <code>secondPlayer</code> 。返回一个由两个值组成的整数数组，分别表示两位最佳运动员在本场锦标赛中比拼的 <strong>最早</strong> 回合数和 <strong>最晚</strong> 回合数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -50,7 +50,7 @@
 不存在使他们在其他回合进行比拼的可能。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -6,7 +6,7 @@
 
 <p>如果存在则返回 <code>true</code>，不存在返回 <code>false</code>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,7 +26,7 @@
 <strong>输入：</strong>nums = [1,5,9,1,5,9], k = 2, t = 3
 <strong>输出：</strong>false</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

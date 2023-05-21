@@ -32,7 +32,7 @@ class FizzBuzz {
 	<li>线程D将调用 <code>number()</code> 来实现输出既不能被 3 整除也不能被 5 整除的数字。</li>
 </ol>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -40,7 +40,7 @@ class FizzBuzz {
 	<li>本题已经提供了打印字符串的相关方法，如 <code>printFizz()</code> 等，具体方法名请参考答题模板中的注释部分。</li>
 </ul>
 
-<p> </p>
+
 
 ## 解法
 

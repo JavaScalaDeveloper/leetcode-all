@@ -8,7 +8,7 @@
 
 <p>以长度为 5 的字符串，按 <code>"HH:MM"</code> 格式返回答案。如果不能确定有效时间，则返回空字符串。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,7 +40,7 @@
 <strong>输出：</strong>"10:00"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

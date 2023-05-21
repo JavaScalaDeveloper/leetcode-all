@@ -6,25 +6,25 @@
 
 <p><code>Excel(int H, char W):</code> 这是一个构造函数，输入表明了 Excel 的高度和宽度。H 是一个正整数，范围从 1 到 26，代表高度。W 是一个字符，范围从 'A' 到 'Z'，宽度等于从 'A' 到 W 的字母个数。Excel 表格是一个高度 * 宽度的二维整数数组，数组中元素初始化为 0。第一行下标从 1 开始，第一列下标从 'A' 开始。</p>
 
-<p> </p>
+
 
 <p><code>void Set(int row, char column, int val):</code> 设置 <code>C(row, column)</code> 中的值为 val。</p>
 
-<p> </p>
+
 
 <p><code>int Get(int row, char column):</code> 返回 <code>C(row, column)</code> 中的值。</p>
 
-<p> </p>
+
 
 <p><code>int Sum(int row, char column, List of Strings : numbers):</code> 这个函数会将计算的结果放入 <code>C(row, column)</code> 中，计算的结果等于在 <code>numbers</code> 中代表的所有元素之和，这个函数同时也会将这个结果返回。求和公式会一直计算更新结果直到这个公式被其他的值或者公式覆盖。</p>
 
 <p><code>numbers</code> 是若干字符串的集合，每个字符串代表单个位置或一个区间。如果这个字符串表示单个位置，它的格式如下：<code>ColRow</code>，例如 "F7" 表示位置 (7, F) 。如果这个字符串表示一个区间，它的格式如下：<code>ColRow1:ColRow2</code>。区间就是左上角为 ColRow1 右下角为 ColRow2 的长方形。</p>
 
-<p> </p>
+
 
 <p><strong>注意: </strong>你可以认为不会出现循环求和的定义，比如说：<code>mat[1]['A'] == sum(1, "B")</code> 和 <code>mat[1]['B'] == sum(1, "A")</code>.</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -61,7 +61,7 @@ excel.set(2, "B", 2);
  // 3 0 0 6
 excel.get(3, "C"); // 返回 6</pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -76,12 +76,12 @@ excel.get(3, "C"); // 返回 6</pre>
 	<li><code>set</code>, <code>get</code>, and <code>sum</code> 操作数不超过 100 次</li>
 </ul>
 
-<p> </p>
+
 
 <ol>
 </ol>
 
-<p> </p>
+
 
 ## 解法
 

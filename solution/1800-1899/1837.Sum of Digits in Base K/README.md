@@ -6,7 +6,7 @@
 
 <p>转换后，各位数字应当视作是 <code>10</code> 进制数字，且它们的总和也应当按 <code>10</code> 进制表示返回。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>解释：</strong>n 本身就是 10 进制。 1 + 0 = 1 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -6,7 +6,7 @@
 
 <p><strong>子序列</strong> 是指在不改变其余元素顺序的情况下，通过删除一些元素或不删除任何元素而从 <code>arr</code> 派生出来的序列。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@
 <strong>解释：</strong>最长的等差子序列是 [7,5,3,1]。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

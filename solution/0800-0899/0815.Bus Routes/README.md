@@ -12,7 +12,7 @@
 
 <p>求出 <strong>最少乘坐的公交车数量</strong> 。如果不可能到达终点车站，返回 <code>-1</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,7 +29,7 @@
 <strong>输出：</strong>-1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

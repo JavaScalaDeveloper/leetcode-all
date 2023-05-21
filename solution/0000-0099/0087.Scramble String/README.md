@@ -17,7 +17,7 @@
 
 <p>给你两个 <strong>长度相等</strong> 的字符串 <code>s1</code><em> </em>和 <code>s2</code>，判断 <code>s2</code><em> </em>是否是 <code>s1</code><em> </em>的扰乱字符串。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,7 +49,7 @@
 <strong>输出：</strong>true
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

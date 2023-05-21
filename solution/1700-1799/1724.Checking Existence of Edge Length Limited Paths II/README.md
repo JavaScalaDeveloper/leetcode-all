@@ -11,7 +11,7 @@
 	<li><code>boolean query(int p, int q, int limit)</code> 当存在一条从 <code>p</code> 到 <code>q</code> 的路径，且路径中每条边的距离都<strong>严格小于</strong> <code>limit</code> 时，返回 <code>true</code> ，否则返回 <code>false</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><b>示例 1:</b></p>
 
@@ -34,7 +34,7 @@ distanceLimitedPathsExist.query(2, 0, 3); // 返回 true。存在一条从 2 到
 distanceLimitedPathsExist.query(0, 5, 6); // 返回 false。从 0 到 5 之间不存在路径。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

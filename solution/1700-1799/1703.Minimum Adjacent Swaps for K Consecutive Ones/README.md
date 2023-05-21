@@ -6,7 +6,7 @@
 
 <p>请你返回使 <code>nums</code> 中包含 <code>k</code> 个 <strong>连续 </strong><code>1</code> 的 <strong>最少</strong> 交换次数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -29,7 +29,7 @@
 <b>解释：</b>nums 已经有连续 2 个 1 了。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

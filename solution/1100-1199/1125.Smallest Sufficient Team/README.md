@@ -12,7 +12,7 @@
 
 <p>请你返回 <strong>任一</strong> 规模最小的必要团队，团队成员用人员编号表示。你可以按 <strong>任意顺序</strong> 返回答案，题目数据保证答案存在。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>输出：</strong>[1,2]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

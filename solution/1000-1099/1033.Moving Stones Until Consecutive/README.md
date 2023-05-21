@@ -10,7 +10,7 @@
 
 <p>要使游戏结束，你可以执行的最小和最大移动次数分别是多少？ 以长度为 2 的数组形式返回答案：<code>answer = [minimum_moves, maximum_moves]</code></p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>解释：</strong>我们无法进行任何移动。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -23,7 +23,7 @@
 	<li>从 <code>[1, 2, <strong>3</strong>, 4, 5, 6]</code> 的中间位置弹出元素，返回 <code>3</code> ，数组变为 <code>[1, 2, 4, 5, 6]</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,7 +47,7 @@ q.popBack();      // 返回 2 -> []
 q.popFront();     // 返回 -1 -> [] （队列为空）
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

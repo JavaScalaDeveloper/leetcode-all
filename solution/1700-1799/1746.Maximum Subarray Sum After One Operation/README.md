@@ -6,7 +6,7 @@
 
 <p>返回替换后的最大子数组和。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,7 +22,7 @@
 <strong>输出：</strong>4
 <strong>解释：</strong>你可以把第一个-1替换为1，使 nums = [1,<strong>1</strong>,1,1,-1,-1,1]. 现在，最大子数组和为 1 + 1 + 1 + 1 = 4.</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

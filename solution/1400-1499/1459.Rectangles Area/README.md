@@ -15,7 +15,7 @@
 id 是该表主键
 每个点都用二维坐标 (x_value, y_value) 表示</pre>
 
-<p> </p>
+
 
 <p>写一个 SQL 语句，报告由表中任意两点可以形成的所有<strong> 边与坐标轴平行 </strong>且 <strong>面积不为零</strong> 的矩形。</p>
 

@@ -14,7 +14,7 @@
 id 是该表单主键。
 name 是用户名字。</pre>
 
-<p> </p>
+
 
 <p>表：<code>Rides</code></p>
 
@@ -30,7 +30,7 @@ id 是该表单主键。
 user_id 是本次行程的用户的 id, 而该用户此次行程距离为 distance 。
 </pre>
 
-<p> </p>
+
 
 <p>写一段 SQL , 报告每个用户的旅行距离。</p>
 

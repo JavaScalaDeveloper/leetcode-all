@@ -6,7 +6,7 @@
 
 <p>节点 <code>p</code> 的后继是值比 <code>p.val</code> 大的节点中键值最小的节点。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>解释：</strong>因为给出的节点没有中序后继，所以答案就返回 <code>null 了。</code>
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

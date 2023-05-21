@@ -12,7 +12,7 @@
 
 <p>一个 <strong>子字符串</strong> 是一个字符串中连续的字符序列。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -37,7 +37,7 @@
 此时 s 中不再含有子字符串 "xy" 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

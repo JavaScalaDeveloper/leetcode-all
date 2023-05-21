@@ -20,7 +20,7 @@
 
 <p>题目保证按照上面规则 <code>answer</code> 数组是唯一的。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1632.Rank%20Transform%20of%20a%20Matrix/images/rank1.jpg" style="width: 442px; height: 162px;" />
@@ -55,7 +55,7 @@ matrix[1][1] 的秩为 3 ，因为 matrix[1][1] > matrix[0][1]， matrix[1][1] >
 <b>输出：</b>[[5,1,4],[1,2,3],[6,3,1]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

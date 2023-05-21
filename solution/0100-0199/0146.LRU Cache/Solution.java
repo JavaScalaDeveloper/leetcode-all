@@ -1,25 +1,12 @@
 package com.solution._0146;
-import change.datastructure.*;
-import java.util.*;
-public class Node {
-    int key;
-    int val;
-    Node prev;
-    Node next;
 
-    Node() {
-    }
+import java.util.HashMap;
+import java.util.Map;
 
-    Node(int key, int val) {
-        this.key = key;
-        this.val = val;
-    }
+public class Solution {
 }
 
-package com.solution._0146;
-import change.datastructure.*;
-import java.util.*;
-public class LRUCache {
+class LRUCache {
     private Map<Integer, Node> cache = new HashMap<>();
     private Node head = new Node();
     private Node tail = new Node();
@@ -83,6 +70,20 @@ public class LRUCache {
     }
 }
 
+class Node {
+    int key;
+    int val;
+    Node prev;
+    Node next;
+
+    Node() {
+    }
+
+    Node(int key, int val) {
+        this.key = key;
+        this.val = val;
+    }
+}
 /**
  * Your LRUCache object will be instantiated and called as such:
  * LRUCache obj = new LRUCache(capacity);

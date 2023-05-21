@@ -6,7 +6,7 @@
 
 <p>返回 <strong>合并后的字符串</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,7 +41,7 @@ word2：    p   q
 合并后：  a p b q c   d
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

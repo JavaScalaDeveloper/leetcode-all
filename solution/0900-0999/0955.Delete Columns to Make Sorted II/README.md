@@ -10,7 +10,7 @@
 
 <p>假设，我们选择了一组删除索引 <code>answer</code>，那么在执行删除操作之后，最终得到的数组的元素是按 <strong>字典序</strong>（<code>strs[0] <= strs[1] <= strs[2] ... <= strs[n - 1]</code>）排列的，然后请你返回 <code>answer.length</code> 的最小可能值。</p>
 
-<p> </p>
+
 
 <ol>
 </ol>
@@ -46,7 +46,7 @@ strs 的列已经是按字典序排列了，所以我们不需要删除任何东
 我们必须删掉每一列。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

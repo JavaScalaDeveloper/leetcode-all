@@ -8,7 +8,7 @@
 
 <p>替换 <code>time</code> 中隐藏的数字，返回你可以得到的最晚有效时间。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,7 +32,7 @@
 <strong>输出：</strong>"19:22"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

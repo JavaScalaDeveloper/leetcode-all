@@ -17,7 +17,7 @@
 
 <p>返回简化后得到的 <strong>规范路径</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,7 +49,7 @@
 <strong>输出：</strong>"/c"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

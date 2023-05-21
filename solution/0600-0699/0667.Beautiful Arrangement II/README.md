@@ -10,7 +10,7 @@
 
 <p>返回列表 <code>answer</code> 。如果存在多种答案，只需返回其中 <strong>任意一种</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>解释：</strong>[1, 3, 2] 包含 3 个范围在 1-3 的不同整数，并且 [2, 1] 中有且仅有 2 个不同整数：1 和 2
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -36,7 +36,7 @@
 	<li><code>1 <= k < n <= 10<sup>4</sup></code></li>
 </ul>
 
-<p> </p>
+
 
 ## 解法
 

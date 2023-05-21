@@ -6,7 +6,7 @@
 
 <p>求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -26,7 +26,7 @@
 <strong>输入：</strong> heights = [2,4]
 <b>输出：</b> 4</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

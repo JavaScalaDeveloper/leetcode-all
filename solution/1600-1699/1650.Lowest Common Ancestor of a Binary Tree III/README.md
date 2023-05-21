@@ -16,7 +16,7 @@
 
 <p>根据<a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor">维基百科中对最近公共祖先节点的定义</a>：“两个节点 p 和 q 在二叉树 T 中的最近公共祖先节点是后代节点中既包括 p 又包括 q 的最深节点（我们允许<strong>一个节点为自身的一个后代节点</strong>）”。一个节点 x 的后代节点是节点 x 到某一叶节点间的路径中的节点 y。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1650.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20III/images/binarytree.png" style="width: 200px; height: 190px;">
@@ -38,7 +38,7 @@
 <strong>输出:</strong> 1
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

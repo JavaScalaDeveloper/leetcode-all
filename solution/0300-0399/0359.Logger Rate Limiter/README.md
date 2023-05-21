@@ -13,7 +13,7 @@
 	<li><code>bool shouldPrintMessage(int timestamp, string message)</code> 如果这条消息 <code>message</code> 在给定的时间戳 <code>timestamp</code> 应该被打印出来，则返回 <code>true</code> ，否则请返回 <code>false</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -34,7 +34,7 @@ logger.shouldPrintMessage(10, "foo"); // 10 < 11 ，返回 false
 logger.shouldPrintMessage(11, "foo"); // 11 >= 11 ，返回 true ，下一次 "foo" 可以打印的时间戳是 11 + 10 = 21
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

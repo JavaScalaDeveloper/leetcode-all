@@ -13,7 +13,7 @@
 
 <p>返回生成数组 <code>nums</code> 中的 <strong>最大</strong> 值。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,7 +48,7 @@
 <strong>解释：</strong>根据规则，nums[0]、nums[1]、nums[2] 和 nums[3] 之中的最大值是 2
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

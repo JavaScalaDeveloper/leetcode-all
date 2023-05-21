@@ -8,7 +8,7 @@
 
 <p>返回使数组 <strong>互补</strong> 的 <strong>最少</strong> 操作次数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,7 +39,7 @@ nums[3] + nums[0] = 3 + 1 = 4.
 <strong>解释：</strong>nums 已经是互补的。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

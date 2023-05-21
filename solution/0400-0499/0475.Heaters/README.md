@@ -10,7 +10,7 @@
 
 <p><strong>说明</strong>：所有供暖器都遵循你的半径标准，加热的半径也一样。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -35,7 +35,7 @@
 <strong>输出：</strong>3
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

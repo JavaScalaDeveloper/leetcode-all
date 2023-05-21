@@ -6,7 +6,7 @@
 
 <p>给你一个字符串 <code>sequence</code> 和 <code>word</code> ，请你返回 <strong>最大重复值 <code>k</code> </strong>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,7 +32,7 @@
 <strong>解释：</strong>"ac" 不是 "ababc" 的子字符串。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

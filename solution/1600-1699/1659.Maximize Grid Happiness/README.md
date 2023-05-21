@@ -17,7 +17,7 @@
 
 <p><strong>网格幸福感</strong> 是每个人幸福感的 <strong>总和</strong> 。 返回 <strong>最大可能的网格幸福感</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1600-1699/1659.Maximize%20Grid%20Happiness/images/grid_happiness.png" style="width: 261px; height: 121px;" />
@@ -52,7 +52,7 @@
 <strong>输出：</strong>240
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

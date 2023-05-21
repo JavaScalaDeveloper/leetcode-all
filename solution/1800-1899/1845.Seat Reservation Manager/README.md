@@ -12,7 +12,7 @@
 	<li><code>void unreserve(int seatNumber)</code> 将给定编号 <code>seatNumber</code> 对应的座位变成可以预约。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@ seatManager.reserve();    // 唯一可以预约的是座位 5 ，所以返回 5 
 seatManager.unreserve(5); // 将座位 5 变为可以预约，现在可预约的座位为 [5] 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

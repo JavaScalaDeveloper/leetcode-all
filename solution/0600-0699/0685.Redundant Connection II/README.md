@@ -10,7 +10,7 @@
 
 <p>返回一条能删除的边，使得剩下的图是有 <code>n</code> 个节点的有根树。若有多个答案，返回最后出现在给定二维数组的答案。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0600-0699/0685.Redundant%20Connection%20II/images/graph1.jpg" style="width: 222px; height: 222px;" />
@@ -26,7 +26,7 @@
 <strong>输出：</strong>[4,1]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

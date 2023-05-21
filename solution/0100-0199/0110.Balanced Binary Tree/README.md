@@ -10,7 +10,7 @@
 <p>一个二叉树<em>每个节点 </em>的左右两个子树的高度差的绝对值不超过 1 。</p>
 </blockquote>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0110.Balanced%20Binary%20Tree/images/balance_1.jpg" style="width: 342px; height: 221px;" />
@@ -33,7 +33,7 @@
 <strong>输出：</strong>true
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

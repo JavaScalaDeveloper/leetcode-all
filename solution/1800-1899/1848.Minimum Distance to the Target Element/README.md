@@ -8,7 +8,7 @@
 
 <p>题目数据保证 <code>target</code> 存在于 <code>nums</code> 中。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 <strong>解释：</strong>nums 中的每个值都是 1 ，但 nums[0] 使 abs(i - start) 的结果得以最小化，所以答案是 abs(0 - 0) = 0 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

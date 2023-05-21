@@ -12,7 +12,7 @@
 	<li><code>it --> it</code> 单词只有两个字符，它就是它自身的 <strong>缩写</strong></li>
 </ul>
 
-<p> </p>
+
 
 <p>实现 <code>ValidWordAbbr</code> 类：</p>
 
@@ -26,7 +26,7 @@
 	</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -46,7 +46,7 @@ validWordAbbr.isUnique("make"); // 返回 true，字典中不存在缩写为 "m2
 validWordAbbr.isUnique("cake"); // 返回 true，因为 "cake" 已经存在于字典中，并且字典中没有其他缩写为 "c2e" 的单词
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

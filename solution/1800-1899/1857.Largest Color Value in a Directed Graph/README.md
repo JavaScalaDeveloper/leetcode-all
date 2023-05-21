@@ -10,7 +10,7 @@
 
 <p>请你返回给定图中有效路径里面的 <strong>最大颜色值</strong><strong> 。</strong>如果图中含有环，请返回 <code>-1</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@
 <b>解释：</b>从 0 到 0 有一个环。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

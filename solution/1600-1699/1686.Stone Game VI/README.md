@@ -18,7 +18,7 @@
 	<li>如果游戏平局，返回 <code>0</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,7 +52,7 @@ Alice 拿石子 0 ， Bob 拿石子 1 ，他们得分都为 1 分。
 Bob 会获胜。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

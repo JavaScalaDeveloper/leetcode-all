@@ -12,7 +12,7 @@
 
 <p>我们称数组 <code>nums</code> 是 <strong>严格递增的</strong> ，当它满足对于所有的 <code>0 &lt;= i &lt; nums.length - 1</code> 都有 <code>nums[i] &lt; nums[i+1]</code> 。一个长度为 <code>1</code> 的数组是严格递增的一种特殊情况。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,7 +36,7 @@
 <b>输出：</b>0
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

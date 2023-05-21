@@ -6,7 +6,7 @@
 
 <p>客户的 <strong>资产总量</strong> 就是他们在各家银行托管的资产数量之和。最富有客户就是 <strong>资产总量</strong> 最大的客户。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 <strong>输出：</strong>17
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

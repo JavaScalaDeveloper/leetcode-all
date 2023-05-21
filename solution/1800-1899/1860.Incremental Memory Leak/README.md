@@ -8,7 +8,7 @@
 
 <p>请你返回一个数组，包含<em> </em><code>[crashTime, memory1<sub>crash</sub>, memory2<sub>crash</sub>]</code> ，其中 <code>crashTime</code>是程序意外退出的时间（单位为秒），<em> </em><code>memory1<sub>crash</sub></code><em> </em>和<em> </em><code>memory2<sub>crash</sub></code><em> </em>分别是两个内存条最后剩余内存的位数。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,7 +33,7 @@
 - 第 6 秒，程序意外退出，两个内存条分别有 0 位和 4 位剩余可用内存。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

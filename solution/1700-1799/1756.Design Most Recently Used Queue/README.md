@@ -11,7 +11,7 @@
 	<li><code>fetch(int k)</code> 将第 <code>k</code> 个元素<strong>（从 1 开始索引）</strong>移到队尾，并返回该元素。</li>
 </ul>
 
-<p> </p>
+
 
 <p><b>示例 1：</b></p>
 
@@ -30,7 +30,7 @@ mRUQueue.fetch(2); // 将第 2 个元素 (2) 移到队尾，使队列变为 [1,4
 mRUQueue.fetch(8); // 第 8 个元素 (2) 已经在队列尾部了，所以直接返回该元素即可。
 </pre>
 
-<p> </p>
+
 
 <p><b>提示：</b></p>
 
@@ -40,7 +40,7 @@ mRUQueue.fetch(8); // 第 8 个元素 (2) 已经在队列尾部了，所以直�
 	<li>最多调用 <code>2000</code> 次 <code>fetch</code></li>
 </ul>
 
-<p> </p>
+
 <b>进阶：</b>找到每次 <code>fetch</code> 的复杂度为 <code>O(n)</code> 的算法比较简单。你可以找到每次 <code>fetch</code> 的复杂度更佳的算法吗？
 
 ## 解法

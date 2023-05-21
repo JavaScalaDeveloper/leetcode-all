@@ -19,7 +19,7 @@
 
 <p>请注意，在初始状态下，排行榜是空的。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,7 +44,7 @@ leaderboard.addScore(2,51);   // leaderboard = [[2,51],[3,39],[4,51],[5,4]];
 leaderboard.top(3);           // returns 141 = 51 + 51 + 39;
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

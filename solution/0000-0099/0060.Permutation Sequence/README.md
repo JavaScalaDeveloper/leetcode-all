@@ -17,7 +17,7 @@
 
 <p>给定 <code>n</code> 和 <code>k</code>，返回第 <code>k</code> 个排列。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,7 +40,7 @@
 <strong>输出：</strong>"123"
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

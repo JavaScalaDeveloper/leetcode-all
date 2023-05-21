@@ -6,7 +6,7 @@
 
 <p><strong>说明：</strong>每次只能向下或者向右移动一步。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0000-0099/0064.Minimum%20Path%20Sum/images/minpath.jpg" style="width: 242px; height: 242px;" />
@@ -23,7 +23,7 @@
 <strong>输出：</strong>12
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

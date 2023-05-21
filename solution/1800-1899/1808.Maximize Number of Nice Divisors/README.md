@@ -13,7 +13,7 @@
 
 <p>请注意，一个质数的定义是大于 <code>1</code> ，且不能被分解为两个小于该数的自然数相乘。一个数 <code>n</code> 的质因子是将 <code>n</code> 分解为若干个质因子，且它们的乘积为 <code>n</code> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,7 +32,7 @@
 <b>输出：</b>18
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

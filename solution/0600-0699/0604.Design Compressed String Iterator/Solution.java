@@ -1,7 +1,22 @@
 package com.solution._0604;
-import change.datastructure.*;
-import java.util.*;
-public class StringIterator {
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+}
+
+class Node {
+    char c;
+    int x;
+
+    Node(char c, int x) {
+        this.c = c;
+        this.x = x;
+    }
+}
+
+class StringIterator {
     private List<Node> d = new ArrayList<>();
     private int p;
 
@@ -31,19 +46,6 @@ public class StringIterator {
 
     public boolean hasNext() {
         return p < d.size() && d.get(p).x > 0;
-    }
-}
-
-package com.solution._0604;
-import change.datastructure.*;
-import java.util.*;
-public class Node {
-    char c;
-    int x;
-
-    Node(char c, int x) {
-        this.c = c;
-        this.x = x;
     }
 }
 

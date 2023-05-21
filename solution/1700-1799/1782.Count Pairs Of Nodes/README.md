@@ -15,7 +15,7 @@
 
 <p>请注意，图中可能会有 <strong>重复边</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1700-1799/1782.Count%20Pairs%20Of%20Nodes/images/1614828447-GMnLVg-image.png" style="width: 310px; height: 278px;" />
@@ -32,7 +32,7 @@
 <b>输出：</b>[10,10,9,8,6]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

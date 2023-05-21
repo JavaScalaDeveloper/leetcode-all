@@ -10,7 +10,7 @@
 
 <p>返回二叉树的 <strong>垂序遍历</strong> 序列。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0900-0999/0987.Vertical%20Order%20Traversal%20of%20a%20Binary%20Tree/images/vtree1.jpg" style="width: 431px; height: 304px;" />
@@ -47,7 +47,7 @@
 这个示例实际上与示例 2 完全相同，只是结点 5 和 6 在树中的位置发生了交换。
 因为 5 和 6 的位置仍然相同，所以答案保持不变，仍然按值从小到大排序。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

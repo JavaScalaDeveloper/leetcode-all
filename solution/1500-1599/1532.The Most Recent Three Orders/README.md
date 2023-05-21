@@ -15,7 +15,7 @@ customer_id 是该表主键
 该表包含消费者的信息
 </pre>
 
-<p> </p>
+
 
 <p>表：<code>Orders</code></p>
 
@@ -33,7 +33,7 @@ order_id 是该表主键
 每一个消费者<strong> 每天一笔订单</strong>
 </pre>
 
-<p> </p>
+
 
 <p>写一个 SQL 语句，找到每个用户的最近三笔订单。如果用户的订单少于 3 笔，则返回他的全部订单。</p>
 
@@ -90,7 +90,7 @@ Marwan 只有 1 笔订单。
 结果表我们按照 customer_name 升序排列，customer_id 升序排列，order_date 降序排列。
 </pre>
 
-<p> </p>
+
 
 <p><strong>进阶：</strong></p>
 

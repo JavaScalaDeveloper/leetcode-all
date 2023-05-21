@@ -6,7 +6,7 @@
 
 <p>所谓占绝大多数，是指在长度为 <code>N</code> 的数组中出现必须<strong> 超过 <code>N/2</code></strong> <strong>次</strong>。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 所以，101 <strong>不是 </strong>数组占绝大多数的元素，因为 2 次 = 4/2。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

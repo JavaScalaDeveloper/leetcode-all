@@ -8,7 +8,7 @@
 
 <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/0100-0199/0118.Pascal%27s%20Triangle/images/1626927345-DZmfxB-PascalTriangleAnimated2.gif" /></p>
 
-<p> </p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>输出:</strong> [[1]]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示:</strong></p>
 

@@ -26,7 +26,7 @@
 	<li>例如，<code>"10:2"</code> 是无效的时间，正确的写法应该是 <code>"10:02"</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,7 +42,7 @@
 <strong>输出：</strong>[]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

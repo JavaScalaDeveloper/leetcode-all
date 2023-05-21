@@ -21,7 +21,7 @@
 	<li>如果 <code>x < 0</code> ，那么值为 <code>-x</code> 。</li>
 </ul>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,7 +47,7 @@
 - queries[3] = [3,5]：子数组是 [2,<strong>7</strong>,<strong>10</strong>] ，差绝对值的最小值为 |7-10| = 3 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

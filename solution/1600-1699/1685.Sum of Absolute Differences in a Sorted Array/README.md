@@ -8,7 +8,7 @@
 
 <p>换句话说， <code>result[i]</code> 等于 <code>sum(|nums[i]-nums[j]|)</code> ，其中 <code>0 <= j < nums.length</code> 且 <code>j != i</code> （下标从 0 开始）。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@ result[2] = |5-2| + |5-3| + |5-5| = 3 + 2 + 0 = 5。
 <b>输出：</b>[24,15,13,15,21]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

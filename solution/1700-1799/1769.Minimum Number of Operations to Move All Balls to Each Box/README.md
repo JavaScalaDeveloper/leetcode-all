@@ -10,7 +10,7 @@
 
 <p>每个 <code>answer[i]</code> 都需要根据盒子的 <strong>初始状态</strong> 进行计算。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,7 +27,7 @@
 <pre><strong>输入：</strong>boxes = "001011"
 <strong>输出：</strong>[11,8,5,4,3,4]</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

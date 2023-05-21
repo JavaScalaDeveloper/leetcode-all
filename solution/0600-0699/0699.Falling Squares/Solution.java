@@ -1,25 +1,25 @@
 package com.solution._0699;
-import change.datastructure.*;
-import java.util.*;
-public class Node {
-    Node left;
-    Node right;
-    int l;
-    int r;
-    int mid;
-    int v;
-    int add;
-    public Node(int l, int r) {
-        this.l = l;
-        this.r = r;
-        this.mid = (l + r) >> 1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+    public List<Integer> fallingSquares(int[][] positions) {
+        List<Integer> ans = new ArrayList<>();
+        SegmentTree tree = new SegmentTree();
+        int mx = 0;
+        for (int[] p : positions) {
+            int l = p[0], w = p[1], r = l + w - 1;
+            int h = tree.query(l, r) + w;
+            mx = Math.max(mx, h);
+            ans.add(mx);
+            tree.modify(l, r, h);
+        }
+        return ans;
     }
 }
 
-package com.solution._0699;
-import change.datastructure.*;
-import java.util.*;
-public class SegmentTree {
+class SegmentTree {
     private Node root = new Node(1, (int) 1e9);
 
     public SegmentTree() {
@@ -92,21 +92,18 @@ public class SegmentTree {
     }
 }
 
-package com.solution._0699;
-import change.datastructure.*;
-import java.util.*;
-public class Solution {
-    public List<Integer> fallingSquares(int[][] positions) {
-        List<Integer> ans = new ArrayList<>();
-        SegmentTree tree = new SegmentTree();
-        int mx = 0;
-        for (int[] p : positions) {
-            int l = p[0], w = p[1], r = l + w - 1;
-            int h = tree.query(l, r) + w;
-            mx = Math.max(mx, h);
-            ans.add(mx);
-            tree.modify(l, r, h);
-        }
-        return ans;
+class Node {
+    Node left;
+    Node right;
+    int l;
+    int r;
+    int mid;
+    int v;
+    int add;
+
+    public Node(int l, int r) {
+        this.l = l;
+        this.r = r;
+        this.mid = (l + r) >> 1;
     }
 }

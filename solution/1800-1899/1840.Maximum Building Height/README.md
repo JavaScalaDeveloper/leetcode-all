@@ -18,7 +18,7 @@
 
 <p>请你返回 <strong>最高</strong> 建筑能达到的 <strong>最高高度</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1800-1899/1840.Maximum%20Building%20Height/images/ic236-q4-ex1-1.png" style="width: 400px; height: 253px;" />
@@ -46,7 +46,7 @@
 我们可以使建筑高度分别为 [0,1,2,3,3,4,4,5,4,3] ，最高建筑的高度为 5 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -8,7 +8,7 @@
 
 <p>如果数组 <code>b</code> 是数组 <code>a</code> 的一个连续子序列，即如果它等于 <code>a[l],a[l+1],...,a[r]</code> ，那么它就是 <code>a</code> 的一个子数组。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -26,7 +26,7 @@
 <strong>解释：</strong>最优子数组是 [5,2,1] 或 [1,2,5]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

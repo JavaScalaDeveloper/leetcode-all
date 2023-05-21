@@ -18,7 +18,7 @@
 
 <p>给你一个长度为 <code>n</code> 的整数数组 <code>stones</code> ，其中 <code>stones[i]</code> 是 <strong>从左边起</strong> 第 <code>i</code> 个石子的价值。请你返回在双方都采用 <strong>最优</strong> 策略的情况下，Alice 和 Bob 的 <strong>分数之差</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,7 +48,7 @@
 两者分数之差为 (-22) - 0 = -22 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

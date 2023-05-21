@@ -1,9 +1,13 @@
+
+package com.solution._0819;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-package com.solution._0819;
-import change.datastructure.*;
-import java.util.*;
 public class Solution {
     private static Pattern pattern = Pattern.compile("[a-z]+");
 

@@ -8,7 +8,7 @@
 
 <p>给你两个整数 <code>lowLimit</code> 和 <code>highLimit</code> ，返回放有最多小球的盒子中的小球数量<em>。</em>如果有多个盒子都满足放有最多小球，只需返回其中任一盒子的小球数量。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -42,7 +42,7 @@
 编号 10 的盒子放有最多小球，小球数量为 2 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

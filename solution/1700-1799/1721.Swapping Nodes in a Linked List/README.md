@@ -6,7 +6,7 @@
 
 <p><strong>交换</strong> 链表正数第 <code>k</code> 个节点和倒数第 <code>k</code> 个节点的值后，返回链表的头节点（链表 <strong>从 1 开始索引</strong>）。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1700-1799/1721.Swapping%20Nodes%20in%20a%20Linked%20List/images/linked1.jpg" style="width: 722px; height: 202px;" />
@@ -43,7 +43,7 @@
 <strong>输出：</strong>[1,2,3]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

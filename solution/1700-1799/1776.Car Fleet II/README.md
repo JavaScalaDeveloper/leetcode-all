@@ -13,7 +13,7 @@
 
 <p>请你返回一个数组 <code>answer</code> ，其中 <code>answer[i]</code> 是第 <code>i</code> 辆车与下一辆车相遇的时间（单位：秒），如果这辆车不会与下一辆车相遇，则 <code>answer[i]</code> 为 <code>-1</code> 。答案精度误差需在 <code>10<sup>-5</sup></code> 以内。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@
 <b>输出：</b>[2.00000,1.00000,1.50000,-1.00000]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

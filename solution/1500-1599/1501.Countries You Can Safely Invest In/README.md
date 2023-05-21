@@ -30,7 +30,7 @@ country_code是该表主键.
 该表每一行包含国家名和国家码. country_code的格式是'xxx', x是数字.
 </pre>
 
-<p> </p>
+
 
 <p>表 <code>Calls</code>:</p>
 

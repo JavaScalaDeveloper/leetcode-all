@@ -14,7 +14,7 @@
 
 <p>返回上述列表的 <strong>异或和</strong> 。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@
 <strong>解释：</strong>列表 = [12 AND 4] = [4] ，异或和 = 4 。
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

@@ -8,7 +8,7 @@
 
 <p>你可以假设除了整数 0 之外，这个整数不会以零开头。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -33,7 +33,7 @@
 <strong>输出：</strong>[1]
 </pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 

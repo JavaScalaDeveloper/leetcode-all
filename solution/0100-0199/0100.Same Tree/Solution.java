@@ -17,6 +17,9 @@ package com.solution._0100;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
+    public static void main(String[] args) {
+
+    }
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == q) return true;
         if (p == null || q == null || p.val != q.val) return false;

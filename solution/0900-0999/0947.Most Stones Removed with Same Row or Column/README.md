@@ -8,7 +8,7 @@
 
 <p>给你一个长度为 <code>n</code> 的数组 <code>stones</code> ，其中 <code>stones[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> 表示第 <code>i</code> 块石头的位置，返回 <strong>可以移除的石子</strong> 的最大数量。</p>
 
-<p> </p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -41,7 +41,7 @@
 <strong>输出：</strong>0
 <strong>解释：</strong>[0,0] 是平面上唯一一块石头，所以不可以移除它。</pre>
 
-<p> </p>
+
 
 <p><strong>提示：</strong></p>
 
