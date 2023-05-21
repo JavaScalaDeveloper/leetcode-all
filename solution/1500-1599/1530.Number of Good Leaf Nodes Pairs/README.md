@@ -61,7 +61,7 @@
 
 递归求解即可。
 
-时间复杂度 $O(n \times distance^2 \times h)$，其中 $n$ 是二叉树的节点数，而 $h$ 是二叉树的高度。
+时间复杂度O(n \times distance^2 \times h)，其中n是二叉树的节点数，而h是二叉树的高度。
 
 ### **Java**
 

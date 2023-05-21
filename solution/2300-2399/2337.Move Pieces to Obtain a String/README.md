@@ -52,12 +52,12 @@
 
 双指针遍历 `start` 和 `target`：
 
--   如果当前字符为 `L` 且 $i\lt j$，那么这个 `L` 无法向右移动，返回 `false`；
--   如果当前字符为 `R` 且 $i\gt j$，那么这个 `R` 无法向左移动，返回 `false`。
+-   如果当前字符为 `L` 且i\lt j，那么这个 `L` 无法向右移动，返回 `false`；
+-   如果当前字符为 `R` 且i\gt j，那么这个 `R` 无法向左移动，返回 `false`。
 
 如果双指针均遍历到末尾，返回 `true`。
 
-时间复杂度 $O(n)$，其中 $n$ 表示字符串 `start` 或 `target` 的长度。
+时间复杂度O(n)，其中n表示字符串 `start` 或 `target` 的长度。
 
 相似题目：[777. 在 LR 字符串中交换相邻字符](/solution/0700-0799/0777.Swap%20Adjacent%20in%20LR%20String/README.md)
 

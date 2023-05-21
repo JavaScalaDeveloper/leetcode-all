@@ -57,17 +57,17 @@ magicDictionary.search("leetcoded"); // 返回 False
 
 **方法一：直接遍历**
 
-对于 $buildDict$ 方法，直接将 $dictionary$ 赋给 $MagicDictionary$ 的成员变量 $d$。
+对于buildDict方法，直接将dictionary赋给MagicDictionary的成员变量d。
 
-对于 $search$ 方法，遍历单词列表中的每个单词 $w$，依次与 $searchWord$ 进行比对，如果存在一个 $w$，满足 $w$ 与 $searchWord$ 恰好只有一个位置对应的字符不同，那么返回 $true$。
+对于search方法，遍历单词列表中的每个单词w，依次与searchWord进行比对，如果存在一个w，满足w与searchWord恰好只有一个位置对应的字符不同，那么返回true。
 
 **方法二：哈希表 + 模式串**
 
-用哈希表 $s$ 存放 $dictionary$ 所有单词，同时生成每个单词的所有模式串，用哈希表 $cnt$ 存放。
+用哈希表s存放dictionary所有单词，同时生成每个单词的所有模式串，用哈希表cnt存放。
 
-模式串的生成规则是：对于一个单词 $w$，我们将每个 $w[i]$ 都替换成 $.$，最终得到一个模式串列表。例如，我们可以生成 $leet$ 的模式串列表为：$[.eet, l.et, le.t, lee.]$。
+模式串的生成规则是：对于一个单词w，我们将每个w[i]都替换成.，最终得到一个模式串列表。例如，我们可以生成leet的模式串列表为：[.eet, l.et, le.t, lee.]。
 
-执行 $search$ 时，我们拿到 $searchWord$ 的模式串列表，然后判断列表中每个模式串 $p$ 是否在 $cnt$ 和 $s$ 中出现过。若 $cnt>1$ 或 $cnt=1$ 且 $searchWord$ 没在 $s$ 中出现过，说明找到了满足条件的单词，返回 $true$。
+执行search时，我们拿到searchWord的模式串列表，然后判断列表中每个模式串p是否在cnt和s中出现过。若cnt>1或cnt=1且searchWord没在s中出现过，说明找到了满足条件的单词，返回true。
 
 ### **Java**
 

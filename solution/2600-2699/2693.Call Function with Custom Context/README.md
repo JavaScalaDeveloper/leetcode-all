@@ -9,7 +9,7 @@
 <pre>
 function tax(price, taxRate) {
   const totalCost = price * (1 + taxRate);
-&nbsp; console.log(`The cost of ${this.item} is ${totalCost}`);
+&nbsp; console.log(`The cost of{this.item} is{totalCost}`);
 }
 </pre>
 
@@ -38,7 +38,7 @@ callPolyfill sets the &quot;this&quot; context to {&quot;a&quot;: 5}. 7 is passe
 <pre>
 <strong>Input:</strong> 
 fn = function tax(price, taxRate) { 
-&nbsp;return `The cost of the ${this.item} is ${price * taxRate}`; 
+&nbsp;return `The cost of the{this.item} is{price * taxRate}`; 
 }
 args = [{&quot;item&quot;: &quot;burger&quot;}, 10, 1,1]
 <strong>Output:</strong> &quot;The cost of the burger is 11&quot;

@@ -69,13 +69,13 @@
 
 **方法一：贪心**
 
-我们记 $target = [x, y, z]$，初始时 $d = e = f = 0$，表示当前的 $a, b, c$ 的最大值。
+我们记target = [x, y, z]，初始时d = e = f = 0，表示当前的a, b, c的最大值。
 
-我们遍历数组 $triplets$，对于每个三元组 $[a, b, c]$，如果 $a \le x, b \le y, c \le z$，则将 $d, e, f$ 分别更新为 $max(d, a), max(e, b), max(f, c)$。
+我们遍历数组triplets，对于每个三元组[a, b, c]，如果a \le x, b \le y, c \le z，则将d, e, f分别更新为max(d, a), max(e, b), max(f, c)。
 
-最后判断 $[d, e, f]$ 是否等于 $target$ 即可。
+最后判断[d, e, f]是否等于target即可。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组 $triplets$ 的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为数组triplets的长度。
 
 ### **Java**
 

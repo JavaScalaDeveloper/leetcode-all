@@ -36,13 +36,13 @@
 
 **方法一：从中心向两侧扩展回文串**
 
-时间复杂度 $O(n^2)$，其中 $n$ 是字符串 `s` 的长度。
+时间复杂度O(n^2)，其中n是字符串 `s` 的长度。
 
 **方法二：Manacher 算法**
 
-在 Manacher 算法的计算过程中，用 $p[i]-1$ 表示以第 $i$ 位为中心的最大回文长度，以第 $i$ 位为中心的回文串数量为 $\left \lceil \frac{p[i]-1}{2}  \right \rceil$。
+在 Manacher 算法的计算过程中，用p[i]-1表示以第i位为中心的最大回文长度，以第i位为中心的回文串数量为\left \lceil \frac{p[i]-1}{2}  \right \rceil。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是字符串 `s` 的长度。
+时间复杂度O(n)，空间复杂度O(n)。其中n是字符串 `s` 的长度。
 
 ### **Java**
 
@@ -71,7 +71,7 @@ class Solution {
         for (char ch : s.toCharArray()) {
             sb.append(ch).append('#');
         }
-        String t = sb.append('$').toString();
+        String t = sb.append('').toString();
         int n = t.length();
         int[] p = new int[n];
         int pos = 0, maxRight = 0;

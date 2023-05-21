@@ -9,7 +9,7 @@
 	<li>至少包含 <strong>一个小写英文</strong>&nbsp;字母。</li>
 	<li>至少包含 <strong>一个大写英文</strong>&nbsp;字母。</li>
 	<li>至少包含 <strong>一个数字</strong>&nbsp;。</li>
-	<li>至少包含 <strong>一个特殊字符</strong>&nbsp;。特殊字符为：<code>"!@#$%^&amp;*()-+"</code>&nbsp;中的一个。</li>
+	<li>至少包含 <strong>一个特殊字符</strong>&nbsp;。特殊字符为：<code>"!@#%^&amp;*()-+"</code>&nbsp;中的一个。</li>
 	<li>它 <strong>不</strong>&nbsp;包含&nbsp;<code>2</code>&nbsp;个连续相同的字符（比方说&nbsp;<code>"aab"</code>&nbsp;不符合该条件，但是&nbsp;<code>"aba"</code>&nbsp;符合该条件）。</li>
 </ul>
 
@@ -39,7 +39,7 @@
 
 <ul>
 	<li><code>1 &lt;= password.length &lt;= 100</code></li>
-	<li><code>password</code>&nbsp;包含字母，数字和&nbsp;<code>"!@#$%^&amp;*()-+"</code>&nbsp;这些特殊字符。</li>
+	<li><code>password</code>&nbsp;包含字母，数字和&nbsp;<code>"!@#%^&amp;*()-+"</code>&nbsp;这些特殊字符。</li>
 </ul>
 
 ## 解法
@@ -48,11 +48,11 @@
 
 根据题目描述，我们可以模拟检查密码是否满足题目要求的过程。
 
-首先，我们检查密码的长度是否小于 $8$，如果是，则返回 `false`。
+首先，我们检查密码的长度是否小于8，如果是，则返回 `false`。
 
-接下来，我们用一个掩码 `mask` 来记录密码是否包含小写字母、大写字母、数字和特殊字符。我们遍历密码，每次遍历到一个字符，先判断它是否和前一个字符相同，如果是，则返回 `false`。然后，根据字符的类型更新掩码 `mask`。最后，我们检查掩码 `mask` 是否为 $15$，如果是，则返回 `true`，否则返回 `false`。
+接下来，我们用一个掩码 `mask` 来记录密码是否包含小写字母、大写字母、数字和特殊字符。我们遍历密码，每次遍历到一个字符，先判断它是否和前一个字符相同，如果是，则返回 `false`。然后，根据字符的类型更新掩码 `mask`。最后，我们检查掩码 `mask` 是否为15，如果是，则返回 `true`，否则返回 `false`。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为密码的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为密码的长度。
 
 ### **Java**
 

@@ -45,11 +45,11 @@
 
 初始时，我们有 `numBottles` 瓶水，因此可以喝到 `ans = numBottles` 瓶水，然后得到 `numBottles` 个空瓶子。
 
-接下来，如果我们有 `numExchange` 个空瓶子，那么我们可以用它们兑换一瓶水并喝掉，此时我们剩余的空瓶子数量为 `numBottles - numExchange + 1`，然后我们累加喝到的水的数量，即 $ans = ans + 1$。
+接下来，如果我们有 `numExchange` 个空瓶子，那么我们可以用它们兑换一瓶水并喝掉，此时我们剩余的空瓶子数量为 `numBottles - numExchange + 1`，然后我们累加喝到的水的数量，即ans = ans + 1。
 
 最后，返回 `ans` 即可。
 
-时间复杂度 $(\frac{numBottles}{numExchange})$，空间复杂度 $O(1)$。
+时间复杂度(\frac{numBottles}{numExchange})，空间复杂度O(1)。
 
 ### **Java**
 

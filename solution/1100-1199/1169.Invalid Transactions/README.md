@@ -5,7 +5,7 @@
 <p>如果出现下述两种情况，交易 <strong>可能无效</strong>：</p>
 
 <ul>
-	<li>交易金额超过<meta charset="UTF-8" />&nbsp;<code>$1000</code></li>
+	<li>交易金额超过<meta charset="UTF-8" />&nbsp;<code>1000</code></li>
 	<li>或者，它和&nbsp;<strong>另一个城市</strong>&nbsp;中 <strong>同名</strong> 的另一笔交易相隔不超过 <code>60</code> 分钟（包含 60 分钟整）</li>
 </ul>
 
@@ -56,7 +56,7 @@
 
 最后，我们遍历答案中的交易编号，将其对应的交易加入答案即可。
 
-时间复杂度 $O(n^2)$，空间复杂度 $O(n)$。其中 $n$ 为交易列表的长度。
+时间复杂度O(n^2)，空间复杂度O(n)。其中n为交易列表的长度。
 
 ### **Java**
 

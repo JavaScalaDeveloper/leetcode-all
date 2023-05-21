@@ -60,21 +60,21 @@
 
 **方法一：位运算 + 枚举**
 
-我们先预处理出数组 `nums` 的异或和 $xs$，即 $xs=nums[0] \oplus nums[1] \oplus \cdots \oplus nums[n-1]$。
+我们先预处理出数组 `nums` 的异或和xs，即xs=nums[0] \oplus nums[1] \oplus \cdots \oplus nums[n-1]。
 
-接下来，我们从后往前枚举数组 `nums` 中的每个元素 $x$，当前的异或和为 $xs$，我们需要找到一个数 $k$，使得 $xs \oplus k$ 的值尽可能大，并且 $k \lt 2^{maximumBit}$。
+接下来，我们从后往前枚举数组 `nums` 中的每个元素x，当前的异或和为xs，我们需要找到一个数k，使得xs \oplus k的值尽可能大，并且k \lt 2^{maximumBit}。
 
-也即是说，我们从 $xs$ 的第 $maximumBit - 1$ 位开始，往低位枚举，如果 $xs$ 的某一位为 $0$，那么我们就将 $k$ 的对应位设置为 $1$，否则我们就将 $k$ 的对应位设置为 $0$。这样，最终得到的 $k$ 就是每一次查询的答案。然后，我们将 $xs$ 更新为 $xs \oplus x$，继续枚举下一个元素。
+也即是说，我们从xs的第maximumBit - 1位开始，往低位枚举，如果xs的某一位为0，那么我们就将k的对应位设置为1，否则我们就将k的对应位设置为0。这样，最终得到的k就是每一次查询的答案。然后，我们将xs更新为xs \oplus x，继续枚举下一个元素。
 
-时间复杂度 $O(n \times m)$，其中 $n$ 和 $m$ 分别是数组 `nums` 和 `maximumBit` 的值。忽略答案数组的空间消耗，空间复杂度 $O(1)$。
+时间复杂度O(n \times m)，其中n和m分别是数组 `nums` 和 `maximumBit` 的值。忽略答案数组的空间消耗，空间复杂度O(1)。
 
 **方法二：枚举优化**
 
-与方法一类似，我们先预处理出数组 `nums` 的异或和 $xs$，即 $xs=nums[0] \oplus nums[1] \oplus \cdots \oplus nums[n-1]$。
+与方法一类似，我们先预处理出数组 `nums` 的异或和xs，即xs=nums[0] \oplus nums[1] \oplus \cdots \oplus nums[n-1]。
 
-接下来，我们算出 $2^{maximumBit} - 1$，即 $2^{maximumBit}$ 减去 $1$，记为 $mask$。然后，我们从后往前枚举数组 `nums` 中的每个元素 $x$，当前的异或和为 $xs$，那么 $k=xs \oplus mask$ 就是每一次查询的答案。然后，我们将 $xs$ 更新为 $xs \oplus x$，继续枚举下一个元素。
+接下来，我们算出2^{maximumBit} - 1，即2^{maximumBit}减去1，记为mask。然后，我们从后往前枚举数组 `nums` 中的每个元素x，当前的异或和为xs，那么k=xs \oplus mask就是每一次查询的答案。然后，我们将xs更新为xs \oplus x，继续枚举下一个元素。
 
-时间复杂度 $O(n)$，其中 $n$ 是数组 `nums` 的长度。忽略答案数组的空间消耗，空间复杂度 $O(1)$。
+时间复杂度O(n)，其中n是数组 `nums` 的长度。忽略答案数组的空间消耗，空间复杂度O(1)。
 
 ### **Java**
 

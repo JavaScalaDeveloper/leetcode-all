@@ -53,17 +53,17 @@
 
 **方法一：动态规划**
 
-定义 $dp[i][j]$ 表示 $nums1$ 前 $i$ 个元素和 $nums2$ 前 $j$ 个元素得到的最大点积。
+定义dp[i][j]表示nums1前i个元素和nums2前j个元素得到的最大点积。
 
 那么有：
 
-$$
+
 dp[i][j]=max(dp[i-1][j], dp[i][j - 1], max(dp[i - 1][j - 1], 0) + nums1[i] \times nums2[j])
-$$
 
-答案为 $dp[m][n]$。
 
-时间复杂度 $O(m \times n)$，空间复杂度 $O(m \times n)$。其中 $m$ 和 $n$ 分别是数组 $nums1$ 和 $nums2$ 的长度。
+答案为dp[m][n]。
+
+时间复杂度O(m \times n)，空间复杂度O(m \times n)。其中m和n分别是数组nums1和nums2的长度。
 
 ### **Java**
 

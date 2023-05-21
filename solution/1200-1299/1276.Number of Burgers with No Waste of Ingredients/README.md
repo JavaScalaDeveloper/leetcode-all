@@ -59,27 +59,27 @@
 
 **方法一：数学**
 
-设巨无霸汉堡数量为 $x$，小皇堡数量为 $y$，则有：
+设巨无霸汉堡数量为x，小皇堡数量为y，则有：
 
-$$
+
 \begin{aligned}
 4x + 2y &= tomatoSlices \\
 x + y &= cheeseSlices
 \end{aligned}
-$$
+
 
 将上述两式转换，可以得到：
 
-$$
+
 \begin{aligned}
 y = (4 \times cheeseSlices - tomatoSlices) / 2 \\
 x = cheeseSlices - y
 \end{aligned}
-$$
 
-其中 $x$ 和 $y$ 必须为非负整数。
 
-时间复杂度 $O(1)$，空间复杂度 $O(1)$。
+其中x和y必须为非负整数。
+
+时间复杂度O(1)，空间复杂度O(1)。
 
 ### **Java**
 

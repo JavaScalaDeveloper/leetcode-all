@@ -49,17 +49,17 @@
 
 **方法一：贪心 + 双指针**
 
-定义两个指针 $i$ 和 $j$，分别指向数组的首尾，用变量 $a$ 和 $b$ 分别表示首尾两个元素的值，变量 $ans$ 表示操作次数。
+定义两个指针i和j，分别指向数组的首尾，用变量a和b分别表示首尾两个元素的值，变量ans表示操作次数。
 
-如果 $a \lt b$，我们将指针 $i$ 向右移动一位，即 $i \leftarrow i + 1$，然后将 $a$ 加上指针 $i$ 指向的元素的值，即 $a \leftarrow a + nums[i]$，同时将操作次数加一，即 $ans \leftarrow ans + 1$。
+如果a \lt b，我们将指针i向右移动一位，即i \leftarrow i + 1，然后将a加上指针i指向的元素的值，即a \leftarrow a + nums[i]，同时将操作次数加一，即ans \leftarrow ans + 1。
 
-如果 $a \gt b$，我们将指针 $j$ 向左移动一位，即 $j \leftarrow j - 1$，然后将 $b$ 加上指针 $j$ 指向的元素的值，即 $b \leftarrow b + nums[j]$，同时将操作次数加一，即 $ans \leftarrow ans + 1$。
+如果a \gt b，我们将指针j向左移动一位，即j \leftarrow j - 1，然后将b加上指针j指向的元素的值，即b \leftarrow b + nums[j]，同时将操作次数加一，即ans \leftarrow ans + 1。
 
-否则，说明 $a = b$，此时我们将指针 $i$ 向右移动一位，即 $i \leftarrow i + 1$，将指针 $j$ 向左移动一位，即 $j \leftarrow j - 1$，并且更新 $a$ 和 $b$ 的值，即 $a \leftarrow nums[i]$ 以及 $b \leftarrow nums[j]$。
+否则，说明a = b，此时我们将指针i向右移动一位，即i \leftarrow i + 1，将指针j向左移动一位，即j \leftarrow j - 1，并且更新a和b的值，即a \leftarrow nums[i]以及b \leftarrow nums[j]。
 
-循环上述过程，直至指针 $i \ge j$，返回操作次数 $ans$ 即可。
+循环上述过程，直至指针i \ge j，返回操作次数ans即可。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为数组的长度。
 
 ### **Java**
 

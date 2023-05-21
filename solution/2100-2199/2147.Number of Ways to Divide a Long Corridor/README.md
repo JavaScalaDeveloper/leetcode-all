@@ -60,7 +60,7 @@
 
 最终返回方案数，记忆化搜索即可。
 
-时间复杂度 $O(n\times 3)$，空间复杂度 $O(n\times 3)$。其中 $n$ 为字符串 `corridor` 的长度。
+时间复杂度O(n\times 3)，空间复杂度O(n\times 3)。其中n为字符串 `corridor` 的长度。
 
 ### **Java**
 

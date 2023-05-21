@@ -55,15 +55,15 @@
 
 **方法一：动态规划**
 
-我们定义 $f[i]$ 表示得到 $target[0,..i]$ 的最少操作次数，初始时 $f[0] = target[0]$。
+我们定义f[i]表示得到target[0,..i]的最少操作次数，初始时f[0] = target[0]。
 
-对于 $target[i]$，如果 $target[i] \leq target[i-1]$，则 $f[i] = f[i-1]$；否则 $f[i] = f[i-1] + target[i] - target[i-1]$。
+对于target[i]，如果target[i] \leq target[i-1]，则f[i] = f[i-1]；否则f[i] = f[i-1] + target[i] - target[i-1]。
 
-最终答案即为 $f[n-1]$。
+最终答案即为f[n-1]。
 
-我们注意到 $f[i]$ 只与 $f[i-1]$ 有关，因此可以只用一个变量来维护操作次数。
+我们注意到f[i]只与f[i-1]有关，因此可以只用一个变量来维护操作次数。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组 $target$ 的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为数组target的长度。
 
 ### **Java**
 

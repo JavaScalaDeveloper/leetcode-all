@@ -62,11 +62,11 @@
 
 **方法一：模拟**
 
-我们先遍历 `indices`，对于每个 $i$，如果 `s[indices[i]: indices[i] + len(sources[i])] == sources[i]`，则说明 $s$ 中从 `indices[i]` 开始的 `len(sources[i])` 个字符与 `sources[i]` 相等，我们记录下标 `indices[i]` 处需要替换的是 `targets[i]`，否则不需要替换。
+我们先遍历 `indices`，对于每个i，如果 `s[indices[i]: indices[i] + len(sources[i])] == sources[i]`，则说明s中从 `indices[i]` 开始的 `len(sources[i])` 个字符与 `sources[i]` 相等，我们记录下标 `indices[i]` 处需要替换的是 `targets[i]`，否则不需要替换。
 
-然后我们从左到右遍历 $s$，如果当前下标 $i$ 处需要替换，则将 `targets[d[i]]` 加入答案，并且 $i$ 跳过 `len(sources[d[i]])` 个字符，否则将 `s[i]` 加入答案，然后 $i$ 自增 $1$。
+然后我们从左到右遍历s，如果当前下标i处需要替换，则将 `targets[d[i]]` 加入答案，并且i跳过 `len(sources[d[i]])` 个字符，否则将 `s[i]` 加入答案，然后i自增1。
 
-时间复杂度 $O(k + n)$，空间复杂度 $O(n)$。其中 $k$ 和 $n$ 分别是 `indices` 和 $s$ 的长度。
+时间复杂度O(k + n)，空间复杂度O(n)。其中k和n分别是 `indices` 和s的长度。
 
 ### **Java**
 

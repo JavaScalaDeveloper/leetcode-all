@@ -45,9 +45,9 @@
 
 **方法一：排序 + 二分查找**
 
-先对 $nums$ 数组进行排序，然后在 $[0, nums[n-1]-nums[0]]$ 范围内二分枚举数对距离 $dist$，若 $nums$ 中数对距离小于等于 $dist$ 的数量 $cnt$ 大于等于 $k$，则尝试缩小 $dist$，否则尝试扩大 $dist$。
+先对nums数组进行排序，然后在[0, nums[n-1]-nums[0]]范围内二分枚举数对距离dist，若nums中数对距离小于等于dist的数量cnt大于等于k，则尝试缩小dist，否则尝试扩大dist。
 
-时间复杂度 $O(nlogn×logm)$，其中 $n$ 表示 $nums$ 的长度，$m$ 表示 $nums$ 中两个数的最大差值。
+时间复杂度O(nlogn×logm)，其中n表示nums的长度，m表示nums中两个数的最大差值。
 
 ### **Java**
 

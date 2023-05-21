@@ -41,11 +41,11 @@ iterator.hasNext(); // 返回 false
 
 **方法一：DFS 回溯**
 
-我们通过 $DFS$ 枚举，预处理生成所有长度为 $combinationLength$ 的字符串，存放到 $cs$ 数组中。
+我们通过DFS枚举，预处理生成所有长度为combinationLength的字符串，存放到cs数组中。
 
 **方法二：二进制编码**
 
-我们看个例子，对于 $abcd$，若 $combinationLength$ 为 2，则 $cs$ 就是 $ab, ac, ad, bc, bd, cd, ...$。
+我们看个例子，对于abcd，若combinationLength为 2，则cs就是ab, ac, ad, bc, bd, cd, ...。
 
 对应的二进制数为：
 
@@ -61,7 +61,7 @@ iterator.hasNext(); // 返回 false
 
 观察到上述规律后，我们依次按照二进制编码从大到小的规律，将所有字符串依次求出。
 
-所谓的长度 $combinationLength$，只需要满足二进制编码中 $1$ 的个数满足要求即可。
+所谓的长度combinationLength，只需要满足二进制编码中1的个数满足要求即可。
 
 ### **Java**
 

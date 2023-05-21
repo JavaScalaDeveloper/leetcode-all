@@ -48,9 +48,9 @@
 
 **方法一：计数模拟**
 
-由于 `ruleKey` 只可能是 `"type"`、`"color"` 或 `"name"`，我们可以直接取 `ruleKey` 的第一个字符来确定 `item` 的下标 $i$。然后遍历 `items` 数组，统计 `item[i] == ruleValue` 的个数即可。
+由于 `ruleKey` 只可能是 `"type"`、`"color"` 或 `"name"`，我们可以直接取 `ruleKey` 的第一个字符来确定 `item` 的下标i。然后遍历 `items` 数组，统计 `item[i] == ruleValue` 的个数即可。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为 `items` 的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为 `items` 的长度。
 
 ### **Java**
 

@@ -47,7 +47,7 @@
 
 我们可以采用逆向计算的方式，从 `target` 开始，如果 `target` 是奇数，则 `target++`，否则 `target >>= 1`，累加操作次数，直到 `target` 小于等于 `startValue`，此时的操作次数加上 `startValue - target` 即为最终结果。
 
-时间复杂度 $O(\log n)$，其中 $n$ 为 `target`。空间复杂度 $O(1)$。
+时间复杂度O(\log n)，其中n为 `target`。空间复杂度O(1)。
 
 ### **Java**
 

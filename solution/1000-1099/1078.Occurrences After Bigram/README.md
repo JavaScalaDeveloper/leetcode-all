@@ -34,11 +34,11 @@
 
 **方法一：字符串分割**
 
-我们可以将字符串 $text$ 按照空格分割成字符串数组 $words$，然后遍历 $words$，如果 $words[i]$ 和 $words[i+1]$ 分别等于 $first$ 和 $second$，那么就将 $words[i+2]$ 添加到答案中。
+我们可以将字符串text按照空格分割成字符串数组words，然后遍历words，如果words[i]和words[i+1]分别等于first和second，那么就将words[i+2]添加到答案中。
 
 遍历结束后，返回答案列表。
 
-时间复杂度 $O(L)$，空间复杂度 $O(L)$，其中 $L$ 是 $text$ 的长度。
+时间复杂度O(L)，空间复杂度O(L)，其中L是text的长度。
 
 ### **Java**
 

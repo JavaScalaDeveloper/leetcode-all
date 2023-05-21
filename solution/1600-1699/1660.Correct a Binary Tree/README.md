@@ -58,11 +58,11 @@
 
 **方法一：DFS**
 
-我们设计一个函数 $dfs(root)$，用于处理以 $root$ 为根的子树。如果 $root$ 为 $null$ 或者 $root.right$ 已经被访问过，说明 $root$ 为无效节点，返回 $null$。否则，递归处理 $root.right$ 和 $root.left$，并返回 $root$。
+我们设计一个函数dfs(root)，用于处理以root为根的子树。如果root为null或者root.right已经被访问过，说明root为无效节点，返回null。否则，递归处理root.right和root.left，并返回root。
 
-最后，返回 $dfs(root)$ 即可。
+最后，返回dfs(root)即可。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为二叉树节点个数。
+时间复杂度O(n)，空间复杂度O(n)。其中n为二叉树节点个数。
 
 ### **Java**
 

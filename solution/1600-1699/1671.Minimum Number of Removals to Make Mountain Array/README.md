@@ -46,11 +46,11 @@
 
 本题可以转化为求最长上升子序列和最长下降子序列。
 
-我们定义 $left[i]$ 表示以 $nums[i]$ 结尾的最长上升子序列的长度，定义 $right[i]$ 表示以 $nums[i]$ 开头的最长下降子序列的长度。
+我们定义left[i]表示以nums[i]结尾的最长上升子序列的长度，定义right[i]表示以nums[i]开头的最长下降子序列的长度。
 
-那么最终答案就是 $n - \max(left[i] + right[i] - 1)$，其中 $1 \leq i \leq n$，并且 $left[i] \gt 1$ 且 $right[i] \gt 1$。
+那么最终答案就是n - \max(left[i] + right[i] - 1)，其中1 \leq i \leq n，并且left[i] \gt 1且right[i] \gt 1。
 
-时间复杂度 $O(n^2)$，空间复杂度 $O(n)$。其中 $n$ 为数组 `nums` 的长度。
+时间复杂度O(n^2)，空间复杂度O(n)。其中n为数组 `nums` 的长度。
 
 ### **Java**
 

@@ -54,14 +54,14 @@ divisors[1] 的可整除性得分为 0 ，因为 nums 中没有任何数字能�
 
 **方法一：枚举**
 
-我们可以枚举 $divisors$ 中的每个元素 $div$，计算 $nums$ 中有多少个元素能被 $div$ 整除，记为 $cnt$。
+我们可以枚举divisors中的每个元素div，计算nums中有多少个元素能被div整除，记为cnt。
 
--   如果 $cnt$ 大于当前最大的可整除性得分 $mx$，则更新 $mx = cnt$，并且更新 $ans = div$。
--   如果 $cnt$ 等于 $mx$ 并且 $div$ 小于 $ans$，则更新 $ans = div$。
+-   如果cnt大于当前最大的可整除性得分mx，则更新mx = cnt，并且更新ans = div。
+-   如果cnt等于mx并且div小于ans，则更新ans = div。
 
-最后返回 $ans$ 即可。
+最后返回ans即可。
 
-时间复杂度 $(m \times n)$，其中 $m$ 和 $n$ 分别是 $nums$ 和 $divisors$ 的长度。空间复杂度 $O(1)$。
+时间复杂度(m \times n)，其中m和n分别是nums和divisors的长度。空间复杂度O(1)。
 
 ### **Java**
 

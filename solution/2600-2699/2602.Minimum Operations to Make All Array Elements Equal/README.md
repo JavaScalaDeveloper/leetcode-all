@@ -51,17 +51,17 @@
 
 **方法一：排序 + 前缀和 + 二分查找**
 
-我们先将数组 $nums$ 进行排序，并计算出长度为 $n+1$ 的前缀和数组 $s$，其中 $s[i]$ 表示数组 $nums$ 中前 $i$ 个元素的和。
+我们先将数组nums进行排序，并计算出长度为n+1的前缀和数组s，其中s[i]表示数组nums中前i个元素的和。
 
-接下来，遍历每个查询 $queries[i]$，我们需要将所有大于 $queries[i]$ 的元素减小到 $queries[i]$，将所有小于 $queries[i]$ 的元素增大到 $queries[i]$。
+接下来，遍历每个查询queries[i]，我们需要将所有大于queries[i]的元素减小到queries[i]，将所有小于queries[i]的元素增大到queries[i]。
 
-我们可以通过二分查找找到数组 $nums$ 中第一个大于 $queries[i]$ 的元素的下标 $i$，则有 $n-i$ 个元素需要减小到 $queries[i]$，这些元素的和为 $s[n]-s[i]$，这些元素的和需要减去 $n-i$ 个 $queries[i]$，因此，这些元素减小到 $queries[i]$ 的总操作次数为 $s[n]-s[i]-(n-i)\times queries[i]$。
+我们可以通过二分查找找到数组nums中第一个大于queries[i]的元素的下标i，则有n-i个元素需要减小到queries[i]，这些元素的和为s[n]-s[i]，这些元素的和需要减去n-i个queries[i]，因此，这些元素减小到queries[i]的总操作次数为s[n]-s[i]-(n-i)\times queries[i]。
 
-同理，我们可以找到数组 $nums$ 中第一个大于等于 $queries[i]$ 的元素的下标 $i$，则有 $i$ 个元素需要增大到 $queries[i]$，这些元素的和为 $s[i]$，因此，这些元素增大到 $queries[i]$ 的总操作次数为 $queries[i]\times i-s[i]$。
+同理，我们可以找到数组nums中第一个大于等于queries[i]的元素的下标i，则有i个元素需要增大到queries[i]，这些元素的和为s[i]，因此，这些元素增大到queries[i]的总操作次数为queries[i]\times i-s[i]。
 
-最后，将这两个总操作次数相加，即为将数组 $nums$ 中所有元素变成 $queries[i]$ 的最少操作次数，即 $ans[i]=s[n]-s[i]-(n-i)\times queries[i]+queries[i]\times i-s[i]$。
+最后，将这两个总操作次数相加，即为将数组nums中所有元素变成queries[i]的最少操作次数，即ans[i]=s[n]-s[i]-(n-i)\times queries[i]+queries[i]\times i-s[i]。
 
-时间复杂度 $O(n \times \log n)$，空间复杂度 $O(n)$。其中 $n$ 为数组 $nums$ 的长度。
+时间复杂度O(n \times \log n)，空间复杂度O(n)。其中n为数组nums的长度。
 
 ### **Java**
 

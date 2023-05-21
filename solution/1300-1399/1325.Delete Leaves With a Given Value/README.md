@@ -59,13 +59,13 @@
 
 **方法一：递归**
 
-我们先判断 $root$ 节点是否为空，若为空，则返回空。
+我们先判断root节点是否为空，若为空，则返回空。
 
-否则，递归地处理 $root$ 的左右子树，即调用 `root.left = removeLeafNodes(root.left, target)` 和 `root.right = removeLeafNodes(root.right, target)`。
+否则，递归地处理root的左右子树，即调用 `root.left = removeLeafNodes(root.left, target)` 和 `root.right = removeLeafNodes(root.right, target)`。
 
-然后判断 $root$ 节点是否为叶子节点，即判断 $root.left$ 和 $root.right$ 是否为空，且 $root.val$ 是否等于 $target$。若是，则返回空，否则返回 $root$。
+然后判断root节点是否为叶子节点，即判断root.left和root.right是否为空，且root.val是否等于target。若是，则返回空，否则返回root。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为二叉树的节点个数。
+时间复杂度O(n)，空间复杂度O(n)。其中n为二叉树的节点个数。
 
 ### **Java**
 

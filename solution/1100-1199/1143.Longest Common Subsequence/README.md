@@ -51,19 +51,19 @@
 
 **方法一：动态规划**
 
-我们定义 $f[i][j]$ 表示 $text1$ 的前 $i$ 个字符和 $text2$ 的前 $j$ 个字符的最长公共子序列的长度。那么答案为 $f[m][n]$，其中 $m$ 和 $n$ 分别为 $text1$ 和 $text2$ 的长度。
+我们定义f[i][j]表示text1的前i个字符和text2的前j个字符的最长公共子序列的长度。那么答案为f[m][n]，其中m和n分别为text1和text2的长度。
 
-如果 $text1$ 的第 $i$ 个字符和 $text2$ 的第 $j$ 个字符相同，则 $f[i][j] = f[i - 1][j - 1] + 1$；如果 $text1$ 的第 $i$ 个字符和 $text2$ 的第 $j$ 个字符不同，则 $f[i][j] = max(f[i - 1][j], f[i][j - 1])$。即状态转移方程为：
+如果text1的第i个字符和text2的第j个字符相同，则f[i][j] = f[i - 1][j - 1] + 1；如果text1的第i个字符和text2的第j个字符不同，则f[i][j] = max(f[i - 1][j], f[i][j - 1])。即状态转移方程为：
 
-$$
+
 f[i][j] =
 \begin{cases}
 f[i - 1][j - 1] + 1, & text1[i - 1] = text2[j - 1] \\
 max(f[i - 1][j], f[i][j - 1]), & text1[i - 1] \neq text2[j - 1]
 \end{cases}
-$$
 
-时间复杂度 $O(m \times n)$，空间复杂度 $O(m \times n)$。其中 $m$ 和 $n$ 分别为 $text1$ 和 $text2$ 的长度。
+
+时间复杂度O(m \times n)，空间复杂度O(m \times n)。其中m和n分别为text1和text2的长度。
 
 ### **Java**
 

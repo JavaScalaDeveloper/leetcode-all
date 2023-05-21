@@ -12,7 +12,7 @@
 <p>每个工人&nbsp;<strong>最多</strong> 只能安排 <strong>一个</strong> 工作，但是一个工作可以 <strong>完成多次</strong> 。</p>
 
 <ul>
-	<li>举个例子，如果 3 个工人都尝试完成一份报酬为 <code>$1</code> 的同样工作，那么总收益为 <code>$3</code>&nbsp;。如果一个工人不能完成任何工作，他的收益为 <code>$0</code> 。</li>
+	<li>举个例子，如果 3 个工人都尝试完成一份报酬为 <code>1</code> 的同样工作，那么总收益为 <code>3</code>&nbsp;。如果一个工人不能完成任何工作，他的收益为 <code>0</code> 。</li>
 </ul>
 
 <p>返回 <em>在把工人分配到工作岗位后，我们所能获得的最大利润&nbsp;</em>。</p>

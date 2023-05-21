@@ -48,11 +48,11 @@
 
 **方法一：前缀和**
 
-我们用变量 $mx$ 记录数组 $nums$ 中前 $i$ 个元素的最大值，用数组 $ans[i]$ 记录数组 $nums$ 中前 $i$ 个元素的分数。
+我们用变量mx记录数组nums中前i个元素的最大值，用数组ans[i]记录数组nums中前i个元素的分数。
 
-接下来，遍历数组 $nums$，对于每个元素 $nums[i]$，我们更新 $mx$，即 $mx = max(mx, nums[i])$，然后更新 $ans[i]$，如果 $i = 0$，则 $ans[i] = nums[i] + mx$，否则 $ans[i] = nums[i] + mx + ans[i - 1]$。
+接下来，遍历数组nums，对于每个元素nums[i]，我们更新mx，即mx = max(mx, nums[i])，然后更新ans[i]，如果i = 0，则ans[i] = nums[i] + mx，否则ans[i] = nums[i] + mx + ans[i - 1]。
 
-时间复杂度 $O(n)$，其中 $n$ 为数组 $nums$ 的长度。忽略答案数组的空间消耗，空间复杂度 $O(1)$。
+时间复杂度O(n)，其中n为数组nums的长度。忽略答案数组的空间消耗，空间复杂度O(1)。
 
 ### **Java**
 

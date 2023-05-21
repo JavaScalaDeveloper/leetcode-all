@@ -52,18 +52,18 @@
 
 **方法一：动态规划**
 
-我们定义 $f[i]$ 表示长度为 $i$ 的字符串中满足条件的个数。状态转移方程为：
+我们定义f[i]表示长度为i的字符串中满足条件的个数。状态转移方程为：
 
-$$
+
 f[i] = \begin{cases}
 1 & i = 0 \\
 f[i - oneGroup] + f[i - zeroGroup] & i \geq 1
 \end{cases}
-$$
 
-最终答案为 $f[minLength] + f[minLength + 1] + \cdots + f[maxLength]$。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n=maxLength$。
+最终答案为f[minLength] + f[minLength + 1] + \cdots + f[maxLength]。
+
+时间复杂度O(n)，空间复杂度O(n)。其中n=maxLength。
 
 ### **Java**
 

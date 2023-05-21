@@ -46,17 +46,17 @@
 
 由于题目保证原串一定可以变成回文串，那么原串中最多只有一种字母出现奇数次。如果有一种字母出现奇数次，那么将该字母中排在最中间的字符移动到字符串中间，剩下的字符可以转化为所有字母均出现偶数次的情况。
 
-贪心算法是：每次固定字符串最左边的字母 $a$ 不变，找出距离字符串右侧最近的 $a$，把它交换到字符串最右边。这样字符串的头尾字母就相等了。把字符串的头尾去掉，就变成了子问题。把所有子问题的答案加起来就是最少交换次数。
+贪心算法是：每次固定字符串最左边的字母a不变，找出距离字符串右侧最近的a，把它交换到字符串最右边。这样字符串的头尾字母就相等了。把字符串的头尾去掉，就变成了子问题。把所有子问题的答案加起来就是最少交换次数。
 
-由于数据范围较小，通过 ${O}(n^2)$ 的模拟即可通过本题。
+由于数据范围较小，通过{O}(n^2)的模拟即可通过本题。
 
 证明：
 
-构造回文串的过程，实际上是每次选择一对字母并把它们交换到字符串头尾的过程。考虑字母 $x$ 和字母 $y$ 哪个先选，分以下情况讨论：
+构造回文串的过程，实际上是每次选择一对字母并把它们交换到字符串头尾的过程。考虑字母x和字母y哪个先选，分以下情况讨论：
 
--   字母 $x$ 和 $y$ 的位置满足 $\underbrace{\cdots}_{a\text{ 个}}x\underbrace{\cdots}_{b\text{ 个}}y\underbrace{\cdots}_{c\text{ 个}}y\underbrace{\cdots}_{d\text{ 个}}x\underbrace{\cdots}_{e\text{ 个}}$。如果先把 $x$ 换到头尾，再把 $y$ 换到头尾，那么需要 $(a + e) + (b + d)$ 次交换；如果先换 $y$ 再换 $x$，那么需要 $(a + b + 1 + d + e + 1) + (a + e)$ 次交换。显然先换 $x$ 更优。
--   字母 $x$ 和 $y$ 的位置满足 $\underbrace{\cdots}_{a\text{ 个}}x\underbrace{\cdots}_{b\text{ 个}}y\underbrace{\cdots}_{c\text{ 个}}x\underbrace{\cdots}_{d\text{ 个}}y\underbrace{\cdots}_{e\text{ 个}}$。如果先换 $x$ 再换 $y$，那么需要 $(a + d + e + 1) + (a + b + e)$ 次交换；如果先换 $y$ 再换 $x$，那么需要 $(a + b + 1 + e) + (a + d + e)$ 次交换。先换哪个都一样。
--   字母 $x$ 和 $y$ 的位置满足 $\underbrace{\cdots}_{a\text{ 个}}x\underbrace{\cdots}_{b\text{ 个}}x\underbrace{\cdots}_{c\text{ 个}}y\underbrace{\cdots}_{d\text{ 个}}y\underbrace{\cdots}_{e\text{ 个}}$。如果先换 $x$ 再换 $y$，那么需要 $(a + c + d + e + 2) + (a + b + c + e)$ 次交换；如果先换 $y$ 再换 $x$，那么需要 $(a + b + c + 2 + e) + (a + c + d + e)$ 次交换。先换哪个都一样。
+-   字母x和y的位置满足\underbrace{\cdots}_{a\text{ 个}}x\underbrace{\cdots}_{b\text{ 个}}y\underbrace{\cdots}_{c\text{ 个}}y\underbrace{\cdots}_{d\text{ 个}}x\underbrace{\cdots}_{e\text{ 个}}。如果先把x换到头尾，再把y换到头尾，那么需要(a + e) + (b + d)次交换；如果先换y再换x，那么需要(a + b + 1 + d + e + 1) + (a + e)次交换。显然先换x更优。
+-   字母x和y的位置满足\underbrace{\cdots}_{a\text{ 个}}x\underbrace{\cdots}_{b\text{ 个}}y\underbrace{\cdots}_{c\text{ 个}}x\underbrace{\cdots}_{d\text{ 个}}y\underbrace{\cdots}_{e\text{ 个}}。如果先换x再换y，那么需要(a + d + e + 1) + (a + b + e)次交换；如果先换y再换x，那么需要(a + b + 1 + e) + (a + d + e)次交换。先换哪个都一样。
+-   字母x和y的位置满足\underbrace{\cdots}_{a\text{ 个}}x\underbrace{\cdots}_{b\text{ 个}}x\underbrace{\cdots}_{c\text{ 个}}y\underbrace{\cdots}_{d\text{ 个}}y\underbrace{\cdots}_{e\text{ 个}}。如果先换x再换y，那么需要(a + c + d + e + 2) + (a + b + c + e)次交换；如果先换y再换x，那么需要(a + b + c + 2 + e) + (a + c + d + e)次交换。先换哪个都一样。
 
 上述讨论可以得到结论：每次交换最外边出现的字母不劣。因此贪心解法成立。
 

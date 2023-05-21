@@ -55,15 +55,15 @@ struct Node {
 
 使用队列进行层序遍历，每次遍历一层时，将当前层的节点按顺序连接起来。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为二叉树的节点个数。
+时间复杂度O(n)，空间复杂度O(n)。其中n为二叉树的节点个数。
 
 **方法二：DFS**
 
 使用递归进行前序遍历，每次遍历到一个节点时，将其左右子节点按顺序连接起来。
 
-具体地，我们设计一个函数 $dfs(left, right)$，表示将 $left$ 节点的 $next$ 指针指向 $right$ 节点。在函数中，我们首先判断 $left$ 和 $right$ 是否为空，若都不为空，则将 $left.next$ 指向 $right$，然后递归地调用 $dfs(left.left, left.right)$, $dfs(left.right, right.left)$, $dfs(right.left, right.right)$。
+具体地，我们设计一个函数dfs(left, right)，表示将left节点的next指针指向right节点。在函数中，我们首先判断left和right是否为空，若都不为空，则将left.next指向right，然后递归地调用dfs(left.left, left.right),dfs(left.right, right.left),dfs(right.left, right.right)。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为二叉树的节点个数。
+时间复杂度O(n)，空间复杂度O(n)。其中n为二叉树的节点个数。
 
 ### **Java**
 

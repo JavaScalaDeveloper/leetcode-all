@@ -31,9 +31,9 @@
 
 **方法一：双指针**
 
-遍历数组 `wordsDict`，找到 `word1` 和 `word2` 的下标 $i$ 和 $j$，求 $i-j$ 的最小值。
+遍历数组 `wordsDict`，找到 `word1` 和 `word2` 的下标i和j，求i-j的最小值。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组 `wordsDict` 的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为数组 `wordsDict` 的长度。
 
 ### **Java**
 

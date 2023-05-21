@@ -38,13 +38,13 @@ i = 4 ，arr[4] = 0 因为不存在值等于 2 的其他下标。
 
 **方法一：哈希表 + 前缀和**
 
-我们先用哈希表 $d$ 记录数组 $nums$ 中每个元素对应的下标列表，即 $d[x]$ 表示数组 $nums$ 中所有值为 $x$ 的下标列表。
+我们先用哈希表d记录数组nums中每个元素对应的下标列表，即d[x]表示数组nums中所有值为x的下标列表。
 
-对于哈希表 $d$ 中的每个值列表 $idx$，我们可以计算出 $idx$ 中每个下标 $i$ 对应的 $arr[i]$ 的值。对于第一个下标 $idx[0]$，右边所有下标距离 $idx[0]$ 的和 $right=\sum_{i=0}^{m-1} - idx[0] \times m$。接下来我们遍历 $idx$，每一次计算得到 $ans[idx[i]] = left + right$，然后更新 $left$ 和 $right$，即 $left = left + (idx[i+1] - idx[i]) \times (i+1)$，而 $right = right - (idx[i+1] - idx[i]) \times (m-i-1)$。
+对于哈希表d中的每个值列表idx，我们可以计算出idx中每个下标i对应的arr[i]的值。对于第一个下标idx[0]，右边所有下标距离idx[0]的和right=\sum_{i=0}^{m-1} - idx[0] \times m。接下来我们遍历idx，每一次计算得到ans[idx[i]] = left + right，然后更新left和right，即left = left + (idx[i+1] - idx[i]) \times (i+1)，而right = right - (idx[i+1] - idx[i]) \times (m-i-1)。
 
-遍历结束后，我们得到了数组 $nums$ 中每个元素对应的 $arr$ 的值，即 $ans$。
+遍历结束后，我们得到了数组nums中每个元素对应的arr的值，即ans。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为数组 $nums$ 的长度。
+时间复杂度O(n)，空间复杂度O(n)。其中n为数组nums的长度。
 
 ### **Java**
 

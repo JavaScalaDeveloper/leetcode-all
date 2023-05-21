@@ -53,11 +53,11 @@
 
 **方法一：字符串比较**
 
-如果 $event1$ 的开始时间大于 $event2$ 的结束时间，或者 $event1$ 的结束时间小于 $event2$ 的开始时间，那么两个事件不会有冲突。否则，两个事件存在冲突。
+如果event1的开始时间大于event2的结束时间，或者event1的结束时间小于event2的开始时间，那么两个事件不会有冲突。否则，两个事件存在冲突。
 
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2400-2499/2446.Determine%20if%20Two%20Events%20Have%20Conflict/images/event.png" />
 
-时间复杂度 $O(1)$，空间复杂度 $O(1)$。
+时间复杂度O(1)，空间复杂度O(1)。
 
 ### **Java**
 
