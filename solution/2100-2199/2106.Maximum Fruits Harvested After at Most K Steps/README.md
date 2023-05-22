@@ -56,28 +56,28 @@
 
 **方法一：双指针**
 
-我们不妨假设移动的位置区间为 $[l,r]$，开始位置为 $startPos$，来看看如何算出移动的最小步数。根据 $startPos$ 所处的位置，我们可以分为三种情况：
+我们不妨假设移动的位置区间为[l,r]，开始位置为startPos，来看看如何算出移动的最小步数。根据startPos所处的位置，我们可以分为三种情况：
 
-1. 如果 $startPos \leq l$，那么就是从 $startPos$ 一直向右移动到 $r$。移动的最小步数为 $r - startPos$；
-2. 如果 $startPos \geq r$，那么就是从 $startPos$ 一直向左移动到 $l$。移动的最小步数为 $startPos - l$；
-3. 如果 $l \lt startPos \lt r$，那么可以从 $startPos$ 向左移动到 $l$，再向右移动到 $r$；也可以从 $startPos$ 向右移动到 $r$，再向左移动到 $l$。移动的最小步数为 $r - l + \min(\lvert startPos - l \rvert, \lvert r - startPos \rvert)$。
+1. 如果startPos ≤ l，那么就是从startPos一直向右移动到r。移动的最小步数为r - startPos；
+2. 如果startPos ≥ r，那么就是从startPos一直向左移动到l。移动的最小步数为startPos - l；
+3. 如果l < startPos < r，那么可以从startPos向左移动到l，再向右移动到r；也可以从startPos向右移动到r，再向左移动到l。移动的最小步数为r - l + min(\lvert startPos - l \rvert, \lvert r - startPos \rvert)。
 
-以上三种情况可以统一用式子 $r - l + \min(\lvert startPos - l \rvert, \lvert r - startPos \rvert)$ 表示。
+以上三种情况可以统一用式子r - l + min(\lvert startPos - l \rvert, \lvert r - startPos \rvert)表示。
 
-假设我们固定区间右端点 $r$，向右移动左端点 $l$，我们来看看最小移动步数是怎么变化的。
+假设我们固定区间右端点r，向右移动左端点l，我们来看看最小移动步数是怎么变化的。
 
-1. 如果 $startPos \leq l$，随着 $l$ 的增大，最小步数不会发生变化。
-2. 如果 $startPos \gt l$，随着 $l$ 的增大，最小步数会减小。
+1. 如果startPos ≤ l，随着l的增大，最小步数不会发生变化。
+2. 如果startPos > l，随着l的增大，最小步数会减小。
 
-因此，随着 $l$ 的增大，最小移动步数一定是非严格单调递减的。基于此，我们可以使用双指针的方法，找出所有符合条件的最大区间，然后取所有符合条件的区间中水果总数最大的一个作为答案。
+因此，随着l的增大，最小移动步数一定是非严格单调递减的。基于此，我们可以使用双指针的方法，找出所有符合条件的最大区间，然后取所有符合条件的区间中水果总数最大的一个作为答案。
 
-具体地，我们用两个指针 $i$ 和 $j$ 分别指向区间的左右下标，初始时 $i = j = 0$。另外用一个变量 $s$ 记录区间内的水果总数，初始时 $s = 0$。
+具体地，我们用两个指针i和j分别指向区间的左右下标，初始时i = j = 0。另外用一个变量s记录区间内的水果总数，初始时s = 0。
 
-每次我们将 $j$ 加入区间中，然后更新 $s = s + fruits[j][1]$。如果此时区间内的最小步数 $fruits[j][0] - fruits[i][0] + \min(\lvert startPos - fruits[i][0] \rvert, \lvert startPos - fruits[j][0] \rvert)$ 大于 $k$，那么我们就将 $i$ 循环向右移动，直到 $i \gt j$ 或者区间内的最小步数小于等于 $k$。此时我们更新答案 $ans = \max(ans, s)$。继续移动 $j$，直到 $j$ 到达数组末尾。
+每次我们将j加入区间中，然后更新s = s + fruits[j][1]。如果此时区间内的最小步数fruits[j][0] - fruits[i][0] + min(\lvert startPos - fruits[i][0] \rvert, \lvert startPos - fruits[j][0] \rvert)大于k，那么我们就将i循环向右移动，直到i > j或者区间内的最小步数小于等于k。此时我们更新答案ans = max(ans, s)。继续移动j，直到j到达数组末尾。
 
 最后返回答案即可。
 
-时间复杂度 $O(n)$，其中 $n$ 是数组的长度。空间复杂度 $O(1)$。
+时间复杂度O(n)，其中n是数组的长度。空间复杂度O(1)。
 
 ### **Java**
 

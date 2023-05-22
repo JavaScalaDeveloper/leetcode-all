@@ -8,7 +8,7 @@
 
 <p>如果一个链表是回文，那么链表节点序列从前往后看和从后往前看是相同的。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,7 +27,7 @@
 <strong>输出:</strong> fasle
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -36,11 +36,11 @@
 	<li><code>0&nbsp;&lt;= node.val &lt;= 9</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶：</strong>能否用&nbsp;O(n) 时间复杂度和 O(1) 空间复杂度解决此题？</p>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 234&nbsp;题相同：<a href="https://leetcode.cn/problems/palindrome-linked-list/">https://leetcode.cn/problems/palindrome-linked-list/</a></p>
 

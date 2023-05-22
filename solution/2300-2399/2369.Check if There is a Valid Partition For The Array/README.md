@@ -42,28 +42,28 @@
 
 **方法一：记忆化搜索**
 
-$dfs(i)$ 表示从数组从下标 $i$ 开始到结尾，是否至少存在一个有效的划分。
+dfs(i)表示从数组从下标i开始到结尾，是否至少存在一个有效的划分。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。
+时间复杂度O(n)，空间复杂度O(n)。
 
 **方法二：动态规划**
 
-设 $dp[i]$ 表示数组前 $i$ 个元素是否至少存在一个有效的划分。初始时 $dp[0]=true$, $dp[1]=false$。
+设dp[i]表示数组前i个元素是否至少存在一个有效的划分。初始时dp[0]=true,dp[1]=false。
 
-根据题意，当 $i \ge 2$ 时，有
+根据题意，当i ≥ 2时，有
 
-$$
+
 dp[i] = \text{OR}
 \begin{cases}
 dp[i-2]\ \text{AND}\ \textit{nums}[i-1] = \textit{nums}[i-2],&i>1\\
 dp[i-3]\ \text{AND}\ \textit{nums}[i-1] = \textit{nums}[i-2] = \textit{nums}[i-3],&i>2\\
 dp[i-3]\ \text{AND}\ \textit{nums}[i-1] = \textit{nums}[i-2]+1 = \textit{nums}[i-3]+2,&i>2
 \end{cases}
-$$
 
-答案为 $dp[n]$。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。
+答案为dp[n]。
+
+时间复杂度O(n)，空间复杂度O(n)。
 
 ### **Java**
 

@@ -8,7 +8,7 @@
 
 <p>如果存在则返回 <code>true</code>，不存在返回 <code>false</code>。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>输入：</strong>nums = [1,5,9,1,5,9], k = 2, t = 3
 <strong>输出：</strong>false</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -39,7 +39,7 @@
 	<li><code>0 &lt;= t &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 220&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/contains-duplicate-iii/">https://leetcode.cn/problems/contains-duplicate-iii/</a></p>
 

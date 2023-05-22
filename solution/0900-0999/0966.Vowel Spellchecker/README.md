@@ -65,7 +65,7 @@
 
 最后返回答案数组 `ans` 即可。
 
-时间复杂度 $O(n+m)$，空间复杂度 $O(n)$。其中 $n$ 和 $m$ 分别为 `wordlist` 和 `queries` 的长度。
+时间复杂度O(n+m)，空间复杂度O(n)。其中n和m分别为 `wordlist` 和 `queries` 的长度。
 
 ### **Java**
 

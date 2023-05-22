@@ -30,13 +30,13 @@
 
 **方法一：一次遍历**
 
-我们先创建一个虚拟头节点 $dummy$，令 $dummy.next = head$，然后创建指针 $pre$ 指向 $dummy$，指针 $cur$ 指向 $head$，开始遍历链表。
+我们先创建一个虚拟头节点dummy，令dummy.next = head，然后创建指针pre指向dummy，指针cur指向head，开始遍历链表。
 
-当 $cur$ 指向的节点值与 $cur.next$ 指向的节点值相同时，我们就让 $cur$ 不断向后移动，直到 $cur$ 指向的节点值与 $cur.next$ 指向的节点值不相同时，停止移动。此时，我们判断 $pre.next$ 是否等于 $cur$，如果相等，说明 $pre$ 与 $cur$ 之间没有重复节点，我们就让 $pre$ 移动到 $cur$ 的位置；否则，说明 $pre$ 与 $cur$ 之间有重复节点，我们就让 $pre.next$ 指向 $cur.next$。然后让 $cur$ 继续向后移动。继续上述操作，直到 $cur$ 为空，遍历结束。
+当cur指向的节点值与cur.next指向的节点值相同时，我们就让cur不断向后移动，直到cur指向的节点值与cur.next指向的节点值不相同时，停止移动。此时，我们判断pre.next是否等于cur，如果相等，说明pre与cur之间没有重复节点，我们就让pre移动到cur的位置；否则，说明pre与cur之间有重复节点，我们就让pre.next指向cur.next。然后让cur继续向后移动。继续上述操作，直到cur为空，遍历结束。
 
-最后，返回 $dummy.next$ 即可。
+最后，返回dummy.next即可。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为链表的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为链表的长度。
 
 ### **Java**
 

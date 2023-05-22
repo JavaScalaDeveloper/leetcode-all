@@ -39,9 +39,9 @@
 
 对于本题，我们需要找出每个数右边**离它最近的**且**比它大的数**，因此我们可以从右往左遍历数组，且需要维护一个从栈底到栈顶单调递减的栈。
 
-对于当前遍历到的数 `temperatures[i]`，如果栈顶元素 `temperatures[stk[-1]]` 小于等于 `temperatures[i]`，则弹出栈顶元素，直到栈为空或者栈顶元素大于 `temperatures[i]`。如果此时栈不为空，那么栈顶元素就是 `temperatures[i]` 右边离它最近的且比它大的数，更新 `ans[i] = stk[-1] - i`。接着，我们将 $i$ 入栈，继续遍历下一个数。
+对于当前遍历到的数 `temperatures[i]`，如果栈顶元素 `temperatures[stk[-1]]` 小于等于 `temperatures[i]`，则弹出栈顶元素，直到栈为空或者栈顶元素大于 `temperatures[i]`。如果此时栈不为空，那么栈顶元素就是 `temperatures[i]` 右边离它最近的且比它大的数，更新 `ans[i] = stk[-1] - i`。接着，我们将i入栈，继续遍历下一个数。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为 `temperatures` 数组的长度。
+时间复杂度O(n)，空间复杂度O(n)。其中n为 `temperatures` 数组的长度。
 
 ### **Java**
 

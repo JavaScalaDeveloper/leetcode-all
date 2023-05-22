@@ -8,7 +8,7 @@
 
 <p>题目数据保证答案符合 32 位整数范围。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 <strong>输出：</strong>0
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -45,11 +45,11 @@
 	<li><code>1 &lt;= target &lt;= 1000</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶：</strong>如果给定的数组中含有负数会发生什么？问题会产生何种变化？如果允许负数出现，需要向题目中添加哪些限制条件？</p>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 377&nbsp;题相同：<a href="https://leetcode.cn/problems/combination-sum-iv/">https://leetcode.cn/problems/combination-sum-iv/</a></p>
 

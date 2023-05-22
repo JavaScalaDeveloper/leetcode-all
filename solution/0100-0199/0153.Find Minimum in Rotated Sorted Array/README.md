@@ -61,7 +61,7 @@
 
 除了 `nums[0]`，也可以以 `nums[right]` 作为参照物，若 `nums[mid] < nums[right]` 成立，则最小值存在于 `[left, mid]` 范围当中，否则存在于 `[mid + 1, right]`。
 
-时间复杂度：$O(logN)$
+时间复杂度：O(logN)
 
 ### **Java**
 

@@ -8,7 +8,7 @@
 
 <p><meta charset="UTF-8" /><strong>回文串</strong>&nbsp;是正着读和反着读都一样的字符串。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@
 <strong>输入：</strong>s = &quot;a&quot;
 <strong>输出：</strong>[[&quot;a&quot;]<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">&nbsp;</span></pre>
 
-<p>&nbsp;</p>
+
 
 <p><b>提示：</b></p>
 
@@ -39,7 +39,7 @@
 	<li><code>s </code>仅由小写英文字母组成</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 131&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/palindrome-partitioning/">https://leetcode.cn/problems/palindrome-partitioning/</a></p>
 

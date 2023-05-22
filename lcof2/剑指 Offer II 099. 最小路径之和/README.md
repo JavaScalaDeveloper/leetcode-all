@@ -8,7 +8,7 @@
 
 <p><strong>说明：</strong>一个机器人每次只能向下或者向右移动一步。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,7 +27,7 @@
 <strong>输出：</strong>12
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -38,7 +38,7 @@
 	<li><code>0 &lt;= grid[i][j] &lt;= 100</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 64&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/minimum-path-sum/">https://leetcode.cn/problems/minimum-path-sum/</a></p>
 

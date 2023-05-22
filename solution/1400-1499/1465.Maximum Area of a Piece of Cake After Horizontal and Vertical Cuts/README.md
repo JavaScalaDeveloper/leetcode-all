@@ -55,7 +55,7 @@
 
 先分别对 `horizontalCuts` 和 `verticalCuts` 排序，然后遍历数组，计算相邻两个元素的差值，取最大值的乘积即可。
 
-时间复杂度 $O(m\log m \times n\log n)$。其中 $m$ 和 $n$ 分别为 `horizontalCuts` 和 `verticalCuts` 的长度。
+时间复杂度O(mlog m × nlog n)。其中m和n分别为 `horizontalCuts` 和 `verticalCuts` 的长度。
 
 ### **Java**
 

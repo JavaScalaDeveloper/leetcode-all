@@ -20,7 +20,7 @@
 
 <p>可以假设&nbsp;<code>next()</code>&nbsp;调用总是有效的，也就是说，当调用 <code>next()</code>&nbsp;时，BST 的中序遍历中至少存在一个下一个数字。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -46,7 +46,7 @@ bSTIterator.next();    // 返回 20
 bSTIterator.hasNext(); // 返回 False
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -56,7 +56,7 @@ bSTIterator.hasNext(); // 返回 False
 	<li>最多调用 <code>10<sup>5</sup></code> 次 <code>hasNext</code> 和 <code>next</code> 操作</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶：</strong></p>
 
@@ -64,7 +64,7 @@ bSTIterator.hasNext(); // 返回 False
 	<li>你可以设计一个满足下述条件的解决方案吗？<code>next()</code> 和 <code>hasNext()</code> 操作均摊时间复杂度为 <code>O(1)</code> ，并使用 <code>O(h)</code> 内存。其中 <code>h</code> 是树的高度。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 173&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/binary-search-tree-iterator/">https://leetcode.cn/problems/binary-search-tree-iterator/</a></p>
 

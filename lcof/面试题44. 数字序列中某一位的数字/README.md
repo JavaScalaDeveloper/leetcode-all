@@ -8,7 +8,7 @@
 
 <p>请写一个函数，求任意第n位对应的数字。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,7 +21,7 @@
 <pre><strong>输入：</strong>n = 11
 <strong>输出：</strong>0</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 

@@ -61,19 +61,19 @@
 
 **方法一：递归**
 
-如果 $val$ 是最大数，那么将 $val$ 作为新的根节点，$root$ 作为新的根节点的左子树。
+如果val是最大数，那么将val作为新的根节点，root作为新的根节点的左子树。
 
-如果 $val$ 不是最大数，由于 $val$ 是在最后追加的数，那么一定是在 $root$ 的右边，所以将 $val$ 作为新节点插入 $root$ 的右子树即可。
+如果val不是最大数，由于val是在最后追加的数，那么一定是在root的右边，所以将val作为新节点插入root的右子树即可。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。
+时间复杂度O(n)，空间复杂度O(n)。
 
 **方法二：迭代**
 
-搜索右子树，找到 $curr.val > val > curr.right.val$ 的节点，然后创建新的节点 $node$，把 $node.left$ 指向 $curr.right$，然后 $curr.right$ 指向 $node$。
+搜索右子树，找到curr.val > val > curr.right.val的节点，然后创建新的节点node，把node.left指向curr.right，然后curr.right指向node。
 
-最后返回 $root$。
+最后返回root。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。
+时间复杂度O(n)，空间复杂度O(1)。
 
 ### **Java**
 

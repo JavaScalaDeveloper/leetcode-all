@@ -8,7 +8,7 @@
 
 <p>本题中，将空字符串定义为有效的&nbsp;<strong>回文串&nbsp;</strong>。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -24,7 +24,7 @@
 <strong>输出:</strong> false
 解释：&quot;raceacar&quot; 不是回文串</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -33,7 +33,7 @@
 	<li>字符串 <code>s</code> 由 ASCII 字符组成</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 125&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/valid-palindrome/">https://leetcode.cn/problems/valid-palindrome/</a></p>
 

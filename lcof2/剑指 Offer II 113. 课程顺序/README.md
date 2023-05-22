@@ -12,7 +12,7 @@
 
 <p>可能会有多个正确的顺序，只要任意返回一种就可以了。如果不可能完成所有课程，返回一个空数组。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -37,7 +37,7 @@
 <strong>输出: </strong><code>[0]</code>
 <strong>解释:</strong>&nbsp;总共 1 门课，直接修第一门课就可。</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -50,7 +50,7 @@
 	<li><code>prerequisites</code>&nbsp;中不存在重复元素</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 210&nbsp;题相同：<a href="https://leetcode.cn/problems/course-schedule-ii/">https://leetcode.cn/problems/course-schedule-ii/</a></p>
 

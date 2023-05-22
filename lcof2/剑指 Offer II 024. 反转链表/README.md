@@ -8,7 +8,7 @@
 
 <div class="original__bRMd">
 <div>
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20024.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/images/rev1ex1.jpg" style="width: 302px; " />
@@ -31,7 +31,7 @@
 <strong>输出：</strong>[]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -40,13 +40,13 @@
 	<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶：</strong>链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？</p>
 </div>
 </div>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 206&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/reverse-linked-list/">https://leetcode.cn/problems/reverse-linked-list/</a></p>
 

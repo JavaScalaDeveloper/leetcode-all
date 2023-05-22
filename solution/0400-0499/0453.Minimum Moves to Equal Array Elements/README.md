@@ -34,30 +34,30 @@
 
 **方法一：数学**
 
-我们不妨记数组 $nums$ 的最小值为 $mi$，数组的和为 $s$，数组的长度为 $n$。
+我们不妨记数组nums的最小值为mi，数组的和为s，数组的长度为n。
 
-假设最小操作次数为 $k$，最终数组的所有元素都为 $x$，则有：
+假设最小操作次数为k，最终数组的所有元素都为x，则有：
 
-$$
+
 \begin{aligned}
-s + (n - 1) \times k &= n \times x \\
+s + (n - 1) × k &= n × x \\
 x &= mi + k \\
 \end{aligned}
-$$
+
 
 将第二个式子代入第一个式子，得到：
 
-$$
+
 \begin{aligned}
-s + (n - 1) \times k &= n \times (mi + k) \\
-s + (n - 1) \times k &= n \times mi + n \times k \\
-k &= s - n \times mi \\
+s + (n - 1) × k &= n × (mi + k) \\
+s + (n - 1) × k &= n × mi + n × k \\
+k &= s - n × mi \\
 \end{aligned}
-$$
 
-因此，最小操作次数为 $s - n \times mi$。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组的长度。
+因此，最小操作次数为s - n × mi。
+
+时间复杂度O(n)，空间复杂度O(1)。其中n为数组的长度。
 
 ### **Java**
 

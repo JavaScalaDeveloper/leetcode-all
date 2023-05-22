@@ -9,9 +9,9 @@
 <p>There are three types of error messages that can be produced from this new object.</p>
 
 <ul>
-	<li>Attempting to modify a key on the object will result in this&nbsp;error message: <code>`Error Modifying: ${key}`</code>.</li>
-	<li>Attempting to modify an index on an array will result in this error message: <code>`Error Modifying&nbsp;Index: ${index}`</code>.</li>
-	<li>Attempting to call a method that mutates an array will result in this error message: <code>`Error Calling Method: ${methodName}`</code>. You may assume the only methods that can mutate&nbsp;an array are&nbsp;<code>[&#39;pop&#39;, &#39;push&#39;, &#39;shift&#39;, &#39;unshift&#39;, &#39;splice&#39;, &#39;sort&#39;, &#39;reverse&#39;]</code>.</li>
+	<li>Attempting to modify a key on the object will result in this&nbsp;error message: <code>`Error Modifying:{key}`</code>.</li>
+	<li>Attempting to modify an index on an array will result in this error message: <code>`Error Modifying&nbsp;Index:{index}`</code>.</li>
+	<li>Attempting to call a method that mutates an array will result in this error message: <code>`Error Calling Method:{methodName}`</code>. You may assume the only methods that can mutate&nbsp;an array are&nbsp;<code>[&#39;pop&#39;, &#39;push&#39;, &#39;shift&#39;, &#39;unshift&#39;, &#39;splice&#39;, &#39;sort&#39;, &#39;reverse&#39;]</code>.</li>
 </ul>
 
 <p><code>obj</code>&nbsp;is a valid JSON object or array, meaning it is the output of <code>JSON.parse()</code>.</p>

@@ -6,7 +6,7 @@
 
 <p>请实现 <code>copyRandomList</code> 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 <code>next</code> 指针指向下一个节点，还有一个 <code>random</code> 指针指向链表中的任意节点或者 <code>null</code>。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,7 +39,7 @@
 <strong>解释：</strong>给定的链表为空（空指针），因此返回 null。
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -49,11 +49,11 @@
 	<li>节点数目不超过 1000 。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>注意：</strong>本题与主站 138 题相同：<a href="https://leetcode.cn/problems/copy-list-with-random-pointer/">https://leetcode.cn/problems/copy-list-with-random-pointer/</a></p>
 
-<p>&nbsp;</p>
+
 
 ## 解法
 

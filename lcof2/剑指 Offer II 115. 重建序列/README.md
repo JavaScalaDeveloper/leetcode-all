@@ -15,7 +15,7 @@
 <p><em>如果 <code>nums</code> 是序列的唯一最短 <strong>超序列</strong> ，则返回 <code>true</code> ，否则返回 <code>false</code> 。</em><br />
 <strong>子序列</strong> 是一个可以通过从另一个序列中删除一些元素或不删除任何元素，而不改变其余元素的顺序的序列。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -49,7 +49,7 @@
 序列 [2,3] 是它的一个子序列：[1,<u><strong>2,3</strong></u>]。
 因为 nums 是唯一最短的超序列，所以返回true。</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -65,7 +65,7 @@
 	<li><code>sequences[i]</code>&nbsp;是&nbsp;<code>nums</code> 的一个子序列</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p>注意：本题与主站 444&nbsp;题相同：<a href="https://leetcode.cn/problems/sequence-reconstruction/">https://leetcode.cn/problems/sequence-reconstruction/</a></p>
 

@@ -16,7 +16,7 @@
 
 <p>返回它的最大深度&nbsp;3 。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 

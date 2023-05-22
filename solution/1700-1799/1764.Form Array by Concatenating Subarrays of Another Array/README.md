@@ -55,11 +55,11 @@
 
 **方法一：贪心枚举**
 
-我们贪心地枚举 `nums` 中每一个数 $nums[j]$ 作为子数组的开始，判断其是否与当前 $groups[i]$ 匹配，是则将指针 $i$ 往后移一位，将指针 $j$ 往后移动 $groups[i].length$ 位，否则将指针 $j$ 往后移动一位。
+我们贪心地枚举 `nums` 中每一个数nums[j]作为子数组的开始，判断其是否与当前groups[i]匹配，是则将指针i往后移一位，将指针j往后移动groups[i].length位，否则将指针j往后移动一位。
 
-如果 $i$ 走到了 $groups.length$，说明所有的子数组都匹配上了，返回 `true`，否则返回 `false`。
+如果i走到了groups.length，说明所有的子数组都匹配上了，返回 `true`，否则返回 `false`。
 
-时间复杂度 $O(n \times m)$，空间复杂度 $O(1)$。其中 $n$ 和 $m$ 分别为 `groups` 和 `nums` 的长度。
+时间复杂度O(n × m)，空间复杂度O(1)。其中n和m分别为 `groups` 和 `nums` 的长度。
 
 ### **Java**
 

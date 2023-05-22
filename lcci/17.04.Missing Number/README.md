@@ -14,7 +14,7 @@
 <pre><strong>输入：</strong>[3,0,1]
 <strong>输出：</strong>2</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 2：</strong></p>
 

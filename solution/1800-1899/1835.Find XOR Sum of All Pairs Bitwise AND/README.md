@@ -43,26 +43,26 @@
 
 **方法一：位运算**
 
-假设数组 `arr1` 的元素分别为 $a_1, a_2, \cdots, a_n$，数组 `arr2` 的元素分别为 $b_1, b_2, \cdots, b_m$，那么题目答案为：
+假设数组 `arr1` 的元素分别为a_1, a_2, \cdots, a_n，数组 `arr2` 的元素分别为b_1, b_2, \cdots, b_m，那么题目答案为：
 
-$$
+
 \begin{aligned}
 \text{ans} &= (a_1 \wedge b_1) \oplus (a_1 \wedge b_2) ... (a_1 \wedge b_m) \\
 &\quad \oplus (a_2 \wedge b_1) \oplus (a_2 \wedge b_2) ... (a_2 \wedge b_m) \\
 &\quad \oplus \cdots \\
 &\quad \oplus (a_n \wedge b_1) \oplus (a_n \wedge b_2) ... (a_n \wedge b_m) \\
 \end{aligned}
-$$
+
 
 由于布尔代数中，异或运算就是不进位的加法，与运算就是乘法，所以上式可以简化为：
 
-$$
+
 \text{ans} = (a_1 \oplus a_2 \oplus \cdots \oplus a_n) \wedge (b_1 \oplus b_2 \oplus \cdots \oplus b_m)
-$$
+
 
 即，数组 `arr1` 的异或和与数组 `arr2` 的异或和的与运算结果。
 
-时间复杂度 $O(n + m)$，空间复杂度 $O(1)$。其中 $n$ 和 $m$ 分别为数组 `arr1` 和 `arr2` 的长度。
+时间复杂度O(n + m)，空间复杂度O(1)。其中n和m分别为数组 `arr1` 和 `arr2` 的长度。
 
 ### **Java**
 

@@ -8,7 +8,7 @@
 
 <p><strong>注意：</strong>此题 <code>matrix</code>&nbsp;输入格式为一维 <code>01</code> 字符串数组。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,7 +48,7 @@
 <strong>输出：</strong>0
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -59,7 +59,7 @@
 	<li><code>matrix[i][j]</code> 为 <code>'0'</code> 或 <code>'1'</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p>注意：本题与主站 85 题相同（输入参数格式不同）：&nbsp;<a href="https://leetcode.cn/problems/maximal-rectangle/">https://leetcode.cn/problems/maximal-rectangle/</a></p>
 

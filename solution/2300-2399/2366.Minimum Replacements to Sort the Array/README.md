@@ -40,16 +40,16 @@
 
 **方法一：贪心**
 
-我们观察发现，要使得数组 $nums$ 变成非递减有序，也即单调递增，那么数组后面的元素应该尽可能大，所以，将数组 $nums$ 的最后一个元素 $nums[n-1]$ 替换成多个更小的数是没有必要的。
+我们观察发现，要使得数组nums变成非递减有序，也即单调递增，那么数组后面的元素应该尽可能大，所以，将数组nums的最后一个元素nums[n-1]替换成多个更小的数是没有必要的。
 
-也即是说，我们可以从后往前遍历数组 $nums$，并且维护当前的最大值 $mx$，初始时 $mx = nums[n-1]$。
+也即是说，我们可以从后往前遍历数组nums，并且维护当前的最大值mx，初始时mx = nums[n-1]。
 
--   若当前遍历到的元素 $nums[i] \leq mx$，此时不需要将 $nums[i]$ 进行替换，我们直接更新 $mx = nums[i]$ 即可。
--   否则，我们需要将 $nums[i]$ 替换成多个和为 $nums[i]$ 的数，这些数的最大值为 $mx$，总共替换成 $k=\left \lceil \frac{nums[i]}{mx} \right \rceil$ 个数，所以需要进行 $k-1$ 次操作，累加到答案中。这 $k$ 个数中，最小的数为 $\left \lfloor \frac{nums[i]}{k} \right \rfloor$，因此，我们更新 $mx = \left \lfloor \frac{nums[i]}{k} \right \rfloor$。
+-   若当前遍历到的元素nums[i] ≤ mx，此时不需要将nums[i]进行替换，我们直接更新mx = nums[i]即可。
+-   否则，我们需要将nums[i]替换成多个和为nums[i]的数，这些数的最大值为mx，总共替换成k=\left \lceil \frac{nums[i]}{mx} \right \rceil个数，所以需要进行k-1次操作，累加到答案中。这k个数中，最小的数为\left \lfloor \frac{nums[i]}{k} \right \rfloor，因此，我们更新mx = \left \lfloor \frac{nums[i]}{k} \right \rfloor。
 
 遍历结束，返回总的操作次数即可。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组 $nums$ 的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为数组nums的长度。
 
 ### **Java**
 

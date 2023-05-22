@@ -46,17 +46,17 @@
 
 对于每个节点，求其与祖先节点的最大差值，我们只需要求出该节点与祖先节点最大值和最小值的差值，取所有差值的最大值即可。
 
-因此，我们设计一个函数 $dfs(root, mi, mx)$，表示当前搜索到的节点为 $root$，其祖先节点的最大值为 $mx$，最小值为 $mi$，函数内更新最大差值 $ans$。
+因此，我们设计一个函数dfs(root, mi, mx)，表示当前搜索到的节点为root，其祖先节点的最大值为mx，最小值为mi，函数内更新最大差值ans。
 
-函数 $dfs(root, mi, mx)$ 的逻辑如下：
+函数dfs(root, mi, mx)的逻辑如下：
 
--   若 $root$ 为空，直接返回。
--   否则，我们更新 $ans = max(ans, |mi - root.val|, |mx - root.val|)$。
--   然后更新 $mi = min(mi, root.val)$, $mx = max(mx, root.val)$，并且递归搜索左右子树。
+-   若root为空，直接返回。
+-   否则，我们更新ans = max(ans, |mi - root.val|, |mx - root.val|)。
+-   然后更新mi = min(mi, root.val),mx = max(mx, root.val)，并且递归搜索左右子树。
 
-在主函数中，我们调用 $dfs(root, root.val, root.val)$，最后返回 $ans$ 即可。
+在主函数中，我们调用dfs(root, root.val, root.val)，最后返回ans即可。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为二叉树节点个数。
+时间复杂度O(n)，空间复杂度O(n)。其中n为二叉树节点个数。
 
 ### **Java**
 

@@ -51,18 +51,18 @@
 
 **方法一：前缀异或**
 
-我们可以用一个长度为 $n+1$ 的前缀异或数组 $s$ 来存储数组 $arr$ 的前缀异或结果，其中 $s[i] = s[i-1] \oplus arr[i-1]$，即 $s[i]$ 表示 $arr$ 中下标 $[0,i-1]$ 的元素的异或结果。
+我们可以用一个长度为n+1的前缀异或数组s来存储数组arr的前缀异或结果，其中s[i] = s[i-1] \oplus arr[i-1]，即s[i]表示arr中下标[0,i-1]的元素的异或结果。
 
-那么对于一个查询 $[l,r]$，我们可以得到：
+那么对于一个查询[l,r]，我们可以得到：
 
-$$
+
 \begin{aligned}
 arr[l] \oplus arr[l+1] \oplus \cdots \oplus arr[r] &= (arr[0] \oplus arr[1] \oplus \cdots \oplus arr[l-1]) \oplus (arr[0] \oplus arr[1] \oplus \cdots \oplus arr[r]) \\
 &= s[l] \oplus s[r+1]
 \end{aligned}
-$$
 
-时间复杂度 $O(n+m)$，空间复杂度 $O(n)$。其中 $n$ 和 $m$ 分别是数组 $arr$ 和查询数组 $queries$ 的长度。
+
+时间复杂度O(n+m)，空间复杂度O(n)。其中n和m分别是数组arr和查询数组queries的长度。
 
 ### **Java**
 

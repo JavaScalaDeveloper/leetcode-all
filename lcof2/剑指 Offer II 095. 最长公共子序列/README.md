@@ -14,7 +14,7 @@
 
 <p>两个字符串的 <strong>公共子序列</strong> 是这两个字符串所共同拥有的子序列。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,7 +40,7 @@
 <strong>解释：</strong>两个字符串没有公共子序列，返回 0 。
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -49,7 +49,7 @@
 	<li><code>text1</code> 和&nbsp;<code>text2</code> 仅由小写英文字符组成。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 1143&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/longest-common-subsequence/">https://leetcode.cn/problems/longest-common-subsequence/</a></p>
 

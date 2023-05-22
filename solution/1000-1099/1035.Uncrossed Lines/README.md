@@ -55,17 +55,17 @@
 
 最长公共子序列问题。
 
-定义 $dp[i][j]$ 表示数组 `nums1` 的前 $i$ 个元素和数组 `nums2` 的前 $j$ 个元素的最长公共子序列的长度。则有：
+定义dp[i][j]表示数组 `nums1` 的前i个元素和数组 `nums2` 的前j个元素的最长公共子序列的长度。则有：
 
-$$
+
 dp[i][j]=
 \begin{cases}
 dp[i-1][j-1]+1, & nums1[i-1]=nums2[j-1] \\
-\max(dp[i-1][j], dp[i][j-1]), & nums1[i-1]\neq nums2[j-1]
+max(dp[i-1][j], dp[i][j-1]), & nums1[i-1]\neq nums2[j-1]
 \end{cases}
-$$
 
-时间复杂度 $O(m\times n)$，空间复杂度 $O(m\times n)$。其中 $m$, $n$ 分别为数组 `nums1` 和 `nums2` 的长度。
+
+时间复杂度O(m× n)，空间复杂度O(m× n)。其中m,n分别为数组 `nums1` 和 `nums2` 的长度。
 
 ### **Java**
 

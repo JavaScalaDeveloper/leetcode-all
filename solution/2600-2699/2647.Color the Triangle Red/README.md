@@ -64,10 +64,10 @@
 
 我们画图观察，可以发现，第一行只有一个三角形，一定要涂色，而从最后一行开始，到第二行结束，每四行的涂色方案是一样的：
 
-1. 最后一行涂色坐标为 $(n, 1)$, $(n, 3)$, ..., $(n, 2n - 1)$。
-1. 第 $n - 1$ 行涂色坐标为 $(n - 1, 2)$。
-1. 第 $n - 2$ 行涂色坐标为 $(n - 2, 3)$, $(n - 2, 5)$, ..., $(n - 2, 2n - 5)$。
-1. 第 $n - 3$ 行涂色坐标为 $(n - 3, 1)$。
+1. 最后一行涂色坐标为(n, 1),(n, 3), ...,(n, 2n - 1)。
+1. 第n - 1行涂色坐标为(n - 1, 2)。
+1. 第n - 2行涂色坐标为(n - 2, 3),(n - 2, 5), ...,(n - 2, 2n - 5)。
+1. 第n - 3行涂色坐标为(n - 3, 1)。
 
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2647.Color%20the%20Triangle%20Red/images/demo3.png" style="width: 50%">
 
@@ -75,7 +75,7 @@
 
 <img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/2600-2699/2647.Color%20the%20Triangle%20Red/images/demo2.png" style="width: 80%">
 
-时间复杂度 $(n^2)$，其中 $n$ 为题目给定的参数。忽略答案数组的空间消耗，空间复杂度 $O(1)$。
+时间复杂度(n^2)，其中n为题目给定的参数。忽略答案数组的空间消耗，空间复杂度O(1)。
 
 ### **Java**
 

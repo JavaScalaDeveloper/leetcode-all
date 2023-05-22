@@ -15,7 +15,7 @@
 	<li><code>boolean startsWith(String prefix)</code> 如果之前已经插入的字符串&nbsp;<code>word</code> 的前缀之一为 <code>prefix</code> ，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -36,7 +36,7 @@ trie.insert(&quot;app&quot;);
 trie.search(&quot;app&quot;);     // 返回 True
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -46,9 +46,9 @@ trie.search(&quot;app&quot;);     // 返回 True
 	<li><code>insert</code>、<code>search</code> 和 <code>startsWith</code> 调用次数 <strong>总计</strong> 不超过 <code>3 * 10<sup>4</sup></code> 次</li>
 </ul>
 
-<p>&nbsp;</p>
 
-<p>&nbsp;</p>
+
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 208 题相同：<a href="https://leetcode.cn/problems/implement-trie-prefix-tree/">https://leetcode.cn/problems/implement-trie-prefix-tree/</a>&nbsp;</p>
 

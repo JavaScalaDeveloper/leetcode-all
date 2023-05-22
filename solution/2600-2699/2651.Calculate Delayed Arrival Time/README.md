@@ -32,9 +32,9 @@
 
 **方法一：数学**
 
-我们直接计算列车实际到站的时间，即为 $arrivalTime + delayedTime$，但是由于时间采用 24 小时制，所以我们需要对结果取模，即 $(arrivalTime + delayedTime) \bmod 24$。
+我们直接计算列车实际到站的时间，即为arrivalTime + delayedTime，但是由于时间采用 24 小时制，所以我们需要对结果取模，即(arrivalTime + delayedTime) mod 24。
 
-时间复杂度 $O(1)$，空间复杂度 $O(1)$。
+时间复杂度O(1)，空间复杂度O(1)。
 
 ### **Java**
 

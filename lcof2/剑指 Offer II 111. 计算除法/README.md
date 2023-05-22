@@ -12,7 +12,7 @@
 
 <p><strong>注意：</strong>输入总是有效的。可以假设除法运算中不会出现除数为 0 的情况，且不存在任何矛盾的结果。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,7 +39,7 @@
 <strong>输出：</strong>[0.50000,2.00000,-1.00000,-1.00000]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -55,7 +55,7 @@
 	<li><code>A<sub>i</sub>, B<sub>i</sub>, C<sub>j</sub>, D<sub>j</sub></code> 由小写英文字母与数字组成</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 399&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/evaluate-division/">https://leetcode.cn/problems/evaluate-division/</a></p>
 

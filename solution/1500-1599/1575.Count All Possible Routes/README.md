@@ -58,30 +58,30 @@
 
 **方法一：记忆化搜索**
 
-我们设计一个函数 $dfs(i, k)$，表示从城市 $i$ 出发，剩余汽油量为 $k$ 时，到达目的地 $finish$ 的路径数。那么答案就是 $dfs(start, fuel)$。
+我们设计一个函数dfs(i, k)，表示从城市i出发，剩余汽油量为k时，到达目的地finish的路径数。那么答案就是dfs(start, fuel)。
 
-函数 $dfs(i, k)$ 的计算过程如下：
+函数dfs(i, k)的计算过程如下：
 
--   如果 $k \lt |locations[i] - locations[finish]|$，那么返回 $0$。
--   如果 $i = finish$，那么答案路径数初始时为 $1$，否则为 $0$。
--   然后，我们遍历所有城市 $j$，如果 $j \ne i$，那么我们可以从城市 $i$ 移动到城市 $j$，此时剩余汽油量为 $k - |locations[i] - locations[j]|$，那么我们可以将答案路径数加上 $dfs(j, k - |locations[i] - locations[j]|)$。
+-   如果k < |locations[i] - locations[finish]|，那么返回0。
+-   如果i = finish，那么答案路径数初始时为1，否则为0。
+-   然后，我们遍历所有城市j，如果j \ne i，那么我们可以从城市i移动到城市j，此时剩余汽油量为k - |locations[i] - locations[j]|，那么我们可以将答案路径数加上dfs(j, k - |locations[i] - locations[j]|)。
 -   最后，我们返回答案路径数。
 
 为了避免重复计算，我们可以使用记忆化搜索。
 
-时间复杂度 $O(n^2 \times m)$，空间复杂度 $O(n \times m)$。其中 $n$ 和 $m$ 分别是数组 $locations$ 和 $fuel$ 的大小。
+时间复杂度O(n^2 × m)，空间复杂度O(n × m)。其中n和m分别是数组locations和fuel的大小。
 
 **方法二：动态规划**
 
 我们也可以将方法一的记忆化搜索转换为动态规划。
 
-我们定义 $f[i][k]$ 表示从城市 $i$ 出发，剩余汽油量为 $k$ 时，到达目的地 $finish$ 的路径数。那么答案就是 $f[start][fuel]$。初始时 $f[finish][k]=1$，其余均为 $0$。
+我们定义f[i][k]表示从城市i出发，剩余汽油量为k时，到达目的地finish的路径数。那么答案就是f[start][fuel]。初始时f[finish][k]=1，其余均为0。
 
-接下来，我们从小到大枚举剩余汽油量 $k$，然后枚举所有的城市 $i$，对于每个城市 $i$，我们枚举所有的城市 $j$，如果 $j \ne i$，并且 $|locations[i] - locations[j]| \le k$，那么我们可以从城市 $i$ 移动到城市 $j$，此时剩余汽油量为 $k - |locations[i] - locations[j]|$，那么我们可以将答案路径数加上 $f[j][k - |locations[i] - locations[j]|]$。
+接下来，我们从小到大枚举剩余汽油量k，然后枚举所有的城市i，对于每个城市i，我们枚举所有的城市j，如果j \ne i，并且|locations[i] - locations[j]| \le k，那么我们可以从城市i移动到城市j，此时剩余汽油量为k - |locations[i] - locations[j]|，那么我们可以将答案路径数加上f[j][k - |locations[i] - locations[j]|]。
 
-最后，我们返回答案路径数 $f[start][fuel]$ 即可。
+最后，我们返回答案路径数f[start][fuel]即可。
 
-时间复杂度 $O(n^2 \times m)$，空间复杂度 $O(n \times m)$。其中 $n$ 和 $m$ 分别是数组 $locations$ 和 $fuel$ 的大小。
+时间复杂度O(n^2 × m)，空间复杂度O(n × m)。其中n和m分别是数组locations和fuel的大小。
 
 ### **Java**
 

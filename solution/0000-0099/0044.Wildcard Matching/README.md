@@ -52,20 +52,20 @@
 
 **方法一：动态规划**
 
-定义状态 $dp[i][j]$ 表示 $s$ 的前 $i$ 个字符和 $p$ 的前 $j$ 个字符是否匹配。
+定义状态dp[i][j]表示s的前i个字符和p的前j个字符是否匹配。
 
 状态转移方程如下：
 
-$$
+
 dp[i][j]=
 \begin{cases}
 dp[i-1][j-1] & \text{if } s[i-1]=p[j-1] \text{ or } p[j-1]=\text{?} \\
-dp[i-1][j-1] \lor dp[i-1][j] \lor dp[i][j-1] & \text{if } p[j-1]=\text{*} \\
+dp[i-1][j-1] OR dp[i-1][j] OR dp[i][j-1] & \text{if } p[j-1]=\text{*} \\
 \text{false} & \text{otherwise}
 \end{cases}
-$$
 
-时间复杂度 $O(m\times n)$，空间复杂度 $O(m\times n)$。
+
+时间复杂度O(m× n)，空间复杂度O(m× n)。
 
 ### **Java**
 

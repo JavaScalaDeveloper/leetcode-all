@@ -8,7 +8,7 @@
 
 <p>请注意，你需要找的是数组排序后的第 <code>k</code> 个最大的元素，而不是第 <code>k</code> 个不同的元素。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -23,7 +23,7 @@
 <strong>输入:</strong> <code>[3,2,3,1,2,4,5,5,6] 和</code> k = 4
 <strong>输出:</strong> 4</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示： </strong></p>
 
@@ -32,7 +32,7 @@
 	<li><code>-10<sup>4</sup>&nbsp;&lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 215&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/kth-largest-element-in-an-array/">https://leetcode.cn/problems/kth-largest-element-in-an-array/</a></p>
 

@@ -50,15 +50,15 @@
 
 因此，可以得到状态转移方程：
 
-$$
+
 dp[i][j]=
 \begin{cases}
 dp[i-1][j-1]+dp[i-1][j], & s[i]=t[j] \\
 dp[i-1][j], & s[i]\neq t[j]
 \end{cases}
-$$
 
-时间复杂度 $O(m\times n)$，空间复杂度 $O(m\times n)$。其中 $m$, $n$ 分别是字符串 `s` 和 `t` 的长度。
+
+时间复杂度O(m× n)，空间复杂度O(m× n)。其中m,n分别是字符串 `s` 和 `t` 的长度。
 
 ### **Java**
 

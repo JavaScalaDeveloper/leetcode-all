@@ -12,7 +12,7 @@
 	<li><code>getRandom</code>：随机返回现有集合中的一项。每个元素应该有&nbsp;<strong>相同的概率&nbsp;</strong>被返回。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 :</strong></p>
 
@@ -37,7 +37,7 @@ randomSet.insert(2); // 2 已在集合中，所以返回 false
 randomSet.getRandom(); // 由于 2 是集合中唯一的数字，getRandom 总是返回 2
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong><meta charset="UTF-8" /></p>
 
@@ -47,7 +47,7 @@ randomSet.getRandom(); // 由于 2 是集合中唯一的数字，getRandom 总�
 	<li>当调用&nbsp;<code>getRandom</code> 方法时，集合中至少有一个元素</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 380&nbsp;题相同：<a href="https://leetcode.cn/problems/insert-delete-getrandom-o1/">https://leetcode.cn/problems/insert-delete-getrandom-o1/</a></p>
 

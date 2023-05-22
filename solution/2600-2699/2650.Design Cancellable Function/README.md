@@ -49,7 +49,7 @@ promise.then(console.log); // 在 t=0ms 解析为 42
 <strong>输入：</strong>
 generatorFunction = function*() { 
 &nbsp; const msg = yield new Promise(res =&gt; res("Hello")); 
-&nbsp; throw `Error: ${msg}`; 
+&nbsp; throw `Error:{msg}`; 
 }
 cancelledAt = null
 <b>输出：</b>{"rejected": "Error: Hello"}

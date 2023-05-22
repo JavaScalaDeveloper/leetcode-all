@@ -13,7 +13,7 @@
 
 <p>返回矩阵中 <b>朋友圈</b>的数量。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20116.%20%E6%9C%8B%E5%8F%8B%E5%9C%88/images/graph1.jpg" style="width: 222px; height: 142px;" />
@@ -29,7 +29,7 @@
 <strong>输出：</strong>3
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -43,7 +43,7 @@
 </ul>
 </div>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 547&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/number-of-provinces/">https://leetcode.cn/problems/number-of-provinces/</a></p>
 

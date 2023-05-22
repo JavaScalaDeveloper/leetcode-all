@@ -14,7 +14,7 @@
 
 <p>请按照以下步骤调用 <code>MyCalendar</code> 类: <code>MyCalendar cal = new MyCalendar();</code> <code>MyCalendar.book(start, end)</code></p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例:</strong></p>
 
@@ -30,9 +30,9 @@ MyCalendar.book(15, 25); // returns false ，第二个日程安排不能添加�
 MyCalendar.book(20, 30); // returns true ，第三个日程安排可以添加到日历中，因为第一个日程安排并不包含时间 20
 </pre>
 
-<p>&nbsp;</p>
 
-<p>&nbsp;</p>
+
+
 
 <p><strong>提示：</strong></p>
 
@@ -41,7 +41,7 @@ MyCalendar.book(20, 30); // returns true ，第三个日程安排可以添加到
 	<li><code>0 &lt;= start &lt; end &lt;= 10<sup>9</sup></code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 729&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/my-calendar-i/">https://leetcode.cn/problems/my-calendar-i/</a></p>
 

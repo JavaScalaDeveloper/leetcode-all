@@ -9,7 +9,7 @@
 <ul>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -36,7 +36,7 @@
 <b>输出：</b>[]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><b>提示：</b></p>
 
@@ -45,11 +45,11 @@
 	<li><code>-10<sup>5</sup>&nbsp;&lt;= Node.val &lt;= 10<sup>5</sup></code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><b>进阶：</b>你可以在&nbsp;<code>O(n&nbsp;log&nbsp;n)</code> 时间复杂度和常数级空间复杂度下，对链表进行排序吗？</p>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 148&nbsp;题相同：<a href="https://leetcode.cn/problems/sort-list/">https://leetcode.cn/problems/sort-list/</a></p>
 

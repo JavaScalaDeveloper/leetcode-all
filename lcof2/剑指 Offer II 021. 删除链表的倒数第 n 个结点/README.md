@@ -6,7 +6,7 @@
 
 <p>给定一个链表，删除链表的倒数第&nbsp;<code>n</code><em>&nbsp;</em>个结点，并且返回链表的头结点。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -31,7 +31,7 @@
 <strong>输出：</strong>[1]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -42,11 +42,11 @@
 	<li><code>1 &lt;= n &lt;= sz</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶：</strong>能尝试使用一趟扫描实现吗？</p>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 19&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">https://leetcode.cn/problems/remove-nth-node-from-end-of-list/</a></p>
 

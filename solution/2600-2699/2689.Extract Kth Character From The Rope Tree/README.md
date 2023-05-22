@@ -69,15 +69,15 @@ You can see that S[root] = &quot;ropetree&quot;. So S[root][7], which represents
 
 **方法一：DFS**
 
-我们可以使用深度优先搜索的方法，定义一个函数 $dfs(root)$，表示从根节点开始搜索，返回以 $root$ 为根节点的子树的字符串。那么答案就是 $dfs(root)[k-1]$。
+我们可以使用深度优先搜索的方法，定义一个函数dfs(root)，表示从根节点开始搜索，返回以root为根节点的子树的字符串。那么答案就是dfs(root)[k-1]。
 
-函数 $dfs(root)$ 的执行逻辑如下：
+函数dfs(root)的执行逻辑如下：
 
--   如果 $root$ 为空，返回空字符串；
--   如果 $root$ 是叶子节点，返回 $root.val$；
--   否则，返回 $dfs(root.left) + dfs(root.right)$。
+-   如果root为空，返回空字符串；
+-   如果root是叶子节点，返回root.val；
+-   否则，返回dfs(root.left) + dfs(root.right)。
 
-时间复杂度 $O(n^2)$，空间复杂度 $O(n)$。其中 $n$ 是树中节点的个数。
+时间复杂度O(n^2)，空间复杂度O(n)。其中n是树中节点的个数。
 
 ### **Java**
 

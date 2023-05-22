@@ -8,7 +8,7 @@
 
 <p>换句话说，第一个字符串的排列之一是第二个字符串的 <strong>子串</strong> 。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,7 +25,7 @@
 <strong>输出:</strong> False
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -34,7 +34,7 @@
 	<li><code>s1</code> 和 <code>s2</code> 仅包含小写字母</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 567&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/permutation-in-string/">https://leetcode.cn/problems/permutation-in-string/</a></p>
 

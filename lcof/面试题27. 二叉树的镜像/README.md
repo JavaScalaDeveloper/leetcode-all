@@ -19,7 +19,7 @@
 &nbsp;/ \ &nbsp; / \<br>
 9 &nbsp; 6 3&nbsp; &nbsp;1</code></p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -27,7 +27,7 @@
 <strong>输出：</strong>[4,7,2,9,6,3,1]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 

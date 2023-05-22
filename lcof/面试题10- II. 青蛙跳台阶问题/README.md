@@ -31,7 +31,7 @@
 
 <p>注意：本题与主站 70 题相同：<a href="https://leetcode.cn/problems/climbing-stairs/">https://leetcode.cn/problems/climbing-stairs/</a></p>
 
-<p>&nbsp;</p>
+
 
 ## 解法
 

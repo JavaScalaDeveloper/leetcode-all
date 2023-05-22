@@ -46,7 +46,7 @@ favoriteCompanies[3]=[&quot;google&quot;] 是 favoriteCompanies[0]=[&quot;leetco
 
 将每个 `company` 字符串列表都转换为一个整数类型的集合。然后遍历每个集合，判断其是否是其他集合的子集，如果不是，则将其下标加入结果集。
 
-时间复杂度 $O(n^2 \times m)$，其中 $n$ 为 `favoriteCompanies` 的长度，$m$ 为 `favoriteCompanies[i]` 的最大长度。
+时间复杂度O(n^2 × m)，其中n为 `favoriteCompanies` 的长度，m为 `favoriteCompanies[i]` 的最大长度。
 
 ### **Java**
 

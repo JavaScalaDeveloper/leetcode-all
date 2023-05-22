@@ -8,7 +8,7 @@
 
 <p><strong>变位词 </strong>指字母相同，但排列不同的字符串。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -31,7 +31,7 @@
 起始索引等于 2 的子串是 &quot;ab&quot;, 它是 &quot;ab&quot; 的变位词。
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -40,7 +40,7 @@
 	<li><code>s</code>&nbsp;和 <code>p</code> 仅包含小写字母</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p>注意：本题与主站 438&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/find-all-anagrams-in-a-string/" style="background-color: rgb(255, 255, 255);">https://leetcode.cn/problems/find-all-anagrams-in-a-string/</a></p>
 

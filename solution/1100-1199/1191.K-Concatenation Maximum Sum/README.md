@@ -44,19 +44,19 @@
 
 **方法一：前缀和 + 分类讨论**
 
-我们记数组 $arr$ 所有元素之和为 $s$，最大前缀和为 $mxPre$，最小前缀和为 $miPre$，最大子数组和为 $mxSub$。
+我们记数组arr所有元素之和为s，最大前缀和为mxPre，最小前缀和为miPre，最大子数组和为mxSub。
 
-遍历数组 $arr$，对于每个元素 $x$，我们更新 $s = s + x$, $mxPre = max(mxPre, s)$, $miPre = min(miPre, s)$, $mxSub = max(mxSub, s - miPre)$。
+遍历数组arr，对于每个元素x，我们更新s = s + x,mxPre = max(mxPre, s),miPre = min(miPre, s),mxSub = max(mxSub, s - miPre)。
 
-接下来，我们考虑 $k$ 的取值情况：
+接下来，我们考虑k的取值情况：
 
--   当 $k = 1$ 时，答案为 $mxSub$。
--   当 $k \ge 2$ 时，如果最大子数组横跨两个 $arr$，那么答案为 $mxPre + mxSuf$，其中 $mxSuf = s - miPre$。
--   当 $k \ge 2$ 且 $s > 0$ 时，如果最大子数组横跨三个 $arr$，那么答案为 $(k - 2) \times s + mxPre + mxSuf$。
+-   当k = 1时，答案为mxSub。
+-   当k ≥ 2时，如果最大子数组横跨两个arr，那么答案为mxPre + mxSuf，其中mxSuf = s - miPre。
+-   当k ≥ 2且s > 0时，如果最大子数组横跨三个arr，那么答案为(k - 2) × s + mxPre + mxSuf。
 
-最后，我们返回答案对 $10^9 + 7$ 取模的结果。
+最后，我们返回答案对10^9 + 7取模的结果。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组 $arr$ 的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为数组arr的长度。
 
 ### **Java**
 

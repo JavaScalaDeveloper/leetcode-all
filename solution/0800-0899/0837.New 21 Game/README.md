@@ -47,93 +47,93 @@
 
 **方法一：记忆化搜索**
 
-我们设计一个函数 $dfs(i)$，表示当前分数为 $i$ 时，到最终停止抽取数字时，分数不超过 $n$ 的概率。那么答案就是 $dfs(0)$。
+我们设计一个函数dfs(i)，表示当前分数为i时，到最终停止抽取数字时，分数不超过n的概率。那么答案就是dfs(0)。
 
-函数 $dfs(i)$ 的计算方法如下：
+函数dfs(i)的计算方法如下：
 
--   如果 $i \ge k$，那么停止抽取数字，如果 $i \le n$，返回 $1$，否则返回 $0$；
--   否则，可以在 $[1,..maxPts]$ 范围内抽取下一个数字 $j$，那么 $dfs(i) = \frac{1}{maxPts} \sum_{j=1}^{maxPts} dfs(i+j)$。
+-   如果i ≥ k，那么停止抽取数字，如果i \le n，返回1，否则返回0；
+-   否则，可以在[1,..maxPts]范围内抽取下一个数字j，那么dfs(i) = \frac{1}{maxPts} \sum_{j=1}^{maxPts} dfs(i+j)。
 
 这里我们可以使用记忆化搜索来加速计算。
 
-以上方法的时间复杂度为 $O(k \times maxPts)$，会超出时间限制，我们需要优化一下。
+以上方法的时间复杂度为O(k × maxPts)，会超出时间限制，我们需要优化一下。
 
-当 $i \lt k$ 时，以下等式成立：
+当i < k时，以下等式成立：
 
-$$
+
 \begin{aligned}
 dfs(i) &= (dfs(i + 1) + dfs(i + 2) + \cdots + dfs(i + maxPts)) / maxPts & (1)
 \end{aligned}
-$$
 
-当 $i \lt k - 1$ 时，以下等式成立：
 
-$$
+当i < k - 1时，以下等式成立：
+
+
 \begin{aligned}
 dfs(i+1) &= (dfs(i + 2) + dfs(i + 3) + \cdots + dfs(i + maxPts + 1)) / maxPts & (2)
 \end{aligned}
-$$
 
-因此，当 $i \lt k-1$ 时，我们将等式 $(1)$ 减去等式 $(2)$，得到：
 
-$$
+因此，当i < k-1时，我们将等式(1)减去等式(2)，得到：
+
+
 \begin{aligned}
 dfs(i) - dfs(i+1) &= (dfs(i + 1) - dfs(i + maxPts + 1)) / maxPts
 \end{aligned}
-$$
+
 
 即：
 
-$$
+
 \begin{aligned}
 dfs(i) &= dfs(i + 1) + (dfs(i + 1) - dfs(i + maxPts + 1)) / maxPts
 \end{aligned}
-$$
 
-如果 $i=k-1$，有：
 
-$$
+如果i=k-1，有：
+
+
 \begin{aligned}
 dfs(i) &= dfs(k - 1) &= dfs(k) + dfs(k + 1) + \cdots + dfs(k + maxPts - 1) / maxPts & (3)
 \end{aligned}
-$$
 
-我们假设有 $i$ 个数不超过 $n$，那么 $k+i-1 \leq n$，又因为 $i\leq maxPts$，所以 $i \leq \min(n-k+1, maxPts)$，因此等式 $(3)$ 可以写成：
 
-$$
+我们假设有i个数不超过n，那么k+i-1 ≤ n，又因为i≤ maxPts，所以i ≤ min(n-k+1, maxPts)，因此等式(3)可以写成：
+
+
 \begin{aligned}
-dfs(k-1) &= \min(n-k+1, maxPts) / maxPts
+dfs(k-1) &= min(n-k+1, maxPts) / maxPts
 \end{aligned}
-$$
+
 
 综上所述，有以下状态转移方程：
 
-$$
+
 \begin{aligned}
 dfs(i) &= \begin{cases}
-1, & i \geq k, i \leq n \\
-0, & i \geq k, i \gt n \\
-\min(n-k+1, maxPts) / maxPts, & i = k - 1 \\
+1, & i ≥ k, i ≤ n \\
+0, & i ≥ k, i > n \\
+min(n-k+1, maxPts) / maxPts, & i = k - 1 \\
 dfs(i + 1) + (dfs(i + 1) - dfs(i + maxPts + 1)) / maxPts, & i < k - 1
 \end{cases}
 \end{aligned}
-$$
 
-时间复杂度 $O(k + maxPts)$，空间复杂度 $O(k + maxPts)$。其中 $k$ 为最大分数。
+
+时间复杂度O(k + maxPts)，空间复杂度O(k + maxPts)。其中k为最大分数。
 
 **方法二：动态规划**
 
 我们可以将方法一中的记忆化搜索改成动态规划。
 
-定义 $f[i]$ 表示当前分数为 $i$ 时，到最终停止抽取数字时，分数不超过 $n$ 的概率。那么答案就是 $f[0]$。
+定义f[i]表示当前分数为i时，到最终停止抽取数字时，分数不超过n的概率。那么答案就是f[0]。
 
-当 $k \leq i \leq \min(n, k + maxPts - 1)$ 时，有 $f[i] = 1$。
+当k ≤ i ≤ min(n, k + maxPts - 1)时，有f[i] = 1。
 
-当 $i = k - 1$ 时，有 $f[i] = \min(n-k+1, maxPts) / maxPts$。
+当i = k - 1时，有f[i] = min(n-k+1, maxPts) / maxPts。
 
-当 $i \lt k - 1$ 时，有 $f[i] = f[i + 1] + (f[i + 1] - f[i + maxPts + 1]) / maxPts$。
+当i < k - 1时，有f[i] = f[i + 1] + (f[i + 1] - f[i + maxPts + 1]) / maxPts。
 
-时间复杂度 $O(k + maxPts)$，空间复杂度 $O(k + maxPts)$。其中 $k$ 为最大分数。
+时间复杂度O(k + maxPts)，空间复杂度O(k + maxPts)。其中k为最大分数。
 
 ### **Java**
 

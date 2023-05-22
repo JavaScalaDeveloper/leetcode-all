@@ -32,7 +32,7 @@
 
 **方法一：分类讨论 + 枚举**
 
-根据题目描述，我们需要求出：在翻转一次子数组的情况下，数组值 $\sum_{i=0}^{n-2} |a_i - a_{i+1}|$ 的最大值。
+根据题目描述，我们需要求出：在翻转一次子数组的情况下，数组值\sum_{i=0}^{n-2} |a_i - a_{i+1}|的最大值。
 
 接下来，我们分以下几种情况讨论：
 
@@ -41,37 +41,37 @@
 1. 翻转子数组，且子数组“包含”最后一个元素
 1. 翻转子数组，且子数组“不包含”第一个元素和最后一个元素
 
-我们记不翻转子数组时的数组值为 $s$，此时有 $s = \sum_{i=0}^{n-2} |a_i - a_{i+1}|$。我们可以将答案 $ans$ 初始化为 $s$。
+我们记不翻转子数组时的数组值为s，此时有s = \sum_{i=0}^{n-2} |a_i - a_{i+1}|。我们可以将答案ans初始化为s。
 
-如果翻转子数组，且子数组包含第一个元素，我们可以枚举翻转的子数组的最后一个元素 $a_i$，其中 $0 \leq i \lt n-1$，此时有 $ans = \max(ans, s + |a_0 - a_{i+1}| - |a_i - a_{i+1}|)$。
+如果翻转子数组，且子数组包含第一个元素，我们可以枚举翻转的子数组的最后一个元素a_i，其中0 ≤ i < n-1，此时有ans = max(ans, s + |a_0 - a_{i+1}| - |a_i - a_{i+1}|)。
 
 <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1300-1399/1330.Reverse%20Subarray%20To%20Maximize%20Array%20Value/images/1-drawio.png" /></p>
 
-同理，如果翻转子数组，且子数组包含最后一个元素，我们可以枚举翻转的子数组的第一个元素 $a_{i+1}$，其中 $0 \leq i \lt n-1$，此时有 $ans = \max(ans, s + |a_{n-1} - a_i| - |a_i - a_{i+1}|)$。
+同理，如果翻转子数组，且子数组包含最后一个元素，我们可以枚举翻转的子数组的第一个元素a_{i+1}，其中0 ≤ i < n-1，此时有ans = max(ans, s + |a_{n-1} - a_i| - |a_i - a_{i+1}|)。
 
 <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1300-1399/1330.Reverse%20Subarray%20To%20Maximize%20Array%20Value/images/2-drawio.png" /></p>
 
-如果翻转子数组，且子数组不包含第一个元素和最后一个元素，我们将数组任意两个相邻元素视为一个点对 $(x, y)$，记翻转的第一个元素为 $y_1$，其左侧相邻元素为 $x_1$；翻转的最后一个元素为 $x_2$，其右侧相邻元素为 $y_2$。
+如果翻转子数组，且子数组不包含第一个元素和最后一个元素，我们将数组任意两个相邻元素视为一个点对(x, y)，记翻转的第一个元素为y_1，其左侧相邻元素为x_1；翻转的最后一个元素为x_2，其右侧相邻元素为y_2。
 
 <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/solution/1300-1399/1330.Reverse%20Subarray%20To%20Maximize%20Array%20Value/images/3-drawio.png" /></p>
 
-此时相比较于不翻转子数组，数组值的变化量为 $|x_1 - x_2| + |y_1 - y_2| - |x_1 - y_1| - |x_2 - y_2|$，其中，前两项可以表示为：
+此时相比较于不翻转子数组，数组值的变化量为|x_1 - x_2| + |y_1 - y_2| - |x_1 - y_1| - |x_2 - y_2|，其中，前两项可以表示为：
 
-$$
-\left | x_1 - x_2 \right |  + \left | y_1 - y_2 \right | = \max \begin{cases} (x_1 + y_1) - (x_2 + y_2) \\ (x_1 - y_1) - (x_2 - y_2) \\ (-x_1 + y_1) - (-x_2 + y_2) \\ (-x_1 - y_1) - (-x_2 - y_2) \end{cases}
-$$
+
+\left | x_1 - x_2 \right |  + \left | y_1 - y_2 \right | = max \begin{cases} (x_1 + y_1) - (x_2 + y_2) \\ (x_1 - y_1) - (x_2 - y_2) \\ (-x_1 + y_1) - (-x_2 + y_2) \\ (-x_1 - y_1) - (-x_2 - y_2) \end{cases}
+
 
 那么数组值变化量为：
 
-$$
-\left | x_1 - x_2 \right |  + \left | y_1 - y_2 \right | - \left | x_1 - y_1 \right | - \left | x_2 - y_2 \right |  = \max \begin{cases} (x_1 + y_1) - \left |x_1 - y_1 \right | - \left ( (x_2 + y_2) + \left |x_2 - y_2 \right | \right ) \\ (x_1 - y_1) - \left |x_1 - y_1 \right | - \left ( (x_2 - y_2) + \left |x_2 - y_2 \right | \right ) \\ (-x_1 + y_1) - \left |x_1 - y_1 \right | - \left ( (-x_2 + y_2) + \left |x_2 - y_2 \right | \right ) \\ (-x_1 - y_1) - \left |x_1 - y_1 \right | - \left ( (-x_2 - y_2) + \left |x_2 - y_2 \right | \right ) \end{cases}
-$$
 
-因此，我们只要求出 $k_1 \times x + k_2 \times y$ 的最大值 $mx$，其中 $k_1, k_2 \in \{-1, 1\}$，以及对应的 $|x - y|$ 的最小值 $mi$，那么数组值变化量的最大值为 $mx - mi$。答案为 $ans = \max(ans, s + \max(0, mx - mi))$。
+\left | x_1 - x_2 \right |  + \left | y_1 - y_2 \right | - \left | x_1 - y_1 \right | - \left | x_2 - y_2 \right |  = max \begin{cases} (x_1 + y_1) - \left |x_1 - y_1 \right | - \left ( (x_2 + y_2) + \left |x_2 - y_2 \right | \right ) \\ (x_1 - y_1) - \left |x_1 - y_1 \right | - \left ( (x_2 - y_2) + \left |x_2 - y_2 \right | \right ) \\ (-x_1 + y_1) - \left |x_1 - y_1 \right | - \left ( (-x_2 + y_2) + \left |x_2 - y_2 \right | \right ) \\ (-x_1 - y_1) - \left |x_1 - y_1 \right | - \left ( (-x_2 - y_2) + \left |x_2 - y_2 \right | \right ) \end{cases}
 
-在代码实现上，我们定义了一个长度为 $5$ 的数组 $dirs=[1, -1, -1, 1, 1]$，每次取数组相邻两个元素作为 $k_1, k_2$ 的值，这样可以覆盖 $k_1, k_2 \in \{-1, 1\}$ 的所有情况。
 
-时间复杂度 $O(n)$，其中 $n$ 是数组 $nums$ 的长度。空间复杂度 $O(1)$。
+因此，我们只要求出k_1 × x + k_2 × y的最大值mx，其中k_1, k_2 \in \{-1, 1\}，以及对应的|x - y|的最小值mi，那么数组值变化量的最大值为mx - mi。答案为ans = max(ans, s + max(0, mx - mi))。
+
+在代码实现上，我们定义了一个长度为5的数组dirs=[1, -1, -1, 1, 1]，每次取数组相邻两个元素作为k_1, k_2的值，这样可以覆盖k_1, k_2 \in \{-1, 1\}的所有情况。
+
+时间复杂度O(n)，其中n是数组nums的长度。空间复杂度O(1)。
 
 ### **Java**
 

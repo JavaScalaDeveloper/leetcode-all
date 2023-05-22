@@ -6,7 +6,7 @@
 
 <p>要求时间复杂度为O(n)。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例1:</strong></p>
 
@@ -14,7 +14,7 @@
 <strong>输出:</strong> 6
 <strong>解释:</strong>&nbsp;连续子数组&nbsp;[4,-1,2,1] 的和最大，为&nbsp;6。</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -25,7 +25,7 @@
 
 <p>注意：本题与主站 53 题相同：<a href="https://leetcode.cn/problems/maximum-subarray/">https://leetcode.cn/problems/maximum-subarray/</a></p>
 
-<p>&nbsp;</p>
+
 
 ## 解法
 

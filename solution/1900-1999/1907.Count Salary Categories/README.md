@@ -19,7 +19,7 @@ account_id&nbsp;是这个表的主键。
 
 <ul>
 	<li><code>"Low Salary"</code>：所有工资 <strong>严格低于</strong> <code>20000</code> 美元。</li>
-	<li><code>"Average Salary"</code>： <strong>包含</strong> 范围内的所有工资&nbsp;<code>[$20000,&nbsp;$50000]</code> 。</li>
+	<li><code>"Average Salary"</code>： <strong>包含</strong> 范围内的所有工资&nbsp;<code>[20000,&nbsp;50000]</code> 。</li>
 	<li>
 	<p><code>"High Salary"</code>：所有工资 <strong>严格大于</strong> <code>50000</code> 美元。</p>
 	</li>

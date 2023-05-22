@@ -13,7 +13,7 @@
 
 <p>不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -31,7 +31,7 @@
 <strong>输入: </strong>head = [1,2,3,4,5]
 <strong>输出: </strong>[1,5,2,4,3]</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -40,7 +40,7 @@
 	<li><code>1 &lt;= node.val &lt;= 1000</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 143&nbsp;题相同：<a href="https://leetcode.cn/problems/reorder-list/">https://leetcode.cn/problems/reorder-list/</a>&nbsp;</p>
 

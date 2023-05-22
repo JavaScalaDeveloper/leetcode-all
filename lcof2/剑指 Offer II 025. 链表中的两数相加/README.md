@@ -8,7 +8,7 @@
 
 <p>可以假设除了数字 0 之外，这两个数字都不会以零开头。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例1：</strong></p>
 
@@ -33,7 +33,7 @@
 <strong>输出：</strong>[0]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -43,11 +43,11 @@
 	<li>输入数据保证链表代表的数字无前导 0</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶：</strong>如果输入链表不能修改该如何处理？换句话说，不能对列表中的节点进行翻转。</p>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 445&nbsp;题相同：<a href="https://leetcode.cn/problems/add-two-numbers-ii/">https://leetcode.cn/problems/add-two-numbers-ii/</a></p>
 

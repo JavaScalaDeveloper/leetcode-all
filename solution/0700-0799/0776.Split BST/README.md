@@ -41,7 +41,7 @@
 -   若 `root.val <= target`，说明 `root` 及其左孩子所有节点的值均小于等于 `target`，那么我们递归 `root.right`，得到 `ans`。然后将 `root.right` 指向 `ans[0]`，最后返回 `[root, ans[1]]`；
 -   若 `root.val > target`，说明 `root` 及其右孩子所有节点的值均大于 `target`，那么我们递归 `root.left`，得到 `ans`。然后将 `root.left` 指向 `ans[1]`，最后返回 `[ans[0], root]`。
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是二叉搜索树的节点个数。
+时间复杂度O(n)，空间复杂度O(n)。其中n是二叉搜索树的节点个数。
 
 ### **Java**
 

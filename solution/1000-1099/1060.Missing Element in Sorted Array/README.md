@@ -51,9 +51,9 @@
 
 **方法一：二分查找**
 
-我们设计一个函数 $missing(i)$，表示 $nums[i]$ 与 $nums[0]$ 之间缺失的元素个数。那么 $missing(i)$ 就等于 $nums[i] - nums[0] - i$。我们可以通过二分查找找到最小的 $i$，使得 $missing(i) \geq k$，那么 $nums[i - 1] + k - missing(i - 1)$ 就是第 $k$ 个缺失的元素。
+我们设计一个函数missing(i)，表示nums[i]与nums[0]之间缺失的元素个数。那么missing(i)就等于nums[i] - nums[0] - i。我们可以通过二分查找找到最小的i，使得missing(i) ≥ k，那么nums[i - 1] + k - missing(i - 1)就是第k个缺失的元素。
 
-时间复杂度 $O(\log n)$，空间复杂度 $O(1)$。其中 $n$ 为数组 $nums$ 的长度。
+时间复杂度O(log n)，空间复杂度O(1)。其中n为数组nums的长度。
 
 ### **Java**
 

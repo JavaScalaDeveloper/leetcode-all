@@ -12,7 +12,7 @@
 
 <p>返回她可以在 <code>H</code> 小时内吃掉所有香蕉的最小速度 <code>K</code>（<code>K</code> 为整数）。</p>
 
-<p>&nbsp;</p>
+
 
 <ul>
 </ul>
@@ -38,7 +38,7 @@
 <strong>输出: </strong>23
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -48,7 +48,7 @@
 	<li><code>1 &lt;= piles[i] &lt;= 10^9</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 875&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/koko-eating-bananas/">https://leetcode.cn/problems/koko-eating-bananas/</a></p>
 

@@ -52,23 +52,23 @@
 
 **方法一：前缀和 + 计数**
 
-我们用 $one[i]$ 表示字符串 $s[0,..i]$ 中 $1$ 的个数，用 $zero[i]$ 表示字符串 $s[0,..i]$ 中 $0$ 的个数。子串符合条件，需要满足
+我们用one[i]表示字符串s[0,..i]中1的个数，用zero[i]表示字符串s[0,..i]中0的个数。子串符合条件，需要满足
 
-$$
+
 \frac{zero[j] - zero[i]}{one[j] - one[i]} = \frac{num1}{num2}
-$$
 
-其中 $i < j$。我们可以将上式转化为
 
-$$
-one[j] \times num1 - zero[j] \times num2 = one[i] \times num1 - zero[i] \times num2
-$$
+其中i < j。我们可以将上式转化为
 
-遍历到下标 $j$ 时，我们只需要统计有多少个下标 $i$ 满足上式即可。因此，我们可以用哈希表记录 $one[i] \times num1 - zero[i] \times num2$ 出现的次数，遍历到下标 $j$ 时，只需要统计 $one[j] \times num1 - zero[j] \times num2$ 出现的次数即可。
 
-哈希表初始时只有一个键值对 $(0, 1)$。
+one[j] × num1 - zero[j] × num2 = one[i] × num1 - zero[i] × num2
 
-时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串 $s$ 的长度。
+
+遍历到下标j时，我们只需要统计有多少个下标i满足上式即可。因此，我们可以用哈希表记录one[i] × num1 - zero[i] × num2出现的次数，遍历到下标j时，只需要统计one[j] × num1 - zero[j] × num2出现的次数即可。
+
+哈希表初始时只有一个键值对(0, 1)。
+
+时间复杂度O(n)，空间复杂度O(n)。其中n为字符串s的长度。
 
 ### **Java**
 

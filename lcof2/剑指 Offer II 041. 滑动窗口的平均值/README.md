@@ -13,7 +13,7 @@
 	<li><code>double next(int val)</code>&nbsp;成员函数 <code>next</code>&nbsp;每次调用的时候都会往滑动窗口增加一个整数，请计算并返回数据流中最后 <code>size</code> 个值的移动平均值，即滑动窗口里所有数字的平均值。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -32,7 +32,7 @@ movingAverage.next(3); // 返回 4.66667 = (1 + 10 + 3) / 3
 movingAverage.next(5); // 返回 6.0 = (10 + 3 + 5) / 3
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -42,7 +42,7 @@ movingAverage.next(5); // 返回 6.0 = (10 + 3 + 5) / 3
 	<li>最多调用 <code>next</code> 方法 <code>10<sup>4</sup></code> 次</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 346&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/moving-average-from-data-stream/">https://leetcode.cn/problems/moving-average-from-data-stream/</a></p>
 

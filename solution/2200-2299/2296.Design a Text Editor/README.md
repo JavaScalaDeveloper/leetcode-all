@@ -73,10 +73,10 @@ textEditor.cursorRight(6); // 返回 "practi"
 
 我们可以使用两个栈 `left` 和 `right`，其中栈 `left` 存储光标左边的字符，另一个栈 `right` 存储光标右边的字符。
 
--   当调用 `addText` 方法时，我们将 `text` 中的字符依次入栈 `left`。时间复杂度 $O(|text|)$。
--   当调用 `deleteText` 方法时，我们将 `left` 中的字符出栈最多 $k$ 次。时间复杂度 $O(k)$。
--   当调用 `cursorLeft` 方法时，我们将 `left` 中的字符出栈最多 $k$ 次，然后将出栈的字符依次入栈 `right`，最后返回 `left` 栈最多 $10$ 个字符。时间复杂度 $O(k)$。
--   当调用 `cursorRight` 方法时，我们将 `right` 中的字符出栈最多 $k$ 次，然后将出栈的字符依次入栈 `left`，最后返回 `left` 栈最多 $10$ 个字符。时间复杂度 $O(k)$。
+-   当调用 `addText` 方法时，我们将 `text` 中的字符依次入栈 `left`。时间复杂度O(|text|)。
+-   当调用 `deleteText` 方法时，我们将 `left` 中的字符出栈最多k次。时间复杂度O(k)。
+-   当调用 `cursorLeft` 方法时，我们将 `left` 中的字符出栈最多k次，然后将出栈的字符依次入栈 `right`，最后返回 `left` 栈最多10个字符。时间复杂度O(k)。
+-   当调用 `cursorRight` 方法时，我们将 `right` 中的字符出栈最多k次，然后将出栈的字符依次入栈 `left`，最后返回 `left` 栈最多10个字符。时间复杂度O(k)。
 
 ### **Java**
 

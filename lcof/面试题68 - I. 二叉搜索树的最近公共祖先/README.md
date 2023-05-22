@@ -12,7 +12,7 @@
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9868%20-%20I.%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/images/binarysearchtree_improved.png"></p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -27,7 +27,7 @@
 <strong>输出:</strong> 2
 <strong>解释:</strong> 节点 2 和节点 4 的最近公共祖先是 2, 因为根据定义最近公共祖先节点可以为节点本身。</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>说明:</strong></p>
 

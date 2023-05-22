@@ -5,7 +5,7 @@
 
 <p>给定非负整数数组 <code>heights</code>&nbsp;，数组中的数字用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 <code>1</code> 。</p>
 <p>求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
-<p>&nbsp;</p>
+
 <p><strong>示例 1:</strong></p>
 <p><img src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20039.%20%E7%9B%B4%E6%96%B9%E5%9B%BE%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2%E9%9D%A2%E7%A7%AF/images/histogram.jpg" /></p>
 <pre>
@@ -18,13 +18,13 @@
 <pre>
 <strong>输入：</strong> heights = [2,4]
 <b>输出：</b> 4</pre>
-<p>&nbsp;</p>
+
 <p><strong>提示：</strong></p>
 <ul>
 	<li><code>1 &lt;= heights.length &lt;=10<sup>5</sup></code></li>
 	<li><code>0 &lt;= heights[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
-<p>&nbsp;</p>
+
 <p><meta charset="UTF-8" />注意：本题与主站 84&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/largest-rectangle-in-histogram/">https://leetcode.cn/problems/largest-rectangle-in-histogram/</a></p>
 ## 解法
 

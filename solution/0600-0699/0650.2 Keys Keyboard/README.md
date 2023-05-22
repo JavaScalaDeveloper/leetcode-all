@@ -40,25 +40,25 @@
 
 **方法一：记忆化搜索**
 
-定义 $dfs(i)$ 为输出 $i$ 个字符的最少操作次数。初始化 `dfs(1)=0`。
+定义dfs(i)为输出i个字符的最少操作次数。初始化 `dfs(1)=0`。
 
-当 $i\gt 1$ 时，有：
+当i> 1时，有：
 
-$$
-dfs(i)=\min _{j \mid i} (dfs(\frac{i}{j})+j, i), 2\leq j\lt i
-$$
 
-时间复杂度 $O(n\sqrt{n})$。
+dfs(i)=min _{j \mid i} (dfs(\frac{i}{j})+j, i), 2≤ j< i
+
+
+时间复杂度O(n\sqrt{n})。
 
 **方法二：动态规划**
 
 记忆化搜索也可以改成动态规划。
 
-$$
-dp[i]=\min _{j \mid i} (dp[\frac{i}{j}]+j, i), 2\leq j\lt i
-$$
 
-时间复杂度 $O(n\sqrt{n})$。
+dp[i]=min _{j \mid i} (dp[\frac{i}{j}]+j, i), 2≤ j< i
+
+
+时间复杂度O(n\sqrt{n})。
 
 ### **Java**
 

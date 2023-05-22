@@ -45,13 +45,13 @@
 
 **方法一：前缀和**
 
-我们定义变量 $left$ 表示数组 `nums` 中下标 $i$ 左侧元素之和，变量 $right$ 表示数组 `nums` 中下标 $i$ 右侧元素之和。初始时 $left = 0$, $right = \sum_{i = 0}^{n - 1} nums[i]$。
+我们定义变量left表示数组 `nums` 中下标i左侧元素之和，变量right表示数组 `nums` 中下标i右侧元素之和。初始时left = 0,right = \sum_{i = 0}^{n - 1} nums[i]。
 
-遍历数组 `nums`，对于当前遍历到的数字 $x$，我们更新 $right = right - x$，此时 $left$ 和 $right$ 分别表示数组 `nums` 中下标 $i$ 左侧元素之和和右侧元素之和。我们将 $left$ 和 $right$ 的差的绝对值加入答案数组 `ans` 中，然后更新 $left = left + x$。
+遍历数组 `nums`，对于当前遍历到的数字x，我们更新right = right - x，此时left和right分别表示数组 `nums` 中下标i左侧元素之和和右侧元素之和。我们将left和right的差的绝对值加入答案数组 `ans` 中，然后更新left = left + x。
 
 遍历完成后，返回答案数组 `ans` 即可。
 
-时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为数组 `nums` 的长度。
+时间复杂度O(n)，空间复杂度O(1)。其中n为数组 `nums` 的长度。
 
 相似题目：
 

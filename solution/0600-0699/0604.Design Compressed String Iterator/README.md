@@ -45,11 +45,11 @@ stringIterator.hasNext(); // 返回 True</pre>
 
 **方法一：解析存储**
 
-将 `compressedString` 解析成字符 $c$ 和对应的重复次数 $x$，存储在数组或列表 $d$ 中，用 $p$ 指向当前字符。
+将 `compressedString` 解析成字符c和对应的重复次数x，存储在数组或列表d中，用p指向当前字符。
 
 然后在 `next` 和 `hasNext` 中进行操作。
 
-初始化的时间复杂度为 $O(n)$，其余操作的时间复杂度为 $O(1)$。其中 $n$ 为 `compressedString` 的长度。
+初始化的时间复杂度为O(n)，其余操作的时间复杂度为O(1)。其中n为 `compressedString` 的长度。
 
 ### **Java**
 

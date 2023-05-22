@@ -34,7 +34,7 @@
 [[],[2],[],[3],[]]
 <strong>输出：</strong>[null,null,2.00000,null,2.50000]</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 
