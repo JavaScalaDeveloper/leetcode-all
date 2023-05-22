@@ -10,9 +10,17 @@
  */
 package com.solution._0002;
 import change.datastructure.*;
+import change.tools.listnode.ListNodeUtils;
+
 import java.util.*;
 public class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3, null)));
+        ListNode l2 = new ListNode(5, new ListNode(4, new ListNode(6, null)));
+        ListNode listNode = addTwoNumbers(l1, l2);
+        System.out.println(ListNodeUtils.getValues(listNode));
+    }
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0);
         int carry = 0;
         ListNode cur = dummy;

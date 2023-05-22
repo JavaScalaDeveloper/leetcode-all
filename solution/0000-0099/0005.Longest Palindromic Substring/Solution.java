@@ -8,10 +8,11 @@ public class Solution {
         int mx = 1, start = 0;
         for (int j = 0; j < n; ++j) {
             for (int i = 0; i <= j; ++i) {
+                boolean flag = s.charAt(i) == s.charAt(j);
                 if (j - i < 2) {
-                    dp[i][j] = s.charAt(i) == s.charAt(j);
+                    dp[i][j] = flag;
                 } else {
-                    dp[i][j] = dp[i + 1][j - 1] && s.charAt(i) == s.charAt(j);
+                    dp[i][j] = dp[i + 1][j - 1] && flag;
                 }
                 if (dp[i][j] && mx < j - i + 1) {
                     mx = j - i + 1;

@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MergeMdFilesByLevel {
+    //    前1500道
+    private static final int MAX_NUM = 1500;
     private static final String OUTPUT_PATH = "D:\\WorkSpaces\\leetcode-all\\change\\scripts\\out\\"; // 修改为输出文件路径
     //题号->难度
     private static final Map<String, String> num2LevelMap = ParseMenu.getLineData().stream()
@@ -23,9 +25,9 @@ public class MergeMdFilesByLevel {
         }
         Map<String, FileOutputStream> fileOutputStreamsMap = new HashMap<>();
 //        中等, 困难, 简单
-        fileOutputStreamsMap.put("简单", new FileOutputStream(OUTPUT_PATH + "easy-v2023.md"));
-        fileOutputStreamsMap.put("中等", new FileOutputStream(OUTPUT_PATH + "medium-v2023.md"));
-        fileOutputStreamsMap.put("困难", new FileOutputStream(OUTPUT_PATH + "hard-v2023.md"));
+        fileOutputStreamsMap.put("简单", new FileOutputStream(OUTPUT_PATH + "easy-0~" + MAX_NUM + "-v2023.md"));
+        fileOutputStreamsMap.put("中等", new FileOutputStream(OUTPUT_PATH + "medium-0~" + MAX_NUM + "-v2023.md"));
+        fileOutputStreamsMap.put("困难", new FileOutputStream(OUTPUT_PATH + "hard-0~" + MAX_NUM + "-v2023.md"));
 
         mergeMdFiles(dir, fileOutputStreamsMap);
         fileOutputStreamsMap.forEach((s, fileOutputStream) -> {
@@ -47,15 +49,18 @@ public class MergeMdFilesByLevel {
             } else if (basicFileAttributes.isRegularFile() && file.getName().endsWith(".md")) {
                 FileInputStream fis = new FileInputStream(file);
                 String path = file.getPath();
-                if (path.length() > 50) {
+                if (path.length() > 60) {
 //                    题号
                     String num = path.substring(46, 50);
+                    int intNum = Integer.parseInt(num);
+                    if (intNum <= MAX_NUM) {
 //                    难度
-                    String level = num2LevelMap.get(num);
-                    FileOutputStream os = fileOutputStreamsMap.get(level);
-                    if (os != null) {
-                        System.out.println(num + "-->" + level);
-                        copy(fis, os);
+                        String level = num2LevelMap.get(num);
+                        FileOutputStream os = fileOutputStreamsMap.get(level);
+                        if (os != null) {
+                            System.out.println(num + "-->" + level);
+                            copy(fis, os);
+                        }
                     }
                 }
                 fis.close();
