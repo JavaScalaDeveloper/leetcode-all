@@ -14,7 +14,7 @@
 
 <p><strong>注意</strong>，函数返回结果后，链表必须 <strong>保持其原始结构</strong> 。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -52,7 +52,7 @@
 这两个链表不相交，因此返回 null 。
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -67,11 +67,11 @@
 	<li>如果 <code>listA</code> 和 <code>listB</code> 有交点，<code>intersectVal == listA[skipA + 1] == listB[skipB + 1]</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶：</strong>能否设计一个时间复杂度 <code>O(n)</code> 、仅用 <code>O(1)</code> 内存的解决方案？</p>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 160&nbsp;题相同：<a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">https://leetcode.cn/problems/intersection-of-two-linked-lists/</a></p>
 

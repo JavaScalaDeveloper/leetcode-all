@@ -6,7 +6,7 @@
 
 <p>给定一个正整数数组&nbsp;<code>nums</code>和整数 <code>k</code>&nbsp;，请找出该数组内乘积小于&nbsp;<code>k</code>&nbsp;的连续的子数组的个数。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -23,7 +23,7 @@
 <strong>输入:</strong> nums = [1,2,3], k = 0
 <strong>输出:</strong> 0</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:&nbsp;</strong></p>
 
@@ -33,7 +33,7 @@
 	<li><code>0 &lt;= k &lt;= 10<sup>6</sup></code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 713&nbsp;题相同：<a href="https://leetcode.cn/problems/subarray-product-less-than-k/">https://leetcode.cn/problems/subarray-product-less-than-k/</a>&nbsp;</p>
 

@@ -15,7 +15,7 @@
 
 <p>给定终点坐标<code>(x, y)</code>，返回机器人能否<strong>完好</strong>地到达终点。如果能，返回<code>true</code>；否则返回<code>false</code>。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
 <strong>输出：</strong>true
 <strong>解释：</strong>到达终点后，再碰到障碍物也不影响返回结果。</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 

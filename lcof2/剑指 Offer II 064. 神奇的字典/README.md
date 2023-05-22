@@ -14,7 +14,7 @@
 	<li><code>bool search(String searchWord)</code> 给定一个字符串 <code>searchWord</code> ，判定能否只将字符串中<strong> 一个 </strong>字母换成另一个字母，使得所形成的新字符串能够与字典中的任一字符串匹配。如果可以，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <div class="top-view__1vxA">
 <div class="original__bRMd">
@@ -37,7 +37,7 @@ magicDictionary.search(&quot;hell&quot;); // 返回 False
 magicDictionary.search(&quot;leetcoded&quot;); // 返回 False
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -55,7 +55,7 @@ magicDictionary.search(&quot;leetcoded&quot;); // 返回 False
 </div>
 </div>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 676&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/implement-magic-dictionary/">https://leetcode.cn/problems/implement-magic-dictionary/</a></p>
 

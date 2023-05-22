@@ -6,13 +6,13 @@
 
 <p>你有一块棋盘，棋盘上有一些格子已经坏掉了。你还有无穷块大小为<code>1 * 2</code>的多米诺骨牌，你想把这些骨牌<strong>不重叠</strong>地覆盖在<strong>完好</strong>的格子上，请找出你最多能在棋盘上放多少块骨牌？这些骨牌可以横着或者竖着放。</p>
 
-<p>&nbsp;</p>
+
 
 <p>输入：<code>n, m</code>代表棋盘的大小；<code>broken</code>是一个<code>b * 2</code>的二维数组，其中每个元素代表棋盘上每一个坏掉的格子的位置。</p>
 
 <p>输出：一个整数，代表最多能在棋盘上放的骨牌数。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -22,7 +22,7 @@
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/lcp/LCP%2004.%20覆盖/images/domino_example_1.jpg" style="height: 204px; width: 304px;"></p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 2：</strong></p>
 
@@ -33,7 +33,7 @@
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/lcp/LCP%2004.%20覆盖/images/domino_example_2.jpg" style="height: 304px; width: 304px;"></p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 

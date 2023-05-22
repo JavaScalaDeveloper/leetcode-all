@@ -10,7 +10,7 @@
 
 <p>需要输出替换之后的句子。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,7 +47,7 @@
 <strong>输出：</strong>&quot;it is ab that this solution is ac&quot;
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -63,7 +63,7 @@
 	<li><code>sentence</code>&nbsp;没有前导或尾随空格。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 648&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/replace-words/">https://leetcode.cn/problems/replace-words/</a></p>
 

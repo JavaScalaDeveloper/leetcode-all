@@ -10,7 +10,7 @@
 
 <p>问总共有多少条不同的路径？</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -45,7 +45,7 @@
 <strong>输入：</strong>m = 3, n = 3
 <strong>输出：</strong>6</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -54,7 +54,7 @@
 	<li>题目数据保证答案小于等于 <code>2 * 10<sup>9</sup></code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 62&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/unique-paths/">https://leetcode.cn/problems/unique-paths/</a></p>
 

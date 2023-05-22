@@ -8,7 +8,7 @@
 
 <p>请设计一个算法来实现二叉树的序列化与反序列化。这里不限定你的序列 / 反序列化算法执行逻辑，只需要保证一个二叉树可以被序列化为一个字符串并且将这个字符串反序列化为原始的树结构。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,7 +40,7 @@
 <strong>输出：</strong>[1,2]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -50,7 +50,7 @@
 	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 297&nbsp;题相同：<a href="https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/">https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/</a>&nbsp;</p>
 

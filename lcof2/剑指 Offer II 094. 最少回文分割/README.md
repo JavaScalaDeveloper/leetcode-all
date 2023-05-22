@@ -10,7 +10,7 @@
 
 <div class="original__bRMd">
 <div>
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 <strong>输出：</strong>1
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -45,7 +45,7 @@
 </div>
 </div>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 132&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/palindrome-partitioning-ii/">https://leetcode.cn/problems/palindrome-partitioning-ii/</a></p>
 

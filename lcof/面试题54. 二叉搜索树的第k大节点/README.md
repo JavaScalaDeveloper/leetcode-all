@@ -4,7 +4,7 @@
 
 <p>给定一棵二叉搜索树，请找出其中第 <code>k</code> 大的节点的值。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -30,7 +30,7 @@
  1
 <strong>输出:</strong> 4</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 

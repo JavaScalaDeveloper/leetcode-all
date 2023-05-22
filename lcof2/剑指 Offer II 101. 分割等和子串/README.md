@@ -6,7 +6,7 @@
 
 <p>给定一个非空的正整数数组 <code>nums</code> ，请判断能否将这些数字分成元素和相等的两部分。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -23,7 +23,7 @@
 <strong>解释：</strong>nums<strong> </strong>不可以分为和相等的两部分
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" /></p>
 
@@ -34,7 +34,7 @@
 	<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 416&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/partition-equal-subset-sum/">https://leetcode.cn/problems/partition-equal-subset-sum/</a></p>
 

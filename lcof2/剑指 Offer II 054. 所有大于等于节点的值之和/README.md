@@ -16,7 +16,7 @@
 	<li>左右子树也必须是二叉搜索树。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -48,7 +48,7 @@
 <strong>输出：</strong>[7,9,4,10]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -59,7 +59,7 @@
 	<li>给定的树为二叉搜索树。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：</p>
 

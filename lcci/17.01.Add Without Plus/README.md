@@ -12,7 +12,7 @@
 <pre><strong>输入:</strong> a = 1, b = 1
 <strong>输出:</strong> 2</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 

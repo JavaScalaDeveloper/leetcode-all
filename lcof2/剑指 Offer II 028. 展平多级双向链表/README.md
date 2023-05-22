@@ -8,7 +8,7 @@
 
 <p>给定位于列表第一级的头节点，请扁平化列表，即将这样的多级双向链表展平成普通的双向链表，使所有结点出现在单级双链表中。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -47,7 +47,7 @@
 <strong>输出：</strong>[]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>如何表示测试用例中的多级链表？</strong></p>
 
@@ -81,7 +81,7 @@
 <pre>
 [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -90,7 +90,7 @@
 	<li><code>1 &lt;= Node.val &lt;= 10^5</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 430&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/">https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/</a></p>
 

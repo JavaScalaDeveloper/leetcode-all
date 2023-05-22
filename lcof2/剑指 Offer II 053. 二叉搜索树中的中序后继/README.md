@@ -8,7 +8,7 @@
 
 <p>节点&nbsp;<code>p</code>&nbsp;的后继是值比&nbsp;<code>p.val</code>&nbsp;大的节点中键值最小的节点，即按中序遍历的顺序节点 <code>p</code> 的下一个节点。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@
 <strong>解释：</strong>因为给出的节点没有中序后继，所以答案就返回 <code>null 了。</code>
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -40,7 +40,7 @@
 	<li>树中各节点的值均保证唯一。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 285&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/inorder-successor-in-bst/">https://leetcode.cn/problems/inorder-successor-in-bst/</a></p>
 

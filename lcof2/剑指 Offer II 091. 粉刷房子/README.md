@@ -12,7 +12,7 @@
 
 <p>请计算出粉刷完所有房子最少的花费成本。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -30,7 +30,7 @@
 <strong>输出: 2</strong>
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -41,7 +41,7 @@
 	<li><code>1 &lt;= costs[i][j] &lt;= 20</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 256&nbsp;题相同：<a href="https://leetcode.cn/problems/paint-house/">https://leetcode.cn/problems/paint-house/</a></p>
 

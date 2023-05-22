@@ -7,7 +7,7 @@
 
 <p>编写一个函数，检查输入的链表是否是回文的。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -21,7 +21,7 @@
 <strong>输出：</strong> true
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶：</strong><br>
 你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？</p>

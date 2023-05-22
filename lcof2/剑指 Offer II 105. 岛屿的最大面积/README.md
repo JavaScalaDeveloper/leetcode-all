@@ -10,7 +10,7 @@
 
 <p>找到给定的二维数组中最大的岛屿面积。如果没有岛屿，则返回面积为 <code>0</code> 。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -27,7 +27,7 @@
 <strong>输入: </strong>grid = [[0,0,0,0,0,0,0,0]]
 <strong>输出: </strong>0</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -38,7 +38,7 @@
 	<li><code>grid[i][j] is either 0 or 1</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p>注意：本题与主站 695&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/max-area-of-island/">https://leetcode.cn/problems/max-area-of-island/</a></p>
 

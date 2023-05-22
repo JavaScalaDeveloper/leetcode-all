@@ -6,7 +6,7 @@
 
 <p>给定一个非空字符串&nbsp;<code>s</code>，请判断如果&nbsp;<strong>最多 </strong>从字符串中删除一个字符能否得到一个回文字符串。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -29,7 +29,7 @@
 <strong>输入:</strong> s = &quot;abc&quot;
 <strong>输出:</strong> false</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -38,7 +38,7 @@
 	<li><code>s</code> 由小写英文字母组成</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 680&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/valid-palindrome-ii/">https://leetcode.cn/problems/valid-palindrome-ii/</a></p>
 

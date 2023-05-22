@@ -6,7 +6,7 @@
 
 <p>给定两个整数 <code>n</code> 和 <code>k</code>，返回 <code>1 ... n</code> 中所有可能的 <code>k</code> 个数的组合。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>输入:</strong>&nbsp;n = 1, k = 1
 <strong>输出: </strong>[[1]]</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -37,7 +37,7 @@
 	<li><code>1 &lt;= k &lt;= n</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 77&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/combinations/">https://leetcode.cn/problems/combinations/</a></p>
 

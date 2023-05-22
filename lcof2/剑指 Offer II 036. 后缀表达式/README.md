@@ -8,7 +8,7 @@
 
 <p>有效的算符包括&nbsp;<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>&nbsp;。每个运算对象可以是整数，也可以是另一个逆波兰表达式。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>说明：</strong></p>
 
@@ -17,7 +17,7 @@
 	<li>给定逆波兰表达式总是有效的。换句话说，表达式总会得出有效数值且不存在除数为 0 的情况。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -50,7 +50,7 @@
 = 17 + 5
 = 22</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -59,7 +59,7 @@
 	<li><code>tokens[i]</code> 要么是一个算符（<code>&quot;+&quot;</code>、<code>&quot;-&quot;</code>、<code>&quot;*&quot;</code> 或 <code>&quot;/&quot;</code>），要么是一个在范围 <code>[-200, 200]</code> 内的整数</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>逆波兰表达式：</strong></p>
 
@@ -77,7 +77,7 @@
 	<li>适合用栈操作运算：遇到数字则入栈；遇到算符则取出栈顶两个数字进行计算，并将结果压入栈中。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 150&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/evaluate-reverse-polish-notation/">https://leetcode.cn/problems/evaluate-reverse-polish-notation/</a></p>
 

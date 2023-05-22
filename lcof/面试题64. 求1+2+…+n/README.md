@@ -4,7 +4,7 @@
 
 <p>求 <code>1+2+...+n</code> ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -18,7 +18,7 @@
 <strong>输出:&nbsp;</strong>45
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 

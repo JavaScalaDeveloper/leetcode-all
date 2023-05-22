@@ -8,7 +8,7 @@
 
 <p>给定一个代表每个房屋存放金额的非负整数数组 <code>nums</code> ，请计算&nbsp;<strong>在不触动警报装置的情况下</strong> ，今晚能够偷窃到的最高金额。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -33,7 +33,7 @@
 <strong>输出：</strong>0
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -42,7 +42,7 @@
 	<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 213&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/house-robber-ii/">https://leetcode.cn/problems/house-robber-ii/</a></p>
 

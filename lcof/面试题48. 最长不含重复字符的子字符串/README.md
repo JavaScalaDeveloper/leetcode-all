@@ -4,7 +4,7 @@
 
 <p>请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -28,7 +28,7 @@
 &nbsp;    请注意，你的答案必须是 <strong>子串 </strong>的长度，<code>&quot;pwke&quot;</code>&nbsp;是一个<em>子序列，</em>不是子串。
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p>提示：</p>
 

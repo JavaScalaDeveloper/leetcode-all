@@ -13,7 +13,7 @@
 
 <p>也就是说，选取下标 <code>i</code> 的概率为 <code>w[i] / sum(w)</code> 。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -53,7 +53,7 @@ solution.pickIndex(); // 返回 0，返回下标 0，返回该下标概率为 1/
 诸若此类。
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -63,7 +63,7 @@ solution.pickIndex(); // 返回 0，返回下标 0，返回该下标概率为 1/
 	<li><code>pickIndex</code>&nbsp;将被调用不超过&nbsp;<code>10000</code>&nbsp;次</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 528&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/random-pick-with-weight/">https://leetcode.cn/problems/random-pick-with-weight/</a></p>
 

@@ -8,7 +8,7 @@
 
 <p><strong>注意：</strong>若两个字符串中每个字符出现的次数都相同且<strong>字符顺序不完全相同</strong>，则称它们互为变位词。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -29,7 +29,7 @@
 <strong>输入:</strong> strs = <code>[&quot;a&quot;]</code>
 <strong>输出: </strong>[[&quot;a&quot;]]</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -39,7 +39,7 @@
 	<li><code>strs[i]</code>&nbsp;仅包含小写字母</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 49&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/group-anagrams/">https://leetcode.cn/problems/group-anagrams/</a></p>
 

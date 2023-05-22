@@ -10,7 +10,7 @@
 
 <p>题目数据保证答案符合 32 位带符号整数范围。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -37,7 +37,7 @@
 <code>babg<strong><u>bag</u></strong></code>
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -46,7 +46,7 @@
 	<li><code>s</code> 和 <code>t</code> 由英文字母组成</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 115&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/distinct-subsequences/">https://leetcode.cn/problems/distinct-subsequences/</a></p>
 

@@ -8,7 +8,7 @@
 
 <p>两个相邻元素间的距离为 <code>1</code> 。</p>
 
-<p>&nbsp;</p>
+
 
 <p><b>示例 1：</b></p>
 
@@ -28,7 +28,7 @@
 <strong>输出：</strong>[[0,0,0],[0,1,0],[1,2,1]]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -41,7 +41,7 @@
 	<li><code>mat</code> 中至少有一个 <code>0&nbsp;</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 542&nbsp;题相同：<a href="https://leetcode.cn/problems/01-matrix/">https://leetcode.cn/problems/01-matrix/</a></p>
 

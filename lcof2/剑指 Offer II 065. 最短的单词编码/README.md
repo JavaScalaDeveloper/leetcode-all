@@ -14,7 +14,7 @@
 
 <p>给定一个单词数组&nbsp;<code>words</code> ，返回成功对 <code>words</code> 进行编码的最小助记字符串 <code>s</code> 的长度 。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@ words[2] = &quot;bell&quot; ，s 开始于 indices[2] = 5 到下一个 &#39;#&#3
 <strong>解释：</strong>一组有效编码为 s = &quot;t#&quot; 和 indices = [0] 。
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -45,7 +45,7 @@ words[2] = &quot;bell&quot; ，s 开始于 indices[2] = 5 到下一个 &#39;#&#3
 	<li><code>words[i]</code> 仅由小写字母组成</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 820&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/short-encoding-of-words/">https://leetcode.cn/problems/short-encoding-of-words/</a></p>
 

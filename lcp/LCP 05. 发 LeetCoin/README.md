@@ -6,7 +6,7 @@
 
 <p>力扣决定给一个刷题团队发<code>LeetCoin</code>作为奖励。同时，为了监控给大家发了多少<code>LeetCoin</code>，力扣有时候也会进行查询。</p>
 
-<p>&nbsp;</p>
+
 
 <p>该刷题团队的管理模式可以用一棵树表示：</p>
 
@@ -15,7 +15,7 @@
 	<li>不存在循环管理的情况，如A管理B，B管理C，C管理A。</li>
 </ol>
 
-<p>&nbsp;</p>
+
 
 <p>力扣想进行的操作有以下三种：</p>
 
@@ -25,7 +25,7 @@
 	<li>查询某一个成员（也可以是负责人），以及他/她管理的所有人被发到的<code>LeetCoin</code>之和。</li>
 </ol>
 
-<p>&nbsp;</p>
+
 
 <p><strong>输入：</strong></p>
 
@@ -45,7 +45,7 @@
 
 <p>返回一个数组，数组里是每次<strong>查询</strong>的返回值（发<code>LeetCoin</code>的操作不需要任何返回值）。由于发的<code>LeetCoin</code>很多，请把每次查询的结果模<code>1e9+7 (1000000007)</code>。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -58,7 +58,7 @@
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/lcp/LCP%2005.%20发%20LeetCoin/images/coin_example_1.jpg" style="height: 344px; width: 300px;"></p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 

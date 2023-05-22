@@ -15,7 +15,7 @@
 	<li><code>void put(int key, int value)</code>&nbsp;如果关键字已经存在，则变更其数据值；如果关键字不存在，则插入该组「关键字-值」。当缓存容量达到上限时，它应该在写入新数据之前删除最久未使用的数据值，从而为新的数据值留出空间。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -39,7 +39,7 @@ lRUCache.get(3);    // 返回 3
 lRUCache.get(4);    // 返回 4
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -51,11 +51,11 @@ lRUCache.get(4);    // 返回 4
 </ul>
 </div>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶</strong>：是否可以在&nbsp;<code>O(1)</code> 时间复杂度内完成这两种操作？</p>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 146&nbsp;题相同：<a href="https://leetcode.cn/problems/lru-cache/">https://leetcode.cn/problems/lru-cache/</a>&nbsp;</p>
 

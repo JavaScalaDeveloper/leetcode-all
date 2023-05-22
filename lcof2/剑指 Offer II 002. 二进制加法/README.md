@@ -8,7 +8,7 @@
 
 <p>输入为 <strong>非空 </strong>字符串且只包含数字&nbsp;<code>1</code>&nbsp;和&nbsp;<code>0</code>。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1:</strong></p>
 
@@ -22,7 +22,7 @@
 <strong>输入:</strong> a = &quot;1010&quot;, b = &quot;1011&quot;
 <strong>输出:</strong> &quot;10101&quot;</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -32,7 +32,7 @@
 	<li>字符串如果不是 <code>&quot;0&quot;</code> ，就都不含前导零。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 67&nbsp;题相同：<a href="https://leetcode.cn/problems/add-binary/">https://leetcode.cn/problems/add-binary/</a></p>
 

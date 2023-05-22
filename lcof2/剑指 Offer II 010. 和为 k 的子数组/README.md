@@ -6,7 +6,7 @@
 
 <p>给定一个正整数数组和一个整数&nbsp;<code>k</code><strong> ，</strong>请找到该数组中和为&nbsp;<code>k</code><strong>&nbsp;</strong>的连续子数组的个数。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1 :</strong></p>
 
@@ -23,7 +23,7 @@
 <strong>输出:</strong> 2
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -35,7 +35,7 @@
 	</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p>注意：本题与主站 560&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/subarray-sum-equals-k/">https://leetcode.cn/problems/subarray-sum-equals-k/</a></p>
 

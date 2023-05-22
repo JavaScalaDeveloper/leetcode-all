@@ -10,7 +10,7 @@
 
 <p>假设数组中存在且只存在一对符合条件的数字，同时一个数字不能使用两次。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -34,7 +34,7 @@
 <strong>输出：</strong>[0,1]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -46,7 +46,7 @@
 	<li>仅存在一个有效答案</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p>注意：本题与主站 167 题相似（下标起点不同）：<a href="https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/">https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/</a></p>
 

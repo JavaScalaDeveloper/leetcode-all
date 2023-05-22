@@ -8,8 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MergeMdFilesByLevel {
-    //    前1500道
-    private static final int MAX_NUM = 1500;
+    private final static int MAX_EXPORT_SIZE = 1500;
     private static final String OUTPUT_PATH = "D:\\WorkSpaces\\leetcode-all\\change\\scripts\\out\\"; // 修改为输出文件路径
     //题号->难度
     private static final Map<String, String> num2LevelMap = ParseMenu.getLineData().stream()
@@ -25,9 +24,9 @@ public class MergeMdFilesByLevel {
         }
         Map<String, FileOutputStream> fileOutputStreamsMap = new HashMap<>();
 //        中等, 困难, 简单
-        fileOutputStreamsMap.put("简单", new FileOutputStream(OUTPUT_PATH + "easy-0~" + MAX_NUM + "-v2023.md"));
-        fileOutputStreamsMap.put("中等", new FileOutputStream(OUTPUT_PATH + "medium-0~" + MAX_NUM + "-v2023.md"));
-        fileOutputStreamsMap.put("困难", new FileOutputStream(OUTPUT_PATH + "hard-0~" + MAX_NUM + "-v2023.md"));
+        fileOutputStreamsMap.put("简单", new FileOutputStream(OUTPUT_PATH + "easy-1~" + MAX_EXPORT_SIZE + "-v2023.md"));
+        fileOutputStreamsMap.put("中等", new FileOutputStream(OUTPUT_PATH + "medium-1~" + MAX_EXPORT_SIZE + "-v2023.md"));
+        fileOutputStreamsMap.put("困难", new FileOutputStream(OUTPUT_PATH + "hard-1~" + MAX_EXPORT_SIZE + "-v2023.md"));
 
         mergeMdFiles(dir, fileOutputStreamsMap);
         fileOutputStreamsMap.forEach((s, fileOutputStream) -> {
@@ -52,8 +51,9 @@ public class MergeMdFilesByLevel {
                 if (path.length() > 60) {
 //                    题号
                     String num = path.substring(46, 50);
-                    int intNum = Integer.parseInt(num);
-                    if (intNum <= MAX_NUM) {
+                    int no = Integer.parseInt(num);
+//                    导出前2000道
+                    if (no <= MAX_EXPORT_SIZE) {
 //                    难度
                         String level = num2LevelMap.get(num);
                         FileOutputStream os = fileOutputStreamsMap.get(level);

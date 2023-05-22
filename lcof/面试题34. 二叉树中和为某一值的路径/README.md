@@ -8,7 +8,7 @@
 
 <p><strong>叶子节点</strong> 是指没有子节点的节点。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -35,7 +35,7 @@
 <strong>输出：</strong>[]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 

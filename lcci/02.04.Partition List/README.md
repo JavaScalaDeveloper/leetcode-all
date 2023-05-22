@@ -10,7 +10,7 @@
 
 <p>你不需要&nbsp;<strong>保留</strong>&nbsp;每个分区中各节点的初始相对位置。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -28,7 +28,7 @@
 <strong>输出</strong>：[1,2]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 

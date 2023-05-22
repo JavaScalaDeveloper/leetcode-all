@@ -6,7 +6,7 @@
 
 <p>答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -20,7 +20,7 @@
 <strong>输出: </strong>36
 <strong>解释: </strong>10 = 3 + 3 + 4, 3 &times;&nbsp;3 &times;&nbsp;4 = 36</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 

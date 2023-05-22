@@ -19,7 +19,7 @@
 &nbsp; &nbsp;\ &nbsp; \<br>
 &nbsp; &nbsp;3 &nbsp; &nbsp;3</code></p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -32,7 +32,7 @@
 <pre><strong>输入：</strong>root = [1,2,2,null,3,null,3]
 <strong>输出：</strong>false</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 

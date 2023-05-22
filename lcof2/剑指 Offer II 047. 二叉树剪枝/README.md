@@ -8,7 +8,7 @@
 
 <p>节点 <code>node</code> 的子树为&nbsp;<code>node</code> 本身，以及所有 <code>node</code>&nbsp;的后代。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -42,7 +42,7 @@
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20047.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E5%89%AA%E6%9E%9D/images/1028.png" style="width:450px" />
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -51,7 +51,7 @@
 	<li>二叉树节点的值只会是 <code>0</code> 或 <code>1</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 814&nbsp;题相同：<a href="https://leetcode.cn/problems/binary-tree-pruning/">https://leetcode.cn/problems/binary-tree-pruning/</a></p>
 

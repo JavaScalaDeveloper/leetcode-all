@@ -6,7 +6,7 @@
 
 <p>给定两个整数 <code>a</code> 和 <code>b</code> ，求它们的除法的商 <code>a/b</code> ，要求不得使用乘号 <code>'*'</code>、除号 <code>'/'</code> 以及求余符号 <code>'%'</code>&nbsp;。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>注意：</strong></p>
 
@@ -15,7 +15,7 @@
 	<li>假设我们的环境只能存储 32 位有符号整数，其数值范围是 <code>[−2<sup>31</sup>,&nbsp;2<sup>31</sup>−1]</code>。本题中，如果除法结果溢出，则返回 <code>2<sup>31&nbsp;</sup>− 1</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -44,7 +44,7 @@
 <strong>输入：</strong>a = 1, b = 1
 <strong>输出：</strong><span style="white-space: pre-wrap;">1</span></pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -53,11 +53,11 @@
 	<li><code>b != 0</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p>注意：本题与主站 29&nbsp;题相同：<a href="https://leetcode.cn/problems/divide-two-integers/">https://leetcode.cn/problems/divide-two-integers/</a></p>
 
-<p>&nbsp;</p>
+
 
 ## 解法
 

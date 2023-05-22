@@ -10,7 +10,7 @@
 
 <p>对于给定的输入，保证和为&nbsp;<code>target</code> 的唯一组合数少于 <code>150</code> 个。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例&nbsp;1：</strong></p>
 
@@ -46,7 +46,7 @@
 <strong>输出: </strong>[[1,1]]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -57,7 +57,7 @@
 	<li><code>1 &lt;= target &lt;= 500</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 39&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/combination-sum/">https://leetcode.cn/problems/combination-sum/</a></p>
 

@@ -8,7 +8,7 @@
 
 <p>具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -25,7 +25,7 @@
 <strong>输出：</strong>6
 <strong>解释：</strong>6个回文子串: "a", "a", "a", "aa", "aa", "aaa"</pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -34,7 +34,7 @@
 	<li><code>s</code> 由小写英文字母组成</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 647 题相同：<a href="https://leetcode.cn/problems/palindromic-substrings/">https://leetcode.cn/problems/palindromic-substrings/</a>&nbsp;</p>
 

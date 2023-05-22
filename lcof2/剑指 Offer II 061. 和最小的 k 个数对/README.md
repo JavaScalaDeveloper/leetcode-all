@@ -10,7 +10,7 @@
 
 <p>请找到和最小的 <code>k</code>&nbsp;个数对&nbsp;<code>(u<sub>1</sub>,v<sub>1</sub>)</code>, <code>&nbsp;(u<sub>2</sub>,v<sub>2</sub>)</code> &nbsp;... &nbsp;<code>(u<sub>k</sub>,v<sub>k</sub>)</code>&nbsp;。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1:</strong></p>
 
@@ -38,7 +38,7 @@
 <strong>解释: </strong>也可能序列中所有的数对都被返回:[1,3],[2,3]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示:</strong></p>
 
@@ -49,7 +49,7 @@
 	<li><code>1 &lt;= k &lt;= 1000</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 373&nbsp;题相同：<a href="https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/">https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/</a></p>
 

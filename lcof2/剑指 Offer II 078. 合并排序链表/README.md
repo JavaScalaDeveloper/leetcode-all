@@ -8,7 +8,7 @@
 
 <p>请将所有链表合并到一个升序链表中，返回合并后的链表。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -39,7 +39,7 @@
 <strong>输出：</strong>[]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -52,7 +52,7 @@
 	<li><code>lists[i].length</code> 的总和不超过 <code>10^4</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 23&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/merge-k-sorted-lists/">https://leetcode.cn/problems/merge-k-sorted-lists/</a></p>
 

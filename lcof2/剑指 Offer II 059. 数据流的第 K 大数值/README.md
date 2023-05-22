@@ -13,7 +13,7 @@
 	<li><code>int add(int val)</code> 将 <code>val</code> 插入数据流 <code>nums</code> 后，返回当前数据流中第 <code>k</code> 大的元素。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -33,7 +33,7 @@ kthLargest.add(9);   // return 8
 kthLargest.add(4);   // return 8
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -46,7 +46,7 @@ kthLargest.add(4);   // return 8
 	<li>题目数据保证，在查找第 <code>k</code> 大元素时，数组中至少有 <code>k</code> 个元素</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 703&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/kth-largest-element-in-a-stream/">https://leetcode.cn/problems/kth-largest-element-in-a-stream/</a></p>
 

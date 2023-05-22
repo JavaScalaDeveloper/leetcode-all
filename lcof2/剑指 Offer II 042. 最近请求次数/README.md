@@ -15,7 +15,7 @@
 
 <p><strong>保证</strong> 每次对 <code>ping</code> 的调用都使用比之前更大的 <code>t</code> 值。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例：</strong></p>
 
@@ -34,7 +34,7 @@ recentCounter.ping(3001);  // requests = [<strong>1</strong>, <strong>100</stron
 recentCounter.ping(3002);  // requests = [1, <strong>100</strong>, <strong>3001</strong>, <strong>3002</strong>]，范围是 [2,3002]，返回 3
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -44,7 +44,7 @@ recentCounter.ping(3002);  // requests = [1, <strong>100</strong>, <strong>3001<
 	<li>至多调用 <code>ping</code> 方法 <code>10<sup>4</sup></code> 次</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 933&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/number-of-recent-calls/">https://leetcode.cn/problems/number-of-recent-calls/</a></p>
 

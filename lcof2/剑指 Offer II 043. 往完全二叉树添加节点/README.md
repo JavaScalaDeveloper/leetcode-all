@@ -14,7 +14,7 @@
 	<li><code>CBTInserter.get_root()</code> 将返回树的根节点。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <ol>
 </ol>
@@ -33,7 +33,7 @@
 <strong>输出：</strong>[null,3,4,[1,2,3,4,5,6,7,8]]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -43,7 +43,7 @@
 	<li>给定节点或插入节点的每个值都在&nbsp;<code>0</code>&nbsp;到&nbsp;<code>5000</code>&nbsp;之间。</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 919&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/complete-binary-tree-inserter/">https://leetcode.cn/problems/complete-binary-tree-inserter/</a></p>
 

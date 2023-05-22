@@ -18,7 +18,7 @@
 
 <p>给定由整数组成的山峰数组 <code>arr</code> ，返回任何满足 <code>arr[0] &lt; arr[1] &lt; ... arr[i - 1] &lt; arr[i] &gt; arr[i + 1] &gt; ... &gt; arr[arr.length - 1]</code> 的下标 <code>i</code>&nbsp;，即山峰顶部。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -55,7 +55,7 @@
 <strong>输出：</strong>2
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>提示：</strong></p>
 
@@ -65,11 +65,11 @@
 	<li>题目数据保证 <code>arr</code> 是一个山脉数组</li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 <p><strong>进阶：</strong>很容易想到时间复杂度 <code>O(n)</code> 的解决方案，你可以设计一个 <code>O(log(n))</code> 的解决方案吗？</p>
 
-<p>&nbsp;</p>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 852&nbsp;题相同：<a href="https://leetcode.cn/problems/peak-index-in-a-mountain-array/">https://leetcode.cn/problems/peak-index-in-a-mountain-array/</a></p>
 

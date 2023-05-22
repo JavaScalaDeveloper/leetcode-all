@@ -6,7 +6,7 @@
 
 <p>序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。</p>
 
-<p>&nbsp;</p>
+
 
 <p><strong>示例 1：</strong></p>
 
@@ -20,7 +20,7 @@
 <strong>输出：</strong>[[1,2,3,4,5],[4,5,6],[7,8]]
 </pre>
 
-<p>&nbsp;</p>
+
 
 <p><strong>限制：</strong></p>
 
@@ -28,7 +28,7 @@
 	<li><code>1 &lt;= target &lt;= 10^5</code></li>
 </ul>
 
-<p>&nbsp;</p>
+
 
 **限制：**
 
