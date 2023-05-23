@@ -1,8 +1,37 @@
 package com.solution._0005;
-import change.datastructure.*;
-import java.util.*;
+
 public class Solution {
-    public String longestPalindrome(String s) {
+    public static void main(String[] args) {
+        String s = "babad";
+        String res = longestPalindrome(s);
+//        System.out.printf(res);
+        String res2 = longestPalindrome2(s);
+        System.out.printf(res2);
+    }
+
+    public static String longestPalindrome2(String s) {
+        int len = s.length();
+        if (len == 1) return s;
+        int left = 0, right = 1;
+        int max = 0;
+        for (int i = 1; i < len - 1; i++) {
+            int l = i - 1, r = i + 1;
+            while (s.charAt(l) == s.charAt(r) && l > 0 && r < len - 1) {
+                l--;
+                r++;
+            }
+            if (r - l > max) {
+                max = r - l;
+                left = l;
+                right = r;
+            }
+        }
+
+        return s.substring(left, right - 1);
+
+    }
+
+    public static String longestPalindrome(String s) {
         int n = s.length();
         boolean[][] dp = new boolean[n][n];
         int mx = 1, start = 0;

@@ -5,6 +5,11 @@ public class Solution {
     private List<String> ans = new ArrayList<>();
     private int n;
 
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        List<String> res = solution.generateParenthesis(4);
+        System.out.println(res);
+    }
     public List<String> generateParenthesis(int n) {
         this.n = n;
         dfs(0, 0, "");

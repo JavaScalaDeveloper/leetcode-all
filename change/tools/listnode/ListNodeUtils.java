@@ -1,8 +1,10 @@
 package change.tools.listnode;
 
 
-import change.datastructure.*;
-import java.util.*;
+import change.datastructure.ListNode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 链表工具类
@@ -71,4 +73,16 @@ public class ListNodeUtils {
         return list;
     }
 
+    private static ListNode reverse(ListNode listNode) {
+        ListNode pre = null;
+        ListNode dump = listNode;
+        while (dump != null) {
+            ListNode next = dump.next;
+//            每一轮翻转以后，把当前节点及前给pre，把后面的节点给dump
+            dump.next = pre;
+            pre = dump;
+            dump = next;
+        }
+        return pre;
+    }
 }

@@ -5,13 +5,17 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
+    public static void main(String[] args) {
+        List<List<Integer>> res = threeSum(new int[]{-1, 0, 1, 2, -1, -4});
+        System.out.println(res);
+    }
     /*
     将数组排序，这样相同的数字就会挨在一起，方便进行去重；
     从左到右枚举数组中的每个数字作为第一个数 a；
     在 a 右边的区域内使用双指针 left 和 right，找出所有满足 a + nums[left] + nums[right] == 0 的三元组，并将其加入结果集；
     注意去重。
      */
-    public List<List<Integer>> threeSum(int[] nums) {
+    public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         int n = nums.length;
         Arrays.sort(nums); // 排序
