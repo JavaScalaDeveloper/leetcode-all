@@ -7,6 +7,13 @@ public class Solution {
     private boolean[] vis;
     private int[] nums;
 
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int[] arr = {1, 2, 3};
+        List<List<Integer>> res = solution.permute(arr);
+        System.out.println(res);
+    }
+
     public List<List<Integer>> permute(int[] nums) {
         this.nums = nums;
         vis = new boolean[nums.length];

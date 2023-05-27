@@ -1,12 +1,23 @@
 package com.solution._0030;
-import change.datastructure.*;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Solution {
-    public List<Integer> findSubstring(String s, String[] words) {
+    public static void main(String[] args) {
+        String s = "barfoothefoobarman";
+        String[] words = new String[]{"foo", "bar"};
+        findSubstring(s, words);
+    }
+
+    public static List<Integer> findSubstring(String s, String[] words) {
         Map<String, Integer> cnt = new HashMap<>();
         for (String w : words) {
             cnt.merge(w, 1, Integer::sum);
         }
+        cnt.forEach((key, value) -> System.out.println(key + "->" + value));
         int m = s.length(), n = words.length;
         int k = words[0].length();
         List<Integer> ans = new ArrayList<>();

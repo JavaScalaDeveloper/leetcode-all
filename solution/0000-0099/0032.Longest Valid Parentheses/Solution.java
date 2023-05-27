@@ -2,7 +2,11 @@ package com.solution._0032;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
-    public int longestValidParentheses(String s) {
+    public static void main(String[] args) {
+        int len = longestValidParentheses(")()())");
+        System.out.println(len);
+    }
+    public static int longestValidParentheses(String s) {
         int n = s.length();
         if (n < 2) {
             return 0;

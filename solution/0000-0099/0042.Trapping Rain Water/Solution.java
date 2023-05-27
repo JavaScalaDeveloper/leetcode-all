@@ -1,8 +1,15 @@
 package com.solution._0042;
 import change.datastructure.*;
+import change.tools.listnode.ArrayUtils;
+
 import java.util.*;
 public class Solution {
-    public int trap(int[] height) {
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        int res = trap(arr);
+        System.out.println(res);
+    }
+    public static int trap(int[] height) {
         int n = height.length;
         int[] left = new int[n];
         int[] right = new int[n];
