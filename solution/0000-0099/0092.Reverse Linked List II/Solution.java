@@ -1,18 +1,26 @@
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * int val;
+ * ListNode next;
+ * ListNode() {}
+ * ListNode(int val) { this.val = val; }
+ * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
 package com.solution._0092;
-import change.datastructure.*;
-import java.util.*;
+
+import change.datastructure.ListNode;
+import change.tools.listnode.ListNodeUtils;
+
 public class Solution {
-    public ListNode reverseBetween(ListNode head, int left, int right) {
+    public static void main(String[] args) {
+        ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        ListNode result = reverseBetween(listNode, 2, 4);
+        System.out.println(ListNodeUtils.getValues(result));
+    }
+
+    public static ListNode reverseBetween(ListNode head, int left, int right) {
         if (head.next == null || left == right) {
             return head;
         }

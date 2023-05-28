@@ -5,7 +5,18 @@ import java.util.Arrays;
 import java.util.Deque;
 
 public class Solution {
-    public int maximalRectangle(char[][] matrix) {
+    public static void main(String[] args) {
+        char[][] arr = {
+                {'1', '0', '1', '0', '0'},
+                {'1', '0', '1', '1', '1'},
+                {'1', '1', '1', '1', '1'},
+                {'1', '0', '0', '1', '0'}
+        };//等价于{4，1，3，3，2），对柱状图求最大面积
+        int res = maximalRectangle(arr);
+        System.out.println(res);
+    }
+
+    public static int maximalRectangle(char[][] matrix) {
         int n = matrix[0].length;
         int[] heights = new int[n];
         int ans = 0;
@@ -22,7 +33,7 @@ public class Solution {
         return ans;
     }
 
-    private int largestRectangleArea(int[] heights) {
+    private static int largestRectangleArea(int[] heights) {
         int res = 0, n = heights.length;
         Deque<Integer> stk = new ArrayDeque<>();
         int[] left = new int[n];

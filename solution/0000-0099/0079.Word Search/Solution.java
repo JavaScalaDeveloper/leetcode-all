@@ -1,7 +1,14 @@
 package com.solution._0079;
-import change.datastructure.*;
-import java.util.*;
+
 public class Solution {
+    public static void main(String[] args) {
+        char[][] board = {{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
+        String word = "ABCCED";
+        Solution solution = new Solution();
+        boolean res = solution.exist(board, word);
+        System.out.println(res);
+    }
+
     public boolean exist(char[][] board, String word) {
         int m = board.length;
         int n = board[0].length;

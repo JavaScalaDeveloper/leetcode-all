@@ -2,7 +2,11 @@ package com.solution._0069;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
-    public int mySqrt(int x) {
+    public static void main(String[] args) {
+        int res = mySqrt(9);
+        System.out.println(res);
+    }
+    public static int mySqrt(int x) {
         int left = 0, right = x;
         while (left < right) {
             int mid = (left + right + 1) >>> 1;

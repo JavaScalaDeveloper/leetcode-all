@@ -1,8 +1,13 @@
 package com.solution._0072;
-import change.datastructure.*;
-import java.util.*;
+
 public class Solution {
-    public int minDistance(String word1, String word2) {
+    public static void main(String[] args) {
+        String word1 = "horse", word2 = "ros";
+        int res = minDistance(word1, word2);
+        System.out.println(res);
+    }
+
+    public static int minDistance(String word1, String word2) {
         int m = word1.length(), n = word2.length();
         int[][] dp = new int[m + 1][n + 1];
         for (int i = 0; i <= m; ++i) {
