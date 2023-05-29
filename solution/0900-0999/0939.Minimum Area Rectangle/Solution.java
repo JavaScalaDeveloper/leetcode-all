@@ -1,18 +1,19 @@
 package com.solution._0939;
-import change.datastructure.*;
+
 import java.util.*;
+
 public class Solution {
     public int minAreaRect(int[][] points) {
         TreeMap<Integer, List<Integer>> d = new TreeMap<>();
-        for (var p : points) {
+        for (int[] p : points) {
             int x = p[0], y = p[1];
             d.computeIfAbsent(x, k -> new ArrayList<>()).add(y);
         }
         Map<Integer, Integer> pos = new HashMap<>();
         int ans = 1 << 30;
-        for (var e : d.entrySet()) {
+        for (Map.Entry<Integer, List<Integer>> e : d.entrySet()) {
             int x = e.getKey();
-            var ys = e.getValue();
+            List<Integer> ys = e.getValue();
             Collections.sort(ys);
             int n = ys.size();
             for (int i = 0; i < n; ++i) {

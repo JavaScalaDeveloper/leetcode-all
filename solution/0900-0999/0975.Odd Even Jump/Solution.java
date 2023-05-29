@@ -1,6 +1,8 @@
 package com.solution._0975;
-import change.datastructure.*;
-import java.util.*;
+
+import java.util.Map;
+import java.util.TreeMap;
+
 public class Solution {
     private int n;
     private Integer[][] f;
@@ -12,9 +14,9 @@ public class Solution {
         f = new Integer[n][2];
         g = new int[n][2];
         for (int i = n - 1; i >= 0; --i) {
-            var hi = tm.ceilingEntry(arr[i]);
+            Map.Entry<Integer, Integer> hi = tm.ceilingEntry(arr[i]);
             g[i][1] = hi == null ? -1 : hi.getValue();
-            var lo = tm.floorEntry(arr[i]);
+            Map.Entry<Integer, Integer> lo = tm.floorEntry(arr[i]);
             g[i][0] = lo == null ? -1 : lo.getValue();
             tm.put(arr[i], i);
         }

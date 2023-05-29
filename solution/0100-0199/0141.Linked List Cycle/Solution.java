@@ -1,14 +1,6 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
+package com.solution._0141;
+import change.datastructure.ListNode;
+
 public class Solution {
     public boolean hasCycle(ListNode head) {
         ListNode slow = head;

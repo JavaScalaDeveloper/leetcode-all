@@ -28,16 +28,16 @@ package com.solution._0117;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
-    private Node prev, next;
+    private TreeNextLinkNode prev, next;
 
-    public Node connect(Node root) {
-        Node node = root;
+    public TreeNextLinkNode connect(TreeNextLinkNode root) {
+        TreeNextLinkNode node = root;
         while (node != null) {
             prev = null;
             next = null;
             while (node != null) {
-                modify(node.left);
-                modify(node.right);
+                modify((TreeNextLinkNode)node.left);
+                modify((TreeNextLinkNode)node.right);
                 node = node.next;
             }
             node = next;
@@ -45,7 +45,7 @@ public class Solution {
         return root;
     }
 
-    private void modify(Node curr) {
+    private void modify(TreeNextLinkNode curr) {
         if (curr == null) {
             return;
         }

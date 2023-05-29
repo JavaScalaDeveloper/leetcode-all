@@ -1,34 +1,6 @@
 package com.solution._0952;
 import change.datastructure.*;
 import java.util.*;
-public class UnionFind {
-    int[] p;
-
-    UnionFind(int n) {
-        p = new int[n];
-        for (int i = 0; i < n; ++i) {
-            p[i] = i;
-        }
-    }
-
-    void union(int a, int b) {
-        int pa = find(a), pb = find(b);
-        if (pa != pb) {
-            p[pa] = pb;
-        }
-    }
-
-    int find(int x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
-        }
-        return p[x];
-    }
-}
-
-package com.solution._0952;
-import change.datastructure.*;
-import java.util.*;
 public class Solution {
     public int largestComponentSize(int[] nums) {
         int m = 0;
@@ -54,5 +26,29 @@ public class Solution {
             ans = Math.max(ans, cnt[t]);
         }
         return ans;
+    }
+    private static  class UnionFind {
+        int[] p;
+
+        UnionFind(int n) {
+            p = new int[n];
+            for (int i = 0; i < n; ++i) {
+                p[i] = i;
+            }
+        }
+
+        void union(int a, int b) {
+            int pa = find(a), pb = find(b);
+            if (pa != pb) {
+                p[pa] = pb;
+            }
+        }
+
+        int find(int x) {
+            if (p[x] != x) {
+                p[x] = find(p[x]);
+            }
+            return p[x];
+        }
     }
 }

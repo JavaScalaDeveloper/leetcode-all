@@ -1,7 +1,12 @@
 package com.solution._0901;
-import change.datastructure.*;
-import java.util.*;
-public class StockSpanner {
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Solution {
+}
+
+class StockSpanner {
     private Deque<int[]> stk = new ArrayDeque<>();
 
     public StockSpanner() {
@@ -12,7 +17,7 @@ public class StockSpanner {
         while (!stk.isEmpty() && stk.peek()[0] <= price) {
             cnt += stk.pop()[1];
         }
-        stk.push(new int[] {price, cnt});
+        stk.push(new int[]{price, cnt});
         return cnt;
     }
 }

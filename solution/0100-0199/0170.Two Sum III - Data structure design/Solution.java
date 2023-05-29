@@ -1,18 +1,19 @@
 package com.solution._0170;
-import change.datastructure.*;
-import java.util.*;
-public class TwoSum {
-    private Map<Integer, Integer> cnt = new HashMap<>();
 
-    public TwoSum() {
-    }
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Solution {
+    private Map<Integer, Integer> cnt = new HashMap<>();
 
     public void add(int number) {
         cnt.merge(number, 1, Integer::sum);
     }
 
     public boolean find(int value) {
-        for (var e : cnt.entrySet()) {
+        Set<Map.Entry<Integer, Integer>> entries = cnt.entrySet();
+        for (Map.Entry<Integer, Integer> e : cnt.entrySet()) {
             int x = e.getKey(), v = e.getValue();
             int y = value - x;
             if (cnt.containsKey(y)) {

@@ -1,22 +1,29 @@
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode() {}
+ * TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) {
+ * this.val = val;
+ * this.left = left;
+ * this.right = right;
+ * }
  * }
  */
 package com.solution._0173;
-import change.datastructure.*;
-import java.util.*;
-public class BSTIterator {
+
+import change.datastructure.TreeNode;
+
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class Solution {
+}
+
+class BSTIterator {
     private Deque<TreeNode> stack = new LinkedList<>();
 
     public BSTIterator(TreeNode root) {

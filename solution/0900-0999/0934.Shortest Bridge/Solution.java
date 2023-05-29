@@ -22,8 +22,9 @@ public class Solution {
         int ans = 0;
         while (true) {
             for (int i = q.size(); i > 0; --i) {
-                var p = q.pollFirst();
+                int[] p = q.pollFirst();
                 for (int k = 0; k < 4; ++k) {
+                    assert p != null;
                     int x = p[0] + dirs[k], y = p[1] + dirs[k + 1];
                     if (x >= 0 && x < n && y >= 0 && y < n) {
                         if (grid[x][y] == 1) {

@@ -1,35 +1,36 @@
 package change.scripts;
 
-import java.io.IOException;
+import change.datastructure.ListNode;
+import change.tools.listnode.ListNodeUtils;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        String filePath = "D:\\WorkSpaces\\leetcode-all\\solution\\0000-0099\\0001.Two Sum\\README.md";
-        String str = null;
-        try {
-            str = new String(Files.readAllBytes(Paths.get(filePath)));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-//        String str = "caergblkmghfaersnecsblixetwey";
-        Pattern pattern = Pattern.compile("");
-        Matcher matcher = pattern.matcher(str);
-        if (matcher.find()) {
-            int startIndex = matcher.start();
-            int endIndex = matcher.end();
-            String result = str.substring(0, startIndex) + str.substring(endIndex);
-            System.out.println(result);
-        } else {
-            System.out.println(str);
-        }
-
-
+//        1,2,3,4 -> 2,1,4,3
+        ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
+        ListNode res = reverse(listNode);
+        System.out.println(ListNodeUtils.getValues(res));
     }
+
+    private static ListNode reverse(ListNode listNode) {
+        ListNode cur=listNode; //234
+        boolean flag=false;
+        int val=0;
+        while (cur.next != null) {
+            if (!flag) {
+                cur.val= cur.next.val;
+                val = cur.val;
+            } else {
+                cur.val=val;
+            }
+            cur=cur.next;
+//            ListNode next = cur.next;
+//            cur.next=pre;
+//            pre=cur;
+//            cur=next;
+        }
+        return cur;
+    }
+
+
 }

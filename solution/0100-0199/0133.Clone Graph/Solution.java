@@ -22,8 +22,12 @@ public class Node {
 */
 
 package com.solution._0133;
-import change.datastructure.*;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Solution {
     private Map<Node, Node> visited = new HashMap<>();
 
@@ -40,5 +44,25 @@ public class Solution {
             clone.neighbors.add(cloneGraph(e));
         }
         return clone;
+    }
+
+    private static class Node {
+        public int val;
+        public List<Node> neighbors;
+
+        public Node() {
+            val = 0;
+            neighbors = new ArrayList<Node>();
+        }
+
+        public Node(int _val) {
+            val = _val;
+            neighbors = new ArrayList<Node>();
+        }
+
+        public Node(int _val, ArrayList<Node> _neighbors) {
+            val = _val;
+            neighbors = _neighbors;
+        }
     }
 }

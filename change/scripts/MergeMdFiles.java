@@ -1,6 +1,8 @@
 package change.scripts;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.attribute.BasicFileAttributes;
 
 public class MergeMdFiles {
 
@@ -21,10 +23,12 @@ public class MergeMdFiles {
 
     private static void mergeMdFiles(File dir, OutputStream os) throws IOException {
         File[] files = dir.listFiles();
+        assert files != null;
         for (File file : files) {
-            if (file.isDirectory()) {
+            BasicFileAttributes basicFileAttributes = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
+            if (basicFileAttributes.isDirectory()) {
                 mergeMdFiles(file, os);
-            } else if (file.isFile() && file.getName().endsWith(".md")) {
+            } else if (basicFileAttributes.isRegularFile() && file.getName().endsWith(".md")) {
 //                忽略solution根目录的文件
                 if (file.getPath().length() > 60) {
 //                    String num = file.getPath().substring(46, 50);

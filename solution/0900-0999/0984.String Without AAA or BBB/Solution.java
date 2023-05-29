@@ -2,6 +2,9 @@ package com.solution._0984;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
+    public static void main(String[] args) {
+
+    }
     public String strWithout3a3b(int a, int b) {
         StringBuilder ans = new StringBuilder();
         while (a > 0 && b > 0) {
@@ -20,10 +23,10 @@ public class Solution {
             }
         }
         if (a > 0) {
-            ans.append("a".repeat(a));
+//            ans.append("a".repeat(a));
         }
         if (b > 0) {
-            ans.append("b".repeat(b));
+//            ans.append("b".repeat(b));
         }
         return ans.toString();
     }

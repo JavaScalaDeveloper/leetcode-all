@@ -1,10 +1,12 @@
 package com.solution._0916;
-import change.datastructure.*;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution {
     public List<String> wordSubsets(String[] words1, String[] words2) {
         int[] cnt = new int[26];
-        for (var b : words2) {
+        for (String b : words2) {
             int[] t = new int[26];
             for (int i = 0; i < b.length(); ++i) {
                 t[b.charAt(i) - 'a']++;
@@ -14,7 +16,7 @@ public class Solution {
             }
         }
         List<String> ans = new ArrayList<>();
-        for (var a : words1) {
+        for (String a : words1) {
             int[] t = new int[26];
             for (int i = 0; i < a.length(); ++i) {
                 t[a.charAt(i) - 'a']++;

@@ -1,7 +1,12 @@
 package com.solution._0933;
-import change.datastructure.*;
-import java.util.*;
-public class RecentCounter {
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Solution {
+}
+
+class RecentCounter {
     private Deque<Integer> q = new ArrayDeque<>();
 
     public RecentCounter() {

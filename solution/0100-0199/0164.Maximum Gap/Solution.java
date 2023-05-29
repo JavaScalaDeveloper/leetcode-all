@@ -16,7 +16,7 @@ public class Solution {
         int bucketSize = Math.max(1, (mx - mi) / (n - 1));
         int bucketCount = (mx - mi) / bucketSize + 1;
         int[][] buckets = new int[bucketCount][2];
-        for (var bucket : buckets) {
+        for (int[] bucket : buckets) {
             bucket[0] = inf;
             bucket[1] = -inf;
         }
@@ -27,7 +27,7 @@ public class Solution {
         }
         int prev = inf;
         int ans = 0;
-        for (var bucket : buckets) {
+        for (int[] bucket : buckets) {
             if (bucket[0] > bucket[1]) {
                 continue;
             }

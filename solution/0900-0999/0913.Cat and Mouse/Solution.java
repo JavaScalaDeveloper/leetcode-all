@@ -44,7 +44,7 @@ public class Solution {
             int[] state = q.poll();
             int t = res[state[0]][state[1]][state[2]];
             List<int[]> prevStates = getPrevStates(state);
-            for (var prevState : prevStates) {
+            for (int[] prevState : prevStates) {
                 int pm = prevState[0], pc = prevState[1], pt = prevState[2];
                 if (res[pm][pc][pt] == TIE) {
                     boolean win

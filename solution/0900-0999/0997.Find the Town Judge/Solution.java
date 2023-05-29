@@ -2,10 +2,13 @@ package com.solution._0997;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
+    public static void main(String[] args) {
+
+    }
     public int findJudge(int n, int[][] trust) {
         int[] cnt1 = new int[n + 1];
         int[] cnt2 = new int[n + 1];
-        for (var t : trust) {
+        for (int[] t : trust) {
             int a = t[0], b = t[1];
             ++cnt1[a];
             ++cnt2[b];

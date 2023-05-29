@@ -1,7 +1,13 @@
 package com.solution._0981;
-import change.datastructure.*;
-import java.util.*;
-public class TimeMap {
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Solution {
+}
+
+class TimeMap {
     private Map<String, TreeMap<Integer, String>> ktv = new HashMap<>();
 
     public TimeMap() {
@@ -15,7 +21,7 @@ public class TimeMap {
         if (!ktv.containsKey(key)) {
             return "";
         }
-        var tv = ktv.get(key);
+        TreeMap<Integer, String> tv = ktv.get(key);
         Integer t = tv.floorKey(timestamp);
         return t == null ? "" : tv.get(t);
     }

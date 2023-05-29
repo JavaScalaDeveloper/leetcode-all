@@ -1,7 +1,9 @@
 package com.solution._0911;
-import change.datastructure.*;
-import java.util.*;
-public class TopVotedCandidate {
+
+public class Solution {
+}
+
+class TopVotedCandidate {
     private int[] times;
     private int[] wins;
 

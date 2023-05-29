@@ -16,14 +16,13 @@ public class Node {
 }
 */
 package com.solution._0138;
-import change.datastructure.*;
-import java.util.*;
+
 public class Solution {
     public Node copyRandomList(Node head) {
         if (head == null) {
             return null;
         }
-        for (Node cur = head; cur != null;) {
+        for (Node cur = head; cur != null; ) {
             Node node = new Node(cur.val, cur.next);
             cur.next = node;
             cur = node.next;
@@ -34,7 +33,7 @@ public class Solution {
             }
         }
         Node ans = head.next;
-        for (Node cur = head; cur != null;) {
+        for (Node cur = head; cur != null; ) {
             Node nxt = cur.next;
             if (nxt != null) {
                 cur.next = nxt.next;
@@ -42,5 +41,22 @@ public class Solution {
             cur = nxt;
         }
         return ans;
+    }
+
+    private static class Node {
+        int val;
+        Node next;
+        Node random;
+
+        public Node(int val) {
+            this.val = val;
+            this.next = null;
+            this.random = null;
+        }
+
+        public Node(int val, Node next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

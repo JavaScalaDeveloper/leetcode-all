@@ -7,7 +7,7 @@ public class Solution {
     private Set<Integer> s = new HashSet<>();
 
     public int atMostNGivenDigitSet(String[] digits, int n) {
-        for (var e : dp) {
+        for (int[] e : dp) {
             Arrays.fill(e, -1);
         }
         for (String d : digits) {

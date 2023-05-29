@@ -9,7 +9,7 @@ public class Solution {
             s += x;
         }
         int[][] f = new int[n + 1][s + 1];
-        for (var e : f) {
+        for (int[] e : f) {
             Arrays.fill(e, -(1 << 30));
         }
         f[0][0] = 0;

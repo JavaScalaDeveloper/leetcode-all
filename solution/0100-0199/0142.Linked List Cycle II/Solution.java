@@ -1,3 +1,6 @@
+package com.solution._0142;
+import change.datastructure.ListNode;
+
 /**
  * Definition for singly-linked list.
  * class ListNode {

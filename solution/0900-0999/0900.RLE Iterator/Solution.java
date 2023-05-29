@@ -1,7 +1,12 @@
 package com.solution._0900;
-import change.datastructure.*;
-import java.util.*;
-public class RLEIterator {
+
+public class Solution {
+    public static void main(String[] args) {
+
+    }
+}
+
+class RLEIterator {
     private int[] encoding;
     private int curr;
     private int i;
