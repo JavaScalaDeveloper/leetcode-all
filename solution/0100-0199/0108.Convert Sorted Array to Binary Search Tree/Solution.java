@@ -15,10 +15,18 @@
  */
 package com.solution._0108;
 import change.datastructure.*;
+import change.tools.listnode.TreeNodeUtils;
+
 import java.util.*;
 public class Solution {
     private int[] nums;
 
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        Solution solution = new Solution();
+        TreeNode res = solution.sortedArrayToBST(arr);
+        TreeNodeUtils.printTree(res);
+    }
     public TreeNode sortedArrayToBST(int[] nums) {
         this.nums = nums;
         return dfs(0, nums.length - 1);

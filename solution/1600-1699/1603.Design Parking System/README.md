@@ -73,5 +73,3 @@ class ParkingSystem {
  * boolean param_1 = obj.addCar(carType);
  */
 ```
-
-**

@@ -76,6 +76,8 @@ $$
 
 ### **Java**
 
+贪心
+
 ```java
 class Solution {
     public int maxProfit(int[] prices) {
@@ -87,6 +89,8 @@ class Solution {
     }
 }
 ```
+
+动态规划
 
 ```java
 class Solution {
@@ -103,11 +107,13 @@ class Solution {
 }
 ```
 
+动态规划（空间优化）
+
 ```java
 class Solution {
     public int maxProfit(int[] prices) {
         int n = prices.length;
-        int[] f = new int[] {-prices[0], 0};
+        int[] f = new int[]{-prices[0], 0};
         for (int i = 1; i < n; ++i) {
             int[] g = new int[2];
             g[0] = Math.max(f[0], f[1] - prices[i]);

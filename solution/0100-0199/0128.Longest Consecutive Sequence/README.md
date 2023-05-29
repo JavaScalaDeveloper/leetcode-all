@@ -33,51 +33,13 @@
 
 ## 解法
 
-**方法一：排序**
-
-我们先将数组排序，然后用一个变量 $t$ 记录当前连续序列的长度，用一个变量 $ans$ 记录最长连续序列的长度。
-
-接下来，我们从下标 $i=1$ 开始遍历数组，对于当前遍历到的元素 $nums[i]$：
-
--   如果 $nums[i]=nums[i-1]$，则说明当前元素重复，无需考虑；
--   如果 $nums[i]=nums[i-1]+1$，则说明当前元素可以接在上一个连续序列后面以形成更长的连续序列，我们更新 $t = t + 1$，然后更新答案 $ans = \max(ans, t)$；
--   否则，说明当前元素无法接在上一个连续序列后面，我们将 $t$ 重新置为 $1$。
-
-最终，我们返回答案 $ans$ 即可。
-
-时间复杂度 $O(n \times \log n)$，空间复杂度 $O(\log n)$。其中 $n$ 是数组的长度。
-
-**方法二：哈希表**
+**哈希表**
 
 我们用哈希表存储数组中的所有元素，然后遍历数组中的每个元素 $x$，如果当前元素的前驱 $x-1$ 不在哈希表中，那么我们以当前元素为起点，不断尝试匹配 $x+1, x+2, x+3, \dots$，直到匹配不到为止，此时的匹配长度即为以 $x$ 为起点的最长连续序列长度，我们更新答案即可。
 
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是数组的长度。
 
 ### **Java**
-
-```java
-class Solution {
-    public int longestConsecutive(int[] nums) {
-        int n = nums.length;
-        if (n < 2) {
-            return n;
-        }
-        Arrays.sort(nums);
-        int ans = 1, t = 1;
-        for (int i = 1; i < n; ++i) {
-            if (nums[i] == nums[i - 1]) {
-                continue;
-            }
-            if (nums[i] == nums[i - 1] + 1) {
-                ans = Math.max(ans, ++t);
-            } else {
-                t = 1;
-            }
-        }
-        return ans;
-    }
-}
-```
 
 ```java
 class Solution {

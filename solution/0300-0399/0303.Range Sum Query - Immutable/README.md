@@ -73,5 +73,3 @@ class NumArray {
  * int param_1 = obj.sumRange(left,right);
  */
 ```
-
-**

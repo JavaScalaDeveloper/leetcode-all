@@ -64,7 +64,7 @@ struct Node {
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为二叉树的节点个数。
 
 ### **Java**
-
+BFS:
 ```java
 /*
 // Definition for a Node.
@@ -116,7 +116,7 @@ class Solution {
     }
 }
 ```
-
+DFS:
 ```java
 /*
 // Definition for a Node.
@@ -173,7 +173,3 @@ class Solution {
     }
 }
 ```
-
-BFS:
-
-DFS:
