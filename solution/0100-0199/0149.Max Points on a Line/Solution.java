@@ -2,6 +2,12 @@ package com.solution._0149;
 import change.datastructure.*;
 import java.util.*;
 public class Solution {
+    public static void main(String[] args) {
+        int[][] points = {{1, 1}, {3, 2}, {5, 3}, {4, 1}, {2, 3}, {1, 4}};
+        Solution solution = new Solution();
+        int res = solution.maxPoints(points);
+        System.out.println(res);
+    }
     public int maxPoints(int[][] points) {
         int n = points.length;
         int ans = 1;

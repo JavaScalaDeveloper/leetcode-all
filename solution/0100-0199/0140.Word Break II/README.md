@@ -9,7 +9,7 @@
 <p><strong class="example">示例 1：</strong></p>
 
 <pre>
-<strong>输入:</strong>s = "<code>catsanddog</code>", wordDict = <code>["cat","cats","and","sand","dog"]</code>
+<strong>输入:</strong>s = <code>"catsanddog"</code>, wordDict = <code>["cat","cats","and","sand","dog"]</code>
 <strong>输出:</strong><code>["cats and dog","cat sand dog"]</code>
 </pre>
 
