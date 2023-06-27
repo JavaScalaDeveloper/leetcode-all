@@ -1579,8 +1579,8 @@ class Solution {
             mask = mask ^ current;
             // 在当前前缀下, 数组内的前缀位数所有情况集合
             Set<Integer> set = new HashSet<>();
-            for (int j = 0, k = numbers.length; j < k; j++) {
-                set.add(mask & numbers[j]);
+            for (int number : numbers) {
+                set.add(mask & number);
             }
             // 期望最终异或值的从右数第i位为1, 再根据异或运算的特性推算假设是否成立
             int flag = max | current;
@@ -1729,6 +1729,52 @@ class Solution {
 }
 ```
 
+假设 dp[i][j] 表示以 arr[i] 和 arr[j] 结尾的最长斐波那契式子序列的长度。在初始化时，我们让每个 dp[i][j] 的初始值为 2，因为任何两个不相等的正整数都可以形成一个长度为 2 的斐波那契式子序列。
+
+然后，我们从第三个元素 arr[k] 开始遍历数组，对于每个元素 arr[k]，我们在之前的元素中寻找能够和它组成斐波那契式子序列的元素 arr[i] 和 arr[j]，更新 dp[i][j] 的值。具体地，如果存在满足 arr[i] +
+arr[j] = arr[k] 的 i 和 j，我们就可以将 dp[i][j] 更新为 dp[j][k] + 1，因为在以 arr[j] 和 arr[k] 结尾的所有斐波那契式子序列中，只有以 arr[i] 和 arr[j]
+结尾的子序列加上 arr[k] 才能够形成以 arr[i] 和 arr[k] 结尾的更长的斐波那契式子序列。
+
+最后，我们在 dp 数组中找到最大值，即为最长的斐波那契式的子序列的长度。
+
+```java
+class Solution {
+    public int lenLongestFibSubseq(int[] arr) {
+        int n = arr.length;
+        int[][] dp = new int[n][n]; // 初始化 dp 数组
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                dp[i][j] = 2;
+            }
+        }
+        Map<Integer, Integer> indexMap = new HashMap<>(); // 记录每个元素在数组中出现的下标
+        for (int k = 2; k < n; k++) { // 枚举每个元素
+            int i = 0, j = k - 1; // 双指针分别指向数组开头和第 k - 1 个元素
+            while (i < j) { // 在之前的数组元素中寻找能够和第 k 个元素组成斐波那契式子序列的元素
+                int sum = arr[i] + arr[j];
+                if (sum == arr[k]) { // 如果满足条件，则更新 dp[i][j] 的值
+                    dp[i][j] = dp[j][k] + 1;
+                    i++;
+                    j--;
+                } else if (sum < arr[k]) { // 如果不满足条件，将 i 向右移动一位
+                    i++;
+                } else { // 如果不满足条件，将 j 向左移动一位
+                    j--;
+                }
+            }
+            indexMap.put(arr[k], k); // 将当前元素在数组中的下标记录下来
+        }
+        int maxLen = 0;
+        for (int i = 0; i < n; i++) { // 在 dp 数组中寻找最大值
+            for (int j = i + 1; j < n; j++) {
+                maxLen = Math.max(maxLen, dp[i][j]);
+            }
+        }
+        return maxLen == 2 ? 0 : maxLen; // 注意特判，如果最长的子序列长度为 2，则说明不存在斐波那契式子序列
+    }
+}
+```
+
 # [ 094. 最少回文分割](https://leetcode.cn/problems/omKAoA)
 
 ## 题目描述
@@ -1783,19 +1829,39 @@ class Solution {
 ```java
 class Solution {
     public int minCut(String s) {
+        // 获取字符串长度
         int n = s.length();
+        // dp1 数组表示从 i 到 j 是否为回文子串
         boolean[][] dp1 = new boolean[n][n];
+        // dp2 数组表示前 i 个字符的最小分割次数
+        int[] dp2 = new int[n];
+        // 初始化 dp2 数组，最坏情况下要切分 n 次
+        for (int i = 0; i < n; i++) {
+            dp2[i] = i;
+        }
+        // 计算 dp1 数组，注意循环的顺序是从后往前，因为计算 dp[i][j] 需要用到 dp[i+1][j-1]
         for (int i = n - 1; i >= 0; i--) {
             for (int j = i; j < n; j++) {
-                dp1[i][j] = s.charAt(i) == s.charAt(j) && (j - i < 3 || dp1[i + 1][j - 1]);
+                // 如果 i 和 j 相等，或者只相差一个字符，则一定是回文串
+                if (j - i <= 1 || s.charAt(i) == s.charAt(j)) {
+                    dp1[i][j] = true;
+
+                    // 如果 s[i+1...j-1] 也是回文串，则 s[i...j] 也是回文串
+                    if (j - i >= 2 && dp1[i + 1][j - 1]) {
+                        dp1[i][j] = true;
+                    }
+                }
             }
         }
-        int[] dp2 = new int[n];
+        // 计算 dp2 数组
         for (int i = 0; i < n; i++) {
-            if (!dp1[0][i]) {
-                dp2[i] = i;
-                for (int j = 1; j <= i; j++) {
-                    if (dp1[j][i]) {
+            // 如果 s[0...i] 已经是回文串，不需要进行分割，次数为 0
+            if (dp1[0][i]) {
+                dp2[i] = 0;
+            } else {
+                // 枚举所有可能的分割点 j，如果 s[j+1...i] 是回文子串，那么分割次数为 dp2[j-1]+1 的最小值
+                for (int j = 0; j < i; j++) {
+                    if (dp1[j + 1][i]) {
                         dp2[i] = Math.min(dp2[i], dp2[j - 1] + 1);
                     }
                 }
@@ -1864,23 +1930,31 @@ class Solution {
 }
 ```
 
+Manacher 算法
+
 ```java
 class Solution {
-    public int[] topKFrequent(int[] nums, int k) {
-        Map<Integer, Integer> cnt = new HashMap<>();
-        for (int v : nums) {
-            cnt.put(v, cnt.getOrDefault(v, 0) + 1);
+    public int countSubstrings(String s) {
+        // 构造新的字符串 t，方便处理原字符串中的所有回文子串
+        StringBuilder sb = new StringBuilder("^#"); // 字符串首尾加上特殊字符 ^ 和 $，避免边界问题
+        for (char ch : s.toCharArray()) {
+            sb.append(ch).append('#'); // 在每个字符之间插入特殊字符 #
         }
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
-        for (var e : cnt.entrySet()) {
-            pq.offer(new int[]{e.getKey(), e.getValue()});
-            if (pq.size() > k) {
-                pq.poll();
+        String t = sb.append('$').toString(); // 字符串结尾再加上特殊字符 $
+        int n = t.length(); // 新字符串的长度
+        int[] p = new int[n]; // 数组 p，用来记录以每个位置为中心的最长回文半径
+        int pos = 0, maxRight = 0; // pos 记录当前已知的最长回文串的中心位置，maxRight 记录其右边界
+        int ans = 0; // 记录回文子串数量
+        for (int i = 1; i < n - 1; i++) { // 遍历新字符串 t 中的每个位置
+            p[i] = maxRight > i ? Math.min(maxRight - i, p[2 * pos - i]) : 1; // 判断是否可以利用前面已经求得的信息来快速计算 p[i]
+            while (t.charAt(i - p[i]) == t.charAt(i + p[i])) { // 暴力扩展以当前位置为中心的回文串
+                p[i]++;
             }
-        }
-        int[] ans = new int[k];
-        for (int i = 0; i < k; ++i) {
-            ans[i] = pq.poll()[0];
+            if (i + p[i] > maxRight) { // 如果当前回文串的右边界超过了已知的最长回文串的右边界，更新中心位置和右边界
+                maxRight = i + p[i];
+                pos = i;
+            }
+            ans += p[i] / 2; // 计算以当前位置为中心的回文子串数量
         }
         return ans;
     }
@@ -2865,6 +2939,39 @@ class Solution {
 }
 ```
 
+广度优先BFS
+
+```java
+class Solution {
+    public int findCircleNum(int[][] isConnected) {
+        int n = isConnected.length; // 获取矩阵的长度，即学生数量
+        boolean[] visited = new boolean[n]; // 记录每个学生是否已经被访问过
+        int circles = 0; // 初始化朋友圈数量为 0
+
+        for (int i = 0; i < n; i++) { // 遍历所有学生
+            if (!visited[i]) { // 如果该学生没有被访问过，说明还未被纳入任何一个朋友圈中
+                circles++; // 新开一个朋友圈
+                Queue<Integer> queue = new LinkedList<>(); // 初始化队列，用于层序遍历所有与该学生直接或间接连接的学生
+                queue.offer(i); // 将该学生加入队列
+
+                while (!queue.isEmpty()) { // 当队列不为空时，继续遍历与该学生直接或间接相连的学生
+                    int j = queue.poll(); // 弹出队首元素
+                    visited[j] = true; // 标记该学生已经被访问过
+
+                    for (int k = 0; k < n; k++) { // 遍历当前学生所连接的所有学生
+                        if (isConnected[j][k] == 1 && !visited[k]) { // 如果该学生与当前学生相连，且还未被访问过
+                            queue.offer(k); // 将该学生加入队列中，准备层序遍历其所连接的学生
+                        }
+                    }
+                }
+            }
+        }
+
+        return circles; // 返回朋友圈数量
+    }
+}
+```
+
 # [ 045. 二叉树最底层最左边的值](https://leetcode.cn/problems/LwUNpT)
 
 ## 题目描述
@@ -3002,58 +3109,80 @@ class Solution {
 
 ```java
 class Solution {
-    private int[] p;
-    private double[] w;
+    private Map<String, Integer> map; // 用于记录每个变量对应的编号
+    private double[] weight; // 用于记录每个连通块对应的相对权重
 
-    public double[] calcEquation(
-            List<List<String>> equations, double[] values, List<List<String>> queries) {
-        int n = equations.size();
-        p = new int[n << 1];
-        w = new double[n << 1];
-        for (int i = 0; i < p.length; ++i) {
-            p[i] = i;
-            w[i] = 1.0;
-        }
-        Map<String, Integer> mp = new HashMap<>(n << 1);
-        int idx = 0;
+    public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
+        // 初始化map和weight
+        map = new HashMap<>();
+        int n = equations.size(); // 方程数量
+        weight = new double[n * 2]; // 变量数量为方程数量的两倍（每个方程有两个变量）
+        Arrays.fill(weight, 1.0); // 初始时每个变量所在连通块的相对权重都为 1.0
+        int index = 0;
+
+        // 进行带权并查集的合并操作
         for (int i = 0; i < n; ++i) {
-            List<String> e = equations.get(i);
-            String a = e.get(0), b = e.get(1);
-            if (!mp.containsKey(a)) {
-                mp.put(a, idx++);
+            String node1 = equations.get(i).get(0);
+            String node2 = equations.get(i).get(1);
+
+            // 将node1和node2映射为整数，作为它们所在连通块的代表点
+            if (!map.containsKey(node1)) {
+                map.put(node1, index++);
             }
-            if (!mp.containsKey(b)) {
-                mp.put(b, idx++);
+            if (!map.containsKey(node2)) {
+                map.put(node2, index++);
             }
-            int pa = find(mp.get(a)), pb = find(mp.get(b));
-            if (pa == pb) {
-                continue;
-            }
-            p[pa] = pb;
-            w[pa] = w[mp.get(b)] * values[i] / w[mp.get(a)];
+
+            int x = map.get(node1);
+            int y = map.get(node2);
+
+            union(x, y, values[i]); // 合并x和y所在的连通块，并把它们之间的相对权重设为values[i]
         }
-        int m = queries.size();
-        double[] res = new double[m];
-        for (int i = 0; i < m; ++i) {
-            String c = queries.get(i).get(0), d = queries.get(i).get(1);
-            Integer id1 = mp.get(c), id2 = mp.get(d);
-            if (id1 == null || id2 == null) {
+
+        // 处理查询
+        int q = queries.size();
+        double[] res = new double[q];
+        for (int i = 0; i < q; ++i) {
+            String node1 = queries.get(i).get(0);
+            String node2 = queries.get(i).get(1);
+
+            Integer x = map.get(node1); // 获取node1对应的连通块编号
+            Integer y = map.get(node2); // 获取node2对应的连通块编号
+
+            if (x == null || y == null) { // 如果node1或node2不存在，则无法计算它们之间的值，返回-1.0
                 res[i] = -1.0;
             } else {
-                int pa = find(id1), pb = find(id2);
-                res[i] = pa == pb ? w[id1] / w[id2] : -1.0;
+                int px = find(x); // 获取node1所在连通块的代表点
+                int py = find(y); // 获取node2所在连通块的代表点
+
+                if (px != py) { // 如果node1和node2不在同一个连通块内，则无法计算它们之间的值，返回-1.0
+                    res[i] = -1.0;
+                } else {
+                    res[i] = weight[x] / weight[y]; // 计算node1/node2的值
+                }
             }
         }
+
         return res;
     }
 
+    private void union(int x, int y, double val) {
+        int px = find(x); // 获取x所在连通块的代表点
+        int py = find(y); // 获取y所在连通块的代表点
+
+        // 更新连通块的相对权重
+        weight[px] = weight[y] * val / weight[x]; // 将x所在连通块的相对权重设为y所在连通块的相对权重乘以val再除以x所在连通块的相对权重
+        weight[px + map.size()] = weight[py + map.size()] * weight[x] / val; // 将y所在连通块的相对权重设为x所在连通块的相对权重乘以1/val再除以y所在连通块的相对权重
+        map.put(Integer.toString(py), px); // 把y所在连通块合并到x所在连通块中，更新map中的映射关系
+    }
+
     private int find(int x) {
-        if (p[x] != x) {
-            int origin = p[x];
-            p[x] = find(p[x]);
-            w[x] *= w[origin];
+        if (x != map.get(Integer.toString(x))) { // 如果x不是所在连通块的代表点，则递归找到连通块的代表点并更新x所在连通块的相对权重
+            int p = find(map.get(Integer.toString(x)));
+            weight[x] *= weight[map.get(Integer.toString(x))]; // 更新x所在连通块的相对权重
+            map.put(Integer.toString(x), p); // 把x所在连通块合并到代表点p所在的连通块中，更新map中的映射关系
         }
-        return p[x];
+        return map.get(Integer.toString(x)); // 返回x所在连通块的代表点
     }
 }
 ```
@@ -3112,26 +3241,23 @@ class Solution {
 
 ```java
 class Solution {
-    public int minEatingSpeed(int[] piles, int h) {
-        int mx = 0;
-        for (int pile : piles) {
-            mx = Math.max(mx, pile);
-        }
-        //最小速度和最大速度
-        int left = 1, right = mx;
-        while (left < right) {
-            int mid = (left + right) >>> 1;
-            int s = 0;
+    public int minEatingSpeed(int[] piles, int H) {
+        int n = piles.length;
+        int l = 1, r = Arrays.stream(piles).sum(); // 左右边界
+        while (l < r) {
+            int mid = (l + r) / 2; // 中间速度
+            int eatTime = 0;
             for (int pile : piles) {
-                s += (pile + mid - 1) / mid;
+                // 计算在当前速度下吃完这一堆需要的时间
+                eatTime += (pile - 1) / mid + 1;
             }
-            if (s <= h) {
-                right = mid;
-            } else {
-                left = mid + 1;
+            if (eatTime <= H) { // 可行，缩小右边界
+                r = mid;
+            } else { // 不可行，增大左边界
+                l = mid + 1;
             }
         }
-        return left;
+        return l;
     }
 }
 ```
@@ -3192,30 +3318,40 @@ class Solution {
 
 ### **Java**
 
+遍历每一条边，对于每一条边 (u, v)，我们检查它们是否已经在同一个连通分量中。如果是，说明这条边是多余的，我们记录下来；否则，我们将这两个节点所在的连通分量合并。最后得到的就是我们要找的多余的边。
+
+具体而言，我们可以使用一个长度为 n 的数组 parent 来记录每个节点的父亲节点。初始时，每个节点的父亲节点都是它自己。遍历每一条边时，我们首先找到它们的父亲节点 x 和 y（即它们所在连通分量的根节点），如果 x 和 y
+已经相等了，说明它们在同一个连通分量中，这条边是多余的，我们记录下来。否则，我们将 x 的父亲节点设为 y，表示将 x 所在的连通分量合并到 y 所在的连通分量中。
+
 ```java
 class Solution {
-    private int[] p;
-
     public int[] findRedundantConnection(int[][] edges) {
-        p = new int[1010];
-        for (int i = 0; i < p.length; ++i) {
-            p[i] = i;
+        int n = edges.length;
+        int[] parent = new int[n + 1];
+        for (int i = 1; i <= n; i++) {
+            parent[i] = i; // 初始化，每个节点的父亲节点都是它自己
         }
-        for (int[] e : edges) {
-            int a = e[0], b = e[1];
-            if (find(a) == find(b)) {
-                return e;
+
+        int[] ans = null;
+        for (int[] edge : edges) {
+            int x = find(parent, edge[0]); // 找到第 i 条边的起点所在连通分量的根节点
+            int y = find(parent, edge[1]); // 找到第 i 条边的终点所在连通分量的根节点
+            if (x == y) { // 如果 x 和 y 已经相等了，说明它们在同一个连通分量中，这条边是多余的
+                ans = edge;
+            } else { // 否则，将 x 所在的连通分量合并到 y 所在的连通分量中
+                parent[x] = y;
             }
-            p[find(a)] = find(b);
         }
-        return null;
+
+        return ans;
     }
 
-    private int find(int x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
+    // 找到节点 x 所在连通分量的根节点
+    private int find(int[] parent, int x) {
+        if (parent[x] != x) {
+            parent[x] = find(parent, parent[x]);
         }
-        return p[x];
+        return parent[x];
     }
 }
 ```
@@ -3430,20 +3566,33 @@ class Solution {
 ```java
 class Solution {
     public int[][] merge(int[][] intervals) {
+        // 按照区间起始位置进行排序
         Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
-        int st = intervals[0][0], ed = intervals[0][1];
-        List<int[]> ans = new ArrayList<>();
+
+        int st = intervals[0][0]; // 初始化起始位置为第一个区间的起始位置
+        int ed = intervals[0][1]; // 初始化结束位置为第一个区间的结束位置
+
+        List<int[]> ans = new ArrayList<>(); // 存储合并后的区间结果
+
         for (int i = 1; i < intervals.length; ++i) {
-            int s = intervals[i][0], e = intervals[i][1];
+            int s = intervals[i][0]; // 当前区间的起始位置
+            int e = intervals[i][1]; // 当前区间的结束位置
+
             if (ed < s) {
+                // 当前区间与前一个区间不重叠，将前一个区间的起始位置和结束位置添加到结果列表中
                 ans.add(new int[]{st, ed});
-                st = s;
-                ed = e;
+                st = s; // 更新起始位置为当前区间的起始位置
+                ed = e; // 更新结束位置为当前区间的结束位置
             } else {
+                // 当前区间与前一个区间重叠，更新结束位置为当前区间的结束位置取最大值
                 ed = Math.max(ed, e);
             }
         }
+
+        // 将最后一个区间的起始位置和结束位置添加到结果列表中
         ans.add(new int[]{st, ed});
+
+        // 将结果列表转换为数组并返回
         return ans.toArray(new int[ans.size()][]);
     }
 }
@@ -3614,7 +3763,6 @@ class Solution {
 
 ```java
 /*
-// Definition for a Node.
 class Node {
     public int val;
     public Node prev;
@@ -3622,32 +3770,31 @@ class Node {
     public Node child;
 };
 */
-
 class Solution {
-    private Node dummy = new Node();
-    private Node tail = dummy;
+    private Node dummy = new Node();  // 虚拟头节点，用于构建展平后的链表
+    private Node tail = dummy;  // 尾节点，指向链表的最后一个节点
 
     public Node flatten(Node head) {
         if (head == null) {
             return null;
         }
-        preOrder(head);
-        dummy.next.prev = null;
-        return dummy.next;
+        preOrder(head);  // 先序遍历多级双向链表，展平链表
+        dummy.next.prev = null;  // 修正展平后链表的头节点的 prev 指针
+        return dummy.next;  // 返回展平后的链表的头节点
     }
 
     private void preOrder(Node node) {
         if (node == null) {
-            return;
+            return;  // 递归终止条件
         }
-        Node next = node.next;
-        Node child = node.child;
-        tail.next = node;
-        node.prev = tail;
-        tail = tail.next;
-        node.child = null;
-        preOrder(child);
-        preOrder(next);
+        Node next = node.next;  // 保存当前节点的 next 指针
+        Node child = node.child;  // 保存当前节点的 child 指针
+        tail.next = node;  // 将当前节点追加到展平后链表的尾部
+        node.prev = tail;  // 更新当前节点的 prev 指针，指向前一个节点
+        tail = tail.next;  // 更新尾节点指针
+        node.child = null;  // 将当前节点的 child 指针置为空，表示已处理完子链表
+        preOrder(child);  // 递归处理当前节点的 child 子链表
+        preOrder(next);  // 递归处理当前节点的 next 节点
     }
 }
 ```
@@ -3789,49 +3936,50 @@ class Solution {
 }
 ```
 
-双指针+hash表
+双指针+哈希表,时间复杂度为 O(n)，空间复杂度为 O(m)
+
+首先，用一个哈希表来记录字符串 t 中每个字符出现的次数。然后，用双指针 left 和 right 来表示要查找的子串在 s 中的位置。
+
+将 right 指针不断右移，直到找到了包含 t 所有字符的子串。在移动过程中，使用一个哈希表来记录 s 中每个字符出现的次数，当
+
+哈希表中的某个字符出现次数大于在 t 中出现的次数时，说明当前子串中该字符出现过多，需要将 left 指针右移，直到该字符出现次数满足要求。
+
+最后，如果找到了符合要求的子串，就更新答案；然后将 left 指针右移，继续查找下一个子串。最终，得到的答案就是最短的符合要求的子串。
 
 ```java
 public class Solution {
-    /*
-    双指针+哈希表,时间复杂度为 O(n)，空间复杂度为 O(m)
-    首先，用一个哈希表来记录字符串 t 中每个字符出现的次数。然后，用双指针 left 和 right 来表示要查找的子串在 s 中的位置。
-    将 right 指针不断右移，直到找到了包含 t 所有字符的子串。在移动过程中，使用一个哈希表来记录 s 中每个字符出现的次数，当
-    哈希表中的某个字符出现次数大于在 t 中出现的次数时，说明当前子串中该字符出现过多，需要将 left 指针右移，直到该字符出现次数满足要求。
-    最后，如果找到了符合要求的子串，就更新答案；然后将 left 指针右移，继续查找下一个子串。最终，得到的答案就是最短的符合要求的子串。
-     */
     public static String minWindow2(String s, String t) {
-        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new HashMap<>();  // 用于存储字符及其对应出现次数的映射关系
         for (char c : t.toCharArray()) {
-            map.merge(c, 1, Integer::sum);//map.put(c, map.getOrDefault(c, 0) + 1);
+            map.merge(c, 1, Integer::sum);  // 将字符串 t 中的字符及其出现次数添加到映射中
         }
-        int left = 0, right = 0, count = map.size();
-        int start = 0, end = Integer.MAX_VALUE;
+        int left = 0, right = 0, count = map.size();  // 初始化左右指针和字符种类数
+        int start = 0, end = Integer.MAX_VALUE;  // 初始化最小窗口的起始位置和结束位置
         while (right < s.length()) {
-            char c = s.charAt(right);
-            if (map.containsKey(c)) {
-                map.put(c, map.get(c) - 1);
-                if (map.get(c) == 0) {
-                    count--;
+            char c = s.charAt(right);  // 获取右指针所指向的字符
+            if (map.containsKey(c)) {  // 如果映射中包含该字符
+                map.put(c, map.get(c) - 1);  // 更新该字符的出现次数
+                if (map.get(c) == 0) {  // 如果该字符的出现次数为0
+                    count--;  // 减少需要匹配的字符种类数
                 }
             }
-            right++;
-            while (count == 0) {
-                if (right - left < end - start) {
+            right++;  // 右指针右移
+            while (count == 0) {  // 当匹配的字符种类数为0时，即达到了一个有效窗口
+                if (right - left < end - start) {  // 更新最小窗口的起始位置和结束位置
                     start = left;
                     end = right;
                 }
-                char c1 = s.charAt(left);
-                if (map.containsKey(c1)) {
-                    map.put(c1, map.get(c1) + 1);
-                    if (map.get(c1) > 0) {
-                        count++;
+                char c1 = s.charAt(left);  // 获取左指针所指向的字符
+                if (map.containsKey(c1)) {  // 如果映射中包含该字符
+                    map.put(c1, map.get(c1) + 1);  // 恢复该字符的出现次数
+                    if (map.get(c1) > 0) {  // 如果该字符的出现次数大于0
+                        count++;  // 增加需要匹配的字符种类数
                     }
                 }
-                left++;
+                left++;  // 左指针右移
             }
         }
-        return end == Integer.MAX_VALUE ? "" : s.substring(start, end);
+        return end == Integer.MAX_VALUE ? "" : s.substring(start, end);  // 返回最小窗口的子串
     }
 }
 ```
@@ -4525,31 +4673,31 @@ DFS。
 
 ```java
 class Solution {
-    private List<List<Integer>> ans;
-    private int target;
-    private int[] candidates;
+    private List<List<Integer>> ans;  // 存储最终结果的列表
+    private int target;  // 目标和
+    private int[] candidates;  // 数组 candidates，存储可选数字
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        ans = new ArrayList<>();
-        this.target = target;
-        this.candidates = candidates;
-        dfs(0, 0, new ArrayList<>());
-        return ans;
+        ans = new ArrayList<>();  // 初始化结果列表
+        this.target = target;  // 初始化目标和
+        this.candidates = candidates;  // 初始化可选数字数组
+        dfs(0, 0, new ArrayList<>());  // 调用深度优先搜索函数
+        return ans;  // 返回最终结果列表
     }
 
     private void dfs(int s, int u, List<Integer> t) {
-        if (s == target) {
-            ans.add(new ArrayList<>(t));
-            return;
+        if (s == target) {  // 如果当前和等于目标和
+            ans.add(new ArrayList<>(t));  // 将当前结果加入最终结果列表
+            return;  // 结束当前递归
         }
-        if (s > target) {
-            return;
+        if (s > target) {  // 如果当前和大于目标和
+            return;  // 结束当前递归
         }
-        for (int i = u; i < candidates.length; ++i) {
-            int c = candidates[i];
-            t.add(c);
-            dfs(s + c, i, t);
-            t.remove(t.size() - 1);
+        for (int i = u; i < candidates.length; ++i) {  // 遍历可选数字数组
+            int c = candidates[i];  // 获取当前可选数字
+            t.add(c);  // 将当前可选数字添加到结果列表中
+            dfs(s + c, i, t);  // 递归调用深度优先搜索函数，更新当前和、当前索引和结果列表
+            t.remove(t.size() - 1);  // 回溯，移除最后一个添加的数字
         }
     }
 }
@@ -4662,40 +4810,43 @@ class Solution {
 
 ```java
 class Solution {
-    private boolean[][] dp;
-    private List<List<String>> ans;
-    private int n;
+    private boolean[][] dp;  // 动态规划数组，用于判断子串是否回文
+    private List<List<String>> ans;  // 存储最终结果的列表
+    private int n;  // 字符串的长度
 
     public String[][] partition(String s) {
-        ans = new ArrayList<>();
-        n = s.length();
-        dp = new boolean[n][n];
+        ans = new ArrayList<>();  // 初始化结果列表
+        n = s.length();  // 获取字符串的长度
+        dp = new boolean[n][n];  // 初始化动态规划数组，默认值为 false
+
+        // 预处理动态规划数组，判断子串是否回文
         for (int i = 0; i < n; ++i) {
-            Arrays.fill(dp[i], true);
+            Arrays.fill(dp[i], true);  // 将对角线上的元素设为 true
         }
         for (int i = n - 1; i >= 0; --i) {
             for (int j = i + 1; j < n; ++j) {
-                dp[i][j] = s.charAt(i) == s.charAt(j) && dp[i + 1][j - 1];
+                dp[i][j] = s.charAt(i) == s.charAt(j) && dp[i + 1][j - 1];  // 判断当前子串是否回文
             }
         }
-        dfs(s, 0, new ArrayList<>());
-        String[][] res = new String[ans.size()][];
+
+        dfs(s, 0, new ArrayList<>());  // 调用深度优先搜索函数
+        String[][] res = new String[ans.size()][];  // 将结果转换为二维数组
         for (int i = 0; i < ans.size(); ++i) {
             res[i] = ans.get(i).toArray(new String[0]);
         }
-        return res;
+        return res;  // 返回最终结果
     }
 
     private void dfs(String s, int i, List<String> t) {
-        if (i == n) {
-            ans.add(new ArrayList<>(t));
-            return;
+        if (i == n) {  // 如果遍历到字符串末尾
+            ans.add(new ArrayList<>(t));  // 将当前结果加入最终结果列表
+            return;  // 结束当前递归
         }
         for (int j = i; j < n; ++j) {
-            if (dp[i][j]) {
-                t.add(s.substring(i, j + 1));
-                dfs(s, j + 1, t);
-                t.remove(t.size() - 1);
+            if (dp[i][j]) {  // 判断从 i 到 j 的子串是否回文
+                t.add(s.substring(i, j + 1));  // 将回文子串添加到结果列表中
+                dfs(s, j + 1, t);  // 递归搜索剩余部分的回文子串
+                t.remove(t.size() - 1);  // 回溯，移除最后一个添加的子串
             }
         }
     }
@@ -4944,8 +5095,6 @@ class Solution {
 }
 ```
 
-BFS
-
 ```java
 public class Solution {
     /*
@@ -5019,6 +5168,16 @@ public class Solution {
 
 ## 解法
 
+完全二叉树示意图
+
+```text
+       1
+     /   \
+    2     3
+   / \   / \
+  4   5 6   7
+```
+
 ### **Java**
 
 ```java
@@ -5042,10 +5201,10 @@ class CBTInserter {
     }
 
     public int insert(int v) {
-        int pid = (tree.size() - 1) >> 1;
+        int pid = (tree.size() - 1) >> 1; // 新节点的父节点索引
         TreeNode node = new TreeNode(v);
         tree.add(node);
-        TreeNode p = tree.get(pid);
+        TreeNode p = tree.get(pid);// 获取父节点
         if (p.left == null) {
             p.left = node;
         } else {
@@ -5054,7 +5213,7 @@ class CBTInserter {
         return p.val;
     }
 
-    public TreeNode get_root() {
+    public TreeNode getRoot() {
         return tree.get(0);
     }
 }
@@ -5197,48 +5356,105 @@ class Solution {
 
 ### **Java**
 
+并查集
+
 ```java
 class Solution {
-    private int[] p;
+    private int[] p; // 存储并查集的父节点
 
     public int numSimilarGroups(String[] strs) {
         int n = strs.length;
         p = new int[n];
+
         for (int i = 0; i < n; ++i) {
-            p[i] = i;
+            p[i] = i; // 初始化并查集，初始时每个元素的父节点为自身
         }
+
         for (int i = 0; i < n; ++i) {
             for (int j = i + 1; j < n; ++j) {
-                if (check(strs[i], strs[j])) {
-                    p[find(i)] = find(j);
+                if (check(strs[i], strs[j])) { // 如果两个字符串相似，将它们合并到同一个相似字符串组
+                    p[find(i)] = find(j); // 将i的根节点的父节点设置为j的根节点
                 }
             }
         }
+
         int res = 0;
         for (int i = 0; i < n; ++i) {
-            if (i == find(i)) {
+            if (i == find(i)) { // 根据父节点是否指向自身来判断相似字符串组的数量
                 ++res;
             }
         }
+
         return res;
     }
 
     private boolean check(String a, String b) {
-        int cnt = 0;
+        int cnt = 0; // 记录不同字符的数量
         int n = a.length();
+
         for (int i = 0; i < n; ++i) {
             if (a.charAt(i) != b.charAt(i)) {
-                ++cnt;
+                ++cnt; // 遍历两个字符串的对应位置，如果字符不同则计数增加
             }
         }
-        return cnt <= 2;
+
+        return cnt <= 2; // 如果不同字符的数量小于等于2，则认为两个字符串相似
     }
 
     private int find(int x) {
-        if (p[x] != x) {
-            p[x] = find(p[x]);
+        if (p[x] != x) { // 当前节点的父节点不是自身，说明还没找到根节点
+            p[x] = find(p[x]); // 递归查找根节点，并将当前节点的父节点更新为根节点
         }
-        return p[x];
+
+        return p[x]; // 返回根节点的索引
+    }
+}
+```
+
+DFS
+
+```java
+class Solution {
+    public int numSimilarGroups(String[] strs) {
+        Set<String> visited = new HashSet<>(); // 用于存储已访问的字符串集合
+        int count = 0; // 相似字符串组的数量
+
+        for (String str : strs) {
+            if (!visited.contains(str)) {
+                dfs(str, visited); // 深度优先搜索
+                count++; // 找到一个新的相似字符串组
+            }
+        }
+
+        return count;
+    }
+
+    private void dfs(String str, Set<String> visited) {
+        visited.add(str);
+
+        for (String nextStr : visited) {
+            if (!visited.contains(nextStr) && isSimilar(str, nextStr)) {
+                dfs(nextStr, visited); // 递归调用DFS
+            }
+        }
+    }
+
+    private boolean isSimilar(String s1, String s2) {
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+
+        int diffCount = 0;
+        for (int i = 0; i < s1.length(); i++) {
+            if (s1.charAt(i) != s2.charAt(i)) {
+                diffCount++;
+                if (diffCount > 2) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }
 ```
@@ -5593,12 +5809,6 @@ class LRUCache {
     }
 }
 
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache obj = new LRUCache(capacity);
- * int param_1 = obj.get(key);
- * obj.put(key,value);
- */
 ```
 
 继承 `LinkedHashMap` 快速实现
@@ -5674,13 +5884,18 @@ class LRUCache extends LinkedHashMap<Integer, Integer> {
 ```java
 class Solution {
     public int minCost(int[][] costs) {
-        int r = 0, g = 0, b = 0;
-        for (int[] cost : costs) {
-            int _r = r, _g = g, _b = b;
-            r = Math.min(_g, _b) + cost[0];
-            g = Math.min(_r, _b) + cost[1];
-            b = Math.min(_r, _g) + cost[2];
+        int r = 0, g = 0, b = 0; // 初始化红色、绿色和蓝色的累计最小花费为0
+
+        for (int[] cost : costs) { // 遍历每个房子的颜色花费数组
+            int r1 = r, g1 = g, b1 = b; // 保存前一个房子的红色、绿色和蓝色累计最小花费
+
+            // 计算当前房子粉刷成红色、绿色和蓝色的最小花费
+            r = Math.min(g1, b1) + cost[0]; // 当前房子粉刷成红色的最小花费为前一个房子粉刷成绿色或蓝色的最小花费加上当前房子粉刷成红色的花费
+            g = Math.min(r1, b1) + cost[1]; // 当前房子粉刷成绿色的最小花费为前一个房子粉刷成红色或蓝色的最小花费加上当前房子粉刷成绿色的花费
+            b = Math.min(r1, g1) + cost[2]; // 当前房子粉刷成蓝色的最小花费为前一个房子粉刷成红色或绿色的最小花费加上当前房子粉刷成蓝色的花费
         }
+
+        // 返回红色、绿色和蓝色的累计最小花费中的最小值
         return Math.min(r, Math.min(g, b));
     }
 }
@@ -5741,72 +5956,73 @@ words[2] = "bell" ，s 开始于 indices[2] = 5 到下一个 '#' 结束的子字
 
 ```java
 class Trie {
-    Trie[] children = new Trie[26];
+    Trie[] children = new Trie[26]; // 子节点数组，用来存储当前节点的所有子节点
 }
 
 class Solution {
     public int minimumLengthEncoding(String[] words) {
-        Trie root = new Trie();
-        for (String w : words) {
-            Trie cur = root;
-            for (int i = w.length() - 1; i >= 0; i--) {
-                int idx = w.charAt(i) - 'a';
-                if (cur.children[idx] == null) {
-                    cur.children[idx] = new Trie();
+        Trie root = new Trie(); // 创建字典树的根节点
+        for (String w : words) { // 遍历单词数组
+            Trie cur = root; // 当前节点初始化为根节点
+            for (int i = w.length() - 1; i >= 0; i--) { // 从单词的最后一个字符开始向前遍历
+                int idx = w.charAt(i) - 'a'; // 计算当前字符在子节点数组中的索引
+                if (cur.children[idx] == null) { // 如果当前节点的子节点数组中对应位置为空
+                    cur.children[idx] = new Trie(); // 创建一个新的节点并赋值给该位置
                 }
-                cur = cur.children[idx];
+                cur = cur.children[idx]; // 将当前节点更新为当前字符对应的子节点
             }
         }
-        return dfs(root, 1);
+        return dfs(root, 1); // 从根节点开始进行深度优先搜索，计算编码长度
     }
 
     private int dfs(Trie cur, int l) {
-        boolean isLeaf = true;
-        int ans = 0;
-        for (int i = 0; i < 26; i++) {
+        boolean isLeaf = true; // 标记当前节点是否为叶子节点
+        int ans = 0; // 编码长度的累计值
+        for (int i = 0; i < 26; i++) { // 遍历当前节点的所有子节点
             if (cur.children[i] != null) {
-                isLeaf = false;
-                ans += dfs(cur.children[i], l + 1);
+                isLeaf = false; // 存在子节点，当前节点不是叶子节点
+                ans += dfs(cur.children[i], l + 1); // 递归调用深度优先搜索，并将编码长度累加到结果中
             }
         }
-        if (isLeaf) {
-            ans += l;
+        if (isLeaf) { // 如果当前节点是叶子节点
+            ans += l; // 将当前节点的深度（编码前缀的长度）累加到结果中
         }
-        return ans;
+        return ans; // 返回最终的编码长度
     }
 }
 ```
 
 ```java
 class Trie {
-    Trie[] children = new Trie[26];
+    Trie[] children = new Trie[26]; // 子节点数组，用来存储当前节点的所有子节点
 
     int insert(String w) {
-        Trie node = this;
-        boolean pref = true;
-        for (int i = w.length() - 1; i >= 0; --i) {
-            int idx = w.charAt(i) - 'a';
-            if (node.children[idx] == null) {
-                pref = false;
-                node.children[idx] = new Trie();
+        Trie node = this; // 当前节点初始化为当前Trie对象
+        boolean pref = true; // 标记是否存在更长的单词作为当前单词的前缀
+        for (int i = w.length() - 1; i >= 0; --i) { // 从单词的最后一个字符开始向前遍历
+            int idx = w.charAt(i) - 'a'; // 计算当前字符在子节点数组中的索引
+            if (node.children[idx] == null) { // 如果当前节点的子节点数组中对应位置为空
+                pref = false; // 标记不存在更长的单词作为当前单词的前缀
+                node.children[idx] = new Trie(); // 创建一个新的节点并赋值给该位置
             }
-            node = node.children[idx];
+            node = node.children[idx]; // 将当前节点更新为当前字符对应的子节点
         }
-        return pref ? 0 : w.length() + 1;
+        return pref ? 0 : w.length() + 1; // 返回是否存在更长的单词作为当前单词的前缀，若存在返回0，否则返回当前单词长度+1
     }
 }
 
 class Solution {
     public int minimumLengthEncoding(String[] words) {
-        Arrays.sort(words, (a, b) -> b.length() - a.length());
-        int ans = 0;
-        Trie trie = new Trie();
-        for (String w : words) {
-            ans += trie.insert(w);
+        Arrays.sort(words, (a, b) -> b.length() - a.length()); // 根据单词长度降序排序数组
+        int ans = 0; // 编码长度的累计值
+        Trie trie = new Trie(); // 创建字典树
+        for (String w : words) { // 遍历单词数组
+            ans += trie.insert(w); // 将单词插入字典树并累加编码长度到结果中
         }
-        return ans;
+        return ans; // 返回最终的编码长度
     }
 }
+
 ```
 
 # [ 062. 实现前缀树](https://leetcode.cn/problems/QC3q1f)
@@ -5884,47 +6100,63 @@ trie.search("app");     // 返回 True
 
 ### **Java**
 
+前缀树示例：
+
+假设插入的单词为apple、app、banana,那么树形图的样式为：
+
+```text
+      root
+      /  \
+     a    b
+   / | \   \
+  p  p  l   a
+ /       \   \
+p         e   n
+            / \
+           p   e
+```
+
 ```java
 class Trie {
-    private Trie[] children;
-    private boolean isEnd;
+    private Trie[] children; // 子节点数组，用来存储当前节点的所有子节点
+    private boolean isEnd; // 标记当前节点是否为一个单词的结束节点
 
     public Trie() {
-        children = new Trie[26];
+        children = new Trie[26]; // 初始化子节点数组，每个位置对应一个字符
     }
 
     public void insert(String word) {
-        Trie node = this;
-        for (char c : word.toCharArray()) {
-            int idx = c - 'a';
-            if (node.children[idx] == null) {
-                node.children[idx] = new Trie();
+        Trie node = this; // 当前节点初始化为当前Trie对象
+        for (char c : word.toCharArray()) { // 遍历单词中的每个字符
+            int idx = c - 'a'; // 计算当前字符在子节点数组中的索引
+            if (node.children[idx] == null) { // 如果当前节点的子节点数组中对应位置为空
+                node.children[idx] = new Trie(); // 创建一个新的节点并赋值给该位置
             }
-            node = node.children[idx];
+            node = node.children[idx]; // 将当前节点更新为当前字符对应的子节点
         }
-        node.isEnd = true;
+        node.isEnd = true; // 将当前节点标记为一个单词的结束节点
     }
 
     public boolean search(String word) {
-        Trie node = searchPrefix(word);
-        return node != null && node.isEnd;
+        Trie node = searchPrefix(word); // 查找目标单词的前缀节点
+        return node != null && node.isEnd; // 判断前缀节点是否存在且为一个单词的结束节点
     }
 
     public boolean startsWith(String prefix) {
-        Trie node = searchPrefix(prefix);
-        return node != null;
+        Trie node = searchPrefix(prefix); // 查找目标前缀的前缀节点
+        return node != null; // 判断前缀节点是否存在
     }
 
     private Trie searchPrefix(String s) {
-        Trie node = this;
-        for (char c : s.toCharArray()) {
-            int idx = c - 'a';
-            if (node.children[idx] == null) {
-                return null;
+        Trie node = this; // 当前节点初始化为当前Trie对象
+        for (char c : s.toCharArray()) { // 遍历目标字符串中的每个字符
+            int idx = c - 'a'; // 计算当前字符在子节点数组中的索引
+            if (node.children[idx] == null) { // 如果当前节点的子节点数组中对应位置为空
+                return null; // 返回空，表示前缀节点不存在
             }
-            node = node.children[idx];
+            node = node.children[idx]; // 将当前节点更新为当前字符对应的子节点
         }
-        return node;
+        return node; // 返回最终的前缀节点
     }
 }
 ```
@@ -6020,6 +6252,51 @@ class Solution {
 
         memo.put(i * 100 + j, ret);
         return ret;
+    }
+}
+```
+
+动态规划
+
+定义一个二维数组dp，其中dp[i][j]表示s1的前i个字符和s2的前j个字符能否交织组成s3的前i+j个字符。
+
+可以得出以下状态转移方程：
+
+当i = 0且j > 0时，dp[0][j]为true，表示s1为空字符串，s3与s2交织组成。
+
+当i > 0且j = 0时，dp[i][0]为true，表示s2为空字符串，s3与s1交织组成。
+
+当i > 0且j > 0时，如果当前s1的第i个字符等于s3的第i+j个字符，并且dp[i-1][j]
+为true，表示s1的前i-1个字符与s2的前j个字符能够交织组成s3的前i+j-1个字符；或者如果s2的第j个字符等于s3的第i+j个字符，并且dp[i][j-1]
+为true，表示s1的前i个字符与s2的前j-1个字符能够交织组成s3的前i+j-1个字符；则dp[i][j]为true。
+
+最终，我们可以通过遍历s1和s2的所有前缀来计算dp数组。如果dp[s1.length()][s2.length()]为true，则说明s3能够由s1和s2交织组成，否则不能。
+
+```java
+public class Solution {
+    public boolean isInterleave(String s1, String s2, String s3) {
+        int m = s1.length();
+        int n = s2.length();
+
+        if (m + n != s3.length()) { // 长度不匹配，直接返回 false
+            return false;
+        }
+
+        boolean[][] dp = new boolean[m + 1][n + 1];
+        dp[0][0] = true;
+
+        for (int i = 0; i <= m; i++) {
+            for (int j = 0; j <= n; j++) {
+                if (i > 0 && s1.charAt(i - 1) == s3.charAt(i + j - 1) && dp[i - 1][j]) {
+                    dp[i][j] = true;
+                }
+                if (j > 0 && s2.charAt(j - 1) == s3.charAt(i + j - 1) && dp[i][j - 1]) {
+                    dp[i][j] = true;
+                }
+            }
+        }
+
+        return dp[m][n];
     }
 }
 ```
@@ -6233,22 +6510,68 @@ public class Solution {
 
 动态规划。自底向上。
 
-空间优化：
-
 ### **Java**
 
 ```java
 class Solution {
-
     public int minimumTotal(List<List<Integer>> triangle) {
         int n = triangle.size();
-        int[] dp = new int[n + 1];
-        for (int i = n - 1; i >= 0; --i) {
-            for (int j = 0; j <= i; ++j) {
+        int[] dp = new int[n + 1]; // 创建dp数组，长度为n+1
+        for (int i = n - 1; i >= 0; --i) { // 从倒数第二行开始向上遍历
+            for (int j = 0; j <= i; ++j) { // 遍历当前行的每个元素
                 dp[j] = Math.min(dp[j], dp[j + 1]) + triangle.get(i).get(j);
+                // 当前位置的最小路径和等于下一行相邻两个位置的较小值加上当前位置的值
             }
         }
-        return dp[0];
+        return dp[0]; // 返回最终结果，即顶部到底部的最小路径和
+    }
+}
+```
+
+从上到下
+
+定义一个二维数组dp，其中dp[i][j]表示从三角形顶部到达位置(i, j)的最小路径和。
+
+状态转移方程：
+
+当j = 0时，dp[i][j] = dp[i-1][j] + triangle[i][j]，表示只能从上一行的第一个元素移动到当前位置。
+
+当j = i时，dp[i][j] = dp[i-1][j-1] + triangle[i][j]，表示只能从上一行的最后一个元素移动到当前位置。
+
+当0 < j < i时，dp[i][j] = min(dp[i-1][j-1], dp[i-1][j]) + triangle[i][j]，表示可以从上一行的前一个元素或者当前行的前一个元素移动到当前位置，取两者中较小的路径和。
+
+最终，我们需要遍历每一行的元素，并计算对应的最小路径和。最后一行的最小路径和即为所求的结果。
+
+```java
+public class Solution {
+    public int minimumTotal(List<List<Integer>> triangle) {
+        int n = triangle.size();
+
+        // 创建dp数组
+        int[][] dp = new int[n][n];
+        dp[0][0] = triangle.get(0).get(0);
+
+        // 计算dp数组
+        for (int i = 1; i < n; i++) {
+            List<Integer> row = triangle.get(i);
+            for (int j = 0; j <= i; j++) {
+                if (j == 0) {
+                    dp[i][j] = dp[i - 1][j] + row.get(j);
+                } else if (j == i) {
+                    dp[i][j] = dp[i - 1][j - 1] + row.get(j);
+                } else {
+                    dp[i][j] = Math.min(dp[i - 1][j - 1], dp[i - 1][j]) + row.get(j);
+                }
+            }
+        }
+
+        // 找出最小路径和
+        int minPath = Integer.MAX_VALUE;
+        for (int j = 0; j < n; j++) {
+            minPath = Math.min(minPath, dp[n - 1][j]);
+        }
+
+        return minPath;
     }
 }
 ```
@@ -6453,35 +6776,41 @@ class Solution {
 
 ```java
 class Solution {
-
     public int[][] updateMatrix(int[][] mat) {
+        // 获取矩阵的行数和列数
         int m = mat.length, n = mat[0].length;
+        // 创建结果矩阵，初始值为-1
         int[][] ans = new int[m][n];
         for (int i = 0; i < m; ++i) {
-            Arrays.fill(ans[i], -1);
+            Arrays.fill(ans[i], -1);  // 使用Arrays类的fill方法将结果矩阵每个元素都设置为-1
         }
+        // 创建双端队列用于广度优先搜索遍历
         Deque<int[]> q = new LinkedList<>();
+        // 遍历原始矩阵，找到值为0的格子，并将对应位置在结果矩阵中设置为0，并加入队列
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
                 if (mat[i][j] == 0) {
-                    ans[i][j] = 0;
-                    q.offer(new int[]{i, j});
+                    ans[i][j] = 0;  // 设置结果矩阵中对应位置为0
+                    q.offer(new int[]{i, j});  // 将当前位置加入队列
                 }
             }
         }
+        // 定义方向数组用于遍历邻居格子
         int[] dirs = new int[]{-1, 0, 1, 0, -1};
+        // 广度优先搜索遍历队列
         while (!q.isEmpty()) {
-            int[] t = q.poll();
+            int[] t = q.poll();  // 取出队列头部的元素
             for (int i = 0; i < 4; ++i) {
-                int x = t[0] + dirs[i];
-                int y = t[1] + dirs[i + 1];
+                int x = t[0] + dirs[i];  // 计算邻居格子的行坐标
+                int y = t[1] + dirs[i + 1];  // 计算邻居格子的列坐标
+                // 如果邻居格子的位置合法且在结果矩阵中对应位置为-1（表示未被更新过），则更新距离，并将该位置加入队列
                 if (x >= 0 && x < m && y >= 0 && y < n && ans[x][y] == -1) {
-                    ans[x][y] = ans[t[0]][t[1]] + 1;
-                    q.offer(new int[]{x, y});
+                    ans[x][y] = ans[t[0]][t[1]] + 1;  // 更新距离
+                    q.offer(new int[]{x, y});  // 将邻居格子的位置加入队列
                 }
             }
         }
-        return ans;
+        return ans;  // 返回结果矩阵
     }
 }
 ```
@@ -6681,46 +7010,40 @@ randomSet.getRandom(); // 由于 2 是集合中唯一的数字，getRandom 总�
 
 ```java
 class RandomizedSet {
-    private final Map<Integer, Integer> m;
-    private final List<Integer> a;
+    private final Map<Integer, Integer> m;  // 哈希表，存储元素值和索引的映射关系
+    private final List<Integer> a;  // 数组，存储元素值
 
     public RandomizedSet() {
-        this.m = new HashMap<>();
-        this.a = new ArrayList<>();
+        this.m = new HashMap<>();  // 初始化哈希表
+        this.a = new ArrayList<>();  // 初始化数组
     }
 
-    /**
-     * Inserts a value to the set. Returns true if the set did not already contain the specified
-     * element.
-     */
     public boolean insert(int val) {
         if (this.m.containsKey(val)) {
-            return false;
+            return false;  // 元素已存在，返回 false
         }
-        this.m.put(val, this.a.size());
-        this.a.add(val);
+        this.m.put(val, this.a.size());  // 将元素值和其在数组中的索引存入哈希表
+        this.a.add(val);  // 将元素值添加到数组末尾
         return true;
     }
 
-    /** Removes a value from the set. Returns true if the set contained the specified element. */
     public boolean remove(int val) {
         if (this.m.containsKey(val)) {
-            int idx = this.m.get(val), last = this.a.size() - 1;
-            Collections.swap(this.a, idx, last);
-            this.m.put(this.a.get(idx), idx);
-            this.a.remove(last);
-            this.m.remove(val);
+            int idx = this.m.get(val);  // 获取元素在数组中的索引
+            int last = this.a.size() - 1;  // 数组中最后一个元素的索引
+            Collections.swap(this.a, idx, last);  // 将要删除的元素与最后一个元素交换位置
+            this.m.put(this.a.get(idx), idx);  // 更新哈希表中交换后元素的索引
+            this.a.remove(last);  // 删除数组中的最后一个元素
+            this.m.remove(val);  // 从哈希表中删除该元素
             return true;
         }
-        return false;
+        return false;  // 元素不存在，返回 false
     }
 
-    /** Get a random element from the set. */
     public int getRandom() {
-        return this.a.get(ThreadLocalRandom.current().nextInt(this.a.size()));
+        return this.a.get(ThreadLocalRandom.current().nextInt(this.a.size()));  // 随机获取数组中的一个元素
     }
 }
-
 ```
 
 1. 插入
@@ -6845,8 +7168,6 @@ class Solution {
 </ul><p><meta charset="UTF-8" />注意：本题与主站 84 题相同： <a href="https://leetcode.cn/problems/largest-rectangle-in-histogram/">https://leetcode.cn/problems/largest-rectangle-in-histogram/</a></p>
 
 ## 解法
-
-`
 
 ### **Java**
 
