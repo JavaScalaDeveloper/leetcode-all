@@ -7282,7 +7282,6 @@ public class Solution {
 ```java
 class Solution {
     private int[] p;
-
     public boolean isBipartite(int[][] graph) {
         int n = graph.length;
         p = new int[n];
