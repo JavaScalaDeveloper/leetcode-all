@@ -2,8 +2,6 @@
 
 ## 题目描述
 
-
-
 <p>给定两个字符串 <code>s</code> 和&nbsp;<code>t</code> 。返回 <code>s</code> 中包含&nbsp;<code>t</code>&nbsp;的所有字符的最短子字符串。如果 <code>s</code> 中不存在符合条件的子字符串，则返回空字符串 <code>&quot;&quot;</code> 。</p>
 
 <p>如果 <code>s</code> 中存在多个符合条件的子字符串，返回任意一个。</p>
@@ -104,46 +102,47 @@ class Solution {
 
 ```java
 class Solution {
-    public String minWindow(String s, String t) {
-        int m = s.length(), n = t.length();
-        if (n > m) {
-            return "";
-        }
-        Map<Character, Integer> need = new HashMap<>();
-        Map<Character, Integer> window = new HashMap<>();
-        int needCount = 0, windowCount = 0;
+    public static String minWindow(String s, String t) {
+        // 统计 t 中每个字符的出现次数
+        Map<Character, Integer> targetCounts = new HashMap<>();
         for (char ch : t.toCharArray()) {
-            if (!need.containsKey(ch)) {
-                needCount++;
-            }
-            need.merge(ch, 1, Integer::sum);
+            targetCounts.put(ch, targetCounts.getOrDefault(ch, 0) + 1);
         }
-        int start = 0, minLen = Integer.MAX_VALUE;
-        int left = 0, right = 0;
-        while (right < m) {
-            char ch = s.charAt(right++);
-            if (need.containsKey(ch)) {
-                int val = window.getOrDefault(ch, 0) + 1;
-                if (val == need.get(ch)) {
-                    windowCount++;
-                }
-                window.put(ch, val);
+
+        int start = 0;
+        int minLen = Integer.MAX_VALUE;
+        int formed = 0;  // 已经形成的子串中包含的 t 中字符的数量
+        Map<Character, Integer> windowCounts = new HashMap<>();  // 当前窗口中每个字符的出现次数
+
+        int left = 0, right = 0;  // 滑动窗口的左右指针
+        while (right < s.length()) {
+            // 移动右指针，扩大窗口
+            char chRight = s.charAt(right);
+            windowCounts.put(chRight, windowCounts.getOrDefault(chRight, 0) + 1);
+            // 如果当前窗口中该字符的数量达到 t 中的要求，则更新 formed 的值
+            if (targetCounts.containsKey(chRight) && windowCounts.get(chRight).equals(targetCounts.get(chRight))) {
+                formed++;
             }
-            while (windowCount == needCount) {
-                if (right - left < minLen) {
-                    minLen = right - left;
+
+            // 尝试缩小窗口，更新最小子串长度和起始位置
+            while (left <= right && formed == targetCounts.size()) {
+                char chLeft = s.charAt(left);
+                // 更新最小子串长度和起始位置
+                if (right - left + 1 < minLen) {
+                    minLen = right - left + 1;
                     start = left;
                 }
-                ch = s.charAt(left++);
-                if (need.containsKey(ch)) {
-                    int val = window.get(ch);
-                    if (val == need.get(ch)) {
-                        windowCount--;
-                    }
-                    window.put(ch, val - 1);
+                // 移动左指针，缩小窗口
+                windowCounts.put(chLeft, windowCounts.get(chLeft) - 1);
+                if (targetCounts.containsKey(chLeft) && windowCounts.get(chLeft) < targetCounts.get(chLeft)) {
+                    formed--;
                 }
+                left++;
             }
+
+            right++;
         }
+
         return minLen == Integer.MAX_VALUE ? "" : s.substring(start, start + minLen);
     }
 }

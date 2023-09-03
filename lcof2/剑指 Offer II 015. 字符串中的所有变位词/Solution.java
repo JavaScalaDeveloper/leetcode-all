@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> ans = new ArrayList<>();

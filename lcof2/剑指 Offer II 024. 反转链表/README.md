@@ -63,14 +63,6 @@
 迭代版本：
 
 ```java
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode pre = null, p = head;
@@ -88,14 +80,6 @@ class Solution {
 递归版本：
 
 ```java
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
 class Solution {
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {

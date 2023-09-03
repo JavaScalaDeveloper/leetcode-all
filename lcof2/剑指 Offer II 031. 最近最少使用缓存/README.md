@@ -182,12 +182,6 @@ class LRUCache {
     }
 }
 
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache obj = new LRUCache(capacity);
- * int param_1 = obj.get(key);
- * obj.put(key,value);
- */
 ```
 
 继承 `LinkedHashMap` 快速实现
@@ -215,11 +209,4 @@ class LRUCache extends LinkedHashMap<Integer, Integer> {
         super.put(key, value);
     }
 }
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache obj = new LRUCache(capacity);
- * int param_1 = obj.get(key);
- * obj.put(key,value);
- */
 ```

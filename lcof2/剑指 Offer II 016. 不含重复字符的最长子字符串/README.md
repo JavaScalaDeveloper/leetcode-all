@@ -2,8 +2,6 @@
 
 ## 题目描述
 
-
-
 <p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的&nbsp;<strong>最长连续子字符串&nbsp;</strong>的长度。</p>
 
 <p>&nbsp;</p>
@@ -74,6 +72,30 @@ class Solution {
             ans = Math.max(ans, right - left);
         }
         return ans;
+    }
+}
+```
+
+滑动窗口
+
+```java
+class Solution {
+    public static int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        int maxLength = 0;
+        Set<Character> set = new HashSet<>();
+        int left = 0, right = 0;
+        while (right < n) {
+            if (!set.contains(s.charAt(right))) {
+                set.add(s.charAt(right));
+                right++;
+                maxLength = Math.max(maxLength, right - left);
+            } else {
+                set.remove(s.charAt(left));
+                left++;
+            }
+        }
+        return maxLength;
     }
 }
 ```

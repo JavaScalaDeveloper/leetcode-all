@@ -2,8 +2,6 @@
 
 ## 题目描述
 
-
-
 <p>给定两个字符串&nbsp;<code>s1</code>&nbsp;和&nbsp;<code>s2</code>，写一个函数来判断 <code>s2</code> 是否包含 <code>s1</code><strong>&nbsp;</strong>的某个变位词。</p>
 
 <p>换句话说，第一个字符串的排列之一是第二个字符串的 <strong>子串</strong> 。</p>
@@ -47,30 +45,25 @@
 ```java
 class Solution {
     public boolean checkInclusion(String s1, String s2) {
-        int n1 = s1.length(), n2 = s2.length();
-        if (n1 > n2) {
-            return false;
+        int n = s1.length(), m = s2.length();
+        if (n > m) return false;
+        int[] freq1 = new int[26];
+        int[] freq2 = new int[26];
+
+        for (int i = 0; i < n; i++) {
+            freq1[s1.charAt(i) - 'a']++;
+            freq2[s2.charAt(i) - 'a']++;
         }
-        int[] window = new int[26];
-        for (int i = 0; i < n1; i++) {
-            window[s1.charAt(i) - 'a']++;
-            window[s2.charAt(i) - 'a']--;
-        }
-        if (check(window)) {
-            return true;
-        }
-        for (int i = n1; i < n2; i++) {
-            window[s2.charAt(i) - 'a']--;
-            window[s2.charAt(i - n1) - 'a']++;
-            if (check(window)) {
+
+        for (int i = 0; i < m - n; i++) {
+            if (Arrays.equals(freq1, freq2)) {
                 return true;
             }
+            freq2[s2.charAt(i + n) - 'a']++;
+            freq2[s2.charAt(i) - 'a']--;
         }
-        return false;
-    }
 
-    private boolean check(int[] window) {
-        return Arrays.stream(window).allMatch(cnt -> cnt == 0);
+        return Arrays.equals(freq1, freq2);
     }
 }
 ```

@@ -4,14 +4,12 @@
 
 <p>给定两个整数 <code>a</code> 和 <code>b</code> ，求它们的除法的商 <code>a/b</code> ，要求不得使用乘号 <code>'*'</code>、除号 <code>'/'</code> 以及求余符号 <code>'%'</code> 。</p>
 
-
 <p><strong>注意：</strong></p>
 
 <ul>
 	<li>整数除法的结果应当截去（<code>truncate</code>）其小数部分，例如：<code>truncate(8.345) = 8</code> 以及 <code>truncate(-2.7335) = -2</code></li>
 	<li>假设我们的环境只能存储 32 位有符号整数，其数值范围是 <code>[−2<sup>31</sup>, 2<sup>31</sup>−1]</code>。本题中，如果除法结果溢出，则返回 <code>2<sup>31 </sup>− 1</code></li>
 </ul>
-
 
 <p><strong>示例 1：</strong></p>
 
@@ -40,7 +38,6 @@
 <strong>输入：</strong>a = 1, b = 1
 <strong>输出：</strong><span style="white-space: pre-wrap;">1</span></pre>
 
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -48,23 +45,9 @@
 	<li><code>b != 0</code></li>
 </ul>
 
-
 <p>注意：本题与主站 29 题相同：<a href="https://leetcode.cn/problems/divide-two-integers/">https://leetcode.cn/problems/divide-two-integers/</a></p>
 
 ## 解法
-
-通过下面这段伪代码，不难理解除法本质上就是减法，但是一次循环只能做一次减法，效率太低会导致超时，所以再加上快速幂的思想优化即可
-
-```py
-sign = -1 if a * b < 0 else 1
-a = abs(a)
-b = abs(b)
-cnt = 0
-while a >= b:
-    a -= b
-    cnt += 1
-return sign * cnt
-```
 
 ### **Java**
 
@@ -195,7 +178,7 @@ class Solution {
     public String addBinary(String a, String b) {
         StringBuilder result = new StringBuilder(); // 存储最终结果
         int carry = 0; // 进位
-        
+
         // 将两个字符串补齐到相同的长度
         while (a.length() < b.length()) {
             a = "0" + a;
@@ -203,19 +186,19 @@ class Solution {
         while (a.length() > b.length()) {
             b = "0" + b;
         }
-        
+
         // 从右往左逐位相加
         for (int i = a.length() - 1; i >= 0; i--) {
             int sum = Character.getNumericValue(a.charAt(i)) + Character.getNumericValue(b.charAt(i)) + carry;
             result.insert(0, sum % 2); // 将当前位的值插入到最终结果的左边
             carry = sum / 2; // 更新进位
         }
-        
+
         // 如果最终进位不为 0，将进位插入到最终结果的左边
         if (carry != 0) {
             result.insert(0, carry);
         }
-        
+
         return result.toString();
     }
 }
@@ -320,6 +303,29 @@ public class Solution {
 }
 ```
 
+暴力法
+
+```java
+public class CountBits {
+    public static int[] countBits(int n) {
+        int[] result = new int[n + 1]; // 创建结果数组，长度为 n+1
+        for (int i = 0; i <= n; i++) { // 遍历从 0 到 n 的每个数字
+            result[i] = countOnes(i); // 调用 countOnes 方法计算当前数字的二进制表示中 1 的个数，并存入结果数组
+        }
+        return result;
+    }
+
+    private static int countOnes(int num) {
+        int count = 0;
+        while (num > 0) { // 当数字大于 0 时进行循环
+            count += num & 1; // 判断当前位是否为 1，如果是则计数器加一
+            num >>= 1; // 将数字右移一位，继续判断下一位
+        }
+        return count;
+    }
+}
+```
+
 # [ 004. 只出现一次的数字](https://leetcode.cn/problems/WGki4K)
 
 ## 题目描述
@@ -406,7 +412,6 @@ public class Solution {
 
 <p>给定一个字符串数组 <code>words</code>，请计算当两个字符串 <code>words[i]</code> 和 <code>words[j]</code> 不包含相同字符时，它们长度的乘积的最大值。假设字符串中只包含英语的小写字母。如果没有不包含相同字符的一对字符串，返回 0。</p>
 
-
 <p><strong>示例 1:</strong></p>
 
 <pre>
@@ -429,7 +434,6 @@ public class Solution {
 <strong>解释: </strong>不存在这样的两个单词。</code>
 </pre>
 
-
 <p><strong>提示：</strong></p>
 
 <ul>
@@ -437,7 +441,6 @@ public class Solution {
 	<li><code>1 <= words[i].length <= 1000</code></li>
 	<li><code>words[i]</code> 仅包含小写字母</li>
 </ul>
-
 
 <p><meta charset="UTF-8" />注意：本题与主站 318 题相同：<a href="https://leetcode.cn/problems/maximum-product-of-word-lengths/">https://leetcode.cn/problems/maximum-product-of-word-lengths/</a></p>
 
@@ -452,16 +455,16 @@ class Solution {
     public int maxProduct(String[] words) {
         int n = words.length;
         int[] masks = new int[n]; // 存储每个字符串的位掩码
-        
+
         // 构建位掩码数组
         for (int i = 0; i < n; i++) {
             for (char ch : words[i].toCharArray()) {
                 masks[i] |= (1 << (ch - 'a')); // 将当前字符对应的二进制位置为1
             }
         }
-        
+
         int maxProduct = 0; // 最大乘积
-        
+
         // 计算最大乘积
         for (int i = 0; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
@@ -471,8 +474,49 @@ class Solution {
                 }
             }
         }
-        
+
         return maxProduct;
+    }
+}
+```
+
+hash表
+
+```java
+public class Solution {
+    public static int maxProduct(String[] words) {
+        int n = words.length;
+        int maxProduct = 0;
+
+        // 构造每个字符串对应的字符集合
+        Set<Character>[] charSets = new HashSet[n];
+        for (int i = 0; i < n; i++) {
+            charSets[i] = new HashSet<>();
+            for (char c : words[i].toCharArray()) {
+                charSets[i].add(c);
+            }
+        }
+
+        // 遍历所有组合，计算乘积的最大值
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (!hasCommonCharacters(charSets[i], charSets[j])) { // 判断两个字符串的字符集合是否不重叠
+                    int product = words[i].length() * words[j].length();
+                    maxProduct = Math.max(maxProduct, product);
+                }
+            }
+        }
+
+        return maxProduct;
+    }
+
+    private static boolean hasCommonCharacters(Set<Character> set1, Set<Character> set2) {
+        for (char c : set1) {
+            if (set2.contains(c)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
 ```
@@ -589,34 +633,37 @@ class Solution {
 ```java
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-        int n = nums.length;
-        List<List<Integer>> ans = new ArrayList<>();
-        Arrays.sort(nums);
-        for (int i = 0; i < n - 2; i++) {
+        int n = nums.length; // 数组长度
+        List<List<Integer>> ans = new ArrayList<>(); // 存储结果的列表
+        Arrays.sort(nums); // 对数组进行排序，方便后续处理
+        for (int i = 0; i < n - 2; i++) { // 遍历数组，寻找三个数之和为0的组合
             if (i > 0 && nums[i] == nums[i - 1]) {
+                // 如果当前数字与前一个数字相等，则跳过，避免重复计算
                 continue;
             }
-            int left = i + 1, right = n - 1;
-            while (left < right) {
-                int cur = nums[i] + nums[left] + nums[right];
-                if (cur < 0) {
+            int left = i + 1, right = n - 1; // 设置左右指针
+            while (left < right) { // 左右指针未相遇时循环
+                int cur = nums[i] + nums[left] + nums[right]; // 当前三个数之和
+                if (cur < 0) { // 如果小于0，左指针右移
                     left++;
-                } else if (cur > 0) {
+                } else if (cur > 0) { // 如果大于0，右指针左移
                     right--;
-                } else {
-                    ans.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                } else { // 等于0，找到一组解
+                    ans.add(Arrays.asList(nums[i], nums[left], nums[right])); // 添加解到结果列表
                     while (left < right && nums[left] == nums[left + 1]) {
+                        // 跳过左指针指向的重复元素
                         left++;
                     }
                     while (left < right && nums[right] == nums[right - 1]) {
+                        // 跳过右指针指向的重复元素
                         right--;
                     }
-                    left++;
-                    right--;
+                    left++; // 左指针右移
+                    right--; // 右指针左移
                 }
             }
         }
-        return ans;
+        return ans; // 返回结果列表
     }
 }
 ```
@@ -628,7 +675,6 @@ class Solution {
 <p>给定一个含有 <code>n</code><strong> </strong>个正整数的数组和一个正整数 <code>target</code><strong> 。</strong></p>
 
 <p>找出该数组中满足其和<strong> </strong><code>≥ target</code><strong> </strong>的长度最小的 <strong>连续子数组</strong> <code>[nums<sub>l</sub>, nums<sub>l+1</sub>, ..., nums<sub>r-1</sub>, nums<sub>r</sub>]</code> ，并返回其长度<strong>。</strong>如果不存在符合条件的子数组，返回 <code>0</code> 。</p>
-
 
 <p><strong>示例 1：</strong></p>
 
@@ -652,7 +698,6 @@ class Solution {
 <strong>输出：</strong>0
 </pre>
 
-
 <p>提示：</p>
 
 <ul>
@@ -661,13 +706,11 @@ class Solution {
 	<li><code>1 <= nums[i] <= 10<sup>5</sup></code></li>
 </ul>
 
-
 <p>进阶：</p>
 
 <ul>
 	<li>如果你已经实现<em> </em><code>O(n)</code> 时间复杂度的解法, 请尝试设计一个 <code>O(n log(n))</code> 时间复杂度的解法。</li>
 </ul>
-
 
 <p><meta charset="UTF-8" />注意：本题与主站 209 题相同：<a href="https://leetcode.cn/problems/minimum-size-subarray-sum/">https://leetcode.cn/problems/minimum-size-subarray-sum/</a></p>
 
@@ -769,18 +812,19 @@ public class Solution {
 ```java
 class Solution {
     public int numSubarrayProductLessThanK(int[] nums, int k) {
-        int n = nums.length;
-        int ans = 0;
-        int sum = 1;
-        int left = 0, right = 0;
-        while (right < n) {
-            sum *= nums[right++];
+        int n = nums.length; // 数组长度
+        int ans = 0; // 结果计数器
+        int sum = 1; // 当前子数组的乘积
+        int left = 0, right = 0; // 左右指针
+        while (right < n) { // 右指针未到达数组末尾时循环
+            sum *= nums[right++]; // 更新当前子数组的乘积并将右指针右移
             while (sum >= k && left < right) {
-                sum /= nums[left++];
+                // 当当前子数组的乘积大于等于k且左指针小于右指针时循环
+                sum /= nums[left++]; // 更新当前子数组的乘积并将左指针右移
             }
-            ans += right - left;
+            ans += right - left; // 统计乘积小于k的子数组个数
         }
-        return ans;
+        return ans; // 返回结果
     }
 }
 ```
@@ -790,7 +834,6 @@ class Solution {
 ## 题目描述
 
 <p>给定一个正整数数组和一个整数 <code>k</code><strong> ，</strong>请找到该数组中和为 <code>k</code><strong> </strong>的连续子数组的个数。</p>
-
 
 <p><strong>示例 1 :</strong></p>
 
@@ -807,7 +850,6 @@ class Solution {
 <strong>输出:</strong> 2
 </pre>
 
-
 <p><strong>提示:</strong></p>
 
 <ul>
@@ -817,7 +859,6 @@ class Solution {
 	<p><code>-10<sup>7</sup> <= k <= 10<sup>7</sup></code></p>
 	</li>
 </ul>
-
 
 <p>注意：本题与主站 560 题相同： <a href="https://leetcode.cn/problems/subarray-sum-equals-k/">https://leetcode.cn/problems/subarray-sum-equals-k/</a></p>
 
@@ -848,6 +889,28 @@ class Solution {
             map.merge(sumVal, 1, Integer::sum);
         }
         return ans;
+    }
+}
+```
+
+前缀和
+
+```java
+public class Solution {
+    public static int subarraySum(int[] nums, int k) {
+        int count = 0;
+        int n = nums.length;
+
+        for (int start = 0; start < n; start++) {
+            int sum = 0;
+            for (int end = start; end < n; end++) {
+                sum += nums[end];
+                if (sum == k) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 }
 ```
@@ -1123,7 +1186,7 @@ class Solution {
         }
         int[] window = new int[26];
         //window=[0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-//        取前len1长度作为滑动窗口
+        //取前len1长度作为滑动窗口
         for (int i = 0; i < len1; i++) {
             window[s2.charAt(i) - 'a']++;
         }
@@ -1132,7 +1195,7 @@ class Solution {
             return true;
         }
         for (int i = len1; i < len2; i++) {
-//            s2的长度为len1的滑动窗口右移，所以要把前面添加到s2里的元素-1
+            //s2的长度为len1的滑动窗口右移，所以要把前面添加到s2里的元素-1
             window[s2.charAt(i - len1) - 'a']--;
             window[s2.charAt(i) - 'a']++;
             if (Arrays.equals(count, window)) {
@@ -1276,18 +1339,24 @@ class Solution {
 ```java
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        Map<Character, Integer> window = new HashMap<>();
-        int n = s.length(), ans = 0;
-        int left = 0, right = 0;
-        while (right < n) {
-            char ch = s.charAt(right++);
-            window.merge(ch, 1, Integer::sum);
-            while (window.get(ch) > 1) {
-                window.merge(s.charAt(left++), -1, Integer::sum);
+        Map<Character, Integer> window = new HashMap<>(); // 用于存储字符及其出现次数
+        int n = s.length(); // 字符串的长度
+        int ans = 0; // 最长连续子字符串的长度
+        int left = 0; // 滑动窗口的左边界
+        int right = 0; // 滑动窗口的右边界
+
+        while (right < n) { // 右指针未到达字符串末尾时
+            char ch = s.charAt(right++); // 获取当前字符并将右指针右移一位
+            window.merge(ch, 1, Integer::sum); // 将字符添加到窗口中，并更新出现次数
+
+            while (window.get(ch) > 1) { // 当前字符重复
+                window.merge(s.charAt(left++), -1, Integer::sum); // 移动左指针，删除窗口中最左边的字符，并更新出现次数
             }
-            ans = Math.max(ans, right - left);
+
+            ans = Math.max(ans, right - left); // 更新最长连续子字符串的长度
         }
-        return ans;
+
+        return ans; // 返回最长连续子字符串的长度
     }
 }
 ```
@@ -1821,22 +1890,6 @@ class Solution {
 
 ## 解法
 
-先利用快慢指针判断链表是否有环，没有环则直接返回 `null`。
-
-若链表有环，我们分析快慢相遇时走过的距离。
-
-对于慢指针（每次走 1 步），走过的距离为 `S=X+Y` ①；快指针（每次走 2 步）走过的距离为 `2S=X+Y+N(Y+Z)` ②。如下图所示，其中 `N`
-表示快指针与慢指针相遇时在环中所走过的圈数，而我们要求的环入口，也即是 `X` 的距离：
-
-![](./images/linked-list-cycle-ii.png)
-
-我们根据式子 ①②，得出 `X+Y=N(Y+Z)` => `X=(N-1)(Y+Z)+Z`。
-
-当 `N=1`(快指针在环中走了一圈与慢指针相遇) 时，`X=(1-1)(Y+Z)+Z`，即 `X=Z`。此时只要定义一个 `p` 指针指向头节点，然后慢指针与 `p` 开始同时走，当慢指针与 `p`
-相遇时，也就到达了环入口，直接返回 `p` 即可。
-
-当 `N>1`时，也是同样的，说明慢指针除了走 `Z` 步，还需要绕 `N-1` 圈才能与 `p` 相遇。
-
 ### **Java**
 
 ```java
@@ -1992,6 +2045,7 @@ public class Solution {
 </div>
 </div>
 
+
 <p><meta charset="UTF-8" />注意：本题与主站 206 题相同： <a href="https://leetcode.cn/problems/reverse-linked-list/">https://leetcode.cn/problems/reverse-linked-list/</a></p>
 
 ## 解法
@@ -2142,7 +2196,6 @@ public class Solution {
 
 <p>不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
 
-
 <p><strong>示例 1:</strong></p>
 
 <p><img alt="" src="https://gcore.jsdelivr.net/gh/doocs/leetcode@main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20026.%20%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8/images/1626420311-PkUiGI-image.png" style="width: 240px; " /></p>
@@ -2159,14 +2212,12 @@ public class Solution {
 <strong>输入: </strong>head = [1,2,3,4,5]
 <strong>输出: </strong>[1,5,2,4,3]</pre>
 
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li>链表的长度范围为 <code>[1, 5 * 10<sup>4</sup>]</code></li>
 	<li><code>1 <= node.val <= 1000</code></li>
 </ul>
-
 
 <p><meta charset="UTF-8" />注意：本题与主站 143 题相同：<a href="https://leetcode.cn/problems/reorder-list/">https://leetcode.cn/problems/reorder-list/</a> </p>
 
@@ -2340,7 +2391,6 @@ class Solution {
 
 <p>给定位于列表第一级的头节点，请扁平化列表，即将这样的多级双向链表展平成普通的双向链表，使所有结点出现在单级双链表中。</p>
 
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -2378,7 +2428,6 @@ class Solution {
 <strong>输出：</strong>[]
 </pre>
 
-
 <p><strong>如何表示测试用例中的多级链表？</strong></p>
 
 <p>以 <strong>示例 1</strong> 为例：</p>
@@ -2411,14 +2460,12 @@ class Solution {
 <pre>
 [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]</pre>
 
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li>节点数目不超过 <code>1000</code></li>
 	<li><code>1 <= Node.val <= 10^5</code></li>
 </ul>
-
 
 <p><meta charset="UTF-8" />注意：本题与主站 430 题相同： <a href="https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/">https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/</a></p>
 
@@ -2987,6 +3034,7 @@ public class Solution {
 
 遍历字符串，将每个字符串按照字符字典序排序后得到一个新的字符串，将相同的新字符串放在哈希表的同一个 key 对应 value 列表中。
 
+
 | key     | value                   |
 | ------- | ----------------------- |
 | `"aet"` | `["eat", "tea", "ate"]` |
@@ -3547,74 +3595,69 @@ public class Solution {
 
 ```java
 class Solution {
-    public int maximalRectangle(String[] matrix) {
-        if (matrix == null || matrix.length == 0) {
+    public int maximalRectangle(char[][] matrix) {
+        if (matrix.length == 0 || matrix[0].length == 0) {
             return 0;
         }
-        int n = matrix[0].length();
-        int[] heights = new int[n];
-        int ans = 0;
-        for (var row : matrix) {
-            for (int j = 0; j < n; ++j) {
-                if (row.charAt(j) == '1') {
-                    heights[j] += 1;
-                } else {
-                    heights[j] = 0;
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int[][] heights = new int[m][n];
+        // 计算每个元素往上的连续 1 的数量
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (matrix[i][j] == '1') {
+                    heights[i][j] = (i == 0 ? 1 : heights[i-1][j] + 1);
                 }
             }
-            ans = Math.max(ans, largestRectangleArea(heights));
         }
-        return ans;
-    }
-
-    private int largestRectangleArea(int[] heights) {
-        int res = 0, n = heights.length;
-        Deque<Integer> stk = new ArrayDeque<>();
-        int[] left = new int[n];
-        int[] right = new int[n];
-        Arrays.fill(right, n);
-        for (int i = 0; i < n; ++i) {
-            while (!stk.isEmpty() && heights[stk.peek()] >= heights[i]) {
-                right[stk.pop()] = i;
+        int maxArea = 0;
+        // 对于每一行，使用单调栈计算最大矩形面积
+        for (int i = 0; i < m; i++) {
+            Stack<Integer> stack = new Stack<>();
+            for (int j = 0; j <= n; j++) {
+                int height = (j == n ? 0 : heights[i][j]);
+                while (!stack.isEmpty() && height < heights[i][stack.peek()]) {
+                    int h = heights[i][stack.pop()];
+                    int w = (stack.isEmpty() ? j : j - stack.peek() - 1);
+                    maxArea = Math.max(maxArea, h * w);
+                }
+                stack.push(j);
             }
-            left[i] = stk.isEmpty() ? -1 : stk.peek();
-            stk.push(i);
         }
-        for (int i = 0; i < n; ++i) {
-            res = Math.max(res, heights[i] * (right[i] - left[i] - 1));
-        }
-        return res;
+        return maxArea;
     }
 }
 ```
+
 动态规划
 
 使用了三个辅助数组：left、right 和 height，分别记录每个柱子的左边界、右边界和高度。通过遍历矩阵的每一行，逐步更新这三个数组，然后根据计算出的每个柱子的面积来更新最大矩形的面积。
+
 ```java
 class Solution {
     public int maximalRectangle(char[][] matrix) {
         if (matrix == null || matrix.length == 0) {
             return 0;
         }
-        
+
         int m = matrix.length; // 矩阵的行数
         int n = matrix[0].length; // 矩阵的列数
-        
+
         int[] left = new int[n]; // 每个柱子的左边界
         int[] right = new int[n]; // 每个柱子的右边界
         int[] height = new int[n]; // 每个柱子的高度
-        
+
         int maxArea = 0; // 最大矩形的面积
-        
+
         Arrays.fill(right, n); // 初始化右边界为 n
-        
-        for (int i = 0; i < m; i++) {
+
+        for (char[] chars : matrix) {
             int curLeft = 0; // 当前行的左边界
             int curRight = n; // 当前行的右边界
-            
+
             // 更新 height 数组和 left 数组
             for (int j = 0; j < n; j++) {
-                if (matrix[i][j] == '1') {
+                if (chars[j] == '1') {
                     height[j]++;
                     left[j] = Math.max(left[j], curLeft);
                 } else {
@@ -3623,24 +3666,24 @@ class Solution {
                     curLeft = j + 1;
                 }
             }
-            
+
             // 更新 right 数组
             for (int j = n - 1; j >= 0; j--) {
-                if (matrix[i][j] == '1') {
+                if (chars[j] == '1') {
                     right[j] = Math.min(right[j], curRight);
                 } else {
                     right[j] = n;
                     curRight = j;
                 }
             }
-            
+
             // 计算每个柱子所能组成的最大矩形面积，并更新最大值
             for (int j = 0; j < n; j++) {
                 int area = (right[j] - left[j]) * height[j];
                 maxArea = Math.max(maxArea, area);
             }
         }
-        
+
         return maxArea;
     }
 }
@@ -3693,12 +3736,10 @@ movingAverage.next(5); // 返回 6.0 = (10 + 3 + 5) / 3
 
 ## 解法
 
-**方法一：循环数组**
-
-**方法二：队列**
-
 ### **Java**
+
 方法一：循环数组
+
 ```java
 class MovingAverage {
     private int[] arr;
@@ -3718,7 +3759,9 @@ class MovingAverage {
     }
 }
 ```
+
 方法二：队列
+
 ```java
 class MovingAverage {
     private Deque<Integer> q = new ArrayDeque<>();
@@ -3945,10 +3988,10 @@ class CBTInserter {
 <pre>
 <strong>输入: </strong>root = [1,null,2]
 <strong>输出: </strong>[1,2]
-<strong>解释:</strong>      
+<strong>解释:</strong>    
            1 
             \
-             2     
+             2   
 </pre>
 
 <p><strong>示例5：</strong></p>
@@ -4278,7 +4321,7 @@ public class Codec {
             sb.append(NULL + SEP);
             return;
         }
-        sb.append(root.val + SEP);
+        sb.append(root.val).append(SEP);
         preorder(root.left, sb);
         preorder(root.right, sb);
     }
@@ -4356,6 +4399,7 @@ public class Codec {
 </ul>
 </div>
 </div>
+
 
 <p><meta charset="UTF-8" />注意：本题与主站 129 题相同： <a href="https://leetcode.cn/problems/sum-root-to-leaf-numbers/">https://leetcode.cn/problems/sum-root-to-leaf-numbers/</a></p>
 
@@ -4464,6 +4508,38 @@ class Solution {
         ans += dfs(node.right, s);
         cnt.merge(s, -1, Integer::sum);
         return ans;
+    }
+}
+```
+解法二
+```java
+public class Solution {
+    public int pathSum(TreeNode root, int targetSum) {
+        if (root == null) {
+            return 0;
+        }
+        // 调用辅助函数开始递归求解
+        int count = countPath(root, targetSum);
+        // 继续向左右子树递归寻找路径
+        count += pathSum(root.left, targetSum);
+        count += pathSum(root.right, targetSum);
+        return count;
+    }
+
+    // 辅助函数，计算以当前节点为起点的路径数目
+    private int countPath(TreeNode node, int targetSum) {
+        if (node == null) {
+            return 0;
+        }
+        int count = 0;
+        // 如果当前节点的值等于目标和，则找到一条路径
+        if (node.val == targetSum) {
+            count++;
+        }
+        // 继续向左右子树递归寻找路径
+        count += countPath(node.left, targetSum - node.val);
+        count += countPath(node.right, targetSum - node.val);
+        return count;
     }
 }
 ```
@@ -4603,32 +4679,34 @@ class Solution {
     }
 }
 ```
+
 递归
+
 ```java
 class Solution {
     private TreeNode currNode; // 记录当前节点的指针
-    
+
     public TreeNode increasingBST(TreeNode root) {
         TreeNode dummyNode = new TreeNode(-1); // 创建一个虚拟节点作为新树的根节点
         currNode = dummyNode;
-        
+
         inorderTraversal(root); // 中序遍历原始二叉搜索树
-        
+
         return dummyNode.right; // 返回新树的根节点的右子节点
     }
-    
+
     private void inorderTraversal(TreeNode node) {
         if (node == null) {
             return;
         }
-        
+
         inorderTraversal(node.left); // 遍历左子树
-        
+
         // 将当前节点 node 连接到新树上
         node.left = null;
         currNode.right = node;
         currNode = node;
-        
+
         inorderTraversal(node.right); // 遍历右子树
     }
 }
@@ -4779,8 +4857,8 @@ Morris 遍历无需使用栈，时间复杂度 $O(n)$，空间复杂度为 $O(1)
 
 1. 若当前节点 root 的右子树为空，**将当前节点值添加至 s** 中，更新当前节点值为 s，并将当前节点更新为 `root.left`。
 2. 若当前节点 root 的右子树不为空，找到右子树的最左节点 next（也即是 root 节点在中序遍历下的后继节点）：
-    - 若后继节点 next 的左子树为空，将后继节点的左子树指向当前节点 root，并将当前节点更新为 `root.right`。
-    - 若后继节点 next 的左子树不为空，**将当前节点值添加 s** 中，更新当前节点值为 s，然后将后继节点左子树指向空（即解除 next 与 root 的指向关系），并将当前节点更新为 `root.left`。
+   - 若后继节点 next 的左子树为空，将后继节点的左子树指向当前节点 root，并将当前节点更新为 `root.right`。
+   - 若后继节点 next 的左子树不为空，**将当前节点值添加 s** 中，更新当前节点值为 s，然后将后继节点左子树指向空（即解除 next 与 root 的指向关系），并将当前节点更新为 `root.left`。
 3. 循环以上步骤，直至二叉树节点为空，遍历结束。
 4. 最后返回二叉搜索树根节点即可。
 
@@ -4862,6 +4940,7 @@ class Solution {
 </div>
 </div>
 
+
 <p>可以假设 <code>next()</code> 调用总是有效的，也就是说，当调用 <code>next()</code> 时，BST 的中序遍历中至少存在一个下一个数字。</p>
 
 <p><strong>示例：</strong></p>
@@ -4921,7 +5000,9 @@ true。
 是否为空，空则表示迭代结束。
 
 ### **Java**
+
 递归
+
 ```java
 
 class BSTIterator {
@@ -4949,7 +5030,9 @@ class BSTIterator {
     }
 }
 ```
+
 栈迭代
+
 ```java
 
 class BSTIterator {
@@ -5458,7 +5541,7 @@ trie.search("app");     // 返回 True
 前缀树每个节点包括两部分：
 
 1. 指向子节点的指针数组 $children$，对于本题而言，数组长度为 $26$，即小写英文字母的数量。$children[0]$ 对应小写字母 $a$，...，$children[25]$ 对应小写字母 $z$。
-1. 布尔字段 $isEnd$，表示该节点是否为字符串的结尾。
+2. 布尔字段 $isEnd$，表示该节点是否为字符串的结尾。
 
 ### 1. 插入字符串
 
@@ -5606,12 +5689,10 @@ class Trie {
 
 ## 解法
 
-**方法一：哈希表**
-
-**方法二：前缀树**
-
 ### **Java**
+
 哈希表
+
 ```java
 class Solution {
     public String replaceWords(List<String> dictionary, String sentence) {
@@ -5631,7 +5712,9 @@ class Solution {
     }
 }
 ```
+
 前缀树
+
 ```java
 class Trie {
     Trie[] children = new Trie[26]; // 存储子节点的数组，每个元素对应一个字母
@@ -5931,7 +6014,7 @@ inputs = [[], ["apple", 3], ["ap"], ["app", 2], ["ap"]]
 MapSum mapSum = new MapSum();
 mapSum.insert("apple", 3);  
 mapSum.sum("ap");           // return 3 (<u>ap</u>ple = 3)
-mapSum.insert("app", 2);    
+mapSum.insert("app", 2);  
 mapSum.sum("ap");           // return 5 (<u>ap</u>ple + <u>ap</u>p = 3 + 2 = 5)
 </pre>
 
@@ -6028,6 +6111,7 @@ class MapSum {
 </ul>
 </div>
 </div>
+
 
 <p><strong>进阶：</strong>你可以在 <code>O(n)</code> 的时间解决这个问题吗？</p>
 
@@ -6326,7 +6410,9 @@ class Solution {
 二分查找。
 
 ### **Java**
+
 二分
+
 ```java
 class Solution {
     public int singleNonDuplicate(int[] nums) {
@@ -6344,7 +6430,9 @@ class Solution {
     }
 }
 ```
+
 抑或
+
 ```java
 public class Main {
     public static int findUniqueNumber(int[] nums) {
@@ -6754,7 +6842,9 @@ class Solution {
 快速排序 partition 实现。
 
 ### **Java**
+
 快排
+
 ```java
 class Solution {
     public int findKthLargest(int[] nums, int k) {
@@ -6784,7 +6874,9 @@ class Solution {
     }
 }
 ```
+
 小根堆
+
 ```java
 import java.util.PriorityQueue;
 
@@ -7672,10 +7764,7 @@ class Solution {
         if (num > 255) {
             return false;
         }
-        if (s.charAt(0) == '0' && s.length() > 1) {
-            return false;
-        }
-        return true;
+        return s.charAt(0) != '0' || s.length() <= 1;
     }
 }
 ```
@@ -8197,6 +8286,7 @@ class Solution {
 </div>
 </div>
 
+
 <p><meta charset="UTF-8" />注意：本题与主站 132 题相同： <a href="https://leetcode.cn/problems/palindrome-partitioning-ii/">https://leetcode.cn/problems/palindrome-partitioning-ii/</a></p>
 
 ## 解法
@@ -8267,7 +8357,6 @@ class Solution {
 
 <p>两个字符串的 <strong>公共子序列</strong> 是这两个字符串所共同拥有的子序列。</p>
 
-
 <p><strong>示例 1：</strong></p>
 
 <pre>
@@ -8292,14 +8381,12 @@ class Solution {
 <strong>解释：</strong>两个字符串没有公共子序列，返回 0 。
 </pre>
 
-
 <p><strong>提示：</strong></p>
 
 <ul>
 	<li><code>1 <= text1.length, text2.length <= 1000</code></li>
 	<li><code>text1</code> 和 <code>text2</code> 仅由小写英文字符组成。</li>
 </ul>
-
 
 <p><meta charset="UTF-8" />注意：本题与主站 1143 题相同： <a href="https://leetcode.cn/problems/longest-common-subsequence/">https://leetcode.cn/problems/longest-common-subsequence/</a></p>
 
@@ -8531,23 +8618,23 @@ class Solution {
     public int numDistinct(String s, String t) {
         int m = s.length(); // 字符串 s 的长度
         int n = t.length(); // 字符串 t 的长度
-        
+
         int[][] dp = new int[m + 1][n + 1]; // 创建一个二维数组 dp，用于保存中间结果
-        
+
         for (int i = 0; i <= m; i++) {
             dp[i][0] = 1; // 初始化 dp 数组的第一列为 1，表示任意非空字符串 s 的子序列中，空字符串 t 出现的次数为 1
         }
-        
+
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
                 dp[i][j] = dp[i - 1][j]; // 不管 s[i-1] 和 t[j-1] 是否相等，都可以将 s[i-1] 不加入到子序列中
-                
+
                 if (s.charAt(i - 1) == t.charAt(j - 1)) { // 如果 s[i-1] 和 t[j-1] 相等，说明可以将 s[i-1] 加入到子序列中
                     dp[i][j] += dp[i - 1][j - 1]; // 将 s[i-1] 加入到子序列中，次数等于 s 的前 i-1 个字符和 t 的前 j-1 个字符中 t 出现的次数（加上当前匹配字符）
                 }
             }
         }
-        
+
         return dp[m][n]; // 返回最终结果，即在完整的字符串 s 的子序列中，字符串 t 出现的次数
     }
 }
@@ -9412,14 +9499,14 @@ class Solution {
 ```java
 class Solution {
     private int[] p;  // 使用并查集数据结构来存储节点间的关系
-    
+
     public boolean isBipartite(int[][] graph) {
         int n = graph.length;
         p = new int[n];  // 初始化并查集
         for (int i = 0; i < n; ++i) {
             p[i] = i;  // 将每个节点的父节点初始化为自身
         }
-        
+
         // 遍历图中的每个节点及其相邻节点
         for (int u = 0; u < n; ++u) {
             int[] g = graph[u];
@@ -9430,7 +9517,7 @@ class Solution {
                 p[find(v)] = find(g[0]);  // 将节点 v 的父节点设置为 g[0] 所在集合的根节点
             }
         }
-        
+
         return true;  // 遍历结束后，没有发现矛盾，说明是二分图
     }
 
@@ -9582,15 +9669,17 @@ class Solution {
 BFS。
 
 ### **Java**
+
 这是一道经典的 BFS 问题。
 
 我们可以将单词看作图中的节点，如果两个单词相差一个字符，则它们之间有一条边。例如，如果单词 "hot" 和 "hat" 在字典 wordList 中，则它们之间有一条边。
 
-由此，我们可以将问题转化为在图中找到从 beginWord 到 endWord 的最短路径。我们可以使用 BFS 在图中搜索最短路径，具体地，每次从队列中取出一个节点，遍历它所有的相邻节点，并将相邻节点添加到队列中，直到找到 endWord 或者队列为空。
+由此，我们可以将问题转化为在图中找到从 beginWord 到 endWord 的最短路径。我们可以使用 BFS 在图中搜索最短路径，具体地，每次从队列中取出一个节点，遍历它所有的相邻节点，并将相邻节点添加到队列中，直到找到 endWord
+或者队列为空。
 
 在搜索过程中，我们需要记录每个单词的访问状态（即是否已经被搜索过），以及从 beginWord 到当前单词的距离。可以使用一个 HashMap 来记录每个单词的访问状态和距离。
+
 ```java
-import java.util.*;
 class Solution {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         Set<String> wordSet = new HashSet<>(wordList); // 将wordList转换成Set，以便快速判断某个单词是否在字典中
@@ -9622,12 +9711,12 @@ class Solution {
                             queue.offer(newWord);
                             visited.add(newWord);
                         }
-                    }       
+                    }
                     wordArray[j] = originalChar; // 恢复原始字符
                 }
-            }   
+            }
             level++; // 层级加一
-        }       
+        }
         return 0; // 无法进行转换
     }
 }
@@ -10424,6 +10513,7 @@ class Solution {
 ```
 
 # [ 115. 重建序列](https://leetcode.cn/problems/ur2n8P)
+
 没搞懂
 
 ## 题目描述
